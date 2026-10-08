@@ -164,12 +164,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G7-VERH-03-claude-bank-291` (Claude K11, gegenereerd, niveau 3 → toepassen)
     - **Opgave:** Elke zijde van een vierkant van 5 bij 5 cm wordt 4 keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?
     - **Antwoord:** 16  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 4 → De zijden worden zoveel keer zo lang. De oppervlakte groeit in twee richtingen tegelijk. · 8 → Twee richtingen betekent factor keer factor, niet factor plus factor.
+    - **Fout-hints (Claude):** 4 · 8
     - **Uitleg (Claude):** De oppervlakte was 5 × 5 = 25 cm². Nu is hij 20 × 20 = 400 cm². Dat is 4 × 4 = 16 keer zo groot.
   - `G7-VERH-03-claude-bank-290` (Claude K11, gegenereerd, niveau 3 → toepassen)
     - **Opgave:** Elke zijde van een vierkant van 3 bij 3 cm wordt 4 keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?
     - **Antwoord:** 16  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 4 → De zijden worden zoveel keer zo lang. De oppervlakte groeit in twee richtingen tegelijk. · 8 → Twee richtingen betekent factor keer factor, niet factor plus factor.
+    - **Fout-hints (Claude):** 4 · 8
     - **Uitleg (Claude):** De oppervlakte was 3 × 3 = 9 cm². Nu is hij 12 × 12 = 144 cm². Dat is 4 × 4 = 16 keer zo groot.
 
 - **Hint 1 (te schrijven):** De oppervlakte is lengte keer breedte. Worden alle zijden langer, dan worden de lengte én de breedte langer.

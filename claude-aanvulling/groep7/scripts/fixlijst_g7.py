@@ -269,6 +269,7 @@ def _zet(it, slog, code, reden, opgave, antwoord=None, denk=None, kale=None, uit
         e['claudeDenkfouten'] = [{'fout': f, 'denkfout': d} for f, d, u in denk]
         e['claudeFoutHints'] = [{'stap': None, 'fout': f, 'uitleg': u} for f, d, u in denk]
         it['foutHints'] = []
+        it['foutHintsTekst'] = ' · '.join(f'{f} → {u}' if u else f for f, d, u in denk) or None      # Z-#810: somtypen/*.md toont de huidige Claude-sleutels
     if kale is not None: e['claudeKaleSom'] = kale
     if uitleg is not None: e['claudeUitleg'] = uitleg
     if jr: it['visual']['jsRender'].update(jr)

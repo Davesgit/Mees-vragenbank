@@ -109,7 +109,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Opgave:** Op een tekening staat schaal 1 : 1. Wat weet je dan over de tekening?
     - **Opties:** A) Het echte voorwerp is 100 keer zo groot · B) Het echte voorwerp is net zo groot als de tekening · C) Het echte voorwerp is 2 keer zo groot
     - **Antwoord:** Het echte voorwerp is net zo groot als de tekening  (controle: n.v.t.)
-    - **Fout-hints (Claude):** De tekening is 2 keer zo klein → Kijk eens naar de twee getallen van deze schaal. Zijn ze verschillend of gelijk? · De tekening is 100 keer zo klein → Je denkt aan de schaal 1 : 100. Lees nog eens welk getal hier achter de dubbele punt staat.
+    - **Fout-hints (Claude):** Het echte voorwerp is 2 keer zo groot → Kijk eens naar de twee getallen van deze schaal. Zijn ze verschillend of gelijk? · Het echte voorwerp is 100 keer zo groot → Je denkt aan de schaal 1 : 100. Lees nog eens welk getal hier achter de dubbele punt staat.
     - **Uitleg (Claude):** Bij schaal 1 : 1 hoort bij 1 cm op de tekening ook 1 cm in het echt. Er wordt dus niets kleiner of groter gemaakt. De tekening is precies even groot als het echte voorwerp.
 
 - **Hint 1 (te schrijven):** Een schaal vergelijkt de tekening met het echte voorwerp. Een op vijftig betekent: één centimeter op de tekening is vijftig centimeter echt.

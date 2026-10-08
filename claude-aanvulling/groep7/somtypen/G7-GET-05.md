@@ -24,7 +24,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G7-GET-05-claude-bank-444` (Claude B5, bank, niveau 3 → toepassen)
     - **Opgave:** Welke breuk is het grootst? Kies uit 5/11, 1/5 of 11/13.
     - **Antwoord:** 11/13  (controle: ok)
-    - **Fout-hints (Claude):** 7/20 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter? · 9/14 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter?
+    - **Fout-hints (Claude):** 5/11 → Kijk niet alleen naar de noemer, maar ook naar de teller. Vergelijk met een half, of maak de noemers gelijk. · 1/5 → Kijk niet alleen naar de noemer, maar ook naar de teller. Vergelijk met een half, of maak de noemers gelijk.
 
 - **Hint 1 (te schrijven):** Hoe groot is elke breuk ongeveer: minder dan een half, ongeveer een half, of bijna één heel?
 - **Hint 2 (te schrijven):** Vergelijk elke breuk met een half en met één heel. Twijfel je nog? Maak de noemers gelijk, of schrijf de breuken als kommagetal.
@@ -47,11 +47,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G7-GET-05-claude-bank-513` (Claude B5, bank, niveau 1 → basis)
     - **Opgave:** Welke breuk is het kleinst? Kies uit 3/5, 1/3 of 5/7.
     - **Antwoord:** 1/3  (controle: ok)
-    - **Fout-hints (Claude):** 3/4 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter? · 2/7 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter?
+    - **Fout-hints (Claude):** 3/5 → Kijk niet alleen naar de noemer, maar ook naar de teller. Vergelijk met een half, of maak de noemers gelijk. · 5/7 → Kijk niet alleen naar de noemer, maar ook naar de teller. Vergelijk met een half, of maak de noemers gelijk.
   - `G7-GET-05-claude-bank-549` (Claude B5, bank, niveau 3 → toepassen)
     - **Opgave:** Welke breuk is het kleinst? Kies uit 7/11, 7/14 of 7/16.
     - **Antwoord:** 7/16  (controle: ok)
-    - **Fout-hints (Claude):** 8/9 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter? · 2/11 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter?
+    - **Fout-hints (Claude):** 7/11 → De tellers zijn gelijk. Hoe groter de noemer, hoe kleiner de stukken. · 7/14 → De tellers zijn gelijk. Hoe groter de noemer, hoe kleiner de stukken.
 
 - **Hint 1 (te schrijven):** Hoe groot is elke breuk ongeveer: minder dan een half, ongeveer een half, of bijna één heel?
 - **Hint 2 (te schrijven):** Vergelijk elke breuk met een half en met één heel. Twijfel je nog? Maak de noemers gelijk, of schrijf de breuken als kommagetal.

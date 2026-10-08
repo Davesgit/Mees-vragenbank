@@ -447,3 +447,22 @@ Checks build 15:41:07: check_hints **155 klaar · 0 open · 0 FAIL · 0 WARN**, 
 - **Z-#749:** `Z749_WACHT = False` in patch_batch6 (na V-#746/Z-#748 in build 15:41:07). bank-135 '1 op de 6' heeft in de data geen Claude-label meer (Z-#748), dus de letterlijke regel 'deel verkeerd geteld (optie)' landt daar; bank-134 '4 op de 10' blijft op 'deel verkeerd geteld' (label een-ernaast). #7 heeft geen optie die erbij past (lijst leeg).
 - **Oef-#481:** de oude Claude-fout-hint «1 cm is 100 000 cm echt» → '100.000' in de data (fixlijst `_z481`), in somtypen/G7-VERH-03.md (build_g7 schrijft de somtypen met punt) en in hints/batch6.json (claudeTekst). `spatie_duizend_check.rapport_bestanden` kijkt nu ook in hints/batch*.json en somtypen/*.md (FAIL, in check_merge_notatie G4–G8): overal **0**.
 - Checks: check_hints **155 klaar · 0 open · 0 FAIL · 0 WARN** (ook LES250 0), merge-notatie ALLES OK, b6/check 779 items · 3.166 sleutels · FAIL 0.
+
+### Oefeningen: Z-#749 nagekeken (8 okt 15:5x, build 15:52)
+- Live (verse kopie 15:53): batch6 #4 heeft 'deel verkeerd geteld' (label een-ernaast) en 'deel verkeerd geteld (optie)' met de letterlijke regel '1 op de 6'; #7 alleen 'niet met het totaal', 'het andere deel', 'andere fout'. bank-134 '4 op de 10' → 'deel verkeerd geteld' (labelregel), bank-135 '1 op de 6' → 'deel verkeerd geteld (optie)'. Beide krijgen de tekst «Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.»
+- check_hints 155 klaar · 0 FAIL · 0 WARN; merge-notatie ALLES OK; b6/check 779 items · 3166 sleutels · **FAIL 0**; patch_batch6 op de kopie 0 wijzigingen. M749 staat weer in runmut.sh, nu op bank-135 (134 draagt sinds Z-#748 een label): **101 mutanten · 0 gemist · 0 ONGEBRUIKT**.
+- Nummering: Oef-#485–#488 staan in g8/merge-fixlijst.md (G8 batch 3); volgende vrije Oef-#489, na #499 verder met Oef-#1000.
+
+### Oefeningen: ronde 1g, alleen guards (8 okt ~16:05; recheck2-batch6-didactiek Z-#811/Z-#812)
+- **Z-#811 (les 280):** b6/check les 216 eist nu 'erbij opgeteld' of 'bij elkaar opgeteld' in de vraag (niet alleen het trefwoord), en draait op elk somtype met de soorten ±1/verschil/gedeeld, niet alleen VERH-03 #1. Mutant **E216d** («Komt er nog iets erbij? …») in mut.py/runmut.sh: gevangen met kenmerk 'les 216'. b6/check FAIL 0; runmut **102 mutanten · 0 gemist · 0 ONGEBRUIKT**.
+- **Z-#812a:** huis_checks.py UITSLUIT + de vier patronen van Didactiek («Je hoeft niets op te tellen», «Optellen is hier fout», «Gebruik geen plus» / «Dit is geen plussom», «Er komt niets bij»). Zelftest `python3 huis_checks.py --zelftest`: **11/11 gevangen, 0 vals alarm** (de 5 toegestane zinnen blijven vrij). Over alle 6 batches (zandbak én live): les 217 FAIL 0.
+- **Z-#812c (les 281):** b1–b4 gaven hun batch niet goed door (b1/b2: dict per sleutel, b3/b4: D3). Nu geven b1–b6 allemaal de batch in het geheugen door (`{'somtypen': …}` of D3/D). Mutant per batch `HUIS217MUT=1` (zin in hint1 in het geheugen): in **alle 6 batches gevangen**, basis FAIL 0.
+- **Z-#812b → Oef-#489 (Overzicht, tools/):** huis_checks staat nog in /workspace/g7work, dus de build-gate draait hem niet. Voorstel: `tools/huis_checks.py` (UITSLUIT + zelftest) en in de build-gate `les217()` over alle hints/batch*.json van G4–G8. Ik verander niets in tools/. **Open.**
+- Geen patch nodig: patch_batch6 blijft gelijk (tweede run 0).
+- Nummering: volgende vrije Oef-#490 (na #499: Oef-#1000).
+
+### Zacht (Didactiek 15:58) — Overzicht, build 16:02:05
+- **Z-#810 ✓** somtypen/G7-VERH-04.md toont bij 127/136 (en elk item dat de fixlijst opnieuw opzet) de huidige Claude-sleutels: `_zet` zet nu ook foutHintsTekst (stond nog '1 op de 5 → … Kijk hoe vaak 5 in 20 past'). Alleen de md verandert; in de data zet apply_hints foutHintsTekst toch opnieuw.
+- **Z-#812 ✓** `tools/les217_check.py` (kopie van g7work/huis_checks.py van Oefeningen, met de vijf nieuwe bewoordingen en de zelftest 11/11) zit in de build-gate check_hints: **FAIL in G7/G8** (0), **WARN in G3–G6** (goedgekeurd; alleen gemeld): G4 GET-E06 #5/#6 'niet zomaar optellen' / 'niet bij elkaar optellen' (2), G5 GET-E05 #13 'Aftrekken, niet optellen.' (1), G6 MEET-E03 #3/#4 'niets op te tellen', VBN-E02 #1 H2 'tel je de twee maanden niet bij elkaar op' (3). G3: 0.
+- **Z-#744 (bank-318/620):** al in build 15:31:04 (R6_744): 318 = 9 : 5 = 18 : ? → 10, 620 = 2 : 12 = 8 : ? → 48; geen getal uit de vraag en geen som/verschil (SOMVERSCHIL 0).
+Checks: check_hints 155 klaar · 0 FAIL · 0 WARN, merge-notatie ALLES OK, b6/check FAIL 0.

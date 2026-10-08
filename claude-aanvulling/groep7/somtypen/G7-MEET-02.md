@@ -81,12 +81,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G7-MEET-02-claude-bank-terug-009` (Claude M24, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Een tuin van 6 bij 6 meter heeft een vierkante vijver van 3 bij 3 meter. Hoeveel m² gras is er?
     - **Antwoord:** 27  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 36 → De vijver is geen gras. Haal die eraf. · 34 → De vijver is 2 × 2 m², niet 2 m². · 40 → De vijver gaat eraf, niet erbij.
+    - **Fout-hints (Claude):** 36 → De vijver is geen gras. Haal die eraf. · 33 → De vijver is 3 × 3 m², niet 3 m². · 45 → De vijver gaat eraf, niet erbij.
     - **Uitleg (Claude):** Hele tuin: 6 × 6 = 36 m². Vijver: 3 × 3 = 9 m². Gras: 36 − 9 = 27 m².
   - `G7-MEET-02-claude-bank-terug-013` (Claude M24, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Een tuin van 9 bij 6 meter heeft een vierkante vijver van 5 bij 5 meter. Hoeveel m² gras is er?
     - **Antwoord:** 29  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 54 → De vijver is geen gras. Haal die eraf. · 52 → De vijver is 2 × 2 m², niet 2 m². · 58 → De vijver gaat eraf, niet erbij.
+    - **Fout-hints (Claude):** 54 → De vijver is geen gras. Haal die eraf. · 49 → De vijver is 5 × 5 m², niet 5 m². · 79 → De vijver gaat eraf, niet erbij.
     - **Uitleg (Claude):** Hele tuin: 9 × 6 = 54 m². Vijver: 5 × 5 = 25 m². Gras: 54 − 25 = 29 m².
 
 - **Hint 1 (te schrijven):** Hoeveel m² (vierkante meter) is de hele tuin? En hoeveel is de vijver?

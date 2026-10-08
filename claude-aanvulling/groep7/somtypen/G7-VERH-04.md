@@ -55,7 +55,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Opgave:** Schrijf 0,5 in procenten.
     - **Opties:** A) 50% · B) 0,5% · C) 5%
     - **Antwoord:** 50%  (controle: ok)
-    - **Fout-hints (Claude):** 500% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links. · 5% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.
+    - **Fout-hints (Claude):** 5% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links. · 0,5%
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten.
 - **Hint 2 (te schrijven):** Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.
@@ -112,7 +112,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Opgave:** In een doos liggen 20 kaartjes en op 5 kaartjes staat een ster. Welk deel van de kaartjes heeft een ster?
     - **Opties:** A) 5 op de 15 · B) 5 op de 20 · C) 15 op de 20
     - **Antwoord:** 5 op de 20  (controle: ok)
-    - **Fout-hints (Claude):** 5 op de 15 → Vergelijk de sterkaartjes met alle kaartjes, niet met de kaartjes zonder ster. · 1 op de 5 → Het aantal sterren is niet meteen het antwoord. Kijk hoe vaak 5 in 20 past.
+    - **Fout-hints (Claude):** 5 op de 15 → Vergelijk de sterkaartjes met alle kaartjes, niet met de kaartjes zonder ster. · 15 op de 20
     - **Uitleg (Claude):** Er zijn in totaal 20 kaartjes. Op 5 daarvan staat een ster. Dat is dus 5 op de 20.
 
 - **Hint 1 (te schrijven):** Bij 'op de' komt eerst het deel waar de vraag over gaat. Achter 'op de' komt het totaal: alles samen.
@@ -196,14 +196,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Tekening:** `{"soort": "rad", "vakjes": 8, "gemarkeerd": {"aantal": 2, "kleur": "groen", "letter": "G", "patroon": "gestreept"}, "pijl": false}`
     - **Opties:** A) 6 op de 8 · B) 2 op de 8 · C) 2 op de 6
     - **Antwoord:** 2 op de 8  (controle: ok)
-    - **Fout-hints (Claude):** 2 op de 6 → Tel alle vakjes van het rad, ook de groene. · 6 op de 8 → Je hebt de vakjes geteld die niet groen zijn. Lees nog eens wat er gevraagd wordt.
+    - **Fout-hints (Claude):** 6 op de 8 → Je hebt de vakjes geteld die niet groen zijn. Lees nog eens wat er gevraagd wordt. · 2 op de 6 → Tel alle vakjes van het rad, ook de groene.
     - **Uitleg (Claude):** Het rad heeft in totaal 8 vakjes. Daarvan zijn er 2 groen. Dat is dus 2 op de 8.
   - `G7-VERH-04-claude-bank-136` (Claude G7, ai, niveau 3 → toepassen)
     - **Opgave:** Een rad heeft 12 even grote vakjes en 3 daarvan zijn rood. Welk deel van de vakjes is rood?
     - **Tekening:** `{"soort": "rad", "vakjes": 12, "gemarkeerd": {"aantal": 3, "kleur": "rood", "letter": "R", "patroon": "gestreept"}, "pijl": false}`
     - **Opties:** A) 3 op de 12 · B) 9 op de 12 · C) 3 op de 9
     - **Antwoord:** 3 op de 12  (controle: ok)
-    - **Fout-hints (Claude):** 1 op de 3 → Het aantal rode vakjes is niet meteen het antwoord. Kijk hoe vaak 3 in 12 past. · 3 op de 9 → Tel alle vakjes van het rad, ook de rode.
+    - **Fout-hints (Claude):** 9 op de 12 · 3 op de 9 → Tel alle vakjes van het rad, ook de rode.
     - **Uitleg (Claude):** Het rad heeft in totaal 12 vakjes. Daarvan zijn er 3 rood. Dat is dus 3 op de 12.
 
 - **Hint 1 (te schrijven):** Bij 'op de' komt eerst het aantal vakjes waar de vraag over gaat. Achter 'op de' komt het aantal vakjes van het hele rad.

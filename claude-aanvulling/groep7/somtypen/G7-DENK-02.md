@@ -73,7 +73,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Opgave:** Er zijn 18 kinderen op het schoolplein. Een derde speelt bij de zandbak. Welke tekening past hier het beste bij?
     - **Opties:** A) 3 groepjes van 6, één groepje omcirkeld · B) 3 groepjes van 6, alle groepjes omcirkeld · C) 2 groepjes van 9, één groepje omcirkeld
     - **Antwoord:** 3 groepjes van 6, één groepje omcirkeld  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 3 groepjes van 6, alle groepjes gekleurd → Een derde betekent dat maar één van de gelijke groepjes telt. · 2 groepjes van 9, één groepje gekleurd → Bij een derde teken je drie even grote groepjes, niet twee.
+    - **Fout-hints (Claude):** 3 groepjes van 6, alle groepjes omcirkeld → Een derde betekent dat maar één van de gelijke groepjes telt. · 2 groepjes van 9, één groepje omcirkeld → Bij een derde teken je drie even grote groepjes, niet twee.
     - **Uitleg (Claude):** Bij een derde verdeel je 18 kinderen in 3 gelijke groepjes. Elk groepje heeft 6 kinderen. Eén groepje speelt bij de zandbak.
 
 - **Hint 1 (te schrijven):** Een derde: je verdeelt alle kinderen in drie even grote groepjes.
@@ -226,7 +226,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Opgave:** Je tekent 5 dozen en in elke doos 6 eieren. Welke som hoort bij deze tekening?
     - **Opties:** A) 5 + 6 = 11 · B) 6 − 5 = 1 · C) 5 × 6 = 30
     - **Antwoord:** 5 × 6 = 30  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 5 + 8 = 13 → In elke doos zitten evenveel eieren. Dan tel je niet één keer op, maar steeds hetzelfde aantal erbij. · 8 − 5 = 3 → Je haalt niets weg. Je hebt juist meerdere dozen met eieren samen.
+    - **Fout-hints (Claude):** 5 + 6 = 11 → In elke doos zitten evenveel eieren. Dan tel je niet één keer op, maar steeds hetzelfde aantal erbij. · 6 − 5 = 1 → Je haalt niets weg. Je hebt juist meerdere dozen met eieren samen.
     - **Uitleg (Claude):** Er zijn 5 dozen met elk 6 eieren. Dat is 6 + 6 + 6 + 6 + 6, en dat is hetzelfde als 5 × 6. Samen zijn dat 30 eieren.
 
 - **Hint 1 (te schrijven):** In elke doos zitten evenveel eieren. Welke som hoort bij steeds hetzelfde aantal?
@@ -302,7 +302,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Opgave:** Langs een pad staan 7 lantaarnpalen op een rij. Tussen twee palen zit steeds 20 meter. Hoe lang is de rij van de eerste tot de laatste paal?
     - **Opties:** A) 120 meter · B) 140 meter · C) 100 meter
     - **Antwoord:** 120 meter  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 35 meter → Teken de palen als streepjes en tel de tussenruimtes. Dat zijn er minder dan het aantal palen. · 25 meter → Tel de tussenruimtes in je tekening nog eens na.
+    - **Fout-hints (Claude):** 140 meter → Teken de palen als streepjes en tel de tussenruimtes. Dat zijn er minder dan het aantal palen. · 100 meter → Tel de tussenruimtes in je tekening nog eens na.
     - **Uitleg (Claude):** Bij 7 palen op een rij zitten 6 tussenruimtes. Elke tussenruimte is 20 meter. 6 × 20 is 120 meter.
 
 - **Hint 1 (te schrijven):** Teken de palen als streepjes op een rij. Tel de stukken tussen de palen.

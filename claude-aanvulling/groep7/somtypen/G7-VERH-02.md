@@ -172,7 +172,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G7-VERH-02-claude-bank-1028` (Claude V4, gegenereerd, niveau 3 → toepassen)
     - **Opgave:** Van de 20 eekhoorns hebben er 3 een noot. Hoeveel procent is dat?
     - **Antwoord:** 15  (controle: ok)
-    - **Fout-hints (Claude):** 2 → 2 is het aantal, niet het percentage. Zet het om naar per 100. · 18 → Dat is het aantal zonder. Zet om naar per 100.
+    - **Fout-hints (Claude):** 3 → 3 is het aantal, niet het percentage. Zet het om naar per 100. · 17 → Dat is het aantal zonder. Zet om naar per 100.
     - **Uitleg (Claude):** Maak er 100 van: 20 → 100 is keer 5. 3 × 5 = 15. Dus 15%.
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Welk deel van het hele aantal is het?
@@ -201,7 +201,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G7-VERH-02-claude-bank-003` (Claude V5, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Een jas kost €60. Er is 25% korting. Wat is de nieuwe prijs in euro's?
     - **Antwoord:** €45  (controle: ok)
-    - **Fout-hints (Claude):** €10 → 50% is niet 50 euro. Reken eerst uit hoeveel 50% van 60 is. · €90 → Korting gaat eraf, niet erbij.
+    - **Fout-hints (Claude):** €15 → 15 is de korting. De vraag is wat je nog betaalt. · €35 → 25% is niet 25 euro. Reken eerst uit hoeveel 25% van 60 is. · €75 → Korting gaat eraf, niet erbij.
     - **Uitleg (Claude):** Korting: 25% van 60 = 15. Nieuwe prijs: 60 − 15 = €45.
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Hoeveel euro is de korting?

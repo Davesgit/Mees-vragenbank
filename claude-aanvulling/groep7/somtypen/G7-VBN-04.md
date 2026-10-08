@@ -85,7 +85,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Tekening:** `{"rijen": [{"naam": "mm", "waarden": [20, 10, 70, 50]}], "soort": "tabel", "kolommen": ["", "week 1", "week 2", "week 3", "week 4"]}`
     - **Opties:** A) 50 · B) 60 · C) 70
     - **Antwoord:** 70  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 60 → Kijk naar het grootste getal in de tabel: past die staaf nog op deze as? · 80 → Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?
+    - **Fout-hints (Claude):** 50 → Kijk naar het grootste getal in de tabel: past die staaf nog op deze as? · 60 → Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?
     - **Uitleg (Claude):** Het grootste getal in de tabel is 70. Het eerste tiental daarboven (of precies 70 als dat een tiental is) is 70. Verder hoeft de as niet te lopen.
   - `G7-VBN-04-claude-bank-018` (Claude G5, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Je tekent een staafdiagram van deze tabel over het aantal verkochte ijsjes. De as loopt in stappen van 10. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?

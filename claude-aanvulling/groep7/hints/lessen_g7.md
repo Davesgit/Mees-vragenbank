@@ -122,3 +122,15 @@ Volledige tekst en de G8-guards: `../../g8/hints/lessen_g8.md`. Voor G7 gelden v
 - **246.** Verandert een besluit de antwoordvorm, loop dan alle velden na die bij de oude vorm hoorden: opties, uitleg, strategie, labels en afleiders uit het oude ontwerp.
 - **247.** Bij 'welk deel'-items mogen het deel en de rest niet even groot zijn (les 195 voor tellen).
 - **248.** Een verplicht plaatje hoort als vlag in de data (nietLiveZonderBeeld).
+
+## Lessen 270–273 (Didactiek recheck-batch1 G8, 8 okt 15:48)
+- **270.** Een labelregel die opvangt wat #390 weigert, hoort **ná** de ±1-regel. Claude geeft het label 'een-ernaast' ook aan echte één-te-veel-sleutels; vóór ±1 krijgen die de verkeerde tekst. Reken de volgorde per sleutel na en test met de mutant 'label vóór ±1'.
+- **271.** Pas je een H2 aan, zoek dan ook de L2's die een kopie van de óúde H2 zijn (vergelijk met de oude tekst, niet met de nieuwe). *Guard:* `/workspace/g8work/l271.py` leest de oude H2's uit hints/wijzigingen_batchN.json en geeft FAIL bij een L2 die gelijk is aan een oude H2 of er sterk op lijkt (> 0,75 en meer dan op de huidige). Uitgezonderd is een bewust bewaarde oude H2 (waarom 'oude H2 blijft laag 2', V-#780). Draait in g8 b1–b3/check.py op de batch in het geheugen (les 281), mutant M_271 (b1). Z-#790: E02 #11 had er 3.
+- **272.** Haal ook je eigen tekstvoorstellen door de lesguards. Zeg eerst wat het getal ís («Dat is de noemer van het kleine stuk …») en laat 'zoveel' pas daarna terugwijzen (les 197). *Guard:* in b1 is 'begint met Zoveel' nu FAIL, net als in b2/b3 (mutant M_zoveel).
+- **273.** Heeft een groep breukantwoorden, test BREUKVORM dan met vijf mutanten: lijst weg · vlag uit · vorm gevraagd maar lijst laten staan · een gelijkwaardige sleutel terug · een gat in de lijst. Pas als alle vijf FAIL geven, is de guard echt. *Standaardtest:* `python3 /workspace/g8work/breukvorm_mut.py [gN …]` (op de items in het geheugen, met tools/breukvorm.rapport). Stand 8 okt 16:0x: G6, G7 en G8 vangen alle vijf; G3–G5 hebben geen breukantwoorden.
+
+## Lessen 280–283 (Didactiek recheck2-batch6 G7, 8 okt 15:50)
+- **280.** Een guard die een vraag eist, moet ook eisen dat de vraag de route noemt, niet alleen dat er een trefwoord in staat. *G7 b6/check (Z-#811):* les 216 eist 'erbij opgeteld' of 'bij elkaar opgeteld' in de vraag, op elk somtype met die soorten (mutant E216d «Komt er nog iets erbij?»).
+- **281.** Een gedeelde check toets je per batch via het bestand. Kijk ook of hij dezelfde data ziet als de check in het geheugen; anders vallen de mutanten van die batch er stil buiten. *G7 (Z-#812c):* b1–b6 geven les217() hun batch als dict met 'somtypen' door (b1/b2 waren een dict per sleutel, b3/b4 heetten D3); mutant HUIS217MUT=1 per batch.
+- **282.** Gegenereerde documentatie (somtypen-md) kan geschiedenisvelden tonen. Na een datawijziging moet de generator de actuele velden laten zien (Z-#810, Overzicht).
+- **283.** 'Volgt in de volgende build' is geen stand. Kijk zelf wat er in de build zit (logs/build_*.log, hint_sleutels.json, de data), en meld de buildtijd die je echt nagekeken hebt.
