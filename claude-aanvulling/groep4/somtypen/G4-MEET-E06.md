@@ -242,14 +242,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G4-MEET-E06-claude-bank-059` (Claude M4, gegenereerd, niveau 1 → basis)
     - **Opgave:** Zet de klok op half twee.
     - **UI:** klok-zetten (wijzers slepen)
-    - **Antwoord:** 1:30  (controle: ok)
-    - **Fout-hints (Claude):** 2:30 → "half twee" is nog vóór twee uur. De kleine wijzer is nog niet bij de 2.
+    - **Antwoord:** 1.30 uur  (controle: ok)
+    - **Fout-hints (Claude):** 2.30 uur → "half twee" is nog vóór twee uur. De kleine wijzer is nog niet bij de 2.
     - **Uitleg (Claude):** Half twee: de grote wijzer op de 6, de kleine wijzer tussen de 1 en de 2.
   - `G4-MEET-E06-claude-bank-060` (Claude M6, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Zet de klok op half één.
     - **UI:** klok-zetten (wijzers slepen)
-    - **Antwoord:** 12:30  (controle: ok)
-    - **Fout-hints (Claude):** 1:30 → "half één" is nog vóór een uur. De kleine wijzer is nog niet bij de 1.
+    - **Antwoord:** 12.30 uur  (controle: ok)
+    - **Fout-hints (Claude):** 1.30 uur → "half één" is nog vóór een uur. De kleine wijzer is nog niet bij de 1.
     - **Uitleg (Claude):** Half een: de grote wijzer op de 6, de kleine wijzer tussen de 12 en de 1.
 
 - **Hint 1 (te schrijven):** Bij half zet je de grote wijzer recht naar beneden.
@@ -271,14 +271,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G4-MEET-E06-claude-bank-065` (Claude M6, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Zet de klok op kwart over acht.
     - **UI:** klok-zetten (wijzers slepen)
-    - **Antwoord:** 8:15  (controle: ok)
-    - **Fout-hints (Claude):** 9:15 → De kleine wijzer wijst naar de 8.
+    - **Antwoord:** 8.15 uur  (controle: ok)
+    - **Fout-hints (Claude):** 9.15 uur → De kleine wijzer wijst naar de 8.
     - **Uitleg (Claude):** De grote wijzer geeft de minuten: elke streep is 5 minuten. 15 minuten is bij de 3. De kleine wijzer staat na de 8.
   - `G4-MEET-E06-claude-bank-067` (Claude M7, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Zet de klok op kwart over één.
     - **UI:** klok-zetten (wijzers slepen)
-    - **Antwoord:** 1:15  (controle: ok)
-    - **Fout-hints (Claude):** 2:15 → De kleine wijzer wijst naar de 1.
+    - **Antwoord:** 1.15 uur  (controle: ok)
+    - **Fout-hints (Claude):** 2.15 uur → De kleine wijzer wijst naar de 1.
     - **Uitleg (Claude):** De grote wijzer geeft de minuten: elke streep is 5 minuten. 15 minuten is bij de 3. De kleine wijzer staat na de 1.
 
 - **Hint 1 (te schrijven):** Bij kwart over zet je de grote wijzer naar de drie.
@@ -301,14 +301,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G4-MEET-E06-claude-bank-069` (Claude M6, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Zet de klok op kwart voor vier.
     - **UI:** klok-zetten (wijzers slepen)
-    - **Antwoord:** 3:45  (controle: ok)
-    - **Fout-hints (Claude):** 4:45 → "kwart voor vier" is nog vóór vier uur. De kleine wijzer is nog niet bij de 4.
+    - **Antwoord:** 3.45 uur  (controle: ok)
+    - **Fout-hints (Claude):** 4.45 uur → "kwart voor vier" is nog vóór vier uur. De kleine wijzer is nog niet bij de 4.
     - **Uitleg (Claude):** De grote wijzer geeft de minuten: elke streep is 5 minuten. 45 minuten is bij de 9. De kleine wijzer staat na de 3.
   - `G4-MEET-E06-claude-bank-073` (Claude M7, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Zet de klok op kwart voor tien.
     - **UI:** klok-zetten (wijzers slepen)
-    - **Antwoord:** 9:45  (controle: ok)
-    - **Fout-hints (Claude):** 10:45 → "kwart voor tien" is nog vóór tien uur. De kleine wijzer is nog niet bij de 10.
+    - **Antwoord:** 9.45 uur  (controle: ok)
+    - **Fout-hints (Claude):** 10.45 uur → "kwart voor tien" is nog vóór tien uur. De kleine wijzer is nog niet bij de 10.
     - **Uitleg (Claude):** De grote wijzer geeft de minuten: elke streep is 5 minuten. 45 minuten is bij de 9. De kleine wijzer staat na de 9.
 
 - **Hint 1 (te schrijven):** Bij kwart voor zet je de grote wijzer naar de negen.
