@@ -2314,5 +2314,81 @@
    }
   ],
   "waarom": "Ronde 1c (Oefeningen 8 okt; Didactiek review batch 5): V-#661, Z-#660"
+ },
+ {
+  "tijd": "14:08",
+  "doel": "G7-VERH-02",
+  "nrOrigineel": 7,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "procent van de prijs afgehaald",
+    "claudeDenkfout": "procent-verkeerde-basis",
+    "regel": "Claudes sleutel: procent-verkeerde-basis",
+    "tekst": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "korting niet goed verwerkt",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken de korting in euro uit, en haal die van de oude prijs af.",
+    "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "procent van de prijs afgehaald",
+    "claudeDenkfout": "procent-verkeerde-basis",
+    "regel": "Claudes sleutel: procent-verkeerde-basis",
+    "tekst": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "korting niet goed verwerkt",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken de korting in euro uit, en haal die van de oude prijs af.",
+    "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af."
+   }
+  ],
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Didactiek review batch 5): Z-#660, V-#662"
+ },
+ {
+  "tijd": "14:08",
+  "doel": "G7-VERH-02",
+  "nrOrigineel": 7,
+  "veld": "hint2",
+  "was": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+  "wordt": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Didactiek review batch 5): V-#662 (25%, 30%, 50%)"
  }
 ]

@@ -540,7 +540,7 @@ def _rv5(it, slog):
         if it['opgave'].startswith('Tabel:'):
             st = int(re.search(r'stukje van de balk is (\d+)', it['opgave']).group(1))
             assert max(map(int, re.findall(r'\b[a-z]{2,4} (\d+)', it['opgave']))) <= n * st, it['id']
-        it['visual']['jsRender'] = {'soort': 'balk', 'stukjes': n}
+        it['visual']['jsRender'] = {'soort': 'balk', 'delen': n, 'kleurbaar': True}      # zelfde vorm als G5 (regels_g5: balk kleuren)
         it['merge']['v667'] = {'reden': f'V-#667: balk van {n} stukjes in jsRender'}
     # Oef-#450: VBN-04 #1 bank-010/011, Claudes sleutel '10' zonder route → weg (de motorroutes '± 1' en 'getal uit de vraag' blijven)
     if c8 in ('d6bcfbf3', 'ee214c17'):
@@ -551,4 +551,4 @@ _pas_toe_z668 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_z668(it, slog)
     if RV5_AAN: _rv5(it, slog)
-RV5_AAN = 'staaf'      # 'staaf' = alleen V-#665; tijdelijk deels uit voor de build van Oefeningen' rondes (14:05); daarna weer aan
+RV5_AAN = True      # 'staaf' = alleen V-#665 (zo gebouwd om 14:07:01) voor de build van Oefeningen' rondes (14:05); daarna weer aan

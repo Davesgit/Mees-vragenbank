@@ -18,12 +18,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Voorbeelden:
   - `G7-VERH-01-claude-bank-006` (Claude V3, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Een pot heeft 400 knikkers. Kleur 20% ervan. Elk stukje is 40 knikkers.
+    - **Tekening:** `{"soort": "balk", "delen": 10, "kleurbaar": true}`
     - **UI:** balk kleuren
     - **Antwoord:** 2  (controle: ok)
     - **Fout-hints (Claude):** —
     - **Uitleg (Claude):** 10% van 400 is 40. 20% is 2 keer 40 = 80.
   - `G7-VERH-01-claude-bank-008` (Claude V3, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Een pot heeft 200 knikkers. Kleur 50% ervan. Elk stukje is 20 knikkers.
+    - **Tekening:** `{"soort": "balk", "delen": 10, "kleurbaar": true}`
     - **UI:** balk kleuren
     - **Antwoord:** 5  (controle: ok)
     - **Fout-hints (Claude):** —
@@ -48,12 +50,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Voorbeelden:
   - `G7-VERH-01-claude-bank-020` (Claude V1, gegenereerd, niveau 1 → basis)
     - **Opgave:** Kleur 60% van de balk.
+    - **Tekening:** `{"soort": "balk", "delen": 20, "kleurbaar": true}`
     - **UI:** balk kleuren
     - **Antwoord:** 12  (controle: n.v.t.)
     - **Fout-hints (Claude):** 6 → Elk stukje is 5%, niet 10%.
     - **Uitleg (Claude):** De hele balk is 100%. Elk stukje is 5%. 60% is 12 stukjes.
   - `G7-VERH-01-claude-bank-019` (Claude V1, gegenereerd, niveau 1 → basis)
     - **Opgave:** Kleur 20% van de balk.
+    - **Tekening:** `{"soort": "balk", "delen": 20, "kleurbaar": true}`
     - **UI:** balk kleuren
     - **Antwoord:** 4  (controle: n.v.t.)
     - **Fout-hints (Claude):** 2 → Elk stukje is 5%, niet 10%.

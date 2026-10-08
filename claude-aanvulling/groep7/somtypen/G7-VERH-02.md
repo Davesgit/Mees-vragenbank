@@ -190,22 +190,22 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **7** · somtypeOrigineel “Een [ding] kost €#. Er is #% korting. Wat is de nieuwe prijs in euro's?” (koppeling: claudeId)
 - Items: **5** · Claude-doelen: V5 (5) · regel: G7-V07-korting
 - Getallenruimte: procenten met € · type: kale
-- Denkfouten (Claude): verkeerde-bewerking (8), procent-verkeerde-basis (5)
-- Verschillende Claude-fout-hints: 7 (meest: “Korting gaat eraf, niet erbij.”)
+- Denkfouten (Claude): verkeerde-bewerking (10), procent-verkeerde-basis (4)
+- Verschillende Claude-fout-hints: 5 (meest: “Korting gaat eraf, niet erbij.”)
 - Voorbeelden:
   - `G7-VERH-02-claude-bank-002` (Claude V5, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Een bal kost €60. Er is 30% korting. Wat is de nieuwe prijs in euro's?
-    - **Antwoord:** 42  (controle: ok)
+    - **Antwoord:** €42  (controle: ok)
     - **Fout-hints (Claude):** €18 → 18 is de korting. De vraag is wat je nog betaalt. · €30 → 30% is niet 30 euro. Reken eerst uit hoeveel 30% van 60 is. · €78 → Korting gaat eraf, niet erbij.
     - **Uitleg (Claude):** Korting: 30% van 60 = 18. Nieuwe prijs: 60 − 18 = €42.
   - `G7-VERH-02-claude-bank-003` (Claude V5, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een wortel kost €60. Er is 50% korting. Wat is de nieuwe prijs in euro's?
-    - **Antwoord:** 30  (controle: ok)
+    - **Opgave:** Een jas kost €60. Er is 25% korting. Wat is de nieuwe prijs in euro's?
+    - **Antwoord:** €45  (controle: ok)
     - **Fout-hints (Claude):** €10 → 50% is niet 50 euro. Reken eerst uit hoeveel 50% van 60 is. · €90 → Korting gaat eraf, niet erbij.
-    - **Uitleg (Claude):** Korting: 50% van 60 = 30. Nieuwe prijs: 60 − 30 = €30.
+    - **Uitleg (Claude):** Korting: 25% van 60 = 15. Nieuwe prijs: 60 − 15 = €45.
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Hoeveel euro is de korting?
-- **Hint 2 (te schrijven):** Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.
+- **Hint 2 (te schrijven):** Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.
 - **Ouderzin:** Je kind rekent een nieuwe prijs uit na korting in procenten.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `procent van de prijs afgehaald` (Claudes sleutel: procent-verkeerde-basis) → Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.  [Claude, taalfix]

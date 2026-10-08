@@ -101,7 +101,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Items: **24** · Claude-doelen: M28 (24) · regel: G7-M01-temperatuur
 - Getallenruimte: 0–1.000 · type: kale
 - Denkfouten (Claude): teken-vergeten (24), een-ernaast (24)
-- Verschillende Claude-fout-hints: 25 (meest: “Je komt onder nul: het antwoord heeft een min ervoor.”)
+- Verschillende Claude-fout-hints: 24 (meest: “Je komt onder nul: het antwoord heeft een min ervoor.”)
 - Voorbeelden:
   - `G7-MEET-04-claude-bank-031` (Claude M28, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Het is 7 graden in de vallei. 's Nachts daalt de temperatuur 17 graden. Hoeveel graden is het dan? (Typ een min voor een getal onder nul, bijvoorbeeld −3.)

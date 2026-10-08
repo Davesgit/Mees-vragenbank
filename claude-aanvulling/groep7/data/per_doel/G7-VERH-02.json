@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T14:07:01+0200",
+ "gegenereerdOp": "2026-10-08T14:08:50+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-VERH-02",
  "bordtitel": "Procenten van een geheel",
@@ -24,16 +24,16 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "56",
+   "antwoord": "€56",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel euro is de korting?",
-   "sterkereHint": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+   "sterkereHint": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€24",
      "uitleg": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: verkeerde-bewerking",
      "soort": "korting niet goed verwerkt",
@@ -43,7 +43,7 @@
      "stap": null,
      "fout": "€50",
      "uitleg": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "procent van de prijs afgehaald",
@@ -53,7 +53,7 @@
      "stap": null,
      "fout": "€104",
      "uitleg": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: verkeerde-bewerking",
      "soort": "korting niet goed verwerkt",
@@ -141,6 +141,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "G7-oef448: Oef-#448 antwoord met €",
      "N9 geldnotatie €N / €N,CC (G5)",
      "W1 moeilijk woord vervangen",
      "W11 winkel: passende spullen"
@@ -154,6 +155,10 @@
     "regel": "G7-V07-korting",
     "reden": "nieuwe prijs na procent korting (G7-VERH-02)",
     "somtype": "Een [ding] kost €#. Er is #% korting. Wat is de nieuwe prijs in euro's?",
+    "oef448": {
+     "antwoord": "56",
+     "reden": "Oef-#448: antwoord met € zoals de sleutels"
+    },
     "duplicaatVan": null,
     "somtypeNr": 7,
     "somtypeNrOrigineel": 7,
@@ -166,7 +171,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "56",
+    "verwacht": "€56",
     "methode": "korting: nieuwe prijs",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -188,7 +193,7 @@
      "soort": "procent van de prijs afgehaald",
      "bron": "claude-taalfix",
      "tekst": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -202,7 +207,7 @@
      "soort": "korting niet goed verwerkt",
      "bron": "claude-taalfix",
      "tekst": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -217,7 +222,7 @@
      "soort": "andere fout",
      "bron": "nieuw",
      "tekst": "Reken de korting in euro uit, en haal die van de oude prijs af.",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "alles": true
@@ -238,16 +243,16 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "42",
+   "antwoord": "€42",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel euro is de korting?",
-   "sterkereHint": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+   "sterkereHint": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€18",
      "uitleg": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: verkeerde-bewerking",
      "soort": "korting niet goed verwerkt",
@@ -257,7 +262,7 @@
      "stap": null,
      "fout": "€30",
      "uitleg": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "procent van de prijs afgehaald",
@@ -267,7 +272,7 @@
      "stap": null,
      "fout": "€78",
      "uitleg": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: verkeerde-bewerking",
      "soort": "korting niet goed verwerkt",
@@ -355,6 +360,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "G7-oef448: Oef-#448 antwoord met €",
      "N9 geldnotatie €N / €N,CC (G5)",
      "W11 winkel: passende spullen",
      "W8 woord kindvriendelijk (G5, enkelvoud)"
@@ -368,6 +374,10 @@
     "regel": "G7-V07-korting",
     "reden": "nieuwe prijs na procent korting (G7-VERH-02)",
     "somtype": "Een [ding] kost €#. Er is #% korting. Wat is de nieuwe prijs in euro's?",
+    "oef448": {
+     "antwoord": "42",
+     "reden": "Oef-#448: antwoord met € zoals de sleutels"
+    },
     "duplicaatVan": null,
     "somtypeNr": 7,
     "somtypeNrOrigineel": 7,
@@ -380,7 +390,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "42",
+    "verwacht": "€42",
     "methode": "korting: nieuwe prijs",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -402,7 +412,7 @@
      "soort": "procent van de prijs afgehaald",
      "bron": "claude-taalfix",
      "tekst": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -416,7 +426,7 @@
      "soort": "korting niet goed verwerkt",
      "bron": "claude-taalfix",
      "tekst": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -431,7 +441,7 @@
      "soort": "andere fout",
      "bron": "nieuw",
      "tekst": "Reken de korting in euro uit, en haal die van de oude prijs af.",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "alles": true
@@ -448,20 +458,30 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een wortel kost €60. Er is 50% korting. Wat is de nieuwe prijs in euro's?",
+   "opgave": "Een jas kost €60. Er is 25% korting. Wat is de nieuwe prijs in euro's?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "30",
+   "antwoord": "€45",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel euro is de korting?",
-   "sterkereHint": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+   "sterkereHint": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "€10",
+     "fout": "€15",
+     "uitleg": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "korting niet goed verwerkt",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€35",
      "uitleg": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "procent van de prijs afgehaald",
@@ -469,16 +489,16 @@
     },
     {
      "stap": null,
-     "fout": "€90",
+     "fout": "€75",
      "uitleg": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: verkeerde-bewerking",
      "soort": "korting niet goed verwerkt",
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€10 → Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd. · €90 → Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
+   "foutHintsTekst": "€15 → Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af? · €35 → Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd. · €75 → Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
    "ouderzin": "Je kind rekent een nieuwe prijs uit na korting in procenten.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -498,8 +518,8 @@
    "bronVariant": "claude-bank:V5:9f46abc6-e013-4081-824a-47a000c60ade",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "€60 met 50% korting",
-    "claudeUitleg": "Korting: 50% van 60 = 30.\nNieuwe prijs: 60 − 30 = €30.",
+    "claudeKaleSom": "€60 met 25% korting",
+    "claudeUitleg": "Korting: 25% van 60 = 15.\nNieuwe prijs: 60 − 15 = €45.",
     "claudeStrategie": "korting uitrekenen en eraf halen",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -508,11 +528,15 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "€10",
+      "fout": "€15",
+      "denkfout": "verkeerde-bewerking"
+     },
+     {
+      "fout": "€35",
       "denkfout": "procent-verkeerde-basis"
      },
      {
-      "fout": "€90",
+      "fout": "€75",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -520,12 +544,17 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "€10",
-      "uitleg": "50% is niet 50 euro. Reken eerst uit hoeveel 50% van 60 is."
+      "fout": "€15",
+      "uitleg": "15 is de korting. De vraag is wat je nog betaalt."
      },
      {
       "stap": null,
-      "fout": "€90",
+      "fout": "€35",
+      "uitleg": "25% is niet 25 euro. Reken eerst uit hoeveel 25% van 60 is."
+     },
+     {
+      "stap": null,
+      "fout": "€75",
       "uitleg": "Korting gaat eraf, niet erbij."
      }
     ]
@@ -550,6 +579,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "G7-v666: V-#666/Z-#666: Een wortel kost €60 met 50% → een jas van €60 met 25% (review batch 5)",
      "N9 geldnotatie €N / €N,CC (G5)"
     ]
    },
@@ -561,6 +591,15 @@
     "regel": "G7-V07-korting",
     "reden": "nieuwe prijs na procent korting (G7-VERH-02)",
     "somtype": "Een [ding] kost €#. Er is #% korting. Wat is de nieuwe prijs in euro's?",
+    "v666": {
+     "opgave": "Een wortel kost €60. Er is 50% korting. Wat is de nieuwe prijs in euro's?",
+     "antwoord": "30",
+     "sleutels": [
+      "€10",
+      "€90"
+     ],
+     "reden": "V-#666/Z-#666: Een wortel kost €60 met 50% → een jas van €60 met 25% (review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 7,
     "somtypeNrOrigineel": 7,
@@ -573,7 +612,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "30",
+    "verwacht": "€45",
     "methode": "korting: nieuwe prijs",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -595,11 +634,11 @@
      "soort": "procent van de prijs afgehaald",
      "bron": "claude-taalfix",
      "tekst": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "waarden": [
-       "€10"
+       "€35"
       ]
      },
      "leesbaar": true
@@ -609,11 +648,12 @@
      "soort": "korting niet goed verwerkt",
      "bron": "claude-taalfix",
      "tekst": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "waarden": [
-       "€90"
+       "€15",
+       "€75"
       ]
      },
      "leesbaar": true
@@ -623,7 +663,7 @@
      "soort": "andere fout",
      "bron": "nieuw",
      "tekst": "Reken de korting in euro uit, en haal die van de oude prijs af.",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "alles": true
@@ -640,20 +680,20 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een wortel kost €60. Er is 30% korting. Wat is de nieuwe prijs in euro's?",
+   "opgave": "Een jas kost €70. Er is 30% korting. Wat is de nieuwe prijs in euro's?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "42",
+   "antwoord": "€49",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel euro is de korting?",
-   "sterkereHint": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+   "sterkereHint": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "€18",
+     "fout": "€21",
      "uitleg": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: verkeerde-bewerking",
      "soort": "korting niet goed verwerkt",
@@ -661,9 +701,9 @@
     },
     {
      "stap": null,
-     "fout": "€30",
+     "fout": "€40",
      "uitleg": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "procent van de prijs afgehaald",
@@ -671,16 +711,16 @@
     },
     {
      "stap": null,
-     "fout": "€78",
+     "fout": "€91",
      "uitleg": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: verkeerde-bewerking",
      "soort": "korting niet goed verwerkt",
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€18 → Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af? · €30 → Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd. · €78 → Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
+   "foutHintsTekst": "€21 → Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af? · €40 → Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd. · €91 → Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
    "ouderzin": "Je kind rekent een nieuwe prijs uit na korting in procenten.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -700,8 +740,8 @@
    "bronVariant": "claude-bank:V5:ba1753a9-4239-4b0b-bacb-5f40540e579a",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "€60 met 30% korting",
-    "claudeUitleg": "Korting: 30% van 60 = 18.\nNieuwe prijs: 60 − 18 = €42.",
+    "claudeKaleSom": "€70 met 30% korting",
+    "claudeUitleg": "Korting: 30% van 70 = 21.\nNieuwe prijs: 70 − 21 = €49.",
     "claudeStrategie": "korting uitrekenen en eraf halen",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -710,15 +750,15 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "€18",
+      "fout": "€21",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "€30",
+      "fout": "€40",
       "denkfout": "procent-verkeerde-basis"
      },
      {
-      "fout": "€78",
+      "fout": "€91",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -726,17 +766,17 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "€18",
-      "uitleg": "18 is de korting. De vraag is wat je nog betaalt."
+      "fout": "€21",
+      "uitleg": "21 is de korting. De vraag is wat je nog betaalt."
      },
      {
       "stap": null,
-      "fout": "€30",
-      "uitleg": "30% is niet 30 euro. Reken eerst uit hoeveel 30% van 60 is."
+      "fout": "€40",
+      "uitleg": "30% is niet 30 euro. Reken eerst uit hoeveel 30% van 70 is."
      },
      {
       "stap": null,
-      "fout": "€78",
+      "fout": "€91",
       "uitleg": "Korting gaat eraf, niet erbij."
      }
     ]
@@ -761,6 +801,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "G7-v666: V-#666/Z-#666: Een wortel kost €60 met 30% → een jas van €70 met 30% (review batch 5)",
      "N9 geldnotatie €N / €N,CC (G5)"
     ]
    },
@@ -772,6 +813,16 @@
     "regel": "G7-V07-korting",
     "reden": "nieuwe prijs na procent korting (G7-VERH-02)",
     "somtype": "Een [ding] kost €#. Er is #% korting. Wat is de nieuwe prijs in euro's?",
+    "v666": {
+     "opgave": "Een wortel kost €60. Er is 30% korting. Wat is de nieuwe prijs in euro's?",
+     "antwoord": "42",
+     "sleutels": [
+      "€18",
+      "€30",
+      "€78"
+     ],
+     "reden": "V-#666/Z-#666: Een wortel kost €60 met 30% → een jas van €70 met 30% (review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 7,
     "somtypeNrOrigineel": 7,
@@ -784,7 +835,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "42",
+    "verwacht": "€49",
     "methode": "korting: nieuwe prijs",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -806,11 +857,11 @@
      "soort": "procent van de prijs afgehaald",
      "bron": "claude-taalfix",
      "tekst": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "waarden": [
-       "€30"
+       "€40"
       ]
      },
      "leesbaar": true
@@ -820,12 +871,12 @@
      "soort": "korting niet goed verwerkt",
      "bron": "claude-taalfix",
      "tekst": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "waarden": [
-       "€18",
-       "€78"
+       "€21",
+       "€91"
       ]
      },
      "leesbaar": true
@@ -835,7 +886,7 @@
      "soort": "andere fout",
      "bron": "nieuw",
      "tekst": "Reken de korting in euro uit, en haal die van de oude prijs af.",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "alles": true
@@ -852,37 +903,37 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een pion kost €20. Er is 50% korting. Wat is de nieuwe prijs in euro's?",
+   "opgave": "Een puzzel kost €20. Er is 25% korting. Wat is de nieuwe prijs in euro's?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "10",
+   "antwoord": "€15",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel euro is de korting?",
-   "sterkereHint": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+   "sterkereHint": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "−30",
-     "uitleg": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "fout": "€5",
+     "uitleg": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: procent-verkeerde-basis",
-     "soort": "procent van de prijs afgehaald",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "korting niet goed verwerkt",
      "bron": "claude-taalfix"
     },
     {
      "stap": null,
-     "fout": "€30",
+     "fout": "€25",
      "uitleg": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "uitlegSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: verkeerde-bewerking",
      "soort": "korting niet goed verwerkt",
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "−30 → Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd. · €30 → Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
+   "foutHintsTekst": "€5 → Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af? · €25 → Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
    "ouderzin": "Je kind rekent een nieuwe prijs uit na korting in procenten.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -902,8 +953,8 @@
    "bronVariant": "claude-bank:V5:eaf0a004-2ba3-4ed8-8aaa-46070de6cbd6",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "€20 met 50% korting",
-    "claudeUitleg": "Korting: 50% van 20 = 10.\nNieuwe prijs: 20 − 10 = €10.",
+    "claudeKaleSom": "€20 met 25% korting",
+    "claudeUitleg": "Korting: 25% van 20 = 5.\nNieuwe prijs: 20 − 5 = €15.",
     "claudeStrategie": "korting uitrekenen en eraf halen",
     "claudeThema": "Voetbal",
     "claudeAntwoordType": "geheel",
@@ -912,11 +963,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "−30",
-      "denkfout": "procent-verkeerde-basis"
+      "fout": "€5",
+      "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "€30",
+      "fout": "€25",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -924,12 +975,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "-30",
-      "uitleg": "50% is niet 50 euro. Reken eerst uit hoeveel 50% van 20 is."
+      "fout": "€5",
+      "uitleg": "5 is de korting. De vraag is wat je nog betaalt."
      },
      {
       "stap": null,
-      "fout": "€30",
+      "fout": "€25",
       "uitleg": "Korting gaat eraf, niet erbij."
      }
     ]
@@ -955,6 +1006,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "G7-N2 minteken '−' bij een negatief getal",
+     "G7-v666: V-#666/Z-#666: Een pion kost €20 met 50% → een puzzel van €20 met 25% (review batch 5)",
      "N9 geldnotatie €N / €N,CC (G5)"
     ]
    },
@@ -966,6 +1018,15 @@
     "regel": "G7-V07-korting",
     "reden": "nieuwe prijs na procent korting (G7-VERH-02)",
     "somtype": "Een [ding] kost €#. Er is #% korting. Wat is de nieuwe prijs in euro's?",
+    "v666": {
+     "opgave": "Een pion kost €20. Er is 50% korting. Wat is de nieuwe prijs in euro's?",
+     "antwoord": "10",
+     "sleutels": [
+      "−30",
+      "€30"
+     ],
+     "reden": "V-#666/Z-#666: Een pion kost €20 met 50% → een puzzel van €20 met 25% (review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 7,
     "somtypeNrOrigineel": 7,
@@ -978,7 +1039,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "10",
+    "verwacht": "€15",
     "methode": "korting: nieuwe prijs",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -1000,12 +1061,10 @@
      "soort": "procent van de prijs afgehaald",
      "bron": "claude-taalfix",
      "tekst": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "−30"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -1014,11 +1073,12 @@
      "soort": "korting niet goed verwerkt",
      "bron": "claude-taalfix",
      "tekst": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "waarden": [
-       "€30"
+       "€25",
+       "€5"
       ]
      },
      "leesbaar": true
@@ -1028,7 +1088,7 @@
      "soort": "andere fout",
      "bron": "nieuw",
      "tekst": "Reken de korting in euro uit, en haal die van de oude prijs af.",
-     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs; neem dat zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.",
      "perItem": false,
      "match": {
       "alles": true
@@ -26875,7 +26935,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "In het museum liggen 40 tanden. 25% ervan is rood. Hoeveel rode tanden zijn er?",
+   "opgave": "In de klas liggen 40 ballonnen. 25% ervan is rood. Hoeveel rode ballonnen zijn er?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -26996,6 +27056,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "G7-v666: V-#666: In het museum liggen 40 tanden → In de klas liggen 40 ballonnen (review batch 5)",
      "N1 ':' + getal → zin (fout-hint)"
     ]
    },
@@ -27011,6 +27072,16 @@
      "id": "G7-VERH-02-claude-bank-park-169",
      "voorstelDoel": "G7-VERH-02",
      "regel": "G6-V01-procent"
+    },
+    "v666": {
+     "opgave": "In het museum liggen 40 tanden. 25% ervan is rood. Hoeveel rode tanden zijn er?",
+     "antwoord": "10",
+     "sleutels": [
+      "20",
+      "4",
+      "15"
+     ],
+     "reden": "V-#666: In het museum liggen 40 tanden → In de klas liggen 40 ballonnen (review batch 5)"
     },
     "duplicaatVan": null,
     "somtypeNr": 4,
@@ -29555,7 +29626,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "In het nest zijn 240 tanden. 90% is beschadigd. Hoeveel tanden zijn beschadigd?",
+   "opgave": "In de winkel zijn 240 kopjes. 90% is beschadigd. Hoeveel kopjes zijn beschadigd?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -29667,7 +29738,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "F2a ≥10.000 krijgt punt"
+     "F2a ≥10.000 krijgt punt",
+     "G7-v666: V-#666: In het nest zijn 240 tanden → In de winkel zijn 240 kopjes (review batch 5)"
     ]
    },
    "opBord": false,
@@ -29678,6 +29750,15 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "In [plek] zijn # [ding]. #% is beschadigd. Hoeveel [ding] zijn beschadigd?",
+    "v666": {
+     "opgave": "In het nest zijn 240 tanden. 90% is beschadigd. Hoeveel tanden zijn beschadigd?",
+     "antwoord": "216",
+     "sleutels": [
+      "24",
+      "21.600"
+     ],
+     "reden": "V-#666: In het nest zijn 240 tanden → In de winkel zijn 240 kopjes (review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 5,
     "somtypeNrOrigineel": 5,
@@ -30218,7 +30299,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Op de kinderboerderij zijn 60 vissen. 60% is beschadigd. Hoeveel vissen zijn beschadigd?",
+   "opgave": "Op de kinderboerderij zijn 60 emmers. 60% is beschadigd. Hoeveel emmers zijn beschadigd?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -30339,7 +30420,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "F8 grammatica (op de kinderboerderij)"
+     "F8 grammatica (op de kinderboerderij)",
+     "G7-v666: V-#666: 60 vissen → 60 emmers (review batch 5)"
     ]
    },
    "opBord": false,
@@ -30350,6 +30432,16 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "In [plek] zijn # [ding]. #% is beschadigd. Hoeveel [ding] zijn beschadigd?",
+    "v666": {
+     "opgave": "Op de kinderboerderij zijn 60 vissen. 60% is beschadigd. Hoeveel vissen zijn beschadigd?",
+     "antwoord": "36",
+     "sleutels": [
+      "6",
+      "24",
+      "3600"
+     ],
+     "reden": "V-#666: 60 vissen → 60 emmers (review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 5,
     "somtypeNrOrigineel": 5,
@@ -31396,7 +31488,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "In de vallei zijn 300 blaadjes. 40% is beschadigd. Hoeveel blaadjes zijn beschadigd?",
+   "opgave": "In de kantine zijn 300 bekers. 40% is beschadigd. Hoeveel bekers zijn beschadigd?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -31528,6 +31620,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "F2a ≥10.000 krijgt punt",
+     "G7-v666: V-#666: In de vallei zijn 300 blaadjes → In de kantine zijn 300 bekers (review batch 5)",
      "W1 moeilijk woord vervangen"
     ]
    },
@@ -31539,6 +31632,16 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "In [plek] zijn # [ding]. #% is beschadigd. Hoeveel [ding] zijn beschadigd?",
+    "v666": {
+     "opgave": "In de vallei zijn 300 blaadjes. 40% is beschadigd. Hoeveel blaadjes zijn beschadigd?",
+     "antwoord": "120",
+     "sleutels": [
+      "30",
+      "180",
+      "12.000"
+     ],
+     "reden": "V-#666: In de vallei zijn 300 blaadjes → In de kantine zijn 300 bekers (review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 5,
     "somtypeNrOrigineel": 5,
@@ -32075,7 +32178,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "In de vallei zijn 160 eieren. 80% is beschadigd. Hoeveel eieren zijn beschadigd?",
+   "opgave": "In de winkel zijn 160 vazen. 80% is beschadigd. Hoeveel vazen zijn beschadigd?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -32206,7 +32309,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "F2a ≥10.000 krijgt punt"
+     "F2a ≥10.000 krijgt punt",
+     "G7-v666: V-#666: In de vallei zijn 160 eieren → In de winkel zijn 160 vazen (review batch 5)"
     ]
    },
    "opBord": false,
@@ -32217,6 +32321,16 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "In [plek] zijn # [ding]. #% is beschadigd. Hoeveel [ding] zijn beschadigd?",
+    "v666": {
+     "opgave": "In de vallei zijn 160 eieren. 80% is beschadigd. Hoeveel eieren zijn beschadigd?",
+     "antwoord": "128",
+     "sleutels": [
+      "16",
+      "32",
+      "12.800"
+     ],
+     "reden": "V-#666: In de vallei zijn 160 eieren → In de winkel zijn 160 vazen (review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 5,
     "somtypeNrOrigineel": 5,
@@ -264798,7 +264912,7 @@
    "algemeneFoutHint": "Het geheel is honderd procent. Hoeveel procent is het deel?"
   }
  ],
- "hintsSyncOp": "2026-10-08T14:07:07+02:00",
+ "hintsSyncOp": "2026-10-08T14:08:56+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -264818,10 +264932,10 @@
   },
   {
    "batch": "batch5.json",
-   "md5": "35bcef83dd1b"
+   "md5": "a26e34579e2a"
   }
  ],
- "geschrevenOp": "2026-10-08T14:07:07+02:00",
+ "geschrevenOp": "2026-10-08T14:08:56+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

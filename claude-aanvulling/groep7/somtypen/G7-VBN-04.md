@@ -13,17 +13,19 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.” (koppeling: claudeId)
 - Items: **12** · Claude-doelen: G5 (12) · regel: G7-D01-staafdiagram
 - Getallenruimte: n.v.t. · type: kale
-- Denkfouten (Claude): grafiek-verkeerd-afgelezen (8)
+- Denkfouten (Claude): grafiek-verkeerd-afgelezen (6)
 - Verschillende Claude-fout-hints: 1 (meest: “Elk stukje is 5, niet 1.”)
 - Voorbeelden:
   - `G7-VBN-04-claude-bank-004` (Claude G5, gegenereerd, niveau 1 → basis)
     - **Opgave:** Tabel: mei 10, juni 30, juli 40, aug 45. Maak de staaf van juni: elk stukje van de balk is 5.
+    - **Tekening:** `{"soort": "balk", "delen": 10, "kleurbaar": true}`
     - **UI:** balk kleuren
     - **Antwoord:** 6  (controle: n.v.t.)
     - **Fout-hints (Claude):** 10 → Elk stukje is 5, niet 1.
     - **Uitleg (Claude):** juni heeft 30. Elk stukje is 5, dus 30 : 5 = 6 stukjes.
   - `G7-VBN-04-claude-bank-006` (Claude G5, gegenereerd, niveau 1 → basis)
     - **Opgave:** Tabel: mei 40, juni 50, juli 30, aug 40. Maak de staaf van juni: elk stukje van de balk is 5.
+    - **Tekening:** `{"soort": "balk", "delen": 10, "kleurbaar": true}`
     - **UI:** balk kleuren
     - **Antwoord:** 10  (controle: n.v.t.)
     - **Fout-hints (Claude):** —
