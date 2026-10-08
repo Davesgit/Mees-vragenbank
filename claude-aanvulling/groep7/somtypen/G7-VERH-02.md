@@ -27,7 +27,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 295 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Welk deel van het getal is dat procent?
-- **Hint 2 (te schrijven):** Reken eerst uit hoeveel tien procent van het getal is. Neem daarvan zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart.
+- **Hint 2 (te schrijven):** Reken eerst uit hoeveel tien procent van het getal is. Neem daarvan zo vaak als nodig. Vijf procent is de helft van tien procent. Vijftig procent is de helft, vijfentwintig procent een kwart.
 - **Ouderzin:** Je kind rekent uit hoeveel een percentage van een getal is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `het hele getal` (fout = getal2) → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.  [nieuw]
@@ -35,7 +35,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tien keer te groot` (fout = antwoord × 10) → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?  [nieuw]
   - `tien keer te klein` (fout = antwoord : 10) → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal?  [nieuw]
   - `verschil van de getallen` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.  [nieuw]
-  - `het andere deel` (Claudes sleutel: andere-deel-genomen) → Dat is het andere deel: wat overblijft. Je zoekt het deel dat bij het procent uit de vraag hoort.  [Claude, taalfix]
+  - `wat overblijft (het hele getal min het goede deel)` (Claudes sleutel: andere-deel-genomen) → Dat is het andere deel: wat overblijft. Je zoekt het deel dat bij het procent uit de vraag hoort.  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken uit hoeveel tien procent van het getal is, en ga van daaruit verder.  [nieuw]
 - Status: hints klaar
 
@@ -57,10 +57,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €0,72 → Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Welk deel van het bedrag is dat procent?
-- **Hint 2 (te schrijven):** Reken eerst uit hoeveel tien procent van het bedrag is. Neem daarvan zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart.
+- **Hint 2 (te schrijven):** Reken eerst uit hoeveel tien procent van het bedrag is. Neem daarvan zo vaak als nodig. Vijf procent is de helft van tien procent. Vijftig procent is de helft, vijfentwintig procent een kwart.
 - **Ouderzin:** Je kind rekent uit hoeveel een percentage van een geldbedrag is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `het hele bedrag` (fout = getal2) → Dat is het hele bedrag: honderd procent. Je zoekt maar een deel ervan.  [nieuw]
+  - `het procent uit de vraag` (fout = getal1) → Is dat het procent uit de vraag? Je zoekt een bedrag: zoveel van de honderd van het hele bedrag.  [nieuw]
   - `tien keer te groot` (fout = antwoord × 10) → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het bedrag?  [nieuw]
   - `tien keer te klein` (fout = antwoord : 10) → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het bedrag?  [nieuw]
   - `het andere deel` (Claudes sleutel: andere-deel-genomen) → Dat is het andere deel: wat overblijft. Je zoekt het deel dat bij het procent uit de vraag hoort.  [Claude, taalfix]
@@ -123,7 +124,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `ander deel` (Claudes sleutel: deel-van-geheel-verkeerd) → Dat is een ander deel van het hele aantal. Welk deel hoort bij het procent uit de vraag?  [Claude, taalfix]
   - `procent eraf` (Claudes sleutel: verkeerde-bewerking) → Dat is het hele aantal min het procent. Maar procent betekent: zoveel van de honderd.  [Claude, taalfix]
-  - `hele aantal min het procent` (Claudes sleutel (alle, zonder label)) → Dat is het hele aantal min het procent. Maar procent betekent: zoveel van de honderd.  [Claude, taalfix]
   - `andere fout` (andere fout) → Welk deel van het hele aantal is het procent uit de vraag?  [nieuw]
 - Status: hints klaar
 
@@ -147,7 +147,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Eerst 10%: 160 : 10 = 16. Dan 75% = 7.5 × 16 = 120. (5% is de helft van 10%: 8.)
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Hoeveel is tien procent van het hele aantal?
-- **Hint 2 (te schrijven):** Tien procent is een tiende deel: deel het hele aantal door tien. Neem dat zo vaak als nodig: zeventig procent is zeven keer tien procent. Vijfentwintig procent is een kwart.
+- **Hint 2 (te schrijven):** Tien procent is een tiende deel: deel het hele aantal door tien. Neem dat zo vaak als nodig: twintig procent is twee keer tien procent. Vijf procent is de helft van tien procent. Vijfentwintig procent is een kwart.
 - **Ouderzin:** Je kind rekent uit hoeveel een percentage van een aantal is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `keer het procent` (fout = getal1 × getal2) → Dat is meer dan het hele aantal. Procent betekent: zoveel van de honderd, dus deel ook door honderd.  [nieuw]
@@ -205,11 +205,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Korting: 50% van 60 = 30. Nieuwe prijs: 60 − 30 = €30.
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Hoeveel euro is de korting?
-- **Hint 2 (te schrijven):** Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs. Haal de korting daarna van de oude prijs af.
+- **Hint 2 (te schrijven):** Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs, vijfentwintig procent een kwart. Haal de korting daarna van de oude prijs af.
 - **Ouderzin:** Je kind rekent een nieuwe prijs uit na korting in procenten.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `procent van de prijs afgehaald` (Claudes sleutel: procent-verkeerde-basis) → Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.  [Claude, taalfix]
   - `korting niet goed verwerkt` (Claudes sleutel: verkeerde-bewerking) → Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?  [Claude, taalfix]
-  - `prijs min het procent` (Claudes sleutel (alle, zonder label)) → Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken de korting in euro uit, en haal die van de oude prijs af.  [nieuw]
 - Status: hints klaar

@@ -84,7 +84,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Bij een schaal staat vooraan altijd de maat op de tekening. Achter de dubbele punt staat de echte maat. Dus het getal 1 hoort bij de tekening.
 
 - **Hint 1 (te schrijven):** Een schaal heeft twee getallen met een dubbele punt (:) ertussen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.
-- **Hint 2 (te schrijven):** Op de tekening is alles kleiner dan echt. Welk getal hoort dan bij de tekening?
+- **Hint 2 (te schrijven):** Op de tekening is alles kleiner dan echt. Wat betekent dat voor de twee getallen van de schaal?
 - **Ouderzin:** Je kind leert wat een schaal (zoals op een plattegrond) betekent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal van het echte voorwerp` (Het getal 500) → Dat getal hoort bij het echte voorwerp. Op de tekening is alles kleiner.  [nieuw]
@@ -108,8 +108,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** De tekening is 2 keer zo klein → Kijk eens naar de twee getallen van deze schaal. Zijn ze verschillend of gelijk? · De tekening is 100 keer zo klein → Je denkt aan de schaal 1 : 100. Lees nog eens welk getal hier achter de dubbele punt staat.
     - **Uitleg (Claude):** Bij schaal 1 : 1 hoort bij 1 cm op de tekening ook 1 cm in het echt. Er wordt dus niets kleiner of groter gemaakt. De tekening is precies even groot als het echte voorwerp.
 
-- **Hint 1 (te schrijven):** Een schaal vergelijkt de tekening met het echte voorwerp. Een op tien betekent: één centimeter op de tekening is tien centimeter echt.
-- **Hint 2 (te schrijven):** Kijk naar de twee getallen van deze schaal. Zijn ze gelijk? Hoeveel keer zo groot is het echte voorwerp dan?
+- **Hint 1 (te schrijven):** Een schaal vergelijkt de tekening met het echte voorwerp. Een op vijftig betekent: één centimeter op de tekening is vijftig centimeter echt.
+- **Hint 2 (te schrijven):** Hoeveel centimeter echt hoort bij één centimeter op de tekening?
 - **Ouderzin:** Je kind leert wat een schaal (zoals op een plattegrond) betekent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `past bij een andere schaal` (De tekening is 100 keer zo klein) → Dat past bij een schaal van een op honderd. Kijk naar de getallen van deze schaal.  [nieuw]
@@ -133,7 +133,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1 cm op de tekening is 10 cm echt → Kijk nog eens goed naar het tweede getal van de schaal. Staat er 10 of staat er meer? · 1 cm op de tekening is 100 m echt → Bij schaal hoort links en rechts dezelfde eenheid. Begin je met cm, dan blijf je bij cm.
     - **Uitleg (Claude):** Bij schaal 1 : 100 hoort bij 1 stukje op de tekening 100 van dezelfde stukjes in het echt. Meet je in cm, dan is 1 cm op papier 100 cm in het echt. De tekening is dus 100 keer kleiner.
 
-- **Hint 1 (te schrijven):** Een schaal vergelijkt de tekening met het echte voorwerp. Een op tien betekent: één centimeter op de tekening is tien centimeter echt.
+- **Hint 1 (te schrijven):** Een schaal vergelijkt de tekening met het echte voorwerp. Een op vijftig betekent: één centimeter op de tekening is vijftig centimeter echt.
 - **Hint 2 (te schrijven):** Bij een schaal horen beide getallen bij dezelfde maat, bijvoorbeeld centimeter. Welk getal hoort bij het echte huis?
 - **Ouderzin:** Je kind leert wat een schaal (zoals op een plattegrond) betekent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -183,11 +183,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1 + 25 → Bij een schaal staat er geen plusteken tussen de getallen. · 1 × 25 → Bij een schaal staat er een ander teken tussen de twee getallen dan een maalteken.
     - **Uitleg (Claude):** Een schaal schrijf je met een dubbele punt tussen twee getallen. Vooraan staat de maat op de tekening, achteraan de echte maat. Daarom is 1 : 25 de schaal.
 
-- **Hint 1 (te schrijven):** Een schaal is geen som: je rekent er niets mee uit. Welk teken past daarbij?
-- **Hint 2 (te schrijven):** Een schaal schrijf je met een dubbele punt (:) tussen de twee getallen. Welke schrijfwijze heeft dat teken?
+- **Hint 1 (te schrijven):** Een schaal zie je op een plattegrond of een kaart. Weet je nog welk teken er tussen de twee getallen staat?
+- **Hint 2 (te schrijven):** Bij een schaal tel je niets op: het teken is geen plusteken. Welk van de andere tekens staat er tussen de twee getallen?
 - **Ouderzin:** Je kind leert wat een schaal (zoals op een plattegrond) betekent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `keersom` (1 × 25) → Dat is een keersom. Een schaal is geen som.  [nieuw]
-  - `plussom` (1 + 25) → Dat is een plussom. Een schaal is geen som.  [nieuw]
-  - `andere fout` (andere fout) → Een schaal is geen som.  [nieuw]
+  - `keersom` (1 × 25) → Dat is een keersom. Bij een schaal staat er geen keerteken tussen de twee getallen.  [nieuw]
+  - `plussom` (1 + 25) → Dat is een plussom. Bij een schaal staat er geen plusteken tussen de twee getallen.  [nieuw]
+  - `andere fout` (andere fout) → Kijk welk teken er bij een schaal tussen de twee getallen staat.  [nieuw]
 - Status: hints klaar

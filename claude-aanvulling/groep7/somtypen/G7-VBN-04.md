@@ -55,9 +55,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** De hoogste staaf hoort bij het grootste getal in de tabel: 80 bij do.
   - `G7-VBN-04-claude-bank-030` (Claude G5, gegenereerd, niveau 1 → basis)
     - **Opgave:** Je maakt een staafdiagram van deze tabel over het aantal verkochte ijsjes. Welke staaf wordt het hoogst?
-    - **Tekening:** `{"rijen": [{"naam": "ijsjes", "waarden": [5, 30, 25, 5, 30]}], "soort": "tabel", "kolommen": ["", "mei", "juni", "juli", "aug", "sept"]}`
+    - **Tekening:** `{"rijen": [{"naam": "ijsjes", "waarden": [5, 30, 25, 5, 20]}], "soort": "tabel", "kolommen": ["", "mei", "juni", "juli", "aug", "sept"]}`
     - **Opties:** A) juni · B) aug · C) juli
-    - **Antwoord:** juni  (controle: n.v.t.)
+    - **Antwoord:** juni  (controle: ok)
     - **Fout-hints (Claude):** aug → aug heeft 5. Is er een groter getal in de tabel? · juli → juli heeft 25. Is er een groter getal in de tabel?
     - **Uitleg (Claude):** De hoogste staaf hoort bij het grootste getal in de tabel: 30 bij juni.
 

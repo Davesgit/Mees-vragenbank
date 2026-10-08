@@ -175,5 +175,11 @@ if __name__ == '__main__':
     _z606n = sorted({_m.group(1) for _i in _z606 for _m in [re.search(r'(\d[\d.]*)\s+\w+\?', _i['opgave'])] if _m})
     print(f"\nZ606 (GET-04 #8: aantal 10, 100 of 1000): {len(_z606)} items, {len(_z606f)} anders; aantallen in de vraag: {_z606n}")
     for _x in _z606f: print('  WARN Z606', _x)
+    # V-#665 (review batch 5): vraag naar de hoogste/laagste staaf → die waarde is uniek (FAIL bij gelijke hoogste/laagste)
+    import staaf_gelijk_check as _SG
+    _sg = _SG.fouten(_alle)
+    print(f"\nV-#665 staaf-check (hoogste/laagste uniek): {len(_sg)} (FAIL)")
+    for _x in _sg: print('  FAIL V-#665 gelijke %s staaf: %s (waarde %s in %s)' % (_x[1], _x[0], _x[2], _x[3]))
+    fail = bool(_sg) or fail
     print('\nG7 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

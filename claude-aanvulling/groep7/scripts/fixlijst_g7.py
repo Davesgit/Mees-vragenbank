@@ -469,3 +469,86 @@ _pas_toe_av8_r5 = pas_toe_av8
 def pas_toe_av8(it, slog):
     _pas_toe_av8_r5(it, slog)
     if 'z668' not in it['merge']: _z668(it, slog)
+
+# ---------- Review batch 5 (Didactiek), verplicht: V-#664, V-#665, V-#666, V-#667; met Oef-#447/#448/#449/#450 en Z-#666 (#7) ----------
+def _vervang(it, paren):
+    """Woordvervanging in opgave, claudeKaleSom, claudeUitleg en Claudes uitleg per sleutel; geeft de nieuwe opgave."""
+    e = it['extraVelden']; o = it['opgave']
+    for a, b in paren:
+        o = o.replace(a, b)
+        for k in ('claudeKaleSom', 'claudeUitleg'):
+            if e.get(k): e[k] = e[k].replace(a, b)
+        for d in e.get('claudeFoutHints') or []:
+            if d.get('uitleg'): d['uitleg'] = d['uitleg'].replace(a, b)
+    return o
+# V-#666: MEET-04 nrO 3/5, vorst binnen → buiten (de kop houdt 'in [plek]')
+RV5_BINNEN = re.compile(r'\bin (?:de|het) (kantine|huis|school|kleedkamer|museum|gymzaal|klas)\b')
+RV5_BUITEN = ['in het bos', 'in het park', 'in de tuin', 'in het veld']
+# V-#666: VERH-02 #4/#5 dingen die rood of kapot kunnen zijn
+RV5_DING = {'228f70eb': [('In het museum liggen 40 tanden', 'In de klas liggen 40 ballonnen'), ('rode tanden', 'rode ballonnen')],
+            '19f864f1': [('In het nest zijn 240 tanden', 'In de winkel zijn 240 kopjes'), ('Hoeveel tanden', 'Hoeveel kopjes')],
+            '5670f46b': [('60 vissen', '60 emmers'), ('Hoeveel vissen', 'Hoeveel emmers')],
+            'bc3decfc': [('In de vallei zijn 300 blaadjes', 'In de kantine zijn 300 bekers'), ('Hoeveel blaadjes', 'Hoeveel bekers')],
+            'ed5e3069': [('In de vallei zijn 160 eieren', 'In de winkel zijn 160 vazen'), ('Hoeveel eieren', 'Hoeveel vazen')]}
+# V-#666 + Z-#666: VERH-02 #7 echte prijzen, geen 50% korting (korting = nieuwe prijs): (ding, prijs, procent)
+RV5_KORTING = {'9f46abc6': ('jas', 60, 25), 'ba1753a9': ('jas', 70, 30), 'eaf0a004': ('puzzel', 20, 25)}
+# V-#665 (Oef-#447): VBN-04 #2 één uniek hoogste getal: (index in de tabel, nieuwe waarde)
+RV5_STAAF = {'8816e526': (4, 35), '53fcafc4': (4, 20)}
+def _rv5(it, slog):
+    cid = it['bron'].get('claudeId') or ''; c8 = cid[:8]; o = it['opgave']; e = it['extraVelden']; doel = it.get('doelId') or ''
+    if RV5_AAN == 'staaf' and c8 not in RV5_STAAF: return
+    # V-#664: MEET-04 #3 bank-044, antwoord −3 = het voorbeeld in de vraagzin → 5 en 9, antwoord −4
+    if c8 == 'ffa8a0a1':
+        o = o.replace('daalt de temperatuur 8 graden', 'daalt de temperatuur 9 graden')
+        _zet(it, slog, 'v664', 'V-#664: 5 − 8 → 5 − 9 (antwoord −3 was het voorbeeld in de vraag, review batch 5)', o, '−4',
+             [('4', 'teken-vergeten', 'Je komt onder nul: het antwoord heeft een min ervoor.'), ('−5', 'een-ernaast', 'Van 5 naar 0 is 5 graden, dan nog 4.')],
+             '5 − 9 graden', 'Van 5 naar 0 is 5 graden. Dan nog 4 graden verder onder nul: −4.')
+        o = it['opgave']
+    if 'graden' in o and RV5_BINNEN.search(o):
+        b = RV5_BUITEN[int(_hashlib.md5(cid.encode()).hexdigest(), 16) % len(RV5_BUITEN)]
+        n = RV5_BINNEN.sub(b, o)
+        if 'v664' in it['merge']: it['opgave'] = n; it['merge']['v664']['reden'] += f'; V-#666: {RV5_BINNEN.search(o).group(0)} → {b}'
+        else: _zet(it, slog, 'v666', f'V-#666: vorst binnen ({RV5_BINNEN.search(o).group(0)}) → {b} (review batch 5)', n)
+    if c8 in RV5_DING:
+        _zet(it, slog, 'v666', 'V-#666: ' + ', '.join(f'{a} → {b}' for a, b in RV5_DING[c8][:1]) + ' (review batch 5)', _vervang(it, RV5_DING[c8]))
+    if c8 in RV5_KORTING:
+        d, p, k = RV5_KORTING[c8]; kort = p * k // 100; a = p - kort
+        assert p * k % 100 == 0 and kort != a
+        denk = [(f'€{kort}', 'verkeerde-bewerking', f'{kort} is de korting. De vraag is wat je nog betaalt.')]
+        if p - k > 0: denk.append((f'€{p - k}', 'procent-verkeerde-basis', f'{k}% is niet {k} euro. Reken eerst uit hoeveel {k}% van {p} is.'))
+        denk.append((f'€{p + kort}', 'verkeerde-bewerking', 'Korting gaat eraf, niet erbij.'))
+        _zet(it, slog, 'v666', f'V-#666/Z-#666: {o.split(".")[0]} met {re.search(r"(\d+)% korting", o).group(1)}% → een {d} van €{p} met {k}% (review batch 5)',
+             f"Een {d} kost €{p}. Er is {k}% korting. Wat is de nieuwe prijs in euro's?", f'€{a}', denk, f'€{p} met {k}% korting',
+             f'Korting: {k}% van {p} = {kort}.\nNieuwe prijs: {p} − {kort} = €{a}.')
+        o = it['opgave']
+    # Oef-#448: VERH-02 #7 'Wat is de nieuwe prijs in euro's?': het antwoord met €, zoals de sleutels ('56' → '€56')
+    if re.fullmatch(r"Een \w+ kost €\d+\. Er is \d+% korting\. Wat is de nieuwe prijs in euro's\?", it['opgave']) and re.fullmatch(r'\d+', str(it['antwoord'])):
+        oud = it['antwoord']; it['antwoord'] = f'€{oud}'
+        if isinstance(it.get('antwoordDetail'), dict) and 'accept' in it['antwoordDetail']: it['antwoordDetail']['accept'] = [it['antwoord']]
+        it['merge']['oef448'] = {'antwoord': oud, 'reden': "Oef-#448: antwoord met € zoals de sleutels"}
+        slog(it, "G7-oef448: Oef-#448 antwoord met €", 'antwoord', oud, it['antwoord'])
+    # V-#665 (Oef-#447): gelijke hoogste staaf → één uniek hoogste getal
+    if c8 in RV5_STAAF:
+        ix, w = RV5_STAAF[c8]; jr = it['visual']['jsRender']; rij = list(jr['rijen'][0]['waarden']); naam = jr['kolommen'][ix + 1]; oudw = rij[ix]
+        rij[ix] = w; assert rij.count(max(rij)) == 1 and rij.index(max(rij)) != ix
+        _vervang(it, [(f'{naam} heeft {oudw}.', f'{naam} heeft {w}.')])
+        _zet(it, slog, 'v665', f'V-#665: {naam} {oudw} → {w} (één hoogste staaf, review batch 5)', it['opgave'],
+             kale='hoogste van ' + ', '.join(map(str, rij)), jr={'rijen': [dict(jr['rijen'][0], waarden=rij)]})
+    # V-#667 (Oef-#449): balk kleuren, het aantal stukjes in jsRender (VERH-01 #2: 20, VERH-01 #1: 10, VBN-04 #1: 10)
+    if it.get('ui') == 'balk kleuren':
+        n = 20 if re.fullmatch(r'Kleur \d+% van de balk\.', it['opgave']) else 10
+        if it['opgave'].startswith('Tabel:'):
+            st = int(re.search(r'stukje van de balk is (\d+)', it['opgave']).group(1))
+            assert max(map(int, re.findall(r'\b[a-z]{2,4} (\d+)', it['opgave']))) <= n * st, it['id']
+        it['visual']['jsRender'] = {'soort': 'balk', 'stukjes': n}
+        it['merge']['v667'] = {'reden': f'V-#667: balk van {n} stukjes in jsRender'}
+    # Oef-#450: VBN-04 #1 bank-010/011, Claudes sleutel '10' zonder route → weg (de motorroutes '± 1' en 'getal uit de vraag' blijven)
+    if c8 in ('d6bcfbf3', 'ee214c17'):
+        denk = [(d['fout'], d['denkfout'], next((h['uitleg'] for h in e.get('claudeFoutHints') or [] if h['fout'] == d['fout']), None))
+                for d in e.get('claudeDenkfouten') or [] if d['fout'] != '10']
+        _zet(it, slog, 'oef450', "Oef-#450: sleutel '10' zonder route weg", it['opgave'], denk=denk)
+_pas_toe_z668 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_z668(it, slog)
+    if RV5_AAN: _rv5(it, slog)
+RV5_AAN = 'staaf'      # 'staaf' = alleen V-#665; tijdelijk deels uit voor de build van Oefeningen' rondes (14:05); daarna weer aan
