@@ -491,3 +491,6 @@ L-R10f: niet aangeraakt (wacht op Dave). N13-3: open (wacht op Oefeningen).
 
 ### V-#1073 (Didactiek 20:09)
 - Vormcue middelste: één afleider per item naar de andere kant, zelfde of gespiegelde denkfout. Elke nieuwe waarde hoort bij precies één motorregel (VC107X in r13_uitvoer.py). VBN-E02 #2 15/29/16 (5 wissels). VORMCUE 0 FAIL, check_hints 0 FAIL.
+
+### Verdict Didactiek op c44ec26
+- Zacht open (zie r13/R13.md): Z-#1012–#1015, Z-#1017 (Oef-#1022), Z-#1019, Z-#1080–#1082; Oef-#1031 alleen bij variant B voor Z-#1062.

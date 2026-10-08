@@ -624,3 +624,6 @@ Checks op r13/g5 (8 okt ±18:20): check_hints 139 klaar · 0 open · 0 FAIL · 2
 ### Z-#1074 en V-#1072 (Didactiek 20:09)
 - Z-#1074: VBN-E01 283, afleider 125 → 90 (vogels wo − do, 'verschil van twee cellen'). 125 was ook een cel. Verdeling blijft 15/15/0.
 - V-#1072 (MEET-E07 #1): voorstel met 15 items in r13/voorstel_v1072.json (antwoord + de kleinste munt uit visual.munten, 15/15 nagerekend; 19/86/77). Nog niet geplaatst: het wacht op de motorregel van Oefeningen (Z-#1076). Z-#1053 (014 '9.00' vs '9:00') staat nog open.
+
+### Verdict Didactiek op c44ec26
+- Zacht open (zie r13/R13.md): Z-#1012–#1015, Z-#1017 (Oef-#1022), Z-#1019, Z-#1080–#1082; Oef-#1031 alleen bij variant B voor Z-#1062.

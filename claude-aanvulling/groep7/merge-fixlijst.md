@@ -490,3 +490,7 @@ Alleen deze 5 items zijn veranderd (vergeleken met de repo: 5 items anders, verd
 ### Vormcue één regel voor alle posities (Didactiek 19:57)
 - kleinste/middelste/grootste: FAIL bij > 50 % én p < 0,01 (kans 1/3); mutanten per positie 17/17. Stand per somtype: zie r13/R13.md. Data van de items niet aangepast (Didactiek stuurt voorstellen per item).
 - G7 check_hints draait nu ook in de repo zelf: de motor wordt gezocht in scripts/ van de repo (huis_checks.motor_map), zonder motorkopie.
+
+### Verdict Didactiek op c44ec26
+- Zacht open (zie r13/R13.md): Z-#1012–#1015, Z-#1017 (Oef-#1022), Z-#1019, Z-#1080–#1082; Oef-#1031 alleen bij variant B voor Z-#1062.
+- V-#1080: TYPVOORBEELD ziet nu ook «bijvoorbeeld X»: 24 FAIL in MEET-04 021–044, tot Oefeningen «bijvoorbeeld −20» zet en de motor opnieuw draait (42 foute sleutels '−3'/'-3' moeten weg). Z-#1083: R13.md gecorrigeerd (946 sleutels: 290 tweelingen + 656 nieuw).

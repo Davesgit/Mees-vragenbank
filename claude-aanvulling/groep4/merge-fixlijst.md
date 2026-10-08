@@ -169,3 +169,7 @@ De WARN komt uit de nieuwe check LES250 (Oef-#484, `tools/les250_check.py`, in c
 
 ### V-#1070/#1071 (Didactiek 20:09)
 - Vormcue middelste: één afleider per item naar de andere kant, zelfde of gespiegelde denkfout. Elke nieuwe waarde hoort bij precies één motorregel (VC107X in r13_uitvoer.py). VBN-E01 #2 17/28/13 (9 wissels) · #3 9/26/19 (3 wissels). VORMCUE 0 FAIL, check_hints 0 FAIL.
+
+### Verdict Didactiek op c44ec26
+- Zacht open (zie r13/R13.md): Z-#1012–#1015, Z-#1017 (Oef-#1022), Z-#1019, Z-#1080–#1082; Oef-#1031 alleen bij variant B voor Z-#1062.
+- Z-#1084: G4 gesynct en gestempeld (hintsSyncOp 20:19:02, schrijflog); apply_hints stempelt nu zoals G5.

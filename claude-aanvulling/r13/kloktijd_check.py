@@ -106,11 +106,25 @@ def typvoorbeeld_treffers(items):
         goed = {str(it.get('antwoord'))} | set(it.get('geldigeAntwoorden') or [])
         if vormen & sleutels: T.append((it, f"{it['id']}: voorbeeld '{h}.{mi}' is een fout-sleutel ({sorted(vormen & sleutels)})"))
         if vormen & goed: T.append((it, f"{it['id']}: voorbeeld '{h}.{mi}' is het goede antwoord"))
+    # V-#1080 (Didactiek r13, G7-MEET-04 021–044): ook «(Typ … bijvoorbeeld X.)» in elke typ-instructie (G3–G8). X (ook met '-'/'−' gewisseld) is geen
+    # antwoord, geen fout-sleutel en geen optie; anders leest de motor het voorbeeld als 'getal uit de vraag' of krijgt wie het overtypt 'goed'.
+    for it in items:
+        m = re.search(r'\((?:Typ|typ)\b[^()]*?\bbijvoorbeeld ([^()]+?)\.?\)', it.get('opgave') or '')
+        if not m: continue
+        x = m.group(1).strip(); vormen = {x, x.replace('−', '-'), x.replace('-', '−')}
+        sleutels = {str(w) for f in it.get('foutRegels') or [] for w in ((f.get('match') or {}).get('waarden') or [])} | {str(f.get('fout')) for f in it.get('foutHints') or []}
+        goed = {str(it.get('antwoord'))} | {str(g) for g in it.get('geldigeAntwoorden') or []} | {str(o.get('tekst')) for o in it.get('opties') or []}
+        if vormen & sleutels: T.append((it, f"{it['id']}: voorbeeld 'bijvoorbeeld {x}' is een fout-sleutel ({sorted(vormen & sleutels)})"))
+        elif vormen & goed: T.append((it, f"{it['id']}: voorbeeld 'bijvoorbeeld {x}' is het goede antwoord of een optie"))
     return T
 def typvoorbeeld_mutant_ok():
     it = {'id': 'mut-1211', 'opgave': 'De kinderen vertrekken om 12.55 uur. De reis duurt 1 uur en 25 minuten. Hoe laat komen ze aan? (Typ als 14.30.)', 'antwoord': '14.20 uur',
           'foutRegels': [{'match': {'waarden': ['14.30 uur', '14.30', '14:30']}}]}
-    return bool(typvoorbeeld_treffers([it])) and not typvoorbeeld_treffers([dict(it, opgave=it['opgave'].replace('14.30.)', '9.45.)'))])
+    ok = bool(typvoorbeeld_treffers([it])) and not typvoorbeeld_treffers([dict(it, opgave=it['opgave'].replace('14.30.)', '9.45.)'))])
+    # V-#1080: G7-MEET-04 021-vorm: «bijvoorbeeld −3» is een sleutel ('getal uit de vraag') → FAIL; met «bijvoorbeeld −20» niet
+    b = {'id': 'mut-1080', 'opgave': "Het is 3 graden in de tuin. 's Nachts daalt de temperatuur 11 graden. Hoeveel graden is het dan? (Typ een min voor een getal onder nul, bijvoorbeeld −3.)",
+         'antwoord': '−8', 'foutHints': [{'fout': '−3'}, {'fout': '-3'}, {'fout': '8'}], 'foutRegels': [{'match': {'waarden': ['−3', '-3']}}]}
+    return ok and bool(typvoorbeeld_treffers([b])) and not typvoorbeeld_treffers([dict(b, opgave=b['opgave'].replace('−3.)', '−20.)'))])
 def invoer(it):
     """typ-invoer van een tijd ('(Typ als 14:30.)'): de motor en de app lezen 'uu:mm'; omzetten vraagt eerst motorsteun → WARN, niet FAIL"""
     return '(Typ als' in (it.get('opgave') or '')
