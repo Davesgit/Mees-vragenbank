@@ -123,6 +123,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `ander deel` (Claudes sleutel: deel-van-geheel-verkeerd) → Dat is een ander deel van het hele aantal. Welk deel hoort bij het procent uit de vraag?  [Claude, taalfix]
   - `procent eraf` (Claudes sleutel: verkeerde-bewerking) → Dat is het hele aantal min het procent. Maar procent betekent: zoveel van de honderd.  [Claude, taalfix]
+  - `hele aantal min het procent` (Claudes sleutel (alle, zonder label)) → Dat is het hele aantal min het procent. Maar procent betekent: zoveel van de honderd.  [Claude, taalfix]
   - `andere fout` (andere fout) → Welk deel van het hele aantal is het procent uit de vraag?  [nieuw]
 - Status: hints klaar
 
@@ -209,5 +210,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `procent van de prijs afgehaald` (Claudes sleutel: procent-verkeerde-basis) → Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.  [Claude, taalfix]
   - `korting niet goed verwerkt` (Claudes sleutel: verkeerde-bewerking) → Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?  [Claude, taalfix]
+  - `prijs min het procent` (Claudes sleutel (alle, zonder label)) → Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken de korting in euro uit, en haal die van de oude prijs af.  [nieuw]
 - Status: hints klaar

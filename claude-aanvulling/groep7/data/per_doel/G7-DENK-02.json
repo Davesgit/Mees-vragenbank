@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T13:31:47+0200",
+ "gegenereerdOp": "2026-10-08T13:44:23+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-DENK-02",
  "bordtitel": "Een situatie in een som zetten",
@@ -1818,25 +1818,25 @@
     {
      "stap": null,
      "fout": "5 + 6 = 11",
-     "uitleg": "Steeds hetzelfde aantal, een paar keer: dat is een keersom.",
-     "uitlegSterker": "Hoeveel zijn het er samen? Tel doos voor doos. Welke som heeft precies dat aantal als uitkomst?",
-     "laag2": "terugval hint2 (somtype)",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "uitleg": "Heb je één doos en het aantal dozen bij elkaar opgeteld? In elke doos zitten evenveel eieren. Welke som past bij steeds hetzelfde aantal?",
+     "uitlegSterker": "Tel de eieren doos voor doos: steeds hetzelfde aantal, zo vaak als er dozen zijn. Een plussom met steeds hetzelfde getal schrijf je korter als een keersom.",
+     "laag2": "tekstSterker",
+     "regel": "5 + 6 = 11",
+     "soort": "opgeteld",
      "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "6 − 5 = 1",
-     "uitleg": "Steeds hetzelfde aantal, een paar keer: dat is een keersom.",
-     "uitlegSterker": "Hoeveel zijn het er samen? Tel doos voor doos. Welke som heeft precies dat aantal als uitkomst?",
-     "laag2": "terugval hint2 (somtype)",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "uitleg": "Gaan er eieren weg? Alle dozen samen horen bij het antwoord. Welke som past bij steeds hetzelfde aantal?",
+     "uitlegSterker": "Schrijf voor elke doos het aantal eieren op en tel ze bij elkaar op. Een plussom met steeds hetzelfde getal schrijf je als een keersom.",
+     "laag2": "tekstSterker",
+     "regel": "6 − 5 = 1",
+     "soort": "afgehaald",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "5 + 6 = 11 → Steeds hetzelfde aantal, een paar keer: dat is een keersom. · 6 − 5 = 1 → Steeds hetzelfde aantal, een paar keer: dat is een keersom.",
+   "foutHintsTekst": "5 + 6 = 11 → Heb je één doos en het aantal dozen bij elkaar opgeteld? In elke doos zitten evenveel eieren. Welke som past bij steeds hetzelfde aantal? · 6 − 5 = 1 → Gaan er eieren weg? Alle dozen samen horen bij het antwoord. Welke som past bij steeds hetzelfde aantal?",
    "ouderzin": "Je kind kiest de som bij een tekening met groepjes die even groot zijn: een keersom.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
@@ -1969,18 +1969,34 @@
    },
    "foutRegels": [
     {
-     "regel": "5 + 8 = 13",
+     "regel": "5 + 6 = 11",
      "soort": "opgeteld",
+     "bron": "nieuw",
      "tekst": "Heb je één doos en het aantal dozen bij elkaar opgeteld? In elke doos zitten evenveel eieren. Welke som past bij steeds hetzelfde aantal?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Tel de eieren doos voor doos: steeds hetzelfde aantal, zo vaak als er dozen zijn. Een plussom met steeds hetzelfde getal schrijf je korter als een keersom.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5 + 6 = 11"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
-     "regel": "8 − 5 = 3",
+     "regel": "6 − 5 = 1",
      "soort": "afgehaald",
+     "bron": "nieuw",
      "tekst": "Gaan er eieren weg? Alle dozen samen horen bij het antwoord. Welke som past bij steeds hetzelfde aantal?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Schrijf voor elke doos het aantal eieren op en tel ze bij elkaar op. Een plussom met steeds hetzelfde getal schrijf je als een keersom.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6 − 5 = 1"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -2470,25 +2486,25 @@
     {
      "stap": null,
      "fout": "140 meter",
-     "uitleg": "Tel de stukken tussen de palen: dat is één minder dan het aantal palen.",
-     "uitlegSterker": "Tussen twee palen zit steeds een stuk. Er is altijd één stuk minder dan er palen zijn. Doe het aantal stukken keer de afstand tussen twee palen.",
-     "laag2": "terugval hint2 (somtype)",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "uitleg": "Heb je het aantal palen keer de afstand gedaan? Tel in je tekening de stukken tussen de palen. Zijn dat er evenveel als palen?",
+     "uitlegSterker": "Teken een paar palen als streepjes, bijvoorbeeld drie. Tussen drie palen zitten twee stukken. Er is altijd één stuk minder dan er palen zijn.",
+     "laag2": "tekstSterker",
+     "regel": "140 meter",
+     "soort": "palen in plaats van stukken",
      "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "100 meter",
-     "uitleg": "Tel de stukken tussen de palen: dat is één minder dan het aantal palen.",
-     "uitlegSterker": "Tussen twee palen zit steeds een stuk. Er is altijd één stuk minder dan er palen zijn. Doe het aantal stukken keer de afstand tussen twee palen.",
-     "laag2": "terugval hint2 (somtype)",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "uitleg": "Dat is één stuk te weinig. Tel in je tekening de stukken tussen de palen nog eens, van de eerste tot de laatste paal.",
+     "uitlegSterker": "Er is altijd één stuk minder dan er palen zijn. Haal één af van het aantal palen, en doe dat keer de afstand tussen twee palen.",
+     "laag2": "tekstSterker",
+     "regel": "100 meter",
+     "soort": "stuk te weinig",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "140 meter → Tel de stukken tussen de palen: dat is één minder dan het aantal palen. · 100 meter → Tel de stukken tussen de palen: dat is één minder dan het aantal palen.",
+   "foutHintsTekst": "140 meter → Heb je het aantal palen keer de afstand gedaan? Tel in je tekening de stukken tussen de palen. Zijn dat er evenveel als palen? · 100 meter → Dat is één stuk te weinig. Tel in je tekening de stukken tussen de palen nog eens, van de eerste tot de laatste paal.",
    "ouderzin": "Je kind rekent de lengte van een rij palen uit: er is één tussenruimte minder dan er palen zijn.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -2619,18 +2635,34 @@
    },
    "foutRegels": [
     {
-     "regel": "35 meter",
+     "regel": "140 meter",
      "soort": "palen in plaats van stukken",
+     "bron": "nieuw",
      "tekst": "Heb je het aantal palen keer de afstand gedaan? Tel in je tekening de stukken tussen de palen. Zijn dat er evenveel als palen?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Teken een paar palen als streepjes, bijvoorbeeld drie. Tussen drie palen zitten twee stukken. Er is altijd één stuk minder dan er palen zijn.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "140 meter"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
-     "regel": "25 meter",
+     "regel": "100 meter",
      "soort": "stuk te weinig",
+     "bron": "nieuw",
      "tekst": "Dat is één stuk te weinig. Tel in je tekening de stukken tussen de palen nog eens, van de eerste tot de laatste paal.",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Er is altijd één stuk minder dan er palen zijn. Haal één af van het aantal palen, en doe dat keer de afstand tussen twee palen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "100 meter"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -2901,8 +2933,8 @@
     {
      "stap": null,
      "fout": "7 wielen",
-     "uitleg": "Is dat het aantal fietsen? De vraag gaat over de wielen, en elke fiets heeft meer dan één wiel.",
-     "uitlegSterker": "Begin bij de eerste soort: hoeveel wielen hebben die fietsen samen? Doe hetzelfde bij de tweede soort. Tel de wielen van de twee soorten bij elkaar op.",
+     "uitleg": "Is dat het aantal fietsen en bakfietsen? De vraag gaat over de wielen, en elke fiets heeft meer dan één wiel.",
+     "uitlegSterker": "Reken bij elke soort uit hoeveel wielen die fietsen samen hebben. Tel de wielen van de twee soorten bij elkaar op.",
      "laag2": "tekstSterker",
      "regel": "7 wielen",
      "soort": "alleen de fietsen",
@@ -2919,7 +2951,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "7 wielen → Is dat het aantal fietsen? De vraag gaat over de wielen, en elke fiets heeft meer dan één wiel. · 14 wielen → Hebben alle fietsen evenveel wielen? De twee soorten hebben een verschillend aantal wielen. Reken elke soort apart uit.",
+   "foutHintsTekst": "7 wielen → Is dat het aantal fietsen en bakfietsen? De vraag gaat over de wielen, en elke fiets heeft meer dan één wiel. · 14 wielen → Hebben alle fietsen evenveel wielen? De twee soorten hebben een verschillend aantal wielen. Reken elke soort apart uit.",
    "ouderzin": "Je kind rekent met twee groepen: elke groep apart een keersom, en daarna samen.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -3075,8 +3107,8 @@
      "regel": "7 wielen",
      "soort": "alleen de fietsen",
      "bron": "nieuw",
-     "tekst": "Is dat het aantal fietsen? De vraag gaat over de wielen, en elke fiets heeft meer dan één wiel.",
-     "tekstSterker": "Begin bij de eerste soort: hoeveel wielen hebben die fietsen samen? Doe hetzelfde bij de tweede soort. Tel de wielen van de twee soorten bij elkaar op.",
+     "tekst": "Is dat het aantal fietsen en bakfietsen? De vraag gaat over de wielen, en elke fiets heeft meer dan één wiel.",
+     "tekstSterker": "Reken bij elke soort uit hoeveel wielen die fietsen samen hebben. Tel de wielen van de twee soorten bij elkaar op.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -3117,11 +3149,11 @@
    "algemeneFoutHint": "Reken elke soort apart uit en tel de uitkomsten bij elkaar op."
   }
  ],
- "hintsSyncOp": "2026-10-08T13:31:53+02:00",
+ "hintsSyncOp": "2026-10-08T13:44:29+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
-   "md5": "5100684acb8c"
+   "md5": "fc76ced123cf"
   },
   {
    "batch": "batch2.json",
@@ -3129,7 +3161,7 @@
   },
   {
    "batch": "batch3.json",
-   "md5": "dd466f5c6095"
+   "md5": "713a3abb416b"
   },
   {
    "batch": "batch4.json",
@@ -3137,10 +3169,10 @@
   },
   {
    "batch": "batch5.json",
-   "md5": "ed00628f66f3"
+   "md5": "9afa4893fe1c"
   }
  ],
- "geschrevenOp": "2026-10-08T13:31:53+02:00",
+ "geschrevenOp": "2026-10-08T13:44:29+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

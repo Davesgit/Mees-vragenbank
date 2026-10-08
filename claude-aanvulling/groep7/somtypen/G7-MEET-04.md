@@ -62,6 +62,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `kouder in plaats van warmer` (Claudes sleutel: verkeerde-bewerking) → Dat is nog kouder dan het was. Het wordt warmer: de temperatuur gaat omhoog.  [Claude, taalfix]
   - `één graad ernaast` (fout = antwoord ± 1) → Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt de temperatuur als het warmer is geworden.  [nieuw]
+  - `onder nul uitgekomen` (Claudes sleutel (alle, zonder label)) → Dat is onder nul. Het wordt zoveel warmer dat je boven nul uitkomt. Tel eerst omhoog tot nul, en dan verder boven nul.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel omhoog tot nul, en dan verder boven nul.  [nieuw]
 - Status: hints klaar
 
@@ -91,6 +92,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `verschil van de getallen` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.  [nieuw]
   - `één graad ernaast` (fout = antwoord ± 1) → Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.  [nieuw]
+  - `aantal met een min` (Claudes sleutel (alle, zonder label)) → Hoeveel graden het warmer is geworden, is een aantal graden: dat is nooit onder nul. Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.  [nieuw]
 - Status: hints klaar
 
@@ -120,6 +122,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `min vergeten` (fout = getal1 - getal2 of getal2 - getal1) → Je komt onder nul uit. Typ dan een min voor het getal.  [nieuw]
   - `één graad te koud` (Claudes sleutel: een-ernaast) → Dat is één graad te koud. Tel eerst de stappen tot nul. Ook van nul naar min één is een stap.  [Claude, taalfix]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt de temperatuur nadat hij is gedaald.  [nieuw]
+  - `één graad te koud (alle)` (Claudes sleutel (alle, zonder label)) → Dat is één graad te koud. Tel eerst de stappen tot nul. Ook van nul naar min één is een stap.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel omlaag tot nul, en dan verder onder nul.  [nieuw]
 - Status: hints klaar
 
@@ -181,6 +184,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `onder nul` (Claudes sleutel: teken-vergeten) → Dat is onder nul. Hoeveel graden het warmer is geworden, typ je zonder min.  [Claude, taalfix]
   - `één graad ernaast` (fout = antwoord ± 1) → Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.  [nieuw]
+  - `aantal met een min` (Claudes sleutel (alle, zonder label)) → Hoeveel graden het warmer is geworden, is een aantal graden: dat is nooit onder nul. Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.  [nieuw]
 - Status: hints klaar
 

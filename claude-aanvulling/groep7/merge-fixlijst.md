@@ -215,18 +215,18 @@ Zandbak = live build 13:13:00 + patches t/m 3c/1d (+ batch5_wip): check_hints 0 
 | Z-#634 / #636 / #637 / #638 | Oefeningen | MEET-03 #1 'net ernaast' weg; GET-05 nrO 5 H1 + laag 2 'Staat er één cijfer achter de komma, dan …'; MEET-03 #9 laag 2 'Is een maat een kommagetal'; MEET-01 #1/#2 en MEET-03 #3/#4 H2 + laag 2 «Een punt in een groot getal is geen komma.» (guard) | ✓ |
 | Oef-#440 | – | in build 13:13:00 (0 ',0'-sleutels); tijdelijke regel weg in ronde 1c. Kommagetal-antwoorden op '× 10' hebben overal een tekst met 'tien keer te veel' of de komma, nergens 'een nul te veel' | ✓ gesloten |
 | Oef-#443 | Overzicht + Oefeningen | data in 13:13:00; ouderzin MEET-03 #9/#10 zonder 'bak', laag 2 'De buitenkant tel je niet.' Rest: V-#631 (doos voor truien/eieren) | ✓ klaar (V-#631 in de build van ronde r4; Z-#639) |
-| hercheck | Oefeningen | na de volgende build van Overzicht: V-#631, Z-#630 (laag 1 van V-#630 bij gelijke tellers en 7/8 tegen 2/3), Z-#631, Z-#632/#633 (motorregel 'je gaf de bodem' → MEET-03 #1 labelregel erheen), Z-#635–#637 (contexten), Z-#616 (bedragen met €, GET-04 #11) | wacht op build |
+| hercheck | Oefeningen | na de volgende build van Overzicht: V-#631, Z-#630 (laag 1 van V-#630 bij gelijke tellers en 7/8 tegen 2/3), Z-#631, Z-#632/#633 (motorregel 'je gaf de bodem' → MEET-03 #1 labelregel erheen), Z-#635–#637 (contexten), Z-#616 (bedragen met €, GET-04 #11) | ✓ gedaan op build 13:26:46/13:31:47 (ronde 1e batch 4) |
 
 ## Oefeningen 8 okt: batch 5 (MEET-04, VBN-04, VERH-01, VERH-02; 25 somtypes), datapunten
 | # | Wie | Wat | Stand |
 |---|---|---|---|
-| Oef-#444 | Overzicht (motor/data) | Minteken: claudeFoutHints hebben '-8' (koppelteken), claudeDenkfouten '−8'. In pas_toe valt een labelregel ('Claudes sleutel: …') dan nooit op die sleutel (vergelijking d['fout'] == k['fout']). 295 sleutels in batch 5 staan daardoor op 'andere fout' (MEET-04 #1 147, #2 111, #3 24, #5 8; VERH-02 #4 4, #7 1). Voorstel: norm421 op beide kanten, of claudeFoutHints.fout met '−'. Daarna gaan ze vanzelf naar de klaarstaande regels | open |
+| Oef-#444 | Overzicht (motor/data) | Minteken: claudeFoutHints hebben '-8' (koppelteken), claudeDenkfouten '−8'. In pas_toe valt een labelregel ('Claudes sleutel: …') dan nooit op die sleutel (vergelijking d['fout'] == k['fout']). 295 sleutels in batch 5 staan daardoor op 'andere fout' (MEET-04 #1 147, #2 111, #3 24, #5 8; VERH-02 #4 4, #7 1). Voorstel: norm421 op beide kanten, of claudeFoutHints.fout met '−'. Daarna gaan ze vanzelf naar de klaarstaande regels | omweg ✓ (ronde 1b batch 5: Claude-regel zonder label, tekst over de waarde; 0 op 'andere fout'); fix in de motor blijft wenselijk | open (motor) |
 | Oef-#445 | Overzicht (data/motor) | VERH-02 #3 (meerkeuze, opties '36%'): bij 33 items geen claudeFoutHints en bij 147 maar één van de twee; de labelregels bereiken de andere optie niet (213 sleutels op 'andere fout'). 'fout = getal1' leest '36%' niet (waarde416 haalt '%' niet weg). Voorstel: labelregel op claudeDenkfouten, of '%' in waarde416 | open |
 | Oef-#446 | Overzicht (data) | Kommagetal-sleutels met een punt: '7.5', '2.5', '0.5' (VERH-01 #2, en een half stukje kun je niet kleuren), '4.4', '9.6' (VERH-02 #4), '6.7' (VERH-02 #6, 40 : 6). Huisnotatie met komma, of weg | open |
 | Oef-#447 | Overzicht (data) | VBN-04 #2 'Welke staaf wordt het hoogst?': bank-032 juli en sept allebei 40, 'sept' is een optie en staat als fout; bank-030 juni en sept allebei 30 (sept geen optie, maar de vraag heeft twee antwoorden) | open |
 | Oef-#448 | Overzicht (data) | VERH-02 #7: antwoord '56' zonder €, sleutels '€24', '€104' met € (een kind dat '24' typt, raakt geen sleutel). Eén notatie (de vraag zegt 'in euro's') | open |
 | Oef-#449 | Overzicht (data) | 'Balk kleuren' (VBN-04 #1, VERH-01 #1/#2): jsRender null, het aantal stukjes staat nergens (VERH-01 #2 gaat uit van twintig). Graag in de data, dan kan de check het nalopen | open |
-| Oef-#450 | Overzicht (data) | VBN-04 #1: Claudes sleutel '10' bij 4 items zonder route (bv. ma 45, stukje 5 → 9). Weghalen of een route | open |
+| Oef-#450 | Overzicht (data) | VBN-04 #1: Claudes sleutel '10' bij 4 items zonder route (bv. ma 45, stukje 5 → 9). Weghalen of een route | deels: ronde 1b batch 5 geeft '± 1' (één item: '10' bij antwoord negen); 3 over: bank-009 '10' = de staaf van ma (andere dag), bank-010/011 '10' zonder route | open |
 | Oef-#451 | Overzicht (data, les 195) | Toevallige treffer: 'getal min procent' of 'som/verschil' geeft het antwoord: VERH-02 #1 50% van 100, 80% van 400, 60% van 150; #3 5 van 25, 5 van 20, 90 van 150. Andere getallen | open |
 | Oef-#427 | – | G5 MEET-E06 #1 gen-001 komt in G7 MEET-04 nrO 7 niet voor (220 claude-bank-items); niets te doen | ✓ gesloten (G7) |
 
@@ -261,3 +261,21 @@ Build **13:31:47**. Checks: G7 check_hints 0 FAIL / 4 WARN (123 klaar · 32 open
 | Oef-#433 (Z-#521) | DENK-02 #12 (nrO 12) | Variant (A): «Tussen twee palen zit steeds 20 meter.» 7 palen → 6 × 20 = 120 meter (goed); opties 140 meter (palen in plaats van stukken, 7 × 20) en 100 meter (stuk te weinig, 5 × 20) | **'35 meter' → '140 meter', '25 meter' → '100 meter'** (nu WARN ONLEESBAAR) |
 | Oef-#433 (Z-#521) | DENK-02 #14 (nrO 14) | «4 fietsen met 2 wielen en 3 bakfietsen met 3 wielen» (getallen, opties en antwoord 17 wielen blijven) | geen; tekst 'alleen de fietsen' mag 'fietsen en bakfietsen' worden |
 | melding Z-#606 | GET-04 nrO 8 | 851: «Eén poesje weegt 3,3 gram» → «Eén knikker weegt 3,3 gram. Hoeveel gram wegen 100 knikkers?» (antwoord 330; Claude-uitleg mee) | geen |
+
+## Oefeningen 8 okt: aanpassen op build 13:26:46 en 13:31:47 (les 194)
+Zandbak = live build 13:31:47 + alle patches: check_hints 0 FAIL / 0 WARN / 0 INFO (123 klaar · 32 open), merge-notatie ALLES OK; b1 FAIL 0 (50), b2 FAIL 0 (324),
+b3 FAIL 0 (2406 items, 10.462 sleutels), b4 FAIL 0 (2625, 10.039), b5 FAIL 0 (1650, 7125; op 'andere fout' alleen VERH-02 #3 213 = Oef-#445 en VBN-04 #1 3 = Oef-#450).
+Tweede run patch_batch1–5: 0 wijzigingen. Alle mutanten gevangen (b2 M5–M7, b3 M2b/Mjouw/M617/M434 + Z-#606 oude ouderzin, b4 mut/mut1d/mut1e, b5 mut/mut1b).
+Ronde 3c (V-#615, Z-#617, Z-#618, Z-#619, Oef-#434, Oef-#442, Z-#606) en ronde 1d (V-#630, V-#632–#634, Z-#634, Z-#636–#638, Oef-#443) staan in de builds van 13:26:46 en 13:31:47 (teksten in somtypen/*.md).
+
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| Z-#630 | Oefeningen | batch 4 ronde 1e: GET-05 nrO 6/7 labelregel 'alleen-noemer-vergeleken' ('kleine noemer gekozen' / 'grote noemer gekozen', 84 + 56 sleutels), laag 1 gespiegeld aan V-#630; guard: sleutelnoemer kleiner/groter dan die van het antwoord (alle 296/84/200/56) | ✓ |
+| Z-#633 | Oefeningen | batch 4 ronde 1e: MEET-03 #1 regel 'fout = de bodem (l × b)' («Dat is de bodem: één laagje. Hoeveel laagjes passen er in de inhoud?»), 830 sleutels | ✓ |
+| Z-#635 | Oefeningen | batch 4 ronde 1e: MEET-02 nrO 3 'Het hok' → 'De tuin' (H1 en laag 1); guard: geen 'hok'/'bak' in een tekst als geen vraag het noemt | ✓ |
+| Z-#637 | Oefeningen | batch 4 ronde 1e: MEET-03 #9 H2 «Doe dat keer de hoogte (of de diepte).» (de vijver); #10 nieuwe kop: teksten noemen geen bak meer | ✓ |
+| V-#631, Z-#631, Z-#632, Z-#636, Z-#616 | Oefeningen | nagelopen op live data: regels en teksten passen (b3/b4 FAIL 0); GET-05 nrO 5 noemt geen context | ✓ |
+| Oef-#433 | Oefeningen | batch 1 ronde 1g: DENK-02 #9 '5 + 6 = 11' / '6 − 5 = 1', #12 '140 meter' / '100 meter' (de 4 WARN ONLEESBAAR weg); #14 laag 1 «Is dat het aantal fietsen en bakfietsen?», laag 2 zonder 'eerste/tweede soort', vlag 'bakfietsen' | ✓ gesloten |
+| Oef-#431 / #432 | Oefeningen | DENK-02 #2 (speelveld) en #3 (omcirkeld): regels passen, geen 'gekleurd'/'sportveld' in de teksten | ✓ gesloten |
+| Z-#606 | Oefeningen | batch 3 ronde 3d: ouderzin GET-04 nrO 8 «… keer honderd door de komma twee plekken te verschuiven, en zet er een nul bij …» (alle 4 items keer honderd met één decimaal); guard in b3/check | ✓ |
+| batch 5 | Oefeningen | ronde 1b: 297 van de 513 sleutels op 'andere fout' naar regels (zie Oef-#444/#450); VERH-02 #3 (213) wacht op Oef-#445: de sleutels '36%' (het deel, 105), 'n − d' (100) en 8 losse staan niet in claudeFoutHints, en geen motorregel leest '%' | deels |

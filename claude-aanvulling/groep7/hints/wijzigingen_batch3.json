@@ -1,0 +1,2391 @@
+[
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-01",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "erbij gedaan",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? Minder dan betekent dat het getal kleiner wordt.",
+    "tekstSterker": "Het antwoord is kleiner dan het grote getal uit de vraag. Zoek de plek waar er één afgaat, en zet daar het cijfer één lager. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "twee keer eraf",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord - getal1",
+    "tekst": "Dat is te weinig. Gaat er op die plek maar één af?",
+    "tekstSterker": "Schrijf het grote getal op en zet een streepje onder de plek waar er één afgaat. Haal daar één af, en niet meer. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één eraf gehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2 - 1",
+    "tekst": "Dat is maar één minder. Hoeveel gaat er volgens de vraag af?",
+    "tekstSterker": "Kijk naar het getal vooraan in de vraag: op welke plek staat de één? Zoek die plek in het grote getal en haal daar één af. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het getal zelf",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is het grote getal uit de vraag. Er moet nog iets af. Hoeveel?",
+    "tekstSterker": "Zoek in het grote getal de plek van het getal vooraan in de vraag, en haal daar één af. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zoek de plek uit de vraag in het grote getal en haal daar één af.",
+    "tekstSterker": "Schrijf het grote getal op. Zet een streepje onder de plek van het getal vooraan in de vraag. Haal daar één af. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "erbij gedaan",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? Minder dan betekent dat het getal kleiner wordt.",
+    "tekstSterker": "Het antwoord is kleiner dan het grote getal uit de vraag. Zoek de plek waar er één afgaat, en zet daar het cijfer één lager. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag. Is dat cijfer ook een nul? Dan wordt het ook een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "twee keer eraf",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord - getal1",
+    "tekst": "Dat is te weinig. Er gaat maar één keer iets af. Bij welke plek?",
+    "tekstSterker": "Schrijf het grote getal op en zet een streepje onder de plek waar er één afgaat. Haal daar één af, en niet meer. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag. Is dat cijfer ook een nul? Dan wordt het ook een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één eraf gehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2 - 1",
+    "tekst": "Dat is maar één minder. Hoeveel gaat er volgens de vraag af?",
+    "tekstSterker": "Kijk naar het getal dat eraf gaat: op welke plek staat de één? Zoek die plek in het grote getal en haal daar één af. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag. Is dat cijfer ook een nul? Dan wordt het ook een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het getal zelf",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is het grote getal uit de vraag. Er moet nog iets af. Hoeveel?",
+    "tekstSterker": "Kijk op welke plek de één staat in het getal dat eraf gaat. Zoek die plek in het grote getal en haal daar één af. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag. Is dat cijfer ook een nul? Dan wordt het ook een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zoek de plek uit de vraag in het grote getal en haal daar één af.",
+    "tekstSterker": "Schrijf het grote getal op. Kijk op welke plek de één staat in het getal dat eraf gaat, en zet in het grote getal een streepje onder die plek. Haal daar één af. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag. Is dat cijfer ook een nul? Dan wordt het ook een negen, en leen je verder naar links."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-01",
+  "nrOrigineel": 2,
+  "veld": "hint1",
+  "was": "Kijk naar het getal vooraan in de vraag. Bij welke plek gaat er één af?",
+  "wordt": "Kijk naar het getal dat eraf gaat. Bij welke plek gaat er één af?",
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-01",
+  "nrOrigineel": 3,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "eraf gehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 - getal2 of getal2 - getal1",
+    "tekst": "Komt er iets bij of gaat er iets af? Meer dan betekent dat het getal groter wordt.",
+    "tekstSterker": "Het antwoord is groter dan het grote getal uit de vraag. Zoek de plek waar er één bijkomt, en zet daar het cijfer één hoger. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "twee keer erbij",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + getal1",
+    "tekst": "Dat is te veel. Komt er op die plek maar één bij?",
+    "tekstSterker": "Schrijf het grote getal op en zet een streepje onder de plek waar er één bijkomt. Doe daar één bij, en niet meer. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één erbij gedaan",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2 + 1",
+    "tekst": "Dat is maar één meer. Hoeveel komt er volgens de vraag bij?",
+    "tekstSterker": "Kijk naar het getal vooraan in de vraag: op welke plek staat de één? Zoek die plek in het grote getal en doe daar één bij. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het getal zelf",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is het grote getal uit de vraag. Er moet nog iets bij. Hoeveel?",
+    "tekstSterker": "Zoek in het grote getal de plek van het getal vooraan in de vraag, en doe daar één bij. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zoek de plek uit de vraag in het grote getal en doe daar één bij.",
+    "tekstSterker": "Schrijf het grote getal op. Zet een streepje onder de plek van het getal vooraan in de vraag. Doe daar één bij. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "eraf gehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 - getal2 of getal2 - getal1",
+    "tekst": "Komt er iets bij of gaat er iets af? Meer dan betekent dat het getal groter wordt.",
+    "tekstSterker": "Het antwoord is groter dan het grote getal uit de vraag. Zoek de plek waar er één bijkomt, en zet daar het cijfer één hoger. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog. Wordt dat cijfer ook tien? Dan wordt het ook een nul, en ga je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "twee keer erbij",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + getal1",
+    "tekst": "Dat is te veel. Er komt maar één keer iets bij. Bij welke plek?",
+    "tekstSterker": "Schrijf het grote getal op en zet een streepje onder de plek waar er één bijkomt. Doe daar één bij, en niet meer. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog. Wordt dat cijfer ook tien? Dan wordt het ook een nul, en ga je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één erbij gedaan",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2 + 1",
+    "tekst": "Dat is maar één meer. Hoeveel komt er volgens de vraag bij?",
+    "tekstSterker": "Kijk naar het getal dat erbij komt: op welke plek staat de één? Zoek die plek in het grote getal en doe daar één bij. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog. Wordt dat cijfer ook tien? Dan wordt het ook een nul, en ga je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het getal zelf",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is het grote getal uit de vraag. Er moet nog iets bij. Hoeveel?",
+    "tekstSterker": "Kijk op welke plek de één staat in het getal dat erbij komt. Zoek die plek in het grote getal en doe daar één bij. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog. Wordt dat cijfer ook tien? Dan wordt het ook een nul, en ga je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zoek de plek uit de vraag in het grote getal en doe daar één bij.",
+    "tekstSterker": "Schrijf het grote getal op. Kijk op welke plek de één staat in het getal dat erbij komt, en zet in het grote getal een streepje onder die plek. Doe daar één bij. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog. Wordt dat cijfer ook tien? Dan wordt het ook een nul, en ga je verder naar links."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-01",
+  "nrOrigineel": 3,
+  "veld": "hint1",
+  "was": "Kijk naar het getal vooraan in de vraag. Bij welke plek komt er één bij?",
+  "wordt": "Kijk naar het getal dat erbij komt. Bij welke plek komt er één bij?",
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-01",
+  "nrOrigineel": 4,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "niet afgerond",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1",
+    "tekst": "Dat is het getal zelf. Rond je het nog af op tienduizendtallen? Kijk naar het cijfer van de duizendtallen.",
+    "tekstSterker": "Bij afronden op tienduizendtallen worden de laatste vier cijfers nullen. Is het cijfer van de duizendtallen vijf of meer, dan ga je naar het tienduizendtal erboven, anders naar het tienduizendtal eronder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "verkeerde kant",
+    "claudeDenkfout": null,
+    "regel": "fout = het andere tienduizendtal naast getal1",
+    "tekst": "Dat is het tienduizendtal aan de andere kant van het getal. Is het cijfer van de duizendtallen vijf of meer, of minder dan vijf?",
+    "tekstSterker": "Schrijf de twee tienduizendtallen op die vlak onder en vlak boven het getal liggen. Kijk naar het cijfer van de duizendtallen. Vijf of meer: kies het bovenste. Minder dan vijf: kies het onderste."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "afgerond op duizendtallen",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 afgerond op duizendtallen",
+    "tekst": "Dat is afgerond op duizendtallen. Op welke plek rond je hier af?",
+    "tekstSterker": "Op tienduizendtallen afronden betekent: de laatste vier cijfers worden nullen. Kijk daarvoor naar het cijfer van de duizendtallen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één stap te ver (omhoog)",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 10000",
+    "tekst": "Dat ligt te ver weg. Welke twee tienduizendtallen liggen vlak naast het getal?",
+    "tekstSterker": "Schrijf het tienduizendtal vlak onder het getal en het tienduizendtal vlak erboven op. Het antwoord is een van die twee. Kijk naar het cijfer van de duizendtallen om te kiezen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één stap te ver (omlaag)",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord - 10000",
+    "tekst": "Dat ligt te ver weg. Welke twee tienduizendtallen liggen vlak naast het getal?",
+    "tekstSterker": "Schrijf het tienduizendtal vlak onder het getal en het tienduizendtal vlak erboven op. Het antwoord is een van die twee. Kijk naar het cijfer van de duizendtallen om te kiezen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "te ver (omhoog)",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 20000 of meer",
+    "tekst": "Dat ligt te ver weg. Welke twee tienduizendtallen liggen vlak naast het getal?",
+    "tekstSterker": "Schrijf het tienduizendtal vlak onder het getal en het tienduizendtal vlak erboven op. Het antwoord is een van die twee. Kijk naar het cijfer van de duizendtallen om te kiezen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "te ver (omlaag)",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord - 20000 of meer",
+    "tekst": "Dat ligt te ver weg. Welke twee tienduizendtallen liggen vlak naast het getal?",
+    "tekstSterker": "Schrijf het tienduizendtal vlak onder het getal en het tienduizendtal vlak erboven op. Het antwoord is een van die twee. Kijk naar het cijfer van de duizendtallen om te kiezen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Kies het tienduizendtal vlak onder of vlak boven het getal. Het cijfer van de duizendtallen beslist."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "niet afgerond",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1",
+    "tekst": "Dat is het getal zelf. Rond je het nog af op tienduizendtallen? Kijk naar het cijfer van de duizendtallen.",
+    "tekstSterker": "Bij afronden op tienduizendtallen worden de laatste vier cijfers nullen. Is het cijfer van de duizendtallen vijf of meer, dan ga je naar het tienduizendtal erboven, anders naar het tienduizendtal eronder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "verkeerde kant",
+    "claudeDenkfout": null,
+    "regel": "fout = het andere tienduizendtal naast getal1",
+    "tekst": "Dat is het tienduizendtal aan de andere kant van het getal. Is het cijfer van de duizendtallen vijf of meer, of minder dan vijf?",
+    "tekstSterker": "Schrijf de twee tienduizendtallen op die vlak onder en vlak boven het getal liggen. Kijk naar het cijfer van de duizendtallen. Vijf of meer: kies het grootste. Minder dan vijf: kies het kleinste."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "afgerond op duizendtallen",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 afgerond op duizendtallen",
+    "tekst": "Dat is afgerond op duizendtallen. Op welke plek rond je hier af?",
+    "tekstSterker": "Op tienduizendtallen afronden betekent: de laatste vier cijfers worden nullen. Kijk daarvoor naar het cijfer van de duizendtallen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één stap te ver (omhoog)",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 10000",
+    "tekst": "Dat ligt te ver weg. Welke twee tienduizendtallen liggen vlak naast het getal?",
+    "tekstSterker": "Schrijf het tienduizendtal vlak onder het getal en het tienduizendtal vlak erboven op. Het antwoord is een van die twee. Kijk naar het cijfer van de duizendtallen om te kiezen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één stap te ver (omlaag)",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord - 10000",
+    "tekst": "Dat ligt te ver weg. Welke twee tienduizendtallen liggen vlak naast het getal?",
+    "tekstSterker": "Schrijf het tienduizendtal vlak onder het getal en het tienduizendtal vlak erboven op. Het antwoord is een van die twee. Kijk naar het cijfer van de duizendtallen om te kiezen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "te ver (omhoog)",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 20000 of meer",
+    "tekst": "Dat ligt te ver weg. Welke twee tienduizendtallen liggen vlak naast het getal?",
+    "tekstSterker": "Schrijf het tienduizendtal vlak onder het getal en het tienduizendtal vlak erboven op. Het antwoord is een van die twee. Kijk naar het cijfer van de duizendtallen om te kiezen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "te ver (omlaag)",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord - 20000 of meer",
+    "tekst": "Dat ligt te ver weg. Welke twee tienduizendtallen liggen vlak naast het getal?",
+    "tekstSterker": "Schrijf het tienduizendtal vlak onder het getal en het tienduizendtal vlak erboven op. Het antwoord is een van die twee. Kijk naar het cijfer van de duizendtallen om te kiezen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Kies het tienduizendtal vlak onder of vlak boven het getal. Het cijfer van de duizendtallen beslist."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-02",
+  "nrOrigineel": 3,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+    "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "te veel cijfers achter de komma",
+    "claudeDenkfout": "plaatswaarde-verkeerd",
+    "regel": "Claudes sleutel: plaatswaarde-verkeerd",
+    "tekst": "Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Afronden op één cijfer achter de komma: er blijft precies één cijfer achter de komma over. Kijk daarvoor naar het tweede cijfer achter de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Rond af op tienden: kijk naar het tweede cijfer achter de komma."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "niet afgerond",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1",
+    "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+    "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+    "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "te veel cijfers achter de komma",
+    "claudeDenkfout": "plaatswaarde-verkeerd",
+    "regel": "Claudes sleutel: plaatswaarde-verkeerd",
+    "tekst": "Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Afronden op één cijfer achter de komma: er blijft precies één cijfer achter de komma over. Kijk daarvoor naar het tweede cijfer achter de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Rond af op tienden: kijk naar het tweede cijfer achter de komma."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 1,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Tel de tienden nog eens: kwam er een één bij uit de honderdsten?",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Tel eerst de honderdsten, dan de tienden. Komen de honderdsten op tien of meer? Dan gaat er een één naar de tienden."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Tel de honderdsten nog eens. Klopt het?",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal maar één cijfer achter de komma? Zet er een nul achter, zodat je honderdsten onder honderdsten telt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "net ernaast (heel antwoord)",
+    "claudeDenkfout": "tiende-of-honderdste-ernaast",
+    "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
+    "tekst": "Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Tel eerst de honderdsten, dan de tienden, dan de hele getallen. Worden de tienden samen tien? Dan schrijf je een nul en gaat er één naar de hele getallen."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "min in plaats van plus",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Is dit een plussom of een minsom? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een plus: tel de twee getallen bij elkaar op. Zet ze onder elkaar met de komma’s onder elkaar."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat eerst: hoe groot is de uitkomst ongeveer, als je alleen met de hele getallen rekent? Zet de komma zo dat je uitkomst daarbij past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet de komma’s onder elkaar en tel per plek op, van rechts naar links."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Tel de tienden nog eens. Kwamen de honderdsten samen op tien of meer? Dan gaat er precies één tiende mee, anders niets.",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Tel eerst de honderdsten, dan de tienden. Komen de honderdsten op tien of meer? Dan gaat er een één naar de tienden."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Tel de honderdsten nog eens. Klopt het?",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal maar één cijfer achter de komma? Zet er een nul achter, zodat je honderdsten onder honderdsten telt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "min in plaats van plus",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Is dit een plussom of een minsom? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een plus: tel de twee getallen bij elkaar op. Zet ze onder elkaar met de komma’s onder elkaar."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat eerst: hoe groot is de uitkomst ongeveer, als je alleen met de hele getallen rekent? Zet de komma zo dat je uitkomst daarbij past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet de komma’s onder elkaar en tel per plek op, van rechts naar links."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Moest je bij de honderdsten een tiende inwisselen?",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Wissel dan één van de plek ervoor in voor tien."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "net ernaast (heel antwoord)",
+    "claudeDenkfout": "tiende-of-honderdste-ernaast",
+    "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
+    "tekst": "Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Haal eerst de honderdsten af, dan de tienden, dan de hele getallen. Blijft er achter de komma niets over? Dan is het antwoord een heel getal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "plus in plaats van min",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Is dit een plussom of een minsom? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een min: haal het tweede getal van het eerste af. Zet ze onder elkaar met de komma’s onder elkaar."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat eerst: hoe groot is de uitkomst ongeveer, als je alleen met de hele getallen rekent? Zet de komma zo dat je uitkomst daarbij past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet de komma’s onder elkaar en haal per plek af, van rechts naar links."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Haal de tienden nog eens af. Moest je bij de honderdsten lenen? Dan is er bij de tienden één minder, anders niet.",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "plus in plaats van min",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Is dit een plussom of een minsom? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een min: haal het tweede getal van het eerste af. Zet ze onder elkaar met de komma’s onder elkaar."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat eerst: hoe groot is de uitkomst ongeveer, als je alleen met de hele getallen rekent? Zet de komma zo dat je uitkomst daarbij past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet de komma’s onder elkaar en haal per plek af, van rechts naar links."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 2,
+  "veld": "hint2",
+  "was": "Heeft een getal geen of minder cijfers achter de komma? Zet er nullen achter. Haal van rechts naar links af: eerst de honderdsten, dan de tienden, dan de hele getallen. Is het bovenste cijfer te klein? Wissel dan één van de plek ervoor in voor tien.",
+  "wordt": "Heeft een getal geen of minder cijfers achter de komma? Zet er nullen achter. Haal van rechts naar links af: eerst de honderdsten, dan de tienden, dan de hele getallen. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij.",
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 3,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "ingewisseld maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Heb je bij de duizendtallen de één afgehaald die je had ingewisseld?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt ingewisseld. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Wissel dan één van de kolom ervoor in voor tien."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 3,
+  "veld": "hint2",
+  "was": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Wissel dan één in van de kolom ervoor.",
+  "wordt": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij.",
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 4,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "ingewisseld maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Heb je bij de duizendtallen de één afgehaald die je had ingewisseld?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt ingewisseld. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Wissel dan één van de kolom ervoor in voor tien."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 4,
+  "veld": "hint2",
+  "was": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Wissel dan één in van de kolom ervoor.",
+  "wordt": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij.",
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 1,
+  "veld": "hint2",
+  "was": "Splits het getal dat je deelt in stukken die je makkelijk deelt. Deel elk stuk en tel de uitkomsten op. Staat er een komma in het getal? Zet die in je antwoord op dezelfde plek, en reken na met een keersom.",
+  "wordt": "Splits het getal dat je deelt in stukken die je makkelijk deelt. Deel elk stuk en tel de uitkomsten op. Staat er een komma in het getal? Zet die in je antwoord op dezelfde plek. Blijft er aan het eind iets over? Maak er tienden of honderdsten van en deel verder achter de komma. Reken na met een keersom.",
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3): V-#604"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Reken de tienden nog eens na. Klopt het?",
+    "tekstSterker": "Splits het kommagetal in het hele getal, de tienden en de honderdsten. Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+    "tekstSterker": "Splits het kommagetal in het hele getal, de tienden en de honderdsten. Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "net ernaast (heel antwoord)",
+    "claudeDenkfout": "tiende-of-honderdste-ernaast",
+    "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
+    "tekst": "Dat ligt net naast het goede antwoord. Reken het nog eens na. Klopt het?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Splits het kommagetal in het hele getal, de tienden en de honderdsten. Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "gedeeld in plaats van keer",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Heb je gedeeld in plaats van keer gedaan? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een keerteken. Bij keer een getal groter dan één wordt de uitkomst groter dan het kommagetal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Zet de komma zo dat je antwoord bij die schatting past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken zonder komma en zet de komma terug met een schatting."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Reken de tienden nog eens na. Klopt het?",
+    "tekstSterker": "Splits het kommagetal in het hele getal, de tienden (en de honderdsten). Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+    "tekstSterker": "Splits het kommagetal in het hele getal, de tienden (en de honderdsten). Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "net ernaast (heel antwoord)",
+    "claudeDenkfout": "tiende-of-honderdste-ernaast",
+    "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
+    "tekst": "Dat ligt net naast het goede antwoord. Reken het nog eens na. Klopt het?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Splits het kommagetal in het hele getal, de tienden (en de honderdsten). Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "gedeeld in plaats van keer",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Heb je gedeeld in plaats van keer gedaan? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een keerteken. Bij keer een getal groter dan één wordt de uitkomst groter dan het kommagetal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Zet de komma zo dat je antwoord bij die schatting past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken zonder komma en zet de komma terug met een schatting."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 6,
+  "veld": "foutHint[middelste getal].tekst",
+  "was": "Dat is het middelste getal. Het gemiddelde is iets anders: tel alles op en deel door het aantal.",
+  "wordt": "Dat is het middelste getal als je de getallen van klein naar groot zet. Het gemiddelde is iets anders: tel alles op en deel door het aantal.",
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3): V-#606"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 8,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "komma een plek te ver",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel. Tel de nullen van het aantal: zoveel plekken schuift de komma.",
+    "tekstSterker": "Tel de nullen van het aantal en schuif de komma precies zoveel plekken naar rechts, niet meer."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma de verkeerde kant op",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Is de uitkomst groter of kleiner dan het gewicht van één? Bij keer wordt het meer.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Meer stuks wegen samen meer dan één. Tel de nullen van het aantal en schuif de komma zoveel plekken naar rechts."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aantal erbij opgeteld",
+    "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+    "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+    "tekst": "Heb je het aantal erbij opgeteld? Je wilt weten wat al die stuks samen wegen: dat is keer.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Elk stuk weegt evenveel. Doe het gewicht van één keer het aantal: tel de nullen van het aantal en schuif de komma zoveel plekken naar rechts."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Doe het gewicht van één keer het aantal: schuif de komma."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "komma een plek te ver",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel. Tel de nullen van het aantal: zoveel plekken schuift de komma.",
+    "tekstSterker": "Tel de nullen van het aantal en schuif de komma precies zoveel plekken naar rechts, niet meer. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul bij."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma de verkeerde kant op",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Is de uitkomst groter of kleiner dan het gewicht van één? Bij keer wordt het meer.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Meer stuks wegen samen meer dan één. Tel de nullen van het aantal en schuif de komma zoveel plekken naar rechts."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aantal erbij opgeteld",
+    "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+    "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+    "tekst": "Heb je het aantal erbij opgeteld? Je wilt weten wat al die stuks samen wegen: dat is keer.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Elk stuk weegt evenveel. Doe het gewicht van één keer het aantal: tel de nullen van het aantal en schuif de komma zoveel plekken naar rechts. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul bij."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Doe het gewicht van één keer het aantal: schuif de komma."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 8,
+  "veld": "hint2",
+  "was": "Bij keer tien schuift de komma één plek naar rechts, bij keer honderd twee plekken. Tel de nullen van het aantal en schuif de komma zoveel plekken.",
+  "wordt": "Bij keer tien schuift de komma één plek naar rechts, bij keer honderd twee plekken. Tel de nullen van het aantal en schuif de komma zoveel plekken. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul bij.",
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3): V-#605"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 8,
+  "veld": "ouderzin",
+  "was": "Je kind rekent een kommagetal keer tien, honderd of duizend door de komma te verschuiven.",
+  "wordt": "Je kind rekent een gewicht keer een rond aantal door de komma te verschuiven, en zet er een nul bij als er geen cijfer meer is.",
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3): Z-#606"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 9,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "een nul te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel. Staat de komma op de goede plek?",
+    "tekstSterker": "Schat met het hele getal: doe het hele getal keer het aantal. Je antwoord ligt daar net boven. Zet de komma zo dat het daarbij past."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Schat eerst: hoe zwaar is het ongeveer?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat met het hele getal: doe het hele getal keer het aantal. Je antwoord ligt daar net boven. Zet de komma zo dat het daarbij past."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "stuk achter de komma niet keer gedaan",
+    "claudeDenkfout": "deel-vergeten-bij-splitsen",
+    "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+    "tekst": "Heb je ook het stuk achter de komma keer gedaan?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Splits het gewicht in het hele getal en het stuk achter de komma. Doe beide keer het aantal en tel de uitkomsten op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Splits het gewicht, doe beide stukken keer het aantal en tel op."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "een nul te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel. Staat de komma op de goede plek?",
+    "tekstSterker": "Schat met het hele getal: doe het hele getal keer het aantal. Je antwoord is groter dan dat, maar kleiner dan het volgende hele getal keer het aantal. Zet de komma zo dat het daarbij past."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Schat eerst: hoe zwaar is het ongeveer?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat met het hele getal: doe het hele getal keer het aantal. Je antwoord is groter dan dat, maar kleiner dan het volgende hele getal keer het aantal. Zet de komma zo dat het daarbij past."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "stuk achter de komma niet keer gedaan",
+    "claudeDenkfout": "deel-vergeten-bij-splitsen",
+    "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+    "tekst": "Heb je ook het stuk achter de komma keer gedaan?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Splits het gewicht in het hele getal en het stuk achter de komma. Doe beide keer het aantal en tel de uitkomsten op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Splits het gewicht, doe beide stukken keer het aantal en tel op."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:58",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 11,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "komma verschoven",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel. Kan één stuk zoveel kosten? Vergelijk met het bedrag voor alles samen.",
+    "tekstSterker": "Deel de euro’s eerst. Wat overblijft, maak je centen: één euro is honderd cent. Deel die centen ook, en schrijf het antwoord met een komma: euro’s voor de komma, centen erachter."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aantal eraf gehaald",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Heb je het aantal eraf gehaald? Je wilt weten wat één kost: dan verdeel je het bedrag over alle stuks.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Eén stuk kost een even groot deel van het hele bedrag. Deel het bedrag door het aantal. Reken na: je antwoord keer het aantal is weer het hele bedrag."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma anders verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Schat eerst: hoeveel euro kost één ongeveer?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Deel de euro’s eerst. Wat overblijft, maak je centen: één euro is honderd cent. Deel die centen ook, en schrijf het antwoord met een komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Deel het bedrag door het aantal, tot op de cent."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "bedrag voor alles",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is het bedrag voor alles samen. Wat kost één?",
+    "tekstSterker": "Eén stuk kost een even groot deel van het hele bedrag. Deel het bedrag door het aantal. Reken na: je antwoord keer het aantal is weer het hele bedrag."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "komma verschoven",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel. Kan één stuk zoveel kosten? Vergelijk met het bedrag voor alles samen.",
+    "tekstSterker": "Deel de euro’s eerst. Wat overblijft, maak je centen: één euro is honderd cent. Deel die centen ook, en schrijf het antwoord met een komma: euro’s voor de komma, centen erachter."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aantal eraf gehaald",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Heb je het aantal eraf gehaald? Je wilt weten wat één kost: dan verdeel je het bedrag over alle stuks.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Eén stuk kost een even groot deel van het hele bedrag. Deel het bedrag door het aantal. Reken na: je antwoord keer het aantal is weer het hele bedrag."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma anders verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Schat eerst: hoeveel euro kost één ongeveer?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Deel de euro’s eerst. Wat overblijft, maak je centen: één euro is honderd cent. Deel die centen ook, en schrijf het antwoord met een komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Deel het bedrag door het aantal, tot op de cent."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3): Z-#605"
+ },
+ {
+  "tijd": "12:59",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Haal de tienden nog eens af. Moest je bij de honderdsten lenen? Dan is er bij de tienden één minder, anders niet.",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "plus in plaats van min",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Is dit een plussom of een minsom? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een min: haal het tweede getal van het eerste af. Zet ze onder elkaar met de komma’s onder elkaar."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat eerst: hoe groot is de uitkomst ongeveer, als je alleen met de hele getallen rekent? Zet de komma zo dat je uitkomst daarbij past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet de komma’s onder elkaar en haal per plek af, van rechts naar links."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Haal de tienden nog eens af. Moest je bij de honderdsten lenen? Dan is er bij de tienden één minder, anders niet.",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "plus in plaats van min",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Is dit een plussom of een minsom? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een min: haal het tweede getal van het eerste af. Zet ze onder elkaar met de komma’s onder elkaar."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat eerst: hoe groot is de uitkomst ongeveer, als je alleen met de hele getallen rekent? Zet de komma zo dat je uitkomst daarbij past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet de komma’s onder elkaar en haal per plek af, van rechts naar links."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:59",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 2,
+  "veld": "hint2",
+  "was": "Heeft een getal geen of minder cijfers achter de komma? Zet er nullen achter. Haal van rechts naar links af: eerst de honderdsten, dan de tienden, dan de hele getallen. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij.",
+  "wordt": "Heeft een getal geen of minder cijfers achter de komma? Zet er nullen achter. Haal van rechts naar links af: eerst de honderdsten, dan de tienden, dan de hele getallen. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links.",
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:59",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 3,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:59",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 3,
+  "veld": "hint2",
+  "was": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij.",
+  "wordt": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links.",
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:59",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 4,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "12:59",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 4,
+  "veld": "hint2",
+  "was": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij.",
+  "wordt": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links.",
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3)"
+ },
+ {
+  "tijd": "13:04",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 1,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Reken de tienden nog eens na. Klopt het?",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 1",
+    "tekst": "Dat is één ernaast. Hoe vaak past het getal waardoor je deelt er precies in?",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "tien te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 10",
+    "tekst": "Dat is tien te veel. Klopt het cijfer van de tientallen?",
+    "tekstSterker": "Splits het getal dat je deelt in stukken, bijvoorbeeld een stuk dat precies tien keer zo groot is als het getal waardoor je deelt. Deel elk stuk en tel de uitkomsten op. Reken na met een keersom."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "tien te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord - 10",
+    "tekst": "Dat is tien te weinig. Klopt het cijfer van de tientallen?",
+    "tekstSterker": "Splits het getal dat je deelt in stukken, bijvoorbeeld een stuk dat precies tien keer zo groot is als het getal waardoor je deelt. Deel elk stuk en tel de uitkomsten op. Reken na met een keersom."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "net ernaast (heel antwoord)",
+    "claudeDenkfout": "tiende-of-honderdste-ernaast",
+    "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
+    "tekst": "Dat ligt net naast het goede antwoord. Reken het na met een keersom. Klopt het?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "stuk vergeten bij splitsen",
+    "claudeDenkfout": "deel-vergeten-bij-splitsen",
+    "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+    "tekst": "Dat is veel te weinig. Heb je de uitkomsten van alle stukken opgeteld?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Splits het getal dat je deelt in stukken die je makkelijk deelt. Schrijf bij elk stuk de uitkomst op. Tel alle uitkomsten bij elkaar op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "keer in plaats van delen",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Heb je keer gedaan in plaats van gedeeld? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een deelteken. Bij delen door een getal groter dan één wordt de uitkomst kleiner dan het getal dat je deelt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Zet de komma zo dat je antwoord bij die schatting past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Deel in stukken die je makkelijk deelt, en reken na met een keersom.",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Reken de tienden nog eens na. Klopt het?",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 1",
+    "tekst": "Dat is één ernaast. Hoe vaak past het getal waardoor je deelt er precies in?",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "tien te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 10",
+    "tekst": "Dat is tien te veel. Klopt het cijfer van de tientallen?",
+    "tekstSterker": "Splits het getal dat je deelt in stukken, bijvoorbeeld een stuk dat precies tien keer zo groot is als het getal waardoor je deelt. Deel elk stuk en tel de uitkomsten op. Reken na met een keersom."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "tien te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord - 10",
+    "tekst": "Dat is tien te weinig. Klopt het cijfer van de tientallen?",
+    "tekstSterker": "Splits het getal dat je deelt in stukken, bijvoorbeeld een stuk dat precies tien keer zo groot is als het getal waardoor je deelt. Deel elk stuk en tel de uitkomsten op. Reken na met een keersom."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "stuk vergeten bij splitsen",
+    "claudeDenkfout": "deel-vergeten-bij-splitsen",
+    "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+    "tekst": "Dat is veel te weinig. Heb je de uitkomsten van alle stukken opgeteld?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Splits het getal dat je deelt in stukken die je makkelijk deelt. Schrijf bij elk stuk de uitkomst op. Tel alle uitkomsten bij elkaar op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "keer in plaats van delen",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Heb je keer gedaan in plaats van gedeeld? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een deelteken. Bij delen door een getal groter dan één wordt de uitkomst kleiner dan het getal dat je deelt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Zet de komma zo dat je antwoord bij die schatting past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Deel in stukken die je makkelijk deelt, en reken na met een keersom.",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3): Z-#612 (na V-#603)"
+ },
+ {
+  "tijd": "13:04",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Reken de tienden nog eens na. Klopt het?",
+    "tekstSterker": "Splits het kommagetal in het hele getal, de tienden (en de honderdsten). Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+    "tekstSterker": "Splits het kommagetal in het hele getal, de tienden (en de honderdsten). Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "net ernaast (heel antwoord)",
+    "claudeDenkfout": "tiende-of-honderdste-ernaast",
+    "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
+    "tekst": "Dat ligt net naast het goede antwoord. Reken het nog eens na. Klopt het?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Splits het kommagetal in het hele getal, de tienden (en de honderdsten). Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "gedeeld in plaats van keer",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Heb je gedeeld in plaats van keer gedaan? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een keerteken. Bij keer een getal groter dan één wordt de uitkomst groter dan het kommagetal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Zet de komma zo dat je antwoord bij die schatting past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken zonder komma en zet de komma terug met een schatting."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Reken de tienden nog eens na. Klopt het?",
+    "tekstSterker": "Splits het kommagetal in het hele getal, de tienden (en de honderdsten). Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+    "tekstSterker": "Splits het kommagetal in het hele getal, de tienden (en de honderdsten). Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "gedeeld in plaats van keer",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Heb je gedeeld in plaats van keer gedaan? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een keerteken. Bij keer een getal groter dan één wordt de uitkomst groter dan het kommagetal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Zet de komma zo dat je antwoord bij die schatting past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken zonder komma en zet de komma terug met een schatting."
+   }
+  ],
+  "waarom": "Ronde 3b (Oefeningen 8 okt; Didactiek review batch 3): Z-#612 (na V-#603)"
+ },
+ {
+  "tijd": "13:12",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 6,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet gedeeld",
+    "claudeDenkfout": "totaal-niet-gedeeld",
+    "regel": "Claudes sleutel: totaal-niet-gedeeld",
+    "tekst": "Dat is alles samen. Deel je dat nog door hoeveel getallen het zijn?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "middelste getal",
+    "claudeDenkfout": "middelste-getal",
+    "regel": "Claudes sleutel: middelste-getal",
+    "tekst": "Dat is het middelste getal als je de getallen van klein naar groot zet. Het gemiddelde is iets anders: tel alles op en deel door het aantal.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "optellen en delen",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Heb je alle getallen opgeteld én daarna gedeeld door hoeveel getallen het zijn?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet het gemiddelde",
+    "claudeDenkfout": "verhoudingstabel-verkeerd",
+    "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+    "tekst": "Heb je alle getallen opgeteld en daarna gedeeld door het aantal? Reken het na.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Tel alle getallen op en deel door hoeveel getallen het zijn."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "niet gedeeld",
+    "claudeDenkfout": null,
+    "regel": "fout = de som van de getallen",
+    "tekst": "Dat is alles samen. Deel je dat nog door hoeveel getallen het zijn?",
+    "claudeTekst": null,
+    "waarom": "Motorregel (Oef-#442): de waarde komt echt zo uit; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "middelste getal",
+    "claudeDenkfout": null,
+    "regel": "fout = het middelste getal (op grootte)",
+    "tekst": "Dat is het middelste getal als je de getallen van klein naar groot zet. Het gemiddelde is iets anders: tel alles op en deel door het aantal.",
+    "claudeTekst": null,
+    "waarom": "Motorregel (Oef-#442): de waarde komt echt zo uit; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet het gemiddelde",
+    "claudeDenkfout": "verhoudingstabel-verkeerd",
+    "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+    "tekst": "Heb je alle getallen opgeteld en daarna gedeeld door het aantal? Reken het na.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Tel alle getallen op en deel door hoeveel getallen het zijn."
+   }
+  ],
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd)"
+ },
+ {
+  "tijd": "13:16",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Haal de tienden nog eens af. Moest je bij de honderdsten lenen? Dan is er bij de tienden één minder, anders niet.",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "plus in plaats van min",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Is dit een plussom of een minsom? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een min: haal het tweede getal van het eerste af. Zet ze onder elkaar met de komma’s onder elkaar."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat eerst: hoe groot is de uitkomst ongeveer, als je alleen met de hele getallen rekent? Zet de komma zo dat je uitkomst daarbij past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet de komma’s onder elkaar en haal per plek af, van rechts naar links."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Haal de tienden nog eens af. Moest je bij de honderdsten lenen? Dan is er bij de tienden één minder, anders niet.",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de plek ervoor één minder. Is het cijfer op de plek ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een honderdste ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,01",
+    "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+    "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "plus in plaats van min",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Is dit een plussom of een minsom? Kijk naar het teken.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Het teken is een min: haal het tweede getal van het eerste af. Zet ze onder elkaar met de komma’s onder elkaar."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat eerst: hoe groot is de uitkomst ongeveer, als je alleen met de hele getallen rekent? Zet de komma zo dat je uitkomst daarbij past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet de komma’s onder elkaar en haal per plek af, van rechts naar links."
+   }
+  ],
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd): V-#615"
+ },
+ {
+  "tijd": "13:16",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 2,
+  "veld": "hint2",
+  "was": "Heeft een getal geen of minder cijfers achter de komma? Zet er nullen achter. Haal van rechts naar links af: eerst de honderdsten, dan de tienden, dan de hele getallen. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links.",
+  "wordt": "Heeft een getal geen of minder cijfers achter de komma? Zet er nullen achter. Haal van rechts naar links af: eerst de honderdsten, dan de tienden, dan de hele getallen. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de plek ervoor één minder. Is het cijfer op de plek ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.",
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd): V-#615"
+ },
+ {
+  "tijd": "13:16",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 3,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd): V-#615"
+ },
+ {
+  "tijd": "13:16",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 3,
+  "veld": "hint2",
+  "was": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links.",
+  "wordt": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.",
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd): V-#615"
+ },
+ {
+  "tijd": "13:16",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 4,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd): V-#615"
+ },
+ {
+  "tijd": "13:16",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 4,
+  "veld": "hint2",
+  "was": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links.",
+  "wordt": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.",
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd): V-#615"
+ },
+ {
+  "tijd": "13:16",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 5,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "alleen het hele getal",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal",
+    "tekst": "Dat is alleen het hele getal. Wat overblijft, kun je ook verdelen. Reken je verder achter de komma?",
+    "tekstSterker": "Deel het hele getal en kijk wat er overblijft. Een hele is tien tienden: maak van wat overblijft tienden en deel die ook. Ga zo door met honderdsten."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 1",
+    "tekst": "Dat is één ernaast. Hoe vaak past het getal waardoor je deelt erin?",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je verdeelt? Zo niet, pas je antwoord aan."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest achter de komma",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Is dat de rest achter de komma gezet? Wat overblijft, deel je verder.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schrijf wat overblijft als tienden: een hele is tien tienden. Deel die tienden ook eerlijk. Ga zo door met honderdsten tot er niets meer overblijft."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "één te veel",
+    "claudeDenkfout": "tafelbuur",
+    "regel": "Claudes sleutel: tafelbuur",
+    "tekst": "Dat is één te veel. Hoe vaak past het getal waardoor je deelt in het hele getal?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er meer uit dan wat je verdeelt? Dan is je antwoord te groot."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Zet de komma zo dat je antwoord bij die schatting past."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Deel eerst het hele getal en verdeel wat overblijft verder achter de komma."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "alleen het hele getal",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal",
+    "tekst": "Dat is alleen het hele getal. Wat overblijft, kun je ook verdelen. Reken je verder achter de komma?",
+    "tekstSterker": "Deel het hele getal en kijk wat er overblijft. Een hele is tien tienden: maak van wat overblijft tienden en deel die ook. Ga zo door met honderdsten."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 1",
+    "tekst": "Dat is één ernaast. Hoe vaak past het getal waardoor je deelt erin?",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je verdeelt? Zo niet, pas je antwoord aan."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest achter de komma",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Is dat de rest achter de komma gezet? Wat overblijft, deel je verder.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Schrijf wat overblijft als tienden: een hele is tien tienden. Deel die tienden ook eerlijk. Ga zo door met honderdsten tot er niets meer overblijft."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "één te veel",
+    "claudeDenkfout": "tafelbuur",
+    "regel": "Claudes sleutel: tafelbuur",
+    "tekst": "Dat is één te veel. Hoe vaak past het getal waardoor je deelt in het hele getal?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er meer uit dan wat je verdeelt? Dan is je antwoord te groot."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "tien keer te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel. Schat eerst: hoe groot is de uitkomst ongeveer?",
+    "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Past je antwoord bij die schatting? Zo niet, reken het opnieuw."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Deel eerst het hele getal en verdeel wat overblijft verder achter de komma."
+   }
+  ],
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd): Z-#617"
+ },
+ {
+  "tijd": "13:18",
+  "doel": "G7-GET-01",
+  "nrOrigineel": 7,
+  "veld": "foutHint[cijfer ernaast].bron",
+  "was": "claude-taalfix",
+  "wordt": "nieuw",
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd): Oef-#434"
+ },
+ {
+  "tijd": "13:18",
+  "doel": "G7-GET-01",
+  "nrOrigineel": 7,
+  "veld": "foutHint[cijfer ernaast].claudeDenkfout",
+  "was": "een-ernaast",
+  "wordt": null,
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd): Oef-#434"
+ },
+ {
+  "tijd": "13:18",
+  "doel": "G7-GET-01",
+  "nrOrigineel": 7,
+  "veld": "foutHint[cijfer ernaast].regel",
+  "was": "Claudes sleutel: een-ernaast",
+  "wordt": "fout = het cijfer op de plek ernaast",
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd): Oef-#434"
+ },
+ {
+  "tijd": "13:18",
+  "doel": "G7-GET-01",
+  "nrOrigineel": 7,
+  "veld": "foutHint[cijfer ernaast].waarom",
+  "was": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+  "wordt": "Motorregel (Oef-#434): de cijfers links en rechts van de gevraagde plaats; vaste tekst zonder getallen",
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd): Oef-#434"
+ },
+ {
+  "tijd": "13:18",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 8,
+  "veld": "ouderzin",
+  "was": "Je kind rekent een gewicht keer een rond aantal door de komma te verschuiven, en zet er een nul bij als er geen cijfer meer is.",
+  "wordt": "Je kind rekent een gewicht keer tien, honderd of duizend door de komma te verschuiven, en zet er een nul bij als er geen cijfer meer is.",
+  "waarom": "Ronde 3c (Oefeningen 8 okt; Oef-#442 gebouwd): Z-#606"
+ },
+ {
+  "tijd": "13:40",
+  "doel": "G7-GET-04",
+  "nrOrigineel": 8,
+  "veld": "ouderzin",
+  "was": "Je kind rekent een gewicht keer tien, honderd of duizend door de komma te verschuiven, en zet er een nul bij als er geen cijfer meer is.",
+  "wordt": "Je kind rekent een gewicht keer honderd door de komma twee plekken te verschuiven, en zet er een nul bij als er geen cijfer meer is.",
+  "waarom": "Ronde 3d (Oefeningen 8 okt; GET-04 nrO 8 alleen keer honderd): Z-#606"
+ }
+]

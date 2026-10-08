@@ -265,7 +265,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 
 - **Hint 1 (te schrijven):** Wat weegt één? En hoeveel stuks zijn het? Alle stuks samen is een keersom.
 - **Hint 2 (te schrijven):** Bij keer tien schuift de komma één plek naar rechts, bij keer honderd twee plekken. Tel de nullen van het aantal en schuif de komma zoveel plekken. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul bij.
-- **Ouderzin:** Je kind rekent een gewicht keer tien, honderd of duizend door de komma te verschuiven, en zet er een nul bij als er geen cijfer meer is.
+- **Ouderzin:** Je kind rekent een gewicht keer honderd door de komma twee plekken te verschuiven, en zet er een nul bij als er geen cijfer meer is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `komma een plek te ver` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen van het aantal: zoveel plekken schuift de komma.  [nieuw]
   - `komma de verkeerde kant op` (Claudes sleutel: komma-verschoven) → Is de uitkomst groter of kleiner dan het gewicht van één? Bij keer wordt het meer.  [Claude, taalfix]

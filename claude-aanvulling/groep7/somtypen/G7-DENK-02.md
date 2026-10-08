@@ -233,8 +233,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Hoeveel zijn het er samen? Tel doos voor doos. Welke som heeft precies dat aantal als uitkomst?
 - **Ouderzin:** Je kind kiest de som bij een tekening met groepjes die even groot zijn: een keersom.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `opgeteld` (5 + 8 = 13) → Heb je één doos en het aantal dozen bij elkaar opgeteld? In elke doos zitten evenveel eieren. Welke som past bij steeds hetzelfde aantal?  [nieuw]
-  - `afgehaald` (8 − 5 = 3) → Gaan er eieren weg? Alle dozen samen horen bij het antwoord. Welke som past bij steeds hetzelfde aantal?  [nieuw]
+  - `opgeteld` (5 + 6 = 11) → Heb je één doos en het aantal dozen bij elkaar opgeteld? In elke doos zitten evenveel eieren. Welke som past bij steeds hetzelfde aantal?  [nieuw]
+  - `afgehaald` (6 − 5 = 1) → Gaan er eieren weg? Alle dozen samen horen bij het antwoord. Welke som past bij steeds hetzelfde aantal?  [nieuw]
   - `andere fout` (andere fout) → Steeds hetzelfde aantal, een paar keer: dat is een keersom.  [nieuw]
 - Status: hints klaar
 
@@ -309,8 +309,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Tussen twee palen zit steeds een stuk. Er is altijd één stuk minder dan er palen zijn. Doe het aantal stukken keer de afstand tussen twee palen.
 - **Ouderzin:** Je kind rekent de lengte van een rij palen uit: er is één tussenruimte minder dan er palen zijn.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `palen in plaats van stukken` (35 meter) → Heb je het aantal palen keer de afstand gedaan? Tel in je tekening de stukken tussen de palen. Zijn dat er evenveel als palen?  [nieuw]
-  - `stuk te weinig` (25 meter) → Dat is één stuk te weinig. Tel in je tekening de stukken tussen de palen nog eens, van de eerste tot de laatste paal.  [nieuw]
+  - `palen in plaats van stukken` (140 meter) → Heb je het aantal palen keer de afstand gedaan? Tel in je tekening de stukken tussen de palen. Zijn dat er evenveel als palen?  [nieuw]
+  - `stuk te weinig` (100 meter) → Dat is één stuk te weinig. Tel in je tekening de stukken tussen de palen nog eens, van de eerste tot de laatste paal.  [nieuw]
   - `andere fout` (andere fout) → Tel de stukken tussen de palen: dat is één minder dan het aantal palen.  [nieuw]
 - Status: hints klaar
 
@@ -359,7 +359,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe bij elke soort het aantal fietsen keer het aantal wielen van één fiets. Tel de uitkomsten van de twee soorten bij elkaar op.
 - **Ouderzin:** Je kind rekent met twee groepen: elke groep apart een keersom, en daarna samen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `alleen de fietsen` (7 wielen) → Is dat het aantal fietsen? De vraag gaat over de wielen, en elke fiets heeft meer dan één wiel.  [nieuw]
+  - `alleen de fietsen` (7 wielen) → Is dat het aantal fietsen en bakfietsen? De vraag gaat over de wielen, en elke fiets heeft meer dan één wiel.  [nieuw]
   - `overal evenveel wielen` (14 wielen) → Hebben alle fietsen evenveel wielen? De twee soorten hebben een verschillend aantal wielen. Reken elke soort apart uit.  [nieuw]
   - `andere fout` (andere fout) → Reken elke soort apart uit en tel de uitkomsten bij elkaar op.  [nieuw]
 - Status: hints klaar
