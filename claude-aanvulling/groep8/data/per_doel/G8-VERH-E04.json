@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T19:16:10+0200",
+ "gegenereerdOp": "2026-10-08T19:34:49+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-VERH-E04",
  "bordtitel": "Procenten uitrekenen: 1%-regel en korting",
@@ -2655,18 +2655,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een rugzak kost na 25% korting €60. Wat was de prijs vóór de korting?",
+   "opgave": "Een rugzak kost na 25% korting €36. Wat was de prijs vóór de korting?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "80",
+   "antwoord": "48",
    "antwoordDetail": null,
    "hint": "Na de korting betaal je niet meer honderd procent van de oude prijs. Hoeveel procent betaal je nog?",
    "sterkereHint": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "75",
+     "fout": "45",
      "uitleg": "Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe.",
      "uitlegSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
      "laag2": "tekstSterker",
@@ -2676,7 +2676,7 @@
     },
     {
      "stap": null,
-     "fout": "60",
+     "fout": "36",
      "uitleg": "Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
      "uitlegSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
      "laag2": "tekstSterker",
@@ -2685,7 +2685,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "75 → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe. · 60 → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
+   "foutHintsTekst": "45 → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe. · 36 → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
    "ouderzin": "Je kind rekent terug naar de prijs van vóór de korting.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -2705,8 +2705,8 @@
    "bronVariant": "claude-bank:V6:5b3d9b42-09c7-46e1-8582-b75900a089d3",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "na 25% korting €60, was?",
-    "claudeUitleg": "€60 is 75% van de oude prijs.\n1% is 60 : 75 = 0,80, dus 100% is €80.",
+    "claudeKaleSom": "na 25% korting €36, was?",
+    "claudeUitleg": "€36 is 75% van de oude prijs.\n1% is 36 : 75 = 0,48, dus 100% is €48.",
     "claudeStrategie": "terugrekenen via 1%",
     "claudeThema": "Ruimte",
     "claudeAntwoordType": "geheel",
@@ -2715,11 +2715,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "75",
+      "fout": "45",
       "denkfout": "procent-verkeerde-basis"
      },
      {
-      "fout": "60",
+      "fout": "36",
       "denkfout": "getal-overgenomen"
      }
     ],
@@ -2727,12 +2727,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "75",
-      "uitleg": "De 25% ging van de óude prijs af, niet van €60. €60 is 75%."
+      "fout": "45",
+      "uitleg": "De 25% ging van de óude prijs af, niet van €36. €36 is 75%."
      },
      {
       "stap": null,
-      "fout": "60",
+      "fout": "36",
       "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
      }
     ]
@@ -2761,7 +2761,8 @@
      "Oef-#1006/#1007: Claude-sleutel zonder '€' en exact",
      "Oef-#1009: geloofwaardige prijs (ander ding)",
      "W11 winkel: passende spullen",
-     "W8 woord kindvriendelijk (G5, enkelvoud)"
+     "W8 woord kindvriendelijk (G5, enkelvoud)",
+     "Z-#1042: dubbel item (E04 #1) → andere getallen"
     ]
    },
    "opBord": false,
@@ -2789,7 +2790,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "80",
+    "verwacht": "48",
     "methode": "G8 prijs vóór korting",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2806,12 +2807,12 @@
     "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
-    "80",
-    "€80",
-    "€ 80",
-    "80 euro",
-    "€80,00",
-    "80,00"
+    "48",
+    "€48",
+    "€ 48",
+    "48 euro",
+    "€48,00",
+    "48,00"
    ],
    "foutRegels": [
     {
@@ -2823,7 +2824,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "60"
+       "36"
       ]
      },
      "leesbaar": true
@@ -2837,7 +2838,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "75"
+       "45"
       ]
      },
      "leesbaar": true
@@ -3699,18 +3700,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een hondenmand kost na 25% korting €60. Wat was de prijs vóór de korting?",
+   "opgave": "Een hondenmand kost na 25% korting €48. Wat was de prijs vóór de korting?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "80",
+   "antwoord": "64",
    "antwoordDetail": null,
    "hint": "Na de korting betaal je niet meer honderd procent van de oude prijs. Hoeveel procent betaal je nog?",
    "sterkereHint": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "75",
+     "fout": "60",
      "uitleg": "Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe.",
      "uitlegSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
      "laag2": "tekstSterker",
@@ -3720,7 +3721,7 @@
     },
     {
      "stap": null,
-     "fout": "60",
+     "fout": "48",
      "uitleg": "Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
      "uitlegSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
      "laag2": "tekstSterker",
@@ -3729,7 +3730,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "75 → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe. · 60 → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
+   "foutHintsTekst": "60 → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe. · 48 → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
    "ouderzin": "Je kind rekent terug naar de prijs van vóór de korting.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -3749,8 +3750,8 @@
    "bronVariant": "claude-bank:V6:d19d8dde-7230-4d61-9dcc-6b63cf4667c8",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "na 25% korting €60, was?",
-    "claudeUitleg": "€60 is 75% van de oude prijs.\n1% is 60 : 75 = 0,80, dus 100% is €80.",
+    "claudeKaleSom": "na 25% korting €48, was?",
+    "claudeUitleg": "€48 is 75% van de oude prijs.\n1% is 48 : 75 = 0,64, dus 100% is €64.",
     "claudeStrategie": "terugrekenen via 1%",
     "claudeThema": "Dino's en fossielen",
     "claudeAntwoordType": "geheel",
@@ -3759,11 +3760,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "75",
+      "fout": "60",
       "denkfout": "procent-verkeerde-basis"
      },
      {
-      "fout": "60",
+      "fout": "48",
       "denkfout": "getal-overgenomen"
      }
     ],
@@ -3771,12 +3772,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "75",
-      "uitleg": "De 25% ging van de óude prijs af, niet van €60. €60 is 75%."
+      "fout": "60",
+      "uitleg": "De 25% ging van de óude prijs af, niet van €48. €48 is 75%."
      },
      {
       "stap": null,
-      "fout": "60",
+      "fout": "48",
       "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
      }
     ]
@@ -3803,7 +3804,8 @@
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
      "Oef-#1006/#1007: Claude-sleutel zonder '€' en exact",
-     "Oef-#1009: geloofwaardige prijs (ander ding)"
+     "Oef-#1009: geloofwaardige prijs (ander ding)",
+     "Z-#1042: dubbel item (E04 #1) → andere getallen"
     ]
    },
    "opBord": false,
@@ -3831,7 +3833,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "80",
+    "verwacht": "64",
     "methode": "G8 prijs vóór korting",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -3848,12 +3850,12 @@
     "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
-    "80",
-    "€80",
-    "€ 80",
-    "80 euro",
-    "€80,00",
-    "80,00"
+    "64",
+    "€64",
+    "€ 64",
+    "64 euro",
+    "€64,00",
+    "64,00"
    ],
    "foutRegels": [
     {
@@ -3865,7 +3867,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "60"
+       "48"
       ]
      },
      "leesbaar": true
@@ -3879,7 +3881,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "75"
+       "60"
       ]
      },
      "leesbaar": true
@@ -7157,7 +7159,7 @@
    "algemeneFoutHint": "Iedereen op school samen is honderd procent. Hoeveel is tien procent? Hoe vaak heb je dat nodig?"
   }
  ],
- "hintsSyncOp": "2026-10-08T19:16:13+02:00",
+ "hintsSyncOp": "2026-10-08T19:34:53+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -7193,10 +7195,10 @@
   },
   {
    "batch": "batch9.json",
-   "md5": "9c7a01c81a4a"
+   "md5": "2bbf318d2838"
   }
  ],
- "geschrevenOp": "2026-10-08T19:16:13+02:00",
+ "geschrevenOp": "2026-10-08T19:34:53+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

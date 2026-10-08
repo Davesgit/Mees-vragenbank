@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T19:16:10+0200",
+ "gegenereerdOp": "2026-10-08T19:34:49+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-VERH-E05",
  "bordtitel": "Hoeveel procent erbij of eraf?",
@@ -4779,18 +4779,18 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een bal kostte €40. De prijs stijgt met 5%. Wat kost de bal nu?",
+   "opgave": "Een bal kostte €60. De prijs stijgt met 5%. Wat kost de bal nu?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "42",
+   "antwoord": "63",
    "antwoordDetail": null,
    "hint": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
    "sterkereHint": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "2",
+     "fout": "3",
      "uitleg": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
      "uitlegSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
      "laag2": "tekstSterker",
@@ -4800,7 +4800,7 @@
     },
     {
      "stap": null,
-     "fout": "38",
+     "fout": "57",
      "uitleg": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
      "uitlegSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
      "laag2": "tekstSterker",
@@ -4810,7 +4810,7 @@
     },
     {
      "stap": null,
-     "fout": "45",
+     "fout": "65",
      "uitleg": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
      "uitlegSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
      "laag2": "tekstSterker",
@@ -4819,7 +4819,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "2 → Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs. · 38 → De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af. · 45 → Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+   "foutHintsTekst": "3 → Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs. · 57 → De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af. · 65 → Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
    "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -4839,8 +4839,8 @@
    "bronVariant": "claude-bank:T5:28734363-2baf-4297-b75e-a1c28dac8a5e",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "40 + 5%",
-    "claudeUitleg": "5% van 40 = 2.\nErbij: 40 + 2 = €42.",
+    "claudeKaleSom": "60 + 5%",
+    "claudeUitleg": "5% van 60 = 3.\nErbij: 60 + 3 = €63.",
     "claudeStrategie": "procent erbij",
     "claudeThema": "Dino's en fossielen",
     "claudeAntwoordType": "geheel",
@@ -4849,15 +4849,15 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "2",
+      "fout": "3",
       "denkfout": "andere-deel-genomen"
      },
      {
-      "fout": "38",
+      "fout": "57",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "45",
+      "fout": "65",
       "denkfout": "procent-verkeerde-basis"
      }
     ],
@@ -4865,18 +4865,18 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "2",
+      "fout": "3",
       "uitleg": "Dat is alleen de stijging. Tel hem op bij de oude prijs."
      },
      {
       "stap": null,
-      "fout": "38",
+      "fout": "57",
       "uitleg": "De prijs stijgt: erbij, niet eraf."
      },
      {
       "stap": null,
-      "fout": "45",
-      "uitleg": "5% is een deel van €40, niet €5."
+      "fout": "65",
+      "uitleg": "5% is een deel van €60, niet €5."
      }
     ]
    },
@@ -4904,7 +4904,8 @@
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "V-#1026: Claude-sleutel zonder '€'",
      "W11 winkel: passende spullen",
-     "W8 woord kindvriendelijk (G5, enkelvoud)"
+     "W8 woord kindvriendelijk (G5, enkelvoud)",
+     "Z-#1042: dubbel item (E05 #2/#3) → andere getallen"
     ]
    },
    "opBord": false,
@@ -4927,7 +4928,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "42",
+    "verwacht": "63",
     "methode": "G8 prijs na procent",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -4944,10 +4945,10 @@
     "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
-    "42",
-    "€42",
-    "€ 42",
-    "42 euro"
+    "63",
+    "€63",
+    "€ 63",
+    "63 euro"
    ],
    "foutRegels": [
     {
@@ -4959,7 +4960,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "2"
+       "3"
       ]
      },
      "leesbaar": true
@@ -4973,7 +4974,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "38"
+       "57"
       ]
      },
      "leesbaar": true
@@ -4987,7 +4988,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "45"
+       "65"
       ]
      },
      "leesbaar": true
@@ -5249,18 +5250,18 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een boek kostte €20. De prijs stijgt met 10%. Wat kost het boek nu?",
+   "opgave": "Een boek kostte €30. De prijs stijgt met 10%. Wat kost het boek nu?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "22",
+   "antwoord": "33",
    "antwoordDetail": null,
    "hint": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
    "sterkereHint": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "2",
+     "fout": "3",
      "uitleg": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
      "uitlegSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
      "laag2": "tekstSterker",
@@ -5270,7 +5271,7 @@
     },
     {
      "stap": null,
-     "fout": "18",
+     "fout": "27",
      "uitleg": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
      "uitlegSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
      "laag2": "tekstSterker",
@@ -5280,7 +5281,7 @@
     },
     {
      "stap": null,
-     "fout": "30",
+     "fout": "40",
      "uitleg": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
      "uitlegSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
      "laag2": "tekstSterker",
@@ -5289,7 +5290,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "2 → Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs. · 18 → De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af. · 30 → Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+   "foutHintsTekst": "3 → Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs. · 27 → De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af. · 40 → Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
    "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -5309,8 +5310,8 @@
    "bronVariant": "claude-bank:T5:8cbb8ff1-466b-4102-8072-df657fea6aa0",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "20 + 10%",
-    "claudeUitleg": "10% van 20 = 2.\nErbij: 20 + 2 = €22.",
+    "claudeKaleSom": "30 + 10%",
+    "claudeUitleg": "10% van 30 = 3.\nErbij: 30 + 3 = €33.",
     "claudeStrategie": "procent erbij",
     "claudeThema": "Ruimte",
     "claudeAntwoordType": "geheel",
@@ -5319,15 +5320,15 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "2",
+      "fout": "3",
       "denkfout": "andere-deel-genomen"
      },
      {
-      "fout": "18",
+      "fout": "27",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "30",
+      "fout": "40",
       "denkfout": "procent-verkeerde-basis"
      }
     ],
@@ -5335,18 +5336,18 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "2",
+      "fout": "3",
       "uitleg": "Dat is alleen de stijging. Tel hem op bij de oude prijs."
      },
      {
       "stap": null,
-      "fout": "18",
+      "fout": "27",
       "uitleg": "De prijs stijgt: erbij, niet eraf."
      },
      {
       "stap": null,
-      "fout": "30",
-      "uitleg": "10% is een deel van €20, niet €10."
+      "fout": "40",
+      "uitleg": "10% is een deel van €30, niet €10."
      }
     ]
    },
@@ -5374,7 +5375,8 @@
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "V-#1026: Claude-sleutel zonder '€'",
      "W1 moeilijk woord vervangen",
-     "W11 winkel: passende spullen"
+     "W11 winkel: passende spullen",
+     "Z-#1042: dubbel item (E05 #2/#3) → andere getallen"
     ]
    },
    "opBord": false,
@@ -5397,7 +5399,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "22",
+    "verwacht": "33",
     "methode": "G8 prijs na procent",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -5414,10 +5416,10 @@
     "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
-    "22",
-    "€22",
-    "€ 22",
-    "22 euro"
+    "33",
+    "€33",
+    "€ 33",
+    "33 euro"
    ],
    "foutRegels": [
     {
@@ -5429,7 +5431,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "2"
+       "3"
       ]
      },
      "leesbaar": true
@@ -5443,7 +5445,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "18"
+       "27"
       ]
      },
      "leesbaar": true
@@ -5457,7 +5459,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "30"
+       "40"
       ]
      },
      "leesbaar": true
@@ -5718,18 +5720,18 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een trui kostte €40. De prijs stijgt met 5%. Wat kost de trui nu?",
+   "opgave": "Een trui kostte €50. De prijs stijgt met 20%. Wat kost de trui nu?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "42",
+   "antwoord": "60",
    "antwoordDetail": null,
    "hint": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
    "sterkereHint": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "2",
+     "fout": "10",
      "uitleg": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
      "uitlegSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
      "laag2": "tekstSterker",
@@ -5739,7 +5741,7 @@
     },
     {
      "stap": null,
-     "fout": "38",
+     "fout": "40",
      "uitleg": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
      "uitlegSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
      "laag2": "tekstSterker",
@@ -5749,7 +5751,7 @@
     },
     {
      "stap": null,
-     "fout": "45",
+     "fout": "70",
      "uitleg": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
      "uitlegSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
      "laag2": "tekstSterker",
@@ -5758,7 +5760,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "2 → Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs. · 38 → De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af. · 45 → Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+   "foutHintsTekst": "10 → Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs. · 40 → De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af. · 70 → Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
    "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -5778,8 +5780,8 @@
    "bronVariant": "claude-bank:T5:19567cbf-d89a-4e35-ad52-adba4172fa24",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "40 + 5%",
-    "claudeUitleg": "5% van 40 = 2.\nErbij: 40 + 2 = €42.",
+    "claudeKaleSom": "50 + 20%",
+    "claudeUitleg": "20% van 50 = 10.\nErbij: 50 + 10 = €60.",
     "claudeStrategie": "procent erbij",
     "claudeThema": "Voetbal",
     "claudeAntwoordType": "geheel",
@@ -5788,15 +5790,15 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "2",
+      "fout": "10",
       "denkfout": "andere-deel-genomen"
      },
      {
-      "fout": "38",
+      "fout": "40",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "45",
+      "fout": "70",
       "denkfout": "procent-verkeerde-basis"
      }
     ],
@@ -5804,18 +5806,18 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "2",
+      "fout": "10",
       "uitleg": "Dat is alleen de stijging. Tel hem op bij de oude prijs."
      },
      {
       "stap": null,
-      "fout": "38",
+      "fout": "40",
       "uitleg": "De prijs stijgt: erbij, niet eraf."
      },
      {
       "stap": null,
-      "fout": "45",
-      "uitleg": "5% is een deel van €40, niet €5."
+      "fout": "70",
+      "uitleg": "20% is een deel van €50, niet €20."
      }
     ]
    },
@@ -5841,7 +5843,8 @@
     "wijzigingen": [
      "D7-TAAL 'mediaan' → 'het middelste getal'; 'trainer'/'shirt' → 'kind'/'trui'",
      "N9 geldnotatie €N / €N,CC (G5)",
-     "V-#1026: Claude-sleutel zonder '€'"
+     "V-#1026: Claude-sleutel zonder '€'",
+     "Z-#1042: dubbel item (E05 #2/#3) → andere getallen"
     ]
    },
    "opBord": false,
@@ -5864,7 +5867,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "42",
+    "verwacht": "60",
     "methode": "G8 prijs na procent",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -5881,10 +5884,10 @@
     "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
-    "42",
-    "€42",
-    "€ 42",
-    "42 euro"
+    "60",
+    "€60",
+    "€ 60",
+    "60 euro"
    ],
    "foutRegels": [
     {
@@ -5896,7 +5899,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "2"
+       "10"
       ]
      },
      "leesbaar": true
@@ -5910,7 +5913,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "38"
+       "40"
       ]
      },
      "leesbaar": true
@@ -5924,7 +5927,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "45"
+       "70"
       ]
      },
      "leesbaar": true
@@ -7098,18 +7101,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een bordspel kostte €40 en kost nu €60. Met hoeveel procent is de prijs gestegen?",
+   "opgave": "Een bordspel kostte €40 en kost nu €70. Met hoeveel procent is de prijs gestegen?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "50",
+   "antwoord": "75",
    "antwoordDetail": null,
    "hint": "Hoeveel euro komt er bij de prijs? Welk deel van de oude prijs is dat?",
    "sterkereHint": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
    "foutHints": [
     {
      "stap": null,
-     "fout": "20",
+     "fout": "30",
      "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
      "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
      "laag2": "tekstSterker",
@@ -7119,7 +7122,7 @@
     },
     {
      "stap": null,
-     "fout": "33",
+     "fout": "43",
      "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
      "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
      "laag2": "tekstSterker",
@@ -7128,7 +7131,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "20 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 33 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "30 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 43 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -7148,8 +7151,8 @@
    "bronVariant": "claude-bank:T5:ee1a0072-b9aa-4815-afcc-53a290630bf3",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "van 40 naar 60 = +__%",
-    "claudeUitleg": "De stijging is 60 − 40 = 20.\n20 van 40 is 50%.",
+    "claudeKaleSom": "van 40 naar 70 = +__%",
+    "claudeUitleg": "De stijging is 70 − 40 = 30.\n30 van 40 is 75%.",
     "claudeStrategie": "stijging als procent",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -7158,15 +7161,15 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "20",
+      "fout": "30",
       "denkfout": "procent-verkeerde-basis"
      },
      {
-      "fout": "33",
+      "fout": "43",
       "denkfout": "procent-verkeerde-basis"
      },
      {
-      "fout": "33,3",
+      "fout": "42,9",
       "denkfout": "procent-verkeerde-basis"
      }
     ],
@@ -7174,12 +7177,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "20",
+      "fout": "30",
       "uitleg": "Dat is de stijging in euro's. Hoeveel procent van de oude prijs is dat?"
      },
      {
       "stap": null,
-      "fout": "33",
+      "fout": "43",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
@@ -7206,8 +7209,9 @@
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
-     "V-#1026: Claude-sleutel zonder '€'",
      "W11 winkel: passende spullen",
+     "Z-#1020: antwoord en Claude-velden bij de nieuwe getallen",
+     "Z-#1020: spreiding/dubbel (E05 #1/#3)",
      "Z-#1021: afgeronde sleutel ook met komma"
     ]
    },
@@ -7231,7 +7235,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "50",
+    "verwacht": "75",
     "methode": "G8 procent erbij/eraf",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -7248,10 +7252,10 @@
     "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
-    "50",
-    "50%",
-    "50 %",
-    "50 procent"
+    "75",
+    "75%",
+    "75 %",
+    "75 procent"
    ],
    "foutRegels": [
     {
@@ -7263,8 +7267,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "20",
-       "33"
+       "30",
+       "43"
       ]
      },
      "leesbaar": true
@@ -8463,18 +8467,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Sanne zet €200 op een spaarrekening met 3% rente per jaar. Hoeveel staat er na één jaar op de rekening?",
+   "opgave": "Sanne zet €500 op een spaarrekening met 3% rente per jaar. Hoeveel staat er na één jaar op de rekening?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "206",
+   "antwoord": "515",
    "antwoordDetail": null,
    "hint": "Procent betekent: zoveel van de honderd. Hoeveel euro rente komt er in één jaar bij?",
    "sterkereHint": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "6",
+     "fout": "15",
      "uitleg": "Dat is alleen de rente. Gevraagd is wat er na één jaar in totaal op de rekening staat.",
      "uitlegSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond.",
      "laag2": "tekstSterker",
@@ -8484,7 +8488,7 @@
     },
     {
      "stap": null,
-     "fout": "260",
+     "fout": "650",
      "uitleg": "Zo komt er tien keer te veel rente bij. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.",
      "uitlegSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond.",
      "laag2": "tekstSterker",
@@ -8494,7 +8498,7 @@
     },
     {
      "stap": null,
-     "fout": "194",
+     "fout": "485",
      "uitleg": "Rente krijg je erbij. Na een jaar staat er dus meer op de rekening dan eerst.",
      "uitlegSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond.",
      "laag2": "tekstSterker",
@@ -8503,7 +8507,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "6 → Dat is alleen de rente. Gevraagd is wat er na één jaar in totaal op de rekening staat. · 260 → Zo komt er tien keer te veel rente bij. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent. · 194 → Rente krijg je erbij. Na een jaar staat er dus meer op de rekening dan eerst.",
+   "foutHintsTekst": "15 → Dat is alleen de rente. Gevraagd is wat er na één jaar in totaal op de rekening staat. · 650 → Zo komt er tien keer te veel rente bij. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent. · 485 → Rente krijg je erbij. Na een jaar staat er dus meer op de rekening dan eerst.",
    "ouderzin": "Je kind rekent uit hoeveel geld er na een jaar met rente op de rekening staat.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -8523,8 +8527,8 @@
    "bronVariant": "claude-bank:T6:fa7305ab-82b5-4e71-922b-18d199e0095a",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "200 + 3%",
-    "claudeUitleg": "Rente: 3% van 200 = €6.\nErbij: 200 + 6 = €206.",
+    "claudeKaleSom": "500 + 3%",
+    "claudeUitleg": "Rente: 3% van 500 = €15.\nErbij: 500 + 15 = €515.",
     "claudeStrategie": "rente erbij",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -8533,15 +8537,15 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "6",
+      "fout": "15",
       "denkfout": "andere-deel-genomen"
      },
      {
-      "fout": "260",
+      "fout": "650",
       "denkfout": "komma-verschoven"
      },
      {
-      "fout": "194",
+      "fout": "485",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -8549,17 +8553,17 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "6",
+      "fout": "15",
       "uitleg": "Dat is alleen de rente. Tel hem op bij het spaargeld."
      },
      {
       "stap": null,
-      "fout": "260",
-      "uitleg": "1% van 200 is 2."
+      "fout": "650",
+      "uitleg": "1% van 500 is 5."
      },
      {
       "stap": null,
-      "fout": "194",
+      "fout": "485",
       "uitleg": "Rente komt erbij, niet eraf."
      }
     ]
@@ -8586,7 +8590,8 @@
     "wijzigingen": [
      "G8-R8/R9 het-woord/€-notatie/context",
      "N9 geldnotatie €N / €N,CC (G5)",
-     "V-#1026: Claude-sleutel zonder '€'"
+     "V-#1026: Claude-sleutel zonder '€'",
+     "Z-#1042: dubbel item (E05 #2/#3) → andere getallen"
     ]
    },
    "opBord": false,
@@ -8609,7 +8614,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "206",
+    "verwacht": "515",
     "methode": "G8 rente",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -8626,10 +8631,10 @@
     "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
-    "206",
-    "€206",
-    "€ 206",
-    "206 euro"
+    "515",
+    "€515",
+    "€ 515",
+    "515 euro"
    ],
    "foutRegels": [
     {
@@ -8641,7 +8646,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "6"
+       "15"
       ]
      },
      "leesbaar": true
@@ -8655,7 +8660,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "260"
+       "650"
       ]
      },
      "leesbaar": true
@@ -8669,7 +8674,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "194"
+       "485"
       ]
      },
      "leesbaar": true
@@ -11807,7 +11812,7 @@
    "algemeneFoutHint": "Het oude aantal is honderd procent. Hoeveel procent is het verschil daarvan?"
   }
  ],
- "hintsSyncOp": "2026-10-08T19:16:13+02:00",
+ "hintsSyncOp": "2026-10-08T19:34:53+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -11843,10 +11848,10 @@
   },
   {
    "batch": "batch9.json",
-   "md5": "9c7a01c81a4a"
+   "md5": "2bbf318d2838"
   }
  ],
- "geschrevenOp": "2026-10-08T19:16:13+02:00",
+ "geschrevenOp": "2026-10-08T19:34:53+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

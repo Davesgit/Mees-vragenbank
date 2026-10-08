@@ -34,8 +34,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.
 - **Ouderzin:** Je kind zet een punt in een rooster met twee getallen tussen haakjes.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `maar één getal` (fout = een getal uit de vraag) → Dat is maar één getal. Een stip heeft er twee: eerst hoe ver je opzij gaat, dan hoe ver omhoog.  [nieuw]
+  - `stip op de lijn van nul` (fout = stip op de lijn van nul) → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.  [nieuw]
   - `omgewisseld` (Claudes sleutel: getallen omgewisseld) → Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.  [Claude, taalfix]
+  - `maar één getal` (fout = een getal uit de vraag) → Dat is maar één getal. Een stip heeft er twee: eerst hoe ver je opzij gaat, dan hoe ver omhoog.  [nieuw]
   - `andere fout` (andere fout) → Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.  [nieuw]
 - Status: hints klaar
 

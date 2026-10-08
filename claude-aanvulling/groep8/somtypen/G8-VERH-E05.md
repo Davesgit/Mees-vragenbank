@@ -78,10 +78,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €50 → Dat is alleen de rente. Tel hem op bij het spaargeld. · €1500 → 1% van 1000 is 10. · €950 → Rente komt erbij, niet eraf.
     - **Uitleg (Claude):** Rente: 5% van 1000 = €50. Erbij: 1000 + 50 = €1050.
   - `G8-VERH-E05-claude-bank-040` (Claude T6, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Sanne zet €200 op een spaarrekening met 3% rente per jaar. Hoeveel staat er na één jaar op de rekening?
-    - **Antwoord:** 206  (controle: ok)
+    - **Opgave:** Sanne zet €500 op een spaarrekening met 3% rente per jaar. Hoeveel staat er na één jaar op de rekening?
+    - **Antwoord:** 515  (controle: ok)
     - **Fout-hints (Claude):** €6 → Dat is alleen de rente. Tel hem op bij het spaargeld. · €260 → 1% van 200 is 2. · €194 → Rente komt erbij, niet eraf.
-    - **Uitleg (Claude):** Rente: 3% van 200 = €6. Erbij: 200 + 6 = €206.
+    - **Uitleg (Claude):** Rente: 3% van 500 = €15. Erbij: 500 + 15 = €515.
 
 - **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Hoeveel euro rente komt er in één jaar bij?
 - **Hint 2 (te schrijven):** Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond.

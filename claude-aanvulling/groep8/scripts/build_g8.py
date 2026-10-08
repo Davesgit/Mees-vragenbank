@@ -332,7 +332,7 @@ def main():
             k_ = r['merge']['somtype']; r['merge']['somtype'] = 'In een plaatjesgrafiek staat één hondje voor # [ding]. [Plek] staan # hele hondjes en # half hondje. Hoeveel [ding] zijn dat?'
             slog(r, 'Oef-#1004: somtype-template', 'somtype', k_, r['merge']['somtype'])
     # Fase 1 (V-#1020/#1021/Z-#1022): E05-koppen blijven die van build 18:20:30 (hint-entries batch9 per oude kop); één kop pas met G8_KOP1014=1
-    if os.environ.get('G8_KOP1014') != '1':
+    if os.environ.get('G8_KOP1014', '1') != '1':
         for r in rows:
             c8_ = r['bron']['claudeId'][:8]
             if r['merge']['status'] == 'gemapt' and r['merge'].get('doel') == 'G8-VERH-E05' and c8_ in KOPPIN_E05 and r['merge']['somtype'] != KOPPIN_E05[c8_]['kop']:
@@ -911,6 +911,27 @@ def fix_g8(r, slog):
             for k_ in ('claudeDenkfouten', 'claudeFoutHints'):
                 for d_ in ex.get(k_) or []: d_['fout'] = km.get(d_.get('fout'), d_.get('fout'))
             slog(r, 'Z-#766/Z-#976: E03 #2 geen route (a − b, a − c) op het antwoord' + ('; antwoord 12 (spreiding)' if c8 == '69623976' else ''), 'opgave', o0, o1)
+        # Z-#1042 (Didactiek hercheck b9 19:16:15, zacht; les 402): dubbele items na het samenvoegen van de koppen → per groep andere getallen, routes nagerekend (assert).
+        # E04 #1 012/013/018 (25% korting, €60): 013 → €36 (48), 018 → €48 (64). Routes: de nieuwe prijs, procent van de nieuwe prijs erbij (na × 125/100) ≠ het antwoord.
+        if r['merge'].get('doel') == 'G8-VERH-E04' and c8 in Z1042_E04:
+            mz_ = re.search(r'kost na (\d+)% korting €(\d+)\.', r['opgave'])
+            if mz_ and int(mz_.group(2)) != Z1042_E04[c8]:
+                p_, y0_, y_ = int(mz_.group(1)), int(mz_.group(2)), Z1042_E04[c8]; a_ = Fr(y_ * 100, 100 - p_); pv_ = Fr(y_ * (100 + p_), 100)
+                assert a_.denominator == 1 and pv_.denominator == 1 and len({int(a_), int(pv_), y_}) == 3, (c8, a_, pv_)
+                a0_ = str(r['antwoord']); a_ = str(int(a_)); o0_ = r['opgave']
+                r['opgave'] = o0_[:mz_.start()] + f'kost na {p_}% korting €{y_}.' + o0_[mz_.end():]; r['antwoord'] = a_
+                if isinstance(r.get('antwoordDetail'), dict):
+                    for k_, v_ in list(r['antwoordDetail'].items()):
+                        if str(v_) == a0_: r['antwoordDetail'][k_] = a_
+                ex = r['extraVelden']; lab_ = {d_.get('fout'): d_.get('denkfout') for d_ in ex.get('claudeDenkfouten') or []}
+                for k_ in ('claudeDenkfouten', 'claudeFoutHints'):
+                    for d_ in ex.get(k_) or []:
+                        if (d_.get('denkfout') or lab_.get(d_.get('fout'))) == 'getal-overgenomen': d_['fout'] = str(y_)
+                        if k_ == 'claudeFoutHints': d_['uitleg'] = (d_.get('uitleg') or '').replace(f'€{y0_}', f'€{y_}')
+                assert sum(1 for d_ in ex.get('claudeDenkfouten') or [] if d_.get('denkfout') == 'getal-overgenomen' and d_['fout'] == str(y_)) == 1, (c8, 'Z-#1042: sleutel nieuwe prijs')
+                ex['claudeKaleSom'] = f'na {p_}% korting €{y_}, was?'
+                ex['claudeUitleg'] = f'€{y_} is {100 - p_}% van de oude prijs.\n1% is {y_} : {100 - p_} = ' + f'{y_ / (100 - p_):.2f}'.replace('.', ',') + f', dus 100% is €{a_}.'
+                slog(r, 'Z-#1042: dubbel item (E04 #1) → andere getallen', 'opgave', o0_, r['opgave'])
         # Oef-#1006/#1007/#1009 (b8, VERH-E04 #1–#7): Claudes sleutels zonder '€' (zoals het antwoord; geldigeAntwoorden met en zonder '€'),
         # 'procent-verkeerde-basis' exact (na × (100 + p) / 100: 57,60 i.p.v. €58), en geloofwaardige prijzen bij #1 (les 147).
         if r['merge'].get('doel') == 'G8-VERH-E04' and re.fullmatch(r'\d+(?:,\d+)?', str(r['antwoord'])) and re.search(r'kost na \d+% korting €\d+\. Wat was de prijs vóór de korting\?|zet €\d+ op een spaarrekening met \d+% rente per jaar\.', r['opgave']):      # #1–#7 (somtypeNrOrigineel staat hier nog niet)
@@ -1059,6 +1080,52 @@ def fix_g8(r, slog):
                 for d_ in ex.get('claudeDenkfouten') or []:
                     if d_.get('fout') == str(som_): d_['fout'] = str(nw_)
                 slog(r, "V-#1032: afleider 'som' → 'een laag te veel' (b·d·(h+1))", 'opties', str(som_), str(nw_))
+        # Z-#1042 (zacht, les 402): E05 #2 022/024/028 (€40 + 5%) en 023/026 (€20 + 10%), E05 #3 038/040 (€200, 3%) → andere getallen (E05 #1 013/034 gaat via Z1020).
+        # Elke Claude-sleutel volgt zijn eigen route (op label); assert: de oude sleutels waren precies die routes, en geen route = het nieuwe antwoord.
+        if r['merge'].get('doel') == 'G8-VERH-E05' and c8 in Z1042_E05:
+            o0_ = r['opgave']; x1_, p1_ = Z1042_E05[c8]; ex = r['extraVelden']; kz_ = lambda v: str(v or '').lstrip('€').strip()
+            m2_ = re.search(r'kostte €(\d+)\. De prijs stijgt met (\d+)%\.', o0_); m3_ = re.search(r'zet €(\d+) op een spaarrekening met (\d+)% rente per jaar\.', o0_)
+            mz_ = m2_ or m3_; x0_, p0_ = int(mz_.group(1)), int(mz_.group(2))
+            if (x0_, p0_) != (x1_, p1_):
+                def rt_(x, p):
+                    d = Fr(x * p, 100); assert d.denominator == 1, (c8, x, p); d = int(d)
+                    return (x + d, {'andere-deel-genomen': d, 'verkeerde-bewerking': x - d, 'procent-verkeerde-basis': x + p}) if m2_ else (x + d, {'andere-deel-genomen': d, 'verkeerde-bewerking': x - d, 'komma-verschoven': x + 10 * d})
+                a0_, R0_ = rt_(x0_, p0_); a1_, R1_ = rt_(x1_, p1_)
+                assert str(a0_) == kz_(r['antwoord']) and a1_ not in R1_.values() and len(set(R1_.values())) == 3 and a1_ not in (x1_, p1_), (c8, a1_, R1_)
+                for d_ in ex.get('claudeDenkfouten') or []: assert kz_(d_.get('fout')) == str(R0_[d_['denkfout']]), (c8, 'Z-#1042: oude sleutel ≠ route', d_)
+                lab_ = {kz_(d_.get('fout')): d_['denkfout'] for d_ in ex.get('claudeDenkfouten') or []}
+                euro_ = lambda oud, nw: ('€' + nw) if str(oud).startswith('€') else nw
+                for d_ in ex.get('claudeDenkfouten') or []: d_['fout'] = euro_(d_['fout'], str(R1_[d_['denkfout']]))
+                for f_ in ex.get('claudeFoutHints') or []:
+                    f_['fout'] = euro_(f_['fout'], str(R1_[lab_[kz_(f_.get('fout'))]]))
+                    f_['uitleg'] = (f_.get('uitleg') or '').replace(f'{p0_}% is een deel van €{x0_}, niet €{p0_}.', f'{p1_}% is een deel van €{x1_}, niet €{p1_}.').replace(f'1% van {x0_} is {x0_ // 100}.', f'1% van {x1_} is ' + f'{x1_ / 100:g}'.replace('.', ',') + '.')
+                n_ = o0_[:mz_.start()] + (f'kostte €{x1_}. De prijs stijgt met {p1_}%.' if m2_ else f'zet €{x1_} op een spaarrekening met {p1_}% rente per jaar.') + o0_[mz_.end():]
+                r['opgave'] = n_; o0a_ = r['antwoord']; r['antwoord'] = euro_(r['antwoord'], str(a1_))
+                if isinstance(r.get('antwoordDetail'), dict):
+                    for k_, v_ in list(r['antwoordDetail'].items()):
+                        if str(v_) == str(o0a_): r['antwoordDetail'][k_] = r['antwoord']
+                d1_ = R1_['andere-deel-genomen']
+                ex['claudeKaleSom'] = f'{x1_} + {p1_}%'
+                ex['claudeUitleg'] = (f'{p1_}% van {x1_} = {d1_}.\nErbij: {x1_} + {d1_} = €{a1_}.' if m2_ else f'Rente: {p1_}% van {x1_} = €{d1_}.\nErbij: {x1_} + {d1_} = €{a1_}.')
+                slog(r, 'Z-#1042: dubbel item (E05 #2/#3) → andere getallen', 'opgave', o0_, n_)
+        # V-#1040 (Didactiek hercheck b8 19:16:15, verplicht; les 400): na V-#1032 is goed = middelste in 78/151 → in 018/026/035/080 de lage afleider → een route boven
+        # het antwoord (goed wordt de kleinste), met een Claude-tekst die al bestaat (Claude-sleutel fout + routetekst, zoals V-#1032).
+        # Assert per item: de oude waarde staat erin, de nieuwe waarde is precies die route en geen andere route, ≠ het antwoord, ≠ een andere optie.
+        if c8 in V1040 and ((r.get('visual') or {}).get('jsRender') or {}).get('soort') == 'bouwsel':
+            jr_ = r['visual']['jsRender']; D_, H_, B_ = jr_['diep'], jr_['hoog'], jr_['breed']; oud_, route_ = V1040[c8]
+            R_ = BR.routes(D_, H_, B_); nw_ = R_[route_]; ops_ = [o_['tekst'] for o_ in r['opties']]
+            if str(oud_) in ops_:
+                assert [k_ for k_, v_ in R_.items() if v_ == nw_] == [route_] and nw_ != D_ * H_ * B_ and str(nw_) not in ops_ and str(D_ * H_ * B_) == str(r['antwoord']), (c8, oud_, route_, nw_, ops_)
+                r['opties'] = [dict(o_, tekst=str(nw_)) if o_['tekst'] == str(oud_) else o_ for o_ in r['opties']]
+                r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+                tk_ = {'laag te veel': 'Je telde een laag te veel. Tel nog eens hoeveel lagen er op elkaar liggen.', 'laag te weinig': 'Je telde een laag te weinig. Tel nog eens hoeveel lagen er op elkaar liggen.',
+                       'drie kanten': 'Je telde alleen de blokjes die je aan de buitenkant ziet. Het bouwwerk is vol, dus er zitten ook blokjes binnenin.'}[route_]
+                for f_ in ex.get('claudeFoutHints') or []:
+                    if f_.get('fout') == str(oud_): f_.update(fout=str(nw_), uitleg=tk_)
+                for d_ in ex.get('claudeDenkfouten') or []:
+                    if d_.get('fout') == str(oud_): d_['fout'] = str(nw_)
+                assert any(f_.get('fout') == str(nw_) for f_ in ex.get('claudeFoutHints') or []), (c8, 'V-#1040: Claude-sleutel niet gevonden')
+                slog(r, f"V-#1040: lage afleider → '{route_}'", 'opties', str(oud_), str(nw_))
         # b9-datapunten (Oefeningen 8 okt, Oef-#1014–#1020) + Didactiek review-batch9 (V-#1020–#1027, Z-#1021/#1022/#1024)
         if r['merge'].get('doel') == 'G8-VERH-E05':
             o = r['opgave']; nr_ = KOPPIN_E05.get(r['bron']['claudeId'][:8], {}).get('id', '')[-3:]      # ids komen later; de bevroren kop-pin kent het id
@@ -1244,8 +1311,13 @@ V1021 = {'012': {'oud': 'Een bal kostte €20 en kost nu €25. Met hoeveel proc
                  'antwoord': '25', 'sleutels': ['10', '20'], 'kaleSom': 'van 40 naar 50 = +__%', 'uitleg': 'De stijging is 50 − 40 = 10.\n10 van 40 is 25%.'},
          '015': {'oud': 'Een ei kostte €20 en kost nu €24. Met hoeveel procent is de prijs gestegen?', 'opgave': 'Een ei kostte €30 en kost nu €36. Met hoeveel procent is de prijs gestegen?',
                  'antwoord': '20', 'sleutels': ['6', '17'], 'kaleSom': 'van 30 naar 36 = +__%', 'uitleg': 'De stijging is 36 − 30 = 6.\n6 van 30 is 20%.'}}      # V-#1021; 'ei' → 'boek' via V1020
-Z1020 = {'9a772298': 92, 'db8f17ef': 168, 'ebb7cc5c': 78, '5a73879c': 60}      # Z-#1020: 014 €80→€92 (15%), 016 €120→€168 (40%), 018 €60→€78 (30%), 043 50→60 (20%)
+Z1020 = {'9a772298': 92, 'db8f17ef': 168, 'ebb7cc5c': 78, '5a73879c': 60, 'ee1a0072': 70}      # + Z-#1042: 034 (bordspel) €40→€70 (75%), was dubbel met 013      # Z-#1020: 014 €80→€92 (15%), 016 €120→€168 (40%), 018 €60→€78 (30%), 043 50→60 (20%)
 KOPPIN_E05 = json.load(open(os.path.join(os.path.dirname(HERE), 'bevroren', 'kop_e05_fase1.json'), encoding='utf-8'))['items']
+V1040 = {'1a8192c9': (7, 'laag te veel'), '272c995d': (24, 'laag te veel'), '2a4533b9': (7, 'drie kanten'), '7b4f6289': (9, 'drie kanten')}      # V-#1040: MEET-V01 #1 018/026/035/080
+# Z-#1044 (zacht) niet gedaan: bij 062 (2×7×2) is 32 de enige route boven het antwoord 28 ('laag te veel' = 'drie kanten'); elke andere route ligt eronder
+# (24, 22, 14, 11, 4), dan wordt goed de grootste (70 > 69, b6 Z-#891 FAIL). Twee routes op 32 blijven dus staan (tekst 'laag te veel' is waar).
+Z1042_E04 = {'5b3d9b42': 36, 'd19d8dde': 48}      # Z-#1042: E04 #1 013 (rugzak) €60 → €36 (48), 018 (hondenmand) €60 → €48 (64)
+Z1042_E05 = {'28734363': (60, 5), '19567cbf': (50, 20), '8cbb8ff1': (30, 10), 'fa7305ab': (500, 3)}      # Z-#1042: E05 #2 024 bal €60 + 5% (63), 028 trui €50 + 20% (60), 026 boek €30 + 10% (33); E05 #3 040 Sanne €500, 3% (515)
 V1032 = {'023be4f1': (15, 144), '0e717574': (13, 100), '0e749130': (10, 48), '0f7cd32b': (15, 140), '15f71b96': (13, 90), '197e0468': (12, 56), '1dddba65': (14, 108),
          '2432ac03': (15, 150), '291b2b8b': (10, 48), '298cd898': (13, 84), '29c3bd48': (13, 84), '3449ddfd': (13, 100), '38f2d9c6': (10, 45), '397449da': (11, 60),
          '3e70fde2': (10, 45), '3efc947b': (11, 42), '41023e89': (16, 147), '5153c129': (14, 120), '54171e5e': (15, 144), '5626d9b4': (11, 32), '58c0842d': (9, 30),
@@ -1267,7 +1339,7 @@ KOP478 += [(r'^(\[wie\] zet €# op een spaarrekening met #% rente per jaar\. Ho
 # Oef-#1014/#1015/#1016 (één kop voor prijsstijging, rente-namen, 'zak noten'): NIET in deze build. De kopregels laten batch9 #1/#18, #5–#17/#20,
 # #2/#4/#9/#10/#21 en batch8 #1/#6 op één kop vallen; sync_hint_keys voegt nooit stil samen (#30) → apply_hints stopt. Eerst één hint-entry per
 # samengevoegde kop (Oefeningen, patch_batch8/9), dan deze regels aanzetten (G8_KOP1014=1):
-if os.environ.get('G8_KOP1014') == '1':
+if os.environ.get('G8_KOP1014', '1') == '1':
     KOP478 = [(r'^Een zak noten (kost|kostte) ', r'Een [ding] \1 ')] + KOP478
     KOP478 += [(r'^(Een \[ding\] kostte €#\. De prijs stijgt met #%\. Wat kost) (?:de|het) [^?]+?( nu\?)$', r'\1 [ding]\2'),
                (r'^(?:Daan|Milan|Sanne|Fatima) (zet €# op een spaarrekening met #% rente per jaar\. Hoeveel staat er na één jaar op de rekening\?)$', r'[wie] \1')]

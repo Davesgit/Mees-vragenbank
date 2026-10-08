@@ -19,7 +19,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G8-MEET-V01-claude-bank-026` (Claude K8, bank, niveau 1 → basis)
     - **Opgave:** Dit bouwwerk is helemaal vol. Hoeveel blokjes zijn er gebruikt?
     - **Tekening:** `{"diep": 3, "hoog": 5, "breed": 2, "soort": "bouwsel"}`
-    - **Opties:** A) 24 · B) 31 · C) 30
+    - **Opties:** A) 36 · B) 31 · C) 30
     - **Antwoord:** 30  (controle: n.v.t.)
     - **Fout-hints (Claude):** 24 → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet. · 31 → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.
   - `G8-MEET-V01-claude-bank-045` (Claude K8, bank, niveau 1 → basis)
