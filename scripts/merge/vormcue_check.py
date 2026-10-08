@@ -99,6 +99,16 @@ def nooit(items):
             if h == 'midden' and not any(c['groot'] or c['klein'] or c['midden'] for c in L): continue
             if not any(c[h] for c in L): I.append(f'{k[0]} #{k[1]}: goed is nooit de {nm} (0/{len(L)})')
     return I
+# Z-#1063 (Didactiek bij V-#1060): somtypen met structureel maar twee eerlijke posities moeten die 1 : 1 houden (marge 0 onder de 50 %-regel).
+BALANS = {('G8-VERH-E06', 1): ('midden', 'groot')}      # E06 #1: kleinste kan niet met een echte denkfout (alleen 'komma drie plekken' ligt boven het antwoord)
+def balans(items, tabel=None):
+    """FAIL als de twee posities van een BALANS-somtype meer dan 1 uit elkaar liggen (bij even n precies gelijk)."""
+    F = []
+    for k, t in posities(items).items():
+        if k not in (tabel or BALANS): continue
+        a, b = (tabel or BALANS)[k]
+        if abs(t[a] - t[b]) > t['n'] % 2: nm = {'klein': 'kleinste', 'midden': 'middelste', 'groot': 'grootste'}; F.append(f"Z-#1063 {k[0]} #{k[1]}: {nm[a]} {t[a]} / {nm[b]} {t[b]} van {t['n']} — moet 1 : 1 (twee eerlijke posities, marge 0)")
+    return F
 def fouten(items): return _oordeel(items)[0]
 def waarschuwingen(items): return _oordeel(items)[1]
 def rapport(items, toon=True, ernst='FAIL'):
@@ -133,6 +143,9 @@ MUTANTEN_Z = [('Z-#1050 M6: 12× [€1, 90 cent, 50 cent], goed = €1 (echt de 
               ('Z-#1050 M5: 12× [40 cent, €3, €40], goed = 40 cent (echt de kleinste)', [_it(11, '40 cent', ['40 cent', '€3', '€40'])] * 12, 'de kleinste optie'),
               ('Z-#1050: G4-MEET-E07-vorm, goed = grootste centbedrag naast een €-afleider', [_it(13, g, o) for g, o in [('80 cent', ['75 cent', '€80', '80 cent']), ('60 cent', ['€6', '50 cent', '60 cent'])] * 6], 'het grootste bedrag'),
               ('Z-#1051 M3-vorm: grootste 11/18 (p ≈ 0,014) → WARN', [_it(12, '9', ['9', '5', '3'])] * 11 + [_it(12, '5', ['9', '5', '3'])] * 7, 'WARN')]
+MUTANTEN_BAL = [('Z-#1063: 49 middelste / 47 grootste', [_it(30, g, o) for g, o in [('92,5%', ['92,5%', '925%', '0,925%'])] * 49 + [('52%', ['52%', '5,2%', '0,52%'])] * 47], True),
+                ('Z-#1063: 48 / 48', [_it(30, g, o) for g, o in [('92,5%', ['92,5%', '925%', '0,925%'])] * 48 + [('52%', ['52%', '5,2%', '0,52%'])] * 48], False)]
+def balans_mutanten_ok(): return all(bool(balans(L, {('MUT', 30): ('midden', 'groot')})) == v for _, L, v in MUTANTEN_BAL)
 def mutanten_z_ok():
     uit = []
     for n, L, v in MUTANTEN_Z:
@@ -147,4 +160,5 @@ def _mut_ok(n, L, v):
 def mutanten_ok(): return all(_mut_ok(n, L, v) for n, L, v in MUTANTEN)
 if __name__ == '__main__' and '--mutanten' in sys.argv:
     for n, L, v in MUTANTEN: print(('ok  ' if _mut_ok(n, L, v) else 'MIS ') + n, fouten(L))
-    print('mutanten VORMCUE:', sum(_mut_ok(n, L, v) for n, L, v in MUTANTEN), '/', len(MUTANTEN), '· zacht Z-#1050/#1051:', sum(mutanten_z_ok()), '/', len(MUTANTEN_Z)); sys.exit(0 if mutanten_ok() and all(mutanten_z_ok()) else 1)
+    print('mutanten Z-#1063 balans:', sum(bool(balans(L, {('MUT', 30): ('midden', 'groot')})) == v for _, L, v in MUTANTEN_BAL), '/', len(MUTANTEN_BAL))
+    print('mutanten VORMCUE:', sum(_mut_ok(n, L, v) for n, L, v in MUTANTEN), '/', len(MUTANTEN), '· zacht Z-#1050/#1051:', sum(mutanten_z_ok()), '/', len(MUTANTEN_Z)); sys.exit(0 if mutanten_ok() and all(mutanten_z_ok()) and balans_mutanten_ok() else 1)

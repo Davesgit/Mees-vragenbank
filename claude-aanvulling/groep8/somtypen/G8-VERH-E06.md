@@ -10,6 +10,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 
 ## Somtype 1: Schrijf # in procenten.
 
+> **Z-#1063 (vormcue, marge 0):** dit somtype heeft maar twee eerlijke posities voor het goede antwoord: middelste en grootste. Kleinste kan niet met een echte denkfout: alleen 'komma drie plekken' ligt boven het antwoord. Na V-#1060 staat het op 0 / 48 / 48 (kleinste / middelste / grootste). Een nieuw item moet middelste en grootste op 1 : 1 houden, anders vuurt de vormcue-regel (> 50 %, p < 0,01). Guard: `check_merge_notatie` Z-#1063. 'Nooit de kleinste' blijft om deze reden INFO.
+
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “Schrijf # in procenten.” (koppeling: claudeId)
 - Items: **96** · Claude-doelen: B13 (96) · regel: G8-P00-park-G7
 - Getallenruimte: procenten · type: meerkeuze

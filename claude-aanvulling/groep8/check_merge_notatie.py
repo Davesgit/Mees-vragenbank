@@ -200,6 +200,10 @@ if __name__ == '__main__':
     import vormcue_check as _VC      # V-#984 (Didactiek b8 deel B, les 372): goede optie niet aan zijn vorm te herkennen (decimalen, lengte) (FAIL)
     fail = (_VC.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     fail = (not _VC.mutanten_ok()) or fail      # mutanten 3/3 (oud E06 #1 FAIL)
+    _B1063 = _VC.balans([_it for _p in files for _it in json.load(open(_p))['items']])      # Z-#1063 (bij V-#1060): E06 #1 middelste : grootste = 1 : 1 (FAIL)
+    print(f"Z-#1063 BALANS (twee eerlijke posities, marge 0): {len(_B1063)} (FAIL) · mutanten {sum(bool(_VC.balans(_L, {('MUT', 30): ('midden', 'groot')})) == _v for _, _L, _v in _VC.MUTANTEN_BAL)}/{len(_VC.MUTANTEN_BAL)}")
+    for _x in _B1063: print('  FAIL', _x)
+    fail = bool(_B1063) or (not _VC.balans_mutanten_ok()) or fail
     import bouwsel_routes as _BR      # Oef-#1000/V-#891 (batch 6, 16:54): vol bouwwerk, geen foute route (ook 'drie kanten') op het goede antwoord (FAIL)
     fail = (_BR.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     fail = any(bool(_BR.fouten(*_m)) != _v for _n, _m, _v in _BR.MUTANTEN) or fail      # mutanten 6/6 (oud 007, 047, 066)

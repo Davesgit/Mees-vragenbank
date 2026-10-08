@@ -452,6 +452,10 @@ def main():
     for f in os.listdir(f'{OUT}/somtypen'):
         p = f'{OUT}/somtypen/{f}'; s = open(p).read()
         open(p, 'w').write(s.replace('onze G7-bank', 'onze G8-bank').replace('Uit de G6-park', 'Uit de G6-park (n.v.t.)').replace('Lijkt op een G7-pilot', 'Lijkt op een G8-pilot'))
+    p = f'{OUT}/somtypen/G8-VERH-E06.md'; s = open(p).read(); k_ = '## Somtype 1: Schrijf # in procenten.\n'
+    if k_ in s and 'Z-#1063' not in s:      # Z-#1063 (Didactiek, bij V-#1060): marge 0
+        s = s.replace(k_, k_ + "\n> **Z-#1063 (vormcue, marge 0):** dit somtype heeft maar twee eerlijke posities voor het goede antwoord: middelste en grootste. Kleinste kan niet met een echte denkfout: alleen 'komma drie plekken' ligt boven het antwoord. Na V-#1060 staat het op 0 / 48 / 48 (kleinste / middelste / grootste). Een nieuw item moet middelste en grootste op 1 : 1 houden, anders vuurt de vormcue-regel (> 50 %, p < 0,01). Guard: `check_merge_notatie` Z-#1063. 'Nooit de kleinste' blijft om deze reden INFO.\n", 1)
+        open(p, 'w').write(s)
     twijfel_md(cats, bui, t7)
     # Oef-#493 (G8 batch 5): vaste volgorde voor patchrondes die van de data afhangen. 1 data (hierboven) → 2 sync → 3 alle hints/patch_batch*.py
     # (idempotent; ze zien de nieuwe koppen en items) → 4 opnieuw sync (een patch kan een kop of nrOrigineel raken) → 5 apply. Elke fase staat met tijd in
@@ -1066,6 +1070,17 @@ def fix_g8(r, slog):
                 for f_ in ex.get('claudeFoutHints') or []:
                     if f_.get('fout') == oud_: f_.update(fout=nw_, uitleg='Dat is tien keer te groot. Reken de noemer om naar honderd en doe met de teller precies hetzelfde.')
                 slog(r, "V-#1000: afleider ': 10' → '× 10'", 'opties', oud_, nw_)
+        # V-#1060 (Didactiek G8-hercheck ec0acc1, verplicht; besluit 19:57 één regel voor alle posities): E06 #1 goed = middelste 49/96. Precies één item:
+        # 005 «Schrijf 0,925 in procenten.» afleider '925%' (komma drie plekken) → '9,25%' (komma één plek), zelfde plek; Claude-sleutel komma-verschoven gaat mee.
+        # Daarna kleinste 0 · middelste 48 · grootste 48 (Z-#1063: marge 0, niet nog een item wisselen: 47/49 = FAIL).
+        if c8 == '066e5862' and r['opgave'] == 'Schrijf 0,925 in procenten.' and any(o_['tekst'] == '925%' for o_ in r['opties']):
+            assert str(r['antwoord']) == '92,5%' and '9,25%' not in [o_['tekst'] for o_ in r['opties']], ('V-#1060', r['antwoord'], r['opties'])
+            r['opties'] = [dict(o_, tekst='9,25%') if o_['tekst'] == '925%' else o_ for o_ in r['opties']]
+            r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+            for k_ in ('claudeDenkfouten', 'claudeFoutHints'):
+                for d_ in ex.get(k_) or []:
+                    if d_.get('fout') == '925%': d_['fout'] = '9,25%'
+            slog(r, "V-#1060: afleider '925%' → '9,25%' (komma één plek in plaats van drie)", 'opties', '925%', '9,25%')
         # V-#1032 (Didactiek hercheck b8 19:01:49, Z-#1034 → verplicht; les 398): MEET-V01 #1 goed = grootste in 94/151; in 25 items de 'som'-afleider (d + h + b)
         # → 'een laag te veel' d·b·(h+1) (zelfde plek). Per item nagerekend: nieuwe afleider ≠ antwoord en ≠ andere opties (assert); grootste → 69/151.
         if c8 in V1032 and ((r.get('visual') or {}).get('jsRender') or {}).get('soort') == 'bouwsel':
