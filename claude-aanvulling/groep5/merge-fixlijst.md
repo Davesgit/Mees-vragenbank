@@ -437,3 +437,25 @@ Somtypenummers van Didactiek = data-somtype; tussen haakjes nrOrigineel (les 89)
 | 329 | Overzicht (data) | E05 #32 (32) 053: «In een tabel staat …» maar `visual.nodig` = false en geen tabel. De hints noemen geen tabel ('Tel de getallen van alle dagen bij elkaar op'), dus het ligt aan de opgave: tabel toevoegen of herschrijven («Op de kinderboerderij tellen ze de bezoekers: …»). Ook: `nr` is niet uniek (138 batch-7-items): bord/app/rapporten op `id` | open |
 | 321 | Dave | niveau E07 #6 (19), TT × TT schatten: 'toepassen' of naar G6 | open (twijfel) |
 | 231 | Overzicht | dunne somtypes E05 #32, E07 #12 (22), E05 #27 (31), #25 (30), E09 #2 | open (bestaand) |
+
+## Ronde 9 (8 okt 2026, build 10:57:42): status van ronde 7b (Didactiek recheck-ronde7b), uitgevoerd door Overzicht
+Code: `scripts/fixlijst_g5_r7b.py` (nu ingehaakt in `build_g5.py`), log `logs/fixlijst_g5_r9.json`, guards `guards_r7b` (een fout stopt de build). Stand: check_hints 139 klaar · 0 open · 0 FAIL · 0 WARN · 130 INFO; check_merge_notatie ALLES OK; #121 0; generator 66 items 0 FAIL.
+
+| # | Stand |
+|---|---|
+| 300 | ✓ 27 open geld-items met `geldInvoer` en de standaard-accepteerlijst |
+| 301 | ✓ 14 items: 13 schatsommen met andere getallen (E05 001, 008, 010, 015, 018, 019, 020, 022, 027, 030, 034; E07 021, 022) en E09 #1 032; guard: de foute route geeft nooit het goede antwoord |
+| 302 | ✓ 11 opties vervangen; guard: geen getoonde optie > 1000 in G5-GET |
+| 322 | ✓ E05 010/008 nieuwe getallen; E07 #6 014/017/021 zijn naar G6 (#321). Guard: antwoord + sleutel ≤ 1000 |
+| 323 | ✓ 9 items met €20 of €50. 024 (5 × €5) blijft €100: met €50 is het wisselgeld gelijk aan de kosten (#301) |
+| 324 | ✓ 4 contexten (sportfeest, klassenbibliotheek, knikkers, zakken) |
+| 325 | ✓ E09 #2 002/016: het getal dat eraf gaat is één kleiner (6 → 5, 5 → 4), de 'opgeteld'-sleutel komt niet meer uit de vraag. **Voor Oefeningen (#353):** de tekst «Je hebt opgeteld.» kan terug in de entry |
+| 326 | ✓ geen term meer al rond in E05 #13 en E07 021/022 (guard) |
+| 327 | ✓ 40 items naar 'toepassen' (3 cijfers of onthouden/lenen; alleen omhoog). E07 #9/#10 in de progressie: **voor Leerlijn** |
+| 329 | ✓ 053 zonder 'tabel'; README: bord/app/rapporten op `id`, niet op `nr` |
+| 321/354 | ✓ besluit: E07 #6 (19), 10 items → G6-GET-E06 (park-G6, geparkeerd in `hints/koppeling_merge.json`) |
+| 235/231 | ✓ 28 generator-items; elk dun somtype heeft nu ≥ 8 items (E05 nrO 30/31/32, E07 nrO 22, E09 nrO 2) |
+| 355 | ✓ `hintsSyncOp` en `hintsBatches` (md5) in gemapt en per_doel, G5–G8 |
+| 303–306, 320, 328 | ✓ ronde 7b (Oefeningen) |
+
+Bugfix: `park_g7_hints.py` gaf de E07-hints aan 220 G7-items; nu alleen entries met 'naar' G7.

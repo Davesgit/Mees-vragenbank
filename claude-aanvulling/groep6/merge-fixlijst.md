@@ -274,7 +274,7 @@ Motor (`fout_regels.py`, gelijk in g5/g6/g7/g8): regressie G5 4657 items, 0 ande
 | 274, 275 (a, b, d), 277 (tekst), 278 (H1), 279, 282, 283 | Oefeningen | zacht | ✓ |
 | 275c | Overzicht (motor) | regel 'getal net boven de stip' (VBN-E02 #2, 10 sleutels) | open |
 | 277 | Overzicht (motor/app) | regel 'fout = de stukken samen met noemer één' (10 sleutels x/1, nu LET OP); kale '5' als 5/1; plaatje zonder kleur | open |
-| 271 | Overzicht | regels in de entry van VERH-E01 (de motorregel bestaat al, ronde 8); tot dan krijgt 002-9 'verhouding niet gelijk' | open, niet aangeraakt |
+| 271 | Overzicht | regels in de entry van VERH-E01 (de motorregel bestaat al, ronde 8) | ✓ ronde 9 (build 10:58:34): via V-#331 hebben 001–004 de getallen en opties van Didactiek (€6/€15/€11, €8/€7/€4, 24/10/4 glazen, 15/8/5 L); elke foute optie heeft een eigen sleutel. Guard `guard331` (build) en `ronde9()` in FIX6 (FAIL). De oude zin over 002-9 vervalt |
 
 ## Oefeningen 23:30: ronde 4d (recheck-ronde3d4c-didactiek.md) en ronde 6b (review-batch6-didactiek.md), zie review-batch6b.md
 | # | Wie | Wat | Stand |
@@ -287,3 +287,21 @@ Motor (`fout_regels.py`, gelijk in g5/g6/g7/g8): regressie G5 4657 items, 0 ande
 | 235 | Overzicht | MKU-E01 #3/#4 samenvoegen met #1 (besluit Didactiek) | open; de teksten passen al |
 | 234 | Overzicht | commentaar 'letter = rij' in de motor (zacht) | open |
 | 299 | Overzicht (niveau) | progressie MKU-E03: 74 % basis; voorstel basis ≤ 20 blokjes en hoogste toren ≤ 3, toepassen 21–37, kritisch ≥ 38 of tekeneis B | open |
+
+## Ronde 9 (8 okt 2026, build 10:58:34; Didactiek recheck-ronde5c en recheck-ronde4d6b; uitgevoerd door Overzicht)
+Alles zit in de build (`scripts/fixlijst_g6.py`, blok 'ronde 9'). `guards_r9` stopt de build bij een fout; `check_fixlijst_g6.py` → `ronde9()` controleert hetzelfde na de build (FIX6). Stand: check_hints 0 FAIL · 0 WARN · 0 open; check_merge_notatie ALLES OK; FIX6 0.
+
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| 331 | Overzicht (data) | **verplicht.** VERH-E01 001–004: getallen en opties van Didactiek (V-#331) | ✓ 4 items; guard (FAIL) |
+| 231/281 | Overzicht (data) | dunne VERH-somtypes **aanvullen** (niet samenvoegen) | ✓ 24 generator-items: VERH-E01 #1 4 → 15, VERH-E02 strook +6, deel van een hoeveelheid +7. Guard: E01 #1 12–15 items, E02 #3/#4 ≥ 9, beide richtingen, geen 'schaal'. `na_alle` faalt als `aanvul231` ontbreekt |
+| 321/354 | Overzicht (data) | G5-GET-E07 #6 (TT × TT schatten) naar G6 | ✓ 10 items `G6-GET-E06-claude-bank-uitg5-001…010`, toepassen, nieuw somtype nrO 8 (`bevroren/somtype_nr_v5.json`), hints via `hints/batch7.json` (kopie van de G5-entry) |
+| 235 | Overzicht (selectie) | MKU-E01 #3/#4 samenvoegen met #1 | ✓ 12 items (ook die uit de aanvulling uit G8); `hints/koppeling_merge.json` samengevoegd 3 → 1, 4 → 1 |
+| 276 | Overzicht (data) | VBN-E02 #1: aantal streepjes gelijk verdeeld; bordtitel | ✓ 1–5 streepjes elk 12 keer (`bevroren/vbn276_streepjes_v1.json`, 17 items opnieuw gekozen). Merge-bordtitel 'Lijngrafiek aflezen'. De canonieke titel in `rekenen-groep6/bank/G6-VBN-E02.md` ('Beelddiagram, cirkeldiagram en lijngrafiek aflezen') is voor Leerlijn |
+| 332 | Overzicht (data) | antwoord gelijk aan een maandwaarde uit de vraag | ✓ o.a. 041/044/058; guard: het antwoord is nooit een waarde van de twee maanden uit de vraag |
+| 333 | Overzicht (motor) | VBN #1/#3: regels 'fout = de andere maand uit de vraag' en 'fout = de som van een deel van de maanden' | ✓ motor (G5–G8 gelijk) en entries: 120 items andere regels, 20 items andere fout-hint |
+| 344 | Overzicht (niveau) | MKU-E03: basis alleen bij < 3 torens achter een hogere | ✓ 14 items uit 'basis' |
+| 330 | Oefeningen | VBN #1: teksten V-#330 | regel staat erin met de tekst van Didactiek; **eindtekst: wacht op Oefeningen** |
+| 334 | Oefeningen | zacht, tekst | **wacht op Oefeningen** |
+| 277, 295 | Overzicht (app) | eisen voor de app | ✓ in README.md ('Eisen voor de app, aanvulling ronde 9') |
+| hm/dl | Leerlijn/Oefeningen | hm en dl (en kommagetallen in lengtematen) zitten niet in de data | **wacht op Oefeningen** (somtypes en teksten); doelen/bordtitels via Leerlijn |

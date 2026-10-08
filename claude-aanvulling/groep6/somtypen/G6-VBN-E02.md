@@ -1,4 +1,4 @@
-# G6-VBN-E02 — Beelddiagram, cirkeldiagram en lijngrafiek aflezen
+# G6-VBN-E02 — Lijngrafiek aflezen
 
 Onze omschrijving: Beelddiagram (beeld >1); eenvoudige cirkel + lijngrafiek · in onze bank: 8 items
 
@@ -18,9 +18,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Voorbeelden:
   - `G6-VBN-E02-claude-bank-049` (Claude G3, bank, niveau 3 → toepassen)
     - **Opgave:** Hoeveel kaartjes waren er in maart meer dan in februari?
-    - **Tekening:** `{"max": 200, "soort": "lijngrafiek", "punten": [{"naam": "januari", "waarde": 30}, {"naam": "februari", "waarde": 80}, {"naam": "maart", "waarde": 110}, {"naam": "april", "waarde": 160}], "cijfer_om": 50, "perstreep": 10, "maxVoor276": 100, "titel": "Verkochte kaartjes per maand"}`
-    - **Opties:** A) 3 · B) 30 · C) 20
-    - **Antwoord:** 30  (controle: ok)
+    - **Tekening:** `{"max": 100, "soort": "lijngrafiek", "punten": [{"naam": "januari", "waarde": 20}, {"naam": "februari", "waarde": 10}, {"naam": "maart", "waarde": 60}, {"naam": "april", "waarde": 80}], "cijfer_om": 50, "perstreep": 10, "maxVoor276": 100, "titel": "Verkochte kaartjes per maand"}`
+    - **Opties:** A) 5 · B) 50 · C) 40
+    - **Antwoord:** 50  (controle: ok)
     - **Fout-hints (Claude):** —
   - `G6-VBN-E02-claude-bank-016` (Claude G3, bank, niveau 3 → toepassen)
     - **Opgave:** Hoeveel broodjes waren er in maart meer dan in februari?
@@ -36,6 +36,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `de tweede maand` (Claudes sleutel: getal-overgenomen) → Dat is het aantal in de tweede maand van de vraag. Hoeveel waren het in de eerste maand? Haal het aantal van de eerste maand ervan af: dat is wat erbij kwam.  [Claude, taalfix]
   - `opgeteld` (Claudes sleutel: verkeerde-bewerking) → Je hebt de twee maanden bij elkaar opgeteld. De vraag is hoeveel er bij kwamen. Hoeveel meer is de tweede maand dan de eerste?  [Claude, taalfix]
   - `de tweede maand (regel)` (fout = de tweede maand uit de vraag) → Dat is het aantal in de tweede maand van de vraag. Hoeveel waren het in de eerste maand? Haal het aantal van de eerste maand ervan af: dat is wat erbij kwam.  [nieuw]
+  - `de andere maand (regel)` (fout = de andere maand uit de vraag) → Dat is het aantal van één maand uit de vraag. De vraag is hoeveel meer het in de ene maand was dan in de andere. Haal het kleinste aantal van het grootste aantal af.  [nieuw]
   - `streepjes geteld` (fout = antwoord : perstreep) → Is dat het aantal streepjes? Elk streepje is meer dan één. Hoeveel is elk streepje? Reken dan het aantal streepjes keer dat getal.  [nieuw]
   - `één streepje te veel` (fout = antwoord + perstreep) → Dat is één streepje te veel. Lees de twee stippen nog eens af en tel de streepjes goed.  [nieuw]
   - `één streepje te weinig` (fout = antwoord − perstreep) → Dat is één streepje te weinig. Lees de twee stippen nog eens af en tel de streepjes goed.  [nieuw]
@@ -113,5 +114,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `één maand (regel)` (fout = de waarde van één maand) → Is dat het aantal van één maand? De vraag gaat over alle maanden samen. Tel de aantallen van alle maanden bij elkaar op.  [nieuw]
   - `streepjes geteld` (fout = antwoord : perstreep) → Is dat het aantal streepjes? Elk streepje is meer dan één. Hoeveel is elk streepje? Lees zo bij elke maand af hoeveel het er waren, en tel die aantallen op.  [nieuw]
   - `anders afgelezen` (Claudes sleutel: grafiek-verkeerd-afgelezen) → Lees bij elke maand de stip goed af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Tel daarna alle maanden op.  [Claude, taalfix]
+  - `een paar maanden (regel)` (fout = de som van een deel van de maanden) → Dat is nog niet alles. Heb je elke maand precies één keer meegeteld? Tel de aantallen van alle maanden bij elkaar op.  [nieuw]
   - `andere fout` (andere fout) → Lees bij elke maand het aantal af en tel alle maanden bij elkaar op.  [nieuw]
 - Status: hints klaar

@@ -2,7 +2,7 @@
 
 Onze omschrijving: ×÷ ±10.000: standaard + strategieën + schattend · in onze bank: 8 items
 
-Claude-vragen gemapt: **284** in **7** somtypen · twijfel (voorstel dit doel): **0**
+Claude-vragen gemapt: **294** in **8** somtypen · twijfel (voorstel dit doel): **0**
 
 Invoer voor het schrijven van hint 1 (`hint`) en hint 2 (`sterkereHint`) per somtype. Velden `hint`, `sterkereHint` en `ouderzin` zijn nog leeg.
 Elk somtype heeft een vaste sleutel (nrOrigineel + somtypeOrigineel, bevroren/somtype_nr_v*.json): neem die over in hints/batch*.json, dan blijft de hint gekoppeld als de nummering of de kop verandert.
@@ -99,7 +99,33 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Reken het aantal rijen keer het aantal in elke rij. Splits een getal in tientallen en eenheden (als het die heeft), en tel de stukken op.  [nieuw]
 - Status: hints klaar
 
-## Somtype 4: Welke som is evenveel als # × #?
+## Somtype 4: Hoeveel is # × # [ding]? Rond beide getallen af op tientallen en reken dan uit.
+
+- Sleutel: nrOrigineel **8** · somtypeOrigineel “Hoeveel is # × # [ding]? Rond beide getallen af op tientallen en reken dan uit.” (koppeling: claudeId)
+- Items: **10** · Claude-doelen: T3 (10) · regel: G6-r9 #321 (uit G5)
+- Getallenruimte: 0–10.000 · type: kale
+- Denkfouten (Claude): —
+- Verschillende Claude-fout-hints: 6 (meest: “Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.”)
+- Voorbeelden:
+  - `G6-GET-E06-claude-bank-uitg5-001` (Claude T3, bank, niveau 1 → toepassen)
+    - **Opgave:** Hoeveel is 18 × 54 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
+    - **Antwoord:** 1000  (controle: n.v.t.)
+    - **Fout-hints (Claude):** 1200 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 800 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
+  - `G6-GET-E06-claude-bank-uitg5-006` (Claude T3, bank, niveau 1 → toepassen)
+    - **Opgave:** Hoeveel is 18 × 21 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
+    - **Antwoord:** 400  (controle: n.v.t.)
+    - **Fout-hints (Claude):** 378 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 600 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
+
+- **Hint 1 (te schrijven):** Rond beide getallen af op tientallen. Kijk bij elk getal naar de eenheden: vijf of meer? Dan rond je naar boven af. Minder dan vijf? Dan naar beneden.
+- **Hint 2 (te schrijven):** Reken dan uit met de ronde getallen. Reken eerst zonder de nullen en zet de nullen er daarna weer achter.
+- **Ouderzin:** Je kind schat een keersom: eerst beide getallen afronden op tientallen, dan uitrekenen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `precies uitgerekend` (fout = getal1 × getal2) → Dat is het precieze antwoord. De vraag is hoeveel het ongeveer is. Rond eerst beide getallen af, en reken dan uit.  [nieuw]
+  - `anders afgerond` (Claudes sleutel (zonder label)) → Heb je beide getallen goed afgerond op tientallen? Reken daarna uit met de ronde getallen.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Rond beide getallen af op tientallen. Reken daarna uit met de ronde getallen.  [nieuw]
+- Status: hints klaar
+
+## Somtype 5: Welke som is evenveel als # × #?
 
 - Sleutel: nrOrigineel **4** · somtypeOrigineel “Welke som is even veel als # × #?” (koppeling: claudeId)
 - Items: **6** · Claude-doelen: T10 (6) · regel: G6-T03-handig-keerdeel
@@ -128,7 +154,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **LET OP kop gewijzigd** (2026-10-01): de hints zijn geschreven voor 'Welke som is even veel als # × #?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 5: # [ding] met # [ding]. Hoeveel [ding]? Reken handig.
+## Somtype 6: # [ding] met # [ding]. Hoeveel [ding]? Reken handig.
 
 - Sleutel: nrOrigineel **5** · somtypeOrigineel “# [ding] met # [ding]. Hoeveel [ding]? Reken handig.” (koppeling: claudeId)
 - Items: **2** · Claude-doelen: T10 (2) · regel: G6-T03-handig-keerdeel
@@ -157,7 +183,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Reken het aantal dozen keer hoeveel er in elke doos zitten. Splits het grote getal in ronde stukken, of verdubbel steeds.  [nieuw]
 - Status: hints klaar
 
-## Somtype 6: Er zijn # [ding]. Ze gaan eerlijk over # [ding]. Welke som hoort bij dit verhaal?
+## Somtype 7: Er zijn # [ding]. Ze gaan eerlijk over # [ding]. Welke som hoort bij dit verhaal?
 
 - Sleutel: nrOrigineel **6** · somtypeOrigineel “Er zijn # [ding]. Ze gaan eerlijk over # [ding]. Welke som hoort bij dit verhaal?” (koppeling: claudeId)
 - Items: **2** · Claude-doelen: T9 (2) · regel: G6-C06-deel
@@ -186,7 +212,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Wat wordt er verdeeld? Dat getal komt vóór het deelteken. Over hoeveel? Dat getal komt erachter.  [nieuw]
 - Status: hints klaar
 
-## Somtype 7: In [plek] staan # [ding] met elk # [ding]. Hoeveel [ding] zijn dat?
+## Somtype 8: In [plek] staan # [ding] met elk # [ding]. Hoeveel [ding] zijn dat?
 
 - Sleutel: nrOrigineel **7** · somtypeOrigineel “In [plek] staan # [ding] met elk # [ding]. Hoeveel [ding] zijn dat?” (koppeling: claudeId)
 - Items: **2** · Claude-doelen: C15 (2) · regel: G6-C03-keer-2x2

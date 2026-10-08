@@ -4,7 +4,7 @@ De vragenbank van **LeerMees**: een gratis, rustig en didactisch rekenplatform v
 
 Deze repo is de bron om verder te werken, voor mensen en voor AI-tools (ChatGPT, Claude en andere). Alle kindteksten zijn Nederlands.
 
-Stand: 8 oktober 2026. G5 en G6 zitten nog in de laatste reviewronde (zie [Stand per groep](#stand-per-groep)).
+Stand: 8 oktober 2026. G5 en G6 zijn klaar voor de laatste tekstcheck van Didactiek (zie [Stand per groep](#stand-per-groep)).
 
 ## Mappen
 
@@ -119,12 +119,12 @@ Wat nog hints nodig heeft: [`claude-aanvulling/hints_todo.md`](claude-aanvulling
 |---|---|---|---|---|
 | G3 | 44 leerdoelen · 284 items | 1.519 items · 26 leerdoelen | 83 van 83 | **Klaar** |
 | G4 | 46 leerdoelen · 368 items | 1.855 items · 24 leerdoelen | 93 van 97 | **Klaar**, behalve 4 schatting-somtypen in G4-GET-E05 (36 items) zonder hints |
-| G5 | 40 leerdoelen · 320 items | 4.827 items · 22 leerdoelen | 140 van 140 | **Laatste reviewronde**: verplichte datafixes van Didactiek staan nog open (zie `merge-fixlijst.md`) |
-| G6 | 44 leerdoelen · 352 items | 4.193 items · 23 leerdoelen | 95 van 95 | **Laatste reviewronde**: verplichte fixes staan nog open, daarna de laatste tekstcheck van Didactiek |
+| G5 | 40 leerdoelen · 320 items | 4.845 items · 22 leerdoelen | 139 van 139 | **Klaar voor de laatste tekstcheck van Didactiek** (ronde 9: alle verplichte fixes gedaan; checks 0 FAIL, 0 WARN). Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`, blok 'Ronde 9' |
+| G6 | 44 leerdoelen · 352 items | 4.227 items · 23 leerdoelen | 94 van 94 | **Klaar voor de laatste tekstcheck van Didactiek** (ronde 9: alle verplichte fixes gedaan; checks 0 FAIL, 0 WARN). Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`, blok 'Ronde 9' |
 | G7 | 25 leerdoelen · 200 items (+ 16 in een Claude-set en 12 pilotbestanden) | 7.661 items · 17 leerdoelen | 0 van 154 | Ingedeeld, **nog zonder hints** |
 | G8 | 37 leerdoelen · 296 items | 1.458 items · 23 leerdoelen | 0 van 223 | Ingedeeld, **nog zonder hints** |
 
-**Let op bij G5 en G6:** er werd tijdens het maken van deze repo nog aan gewerkt. Hier staat de laatste complete build zoals die op 8 oktober op schijf stond: G6 van 10:27:27 en G5 van 10:28:30 (veld `gegenereerdOp`). De motor `scripts/fout_regels.py` is van 10:35 en kan dus iets nieuwer zijn dan die build.
+**G5 en G6 (ronde 9):** de builds zijn van 8 oktober, G5 10:57:42 en G6 10:58:34 (veld `gegenereerdOp`), met de motor `scripts/fout_regels.py` die hier staat (gelijk in G5–G8). Elk databestand heeft ook `hintsSyncOp` en `hintsBatches` (welke hint-batches erin zitten). Bord, app en rapporten werken op `id`, niet op `nr` of het somtypenummer: die kunnen verschuiven. G5 heeft 139 somtypen, want E07 #6 (TT × TT schatten, 10 items) is naar G6-GET-E06 gegaan. G6 heeft 94 somtypen, want MKU-E01 #3 en #4 zijn samengevoegd met #1 en GET-E06 heeft er één bij.
 
 ## App-eisen
 

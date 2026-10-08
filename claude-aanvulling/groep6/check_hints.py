@@ -34,7 +34,7 @@ Somtypes zonder 'hints klaar' tellen als 'open'.
 Gebruik: python3 check_hints.py [bestand.md ...]   (standaard alle somtypen/G6-*.md) · exit 1 bij FAIL.
 """
 import re,sys,os,glob,json,collections
-import sys as _sys113; _sys113.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge')); import klok113_check as _K113
+import sys as _sys113; _sys113.path.insert(0, '/workspace/claude-merge/tools'); import klok113_check as _K113
 BASE=os.path.dirname(os.path.abspath(__file__))
 LETTER=re.compile(r"(?<![\w'’/.-])([A-D])(?![\w'’/-])")
 KLOK=re.compile(r'(?<![\d:])\d{1,2}:\d{2}(?!\d)')
@@ -220,13 +220,17 @@ def hint_koppeling():
     nu=hashlib.md5(json.dumps(sorted((it['bron']['claudeId'],it['merge']['doel'],it['merge']['somtype']) for it in its),ensure_ascii=False).encode()).hexdigest()
     if L.get('indeling')!=nu: fails.append("hint-koppeling: logs/hint_sleutels.json hoort niet bij de somtype-indeling in data/gemapt.json (draai scripts/sync_hint_keys.py na de build)")
     for x in L.get('problemen',[]): fails.append(f"hint-koppeling (logs/hint_sleutels.json): {x}")
-    per=collections.defaultdict(list)
+    per=collections.defaultdict(list); alle_e=[]
+    import sys as _s; _s.path.insert(0,f"{BASE}/scripts"); import koppeling_merge as KM      # ronde 9 (#235)
     for b in sorted(glob.glob(f"{BASE}/hints/batch*.json")):
         for st in json.load(open(b,encoding='utf-8')).get('somtypen',[]):
+            alle_e.append(st)
+            if KM.speciaal(st): continue      # samengevoegd (hints/koppeling_merge.json)
             per[(st['doel'],st.get('somtype'))].append(f"{os.path.basename(b)}#{st.get('nrOrigineel')}")
             mp=f"{BASE}/somtypen/{st['doel']}.md"
             K={m.group(2).strip():int(m.group(1)) for m in re.finditer(r'^## Somtype (\d+): (.*)$',open(mp,encoding='utf-8').read(),re.M)} if os.path.exists(mp) else {}
             if K.get(st.get('somtype'))!=st.get('nr'): fails.append(f"hint-koppeling: {os.path.basename(b)} {st['doel']} nr {st.get('nr')} '{st.get('somtype')}' staat zo niet in somtypen/{st['doel']}.md")
+    kp,_ki=KM.controleer(alle_e); fails+=[f"hint-koppeling (koppeling_merge.json): {x}" for x in kp]
     for (d,k),w in per.items():
         if len(w)>1: fails.append(f"hint-koppeling: {d} '{k}': {len(w)} hint-entries ({', '.join(w)}); nooit stil samenvoegen")
     return fails

@@ -133,3 +133,20 @@ Deze eisen volgen uit de merge-punten. De merge-data voldoen eraan, en de genoem
 - **#158:** G6 = hele getallen tot 100.000. `_bereik` in fix152 kiest bij duizendtallen n ≥ 10.000, bij tienduizendtallen 10.000–99.999. E01 #1 049/055/057/058/060/066/068/076 hebben een nieuw getal van 5 cijfers. De ouderzinnen noemen 'tot 100.000'. Guard: assert in de build en FAIL in FIX6.
 - **#159c (Dave 20:49):** de helft van de #152-getallen (11 van de 21) heeft een nul binnenin, de andere helft niet (`NUL152`).
 - **#160:** M02 #4 (201–208) heeft geen 'de teller' in de opgave, en de aantallen kunnen echt. Bij E01 #5/#7/#8 past de context bij het aantal (`bewerk_na`). Geen kindtekst noemt 'teller' in M02 #4.
+
+
+## Ronde 9 (8 okt 2026, build 10:58:34; Didactiek recheck-ronde5c, recheck-ronde4d6b; uitgevoerd door Overzicht)
+- Draaien: `bash keten_r8.sh` (build → sync → apply → check_hints → check_merge_notatie met FIX6). G6 leest `../g5/data/geparkeerd_G6.json`: eerst G5 bouwen.
+- Cijfers: gemapt 4227 (4193 + 10 uit G5 + 24 generator). check_hints: 0 open · 0 FAIL · 0 WARN · 9 INFO. check_merge_notatie: ALLES OK. FIX6 (ronde 3–9): 0 FAIL. motor_regressie: 4227 items, 0 anders.
+- **#331 (verplicht):** VERH-E01 001–004 met de getallen van Didactiek (10 kg → €15; 6 broden → €8; 6 pakken → 24 glazen; 5 flessen → 15 L) en hun opties. Guard `guard331` in de build en `ronde9()` in FIX6.
+- **#231/#281:** aanvulling (niet samenvoegen) van de dunne VERH-somtypes: 24 generator-items (VERH-E01 #1: 11, VERH-E02 strook: 6, VERH-E02 deel van een hoeveelheid: 7). Guards: VERH-E01 #1 heeft 12–15 items, VERH-E02 #3 en #4 elk ≥ 9, #3 in beide richtingen, geen 'schaal'. `na_alle` stopt met een FAIL als `aanvul231` ontbreekt.
+- **#321:** 10 items uit G5-GET-E07 #6 → `G6-GET-E06-claude-bank-uitg5-NNN` (toepassen, getallenruimte 0–10.000, nieuw somtype nrO 8 in `bevroren/somtype_nr_v5.json`, hints via `hints/batch7.json`).
+- **#235:** MKU-E01 #3 (vak G#) en #4 (vak H#) samengevoegd met #1 ('[plattegrond] Wat staat er in vak [vak]?'), 12 items, ook de items uit de aanvulling uit G8. `hints/koppeling_merge.json`: samengevoegd 3 → 1 en 4 → 1 (entries gelijk, gecontroleerd).
+- **#276/#332:** VBN-E02 #1: elk aantal streepjes (1–5) komt 12 keer voor (`bevroren/vbn276_streepjes_v1.json`, haalbaar per item); het antwoord is nooit een waarde van een van de twee maanden uit de vraag. Bordtitel VBN-E02 in de merge: 'Lijngrafiek aflezen'.
+- **#333:** VBN #1 en #3 met de nieuwe motorregels 'fout = de andere maand uit de vraag' en 'fout = de som van een deel van de maanden'.
+- **#344:** MKU-E03 'basis' alleen met minder dan 3 torens achter een hogere: 14 items uit 'basis' (13 naar 'kritisch' door tekeneis B, 1 naar 'toepassen').
+
+## Eisen voor de app, aanvulling ronde 9
+8. **Breukplaatje (#277):** komt er een plaatje bij een breuk, dan is kleur niet het enige kenmerk (ook arcering of een lijn), net als #227.
+9. **Plattegrond met hoogtegetallen (#295):** de H2-tekst `hint2MetPlaatje` (MKU-E03 #1) gaat pas live als er een echt plaatje bij Hint 2 is. Tot dan toont de app de gewone Hint 2. De plattegrond is geen knop: het kind tikt niet op vakjes, het antwoord gaat via de invoer.
+10. **Op `id`, niet op `nr`** (G5 #329): somtypenummers schuiven als er een somtype bijkomt (ronde 9: GET-E06).

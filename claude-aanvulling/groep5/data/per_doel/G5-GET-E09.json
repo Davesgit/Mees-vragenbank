@@ -7,11 +7,11 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T10:28:30+0200",
+ "gegenereerdOp": "2026-10-08T10:57:42+0200",
  "g4Basis": "g4/scripts build 14:35 (kopie in scripts/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G5-GET-E09",
  "bordtitel": "Meerdere sommen tot duizend",
- "aantal": 32,
+ "aantal": 35,
  "items": [
   {
    "id": "G5-GET-E09-claude-bank-naar-001",
@@ -272,11 +272,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "6 kinderen nemen elk 8 knikkers mee naar school. Ze raken er samen 6 kwijt. Hoeveel knikkers hebben ze nog?",
+   "opgave": "6 kinderen nemen elk 8 knikkers mee naar school. Ze raken er samen 5 kwijt. Hoeveel knikkers hebben ze nog?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "42",
+   "antwoord": "43",
    "antwoordDetail": null,
    "hint": "Reken eerst uit hoeveel het er samen zijn. Het is steeds evenveel: dat is een keersom.",
    "sterkereHint": "Haal er daarna af wat weggaat.",
@@ -293,26 +293,26 @@
     },
     {
      "stap": null,
-     "fout": "12",
-     "uitleg": "Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.",
-     "uitlegSterker": "Schrijf twee sommen op: eerst de keersom, dan de minsom met de uitkomst van de keersom.",
-     "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: verkeerde-bewerking",
-     "soort": "stappen door elkaar",
-     "bron": "claude-taalfix"
-    },
-    {
-     "stap": null,
-     "fout": "8",
+     "fout": "9",
      "uitleg": "Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.",
      "uitlegSterker": "Doe het aantal keer hoeveel het steeds is. Haal er daarna af wat weggaat.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "18",
+     "uitleg": "Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.",
+     "uitlegSterker": "Schrijf twee sommen op: eerst de keersom, dan de minsom met de uitkomst van de keersom.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "stappen door elkaar",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "48 → Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af. · 12 → Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat. · 8 → Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.",
+   "foutHintsTekst": "48 → Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af. · 9 → Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat. · 18 → Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.",
    "ouderzin": "Je kind rekent een verhaaltje in twee stappen uit: eerst een keersom, dan iets eraf.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
@@ -332,8 +332,8 @@
    "bronVariant": "claude-bank:T8:f943628d-4668-4e74-8afc-5cbc213a911b",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "6 × 8 − 6",
-    "claudeUitleg": "Stap 1: 6 × 8 = 48.\nStap 2: 48 − 6 = 42.",
+    "claudeKaleSom": "6 × 8 − 5",
+    "claudeUitleg": "Stap 1: 6 × 8 = 48.\nStap 2: 48 − 5 = 43.",
     "claudeStrategie": "twee stappen",
     "claudeThema": "Dino's en fossielen",
     "claudeAntwoordType": "geheel",
@@ -346,12 +346,12 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "12",
-      "denkfout": "verkeerde-bewerking"
+      "fout": "9",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
      },
      {
-      "fout": "8",
-      "denkfout": "optellen-ipv-vermenigvuldigen"
+      "fout": "18",
+      "denkfout": "verkeerde-bewerking"
      }
     ],
     "mergeFoutHints": [],
@@ -359,17 +359,17 @@
      {
       "stap": null,
       "fout": "48",
-      "uitleg": "Je hebt de tweede stap vergeten: er gaan er nog weg."
+      "uitleg": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg."
      },
      {
       "stap": null,
-      "fout": "12",
-      "uitleg": "Eerst het totaal uitrekenen met de keersom, en dan pas het weggehaalde eraf."
+      "fout": "9",
+      "uitleg": "Het is steeds evenveel: dat is een keersom."
      },
      {
       "stap": null,
-      "fout": "8",
-      "uitleg": "Elk evenveel: het totaal is een keersom, geen plussom."
+      "fout": "18",
+      "uitleg": "Reken eerst uit hoeveel het er samen zijn. Haal er daarna af wat weggaat."
      }
     ]
    },
@@ -419,6 +419,10 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "# [ding] nemen elk # [ding] mee naar school. Ze raken er samen # [ding]. Hoeveel knikkers hebben ze nog?",
+    "r7b325": {
+     "oud": "Ze raken er samen 6 kwijt. = 42",
+     "nieuw": "Ze raken er samen 5 kwijt. = 43"
+    },
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
     "somtypeOrigineel": "Twee stappen: # keer # [ding], daarna # eraf. Hoeveel nog?",
@@ -484,7 +488,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "12"
+       "18"
       ]
      },
      "leesbaar": true
@@ -498,7 +502,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "8"
+       "9"
       ]
      },
      "leesbaar": true
@@ -525,11 +529,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Ayoub koopt 4 schriften van €3 per stuk en betaalt met €100. Hoeveel geld krijgt hij terug?",
+   "opgave": "Ayoub koopt 4 schriften van €3 per stuk en betaalt met €20. Hoeveel geld krijgt hij terug?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "€88",
+   "antwoord": "€8",
    "antwoordDetail": null,
    "hint": "Reken eerst uit wat alles samen kost. Elk ding kost evenveel: dat is een keersom, het aantal keer de prijs.",
    "sterkereHint": "Haal dat dan af van het geld waarmee je betaalt.",
@@ -546,7 +550,7 @@
     },
     {
      "stap": null,
-     "fout": "€97",
+     "fout": "€17",
      "uitleg": "Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -556,7 +560,7 @@
     },
     {
      "stap": null,
-     "fout": "€93",
+     "fout": "€13",
      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -565,7 +569,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€12 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €97 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €93 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
+   "foutHintsTekst": "€12 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €17 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €13 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
    "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt als het een paar dezelfde dingen koopt.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -585,8 +589,8 @@
    "bronVariant": "claude-bank:T8:a0197579-359d-48bf-aad9-9077aef5ae5e",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "100 − 4 × 3",
-    "claudeUitleg": "Stap 1: 4 × 3 = €12.\nStap 2: 100 − 12 = €88 terug.",
+    "claudeKaleSom": "20 − 4 × 3",
+    "claudeUitleg": "Stap 1: 4 × €3 = €12.\nStap 2: €20 − €12 = €8 terug.",
     "claudeStrategie": "twee stappen",
     "claudeThema": "Ruimte",
     "claudeAntwoordType": "geheel",
@@ -599,11 +603,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "€97",
+      "fout": "€17",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "€93",
+      "fout": "€13",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -612,17 +616,17 @@
      {
       "stap": null,
       "fout": "€12",
-      "uitleg": "Dat is wat het kost. Gevraagd is wat hij terugkrijgt."
+      "uitleg": "Dat is wat alles samen kost. Haal het van het geld waarmee je betaalt."
      },
      {
       "stap": null,
-      "fout": "€97",
-      "uitleg": "Het zijn 4 stickers: reken eerst de totaalprijs uit."
+      "fout": "€17",
+      "uitleg": "Je hebt de prijs van één ding eraf gehaald."
      },
      {
       "stap": null,
-      "fout": "€93",
-      "uitleg": "4 keer €3: vermenigvuldigen."
+      "fout": "€13",
+      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom."
      }
     ]
    },
@@ -674,6 +678,11 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Ayoub koopt # [ding] van €# [ding] stuk en betaalt met €#. Hoeveel [ding] krijgt hij terug?",
+    "r7b323": {
+     "punt": "#323",
+     "oud": "4 × €3, betaalt €100",
+     "nieuw": "4 × €3, betaalt €20"
+    },
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
     "somtypeOrigineel": "Wisselgeld: [wie] koopt # [ding] van €# per stuk en betaalt met €#. Hoeveel terug?",
@@ -701,6 +710,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€8",
+    "accepteer": [
+     "€8",
+     "8",
+     "€ 8",
+     "€8,00",
+     "8,00",
+     "€ 8,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "8.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "8"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -739,7 +768,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€97"
+       "€17"
       ]
      },
      "leesbaar": true
@@ -753,7 +782,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€97"
+       "€17"
       ]
      },
      "leesbaar": true
@@ -767,7 +796,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€93"
+       "€13"
       ]
      },
      "leesbaar": true
@@ -969,6 +998,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€4",
+    "accepteer": [
+     "€4",
+     "4",
+     "€ 4",
+     "€4,00",
+     "4,00",
+     "€ 4,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "4.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "4"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -1062,11 +1111,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Ayoub koopt 5 puzzels van €6 per stuk en betaalt met €100. Hoeveel geld krijgt hij terug?",
+   "opgave": "Ayoub koopt 5 puzzels van €6 per stuk en betaalt met €50. Hoeveel geld krijgt hij terug?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "€70",
+   "antwoord": "€20",
    "antwoordDetail": null,
    "hint": "Reken eerst uit wat alles samen kost. Elk ding kost evenveel: dat is een keersom, het aantal keer de prijs.",
    "sterkereHint": "Haal dat dan af van het geld waarmee je betaalt.",
@@ -1083,7 +1132,7 @@
     },
     {
      "stap": null,
-     "fout": "€94",
+     "fout": "€44",
      "uitleg": "Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -1093,7 +1142,7 @@
     },
     {
      "stap": null,
-     "fout": "€89",
+     "fout": "€39",
      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -1102,7 +1151,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€30 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €94 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €89 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
+   "foutHintsTekst": "€30 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €44 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €39 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
    "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt als het een paar dezelfde dingen koopt.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -1122,8 +1171,8 @@
    "bronVariant": "claude-bank:T8:e6d88f34-501f-4e41-be74-39b18ad308e7",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "100 − 5 × 6",
-    "claudeUitleg": "Stap 1: 5 × 6 = €30.\nStap 2: 100 − 30 = €70 terug.",
+    "claudeKaleSom": "50 − 5 × 6",
+    "claudeUitleg": "Stap 1: 5 × €6 = €30.\nStap 2: €50 − €30 = €20 terug.",
     "claudeStrategie": "twee stappen",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -1136,11 +1185,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "€94",
+      "fout": "€44",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "€89",
+      "fout": "€39",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -1149,17 +1198,17 @@
      {
       "stap": null,
       "fout": "€30",
-      "uitleg": "Dat is wat het kost. Gevraagd is wat hij terugkrijgt."
+      "uitleg": "Dat is wat alles samen kost. Haal het van het geld waarmee je betaalt."
      },
      {
       "stap": null,
-      "fout": "€94",
-      "uitleg": "Het zijn 5 noten: reken eerst de totaalprijs uit."
+      "fout": "€44",
+      "uitleg": "Je hebt de prijs van één ding eraf gehaald."
      },
      {
       "stap": null,
-      "fout": "€89",
-      "uitleg": "5 keer €6: vermenigvuldigen."
+      "fout": "€39",
+      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom."
      }
     ]
    },
@@ -1209,6 +1258,11 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Ayoub koopt # [ding] van €# [ding] stuk en betaalt met €#. Hoeveel [ding] krijgt hij terug?",
+    "r7b323": {
+     "punt": "#323",
+     "oud": "5 × €6, betaalt €100",
+     "nieuw": "5 × €6, betaalt €50"
+    },
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
     "somtypeOrigineel": "Wisselgeld: [wie] koopt # [ding] van €# per stuk en betaalt met €#. Hoeveel terug?",
@@ -1236,6 +1290,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€20",
+    "accepteer": [
+     "€20",
+     "20",
+     "€ 20",
+     "€20,00",
+     "20,00",
+     "€ 20,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "20.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "20"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -1274,7 +1348,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€94"
+       "€44"
       ]
      },
      "leesbaar": true
@@ -1288,7 +1362,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€94"
+       "€44"
       ]
      },
      "leesbaar": true
@@ -1302,7 +1376,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€89"
+       "€39"
       ]
      },
      "leesbaar": true
@@ -1503,6 +1577,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€28",
+    "accepteer": [
+     "€28",
+     "28",
+     "€ 28",
+     "€28,00",
+     "28,00",
+     "€ 28,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "28.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "28"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -1770,6 +1864,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€46",
+    "accepteer": [
+     "€46",
+     "46",
+     "€ 46",
+     "€46,00",
+     "46,00",
+     "€ 46,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "46.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "46"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -2037,6 +2151,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€10",
+    "accepteer": [
+     "€10",
+     "10",
+     "€ 10",
+     "€10,00",
+     "10,00",
+     "€ 10,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "10.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "10"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -2130,11 +2264,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Daan koopt 3 kaartjes voor de bioscoop van €7 per stuk en betaalt met €100. Hoeveel geld krijgt hij terug?",
+   "opgave": "Daan koopt 3 kaartjes voor de bioscoop van €7 per stuk en betaalt met €50. Hoeveel geld krijgt hij terug?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "€79",
+   "antwoord": "€29",
    "antwoordDetail": null,
    "hint": "Reken eerst uit wat alles samen kost. Elk ding kost evenveel: dat is een keersom, het aantal keer de prijs.",
    "sterkereHint": "Haal dat dan af van het geld waarmee je betaalt.",
@@ -2151,7 +2285,7 @@
     },
     {
      "stap": null,
-     "fout": "€93",
+     "fout": "€43",
      "uitleg": "Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -2161,7 +2295,7 @@
     },
     {
      "stap": null,
-     "fout": "€90",
+     "fout": "€40",
      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -2170,7 +2304,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€21 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €93 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €90 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
+   "foutHintsTekst": "€21 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €43 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €40 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
    "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt als het een paar dezelfde dingen koopt.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -2190,8 +2324,8 @@
    "bronVariant": "claude-bank:T8:2704636f-8286-4aaf-9a64-eaba2eb30840",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "100 − 3 × 7",
-    "claudeUitleg": "Stap 1: 3 × 7 = €21.\nStap 2: 100 − 21 = €79 terug.",
+    "claudeKaleSom": "50 − 3 × 7",
+    "claudeUitleg": "Stap 1: 3 × €7 = €21.\nStap 2: €50 − €21 = €29 terug.",
     "claudeStrategie": "twee stappen",
     "claudeThema": "Ruimte",
     "claudeAntwoordType": "geheel",
@@ -2204,11 +2338,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "€93",
+      "fout": "€43",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "€90",
+      "fout": "€40",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -2217,17 +2351,17 @@
      {
       "stap": null,
       "fout": "€21",
-      "uitleg": "Dat is wat het kost. Gevraagd is wat hij terugkrijgt."
+      "uitleg": "Dat is wat alles samen kost. Haal het van het geld waarmee je betaalt."
      },
      {
       "stap": null,
-      "fout": "€93",
-      "uitleg": "Het zijn 3 stickers: reken eerst de totaalprijs uit."
+      "fout": "€43",
+      "uitleg": "Je hebt de prijs van één ding eraf gehaald."
      },
      {
       "stap": null,
-      "fout": "€90",
-      "uitleg": "3 keer €7: vermenigvuldigen."
+      "fout": "€40",
+      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom."
      }
     ]
    },
@@ -2278,6 +2412,11 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Daan koopt # [ding] voor de bioscoop van €# [ding] stuk en betaalt met €#. Hoeveel [ding] krijgt hij terug?",
+    "r7b323": {
+     "punt": "#323",
+     "oud": "3 × €7, betaalt €100",
+     "nieuw": "3 × €7, betaalt €50"
+    },
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
     "somtypeOrigineel": "Wisselgeld: [wie] koopt # [ding] van €# per stuk en betaalt met €#. Hoeveel terug?",
@@ -2305,6 +2444,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€29",
+    "accepteer": [
+     "€29",
+     "29",
+     "€ 29",
+     "€29,00",
+     "29,00",
+     "€ 29,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "29.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "29"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -2343,7 +2502,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€93"
+       "€43"
       ]
      },
      "leesbaar": true
@@ -2357,7 +2516,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€93"
+       "€43"
       ]
      },
      "leesbaar": true
@@ -2371,7 +2530,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€90"
+       "€40"
       ]
      },
      "leesbaar": true
@@ -2803,6 +2962,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€44",
+    "accepteer": [
+     "€44",
+     "44",
+     "€ 44",
+     "€44,00",
+     "44,00",
+     "€ 44,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "44.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "44"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -3070,6 +3249,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€20",
+    "accepteer": [
+     "€20",
+     "20",
+     "€ 20",
+     "€20,00",
+     "20,00",
+     "€ 20,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "20.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "20"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -3336,6 +3535,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€6",
+    "accepteer": [
+     "€6",
+     "6",
+     "€ 6",
+     "€6,00",
+     "6,00",
+     "€ 6,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "6.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "6"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -3604,6 +3823,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€40",
+    "accepteer": [
+     "€40",
+     "40",
+     "€ 40",
+     "€40,00",
+     "40,00",
+     "€ 40,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "40.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "40"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -3927,11 +4166,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "In de kast staan 6 dozen met elk 5 stiften. Er worden er 5 gebruikt. Hoeveel stiften liggen er nog in de kast?",
+   "opgave": "In de kast staan 6 dozen met elk 5 stiften. Er worden er 4 gebruikt. Hoeveel stiften liggen er nog in de kast?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "25",
+   "antwoord": "26",
    "antwoordDetail": null,
    "hint": "Reken eerst uit hoeveel het er samen zijn. Het is steeds evenveel: dat is een keersom.",
    "sterkereHint": "Haal er daarna af wat weggaat.",
@@ -3948,16 +4187,26 @@
     },
     {
      "stap": null,
-     "fout": "6",
+     "fout": "7",
      "uitleg": "Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.",
      "uitlegSterker": "Doe het aantal keer hoeveel het steeds is. Haal er daarna af wat weggaat.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "6",
+     "uitleg": "Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.",
+     "uitlegSterker": "Schrijf twee sommen op: eerst de keersom, dan de minsom met de uitkomst van de keersom.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "stappen door elkaar",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "30 → Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af. · 6 → Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.",
+   "foutHintsTekst": "30 → Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af. · 7 → Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat. · 6 → Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.",
    "ouderzin": "Je kind rekent een verhaaltje in twee stappen uit: eerst een keersom, dan iets eraf.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
@@ -3977,8 +4226,8 @@
    "bronVariant": "claude-bank:T8:f36e96bb-730c-44bb-abfd-2708bdc66333",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "6 × 5 − 5",
-    "claudeUitleg": "Stap 1: 6 × 5 = 30.\nStap 2: 30 − 5 = 25.",
+    "claudeKaleSom": "6 × 5 − 4",
+    "claudeUitleg": "Stap 1: 6 × 5 = 30.\nStap 2: 30 − 4 = 26.",
     "claudeStrategie": "twee stappen",
     "claudeThema": "Ruimte",
     "claudeAntwoordType": "geheel",
@@ -3991,8 +4240,12 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "6",
+      "fout": "7",
       "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "6",
+      "denkfout": "verkeerde-bewerking"
      }
     ],
     "mergeFoutHints": [],
@@ -4000,12 +4253,17 @@
      {
       "stap": null,
       "fout": "30",
-      "uitleg": "Je hebt de tweede stap vergeten: er gaan er nog weg."
+      "uitleg": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg."
+     },
+     {
+      "stap": null,
+      "fout": "7",
+      "uitleg": "Het is steeds evenveel: dat is een keersom."
      },
      {
       "stap": null,
       "fout": "6",
-      "uitleg": "Elk evenveel: het totaal is een keersom, geen plussom."
+      "uitleg": "Reken eerst uit hoeveel het er samen zijn. Haal er daarna af wat weggaat."
      }
     ]
    },
@@ -4055,6 +4313,10 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "In [plek] staan # [ding] met elk # [ding]. Er worden er # [ding]. Hoeveel [ding] liggen er nog in de kast?",
+    "r7b325": {
+     "oud": "Er worden er 5 gebruikt. = 25",
+     "nieuw": "Er worden er 4 gebruikt. = 26"
+    },
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
     "somtypeOrigineel": "Twee stappen: # keer # [ding], daarna # eraf. Hoeveel nog?",
@@ -4119,7 +4381,9 @@
      "tekstSterker": "Schrijf twee sommen op: eerst de keersom, dan de minsom met de uitkomst van de keersom.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "6"
+      ]
      },
      "leesbaar": true
     },
@@ -4132,7 +4396,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "6"
+       "7"
       ]
      },
      "leesbaar": true
@@ -4334,6 +4598,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€28",
+    "accepteer": [
+     "€28",
+     "28",
+     "€ 28",
+     "€28,00",
+     "28,00",
+     "€ 28,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "28.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "28"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -4601,6 +4885,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€2",
+    "accepteer": [
+     "€2",
+     "2",
+     "€ 2",
+     "€2,00",
+     "2,00",
+     "€ 2,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "2.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "2"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -4868,6 +5172,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€44",
+    "accepteer": [
+     "€44",
+     "44",
+     "€ 44",
+     "€44,00",
+     "44,00",
+     "€ 44,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "44.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "44"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -4961,11 +5285,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Mila koopt 5 boeken van €7 per stuk en betaalt met €100. Hoeveel geld krijgt ze terug?",
+   "opgave": "Mila koopt 5 boeken van €7 per stuk en betaalt met €50. Hoeveel geld krijgt ze terug?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "€65",
+   "antwoord": "€15",
    "antwoordDetail": null,
    "hint": "Reken eerst uit wat alles samen kost. Elk ding kost evenveel: dat is een keersom, het aantal keer de prijs.",
    "sterkereHint": "Haal dat dan af van het geld waarmee je betaalt.",
@@ -4982,7 +5306,7 @@
     },
     {
      "stap": null,
-     "fout": "€93",
+     "fout": "€43",
      "uitleg": "Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -4992,7 +5316,7 @@
     },
     {
      "stap": null,
-     "fout": "€88",
+     "fout": "€38",
      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -5001,7 +5325,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€35 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €93 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €88 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
+   "foutHintsTekst": "€35 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €43 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €38 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
    "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt als het een paar dezelfde dingen koopt.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -5021,8 +5345,8 @@
    "bronVariant": "claude-bank:T8:ade56c48-95c9-43d2-9251-15afe90d9bba",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "100 − 5 × 7",
-    "claudeUitleg": "Stap 1: 5 × 7 = €35.\nStap 2: 100 − 35 = €65 terug.",
+    "claudeKaleSom": "50 − 5 × 7",
+    "claudeUitleg": "Stap 1: 5 × €7 = €35.\nStap 2: €50 − €35 = €15 terug.",
     "claudeStrategie": "twee stappen",
     "claudeThema": "Voetbal",
     "claudeAntwoordType": "geheel",
@@ -5035,11 +5359,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "€93",
+      "fout": "€43",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "€88",
+      "fout": "€38",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -5048,17 +5372,17 @@
      {
       "stap": null,
       "fout": "€35",
-      "uitleg": "Dat is wat het kost. Gevraagd is wat hij terugkrijgt."
+      "uitleg": "Dat is wat alles samen kost. Haal het van het geld waarmee je betaalt."
      },
      {
       "stap": null,
-      "fout": "€93",
-      "uitleg": "Het zijn 5 stickers: reken eerst de totaalprijs uit."
+      "fout": "€43",
+      "uitleg": "Je hebt de prijs van één ding eraf gehaald."
      },
      {
       "stap": null,
-      "fout": "€88",
-      "uitleg": "5 keer €7: vermenigvuldigen."
+      "fout": "€38",
+      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom."
      }
     ]
    },
@@ -5108,6 +5432,11 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Mila koopt # [ding] van €# [ding] stuk en betaalt met €#. Hoeveel [ding] krijgt ze terug?",
+    "r7b323": {
+     "punt": "#323",
+     "oud": "5 × €7, betaalt €100",
+     "nieuw": "5 × €7, betaalt €50"
+    },
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
     "somtypeOrigineel": "Wisselgeld: [wie] koopt # [ding] van €# per stuk en betaalt met €#. Hoeveel terug?",
@@ -5135,6 +5464,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€15",
+    "accepteer": [
+     "€15",
+     "15",
+     "€ 15",
+     "€15,00",
+     "15,00",
+     "€ 15,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "15.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "15"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -5173,7 +5522,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€93"
+       "€43"
       ]
      },
      "leesbaar": true
@@ -5187,7 +5536,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€93"
+       "€43"
       ]
      },
      "leesbaar": true
@@ -5201,7 +5550,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€88"
+       "€38"
       ]
      },
      "leesbaar": true
@@ -5402,6 +5751,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€38",
+    "accepteer": [
+     "€38",
+     "38",
+     "€ 38",
+     "€38,00",
+     "38,00",
+     "€ 38,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "38.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "38"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -5495,11 +5864,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Mila koopt 5 kaartjes voor het zwembad van €4 per stuk en betaalt met €100. Hoeveel geld krijgt ze terug?",
+   "opgave": "Mila koopt 5 kaartjes voor het zwembad van €4 per stuk en betaalt met €50. Hoeveel geld krijgt ze terug?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "€80",
+   "antwoord": "€30",
    "antwoordDetail": null,
    "hint": "Reken eerst uit wat alles samen kost. Elk ding kost evenveel: dat is een keersom, het aantal keer de prijs.",
    "sterkereHint": "Haal dat dan af van het geld waarmee je betaalt.",
@@ -5516,7 +5885,7 @@
     },
     {
      "stap": null,
-     "fout": "€96",
+     "fout": "€46",
      "uitleg": "Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -5526,7 +5895,7 @@
     },
     {
      "stap": null,
-     "fout": "€91",
+     "fout": "€41",
      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -5535,7 +5904,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€20 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €96 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €91 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
+   "foutHintsTekst": "€20 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €46 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €41 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
    "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt als het een paar dezelfde dingen koopt.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -5555,8 +5924,8 @@
    "bronVariant": "claude-bank:T8:bf074b06-acb4-48d0-9150-6bab8fe56f49",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "100 − 5 × 4",
-    "claudeUitleg": "Stap 1: 5 × 4 = €20.\nStap 2: 100 − 20 = €80 terug.",
+    "claudeKaleSom": "50 − 5 × 4",
+    "claudeUitleg": "Stap 1: 5 × €4 = €20.\nStap 2: €50 − €20 = €30 terug.",
     "claudeStrategie": "twee stappen",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -5569,11 +5938,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "€96",
+      "fout": "€46",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "€91",
+      "fout": "€41",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -5582,17 +5951,17 @@
      {
       "stap": null,
       "fout": "€20",
-      "uitleg": "Dat is wat het kost. Gevraagd is wat hij terugkrijgt."
+      "uitleg": "Dat is wat alles samen kost. Haal het van het geld waarmee je betaalt."
      },
      {
       "stap": null,
-      "fout": "€96",
-      "uitleg": "Het zijn 5 noten: reken eerst de totaalprijs uit."
+      "fout": "€46",
+      "uitleg": "Je hebt de prijs van één ding eraf gehaald."
      },
      {
       "stap": null,
-      "fout": "€91",
-      "uitleg": "5 keer €4: vermenigvuldigen."
+      "fout": "€41",
+      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom."
      }
     ]
    },
@@ -5641,6 +6010,11 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Mila koopt # [ding] voor het zwembad van €# [ding] stuk en betaalt met €#. Hoeveel [ding] krijgt ze terug?",
+    "r7b323": {
+     "punt": "#323",
+     "oud": "5 × €4, betaalt €100",
+     "nieuw": "5 × €4, betaalt €50"
+    },
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
     "somtypeOrigineel": "Wisselgeld: [wie] koopt # [ding] van €# per stuk en betaalt met €#. Hoeveel terug?",
@@ -5668,6 +6042,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€30",
+    "accepteer": [
+     "€30",
+     "30",
+     "€ 30",
+     "€30,00",
+     "30,00",
+     "€ 30,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "30.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "30"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -5706,7 +6100,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€96"
+       "€46"
       ]
      },
      "leesbaar": true
@@ -5720,7 +6114,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€96"
+       "€46"
       ]
      },
      "leesbaar": true
@@ -5734,7 +6128,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€91"
+       "€41"
       ]
      },
      "leesbaar": true
@@ -5761,11 +6155,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Milan koopt 6 schriften van €2 per stuk en betaalt met €100. Hoeveel geld krijgt hij terug?",
+   "opgave": "Milan koopt 6 schriften van €2 per stuk en betaalt met €50. Hoeveel geld krijgt hij terug?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "€88",
+   "antwoord": "€38",
    "antwoordDetail": null,
    "hint": "Reken eerst uit wat alles samen kost. Elk ding kost evenveel: dat is een keersom, het aantal keer de prijs.",
    "sterkereHint": "Haal dat dan af van het geld waarmee je betaalt.",
@@ -5782,7 +6176,7 @@
     },
     {
      "stap": null,
-     "fout": "€98",
+     "fout": "€48",
      "uitleg": "Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -5792,7 +6186,7 @@
     },
     {
      "stap": null,
-     "fout": "€92",
+     "fout": "€42",
      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -5801,7 +6195,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€12 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €98 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €92 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
+   "foutHintsTekst": "€12 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €48 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €42 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
    "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt als het een paar dezelfde dingen koopt.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -5821,8 +6215,8 @@
    "bronVariant": "claude-bank:T8:5f956725-536a-469c-bd72-9ed323a5e9d8",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "100 − 6 × 2",
-    "claudeUitleg": "Stap 1: 6 × 2 = €12.\nStap 2: 100 − 12 = €88 terug.",
+    "claudeKaleSom": "50 − 6 × 2",
+    "claudeUitleg": "Stap 1: 6 × €2 = €12.\nStap 2: €50 − €12 = €38 terug.",
     "claudeStrategie": "twee stappen",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -5835,11 +6229,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "€98",
+      "fout": "€48",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "€92",
+      "fout": "€42",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -5848,17 +6242,17 @@
      {
       "stap": null,
       "fout": "€12",
-      "uitleg": "Dat is wat het kost. Gevraagd is wat hij terugkrijgt."
+      "uitleg": "Dat is wat alles samen kost. Haal het van het geld waarmee je betaalt."
      },
      {
       "stap": null,
-      "fout": "€98",
-      "uitleg": "Het zijn 6 wortels: reken eerst de totaalprijs uit."
+      "fout": "€48",
+      "uitleg": "Je hebt de prijs van één ding eraf gehaald."
      },
      {
       "stap": null,
-      "fout": "€92",
-      "uitleg": "6 keer €2: vermenigvuldigen."
+      "fout": "€42",
+      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom."
      }
     ]
    },
@@ -5909,6 +6303,11 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Milan koopt # [ding] van €# [ding] stuk en betaalt met €#. Hoeveel [ding] krijgt hij terug?",
+    "r7b323": {
+     "punt": "#323",
+     "oud": "6 × €2, betaalt €100",
+     "nieuw": "6 × €2, betaalt €50"
+    },
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
     "somtypeOrigineel": "Wisselgeld: [wie] koopt # [ding] van €# per stuk en betaalt met €#. Hoeveel terug?",
@@ -5936,6 +6335,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€38",
+    "accepteer": [
+     "€38",
+     "38",
+     "€ 38",
+     "€38,00",
+     "38,00",
+     "€ 38,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "38.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "38"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -5974,7 +6393,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€98"
+       "€48"
       ]
      },
      "leesbaar": true
@@ -5988,7 +6407,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€98"
+       "€48"
       ]
      },
      "leesbaar": true
@@ -6002,7 +6421,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€92"
+       "€42"
       ]
      },
      "leesbaar": true
@@ -6203,6 +6622,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€75",
+    "accepteer": [
+     "€75",
+     "75",
+     "€ 75",
+     "€75,00",
+     "75,00",
+     "€ 75,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "75.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "75"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -6296,11 +6735,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Milan koopt 6 boeken van €6 per stuk en betaalt met €100. Hoeveel geld krijgt hij terug?",
+   "opgave": "Milan koopt 6 boeken van €6 per stuk en betaalt met €50. Hoeveel geld krijgt hij terug?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "€64",
+   "antwoord": "€14",
    "antwoordDetail": null,
    "hint": "Reken eerst uit wat alles samen kost. Elk ding kost evenveel: dat is een keersom, het aantal keer de prijs.",
    "sterkereHint": "Haal dat dan af van het geld waarmee je betaalt.",
@@ -6317,7 +6756,7 @@
     },
     {
      "stap": null,
-     "fout": "€94",
+     "fout": "€44",
      "uitleg": "Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -6327,7 +6766,7 @@
     },
     {
      "stap": null,
-     "fout": "€88",
+     "fout": "€38",
      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -6336,7 +6775,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€36 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €94 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €88 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
+   "foutHintsTekst": "€36 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €44 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €38 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
    "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt als het een paar dezelfde dingen koopt.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -6356,8 +6795,8 @@
    "bronVariant": "claude-bank:T8:71409815-a9b3-4e54-b1cb-d49a8f262984",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "100 − 6 × 6",
-    "claudeUitleg": "Stap 1: 6 × 6 = €36.\nStap 2: 100 − 36 = €64 terug.",
+    "claudeKaleSom": "50 − 6 × 6",
+    "claudeUitleg": "Stap 1: 6 × €6 = €36.\nStap 2: €50 − €36 = €14 terug.",
     "claudeStrategie": "twee stappen",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -6370,11 +6809,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "€94",
+      "fout": "€44",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "€88",
+      "fout": "€38",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -6383,17 +6822,17 @@
      {
       "stap": null,
       "fout": "€36",
-      "uitleg": "Dat is wat het kost. Gevraagd is wat hij terugkrijgt."
+      "uitleg": "Dat is wat alles samen kost. Haal het van het geld waarmee je betaalt."
      },
      {
       "stap": null,
-      "fout": "€94",
-      "uitleg": "Het zijn 6 vissen: reken eerst de totaalprijs uit."
+      "fout": "€44",
+      "uitleg": "Je hebt de prijs van één ding eraf gehaald."
      },
      {
       "stap": null,
-      "fout": "€88",
-      "uitleg": "6 keer €6: vermenigvuldigen."
+      "fout": "€38",
+      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom."
      }
     ]
    },
@@ -6442,6 +6881,11 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Milan koopt # [ding] van €# [ding] stuk en betaalt met €#. Hoeveel [ding] krijgt hij terug?",
+    "r7b323": {
+     "punt": "#323",
+     "oud": "6 × €6, betaalt €100",
+     "nieuw": "6 × €6, betaalt €50"
+    },
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
     "somtypeOrigineel": "Wisselgeld: [wie] koopt # [ding] van €# per stuk en betaalt met €#. Hoeveel terug?",
@@ -6469,6 +6913,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€14",
+    "accepteer": [
+     "€14",
+     "14",
+     "€ 14",
+     "€14,00",
+     "14,00",
+     "€ 14,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "14.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "14"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -6507,7 +6971,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€94"
+       "€44"
       ]
      },
      "leesbaar": true
@@ -6521,7 +6985,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€94"
+       "€44"
       ]
      },
      "leesbaar": true
@@ -6535,7 +6999,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€88"
+       "€38"
       ]
      },
      "leesbaar": true
@@ -6562,11 +7026,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Milan koopt 4 kaartjes voor de bioscoop van €7 per stuk en betaalt met €100. Hoeveel geld krijgt hij terug?",
+   "opgave": "Milan koopt 4 kaartjes voor de bioscoop van €7 per stuk en betaalt met €50. Hoeveel geld krijgt hij terug?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "€72",
+   "antwoord": "€22",
    "antwoordDetail": null,
    "hint": "Reken eerst uit wat alles samen kost. Elk ding kost evenveel: dat is een keersom, het aantal keer de prijs.",
    "sterkereHint": "Haal dat dan af van het geld waarmee je betaalt.",
@@ -6583,7 +7047,7 @@
     },
     {
      "stap": null,
-     "fout": "€93",
+     "fout": "€43",
      "uitleg": "Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -6593,7 +7057,7 @@
     },
     {
      "stap": null,
-     "fout": "€89",
+     "fout": "€39",
      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -6602,7 +7066,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€28 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €93 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €89 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
+   "foutHintsTekst": "€28 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €43 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €39 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
    "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt als het een paar dezelfde dingen koopt.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -6622,8 +7086,8 @@
    "bronVariant": "claude-bank:T8:ef49a3ea-0ff0-420f-989b-83269076ee46",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "100 − 4 × 7",
-    "claudeUitleg": "Stap 1: 4 × 7 = €28.\nStap 2: 100 − 28 = €72 terug.",
+    "claudeKaleSom": "50 − 4 × 7",
+    "claudeUitleg": "Stap 1: 4 × €7 = €28.\nStap 2: €50 − €28 = €22 terug.",
     "claudeStrategie": "twee stappen",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -6636,11 +7100,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "€93",
+      "fout": "€43",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "€89",
+      "fout": "€39",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -6649,17 +7113,17 @@
      {
       "stap": null,
       "fout": "€28",
-      "uitleg": "Dat is wat het kost. Gevraagd is wat hij terugkrijgt."
+      "uitleg": "Dat is wat alles samen kost. Haal het van het geld waarmee je betaalt."
      },
      {
       "stap": null,
-      "fout": "€93",
-      "uitleg": "Het zijn 4 vissen: reken eerst de totaalprijs uit."
+      "fout": "€43",
+      "uitleg": "Je hebt de prijs van één ding eraf gehaald."
      },
      {
       "stap": null,
-      "fout": "€89",
-      "uitleg": "4 keer €7: vermenigvuldigen."
+      "fout": "€39",
+      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom."
      }
     ]
    },
@@ -6709,6 +7173,11 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Milan koopt # [ding] voor de bioscoop van €# [ding] stuk en betaalt met €#. Hoeveel [ding] krijgt hij terug?",
+    "r7b323": {
+     "punt": "#323",
+     "oud": "4 × €7, betaalt €100",
+     "nieuw": "4 × €7, betaalt €50"
+    },
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
     "somtypeOrigineel": "Wisselgeld: [wie] koopt # [ding] van €# per stuk en betaalt met €#. Hoeveel terug?",
@@ -6736,6 +7205,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€22",
+    "accepteer": [
+     "€22",
+     "22",
+     "€ 22",
+     "€22,00",
+     "22,00",
+     "€ 22,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "22.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "22"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -6774,7 +7263,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€93"
+       "€43"
       ]
      },
      "leesbaar": true
@@ -6788,7 +7277,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€93"
+       "€43"
       ]
      },
      "leesbaar": true
@@ -6802,7 +7291,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€89"
+       "€39"
       ]
      },
      "leesbaar": true
@@ -7004,6 +7493,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€37",
+    "accepteer": [
+     "€37",
+     "37",
+     "€ 37",
+     "€37,00",
+     "37,00",
+     "€ 37,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "37.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "37"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -7271,6 +7780,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€8",
+    "accepteer": [
+     "€8",
+     "8",
+     "€ 8",
+     "€8,00",
+     "8,00",
+     "€ 8,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "8.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "8"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -7364,11 +7893,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Sem koopt 5 puzzels van €7 per stuk en betaalt met €100. Hoeveel geld krijgt hij terug?",
+   "opgave": "Sem koopt 5 puzzels van €7 per stuk en betaalt met €50. Hoeveel geld krijgt hij terug?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "€65",
+   "antwoord": "€15",
    "antwoordDetail": null,
    "hint": "Reken eerst uit wat alles samen kost. Elk ding kost evenveel: dat is een keersom, het aantal keer de prijs.",
    "sterkereHint": "Haal dat dan af van het geld waarmee je betaalt.",
@@ -7385,7 +7914,7 @@
     },
     {
      "stap": null,
-     "fout": "€93",
+     "fout": "€43",
      "uitleg": "Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -7395,7 +7924,7 @@
     },
     {
      "stap": null,
-     "fout": "€88",
+     "fout": "€38",
      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -7404,7 +7933,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€35 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €93 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €88 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
+   "foutHintsTekst": "€35 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €43 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €38 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
    "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt als het een paar dezelfde dingen koopt.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -7424,8 +7953,8 @@
    "bronVariant": "claude-bank:T8:98be7750-d95e-4fdf-83fb-3a8dee23bd74",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "100 − 5 × 7",
-    "claudeUitleg": "Stap 1: 5 × 7 = €35.\nStap 2: 100 − 35 = €65 terug.",
+    "claudeKaleSom": "50 − 5 × 7",
+    "claudeUitleg": "Stap 1: 5 × €7 = €35.\nStap 2: €50 − €35 = €15 terug.",
     "claudeStrategie": "twee stappen",
     "claudeThema": "Ruimte",
     "claudeAntwoordType": "geheel",
@@ -7438,11 +7967,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "€93",
+      "fout": "€43",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "€88",
+      "fout": "€38",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -7451,17 +7980,17 @@
      {
       "stap": null,
       "fout": "€35",
-      "uitleg": "Dat is wat het kost. Gevraagd is wat hij terugkrijgt."
+      "uitleg": "Dat is wat alles samen kost. Haal het van het geld waarmee je betaalt."
      },
      {
       "stap": null,
-      "fout": "€93",
-      "uitleg": "Het zijn 5 knikkers: reken eerst de totaalprijs uit."
+      "fout": "€43",
+      "uitleg": "Je hebt de prijs van één ding eraf gehaald."
      },
      {
       "stap": null,
-      "fout": "€88",
-      "uitleg": "5 keer €7: vermenigvuldigen."
+      "fout": "€38",
+      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom."
      }
     ]
    },
@@ -7513,6 +8042,11 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Sem koopt # [ding] van €# [ding] stuk en betaalt met €#. Hoeveel [ding] krijgt hij terug?",
+    "r7b323": {
+     "punt": "#323",
+     "oud": "5 × €7, betaalt €100",
+     "nieuw": "5 × €7, betaalt €50"
+    },
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
     "somtypeOrigineel": "Wisselgeld: [wie] koopt # [ding] van €# per stuk en betaalt met €#. Hoeveel terug?",
@@ -7540,6 +8074,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€15",
+    "accepteer": [
+     "€15",
+     "15",
+     "€ 15",
+     "€15,00",
+     "15,00",
+     "€ 15,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "15.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "15"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -7578,7 +8132,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€93"
+       "€43"
       ]
      },
      "leesbaar": true
@@ -7592,7 +8146,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€93"
+       "€43"
       ]
      },
      "leesbaar": true
@@ -7606,7 +8160,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€88"
+       "€38"
       ]
      },
      "leesbaar": true
@@ -7807,6 +8361,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€34",
+    "accepteer": [
+     "€34",
+     "34",
+     "€ 34",
+     "€34,00",
+     "34,00",
+     "€ 34,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "34.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "34"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -8075,6 +8649,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€8",
+    "accepteer": [
+     "€8",
+     "8",
+     "€ 8",
+     "€8,00",
+     "8,00",
+     "€ 8,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "8.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "8"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -8168,15 +8762,25 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Sem koopt 5 schriften van €5 per stuk en betaalt met €50. Hoeveel geld krijgt hij terug?",
+   "opgave": "Sem koopt 4 schriften van €5 per stuk en betaalt met €50. Hoeveel geld krijgt hij terug?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "€25",
+   "antwoord": "€30",
    "antwoordDetail": null,
    "hint": "Reken eerst uit wat alles samen kost. Elk ding kost evenveel: dat is een keersom, het aantal keer de prijs.",
    "sterkereHint": "Haal dat dan af van het geld waarmee je betaalt.",
    "foutHints": [
+    {
+     "stap": null,
+     "fout": "€20",
+     "uitleg": "Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af.",
+     "uitlegSterker": "Je weet nu wat het kost. Haal dat van het geld waarmee je betaalt af. Wat overblijft, krijg je terug.",
+     "laag2": "tekstSterker",
+     "regel": "fout = wat het kost (aantal × prijs)",
+     "soort": "wat het kost",
+     "bron": "nieuw"
+    },
     {
      "stap": null,
      "fout": "€45",
@@ -8189,7 +8793,7 @@
     },
     {
      "stap": null,
-     "fout": "€40",
+     "fout": "€41",
      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
      "uitlegSterker": "Doe het aantal keer de prijs. Haal dat daarna van het geld waarmee je betaalt af.",
      "laag2": "tekstSterker",
@@ -8198,7 +8802,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€45 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €40 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
+   "foutHintsTekst": "€20 → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af. · €45 → Je hebt de prijs van één ding eraf gehaald. Er worden er meer gekocht. Reken eerst uit wat ze samen kosten. · €41 → Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom.",
    "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt als het een paar dezelfde dingen koopt.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -8218,8 +8822,8 @@
    "bronVariant": "claude-bank:T8:bfd798a8-725b-45a4-a155-b6f48c58e8c7",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "50 − 5 × 5",
-    "claudeUitleg": "Stap 1: 5 × 5 = €25.\nStap 2: 50 − 25 = €25 terug.",
+    "claudeKaleSom": "50 − 4 × 5",
+    "claudeUitleg": "Stap 1: 4 × €5 = €20.\nStap 2: €50 − €20 = €30 terug.",
     "claudeStrategie": "twee stappen",
     "claudeThema": "Ruimte",
     "claudeAntwoordType": "geheel",
@@ -8228,11 +8832,15 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
+      "fout": "€20",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
       "fout": "€45",
       "denkfout": "verkeerde-bewerking"
      },
      {
-      "fout": "€40",
+      "fout": "€41",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -8240,13 +8848,18 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "€45",
-      "uitleg": "Het zijn 5 stickers: reken eerst de totaalprijs uit."
+      "fout": "€20",
+      "uitleg": "Dat is wat alles samen kost. Haal het van het geld waarmee je betaalt."
      },
      {
       "stap": null,
-      "fout": "€40",
-      "uitleg": "5 keer €5: vermenigvuldigen."
+      "fout": "€45",
+      "uitleg": "Je hebt de prijs van één ding eraf gehaald."
+     },
+     {
+      "stap": null,
+      "fout": "€41",
+      "uitleg": "Je hebt het aantal en de prijs opgeteld. Elk ding kost evenveel: dat is een keersom."
      }
     ]
    },
@@ -8297,6 +8910,11 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Sem koopt # [ding] van €# [ding] stuk en betaalt met €#. Hoeveel [ding] krijgt hij terug?",
+    "r7b323": {
+     "punt": "#301",
+     "oud": "5 × €5, betaalt €50",
+     "nieuw": "4 × €5, betaalt €50"
+    },
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
     "somtypeOrigineel": "Wisselgeld: [wie] koopt # [ding] van €# per stuk en betaalt met €#. Hoeveel terug?",
@@ -8324,6 +8942,26 @@
     "foutHintPlaceholder": null,
     "foutHintsNietToegepast": []
    },
+   "geldInvoer": {
+    "sleutel": "€30",
+    "accepteer": [
+     "€30",
+     "30",
+     "€ 30",
+     "€30,00",
+     "30,00",
+     "€ 30,00"
+    ],
+    "regel": "met en zonder €, met spaties, met en zonder ',00'; komma, geen punt",
+    "punt": {
+     "voorbeeld": "30.00",
+     "tekst": "Bij geld schrijf je een komma."
+    },
+    "merge": "#300"
+   },
+   "antwoordOokGoed": [
+    "30"
+   ],
    "foutRegels": [
     {
      "regel": "fout = wat het kost (aantal × prijs)",
@@ -8334,7 +8972,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€25"
+       "€20"
       ]
      },
      "leesbaar": true
@@ -8347,7 +8985,9 @@
      "tekstSterker": "Je weet nu wat het kost. Haal dat van het geld waarmee je betaalt af. Wat overblijft, krijg je terug.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "€20"
+      ]
      },
      "leesbaar": true
     },
@@ -8388,7 +9028,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€40"
+       "€41"
       ]
      },
      "leesbaar": true
@@ -8407,6 +9047,745 @@
     }
    ],
    "algemeneFoutHint": "Reken eerst uit wat alles samen kost: het aantal keer de prijs. Haal dat dan af van het geld waarmee je betaalt."
+  },
+  {
+   "id": "G5-GET-E09-merge-gen-001",
+   "nr": "001",
+   "doelId": "G5-GET-E09",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "4 kinderen hebben elk 9 kaartjes. Ze geven er samen 6 weg. Hoeveel kaartjes hebben ze nog?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "30",
+   "antwoordDetail": null,
+   "hint": "Reken eerst uit hoeveel het er samen zijn. Het is steeds evenveel: dat is een keersom.",
+   "sterkereHint": "Haal er daarna af wat weggaat.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "36",
+     "uitleg": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af.",
+     "uitlegSterker": "Lees de vraag nog eens. Wat gaat er weg? Haal dat van het totaal af.",
+     "laag2": "tekstSterker",
+     "regel": "fout = tweede stap vergeten (getal1 × getal2)",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "7",
+     "uitleg": "Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.",
+     "uitlegSterker": "Doe het aantal keer hoeveel het steeds is. Haal er daarna af wat weggaat.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "opgeteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "12",
+     "uitleg": "Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.",
+     "uitlegSterker": "Schrijf twee sommen op: eerst de keersom, dan de minsom met de uitkomst van de keersom.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "stappen door elkaar",
+     "bron": "claude-taalfix"
+    }
+   ],
+   "foutHintsTekst": "36 → Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af. · 7 → Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat. · 12 → Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.",
+   "ouderzin": "Je kind rekent een verhaaltje in twee stappen uit: eerst een keersom, dan iets eraf.",
+   "getallenruimte": "n.v.t.",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "merge-generator:G5-r9-#235:g5-r9-gen235-e09-02-01",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "4 × 9 − 6",
+    "claudeUitleg": "Stap 1: 4 × 9 = 36.\nStap 2: 36 − 6 = 30.",
+    "claudeStrategie": null,
+    "claudeThema": null,
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "36",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "7",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "12",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "36",
+      "uitleg": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg."
+     },
+     {
+      "stap": null,
+      "fout": "7",
+      "uitleg": "Het is steeds evenveel: dat is een keersom."
+     },
+     {
+      "stap": null,
+      "fout": "12",
+      "uitleg": "Reken eerst uit hoeveel het er samen zijn. Haal er daarna af wat weggaat."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "scripts/fixlijst_g5_r7b.py",
+    "type": "merge-generator",
+    "claudeId": "g5-r9-gen235-e09-02-01",
+    "claudeDoel": "merge-generator G5 ronde 9 (#235)",
+    "claudeDoelTitel": "geen Claude-item",
+    "claudeGroep": null,
+    "claudeBron": null,
+    "claudeVersie": null,
+    "generator": "G5-r9 #235 (dunne somtypen aanvullen, Didactiek recheck r7b)",
+    "sjabloonClaudeId": "c2867f97-5744-4f61-8e29-452c7423b80f",
+    "sjabloonId": "G5-GET-E09-claude-bank-naar-001"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G5-r9 #235 generator (vorm naar het sjabloon G5-GET-E09-claude-bank-naar-001)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G5-GET-E09",
+    "somtype": "Twee stappen: # keer # [ding], daarna # eraf. Hoeveel nog?",
+    "duplicaatVan": null,
+    "regel": "G5-r9 #235 generator",
+    "reden": "#235: dun somtype aangevuld (sjabloon G5-GET-E09-claude-bank-naar-001)",
+    "gen235": {
+     "sjabloon": "G5-GET-E09-claude-bank-naar-001",
+     "kop": "vast: het somtype van het sjabloon (een vaste kop per somtype, niet uit de opgave te berekenen)"
+    },
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Twee stappen: # keer # [ding], daarna # eraf. Hoeveel nog?",
+    "hints": {
+     "batch": "batch7.json",
+     "nr": 2,
+     "somtype": "Twee stappen: # keer # [ding], daarna # eraf. Hoeveel nog?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "30",
+    "methode": "G5-r9 #235 generator (nagerekend in fixlijst_g5_r7b.py)",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": null,
+     "verwacht": null,
+     "methode": "geen Claude-item"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = tweede stap vergeten (getal1 × getal2)",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw",
+     "tekst": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af.",
+     "tekstSterker": "Lees de vraag nog eens. Wat gaat er weg? Haal dat van het totaal af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "36"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "tweede stap vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af.",
+     "tekstSterker": "Lees de vraag nog eens. Wat gaat er weg? Haal dat van het totaal af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "36"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "stappen door elkaar",
+     "bron": "claude-taalfix",
+     "tekst": "Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.",
+     "tekstSterker": "Schrijf twee sommen op: eerst de keersom, dan de minsom met de uitkomst van de keersom.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "12"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "opgeteld",
+     "bron": "claude-taalfix",
+     "tekst": "Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.",
+     "tekstSterker": "Doe het aantal keer hoeveel het steeds is. Haal er daarna af wat weggaat.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst het totaal uit met een keersom. Haal er daarna af wat weggaat.",
+     "tekstSterker": "Schrijf twee sommen op: eerst de keersom, dan de minsom met de uitkomst van de keersom.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst het totaal uit met een keersom. Haal er daarna af wat weggaat."
+  },
+  {
+   "id": "G5-GET-E09-merge-gen-002",
+   "nr": "002",
+   "doelId": "G5-GET-E09",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "5 kinderen plukken elk 8 appels. Ze eten er samen 6 op. Hoeveel appels hebben ze nog?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "34",
+   "antwoordDetail": null,
+   "hint": "Reken eerst uit hoeveel het er samen zijn. Het is steeds evenveel: dat is een keersom.",
+   "sterkereHint": "Haal er daarna af wat weggaat.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "40",
+     "uitleg": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af.",
+     "uitlegSterker": "Lees de vraag nog eens. Wat gaat er weg? Haal dat van het totaal af.",
+     "laag2": "tekstSterker",
+     "regel": "fout = tweede stap vergeten (getal1 × getal2)",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "7",
+     "uitleg": "Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.",
+     "uitlegSterker": "Doe het aantal keer hoeveel het steeds is. Haal er daarna af wat weggaat.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "opgeteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "10",
+     "uitleg": "Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.",
+     "uitlegSterker": "Schrijf twee sommen op: eerst de keersom, dan de minsom met de uitkomst van de keersom.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "stappen door elkaar",
+     "bron": "claude-taalfix"
+    }
+   ],
+   "foutHintsTekst": "40 → Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af. · 7 → Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat. · 10 → Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.",
+   "ouderzin": "Je kind rekent een verhaaltje in twee stappen uit: eerst een keersom, dan iets eraf.",
+   "getallenruimte": "n.v.t.",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "merge-generator:G5-r9-#235:g5-r9-gen235-e09-02-02",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "5 × 8 − 6",
+    "claudeUitleg": "Stap 1: 5 × 8 = 40.\nStap 2: 40 − 6 = 34.",
+    "claudeStrategie": null,
+    "claudeThema": null,
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "40",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "7",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "10",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "40",
+      "uitleg": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg."
+     },
+     {
+      "stap": null,
+      "fout": "7",
+      "uitleg": "Het is steeds evenveel: dat is een keersom."
+     },
+     {
+      "stap": null,
+      "fout": "10",
+      "uitleg": "Reken eerst uit hoeveel het er samen zijn. Haal er daarna af wat weggaat."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "scripts/fixlijst_g5_r7b.py",
+    "type": "merge-generator",
+    "claudeId": "g5-r9-gen235-e09-02-02",
+    "claudeDoel": "merge-generator G5 ronde 9 (#235)",
+    "claudeDoelTitel": "geen Claude-item",
+    "claudeGroep": null,
+    "claudeBron": null,
+    "claudeVersie": null,
+    "generator": "G5-r9 #235 (dunne somtypen aanvullen, Didactiek recheck r7b)",
+    "sjabloonClaudeId": "c2867f97-5744-4f61-8e29-452c7423b80f",
+    "sjabloonId": "G5-GET-E09-claude-bank-naar-001"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G5-r9 #235 generator (vorm naar het sjabloon G5-GET-E09-claude-bank-naar-001)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G5-GET-E09",
+    "somtype": "Twee stappen: # keer # [ding], daarna # eraf. Hoeveel nog?",
+    "duplicaatVan": null,
+    "regel": "G5-r9 #235 generator",
+    "reden": "#235: dun somtype aangevuld (sjabloon G5-GET-E09-claude-bank-naar-001)",
+    "gen235": {
+     "sjabloon": "G5-GET-E09-claude-bank-naar-001",
+     "kop": "vast: het somtype van het sjabloon (een vaste kop per somtype, niet uit de opgave te berekenen)"
+    },
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Twee stappen: # keer # [ding], daarna # eraf. Hoeveel nog?",
+    "hints": {
+     "batch": "batch7.json",
+     "nr": 2,
+     "somtype": "Twee stappen: # keer # [ding], daarna # eraf. Hoeveel nog?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "34",
+    "methode": "G5-r9 #235 generator (nagerekend in fixlijst_g5_r7b.py)",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": null,
+     "verwacht": null,
+     "methode": "geen Claude-item"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = tweede stap vergeten (getal1 × getal2)",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw",
+     "tekst": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af.",
+     "tekstSterker": "Lees de vraag nog eens. Wat gaat er weg? Haal dat van het totaal af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "40"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "tweede stap vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af.",
+     "tekstSterker": "Lees de vraag nog eens. Wat gaat er weg? Haal dat van het totaal af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "40"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "stappen door elkaar",
+     "bron": "claude-taalfix",
+     "tekst": "Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.",
+     "tekstSterker": "Schrijf twee sommen op: eerst de keersom, dan de minsom met de uitkomst van de keersom.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "10"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "opgeteld",
+     "bron": "claude-taalfix",
+     "tekst": "Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.",
+     "tekstSterker": "Doe het aantal keer hoeveel het steeds is. Haal er daarna af wat weggaat.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst het totaal uit met een keersom. Haal er daarna af wat weggaat.",
+     "tekstSterker": "Schrijf twee sommen op: eerst de keersom, dan de minsom met de uitkomst van de keersom.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst het totaal uit met een keersom. Haal er daarna af wat weggaat."
+  },
+  {
+   "id": "G5-GET-E09-merge-gen-003",
+   "nr": "003",
+   "doelId": "G5-GET-E09",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "In de gymzaal liggen 7 netten met elk 6 ballen. Er gaan er 9 lek. Hoeveel ballen zijn er nog heel?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "33",
+   "antwoordDetail": null,
+   "hint": "Reken eerst uit hoeveel het er samen zijn. Het is steeds evenveel: dat is een keersom.",
+   "sterkereHint": "Haal er daarna af wat weggaat.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "42",
+     "uitleg": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af.",
+     "uitlegSterker": "Lees de vraag nog eens. Wat gaat er weg? Haal dat van het totaal af.",
+     "laag2": "tekstSterker",
+     "regel": "fout = tweede stap vergeten (getal1 × getal2)",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "4",
+     "uitleg": "Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.",
+     "uitlegSterker": "Doe het aantal keer hoeveel het steeds is. Haal er daarna af wat weggaat.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "opgeteld",
+     "bron": "claude-taalfix"
+    }
+   ],
+   "foutHintsTekst": "42 → Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af. · 4 → Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.",
+   "ouderzin": "Je kind rekent een verhaaltje in twee stappen uit: eerst een keersom, dan iets eraf.",
+   "getallenruimte": "n.v.t.",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "merge-generator:G5-r9-#235:g5-r9-gen235-e09-02-03",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "7 × 6 − 9",
+    "claudeUitleg": "Stap 1: 7 × 6 = 42.\nStap 2: 42 − 9 = 33.",
+    "claudeStrategie": null,
+    "claudeThema": null,
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "42",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "4",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "42",
+      "uitleg": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg."
+     },
+     {
+      "stap": null,
+      "fout": "4",
+      "uitleg": "Het is steeds evenveel: dat is een keersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "scripts/fixlijst_g5_r7b.py",
+    "type": "merge-generator",
+    "claudeId": "g5-r9-gen235-e09-02-03",
+    "claudeDoel": "merge-generator G5 ronde 9 (#235)",
+    "claudeDoelTitel": "geen Claude-item",
+    "claudeGroep": null,
+    "claudeBron": null,
+    "claudeVersie": null,
+    "generator": "G5-r9 #235 (dunne somtypen aanvullen, Didactiek recheck r7b)",
+    "sjabloonClaudeId": "c2867f97-5744-4f61-8e29-452c7423b80f",
+    "sjabloonId": "G5-GET-E09-claude-bank-naar-001"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G5-r9 #235 generator (vorm naar het sjabloon G5-GET-E09-claude-bank-naar-001)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G5-GET-E09",
+    "somtype": "Twee stappen: # keer # [ding], daarna # eraf. Hoeveel nog?",
+    "duplicaatVan": null,
+    "regel": "G5-r9 #235 generator",
+    "reden": "#235: dun somtype aangevuld (sjabloon G5-GET-E09-claude-bank-naar-001)",
+    "gen235": {
+     "sjabloon": "G5-GET-E09-claude-bank-naar-001",
+     "kop": "vast: het somtype van het sjabloon (een vaste kop per somtype, niet uit de opgave te berekenen)"
+    },
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Twee stappen: # keer # [ding], daarna # eraf. Hoeveel nog?",
+    "hints": {
+     "batch": "batch7.json",
+     "nr": 2,
+     "somtype": "Twee stappen: # keer # [ding], daarna # eraf. Hoeveel nog?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "33",
+    "methode": "G5-r9 #235 generator (nagerekend in fixlijst_g5_r7b.py)",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": null,
+     "verwacht": null,
+     "methode": "geen Claude-item"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = tweede stap vergeten (getal1 × getal2)",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw",
+     "tekst": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af.",
+     "tekstSterker": "Lees de vraag nog eens. Wat gaat er weg? Haal dat van het totaal af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "42"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "tweede stap vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af.",
+     "tekstSterker": "Lees de vraag nog eens. Wat gaat er weg? Haal dat van het totaal af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "42"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "stappen door elkaar",
+     "bron": "claude-taalfix",
+     "tekst": "Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.",
+     "tekstSterker": "Schrijf twee sommen op: eerst de keersom, dan de minsom met de uitkomst van de keersom.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "opgeteld",
+     "bron": "claude-taalfix",
+     "tekst": "Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.",
+     "tekstSterker": "Doe het aantal keer hoeveel het steeds is. Haal er daarna af wat weggaat.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst het totaal uit met een keersom. Haal er daarna af wat weggaat.",
+     "tekstSterker": "Schrijf twee sommen op: eerst de keersom, dan de minsom met de uitkomst van de keersom.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst het totaal uit met een keersom. Haal er daarna af wat weggaat."
+  }
+ ],
+ "hintsSyncOp": "2026-10-08T10:57:46+02:00",
+ "hintsBatches": [
+  {
+   "batch": "batch1.json",
+   "md5": "842699d208fd"
+  },
+  {
+   "batch": "batch2.json",
+   "md5": "177896520b4a"
+  },
+  {
+   "batch": "batch3.json",
+   "md5": "6084f882b8c5"
+  },
+  {
+   "batch": "batch4.json",
+   "md5": "8c2471f502ac"
+  },
+  {
+   "batch": "batch5.json",
+   "md5": "73fd646d3959"
+  },
+  {
+   "batch": "batch6.json",
+   "md5": "6b0a808ef2f9"
+  },
+  {
+   "batch": "batch7.json",
+   "md5": "39f62e9aae00"
   }
  ]
 }

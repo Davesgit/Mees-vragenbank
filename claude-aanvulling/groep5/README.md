@@ -165,3 +165,19 @@ Script: `python3 scripts/build_g5.py`. Dat draait ook `sync_hint_keys.py` en `ap
 - **Stand 19:47 (rebuild met ronde 5e-2 van Oefeningen; nieuwe regel #113 van 19:42/19:46):** gemapt 4657 · park-G6 2313 · park-G7 220 · terug-G4 300. 120 somtypen. Controle FOUT 0. check_hints: 0 FAIL · 0 WARN · 130 INFO (127 #113). check_merge_notatie: ALLES OK.
 - **Stand 20:18:14 (#120–#122; eerst 'stand 20:40' genoemd):** gemapt 4657 · park-G6 2313 · park-G7 220 · terug-G4 300. 120 somtypen. Controle FOUT 0. check_hints: 0 FAIL · 0 WARN · 130 INFO. check_merge_notatie: ALLES OK (nieuw: R121, DOELID). 27 items vervangen (#121), doelId van gen-001…020 gezet (#122), checker #113 aangescherpt (#120). Zie het fixlijst-blok '#120–#122'.
 - **Stand 22:31:36 (#123–#125 en E02-001):** gemapt 4827 (170 uit G8, waaronder «4 dozen met elk 198 vissen» in GET-E07, nieuw somtype 12 / sleutel 22, bevroren v8) · park-G6 2313 · park-G7 220 · terug-G4 300. check_hints: 120 klaar · 20 open · 0 FAIL · 0 WARN. #123 (7 opties 'één vergeten' terug naar rij − één cel), #124 (KOLOM_VOOR_DEEL), #125 (2 getallenruimtes). Zie het fixlijst-blok '#123–#125'. Open somtypes per doel: `../hints_todo.md`.
+
+
+## Ronde 9 (8 okt 2026, build 10:57:42; Didactiek recheck-ronde7b, uitgevoerd door Overzicht)
+- Code: `scripts/fixlijst_g5_r7b.py` (vanaf regel 35 herschreven) zit nu in de build: `R7B.fix_r7b` na fix329, `R7B.guards_r7b` na de ids. Log: `logs/fixlijst_g5_r9.json`. Een guard die faalt, stopt de build (AssertionError).
+- Cijfers: gemapt 4845 (4827 − 10 naar G6 + 28 generator) · park-G6 2323 · park-G7 220 · terug-G4 300. check_hints: 139 klaar · 0 open · 0 FAIL · 0 WARN · 130 INFO. check_merge_notatie: ALLES OK. #121: 0. Generator: 66 items, 0 FAIL.
+- **#302:** 11 getoonde opties boven 1000 vervangen; guard: geen optie > 1000 in G5-GET (MEET-E04 ml en VBN-E01 mogen wel).
+- **#301/#322/#326:** 13 schatsommen met nieuwe getallen (E05: 001, 008, 010, 015, 018, 019, 020, 022, 027, 030, 034; E07: 021, 022). De kop blijft gelijk (assert). Guards: de foute route geeft nooit het goede antwoord, antwoord + sleutel ≤ 1000, geen term al rond.
+- **#300:** 27 open geld-items met `geldInvoer` en de standaard-accepteerlijst ('€88', '88', '€ 88', '€88,00', '88,00').
+- **#323:** 9 items betalen met het kleinste biljet dat genoeg is (003 → €20; 005, 009, 020, 022, 023, 025, 026, 029 → €50). **024 (5 × €5) blijft €100**: met €50 zou het wisselgeld gelijk zijn aan de kosten (#301). Guard: het biljet is een van de eerste twee biljetten boven de kosten.
+- **#324:** 4 contexten aangepast (schoolplein → sportfeest, bibliotheek → klassenbibliotheek, vissen → knikkers, kratten → zakken). **#325:** E09 #2 002/016 met andere getallen; de 'opgeteld'-sleutel komt niet meer uit de vraag.
+- **#321/#354 (besluit):** E07 #6 (19), TT × TT schatten, 10 items → G6-GET-E06 (status park-G6, `besluit321`). `hints/koppeling_merge.json`: geparkeerd G5-GET-E07 nrO 19 → G6-GET-E06. `park_g7_hints.py` past nu alleen entries toe met 'naar' G7 (eerst kregen 220 G7-items ten onrechte de E07-hints).
+- **#235/#231 (dunne somtypes):** 28 generator-items (`G5-GET-E0x-merge-gen-NNN`, bron 'merge-generator'): E05 nrO 30 +5, nrO 31 +6, nrO 32 +7 (bezoekers, vaste kop), E07 nrO 22 +7 (alle 'dozen'), E09 nrO 2 +3. Elk somtype heeft nu ten minste 8 items (guard).
+- **#327:** 40 items naar niveau 'toepassen' (alleen naar-items en generator, alleen omhoog): 3 cijfers of onthouden/lenen.
+- **#329:** E05 #32 053 heeft een kop zonder tabel («Op de kinderboerderij tellen ze de bezoekers: …»). **Bord, app en rapporten werken op `id`, niet op `nr`:** `nr` is niet uniek (138 batch-7-items) en de somtypenummers schuiven als er een somtype bijkomt.
+- **#355:** `data/gemapt.json` en elk `per_doel`-bestand hebben `hintsSyncOp` (ISO, Amsterdam) en `hintsBatches` (batch + md5[:12]), ook in G6–G8.
+- Motor: `scripts/fout_regels.py` is gelijk in G5–G8 (md5 2e5f773d…); motor_regressie G5: 4845 items, 0 anders.

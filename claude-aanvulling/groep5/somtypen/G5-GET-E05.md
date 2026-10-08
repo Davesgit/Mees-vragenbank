@@ -2,7 +2,7 @@
 
 Onze omschrijving: +/− ≤1000: rijg/splits/kolom/cijferen + strategieën + schattend · in onze bank: 8 items
 
-Claude-vragen gemapt: **489** in **32** somtypen · twijfel (voorstel dit doel): **0**
+Claude-vragen gemapt: **507** in **32** somtypen · twijfel (voorstel dit doel): **0**
 
 Invoer voor het schrijven van hint 1 (`hint`) en hint 2 (`sterkereHint`) per somtype. Velden `hint`, `sterkereHint` en `ouderzin` zijn nog leeg.
 Elk somtype heeft een vaste sleutel (nrOrigineel + somtypeOrigineel, bevroren/somtype_nr_v*.json): neem die over in hints/batch*.json, dan blijft de hint gekoppeld als de nummering of de kop verandert.
@@ -393,12 +393,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Items: **11** · Claude-doelen: T3 (11) · regel: D8-SCHAT-NAAR-G5
 - Getallenruimte: 0–1.000 · type: kale
 - Denkfouten (Claude): —
-- Verschillende Claude-fout-hints: 4 (meest: “Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.”)
+- Verschillende Claude-fout-hints: 11 (meest: “Rond af op tientallen, zoals de vraag zegt. Reken daarna uit met de ronde getallen.”)
 - Voorbeelden:
   - `G5-GET-E05-claude-bank-naar-015` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Hoeveel is 20 + 85 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
-    - **Antwoord:** 110  (controle: n.v.t.)
+    - **Opgave:** Hoeveel is 62 + 85 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
+    - **Antwoord:** 150  (controle: n.v.t.)
     - **Fout-hints (Claude):** 100 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 90 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
+    - **Uitleg (Claude):** 62 wordt 60 en 85 wordt 90. 60 + 90 = 150.
   - `G5-GET-E05-claude-bank-naar-023` (Claude T3, bank, niveau 1 → basis)
     - **Opgave:** Hoeveel is 52 + 86 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
     - **Antwoord:** 140  (controle: n.v.t.)
@@ -423,12 +424,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Denkfouten (Claude): laatste-cijfer (7), orde-van-grootte (6), bovengrens (3), ondergrens (2)
 - Verschillende Claude-fout-hints: 18 (meest: “Rond eerst af. 50 + 60 is 110. Ligt 13 daar dichtbij?”)
 - Voorbeelden:
-  - `G5-GET-E05-claude-bank-naar-054` (Claude T3, bank, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-naar-054` (Claude T3, bank, niveau 1 → toepassen)
     - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 53 + 60 kan kloppen?
     - **Opties:** A) 113 · B) 13 · C) 111
     - **Antwoord:** 113  (controle: n.v.t.)
     - **Fout-hints (Claude):** 13 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
-  - `G5-GET-E05-claude-bank-naar-060` (Claude T3, bank, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-naar-060` (Claude T3, bank, niveau 1 → toepassen)
     - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 71 + 35 kan kloppen?
     - **Opties:** A) 106 · B) 6 · C) 104
     - **Antwoord:** 106  (controle: n.v.t.)
@@ -445,13 +446,42 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Rond beide getallen af en tel ze op. Zo weet je ongeveer hoe groot de uitkomst is. Kijk daarna naar de laatste cijfers.  [nieuw]
 - Status: hints klaar
 
-## Somtype 15: Hoeveel is # − # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — zonder overschrijding van het tiental
+## Somtype 15: Hoeveel is # − # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — met overschrijding van het tiental
+
+- Sleutel: nrOrigineel **31** · somtypeOrigineel “Hoeveel is # − # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — met overschrijding van het tiental” (koppeling: claudeId)
+- Items: **8** · Claude-doelen: merge-generator G5 ronde 9 (#235) (6), T3 (2) · regel: D8-SCHAT-NAAR-G5, G5-r9 #235 generator
+- Getallenruimte: 0–1.000 · type: kale
+- Denkfouten (Claude): —
+- Verschillende Claude-fout-hints: 10 (meest: “Rond af op honderdtallen, zoals de vraag zegt. Reken daarna uit met de ronde getallen.”)
+- Voorbeelden:
+  - `G5-GET-E05-claude-bank-naar-036` (Claude T3, bank, niveau 1 → basis)
+    - **Opgave:** Hoeveel is 850 − 194 ongeveer? Rond beide getallen af op honderdtallen en reken dan uit.
+    - **Antwoord:** 700  (controle: n.v.t.)
+    - **Fout-hints (Claude):** 706 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 500 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
+  - `G5-GET-E05-merge-gen-008` (Claude merge-generator G5 ronde 9 (#235), None, niveau 1 → basis)
+    - **Opgave:** Hoeveel is 913 − 386 ongeveer? Rond beide getallen af op honderdtallen en reken dan uit.
+    - **Antwoord:** 500  (controle: ok)
+    - **Fout-hints (Claude):** 706 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 500 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
+    - **Uitleg (Claude):** 913 wordt 900 en 386 wordt 400. 900 − 400 = 500.
+
+- **Hint 1 (te schrijven):** Rond eerst beide getallen af op honderdtallen. Kijk bij elk getal naar de tientallen: vijf of meer? Dan rond je naar boven af. Minder dan vijf? Dan naar beneden.
+- **Hint 2 (te schrijven):** Reken dan uit met de ronde getallen. Haal het tweede ronde getal van het eerste af.
+- **Ouderzin:** Je kind schat een minsom: eerst beide getallen afronden op honderdtallen, dan uitrekenen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `precies uitgerekend` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het precieze antwoord. De vraag is hoeveel het ongeveer is. Rond eerst beide getallen af, en reken dan uit.  [nieuw]
+  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Heb je elk getal goed afgerond? Kijk bij elk getal naar de tientallen.  [nieuw]
+  - `honderd te weinig` (fout = antwoord − 100) → Dat is honderd te weinig. Heb je elk getal goed afgerond? Kijk bij elk getal naar de tientallen.  [nieuw]
+  - `anders afgerond` (Claudes sleutel (zonder label)) → Rond beide getallen af op honderdtallen, zoals de vraag zegt. Reken daarna uit met de ronde getallen.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Rond beide getallen af op honderdtallen. Reken daarna uit met de ronde getallen.  [nieuw]
+- Status: hints klaar
+
+## Somtype 16: Hoeveel is # − # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — zonder overschrijding van het tiental
 
 - Sleutel: nrOrigineel **22** · somtypeOrigineel “Hoeveel is # − # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — zonder overschrijding van het tiental” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: T3 (8) · regel: D8-SCHAT-NAAR-G5
 - Getallenruimte: 0–1.000 · type: kale
 - Denkfouten (Claude): —
-- Verschillende Claude-fout-hints: 4 (meest: “Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.”)
+- Verschillende Claude-fout-hints: 6 (meest: “Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.”)
 - Voorbeelden:
   - `G5-GET-E05-claude-bank-naar-032` (Claude T3, bank, niveau 1 → basis)
     - **Opgave:** Hoeveel is 567 − 152 ongeveer? Rond beide getallen af op honderdtallen en reken dan uit.
@@ -473,7 +503,67 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Rond beide getallen af op honderdtallen. Reken daarna uit met de ronde getallen.  [nieuw]
 - Status: hints klaar
 
-## Somtype 16: Verhaalsom min: # [ding], er gaan er # weg. Hoeveel nog?
+## Somtype 17: In een tabel staat het aantal bezoekers van [plek]: maandag #, dinsdag #, woensdag # en donderdag #. Hoeveel bezoekers waren er in die vier dagen samen?
+
+- Sleutel: nrOrigineel **32** · somtypeOrigineel “In een tabel staat het aantal bezoekers van [plek]: maandag #, dinsdag #, woensdag # en donderdag #. Hoeveel bezoekers waren er in die vier dagen samen?” (koppeling: claudeId)
+- Items: **8** · Claude-doelen: merge-generator G5 ronde 9 (#235) (7), G9 (1) · regel: D8-STAT-NAAR-G5, G5-r9 #235 generator
+- Getallenruimte: 0–1.000 · type: meerkeuze
+- Denkfouten (Claude): tiental-ernaast (8), getal-overgenomen (8)
+- Verschillende Claude-fout-hints: 4 (meest: “Dat is tien te weinig. Let goed op de tientallen.”)
+- Voorbeelden:
+  - `G5-GET-E05-claude-bank-naar-053` (Claude G9, ai, niveau 2 → toepassen)
+    - **Opgave:** Dit zijn de bezoekers van de kinderboerderij: maandag 45, dinsdag 38, woensdag 92 en donderdag 55. Hoeveel bezoekers waren er in die vier dagen samen?
+    - **Opties:** A) 220 bezoekers · B) 92 bezoekers · C) 230 bezoekers
+    - **Antwoord:** 230 bezoekers  (controle: n.v.t.)
+    - **Fout-hints (Claude):** 220 bezoekers → Tel de getallen nog een keer rustig op. Let goed op de tientallen. · 92 bezoekers → 92 hoort bij één dag. De vraag gaat over alle vier de dagen samen.
+    - **Uitleg (Claude):** Je telt alle dagen op: 45 + 38 = 83 en 92 + 55 = 147. Samen is dat 83 + 147 = 230 bezoekers.
+  - `G5-GET-E05-merge-gen-015` (Claude merge-generator G5 ronde 9 (#235), None, niveau 2 → toepassen)
+    - **Opgave:** Dit zijn de bezoekers van het museum: maandag 125, dinsdag 98, woensdag 143 en donderdag 76. Hoeveel bezoekers waren er in die vier dagen samen?
+    - **Opties:** A) 442 bezoekers · B) 432 bezoekers · C) 143 bezoekers
+    - **Antwoord:** 442 bezoekers  (controle: ok)
+    - **Fout-hints (Claude):** 220 bezoekers → Tel de getallen nog een keer rustig op. Let goed op de tientallen. · 92 bezoekers → 92 hoort bij één dag. De vraag gaat over alle vier de dagen samen.
+    - **Uitleg (Claude):** 125 + 98 + 143 + 76 = 442.
+
+- **Hint 1 (te schrijven):** Tel de getallen van alle dagen bij elkaar op.
+- **Hint 2 (te schrijven):** Tel eerst twee dagen bij elkaar. Tel daar steeds de volgende dag bij, tot je alle dagen hebt gehad.
+- **Ouderzin:** Je kind telt de getallen uit een tabel bij elkaar op.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tiental te weinig` (Claudes sleutel: tiental-ernaast) → Dat is tien te weinig. Tel de getallen nog eens op. Let goed op de tientallen.  [Claude, taalfix]
+  - `één dag` (Claudes sleutel: getal-overgenomen) → Dat is het getal van één dag. De vraag gaat over alle dagen samen.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Tel de getallen van alle dagen bij elkaar op.  [nieuw]
+- Status: hints klaar
+
+## Somtype 18: Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen? — met overschrijding van het tiental
+
+- Sleutel: nrOrigineel **30** · somtypeOrigineel “Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen? — met overschrijding van het tiental” (koppeling: claudeId)
+- Items: **8** · Claude-doelen: merge-generator G5 ronde 9 (#235) (5), T3 (3) · regel: D8-KLOPPEN-NAAR-G5, G5-r9 #235 generator
+- Getallenruimte: 0–1.000 · type: meerkeuze
+- Denkfouten (Claude): laatste-cijfer (6), ondergrens (5), bovengrens (4), orde-van-grootte (1)
+- Verschillende Claude-fout-hints: 16 (meest: “Rond 700 naar boven af en 273 naar beneden. 700 − 200 is 500. De uitkomst kan dus niet groter zijn dan 500, en 527 is groter.”)
+- Voorbeelden:
+  - `G5-GET-E05-claude-bank-naar-070` (Claude T3, bank, niveau 1 → toepassen)
+    - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 700 − 273 kan kloppen?
+    - **Opties:** A) 427 · B) 527 · C) 973
+    - **Antwoord:** 427  (controle: n.v.t.)
+    - **Fout-hints (Claude):** 527 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 973 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
+  - `G5-GET-E05-merge-gen-002` (Claude merge-generator G5 ronde 9 (#235), None, niveau 1 → toepassen)
+    - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 813 − 456 kan kloppen?
+    - **Opties:** A) 355 · B) 357 · C) 257
+    - **Antwoord:** 357  (controle: ok)
+    - **Fout-hints (Claude):** 527 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 973 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
+
+- **Hint 1 (te schrijven):** Rond beide getallen af en haal het tweede van het eerste af. Zo weet je ongeveer hoe groot de uitkomst is.
+- **Hint 2 (te schrijven):** Kijk daarna naar de laatste cijfers. Op welk cijfer moet de uitkomst eindigen? Kies het antwoord dat in de buurt ligt en op dat cijfer eindigt.
+- **Ouderzin:** Je kind kiest zonder uit te rekenen welk antwoord bij een minsom kan kloppen: afronden en naar het laatste cijfer kijken.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `te ver weg` (Claudes sleutel: orde-van-grootte) → Rond eerst af en reken dat uit. Ligt dit antwoord daar in de buurt?  [Claude, taalfix]
+  - `ander laatste cijfer` (Claudes sleutel: laatste-cijfer) → Haal het laatste cijfer van het tweede getal af van het laatste cijfer van het eerste. Kan dat niet? Doe er dan eerst tien bij. Eindigt dit antwoord op dat cijfer?  [Claude, taalfix]
+  - `te groot` (Claudes sleutel: bovengrens) → Rond het eerste getal naar boven af en het tweede naar beneden. Haal ze van elkaar af. Groter dan dat kan de uitkomst niet zijn. Is dit antwoord groter?  [Claude, taalfix]
+  - `te klein` (Claudes sleutel: ondergrens) → Rond het eerste getal naar beneden af en het tweede naar boven. Haal ze van elkaar af. Kleiner dan dat kan de uitkomst niet zijn. Is dit antwoord kleiner?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Rond beide getallen af en haal het tweede van het eerste af. Zo weet je ongeveer hoe groot de uitkomst is. Kijk daarna naar de laatste cijfers.  [nieuw]
+- Status: hints klaar
+
+## Somtype 19: Verhaalsom min: # [ding], er gaan er # weg. Hoeveel nog?
 
 - Sleutel: nrOrigineel **23** · somtypeOrigineel “Verhaalsom min: # [ding], er gaan er # weg. Hoeveel nog?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: T1 (8) · regel: G8-T1-door-elkaar
@@ -481,12 +571,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Denkfouten (Claude): verkeerde-bewerking (8), onthouden-vergeten (8)
 - Verschillende Claude-fout-hints: 2 (meest: “Weg is aftrekken.”)
 - Voorbeelden:
-  - `G5-GET-E05-claude-bank-naar-043` (Claude T1, gegenereerd, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-naar-043` (Claude T1, gegenereerd, niveau 1 → toepassen)
     - **Opgave:** In de winkel liggen 795 appels. Er worden er 34 verkocht. Hoeveel appels liggen er nog?
     - **Antwoord:** 761  (controle: n.v.t.)
     - **Fout-hints (Claude):** 829 → Weg is aftrekken. · 771 → Kijk of je moest lenen bij de tientallen.
     - **Uitleg (Claude):** 795 − 34 = 761.
-  - `G5-GET-E05-claude-bank-naar-049` (Claude T1, gegenereerd, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-naar-049` (Claude T1, gegenereerd, niveau 1 → toepassen)
     - **Opgave:** In de sporthal zitten 445 mensen. Er gaan er 107 naar huis. Hoeveel mensen zitten er nog?
     - **Antwoord:** 338  (controle: n.v.t.)
     - **Fout-hints (Claude):** 552 → Weg is aftrekken. · 348 → Kijk of je moest lenen bij de tientallen.
@@ -504,7 +594,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
 - Status: hints klaar
 
-## Somtype 17: Verhaalsom plus: # [ding], er komen er # bij. Hoeveel nu?
+## Somtype 20: Verhaalsom plus: # [ding], er komen er # bij. Hoeveel nu?
 
 - Sleutel: nrOrigineel **24** · somtypeOrigineel “Verhaalsom plus: # [ding], er komen er # bij. Hoeveel nu?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: T1 (8) · regel: G8-T1-door-elkaar
@@ -512,12 +602,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Denkfouten (Claude): verkeerde-bewerking (8), tiental-ernaast (8)
 - Verschillende Claude-fout-hints: 2 (meest: “Erbij is optellen.”)
 - Voorbeelden:
-  - `G5-GET-E05-claude-bank-naar-042` (Claude T1, gegenereerd, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-naar-042` (Claude T1, gegenereerd, niveau 1 → toepassen)
     - **Opgave:** In de winkel liggen 505 appels. Er komen er 90 bij. Hoeveel appels liggen er nu?
     - **Antwoord:** 595  (controle: ok)
     - **Fout-hints (Claude):** 415 → Erbij is optellen. · 585 → Tel de tientallen nog eens.
     - **Uitleg (Claude):** 505 + 90 = 595.
-  - `G5-GET-E05-claude-bank-naar-051` (Claude T1, gegenereerd, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-naar-051` (Claude T1, gegenereerd, niveau 1 → toepassen)
     - **Opgave:** In de zaal zitten 188 mensen. Er komen er 74 bij. Hoeveel mensen zitten er nu?
     - **Antwoord:** 262  (controle: ok)
     - **Fout-hints (Claude):** 114 → Erbij is optellen. · 252 → Tel de tientallen nog eens.
@@ -535,7 +625,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
-## Somtype 18: [wie] heeft # [ding] en geeft er # weg. Hoeveel [ding] houdt [wie] over?
+## Somtype 21: [wie] heeft # [ding] en geeft er # weg. Hoeveel [ding] houdt [wie] over?
 
 - Sleutel: nrOrigineel **13** · somtypeOrigineel “[wie] heeft # [ding] en geeft er # weg. Hoeveel [ding] houdt [wie] over?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: C3 (8) · regel: G5-C04-plusmin-context
@@ -571,22 +661,24 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
 - Status: hints klaar
 
-## Somtype 19: Hoeveel is # + # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — zonder overschrijding van het tiental
+## Somtype 22: Hoeveel is # + # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — zonder overschrijding van het tiental
 
 - Sleutel: nrOrigineel **25** · somtypeOrigineel “Hoeveel is # + # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — zonder overschrijding van het tiental” (koppeling: claudeId)
 - Items: **7** · Claude-doelen: T3 (7) · regel: D8-SCHAT-NAAR-G5
 - Getallenruimte: 0–1.000 · type: kale
 - Denkfouten (Claude): —
-- Verschillende Claude-fout-hints: 4 (meest: “Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.”)
+- Verschillende Claude-fout-hints: 7 (meest: “Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.”)
 - Voorbeelden:
   - `G5-GET-E05-claude-bank-naar-001` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Hoeveel is 131 + 370 ongeveer? Rond beide getallen af op honderdtallen en reken dan uit.
+    - **Opgave:** Hoeveel is 131 + 362 ongeveer? Rond beide getallen af op honderdtallen en reken dan uit.
     - **Antwoord:** 500  (controle: n.v.t.)
     - **Fout-hints (Claude):** 470 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 400 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
+    - **Uitleg (Claude):** 131 wordt 100 en 362 wordt 400. 100 + 400 = 500.
   - `G5-GET-E05-claude-bank-naar-010` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Hoeveel is 110 + 880 ongeveer? Rond beide getallen af op honderdtallen en reken dan uit.
-    - **Antwoord:** 1000  (controle: n.v.t.)
+    - **Opgave:** Hoeveel is 113 + 780 ongeveer? Rond beide getallen af op honderdtallen en reken dan uit.
+    - **Antwoord:** 900  (controle: n.v.t.)
     - **Fout-hints (Claude):** 1100 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 800 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
+    - **Uitleg (Claude):** 113 wordt 100 en 780 wordt 800. 100 + 800 = 900.
 
 - **Hint 1 (te schrijven):** Rond eerst beide getallen af op honderdtallen. Kijk bij elk getal naar de tientallen: vijf of meer? Dan rond je naar boven af. Minder dan vijf? Dan naar beneden.
 - **Hint 2 (te schrijven):** Reken dan uit met de ronde getallen. Tel ze bij elkaar op.
@@ -599,13 +691,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Rond beide getallen af op honderdtallen. Reken daarna uit met de ronde getallen.  [nieuw]
 - Status: hints klaar
 
-## Somtype 20: Hoeveel is # + # [ding]? Rond beide getallen af op tientallen en reken dan uit. — met overschrijding van het tiental
+## Somtype 23: Hoeveel is # + # [ding]? Rond beide getallen af op tientallen en reken dan uit. — met overschrijding van het tiental
 
 - Sleutel: nrOrigineel **26** · somtypeOrigineel “Hoeveel is # + # [ding]? Rond beide getallen af op tientallen en reken dan uit. — met overschrijding van het tiental” (koppeling: claudeId)
 - Items: **7** · Claude-doelen: T3 (7) · regel: D8-SCHAT-NAAR-G5
 - Getallenruimte: 0–1.000 · type: kale
 - Denkfouten (Claude): —
-- Verschillende Claude-fout-hints: 4 (meest: “Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.”)
+- Verschillende Claude-fout-hints: 6 (meest: “Dat is het precieze antwoord. Hier maak je een schatting. Rond eerst af zoals in de vraag staat.”)
 - Voorbeelden:
   - `G5-GET-E05-claude-bank-naar-014` (Claude T3, bank, niveau 1 → basis)
     - **Opgave:** Hoeveel is 84 + 87 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
@@ -627,13 +719,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Rond beide getallen af op tientallen. Reken daarna uit met de ronde getallen.  [nieuw]
 - Status: hints klaar
 
-## Somtype 21: Hoeveel is # + # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — met overschrijding van het tiental
+## Somtype 24: Hoeveel is # + # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — met overschrijding van het tiental
 
 - Sleutel: nrOrigineel **27** · somtypeOrigineel “Hoeveel is # + # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — met overschrijding van het tiental” (koppeling: claudeId)
 - Items: **6** · Claude-doelen: T3 (6) · regel: D8-SCHAT-NAAR-G5
 - Getallenruimte: 0–1.000 · type: kale
 - Denkfouten (Claude): —
-- Verschillende Claude-fout-hints: 4 (meest: “Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.”)
+- Verschillende Claude-fout-hints: 6 (meest: “Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.”)
 - Voorbeelden:
   - `G5-GET-E05-claude-bank-naar-002` (Claude T3, bank, niveau 1 → basis)
     - **Opgave:** Hoeveel is 278 + 598 ongeveer? Rond beide getallen af op honderdtallen en reken dan uit.
@@ -655,20 +747,20 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Rond beide getallen af op honderdtallen. Reken daarna uit met de ronde getallen.  [nieuw]
 - Status: hints klaar
 
-## Somtype 22: Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen? — met overschrijding van het tiental
+## Somtype 25: Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen? — met overschrijding van het tiental
 
 - Sleutel: nrOrigineel **28** · somtypeOrigineel “Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen? — met overschrijding van het tiental” (koppeling: claudeId)
 - Items: **6** · Claude-doelen: T3 (6) · regel: D8-KLOPPEN-NAAR-G5
 - Getallenruimte: 0–1.000 · type: meerkeuze
 - Denkfouten (Claude): orde-van-grootte (6), laatste-cijfer (4), bovengrens (1), ondergrens (1)
-- Verschillende Claude-fout-hints: 12 (meest: “Rond eerst af. 200 + 300 is 500. Ligt 4830 daar dichtbij?”)
+- Verschillende Claude-fout-hints: 12 (meest: “Rond eerst af. 200 + 300 is 500. Ligt 48 daar dichtbij?”)
 - Voorbeelden:
-  - `G5-GET-E05-claude-bank-naar-058` (Claude T3, bank, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-naar-058` (Claude T3, bank, niveau 1 → toepassen)
     - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 215 + 268 kan kloppen?
-    - **Opties:** A) 483 · B) 4830 · C) 485
+    - **Opties:** A) 483 · B) 48 · C) 485
     - **Antwoord:** 483  (controle: n.v.t.)
     - **Fout-hints (Claude):** 583 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
-  - `G5-GET-E05-claude-bank-naar-065` (Claude T3, bank, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-naar-065` (Claude T3, bank, niveau 1 → toepassen)
     - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 47 + 76 kan kloppen?
     - **Opties:** A) 123 · B) 23 · C) 125
     - **Antwoord:** 123  (controle: n.v.t.)
@@ -685,7 +777,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Rond beide getallen af en tel ze op. Zo weet je ongeveer hoe groot de uitkomst is. Kijk daarna naar de laatste cijfers.  [nieuw]
 - Status: hints klaar
 
-## Somtype 23: Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen? — zonder overschrijding van het tiental
+## Somtype 26: Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen? — zonder overschrijding van het tiental
 
 - Sleutel: nrOrigineel **29** · somtypeOrigineel “Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen? — zonder overschrijding van het tiental” (koppeling: claudeId)
 - Items: **6** · Claude-doelen: T3 (6) · regel: D8-KLOPPEN-NAAR-G5
@@ -693,14 +785,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Denkfouten (Claude): orde-van-grootte (5), laatste-cijfer (4), bovengrens (2), ondergrens (1)
 - Verschillende Claude-fout-hints: 12 (meest: “Rond eerst af. 700 − 600 is 100. Ligt 48 daar dichtbij?”)
 - Voorbeelden:
-  - `G5-GET-E05-claude-bank-naar-069` (Claude T3, bank, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-naar-069` (Claude T3, bank, niveau 1 → toepassen)
     - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 708 − 560 kan kloppen?
     - **Opties:** A) 148 · B) 48 · C) 150
     - **Antwoord:** 148  (controle: n.v.t.)
     - **Fout-hints (Claude):** 48 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
-  - `G5-GET-E05-claude-bank-naar-074` (Claude T3, bank, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-naar-074` (Claude T3, bank, niveau 1 → toepassen)
     - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 302 − 240 kan kloppen?
-    - **Opties:** A) 62 · B) 620 · C) 1062
+    - **Opties:** A) 62 · B) 620 · C) 6
     - **Antwoord:** 62  (controle: n.v.t.)
     - **Fout-hints (Claude):** 72 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 52 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
 
@@ -715,7 +807,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Rond beide getallen af en haal het tweede van het eerste af. Zo weet je ongeveer hoe groot de uitkomst is. Kijk daarna naar de laatste cijfers.  [nieuw]
 - Status: hints klaar
 
-## Somtype 24: In [plek] liggen # [ding]. Er komen # [ding] bij. Hoeveel liggen er nu?
+## Somtype 27: In [plek] liggen # [ding]. Er komen # [ding] bij. Hoeveel liggen er nu?
 
 - Sleutel: nrOrigineel **14** · somtypeOrigineel “In [plek] liggen # [ding]. Er komen # [ding] bij. Hoeveel liggen er nu?” (koppeling: claudeId)
 - Items: **4** · Claude-doelen: C2 (4) · regel: G5-C04-plusmin-context
@@ -748,37 +840,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
-## Somtype 25: Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen? — met overschrijding van het tiental
-
-- Sleutel: nrOrigineel **30** · somtypeOrigineel “Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen? — met overschrijding van het tiental” (koppeling: claudeId)
-- Items: **3** · Claude-doelen: T3 (3) · regel: D8-KLOPPEN-NAAR-G5
-- Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): bovengrens (4), laatste-cijfer (1), orde-van-grootte (1)
-- Verschillende Claude-fout-hints: 6 (meest: “Rond 700 naar boven af en 273 naar beneden. 700 − 200 is 500. De uitkomst kan dus niet groter zijn dan 500, en 527 is groter.”)
-- Voorbeelden:
-  - `G5-GET-E05-claude-bank-naar-070` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 700 − 273 kan kloppen?
-    - **Opties:** A) 427 · B) 527 · C) 973
-    - **Antwoord:** 427  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 527 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 973 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
-  - `G5-GET-E05-claude-bank-naar-076` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 563 − 156 kan kloppen?
-    - **Opties:** A) 407 · B) 507 · C) 4070
-    - **Antwoord:** 407  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 507 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 307 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
-
-- **Hint 1 (te schrijven):** Rond beide getallen af en haal het tweede van het eerste af. Zo weet je ongeveer hoe groot de uitkomst is.
-- **Hint 2 (te schrijven):** Kijk daarna naar de laatste cijfers. Op welk cijfer moet de uitkomst eindigen? Kies het antwoord dat in de buurt ligt en op dat cijfer eindigt.
-- **Ouderzin:** Je kind kiest zonder uit te rekenen welk antwoord bij een minsom kan kloppen: afronden en naar het laatste cijfer kijken.
-- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `te ver weg` (Claudes sleutel: orde-van-grootte) → Rond eerst af en reken dat uit. Ligt dit antwoord daar in de buurt?  [Claude, taalfix]
-  - `ander laatste cijfer` (Claudes sleutel: laatste-cijfer) → Haal het laatste cijfer van het tweede getal af van het laatste cijfer van het eerste. Kan dat niet? Doe er dan eerst tien bij. Eindigt dit antwoord op dat cijfer?  [Claude, taalfix]
-  - `te groot` (Claudes sleutel: bovengrens) → Rond het eerste getal naar boven af en het tweede naar beneden. Haal ze van elkaar af. Groter dan dat kan de uitkomst niet zijn. Is dit antwoord groter?  [Claude, taalfix]
-  - `te klein` (Claudes sleutel: ondergrens) → Rond het eerste getal naar beneden af en het tweede naar boven. Haal ze van elkaar af. Kleiner dan dat kan de uitkomst niet zijn. Is dit antwoord kleiner?  [Claude, taalfix]
-  - `andere fout` (andere fout) → Rond beide getallen af en haal het tweede van het eerste af. Zo weet je ongeveer hoe groot de uitkomst is. Kijk daarna naar de laatste cijfers.  [nieuw]
-- Status: hints klaar
-
-## Somtype 26: Op [plek] lagen # [ding]. Er zijn er # [ding]. Hoeveel [ding] liggen er nog?
+## Somtype 28: Op [plek] lagen # [ding]. Er zijn er # [ding]. Hoeveel [ding] liggen er nog?
 
 - Sleutel: nrOrigineel **15** · somtypeOrigineel “Op [plek] lagen # [ding]. Er zijn er # [ding]. Hoeveel [ding] liggen er nog?” (koppeling: claudeId)
 - Items: **3** · Claude-doelen: C5 (3) · regel: G5-C04-plusmin-context
@@ -813,35 +875,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
 - Status: hints klaar
 
-## Somtype 27: Hoeveel is # − # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — met overschrijding van het tiental
-
-- Sleutel: nrOrigineel **31** · somtypeOrigineel “Hoeveel is # − # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — met overschrijding van het tiental” (koppeling: claudeId)
-- Items: **2** · Claude-doelen: T3 (2) · regel: D8-SCHAT-NAAR-G5
-- Getallenruimte: 0–1.000 · type: kale
-- Denkfouten (Claude): —
-- Verschillende Claude-fout-hints: 3 (meest: “Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.”)
-- Voorbeelden:
-  - `G5-GET-E05-claude-bank-naar-036` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Hoeveel is 850 − 194 ongeveer? Rond beide getallen af op honderdtallen en reken dan uit.
-    - **Antwoord:** 700  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 706 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 500 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
-  - `G5-GET-E05-claude-bank-naar-041` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Hoeveel is 320 − 211 ongeveer? Rond beide getallen af op honderdtallen en reken dan uit.
-    - **Antwoord:** 100  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 200 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven. · 300 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
-
-- **Hint 1 (te schrijven):** Rond eerst beide getallen af op honderdtallen. Kijk bij elk getal naar de tientallen: vijf of meer? Dan rond je naar boven af. Minder dan vijf? Dan naar beneden.
-- **Hint 2 (te schrijven):** Reken dan uit met de ronde getallen. Haal het tweede ronde getal van het eerste af.
-- **Ouderzin:** Je kind schat een minsom: eerst beide getallen afronden op honderdtallen, dan uitrekenen.
-- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `precies uitgerekend` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het precieze antwoord. De vraag is hoeveel het ongeveer is. Rond eerst beide getallen af, en reken dan uit.  [nieuw]
-  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Heb je elk getal goed afgerond? Kijk bij elk getal naar de tientallen.  [nieuw]
-  - `honderd te weinig` (fout = antwoord − 100) → Dat is honderd te weinig. Heb je elk getal goed afgerond? Kijk bij elk getal naar de tientallen.  [nieuw]
-  - `anders afgerond` (Claudes sleutel (zonder label)) → Rond beide getallen af op honderdtallen, zoals de vraag zegt. Reken daarna uit met de ronde getallen.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Rond beide getallen af op honderdtallen. Reken daarna uit met de ronde getallen.  [nieuw]
-- Status: hints klaar
-
-## Somtype 28: In [plek] liggen # [ding] en op [plek] #. Hoeveel [ding] zijn dat samen?
+## Somtype 29: In [plek] liggen # [ding] en op [plek] #. Hoeveel [ding] zijn dat samen?
 
 - Sleutel: nrOrigineel **16** · somtypeOrigineel “In [plek] liggen # [ding] en op [plek] #. Hoeveel [ding] zijn dat samen?” (koppeling: claudeId)
 - Items: **2** · Claude-doelen: C4 (2) · regel: G5-C04-plusmin-context
@@ -874,7 +908,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
-## Somtype 29: In [plek] liggen # [ding]. Er komen er # bij. Hoeveel zijn het er samen?
+## Somtype 30: In [plek] liggen # [ding]. Er komen er # bij. Hoeveel zijn het er samen?
 
 - Sleutel: nrOrigineel **17** · somtypeOrigineel “In [plek] liggen # [ding]. Er komen er # bij. Hoeveel zijn het er samen?” (koppeling: claudeId)
 - Items: **2** · Claude-doelen: D4-3 (2) · regel: G5-C04-plusmin-context
@@ -907,7 +941,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
-## Somtype 30: Op [plek] liggen # [ding] en in [plek] #. Hoeveel [ding] zijn dat samen?
+## Somtype 31: Op [plek] liggen # [ding] en in [plek] #. Hoeveel [ding] zijn dat samen?
 
 - Sleutel: nrOrigineel **18** · somtypeOrigineel “Op [plek] liggen # [ding] en in [plek] #. Hoeveel [ding] zijn dat samen?” (koppeling: claudeId)
 - Items: **2** · Claude-doelen: C4 (2) · regel: G5-C04-plusmin-context
@@ -940,7 +974,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
-## Somtype 31: Op [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over?
+## Somtype 32: Op [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over?
 
 - Sleutel: nrOrigineel **19** · somtypeOrigineel “Op [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over?” (koppeling: claudeId)
 - Items: **2** · Claude-doelen: C6 (2) · regel: G5-C04-plusmin-context
@@ -973,28 +1007,4 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `onder het honderdtal` (fout = antwoord + 100) → Dat is één honderdtal te veel. Je gaat onder het hele honderdtal, dus het honderdtal wordt één minder.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is één honderdtal te weinig. Haal de honderdtallen nog eens af.  [nieuw]
   - `andere fout` (andere fout) → Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
-- Status: hints klaar
-
-## Somtype 32: In een tabel staat het aantal bezoekers van [plek]: maandag #, dinsdag #, woensdag # en donderdag #. Hoeveel bezoekers waren er in die vier dagen samen?
-
-- Sleutel: nrOrigineel **32** · somtypeOrigineel “In een tabel staat het aantal bezoekers van [plek]: maandag #, dinsdag #, woensdag # en donderdag #. Hoeveel bezoekers waren er in die vier dagen samen?” (koppeling: claudeId)
-- Items: **1** · Claude-doelen: G9 (1) · regel: D8-STAT-NAAR-G5
-- Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): tiental-ernaast (1), getal-overgenomen (1)
-- Verschillende Claude-fout-hints: 2 (meest: “Tel de getallen nog een keer rustig op. Let goed op de tientallen.”)
-- Voorbeelden:
-  - `G5-GET-E05-claude-bank-naar-053` (Claude G9, ai, niveau 2 → toepassen)
-    - **Opgave:** Dit zijn de bezoekers van de kinderboerderij: maandag 45, dinsdag 38, woensdag 92 en donderdag 55. Hoeveel bezoekers waren er in die vier dagen samen?
-    - **Opties:** A) 220 bezoekers · B) 92 bezoekers · C) 230 bezoekers
-    - **Antwoord:** 230 bezoekers  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 220 bezoekers → Tel de getallen nog een keer rustig op. Let goed op de tientallen. · 92 bezoekers → 92 hoort bij één dag. De vraag gaat over alle vier de dagen samen.
-    - **Uitleg (Claude):** Je telt alle dagen op: 45 + 38 = 83 en 92 + 55 = 147. Samen is dat 83 + 147 = 230 bezoekers.
-
-- **Hint 1 (te schrijven):** Tel de getallen van alle dagen bij elkaar op.
-- **Hint 2 (te schrijven):** Tel eerst twee dagen bij elkaar. Tel daar steeds de volgende dag bij, tot je alle dagen hebt gehad.
-- **Ouderzin:** Je kind telt de getallen uit een tabel bij elkaar op.
-- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `tiental te weinig` (Claudes sleutel: tiental-ernaast) → Dat is tien te weinig. Tel de getallen nog eens op. Let goed op de tientallen.  [Claude, taalfix]
-  - `één dag` (Claudes sleutel: getal-overgenomen) → Dat is het getal van één dag. De vraag gaat over alle dagen samen.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Tel de getallen van alle dagen bij elkaar op.  [nieuw]
 - Status: hints klaar

@@ -2,7 +2,7 @@
 
 Onze omschrijving: × ÷ ≤1000: standaard + strategieën; veelvouden van 10; schattend × · in onze bank: 8 items
 
-Claude-vragen gemapt: **507** in **12** somtypen · twijfel (voorstel dit doel): **0**
+Claude-vragen gemapt: **504** in **11** somtypen · twijfel (voorstel dit doel): **0**
 
 Invoer voor het schrijven van hint 1 (`hint`) en hint 2 (`sterkereHint`) per somtype. Velden `hint`, `sterkereHint` en `ouderzin` zijn nog leeg.
 Elk somtype heeft een vaste sleutel (nrOrigineel + somtypeOrigineel, bevroren/somtype_nr_v*.json): neem die over in hints/batch*.json, dan blijft de hint gekoppeld als de nummering of de kop verandert.
@@ -154,33 +154,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Reken het in stukken uit en tel de stukken op. Kijk of je antwoord past: het is een keersom.  [nieuw]
 - Status: hints klaar
 
-## Somtype 6: Hoeveel is # × # [ding]? Rond beide getallen af op tientallen en reken dan uit.
-
-- Sleutel: nrOrigineel **19** · somtypeOrigineel “Hoeveel is # × # [ding]? Rond beide getallen af op tientallen en reken dan uit.” (koppeling: claudeId)
-- Items: **10** · Claude-doelen: T3 (10) · regel: D8-SCHAT-NAAR-G5
-- Getallenruimte: 0–1.000 · type: kale
-- Denkfouten (Claude): —
-- Verschillende Claude-fout-hints: 3 (meest: “Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.”)
-- Voorbeelden:
-  - `G5-GET-E07-claude-bank-naar-014` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Hoeveel is 18 × 54 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
-    - **Antwoord:** 1000  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 1200 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 800 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
-  - `G5-GET-E07-claude-bank-naar-019` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Hoeveel is 18 × 21 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
-    - **Antwoord:** 400  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 378 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 600 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
-
-- **Hint 1 (te schrijven):** Rond beide getallen af op tientallen. Kijk bij elk getal naar de eenheden: vijf of meer? Dan rond je naar boven af. Minder dan vijf? Dan naar beneden.
-- **Hint 2 (te schrijven):** Reken dan uit met de ronde getallen. Reken eerst zonder de nullen en zet de nullen er daarna weer achter.
-- **Ouderzin:** Je kind schat een keersom: eerst beide getallen afronden op tientallen, dan uitrekenen.
-- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `precies uitgerekend` (fout = getal1 × getal2) → Dat is het precieze antwoord. De vraag is hoeveel het ongeveer is. Rond eerst beide getallen af, en reken dan uit.  [nieuw]
-  - `anders afgerond` (Claudes sleutel (zonder label)) → Heb je beide getallen goed afgerond op tientallen? Reken daarna uit met de ronde getallen.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Rond beide getallen af op tientallen. Reken daarna uit met de ronde getallen.  [nieuw]
-- Status: hints klaar
-
-## Somtype 7: [wie] verzamelt elke dag # [ding]. Hoeveel [ding] zijn dat in # dagen?
+## Somtype 6: [wie] verzamelt elke dag # [ding]. Hoeveel [ding] zijn dat in # dagen?
 
 - Sleutel: nrOrigineel **5** · somtypeOrigineel “[wie] verzamelt elke dag # [ding]. Hoeveel [ding] zijn dat in # dagen?” (koppeling: claudeId)
 - Items: **9** · Claude-doelen: C7 (9) · regel: G5-C01-keer-context
@@ -208,6 +182,35 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Reken eerst zonder de nullen en zet ze er daarna allemaal weer achter.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Staat er een nul te veel achter? Reken eerst zonder de nullen en zet ze er daarna weer achter.  [nieuw]
   - `andere fout` (andere fout) → Reken eerst zonder de nullen en zet ze er daarna weer achter. Kijk of je antwoord past: het is een keersom.  [nieuw]
+- Status: hints klaar
+
+## Somtype 7: # [ding] met elk # [ding]. Schat hoeveel dat ongeveer is: rond # af op honderdtallen en reken dan uit.
+
+- Sleutel: nrOrigineel **22** · somtypeOrigineel “# [ding] met elk # [ding]. Schat hoeveel dat ongeveer is: rond # af op honderdtallen en reken dan uit.” (koppeling: claudeId)
+- Items: **8** · Claude-doelen: merge-generator G5 ronde 9 (#235) (7), T3 (1) · regel: G8-T3-schatten-afspraak, G5-r9 #235 generator
+- Getallenruimte: 0–1.000 · type: kale
+- Denkfouten (Claude): verkeerde-bewerking (8), nul-fout-tientallen (8), optellen-ipv-vermenigvuldigen (8)
+- Verschillende Claude-fout-hints: 12 (meest: “Tel de nullen goed mee.”)
+- Voorbeelden:
+  - `G5-GET-E07-claude-bank-naar-057` (Claude T3, gegenereerd, niveau 1 → basis)
+    - **Opgave:** 4 dozen met elk 198 knikkers. Schat hoeveel dat ongeveer is: rond 198 af op honderdtallen en reken dan uit.
+    - **Antwoord:** 800  (controle: ok)
+    - **Fout-hints (Claude):** 792 → Precies uitgerekend. Hier vragen we de schatting met het ronde getal. · 80 → 200 × 4: tel de nullen goed. · 204 → 4 dozen van elk ongeveer 200: dat is een keersom.
+    - **Uitleg (Claude):** 198 is bijna 200. 200 × 4 = 800. Precies is het 792, dus de schatting klopt goed.
+  - `G5-GET-E07-merge-gen-004` (Claude merge-generator G5 ronde 9 (#235), None, niveau 1 → basis)
+    - **Opgave:** 5 dozen met elk 104 potloden. Schat hoeveel dat ongeveer is: rond 104 af op honderdtallen en reken dan uit.
+    - **Antwoord:** 500  (controle: ok)
+    - **Fout-hints (Claude):** 792 → Precies uitgerekend. Hier vragen we de schatting met het ronde getal. · 80 → 200 × 4: tel de nullen goed. · 204 → 4 dozen van elk ongeveer 200: dat is een keersom.
+    - **Uitleg (Claude):** 104 is ongeveer 100. 5 × 100 = 500.
+
+- **Hint 1 (te schrijven):** Rond eerst af zoals in de vraag staat.
+- **Hint 2 (te schrijven):** Reken dan uit met het ronde getal.
+- **Ouderzin:** Je kind schat een keersom door eerst af te ronden.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `precies uitgerekend` (fout = getal1 × getal2) → Dat is precies uitgerekend. De vraag is hoeveel het ongeveer is. Rond eerst af en reken dan uit met het ronde getal.  [nieuw]
+  - `nul vergeten` (fout = antwoord : 10) → Tel de nullen van het ronde getal goed mee.  [nieuw]
+  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Je hebt opgeteld. In elke doos zitten er evenveel: dat is een keersom.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Rond eerst af zoals in de vraag staat. Reken dan uit met het ronde getal.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 8: Keersom in een verhaal: splits het grootste getal
@@ -327,28 +330,4 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Reken eerst zonder de nullen en zet ze er daarna allemaal weer achter.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Staat er een nul te veel achter? Reken eerst zonder de nullen en zet ze er daarna weer achter.  [nieuw]
   - `andere fout` (andere fout) → Reken eerst zonder de nullen en zet ze er daarna weer achter. Kijk of je antwoord past: het is een keersom.  [nieuw]
-- Status: hints klaar
-
-## Somtype 12: # [ding] met elk # [ding]. Schat hoeveel dat ongeveer is: rond # af op honderdtallen en reken dan uit.
-
-- Sleutel: nrOrigineel **22** · somtypeOrigineel “# [ding] met elk # [ding]. Schat hoeveel dat ongeveer is: rond # af op honderdtallen en reken dan uit.” (koppeling: claudeId)
-- Items: **1** · Claude-doelen: T3 (1) · regel: G8-T3-schatten-afspraak
-- Getallenruimte: 0–1.000 · type: kale
-- Denkfouten (Claude): verkeerde-bewerking (1), nul-fout-tientallen (1), optellen-ipv-vermenigvuldigen (1)
-- Verschillende Claude-fout-hints: 3 (meest: “Precies uitgerekend. Hier vragen we de schatting met het ronde getal.”)
-- Voorbeelden:
-  - `G5-GET-E07-claude-bank-naar-057` (Claude T3, gegenereerd, niveau 1 → basis)
-    - **Opgave:** 4 dozen met elk 198 vissen. Schat hoeveel dat ongeveer is: rond 198 af op honderdtallen en reken dan uit.
-    - **Antwoord:** 800  (controle: ok)
-    - **Fout-hints (Claude):** 792 → Precies uitgerekend. Hier vragen we de schatting met het ronde getal. · 80 → 200 × 4: tel de nullen goed. · 204 → 4 dozen van elk ongeveer 200: dat is een keersom.
-    - **Uitleg (Claude):** 198 is bijna 200. 200 × 4 = 800. Precies is het 792, dus de schatting klopt goed.
-
-- **Hint 1 (te schrijven):** Rond eerst af zoals in de vraag staat.
-- **Hint 2 (te schrijven):** Reken dan uit met het ronde getal.
-- **Ouderzin:** Je kind schat een keersom door eerst af te ronden.
-- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `precies uitgerekend` (fout = getal1 × getal2) → Dat is precies uitgerekend. De vraag is hoeveel het ongeveer is. Rond eerst af en reken dan uit met het ronde getal.  [nieuw]
-  - `nul vergeten` (fout = antwoord : 10) → Tel de nullen van het ronde getal goed mee.  [nieuw]
-  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Je hebt opgeteld. In elke doos zitten er evenveel: dat is een keersom.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Rond eerst af zoals in de vraag staat. Reken dan uit met het ronde getal.  [nieuw]
 - Status: hints klaar
