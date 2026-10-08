@@ -9,7 +9,7 @@ def laad(p, naam):
 sys.path.insert(0, f'{g}/scripts'); AH = laad(f'{g}/scripts/apply_hints.py', 'ah_' + os.path.basename(g))
 O, N = laad(oud, 'motor_oud'), laad(nieuw, 'motor_nieuw')
 for M in (O, N):
-    for k in ('BEREIK_AFRONDEN', 'GELD_PUNT', 'LIJN_BINNEN'): setattr(M, k, getattr(AH.fout_regels, k))
+    for k in ("BEREIK_AFRONDEN", "GELD_PUNT", "LIJN_BINNEN", "KOMMA437"): setattr(M, k, getattr(AH.fout_regels, k, False))
 G = json.load(open(f'{g}/data/gemapt.json'))['items']
 idx = collections.defaultdict(list)
 for it in G: idx[(it['merge']['doel'], it['merge']['somtype'])].append(it)

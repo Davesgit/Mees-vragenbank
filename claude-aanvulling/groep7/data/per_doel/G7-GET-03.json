@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T12:44:21+0200",
+ "gegenereerdOp": "2026-10-08T12:52:39+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-GET-03",
  "bordtitel": "Optellen en aftrekken met komma’s",
@@ -33463,15 +33463,45 @@
     {
      "stap": null,
      "fout": "4,9",
-     "uitleg": "Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?",
-     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Tel eerst de honderdsten, dan de tienden, dan de hele getallen. Worden de tienden samen tien? Dan schrijf je een nul en gaat er één naar de hele getallen.",
+     "uitleg": "Dat is een tiende ernaast. Tel de tienden nog eens: kwam er een één bij uit de honderdsten?",
+     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Tel eerst de honderdsten, dan de tienden. Komen de honderdsten op tien of meer? Dan gaat er een één naar de tienden.",
      "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
-     "soort": "net ernaast (heel antwoord)",
-     "bron": "claude-taalfix"
+     "regel": "fout = antwoord ± 0,1",
+     "soort": "een tiende ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "4,99",
+     "uitleg": "Dat is een honderdste ernaast. Tel de honderdsten nog eens. Klopt het?",
+     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal maar één cijfer achter de komma? Zet er een nul achter, zodat je honderdsten onder honderdsten telt.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 0,01",
+     "soort": "een honderdste ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "5,01",
+     "uitleg": "Dat is een honderdste ernaast. Tel de honderdsten nog eens. Klopt het?",
+     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal maar één cijfer achter de komma? Zet er een nul achter, zodat je honderdsten onder honderdsten telt.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 0,01",
+     "soort": "een honderdste ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "5,1",
+     "uitleg": "Dat is een tiende ernaast. Tel de tienden nog eens: kwam er een één bij uit de honderdsten?",
+     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Tel eerst de honderdsten, dan de tienden. Komen de honderdsten op tien of meer? Dan gaat er een één naar de tienden.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 0,1",
+     "soort": "een tiende ernaast",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "4,9 → Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?",
+   "foutHintsTekst": "4,9 → Dat is een tiende ernaast. Tel de tienden nog eens: kwam er een één bij uit de honderdsten? · 4,99 → Dat is een honderdste ernaast. Tel de honderdsten nog eens. Klopt het? · 5,01 → Dat is een honderdste ernaast. Tel de honderdsten nog eens. Klopt het? · 5,1 → Dat is een tiende ernaast. Tel de tienden nog eens: kwam er een één bij uit de honderdsten?",
    "ouderzin": "Je kind telt kommagetallen op door de komma’s onder elkaar te zetten.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
@@ -33591,7 +33621,10 @@
      "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Tel eerst de honderdsten, dan de tienden. Komen de honderdsten op tien of meer? Dan gaat er een één naar de tienden.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "4,9",
+       "5,1"
+      ]
      },
      "leesbaar": true
     },
@@ -33603,7 +33636,10 @@
      "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal maar één cijfer achter de komma? Zet er een nul achter, zodat je honderdsten onder honderdsten telt.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "4,99",
+       "5,01"
+      ]
      },
      "leesbaar": true
     },
@@ -33615,9 +33651,7 @@
      "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Tel eerst de honderdsten, dan de tienden, dan de hele getallen. Worden de tienden samen tien? Dan schrijf je een nul en gaat er één naar de hele getallen.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "4,9"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -93234,15 +93268,45 @@
     {
      "stap": null,
      "fout": "2,01",
-     "uitleg": "Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?",
-     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Haal eerst de honderdsten af, dan de tienden, dan de hele getallen. Blijft er achter de komma niets over? Dan is het antwoord een heel getal.",
+     "uitleg": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt.",
      "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
-     "soort": "net ernaast (heel antwoord)",
-     "bron": "claude-taalfix"
+     "regel": "fout = antwoord ± 0,01",
+     "soort": "een honderdste ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "1,9",
+     "uitleg": "Dat is een tiende ernaast. Moest je bij de honderdsten een tiende inwisselen?",
+     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Wissel dan één van de plek ervoor in voor tien.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 0,1",
+     "soort": "een tiende ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "1,99",
+     "uitleg": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 0,01",
+     "soort": "een honderdste ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2,1",
+     "uitleg": "Dat is een tiende ernaast. Moest je bij de honderdsten een tiende inwisselen?",
+     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Wissel dan één van de plek ervoor in voor tien.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 0,1",
+     "soort": "een tiende ernaast",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "0,2 → Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar. · 2,01 → Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?",
+   "foutHintsTekst": "0,2 → Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar. · 2,01 → Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het? · 1,9 → Dat is een tiende ernaast. Moest je bij de honderdsten een tiende inwisselen? · 1,99 → Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het? · 2,1 → Dat is een tiende ernaast. Moest je bij de honderdsten een tiende inwisselen?",
    "ouderzin": "Je kind trekt kommagetallen van elkaar af door de komma’s onder elkaar te zetten.",
    "getallenruimte": "kommagetallen (2 cijfers achter de komma)",
    "context": "laag",
@@ -93367,7 +93431,10 @@
      "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Wissel dan één van de plek ervoor in voor tien.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "1,9",
+       "2,1"
+      ]
      },
      "leesbaar": true
     },
@@ -93379,7 +93446,10 @@
      "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "1,99",
+       "2,01"
+      ]
      },
      "leesbaar": true
     },
@@ -93391,9 +93461,7 @@
      "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Haal eerst de honderdsten af, dan de tienden, dan de hele getallen. Blijft er achter de komma niets over? Dan is het antwoord een heel getal.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "2,01"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -99370,25 +99438,45 @@
     {
      "stap": null,
      "fout": "3,9",
-     "uitleg": "Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?",
-     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Haal eerst de honderdsten af, dan de tienden, dan de hele getallen. Blijft er achter de komma niets over? Dan is het antwoord een heel getal.",
+     "uitleg": "Dat is een tiende ernaast. Moest je bij de honderdsten een tiende inwisselen?",
+     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Wissel dan één van de plek ervoor in voor tien.",
      "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
-     "soort": "net ernaast (heel antwoord)",
-     "bron": "claude-taalfix"
+     "regel": "fout = antwoord ± 0,1",
+     "soort": "een tiende ernaast",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "4,01",
-     "uitleg": "Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?",
-     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Haal eerst de honderdsten af, dan de tienden, dan de hele getallen. Blijft er achter de komma niets over? Dan is het antwoord een heel getal.",
+     "uitleg": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt.",
      "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
-     "soort": "net ernaast (heel antwoord)",
-     "bron": "claude-taalfix"
+     "regel": "fout = antwoord ± 0,01",
+     "soort": "een honderdste ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "3,99",
+     "uitleg": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 0,01",
+     "soort": "een honderdste ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "4,1",
+     "uitleg": "Dat is een tiende ernaast. Moest je bij de honderdsten een tiende inwisselen?",
+     "uitlegSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Wissel dan één van de plek ervoor in voor tien.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 0,1",
+     "soort": "een tiende ernaast",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "3,9 → Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het? · 4,01 → Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?",
+   "foutHintsTekst": "3,9 → Dat is een tiende ernaast. Moest je bij de honderdsten een tiende inwisselen? · 4,01 → Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het? · 3,99 → Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het? · 4,1 → Dat is een tiende ernaast. Moest je bij de honderdsten een tiende inwisselen?",
    "ouderzin": "Je kind trekt kommagetallen van elkaar af door de komma’s onder elkaar te zetten.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
@@ -99513,7 +99601,10 @@
      "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Wissel dan één van de plek ervoor in voor tien.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "3,9",
+       "4,1"
+      ]
      },
      "leesbaar": true
     },
@@ -99525,7 +99616,10 @@
      "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "3,99",
+       "4,01"
+      ]
      },
      "leesbaar": true
     },
@@ -99537,10 +99631,7 @@
      "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Haal eerst de honderdsten af, dan de tienden, dan de hele getallen. Blijft er achter de komma niets over? Dan is het antwoord een heel getal.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "3,9",
-       "4,01"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -106877,22 +106968,22 @@
    "algemeneFoutHint": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
   }
  ],
- "hintsSyncOp": "2026-10-08T12:44:26+02:00",
+ "hintsSyncOp": "2026-10-08T12:52:43+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
-   "md5": "1106695c9148"
+   "md5": "70001ae7e3df"
   },
   {
    "batch": "batch2.json",
-   "md5": "8c699cd7b0a1"
+   "md5": "a87af875ab03"
   },
   {
    "batch": "batch3.json",
    "md5": "27ee48fd8a5d"
   }
  ],
- "geschrevenOp": "2026-10-08T12:44:26+02:00",
+ "geschrevenOp": "2026-10-08T12:52:43+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

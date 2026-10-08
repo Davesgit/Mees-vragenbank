@@ -3,6 +3,8 @@
 Regels gelden van boven naar beneden; de eerste die past, wint. Gebruikt door apply_hints.py.
 Nieuw 8 okt 12:4x (G7 batch 2, Oef-#421/#422/#429): norm421 = één notatie voor letterlijke regels en opties ('−'/'-'/'–' als minteken, 'euro'/'€');
   'de deelsom omgedraaid' = de deling met deeltal en deler omgewisseld (antwoord 'a : b' → optie 'b : a'; antwoord getal → b/a).
+  Oef-#437: KOMMA437 (G7/G8) leest '8,4' als één getal; Oef-#436: 'fout = antwoord ± 0,1 / ± 0,01' ook bij een heel antwoord (vraag met kommagetal);
+  Oef-#434: 'fout = het cijfer op de plek ernaast' (plaatswaarde: de cijfers links en rechts van de gevraagde plaats).
 Per item komt er uit:
   foutHints   concrete sleutels (fout getal / optietekst / vak) met kindtekst, zoals het exportformaat ze kent
   foutRegels  de geordende regels met een matcher (waarden / kleinerDan / vanaf / totEnMet / alles) voor invoer
@@ -99,6 +101,7 @@ GELD_PUNT = False          # G5: True (merge-punt #33), gezet in scripts/apply_h
 KOLOM_VOOR_DEEL = False    # G5: True (merge-fixlijst #124), gezet in scripts/apply_hints.py: bij 'Hoeveel X in totaal?' wint een kolomsom van 'twee cellen'/Claudes sleutel
 GELD_PUNT_TEKST = 'Bij geld schrijf je een komma.'
 ANTWOORD_UIT_WAARDEN = False   # G6: True (merge-fixlijst #223, Didactiek 3b): het goede antwoord nooit in foutRegels.match.waarden, ook buiten tabellen (assert)
+KOMMA437 = False           # Oef-#437: kommagetal in de vraag als één getal; True in G7/G8 (apply_hints); G5/G6 blijven gelijk (goedgekeurd)
 LIJN_BINNEN = False        # G5: True (merge-fixlijst #14: geen sleutel buiten de getallenlijn), gezet in scripts/apply_hints.py; G4 ongewijzigd
 
 def _int(v):
@@ -152,7 +155,17 @@ def _punt(x):
 def _nums(t):
     t = re.sub(r'(?<!\d)\d{1,2}:\d{2}(?!\d)', ' ', t)
     # G5 fixlijst #60: '10.000' is één getal (punt als duizendtal-scheider), niet 10 en 0
-    return [int(x.replace('.', '')) for x in re.findall(r'(?<![\w:.])(?:\d{1,3}(?:\.\d{3})+|\d+)(?![\w:]|\.\d)', t)]
+    # Oef-#437 (G7 batch 3): een decimale komma tussen cijfers is één getal ('8,4' → 42/5, als Fraction), niet 8 en 4. Een komma met een spatie
+    # erachter blijft een opsommingsteken ('8, 4'); een rij zonder spaties ('3,5,7') blijft drie hele getallen.
+    INT = r'(?:\d{1,3}(?:\.\d{3})+|\d+)'
+    if not KOMMA437: return [int(x.replace('.', '')) for x in re.findall(r'(?<![\w:.])' + INT + r'(?![\w:]|\.\d)', t)]      # zoals vóór #437
+    uit = []
+    for m in re.finditer(r'(?<![\w:.,])(' + INT + r',\d+)(?!,\d)(?![\w:]|\.\d)|(?<![\w:.])(' + INT + r')(?![\w:]|\.\d)', t):
+        if m.group(1):
+            n_, _, d_ = m.group(1).partition(','); x = Fraction(int(n_.replace('.', ''))) + Fraction(int(d_), 10 ** len(d_))
+            uit.append(int(x) if x.denominator == 1 else x)
+        else: uit.append(int(m.group(2).replace('.', '')))
+    return uit
 
 def _uur(v):
     m = re.fullmatch(r'(\d+)(?: uur|:00)', str(v).strip())
@@ -462,7 +475,7 @@ def _compile_regel(regel, c):
     if c.jr.get('soort') == 'lijngrafiek' and (r219 := _lijn219(r, c)) is not None: return r219      # G6 merge-fixlijst #219: lijngrafiek (VBN-E02)
     if (r8 := _regels_r8(r, c)) is not None: return r8      # G6 merge-fixlijst ronde 8: #233, #271, G5 GET-E09
     if (r10 := _regels_r10(r, c)) is not None: return r10   # G6 merge-fixlijst ronde 10: #380 helft van de strook
-    E = lambda *vals: {'exact': {str(x) for x in vals if x is not None and (not isinstance(x, int) or x >= 0)}}
+    E = lambda *vals: {'exact': {(_kg(x) if isinstance(x, Fraction) else str(x)) for x in vals if x is not None and (not isinstance(x, (int, Fraction)) or x >= 0) and not (isinstance(x, Fraction) and _kg(x) is None)}}      # Oef-#437: kommagetal als '8,4'
     if r.startswith('andere fout') or 'of een andere fout' in r or r.startswith('ander vak') or 'een andere vorm of kleur' in r or 'een klok met een ander uur' in r:
         return {'alles': True}
     if r.startswith('volgorde omgedraaid'): return E('|'.join(reversed(c.ans.split('|'))))
@@ -798,7 +811,16 @@ def _compile_regel(regel, c):
     if re.match(r'fout = getal - 10 of antwoord - 10', r): return E(g1 - 10, a - 10)
     if re.match(r'fout = getal \+ 1\b', r): return E(g1 + 1)
     if r.startswith('fout = getal + bekend deel'): return E(n[0] + n[-1])
-    if r.startswith('fout = een getal uit de vraag'): return E(*n)
+    # Oef-#434 (G7 GET-01 #7): 'Welk cijfer staat op de plaats van de tienduizendtallen in 736.125?' → de cijfers op de plaats links en rechts
+    # ernaast (7 en 6), niet het goede cijfer. Het getal is het langste getal in de vraag; alleen bij een antwoord van één cijfer.
+    if r.startswith(('fout = het cijfer op de plek ernaast', 'fout = het cijfer op de plaats ernaast')):
+        PL = ['eenheden', 'tientallen', 'honderdtallen', 'duizendtallen', 'tienduizendtallen', 'honderdduizendtallen', 'miljoenen']
+        q = re.search(r'(?:plaats|plek) van de (\w+)', c.opg.lower()); gs = re.findall(r'\d{1,3}(?:\.\d{3})+|\d+', c.opg)
+        if not q or q.group(1) not in PL or not gs or not re.fullmatch(r'\d', c.ans.strip()): return {'exact': set()}
+        cf = max(gs, key=lambda x: len(x.replace('.', ''))).replace('.', ''); i = len(cf) - 1 - PL.index(q.group(1))
+        if not 0 <= i < len(cf) or cf[i] != c.ans.strip(): return {'exact': set()}
+        return E(*[cf[j] for j in (i - 1, i + 1) if 0 <= j < len(cf) and cf[j] != c.ans.strip()])
+    if r.startswith('fout = een getal uit de vraag'): return E(*[x for x in n if not (isinstance(x, Fraction) and _kg(x) == c.ans.strip())])      # #437: een kommagetal = het antwoord is geen fout
     if r.startswith('fout kleiner dan het kleinste getal'): m0 = min(n); return {'pred': lambda v: _int(v) is not None and _int(v) < m0, 'kleinerDan': m0}
     if r.startswith('fout kleiner dan het getal in de vraag'): return {'pred': lambda v: _int(v) is not None and _int(v) < g1, 'kleinerDan': g1}
     if r.startswith('fout = laatste getal van de rij'):
@@ -812,8 +834,10 @@ def _compile_regel(regel, c):
         m = re.search(r'(\d+) \+ □', c.opg); return E(int(m.group(1))) if m else None
     # G6 fixlijst #4 (Dave 19:58): regels bij een kommagetal-antwoord (1,4); sleutels met komma, zonder slot-nullen; invoer zoals VORM (#105)
     if m := re.match(r'fout = antwoord (±|\+|-) (\d+,\d+)', r):
-        if c.d is None: return {'exact': set()} if _dec(c.ans) is not None else None
-        x_ = _dec(m.group(2)); doel = ([c.d - x_] if m.group(1) in ('±', '-') and c.d - x_ >= 0 else []) + ([c.d + x_] if m.group(1) in ('±', '+') else [])
+        d_ = c.d
+        if d_ is None and re.fullmatch(r'\d+', c.ans.strip()) and re.search(r'\d,\d', c.opg): d_ = Fraction(int(c.ans.strip()))      # Oef-#436: ook bij een heel antwoord, als de vraag kommagetallen heeft ('4,6 + 0,4 = 5' → '4,9' en '5,1')
+        if d_ is None: return {'exact': set()} if _dec(c.ans) is not None else None
+        x_ = _dec(m.group(2)); doel = ([d_ - x_] if m.group(1) in ('±', '-') and d_ - x_ >= 0 else []) + ([d_ + x_] if m.group(1) in ('±', '+') else [])
         return {'exact': {_kg(y) for y in doel}, 'pred': lambda v: _dec(v) in doel}
     if r.startswith(('fout = het hele getal van het kommagetal', 'fout = de tienden als heel getal', 'fout = de cijfers om de komma omgedraaid')):
         if c.d is None: return {'exact': set()} if _dec(c.ans) is not None else None

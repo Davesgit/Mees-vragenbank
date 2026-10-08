@@ -278,8 +278,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Tel bij stap één het zakgeld op bij wat je gespaard had. Haal bij stap twee de prijs van het schrift ervan af.
 - **Ouderzin:** Je kind volgt een plan in twee stappen: eerst erbij, dan eraf.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `tweede stap vergeten` (13) → Is dat wat je na stap één hebt? Bij stap twee koop je nog een schrift.  [nieuw]
-  - `prijs erbij opgeteld` (16) → Heb je de prijs van het schrift erbij opgeteld? Als je iets koopt, heb je minder geld.  [nieuw]
+  - `tweede stap vergeten` (13 euro) → Is dat wat je na stap één hebt? Bij stap twee koop je nog een schrift.  [nieuw]
+  - `prijs erbij opgeteld` (16 euro) → Heb je de prijs van het schrift erbij opgeteld? Als je iets koopt, heb je minder geld.  [nieuw]
   - `andere fout` (andere fout) → Tel het zakgeld erbij op en haal de prijs van wat je koopt eraf.  [nieuw]
 - Status: hints klaar
 

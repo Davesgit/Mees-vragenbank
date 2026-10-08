@@ -207,7 +207,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind kiest de som bij een tekening met groepjes die even groot zijn: een keersom.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (4 + 6) → Heb je één rij en het aantal rijen bij elkaar opgeteld? In elke rij liggen evenveel knikkers. Welke som hoort bij steeds hetzelfde aantal, een paar keer?  [nieuw]
-  - `afgehaald` (Claudes sleutel: verkeerde-bewerking) → Gaan er knikkers weg? Er gaat niets af: elke rij hoort erbij. Welke som past bij steeds hetzelfde aantal?  [Claude, taalfix]
+  - `afgehaald` (6 − 4) → Gaan er knikkers weg? Er gaat niets af: elke rij hoort erbij. Welke som past bij steeds hetzelfde aantal?  [nieuw]
   - `andere fout` (andere fout) → Steeds hetzelfde aantal, een paar keer: dat is een keersom.  [nieuw]
 - Status: hints klaar
 
@@ -233,7 +233,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind kiest de som bij een tekening met groepjes die even groot zijn: een keersom.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (5 + 8 = 13) → Heb je één doos en het aantal dozen bij elkaar opgeteld? In elke doos zitten evenveel eieren. Welke som past bij steeds hetzelfde aantal?  [nieuw]
-  - `afgehaald` (Claudes sleutel: verkeerde-bewerking) → Gaan er eieren weg? Alle dozen samen horen bij het antwoord. Welke som past bij steeds hetzelfde aantal?  [Claude, taalfix]
+  - `afgehaald` (8 − 5 = 3) → Gaan er eieren weg? Alle dozen samen horen bij het antwoord. Welke som past bij steeds hetzelfde aantal?  [nieuw]
   - `andere fout` (andere fout) → Steeds hetzelfde aantal, een paar keer: dat is een keersom.  [nieuw]
 - Status: hints klaar
 

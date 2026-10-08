@@ -51,3 +51,9 @@ Nummering van Didactiek (80–89). De lessen 1–67 staan in `g6/hints/lessen_ba
 153. **Test een check door de foute zin terug te zetten in een kopie**, en zet die mutatietest in de gedeelde checks (`g6work/r11/r11_check.py`): vangt de check de oude zin niet, dan beschermt hij niets.
 154. **Een guard die dezelfde functie gebruikt als wat hij bewaakt, beschermt niets.** Leg het gedrag vast in een vaste testtabel met verwachte uitkomsten (r11_check.py: `lett_guard` en `in_vraag390`, met €, breuk, minteken, punt-duizendtal).
 155. **Een laag 2 heeft geen halve vergelijking: noem de grootheid zelf.** «net zoveel keer als de noemer» (de helft staat in H1) → «Hoeveel keer zo groot is de nieuwe noemer? Doe de teller ook zoveel keer.»; «met dit aantal» → «met het aantal hokjes uit de vraag» (#541, #533).
+
+## Lessen 156–159 (Didactiek eindcheck G5/G6 r11b, 8 okt)
+- **156.** Een regel die je in een entry zet, geldt voor elk item van het somtype, niet alleen voor de gemelde sleutels. Tel na de build hoeveel sleutels hij echt maakt (G5 #530: 3 gemeld, 482 gemaakt) en lees de tekst tegen alle items.
+- **157.** Een guard die vaste items pint, beschermt alleen die items. Hangt een tekst af van een voorwaarde (G6 #532: met of zonder overdracht), laat de guard die voorwaarde dan bij elke sleutel narekenen. Test dat met een mutant op een ander item.
+- **158.** Toets een check op een verboden bewering ook met omschrijvingen: een andere zinsgrens, synoniemen, een afgekorte vorm. Niet alleen met de letterlijke zin waar de fout ooit stond.
+- **159.** Een zelftest die stil overslaat als zijn tabel ontbreekt, is geen test. Laat hem melden dat hij niet gedraaid heeft.

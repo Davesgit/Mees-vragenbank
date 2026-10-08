@@ -161,7 +161,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind kiest de som bij 'het quotiënt': een deelsom, met het eerste getal uit de vraag vooraan.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `keersom` (de keersom) → Doe je keer bij het quotiënt? Het quotiënt is de uitkomst van een deling.  [nieuw]
-  - `andere fout` (andere fout) → Staat het goede getal vooraan? Bij het quotiënt van twee getallen deel je het eerste getal door het tweede.  [nieuw]
+  - `deelsom omgedraaid` (de deelsom omgedraaid) → Staat het goede getal vooraan? Bij het quotiënt van twee getallen deel je het eerste getal door het tweede.  [nieuw]
+  - `andere fout` (andere fout) → Welke som geeft het quotiënt? Zoek het deelteken, en kijk welk getal vooraan staat.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 6: Hoe heet de # in # × # = #?

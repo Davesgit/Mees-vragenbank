@@ -320,8 +320,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Claude-fout-hints: geen
 - Voorbeelden:
   - `G5-MEET-E06-merge-gen-001` (Claude merge-generator #84, None, niveau None → toepassen)
-    - **Opgave:** Hoeveel dagen duurt het van 24 oktober tot 18 november?
-    - **Antwoord:** 25  (controle: ok)
+    - **Opgave:** Hoeveel dagen duurt het van 23 mei tot 13 juni?
+    - **Antwoord:** 21  (controle: ok)
     - **Fout-hints (Claude):** —
   - `G5-MEET-E06-merge-gen-011` (Claude merge-generator #84, None, niveau None → toepassen)
     - **Opgave:** Hoeveel dagen duurt het van 9 mei tot 6 juni?
