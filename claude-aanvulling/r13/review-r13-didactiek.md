@@ -205,3 +205,187 @@
 - Datapunt **Oef-#1021 → Overzicht/Leerlijn:** bij 1211 is de afleider 'tien minuten te laat' = '14.30 uur' precies het voorbeeld «(Typ als 14.30.)». Een kind dat het voorbeeld overtypt, krijgt «De minuten kloppen niet…». Dit is het enige geval in G3–G6 (232 Typ-als-items in G5). Advies: een ander voorbeeld bij 1211.
 - De eerder gemelde ontbrekende ')' bij 1207/1208/1211 staat nu goed. Niets te doen.
 - Z-#1010–#1016, #1018 en #1019 zijn van Overzicht/Leerlijn. Z-#1018 is wel al afgedekt in onze guard.
+
+## Delta 545f332 (Didactiek, 8 okt, deltacheck op 983900d)
+
+**Stand.** Gecontroleerd: 983900d..545f332, read-only via `git archive` naar een snapshot. `tools/` en `bevroren/` zijn mee gekopieerd, bytecode stond uit en er bleef geen `__pycache__` achter. In de repo is niets geschreven.
+- **Branch verschoven tijdens het werk:** na-ronde-r13 = **c44ec26** (20:06:58).
+- **c44ec26 bevat:** vormcue-tools, check_hints met repo-paden en een fallback in huis_checks naar `scripts/` voor de motor. Er zijn geen data, hints of concept gewijzigd (`git diff` leeg). Volgens les 290 heb ik alle checks opnieuw gedraaid op een nieuwe snapshot van c44ec26, zonder padaanpassing. De databevindingen hieronder gelden dus voor beide commits.
+- **Stempels per_doel:**
+  - G3 gegenereerdOp 01-10 13:58:16
+  - G4 08-10 15:46:18 (zonder hintsSyncOp)
+  - G5 12:47:18, hintsSyncOp 19:44:53 (5 bestanden; de rest 18:12:31)
+  - G6 12:11:42, hintsSyncOp 19:45:00 (4; de rest 18:12:40)
+  - G7 16:20:58, hintsSyncOp 19:45:10 (2; de rest 16:21:05)
+- main = 4708a62.
+
+**Wat er in de delta zit.** Eén commit (545f332), 73 bestanden. Itemwijzigingen ten opzichte van 983900d (0 items erbij of eraf):
+
+| Groep | Wijziging |
+|---|---|
+| G4 | 27 items: GET-E06 3 (V-#1002), MEET-E07 24 (Oef-#1028/vormcue) |
+| G5 | 152 items: MEET-E07 114 (V-#1001), MEET-E06 12 (V-#1012, Oef-#1021), VBN-E03 15, GET-E05 8, VBN-E01 3 (vormcue/Z-#1053) |
+| G6 | 38 items: GET-M04 12 (V-#1010), GET-E08 3 (V-#1011), VERH-E01 18, VBN-E02 5 (vormcue) |
+| G7 | 342 items: MEET-04 336, MEET-02 6 (V-#1003) |
+
+Verder: gates, check_v1012, bewijs_v1013, concept ronde 2 en R13.md.
+
+### 1 · Mijn r13-punten
+
+- **V-#1010 ✓**
+  - `optiesTekst` ≠ `opties[]`: 12 → 0 (G3–G7).
+  - In G6 komen 'de deler' en 'het deeltal' niet meer voor als afleider. In G7-DENK-04 staan ze nog 15× als vraag naar een deling («Hoe heet de 38 in 304 : 8 = 38?»). Dat is terecht.
+  - OPTIESTEKST faalt op de oude data: G6 24 (12 items), op 482a19f én op 983900d.
+- **V-#1011 ✓**
+  - E08: 011 '7' → '8', 008 → '11', 012 → '10'.
+  - De L1 «Is dat een van de getallen uit de vraag?» klopt. «alles samen» staat alleen nog bij de som.
+  - GEMIDDELDE-SAMEN faalt op 983900d (G6: 2).
+- **V-#1012 ✓**
+  - 1200–1211: de 8 overloopsleutels hebben de L1 «Achter de punt staan de minuten. Dat kunnen er niet zestig of meer zijn: een uur heeft zestig minuten. Dan komt er een uur bij.»
+  - De regels hebben de waarden in drie vormen, bijvoorbeeld 1200 `['12.85 uur', '12.85', '12:85']`.
+  - check_v1012 zit als FAIL in de G5-check: nu 0. Op de data van 983900d: 40 met de oude hints, 24 volgens het bewijs (zelfde guard, andere hintstand). Op 482a19f: 623.
+  - KLOKWOORD/KLOKSLEUTEL:
+    - 482a19f: 8/228
+    - 983900d: 12/8
+    - nu: 0/0
+  - **Oef-#1021:** 1211 heeft nu «(Typ als 9.45.)». 9.45 is geen antwoord en geen sleutel. TYPVOORBEELD faalt op 983900d (1).
+- **V-#1013 ✓**
+  - KLOKTIJD, TIJDSDUUR, KLOKWOORD, KLOKSLEUTEL, TYPVOORBEELD, JUISTE-OPTIE, OPTIESTEKST, GEMIDDELDE(-SAMEN) en VORMCUE staan als FAIL in check_merge_notatie G3–G7.
+  - Eigen hybride: nieuwe checks op oude data/hints. Uitkomst gelijk aan `bewijs_v1013.json`:
+
+    | Gate | 482a19f | 983900d | nu |
+    |---|---|---|---|
+    | KLOKTIJD | G3 24, G4 78, G5 1366 | 0 | 0 |
+    | JUISTE-OPTIE | G5 2, G6 16 | 0 | 0 |
+    | GEMIDDELDE | G6 7 | 0 | 0 |
+
+  - **TIJDSDUUR** is 0 op 482a19f en op 983900d. Er is dus geen bewijs op oude data. De guard rust op 20/20 mutanten. Dat volstaat (les 423).
+- **Procespunt / Z-#1010 ✓**
+  - fixlijst_g6.py, fixlijst_g5b.py en check_fixlijst_g6.py staan in de repo.
+  - Op 545f332 crashte G7 check_hints in de repo: de motor ontbrak in `groep7/scripts`. De commitregel «check_hints G3–G7 0 FAIL» klopte daar alleen met PYTHONPATH.
+  - Op c44ec26 is dat opgelost. Ongewijzigd gedraaid: check_hints G3–G7 0 FAIL. G7 telt 155 hints, 0 FAIL/WARN/INFO. Er is geen claude-merge-pad geopend en er is niets buiten de snapshot geschreven.
+  - Er resteren alleen commentaarregels en `referentiematen_check` (leest `/workspace/claude-merge/referentiematen.json` als die bestaat).
+- **Status Z-#1011–#1019:**
+
+  | Punt | Status |
+  |---|---|
+  | Z-#1011 | ✓ (R13.md) |
+  | Z-#1012 | open (geen build-assert voor niveau/speelVolgorde) |
+  | Z-#1013–#1015 | open (Leerlijn, niet genoemd) |
+  | Z-#1016 | ✓ (GEMIDDELDE als FAIL in G6) |
+  | Z-#1017 | open als Oef-#1022 |
+  | Z-#1018 | ✓ (kloktijd_check leest de 6 velden) |
+  | Z-#1019 | open (G8 valt buiten de delta) |
+
+### 2 · V-#1001–#1003
+
+- **V-#1001 ✓, 114/114 items.**
+  - De nieuwe afleider is gelijk aan het totaal min het kleinste euro-stuk (bijvoorbeeld 014: €5 + €1 + €1 + 50 ct → €6,50). Hij is nooit gelijk aan het antwoord.
+  - `opties`, `optiesTekst`, juisteOptie, L1 «Dat is te weinig…» en foutRegels kloppen.
+  - Centen-cue (alleen het goede antwoord heeft centen): 114 → 0.
+  - **Bijeffect, voor de vormcue-eigenaar:** in deze 114 items is «goed = kleinste» gedaald van 29 naar 0 en «goed = middelste» gestegen van 54 naar 76. Daar komt de FAIL «G5-MEET-E07 #1 middelste 101/182» vandaan. Advies: vervang in ongeveer de helft van de items de 'te weinig'-afleider door «één stuk dubbel geteld», dus antwoord + kleinste euro-stuk (014: €8,50). Die heeft ook centen, dus de centen-cue blijft 0.
+- **V-#1002 ✓**
+  - claudeKaleSom bij 018/020/024 = '3 × 9', '5 × 7', '4 × 8'. Dat past bij de opgave en bij 27/35/32.
+- **V-#1003 ✓**
+  - 001/002/003/029/031/032: claudeKaleSom en claudeUitleg kloppen met de nieuwe maten en antwoorden (21, 45, 63, 35, 36, 39).
+  - De foutHints (b×h, b+h, b×h:4) zijn ook herrekend.
+  - Alle 51 MEET-02-items: geen getal in de kale som dat niet in de opgave staat.
+
+### 3 · G7-MEET-04 (336 items)
+
+- **Niets weg of veranderd.**
+  - 0 sleutels weg en 0 teksten of regels veranderd. Alle andere velden zijn gelijk.
+  - De oude `foutHintsTekst` is steeds het begin van de nieuwe.
+  - Per item komen er 1–4 sleutels bij: 7/95/187/47.
+- **Wat erbij komt (946 sleutels), in twee soorten:**
+  - **290 '-'-tweelingen** van bestaande '−'-sleutels, met precies dezelfde tekst. Die kloppen per constructie.
+  - **656 nieuwe sleutels** (328 × '−'/'-') met «Dat getal staat al in de vraag. Je zoekt …». Bij 614 staat het getal mét teken in de vraagtekst. Die kloppen.
+  - **42 kloppen niet** (V-#1080):
+    - in 021–044 is het het voorbeeld uit «(Typ een min voor een getal onder nul, bijvoorbeeld −3.)»;
+    - in de vraag zelf staat +3 («Het is 3 graden …»);
+    - in 028/030/037 is −3 ook al een route ('één graad te koud', antwoord −2).
+- De R13-zin «alleen '−12'/'-12' op 'fout = een getal uit de vraag'» is dus onvolledig (Z-#1083).
+
+### 4 · Kloktijdregel G3–G7 (c44ec26 = data 545f332)
+
+- KLOKTIJD 0 en TIJDSDUUR 0 in G3–G7, met de guard van 983900d en die van nu (mutanten 20/20). Er is geen duur zonder triggerwoord als kloktijd geschreven.
+- ':' staat alleen bij digitaleKlok (G4 12, G5 234). In G6 staat ':' alleen in interne velden (`beoordeling.bron` en `claudeDenkfouten.door`). Geen kindtekst.
+- 'dubbele punt' komt alleen voor bij digitaleKlok.
+- Typ-instructie: G5 231× «(Typ als 14.30.)» en 1× «(Typ als 9.45.)». geldigeAntwoorden staat in alle drie de vormen (G3 12, G4 18, G5 257).
+- Duurvragen met een kloktijd als antwoord: alleen 1200–1211. Daar staat de duur in woorden («De reis duurt 1 uur en 20 minuten»).
+- **G7 check_hints:**
+  - Op 545f332 alleen met PYTHONPATH=`scripts/`: 155 hints, 0 FAIL.
+  - Op c44ec26 ongewijzigd: 0 FAIL.
+- **Bijvangst, geen kloktijd:** G7-VERH-02-1024 claudeUitleg «keer 1.25 … 4 × 1.25 = 5» (Z-#1082).
+
+### 5 · Kritisch-concept L-R10b, ronde 2 (`r13/kritisch_concept_g6.json`)
+
+**Wat goed is:**
+- **Rekenwerk:** alle 120 items nagerekend → 0 fout. Elke denkfoutwaarde klopt, behalve M06 (V-#1083).
+- **Balans:** 60/60, en per somtype 2 waar + 2 fout (30/30).
+- **Letters:** goede letter A/B/C 40/40/40. Ja op A/B/C: 20 van de 40 waar. Ware itemnummers 13/16/17/14.
+- **Afrondvorm:** de vormregel klopt.
+- **Taal:** geen ':', directe rede «Noor zegt: "…" Klopt dat?», «het zijn 8 koekjes».
+- **Hints:** H1/H2/L1 zijn compleet, met een L1 voor elke foute optie. H2 zet de stap klaar zonder conclusie.
+
+**Wat niet goed is: een kind kan raden uit de vorm.**
+- **Rang:** in **80/120** items is het goede getal het middelste van {bewering, Nee, Nee}.
+  - In 26 van de 30 somtypes heeft het goede getal steeds dezelfde rang: 17× midden (alle omrekensomtypes, E03 #4, VERH-E03), 7× grootste, 2× kleinste.
+  - «Kies het middelste getal» haalt dus 67 %.
+- **Afronden:** E01 #1/#2 heeft in elk item precies één veelvoud van 10.000/1.000, en dat is nooit goed.
+- **M02 #1:** een foute bewering is altijd één cijfer (3, 4) en een ware altijd 10/100/1000.
+- **Dubbele sommen:** MEET-E01 #2/#3, E04 #3 en E05 #1 hebben maar twee verschillende sommen per 4 items. «2 kg is 2000 g» staat er twee keer letterlijk in. VERH-E03 01-1/01-4 zijn allebei «2 taarten over 7 kinderen».
+- **Niveau:** «1 kg is 1000 g» en «1 km is 1000 m» liggen onder G6. De bank van G6 werkt met «30.000 g = □ kg», «41.000 cm = □ m» en «29 L = □ cl».
+
+**Oordeel: nog niet bruikbaar voor de data.** Het rekenwerk, de balans en de posities zijn op orde. De vorm verklapt nog te veel: de verplichte punten V-#1081–#1084.
+
+### Verdict
+
+| Groep | Verdict | Toelichting |
+|---|---|---|
+| **G3** | **taal: ok (definitief)** | Alles op de branch, gates groen, check_hints 0 FAIL. Oef-#1022 is zacht. |
+| **G4** | **taal: ok (voorlopig)** | Mijn deel is af: V-#1002 ✓, KLOKTIJD-gate. De merge-check faalt alleen op VORMCUE 'middelste' (VBN-E01 #2/#3, andere eigenaar). |
+| **G5** | **taal: ok (voorlopig)** | V-#1001/#1012/#1013 ✓ met guards. De merge-check faalt alleen op VORMCUE 'middelste' MEET-E07 #1 (bijeffect van V-#1001, zie §2). |
+| **G6** | **taal: ok (voorlopig)** | V-#1010/#1011 ✓ met guards. De merge-check faalt alleen op VORMCUE 'middelste' VBN-E02 #2. |
+| **G7** | **taal: fix** | V-#1080. V-#1003 ✓. De gates zijn groen, maar TYPVOORBEELD ziet «bijvoorbeeld …» niet. |
+| **Concept L-R10b** | **niet bruikbaar (nog)** | V-#1081–#1084 |
+
+G4–G6 worden definitief zodra VORMCUE groen is. Daarvoor hoeft taalkundig niets.
+
+### Verplicht
+
+- **V-#1080 · G7 · Oefeningen (main-motor Oef-#494) + Overzicht (gate).**
+  - G7-MEET-04 021–044: vervang het voorbeeld in de typ-instructie door een waarde die nergens antwoord of route is: «(Typ een min voor een getal onder nul, bijvoorbeeld −20.)». Het bereik van 021–044 loopt van −13 tot 19.
+  - Draai daarna de motor opnieuw. Dan vervallen de 42 sleutels '−3'/'-3' met «Dat getal staat al in de vraag» uit zichzelf, en blijft «één graad te koud» bij 028/030/037 een gewone route.
+  - Breid TYPVOORBEELD uit naar «bijvoorbeeld X» in elke typ-instructie (G3–G8), met een mutant. Het bewijs: op deze data moet hij 24 items laten falen.
+- **V-#1081 · Concept · Overzicht (generator + guard). Rang- en vormcue.**
+  - Per somtype hooguit 2 van de 4 goede antwoorden op dezelfde rang, met de bewering meegeteld. Draai `vormcue_check` (rang) op het concept, met mutant.
+  - **Omrekenen:** zet in de helft van de items beide Nee-opties aan één kant, bijvoorbeeld 9000 cm → «Nee, het is 900 m.» / «Nee, het is 9000 m.» (getal overgenomen).
+  - **E09 #1:** voeg «teller en noemer omgedraaid» toe (5/3 van €75 = €125).
+  - **E06/M06:** voeg een grotere fout toe, bijvoorbeeld «30 × 26 = 780 (29 afgerond, niet terug)».
+  - **E04, MEET-E03 #2, VERH-E02:** als er geen natuurlijke fout aan de andere kant is, kiest Oefeningen er een. Lukt dat niet, laat het somtype dan buiten de kritisch-set.
+  - **Afronden:** in 1 van de 4 items per somtype is het goede antwoord zelf een veelvoud van de volgende eenheid. Bijvoorbeeld: «Kim zegt: "29.613 afgerond op duizendtallen is 29.000." Klopt dat?» → «Nee, het is 30.000.» / «Nee, het is 20.000.».
+  - **M02 #1:** een foute bewering mag ook een verkeerde plekwaarde zijn, bijvoorbeeld «verandert met 100» waar het 1000 is.
+- **V-#1082 · Concept · Overzicht.**
+  - Elke (getal, eenheid) en elke context komt per somtype maar één keer voor. Zet daar een guard op.
+  - Neem de getallen uit het bereik van het oorspronkelijke G6-somtype, uit het midden van basis/toepassen. Dus geen 1 of 2 km/kg/L/m.
+  - VERH-E03: elke verdeling anders.
+- **V-#1083 · Concept · Overzicht.** M06 «onthouden vergeten» is verkeerd berekend.
+  - Nu: 62 / 125 / 286 / 555. Een kind dat het onthouden vergeet, schrijft 4062 / 2125 / 1286 / 1555 (de laatste kolom helemaal).
+  - Zoals het nu staat, is «365 × 7 = 125» al met een schatting te weerleggen, en geen echte denkfout.
+- **V-#1084 · Concept · Oefeningen.** In 20 L1's vraagt het concept van de kleine naar de grote maat, met een kommagetal als antwoord: «Hoeveel m is één cm?», «Hoeveel L is één cl?», «Hoeveel km is één hm?», «Hoeveel dl is één ml?», «Hoeveel L is één dl?», «Hoeveel hm is één m?». Vraag altijd vanaf de grote maat: «Hoeveel cm is één m?».
+
+### Zacht
+
+- **Z-#1080 · Concept · Oefeningen.** Waar-items: de 120 L1's bij «Nee, het is …» zijn nu allemaal «Reken het nog eens na…» (mijn §8-advies). Beter: geef de L1 van die denkfout, die er bij de fout-items al is, bijvoorbeeld «Er is per kolom het kleinste van het grootste afgehaald. …».
+- **Z-#1081 · Concept · taal.** E03 #4: «Noor schrijft 5/6 als een breuk met noemer 24. Noor zegt: …» → «… Ze zegt: …».
+- **Z-#1082 · G7 · Oefeningen.** VERH-02-1024 claudeUitleg: «keer 1.25» / «4 × 1.25 = 5» → «keer 1,25» / «4 × 1,25 = 5». Dit stond er al eerder.
+- **Z-#1083 · Overzicht.** Corrigeer R13.md bij MEET-04: 290 '-'-tweelingen + 656 nieuwe sleutels voor het mingetal uit de vraag, waarvan 42 het typvoorbeeld zijn (V-#1080).
+- **Z-#1084 · Overzicht.** G4 per_doel: gegenereerdOp staat nog op 15:46:18, terwijl 27 items veranderd zijn (GET-E06, MEET-E07), en hintsSyncOp ontbreekt. Leg de patch vast in een stempel of log.
+
+### Lessen
+
+- **420.** Een sleutel voor een notatievariant ('−12' → '-12') is alleen veilig als hij een bestaande sleutel met dezelfde tekst spiegelt. Een nieuwe sleutel «getal uit de vraag» moet de typ-instructie overslaan: het voorbeeld is geen getal uit de vraag.
+- **421.** Een afleiderfix die één cue weghaalt, kan een andere cue maken (centen → rang). Meet na elke afleiderwissel ook de rang van het goede antwoord.
+- **422.** Bij waar/fout-items telt de bewering als getal mee in de rang-check. Omrekenafleiders ÷10/×10 zetten het goede antwoord altijd in het midden.
+- **423.** Bewijs op oude data kan alleen als de oude data de fout bevatten. Is dat niet zo (TIJDSDUUR 0 op 482a19f en 983900d), meld dan dat de guard alleen op mutanten rust.

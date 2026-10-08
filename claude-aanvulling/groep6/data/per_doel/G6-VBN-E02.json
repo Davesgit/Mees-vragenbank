@@ -25654,7 +25654,7 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "10"
+     "tekst": "20"
     },
     {
      "letter": "B",
@@ -25665,7 +25665,7 @@
      "tekst": "35"
     }
    ],
-   "optiesTekst": "A) 10 · B) 15 · C) 35",
+   "optiesTekst": "A) 20 · B) 15 · C) 35",
    "antwoord": "15",
    "antwoordDetail": {
     "juisteOptie": "B",
@@ -25676,12 +25676,12 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "10",
-     "uitleg": "Dat is één streepje te weinig. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens.",
+     "fout": "20",
+     "uitleg": "Dat is één streepje te veel. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens.",
      "uitlegSterker": "Zoek het getal langs de zijkant op dezelfde hoogte als de stip, of net eronder. Tel dan de streepjes tot de stip. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.",
      "laag2": "terugval hint2 (somtype)",
-     "regel": "fout = antwoord − perstreep",
-     "soort": "één streepje te weinig",
+     "regel": "fout = antwoord + perstreep",
+     "soort": "één streepje te veel",
      "bron": "nieuw"
     },
     {
@@ -25695,7 +25695,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "10 → Dat is één streepje te weinig. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens. · 35 → Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.",
+   "foutHintsTekst": "20 → Dat is één streepje te veel. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens. · 35 → Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.",
    "ouderzin": "Je kind leest in een lijngrafiek af hoeveel het er in één maand waren.",
    "getallenruimte": "grafiek tot 200",
    "context": "laag",
@@ -25757,10 +25757,6 @@
     "claudeNiveau": 3,
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
-     {
-      "fout": "10",
-      "denkfout": "grafiek-verkeerd-afgelezen"
-     },
      {
       "fout": "35",
       "denkfout": "klok-verkeerd-gelezen"
@@ -27142,7 +27138,7 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "45"
+     "tekst": "15"
     },
     {
      "letter": "B",
@@ -27153,7 +27149,7 @@
      "tekst": "25"
     }
    ],
-   "optiesTekst": "A) 45 · B) 35 · C) 25",
+   "optiesTekst": "A) 15 · B) 35 · C) 25",
    "antwoord": "35",
    "antwoordDetail": {
     "juisteOptie": "B",
@@ -27164,13 +27160,13 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "45",
+     "fout": "15",
      "uitleg": "Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.",
      "uitlegSterker": "Zet een vinger op de naam van de maand uit de vraag, onder de grafiek. Schuif recht omhoog tot je vinger bij de stip is. Lees daar af hoe hoog de stip staat.",
      "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
-     "soort": "andere maand",
-     "bron": "claude-taalfix"
+     "regel": "fout = een andere maand",
+     "soort": "andere maand (regel)",
+     "bron": "nieuw"
     },
     {
      "stap": null,
@@ -27183,7 +27179,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "45 → Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip. · 25 → Dat is het getal langs de zijkant net onder de stip. Staat de stip precies op dat getal? Tel de streepjes vanaf dat getal tot de stip.",
+   "foutHintsTekst": "15 → Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip. · 25 → Dat is het getal langs de zijkant net onder de stip. Staat de stip precies op dat getal? Tel de streepjes vanaf dat getal tot de stip.",
    "ouderzin": "Je kind leest in een lijngrafiek af hoeveel het er in één maand waren.",
    "getallenruimte": "grafiek tot 200",
    "context": "laag",
@@ -27244,20 +27240,10 @@
      {
       "fout": "25",
       "denkfout": "plaatswaarde-verkeerd"
-     },
-     {
-      "fout": "45",
-      "denkfout": "klok-verkeerd-gelezen"
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": [
-     {
-      "stap": null,
-      "fout": "45",
-      "uitleg": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?"
-     }
-    ]
+    "claudeFoutHints": []
    },
    "bron": {
     "bestand": "vragen.json",
@@ -27367,9 +27353,7 @@
      "tekstSterker": "Zet een vinger op de naam van de maand uit de vraag, onder de grafiek. Schuif recht omhoog tot je vinger bij de stip is. Lees daar af hoe hoog de stip staat.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "45"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -27395,7 +27379,8 @@
      "match": {
       "waarden": [
        "10",
-       "15"
+       "15",
+       "45"
       ]
      },
      "leesbaar": true
@@ -36048,14 +36033,14 @@
     },
     {
      "letter": "B",
-     "tekst": "10"
+     "tekst": "150"
     },
     {
      "letter": "C",
      "tekst": "100"
     }
    ],
-   "optiesTekst": "A) 110 · B) 10 · C) 100",
+   "optiesTekst": "A) 110 · B) 150 · C) 100",
    "antwoord": "100",
    "antwoordDetail": {
     "juisteOptie": "C",
@@ -36076,7 +36061,7 @@
     },
     {
      "stap": null,
-     "fout": "10",
+     "fout": "150",
      "uitleg": "Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.",
      "uitlegSterker": "Zet een vinger op de naam van de maand uit de vraag, onder de grafiek. Schuif recht omhoog tot je vinger bij de stip is. Lees daar af hoe hoog de stip staat.",
      "laag2": "tekstSterker",
@@ -36085,7 +36070,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "110 → Dat is één streepje te veel. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens. · 10 → Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.",
+   "foutHintsTekst": "110 → Dat is één streepje te veel. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens. · 150 → Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.",
    "ouderzin": "Je kind leest in een lijngrafiek af hoeveel het er in één maand waren.",
    "getallenruimte": "grafiek tot 200",
    "context": "laag",
@@ -36151,10 +36136,6 @@
     "claudeNiveau": 3,
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
-     {
-      "fout": "10",
-      "denkfout": "grafiek-verkeerd-afgelezen"
-     },
      {
       "fout": "110",
       "denkfout": "grafiek-verkeerd-afgelezen"
@@ -36347,7 +36328,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "10"
+      ]
      },
      "leesbaar": true
     },
@@ -37544,10 +37527,10 @@
     },
     {
      "letter": "C",
-     "tekst": "5"
+     "tekst": "15"
     }
    ],
-   "optiesTekst": "A) 35 · B) 10 · C) 5",
+   "optiesTekst": "A) 35 · B) 10 · C) 15",
    "antwoord": "10",
    "antwoordDetail": {
     "juisteOptie": "B",
@@ -37568,16 +37551,16 @@
     },
     {
      "stap": null,
-     "fout": "5",
-     "uitleg": "Dat is één streepje te weinig. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens.",
+     "fout": "15",
+     "uitleg": "Dat is één streepje te veel. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens.",
      "uitlegSterker": "Zoek het getal langs de zijkant op dezelfde hoogte als de stip, of net eronder. Tel dan de streepjes tot de stip. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.",
      "laag2": "terugval hint2 (somtype)",
-     "regel": "fout = antwoord − perstreep",
-     "soort": "één streepje te weinig",
+     "regel": "fout = antwoord + perstreep",
+     "soort": "één streepje te veel",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "35 → Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip. · 5 → Dat is één streepje te weinig. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens.",
+   "foutHintsTekst": "35 → Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip. · 15 → Dat is één streepje te veel. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens.",
    "ouderzin": "Je kind leest in een lijngrafiek af hoeveel het er in één maand waren.",
    "getallenruimte": "grafiek tot 200",
    "context": "laag",
@@ -37639,10 +37622,6 @@
     "claudeNiveau": 3,
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
-     {
-      "fout": "5",
-      "denkfout": "grafiek-verkeerd-afgelezen"
-     },
      {
       "fout": "35",
       "denkfout": "klok-verkeerd-gelezen"
@@ -41621,10 +41600,10 @@
     },
     {
      "letter": "C",
-     "tekst": "20"
+     "tekst": "5"
     }
    ],
-   "optiesTekst": "A) 15 · B) 3 · C) 20",
+   "optiesTekst": "A) 15 · B) 3 · C) 5",
    "antwoord": "15",
    "antwoordDetail": {
     "juisteOptie": "A",
@@ -41645,16 +41624,16 @@
     },
     {
      "stap": null,
-     "fout": "20",
+     "fout": "5",
      "uitleg": "Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.",
      "uitlegSterker": "Zet een vinger op de naam van de maand uit de vraag, onder de grafiek. Schuif recht omhoog tot je vinger bij de stip is. Lees daar af hoe hoog de stip staat.",
      "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
-     "soort": "andere maand",
-     "bron": "claude-taalfix"
+     "regel": "fout = een andere maand",
+     "soort": "andere maand (regel)",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "3 → Is dat het aantal streepjes? Elk streepje is meer dan één. Hoeveel is elk streepje? Reken dan het aantal streepjes keer dat getal. · 20 → Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.",
+   "foutHintsTekst": "3 → Is dat het aantal streepjes? Elk streepje is meer dan één. Hoeveel is elk streepje? Reken dan het aantal streepjes keer dat getal. · 5 → Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.",
    "ouderzin": "Je kind leest in een lijngrafiek af hoeveel het er in één maand waren.",
    "getallenruimte": "grafiek tot 200",
    "context": "laag",
@@ -41715,20 +41694,10 @@
      {
       "fout": "3",
       "denkfout": "grafiek-verkeerd-afgelezen"
-     },
-     {
-      "fout": "20",
-      "denkfout": "klok-verkeerd-gelezen"
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": [
-     {
-      "stap": null,
-      "fout": "20",
-      "uitleg": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?"
-     }
-    ]
+    "claudeFoutHints": []
    },
    "bron": {
     "bestand": "vragen.json",
@@ -41838,9 +41807,7 @@
      "tekstSterker": "Zet een vinger op de naam van de maand uit de vraag, onder de grafiek. Schuif recht omhoog tot je vinger bij de stip is. Lees daar af hoe hoog de stip staat.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "20"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -41865,7 +41832,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "5"
+       "5",
+       "20"
       ]
      },
      "leesbaar": true
@@ -41920,7 +41888,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "20"
+      ]
      },
      "leesbaar": true
     },
@@ -67132,7 +67102,7 @@
    "algemeneFoutHint": "Lees bij elke maand het aantal af en tel alle maanden bij elkaar op."
   }
  ],
- "hintsSyncOp": "2026-10-08T19:45:00+02:00",
+ "hintsSyncOp": "2026-10-08T20:11:37+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -67163,7 +67133,7 @@
    "md5": "0f23a2211eaf"
   }
  ],
- "geschrevenOp": "2026-10-08T19:45:00+02:00",
+ "geschrevenOp": "2026-10-08T20:11:37+02:00",
  "geschrevenDoor": "apply_hints (los, zonder nieuwe build)",
  "itemsGewijzigdBijSchrijven": true
 }

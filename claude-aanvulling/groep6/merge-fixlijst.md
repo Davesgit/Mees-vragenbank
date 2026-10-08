@@ -488,3 +488,6 @@ L-R10f: niet aangeraakt (wacht op Dave). N13-3: open (wacht op Oefeningen).
 
 ### Vormcue één regel voor alle posities (Didactiek 19:57)
 - kleinste/middelste/grootste: FAIL bij > 50 % én p < 0,01 (kans 1/3); mutanten per positie 17/17. Stand per somtype: zie r13/R13.md. Data van de items niet aangepast (Didactiek stuurt voorstellen per item).
+
+### V-#1073 (Didactiek 20:09)
+- Vormcue middelste: één afleider per item naar de andere kant, zelfde of gespiegelde denkfout. Elke nieuwe waarde hoort bij precies één motorregel (VC107X in r13_uitvoer.py). VBN-E02 #2 15/29/16 (5 wissels). VORMCUE 0 FAIL, check_hints 0 FAIL.

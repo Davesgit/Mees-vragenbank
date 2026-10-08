@@ -166,3 +166,6 @@ De WARN komt uit de nieuwe check LES250 (Oef-#484, `tools/les250_check.py`, in c
 
 ### Vormcue één regel voor alle posities (Didactiek 19:57)
 - kleinste/middelste/grootste: FAIL bij > 50 % én p < 0,01 (kans 1/3); mutanten per positie 17/17. Stand per somtype: zie r13/R13.md. Data van de items niet aangepast (Didactiek stuurt voorstellen per item).
+
+### V-#1070/#1071 (Didactiek 20:09)
+- Vormcue middelste: één afleider per item naar de andere kant, zelfde of gespiegelde denkfout. Elke nieuwe waarde hoort bij precies één motorregel (VC107X in r13_uitvoer.py). VBN-E01 #2 17/28/13 (9 wissels) · #3 9/26/19 (3 wissels). VORMCUE 0 FAIL, check_hints 0 FAIL.

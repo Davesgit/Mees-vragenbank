@@ -49,3 +49,4 @@ Volgorde voor Overzicht: eerst 1–5, 7 en 9 in de opgaven. Dan build_g3 (punt 1
 |---|---|---|
 | V-#1013 | vaste gates in check_merge_notatie (KLOKTIJD/TIJDSDUUR/KLOKWOORD/KLOKSLEUTEL/TYPVOORBEELD, JUISTE-OPTIE/OPTIESTEKST, GEMIDDELDE/-SAMEN, VORMCUE) als FAIL | ✓ G3: ALLES OK (VORMCUE 0 FAIL · 1 WARN MEET-E05 middelste 10/16, Z-#1051) |
 | **Oef-#1022** (open) | G3 klok-zetten (MEET-E05): het antwoord '3.00 uur' bij «Zet de klok op drie uur» (Z-#1017). Voorstel Oefeningen: een weergaveveld `antwoordTekst` = `claudeKaleSom` («drie uur») als het antwoord zichtbaar is; `geldigeAntwoorden` blijven de drie vormen. | **open**, niet gebouwd (wacht op besluit app/Overzicht) |
+- Z-#1077: G3-items hebben geen somtypeNr; de vormcue-guard groepeert in G3 per doel (grof). Voorstel: somtypeNr toevoegen.

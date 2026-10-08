@@ -140,7 +140,7 @@ VC105X = {}
 for n_, (e_, nw_) in {'003': ('50 cent', '85 cent'), '004': ('40 cent', '60 cent'), '006': ('50 cent', '65 cent'), '007': ('70 cent', '80 cent'), '008': ('50 cent', '80 cent'), '009': ('10 cent', '25 cent'),
                       '010': ('50 cent', '90 cent'), '012': ('20 cent', '40 cent'), '014': ('50 cent', '75 cent'), '015': ('20 cent', '35 cent'), '018': ('50 cent', '90 cent')}.items():
     VC105X[f'G4-MEET-E07-claude-bank-{n_}'] = ('V-#1050', e_, nw_, lambda it, v: _cent(v) == _cent(it['antwoord']) + _munt(it), ('geld-verkeerd-geteld', V1050_T))      # munt dubbel geteld = antwoord + kleinste munt
-for n_, (e_, nw_, ding) in {'280': ('760', '130', 'appels'), '282': ('620', '90', 'stiften'), '283': ('585', '125', 'vogels')}.items():
+for n_, (e_, nw_, ding) in {'280': ('760', '130', 'appels'), '282': ('620', '90', 'stiften'), '283': ('585', '90', 'vogels')}.items():      # 283: Z-#1074 (Didactiek 20:09) 125 → 90 (125 was ook een cel); VC107X bewijst de route
     VC105X[f'G5-VBN-E01-claude-bank-{n_}'] = ('V-#1051', e_, nw_, (lambda d: lambda it, v: int(v) < int(it['antwoord']) and any(a - b == int(v) for a in _rij(it, d) for b in _rij(it, d)))(ding), 'weg')      # verschil van twee cellen in de rij
 for n_, (e_, nw_, stap) in {'011': ('33', '39', 3), '019': ('48', '60', 6), '024': ('95', '105', 5)}.items():
     VC105X[f'G5-VBN-E03-claude-bank-{n_}'] = ('V-#1052', e_, nw_, (lambda st: lambda it, v: int(v) == int(it['antwoord']) + st)(stap), ('een-ernaast', V1052_T[n_]))      # één stap te ver
@@ -150,6 +150,64 @@ for n_, (e_, nw_) in {'121': ('55', '160'), '122': ('60', '300'), '123': ('60', 
     VC105X[f'G6-VBN-E02-claude-bank-{n_}'] = ('V-#1054', e_, nw_, lambda it, v: int(v) - int(it['antwoord']) in _maanden(it), 'weg')      # alle maanden samen plus één maand
 for i_, (e_, nw_) in {'G6-VERH-E01-claude-bank-001': ('€6', '€30'), 'G6-VERH-E01-claude-bank-002': ('€4', '€24'), 'G6-VERH-E01-merge-gen-006': ('€10', '€30'), 'G6-VERH-E01-merge-gen-014': ('€3', '€90')}.items():
     VC105X[i_] = ('V-#1055', e_, nw_, lambda it, v: (lambda m: m and int(m.group(2)) * int(m.group(3)) == _getal(v))(re.search(r'(\d+) [^€]*?€(\d+)\..*?(?:bij|kosten) (\d+) ', it['opgave'])), ('keer-getal-uit-de-vraag', V1055_T))      # y1 × x2
+# V-#1070–#1073 + Z-#1074 (Didactiek 'Delta 545f332 vormcue', 20:09; voorstellen_1070.json): 'middelste' > 50 % → per item één afleider naar de andere kant.
+# De motor kent alle nieuwe waarden; de oude Claude-sleutel vervalt. Les 306/415: na de wissel hoort de nieuwe waarde bij PRECIES ÉÉN leesbare motorregel
+# (alle regels van de entry, via compile_regel van de groepsmotor), en dat is de bedoelde regel; ≠ antwoord, ≠ andere optie; geen dubbele soort erbij.
+VC107X = {}
+for n_, (e_, nw_, r_) in {'057': ('53', '9', 'fout = andere cel'), '060': ('68', '40', 'fout = verschil van twee cellen'), '065': ('25', '8', 'fout = verschil van twee cellen'),
+                          '077': ('61', '18', 'fout = andere cel'), '079': ('25', '9', 'fout = andere cel'), '085': ('75', '18', 'fout = andere cel'),
+                          '095': ('26', '3', 'fout = verschil van twee cellen'), '100': ('17', '4', 'fout = verschil van twee cellen'), '103': ('68', '12', 'fout = andere cel')}.items():
+    VC107X[f'G4-VBN-E01-claude-bank-{n_}'] = ('V-#1070', 4, e_, nw_, r_)
+for n_, (e_, nw_, r_) in {'012': ('32', '51', 'fout = som van de kolom'), '024': ('21', '34', 'fout = som van de rij'), '047': ('19', '45', 'fout = som van de rij')}.items():
+    VC107X[f'G4-VBN-E01-claude-bank-{n_}'] = ('V-#1071', 4, e_, nw_, r_)
+for n_, (e_, nw_, r_) in {'072': ('10', '20', 'fout = antwoord + perstreep'), '104': ('5', '15', 'fout = antwoord + perstreep'), '100': ('10', '150', 'fout = een andere maand'),
+                          '076': ('45', '15', 'fout = een andere maand'), '115': ('20', '5', 'fout = een andere maand')}.items():
+    VC107X[f'G6-VBN-E02-claude-bank-{n_}'] = ('V-#1073', 6, e_, nw_, r_)
+VC107X['G5-VBN-E01-claude-bank-283'] = ('Z-#1074', 5, '125', '90', 'fout = verschil van twee cellen')
+_MOTOR = {}
+def _motor(g):
+    if g not in _MOTOR:
+        import importlib.util
+        sp = importlib.util.spec_from_file_location(f'fout_regels_r13_g{g}', f'{R13}/g{g}/scripts/fout_regels.py'); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m); _MOTOR[g] = m
+    return _MOTOR[g]
+def routes(it, g, v):
+    """leesbare motorregels van de entry (it['foutRegels']) waarvan de waardenlijst v bevat"""
+    FR = _motor(g); c = FR.Ctx(it); uit = []
+    for r in it.get('foutRegels') or []:
+        try: comp = FR.compile_regel(r['regel'], c)
+        except Exception: comp = None
+        if comp and (v in (comp.get('exact') or ()) or (comp.get('pred') and comp['pred'](v))): uit.append(r['regel'])
+    return uit
+def vormcue107x(it, log):
+    if it['id'] not in VC107X: return
+    vnr, g, eruit, nieuw, regel = VC107X[it['id']]; ops = [o['tekst'] for o in it['opties']]
+    if nieuw in ops and eruit not in ops:      # al gedaan (idempotent); route opnieuw bewijzen
+        rr = routes(it, g, nieuw)
+        if rr != [regel]: raise SystemExit(f"{vnr} {it['id']}: {nieuw} heeft routes {rr}, verwacht precies [{regel!r}]")
+        return
+    if eruit not in ops or nieuw in ops or nieuw == str(it['antwoord']): raise SystemExit(f"{vnr} {it['id']}: opties {ops} passen niet bij {eruit} → {nieuw}")
+    rr = routes(it, g, nieuw)
+    if rr != [regel]: raise SystemExit(f"{vnr} {it['id']}: {nieuw} heeft routes {rr}, verwacht precies [{regel!r}] (les 306/415)")
+    voor_soort = [f.get('soort') for f in it.get('foutHints') or [] if f.get('fout') != eruit]
+    it['opties'] = [dict(o, tekst=nieuw) if o['tekst'] == eruit else o for o in it['opties']]
+    if it.get('optiesTekst'): it['optiesTekst'] = ' · '.join(f"{o['letter']}) {o['tekst']}" for o in it['opties'])
+    if isinstance(it.get('antwoordDetail'), dict) and it['antwoordDetail'].get('juisteOptie'):
+        it['antwoordDetail']['juisteOptie'] = next(o['letter'] for o in it['opties'] if o['tekst'] == str(it['antwoord']))
+    ex = it['extraVelden']
+    ex['claudeDenkfouten'] = [d for d in ex.get('claudeDenkfouten') or [] if d.get('fout') != eruit]
+    ex['claudeFoutHints'] = [f for f in ex.get('claudeFoutHints') or [] if f.get('fout') != eruit]
+    it['foutHints'] = [f for f in it.get('foutHints') or [] if f.get('fout') != eruit]      # apply bouwt ze opnieuw
+    log.append({'id': it['id'], 'punt': vnr, 'eruit': eruit, 'nieuw': nieuw, 'regel': regel, 'blijft': voor_soort})
+def check107x(G, g):
+    """na apply: de nieuwe optie heeft een fout-hint van de bedoelde regel; geen soort dubbel die eerst niet dubbel was"""
+    F = []
+    for it in G['items']:
+        if it['id'] not in VC107X or VC107X[it['id']][1] != g: continue
+        vnr, _, eruit, nieuw, regel = VC107X[it['id']]; fh = {f['fout']: f for f in it['foutHints']}
+        if nieuw not in fh or fh[nieuw].get('regel') != regel: F.append(f"{vnr} {it['id']}: {nieuw} krijgt {fh.get(nieuw, {}).get('regel')!r}, verwacht {regel!r}")
+        so = [f.get('soort') for f in it['foutHints']]
+        if len(set(so)) < len(so): F.append(f"{vnr} {it['id']}: dubbele soort {so}")
+    return F
 def vormcue105x(it, log):
     if it['id'] not in VC105X: return
     vnr, eruit, nieuw, route, claude = VC105X[it['id']]; ops = [o['tekst'] for o in it['opties']]
@@ -194,13 +252,13 @@ def g5():
             pos = VOLGORDE_E07.index(m['somtypeNr']) + 1
             if m.get('speelVolgorde') != pos: m['speelVolgorde'] = pos; R['L-R9-4a'].append(it['id'])
         if it['id'] in NAAR_BASIS_G5: zet_niveau(it, 'basis', R['L-R9-4b'], 'L-R9-4b: uitkomst/deeltal 2 cijfers, gelijk aan het cluster')
-        v1001(it, R['V-#1001']); oef1021(it, R['Oef-#1021']); vormcue105x(it, R['V-#1050–#1055'])
+        v1001(it, R['V-#1001']); oef1021(it, R['Oef-#1021']); vormcue105x(it, R['V-#1050–#1055']); vormcue107x(it, R.setdefault('V-#1070–#1073', []))
         juiste_optie(it, R['JO'])
     schrijf(p, G)
     json.dump({'uitleg': 'L-R9-4a (Leerlijn-besluit A, 8 okt 14:40): speel- en progressievolgorde per doel, als lijst van weergavenummers (bevroren/somtype_weergave_nr.json). '
                'Geen hernummering (D-#408). Per item staat de positie in merge.speelVolgorde. Delen-cluster #3 → #9, keer-cluster #8 → #10 → #5.',
                'volgorde': {'G5-GET-E07': VOLGORDE_E07}}, open(f'{R13}/g5/bevroren/speelvolgorde.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    R['apply'] = apply(5); R['L-R9-4a'] = len(R['L-R9-4a']); return R
+    R['apply'] = apply(5); R['check107x'] = check107x(laad(5)[1], 5); R['L-R9-4a'] = len(R['L-R9-4a']); return R
 
 def g6():
     p, G = laad(6); R = {'L-R10a': [], 'L-R10a_geenKenmerk': collections.Counter(), 'L-R10c': [], 'L-R10d': [], 'L-R10d_niet': [], 'L-R10e': [], 'V-#851/#852': [], 'JO': [], 'V-#1010': [], 'V-#1011': [], 'V-#1050–#1055': [], 'fouten': []}
@@ -210,7 +268,7 @@ def g6():
         if it['merge'].get('status') == 'gemapt': groep[(it['merge']['doel'], it['merge']['somtypeNrOrigineel'])].append(it)
     for key, its in groep.items():
         for it in its:
-            e08(it, R['V-#851/#852']); juiste_optie(it, R['JO']); v1010(it, R['V-#1010']); v1011(it, R['V-#1011']); vormcue105x(it, R['V-#1050–#1055'])
+            e08(it, R['V-#851/#852']); juiste_optie(it, R['JO']); v1010(it, R['V-#1010']); v1011(it, R['V-#1011']); vormcue105x(it, R['V-#1050–#1055']); vormcue107x(it, R.setdefault('V-#1070–#1073', []))
             if key in vast and it['niveau'] != 'kritisch':
                 try: nv, k = NV.classificeer(it, *key)
                 except Exception as e: nv, k = None, f'niet te lezen ({type(e).__name__})'
@@ -235,7 +293,7 @@ def g6():
             R['L-R10d_niet'].append(f'{key[0]} nrO {key[1]} ({len(its)}): kenmerk van nrO {groot[key[0]][1]} niet op alle items te lezen'); continue
         for it, (nv, k) in zip(its, uit): zet_niveau(it, nv, R['L-R10d'], f'L-R10d via nrO {groot[key[0]][1]}: {k}')
     schrijf(p, G)
-    R['apply'] = apply(6)
+    R['apply'] = apply(6); R['check107x'] = check107x(laad(6)[1], 6)
     for doel, t in TITELS.items():
         pd = f'{R13}/g6/data/per_doel/{doel}.json'; D = json.load(open(pd, encoding='utf-8'))
         if D.get('bordtitel') != t: R.setdefault('N13', []).append({'doel': doel, 'van': D.get('bordtitel'), 'naar': t}); D['bordtitel'] = t
@@ -244,9 +302,9 @@ def g6():
     return R
 
 def g4():
-    p, G = laad(4); R = {'V-#1002': [], 'V-#1050–#1055': []}
+    p, G = laad(4); R = {'V-#1002': [], 'V-#1050–#1055': [], 'V-#1070–#1073': []}
     for it in G['items']:
-        vormcue105x(it, R['V-#1050–#1055'])
+        vormcue105x(it, R['V-#1050–#1055']); vormcue107x(it, R['V-#1070–#1073'])
         if it['id'] in V1002:
             oud, nw = V1002[it['id']]; ex = it['extraVelden']
             if ex.get('claudeKaleSom') == oud: ex['claudeKaleSom'] = nw; R['V-#1002'].append({'id': it['id'], 'van': oud, 'naar': nw})
@@ -254,7 +312,7 @@ def g4():
             if it['id'].endswith('-018'):      # sleutel 30 = 10 × 3: één stap hoger in de tafel van 3 (route 'tafelbuur'), blijft
                 assert any(d.get('fout') == '30' and d.get('denkfout') == 'tafelbuur' for d in ex.get('claudeDenkfouten') or [])
                 R['018-sleutel-30'] = 'blijft: route tafelbuur (10 × 3, een stap hoger in de tafel van 3)'
-    schrijf(p, G); R['apply'] = apply(4); return R
+    schrijf(p, G); R['apply'] = apply(4); R['check107x'] = check107x(laad(4)[1], 4); return R
 
 def g7():
     p, G = laad(7); R = {'V-#1003': []}
