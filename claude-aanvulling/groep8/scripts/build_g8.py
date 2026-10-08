@@ -1114,6 +1114,7 @@ KOP478 += [  # V-#871c (Didactiek batch 4)
           (r'^In Nederland worden in een jaar # \[ding\] truien verkocht\.', 'In Nederland worden in een jaar # miljoen truien verkocht.')]
 PLEK972 = r'(?:het station|het stadion|de camping|het strand|het dorp|de stad|de boerderij|het meer|de school|het zwembad|de haven|de vuurtoren|de bakker|de bibliotheek|de kerk|het plein|\[plek\])'
 KOP478 += [(r'^(Op een kaart met schaal # : # is de afstand van )' + PLEK972 + r' naar ' + PLEK972 + r'( # cm\. Hoeveel meter is dat in het echt\?)$', r'\1[plek] naar [plek]\2')]      # V-#972: kop blijft '[plek] naar [plek]'; Z-#985-rente staat uit (G8_Z985_RENTE=1) tot Oefeningen de data-eis van b8/check E04 #2 aanpast
+KOP478 += [(r'^(\[wie\] zet €# op een spaarrekening met #% rente per jaar\. Hoeveel \[ding\] krijgt) het( na één jaar\?)$', r'\1 hij\2')]      # Z-#985 (G8_Z985_RENTE=1): 'Een kind … het' (6 items), 'Een speler … hij' (024/027) blijft; één kop in fase 1, zodat 024/027 hun hints houden
 def kop_g8(s):
     for a, b in KOP478: s = re.sub(a, b, s)
     return s

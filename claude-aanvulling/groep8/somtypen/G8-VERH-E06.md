@@ -28,7 +28,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5,25% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.
 
 - **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Eén hele is honderd procent.
-- **Hint 2 (te schrijven):** Doe het kommagetal keer honderd: de komma schuift twee plekken naar rechts. Zet daarna het procentteken erachter.
+- **Hint 2 (te schrijven):** Doe het kommagetal keer honderd: de komma schuift dan naar rechts, één plek voor elke nul van honderd. Zet daarna het procentteken erachter.
 - **Ouderzin:** Je kind schrijft een kommagetal als procent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `kommagetal met procentteken` (fout = kommagetal met procentteken) → Dat is het kommagetal met een procentteken erachter. Procent is zoveel van de honderd: doe het kommagetal eerst keer honderd.  [nieuw]
@@ -59,8 +59,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Maak een verhoudingstabel: de noemer hoort bij honderd procent, de teller bij het procent dat je zoekt. Reken de noemer om naar honderd en doe met de teller hetzelfde. Gaat dat niet in één keer? Deel dan eerst allebei door hetzelfde getal.
 - **Ouderzin:** Je kind schrijft een breuk als procent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `getal uit de breuk` (21%) → Dat is een getal uit de breuk met een procentteken erachter. Dat klopt alleen als de noemer honderd is.  [nieuw]
-  - `getal uit de breuk (noemer)` (40%) → Dat is een getal uit de breuk met een procentteken erachter. Dat klopt alleen als de noemer honderd is.  [nieuw]
+  - `getal uit de breuk` (fout = het deel zelf (als %)) → Dat is de teller met een procentteken erachter. Dat klopt alleen als de noemer honderd is. Reken de noemer eerst om naar honderd.  [nieuw]
+  - `getal uit de breuk (kommaprocent)` (21%) → Dat is de teller met een procentteken erachter. Dat klopt alleen als de noemer honderd is. Reken de noemer eerst om naar honderd.  [nieuw]
   - `tien keer ernaast` (Claudes sleutel: nul-fout-tientallen) → Dat is tien keer te groot of te klein. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.  [nieuw]
 - Status: hints klaar

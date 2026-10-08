@@ -45,12 +45,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 15 (meest: “Gevraagd is alleen de rente, niet het hele bedrag op de rekening.”)
 - Voorbeelden:
   - `G8-VERH-E04-claude-bank-029` (Claude T6, gegenereerd, niveau 1 → basis)
-    - **Opgave:** Een kind zet €2000 op een spaarrekening met 3% rente per jaar. Hoeveel rente krijgt hij na één jaar?
+    - **Opgave:** Een kind zet €2000 op een spaarrekening met 3% rente per jaar. Hoeveel rente krijgt het na één jaar?
     - **Antwoord:** 60  (controle: ok)
     - **Fout-hints (Claude):** €600 → 1% van 2000 is 20, niet 200. · €2060 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €3 → 3% is een deel van €2.000, niet €3.
     - **Uitleg (Claude):** 1% van 2000 is 20. 3% is 3 × 20 = €60.
   - `G8-VERH-E04-claude-bank-030` (Claude T6, gegenereerd, niveau 1 → basis)
-    - **Opgave:** Een kind zet €500 op een spaarrekening met 1% rente per jaar. Hoeveel rente krijgt hij na één jaar?
+    - **Opgave:** Een kind zet €500 op een spaarrekening met 1% rente per jaar. Hoeveel rente krijgt het na één jaar?
     - **Antwoord:** 5  (controle: ok)
     - **Fout-hints (Claude):** €50 → 1% van 500 is 5, niet 50. · €505 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €1 → 1% is een deel van €500, niet €1.
     - **Uitleg (Claude):** 1% van 500 is 5. 1% is 1 × 5 = €5.
@@ -214,6 +214,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent een procent van een aantal uit.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `procent als aantal` (30 kinderen) → Dat is het getal van het procent, nog geen aantal. Hoeveel is dat procent van iedereen op school?  [nieuw]
-  - `geheel min het procent` (170 kinderen) → Je haalde het procent van het aantal op school af. Maar het procent is geen aantal kinderen. Hoeveel kinderen is dat procent van iedereen op school?  [nieuw]
+  - `geheel min het procent` (170 kinderen) → Dat is iedereen op school min het getal van het procent. Het procent is geen aantal kinderen: hoeveel is dat procent van iedereen op school?  [nieuw]
   - `andere fout` (andere fout) → Iedereen op school samen is honderd procent. Hoeveel is tien procent? Hoe vaak heb je dat nodig?  [nieuw]
 - Status: hints klaar

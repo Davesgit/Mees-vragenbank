@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T18:09:12+0200",
+ "gegenereerdOp": "2026-10-08T18:20:30+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-VERH-V01",
  "bordtitel": "Procenten, breuken en schaal herhalen",
@@ -48,25 +48,25 @@
     {
      "stap": null,
      "fout": "60 procent",
-     "uitleg": "Het hele aantal is honderd procent. Hoeveel procent is het deel?",
+     "uitleg": "Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
      "uitlegSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "laag2": "tekstSterker",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "regel": "60 procent",
+     "soort": "aantal als procent",
      "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "3 procent",
-     "uitleg": "Het hele aantal is honderd procent. Hoeveel procent is het deel?",
+     "uitleg": "Dat is tien keer te klein. Het hele aantal is honderd procent. Welk procent hoort dan bij het deel?",
      "uitlegSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "laag2": "tekstSterker",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "regel": "3 procent",
+     "soort": "tien keer te klein",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "60 procent → Het hele aantal is honderd procent. Hoeveel procent is het deel? · 3 procent → Het hele aantal is honderd procent. Hoeveel procent is het deel?",
+   "foutHintsTekst": "60 procent → Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd? · 3 procent → Dat is tien keer te klein. Het hele aantal is honderd procent. Welk procent hoort dan bij het deel?",
    "ouderzin": "Je kind rekent uit hoeveel procent een deel van een groep is.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -200,18 +200,34 @@
    ],
    "foutRegels": [
     {
-     "regel": "40 procent",
+     "regel": "60 procent",
      "soort": "aantal als procent",
+     "bron": "nieuw",
      "tekst": "Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "60 procent"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
-     "regel": "2 procent",
+     "regel": "3 procent",
      "soort": "tien keer te klein",
-     "tekst": "Dat is tien keer te klein. Hoe vaak past het deel in het hele aantal? Welk procent hoort daarbij?",
-     "match": null,
-     "leesbaar": false
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te klein. Het hele aantal is honderd procent. Welk procent hoort dan bij het deel?",
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3 procent"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -229,7 +245,7 @@
    "algemeneFoutHint": "Het hele aantal is honderd procent. Hoeveel procent is het deel?"
   }
  ],
- "hintsSyncOp": "2026-10-08T18:09:15+02:00",
+ "hintsSyncOp": "2026-10-08T18:20:33+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -261,10 +277,10 @@
   },
   {
    "batch": "batch8.json",
-   "md5": "b10fde9d08b9"
+   "md5": "a678da6be4cc"
   }
  ],
- "geschrevenOp": "2026-10-08T18:09:15+02:00",
+ "geschrevenOp": "2026-10-08T18:20:33+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

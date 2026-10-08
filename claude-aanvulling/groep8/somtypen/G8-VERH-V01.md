@@ -27,7 +27,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.
 - **Ouderzin:** Je kind rekent uit hoeveel procent een deel van een groep is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `aantal als procent` (40 procent) → Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd?  [nieuw]
-  - `tien keer te klein` (2 procent) → Dat is tien keer te klein. Hoe vaak past het deel in het hele aantal? Welk procent hoort daarbij?  [nieuw]
+  - `aantal als procent` (60 procent) → Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd?  [nieuw]
+  - `tien keer te klein` (3 procent) → Dat is tien keer te klein. Het hele aantal is honderd procent. Welk procent hoort dan bij het deel?  [nieuw]
   - `andere fout` (andere fout) → Het hele aantal is honderd procent. Hoeveel procent is het deel?  [nieuw]
 - Status: hints klaar

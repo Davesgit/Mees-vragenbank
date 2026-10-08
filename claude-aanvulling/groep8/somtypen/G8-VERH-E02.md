@@ -27,7 +27,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Deel de prijs door het aantal dat samen zoveel kost: dan weet je wat er één kost. Doe dat keer het aantal dat gevraagd wordt.
 - **Ouderzin:** Je kind rekent via de prijs van één stuk uit wat meer stuks kosten.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `een klein bedrag erbij` (€6,50) → Zo komt er voor de extra stuks maar een klein bedrag bij. Wat kost er één? Doe dat keer het aantal dat gevraagd wordt.  [nieuw]
+  - `een klein bedrag erbij` (€6,50) → Je deed het verschil in aantal erbij, alsof elk extra stuk één euro kost. Wat kost er één? Doe dat keer het aantal dat gevraagd wordt.  [nieuw]
   - `keer het nieuwe aantal` (€22,50) → Dat is de prijs van de hele groep uit de vraag, keer het nieuwe aantal. Reken eerst uit wat er één kost.  [nieuw]
   - `andere fout` (andere fout) → Wat kost er één? Doe dat keer het aantal dat gevraagd wordt.  [nieuw]
 - Status: hints klaar

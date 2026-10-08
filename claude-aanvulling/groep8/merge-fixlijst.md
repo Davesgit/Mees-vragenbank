@@ -299,6 +299,13 @@ Zie review-batch8.md. Kopie van live na plaatsing (build 17:36:36 + batch 8): ch
 | Oef-#1010 | Overzicht (data, les 306) | E04 #8 032: de foute route 'geheel min het procent' (150 − 60 = 90) geeft het goede antwoord. De afleider '100 kinderen' heeft geen route op de getallen. Voorstel: andere getallen, en een afleider met een route (bijv. het procent als aantal). b8/check FAIL 1 tot dan. | open |
 | Oef-#1011 | Overzicht (data) | E02 claudeUitleg «Eén pet kost …» (het gaat over pakken sap) en '5 x 1,50' (G8: '×'). | open |
 | Z-#894 (b6/check) | Oefeningen | regex #35 041 kent nu ook 'tellen de staven samen op tot #'; b6 FAIL 2 → 0, 62 mutanten 0 gemist (8 okt 17:38). | **✓** |
+| b8 ronde 1b/2 | Oefeningen | patch_batch8 geplaatst 17:55:49 (deel 1) en 18:17:01 (geheel, build 18:09:12): V-#971, V-#981, V-#982, Z-#971, Z-#972, Z-#974, Z-#984 (teller via motor), V01 na Z-#981, oude LT '40%'/'40 procent'/'2 procent' weg, E06 #1 H2 (les 264). Kopie: check_hints 0 FAIL/WARN, b1–b8 FAIL 0, mutanten 0 gemist, idempotent. Zie review-batch8.md. | **✓** |
+| Z-#973 (b8) | Oefeningen | 133 E03-sleutels nu op 'tien keer te weinig'; teksten waar; guard in b8/check (mutant M_973). | **✓** |
+| Z-#985 (b8/check) | Oefeningen | E04 #2 data-eis en kop: 'krijgt hij/het/ze/zij'. Nagebootst met de vlag aan: b8 FAIL 0 · WARN 0. Overzicht: kop niet laten splitsen (zoals in build 18:04: 024/027 zonder hints). | **✓** (Oefeningen) |
+| Oef-#1012 | Overzicht (motor) | 'fout = het deel zelf (als %)' (Oef-#453) leest alleen een heel procent als antwoord; bij 21/40 = 52,5% geen sleutel. Nu een voorwaardelijke letterlijke regel in patch_batch8 (soort 'kommaprocent'), die wegvalt als het item verdwijnt. | open |
+| Oef-#1013 | Overzicht (motor G7) | Z-#973 staat alleen in g8/scripts/fout_regels.py. Bij overzetten naar G7: G7-GET-01 #6 «Eén nul te weinig» is onwaar voor een kommasleutel (andere G7-teksten bij 'antwoord : 10' blijven waar). | open |
+| Z-#963 / Z-#961 | Oefeningen | b7/check zonder SNAP_B7-tolerantie (mutant M_snapb7); generieke mutantrunner `g8work/mutrun.py` (elke mutant moet zijn eigen verwachte melding geven, crash = gemist), alle bN/runmut.sh en bN/verwacht.tsv. | **✓** |
+| V-#970/#972/#975, Oef-#1006–#1011 | Overzicht | in build 18:04/18:09; hercheck op een kopie: b1–b8 FAIL 0. | **✓** (hercheck) |
 
 ## Overzicht: builds 17:03:20, 17:08:44, 17:14:34 en 17:24:12 (Z-#914)
 ### Build 17:03:20 — batch 6 + Didactiek batch 5/6-review (V-#880, V-#891, V-#893, V-#894, Oef-#498–#1002, V-#901–#904)
@@ -398,3 +405,13 @@ Commits in mees-vragenbank (`/workspace/mees-vragenbank`, branch main; procespun
 
 Checks build 18:09:12: check_hints **197 klaar · 26 open · 0 FAIL · 3 WARN** (ONLEESBAAR '40%' E06 #2, '40 procent'/'2 procent' V01: oude letterlijke regels, Oefeningen); merge-notatie **ALLES OK** (EINDCIJFER 0, KALESOM 0, VORMCUE 0, alle mutanten); **b1 0 · b2 0 · b3 0 · b4 0 · b5 0 · b6 1** (les 234 SNAP 041, Oefeningen) **· b7 0 · b8 20** (V-#971 2, les 373 1 (V-#982), E06 #2 teller-afleiders 12, V01 4, les 234 SNAP 004 1; allemaal Oefeningen-regels/SNAP na de nieuwe data). Live per_doel 23 · somtypen 23, alle gevuld (bouw_veilig, 0 conflict).
 Commit in mees-vragenbank (`/workspace/mees-vragenbank`, main): build 18:09:12 → **cfc6ebf** (`git -C /workspace/mees-vragenbank show --stat cfc6ebf`).
+
+### Build 18:20:30 — b8 ronde 1b/2 van Oefeningen (patch_batch8.py 18:17:01, md5 6480468b…), Z-#985 rente aan
+| punt | stand |
+|---|---|
+| b8 ronde 1b/2 | **✓** `hints/patch_batch8.py` (18:17:01) mee in de build (bouw_veilig: 45 bestanden atomair naar live, 0 conflict). |
+| Z-#985 rente | **✓** met `G8_Z985_RENTE=1`: VERH-E04 #2 'Een kind … krijgt **het** na één jaar?' bij de 6 kind-items (025, 026, 028, 029, 030, 031); 'Een speler …' (024, 027) houdt 'hij'. Didactiek vroeg 'het' of een naam bij 'Een kind' (review-batch8b-didactiek.md); 'kind' is een het-woord, 'speler' niet. Eén kop in fase 1: KOP478-regel zet 'krijgt het' terug naar de kop '… [ding] krijgt hij na één jaar?' (kop = sleutel, geen kindtekst); alle 8 items houden hint, sterkere hint en 3 fout-hints (ook 024/027). |
+| Z-#985 claudeKaleSom met doelcodes | **geen actie**: de app (`leermees-prototype-v1/scripts/build-bank.js` slaat alle *claude*-bestanden over) en de ChatGPT-export (alleen de canonieke bank; `extraVelden` overal leeg, claudeKaleSom komt er niet in voor) tonen claudeKaleSom/extraVelden niet aan kinderen. Gaat de merge-data later wel de app in, dan eerst besluiten of extraVelden getoond worden (G4-README: claudeUitleg blijft intern; Didactiek Z-#843: claudeKaleSom = kindveld). |
+| Oef-#1013 | Z-#973 **niet** naar g7/scripts/fout_regels.py geport (pas na overleg). |
+
+Checks build 18:20:30: check_hints **197 klaar · 26 open · 0 FAIL · 0 WARN**; merge-notatie **ALLES OK**; **b1–b8 FAIL 0 · WARN 0** (b8 368 items · 2016 sleutels); G5–G7 (main) ongewijzigd: 0 FAIL.
