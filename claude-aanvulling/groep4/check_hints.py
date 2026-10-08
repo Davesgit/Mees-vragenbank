@@ -231,5 +231,9 @@ if __name__=="__main__":
     for x in fails: print("FAIL",x)
     for x in warns: print("WARN",x)
     for x in info: print("INFO",x)
+    # Oef-#484 (les 250, 8 okt): ±1-tekst op een sleutel die een getal uit de vraag is (WARN, alle groepen)
+    import json as _j250, glob as _g250, os as _o250, sys as _s250; _s250.path.insert(0, '/workspace/claude-merge/tools'); import les250_check as _L250
+    for _w in _L250.treffers([_it for _p in sorted(_g250.glob(_o250.path.join(_o250.path.dirname(_o250.path.abspath(__file__)), 'data', 'per_doel', '*.json'))) for _it in _j250.load(open(_p))['items']]):
+        warns.append('LES250 ' + _w); print('WARN LES250', _w)
     print(f"Somtypen: {k} hints klaar · {o} open · {len(fails)} FAIL · {len(warns)} WARN · {len(info)} INFO · {'ALLES OK' if not fails else 'FAIL'}")
     sys.exit(1 if fails else 0)

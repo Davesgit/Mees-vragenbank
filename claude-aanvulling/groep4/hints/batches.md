@@ -35,3 +35,4 @@ Open voor de volgende ronde:
 - VBN-E01 #4/#5 volgt de hint-richting van Didactiek ('vlak onder de top van de staaf', 'spring verder met twee'). 'één streepje te veel/te weinig' = 'antwoord ± getal1'. 'streepjes geteld' heeft nog geen regel (fixlijst #40).
 
 - **Batch 5 ronde 1b (8 okt, Oefeningen):** review-batch5-didactiek (taal: fix) verwerkt in patch_batch5.py: V-#720, V-#721, tientallen-H2 (twijfel 1), Z-#720, Z-#722, Z-#723, Z-#724; check FAIL 0, zie merge-fixlijst.md.
+- **Batch 5 ronde 1c (8 okt 15:2x, Oefeningen):** Didactiek taal ok (build 15:08:46). patch_batch5.py ronde 1c: Z-#730 (H1 min), Z-#733 (ouderzin MC); lessen 233–235 als guards (g4work/b5/check.py, runmut.sh 14 mutanten). check_hints 97 klaar · 0 FAIL; tweede patch-run 0.

@@ -136,3 +136,18 @@ Nummering: Oefeningen Oef-#NNN (gedeelde reeks met G7; volgende vrije daarna Oef
 - **Z-#726 (= Oef-#463):** koppen nog ongewijzigd in de data; zodra Overzicht/Leerlijn ze via kopGewijzigd aanpast, ruim ik op met 'kopNagekeken' in patch_batch5 (geen 'afronden' als eis).
 - Lessen 230–232 in hints/lessen_g4.md en g7/hints/lessen_g7.md (algemeen).
 
+## Oefeningen: G4 batch 5 ronde 1c (Didactiek taal ok, build 15:08:46). Toegevoegd 2026-10-08 15:2x
+- `hints/patch_batch5.py` ronde 1c: Z-#730 (H1 min, één aankondiging), Z-#733 (ouderzin MC, plus en min). 3 wijzigingen, tweede run 0. Z-#731: Overzicht. Lessen 233–235 in hints/lessen_g4.md; guards en mutanten in g4work/b5/check.py (runmut.sh: 14 mutanten, 0 gemist). Geen nieuwe datapunten.
+
+## Oefeningen: G4 batch 5 ronde 1d (8 okt 15:4x; build 15:20:36)
+- **Z-#726:** de nieuwe koppen ('Hoeveel is # + # ongeveer?', '… kan kloppen?') zijn nagekeken tegen H1, H2, de ouderzin en de fout-hints. Ze passen: geen tekst leunt op de oude kopzin. Opgeruimd met `kopNagekeken` (#2–#5) in patch_batch5 ronde 1d (16 logregels, tweede run 0).
+- **Z-#731:** 002 (35 + 46 ≈ 90) en 017 (65 − 23 ≈ 50) hebben precies vijf eenheden.
+  - De vijf-of-meer-regel in H2 geeft het antwoord.
+  - Sleutels: 002 '81' precies, '70/80/100/110' tientallen ernaast, '35/46' getal uit de vraag, '86' andere fout; 017 analoog.
+  - Les 233: nieuwe guard 'minstens één item met precies vijf eenheden in #2 en #3' (mutant M_z731).
+  - Les 234: de meerkeuze (#4/#5) is niet veranderd. Het snapshot is gelijk, de telling ook: plus {2:5, 3:3}, min {1:1, 2:7}.
+- **Checks (verse kopie van live):** check_hints 97 klaar · 0 FAIL · 0 WARN; merge-notatie ALLES OK; b5/check 36 items · FAIL 0 · WARN 0; 15 mutanten, 0 gemist.
+
+### Ronde 1c/1d GET-E05 (Oefeningen patch_batch5 15:41) — Overzicht, build 15:46:18
+check_hints **97 klaar · 0 open · 0 FAIL · 1 WARN**, merge-notatie ALLES OK, b5/check 36 items · FAIL 0 · WARN 0.
+De WARN komt uit de nieuwe check LES250 (Oef-#484, `tools/les250_check.py`, in check_hints van G3–G8): GET-M05 bank-059 «38 eieren, er gaan er 14 weg»: sleutel **14** heeft de tekst «Dat is één tiental te weinig», maar 14 staat ook in de vraag (#390). **Oefeningen:** een tekst die bij het overnemen van het getal past, of de sleutel weghalen. (G5 GET-E05 bank-092 sleutel 458 heeft hetzelfde; G5 is goedgekeurd, dus alleen gemeld.)

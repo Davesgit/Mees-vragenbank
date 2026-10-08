@@ -38,7 +38,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `twintig te veel` (fout = antwoord + 20) → Dat is twintig te veel. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan opnieuw met de ronde getallen.  [nieuw]
   - `twintig te weinig` (fout = antwoord - 20) → Dat is twintig te weinig. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan opnieuw met de ronde getallen.  [nieuw]
   - `andere fout` (andere fout) → Maak eerst van allebei de getallen een rond getal, zoals de vraag zegt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Tel daarna de twee ronde getallen op.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Hoeveel is # + # [ding]? Rond beide getallen af op tientallen en reken dan uit.'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 2: Hoeveel is # − # ongeveer?
@@ -71,7 +70,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `twintig te veel` (fout = antwoord + 20) → Dat is twintig te veel. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan opnieuw met de ronde getallen.  [nieuw]
   - `twintig te weinig` (fout = antwoord - 20) → Dat is twintig te weinig. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan opnieuw met de ronde getallen.  [nieuw]
   - `andere fout` (andere fout) → Maak eerst van allebei de getallen een rond getal, zoals de vraag zegt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Haal daarna het tweede ronde getal van het eerste af.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Hoeveel is # − # [ding]? Rond beide getallen af op tientallen en reken dan uit.'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 3: Kijk zonder uit te rekenen. Welk antwoord bij # + # kan kloppen?
@@ -105,7 +103,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `te klein` (Claudes sleutel: ondergrens) → Dat zijn te weinig tientallen. Tel alleen de tientallen op. Zijn de eenheden samen tien of meer? Dan komt er nog één tiental bij. Zoveel tientallen heeft het antwoord.  [Claude, taalfix]
   - `laatste cijfer` (Claudes sleutel: laatste-cijfer) → Kijk naar het laatste cijfer. Tel alleen de eenheden op. Op welk cijfer eindigt dat? Daar eindigt het antwoord ook op.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk naar het laatste cijfer. Tel alleen de eenheden op. Op welk cijfer eindigt dat? Daar eindigt het antwoord ook op. Kijk dan hoeveel tientallen het antwoord heeft.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 4: Kijk zonder uit te rekenen. Welk antwoord bij # − # kan kloppen?
@@ -139,7 +136,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `te klein` (Claudes sleutel: ondergrens) → Dat zijn te weinig tientallen. Haal de tientallen van elkaar af. Moest je bij de eenheden eerst tien erbij doen? Dan gaat er nog één tiental af. Zoveel tientallen heeft het antwoord.  [Claude, taalfix]
   - `laatste cijfer` (Claudes sleutel: laatste-cijfer) → Kijk naar de eenheden. Is het laatste cijfer van het eerste getal kleiner dan dat van het tweede getal? Doe er dan eerst tien bij. Haal dan de eenheden van elkaar af. Wat je krijgt, is het laatste cijfer van het antwoord.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk naar de eenheden. Is het laatste cijfer van het eerste getal kleiner dan dat van het tweede getal? Doe er dan eerst tien bij. Haal dan de eenheden van elkaar af. Wat je krijgt, is het laatste cijfer van het antwoord. Kijk dan hoeveel tientallen het antwoord heeft.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 5: In twee dozen zitten samen # [ding]. In de ene doos zitten # [ding] meer dan in de andere. Hoeveel [ding] zitten er in elke doos?
