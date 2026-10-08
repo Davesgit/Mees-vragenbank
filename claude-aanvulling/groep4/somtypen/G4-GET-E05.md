@@ -8,12 +8,13 @@ Invoer voor het schrijven van hint 1 (`hint`) en hint 2 (`sterkereHint`) per som
 Elk somtype heeft een vaste sleutel (nrOrigineel + somtypeOrigineel, bevroren/somtype_nr_v1.json): neem die over in hints/batch*.json, dan blijft de hint gekoppeld als de nummering of de kop verandert.
 Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/Davesgit/leermees-vragenbank @ 7da3257
 
-## Somtype 1: Hoeveel is # + # [ding]? Rond beide getallen af op tientallen en reken dan uit.
+## Somtype 1: Hoeveel is # + # ongeveer?
 
 - Sleutel: nrOrigineel **2** · somtypeOrigineel “Hoeveel is # + # [ding]? Rond beide getallen af op tientallen en reken dan uit.” (koppeling: claudeId)
 - Items: **12** · Claude-doelen: T3 (12) · regel: D8-SCHAT-NAAR-G4
 - Getallenruimte: 0–100 · type: kale
-- Merge-fixlijst: #V-#722 getallenruimte 0–100 (12), #Z-#721 12 + 55 (≈ 70) → 12 + 53 (≈ 60) (1), #Z-#721 14 + 78 (≈ 90) → 14 + 72 (≈ 80) (1), #Z-#721 16 + 31 (≈ 50) → 16 + 37 (≈ 60) (1)
+- **Kop gewijzigd** (kopGewijzigd, merge-fixlijst): was “Hoeveel is # + # [ding]? Rond beide getallen af op tientallen en reken dan uit.”. Hints nakijken.
+- Merge-fixlijst: #V-#722 getallenruimte 0–100 (12), #Z-#721 14 + 78 (≈ 90) → 14 + 72 (≈ 80) (1), #Z-#721 16 + 31 (≈ 50) → 16 + 37 (≈ 60) (1), #Z-#731 12 + 55 (≈ 70) → 35 + 46 (≈ 90) (1)
 - Denkfouten (Claude): —
 - Verschillende Claude-fout-hints: 4 (meest: “Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.”)
 - Voorbeelden:
@@ -37,14 +38,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `twintig te veel` (fout = antwoord + 20) → Dat is twintig te veel. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan opnieuw met de ronde getallen.  [nieuw]
   - `twintig te weinig` (fout = antwoord - 20) → Dat is twintig te weinig. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan opnieuw met de ronde getallen.  [nieuw]
   - `andere fout` (andere fout) → Maak eerst van allebei de getallen een rond getal, zoals de vraag zegt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Tel daarna de twee ronde getallen op.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Hoeveel is # + # [ding]? Rond beide getallen af op tientallen en reken dan uit.'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 2: Hoeveel is # − # [ding]? Rond beide getallen af op tientallen en reken dan uit.
+## Somtype 2: Hoeveel is # − # ongeveer?
 
 - Sleutel: nrOrigineel **3** · somtypeOrigineel “Hoeveel is # − # [ding]? Rond beide getallen af op tientallen en reken dan uit.” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: T3 (8) · regel: D8-SCHAT-NAAR-G4
 - Getallenruimte: 0–100 · type: kale
-- Merge-fixlijst: #V-#722 getallenruimte 0–100 (8), #Z-#721 51 − 12 (≈ 40) → 51 − 17 (≈ 30) (1), #Z-#721 54 − 32 (≈ 20) → 56 − 32 (≈ 30) (1), #Z-#721 82 − 14 (≈ 70) → 82 − 16 (≈ 60) (1), #Z-#722 44 − 20 (≈ 20) → 46 − 20 (≈ 30) (1)
+- **Kop gewijzigd** (kopGewijzigd, merge-fixlijst): was “Hoeveel is # − # [ding]? Rond beide getallen af op tientallen en reken dan uit.”. Hints nakijken.
+- Merge-fixlijst: #V-#722 getallenruimte 0–100 (8), #Z-#721 51 − 12 (≈ 40) → 51 − 17 (≈ 30) (1), #Z-#721 82 − 14 (≈ 70) → 82 − 16 (≈ 60) (1), #Z-#722 44 − 20 (≈ 20) → 46 − 20 (≈ 30) (1), #Z-#731 54 − 32 (≈ 20) → 65 − 23 (≈ 50) (1)
 - Denkfouten (Claude): —
 - Verschillende Claude-fout-hints: 4 (meest: “Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.”)
 - Voorbeelden:
@@ -53,8 +56,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 30  (controle: n.v.t.)
     - **Fout-hints (Claude):** 10 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven. · 40 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
   - `G4-GET-E05-claude-bank-naar-017` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Hoeveel is 56 − 32 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
-    - **Antwoord:** 30  (controle: n.v.t.)
+    - **Opgave:** Hoeveel is 65 − 23 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
+    - **Antwoord:** 50  (controle: n.v.t.)
     - **Fout-hints (Claude):** 22 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 40 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
 
 - **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen. Je maakt eerst van elk getal een rond getal: een getal dat eindigt op een nul.
@@ -68,13 +71,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `twintig te veel` (fout = antwoord + 20) → Dat is twintig te veel. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan opnieuw met de ronde getallen.  [nieuw]
   - `twintig te weinig` (fout = antwoord - 20) → Dat is twintig te weinig. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan opnieuw met de ronde getallen.  [nieuw]
   - `andere fout` (andere fout) → Maak eerst van allebei de getallen een rond getal, zoals de vraag zegt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Haal daarna het tweede ronde getal van het eerste af.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Hoeveel is # − # [ding]? Rond beide getallen af op tientallen en reken dan uit.'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 3: Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?
+## Somtype 3: Kijk zonder uit te rekenen. Welk antwoord bij # + # kan kloppen?
 
 - Sleutel: nrOrigineel **4** · somtypeOrigineel “Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: T3 (8) · regel: D8-KLOPPEN-NAAR-G4
 - Getallenruimte: 0–100 · type: meerkeuze
+- **Kop gewijzigd** (kopGewijzigd, merge-fixlijst): was “Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?”. Hints nakijken.
 - Merge-fixlijst: #V-#722 getallenruimte 0–100 (8)
 - Denkfouten (Claude): ondergrens (6), bovengrens (4), orde-van-grootte (3), laatste-cijfer (3)
 - Verschillende Claude-fout-hints: 16 (meest: “Rond allebei naar boven af. 40 + 40 is 80. De uitkomst kan dus niet groter zijn dan 80, en 84 is groter.”)
@@ -92,7 +97,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 
 - **Hint 1 (te schrijven):** Je hoeft niet precies te rekenen. Kijk eerst naar het laatste cijfer. Tel alleen de eenheden op. Op welk cijfer eindigt dat? Daar eindigt het antwoord ook op.
 - **Hint 2 (te schrijven):** Blijft er meer dan één antwoord over? Tel alleen de tientallen op. Zijn de eenheden samen tien of meer? Dan komt er nog één tiental bij. Het antwoord ligt tussen dat tiental en het volgende tiental.
-- **Ouderzin:** Je kind kiest zonder precies te rekenen welk antwoord kan kloppen: door naar het laatste cijfer te kijken en te schatten hoe groot het is.
+- **Ouderzin:** Je kind kiest zonder precies te rekenen welk antwoord kan kloppen: eerst kijkt het naar het laatste cijfer, dan naar het aantal tientallen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `min in plaats van plus` (fout = getal1 - getal2 of getal2 - getal1) → Heb je min gedaan? Er staat een plus: er komt iets bij. Het antwoord is dus groter dan allebei de getallen.  [nieuw]
   - `veel te groot` (fout = antwoord × 10) → Dat is veel te groot. Het antwoord is kleiner dan honderd. Kijk eerst naar het laatste cijfer, en dan naar de tientallen.  [nieuw]
@@ -100,13 +105,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `te klein` (Claudes sleutel: ondergrens) → Dat zijn te weinig tientallen. Tel alleen de tientallen op. Zijn de eenheden samen tien of meer? Dan komt er nog één tiental bij. Zoveel tientallen heeft het antwoord.  [Claude, taalfix]
   - `laatste cijfer` (Claudes sleutel: laatste-cijfer) → Kijk naar het laatste cijfer. Tel alleen de eenheden op. Op welk cijfer eindigt dat? Daar eindigt het antwoord ook op.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk naar het laatste cijfer. Tel alleen de eenheden op. Op welk cijfer eindigt dat? Daar eindigt het antwoord ook op. Kijk dan hoeveel tientallen het antwoord heeft.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 4: Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen?
+## Somtype 4: Kijk zonder uit te rekenen. Welk antwoord bij # − # kan kloppen?
 
 - Sleutel: nrOrigineel **5** · somtypeOrigineel “Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: T3 (8) · regel: D8-KLOPPEN-NAAR-G4
 - Getallenruimte: 0–100 · type: meerkeuze
+- **Kop gewijzigd** (kopGewijzigd, merge-fixlijst): was “Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen?”. Hints nakijken.
 - Merge-fixlijst: #V-#722 getallenruimte 0–100 (8)
 - Denkfouten (Claude): bovengrens (8), laatste-cijfer (6), ondergrens (2)
 - Verschillende Claude-fout-hints: 16 (meest: “Rond 88 naar boven af en 33 naar beneden. 90 − 30 is 60. De uitkomst kan dus niet groter zijn dan 60, en 65 is groter.”)
@@ -122,9 +129,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 42  (controle: n.v.t.)
     - **Fout-hints (Claude):** 100 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** Je hoeft niet precies te rekenen. Kijk eerst naar het laatste cijfer. Kijk naar de eenheden. Is het laatste cijfer van het eerste getal kleiner dan dat van het tweede getal? Doe er dan eerst tien bij. Haal dan de eenheden van elkaar af. Wat je krijgt, is het laatste cijfer van het antwoord.
+- **Hint 1 (te schrijven):** Je hoeft niet precies te rekenen. Kijk eerst naar de eenheden. Is het laatste cijfer van het eerste getal kleiner dan dat van het tweede getal? Doe er dan eerst tien bij. Haal dan de eenheden van elkaar af. Wat je krijgt, is het laatste cijfer van het antwoord.
 - **Hint 2 (te schrijven):** Blijft er meer dan één antwoord over? Haal de tientallen van elkaar af. Moest je bij de eenheden eerst tien erbij doen? Dan gaat er nog één tiental af. Het antwoord ligt tussen dat tiental en het volgende tiental.
-- **Ouderzin:** Je kind kiest zonder precies te rekenen welk antwoord kan kloppen: door naar het laatste cijfer te kijken en te schatten hoe groot het is.
+- **Ouderzin:** Je kind kiest zonder precies te rekenen welk antwoord kan kloppen: eerst kijkt het naar het laatste cijfer, dan naar het aantal tientallen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `plus in plaats van min` (fout = getal1 + getal2) → Heb je plus gedaan? Er staat een min: er gaat iets af. Het antwoord is dus kleiner dan het eerste getal.  [nieuw]
   - `veel te groot` (fout = antwoord × 10) → Dat is veel te groot. Het antwoord is kleiner dan honderd. Kijk eerst naar het laatste cijfer, en dan naar de tientallen.  [nieuw]
@@ -132,6 +139,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `te klein` (Claudes sleutel: ondergrens) → Dat zijn te weinig tientallen. Haal de tientallen van elkaar af. Moest je bij de eenheden eerst tien erbij doen? Dan gaat er nog één tiental af. Zoveel tientallen heeft het antwoord.  [Claude, taalfix]
   - `laatste cijfer` (Claudes sleutel: laatste-cijfer) → Kijk naar de eenheden. Is het laatste cijfer van het eerste getal kleiner dan dat van het tweede getal? Doe er dan eerst tien bij. Haal dan de eenheden van elkaar af. Wat je krijgt, is het laatste cijfer van het antwoord.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk naar de eenheden. Is het laatste cijfer van het eerste getal kleiner dan dat van het tweede getal? Doe er dan eerst tien bij. Haal dan de eenheden van elkaar af. Wat je krijgt, is het laatste cijfer van het antwoord. Kijk dan hoeveel tientallen het antwoord heeft.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 5: In twee dozen zitten samen # [ding]. In de ene doos zitten # [ding] meer dan in de andere. Hoeveel [ding] zitten er in elke doos?
