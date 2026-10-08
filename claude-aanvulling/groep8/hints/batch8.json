@@ -1,0 +1,1703 @@
+{
+ "batch": "batch8",
+ "geschreven": "2026-10-08",
+ "uitleg": "Hints per somtype (G8-merge, batch 8 = VERH-E01/E02/E03/E04/E06/V01: schaal, procenten, verhoudingen). Formaat als g7/hints/batch*.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: rekenregels uit scripts/fout_regels.py met een vaste tekst, laag 1 'tekst' en laag 2 'tekstSterker'; 'andere fout' als laatste.",
+ "somtypen": [
+  {
+   "doel": "G8-VERH-E01",
+   "nr": 1,
+   "somtype": "In een bak zitten # [ding], # [ding] en # [ding] knikker. Welk deel van de knikkers is rood?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "In een bak zitten # [ding], # [ding] en # [ding] knikker. Welk deel van de knikkers is rood?",
+   "hint1": "Welk deel van alle knikkers? Tel eerst hoeveel knikkers er samen in de bak zitten.",
+   "hint2": "Tel alle knikkers in de bak bij elkaar op, van elke kleur. Tel ook hoeveel er de kleur uit de vraag hebben. Zet dat aantal tegenover alle knikkers samen.",
+   "ouderzin": "Je kind schrijft een deel van een groep als zoveel op de zoveel.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "zonder het deel",
+     "claudeDenkfout": null,
+     "regel": "6 op de 4",
+     "tekst": "Na 'op de' tel je alle knikkers samen, ook die met de kleur uit de vraag.",
+     "tekstSterker": "Tel alle knikkers in de bak bij elkaar op, van elke kleur. Tel ook hoeveel er de kleur uit de vraag hebben. Zet dat aantal tegenover alle knikkers samen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere kleur",
+     "claudeDenkfout": null,
+     "regel": "3 op de 10",
+     "tekst": "Kijk welke kleur de vraag noemt. Hoeveel knikkers hebben die kleur?",
+     "tekstSterker": "Tel alle knikkers in de bak bij elkaar op, van elke kleur. Tel ook hoeveel er de kleur uit de vraag hebben. Zet dat aantal tegenover alle knikkers samen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel alle knikkers samen. Hoeveel daarvan hebben de kleur uit de vraag?",
+     "tekstSterker": "Tel alle knikkers in de bak bij elkaar op, van elke kleur. Tel ook hoeveel er de kleur uit de vraag hebben. Zet dat aantal tegenover alle knikkers samen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zette 6 tegenover de andere knikkers. Tel alle knikkers in de bak, dus ook de 6.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk nog eens welke knikkers de vraag bedoelt. Hoeveel zijn het er?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E02",
+   "nr": 1,
+   "somtype": "In een winkel kosten # [ding] sap samen €#. Hoeveel kosten # van die pakken sap?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "In een winkel kosten # [ding] sap samen €#. Hoeveel kosten # van die pakken sap?",
+   "hint1": "Wat kost er één? Reken dat eerst uit.",
+   "hint2": "Deel de prijs door het aantal dat samen zoveel kost: dan weet je wat er één kost. Doe dat keer het aantal dat gevraagd wordt.",
+   "ouderzin": "Je kind rekent via de prijs van één stuk uit wat meer stuks kosten.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een klein bedrag erbij",
+     "claudeDenkfout": null,
+     "regel": "€6,50",
+     "tekst": "Zo komt er voor de extra stuks maar een klein bedrag bij. Wat kost er één? Doe dat keer het aantal dat gevraagd wordt.",
+     "tekstSterker": "Deel de prijs door het aantal dat samen zoveel kost: dan weet je wat er één kost. Doe dat keer het aantal dat gevraagd wordt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer het nieuwe aantal",
+     "claudeDenkfout": null,
+     "regel": "€22,50",
+     "tekst": "Dat is de prijs van de hele groep uit de vraag, keer het nieuwe aantal. Reken eerst uit wat er één kost.",
+     "tekstSterker": "Deel de prijs door het aantal dat samen zoveel kost: dan weet je wat er één kost. Doe dat keer het aantal dat gevraagd wordt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Wat kost er één? Doe dat keer het aantal dat gevraagd wordt.",
+     "tekstSterker": "Deel de prijs door het aantal dat samen zoveel kost: dan weet je wat er één kost. Doe dat keer het aantal dat gevraagd wordt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je deed er €2 bij. Reken eerst uit wat één pak kost.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je deed de prijs van 3 pakken keer 5. Reken eerst uit wat één pak kost.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E03",
+   "nr": 1,
+   "somtype": "De schaal van een kaart is # : #. Twee steden liggen op de kaart # cm uit elkaar. Hoeveel km is dat in het echt?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "De schaal van een kaart is # : #. Twee steden liggen op de kaart # cm uit elkaar. Hoeveel km is dat in het echt?",
+   "hint1": "Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.",
+   "hint2": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart.",
+   "ouderzin": "Je kind rekent een afstand op een kaart om naar kilometers in het echt, met de schaal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "meters",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 1000",
+     "tekst": "Dat is het aantal meter. Gevraagd is kilometers: duizend meter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Hoeveel kilometer is één centimeter op deze kaart? Reken daarmee verder.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere omrekening",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E03",
+   "nr": 2,
+   "somtype": "De schaal van een kaart is # : #. Twee dorpen liggen op de kaart # cm uit elkaar. Hoeveel km is dat in het echt?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "De schaal van een kaart is # : #. Twee dorpen liggen op de kaart # cm uit elkaar. Hoeveel km is dat in het echt?",
+   "hint1": "Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.",
+   "hint2": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart.",
+   "ouderzin": "Je kind rekent een afstand op een kaart om naar kilometers in het echt, met de schaal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "meters",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 1000",
+     "tekst": "Dat is het aantal meter. Gevraagd is kilometers: duizend meter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Hoeveel kilometer is één centimeter op deze kaart? Reken daarmee verder.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere omrekening",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E03",
+   "nr": 3,
+   "somtype": "De schaal van een kaart is # : #. Twee plaatsen liggen op de kaart # cm uit elkaar. Hoeveel km is dat in het echt?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "De schaal van een kaart is # : #. Twee plaatsen liggen op de kaart # cm uit elkaar. Hoeveel km is dat in het echt?",
+   "hint1": "Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.",
+   "hint2": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart.",
+   "ouderzin": "Je kind rekent een afstand op een kaart om naar kilometers in het echt, met de schaal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "meters",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 1000",
+     "tekst": "Dat is het aantal meter. Gevraagd is kilometers: duizend meter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Hoeveel kilometer is één centimeter op deze kaart? Reken daarmee verder.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere omrekening",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E03",
+   "nr": 8,
+   "somtype": "Op een kaart met schaal # : # is [plek] # cm van [plek]. Hoeveel kilometer is dat in het echt?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "Op een kaart met schaal # : # is [plek] # cm van [plek]. Hoeveel kilometer is dat in het echt?",
+   "hint1": "Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.",
+   "hint2": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart.",
+   "ouderzin": "Je kind rekent een afstand op een kaart om naar kilometers in het echt, met de schaal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "meters",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 1000",
+     "tekst": "Dat is het aantal meter. Gevraagd is kilometers: duizend meter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere omrekening",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat zijn meters. Een kilometer is 1000 meter.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Een nul te veel. 1 cm is hier 1 km.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E03",
+   "nr": 11,
+   "somtype": "Op een kaart met schaal # : # is de klas # cm van de school. Hoeveel kilometer is dat in het echt?",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "Op een kaart met schaal # : # is de klas # cm van de school. Hoeveel kilometer is dat in het echt?",
+   "hint1": "Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.",
+   "hint2": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart.",
+   "ouderzin": "Je kind rekent een afstand op een kaart om naar kilometers in het echt, met de schaal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "meters",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 1000",
+     "tekst": "Dat is het aantal meter. Gevraagd is kilometers: duizend meter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere omrekening",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.",
+     "tekstSterker": "Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat zijn meters. Een kilometer is 1000 meter.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Een nul te veel. 1 cm is hier 1 km.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E03",
+   "nr": 4,
+   "somtype": "De schaal van een kaart is # : #. Twee dorpen liggen in het echt # km uit elkaar. Hoeveel cm is dat op de kaart?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "De schaal van een kaart is # : #. Twee dorpen liggen in het echt # km uit elkaar. Hoeveel cm is dat op de kaart?",
+   "hint1": "Bij een schaal staat een dubbele punt tussen de getallen. Op de kaart is alles veel kleiner dan in het echt. Hoeveel kilometer is één centimeter op de kaart?",
+   "hint2": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart.",
+   "ouderzin": "Je kind rekent een echte afstand in kilometers om naar centimeters op een kaart, met de schaal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Op de kaart is de afstand veel kleiner dan in het echt.",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere omrekening",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Hoe vaak past dat in de echte afstand?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel kilometer is één centimeter op deze kaart? Hoe vaak past dat in de echte afstand?",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E03",
+   "nr": 5,
+   "somtype": "De schaal van een kaart is # : #. Twee plaatsen liggen in het echt # km uit elkaar. Hoeveel cm is dat op de kaart?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "De schaal van een kaart is # : #. Twee plaatsen liggen in het echt # km uit elkaar. Hoeveel cm is dat op de kaart?",
+   "hint1": "Bij een schaal staat een dubbele punt tussen de getallen. Op de kaart is alles veel kleiner dan in het echt. Hoeveel kilometer is één centimeter op de kaart?",
+   "hint2": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart.",
+   "ouderzin": "Je kind rekent een echte afstand in kilometers om naar centimeters op een kaart, met de schaal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Op de kaart is de afstand veel kleiner dan in het echt.",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere omrekening",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Hoe vaak past dat in de echte afstand?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel kilometer is één centimeter op deze kaart? Hoe vaak past dat in de echte afstand?",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E03",
+   "nr": 6,
+   "somtype": "De schaal van een kaart is # : #. Twee steden liggen in het echt # km uit elkaar. Hoeveel cm is dat op de kaart?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "De schaal van een kaart is # : #. Twee steden liggen in het echt # km uit elkaar. Hoeveel cm is dat op de kaart?",
+   "hint1": "Bij een schaal staat een dubbele punt tussen de getallen. Op de kaart is alles veel kleiner dan in het echt. Hoeveel kilometer is één centimeter op de kaart?",
+   "hint2": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart.",
+   "ouderzin": "Je kind rekent een echte afstand in kilometers om naar centimeters op een kaart, met de schaal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Op de kaart is de afstand veel kleiner dan in het echt.",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere omrekening",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Hoe vaak past dat in de echte afstand?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel kilometer is één centimeter op deze kaart? Hoe vaak past dat in de echte afstand?",
+     "tekstSterker": "Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E03",
+   "nr": 7,
+   "somtype": "Op een kaart met schaal # : # is de afstand van [plek] naar [plek] # cm. Hoeveel meter is dat in het echt?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Op een kaart met schaal # : # is de afstand van [plek] naar [plek] # cm. Hoeveel meter is dat in het echt?",
+   "hint1": "Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.",
+   "hint2": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg.",
+   "ouderzin": "Je kind rekent een afstand op een kaart om naar meters in het echt, met de schaal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nog in centimeters",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 100",
+     "tekst": "Dat is het aantal centimeter in het echt. Gevraagd is meters: honderd centimeter is één meter.",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens: honderd centimeter is één meter.",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Tel de nullen nog eens: honderd centimeter is één meter.",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere omrekening",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat past niet bij de schaal. Hoeveel centimeter is het in het echt? Reken dat om naar meters.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel centimeter is het in het echt? Reken dat om naar meters: honderd centimeter is één meter.",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is in centimeters. Reken om naar meters: delen door 100.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van cm naar m is delen door 100, niet door 1000.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Tel de nullen nog eens. Van cm naar m haal je twee nullen weg.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E03",
+   "nr": 9,
+   "somtype": "Op een kaart met schaal # : # is de afstand van de gymzaal naar de school # cm. Hoeveel meter is dat in het echt?",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "Op een kaart met schaal # : # is de afstand van de gymzaal naar de school # cm. Hoeveel meter is dat in het echt?",
+   "hint1": "Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.",
+   "hint2": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg.",
+   "ouderzin": "Je kind rekent een afstand op een kaart om naar meters in het echt, met de schaal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nog in centimeters",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 100",
+     "tekst": "Dat is het aantal centimeter in het echt. Gevraagd is meters: honderd centimeter is één meter.",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens: honderd centimeter is één meter.",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Tel de nullen nog eens: honderd centimeter is één meter.",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere omrekening",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat past niet bij de schaal. Hoeveel centimeter is het in het echt? Reken dat om naar meters.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel centimeter is het in het echt? Reken dat om naar meters: honderd centimeter is één meter.",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is in centimeters. Reken om naar meters: delen door 100.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van cm naar m is delen door 100, niet door 1000.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Tel de nullen nog eens. Van cm naar m haal je twee nullen weg.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E03",
+   "nr": 10,
+   "somtype": "Op een kaart met schaal # : # is de afstand van de klas naar het huis # cm. Hoeveel meter is dat in het echt?",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "Op een kaart met schaal # : # is de afstand van de klas naar het huis # cm. Hoeveel meter is dat in het echt?",
+   "hint1": "Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.",
+   "hint2": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg.",
+   "ouderzin": "Je kind rekent een afstand op een kaart om naar meters in het echt, met de schaal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nog in centimeters",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 100",
+     "tekst": "Dat is het aantal centimeter in het echt. Gevraagd is meters: honderd centimeter is één meter.",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens: honderd centimeter is één meter.",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Tel de nullen nog eens: honderd centimeter is één meter.",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere omrekening",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat past niet bij de schaal. Hoeveel centimeter is het in het echt? Reken dat om naar meters.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel centimeter is het in het echt? Reken dat om naar meters: honderd centimeter is één meter.",
+     "tekstSterker": "Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is in centimeters. Reken om naar meters: delen door 100.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van cm naar m is delen door 100, niet door 1000.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Tel de nullen nog eens. Van cm naar m haal je twee nullen weg.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E04",
+   "nr": 1,
+   "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+   "hint1": "Na de korting betaal je niet meer honderd procent van de oude prijs. Hoeveel procent betaal je nog?",
+   "hint2": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
+   "ouderzin": "Je kind rekent terug naar de prijs van vóór de korting.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "nieuwe prijs",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent van de nieuwe prijs",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "De nieuwe prijs is een deel van de oude prijs. Welk procent? Reken daarmee terug naar honderd procent.",
+     "tekstSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De 50% ging van de óude prijs af, niet van €30. €30 is 50%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De 20% ging van de óude prijs af, niet van €160. €160 is 80%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De 50% ging van de óude prijs af, niet van €100. €100 is 50%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De 20% ging van de óude prijs af, niet van €120. €120 is 80%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De 20% ging van de óude prijs af, niet van €48. €48 is 80%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De 10% ging van de óude prijs af, niet van €54. €54 is 90%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De 25% ging van de óude prijs af, niet van €60. €60 is 75%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De 50% ging van de óude prijs af, niet van €40. €40 is 50%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De 10% ging van de óude prijs af, niet van €180. €180 is 90%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De 50% ging van de óude prijs af, niet van €20. €20 is 50%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De 20% ging van de óude prijs af, niet van €192. €192 is 80%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E04",
+   "nr": 6,
+   "somtype": "Een zak noten kost na #% korting €#. Wat was de prijs vóór de korting?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Een zak noten kost na #% korting €#. Wat was de prijs vóór de korting?",
+   "hint1": "Na de korting betaal je niet meer honderd procent van de oude prijs. Hoeveel procent betaal je nog?",
+   "hint2": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
+   "ouderzin": "Je kind rekent terug naar de prijs van vóór de korting.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "nieuwe prijs",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent van de nieuwe prijs",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "De nieuwe prijs is een deel van de oude prijs. Welk procent? Reken daarmee terug naar honderd procent.",
+     "tekstSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De 50% ging van de óude prijs af, niet van €75. €75 is 50%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E04",
+   "nr": 2,
+   "somtype": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+   "hint1": "Procent betekent: zoveel van de honderd. Hoeveel euro is één procent van het bedrag op de rekening?",
+   "hint2": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij.",
+   "ouderzin": "Je kind rekent uit hoeveel geld er in een jaar bij komt met een procent rente.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Dat is tien keer te veel. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "bedrag erbij",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is het bedrag op de rekening met wat erbij komt samen. Gevraagd is alleen wat er in één jaar bij komt.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als bedrag",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Dat is het getal van het procent. Wat erbij komt, is een deel van het bedrag: hoeveel euro is dat?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel het bedrag door honderd en doe dat keer het procent.",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "1% van 800 is 8, niet 80.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "3% is een deel van €800, niet €3.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% van 200 is 2, niet 20.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "3% is een deel van €200, niet €3.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% van 1500 is 15, niet 150.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "4% is een deel van €1500, niet €4.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% is een deel van €1500, niet €1.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% van 300 is 3, niet 30.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "4% is een deel van €300, niet €4.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% van 2000 is 20, niet 200.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "3% is een deel van €2000, niet €3.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% van 500 is 5, niet 50.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% is een deel van €500, niet €1.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "5% is een deel van €1500, niet €5.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E04",
+   "nr": 3,
+   "somtype": "Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+   "hint1": "Procent betekent: zoveel van de honderd. Hoeveel euro is één procent van het bedrag op de rekening?",
+   "hint2": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij.",
+   "ouderzin": "Je kind rekent uit hoeveel geld er in een jaar bij komt met een procent rente.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Dat is tien keer te veel. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "bedrag erbij",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is het bedrag op de rekening met wat erbij komt samen. Gevraagd is alleen wat er in één jaar bij komt.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als bedrag",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Dat is het getal van het procent. Wat erbij komt, is een deel van het bedrag: hoeveel euro is dat?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel het bedrag door honderd en doe dat keer het procent.",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "1% van 500 is 5, niet 50.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "3% is een deel van €500, niet €3.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% van 800 is 8, niet 80.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "4% is een deel van €800, niet €4.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% van 200 is 2, niet 20.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% is een deel van €200, niet €1.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% van 400 is 4, niet 40.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "3% is een deel van €400, niet €3.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E04",
+   "nr": 4,
+   "somtype": "Fatima zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Fatima zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?",
+   "hint1": "Procent betekent: zoveel van de honderd. Hoeveel euro is één procent van het bedrag op de rekening?",
+   "hint2": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij.",
+   "ouderzin": "Je kind rekent uit hoeveel geld er in een jaar bij komt met een procent rente.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Dat is tien keer te veel. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "bedrag erbij",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is het bedrag op de rekening met wat erbij komt samen. Gevraagd is alleen wat er in één jaar bij komt.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als bedrag",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Dat is het getal van het procent. Wat erbij komt, is een deel van het bedrag: hoeveel euro is dat?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel het bedrag door honderd en doe dat keer het procent.",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "1% van 800 is 8, niet 80.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "3% is een deel van €800, niet €3.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% van 2000 is 20, niet 200.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "3% is een deel van €2000, niet €3.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E04",
+   "nr": 5,
+   "somtype": "Bram zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Bram zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+   "hint1": "Procent betekent: zoveel van de honderd. Hoeveel euro is één procent van het bedrag op de rekening?",
+   "hint2": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij.",
+   "ouderzin": "Je kind rekent uit hoeveel geld er in een jaar bij komt met een procent rente.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Dat is tien keer te veel. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "bedrag erbij",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is het bedrag op de rekening met wat erbij komt samen. Gevraagd is alleen wat er in één jaar bij komt.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als bedrag",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Dat is het getal van het procent. Wat erbij komt, is een deel van het bedrag: hoeveel euro is dat?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel het bedrag door honderd en doe dat keer het procent.",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "1% van 1500 is 15, niet 150.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "2% is een deel van €1500, niet €2.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E04",
+   "nr": 7,
+   "somtype": "Sanne zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Sanne zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?",
+   "hint1": "Procent betekent: zoveel van de honderd. Hoeveel euro is één procent van het bedrag op de rekening?",
+   "hint2": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij.",
+   "ouderzin": "Je kind rekent uit hoeveel geld er in een jaar bij komt met een procent rente.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Dat is tien keer te veel. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "bedrag erbij",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is het bedrag op de rekening met wat erbij komt samen. Gevraagd is alleen wat er in één jaar bij komt.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als bedrag",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Dat is het getal van het procent. Wat erbij komt, is een deel van het bedrag: hoeveel euro is dat?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel het bedrag door honderd en doe dat keer het procent.",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "1% van 400 is 4, niet 40.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "1% is een deel van €400, niet €1.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E04",
+   "nr": 8,
+   "somtype": "Van de # [ding] op school komt # procent met de fiets. Hoeveel kinderen komen er met de fiets?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "Van de # [ding] op school komt # procent met de fiets. Hoeveel kinderen komen er met de fiets?",
+   "hint1": "Procent betekent: zoveel van de honderd. Iedereen op school samen is honderd procent.",
+   "hint2": "Reken uit hoeveel tien procent is: deel het aantal op school door tien. Hoe vaak heb je tien procent nodig?",
+   "ouderzin": "Je kind rekent een procent van een aantal uit.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "procent als aantal",
+     "claudeDenkfout": null,
+     "regel": "60 kinderen",
+     "tekst": "Dat is het getal van het procent, nog geen aantal. Hoeveel is dat procent van iedereen op school?",
+     "tekstSterker": "Reken uit hoeveel tien procent is: deel het aantal op school door tien. Hoe vaak heb je tien procent nodig?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "100 kinderen",
+     "tekst": "Dat is te veel. Reken uit hoeveel tien procent van iedereen op school is, en neem dat zo vaak als nodig.",
+     "tekstSterker": "Reken uit hoeveel tien procent is: deel het aantal op school door tien. Hoe vaak heb je tien procent nodig?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Iedereen op school samen is honderd procent. Hoeveel is tien procent? Hoe vaak heb je dat nodig?",
+     "tekstSterker": "Reken uit hoeveel tien procent is: deel het aantal op school door tien. Hoe vaak heb je tien procent nodig?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "60 is het percentage en niet het aantal kinderen. Reken het uit met 150.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je rekent met 100 kinderen. De school heeft een ander aantal leerlingen.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E06",
+   "nr": 1,
+   "somtype": "Schrijf # in procenten.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Schrijf # in procenten.",
+   "hint1": "Procent betekent: zoveel van de honderd. Eén hele is honderd procent.",
+   "hint2": "Doe het kommagetal keer honderd: de komma schuift twee plekken naar rechts. Zet daarna het procentteken erachter.",
+   "ouderzin": "Je kind schrijft een kommagetal als procent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kommagetal met procentteken",
+     "claudeDenkfout": null,
+     "regel": "fout = kommagetal met procentteken",
+     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent is zoveel van de honderd: doe het kommagetal eerst keer honderd.",
+     "tekstSterker": "Doe het kommagetal keer honderd: de komma schuift twee plekken naar rechts. Zet daarna het procentteken erachter."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "komma verschoven",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Staat de komma goed? Bij keer honderd schuift de komma twee plekken naar rechts, niet één of drie.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe het kommagetal keer honderd: de komma schuift twee plekken naar rechts. Zet daarna het procentteken erachter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe het kommagetal keer honderd. Staat de komma dan twee plekken verder naar rechts?",
+     "tekstSterker": "Doe het kommagetal keer honderd: de komma schuift twee plekken naar rechts. Zet daarna het procentteken erachter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E06",
+   "nr": 2,
+   "somtype": "Schrijf #/# in procenten.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Schrijf #/# in procenten.",
+   "hint1": "Procent betekent: zoveel van de honderd. Een breuk met honderd als noemer kun je zo als procent schrijven.",
+   "hint2": "Maak een verhoudingstabel: de noemer hoort bij honderd procent, de teller bij het procent dat je zoekt. Reken de noemer om naar honderd en doe met de teller hetzelfde. Gaat dat niet in één keer? Deel dan eerst allebei door hetzelfde getal.",
+   "ouderzin": "Je kind schrijft een breuk als procent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de breuk",
+     "claudeDenkfout": null,
+     "regel": "21%",
+     "tekst": "Dat is een getal uit de breuk met een procentteken erachter. Dat klopt alleen als de noemer honderd is.",
+     "tekstSterker": "Maak een verhoudingstabel: de noemer hoort bij honderd procent, de teller bij het procent dat je zoekt. Reken de noemer om naar honderd en doe met de teller hetzelfde. Gaat dat niet in één keer? Deel dan eerst allebei door hetzelfde getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de breuk (noemer)",
+     "claudeDenkfout": null,
+     "regel": "40%",
+     "tekst": "Dat is een getal uit de breuk met een procentteken erachter. Dat klopt alleen als de noemer honderd is.",
+     "tekstSterker": "Maak een verhoudingstabel: de noemer hoort bij honderd procent, de teller bij het procent dat je zoekt. Reken de noemer om naar honderd en doe met de teller hetzelfde. Gaat dat niet in één keer? Deel dan eerst allebei door hetzelfde getal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien keer ernaast",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "tekst": "Dat is tien keer te groot of te klein. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Maak een verhoudingstabel: de noemer hoort bij honderd procent, de teller bij het procent dat je zoekt. Reken de noemer om naar honderd en doe met de teller hetzelfde. Gaat dat niet in één keer? Deel dan eerst allebei door hetzelfde getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.",
+     "tekstSterker": "Maak een verhoudingstabel: de noemer hoort bij honderd procent, de teller bij het procent dat je zoekt. Reken de noemer om naar honderd en doe met de teller hetzelfde. Gaat dat niet in één keer? Deel dan eerst allebei door hetzelfde getal."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E06",
+   "nr": 3,
+   "somtype": "#% van de appels in [plek] is rot. Schrijf dat als kommagetal.",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "#% van de [ding] is kapot. Schrijf dat als kommagetal.",
+   "hint1": "Procent betekent: zoveel van de honderd. Zoveel honderdsten kun je als kommagetal schrijven.",
+   "hint2": "Deel het getal van het procent door honderd: de komma schuift twee plekken naar links. Is er geen heel getal? Zet dan een nul voor de komma.",
+   "ouderzin": "Je kind schrijft een procent als kommagetal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te groot",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te groot. Procent zijn honderdsten: deel het getal van het procent door honderd.",
+     "tekstSterker": "Deel het getal van het procent door honderd: de komma schuift twee plekken naar links. Is er geen heel getal? Zet dan een nul voor de komma."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "procent zonder komma",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat is het getal van het procent. Als kommagetal is het honderd keer zo klein.",
+     "tekstSterker": "Deel het getal van het procent door honderd: de komma schuift twee plekken naar links. Is er geen heel getal? Zet dan een nul voor de komma."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent zonder komma (punt)",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "tekst": "Dat is het getal van het procent. Als kommagetal is het honderd keer zo klein.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het getal van het procent door honderd: de komma schuift twee plekken naar links. Is er geen heel getal? Zet dan een nul voor de komma."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "komma verschoven",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Staat de komma goed? Procent zijn honderdsten: de komma schuift twee plekken naar links.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het getal van het procent door honderd: de komma schuift twee plekken naar links. Is er geen heel getal? Zet dan een nul voor de komma."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel het getal van het procent door honderd.",
+     "tekstSterker": "Deel het getal van het procent door honderd: de komma schuift twee plekken naar links. Is er geen heel getal? Zet dan een nul voor de komma."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Procent is per honderd: de komma schuift twee plekken naar links, niet één.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "12.5% is 12.5 van de 100. Als kommagetal deel je door 100.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "#% van de [ding] is kapot. Schrijf dat als kommagetal.",
+    "naar": "#% van de appels in [plek] is rot. Schrijf dat als kommagetal.",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-V01",
+   "nr": 1,
+   "somtype": "Bij een enquête zeggen # van de # [ding] dat zij het liefst voetballen. Hoeveel procent van [wie] is dat?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Bij een enquête zeggen # van de # [ding] dat zij het liefst voetballen. Hoeveel procent van [wie] is dat?",
+   "hint1": "Procent betekent: zoveel van de honderd. Het hele aantal is honderd procent.",
+   "hint2": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+   "ouderzin": "Je kind rekent uit hoeveel procent een deel van een groep is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "aantal als procent",
+     "claudeDenkfout": null,
+     "regel": "40 procent",
+     "tekst": "Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te klein",
+     "claudeDenkfout": null,
+     "regel": "2 procent",
+     "tekst": "Dat is tien keer te klein. Hoe vaak past het deel in het hele aantal? Welk procent hoort daarbij?",
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Het hele aantal is honderd procent. Hoeveel procent is het deel?",
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Het getal 40 is het aantal kinderen en nog geen percentage. Vergelijk het met 200.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Reken na hoeveel keer 40 in 200 past en maak daar een percentage van.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}
