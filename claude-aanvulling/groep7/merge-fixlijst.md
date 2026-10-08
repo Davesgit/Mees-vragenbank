@@ -339,7 +339,7 @@ Ronde 3c (V-#615, Z-#617, Z-#618, Z-#619, Oef-#434, Oef-#442, Z-#606) en ronde 1
 
 | nr | voor | wat | stand |
 |---|---|---|---|
-| Oef-#452 | Overzicht (data) | VERH-03 #1/#2: veel claudeDenkfouten staan niet in claudeFoutHints (530 van 662 en 446 van 528), dus routes als b × c, erbij optellen en ± de prijs van één worden nooit sleutels | open |
+| Oef-#452 | Overzicht (data) | VERH-03 #1/#2: veel claudeDenkfouten staan niet in claudeFoutHints (530 van 662 en 446 van 528), dus routes als b × c, erbij optellen en ± de prijs van één worden nooit sleutels | ✓ build 14:35:51: oorzaak G4-regel D12b (sjabloontekst «Maak een verhoudingstabel.» / «Dat getal staat al in de som.» viel weg, en daarmee de sleutel). fixlijst_g7 _v452 zet 976 sleutels in VERH-03 terug (uitleg None). 547 daarvan (label 'verhoudingstabel-verkeerd': €8 bij 6 pennen €3 → 11, 72 bij 4:9=8:?) staan nu op 'andere fout': Oefeningen kan een regel 'Claudes sleutel: verhoudingstabel-verkeerd' maken |
 | Oef-#453 | Overzicht (data/motor) | VERH-04 #1 (109) en #2 ('0,7%', '0,9%', '0,3%'): Claudes '%'-sleutels met 'getal-overgenomen' staan niet in claudeFoutHints; de motor leest geen '%' buiten 'D van G'. Nu 'andere fout' (#1, algemene aanpak) en letterlijke regels (#2). Voorstel: sleutels in claudeFoutHints, of 'tien keer het procent (als %)' en een regel 'kommagetal met procentteken' ook zonder 'D van G' | open |
 | Oef-#454 | Didactiek/Overzicht | VERH-03 #4/#6: «k keer zo groot» = elke zijde k keer zo lang, terwijl de oppervlakte in #6 k × k groeit; VERH-03 #17 legt alleen 1 : 100 uit, maar vergelijkt 1 : 10 en 1 : 100 | open |
 | Oef-#455 | Overzicht (data) | VERH-04 #5 bank-125: optie '40%' zonder Claude-route (geen denkfout); blijft op 'andere fout' | open |

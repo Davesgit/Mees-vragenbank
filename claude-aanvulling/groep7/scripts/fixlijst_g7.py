@@ -662,3 +662,21 @@ def _z664(it, slog):
 _pas_toe_z667 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_z667(it, slog); _z664(it, slog)
+
+# ---------- Oef-#452: VERH-03, Claudes sleutels die niet in claudeFoutHints staan ----------
+# Oorzaak (geen kapotte koppeling): de G4-regel D12b (regels_g4, ONGEPAST_G4) laat Claude-fout-hints met de sjabloontekst «Maak een
+# verhoudingstabel. …» altijd vallen, en «Dat getal staat al in de som. …» als de vraag geen rekenteken heeft. Met de tekst verdween ook de
+# sleutel uit claudeFoutHints (de basis van apply_hints), terwijl claudeDenkfouten hem houdt. In VERH-03 (verhoudingen) is dat juist de goede
+# route. Herstel voor G7-VERH-03: de ontbrekende sleutels terug in claudeFoutHints, zonder Claudes sjabloontekst (uitleg None): de labelregels
+# en motorregels van de entry pakken ze; zonder passende regel vallen ze op 'andere fout' (Oefeningen kan dan regels maken).
+def _v452(it, slog):
+    if it.get('doelId') != 'G7-VERH-03': return
+    e = it['extraVelden']; n = lambda x: re.sub(r'^\s*[-–]', '−', str(x or ''))
+    ks = {n(h.get('fout')) for h in e.get('claudeFoutHints') or []}
+    terug = [d['fout'] for d in e.get('claudeDenkfouten') or [] if n(d.get('fout')) not in ks and d.get('fout') != it['antwoord']]
+    if not terug: return
+    e['claudeFoutHints'] = (e.get('claudeFoutHints') or []) + [{'stap': None, 'fout': k, 'uitleg': None} for k in dict.fromkeys(terug)]
+    it['merge']['oef452'] = {'terug': terug, 'reden': "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"}
+_pas_toe_z664 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_z664(it, slog); _v452(it, slog)
