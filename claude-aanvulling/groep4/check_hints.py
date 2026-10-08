@@ -237,6 +237,8 @@ if __name__=="__main__":
         warns.append('LES250 ' + _w); print('WARN LES250', _w)
     # Z-#812 (Didactiek, 8 okt): les 217 (geen zin die een bewerking uitsluit) in de build-gate (WARN in G4)
     import les217_check as _L217
+    _m217, _v217 = _L217.zelftest()      # Oef-#489: zelftest (Z-#812/Z-#824) hoort groen te zijn, anders FAIL
+    if _m217 or _v217: fails.append(f'les 217 zelftest: {len(_m217)} gemist, {len(_v217)} vals alarm'); print('FAIL les 217 zelftest', _m217, _v217)
     for _w in _L217.groep(_o250.path.dirname(_o250.path.abspath(__file__))): warns.append(_w); print('WARN', _w)
     print(f"Somtypen: {k} hints klaar · {o} open · {len(fails)} FAIL · {len(warns)} WARN · {len(info)} INFO · {'ALLES OK' if not fails else 'FAIL'}")
     sys.exit(1 if fails else 0)

@@ -75,10 +75,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.
 - **Ouderzin:** Je kind rekent een gemiddelde uit als cijfers vaker voorkomen: elk cijfer telt zo vaak mee als het voorkomt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `totaal` (140) → Dat is het totaal van alle cijfers samen. Verdeel het nog eerlijk over alle kinderen.  [nieuw]
-  - `elk cijfer één keer` (22) → Dan telt elk cijfer maar één keer mee. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.  [nieuw]
+  - `totaal` (120) → Dat is het totaal van alle cijfers samen. Verdeel het nog eerlijk over alle kinderen.  [nieuw]
+  - `elk cijfer één keer` (7) → Dan telt elk cijfer even zwaar mee. Maar het ene cijfer hebben veel meer kinderen dan het andere. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.  [nieuw]
   - `andere fout` (andere fout) → Elk cijfer telt zo vaak mee als het voorkomt. Deel het totaal door het aantal kinderen.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In groep # hebben # kinderen een cijfer voor een toets. Tien kinderen hebben een #, vijf kinderen een # en vijf kinderen een #. Wat is het gemiddelde cijfer?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 4: Mila fietst vier dagen naar school: # km, # km, # km en # km. Hoeveel kilometer fietst zij gemiddeld per dag?
@@ -101,7 +100,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent een gemiddelde uit: alle afstanden optellen en delen door het aantal dagen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `totaal` (16 km) → Dat is het totaal van alle dagen. Verdeel het nog eerlijk over de dagen.  [nieuw]
-  - `langste dag` (6 km) → Dat is de langste dag. Een gemiddelde ligt tussen de kortste en de langste dag in.  [nieuw]
+  - `midden` (4,5 km) → Dat ligt precies tussen de kortste en de langste dag. Bij een gemiddelde tellen alle dagen mee: tel ze op en deel door het aantal dagen.  [nieuw]
   - `andere fout` (andere fout) → Tel alle afstanden op en deel door het aantal dagen.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Mila fietst vier dagen naar school. # km, # km, # km en # km. Hoeveel kilometer fietst zij gemiddeld per dag?'. Nakijken of ze nog passen.
 - Status: hints klaar

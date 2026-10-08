@@ -1016,7 +1016,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Je zoekt telkens de naam die alfabetisch het eerst komt. Die zet je op de volgende plaats in de rij. Zo komen alle namen een keer aan de beurt.
 
 - **Hint 1 (te schrijven):** Alfabetische volgorde gaat over de letters. Een aanpak werkt altijd als elk woord zo een plek krijgt.
-- **Hint 2 (te schrijven):** Probeer elke aanpak uit met een paar woorden, bijvoorbeeld kat, aap en boom. Staan ze daarna in de goede volgorde?
+- **Hint 2 (te schrijven):** Probeer elke aanpak uit met een paar woorden, bijvoorbeeld kat, aap en boom. Staan de woorden na elke aanpak in de goede volgorde?
 - **Ouderzin:** Je kind kiest een aanpak om te sorteren die altijd werkt: steeds het woord zoeken dat in het alfabet het eerst komt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `lengte` (Zet de kortste namen vooraan) → Alfabetische volgorde gaat over de letters, niet over hoe lang een woord is. Waar kijk je dan naar?  [nieuw]
@@ -1112,7 +1112,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Een gemiddelde vind je door alles samen te nemen en het dan eerlijk te verdelen. Je telt de 5 cijfers op tot een totaal. Dat totaal deel je door het aantal cijfers, dus door 5.
 
 - **Hint 1 (te schrijven):** Een gemiddelde is wat je krijgt als je alles eerlijk verdeelt, zodat elk cijfer even groot wordt.
-- **Hint 2 (te schrijven):** Probeer elke aanpak met drie cijfers: zes, zeven en acht. Het gemiddelde daarvan is zeven. Gebruik drie waar de aanpak het aantal cijfers gebruikt. Welke aanpak komt op zeven uit?
+- **Hint 2 (te schrijven):** Probeer elke aanpak met vijf keer een zeven. Het gemiddelde daarvan is zeven. Welke aanpak komt op zeven uit?
 - **Ouderzin:** Je kind kiest hoe je een gemiddelde uitrekent: alles optellen en delen door het aantal.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `erbij` (Tel alle cijfers op en tel de som bij 5 op.) → Dan wordt het getal alleen maar groter, groter dan elk cijfer. Een gemiddelde ligt tussen het laagste en het hoogste cijfer.  [nieuw]
@@ -1135,7 +1135,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5 × 100 doen en er 2 afhalen → Je hebt vijf keer 2 te veel gerekend, niet één keer. Hoeveel is dat bij elkaar? · 98 vijf keer onder elkaar optellen → Dat mag wel, maar het kost veel stappen. 98 ligt heel dicht bij een rond getal.
     - **Uitleg (Claude):** 98 is 2 minder dan 100. Bij 5 keer reken je dus 5 × 2 = 10 te veel. Daarom haal je 10 van 500 af.
 
-- **Hint 1 (te schrijven):** Het getal ligt dicht bij een rond getal. Met een rond getal reken je makkelijker.
+- **Hint 1 (te schrijven):** Eén van de getallen ligt vlak bij een rond getal. Met een rond getal reken je makkelijker.
 - **Hint 2 (te schrijven):** Reken de som eerst zelf uit. Reken dan elke aanpak uit. Welke komt op hetzelfde uit, en welke gaat het snelst?
 - **Ouderzin:** Je kind kiest een handige aanpak: rekenen met een rond getal en daarna verbeteren wat je te veel nam.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -1377,7 +1377,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Eerst 100 erbij, dan 1 erbij → Je deed er 1 te veel bij. Bedenk wat je moet doen als je eerst een te groot getal pakt. · Eerst 90 erbij, dan 9 eraf → Kijk nog eens goed hoe dicht 99 bij een rond honderdtal ligt.
     - **Uitleg (Claude):** 99 ligt vlak bij 100. Je telt er eerst 100 bij op en haalt daarna de 1 die je te veel nam er weer af. Zo hoef je niet onder elkaar te rekenen.
 
-- **Hint 1 (te schrijven):** Het getal ligt dicht bij een rond getal. Met een rond getal reken je makkelijker.
+- **Hint 1 (te schrijven):** Eén van de getallen ligt vlak bij een rond getal. Met een rond getal reken je makkelijker.
 - **Hint 2 (te schrijven):** Reken de som zelf uit, en reken daarna elke aanpak uit. Welke aanpak komt op hetzelfde uit?
 - **Ouderzin:** Je kind kiest een handige aanpak: rekenen met een rond getal en daarna verbeteren wat je te veel nam.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):

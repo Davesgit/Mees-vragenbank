@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T16:06:26+0200",
+ "gegenereerdOp": "2026-10-08T16:13:53+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-GET-V02",
  "bordtitel": "Rekenen tot 100.000 en rekenmachine herhalen",
@@ -515,25 +515,25 @@
     {
      "stap": null,
      "fout": "7",
-     "uitleg": "Elk cijfer telt zo vaak mee als het voorkomt. Deel het totaal door het aantal kinderen.",
+     "uitleg": "Dan telt elk cijfer even zwaar mee. Maar het ene cijfer hebben veel meer kinderen dan het andere. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.",
      "uitlegSterker": "Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.",
      "laag2": "tekstSterker",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "regel": "7",
+     "soort": "elk cijfer één keer",
      "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "120",
-     "uitleg": "Elk cijfer telt zo vaak mee als het voorkomt. Deel het totaal door het aantal kinderen.",
+     "uitleg": "Dat is het totaal van alle cijfers samen. Verdeel het nog eerlijk over alle kinderen.",
      "uitlegSterker": "Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.",
      "laag2": "tekstSterker",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "regel": "120",
+     "soort": "totaal",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "7 → Elk cijfer telt zo vaak mee als het voorkomt. Deel het totaal door het aantal kinderen. · 120 → Elk cijfer telt zo vaak mee als het voorkomt. Deel het totaal door het aantal kinderen.",
+   "foutHintsTekst": "7 → Dan telt elk cijfer even zwaar mee. Maar het ene cijfer hebben veel meer kinderen dan het andere. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer. · 120 → Dat is het totaal van alle cijfers samen. Verdeel het nog eerlijk over alle kinderen.",
    "ouderzin": "Je kind rekent een gemiddelde uit als cijfers vaker voorkomen: elk cijfer telt zo vaak mee als het voorkomt.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -684,18 +684,34 @@
    ],
    "foutRegels": [
     {
-     "regel": "140",
+     "regel": "120",
      "soort": "totaal",
+     "bron": "nieuw",
      "tekst": "Dat is het totaal van alle cijfers samen. Verdeel het nog eerlijk over alle kinderen.",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "120"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
-     "regel": "22",
+     "regel": "7",
      "soort": "elk cijfer één keer",
-     "tekst": "Dan telt elk cijfer maar één keer mee. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.",
-     "match": null,
-     "leesbaar": false
+     "bron": "nieuw",
+     "tekst": "Dan telt elk cijfer even zwaar mee. Maar het ene cijfer hebben veel meer kinderen dan het andere. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.",
+     "tekstSterker": "Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -757,15 +773,15 @@
     {
      "stap": null,
      "fout": "4,5 km",
-     "uitleg": "Tel alle afstanden op en deel door het aantal dagen.",
+     "uitleg": "Dat ligt precies tussen de kortste en de langste dag. Bij een gemiddelde tellen alle dagen mee: tel ze op en deel door het aantal dagen.",
      "uitlegSterker": "Tel alle afstanden bij elkaar op: dat is het totaal. Deel het totaal door het aantal dagen.",
      "laag2": "tekstSterker",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "regel": "4,5 km",
+     "soort": "midden",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "16 km → Dat is het totaal van alle dagen. Verdeel het nog eerlijk over de dagen. · 4,5 km → Tel alle afstanden op en deel door het aantal dagen.",
+   "foutHintsTekst": "16 km → Dat is het totaal van alle dagen. Verdeel het nog eerlijk over de dagen. · 4,5 km → Dat ligt precies tussen de kortste en de langste dag. Bij een gemiddelde tellen alle dagen mee: tel ze op en deel door het aantal dagen.",
    "ouderzin": "Je kind rekent een gemiddelde uit: alle afstanden optellen en delen door het aantal dagen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -915,14 +931,17 @@
      "leesbaar": true
     },
     {
-     "regel": "6 km",
-     "soort": "langste dag",
+     "regel": "4,5 km",
+     "soort": "midden",
      "bron": "nieuw",
-     "tekst": "Dat is de langste dag. Een gemiddelde ligt tussen de kortste en de langste dag in.",
+     "tekst": "Dat ligt precies tussen de kortste en de langste dag. Bij een gemiddelde tellen alle dagen mee: tel ze op en deel door het aantal dagen.",
      "tekstSterker": "Tel alle afstanden bij elkaar op: dat is het totaal. Deel het totaal door het aantal dagen.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "4,5 km"
+      ],
+      "opOpties": true
      },
      "leesbaar": true
     },
@@ -942,7 +961,7 @@
    "algemeneFoutHint": "Tel alle afstanden op en deel door het aantal dagen."
   }
  ],
- "hintsSyncOp": "2026-10-08T16:06:27+02:00",
+ "hintsSyncOp": "2026-10-08T16:13:54+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -954,10 +973,10 @@
   },
   {
    "batch": "batch3.json",
-   "md5": "7e0e3a1c7aaf"
+   "md5": "c6b38756f23a"
   }
  ],
- "geschrevenOp": "2026-10-08T16:06:27+02:00",
+ "geschrevenOp": "2026-10-08T16:13:54+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

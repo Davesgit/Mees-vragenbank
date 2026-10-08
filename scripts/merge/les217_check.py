@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""[tools-kopie 8 okt 16:0x van g7work/huis_checks.py (Oefeningen), Z-#812: ook in de build-gate (check_hints G3–G8: G7/G8 FAIL, G3–G6 WARN).]
+"""[tools-kopie 8 okt 16:1x van g7work/huis_checks.py (Oefeningen, met Z-#824, zelftest 15/15), Oef-#489/Z-#812: in de build-gate (check_hints G3–G8: G7/G8 FAIL, G3–G6 WARN; zelftest mislukt = FAIL in alle groepen).]
 Gedeelde huisregel-checks voor alle G7-batches (Z-#741, les 243): elke b*/check.py roept les217() aan op zijn eigen hints/batchN.json.
 Los te draaien over alle batches: python3 huis_checks.py [pad naar g7]  (standaard de zandbak; exit 1 bij FAIL).
 les 217 (Z-#741, les 242): geen zin die een bewerking uitsluit. Herhaald optellen, kolommen optellen en 'erbij' zijn geldige routes;
@@ -18,12 +18,15 @@ UITSLUIT = re.compile(r"""(
   | \b(optellen|plus)\b[^.?!]{0,15}\bis\s+(hier\s+)?(fout|verkeerd|niet\s+goed)\b             # optellen is hier fout
   | \bgeen\s+plus(som)?\b(?!teken)                                                            # gebruik geen plus / dit is geen plussom (niet: 'geen plusteken')
   | \ber\s+komt\s+niets\s+bij\b                                                              # er komt niets bij
+  # Z-#824 (Didactiek review-batch3 G8, m7): 'is niet goed' / 'mag niet' ook bij aftrekken, eraf, delen; 'je mag hier niet optellen'
+  | \b(aftrekken|eraf\s+(halen|doen)|delen|erbij\s+doen)\b[^.?!]{0,15}\b(is\s+(hier\s+)?niet\s+goed|mag\s+(je\s+)?(hier\s+)?niet)\b
+  | \bmag\s+(je\s+)?(hier\s+)?(niet|nooit)\s+(op\s?tellen|optellen|aftrekken|delen|plus\s+doen|erbij\s+doen)\b
 )""", re.I | re.X)
 # zelftest (Z-#812): python3 huis_checks.py --zelftest; elke FOUT-zin moet vallen, elke GOED-zin vrij blijven
-ZELFTEST_FOUT = ['Bij een schaal tel je nooit iets op.', 'Optellen mag niet.', 'Je doet alleen delen of keer.', 'Je mag hier geen plus doen.',
+ZELFTEST_FOUT = ['Optellen is niet goed hier.', 'Erbij doen mag niet.', 'Je mag hier niet optellen.', 'Aftrekken is hier niet goed.', 'Bij een schaal tel je nooit iets op.', 'Optellen mag niet.', 'Je doet alleen delen of keer.', 'Je mag hier geen plus doen.',
                  'Tel nooit op bij een schaal.', 'Je telt hier niet op maar je doet keer.', 'Je hoeft niets op te tellen.', 'Optellen is hier fout.',
                  'Gebruik geen plus.', 'Er komt niets bij: het gaat om keer.', 'Dit is geen plussom.']
-ZELFTEST_GOED = ['Heb je erbij opgeteld? Kijk nog eens naar de vraag.', 'Tel ze allebei nog eens.', "Achter 'op de' komt niet het deel, maar het totaal.",
+ZELFTEST_GOED = ['Dat is niet goed: kijk nog eens naar de vraag.', 'Een gemiddelde mag niet groter zijn dan het hoogste cijfer.', 'Heb je erbij opgeteld? Kijk nog eens naar de vraag.', 'Tel ze allebei nog eens.', "Achter 'op de' komt niet het deel, maar het totaal.",
                  'Het is geen plusteken.', 'Heb je opgeteld in plaats van keer gedaan?']
 def zelftest():
     mis = [t for t in ZELFTEST_FOUT if not UITSLUIT.search(t)]; vals = [t for t in ZELFTEST_GOED if UITSLUIT.search(t)]
