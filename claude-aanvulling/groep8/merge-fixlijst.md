@@ -277,6 +277,16 @@ Checks: check_hints **121 klaar · 102 open · 0 FAIL · 0 WARN**; merge-notatie
 - **Z-#894** ('30 hoog', #35-opgave): data van Overzicht, niet van Oefeningen; niet aangeraakt.
 - **V-#910 (+ Z-#911, Z-#912) in build 17:14:34**, nagecheckt op een kopie: E05-ROUTES 0; b4/check 141 items · 917 sleutels · FAIL 0; 41 mutanten, 0 gemist; telling 281 Claude-sleutels, 0 op 'andere fout'. Per groep (les 337): 23 opgaven gewijzigd (busje 13, krat 6, bak 2, kist 1, mand 1); Claude-sleutels bak −2, verder 0. Antwoord + 1 nu in alle 80 'nodig'-items op 'één te veel', geen 0,…-sleutels meer.
 
+## Oefeningen: G8 batch 7 ronde 1b (8 okt 17:26:20)
+| punt | stand |
+|---|---|
+| V-#940 / V-#941 / V-#942 / V-#943 | **✓** H2 #8, #11, #27 en H1 #25 (teksten Didactiek), patch_batch7.py. |
+| Z-#941 / Z-#942 / Z-#944 | **✓** #13 H1↔H2; #23 H2 zonder 'verschillen'; woordkeus #7/#14/#18/#20/#21/#28. |
+| V-#946 | **✓** b7/check kent '×' én 'x'; mislukte match = FAIL (les 353). Klaar vóór Overzichts build. |
+| Z-#943 | **voorwaardelijk** in patch_batch7: '24 honden' + nieuwe L1 zodra de data '1 hondje = 6' heeft (Oef-#1004). |
+| V-#944 / V-#945 | wacht op Overzichts data; daarna hercheck en SNAP op een kopie. 029 gerekend op hond 30 / kat 10 (geen aflezing op 50). |
+| lessen 350–354 | **✓** in hints/lessen_g8.md. |
+
 ## Overzicht: builds 17:03:20, 17:08:44, 17:14:34 en 17:24:12 (Z-#914)
 ### Build 17:03:20 — batch 6 + Didactiek batch 5/6-review (V-#880, V-#891, V-#893, V-#894, Oef-#498–#1002, V-#901–#904)
 | punt | stand |
@@ -311,4 +321,17 @@ Checks: check_hints **121 klaar · 102 open · 0 FAIL · 0 WARN**; merge-notatie
 | b7-data (V-#944, V-#945, V-#946, Z-#943/Oef-#1004, Z-#945) | **klaar, niet actief** (steering 17:21: pas na patch_batch7 ronde 1b van Oefeningen). Alles achter `tools/g8_b7_vlag.py` (ACTIEF = False; G8_B7=1). Ook de guards: XSTER vangt dan '(x 1000)', 'x 3', '(*1000)' (Z-#940, 8 mutanten) en STAAF-BESLIS les 326/352 (beslissende staaf op een half streepje: geen aflezing < 1 streepje van 50; 029 oud = FAIL). |
 | Oef-#1003 | vervangen door **V-#945** (Didactiek beslist): 029 hond 30, kat 10, konijn 15, vis 45; beslissend 40; 'Nee' blijft. |
 
-Checks build 17:24:12: check_hints **172 klaar · 51 open · 0 FAIL · 0 WARN**; merge-notatie **ALLES OK** (KLOKTIJD 0, TIJDSDUUR 0, STAAF-BESLIS 0, E05-ROUTES 0); b1 0, b2 0, b3 0, **b4 141 items · 917 sleutels · FAIL 0**, b5 0, b6 0; **b7 FAIL 2**: 029 (les 326, data; gaat weg met V-#945 zodra de vlag aan staat) en #23 018 H2 (les 264 op H2, Z-#942; hints van Oefeningen).
+Checks build 17:24:12 (op main als ef86a74): check_hints **172 klaar · 51 open · 0 FAIL · 0 WARN**; merge-notatie **ALLES OK** (KLOKTIJD 0, TIJDSDUUR 0, STAAF-BESLIS 0, E05-ROUTES 0); b1 0, b2 0, b3 0, **b4 141 items · 917 sleutels · FAIL 0**, b5 0, b6 0; **b7 FAIL 2**: 029 (les 326, data; gaat weg met V-#945 zodra de vlag aan staat) en #23 018 H2 (les 264 op H2, Z-#942; hints van Oefeningen).
+
+### Build 17:30:20 — b7-data (V-#944, V-#945, V-#946, Z-#940, Z-#943/Oef-#1004, Z-#945) na patch_batch7 ronde 1b; veilige build
+| punt | stand |
+|---|---|
+| vlag | `tools/g8_b7_vlag.py` ACTIEF = True (Oefeningen b7 ronde 1b, patch_batch7 17:26:20; patch_batch5/6 17:18:47 ook mee in fase 3). |
+| V-#945 (vervangt Oef-#1003) | **✓** 029 hond 30, kat 10, konijn 15, vis 45 (som 100); claudeUitleg «30% + 10% = 40%. Dat is niet meer dan 50%.»; 'Nee' blijft. STAAF-BESLIS nu met les 326/352 (beslissende staaf op een half streepje: geen aflezing < 1 streepje van 50); mutanten 8/8. |
+| V-#944 | **✓** 019 «In klas B kiest 40% van de 30 kinderen voor voetbal.»; antwoord «Klas B, want dat zijn 12 kinderen.» (optie, juisteOptieTekst, claudeUitleg «40% van 30 is 12 kinderen»). A = 10, B = 12; 'percentages vergeleken' = A, 'evenveel' fout; geen route op het antwoord. |
+| V-#946 / Z-#940 | **✓** 002 «aantal bezoekers (× 1000)», kop '(× #)'. XSTER vangt nu ook een keerteken zonder cijfer ervóór ('(x 1000)', 'x 3', '(*1000)'); 8 mutanten in de gate (o.a. '(x 1000)' → FAIL, '(× 1000)', 'box 3', 'max 60' → geen FAIL). Op de data: XSTER 0. |
+| Z-#943 / Oef-#1004 | **✓** 016 «één hondje voor 6 honden»: 3 × 6 + 3 = 21; opties 21 / 24 (halve als volle) / 4 (plaatjes); Claudes sleutels en claudeUitleg mee; kop = template «In een plaatjesgrafiek staat één hondje voor # [ding]. [Plek] staan # hele hondjes en # half hondje. Hoeveel [ding] zijn dat?» (na Oef-#1001, zodat [ding] blijft). Regel/L1 van Oefeningen (ronde 1b). |
+| Z-#945 | **✓** 004 kop tussen aanhalingstekens (opgave en kop); 011 «Het aantal wordt groter.»; 014 «Het grote plaatje lijkt voor veel meer stuks te staan.»; 017 «De brede staaf lijkt bij een groter aantal te horen.» |
+| lege map (Oefeningen 17:27) | **✓ oorzaak:** build_g8.py leegde bij de start data/per_doel/ en somtypen/ (os.remove per bestand) en schreef ze pas ~40 s later opnieuw. De build die om 17:20:38 begon, werd na 20 s onderbroken (vanaf 17:20:58 leeg) tot de build van 17:23:08 ze om ~17:24 weer schreef; ook elke gewone build had een gat van ~40 s. **Oplossing:** `scripts/bouw_veilig.py`; `python3 scripts/build_g8.py` gaat er nu altijd doorheen: bouwen (fase 1–5) in een kopie `claude-merge/.g8_bouw_*/g8`, controle (per_doel en somtypen elk zelfde aantal als live, niet leeg, per_doel geldige JSON met items), dan elk gewijzigd bestand atomair (os.replace) naar live; een bestand dat tijdens de build op live veranderde wordt niet overschreven (CONFLICT); mislukte build = live ongemoeid; bouwmap weg. Build 17:30:20: tijdens de build elke 2 s geteld, live nooit onder 23/23; daarna 38 bestanden atomair, 0 conflict; **per_doel 23 · somtypen 23 · alle gevuld**. (Alleen g4–g7/data/aanvulling_uit_g8.json schrijft de build nog direct; die staan buiten g8 en horen bij de G4–G7-builds.) |
+
+Checks build 17:30:20: check_hints **172 klaar · 51 open · 0 FAIL · 0 WARN**; merge-notatie **ALLES OK** (XSTER 0, STAAF-BESLIS 0, KLOKTIJD 0, TIJDSDUUR 0, E05-ROUTES 0); **b1 0 · b2 0 · b3 0 · b4 0 (141 items · 917 sleutels) · b5 0 · b6 0 · b7 0 (26 items · 52 sleutels)**. Mutanten: b1 25, b2 31, b3 50, b4 41, b5 56, b6 62, b7 57, allemaal 0 gemist; gate: STAAF-BESLIS 8/8, XSTER 8/8, TIJDSDUUR 8/8, E05 15/15, BOUWSEL 6/6.

@@ -213,7 +213,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
   - `andere fout` (andere fout) → Kijk hoeveel er telkens bij komt van het ene getal naar het volgende. Is dat overal evenveel?  [nieuw]
 - Status: hints klaar
 
-## Somtype 7: Bij de as van een grafiek staat: aantal bezoekers (x #). De staaf van zaterdag stopt bij #. Hoeveel bezoekers waren er?
+## Somtype 7: Bij de as van een grafiek staat: aantal bezoekers (× #). De staaf van zaterdag stopt bij #. Hoeveel bezoekers waren er?
 
 - Sleutel: nrOrigineel **7** · somtypeOrigineel “Bij de as van een grafiek staat: aantal bezoekers (x #). De staaf van zaterdag stopt bij #. Hoeveel [ding] waren er?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: G8 (1) · regel: G8-G8-kritisch
@@ -222,7 +222,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
 - Verschillende Claude-fout-hints: 2 (meest: “Je hebt het getal van de as overgenomen. Lees het tekstje bij de as nog eens.”)
 - Voorbeelden:
   - `G8-VBN-E04-claude-bank-002` (Claude G8, ai, niveau 1 → basis)
-    - **Opgave:** Bij de as van een grafiek staat: aantal bezoekers (x 1000). De staaf van zaterdag stopt bij 4. Hoeveel bezoekers waren er?
+    - **Opgave:** Bij de as van een grafiek staat: aantal bezoekers (× 1000). De staaf van zaterdag stopt bij 4. Hoeveel bezoekers waren er?
     - **Opties:** A) 4 bezoekers · B) 400 bezoekers · C) 4000 bezoekers
     - **Antwoord:** 4000 bezoekers  (controle: n.v.t.)
     - **Fout-hints (Claude):** 4 bezoekers → Je hebt het getal van de as overgenomen. Lees het tekstje bij de as nog eens. · 400 bezoekers → Je hebt met 100 vermenigvuldigd. Kijk goed welk getal er achter het maalteken staat.
@@ -254,7 +254,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
     - **Uitleg (Claude):** De staaf stopt halverwege 10 en 15. Dat is ongeveer 12 of 13. Bij stapjes van 5 moet je tussenwaarden zelf schatten.
 
 - **Hint 1 (te schrijven):** Tussen welke twee getallen stopt de staaf? Daar zit het aantal tussen.
-- **Hint 2 (te schrijven):** De staaf stopt halverwege twee getallen op de as. Zoek wat er ongeveer in het midden ligt. Precies aflezen kan niet, dus je schat.
+- **Hint 2 (te schrijven):** De staaf stopt halverwege twee getallen op de as. Welk getal ligt precies in het midden van die twee? Kies de optie die daar het dichtst bij ligt.
 - **Ouderzin:** Je kind schat een waarde die tussen twee getallen op de as ligt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `stukje erboven` (Ongeveer 2 of 3) → Zo groot is alleen het stukje boven het lagere getal. De staaf begint bij nul: hoe ver komt hij in totaal?  [nieuw]
@@ -262,7 +262,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
   - `andere fout` (andere fout) → Zoek de twee getallen waar de staaf tussen stopt, en schat wat er in het midden ligt.  [nieuw]
 - Status: hints klaar
 
-## Somtype 9: Boven een staafdiagram staat: Het aantal bezoekers is verdubbeld. De staaf gaat van # naar #. Klopt die kop?
+## Somtype 9: Boven een staafdiagram staat: "Het aantal bezoekers is verdubbeld." De staaf gaat van # naar #. Klopt die kop?
 
 - Sleutel: nrOrigineel **9** · somtypeOrigineel “Boven een staafdiagram staat: Het aantal bezoekers is verdubbeld. De staaf gaat van # naar #. Klopt die kop?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: G8 (1) · regel: G8-G8-kritisch
@@ -271,7 +271,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
 - Verschillende Claude-fout-hints: 2 (meest: “De staaf lijkt misschien veel hoger. Kijk naar de getallen 20 en 24.”)
 - Voorbeelden:
   - `G8-VBN-E04-claude-bank-004` (Claude G8, ai, niveau 2 → toepassen)
-    - **Opgave:** Boven een staafdiagram staat: Het aantal bezoekers is verdubbeld. De staaf gaat van 20 naar 24. Klopt die kop?
+    - **Opgave:** Boven een staafdiagram staat: "Het aantal bezoekers is verdubbeld." De staaf gaat van 20 naar 24. Klopt die kop?
     - **Opties:** A) Ja, de staaf is twee keer zo hoog. · B) Ja, er zijn 4 bezoekers bij gekomen. · C) Nee, 24 is geen dubbel van 20.
     - **Antwoord:** Nee, 24 is geen dubbel van 20.  (controle: n.v.t.)
     - **Fout-hints (Claude):** Ja, de staaf is twee keer zo hoog. → De staaf lijkt misschien veel hoger. Kijk naar de getallen 20 en 24. · Ja, er zijn 4 bezoekers bij gekomen. → Verdubbelen is niet hetzelfde als er een paar bij krijgen. Wat is het dubbele van 20?
@@ -284,6 +284,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
   - `staaf lijkt hoger` (Ja, de staaf is twee keer zo hoog.) → Kijk niet naar hoe hoog de staaf lijkt, maar naar de getallen. Is het nieuwe getal twee keer zo groot als het oude?  [nieuw]
   - `een paar erbij` (Ja, er zijn 4 bezoekers bij gekomen.) → Er komen er wel een paar bij, maar verdubbelen is meer: twee keer zoveel. Is dat hier zo?  [nieuw]
   - `andere fout` (andere fout) → Reken uit hoeveel twee keer het oude getal is, en vergelijk dat met het nieuwe getal.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Boven een staafdiagram staat: Het aantal bezoekers is verdubbeld. De staaf gaat van # naar #. Klopt die kop?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 10: De verkoop van sap is verdubbeld. In de grafiek staat een flesje dat twee keer zo hoog én twee keer zo breed is getekend. Waarom fopt dit je?
@@ -326,7 +327,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
     - **Uitleg (Claude):** Door de schuine tekening komt het voorste stuk dichterbij en lijkt het breder. Beide stukken zijn toch echt 25%. Kijk daarom naar de getallen en niet naar de vorm.
 
 - **Hint 1 (te schrijven):** Wat zeggen de percentages bij de twee stukken? En wat zie je met je ogen?
-- **Hint 2 (te schrijven):** Door de schuine tekening komt een stuk dichterbij. Wat dichterbij is, ziet er breder uit. Vertrouw op de getallen bij de stukken, niet op hoe groot ze eruitzien.
+- **Hint 2 (te schrijven):** Stel je een taart voor die schuin voor je staat. Welk stuk neemt in de tekening de meeste ruimte in? Past dat bij de percentages?
 - **Ouderzin:** Je kind ziet dat een schuin getekend cirkeldiagram de stukken anders laat lijken dan ze zijn.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `echt groter` (Het voorste stuk is echt groter dan 25%.) → Bij de stukken staan percentages. Wat zeggen die getallen: is het ene stuk echt groter dan het andere?  [nieuw]
@@ -373,8 +374,8 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
     - **Fout-hints (Claude):** Ja, want beide lijnen stijgen samen. → Twee lijnen die samen stijgen, hoeven elkaar niet te veroorzaken. Wat hebben ze allebei gemeen? · Nee, want de lijnen dalen juist samen. → Lees nog eens wat er in de warme maanden met beide lijnen gebeurt.
     - **Uitleg (Claude):** Beide lijnen stijgen omdat het warm is. Het een zorgt niet voor het ander. Uit een grafiek mag je niet zomaar een oorzaak halen.
 
-- **Hint 1 (te schrijven):** Gaan twee dingen samen omhoog, dan hoeft het ene niet door het andere te komen.
-- **Hint 2 (te schrijven):** Wanneer stijgen beide lijnen? Bedenk wat er in die maanden anders is. Kan dat voor beide de reden zijn?
+- **Hint 1 (te schrijven):** Wanneer gaan beide lijnen omhoog? Wat is er in die maanden anders?
+- **Hint 2 (te schrijven):** Stijgen twee lijnen tegelijk, dan kan er één reden zijn voor beide. Welke reden past bij de maanden waarin ze stijgen?
 - **Ouderzin:** Je kind leert dat twee lijnen die samen stijgen niet betekenen dat het ene door het andere komt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `dalen` (Nee, want de lijnen dalen juist samen.) → Lees nog eens wat er in de warme maanden met de lijnen gebeurt: gaan ze omhoog of omlaag?  [nieuw]
@@ -426,7 +427,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
 - **Hint 2 (te schrijven):** De winkel kiest zelf welke maanden in de grafiek komen. Wat gebeurt er met je beeld van het hele jaar als je alleen de beste maanden ziet?
 - **Ouderzin:** Je kind ziet dat een grafiek misleidt als er gegevens weggelaten zijn.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `getallen fout` (De getallen bij die maanden kloppen niet.) → De getallen zelf zijn goed gemeten. Denk aan de maanden die er niet bij staan.  [nieuw]
+  - `getallen fout` (De getallen bij die maanden kloppen niet.) → De getallen zelf kunnen best kloppen. Denk aan de maanden die er niet bij staan.  [nieuw]
   - `drie staven` (Drie staven zijn te weinig om te tekenen.) → Drie staven mag best. Het gaat erom welke maanden er weggelaten zijn.  [nieuw]
   - `andere fout` (andere fout) → Welke maanden staan er niet in de grafiek, en wat betekent dat?  [nieuw]
 - Status: hints klaar
@@ -465,8 +466,8 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
 - Voorbeelden:
   - `G8-VBN-E04-claude-bank-011` (Claude G8, ai, niveau 2 → toepassen)
     - **Opgave:** In een grafiek staat onderaan de as het getal 100 en bovenaan het getal 0. De lijn loopt naar beneden. Wat betekent dat?
-    - **Opties:** A) Het aantal wordt juist groter. · B) Het aantal wordt steeds kleiner. · C) Het aantal blijft de hele tijd gelijk.
-    - **Antwoord:** Het aantal wordt juist groter.  (controle: n.v.t.)
+    - **Opties:** A) Het aantal wordt groter. · B) Het aantal wordt steeds kleiner. · C) Het aantal blijft de hele tijd gelijk.
+    - **Antwoord:** Het aantal wordt groter.  (controle: n.v.t.)
     - **Fout-hints (Claude):** Het aantal wordt steeds kleiner. → Je bent gewend dat omhoog meer betekent. Lees hier eerst de getallen bij de as. · Het aantal blijft de hele tijd gelijk. → De lijn loopt duidelijk niet recht. Kijk naar de getallen waar de lijn langs gaat.
     - **Uitleg (Claude):** Hier staan de getallen omgekeerd: hoe lager op de as, hoe groter het getal. Een dalende lijn hoort dus bij grotere aantallen. Kijk altijd eerst naar de getallen bij de as.
 
@@ -538,8 +539,8 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
 - Voorbeelden:
   - `G8-VBN-E04-claude-bank-014` (Claude G8, ai, niveau 1 → basis)
     - **Opgave:** In een plaatjesgrafiek staat bij appels een klein appeltje en bij peren een grote peer. Beide plaatjes staan voor 10 stuks. Waarom fopt dit je?
-    - **Opties:** A) Het grote plaatje lijkt veel meer stuks. · B) Peren zijn nu eenmaal groter dan appels. · C) Er staan te weinig plaatjes bij appels.
-    - **Antwoord:** Het grote plaatje lijkt veel meer stuks.  (controle: n.v.t.)
+    - **Opties:** A) Het grote plaatje lijkt voor veel meer stuks te staan. · B) Peren zijn nu eenmaal groter dan appels. · C) Er staan te weinig plaatjes bij appels.
+    - **Antwoord:** Het grote plaatje lijkt voor veel meer stuks te staan.  (controle: n.v.t.)
     - **Fout-hints (Claude):** Peren zijn nu eenmaal groter dan appels. → In een grafiek gaat het niet om het echte fruit, maar om de aantallen die de plaatjes laten zien. · Er staan te weinig plaatjes bij appels. → Het aantal plaatjes klopt juist wel. Let op het verschil in grootte.
     - **Uitleg (Claude):** In een plaatjesgrafiek moet elk plaatje even groot zijn. Anders denk je bij een groot plaatje meteen aan een groot aantal. Hier staan beide plaatjes toch echt voor 10 stuks.
 
@@ -573,12 +574,12 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
 - **Ouderzin:** Je kind leest een plaatjesgrafiek: het aantal plaatjes keer wat één plaatje betekent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `plaatjes geteld` (6 kinderen) → Dat is het aantal plaatjes. Eén plaatje staat voor meer dan één: lees nog eens voor hoeveel.  [nieuw]
-  - `opgeteld` (16 kinderen) → Dat zijn de twee getallen bij elkaar opgeteld. Elk plaatje staat voor een heel groepje: doe keer.  [nieuw]
+  - `opgeteld` (16 kinderen) → Dat is het aantal plaatjes plus het getal bij één plaatje. Elk plaatje staat voor een heel groepje: doe keer.  [nieuw]
   - `andere fout` (andere fout) → Lees voor hoeveel één plaatje staat. Doe het aantal plaatjes keer dat getal.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een plaatjesgrafiek staat een fietsje voor # [ding]. Bij groep # [ding] # [ding]. Hoeveel [ding] zijn dat?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 22: In een plaatjesgrafiek staat één hondje voor # [ding]. In [plek] staan # [ding] hondjes en # [ding] hondje. Hoeveel [ding] zijn dat?
+## Somtype 22: In een plaatjesgrafiek staat één hondje voor # [ding]. [Plek] staan # hele hondjes en # half hondje. Hoeveel [ding] zijn dat?
 
 - Sleutel: nrOrigineel **21** · somtypeOrigineel “In een plaatjesgrafiek staat één hondje voor # [ding]. In [plek] staan # [ding] hondjes en # [ding] hondje. Hoeveel [ding] zijn dat?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: G8 (1) · regel: G8-G8-kritisch
@@ -587,19 +588,20 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
 - Verschillende Claude-fout-hints: 2 (meest: “Je hebt het halve plaatje als een heel plaatje geteld. Voor hoeveel honden staat een half hondje?”)
 - Voorbeelden:
   - `G8-VBN-E04-claude-bank-016` (Claude G8, ai, niveau 3 → toepassen)
-    - **Opgave:** In een plaatjesgrafiek staat één hondje voor 4 honden. Bij het asiel staan 3 hele hondjes en 1 half hondje. Hoeveel honden zijn dat?
-    - **Opties:** A) 16 honden · B) 4 honden · C) 14 honden
-    - **Antwoord:** 14 honden  (controle: n.v.t.)
+    - **Opgave:** In een plaatjesgrafiek staat één hondje voor 6 honden. Bij het asiel staan 3 hele hondjes en 1 half hondje. Hoeveel honden zijn dat?
+    - **Opties:** A) 24 honden · B) 4 honden · C) 21 honden
+    - **Antwoord:** 21 honden  (controle: n.v.t.)
     - **Fout-hints (Claude):** 16 honden → Je hebt het halve plaatje als een heel plaatje geteld. Voor hoeveel honden staat een half hondje? · 4 honden → Je hebt de plaatjes geteld in plaats van de honden. Elk heel plaatje staat voor meer dan één hond.
-    - **Uitleg (Claude):** Drie hele hondjes zijn 3 keer 4, dus 12 honden. Een half hondje is de helft van 4, dus 2 honden. Samen zijn dat 14 honden.
+    - **Uitleg (Claude):** Drie hele hondjes zijn 3 keer 6, dus 18 honden. Een half hondje is de helft van 6, dus 3 honden. Samen zijn dat 21 honden.
 
-- **Hint 1 (te schrijven):** Een halve tekening staat voor de helft van wat één tekening betekent.
+- **Hint 1 (te schrijven):** Een half plaatje staat voor de helft van wat één plaatje betekent.
 - **Hint 2 (te schrijven):** Reken eerst de volle plaatjes uit: het aantal keer wat één plaatje betekent. Het halve plaatje is de helft daarvan. Tel die twee bij elkaar op.
 - **Ouderzin:** Je kind leest een plaatjesgrafiek met een half plaatje: dat telt voor de helft.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `halve als volle` (16 honden) → Zo telt het halve plaatje mee als een vol plaatje. Voor hoeveel staat het halve plaatje?  [nieuw]
-  - `plaatjes geteld` (4 honden) → Dat getal is het aantal plaatjes, en ook wat één plaatje betekent. Reken uit wat alle plaatjes samen betekenen.  [nieuw]
+  - `halve als volle` (24 honden) → Zo telt het halve plaatje mee als een vol plaatje. Voor hoeveel staat het halve plaatje?  [nieuw]
+  - `plaatjes geteld` (4 honden) → Dat is het aantal plaatjes. Eén plaatje staat voor meer dan één: reken uit wat alle plaatjes samen betekenen.  [nieuw]
   - `andere fout` (andere fout) → Reken de volle plaatjes uit en tel de helft van één plaatje erbij.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een plaatjesgrafiek staat één hondje voor # [ding]. In [plek] staan # [ding] hondjes en # [ding] hondje. Hoeveel [ding] zijn dat?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 23: In een staafdiagram is de staaf van zwemmen net zo hoog als die van turnen, maar veel breder getekend. Waarom kan dat je foppen?
@@ -612,8 +614,8 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
 - Voorbeelden:
   - `G8-VBN-E04-claude-bank-017` (Claude G8, ai, niveau 2 → toepassen)
     - **Opgave:** In een staafdiagram is de staaf van zwemmen net zo hoog als die van turnen, maar veel breder getekend. Waarom kan dat je foppen?
-    - **Opties:** A) De brede staaf hoort bij meer kinderen. · B) Staven mogen nooit naast elkaar staan. · C) De brede staaf lijkt een groter aantal.
-    - **Antwoord:** De brede staaf lijkt een groter aantal.  (controle: n.v.t.)
+    - **Opties:** A) De brede staaf hoort bij meer kinderen. · B) Staven mogen nooit naast elkaar staan. · C) De brede staaf lijkt bij een groter aantal te horen.
+    - **Antwoord:** De brede staaf lijkt bij een groter aantal te horen.  (controle: n.v.t.)
     - **Fout-hints (Claude):** De brede staaf hoort bij meer kinderen. → In een staafdiagram vertelt alleen de hoogte het aantal. Wat zegt de breedte dan? · Staven mogen nooit naast elkaar staan. → Staven naast elkaar is heel normaal. Let op het verschil in breedte.
     - **Uitleg (Claude):** In een staafdiagram lees je het aantal af aan de hoogte. Een bredere staaf ziet er groter uit, maar hoort bij hetzelfde aantal. Alle staven horen even breed te zijn.
 
@@ -642,7 +644,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
     - **Uitleg (Claude):** Als de as bij 90 begint, zie je alleen het bovenste stukje van elke staaf. Een klein verschil lijkt dan een groot verschil. Begin je bij 0, dan zijn de staven bijna even hoog.
 
 - **Hint 1 (te schrijven):** Bij welk getal begint de as? Welk stuk van de staven zie je dan niet?
-- **Hint 2 (te schrijven):** Begint de as niet bij nul, dan zie je van elke staaf alleen het stuk boven het begingetal. Hoe zien kleine verschillen tussen de staven er dan uit?
+- **Hint 2 (te schrijven):** Begint de as niet bij nul, dan zie je van elke staaf alleen het stuk boven het begingetal. Stel dat de ene staaf maar een klein beetje hoger is dan de andere. Hoe ziet dat er dan uit?
 - **Ouderzin:** Je kind ziet dat een as die niet bij nul begint verschillen groter laat lijken.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `te dicht` (De staven staan te dicht bij elkaar.) → De afstand tussen de staven maakt niets uit. Kijk nog eens bij welk getal de as begint.  [nieuw]
@@ -659,11 +661,11 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
 - Verschillende Claude-fout-hints: 2 (meest: “Een percentage hoort altijd bij een totaal. De klassen zijn niet even groot.”)
 - Voorbeelden:
   - `G8-VBN-E04-claude-bank-019` (Claude G8, ai, niveau 3 → toepassen)
-    - **Opgave:** In klas A kiest 50% van de 20 kinderen voor voetbal. In klas B kiest 40% van de 40 kinderen voor voetbal. Welke klas heeft de meeste voetballers?
-    - **Opties:** A) Klas B, want dat zijn 16 kinderen. · B) Klas A, want 50% is meer dan 40%. · C) Ze hebben allebei evenveel voetballers.
-    - **Antwoord:** Klas B, want dat zijn 16 kinderen.  (controle: n.v.t.)
+    - **Opgave:** In klas A kiest 50% van de 20 kinderen voor voetbal. In klas B kiest 40% van de 30 kinderen voor voetbal. Welke klas heeft de meeste voetballers?
+    - **Opties:** A) Klas B, want dat zijn 12 kinderen. · B) Klas A, want 50% is meer dan 40%. · C) Ze hebben allebei evenveel voetballers.
+    - **Antwoord:** Klas B, want dat zijn 12 kinderen.  (controle: n.v.t.)
     - **Fout-hints (Claude):** Klas A, want 50% is meer dan 40%. → Een percentage hoort altijd bij een totaal. De klassen zijn niet even groot. · Ze hebben allebei evenveel voetballers. → Reken beide percentages eerst om naar echte aantallen kinderen.
-    - **Uitleg (Claude):** 50% van 20 is 10 kinderen en 40% van 40 is 16 kinderen. Het grootste percentage hoort dus niet bij het grootste aantal. Kijk altijd bij welk totaal een percentage hoort.
+    - **Uitleg (Claude):** 50% van 20 is 10 kinderen en 40% van 30 is 12 kinderen. Het grootste percentage hoort dus niet bij het grootste aantal. Kijk altijd bij welk totaal een percentage hoort.
 
 - **Hint 1 (te schrijven):** Een percentage is een deel van een totaal. Zijn de twee klassen even groot?
 - **Hint 2 (te schrijven):** Reken voor elke klas uit hoeveel voetballers het zijn: het percentage van het aantal in die klas. Vergelijk daarna de aantallen, niet de percentages.
@@ -690,7 +692,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
     - **Fout-hints (Claude):** 40 kinderen hebben een hond gekozen. → 40% is een deel van het totaal. Staat het totale aantal kinderen er wel bij? · 4 kinderen hebben een hond gekozen. → Een percentage is geen aantal. Je hebt eerst het totaal nodig.
     - **Uitleg (Claude):** Een cirkeldiagram laat alleen delen van het geheel zien. Zonder het totale aantal kinderen kun je geen aantallen berekenen. 40% van 20 is heel iets anders dan 40% van 200.
 
-- **Hint 1 (te schrijven):** Een cirkeldiagram toont percentages. Staat er ook bij hoeveel er in totaal meededen?
+- **Hint 1 (te schrijven):** Wat toont een cirkeldiagram: aantallen of percentages? En wat wordt er gevraagd?
 - **Hint 2 (te schrijven):** Een percentage is een deel van het totaal. Om een aantal uit te rekenen, heb je het totaal nodig. Staat dat ergens?
 - **Ouderzin:** Je kind ziet dat een cirkeldiagram met percentages zonder totaal geen aantallen geeft.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -787,7 +789,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
     - **Uitleg (Claude):** Als de assen verschillende stapjes hebben, mag je de lijnen niet zomaar vergelijken. Dezelfde steilheid hoort dan bij heel verschillende aantallen. Vergelijk altijd eerst de assen.
 
 - **Hint 1 (te schrijven):** Kijk tot welk getal elke as loopt. Zijn de assen hetzelfde?
-- **Hint 2 (te schrijven):** Een even steile lijn betekent bij een as tot een hoog getal veel meer dan bij een as tot een laag getal. Vergelijk daarom eerst de assen, dan pas de lijnen.
+- **Hint 2 (te schrijven):** Stel dat beide lijnen van onderaan tot halverwege hun as stijgen. Hoeveel is dat bij de ene as, en hoeveel bij de andere?
 - **Ouderzin:** Je kind vergelijkt twee grafieken pas na het vergelijken van de assen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `kleine as` (De grafiek met de as tot 50 stijgt het meest.) → Kijk hoeveel elke as per hokje omhoog gaat. Bij welke as hoort bij dezelfde steilheid het grootste aantal?  [nieuw]
@@ -815,7 +817,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
 - **Ouderzin:** Je kind ziet dat een onderzoek bij een paar leerlingen uit één klas niets zegt over de hele school.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `allemaal rekenen` (Ja, want alle 5 kozen voor rekenen.) → Die paar kozen inderdaad rekenen. Maar hoeveel zitten er op de hele school?  [nieuw]
-  - `één klas` (Ja, één klas lijkt op alle klassen.) → Denk aan de andere groepen. Zouden die precies hetzelfde kiezen?  [nieuw]
+  - `één klas` (Ja, één klas lijkt op alle klassen.) → Denk aan de andere klassen. Zouden die precies hetzelfde kiezen?  [nieuw]
   - `andere fout` (andere fout) → Hoeveel zijn er gevraagd? Zegt dat iets over de hele school?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Voor een onderzoek over het lievelingsvak zijn # [ding] uit één klas gevraagd. De kop zegt: de hele school kiest rekenen. Klopt dat?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -859,11 +861,11 @@ Dit staafdiagram heet "Hoe komen de kinderen naar school?" en toont percentages.
   - `G8-VBN-E04-claude-bank-029` (Claude G13, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Elk streepje is 10.
 Dit staafdiagram heet "Huisdieren in de klas" en toont percentages. Eronder staat: "Hond en kat zijn samen meer dan de helft." Klopt dat?
-    - **Tekening:** `{"max": 60, "soort": "staafdiagram", "staven": [{"naam": "hond", "waarde": 25}, {"naam": "kat", "waarde": 15}, {"naam": "konijn", "waarde": 15}, {"naam": "vis", "waarde": 45}], "cijfer_om": 1, "perstreep": 10}`
+    - **Tekening:** `{"max": 60, "soort": "staafdiagram", "staven": [{"naam": "hond", "waarde": 30}, {"naam": "kat", "waarde": 10}, {"naam": "konijn", "waarde": 15}, {"naam": "vis", "waarde": 45}], "cijfer_om": 1, "perstreep": 10}`
     - **Opties:** A) Dat kun je hier niet zien. · B) Nee, dat klopt niet. · C) Ja, dat klopt.
     - **Antwoord:** Nee, dat klopt niet.  (controle: n.v.t.)
     - **Fout-hints (Claude):** Ja, dat klopt. → Lees de percentages van de staven af en reken de bewering na. · Dat kun je hier niet zien. → Alles wat je nodig hebt staat in het diagram: lees de percentages af en reken na.
-    - **Uitleg (Claude):** 25% + 15% = 40%. Dat is niet meer dan 50%.
+    - **Uitleg (Claude):** 30% + 10% = 40%. Dat is niet meer dan 50%.
 
 - **Hint 1 (te schrijven):** Meer dan de helft betekent: meer dan vijftig procent. Het gaat om twee staven samen.
 - **Hint 2 (te schrijven):** Lees de twee staven af die in de zin staan. Tel hun percentages op. Is dat samen meer dan vijftig procent?

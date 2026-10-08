@@ -908,6 +908,8 @@ def twijfel_md(cats, bui, t7):
     open(f'{OUT}/twijfel_voor_didactiek.md', 'w').write('\n'.join(out) + '\n')
 
 if __name__ == '__main__':
+    if os.environ.get('G8_STAGING') != '1':      # Oefeningen 17:27 (lege map): bouw nooit direct op live; scripts/bouw_veilig.py bouwt in een kopie en zet daarna atomair om
+        sys.path.insert(0, HERE); import bouw_veilig; sys.exit(bouw_veilig.main())
     rows, gem, twf, t7, bui, stats = main()
     print('pool', stats['pool'], '(G7-park', stats['g7ParkInPool'], 'van', stats['g7ParkTotaal'], ') | rows', len(rows), 'gemapt', len(gem), 'twijfel', len(twf), 'terug-G7', len(t7),
           '(aanvulling G7', stats['aanvullingG7'], ') buiten', len(bui), '| al in G3–G7', stats['alInG3G7']['totaal'], '| geen regel', stats['geenRegel'], '| geschrapt', stats['geschrapt'])
