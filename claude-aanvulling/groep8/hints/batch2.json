@@ -1,0 +1,1257 @@
+{
+ "batch": "batch2",
+ "geschreven": "2026-10-08",
+ "uitleg": "Hints per somtype (G8-merge, batch 2 = GET-E02 #12–#36: meerkeuze met tekstopties (aanpak kiezen, controleren, fout vinden)). Formaat als g7/hints/batch*.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per foute optie een letterlijke regel (de hele optietekst) met een vaste tekst, laag 1 'tekst' en laag 2 'tekstSterker'; 'andere fout' als laatste.",
+ "somtypen": [
+  {
+   "doel": "G8-GET-E02",
+   "nr": 12,
+   "somtype": "'s Ochtends is het # graden en 's middags # graden. Hoe reken je uit hoeveel graden het warmer is geworden?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "'s Ochtends is het # graden en 's middags # graden. Hoe reken je uit hoeveel graden het warmer is geworden?",
+   "hint1": "Hoeveel graden warmer: de vraag gaat over het verschil tussen de twee temperaturen.",
+   "hint2": "Het verschil tussen twee getallen vind je door het kleinste van het grootste af te halen.",
+   "ouderzin": "Je kind kiest hoe je een verschil uitrekent: hoeveel graden is het warmer geworden?",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal overgenomen",
+     "claudeDenkfout": null,
+     "regel": "Neem het getal 11 over als verschil",
+     "tekst": "Dat is de temperatuur van 's middags. Hoeveel graden is dat meer dan 's ochtends?",
+     "tekstSterker": "Het verschil tussen twee getallen vind je door het kleinste van het grootste af te halen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "Tel 3 en 11 bij elkaar op",
+     "tekst": "Bij elkaar optellen geeft geen verschil. Hoeveel graden is het 's middags meer dan 's ochtends?",
+     "tekstSterker": "Het verschil tussen twee getallen vind je door het kleinste van het grootste af te halen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Je zoekt het verschil tussen de twee temperaturen.",
+     "tekstSterker": "Het verschil tussen twee getallen vind je door het kleinste van het grootste af te halen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een verschil is hoeveel het gestegen is. Wordt de uitkomst dan groter of juist kleiner dan 11?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De ochtendtemperatuur was niet 0 graden. Die moet je meenemen als je het verschil uitrekent.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 13,
+   "somtype": "Bas koopt # [ding] sap van €#. Hij krijgt €# als antwoord. Wat laat zien dat dit niet klopt?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Bas koopt # [ding] sap van €#. Hij krijgt €# als antwoord. Wat laat zien dat dit niet klopt?",
+   "hint1": "Schat het antwoord met ronde getallen. Dan zie je snel of het antwoord van Bas kan kloppen.",
+   "hint2": "Rond de prijs af op hele euro's. Doe dat keer het aantal. Ligt het antwoord van Bas daar dichtbij?",
+   "ouderzin": "Je kind controleert een antwoord met een schatting: ronde prijs keer het aantal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "komma vergeten",
+     "claudeDenkfout": null,
+     "regel": "Het klopt, want 6 × 1,99 is bijna 120",
+     "tekst": "Kijk naar de komma in de prijs. Rond de prijs af op hele euro's en doe dat keer het aantal: kom je dan ook boven de honderd euro?",
+     "tekstSterker": "Rond de prijs af op hele euro's. Doe dat keer het aantal. Ligt het antwoord van Bas daar dichtbij?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te groot",
+     "claudeDenkfout": null,
+     "regel": "Het antwoord moet ongeveer €1200 zijn",
+     "tekst": "Dat is nog veel meer. Rond de prijs af op hele euro's en doe dat keer het aantal: hoeveel euro is dat ongeveer?",
+     "tekstSterker": "Rond de prijs af op hele euro's. Doe dat keer het aantal. Ligt het antwoord van Bas daar dichtbij?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Rond de prijs af op hele euro's en doe dat keer het aantal.",
+     "tekstSterker": "Rond de prijs af op hele euro's. Doe dat keer het aantal. Ligt het antwoord van Bas daar dichtbij?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Schat eerst met een rond bedrag: hoeveel is 6 keer 2 euro ongeveer?",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed waar de komma staat in €1,99. Eén pak kost nog geen 2 euro.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 14,
+   "somtype": "Bij een spel krijg je # [ding] voor elk doelpunt. Voor elke misser gaat er # [ding] af. Hoe reken je de score uit?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Bij een spel krijg je # [ding] voor elk doelpunt. Voor elke misser gaat er # [ding] af. Hoe reken je de score uit?",
+   "hint1": "Elk doelpunt levert evenveel op. Elke misser kost iets.",
+   "hint2": "Doe het aantal doelpunten keer wat één doelpunt oplevert. Haal daarna af wat de missers kosten.",
+   "ouderzin": "Je kind kiest hoe je een score uitrekent: doelpunten keer wat ze opleveren, dan de missers eraf.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "plus in plaats van keer",
+     "claudeDenkfout": null,
+     "regel": "Doelpunten plus 3, dan het aantal missers eraf.",
+     "tekst": "Elk doelpunt levert evenveel op. Heb je dat voor elk doelpunt meegeteld, of maar één keer?",
+     "tekstSterker": "Doe het aantal doelpunten keer wat één doelpunt oplevert. Haal daarna af wat de missers kosten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "missers erbij",
+     "claudeDenkfout": null,
+     "regel": "Doelpunten maal 3, dan het aantal missers erbij.",
+     "tekst": "Een misser kost iets. Komt dat bij de score of gaat het eraf?",
+     "tekstSterker": "Doe het aantal doelpunten keer wat één doelpunt oplevert. Haal daarna af wat de missers kosten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst uit wat alle doelpunten samen opleveren. Wat gebeurt er dan met de missers?",
+     "tekstSterker": "Doe het aantal doelpunten keer wat één doelpunt oplevert. Haal daarna af wat de missers kosten."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Elk doelpunt levert 3 punten op. Hoe reken je hetzelfde aantal punten per keer?",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Een misser is niet goed voor je score. Wordt het totaal dan groter of kleiner?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 15,
+   "somtype": "Bram heeft # [ding] met # [ding]. Hij rekent uit dat er # [ding] zijn. Wat laat zien dat dit niet kan?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "Bram heeft # [ding] met # [ding]. Hij rekent uit dat er # [ding] zijn. Wat laat zien dat dit niet kan?",
+   "hint1": "Hoeveel zitten er in één groep? En hoeveel van die groepen heeft Bram?",
+   "hint2": "Doe het aantal groepen keer het aantal in één groep: dat is het totaal. Is dat veel meer dan het antwoord van Bram?",
+   "ouderzin": "Je kind controleert of een antwoord kan: heeft één groep er al zoveel, dan hebben alle groepen samen er veel meer.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "Niets, 12 en 15 samen is inderdaad 27",
+     "tekst": "Elke groep heeft er evenveel. Is het totaal dan het aantal groepen plus het aantal in één groep?",
+     "tekstSterker": "Doe het aantal groepen keer het aantal in één groep: dat is het totaal. Is dat veel meer dan het antwoord van Bram?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "gedeeld",
+     "claudeDenkfout": null,
+     "regel": "Hij had 12 : 15 moeten doen",
+     "tekst": "Met meer groepen wordt het totaal groter. Past delen daarbij?",
+     "tekstSterker": "Doe het aantal groepen keer het aantal in één groep: dat is het totaal. Is dat veel meer dan het antwoord van Bram?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel zitten er in één groep, en hoeveel groepen zijn er? Wat betekent dat voor het totaal?",
+     "tekstSterker": "Doe het aantal groepen keer het aantal in één groep: dat is het totaal. Is dat veel meer dan het antwoord van Bram?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees nog eens: er zijn 12 zakjes met elk 15 knikkers. Wat doe je dan met die getallen?",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Delen maakt het aantal juist kleiner. Bij groepen van evenveel spullen kies je iets anders.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 16,
+   "somtype": "De trein vertrekt om #:# en komt aan om #:#. Hoe reken je handig uit hoe lang de reis duurt?",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "De trein vertrekt om #:# en komt aan om #:#. Hoe reken je handig uit hoe lang de reis duurt?",
+   "hint1": "Een uur heeft zestig minuten, geen honderd. Daarom reken je met tijden in sprongen.",
+   "hint2": "Spring eerst van de vertrektijd naar het volgende hele uur. Spring dan verder naar de aankomsttijd. Tel de sprongen bij elkaar op.",
+   "ouderzin": "Je kind kiest een handige aanpak voor een tijdsduur: eerst naar het hele uur, dan verder.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "minuten afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "Trek 35 van 10 af en tel de uren erbij.",
+     "tekst": "De minuten bij aankomst zijn minder dan bij vertrek. Zo aftrekken loopt vast, want een uur heeft zestig minuten. Spring liever eerst naar het volgende hele uur.",
+     "tekstSterker": "Spring eerst van de vertrektijd naar het volgende hele uur. Spring dan verder naar de aankomsttijd. Tel de sprongen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tijden opgeteld",
+     "claudeDenkfout": null,
+     "regel": "Tel de twee tijden bij elkaar op.",
+     "tekst": "Twee tijden bij elkaar optellen geeft geen duur. Hoe lang is het van de vertrektijd tot de aankomsttijd?",
+     "tekstSterker": "Spring eerst van de vertrektijd naar het volgende hele uur. Spring dan verder naar de aankomsttijd. Tel de sprongen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Spring van de vertrektijd naar het volgende hele uur, en dan naar de aankomsttijd.",
+     "tekstSterker": "Spring eerst van de vertrektijd naar het volgende hele uur. Spring dan verder naar de aankomsttijd. Tel de sprongen bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een uur heeft 60 minuten, niet 100. Werk in stappen naar een heel uur toe.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je zoekt het verschil tussen vertrek en aankomst, niet een som.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 17,
+   "somtype": "Een [ding] is # m lang en # m breed. Fleur wil weten hoeveel vierkante meter het bad is en rekent # + # + # + # = #. Wat is er fout aan haar aanpak?",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "Een [ding] is # m lang en # m breed. Fleur wil weten hoeveel vierkante meter het bad is en rekent # + # + # + # = #. Wat is er fout aan haar aanpak?",
+   "hint1": "Vierkante meters gaan over de oppervlakte. Wat rekende Fleur uit: de oppervlakte of de lengte rondom?",
+   "hint2": "Alle zijden bij elkaar optellen geeft de omtrek: de lengte rondom. Vierkante meters gaan over de oppervlakte: lengte keer breedte.",
+   "ouderzin": "Je kind ziet het verschil tussen omtrek (de lengte rondom) en oppervlakte (lengte keer breedte).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "omtrek goedgekeurd",
+     "claudeDenkfout": null,
+     "regel": "Niets, 70 vierkante meter klopt",
+     "tekst": "Fleur telde alle zijden bij elkaar op. Is dat de oppervlakte of de lengte rondom?",
+     "tekstSterker": "Alle zijden bij elkaar optellen geeft de omtrek: de lengte rondom. Vierkante meters gaan over de oppervlakte: lengte keer breedte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ook de omtrek",
+     "claudeDenkfout": null,
+     "regel": "Ze moest 25 + 10 doen en dat verdubbelen",
+     "tekst": "Dat is dezelfde som anders opgeschreven: ook dat geeft de lengte rondom. Vierkante meters gaan over de oppervlakte.",
+     "tekstSterker": "Alle zijden bij elkaar optellen geeft de omtrek: de lengte rondom. Vierkante meters gaan over de oppervlakte: lengte keer breedte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Wat geeft alle zijden bij elkaar optellen: de oppervlakte of de lengte rondom?",
+     "tekstSterker": "Alle zijden bij elkaar optellen geeft de omtrek: de lengte rondom. Vierkante meters gaan over de oppervlakte: lengte keer breedte."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Denk aan tegels van 1 bij 1 meter op de bodem. Hoe tel je die het handigst?",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Dat geeft weer de lengte van de rand. De vraag gaat over het vlak binnen de rand.",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 18,
+   "somtype": "Een [ding] is # m lang en # m breed. Je legt tegels van # vierkante meter. Hoe reken je uit hoeveel tegels je nodig hebt?",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "Een [ding] is # m lang en # m breed. Je legt tegels van # vierkante meter. Hoe reken je uit hoeveel tegels je nodig hebt?",
+   "hint1": "De tegels bedekken alles. Je zoekt dus de oppervlakte, niet de lengte rondom.",
+   "hint2": "Denk aan rijen tegels. Hoeveel tegels passen er in één rij, en hoeveel rijen zijn er? Doe die twee keer elkaar.",
+   "ouderzin": "Je kind kiest hoe je uitrekent hoeveel tegels er nodig zijn: de oppervlakte, lengte keer breedte.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "lengte plus breedte",
+     "claudeDenkfout": null,
+     "regel": "Lengte en breedte bij elkaar optellen",
+     "tekst": "Dan tel je maar één rij langs de lengte en één rij langs de breedte. De tegels moeten alles bedekken: hoeveel rijen tegels passen er?",
+     "tekstSterker": "Denk aan rijen tegels. Hoeveel tegels passen er in één rij, en hoeveel rijen zijn er? Doe die twee keer elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "omtrek",
+     "claudeDenkfout": null,
+     "regel": "Alle zijden bij elkaar optellen",
+     "tekst": "Alle zijden bij elkaar optellen geeft de omtrek: de lengte rondom. Tegels bedekken de oppervlakte.",
+     "tekstSterker": "Denk aan rijen tegels. Hoeveel tegels passen er in één rij, en hoeveel rijen zijn er? Doe die twee keer elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tegels bedekken de oppervlakte. Hoeveel rijen zijn er, en hoeveel tegels in één rij?",
+     "tekstSterker": "Denk aan rijen tegels. Hoeveel tegels passen er in één rij, en hoeveel rijen zijn er? Doe die twee keer elkaar."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je legt tegels op de hele vloer, niet alleen langs de randen. Denk aan het vlak.",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Tel eens hoeveel tegels er in één rij liggen en hoeveel rijen er zijn.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 19,
+   "somtype": "Een [ding] is # m lang en # m breed. Joep wil weten hoeveel meter hek hij nodig heeft en rekent # × # = #. Wat is er fout aan zijn aanpak?",
+   "nrOrigineel": 12,
+   "somtypeOrigineel": "Een [ding] is # m lang en # m breed. Joep wil weten hoeveel meter hek hij nodig heeft en rekent # × # = #. Wat is er fout aan zijn aanpak?",
+   "hint1": "Een hek staat rondom. Je zoekt dus de omtrek: de lengte rondom.",
+   "hint2": "De omtrek is alle zijden bij elkaar opgeteld. Lengte keer breedte is de oppervlakte. Wat rekende Joep uit?",
+   "ouderzin": "Je kind ziet het verschil tussen omtrek (de lengte rondom) en oppervlakte (lengte keer breedte).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "twee zijden",
+     "claudeDenkfout": null,
+     "regel": "Hij had 8 + 5 moeten doen",
+     "tekst": "Dat zijn maar twee zijden. Een hek gaat helemaal rondom, langs alle vier de zijden.",
+     "tekstSterker": "De omtrek is alle zijden bij elkaar opgeteld. Lengte keer breedte is de oppervlakte. Wat rekende Joep uit?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "oppervlakte verdubbeld",
+     "claudeDenkfout": null,
+     "regel": "Hij had 8 × 5 × 2 moeten doen",
+     "tekst": "Lengte keer breedte blijft een oppervlakte, ook als je het verdubbelt. Voor een hek tel je de zijden rondom bij elkaar op.",
+     "tekstSterker": "De omtrek is alle zijden bij elkaar opgeteld. Lengte keer breedte is de oppervlakte. Wat rekende Joep uit?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Een hek staat rondom. Zoekt Joep de omtrek of de oppervlakte?",
+     "tekstSterker": "De omtrek is alle zijden bij elkaar opgeteld. Lengte keer breedte is de oppervlakte. Wat rekende Joep uit?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een hek gaat langs alle vier de zijden. Keersommen horen bij het vlak binnen de tuin.",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je bent nu maar langs twee zijden gelopen. Hoeveel zijden heeft de tuin?",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 20,
+   "somtype": "Een broek van €# wordt # procent goedkoper. Rik rekent uit dat de broek nu €# kost. Wat ging er mis?",
+   "nrOrigineel": 13,
+   "somtypeOrigineel": "Een broek van €# wordt # procent goedkoper. Rik rekent uit dat de broek nu €# [ding]. Wat ging er mis?",
+   "hint1": "Procent betekent: van elke honderd. Hoeveel euro is de korting bij deze prijs?",
+   "hint2": "Reken uit hoeveel euro de korting is: deel de prijs door honderd en doe dat keer het procent. Haal dat bedrag van de prijs af. Komt er hetzelfde uit als bij Rik?",
+   "ouderzin": "Je kind ziet het verschil tussen een procent en een bedrag in euro.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "procent als euro",
+     "claudeDenkfout": null,
+     "regel": "Niets, 10 procent van €40 is €10",
+     "tekst": "Reken het na: deel de prijs door honderd en doe dat keer het procent. Is de korting echt zoveel euro?",
+     "tekstSterker": "Reken uit hoeveel euro de korting is: deel de prijs door honderd en doe dat keer het procent. Haal dat bedrag van de prijs af. Komt er hetzelfde uit als bij Rik?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "erbij",
+     "claudeDenkfout": null,
+     "regel": "Hij moest €10 bij de prijs optellen",
+     "tekst": "De broek wordt goedkoper. Gaat de korting eraf of komt die erbij?",
+     "tekstSterker": "Reken uit hoeveel euro de korting is: deel de prijs door honderd en doe dat keer het procent. Haal dat bedrag van de prijs af. Komt er hetzelfde uit als bij Rik?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro de korting is, en haal dat van de prijs af.",
+     "tekstSterker": "Reken uit hoeveel euro de korting is: deel de prijs door honderd en doe dat keer het procent. Haal dat bedrag van de prijs af. Komt er hetzelfde uit als bij Rik?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Procent betekent 'van de honderd'. Reken eerst uit wat 10 procent van 40 is.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Goedkoper worden betekent dat de prijs daalt. Wat doe je dan met het kortingsbedrag?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een broek van €# wordt # procent goedkoper. Rik rekent uit dat de broek nu €# [ding]. Wat ging er mis?",
+    "naar": "Een broek van €# wordt # procent goedkoper. Rik rekent uit dat de broek nu €# kost. Wat ging er mis?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 21,
+   "somtype": "Een jas van €# gaat # procent in prijs omlaag. Milou rekent uit dat de jas nu €# kost. Wat ging er mis?",
+   "nrOrigineel": 14,
+   "somtypeOrigineel": "Een jas van €# [ding] # procent in prijs omlaag. Milou rekent uit dat de jas nu €# [ding]. Wat ging er mis?",
+   "hint1": "Kijk goed wat Milou uitrekende: de korting of de nieuwe prijs?",
+   "hint2": "De korting is het bedrag dat eraf gaat. De nieuwe prijs is de oude prijs min de korting. Welke van de twee rekende Milou uit?",
+   "ouderzin": "Je kind ziet het verschil tussen de korting en de nieuwe prijs.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "procent van de uitkomst",
+     "claudeDenkfout": null,
+     "regel": "Ze moest 25 procent van 15 nemen",
+     "tekst": "Het procent hoort bij de oude prijs. Waarvan neem je het procent?",
+     "tekstSterker": "De korting is het bedrag dat eraf gaat. De nieuwe prijs is de oude prijs min de korting. Welke van de twee rekende Milou uit?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nieuwe prijs",
+     "claudeDenkfout": null,
+     "regel": "De jas kost nu €35",
+     "tekst": "Reken het na. Het procent is geen bedrag in euro: hoeveel euro is de korting? Haal die van de oude prijs af. Komt daar dit bedrag uit?",
+     "tekstSterker": "De korting is het bedrag dat eraf gaat. De nieuwe prijs is de oude prijs min de korting. Welke van de twee rekende Milou uit?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Is wat Milou uitrekende de korting of de nieuwe prijs?",
+     "tekstSterker": "De korting is het bedrag dat eraf gaat. De nieuwe prijs is de oude prijs min de korting. Welke van de twee rekende Milou uit?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Het percentage hoort bij de oude prijs van de jas, niet bij je tussenantwoord.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Trek je korting netjes van de oude prijs af en reken het verschil nog eens na.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een jas van €# [ding] # procent in prijs omlaag. Milou rekent uit dat de jas nu €# [ding]. Wat ging er mis?",
+    "naar": "Een jas van €# gaat # procent in prijs omlaag. Milou rekent uit dat de jas nu €# kost. Wat ging er mis?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 22,
+   "somtype": "Een recept voor # [ding] vraagt # gram rijst. Daan wil koken voor # [ding] en pakt # gram. Klopt zijn aanpak?",
+   "nrOrigineel": 15,
+   "somtypeOrigineel": "Een recept voor # [ding] vraagt # gram rijst. Daan wil koken voor # [ding] en pakt # gram. Klopt zijn aanpak?",
+   "hint1": "Bij een recept hoort bij meer mensen ook meer rijst: hoeveel keer zoveel mensen worden het?",
+   "hint2": "Hoeveel keer zoveel mensen worden het? Dan heb je evenveel keer zoveel rijst nodig. Deed Daan dat?",
+   "ouderzin": "Je kind controleert een aanpak met verhoudingen: twee keer zoveel mensen is twee keer zoveel rijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "mensen erbij",
+     "claudeDenkfout": null,
+     "regel": "Nee, hij moest 304 gram nemen",
+     "tekst": "Dan krijgt elke extra persoon maar één gram rijst. Hoeveel keer zoveel mensen worden het, en hoeveel rijst hoort daarbij?",
+     "tekstSterker": "Hoeveel keer zoveel mensen worden het? Dan heb je evenveel keer zoveel rijst nodig. Deed Daan dat?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "mensen bij de grammen",
+     "claudeDenkfout": null,
+     "regel": "Nee, hij moest 300 + 8 nemen",
+     "tekst": "Dan tel je het aantal mensen bij de grammen op. Hoeveel keer zoveel mensen worden het?",
+     "tekstSterker": "Hoeveel keer zoveel mensen worden het? Dan heb je evenveel keer zoveel rijst nodig. Deed Daan dat?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel keer zoveel mensen worden het? Hoort daar evenveel keer zoveel rijst bij?",
+     "tekstSterker": "Hoeveel keer zoveel mensen worden het? Dan heb je evenveel keer zoveel rijst nodig. Deed Daan dat?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bij een recept groeien de personen en de grammen in dezelfde verhouding mee.",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Kijk hoeveel keer zo groot de groep wordt en doe met de rijst hetzelfde.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 23,
+   "somtype": "Een recept voor # [ding] vraagt # gram rijst. Hoe reken je uit hoeveel rijst je nodig hebt voor # [ding]?",
+   "nrOrigineel": 16,
+   "somtypeOrigineel": "Een recept voor # [ding] vraagt # gram rijst. Hoe reken je uit hoeveel rijst je nodig hebt voor # [ding]?",
+   "hint1": "Reken eerst uit hoeveel rijst één persoon nodig heeft.",
+   "hint2": "Deel de rijst door het aantal mensen van het recept: dat is voor één persoon. Doe dat keer het aantal mensen waarvoor je kookt.",
+   "ouderzin": "Je kind kiest de aanpak via één: eerst hoeveel rijst voor één persoon, dan voor iedereen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "mensen bij de grammen",
+     "claudeDenkfout": null,
+     "regel": "Tel 200 en 6 bij elkaar op",
+     "tekst": "Dan tel je mensen bij grammen op. Hoeveel rijst is er voor één persoon?",
+     "tekstSterker": "Deel de rijst door het aantal mensen van het recept: dat is voor één persoon. Doe dat keer het aantal mensen waarvoor je kookt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "hele recept per persoon",
+     "claudeDenkfout": null,
+     "regel": "Doe 200 keer 6",
+     "tekst": "Dan krijgt elke persoon de rijst van het hele recept. Het recept is al voor meer mensen: hoeveel is er voor één persoon?",
+     "tekstSterker": "Deel de rijst door het aantal mensen van het recept: dat is voor één persoon. Doe dat keer het aantal mensen waarvoor je kookt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel rijst heeft één persoon nodig?",
+     "tekstSterker": "Deel de rijst door het aantal mensen van het recept: dat is voor één persoon. Doe dat keer het aantal mensen waarvoor je kookt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Personen en grammen zijn verschillende dingen. Zoek eerst hoeveel rijst één persoon nodig heeft.",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Zes personen eten niet zes keer zoveel als vier personen. Reken eerst per persoon.",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 24,
+   "somtype": "Een stadion heeft # [ding] met # [ding]. Anne schat vooraf ongeveer # [ding] en rekent daarna precies # uit. Wat zegt dit over haar aanpak?",
+   "nrOrigineel": 17,
+   "somtypeOrigineel": "Een stadion heeft # [ding] met # [ding]. Anne schat vooraf ongeveer # [ding] en rekent daarna precies # uit. Wat zegt dit over haar aanpak?",
+   "hint1": "Een schatting is ongeveer. Ligt het precieze antwoord dicht bij de schatting?",
+   "hint2": "Reken de schatting na met ronde getallen. Kijk dan hoe ver het precieze antwoord ervan af ligt. Is dat weinig, dan past de schatting.",
+   "ouderzin": "Je kind beoordeelt een schatting: een schatting hoeft niet precies te kloppen, wel ongeveer.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nul vergeten",
+     "claudeDenkfout": null,
+     "regel": "Haar schatting was fout, want 4 × 2000 is 800",
+     "tekst": "Reken het na en tel de nullen. Hoeveel nullen heeft het ronde getal, en hoeveel heeft de uitkomst?",
+     "tekstSterker": "Reken de schatting na met ronde getallen. Kijk dan hoe ver het precieze antwoord ervan af ligt. Is dat weinig, dan past de schatting."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "schatting als antwoord",
+     "claudeDenkfout": null,
+     "regel": "Ze rekende fout, want het moet 8000 zijn",
+     "tekst": "Een schatting is ongeveer, niet precies. Het precieze antwoord mag een beetje van de schatting afwijken.",
+     "tekstSterker": "Reken de schatting na met ronde getallen. Kijk dan hoe ver het precieze antwoord ervan af ligt. Is dat weinig, dan past de schatting."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Ligt het precieze antwoord dicht bij de schatting?",
+     "tekstSterker": "Reken de schatting na met ronde getallen. Kijk dan hoe ver het precieze antwoord ervan af ligt. Is dat weinig, dan past de schatting."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een schatting is een ruwe benadering. Die hoeft niet precies gelijk te zijn aan de echte uitkomst.",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Reken 4 × 2000 nog eens rustig na en let op het aantal nullen.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 25,
+   "somtype": "Eva rekent # : # uit en krijgt #. Hoe kan ze snel controleren of dit klopt?",
+   "nrOrigineel": 18,
+   "somtypeOrigineel": "Eva rekent # : # uit en krijgt #. Hoe kan ze snel controleren of dit klopt?",
+   "hint1": "Een deling controleer je met de omgekeerde som.",
+   "hint2": "Gedeeld door en keer horen bij elkaar. Doe het antwoord keer het getal waardoor je deelt. Komt het getal eruit dat je deelde?",
+   "ouderzin": "Je kind controleert een deelsom met de omgekeerde keersom.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "overschrijven",
+     "claudeDenkfout": null,
+     "regel": "Het antwoord nog een keer overschrijven",
+     "tekst": "Overschrijven controleert niets: een fout schrijf je zo ook over. Welke som is het omgekeerde van gedeeld door?",
+     "tekstSterker": "Gedeeld door en keer horen bij elkaar. Doe het antwoord keer het getal waardoor je deelt. Komt het getal eruit dat je deelde?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "plus",
+     "claudeDenkfout": null,
+     "regel": "63 + 7 uitrekenen en kijken of het klopt",
+     "tekst": "Plus is niet het omgekeerde van gedeeld door. Welke som hoort andersom bij gedeeld door?",
+     "tekstSterker": "Gedeeld door en keer horen bij elkaar. Doe het antwoord keer het getal waardoor je deelt. Komt het getal eruit dat je deelde?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Wat is het omgekeerde van gedeeld door?",
+     "tekstSterker": "Gedeeld door en keer horen bij elkaar. Doe het antwoord keer het getal waardoor je deelt. Komt het getal eruit dat je deelde?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Optellen is niet de omgekeerde bewerking van delen. Welke som maakt delen ongedaan?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Overschrijven laat een rekenfout gewoon staan. Je hebt een echte controlesom nodig.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 26,
+   "somtype": "Fenna heeft # + # = # uitgerekend. Hoe kan zij haar antwoord het beste controleren?",
+   "nrOrigineel": 19,
+   "somtypeOrigineel": "Fenna heeft # + # = # [ding]. Hoe kan zij haar antwoord het beste controleren?",
+   "hint1": "Een plussom controleer je het best met de omgekeerde som.",
+   "hint2": "Min is het omgekeerde van plus. Haal van de uitkomst een van de twee getallen af. Komt het andere getal eruit?",
+   "ouderzin": "Je kind controleert een plussom met de omgekeerde minsom.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nog een keer hetzelfde",
+     "claudeDenkfout": null,
+     "regel": "De som nog een keer precies zo uitrekenen",
+     "tekst": "Dan maak je misschien dezelfde fout nog eens. Met de omgekeerde som controleer je op een andere manier.",
+     "tekstSterker": "Min is het omgekeerde van plus. Haal van de uitkomst een van de twee getallen af. Komt het andere getal eruit?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nog meer erbij",
+     "claudeDenkfout": null,
+     "regel": "412 + 178 uitrekenen",
+     "tekst": "Nog meer erbij doen controleert de plussom niet. Wat is het omgekeerde van plus?",
+     "tekstSterker": "Min is het omgekeerde van plus. Haal van de uitkomst een van de twee getallen af. Komt het andere getal eruit?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Wat is het omgekeerde van plus?",
+     "tekstSterker": "Min is het omgekeerde van plus. Haal van de uitkomst een van de twee getallen af. Komt het andere getal eruit?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Als je dezelfde weg nog eens loopt, maak je vaak dezelfde fout. Zoek een andere weg terug.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Om terug te gaan naar het begin moet je de bewerking omkeren.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Fenna heeft # + # = # [ding]. Hoe kan zij haar antwoord het beste controleren?",
+    "naar": "Fenna heeft # + # = # uitgerekend. Hoe kan zij haar antwoord het beste controleren?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 27,
+   "somtype": "Hoe zie je of een getal deelbaar is door #?",
+   "nrOrigineel": 20,
+   "somtypeOrigineel": "Hoe zie je of een getal deelbaar is door #?",
+   "hint1": "Schrijf een paar uitkomsten uit de tafel van dat getal op. Wat zie je steeds terugkomen?",
+   "hint2": "Kijk naar het cijfer helemaal rechts, bij de eenheden. Op welke cijfers eindigen de uitkomsten van die tafel?",
+   "ouderzin": "Je kind weet hoe je ziet of een getal in de tafel van vijf zit: kijk naar het cijfer van de eenheden.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "cijfer links",
+     "claudeDenkfout": null,
+     "regel": "Kijk of het eerste cijfer 0 of 5 is",
+     "tekst": "De uitkomsten van de tafel beginnen met allerlei cijfers. Kijk naar het cijfer helemaal rechts, bij de eenheden.",
+     "tekstSterker": "Kijk naar het cijfer helemaal rechts, bij de eenheden. Op welke cijfers eindigen de uitkomsten van die tafel?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "even",
+     "claudeDenkfout": null,
+     "regel": "Kijk of het getal even is",
+     "tekst": "In die tafel zitten ook oneven getallen, en niet elk even getal zit erin. Kijk naar het cijfer helemaal rechts.",
+     "tekstSterker": "Kijk naar het cijfer helemaal rechts, bij de eenheden. Op welke cijfers eindigen de uitkomsten van die tafel?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar het cijfer helemaal rechts. Op welke cijfers eindigt de tafel?",
+     "tekstSterker": "Kijk naar het cijfer helemaal rechts, bij de eenheden. Op welke cijfers eindigen de uitkomsten van die tafel?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Probeer je stap eens bij 53 en bij 25. Welk cijfer verraadt de deling door 5?",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Probeer je stap eens bij 12 en bij 15. Klopt hij dan nog?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 28,
+   "somtype": "Hoe zie je of een getal even is?",
+   "nrOrigineel": 21,
+   "somtypeOrigineel": "Hoe zie je of een getal even is?",
+   "hint1": "Even getallen zitten in de tafel van twee: je kunt ze eerlijk in tweeën verdelen.",
+   "hint2": "Kijk naar het cijfer helemaal rechts, bij de eenheden. Is dat cijfer even, dan is het hele getal even.",
+   "ouderzin": "Je kind weet hoe je ziet of een getal even is: kijk naar het cijfer van de eenheden.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "cijfer links",
+     "claudeDenkfout": null,
+     "regel": "Kijk of het eerste cijfer 0, 2, 4, 6 of 8 is.",
+     "tekst": "Het cijfer helemaal links zegt niet of een getal even is. Kijk naar het cijfer helemaal rechts.",
+     "tekstSterker": "Kijk naar het cijfer helemaal rechts, bij de eenheden. Is dat cijfer even, dan is het hele getal even."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tafel van drie",
+     "claudeDenkfout": null,
+     "regel": "Kijk of je het getal door 3 kunt delen.",
+     "tekst": "Even betekent: in de tafel van twee, niet in de tafel van drie.",
+     "tekstSterker": "Kijk naar het cijfer helemaal rechts, bij de eenheden. Is dat cijfer even, dan is het hele getal even."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Even betekent: in de tafel van twee. Kijk naar het cijfer helemaal rechts.",
+     "tekstSterker": "Kijk naar het cijfer helemaal rechts, bij de eenheden. Is dat cijfer even, dan is het hele getal even."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bij even en oneven telt alleen het cijfer op de plaats van de eenheden.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Even betekent dat je het eerlijk in twee gelijke delen kunt splitsen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 29,
+   "somtype": "In een staafgrafiek staat de temperatuur per dag. Ruben leest bij woensdag # graden af, maar hij keek per ongeluk bij donderdag. Hoe voorkom je zo'n fout?",
+   "nrOrigineel": 22,
+   "somtypeOrigineel": "In een grafiek staat de temperatuur per dag. Ruben leest bij woensdag # graden af, maar hij keek per ongeluk bij donderdag. Hoe voorkom je zo'n fout?",
+   "hint1": "Ruben keek bij de verkeerde dag. Hoe weet je bij welke dag een staaf hoort?",
+   "hint2": "Onder elke staaf staat bij welke dag die hoort. Lees dat eerst, en kijk dan pas hoe hoog de staaf is.",
+   "ouderzin": "Je kind leert een grafiek nauwkeurig aflezen: eerst kijken bij welke dag een staaf hoort.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "hoogste staaf",
+     "claudeDenkfout": null,
+     "regel": "Altijd de hoogste staaf kiezen",
+     "tekst": "De hoogste staaf hoort bij één dag, en dat hoeft woensdag niet te zijn. Hoe zie je bij welke dag een staaf hoort?",
+     "tekstSterker": "Onder elke staaf staat bij welke dag die hoort. Lees dat eerst, en kijk dan pas hoe hoog de staaf is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "schaal opgeteld",
+     "claudeDenkfout": null,
+     "regel": "De getallen links bij elkaar optellen",
+     "tekst": "De getallen langs de kant zijn de schaal om af te lezen. Hoe zie je bij welke dag een staaf hoort?",
+     "tekstSterker": "Onder elke staaf staat bij welke dag die hoort. Lees dat eerst, en kijk dan pas hoe hoog de staaf is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoe zie je bij welke dag een staaf hoort?",
+     "tekstSterker": "Onder elke staaf staat bij welke dag die hoort. Lees dat eerst, en kijk dan pas hoe hoog de staaf is."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De vraag gaat over één bepaalde dag. De hoogste staaf hoort daar niet altijd bij.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De getallen links vormen de schaal. Je hoeft ze niet op te tellen om één waarde af te lezen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "In een grafiek staat de temperatuur per dag. Ruben leest bij woensdag # graden af, maar hij keek per ongeluk bij donderdag. Hoe voorkom je zo'n fout?",
+    "naar": "In een staafgrafiek staat de temperatuur per dag. Ruben leest bij woensdag # graden af, maar hij keek per ongeluk bij donderdag. Hoe voorkom je zo'n fout?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 30,
+   "somtype": "In een staafgrafiek staat het aantal bezoekers per dag. Hoe vind je het totaal van de hele week?",
+   "nrOrigineel": 23,
+   "somtypeOrigineel": "In een staafgrafiek staat het aantal bezoekers per dag. Hoe vind je het totaal van de hele week?",
+   "hint1": "Het totaal van de week is alle dagen bij elkaar.",
+   "hint2": "Lees bij elke dag af hoe hoog de staaf is. Tel al die aantallen bij elkaar op.",
+   "ouderzin": "Je kind leest een staafgrafiek af en telt de waarden van alle dagen op.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "hoogste keer de week",
+     "claudeDenkfout": null,
+     "regel": "Lees de hoogste staaf af en doe die keer 7",
+     "tekst": "Dan doe je alsof het elke dag even druk was als op de drukste dag. Lees elke staaf apart af.",
+     "tekstSterker": "Lees bij elke dag af hoe hoog de staaf is. Tel al die aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verschil",
+     "claudeDenkfout": null,
+     "regel": "Trek de laagste staaf van de hoogste af",
+     "tekst": "Dat is het verschil tussen de drukste en de rustigste dag, niet het totaal.",
+     "tekstSterker": "Lees bij elke dag af hoe hoog de staaf is. Tel al die aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Het totaal van de week is alle dagen bij elkaar.",
+     "tekstSterker": "Lees bij elke dag af hoe hoog de staaf is. Tel al die aantallen bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Niet elke dag kwamen er evenveel bezoekers. Kijk naar alle staven apart.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Zo vind je een verschil, geen totaal. Wat doe je met alle dagen samen?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 31,
+   "somtype": "In een winkel is er op alles # procent korting. Hoe reken je de nieuwe prijs uit?",
+   "nrOrigineel": 24,
+   "somtypeOrigineel": "In een winkel is er op alles # procent korting. Hoe reken je de nieuwe prijs uit?",
+   "hint1": "Korting gaat van de prijs af. Waarvan neem je het procent?",
+   "hint2": "Reken het procent uit van de oude prijs: dat is de korting in euro. Haal die van de oude prijs af.",
+   "ouderzin": "Je kind kiest hoe je een prijs met korting uitrekent: het procent van de prijs, en dat eraf.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "procent van de korting",
+     "claudeDenkfout": null,
+     "regel": "Bereken 25 procent van de korting en trek dat eraf.",
+     "tekst": "De korting weet je nog niet: die reken je juist uit. Het procent hoort bij de prijs.",
+     "tekstSterker": "Reken het procent uit van de oude prijs: dat is de korting in euro. Haal die van de oude prijs af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "erbij",
+     "claudeDenkfout": null,
+     "regel": "Bereken 25 procent van de prijs en tel dat erbij op.",
+     "tekst": "Met korting wordt het goedkoper. Gaat de korting eraf of komt die erbij?",
+     "tekstSterker": "Reken het procent uit van de oude prijs: dat is de korting in euro. Haal die van de oude prijs af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Neem het procent van de prijs. Gaat dat eraf of erbij?",
+     "tekstSterker": "Reken het procent uit van de oude prijs: dat is de korting in euro. Haal die van de oude prijs af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Met korting betaal je minder dan eerst. Gaat de prijs dan omhoog of omlaag?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Let op waarvan je het percentage neemt. Waarvan gaat de 25 procent af?",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 32,
+   "somtype": "In groep # zitten # leerlingen. # procent doet mee aan de sportdag. Hoe reken je uit hoeveel leerlingen dat zijn?",
+   "nrOrigineel": 25,
+   "somtypeOrigineel": "In groep # [ding] # [ding]. # procent doet mee aan de sportdag. Hoe reken je uit hoeveel leerlingen dat zijn?",
+   "hint1": "Procent betekent: van elke honderd. Alle leerlingen samen zijn honderd procent.",
+   "hint2": "Reken uit hoeveel leerlingen één procent is: deel het aantal leerlingen door honderd. Doe dat keer het procent.",
+   "ouderzin": "Je kind kiest hoe je een procent van een aantal uitrekent: eerst één procent, dan keer het procent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "procent als uitkomst",
+     "claudeDenkfout": null,
+     "regel": "Deel 15 door 100 en doe dat keer 40 procent",
+     "tekst": "Kijk naar het woord procent aan het eind: zo krijg je weer een procent, geen aantal leerlingen. Hoeveel leerlingen is één procent?",
+     "tekstSterker": "Reken uit hoeveel leerlingen één procent is: deel het aantal leerlingen door honderd. Doe dat keer het procent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "Trek 15 van 40 af",
+     "tekst": "Het procent is geen aantal leerlingen. Hoeveel leerlingen is één procent van alle leerlingen?",
+     "tekstSterker": "Reken uit hoeveel leerlingen één procent is: deel het aantal leerlingen door honderd. Doe dat keer het procent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel leerlingen is één procent? Doe dat keer het procent.",
+     "tekstSterker": "Reken uit hoeveel leerlingen één procent is: deel het aantal leerlingen door honderd. Doe dat keer het procent."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Procenten zijn delen van het geheel, geen aantal dat je eraf haalt. Zoek eerst 1 procent.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Let goed op waarvan je het deel wilt weten. Van welk getal bereken je hier de procenten?",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "In groep # [ding] # [ding]. # procent doet mee aan de sportdag. Hoe reken je uit hoeveel leerlingen dat zijn?",
+    "naar": "In groep # zitten # leerlingen. # procent doet mee aan de sportdag. Hoe reken je uit hoeveel leerlingen dat zijn?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 33,
+   "somtype": "Je doet # kg appels in zakjes van # gram. Je wilt weten hoeveel zakjes dat worden. Wat doe je eerst?",
+   "nrOrigineel": 26,
+   "somtypeOrigineel": "Je doet # kg appels in zakjes van # gram. Je wilt weten hoeveel zakjes dat worden. Wat doe je eerst?",
+   "hint1": "De ene maat staat in kilogram, de andere in gram. Maak eerst van allebei dezelfde maat.",
+   "hint2": "Eén kilogram is duizend gram. Reken de kilogrammen om naar grammen, dan kun je delen.",
+   "ouderzin": "Je kind ziet dat je eerst dezelfde maat nodig hebt: kilogram omrekenen naar gram.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "direct delen",
+     "claudeDenkfout": null,
+     "regel": "Deel 2,5 direct door 500.",
+     "tekst": "Kilogram en gram zijn verschillende maten. Maak eerst van allebei dezelfde maat.",
+     "tekstSterker": "Eén kilogram is duizend gram. Reken de kilogrammen om naar grammen, dan kun je delen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerd omgerekend",
+     "claudeDenkfout": null,
+     "regel": "Reken 500 gram om naar 5 kg.",
+     "tekst": "Reken het na: duizend gram is één kilogram. Dan is dit minder dan één kilogram.",
+     "tekstSterker": "Eén kilogram is duizend gram. Reken de kilogrammen om naar grammen, dan kun je delen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Maak eerst van allebei dezelfde maat: één kilogram is duizend gram.",
+     "tekstSterker": "Eén kilogram is duizend gram. Reken de kilogrammen om naar grammen, dan kun je delen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk goed hoeveel gram er in 1 kg gaat. Wordt het getal dan groter of kleiner?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je kunt pas rekenen als beide getallen dezelfde eenheid hebben.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 34,
+   "somtype": "Je fietst # [ding] in # uur. Hoe reken je uit hoeveel kilometer je in # uur fietst?",
+   "nrOrigineel": 27,
+   "somtypeOrigineel": "Je fietst # [ding] in # uur. Hoe reken je uit hoeveel kilometer je in # uur fietst?",
+   "hint1": "Elk uur fiets je even ver. Hoeveel kilometer is dat in één uur?",
+   "hint2": "Deel de kilometers door het aantal uren. Dan weet je hoeveel kilometer je in één uur fietst.",
+   "ouderzin": "Je kind kiest de aanpak via één: hoeveel kilometer in één uur.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "keer",
+     "claudeDenkfout": null,
+     "regel": "Vermenigvuldig 24 met 2",
+     "tekst": "Dan krijg je de kilometers van meer uren, niet van één uur.",
+     "tekstSterker": "Deel de kilometers door het aantal uren. Dan weet je hoeveel kilometer je in één uur fietst."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "uren eraf",
+     "claudeDenkfout": null,
+     "regel": "Trek 2 van 24 af",
+     "tekst": "Je haalt dan uren van kilometers af. Elk uur fiets je even ver: hoeveel kilometer is dat in één uur?",
+     "tekstSterker": "Deel de kilometers door het aantal uren. Dan weet je hoeveel kilometer je in één uur fietst."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Elk uur fiets je even ver. Hoeveel kilometer is dat in één uur?",
+     "tekstSterker": "Deel de kilometers door het aantal uren. Dan weet je hoeveel kilometer je in één uur fietst."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "In één uur fiets je minder ver dan in twee uur. Wordt je antwoord dan groter of kleiner?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je verdeelt de kilometers over de uren. Welke bewerking hoort bij eerlijk verdelen?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 35,
+   "somtype": "Je hebt # [ding] en # [ding]. Hoe reken je uit hoeveel koekjes [wie] krijgt en hoeveel er overblijven?",
+   "nrOrigineel": 28,
+   "somtypeOrigineel": "Je hebt # [ding] en # [ding]. Hoe reken je uit hoeveel koekjes [wie] krijgt en hoeveel er overblijven?",
+   "hint1": "Eerlijk verdelen is delen. Soms blijft er iets over.",
+   "hint2": "Deel het aantal koekjes door het aantal mensen. Het hele getal is wat ieder krijgt. Wat overblijft is de rest.",
+   "ouderzin": "Je kind kiest hoe je eerlijk verdeelt: delen, en kijken wat er overblijft.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "naar boven",
+     "claudeDenkfout": null,
+     "regel": "Deel 50 door 8 en rond naar boven af",
+     "tekst": "Naar boven afronden geeft koekjes die er niet zijn. De vraag wil ook weten hoeveel er overblijven: kijk naar de rest.",
+     "tekstSterker": "Deel het aantal koekjes door het aantal mensen. Het hele getal is wat ieder krijgt. Wat overblijft is de rest."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "Trek 8 van 50 af, dat is het antwoord",
+     "tekst": "Dan krijgt ieder maar één koekje. Bij eerlijk verdelen deel je het aantal koekjes door het aantal mensen.",
+     "tekstSterker": "Deel het aantal koekjes door het aantal mensen. Het hele getal is wat ieder krijgt. Wat overblijft is de rest."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eerlijk verdelen is delen. Hoeveel krijgt ieder, en wat blijft er over?",
+     "tekstSterker": "Deel het aantal koekjes door het aantal mensen. Het hele getal is wat ieder krijgt. Wat overblijft is de rest."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je kunt geen koekje uitdelen dat er niet is. Wat gebeurt er met de koekjes die overblijven?",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Eerlijk verdelen over groepjes doe je niet met aftrekken. Welke bewerking hoort bij verdelen?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 36,
+   "somtype": "Je hebt # [ding] en dozen voor # [ding]. Hoe reken je uit hoeveel volle dozen je kunt maken?",
+   "nrOrigineel": 29,
+   "somtypeOrigineel": "Je hebt # [ding] en dozen voor # [ding]. Hoe reken je uit hoeveel volle dozen je kunt maken?",
+   "hint1": "Alleen dozen die helemaal vol zijn tellen mee. Hoe vaak past de inhoud van één doos in het totaal?",
+   "hint2": "Deel het totaal door wat er in één doos past. Het hele getal is het aantal volle dozen. De rest past niet in een volle doos.",
+   "ouderzin": "Je kind kiest hoe je uitrekent hoeveel volle dozen het worden: delen en alleen het hele getal gebruiken.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "naar boven",
+     "claudeDenkfout": null,
+     "regel": "Deel 40 door 6 en rond het antwoord naar boven af.",
+     "tekst": "Dan tel je een doos mee die niet vol is. De vraag gaat over volle dozen.",
+     "tekstSterker": "Deel het totaal door wat er in één doos past. Het hele getal is het aantal volle dozen. De rest past niet in een volle doos."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "Trek 6 van 40 af en noem dat het aantal dozen.",
+     "tekst": "Dan haal je maar één doos eraf. Hoe vaak past de inhoud van één doos in het totaal?",
+     "tekstSterker": "Deel het totaal door wat er in één doos past. Het hele getal is het aantal volle dozen. De rest past niet in een volle doos."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoe vaak past de inhoud van één doos in het totaal? Alleen volle dozen tellen.",
+     "tekstSterker": "Deel het totaal door wat er in één doos past. Het hele getal is het aantal volle dozen. De rest past niet in een volle doos."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een doos telt alleen mee als hij helemaal vol is. Wat doe je met de eieren die overblijven?",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je verdeelt de eieren in groepjes van 6. Welke bewerking maakt groepjes?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

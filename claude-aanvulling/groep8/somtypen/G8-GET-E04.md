@@ -74,10 +74,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 3 (meest: “Een deel ván een deel is vermenigvuldigen, niet optellen.”)
 - Voorbeelden:
   - `G8-GET-E04-claude-bank-039` (Claude B14, gegenereerd, niveau 3 → toepassen)
-    - **Opgave:** Er is nog 1/3 taart. Een kind eet daar 1/2 deel van. Welk deel van de hele taart is dat? Typ een breuk.
-    - **Antwoord:** 1/6  (controle: n.v.t.)
+    - **Opgave:** Er is nog 1/5 taart. Een kind eet daar 1/2 deel van. Welk deel van de hele taart is dat? Typ een breuk.
+    - **Antwoord:** 1/10  (controle: n.v.t.)
     - **Fout-hints (Claude):** 2/5 → Een deel ván een deel is vermenigvuldigen, niet optellen. · 1/3 → Vermenigvuldig ook de noemers met elkaar.
-    - **Uitleg (Claude):** Deel van een deel: vermenigvuldig tellers en noemers. 1 × 1 = 1, 2 × 3 = 6. Dus 1/6.
+    - **Uitleg (Claude):** Deel van een deel: vermenigvuldig tellers en noemers. 1 × 1 = 1, 2 × 5 = 10. Dus 1/10.
   - `G8-GET-E04-claude-bank-041` (Claude B14, gegenereerd, niveau 3 → toepassen)
     - **Opgave:** Er is nog 2/3 taart. Een kind eet daar 1/2 deel van. Welk deel van de hele taart is dat? Typ een breuk.
     - **Antwoord:** 1/3  (controle: n.v.t.)

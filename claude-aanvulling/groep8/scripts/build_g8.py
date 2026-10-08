@@ -24,6 +24,7 @@ R, G, T = R7.R, R7.G, R7.T
 OURS = {d['id']: {'bordtitel': d['bordtitel'], 'korteNaam': d['korteNaam'], 'domein': d['domein'], 'aantalItems': d['aantalItems']}
         for g in EXP['groepen'] if g['groep'] == 8 for dm in g['domeinen'] for d in dm['doelen']}
 import besluiten_g8 as BG8                 # Didactiek-besluiten op de 1226 G8-twijfelitems + Dave 20:56
+sys.path.insert(0, "/workspace/claude-merge/tools"); import breukvorm as BV      # V-#760 (Didactiek G8 batch 1, 8 okt): even grote breuk telt als goed (#170, Dave 21:24)
 BESLUIT_G8 = BG8.laad()
 _I8 = json.load(open(f'{OUT}/bevroren/ids_v1.json'))      # Dave 20:56 (5): ook via vorigeIds (het item kreeg in G5 een naar-id; anders valt de regel stil weg)
 E02_001 = next((c for c, i in _I8['ids'].items() if i == 'G8-GET-E02-claude-bank-001'), None) or next((c for c, vs in _I8.get('vorigeIds', {}).items() if 'G8-GET-E02-claude-bank-001' in vs), None)
@@ -302,9 +303,11 @@ def main():
             it['merge']['status'] = 'naar-G5'; it['merge']['voorstelDoel'] = d5; it['merge']['reden'] += f"; besluit Dave 20:56 (4): naar G5 ({d5})"
         if BESLUIT_G8 and st == 'buiten-basisschool': BG8.mediaan_tekst(it, slog)
         if BESLUIT_G8: BG8.zonder_kans(it, slog)      # Dave 22:06 (1): geen 'kans' in G8
+        if it['merge']['status'] == 'gemapt': fix_g8(it, slog)      # alleen G8-items: de aanvulling voor G4–G7 blijft gelijk (goedgekeurde builds)
+        if it['merge']['status'] == 'gemapt' and BV.pas_toe(it): slog(it, 'G8-BV170 (G6-fixlijst #170, Dave 21:24; V-#760): even grote breuk telt als goed (antwoordOokGoed), behalve als de opgave een vorm vraagt', 'antwoordOokGoed', None, it['antwoordOokGoed'][:6])
         hercontrole_g8(it, q)
         it['licentie']['wijzigingen'] = sorted({f['soort'] for f in B3.FIXLOG if f['id'] == q['id']}); it['licentie']['gewijzigd'] = True
-        it['merge']['somtype'] = BG7.somtype(it) or B7.somtype_g7(it)
+        it['merge']['somtype'] = kop_g8(BG7.somtype(it) or B7.somtype_g7(it))
         rows.append(it)
     # ids (bevroren)
     idp = f'{OUT}/bevroren/ids_v1.json'
@@ -357,6 +360,8 @@ def main():
                 r['opties'] = [{'letter': 'ABCDEF'[j], 'tekst': t} for j, t in enumerate(nieuw)]
                 r['optiesTekst'] = ' · '.join(f"{o['letter']}) {o['tekst']}" for o in r['opties'])
                 slog(r, 'Oef-#467 goede optie verdeeld over A/B/C', 'opties', ' · '.join(teksten), r['optiesTekst'])
+                ad_ = r.get('antwoordDetail')
+                if isinstance(ad_, dict) and 'juisteOptie' in ad_: ad_['juisteOptie'] = r['opties'][pos]['letter']; ad_['juisteOptieTekst'] = r['antwoord']
                 r['licentie']['wijzigingen'] = sorted(set(r['licentie']['wijzigingen']) | {'Oef-#467 goede optie verdeeld over A/B/C'})
     gem = [r for r in rows if r['merge']['status'] == 'gemapt']; twf = [r for r in rows if r['merge']['status'] == 'twijfel']
     t7 = [r for r in rows if r['merge']['status'] == 'terug-G7']; bui = [r for r in rows if r['merge']['status'] == 'buiten-basisschool']
@@ -422,6 +427,85 @@ def main():
     for sc in ('sync_hint_keys.py', 'apply_hints.py'):
         subprocess.run([sys.executable, f'{HERE}/{sc}'], check=True)
     return rows, gem, twf, t7, bui, stats
+
+OEF476 = False      # Oef-#476 klaar ('Deel 40 door 15'); aan zodra patch_batch2 de regel voor de nieuwe optietekst heeft
+def fix_g8(r, slog):
+    """Itemfixes G8 (8 okt): Z-#766, Z-#767, Z-#768, Oef-#476, Oef-#480. Per item, vóór BV.pas_toe, de hercontrole en de kop."""
+    # Z-#766 (Didactiek G8 batch 1, 8 okt): E04 #3 bank-039 (1/3, 1/2) en bank-044 (2/4, 1/3): 1/2 − 1/3 = 1/6 = het antwoord (aftrekken gaf toevallig goed).
+    # Nieuwe breuken, niet al in E04 #3, zelfde routes: teller+teller/noemer+noemer, de overgebleven breuk. Aftrekken geeft nu iets anders.
+    # E03 #4 bank-038: 35 − 4 × 7 = 7, het antwoord stond in de vraag → 40 − 4 × 7 = 12 (zelfde routes: van links naar rechts 252, plus i.p.v. keer 40 − (4 + 7) = 29).
+    R8_766 = {'13482195': (('1/3', '1/2'), ('1/5', '1/2', '1/10'), [('2/7', 'teller-en-noemer-optellen'), ('1/5', 'deel-vergeten-bij-splitsen')]),
+              'db461856': (('2/4', '1/3'), ('4/5', '1/3', '4/15'), [('5/8', 'teller-en-noemer-optellen'), ('1/15', 'deel-vergeten-bij-splitsen'), ('4/5', 'deel-vergeten-bij-splitsen')])}
+    if True:
+        c8 = (r['bron'].get('claudeId') or '')[:8]; o = r['opgave']
+        if c8 in R8_766:
+            (a0, b0), (a, b, ans), sl = R8_766[c8]
+            assert o == f'Er is nog {a0} taart. Een kind eet daar {b0} deel van. Welk deel van de hele taart is dat? Typ een breuk.', (r['id'], o)
+            ta, na = map(int, a.split('/')); tb, nb = map(int, b.split('/'))
+            r['opgave'] = f'Er is nog {a} taart. Een kind eet daar {b} deel van. Welk deel van de hele taart is dat? Typ een breuk.'; r['antwoord'] = ans
+            ex = r['extraVelden']; ex['claudeDenkfouten'] = [{'fout': f, 'denkfout': d} for f, d in sl]
+            ex['claudeFoutHints'] = [{'stap': None, 'fout': f, 'uitleg': None} for f, d in sl]
+            ex['claudeKaleSom'] = f'{b} × {a}'
+            ex['claudeUitleg'] = f'Deel van een deel: vermenigvuldig tellers en noemers.\n{tb} × {ta} = {tb * ta}, {nb} × {na} = {nb * na}.\nDus {ans}.'
+            r['foutHints'] = []; BV.pas_toe(r)
+            slog(r, 'Z-#766: aftrekken gaf toevallig het antwoord (1/2 − 1/3 = 1/6)', 'opgave', o, r['opgave'])
+        if c8 == '574c9352' and o == 'Reken uit. 35 − 4 × 7':
+            r['opgave'] = 'Reken uit. 40 − 4 × 7'; r['antwoord'] = '12' if isinstance(r['antwoord'], str) else 12
+            ex = r['extraVelden']; ex['claudeDenkfouten'] = [{'fout': '252', 'denkfout': 'verkeerde-bewerking'}, {'fout': '29', 'denkfout': 'optellen-ipv-vermenigvuldigen'}]
+            ex['claudeFoutHints'] = [{'stap': None, 'fout': '252', 'uitleg': 'Keer gaat vóór min. Eerst de keersom, dan pas aftrekken.'},
+                                     {'stap': None, 'fout': '29', 'uitleg': 'Er staat een keerteken: eerst vermenigvuldigen, dan pas aftrekken.'}]
+            ex['claudeKaleSom'] = '40 − 4 × 7'; ex['claudeUitleg'] = 'Eerst vermenigvuldigen: 4 × 7 = 28. Dan 40 − 28 = 12.'
+            r['foutHints'] = []
+            slog(r, 'Z-#766: het antwoord stond in de vraag (35 − 4 × 7 = 7)', 'opgave', o, r['opgave'])
+    # Z-#767 (Didactiek G8 batch 1): elk open antwoord met een duizendpunt heeft ook de vorm zonder punt in geldigeAntwoorden
+    # (E02 #2/#3/#4/#6/#7 hadden die lijst al; #8/#10/#11 niet, o.a. 054 '10.000').
+    if True:
+        a = str(r['antwoord'])
+        if r['type'] in ('kale', None) and re.fullmatch(r'\d{1,3}(?:\.\d{3})+', a):
+            g = list(r.get('geldigeAntwoorden') or [])
+            for x in (a, a.replace('.', '')):
+                if x not in g: g.append(x)
+            if g != (r.get('geldigeAntwoorden') or []): slog(r, 'Z-#767: geldigeAntwoorden met en zonder duizendpunt', 'geldigeAntwoorden', r.get('geldigeAntwoorden'), g)
+            r['geldigeAntwoorden'] = g
+    # Z-#768 (Didactiek G8 batch 1, Oef-#471): contexten die niet kloppen (E02 #8 en #11).
+    R8_768 = {'64e96cb9': ('tanden', 'knikkers'), 'aff44739': ('In het nest liggen 2640 schelpen', 'Op het strand liggen 2640 schelpen'),
+              'd26ecfc9': ('In het huis liggen 2509 stenen', 'Op de bouwplaats liggen 2509 stenen'), 'd045f9e8': ('In de klas liggen 2220 pakken', 'In het magazijn liggen 2220 pakken'),
+              'bf70ae98': ('In het stadion liggen 2137 stickers', 'In de winkel liggen 2137 stickers')}
+    if True:
+        c8 = (r['bron'].get('claudeId') or '')[:8]
+        if c8 in R8_768 and R8_768[c8][0] in r['opgave']:
+            a, b = R8_768[c8]; o = r['opgave']; r['opgave'] = o.replace(a, b)
+            for k in ('claudeUitleg', 'claudeKaleSom'):
+                if isinstance(r['extraVelden'].get(k), str): r['extraVelden'][k] = r['extraVelden'][k].replace(a, b)
+            slog(r, 'Z-#768: context die niet klopt', 'opgave', o, r['opgave'])
+    # Oef-#476 (8 okt): GET-E02 #32 (bank-033) afleider 'Deel 15 door 100 en doe dat keer 40 procent' gaf hetzelfde getal (6) als het antwoord → 'Deel 40 door 15'.
+    # Oef-#480: GET-E02 #29 (bank-030) 'In een grafiek' → 'In een staafgrafiek' (de opties gaan over staven).
+    if True:
+        c8 = (r['bron'].get('claudeId') or '')[:8]
+        if c8 == '5617ea49' and OEF476:      # wacht op de literal-regel van Oefeningen in patch_batch2 (anders ONLEESBAAR-WARN)
+            oud, nieuw = 'Deel 15 door 100 en doe dat keer 40 procent', 'Deel 40 door 15'
+            if any(o_['tekst'] == oud for o_ in r['opties']):
+                voor = r['optiesTekst']
+                for o_ in r['opties']:
+                    if o_['tekst'] == oud: o_['tekst'] = nieuw
+                r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+                ex = r['extraVelden']
+                for d_ in ex.get('claudeDenkfouten') or []:
+                    if d_['fout'] == oud: d_['fout'] = nieuw; d_['denkfout'] = 'verkeerde-bewerking'
+                for h_ in ex.get('claudeFoutHints') or []:
+                    if h_['fout'] == oud: h_['fout'] = nieuw; h_['uitleg'] = 'Je wilt een deel van 40 leerlingen weten. Delen door 15 geeft hoe vaak 15 in 40 past, niet 15 procent van 40.'
+                r['foutHints'] = []
+                slog(r, 'Oef-#476: afleider gaf hetzelfde getal als het antwoord', 'opties', voor, r['optiesTekst'])
+        if c8 == '1c755b40' and r['opgave'].startswith('In een grafiek staat'):
+            o = r['opgave']; r['opgave'] = o.replace('In een grafiek staat', 'In een staafgrafiek staat', 1); slog(r, "Oef-#480: 'staafgrafiek' (de opties gaan over staven)", 'opgave', o, r['opgave'])
+
+# Oef-#472 / #478 (G8 batch 1/2, 8 okt; zoals G4 Z-#726): de kop-generator maakte van 'kan' en van werkwoorden een '[ding]'.
+KOP478 = [(r'^(Kijk zonder uit te rekenen\. Welk antwoord bij # [×+−:] #) \[ding\] kloppen\?$', r'\1 kan kloppen?'),
+          (r'nu €# \[ding\]\.', 'nu €# kost.'), (r'^Een jas van €# \[ding\] # procent', 'Een jas van €# gaat # procent'),
+          (r'= # \[ding\]\. Hoe kan', '= # uitgerekend. Hoe kan'), (r'^In groep # \[ding\] # \[ding\]\.', 'In groep # zitten # leerlingen.')]
+def kop_g8(s):
+    for a, b in KOP478: s = re.sub(a, b, s)
+    return s
 
 def twijfel_md(cats, bui, t7):
     out = ['# G8-merge: twijfel voor Didactiek (build ' + datetime.datetime.now().strftime('%d-%m %H:%M') + ')', '',

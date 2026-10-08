@@ -162,6 +162,12 @@ if __name__ == '__main__':
     fail = (_HL.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import spatie_duizend_check as _SD      # V-#705 (review G7 batch 6, Didactiek 8 okt): spatie als duizendtalscheiding (FAIL, G4–G8)
     fail = (_SD.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    # BREUKVORM (G6 merge-fixlijst #170, Dave 21:24; V-#760, Didactiek G8 batch 1, 8 okt): even grote breuk goed, behalve als de opgave een vorm vraagt (FAIL)
+    import breukvorm as _BV
+    fail = (_BV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    # JUISTE-OPTIE (Oef-#467, 8 okt): antwoordDetail.juisteOptie(Tekst) past bij de opties (FAIL, alleen G8: in G5/G6 staan nog oude mismatches)
+    import juiste_optie_check as _JO
+    fail = (_JO.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import optie_positie_check as _OP      # Oef-#459 (8 okt): goede antwoord >60% op één plek in een somtype met ≥4 items (WARN)
     _OP.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
     print('\nG8 merge-notatie:', 'FAIL' if fail else 'ALLES OK')

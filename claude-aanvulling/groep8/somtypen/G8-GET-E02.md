@@ -119,7 +119,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Kijk bij elk getal naar de eenheden. Is dat vijf of meer? Dan rond je naar boven af op tientallen. Anders rond je naar beneden af.  [nieuw]
 - Status: hints klaar
 
-## Somtype 5: Kijk zonder uit te rekenen. Welk antwoord bij # × # [ding] kloppen?
+## Somtype 5: Kijk zonder uit te rekenen. Welk antwoord bij # × # kan kloppen?
 
 - Sleutel: nrOrigineel **54** · somtypeOrigineel “Kijk zonder uit te rekenen. Welk antwoord bij # × # [ding] kloppen?” (koppeling: claudeId)
 - Items: **19** · Claude-doelen: T3 (19) · regel: D8-KLOPPEN-MEERKEUZE-G8
@@ -148,6 +148,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `veel te klein` (Claudes sleutel: orde-van-grootte) → Dat is te klein. Rond het grootste getal naar beneden af op honderdtallen en reken keer: kleiner kan het antwoord niet zijn.  [Claude, taalfix]
   - `eindcijfer` (Claudes sleutel: laatste-cijfer) → Kijk waarop het antwoord moet eindigen. Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt dat? Daarop eindigt het antwoord ook.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk eerst waarop het antwoord eindigt, en daarna tussen welke ronde getallen het ligt.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Kijk zonder uit te rekenen. Welk antwoord bij # × # [ding] kloppen?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 6: Hoeveel is # + # [ding]? Rond beide getallen af op honderdtallen en reken dan uit.
@@ -217,7 +218,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 3 (meest: “Dat is precies. Hier vragen we de schatting met ronde getallen.”)
 - Voorbeelden:
   - `G8-GET-E02-claude-bank-023` (Claude T3, gegenereerd, niveau 1 → basis)
-    - **Opgave:** In het nest liggen 2640 schelpen en er komen 1536 bij. Schat het totaal: rond beide getallen af op duizendtallen en tel op.
+    - **Opgave:** Op het strand liggen 2640 schelpen en er komen 1536 bij. Schat het totaal: rond beide getallen af op duizendtallen en tel op.
     - **Antwoord:** 5000  (controle: ok)
     - **Fout-hints (Claude):** 4176 → Dat is precies. Hier vragen we de schatting met ronde getallen. · 6000 → Kijk per getal naar de honderdtallen: onder de 500 rond je naar beneden af. · 4000 → Kijk per getal naar de honderdtallen: vanaf 500 rond je naar boven af.
     - **Uitleg (Claude):** 2640 is ongeveer 3000, 1536 ongeveer 2000. Samen 5000. Precies is het 4176.
@@ -239,7 +240,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Rond eerst allebei de getallen af op duizendtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
 - Status: hints klaar
 
-## Somtype 9: Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?
+## Somtype 9: Kijk zonder uit te rekenen. Welk antwoord bij # + # kan kloppen?
 
 - Sleutel: nrOrigineel **57** · somtypeOrigineel “Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: T3 (8) · regel: D8-KLOPPEN-MEERKEUZE-G8
@@ -267,6 +268,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `veel te klein` (Claudes sleutel: orde-van-grootte) → Dat is te klein. Rond allebei de getallen naar beneden af op honderdtallen en tel op: kleiner kan het antwoord niet zijn.  [Claude, taalfix]
   - `eindcijfer` (Claudes sleutel: laatste-cijfer) → Kijk waarop het antwoord moet eindigen. Tel alleen de eenheden van de twee getallen op. Op welk cijfer eindigt dat? Daarop eindigt het antwoord ook.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk eerst waarop het antwoord eindigt, en daarna tussen welke ronde getallen het ligt.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 10: Ongeveer hoeveel is # × #? Rond # af op honderdtallen en # op tientallen, en reken dan uit.
@@ -307,7 +309,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 7 (meest: “Precies uitgerekend. Hier vragen we de schatting met het ronde getal.”)
 - Voorbeelden:
   - `G8-GET-E02-claude-bank-002` (Claude T3, gegenereerd, niveau 1 → basis)
-    - **Opgave:** 5 dozen met elk 497 tanden. Schat hoeveel dat ongeveer is: rond 497 af op honderdtallen en reken dan uit.
+    - **Opgave:** 5 dozen met elk 497 knikkers. Schat hoeveel dat ongeveer is: rond 497 af op honderdtallen en reken dan uit.
     - **Antwoord:** 2500  (controle: ok)
     - **Fout-hints (Claude):** 2485 → Precies uitgerekend. Hier vragen we de schatting met het ronde getal. · 250 → 500 × 5: tel de nullen goed. · 505 → 5 dozen van elk ongeveer 500: dat is een keersom.
     - **Uitleg (Claude):** 497 is bijna 500. 500 × 5 = 2500. Precies is het 2485, dus de schatting klopt goed.
@@ -343,8 +345,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Tel 3 en 11 bij elkaar op → Een verschil is hoeveel het gestegen is. Wordt de uitkomst dan groter of juist kleiner dan 11? · Neem het getal 11 over als verschil → De ochtendtemperatuur was niet 0 graden. Die moet je meenemen als je het verschil uitrekent.
     - **Uitleg (Claude):** Het verschil vind je door de laagste temperatuur van de hoogste af te trekken. 11 min 3 is 8. De temperatuur is dus 8 graden gestegen.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoeveel graden warmer: de vraag gaat over het verschil tussen de twee temperaturen.
+- **Hint 2 (te schrijven):** Het verschil tussen twee getallen vind je door het kleinste van het grootste af te halen.
+- **Ouderzin:** Je kind kiest hoe je een verschil uitrekent: hoeveel graden is het warmer geworden?
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal overgenomen` (Neem het getal 11 over als verschil) → Dat is de temperatuur van 's middags. Hoeveel graden is dat meer dan 's ochtends?  [nieuw]
+  - `opgeteld` (Tel 3 en 11 bij elkaar op) → Bij elkaar optellen geeft geen verschil. Hoeveel graden is het 's middags meer dan 's ochtends?  [nieuw]
+  - `andere fout` (andere fout) → Je zoekt het verschil tussen de twee temperaturen.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 13: Bas koopt # [ding] sap van €#. Hij krijgt €# als antwoord. Wat laat zien dat dit niet klopt?
 
@@ -361,8 +369,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Het antwoord moet ongeveer €1200 zijn → Schat eerst met een rond bedrag: hoeveel is 6 keer 2 euro ongeveer? · Het klopt, want 6 × 1,99 is bijna 120 → Kijk goed waar de komma staat in €1,99. Eén pak kost nog geen 2 euro.
     - **Uitleg (Claude):** €1,99 is bijna €2. Zes keer 2 euro is ongeveer 12 euro. Een uitkomst van meer dan 100 euro kan dus niet kloppen.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Schat het antwoord met ronde getallen. Dan zie je snel of het antwoord van Bas kan kloppen.
+- **Hint 2 (te schrijven):** Rond de prijs af op hele euro's. Doe dat keer het aantal. Ligt het antwoord van Bas daar dichtbij?
+- **Ouderzin:** Je kind controleert een antwoord met een schatting: ronde prijs keer het aantal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `komma vergeten` (Het klopt, want 6 × 1,99 is bijna 120) → Kijk naar de komma in de prijs. Rond de prijs af op hele euro's en doe dat keer het aantal: kom je dan ook boven de honderd euro?  [nieuw]
+  - `tien keer te groot` (Het antwoord moet ongeveer €1200 zijn) → Dat is nog veel meer. Rond de prijs af op hele euro's en doe dat keer het aantal: hoeveel euro is dat ongeveer?  [nieuw]
+  - `andere fout` (andere fout) → Rond de prijs af op hele euro's en doe dat keer het aantal.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 14: Bij een spel krijg je # [ding] voor elk doelpunt. Voor elke misser gaat er # [ding] af. Hoe reken je de score uit?
 
@@ -379,8 +393,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Doelpunten plus 3, dan het aantal missers eraf. → Elk doelpunt levert 3 punten op. Hoe reken je hetzelfde aantal punten per keer? · Doelpunten maal 3, dan het aantal missers erbij. → Een misser is niet goed voor je score. Wordt het totaal dan groter of kleiner?
     - **Uitleg (Claude):** Per doelpunt krijg je 3 punten, dus vermenigvuldig je het aantal doelpunten met 3. Elke misser kost 1 punt. Die missers haal je van het totaal af.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Elk doelpunt levert evenveel op. Elke misser kost iets.
+- **Hint 2 (te schrijven):** Doe het aantal doelpunten keer wat één doelpunt oplevert. Haal daarna af wat de missers kosten.
+- **Ouderzin:** Je kind kiest hoe je een score uitrekent: doelpunten keer wat ze opleveren, dan de missers eraf.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `plus in plaats van keer` (Doelpunten plus 3, dan het aantal missers eraf.) → Elk doelpunt levert evenveel op. Heb je dat voor elk doelpunt meegeteld, of maar één keer?  [nieuw]
+  - `missers erbij` (Doelpunten maal 3, dan het aantal missers erbij.) → Een misser kost iets. Komt dat bij de score of gaat het eraf?  [nieuw]
+  - `andere fout` (andere fout) → Reken eerst uit wat alle doelpunten samen opleveren. Wat gebeurt er dan met de missers?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 15: Bram heeft # [ding] met # [ding]. Hij rekent uit dat er # [ding] zijn. Wat laat zien dat dit niet kan?
 
@@ -397,8 +417,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Niets, 12 en 15 samen is inderdaad 27 → Lees nog eens: er zijn 12 zakjes met elk 15 knikkers. Wat doe je dan met die getallen? · Hij had 12 : 15 moeten doen → Delen maakt het aantal juist kleiner. Bij groepen van evenveel spullen kies je iets anders.
     - **Uitleg (Claude):** Bij 12 groepen van 15 hoort een vermenigvuldiging. Het antwoord moet dus veel groter zijn dan 15. Een snelle schatting laat zien dat 27 onmogelijk is.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoeveel zitten er in één groep? En hoeveel van die groepen heeft Bram?
+- **Hint 2 (te schrijven):** Doe het aantal groepen keer het aantal in één groep: dat is het totaal. Is dat veel meer dan het antwoord van Bram?
+- **Ouderzin:** Je kind controleert of een antwoord kan: heeft één groep er al zoveel, dan hebben alle groepen samen er veel meer.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `opgeteld` (Niets, 12 en 15 samen is inderdaad 27) → Elke groep heeft er evenveel. Is het totaal dan het aantal groepen plus het aantal in één groep?  [nieuw]
+  - `gedeeld` (Hij had 12 : 15 moeten doen) → Met meer groepen wordt het totaal groter. Past delen daarbij?  [nieuw]
+  - `andere fout` (andere fout) → Hoeveel zitten er in één groep, en hoeveel groepen zijn er? Wat betekent dat voor het totaal?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 16: De trein vertrekt om #:# en komt aan om #:#. Hoe reken je handig uit hoe lang de reis duurt?
 
@@ -415,8 +441,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Trek 35 van 10 af en tel de uren erbij. → Een uur heeft 60 minuten, niet 100. Werk in stappen naar een heel uur toe. · Tel de twee tijden bij elkaar op. → Je zoekt het verschil tussen vertrek en aankomst, niet een som.
     - **Uitleg (Claude):** Bij tijd reken je handig met stappen naar een heel uur. Van 14:35 naar 15:00 is 25 minuten. Daarna nog 1 uur en 10 minuten, samen 1 uur en 35 minuten.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een uur heeft zestig minuten, geen honderd. Daarom reken je met tijden in sprongen.
+- **Hint 2 (te schrijven):** Spring eerst van de vertrektijd naar het volgende hele uur. Spring dan verder naar de aankomsttijd. Tel de sprongen bij elkaar op.
+- **Ouderzin:** Je kind kiest een handige aanpak voor een tijdsduur: eerst naar het hele uur, dan verder.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `minuten afgetrokken` (Trek 35 van 10 af en tel de uren erbij.) → De minuten bij aankomst zijn minder dan bij vertrek. Zo aftrekken loopt vast, want een uur heeft zestig minuten. Spring liever eerst naar het volgende hele uur.  [nieuw]
+  - `tijden opgeteld` (Tel de twee tijden bij elkaar op.) → Twee tijden bij elkaar optellen geeft geen duur. Hoe lang is het van de vertrektijd tot de aankomsttijd?  [nieuw]
+  - `andere fout` (andere fout) → Spring van de vertrektijd naar het volgende hele uur, en dan naar de aankomsttijd.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 17: Een [ding] is # m lang en # m breed. Fleur wil weten hoeveel vierkante meter het bad is en rekent # + # + # + # = #. Wat is er fout aan haar aanpak?
 
@@ -433,8 +465,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Niets, 70 vierkante meter klopt → Denk aan tegels van 1 bij 1 meter op de bodem. Hoe tel je die het handigst? · Ze moest 25 + 10 doen en dat verdubbelen → Dat geeft weer de lengte van de rand. De vraag gaat over het vlak binnen de rand.
     - **Uitleg (Claude):** Rondom optellen geeft de omtrek. Voor oppervlakte doe je lengte keer breedte: 25 × 10 = 250. De uitkomst is dus 250 vierkante meter.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Vierkante meters gaan over de oppervlakte. Wat rekende Fleur uit: de oppervlakte of de lengte rondom?
+- **Hint 2 (te schrijven):** Alle zijden bij elkaar optellen geeft de omtrek: de lengte rondom. Vierkante meters gaan over de oppervlakte: lengte keer breedte.
+- **Ouderzin:** Je kind ziet het verschil tussen omtrek (de lengte rondom) en oppervlakte (lengte keer breedte).
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `omtrek goedgekeurd` (Niets, 70 vierkante meter klopt) → Fleur telde alle zijden bij elkaar op. Is dat de oppervlakte of de lengte rondom?  [nieuw]
+  - `ook de omtrek` (Ze moest 25 + 10 doen en dat verdubbelen) → Dat is dezelfde som anders opgeschreven: ook dat geeft de lengte rondom. Vierkante meters gaan over de oppervlakte.  [nieuw]
+  - `andere fout` (andere fout) → Wat geeft alle zijden bij elkaar optellen: de oppervlakte of de lengte rondom?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 18: Een [ding] is # m lang en # m breed. Je legt tegels van # vierkante meter. Hoe reken je uit hoeveel tegels je nodig hebt?
 
@@ -451,8 +489,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Alle zijden bij elkaar optellen → Je legt tegels op de hele vloer, niet alleen langs de randen. Denk aan het vlak. · Lengte en breedte bij elkaar optellen → Tel eens hoeveel tegels er in één rij liggen en hoeveel rijen er zijn.
     - **Uitleg (Claude):** De vloer bestaat uit 3 rijen van 5 tegels. Dat zijn 5 keer 3 tegels. Bij een vlak vermenigvuldig je de lengte met de breedte.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** De tegels bedekken alles. Je zoekt dus de oppervlakte, niet de lengte rondom.
+- **Hint 2 (te schrijven):** Denk aan rijen tegels. Hoeveel tegels passen er in één rij, en hoeveel rijen zijn er? Doe die twee keer elkaar.
+- **Ouderzin:** Je kind kiest hoe je uitrekent hoeveel tegels er nodig zijn: de oppervlakte, lengte keer breedte.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `lengte plus breedte` (Lengte en breedte bij elkaar optellen) → Dan tel je maar één rij langs de lengte en één rij langs de breedte. De tegels moeten alles bedekken: hoeveel rijen tegels passen er?  [nieuw]
+  - `omtrek` (Alle zijden bij elkaar optellen) → Alle zijden bij elkaar optellen geeft de omtrek: de lengte rondom. Tegels bedekken de oppervlakte.  [nieuw]
+  - `andere fout` (andere fout) → Tegels bedekken de oppervlakte. Hoeveel rijen zijn er, en hoeveel tegels in één rij?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 19: Een [ding] is # m lang en # m breed. Joep wil weten hoeveel meter hek hij nodig heeft en rekent # × # = #. Wat is er fout aan zijn aanpak?
 
@@ -469,10 +513,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Hij had 8 × 5 × 2 moeten doen → Een hek gaat langs alle vier de zijden. Keersommen horen bij het vlak binnen de tuin. · Hij had 8 + 5 moeten doen → Je bent nu maar langs twee zijden gelopen. Hoeveel zijden heeft de tuin?
     - **Uitleg (Claude):** Voor een hek tel je alle zijden op: 8 + 5 + 8 + 5 = 26 meter. Met 8 × 5 bereken je hoeveel vierkante meter de tuin groot is. Dat is iets anders.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een hek staat rondom. Je zoekt dus de omtrek: de lengte rondom.
+- **Hint 2 (te schrijven):** De omtrek is alle zijden bij elkaar opgeteld. Lengte keer breedte is de oppervlakte. Wat rekende Joep uit?
+- **Ouderzin:** Je kind ziet het verschil tussen omtrek (de lengte rondom) en oppervlakte (lengte keer breedte).
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `twee zijden` (Hij had 8 + 5 moeten doen) → Dat zijn maar twee zijden. Een hek gaat helemaal rondom, langs alle vier de zijden.  [nieuw]
+  - `oppervlakte verdubbeld` (Hij had 8 × 5 × 2 moeten doen) → Lengte keer breedte blijft een oppervlakte, ook als je het verdubbelt. Voor een hek tel je de zijden rondom bij elkaar op.  [nieuw]
+  - `andere fout` (andere fout) → Een hek staat rondom. Zoekt Joep de omtrek of de oppervlakte?  [nieuw]
+- Status: hints klaar
 
-## Somtype 20: Een broek van €# wordt # procent goedkoper. Rik rekent uit dat de broek nu €# [ding]. Wat ging er mis?
+## Somtype 20: Een broek van €# wordt # procent goedkoper. Rik rekent uit dat de broek nu €# kost. Wat ging er mis?
 
 - Sleutel: nrOrigineel **13** · somtypeOrigineel “Een broek van €# wordt # procent goedkoper. Rik rekent uit dat de broek nu €# [ding]. Wat ging er mis?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W3 (1) · regel: G8-W3-aanpak
@@ -487,10 +537,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Niets, 10 procent van €40 is €10 → Procent betekent 'van de honderd'. Reken eerst uit wat 10 procent van 40 is. · Hij moest €10 bij de prijs optellen → Goedkoper worden betekent dat de prijs daalt. Wat doe je dan met het kortingsbedrag?
     - **Uitleg (Claude):** 10 procent van €40 is €4, niet €10. De nieuwe prijs is dus €36. Rik verwarde procenten met euro's.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent betekent: van elke honderd. Hoeveel euro is de korting bij deze prijs?
+- **Hint 2 (te schrijven):** Reken uit hoeveel euro de korting is: deel de prijs door honderd en doe dat keer het procent. Haal dat bedrag van de prijs af. Komt er hetzelfde uit als bij Rik?
+- **Ouderzin:** Je kind ziet het verschil tussen een procent en een bedrag in euro.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `procent als euro` (Niets, 10 procent van €40 is €10) → Reken het na: deel de prijs door honderd en doe dat keer het procent. Is de korting echt zoveel euro?  [nieuw]
+  - `erbij` (Hij moest €10 bij de prijs optellen) → De broek wordt goedkoper. Gaat de korting eraf of komt die erbij?  [nieuw]
+  - `andere fout` (andere fout) → Reken uit hoeveel euro de korting is, en haal dat van de prijs af.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een broek van €# wordt # procent goedkoper. Rik rekent uit dat de broek nu €# [ding]. Wat ging er mis?'. Nakijken of ze nog passen.
+- Status: hints klaar
 
-## Somtype 21: Een jas van €# [ding] # procent in prijs omlaag. Milou rekent uit dat de jas nu €# [ding]. Wat ging er mis?
+## Somtype 21: Een jas van €# gaat # procent in prijs omlaag. Milou rekent uit dat de jas nu €# kost. Wat ging er mis?
 
 - Sleutel: nrOrigineel **14** · somtypeOrigineel “Een jas van €# [ding] # procent in prijs omlaag. Milou rekent uit dat de jas nu €# [ding]. Wat ging er mis?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W3 (1) · regel: G8-W3-aanpak
@@ -505,8 +562,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Ze moest 25 procent van 15 nemen → Het percentage hoort bij de oude prijs van de jas, niet bij je tussenantwoord. · De jas kost nu €35 → Trek je korting netjes van de oude prijs af en reken het verschil nog eens na.
     - **Uitleg (Claude):** 25 procent van 60 is 15. Dat bedrag gaat eraf, dus de jas kost 60 − 15 = 45 euro. Lees na het rekenen altijd terug wat er gevraagd werd.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Kijk goed wat Milou uitrekende: de korting of de nieuwe prijs?
+- **Hint 2 (te schrijven):** De korting is het bedrag dat eraf gaat. De nieuwe prijs is de oude prijs min de korting. Welke van de twee rekende Milou uit?
+- **Ouderzin:** Je kind ziet het verschil tussen de korting en de nieuwe prijs.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `procent van de uitkomst` (Ze moest 25 procent van 15 nemen) → Het procent hoort bij de oude prijs. Waarvan neem je het procent?  [nieuw]
+  - `nieuwe prijs` (De jas kost nu €35) → Reken het na. Het procent is geen bedrag in euro: hoeveel euro is de korting? Haal die van de oude prijs af. Komt daar dit bedrag uit?  [nieuw]
+  - `andere fout` (andere fout) → Is wat Milou uitrekende de korting of de nieuwe prijs?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een jas van €# [ding] # procent in prijs omlaag. Milou rekent uit dat de jas nu €# [ding]. Wat ging er mis?'. Nakijken of ze nog passen.
+- Status: hints klaar
 
 ## Somtype 22: Een recept voor # [ding] vraagt # gram rijst. Daan wil koken voor # [ding] en pakt # gram. Klopt zijn aanpak?
 
@@ -523,8 +587,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Nee, hij moest 300 + 8 nemen → Bij een recept groeien de personen en de grammen in dezelfde verhouding mee. · Nee, hij moest 304 gram nemen → Kijk hoeveel keer zo groot de groep wordt en doe met de rijst hetzelfde.
     - **Uitleg (Claude):** Van 4 naar 8 personen is twee keer zo veel. Dan gaat ook de rijst twee keer zo veel: 2 × 300 is 600 gram. De verhouding blijft gelijk.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een recept hoort bij meer mensen ook meer rijst: hoeveel keer zoveel mensen worden het?
+- **Hint 2 (te schrijven):** Hoeveel keer zoveel mensen worden het? Dan heb je evenveel keer zoveel rijst nodig. Deed Daan dat?
+- **Ouderzin:** Je kind controleert een aanpak met verhoudingen: twee keer zoveel mensen is twee keer zoveel rijst.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `mensen erbij` (Nee, hij moest 304 gram nemen) → Dan krijgt elke extra persoon maar één gram rijst. Hoeveel keer zoveel mensen worden het, en hoeveel rijst hoort daarbij?  [nieuw]
+  - `mensen bij de grammen` (Nee, hij moest 300 + 8 nemen) → Dan tel je het aantal mensen bij de grammen op. Hoeveel keer zoveel mensen worden het?  [nieuw]
+  - `andere fout` (andere fout) → Hoeveel keer zoveel mensen worden het? Hoort daar evenveel keer zoveel rijst bij?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 23: Een recept voor # [ding] vraagt # gram rijst. Hoe reken je uit hoeveel rijst je nodig hebt voor # [ding]?
 
@@ -541,8 +611,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Tel 200 en 6 bij elkaar op → Personen en grammen zijn verschillende dingen. Zoek eerst hoeveel rijst één persoon nodig heeft. · Doe 200 keer 6 → Zes personen eten niet zes keer zoveel als vier personen. Reken eerst per persoon.
     - **Uitleg (Claude):** Eén persoon krijgt 200 gedeeld door 4, dus 50 gram. Zes personen krijgen dan 6 keer 50 gram. Via één persoon rekenen werkt altijd.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Reken eerst uit hoeveel rijst één persoon nodig heeft.
+- **Hint 2 (te schrijven):** Deel de rijst door het aantal mensen van het recept: dat is voor één persoon. Doe dat keer het aantal mensen waarvoor je kookt.
+- **Ouderzin:** Je kind kiest de aanpak via één: eerst hoeveel rijst voor één persoon, dan voor iedereen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `mensen bij de grammen` (Tel 200 en 6 bij elkaar op) → Dan tel je mensen bij grammen op. Hoeveel rijst is er voor één persoon?  [nieuw]
+  - `hele recept per persoon` (Doe 200 keer 6) → Dan krijgt elke persoon de rijst van het hele recept. Het recept is al voor meer mensen: hoeveel is er voor één persoon?  [nieuw]
+  - `andere fout` (andere fout) → Hoeveel rijst heeft één persoon nodig?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 24: Een stadion heeft # [ding] met # [ding]. Anne schat vooraf ongeveer # [ding] en rekent daarna precies # uit. Wat zegt dit over haar aanpak?
 
@@ -559,8 +635,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Ze rekende fout, want het moet 8000 zijn → Een schatting is een ruwe benadering. Die hoeft niet precies gelijk te zijn aan de echte uitkomst. · Haar schatting was fout, want 4 × 2000 is 800 → Reken 4 × 2000 nog eens rustig na en let op het aantal nullen.
     - **Uitleg (Claude):** 1980 is bijna 2000 en 4 × 2000 is 8000. De echte uitkomst 7920 ligt daar vlak onder. De schatting laat dus zien dat het antwoord klopt.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een schatting is ongeveer. Ligt het precieze antwoord dicht bij de schatting?
+- **Hint 2 (te schrijven):** Reken de schatting na met ronde getallen. Kijk dan hoe ver het precieze antwoord ervan af ligt. Is dat weinig, dan past de schatting.
+- **Ouderzin:** Je kind beoordeelt een schatting: een schatting hoeft niet precies te kloppen, wel ongeveer.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `nul vergeten` (Haar schatting was fout, want 4 × 2000 is 800) → Reken het na en tel de nullen. Hoeveel nullen heeft het ronde getal, en hoeveel heeft de uitkomst?  [nieuw]
+  - `schatting als antwoord` (Ze rekende fout, want het moet 8000 zijn) → Een schatting is ongeveer, niet precies. Het precieze antwoord mag een beetje van de schatting afwijken.  [nieuw]
+  - `andere fout` (andere fout) → Ligt het precieze antwoord dicht bij de schatting?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 25: Eva rekent # : # uit en krijgt #. Hoe kan ze snel controleren of dit klopt?
 
@@ -577,10 +659,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 63 + 7 uitrekenen en kijken of het klopt → Optellen is niet de omgekeerde bewerking van delen. Welke som maakt delen ongedaan? · Het antwoord nog een keer overschrijven → Overschrijven laat een rekenfout gewoon staan. Je hebt een echte controlesom nodig.
     - **Uitleg (Claude):** Delen controleer je met vermenigvuldigen. 7 × 8 is 56 en dat is niet 63, dus het antwoord klopt niet. Zo vind je je fout meteen.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een deling controleer je met de omgekeerde som.
+- **Hint 2 (te schrijven):** Gedeeld door en keer horen bij elkaar. Doe het antwoord keer het getal waardoor je deelt. Komt het getal eruit dat je deelde?
+- **Ouderzin:** Je kind controleert een deelsom met de omgekeerde keersom.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `overschrijven` (Het antwoord nog een keer overschrijven) → Overschrijven controleert niets: een fout schrijf je zo ook over. Welke som is het omgekeerde van gedeeld door?  [nieuw]
+  - `plus` (63 + 7 uitrekenen en kijken of het klopt) → Plus is niet het omgekeerde van gedeeld door. Welke som hoort andersom bij gedeeld door?  [nieuw]
+  - `andere fout` (andere fout) → Wat is het omgekeerde van gedeeld door?  [nieuw]
+- Status: hints klaar
 
-## Somtype 26: Fenna heeft # + # = # [ding]. Hoe kan zij haar antwoord het beste controleren?
+## Somtype 26: Fenna heeft # + # = # uitgerekend. Hoe kan zij haar antwoord het beste controleren?
 
 - Sleutel: nrOrigineel **19** · somtypeOrigineel “Fenna heeft # + # = # [ding]. Hoe kan zij haar antwoord het beste controleren?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W3 (1) · regel: G8-W3-aanpak
@@ -595,8 +683,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** De som nog een keer precies zo uitrekenen → Als je dezelfde weg nog eens loopt, maak je vaak dezelfde fout. Zoek een andere weg terug. · 412 + 178 uitrekenen → Om terug te gaan naar het begin moet je de bewerking omkeren.
     - **Uitleg (Claude):** Optellen en aftrekken zijn elkaars omgekeerde. Haal je 178 weer van 412 af, dan hoor je op 234 uit te komen. Zo controleer je via een andere weg.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een plussom controleer je het best met de omgekeerde som.
+- **Hint 2 (te schrijven):** Min is het omgekeerde van plus. Haal van de uitkomst een van de twee getallen af. Komt het andere getal eruit?
+- **Ouderzin:** Je kind controleert een plussom met de omgekeerde minsom.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `nog een keer hetzelfde` (De som nog een keer precies zo uitrekenen) → Dan maak je misschien dezelfde fout nog eens. Met de omgekeerde som controleer je op een andere manier.  [nieuw]
+  - `nog meer erbij` (412 + 178 uitrekenen) → Nog meer erbij doen controleert de plussom niet. Wat is het omgekeerde van plus?  [nieuw]
+  - `andere fout` (andere fout) → Wat is het omgekeerde van plus?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Fenna heeft # + # = # [ding]. Hoe kan zij haar antwoord het beste controleren?'. Nakijken of ze nog passen.
+- Status: hints klaar
 
 ## Somtype 27: Hoe zie je of een getal deelbaar is door #?
 
@@ -613,8 +708,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Kijk of het eerste cijfer 0 of 5 is → Probeer je stap eens bij 53 en bij 25. Welk cijfer verraadt de deling door 5? · Kijk of het getal even is → Probeer je stap eens bij 12 en bij 15. Klopt hij dan nog?
     - **Uitleg (Claude):** Alle veelvouden van 5 eindigen op 0 of 5. Het laatste cijfer bepaalt dus het antwoord. Deze stap werkt bij elk getal.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Schrijf een paar uitkomsten uit de tafel van dat getal op. Wat zie je steeds terugkomen?
+- **Hint 2 (te schrijven):** Kijk naar het cijfer helemaal rechts, bij de eenheden. Op welke cijfers eindigen de uitkomsten van die tafel?
+- **Ouderzin:** Je kind weet hoe je ziet of een getal in de tafel van vijf zit: kijk naar het cijfer van de eenheden.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `cijfer links` (Kijk of het eerste cijfer 0 of 5 is) → De uitkomsten van de tafel beginnen met allerlei cijfers. Kijk naar het cijfer helemaal rechts, bij de eenheden.  [nieuw]
+  - `even` (Kijk of het getal even is) → In die tafel zitten ook oneven getallen, en niet elk even getal zit erin. Kijk naar het cijfer helemaal rechts.  [nieuw]
+  - `andere fout` (andere fout) → Kijk naar het cijfer helemaal rechts. Op welke cijfers eindigt de tafel?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 28: Hoe zie je of een getal even is?
 
@@ -631,10 +732,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Kijk of het eerste cijfer 0, 2, 4, 6 of 8 is. → Bij even en oneven telt alleen het cijfer op de plaats van de eenheden. · Kijk of je het getal door 3 kunt delen. → Even betekent dat je het eerlijk in twee gelijke delen kunt splitsen.
     - **Uitleg (Claude):** Een even getal is deelbaar door 2. Daarvoor hoef je alleen naar het cijfer van de eenheden te kijken. Is dat 0, 2, 4, 6 of 8, dan is het getal even.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Even getallen zitten in de tafel van twee: je kunt ze eerlijk in tweeën verdelen.
+- **Hint 2 (te schrijven):** Kijk naar het cijfer helemaal rechts, bij de eenheden. Is dat cijfer even, dan is het hele getal even.
+- **Ouderzin:** Je kind weet hoe je ziet of een getal even is: kijk naar het cijfer van de eenheden.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `cijfer links` (Kijk of het eerste cijfer 0, 2, 4, 6 of 8 is.) → Het cijfer helemaal links zegt niet of een getal even is. Kijk naar het cijfer helemaal rechts.  [nieuw]
+  - `tafel van drie` (Kijk of je het getal door 3 kunt delen.) → Even betekent: in de tafel van twee, niet in de tafel van drie.  [nieuw]
+  - `andere fout` (andere fout) → Even betekent: in de tafel van twee. Kijk naar het cijfer helemaal rechts.  [nieuw]
+- Status: hints klaar
 
-## Somtype 29: In een grafiek staat de temperatuur per dag. Ruben leest bij woensdag # graden af, maar hij keek per ongeluk bij donderdag. Hoe voorkom je zo'n fout?
+## Somtype 29: In een staafgrafiek staat de temperatuur per dag. Ruben leest bij woensdag # graden af, maar hij keek per ongeluk bij donderdag. Hoe voorkom je zo'n fout?
 
 - Sleutel: nrOrigineel **22** · somtypeOrigineel “In een grafiek staat de temperatuur per dag. Ruben leest bij woensdag # graden af, maar hij keek per ongeluk bij donderdag. Hoe voorkom je zo'n fout?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W3 (1) · regel: G8-W3-aanpak
@@ -643,14 +750,21 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “De vraag gaat over één bepaalde dag. De hoogste staaf hoort daar niet altijd bij.”)
 - Voorbeelden:
   - `G8-GET-E02-claude-bank-030` (Claude W3, ai, niveau 1 → basis)
-    - **Opgave:** In een grafiek staat de temperatuur per dag. Ruben leest bij woensdag 14 graden af, maar hij keek per ongeluk bij donderdag. Hoe voorkom je zo'n fout?
+    - **Opgave:** In een staafgrafiek staat de temperatuur per dag. Ruben leest bij woensdag 14 graden af, maar hij keek per ongeluk bij donderdag. Hoe voorkom je zo'n fout?
     - **Opties:** A) Altijd de hoogste staaf kiezen · B) De getallen links bij elkaar optellen · C) Eerst de naam onder de staaf lezen
     - **Antwoord:** Eerst de naam onder de staaf lezen  (controle: n.v.t.)
     - **Fout-hints (Claude):** Altijd de hoogste staaf kiezen → De vraag gaat over één bepaalde dag. De hoogste staaf hoort daar niet altijd bij. · De getallen links bij elkaar optellen → De getallen links vormen de schaal. Je hoeft ze niet op te tellen om één waarde af te lezen.
     - **Uitleg (Claude):** Onder elke staaf staat bij welke dag hij hoort. Zoek eerst de juiste dag en ga dan omhoog naar de waarde. Zo lees je de goede staaf af.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Ruben keek bij de verkeerde dag. Hoe weet je bij welke dag een staaf hoort?
+- **Hint 2 (te schrijven):** Onder elke staaf staat bij welke dag die hoort. Lees dat eerst, en kijk dan pas hoe hoog de staaf is.
+- **Ouderzin:** Je kind leert een grafiek nauwkeurig aflezen: eerst kijken bij welke dag een staaf hoort.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `hoogste staaf` (Altijd de hoogste staaf kiezen) → De hoogste staaf hoort bij één dag, en dat hoeft woensdag niet te zijn. Hoe zie je bij welke dag een staaf hoort?  [nieuw]
+  - `schaal opgeteld` (De getallen links bij elkaar optellen) → De getallen langs de kant zijn de schaal om af te lezen. Hoe zie je bij welke dag een staaf hoort?  [nieuw]
+  - `andere fout` (andere fout) → Hoe zie je bij welke dag een staaf hoort?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een grafiek staat de temperatuur per dag. Ruben leest bij woensdag # graden af, maar hij keek per ongeluk bij donderdag. Hoe voorkom je zo'n fout?'. Nakijken of ze nog passen.
+- Status: hints klaar
 
 ## Somtype 30: In een staafgrafiek staat het aantal bezoekers per dag. Hoe vind je het totaal van de hele week?
 
@@ -667,8 +781,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Lees de hoogste staaf af en doe die keer 7 → Niet elke dag kwamen er evenveel bezoekers. Kijk naar alle staven apart. · Trek de laagste staaf van de hoogste af → Zo vind je een verschil, geen totaal. Wat doe je met alle dagen samen?
     - **Uitleg (Claude):** Elke staaf hoort bij één dag. Voor het totaal heb je alle dagen nodig. Je leest elke staaf af en telt de getallen bij elkaar op.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Het totaal van de week is alle dagen bij elkaar.
+- **Hint 2 (te schrijven):** Lees bij elke dag af hoe hoog de staaf is. Tel al die aantallen bij elkaar op.
+- **Ouderzin:** Je kind leest een staafgrafiek af en telt de waarden van alle dagen op.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `hoogste keer de week` (Lees de hoogste staaf af en doe die keer 7) → Dan doe je alsof het elke dag even druk was als op de drukste dag. Lees elke staaf apart af.  [nieuw]
+  - `verschil` (Trek de laagste staaf van de hoogste af) → Dat is het verschil tussen de drukste en de rustigste dag, niet het totaal.  [nieuw]
+  - `andere fout` (andere fout) → Het totaal van de week is alle dagen bij elkaar.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 31: In een winkel is er op alles # procent korting. Hoe reken je de nieuwe prijs uit?
 
@@ -685,10 +805,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Bereken 25 procent van de prijs en tel dat erbij op. → Met korting betaal je minder dan eerst. Gaat de prijs dan omhoog of omlaag? · Bereken 25 procent van de korting en trek dat eraf. → Let op waarvan je het percentage neemt. Waarvan gaat de 25 procent af?
     - **Uitleg (Claude):** De korting hoort bij de oude prijs, dus daarvan neem je 25 procent. Dat bedrag haal je van de oude prijs af. Zo houd je de nieuwe prijs over.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Korting gaat van de prijs af. Waarvan neem je het procent?
+- **Hint 2 (te schrijven):** Reken het procent uit van de oude prijs: dat is de korting in euro. Haal die van de oude prijs af.
+- **Ouderzin:** Je kind kiest hoe je een prijs met korting uitrekent: het procent van de prijs, en dat eraf.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `procent van de korting` (Bereken 25 procent van de korting en trek dat eraf.) → De korting weet je nog niet: die reken je juist uit. Het procent hoort bij de prijs.  [nieuw]
+  - `erbij` (Bereken 25 procent van de prijs en tel dat erbij op.) → Met korting wordt het goedkoper. Gaat de korting eraf of komt die erbij?  [nieuw]
+  - `andere fout` (andere fout) → Neem het procent van de prijs. Gaat dat eraf of erbij?  [nieuw]
+- Status: hints klaar
 
-## Somtype 32: In groep # [ding] # [ding]. # procent doet mee aan de sportdag. Hoe reken je uit hoeveel leerlingen dat zijn?
+## Somtype 32: In groep # zitten # leerlingen. # procent doet mee aan de sportdag. Hoe reken je uit hoeveel leerlingen dat zijn?
 
 - Sleutel: nrOrigineel **25** · somtypeOrigineel “In groep # [ding] # [ding]. # procent doet mee aan de sportdag. Hoe reken je uit hoeveel leerlingen dat zijn?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W6 (1) · regel: G8-W6-aanpak
@@ -703,8 +829,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Trek 15 van 40 af → Procenten zijn delen van het geheel, geen aantal dat je eraf haalt. Zoek eerst 1 procent. · Deel 15 door 100 en doe dat keer 40 procent → Let goed op waarvan je het deel wilt weten. Van welk getal bereken je hier de procenten?
     - **Uitleg (Claude):** Eén procent van 40 is 40 gedeeld door 100, dus 0,4. Vijftien procent is 15 keer 0,4. Dat zijn 6 leerlingen.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent betekent: van elke honderd. Alle leerlingen samen zijn honderd procent.
+- **Hint 2 (te schrijven):** Reken uit hoeveel leerlingen één procent is: deel het aantal leerlingen door honderd. Doe dat keer het procent.
+- **Ouderzin:** Je kind kiest hoe je een procent van een aantal uitrekent: eerst één procent, dan keer het procent.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `procent als uitkomst` (Deel 15 door 100 en doe dat keer 40 procent) → Kijk naar het woord procent aan het eind: zo krijg je weer een procent, geen aantal leerlingen. Hoeveel leerlingen is één procent?  [nieuw]
+  - `afgetrokken` (Trek 15 van 40 af) → Het procent is geen aantal leerlingen. Hoeveel leerlingen is één procent van alle leerlingen?  [nieuw]
+  - `andere fout` (andere fout) → Hoeveel leerlingen is één procent? Doe dat keer het procent.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In groep # [ding] # [ding]. # procent doet mee aan de sportdag. Hoe reken je uit hoeveel leerlingen dat zijn?'. Nakijken of ze nog passen.
+- Status: hints klaar
 
 ## Somtype 33: Je doet # kg appels in zakjes van # gram. Je wilt weten hoeveel zakjes dat worden. Wat doe je eerst?
 
@@ -721,8 +854,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Reken 500 gram om naar 5 kg. → Kijk goed hoeveel gram er in 1 kg gaat. Wordt het getal dan groter of kleiner? · Deel 2,5 direct door 500. → Je kunt pas rekenen als beide getallen dezelfde eenheid hebben.
     - **Uitleg (Claude):** Je kunt alleen rekenen met dezelfde eenheid. In 1 kg zitten 1000 gram, dus 2,5 kg is 2500 gram. Daarna deel je 2500 door 500.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** De ene maat staat in kilogram, de andere in gram. Maak eerst van allebei dezelfde maat.
+- **Hint 2 (te schrijven):** Eén kilogram is duizend gram. Reken de kilogrammen om naar grammen, dan kun je delen.
+- **Ouderzin:** Je kind ziet dat je eerst dezelfde maat nodig hebt: kilogram omrekenen naar gram.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `direct delen` (Deel 2,5 direct door 500.) → Kilogram en gram zijn verschillende maten. Maak eerst van allebei dezelfde maat.  [nieuw]
+  - `verkeerd omgerekend` (Reken 500 gram om naar 5 kg.) → Reken het na: duizend gram is één kilogram. Dan is dit minder dan één kilogram.  [nieuw]
+  - `andere fout` (andere fout) → Maak eerst van allebei dezelfde maat: één kilogram is duizend gram.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 34: Je fietst # [ding] in # uur. Hoe reken je uit hoeveel kilometer je in # uur fietst?
 
@@ -739,8 +878,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Vermenigvuldig 24 met 2 → In één uur fiets je minder ver dan in twee uur. Wordt je antwoord dan groter of kleiner? · Trek 2 van 24 af → Je verdeelt de kilometers over de uren. Welke bewerking hoort bij eerlijk verdelen?
     - **Uitleg (Claude):** Je wilt weten hoeveel kilometer je per uur aflegt. Je verdeelt 24 kilometer over 2 uur. 24 gedeeld door 2 is 12 kilometer per uur.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Elk uur fiets je even ver. Hoeveel kilometer is dat in één uur?
+- **Hint 2 (te schrijven):** Deel de kilometers door het aantal uren. Dan weet je hoeveel kilometer je in één uur fietst.
+- **Ouderzin:** Je kind kiest de aanpak via één: hoeveel kilometer in één uur.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `keer` (Vermenigvuldig 24 met 2) → Dan krijg je de kilometers van meer uren, niet van één uur.  [nieuw]
+  - `uren eraf` (Trek 2 van 24 af) → Je haalt dan uren van kilometers af. Elk uur fiets je even ver: hoeveel kilometer is dat in één uur?  [nieuw]
+  - `andere fout` (andere fout) → Elk uur fiets je even ver. Hoeveel kilometer is dat in één uur?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 35: Je hebt # [ding] en # [ding]. Hoe reken je uit hoeveel koekjes [wie] krijgt en hoeveel er overblijven?
 
@@ -757,8 +902,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Deel 50 door 8 en rond naar boven af → Je kunt geen koekje uitdelen dat er niet is. Wat gebeurt er met de koekjes die overblijven? · Trek 8 van 50 af, dat is het antwoord → Eerlijk verdelen over groepjes doe je niet met aftrekken. Welke bewerking hoort bij verdelen?
     - **Uitleg (Claude):** 50 gedeeld door 8 is 6, want 8 keer 6 is 48. Er blijven dan 2 koekjes over. Elk kind krijgt er 6 en er blijven er 2 liggen.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eerlijk verdelen is delen. Soms blijft er iets over.
+- **Hint 2 (te schrijven):** Deel het aantal koekjes door het aantal mensen. Het hele getal is wat ieder krijgt. Wat overblijft is de rest.
+- **Ouderzin:** Je kind kiest hoe je eerlijk verdeelt: delen, en kijken wat er overblijft.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `naar boven` (Deel 50 door 8 en rond naar boven af) → Naar boven afronden geeft koekjes die er niet zijn. De vraag wil ook weten hoeveel er overblijven: kijk naar de rest.  [nieuw]
+  - `afgetrokken` (Trek 8 van 50 af, dat is het antwoord) → Dan krijgt ieder maar één koekje. Bij eerlijk verdelen deel je het aantal koekjes door het aantal mensen.  [nieuw]
+  - `andere fout` (andere fout) → Eerlijk verdelen is delen. Hoeveel krijgt ieder, en wat blijft er over?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 36: Je hebt # [ding] en dozen voor # [ding]. Hoe reken je uit hoeveel volle dozen je kunt maken?
 
@@ -775,8 +926,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Deel 40 door 6 en rond het antwoord naar boven af. → Een doos telt alleen mee als hij helemaal vol is. Wat doe je met de eieren die overblijven? · Trek 6 van 40 af en noem dat het aantal dozen. → Je verdeelt de eieren in groepjes van 6. Welke bewerking maakt groepjes?
     - **Uitleg (Claude):** Je verdeelt de eieren in groepjes van 6, dus je deelt. 40 gedeeld door 6 is 6 met een rest. Alleen de volle dozen tellen, dus je gebruikt het hele aantal.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Alleen dozen die helemaal vol zijn tellen mee. Hoe vaak past de inhoud van één doos in het totaal?
+- **Hint 2 (te schrijven):** Deel het totaal door wat er in één doos past. Het hele getal is het aantal volle dozen. De rest past niet in een volle doos.
+- **Ouderzin:** Je kind kiest hoe je uitrekent hoeveel volle dozen het worden: delen en alleen het hele getal gebruiken.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `naar boven` (Deel 40 door 6 en rond het antwoord naar boven af.) → Dan tel je een doos mee die niet vol is. De vraag gaat over volle dozen.  [nieuw]
+  - `afgetrokken` (Trek 6 van 40 af en noem dat het aantal dozen.) → Dan haal je maar één doos eraf. Hoe vaak past de inhoud van één doos in het totaal?  [nieuw]
+  - `andere fout` (andere fout) → Hoe vaak past de inhoud van één doos in het totaal? Alleen volle dozen tellen.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 37: Je koopt # [ding] van # euro en # [ding] van # euro. Hoe reken je uit hoeveel je in totaal betaalt?
 
