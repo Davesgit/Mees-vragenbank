@@ -100,6 +100,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `een tiental te laag` (fout = antwoord - 10) → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.  [nieuw]
   - `een tiental te hoog` (fout = antwoord + 10) → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.  [nieuw]
+  - `twee tientallen te laag` (fout = antwoord - 20) → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.  [nieuw]
+  - `twee tientallen te hoog` (fout = antwoord + 20) → Dan past alles wel, maar het kan lager. De vraag is tot welk tiental de as minstens moet lopen.  [nieuw]
   - `andere fout` (andere fout) → Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.  [nieuw]
 - Status: hints klaar
 

@@ -103,12 +103,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Getallenruimte: 0–1.000 · type: meerkeuze
 - Uit de G6-park: 1 items
 - Denkfouten (Claude): None (1), getal-overgenomen (1)
-- Verschillende Claude-fout-hints: 2 (meest: “Kijk eens naar de twee getallen van deze schaal. Zijn ze verschillend of gelijk?”)
+- Claude-fout-hints: geen
 - Voorbeelden:
   - `G7-VERH-01-claude-bank-002` (Claude M19, ai, niveau 1 → basis)
     - **Opgave:** Op een tekening staat schaal 1 : 1. Wat weet je dan over de tekening?
-    - **Opties:** A) De tekening is 100 keer zo klein · B) De tekening is net zo groot als het echte voorwerp · C) De tekening is 2 keer zo klein
-    - **Antwoord:** De tekening is net zo groot als het echte voorwerp  (controle: n.v.t.)
+    - **Opties:** A) Het echte voorwerp is 100 keer zo groot · B) Het echte voorwerp is net zo groot als de tekening · C) Het echte voorwerp is 2 keer zo groot
+    - **Antwoord:** Het echte voorwerp is net zo groot als de tekening  (controle: n.v.t.)
     - **Fout-hints (Claude):** De tekening is 2 keer zo klein → Kijk eens naar de twee getallen van deze schaal. Zijn ze verschillend of gelijk? · De tekening is 100 keer zo klein → Je denkt aan de schaal 1 : 100. Lees nog eens welk getal hier achter de dubbele punt staat.
     - **Uitleg (Claude):** Bij schaal 1 : 1 hoort bij 1 cm op de tekening ook 1 cm in het echt. Er wordt dus niets kleiner of groter gemaakt. De tekening is precies even groot als het echte voorwerp.
 
@@ -116,8 +116,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Hoeveel centimeter echt hoort bij één centimeter op de tekening?
 - **Ouderzin:** Je kind leert wat een schaal (zoals op een plattegrond) betekent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `past bij een andere schaal` (De tekening is 100 keer zo klein) → Dat past bij een schaal van een op honderd. Kijk naar de getallen van deze schaal.  [nieuw]
-  - `past bij een andere schaal (twee)` (De tekening is 2 keer zo klein) → Dat past bij een schaal van een op twee. Kijk naar de getallen van deze schaal.  [nieuw]
+  - `past bij een andere schaal` (Het echte voorwerp is 100 keer zo groot) → Dat past bij een schaal van een op honderd. Kijk naar de getallen van deze schaal.  [nieuw]
+  - `past bij een andere schaal (twee)` (Het echte voorwerp is 2 keer zo groot) → Dat past bij een schaal van een op twee. Kijk naar de getallen van deze schaal.  [nieuw]
   - `andere fout` (andere fout) → Kijk naar de twee getallen van deze schaal.  [nieuw]
 - Status: hints klaar
 

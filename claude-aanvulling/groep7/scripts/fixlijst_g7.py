@@ -644,3 +644,21 @@ def _z667(it, slog):
 _pas_toe_v451 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_v451(it, slog); _z667(it, slog)
+
+# ---------- Z-#664 (review batch 5, deel Overzicht): VERH-01 #4 (nrO 4) opties «… keer zo klein» ----------
+# Didactiek: «keer zo klein» kan beter «keer kleiner» of «Het echte voorwerp is … keer zo groot». Gekozen: de tweede vorm, en alle drie de opties
+# met hetzelfde begin (anders valt het goede antwoord op door zijn andere zinsbouw). Alleen bank-002 (752cd1e4) heeft deze opties; #5 niet.
+# De literal-regels in de entry gaan mee (patch_batch5, blok Z-#664); hun teksten blijven.
+Z664 = {'De tekening is 100 keer zo klein': 'Het echte voorwerp is 100 keer zo groot',
+        'De tekening is 2 keer zo klein': 'Het echte voorwerp is 2 keer zo groot',
+        'De tekening is net zo groot als het echte voorwerp': 'Het echte voorwerp is net zo groot als de tekening'}
+def _z664(it, slog):
+    if not (it['bron'].get('claudeId') or '').startswith('752cd1e4'): return
+    e = it['extraVelden']; u = {h['fout']: h.get('uitleg') for h in e.get('claudeFoutHints') or []}
+    denk = [(Z664.get(d['fout'], d['fout']), d.get('denkfout'), u.get(d['fout'])) for d in e.get('claudeDenkfouten') or []]
+    opties = [Z664.get(o['tekst'], o['tekst']) for o in it['opties']]
+    _opties(it, slog, 'z664', "Z-#664: opties «keer zo klein» → «Het echte voorwerp is … keer zo groot» (review batch 5)", it['opgave'], opties,
+            Z664.get(it['antwoord'], it['antwoord']), denk)
+_pas_toe_z667 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_z667(it, slog); _z664(it, slog)
