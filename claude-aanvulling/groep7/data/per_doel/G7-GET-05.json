@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T12:16:26+0200",
+ "gegenereerdOp": "2026-10-08T12:36:53+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-GET-05",
  "bordtitel": "Breuken en de rekenmachine",
@@ -24374,14 +24374,14 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Reken uit: 6/8 − 3/8 = ? Typ een breuk.",
+   "opgave": "Reken uit: 6/8 − 4/8 = ? Typ een breuk.",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "3/8",
+   "antwoord": "2/8",
    "antwoordDetail": {
     "accept": [
-     "3/8"
+     "2/8"
     ],
     "gelijkwaardigeBreukGoed": true
    },
@@ -24390,16 +24390,16 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "3/16",
+     "fout": "2/16",
      "uitleg": "De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet."
     },
     {
      "stap": null,
-     "fout": "9/8",
+     "fout": "10/8",
      "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
     }
    ],
-   "foutHintsTekst": "3/16 → De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 9/8 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+   "foutHintsTekst": "2/16 → De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 10/8 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
    "ouderzin": "",
    "getallenruimte": "breuken (noemer tot 8)",
    "context": "laag",
@@ -24419,7 +24419,7 @@
    "bronVariant": "claude-bank:B8:1594b165-3094-47b9-85c5-f96eeecd9c43",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "6/8 − 3/8",
+    "claudeKaleSom": "6/8 − 4/8",
     "claudeUitleg": null,
     "claudeStrategie": null,
     "claudeThema": null,
@@ -24429,11 +24429,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "3/16",
+      "fout": "2/16",
       "denkfout": "teller-en-noemer-optellen"
      },
      {
-      "fout": "9/8",
+      "fout": "10/8",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -24441,12 +24441,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "3/16",
-      "uitleg": "De noemer zegt in hoeveel stukken de taart is verdeeld. Die verandert niet als je stukken bij elkaar doet."
+      "fout": "2/16",
+      "uitleg": "De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet."
      },
      {
       "stap": null,
-      "fout": "9/8",
+      "fout": "10/8",
       "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
      }
     ]
@@ -24474,6 +24474,7 @@
      "D-G6 fout-hint: 'het geheel'; telfout in de teller → 'Tel de stukjes nog eens'",
      "D-G6 kale breuksom: 'Reken uit: … = ?' en 'Typ een breuk.' (G7-bank, Didactiek)",
      "G7-BV170 (G6-fixlijst #170, Dave 21:24): even grote breuk telt als goed (antwoordOokGoed), behalve als de opgave een vorm vraagt",
+     "G7-V560 (recheck batch 1 Didactiek): goed antwoord was een getal uit de vraag; nieuwe getallen en afleiders",
      "N2 - → −"
     ]
    },
@@ -24500,6 +24501,15 @@
      "dave": null,
      "duplicaatVan": null
     },
+    "v560": {
+     "opgaveOud": "Reken uit: 6/8 − 3/8 = ? Typ een breuk.",
+     "vervangen": {
+      "3/8": "2/8",
+      "3/16": "2/16",
+      "9/8": "10/8"
+     },
+     "reden": "V-#560: het goede antwoord was een getal uit de vraag"
+    },
     "breukvorm170": "een even grote breuk is goed (antwoordOokGoed)",
     "duplicaatVan": null,
     "somtypeNr": 5,
@@ -24508,7 +24518,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "3/8",
+    "verwacht": "1/4",
     "methode": "breuken plus/min (zelfde noemer)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -24523,17 +24533,30 @@
     "claudeUitlegInKindtekst": null
    },
    "antwoordOokGoed": [
-    "6/16",
-    "9/24",
-    "12/32",
-    "15/40",
-    "18/48",
-    "21/56",
-    "24/64",
-    "27/72",
-    "30/80",
-    "33/88",
-    "36/96"
+    "1/4",
+    "3/12",
+    "4/16",
+    "5/20",
+    "6/24",
+    "7/28",
+    "8/32",
+    "9/36",
+    "10/40",
+    "11/44",
+    "12/48",
+    "13/52",
+    "14/56",
+    "15/60",
+    "16/64",
+    "17/68",
+    "18/72",
+    "19/76",
+    "20/80",
+    "21/84",
+    "22/88",
+    "23/92",
+    "24/96",
+    "25/100"
    ],
    "breukGelijkwaardigGoed": true
   },
@@ -25565,14 +25588,14 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Reken uit: 6/10 − 3/10 = ? Typ een breuk.",
+   "opgave": "Reken uit: 6/10 − 2/10 = ? Typ een breuk.",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "3/10",
+   "antwoord": "4/10",
    "antwoordDetail": {
     "accept": [
-     "3/10"
+     "4/10"
     ],
     "gelijkwaardigeBreukGoed": true
    },
@@ -25581,16 +25604,16 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "3/20",
+     "fout": "4/20",
      "uitleg": "De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet."
     },
     {
      "stap": null,
-     "fout": "18/10",
-     "uitleg": "Tel de stukjes nog eens: 6 − 3 = ?"
+     "fout": "8/10",
+     "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
     }
    ],
-   "foutHintsTekst": "3/20 → De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 18/10 → Tel de stukjes nog eens: 6 − 3 = ?",
+   "foutHintsTekst": "4/20 → De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 8/10 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
    "ouderzin": "",
    "getallenruimte": "breuken (noemer tot 10)",
    "context": "laag",
@@ -25610,7 +25633,7 @@
    "bronVariant": "claude-bank:B8:438a6c6b-ea80-4c1f-b189-ef6aad350c4c",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "6/10 − 3/10",
+    "claudeKaleSom": "6/10 − 2/10",
     "claudeUitleg": null,
     "claudeStrategie": null,
     "claudeThema": null,
@@ -25620,25 +25643,25 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "3/20",
+      "fout": "4/20",
       "denkfout": "teller-en-noemer-optellen"
      },
      {
-      "fout": "18/10",
-      "denkfout": "teller-en-noemer-optellen"
+      "fout": "8/10",
+      "denkfout": "verkeerde-bewerking"
      }
     ],
     "mergeFoutHints": [],
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "3/20",
-      "uitleg": "De noemer zegt in hoeveel stukken de taart is verdeeld. Die verandert niet als je stukken bij elkaar doet."
+      "fout": "4/20",
+      "uitleg": "De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet."
      },
      {
       "stap": null,
-      "fout": "18/10",
-      "uitleg": "De noemer zegt in hoeveel stukken de taart is verdeeld. Die verandert niet als je stukken bij elkaar doet."
+      "fout": "8/10",
+      "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
      }
     ]
    },
@@ -25665,6 +25688,7 @@
      "D-G6 fout-hint: 'het geheel'; telfout in de teller → 'Tel de stukjes nog eens'",
      "D-G6 kale breuksom: 'Reken uit: … = ?' en 'Typ een breuk.' (G7-bank, Didactiek)",
      "G7-BV170 (G6-fixlijst #170, Dave 21:24): even grote breuk telt als goed (antwoordOokGoed), behalve als de opgave een vorm vraagt",
+     "G7-V560 (recheck batch 1 Didactiek): goed antwoord was een getal uit de vraag; nieuwe getallen en afleiders",
      "N2 - → −"
     ]
    },
@@ -25691,6 +25715,15 @@
      "dave": null,
      "duplicaatVan": null
     },
+    "v560": {
+     "opgaveOud": "Reken uit: 6/10 − 3/10 = ? Typ een breuk.",
+     "vervangen": {
+      "3/10": "4/10",
+      "3/20": "4/20",
+      "18/10": "8/10"
+     },
+     "reden": "V-#560: het goede antwoord was een getal uit de vraag"
+    },
     "breukvorm170": "een even grote breuk is goed (antwoordOokGoed)",
     "duplicaatVan": null,
     "somtypeNr": 5,
@@ -25699,7 +25732,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "3/10",
+    "verwacht": "2/5",
     "methode": "breuken plus/min (zelfde noemer)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -25714,15 +25747,25 @@
     "claudeUitlegInKindtekst": null
    },
    "antwoordOokGoed": [
-    "6/20",
-    "9/30",
-    "12/40",
-    "15/50",
-    "18/60",
-    "21/70",
-    "24/80",
-    "27/90",
-    "30/100"
+    "2/5",
+    "6/15",
+    "8/20",
+    "10/25",
+    "12/30",
+    "14/35",
+    "16/40",
+    "18/45",
+    "20/50",
+    "22/55",
+    "24/60",
+    "26/65",
+    "28/70",
+    "30/75",
+    "32/80",
+    "34/85",
+    "36/90",
+    "38/95",
+    "40/100"
    ],
    "breukGelijkwaardigGoed": true
   },
@@ -26247,14 +26290,14 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Reken uit: 8/11 − 4/11 = ? Typ een breuk.",
+   "opgave": "Reken uit: 8/11 − 6/11 = ? Typ een breuk.",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "4/11",
+   "antwoord": "2/11",
    "antwoordDetail": {
     "accept": [
-     "4/11"
+     "2/11"
     ],
     "gelijkwaardigeBreukGoed": true
    },
@@ -26263,16 +26306,16 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "4/22",
+     "fout": "2/22",
      "uitleg": "De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet."
     },
     {
      "stap": null,
-     "fout": "5/11",
-     "uitleg": "Tel de stukjes nog eens: 8 − 4 = ?"
+     "fout": "14/11",
+     "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
     }
    ],
-   "foutHintsTekst": "4/22 → De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 5/11 → Tel de stukjes nog eens: 8 − 4 = ?",
+   "foutHintsTekst": "2/22 → De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 14/11 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
    "ouderzin": "",
    "getallenruimte": "breuken (noemer tot 11)",
    "context": "laag",
@@ -26292,7 +26335,7 @@
    "bronVariant": "claude-bank:B8:56b59828-0e45-4772-982a-7ffc423bf9ed",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "8/11 − 4/11",
+    "claudeKaleSom": "8/11 − 6/11",
     "claudeUitleg": null,
     "claudeStrategie": null,
     "claudeThema": null,
@@ -26302,25 +26345,25 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "4/22",
+      "fout": "2/22",
       "denkfout": "teller-en-noemer-optellen"
      },
      {
-      "fout": "5/11",
-      "denkfout": "teller-en-noemer-optellen"
+      "fout": "14/11",
+      "denkfout": "verkeerde-bewerking"
      }
     ],
     "mergeFoutHints": [],
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "4/22",
-      "uitleg": "De noemer zegt in hoeveel stukken de taart is verdeeld. Die verandert niet als je stukken bij elkaar doet."
+      "fout": "2/22",
+      "uitleg": "De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet."
      },
      {
       "stap": null,
-      "fout": "5/11",
-      "uitleg": "De noemer zegt in hoeveel stukken de taart is verdeeld. Die verandert niet als je stukken bij elkaar doet."
+      "fout": "14/11",
+      "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
      }
     ]
    },
@@ -26347,6 +26390,7 @@
      "D-G6 fout-hint: 'het geheel'; telfout in de teller → 'Tel de stukjes nog eens'",
      "D-G6 kale breuksom: 'Reken uit: … = ?' en 'Typ een breuk.' (G7-bank, Didactiek)",
      "G7-BV170 (G6-fixlijst #170, Dave 21:24): even grote breuk telt als goed (antwoordOokGoed), behalve als de opgave een vorm vraagt",
+     "G7-V560 (recheck batch 1 Didactiek): goed antwoord was een getal uit de vraag; nieuwe getallen en afleiders",
      "N2 - → −"
     ]
    },
@@ -26373,6 +26417,15 @@
      "dave": null,
      "duplicaatVan": null
     },
+    "v560": {
+     "opgaveOud": "Reken uit: 8/11 − 4/11 = ? Typ een breuk.",
+     "vervangen": {
+      "4/11": "2/11",
+      "4/22": "2/22",
+      "5/11": "14/11"
+     },
+     "reden": "V-#560: het goede antwoord was een getal uit de vraag"
+    },
     "breukvorm170": "een even grote breuk is goed (antwoordOokGoed)",
     "duplicaatVan": null,
     "somtypeNr": 5,
@@ -26381,7 +26434,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "4/11",
+    "verwacht": "2/11",
     "methode": "breuken plus/min (zelfde noemer)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -26396,14 +26449,14 @@
     "claudeUitlegInKindtekst": null
    },
    "antwoordOokGoed": [
-    "8/22",
-    "12/33",
-    "16/44",
-    "20/55",
-    "24/66",
-    "28/77",
-    "32/88",
-    "36/99"
+    "4/22",
+    "6/33",
+    "8/44",
+    "10/55",
+    "12/66",
+    "14/77",
+    "16/88",
+    "18/99"
    ],
    "breukGelijkwaardigGoed": true
   },
@@ -26584,14 +26637,14 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Reken uit: 10/12 − 5/12 = ? Typ een breuk.",
+   "opgave": "Reken uit: 10/12 − 6/12 = ? Typ een breuk.",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "5/12",
+   "antwoord": "4/12",
    "antwoordDetail": {
     "accept": [
-     "5/12"
+     "4/12"
     ],
     "gelijkwaardigeBreukGoed": true
    },
@@ -26600,16 +26653,16 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "6/12",
-     "uitleg": "Tel de stukjes nog eens: 10 − 5 = ?"
+     "fout": "4/24",
+     "uitleg": "De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet."
     },
     {
      "stap": null,
-     "fout": "15/12",
+     "fout": "16/12",
      "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
     }
    ],
-   "foutHintsTekst": "6/12 → Tel de stukjes nog eens: 10 − 5 = ? · 15/12 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+   "foutHintsTekst": "4/24 → De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 16/12 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
    "ouderzin": "",
    "getallenruimte": "breuken (noemer tot 12)",
    "context": "laag",
@@ -26629,7 +26682,7 @@
    "bronVariant": "claude-bank:B8:58d84320-c0cf-4171-9cff-1001d1a7cd12",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "10/12 − 5/12",
+    "claudeKaleSom": "10/12 − 6/12",
     "claudeUitleg": null,
     "claudeStrategie": null,
     "claudeThema": null,
@@ -26639,11 +26692,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "6/12",
+      "fout": "4/24",
       "denkfout": "teller-en-noemer-optellen"
      },
      {
-      "fout": "15/12",
+      "fout": "16/12",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -26651,12 +26704,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "6/12",
-      "uitleg": "De noemer zegt in hoeveel stukken de taart is verdeeld. Die verandert niet als je stukken bij elkaar doet."
+      "fout": "4/24",
+      "uitleg": "De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet."
      },
      {
       "stap": null,
-      "fout": "15/12",
+      "fout": "16/12",
       "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
      }
     ]
@@ -26684,6 +26737,7 @@
      "D-G6 fout-hint: 'het geheel'; telfout in de teller → 'Tel de stukjes nog eens'",
      "D-G6 kale breuksom: 'Reken uit: … = ?' en 'Typ een breuk.' (G7-bank, Didactiek)",
      "G7-BV170 (G6-fixlijst #170, Dave 21:24): even grote breuk telt als goed (antwoordOokGoed), behalve als de opgave een vorm vraagt",
+     "G7-V560 (recheck batch 1 Didactiek): goed antwoord was een getal uit de vraag; nieuwe getallen en afleiders",
      "N2 - → −"
     ]
    },
@@ -26710,6 +26764,15 @@
      "dave": null,
      "duplicaatVan": null
     },
+    "v560": {
+     "opgaveOud": "Reken uit: 10/12 − 5/12 = ? Typ een breuk.",
+     "vervangen": {
+      "5/12": "4/12",
+      "6/12": "4/24",
+      "15/12": "16/12"
+     },
+     "reden": "V-#560: het goede antwoord was een getal uit de vraag"
+    },
     "breukvorm170": "een even grote breuk is goed (antwoordOokGoed)",
     "duplicaatVan": null,
     "somtypeNr": 5,
@@ -26718,7 +26781,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "5/12",
+    "verwacht": "1/3",
     "methode": "breuken plus/min (zelfde noemer)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -26733,13 +26796,38 @@
     "claudeUitlegInKindtekst": null
    },
    "antwoordOokGoed": [
-    "10/24",
-    "15/36",
-    "20/48",
-    "25/60",
-    "30/72",
-    "35/84",
-    "40/96"
+    "1/3",
+    "2/6",
+    "3/9",
+    "5/15",
+    "6/18",
+    "7/21",
+    "8/24",
+    "9/27",
+    "10/30",
+    "11/33",
+    "12/36",
+    "13/39",
+    "14/42",
+    "15/45",
+    "16/48",
+    "17/51",
+    "18/54",
+    "19/57",
+    "20/60",
+    "21/63",
+    "22/66",
+    "23/69",
+    "24/72",
+    "25/75",
+    "26/78",
+    "27/81",
+    "28/84",
+    "29/87",
+    "30/90",
+    "31/93",
+    "32/96",
+    "33/99"
    ],
    "breukGelijkwaardigGoed": true
   },
@@ -30458,14 +30546,14 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Reken uit: 8/9 − 4/9 = ? Typ een breuk.",
+   "opgave": "Reken uit: 8/9 − 5/9 = ? Typ een breuk.",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "4/9",
+   "antwoord": "3/9",
    "antwoordDetail": {
     "accept": [
-     "4/9"
+     "3/9"
     ],
     "gelijkwaardigeBreukGoed": true
    },
@@ -30474,16 +30562,16 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "3/9",
-     "uitleg": "Tel de stukjes nog eens: 8 − 4 = ?"
+     "fout": "3/18",
+     "uitleg": "De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet."
     },
     {
      "stap": null,
-     "fout": "12/9",
+     "fout": "13/9",
      "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
     }
    ],
-   "foutHintsTekst": "3/9 → Tel de stukjes nog eens: 8 − 4 = ? · 12/9 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+   "foutHintsTekst": "3/18 → De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 13/9 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
    "ouderzin": "",
    "getallenruimte": "breuken (noemer tot 9)",
    "context": "laag",
@@ -30503,7 +30591,7 @@
    "bronVariant": "claude-bank:B8:b5c34a41-d9a4-4a01-a49c-9c6f2d106235",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "8/9 − 4/9",
+    "claudeKaleSom": "8/9 − 5/9",
     "claudeUitleg": null,
     "claudeStrategie": null,
     "claudeThema": null,
@@ -30513,11 +30601,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "3/9",
+      "fout": "3/18",
       "denkfout": "teller-en-noemer-optellen"
      },
      {
-      "fout": "12/9",
+      "fout": "13/9",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -30525,12 +30613,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "3/9",
-      "uitleg": "De noemer zegt in hoeveel stukken de taart is verdeeld. Die verandert niet als je stukken bij elkaar doet."
+      "fout": "3/18",
+      "uitleg": "De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet."
      },
      {
       "stap": null,
-      "fout": "12/9",
+      "fout": "13/9",
       "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
      }
     ]
@@ -30558,6 +30646,7 @@
      "D-G6 fout-hint: 'het geheel'; telfout in de teller → 'Tel de stukjes nog eens'",
      "D-G6 kale breuksom: 'Reken uit: … = ?' en 'Typ een breuk.' (G7-bank, Didactiek)",
      "G7-BV170 (G6-fixlijst #170, Dave 21:24): even grote breuk telt als goed (antwoordOokGoed), behalve als de opgave een vorm vraagt",
+     "G7-V560 (recheck batch 1 Didactiek): goed antwoord was een getal uit de vraag; nieuwe getallen en afleiders",
      "N2 - → −"
     ]
    },
@@ -30584,6 +30673,15 @@
      "dave": null,
      "duplicaatVan": null
     },
+    "v560": {
+     "opgaveOud": "Reken uit: 8/9 − 4/9 = ? Typ een breuk.",
+     "vervangen": {
+      "4/9": "3/9",
+      "3/9": "3/18",
+      "12/9": "13/9"
+     },
+     "reden": "V-#560: het goede antwoord was een getal uit de vraag"
+    },
     "breukvorm170": "een even grote breuk is goed (antwoordOokGoed)",
     "duplicaatVan": null,
     "somtypeNr": 5,
@@ -30592,7 +30690,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "4/9",
+    "verwacht": "1/3",
     "methode": "breuken plus/min (zelfde noemer)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -30607,16 +30705,38 @@
     "claudeUitlegInKindtekst": null
    },
    "antwoordOokGoed": [
-    "8/18",
-    "12/27",
-    "16/36",
-    "20/45",
-    "24/54",
-    "28/63",
-    "32/72",
-    "36/81",
-    "40/90",
-    "44/99"
+    "1/3",
+    "2/6",
+    "4/12",
+    "5/15",
+    "6/18",
+    "7/21",
+    "8/24",
+    "9/27",
+    "10/30",
+    "11/33",
+    "12/36",
+    "13/39",
+    "14/42",
+    "15/45",
+    "16/48",
+    "17/51",
+    "18/54",
+    "19/57",
+    "20/60",
+    "21/63",
+    "22/66",
+    "23/69",
+    "24/72",
+    "25/75",
+    "26/78",
+    "27/81",
+    "28/84",
+    "29/87",
+    "30/90",
+    "31/93",
+    "32/96",
+    "33/99"
    ],
    "breukGelijkwaardigGoed": true
   },
@@ -32504,14 +32624,14 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Reken uit: 6/7 − 3/7 = ? Typ een breuk.",
+   "opgave": "Reken uit: 6/7 − 4/7 = ? Typ een breuk.",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "3/7",
+   "antwoord": "2/7",
    "antwoordDetail": {
     "accept": [
-     "3/7"
+     "2/7"
     ],
     "gelijkwaardigeBreukGoed": true
    },
@@ -32520,16 +32640,16 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "3/14",
+     "fout": "2/14",
      "uitleg": "De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet."
     },
     {
      "stap": null,
-     "fout": "2/7",
-     "uitleg": "Tel de stukjes nog eens: 6 − 3 = ?"
+     "fout": "10/7",
+     "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
     }
    ],
-   "foutHintsTekst": "3/14 → De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 2/7 → Tel de stukjes nog eens: 6 − 3 = ?",
+   "foutHintsTekst": "2/14 → De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 10/7 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
    "ouderzin": "",
    "getallenruimte": "breuken (noemer tot 7)",
    "context": "laag",
@@ -32549,7 +32669,7 @@
    "bronVariant": "claude-bank:B8:e5748898-6f21-4d23-81d7-78dec5fc52fa",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "6/7 − 3/7",
+    "claudeKaleSom": "6/7 − 4/7",
     "claudeUitleg": null,
     "claudeStrategie": null,
     "claudeThema": null,
@@ -32559,25 +32679,25 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "3/14",
+      "fout": "2/14",
       "denkfout": "teller-en-noemer-optellen"
      },
      {
-      "fout": "2/7",
-      "denkfout": "teller-en-noemer-optellen"
+      "fout": "10/7",
+      "denkfout": "verkeerde-bewerking"
      }
     ],
     "mergeFoutHints": [],
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "3/14",
-      "uitleg": "De noemer zegt in hoeveel stukken de taart is verdeeld. Die verandert niet als je stukken bij elkaar doet."
+      "fout": "2/14",
+      "uitleg": "De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet."
      },
      {
       "stap": null,
-      "fout": "2/7",
-      "uitleg": "De noemer zegt in hoeveel stukken de taart is verdeeld. Die verandert niet als je stukken bij elkaar doet."
+      "fout": "10/7",
+      "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
      }
     ]
    },
@@ -32604,6 +32724,7 @@
      "D-G6 fout-hint: 'het geheel'; telfout in de teller → 'Tel de stukjes nog eens'",
      "D-G6 kale breuksom: 'Reken uit: … = ?' en 'Typ een breuk.' (G7-bank, Didactiek)",
      "G7-BV170 (G6-fixlijst #170, Dave 21:24): even grote breuk telt als goed (antwoordOokGoed), behalve als de opgave een vorm vraagt",
+     "G7-V560 (recheck batch 1 Didactiek): goed antwoord was een getal uit de vraag; nieuwe getallen en afleiders",
      "N2 - → −"
     ]
    },
@@ -32630,6 +32751,15 @@
      "dave": null,
      "duplicaatVan": null
     },
+    "v560": {
+     "opgaveOud": "Reken uit: 6/7 − 3/7 = ? Typ een breuk.",
+     "vervangen": {
+      "3/7": "2/7",
+      "3/14": "2/14",
+      "2/7": "10/7"
+     },
+     "reden": "V-#560: het goede antwoord was een getal uit de vraag"
+    },
     "breukvorm170": "een even grote breuk is goed (antwoordOokGoed)",
     "duplicaatVan": null,
     "somtypeNr": 5,
@@ -32638,7 +32768,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "3/7",
+    "verwacht": "2/7",
     "methode": "breuken plus/min (zelfde noemer)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -32653,19 +32783,19 @@
     "claudeUitlegInKindtekst": null
    },
    "antwoordOokGoed": [
-    "6/14",
-    "9/21",
-    "12/28",
-    "15/35",
-    "18/42",
-    "21/49",
-    "24/56",
-    "27/63",
-    "30/70",
-    "33/77",
-    "36/84",
-    "39/91",
-    "42/98"
+    "4/14",
+    "6/21",
+    "8/28",
+    "10/35",
+    "12/42",
+    "14/49",
+    "16/56",
+    "18/63",
+    "20/70",
+    "22/77",
+    "24/84",
+    "26/91",
+    "28/98"
    ],
    "breukGelijkwaardigGoed": true
   },
@@ -87704,11 +87834,18 @@
    "breukGelijkwaardigGoed": true
   }
  ],
- "hintsSyncOp": "2026-10-08T12:16:56+02:00",
+ "hintsSyncOp": "2026-10-08T12:36:57+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
-   "md5": "4715654e9a9a"
+   "md5": "99522aca3a7a"
+  },
+  {
+   "batch": "batch2.json",
+   "md5": "51b0ad888aad"
   }
- ]
+ ],
+ "geschrevenOp": "2026-10-08T12:36:57+02:00",
+ "geschrevenDoor": "build (apply_hints)",
+ "itemsGewijzigdBijSchrijven": true
 }

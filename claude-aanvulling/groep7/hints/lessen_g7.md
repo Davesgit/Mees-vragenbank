@@ -12,3 +12,34 @@ De nummers volgen die van Didactiek (G7 review batch 1, `g7/review-batch1-didact
 147. **Bij één item per somtype zet je de woorden van het item vast met een vlag en een guard.** `"contextgebonden": {"woorden": […], "aanname": "…"}` in de entry; de guard (`g7work/b1/check.py` + `g7work/b1b/context.py`) eist één item per gevlagde entry, elk vlagwoord in de opgave, en elk woord uit de opgave dat niet vast in de kop staat, in de vlag. Let het meest op een [ding] die het begrip zelf is ('omtrek').
 148. **Zeg pas 'geen route' na een vast rijtje:** een stap of dag vergeten, de groei maar één keer, 'meer dan de eerste' in plaats van 'meer dan de vorige', verwisseld, alles opgeteld. Bij '11 dl' gaf dat twee routes.
 149. **Toets een context ook op de verpakking** (pak, kan, doos, flesje): 'een pak sap van 2 liter', 'een kan met 6 liter' en 'een eierdoos van 8' kloppen niet met de referentiematen. En: hebben de live data de hints nog niet, review dan de gesyncte en toegepaste stand in een zandbak, en schrijf de build erbij.
+
+## O1. Begripsvraag 'Hoe heet …?': H2 noemt de familie van namen, niet welke plek welke naam heeft (G7 batch 2, DENK-04; eigen les van Oefeningen, eerst als '156' genummerd, nu O1 omdat Didactiek 156–165 heeft)
+Bij 'Hoe heet de 8 in 130 − 8 = 122?' is de koppeling plek → naam het antwoord zelf. H1 laat het kind de plek zoeken (vooraan, achter het teken,
+achter het isgelijkteken); H2 zegt welke namen bij deze somsoort horen en welke bij een andere ('Bij een minsom horen de namen aftrektal,
+aftrekker en verschil. Term en som horen bij een plussom.'). Dan blijven er twee opties over en moet het kind nog kiezen (les 144). De volledige
+koppeling staat pas in laag 2 van een fout-hint, na twee foute keuzes. Geen naam met lidwoord in H2 ('de som'): check_hints ziet dat als het
+antwoord van een ander item.
+
+## O2. Een nieuwe batch kan gesynct zijn voordat je eigen checks klaar zijn (G7 batch 2; eigen les van Oefeningen, eerst '157', nu O2)
+De build van Overzicht nam batch2.json mee (sync: koppeling) terwijl de eerste versie nog in de checks zat. Vanaf dat moment nooit meer
+make_batchN.py --force: de verbeteringen van na de sync staan als 'Ronde 1a' in patch_batchN.py, met een diff tegen de make-uitvoer
+(0 verschil) als bewijs dat er niets verloren ging.
+
+## Lessen 156–165 (Didactiek: G5/G6 eindcheck r11b en G7 recheck batch 1, 8 okt)
+- **156.** Een regel die je in een entry zet, geldt voor elk item van het somtype, niet alleen voor de gemelde sleutels. Tel na de build hoeveel sleutels hij echt maakt (G5: 3 gemeld, 482 gemaakt) en lees de tekst tegen alle items.
+- **157.** Een guard die vaste items pint, beschermt alleen die items. Hangt een tekst af van een voorwaarde, laat de guard die voorwaarde dan bij elke sleutel narekenen. Test dat met een mutant op een ander item.
+- **158.** Toets een check op een verboden bewering ook met omschrijvingen: een andere zinsgrens, synoniemen, een afgekorte vorm. Niet alleen met de letterlijke zin waar de fout ooit stond. (G7: de kleur-guard in b1/check vangt 'gekleurd', 'kleur er één', 'rode'.)
+- **159.** Een zelftest die stil overslaat als zijn tabel ontbreekt, is geen test. Laat hem melden dat hij niet gedraaid heeft.
+- **160.** Een routetool vindt combinaties van getallen, geen denkfouten. Vraag bij elke melding eerst 'doet een kind van groep 7 dit echt?', voordat je een tekst herschrijft. Anders wordt een gerichte tekst vaag voor een route die niemand neemt (G7 ronde 1c: '4 + 3', '2 × 2', '4 × 4', '3 + 3 × 2' waren artefacten).
+- **161.** Een laag 1 die iets zegt over de waarde («Dat is wat er na stap één …») is waar voor elke route naar die waarde: de veiligste vorm bij meerdere echte routes. Een vraag naar de bewerking («Heb je … opgeteld?») is gerichter, maar alleen goed als er één echte route is.
+- **162.** Bij procenten is 'een getal uit de vraag = het goede antwoord' voorspelbaar: n van N geeft N% precies als n = N² : 100 (4/20, 9/30, 16/40, 25/50). Zoek bij elk procent-somtype op die vorm, niet alleen op toeval.
+- **163.** Een melding 'a × a' of 'getal uit de vraag' op het goede antwoord is pas een probleem als het een fóute route is. Bij 4/25 = 16% (×4) of bij het aflezen van een schaal is het de goede route.
+- **164.** Noem bij elke check de stand van de hint-sync én die van de build. De hint-sync kan verder zijn dan de build (batch1.json kwam vier minuten na de build 12:16:26); beoordeel de build en zeg wat er nog niet in zit.
+- **165.** Kijk bij een gesplitst somtype naar nrOrigineel én het kopnummer. Het rad van VERH-04 is nrO 7 maar kop 6 in het md-bestand. Leg het nummer vast als nrOrigineel (de hints hangen daaraan), en zeg in elke opdracht welk nummer bedoeld is.
+
+## Lessen 166–170 (Didactiek: G7 review batch 2, build 12:32:32, 8 okt)
+- **166.** Vraagt een item 'bij welke stap', dan horen de stapnummers in de vraag («Stap 1: neem 30. Stap 2: …»). Een hint kan een telafspraak die het kind niet kent niet repareren: de fout valt al bij de eerste poging (V-#570, DENK-03 nrO 21).
+- **167.** Noem een getal via zijn stap of zijn rol: 'het getal van de min-stap', 'het begingetal', 'het getal dat in die stap staat', 'het getal waar de vraag over gaat'. Niet 'het laatste getal' of 'het getal uit de vraag': bij een bewering (Lisa zegt 20) of een hele som in de vraag wijst dat naar een ander getal (V-#571, Z-#571, Z-#580). Guard: g7work/b2/check.py.
+- **168.** 'andere fout' met een tekst voor één route mag als tussenstap, als die route bij elk item nagerekend is en vastgepind met een assert (DENK-04 #5 '8 : 328' tot Oef-#429). Zodra de motorregel er is, verhuizen beide lagen ernaar en krijgt 'andere fout' weer een algemene tekst.
+- **169.** Een getal uit de vraag in woorden ('keer twee', 'door twee') is een verkapt cijfer: het klopt voor het item van nu en niet voor het volgende. Maak het algemeen, of vlag het. Vaste getallen mogen wel: verdubbelen = keer twee, dubbel vouwen, duizend meter, stapnamen, de structuur van de kop (twee reeksen, vier stappen). Guard met een lijst nagekeken uitzonderingen: g7work/b2/check.py.
+- **170.** Maak 'som' als naam herkenbaar naast minsom en plussom: «de naam som», «De namen term en som horen bij een plussom» (Z-#578). Anders leest «Hoort de som bij een minsom?» als een vraag over de hele som.

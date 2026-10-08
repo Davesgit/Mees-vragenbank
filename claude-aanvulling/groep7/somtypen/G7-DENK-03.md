@@ -79,7 +79,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent een opgave in twee stappen uit: eerst een keersom, dan eraf.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tweede stap vergeten` (24 stoelen) → Is dat het aantal na de eerste stap? Je haalt er daarna nog een paar weg.  [nieuw]
-  - `opgeteld in plaats van keer` (7 stoelen) → Heb je het aantal tafels en het aantal stoelen aan één tafel opgeteld? Elke tafel heeft evenveel stoelen. Hoeveel keer dat aantal is het?  [nieuw]
+  - `opgeteld in plaats van keer` (7 stoelen) → Heb je het aantal tafels en het aantal stoelen aan één tafel opgeteld? Elke tafel heeft evenveel stoelen, dus alle stoelen samen is een keersom.  [nieuw]
   - `andere fout` (andere fout) → Reken eerst alle stoelen samen uit met een keersom. Haal de stoelen die je weghaalt daarna eraf.  [nieuw]
 - Status: hints klaar
 
@@ -117,11 +117,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Schrijf het getal na elke verdubbeling op. Heb je echt 4 keer verdubbeld?”)
 - Voorbeelden:
   - `G7-DENK-03-claude-bank-004` (Claude W5, ai, niveau 3 → toepassen)
-    - **Opgave:** Je begint bij 1 en verdubbelt het getal 4 keer. Welk getal krijg je dan?
-    - **Opties:** A) 8 · B) 9 · C) 16
-    - **Antwoord:** 16  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 8 → Schrijf het getal na elke verdubbeling op. Heb je echt 4 keer verdubbeld? · 9 → Verdubbelen is niet steeds er 2 bij optellen. Wat gebeurt er met een getal als het 2 keer zoveel wordt?
-    - **Uitleg (Claude):** Je krijgt na elke stap 2, 4, 8 en 16. Dat zijn vier verdubbelingen. De uitkomst is 16.
+    - **Opgave:** Je begint bij 3 en verdubbelt het getal 4 keer. Welk getal krijg je dan?
+    - **Opties:** A) 24 · B) 11 · C) 48
+    - **Antwoord:** 48  (controle: n.v.t.)
+    - **Fout-hints (Claude):** 24 → Schrijf het getal na elke verdubbeling op. Heb je echt 4 keer verdubbeld? · 11 → Verdubbelen is niet steeds er 2 bij optellen. Wat gebeurt er met een getal als het 2 keer zoveel wordt?
+    - **Uitleg (Claude):** Je krijgt na elke stap 6, 12, 24 en 48. Dat zijn vier verdubbelingen. De uitkomst is 48.
 
 - **Hint 1 (te schrijven):** Verdubbelen is keer twee. Schrijf na elke stap het nieuwe getal op.
 - **Hint 2 (te schrijven):** Begin bij het getal uit de vraag en doe het keer twee. Doe de uitkomst weer keer twee. Houd met streepjes bij hoe vaak je verdubbelt, tot het aantal keer uit de vraag.
@@ -202,8 +202,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het aantal flesjes keer de deciliters in één flesje: zoveel zit er na stap één in de kan. Haal bij stap twee de deciliters die je eruit giet eraf.
 - **Ouderzin:** Je kind volgt een plan in twee stappen: eerst een keersom, dan eraf.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `tweede stap vergeten` (9 dl) → Is dat wat er na stap één in de kan zit? Bij stap twee giet je er nog iets uit.  [nieuw]
-  - `opgeteld in plaats van keer` (4 dl) → Heb je het aantal flesjes en de deciliters van één flesje opgeteld? Elk flesje heeft evenveel sap. Hoeveel keer dat aantal is het?  [nieuw]
+  - `stand na stap één` (9 dl) → Dat is wat er na stap één in de kan zit. Bij stap twee giet je er nog iets uit. Hoeveel blijft er dan in de kan?  [nieuw]
+  - `opgeteld in plaats van keer` (4 dl) → Heb je het aantal flesjes en de deciliters van één flesje opgeteld? Elk flesje heeft evenveel sap, dus alle deciliters samen is een keersom.  [nieuw]
   - `andere fout` (andere fout) → Reken eerst uit hoeveel deciliter er in de kan zit. Haal daarna af wat je eruit giet.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Je hebt # [ding] sap van elk # liter. Stap #: giet alles in een kan. Stap #: giet er # liter uit. Hoeveel liter zit er nog in de kan?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -253,7 +253,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Haal bij stap één de stickers die je weggeeft van het begin af. Haal bij stap twee nog eens af wat je weggeeft.
 - **Ouderzin:** Je kind volgt een plan in twee stappen en haalt twee keer iets af.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `tweede stap vergeten` (16 stickers) → Is dat wat je na stap één nog hebt? Bij stap twee geef je er nog een paar weg.  [nieuw]
+  - `stand na stap één` (16 stickers) → Dat is wat je na stap één nog hebt. Bij stap twee geef je er nog een paar weg. Hoeveel houd je dan over?  [nieuw]
   - `erbij in plaats van eraf` (28 stickers) → Heb je de stickers die je weggeeft opgeteld? Weggeven is eraf halen: je houdt er minder over.  [nieuw]
   - `andere fout` (andere fout) → Haal bij elke stap af wat je weggeeft.  [nieuw]
 - Status: hints klaar
@@ -268,11 +268,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Je hebt stap 1 goed gedaan. Wat gebeurt er bij stap 2 met je geld?”)
 - Voorbeelden:
   - `G7-DENK-03-claude-bank-010` (Claude W5, ai, niveau 2 → toepassen)
-    - **Opgave:** Je hebt 8 euro gespaard. Stap 1: je krijgt 5 euro zakgeld. Stap 2: je koopt een schrift van 4 euro. Hoeveel euro heb je dan?
-    - **Opties:** A) 17 euro · B) 9 euro · C) 13 euro
-    - **Antwoord:** 9 euro  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 13 euro → Je hebt stap 1 goed gedaan. Wat gebeurt er bij stap 2 met je geld? · 17 euro → Als je een schrift koopt, gaat er geld af. Tel je dat er dan bij op?
-    - **Uitleg (Claude):** 8 euro plus 5 euro is 13 euro. Daar gaat 4 euro af voor het schrift. Je houdt 9 euro over.
+    - **Opgave:** Je hebt 8 euro gespaard. Stap 1: je krijgt 5 euro zakgeld. Stap 2: je koopt een schrift van 3 euro. Hoeveel euro heb je dan?
+    - **Opties:** A) 16 euro · B) 10 euro · C) 13 euro
+    - **Antwoord:** 10 euro  (controle: n.v.t.)
+    - **Fout-hints (Claude):** 13 euro → Je hebt stap 1 goed gedaan. Wat gebeurt er bij stap 2 met je geld? · 16 euro → Als je een schrift koopt, gaat er geld af. Tel je dat er dan bij op?
+    - **Uitleg (Claude):** 8 euro plus 5 euro is 13 euro. Daar gaat 3 euro af voor het schrift. Je houdt 10 euro over.
 
 - **Hint 1 (te schrijven):** Volg de stappen één voor één. Hoeveel geld heb je na stap één?
 - **Hint 2 (te schrijven):** Tel bij stap één het zakgeld op bij wat je gespaard had. Haal bij stap twee de prijs van het schrift ervan af.
@@ -299,8 +299,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 400 m → Lees de route vanaf het begin. Heb je het eerste stuk ook meegeteld? · 6 km → Kijk nog eens naar de eenheid. Hoeveel meter zit er in 1 km?
     - **Uitleg (Claude):** Je telt alle stukken op: 200 m, 150 m en 250 m. Samen is dat 600 m. Alle drie de stappen horen erbij.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** De route bestaat uit een paar stukken. Hoeveel meter is elk stuk?
+- **Hint 2 (te schrijven):** Schrijf de meters van alle stukken onder elkaar, ook het eerste stuk rechtdoor. Tel ze bij elkaar op. Kijk tot slot of de eenheid klopt: meter of kilometer.
+- **Ouderzin:** Je kind telt de stukken van een route bij elkaar op en let op de eenheid.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `eerste stuk vergeten` (400 m) → Heb je alle stukken van de route meegeteld, ook het eerste stuk rechtdoor?  [nieuw]
+  - `meter als kilometer` (6 km) → Klopt de eenheid? Een kilometer is duizend meter. Is de route echt zo lang?  [nieuw]
+  - `andere fout` (andere fout) → Tel de meters van alle stukken van de route bij elkaar op.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 13: Je rijgt een ketting volgens dit patroon. # [ding] kralen en # [ding] kraal. Je herhaalt het patroon # keer. Hoeveel [ding] zitten er in de ketting?
 
@@ -318,8 +324,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 3 kralen → Dat is één keer het patroon. Maar hoe vaak herhaal je het? · 10 kralen → Je hebt alleen de rode kralen geteld. De blauwe kralen horen er ook bij.
     - **Uitleg (Claude):** Eén patroon is 2 plus 1, dus 3 kralen. Je doet dat 5 keer, dus 5 keer 3. Dat zijn 15 kralen.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoeveel kralen zitten er in één keer het patroon?
+- **Hint 2 (te schrijven):** Tel de kralen van één patroon: alle soorten kralen samen. Doe dat aantal keer het aantal keer dat je het patroon herhaalt.
+- **Ouderzin:** Je kind rekent uit hoeveel kralen een ketting heeft als een patroon een paar keer terugkomt: eerst één patroon, dan keer.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `één keer het patroon` (3 kralen) → Is dat één keer het patroon? Je herhaalt het patroon een paar keer.  [nieuw]
+  - `één soort kraal` (10 kralen) → Heb je de andere kraal uit het patroon ook meegeteld? Elk patroon heeft twee soorten kralen.  [nieuw]
+  - `andere fout` (andere fout) → Tel de kralen van één patroon en doe dat keer het aantal keer.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 14: Je staat op tree # van de trap. Stap #: ga # [ding] omhoog. Stap #: ga # [ding] omlaag. Op welke tree sta je dan?
 
@@ -337,15 +349,20 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Tree 8 → Na stap 1 sta je goed. Kijk nog eens naar stap 2: die moet je ook nog doen. · Tree 10 → Omlaag gaan is niet erbij optellen. Wat doe je met het getal als je daalt?
     - **Uitleg (Claude):** Van tree 3 ga je 5 omhoog, dan sta je op tree 8. Daarna ga je 2 omlaag. Dan sta je op tree 6.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Volg de stappen één voor één. Op welke tree sta je na stap één?
+- **Hint 2 (te schrijven):** Omhoog is erbij, omlaag is eraf. Tel bij stap één de treden omhoog op bij de tree waar je begint. Haal bij stap twee de treden omlaag eraf.
+- **Ouderzin:** Je kind volgt twee stappen op een trap: omhoog is erbij, omlaag is eraf.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `stand na stap één` (tree 8) → Waar sta je na stap één? Bij stap twee ga je nog een paar treden omlaag.  [nieuw]
+  - `omlaag als omhoog` (tree 10) → Ga je bij stap twee omhoog of omlaag? Omlaag gaan is eraf, niet erbij.  [nieuw]
+  - `andere fout` (andere fout) → Tel de treden omhoog erbij en haal de treden omlaag eraf.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 15: Je volgt deze stappen: neem #, verdubbel het getal en tel er # bij op. Welke uitkomst krijg je?
 
 - Sleutel: nrOrigineel **14** · somtypeOrigineel “Je volgt deze stappen: neem #, verdubbel het getal en tel er # bij op. Welke uitkomst krijg je?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W5 (1) · regel: G7-W03-stappenplan
 - Getallenruimte: n.v.t. · type: meerkeuze
-- **Visual: nodig — niet live zonder beeld** (1 items): de vraag verwijst naar een plaatje, maar Claude gaf geen tekening (Visual: nodig)
 - Uit de G6-park: 1 items
 - Denkfouten (Claude): optellen-ipv-vermenigvuldigen (1), None (1)
 - Verschillende Claude-fout-hints: 2 (meest: “Verdubbelen is niet 2 erbij optellen. Wat gebeurt er met 6 als je het verdubbelt?”)
@@ -357,8 +374,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 11 → Verdubbelen is niet 2 erbij optellen. Wat gebeurt er met 6 als je het verdubbelt? · 12 → Je bent goed begonnen, maar lees de laatste stap nog eens. Heb je alle drie de stappen gedaan?
     - **Uitleg (Claude):** Eerst verdubbel je 6, dat is 12. Daarna tel je er 3 bij op. Zo kom je op 15.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Wat betekent verdubbelen? Doe de stappen één voor één.
+- **Hint 2 (te schrijven):** Verdubbelen is keer twee: het getal wordt twee keer zo groot. Schrijf na elke stap het nieuwe getal op. Tel er bij de laatste stap het getal uit de vraag bij op.
+- **Ouderzin:** Je kind volgt een rij stappen: eerst verdubbelen (keer twee), dan erbij.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `twee erbij in plaats van verdubbelen` (11) → Heb je twee erbij gedaan bij verdubbelen? Verdubbelen is keer twee: het getal wordt twee keer zo groot.  [nieuw]
+  - `laatste stap vergeten` (12) → Is dat het getal na het verdubbelen? Er is nog een stap: er komt nog iets bij.  [nieuw]
+  - `andere fout` (andere fout) → Verdubbel het getal en tel er het getal van de laatste stap bij op.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 16: Je vouwt een blad papier # keer dubbel. Na elke vouw wordt het aantal delen # keer zoveel. In hoeveel delen is het blad verdeeld?
 
@@ -376,8 +399,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 6 delen → Je hebt er steeds 2 bij opgeteld. Maar bij elke vouw wordt het aantal delen 2 keer zoveel. · 4 delen → Tel je vouwen na. Hoeveel keer heb je het blad dubbelgevouwen?
     - **Uitleg (Claude):** Na 1 vouw zijn er 2 delen en na 2 vouwen 4 delen. Na de derde vouw is dat weer 2 keer zoveel. Dat zijn 8 delen.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoeveel delen heb je na één vouw? En na twee vouwen?
+- **Hint 2 (te schrijven):** Begin met één heel blad. Bij elke vouw wordt het aantal delen twee keer zo groot. Schrijf na elke vouw het aantal delen op, tot je zo vaak gevouwen hebt als de vraag zegt.
+- **Ouderzin:** Je kind ziet dat het aantal delen bij elke vouw verdubbelt, en houdt bij hoe vaak.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `erbij of keer het aantal vouwen` (6 delen) → Wordt het aantal delen bij elke vouw twee keer zo groot? Schrijf na elke vouw op hoeveel delen er zijn.  [nieuw]
+  - `een vouw te weinig` (4 delen) → Heb je zo vaak verdubbeld als je vouwt? Tel je vouwen na.  [nieuw]
+  - `andere fout` (andere fout) → Verdubbel het aantal delen bij elke vouw, zo vaak als je vouwt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 17: Op een wandeltocht van # km staan om de # meter bordjes, ook bij de start en de finish. Hoeveel bordjes staan er?
 
@@ -394,10 +423,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 24 bordjes → Vergeet het bordje bij de start niet mee te tellen. · 6 bordjes → Reken de 12 km eerst om naar meters voordat je deelt.
     - **Uitleg (Claude):** 12 km is 12.000 meter. 12.000 : 500 = 24 stukken. Met het bordje bij de start erbij zijn dat 25 bordjes.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoeveel meter is de hele tocht? Reken de kilometers om naar meter.
+- **Hint 2 (te schrijven):** Een kilometer is duizend meter. Deel de lengte van de tocht in meter door de afstand tussen twee bordjes: zoveel stukken zijn er. Aan het begin van elk stuk staat een bordje, en bij de finish staat er nog één.
+- **Ouderzin:** Je kind rekent kilometers om naar meter en telt bij bordjes langs een route ook het bordje bij de finish mee.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `start of finish vergeten` (24 bordjes) → Heb je het bordje bij de start én het bordje bij de finish meegeteld? Er is één bordje meer dan er stukken zijn.  [nieuw]
+  - `niet omgerekend` (6 bordjes) → Hoeveel keer past de afstand tussen twee bordjes in de hele tocht? Reken de tocht eerst om naar meter.  [nieuw]
+  - `andere fout` (andere fout) → Reken de tocht om naar meter, deel door de afstand tussen de bordjes en tel er één bordje bij.  [nieuw]
+- Status: hints klaar
 
-## Somtype 18: Recept: stap #, pak # [ding]. Stap #: pers voor elk glas # [ding]. Hoeveel sinaasappels pers je?
+## Somtype 18: Recept. Stap #: pak # [ding]. Stap #: pers voor elk glas # [ding]. Hoeveel sinaasappels pers je?
 
 - Sleutel: nrOrigineel **16** · somtypeOrigineel “Recept: stap #, pak # [ding]. Stap #: pers voor elk glas # [ding]. Hoeveel sinaasappels pers je?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W5 (1) · regel: G7-W03-stappenplan
@@ -407,14 +442,21 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Je hebt de getallen bij elkaar opgeteld. Elk glas krijgt 2 sinaasappels, dus hoeveel keer 2 heb je nodig?”)
 - Voorbeelden:
   - `G7-DENK-03-claude-bank-016` (Claude W5, ai, niveau 1 → basis)
-    - **Opgave:** Recept: stap 1, pak 3 glazen. Stap 2: pers voor elk glas 2 sinaasappels. Hoeveel sinaasappels pers je?
+    - **Opgave:** Recept. Stap 1: pak 3 glazen. Stap 2: pers voor elk glas 2 sinaasappels. Hoeveel sinaasappels pers je?
     - **Opties:** A) 3 sinaasappels · B) 6 sinaasappels · C) 5 sinaasappels
     - **Antwoord:** 6 sinaasappels  (controle: n.v.t.)
     - **Fout-hints (Claude):** 5 sinaasappels → Je hebt de getallen bij elkaar opgeteld. Elk glas krijgt 2 sinaasappels, dus hoeveel keer 2 heb je nodig? · 3 sinaasappels → Je noemde het aantal glazen. Kijk nog eens hoeveel sinaasappels er in één glas gaan.
     - **Uitleg (Claude):** Elk glas heeft 2 sinaasappels nodig. Bij 3 glazen doe je 3 keer 2. Dat zijn 6 sinaasappels.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoeveel sinaasappels pers je voor één glas? En voor hoeveel glazen?
+- **Hint 2 (te schrijven):** Voor elk glas pers je evenveel sinaasappels. Doe het aantal glazen keer het aantal sinaasappels voor één glas.
+- **Ouderzin:** Je kind volgt een recept in twee stappen en ziet dat 'voor elk glas' een keersom is.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `alleen de glazen` (3 sinaasappels) → Is dat het aantal glazen? De vraag is hoeveel sinaasappels je perst.  [nieuw]
+  - `opgeteld` (5 sinaasappels) → Heb je het aantal glazen en het aantal sinaasappels opgeteld? Voor elk glas pers je evenveel sinaasappels. Hoe vaak gebeurt dat?  [nieuw]
+  - `andere fout` (andere fout) → Doe het aantal glazen keer het aantal sinaasappels voor één glas.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Recept: stap #, pak # [ding]. Stap #: pers voor elk glas # [ding]. Hoeveel sinaasappels pers je?'. Nakijken of ze nog passen.
+- Status: hints klaar
 
 ## Somtype 19: Reeks A: neem #, doe keer # en tel er # bij op. Reeks B: neem #, tel er # bij op en doe keer #. Welke reeks geeft het grootste getal?
 
@@ -432,8 +474,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Reeks A → Reken beide reeksen helemaal uit. Vergelijk daarna de twee uitkomsten. · Ze geven hetzelfde getal → De volgorde van de stappen is anders. Werkt keer 4 dan wel op hetzelfde getal?
     - **Uitleg (Claude):** Reeks A geeft 20 plus 2, dus 22. Reeks B geeft 7 keer 4, dus 28. Reeks B geeft het grootste getal.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Reken elke reeks helemaal uit, stap voor stap. Welke uitkomst is groter?
+- **Hint 2 (te schrijven):** Schrijf bij de eerste reeks na elke stap het getal op. Doe hetzelfde bij de tweede reeks. Vergelijk de twee uitkomsten.
+- **Ouderzin:** Je kind rekent twee reeksen stappen uit en vergelijkt de uitkomsten; de volgorde van de stappen kan uitmaken.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `volgorde maakt niet uit` (ze geven hetzelfde getal) → Maakt de volgorde hier niets uit? Reken beide reeksen uit en kijk of de uitkomsten echt gelijk zijn.  [nieuw]
+  - `eerste reeks gekozen` (reeks a) → Heb je beide reeksen helemaal uitgerekend? Welke uitkomst is echt het grootst?  [nieuw]
+  - `andere fout` (andere fout) → Reken beide reeksen stap voor stap uit en vergelijk de uitkomsten.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 20: Regel: is het getal even, deel het dan door #. Is het oneven, tel er dan # bij op. Je begint bij # en doet # [ding]. Welk getal krijg je?
 
@@ -451,10 +499,42 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 8 → Je hebt de regel goed gebruikt. Tel na hoeveel stappen je al hebt gedaan. · 19 → Kijk bij elk getal eerst of het even of oneven is. Bij een even getal geldt een andere regel.
     - **Uitleg (Claude):** 10 is even, dus wordt het 5. 5 is oneven, dus wordt het 8. 8 is even, dus wordt het 4.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Is het begingetal even of oneven? Welke regel hoort daarbij?
+- **Hint 2 (te schrijven):** Kijk bij elke stap opnieuw of het getal even of oneven is, en gebruik de regel die daarbij hoort. Schrijf na elke stap het nieuwe getal op met een streepje erbij. Stop als je zoveel streepjes hebt als de vraag zegt.
+- **Ouderzin:** Je kind past een regel een paar keer toe en kijkt bij elke stap opnieuw of het getal even of oneven is.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `steeds dezelfde regel` (19) → Heb je bij elke stap gekeken of het getal even of oneven is? Bij een even getal hoort een andere regel.  [nieuw]
+  - `een stap te weinig` (8) → Hoeveel stappen heb je gedaan? Tel ze na: de vraag noemt het aantal stappen.  [nieuw]
+  - `andere fout` (andere fout) → Kijk bij elke stap of het getal even of oneven is, en doe precies zoveel stappen als de vraag zegt.  [nieuw]
+- Status: hints klaar
 
-## Somtype 21: Stappen: neem #, deel door #, tel er # bij op en doe keer #. Tim zegt dat de uitkomst # is. Klopt dat?
+## Somtype 21: Stap #: neem #. Stap #: haal er # af. Stap #: deel door #. Stap #: tel er # bij op. Iemand schreef na elke stap het getal op: #, #, #, #. Bij welke stap ging het mis?
+
+- Sleutel: nrOrigineel **21** · somtypeOrigineel “Stappen: neem #, haal er # af, deel door # en tel er # bij op. Iemand schreef op. #, #, #, #. Bij welke stap ging het mis?” (koppeling: claudeId)
+- Items: **1** · Claude-doelen: W5 (1) · regel: G7-W03-stappenplan
+- Getallenruimte: n.v.t. · type: meerkeuze
+- Uit de G6-park: 1 items
+- Denkfouten (Claude): None (2)
+- Verschillende Claude-fout-hints: 2 (meest: “Reken stap 2 na. 30 min 6. Klopt het getal dat er staat?”)
+- Voorbeelden:
+  - `G7-DENK-03-claude-bank-021` (Claude W5, ai, niveau 2 → toepassen)
+    - **Opgave:** Stap 1: neem 30. Stap 2: haal er 6 af. Stap 3: deel door 4. Stap 4: tel er 10 bij op. Iemand schreef na elke stap het getal op: 30, 24, 8, 18. Bij welke stap ging het mis?
+    - **Opties:** A) Bij stap 3 · B) Bij stap 2 · C) Bij stap 4
+    - **Antwoord:** Bij stap 3  (controle: n.v.t.)
+    - **Fout-hints (Claude):** Bij stap 2 → Reken stap 2 na. 30 min 6. Klopt het getal dat er staat? · Bij stap 4 → Kijk of de stap ervoor al goed ging. Wat is 24 gedeeld door 4?
+    - **Uitleg (Claude):** 30 min 6 is 24, dat klopt nog. Maar 24 gedeeld door 4 is 6 en niet 8. De fout zit dus in stap 3.
+
+- **Hint 1 (te schrijven):** Reken de stappen zelf uit. Vergelijk na elke stap jouw getal met het opgeschreven getal.
+- **Hint 2 (te schrijven):** Het begingetal nemen is de eerste stap. Schrijf jouw getallen onder de opgeschreven getallen. De eerste plek waar ze verschillen, is de stap waar het misging.
+- **Ouderzin:** Je kind rekent een rij stappen na en zoekt de eerste stap waar het misging.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `goede stap gekozen of anders geteld` (bij stap 2) → Klopt het getal na het eraf halen? Reken het na. Let op: het begingetal nemen is de eerste stap.  [nieuw]
+  - `laatste stap gekozen` (bij stap 4) → Ging het in de stap ervoor al goed? Reken elke stap na vanaf het begin.  [nieuw]
+  - `andere fout` (andere fout) → Reken elke stap zelf uit en zoek de eerste stap waar het opgeschreven getal anders is.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Stappen: neem #, haal er # af, deel door # en tel er # bij op. Iemand schreef op. #, #, #, #. Bij welke stap ging het mis?'. Nakijken of ze nog passen.
+- Status: hints klaar
+
+## Somtype 22: Stappen: neem #, deel door #, tel er # bij op en doe keer #. Tim zegt dat de uitkomst # is. Klopt dat?
 
 - Sleutel: nrOrigineel **19** · somtypeOrigineel “Stappen: neem #, deel door #, tel er # bij op en doe keer #. Tim zegt dat de uitkomst # is. Klopt dat?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W5 (1) · regel: G7-W03-stappenplan
@@ -470,10 +550,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Nee, het moet 16 zijn → Er zijn vier stappen. Heb je de stap met plus 5 ook gedaan? · Nee, het moet 15 zijn → In de laatste stap staat keer 2. Dat is iets anders dan er 2 bij optellen.
     - **Uitleg (Claude):** 48 gedeeld door 6 is 8, plus 5 is 13. Daarna is 13 keer 2 is 26. Tim heeft het goed gedaan.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Reken de stappen zelf uit, één voor één. Wat krijg jij?
+- **Hint 2 (te schrijven):** Schrijf na elke stap het getal op: na het delen, na het erbij tellen en na de keer-stap. Vergelijk jouw laatste getal met wat Tim zegt.
+- **Ouderzin:** Je kind rekent een rij stappen na en controleert of een uitkomst klopt.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `keer als plus` (nee, het moet 15 zijn) → Wat staat er in de laatste stap: keer of plus? Keer twee is iets anders dan twee erbij.  [nieuw]
+  - `plus-stap vergeten` (nee, het moet 16 zijn) → Heb je alle stappen gedaan? Er is ook een stap waarin je iets erbij telt.  [nieuw]
+  - `andere fout` (andere fout) → Reken alle stappen zelf uit, in de goede volgorde, en vergelijk met de uitkomst van Tim.  [nieuw]
+- Status: hints klaar
 
-## Somtype 22: Stappen: neem #, doe keer # en haal er # af. Lisa zegt dat de uitkomst # is. Klopt dat?
+## Somtype 23: Stappen: neem #, doe keer # en haal er # af. Lisa zegt dat de uitkomst # is. Klopt dat?
 
 - Sleutel: nrOrigineel **20** · somtypeOrigineel “Stappen: neem #, doe keer # en haal er # af. Lisa zegt dat de uitkomst # is. Klopt dat?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W5 (1) · regel: G7-W03-stappenplan
@@ -489,27 +575,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Nee, het moet 5 zijn → Kijk nog eens naar stap 2. Daar staat keer 3, niet plus 3. · Nee, het moet 34 zijn → Bij stap 3 haal je 7 af. Wordt de uitkomst dan groter of kleiner?
     - **Uitleg (Claude):** Eerst 9 keer 3, dat is 27. Daarna haal je er 7 af. Dat is 20, dus Lisa heeft gelijk.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
-
-## Somtype 23: Stappen: neem #, haal er # af, deel door # en tel er # bij op. Iemand schreef op. #, #, #, #. Bij welke stap ging het mis?
-
-- Sleutel: nrOrigineel **21** · somtypeOrigineel “Stappen: neem #, haal er # af, deel door # en tel er # bij op. Iemand schreef op. #, #, #, #. Bij welke stap ging het mis?” (koppeling: claudeId)
-- Items: **1** · Claude-doelen: W5 (1) · regel: G7-W03-stappenplan
-- Getallenruimte: n.v.t. · type: meerkeuze
-- Uit de G6-park: 1 items
-- Denkfouten (Claude): None (2)
-- Verschillende Claude-fout-hints: 2 (meest: “Reken stap 2 na. 30 min 6. Klopt het getal dat er staat?”)
-- Voorbeelden:
-  - `G7-DENK-03-claude-bank-021` (Claude W5, ai, niveau 2 → toepassen)
-    - **Opgave:** Stappen: neem 30, haal er 6 af, deel door 4 en tel er 10 bij op. Iemand schreef op. 30, 24, 8, 18. Bij welke stap ging het mis?
-    - **Opties:** A) Bij stap 3 · B) Bij stap 2 · C) Bij stap 4
-    - **Antwoord:** Bij stap 3  (controle: n.v.t.)
-    - **Fout-hints (Claude):** Bij stap 2 → Reken stap 2 na. 30 min 6. Klopt het getal dat er staat? · Bij stap 4 → Kijk of de stap ervoor al goed ging. Wat is 24 gedeeld door 4?
-    - **Uitleg (Claude):** 30 min 6 is 24, dat klopt nog. Maar 24 gedeeld door 4 is 6 en niet 8. De fout zit dus in stap 3.
-
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Reken de stappen zelf uit. Wat krijg jij?
+- **Hint 2 (te schrijven):** Schrijf na elke stap het getal op: na de keer-stap en na het eraf halen. Vergelijk jouw laatste getal met wat Lisa zegt.
+- **Ouderzin:** Je kind rekent een rij stappen na en controleert of een uitkomst klopt.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `erbij in plaats van eraf` (nee, het moet 34 zijn) → Wat doe je in de laatste stap: erbij of eraf? Als je iets eraf haalt, wordt het getal kleiner.  [nieuw]
+  - `plus in plaats van keer` (nee, het moet 5 zijn) → Wat staat er in de tweede stap: keer of plus? Keer is iets anders dan erbij.  [nieuw]
+  - `andere fout` (andere fout) → Doe de keer-stap en haal er het laatste getal af. Vergelijk met de uitkomst van Lisa.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 24: Verdeel # [ding] eerlijk over # [ding]. De knikkers die overblijven, leg je apart. Hoeveel [ding] liggen er apart?
 
@@ -527,15 +600,20 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 6 knikkers → Dat is het aantal in één zakje. De vraag gaat over de knikkers die niet meer passen. · Geen enkele → Kijk of 50 precies in 8 gelijke groepen gaat. Blijft er echt niets over?
     - **Uitleg (Claude):** In elk zakje gaan 6 knikkers, want 8 keer 6 is 48. Van de 50 knikkers blijven er dan 2 over. Die leg je apart.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoeveel knikkers krijgt elk zakje als je eerlijk verdeelt? Blijft er iets over?
+- **Hint 2 (te schrijven):** Zoek het grootste aantal dat in elk zakje kan, zonder dat je knikkers tekortkomt. Doe dat aantal keer het aantal zakjes. Haal die uitkomst van alle knikkers af: wat overblijft, ligt apart.
+- **Ouderzin:** Je kind deelt met rest en kijkt hoeveel er overblijft.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `aantal per zakje` (6 knikkers) → Is dat het aantal in één zakje? De vraag is hoeveel knikkers er overblijven.  [nieuw]
+  - `rest vergeten` (geen enkele) → Gaat het precies op? Doe het aantal per zakje keer het aantal zakjes en vergelijk met alle knikkers.  [nieuw]
+  - `andere fout` (andere fout) → Verdeel eerlijk, kijk hoeveel er in de zakjes zitten en haal dat van alle knikkers af.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 25: Volg deze stappen: neem #, doe keer #, tel er # bij op en deel door #. Wat is de uitkomst?
 
 - Sleutel: nrOrigineel **23** · somtypeOrigineel “Volg deze stappen: neem #, doe keer #, tel er # bij op en deel door #. Wat is de uitkomst?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W5 (1) · regel: G7-W03-stappenplan
 - Getallenruimte: n.v.t. · type: meerkeuze
-- **Visual: nodig — niet live zonder beeld** (1 items): de vraag verwijst naar een plaatje, maar Claude gaf geen tekening (Visual: nodig)
 - Uit de G6-park: 1 items
 - Denkfouten (Claude): None (2)
 - Verschillende Claude-fout-hints: 2 (meest: “Je bent tot stap 3 goed gekomen. Er staat nog een vierde stap.”)
@@ -547,8 +625,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 40 → Je bent tot stap 3 goed gekomen. Er staat nog een vierde stap. · 26 → Let op de volgorde van de stappen. Delen doe je pas nadat je hebt opgeteld.
     - **Uitleg (Claude):** 7 keer 4 is 28 en 12 erbij is 40. Daarna deel je 40 door 2. De uitkomst is 20.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Doe de stappen in de volgorde van de vraag. Welk getal heb je na elke stap?
+- **Hint 2 (te schrijven):** Schrijf na elke stap het getal op: na de keer-stap, na de plus-stap en na de deel-stap. Doe de deel-stap als laatste, met het getal dat je na de plus-stap hebt.
+- **Ouderzin:** Je kind volgt een rij van vier stappen precies in de goede volgorde.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `deel-stap niet op het getal na de plus-stap` (26) → Welk getal heb je na de plus-stap? Dat hele getal deel je in de laatste stap door twee.  [nieuw]
+  - `laatste stap vergeten` (40) → Is dat het getal na de plus-stap? Er is nog een laatste stap: delen.  [nieuw]
+  - `andere fout` (andere fout) → Doe alle stappen in de volgorde van de vraag, de deel-stap als laatste.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 26: Voor # [ding] gebruik je # g boter. Je wilt # [ding] bakken. Iemand zegt dat je dan # g boter nodig hebt. Klopt dat?
 
@@ -560,11 +644,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Kijk hoe vaak 6 in 18 past. Met 240 g bak je niet genoeg koekjes.”)
 - Voorbeelden:
   - `G7-DENK-03-claude-bank-024` (Claude W5, ai, niveau 3 → toepassen)
-    - **Opgave:** Voor 6 koekjes gebruik je 120 g boter. Je wilt 18 koekjes bakken. Iemand zegt dat je dan 240 g boter nodig hebt. Klopt dat?
-    - **Opties:** A) Nee, het moet 360 g zijn · B) Ja, 240 g klopt · C) Nee, het moet 40 g zijn
-    - **Antwoord:** Nee, het moet 360 g zijn  (controle: n.v.t.)
-    - **Fout-hints (Claude):** Ja, 240 g klopt → Kijk hoe vaak 6 in 18 past. Met 240 g bak je niet genoeg koekjes. · Nee, het moet 40 g zijn → Je bakt meer koekjes dan in het recept staat. Heb je dan meer of minder boter nodig?
-    - **Uitleg (Claude):** 18 koekjes is 3 keer zoveel als 6 koekjes. Dus neem je ook 3 keer 120 g boter. Dat is 360 g.
+    - **Opgave:** Voor 12 koekjes gebruik je 60 g boter. Je wilt 36 koekjes bakken. Iemand zegt dat je dan 120 g boter nodig hebt. Klopt dat?
+    - **Opties:** A) Nee, het moet 180 g zijn · B) Ja, 120 g klopt · C) Nee, het moet 20 g zijn
+    - **Antwoord:** Nee, het moet 180 g zijn  (controle: n.v.t.)
+    - **Fout-hints (Claude):** Ja, 120 g klopt → Kijk hoe vaak 6 in 18 past. Met 240 g bak je niet genoeg koekjes. · Nee, het moet 20 g zijn → Je bakt meer koekjes dan in het recept staat. Heb je dan meer of minder boter nodig?
+    - **Uitleg (Claude):** 36 koekjes is 3 keer zoveel als 12 koekjes. Dus neem je ook 3 keer 60 g boter. Dat is 180 g.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Je wilt meer koekjes bakken. Hoeveel keer zoveel koekjes zijn dat?
+- **Hint 2 (te schrijven):** Deel het aantal koekjes dat je wilt bakken door het aantal koekjes uit de eerste zin. De uitkomst zegt hoeveel keer zoveel boter je nodig hebt. Reken het uit en vergelijk met wat iemand zegt.
+- **Ouderzin:** Je kind vergroot een hoeveelheid: hoeveel keer zoveel koekjes, zoveel keer zoveel boter.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `bewering overgenomen` (ja, 240 g klopt) → Heb je het zelf nagerekend? Hoeveel keer past het aantal koekjes uit de eerste zin in het aantal dat je wilt bakken?  [nieuw]
+  - `gedeeld in plaats van keer` (nee, het moet 40 g zijn) → Bak je meer of minder koekjes dan in de eerste zin? Heb je dan meer of minder boter nodig?  [nieuw]
+  - `andere fout` (andere fout) → Reken uit hoeveel keer zoveel koekjes je bakt, en doe de boter ook zoveel keer.  [nieuw]
+- Status: hints klaar

@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T12:16:26+0200",
+ "gegenereerdOp": "2026-10-08T12:36:53+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-DENK-02",
  "bordtitel": "Een situatie in een som zetten",
@@ -259,8 +259,8 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "60 meter"
    },
-   "hint": "Lees goed welk getal de vraag zoekt. De omtrek is de rand rondom. De oppervlakte is het vlak binnen de rand.",
-   "sterkereHint": "Zoekt de vraag de omtrek? Tel dan alle vier de zijden bij elkaar op. Zoekt de vraag de oppervlakte? Doe dan de lengte keer de breedte.",
+   "hint": "De omtrek is de lengte van de rand helemaal rondom het veld.",
+   "sterkereHint": "Loop in gedachten om het veld heen. Een rechthoek heeft twee lange en twee korte zijden. Tel alle vier de zijden bij elkaar op.",
    "foutHints": [
     {
      "stap": null,
@@ -284,7 +284,7 @@
     }
    ],
    "foutHintsTekst": "30 meter → Heb je maar twee zijden geteld? Een rechthoek heeft vier zijden. Loop helemaal om het veld heen. · 200 meter → Heb je de lengte keer de breedte gedaan? Zo krijg je de oppervlakte: het vlak binnen de rand. De omtrek is alleen de rand.",
-   "ouderzin": "Je kind rekent aan een rechthoek: de omtrek (alle vier de zijden opgeteld) of de oppervlakte (de lengte keer de breedte), net wat de vraag zoekt.",
+   "ouderzin": "Je kind rekent de omtrek van een rechthoek uit: alle vier de zijden bij elkaar opgeteld.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -436,7 +436,7 @@
      "regel": "andere fout",
      "soort": "andere fout",
      "bron": "nieuw",
-     "tekst": "Zoek je de omtrek? Tel dan alle vier de zijden op. Zoek je de oppervlakte? Doe dan de lengte keer de breedte.",
+     "tekst": "De omtrek is de rand rondom. Tel alle vier de zijden van de rechthoek bij elkaar op.",
      "tekstSterker": null,
      "perItem": false,
      "match": {
@@ -445,7 +445,7 @@
      "leesbaar": true
     }
    ],
-   "algemeneFoutHint": "Zoek je de omtrek? Tel dan alle vier de zijden op. Zoek je de oppervlakte? Doe dan de lengte keer de breedte."
+   "algemeneFoutHint": "De omtrek is de rand rondom. Tel alle vier de zijden van de rechthoek bij elkaar op."
   },
   {
    "id": "G7-DENK-02-claude-bank-003",
@@ -477,16 +477,16 @@
     "juisteOptieTekst": "3 groepjes van 6, één groepje gekleurd"
    },
    "hint": "Een derde: je verdeelt alle kinderen in drie even grote groepjes.",
-   "sterkereHint": "Hoeveel is een derde van de hele groep? Reken het uit. Tel bij elke tekening hoeveel er gekleurd zijn.",
+   "sterkereHint": "Hoeveel is een derde van de hele groep? Reken het uit. Tel bij elke tekening hoeveel kinderen er bij de zandbak horen.",
    "foutHints": [
     {
      "stap": null,
      "fout": "3 groepjes van 6, alle groepjes gekleurd",
      "uitleg": "Spelen alle kinderen bij de zandbak? Een derde is maar één van de drie even grote groepjes.",
-     "uitlegSterker": "Verdeel de kinderen in drie even grote groepjes. Kleur er één. Alleen dat ene groepje is een derde; de andere twee horen er niet bij.",
+     "uitlegSterker": "Verdeel de kinderen in drie even grote groepjes. Eén groepje speelt bij de zandbak. Alleen dat ene groepje is een derde; de andere twee horen er niet bij.",
      "laag2": "tekstSterker",
-     "regel": "alle groepjes gekleurd",
-     "soort": "alles gekleurd",
+     "regel": "alle groepjes",
+     "soort": "alle groepjes",
      "bron": "nieuw"
     },
     {
@@ -624,11 +624,11 @@
    },
    "foutRegels": [
     {
-     "regel": "alle groepjes gekleurd",
-     "soort": "alles gekleurd",
+     "regel": "alle groepjes",
+     "soort": "alle groepjes",
      "bron": "nieuw",
      "tekst": "Spelen alle kinderen bij de zandbak? Een derde is maar één van de drie even grote groepjes.",
-     "tekstSterker": "Verdeel de kinderen in drie even grote groepjes. Kleur er één. Alleen dat ene groepje is een derde; de andere twee horen er niet bij.",
+     "tekstSterker": "Verdeel de kinderen in drie even grote groepjes. Eén groepje speelt bij de zandbak. Alleen dat ene groepje is een derde; de andere twee horen er niet bij.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -3095,11 +3095,18 @@
    "algemeneFoutHint": "Reken elke soort apart uit en tel de uitkomsten bij elkaar op."
   }
  ],
- "hintsSyncOp": "2026-10-08T12:16:56+02:00",
+ "hintsSyncOp": "2026-10-08T12:36:57+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
-   "md5": "4715654e9a9a"
+   "md5": "99522aca3a7a"
+  },
+  {
+   "batch": "batch2.json",
+   "md5": "51b0ad888aad"
   }
- ]
+ ],
+ "geschrevenOp": "2026-10-08T12:36:57+02:00",
+ "geschrevenDoor": "build (apply_hints)",
+ "itemsGewijzigdBijSchrijven": true
 }

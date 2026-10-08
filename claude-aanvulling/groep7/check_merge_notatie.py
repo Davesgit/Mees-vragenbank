@@ -159,12 +159,13 @@ if __name__ == '__main__':
     fail = (_GA.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import bijna390_check as _B390      # #390 (G6 gate ronde 9 deel B): getal uit de vraag nooit ±1/'Bijna!' (FAIL, G5–G8)
     fail = (_B390.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
-    # Review G7 batch 1 (Didactiek 8 okt): Z-#518 CONTEXT (WARN), Z-#525 VISUAL (WARN), Z-#520 ROUTES (INFO, alleen somtypes met hints + telling heel G7)
+    import antwoord_in_vraag_check as _AIV      # V-#560 (recheck G7 batch 1, Didactiek 8 okt): procent/breuk, goed antwoord = getal uit de vraag (FAIL, G5–G8)
+    fail = (_AIV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    # Review G7 batch 1 (Didactiek 8 okt): Z-#518 CONTEXT (WARN), Z-#525 VISUAL (WARN), Z-#520/Z-#562 ROUTES (INFO, heel G7 per stuk)
     import contextgebonden_check as _CG, visual_somtype_check as _VS, routes_check as _RT
     _alle = [_it for _p in files for _it in json.load(open(_p))['items']]
     _CG.rapport(os.path.dirname(os.path.abspath(__file__))); _VS.rapport(_alle)
-    _hk = {(_e['doel'], _e.get('nrOrigineel')) for _b in glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'hints', 'batch*.json')) for _e in json.load(open(_b)).get('somtypen', [])}
-    _RT.rapport([_it for _it in _alle if (_it['merge']['doel'], _it['merge'].get('somtypeNrOrigineel')) in _hk])
-    print(f"  (heel G7, alle meerkeuze: {len(_RT.rapport(_alle, toon=False))} INFO-treffers; niet per stuk getoond)")
+    # Z-#562 (recheck batch 1): alle meldingen per stuk, voor heel G7 (alle meerkeuze), met minder bijvangst; ook in logs/routes.json
+    _RT.rapport(_alle, log=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logs', 'routes.json'))
     print('\nG7 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

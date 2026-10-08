@@ -99,8 +99,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Items: **60** · Claude-doelen: B8 (60) · regel: G7-B01-breuk-plusmin
 - Getallenruimte: breuken (noemer tot 10), breuken (noemer tot 11), breuken (noemer tot 12), breuken (noemer tot 4), breuken (noemer tot 5), breuken (noemer tot 6), breuken (noemer tot 7), breuken (noemer tot 8), breuken (noemer tot 9) · type: kale
 - Uit de G6-park: 60 items
-- Denkfouten (Claude): teller-en-noemer-optellen (83), verkeerde-bewerking (37)
-- Verschillende Claude-fout-hints: 27 (meest: “Lees de vraag nog eens: komt er iets bij, of gaat er iets af?”)
+- Denkfouten (Claude): teller-en-noemer-optellen (80), verkeerde-bewerking (40)
+- Verschillende Claude-fout-hints: 24 (meest: “Lees de vraag nog eens: komt er iets bij, of gaat er iets af?”)
 - Voorbeelden:
   - `G7-GET-05-claude-bank-172` (Claude B8, bank, niveau 3 → toepassen)
     - **Opgave:** Reken uit: 3/4 − 2/4 = ? Typ een breuk.

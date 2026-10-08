@@ -1,0 +1,1130 @@
+{
+ "batch": "batch2",
+ "geschreven": "2026-10-08",
+ "uitleg": "Hints per somtype (G7-merge, batch 2 = DENK-03 een plan in stappen, nrO 11–24 en 26, en DENK-04 de namen van de getallen in een som, 6 somtypes). Formaat als hints/batch1.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per foute optie een regel (DENK-03: de optietekst, exact; DENK-04: motorregel of foute naam), laag 1 'tekst' en laag 2 'tekstSterker'; 'andere fout' als laatste.",
+ "somtypen": [
+  {
+   "doel": "G7-DENK-03",
+   "nr": 12,
+   "somtype": "Je loopt een route. # m rechtdoor, dan links # m en dan rechts # m. Hoeveel meter heb je in totaal gelopen?",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "Je loopt een route. # m rechtdoor, dan links # m en dan rechts # m. Hoeveel meter heb je in totaal gelopen?",
+   "hint1": "De route bestaat uit een paar stukken. Hoeveel meter is elk stuk?",
+   "hint2": "Schrijf de meters van alle stukken onder elkaar, ook het eerste stuk rechtdoor. Tel ze bij elkaar op. Kijk tot slot of de eenheid klopt: meter of kilometer.",
+   "ouderzin": "Je kind telt de stukken van een route bij elkaar op en let op de eenheid.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "eerste stuk vergeten",
+     "claudeDenkfout": null,
+     "regel": "400 m",
+     "tekst": "Heb je alle stukken van de route meegeteld, ook het eerste stuk rechtdoor?",
+     "tekstSterker": "Zet een streepje bij elk stuk van de route als je het optelt: rechtdoor, links en rechts. Tel pas op als elk stuk een streepje heeft."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "meter als kilometer",
+     "claudeDenkfout": null,
+     "regel": "6 km",
+     "tekst": "Klopt de eenheid? Een kilometer is duizend meter. Is de route echt zo lang?",
+     "tekstSterker": "Tel de meters van de stukken op en schrijf het antwoord in meter. Duizend meter is één kilometer: is de route langer of korter dan dat?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de meters van alle stukken van de route bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de route vanaf het begin. Heb je het eerste stuk ook meegeteld?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Kijk nog eens naar de eenheid. Hoeveel meter zit er in 1 km?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 13,
+   "somtype": "Je rijgt een ketting volgens dit patroon. # [ding] kralen en # [ding] kraal. Je herhaalt het patroon # keer. Hoeveel [ding] zitten er in de ketting?",
+   "nrOrigineel": 12,
+   "somtypeOrigineel": "Je rijgt een ketting volgens dit patroon. # [ding] kralen en # [ding] kraal. Je herhaalt het patroon # keer. Hoeveel [ding] zitten er in de ketting?",
+   "hint1": "Hoeveel kralen zitten er in één keer het patroon?",
+   "hint2": "Tel de kralen van één patroon: alle soorten kralen samen. Doe dat aantal keer het aantal keer dat je het patroon herhaalt.",
+   "ouderzin": "Je kind rekent uit hoeveel kralen een ketting heeft als een patroon een paar keer terugkomt: eerst één patroon, dan keer.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één keer het patroon",
+     "claudeDenkfout": null,
+     "regel": "3 kralen",
+     "tekst": "Is dat één keer het patroon? Je herhaalt het patroon een paar keer.",
+     "tekstSterker": "Schrijf het patroon zo vaak op als je het herhaalt, en tel alle kralen. Korter: doe de kralen van één patroon keer het aantal keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één soort kraal",
+     "claudeDenkfout": null,
+     "regel": "10 kralen",
+     "tekst": "Heb je de andere kraal uit het patroon ook meegeteld? Elk patroon heeft twee soorten kralen.",
+     "tekstSterker": "Maak twee rijtjes: één voor elke soort kraal, met een getal voor elke keer dat je het patroon maakt. Tel de twee rijtjes bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de kralen van één patroon en doe dat keer het aantal keer."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is één keer het patroon. Maar hoe vaak herhaal je het?",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je hebt alleen de rode kralen geteld. De blauwe kralen horen er ook bij.",
+     "claudeDenkfout": null,
+     "waarom": "zegt zeker wat het kind deed; nu een vraag (les 20/101), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "kraal"
+    ],
+    "aanname": "het patroon heeft twee soorten kralen (laag 1 van één soort kraal)"
+   }
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 14,
+   "somtype": "Je staat op tree # van de trap. Stap #: ga # [ding] omhoog. Stap #: ga # [ding] omlaag. Op welke tree sta je dan?",
+   "nrOrigineel": 13,
+   "somtypeOrigineel": "Je staat op tree # van de trap. Stap #: ga # [ding] omhoog. Stap #: ga # [ding] omlaag. Op welke tree sta je dan?",
+   "hint1": "Volg de stappen één voor één. Op welke tree sta je na stap één?",
+   "hint2": "Omhoog is erbij, omlaag is eraf. Tel bij stap één de treden omhoog op bij de tree waar je begint. Haal bij stap twee de treden omlaag eraf.",
+   "ouderzin": "Je kind volgt twee stappen op een trap: omhoog is erbij, omlaag is eraf.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "stand na stap één",
+     "claudeDenkfout": null,
+     "regel": "tree 8",
+     "tekst": "Waar sta je na stap één? Bij stap twee ga je nog een paar treden omlaag.",
+     "tekstSterker": "Schrijf onder elkaar op welke tree je staat: aan het begin, na stap één en na stap twee. Omlaag gaan haal je eraf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "omlaag als omhoog",
+     "claudeDenkfout": null,
+     "regel": "tree 10",
+     "tekst": "Ga je bij stap twee omhoog of omlaag? Omlaag gaan is eraf, niet erbij.",
+     "tekstSterker": "Teken een trap en zet je vinger op de tree waar je begint. Ga bij stap één omhoog. Ga bij stap twee omlaag: tel de treden terug."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de treden omhoog erbij en haal de treden omlaag eraf."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Na stap 1 sta je goed. Kijk nog eens naar stap 2: die moet je ook nog doen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Omlaag gaan is niet erbij optellen. Wat doe je met het getal als je daalt?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "treden"
+    ]
+   }
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 15,
+   "somtype": "Je volgt deze stappen: neem #, verdubbel het getal en tel er # bij op. Welke uitkomst krijg je?",
+   "nrOrigineel": 14,
+   "somtypeOrigineel": "Je volgt deze stappen: neem #, verdubbel het getal en tel er # bij op. Welke uitkomst krijg je?",
+   "hint1": "Wat betekent verdubbelen? Doe de stappen één voor één.",
+   "hint2": "Verdubbelen is keer twee: het getal wordt twee keer zo groot. Schrijf na elke stap het nieuwe getal op. Tel er bij de laatste stap het getal bij op dat in die stap staat.",
+   "ouderzin": "Je kind volgt een rij stappen: eerst verdubbelen (keer twee), dan erbij.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "twee erbij in plaats van verdubbelen",
+     "claudeDenkfout": null,
+     "regel": "11",
+     "tekst": "Heb je twee erbij gedaan bij verdubbelen? Verdubbelen is keer twee: het getal wordt twee keer zo groot.",
+     "tekstSterker": "Verdubbelen is het getal bij zichzelf optellen. Doe dat met het begingetal en schrijf de uitkomst op. Tel er tot slot het getal van de laatste stap bij op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "laatste stap vergeten",
+     "claudeDenkfout": null,
+     "regel": "12",
+     "tekst": "Is dat het getal na het verdubbelen? Er is nog een stap: er komt nog iets bij.",
+     "tekstSterker": "Schrijf de stappen onder elkaar en zet een vinkje bij elke stap die je gedaan hebt. Doe de stap zonder vinkje ook."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Verdubbel het getal en tel er het getal van de laatste stap bij op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Verdubbelen is niet 2 erbij optellen. Wat gebeurt er met 6 als je het verdubbelt?",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Je bent goed begonnen, maar lees de laatste stap nog eens. Heb je alle drie de stappen gedaan?",
+     "claudeDenkfout": null,
+     "waarom": "zegt zeker wat het kind deed; nu een vraag (les 20/101), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 16,
+   "somtype": "Je vouwt een blad papier # keer dubbel. Na elke vouw wordt het aantal delen # keer zoveel. In hoeveel delen is het blad verdeeld?",
+   "nrOrigineel": 15,
+   "somtypeOrigineel": "Je vouwt een blad papier # keer dubbel. Na elke vouw wordt het aantal delen # keer zoveel. In hoeveel delen is het blad verdeeld?",
+   "hint1": "Hoeveel delen heb je na één vouw? En na twee vouwen?",
+   "hint2": "Begin met één heel blad. Bij elke vouw wordt het aantal delen twee keer zo groot. Schrijf na elke vouw het aantal delen op, tot je zo vaak gevouwen hebt als de vraag zegt.",
+   "ouderzin": "Je kind ziet dat het aantal delen bij elke vouw verdubbelt, en houdt bij hoe vaak.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "erbij of keer het aantal vouwen",
+     "claudeDenkfout": null,
+     "regel": "6 delen",
+     "tekst": "Wordt het aantal delen bij elke vouw twee keer zo groot? Schrijf na elke vouw op hoeveel delen er zijn.",
+     "tekstSterker": "Vouw in gedachten: één blad wordt na één vouw twee delen. Elke volgende vouw verdubbelt wat je al had: neem het aantal delen van de vouw ervoor keer twee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een vouw te weinig",
+     "claudeDenkfout": null,
+     "regel": "4 delen",
+     "tekst": "Heb je zo vaak verdubbeld als je vouwt? Tel je vouwen na.",
+     "tekstSterker": "Zet voor elke vouw een streepje en schrijf het aantal delen erachter. Stop pas als je zoveel streepjes hebt als het aantal vouwen uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Verdubbel het aantal delen bij elke vouw, zo vaak als je vouwt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt er steeds 2 bij opgeteld. Maar bij elke vouw wordt het aantal delen 2 keer zoveel.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Tel je vouwen na. Hoeveel keer heb je het blad dubbelgevouwen?",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 17,
+   "somtype": "Op een wandeltocht van # km staan om de # meter bordjes, ook bij de start en de finish. Hoeveel bordjes staan er?",
+   "nrOrigineel": 26,
+   "somtypeOrigineel": "Op een wandeltocht van # km staan om de # meter bordjes, ook bij de start en de finish. Hoeveel bordjes staan er?",
+   "hint1": "Hoeveel meter is de hele tocht? Reken de kilometers om naar meter.",
+   "hint2": "Een kilometer is duizend meter. Deel de lengte van de tocht in meter door de afstand tussen twee bordjes: zoveel stukken zijn er. Aan het begin van elk stuk staat een bordje, en bij de finish staat er nog één.",
+   "ouderzin": "Je kind rekent kilometers om naar meter en telt bij bordjes langs een route ook het bordje bij de finish mee.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "start of finish vergeten",
+     "claudeDenkfout": null,
+     "regel": "24 bordjes",
+     "tekst": "Heb je het bordje bij de start én het bordje bij de finish meegeteld? Er is één bordje meer dan er stukken zijn.",
+     "tekstSterker": "Teken een kort stuk van de tocht met drie bordjes: daartussen liggen twee stukken. Bij bordjes langs een weg is er altijd één bordje meer dan er stukken zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "helft genomen in plaats van hoe vaak het past",
+     "claudeDenkfout": null,
+     "regel": "6 bordjes",
+     "tekst": "Hoe vaak past de afstand tussen twee bordjes in één kilometer? Zoveel stukken liggen er in elke kilometer van de tocht.",
+     "tekstSterker": "Schrijf de lengte van de tocht in meter: een kilometer is duizend meter. Deel dat door de afstand tussen twee bordjes. Tel er nog één bordje bij, want er staat er ook een bij de finish."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken de tocht om naar meter, deel door de afstand tussen de bordjes en tel er één bordje bij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Vergeet het bordje bij de start niet mee te tellen.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Reken de 12 km eerst om naar meters voordat je deelt.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 18,
+   "somtype": "Recept. Stap #: pak # [ding]. Stap #: pers voor elk glas # [ding]. Hoeveel sinaasappels pers je?",
+   "nrOrigineel": 16,
+   "somtypeOrigineel": "Recept: stap #, pak # [ding]. Stap #: pers voor elk glas # [ding]. Hoeveel sinaasappels pers je?",
+   "hint1": "Hoeveel sinaasappels pers je voor één glas? En voor hoeveel glazen?",
+   "hint2": "Voor elk glas pers je evenveel sinaasappels. Doe het aantal glazen keer het aantal sinaasappels voor één glas.",
+   "ouderzin": "Je kind volgt een recept in twee stappen en ziet dat 'voor elk glas' een keersom is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alleen de glazen",
+     "claudeDenkfout": null,
+     "regel": "3 sinaasappels",
+     "tekst": "Is dat het aantal glazen? De vraag is hoeveel sinaasappels je perst.",
+     "tekstSterker": "Teken de glazen en zet bij elk glas de sinaasappels die je ervoor perst. Tel alle sinaasappels."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "5 sinaasappels",
+     "tekst": "Heb je het aantal glazen en het aantal sinaasappels opgeteld? Voor elk glas pers je evenveel sinaasappels. Hoe vaak gebeurt dat?",
+     "tekstSterker": "Tel glas voor glas: bij elk glas komen er evenveel sinaasappels bij, zo vaak als er glazen zijn. Een plussom met steeds hetzelfde getal is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe het aantal glazen keer het aantal sinaasappels voor één glas."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt de getallen bij elkaar opgeteld. Elk glas krijgt 2 sinaasappels, dus hoeveel keer 2 heb je nodig?",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Je noemde het aantal glazen. Kijk nog eens hoeveel sinaasappels er in één glas gaan.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "zegt zeker wat het kind deed; nu een vraag (les 20/101), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "glazen"
+    ]
+   },
+   "kopGewijzigd": {
+    "van": "Recept: stap #, pak # [ding]. Stap #: pers voor elk glas # [ding]. Hoeveel sinaasappels pers je?",
+    "naar": "Recept. Stap #: pak # [ding]. Stap #: pers voor elk glas # [ding]. Hoeveel sinaasappels pers je?",
+    "op": "2026-10-08"
+   }
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 19,
+   "somtype": "Reeks A: neem #, doe keer # en tel er # bij op. Reeks B: neem #, tel er # bij op en doe keer #. Welke reeks geeft het grootste getal?",
+   "nrOrigineel": 17,
+   "somtypeOrigineel": "Reeks A: neem #, doe keer # en tel er # bij op. Reeks B: neem #, tel er # bij op en doe keer #. Welke reeks geeft het grootste getal?",
+   "hint1": "Reken elke reeks helemaal uit, stap voor stap. Welke uitkomst is groter?",
+   "hint2": "Schrijf bij de eerste reeks na elke stap het getal op. Doe hetzelfde bij de tweede reeks. Vergelijk de twee uitkomsten.",
+   "ouderzin": "Je kind rekent twee reeksen stappen uit en vergelijkt de uitkomsten; de volgorde van de stappen kan uitmaken.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "volgorde maakt niet uit",
+     "claudeDenkfout": null,
+     "regel": "ze geven hetzelfde getal",
+     "tekst": "Maakt de volgorde hier niets uit? Reken beide reeksen uit en kijk of de uitkomsten echt gelijk zijn.",
+     "tekstSterker": "Bij de tweede reeks tel je iets op vóór de keer-stap. Zo gaat de keer ook over wat erbij kwam. Reken beide reeksen stap voor stap uit en vergelijk de uitkomsten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "eerste reeks gekozen",
+     "claudeDenkfout": null,
+     "regel": "reeks a",
+     "tekst": "Heb je beide reeksen helemaal uitgerekend? Welke uitkomst is echt het grootst?",
+     "tekstSterker": "Schrijf voor beide reeksen elk getal na elke stap op, in de volgorde van de vraag. Zet de twee laatste getallen naast elkaar en kijk welke groter is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken beide reeksen stap voor stap uit en vergelijk de uitkomsten."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Reken beide reeksen helemaal uit. Vergelijk daarna de twee uitkomsten.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De volgorde van de stappen is anders. Werkt keer 4 dan wel op hetzelfde getal?",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 20,
+   "somtype": "Regel: is het getal even, deel het dan door #. Is het oneven, tel er dan # bij op. Je begint bij # en doet # [ding]. Welk getal krijg je?",
+   "nrOrigineel": 18,
+   "somtypeOrigineel": "Regel: is het getal even, deel het dan door #. Is het oneven, tel er dan # bij op. Je begint bij # en doet # [ding]. Welk getal krijg je?",
+   "hint1": "Is het begingetal even of oneven? Welke regel hoort daarbij?",
+   "hint2": "Kijk bij elke stap opnieuw of het getal even of oneven is, en gebruik de regel die daarbij hoort. Schrijf na elke stap het nieuwe getal op met een streepje erbij. Stop als je zoveel streepjes hebt als de vraag zegt.",
+   "ouderzin": "Je kind past een regel een paar keer toe en kijkt bij elke stap opnieuw of het getal even of oneven is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "steeds dezelfde regel",
+     "claudeDenkfout": null,
+     "regel": "19",
+     "tekst": "Heb je bij elke stap gekeken of het getal even of oneven is? Bij een even getal hoort een andere regel.",
+     "tekstSterker": "Maak een tabel met drie kolommen: het getal, even of oneven, en het nieuwe getal. Vul een rij in voor elke stap."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een stap te weinig",
+     "claudeDenkfout": null,
+     "regel": "8",
+     "tekst": "Hoeveel stappen heb je gedaan? Tel ze na: de vraag noemt het aantal stappen.",
+     "tekstSterker": "Zet een streepje achter elk nieuw getal. Het begingetal krijgt geen streepje. Ga door tot je zoveel streepjes hebt als het aantal stappen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij elke stap of het getal even of oneven is, en doe precies zoveel stappen als de vraag zegt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt de regel goed gebruikt. Tel na hoeveel stappen je al hebt gedaan.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "zegt zeker wat het kind deed; nu een vraag (les 20/101), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk bij elk getal eerst of het even of oneven is. Bij een even getal geldt een andere regel.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "stappen"
+    ]
+   }
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 22,
+   "somtype": "Stappen: neem #, deel door #, tel er # bij op en doe keer #. Tim zegt dat de uitkomst # is. Klopt dat?",
+   "nrOrigineel": 19,
+   "somtypeOrigineel": "Stappen: neem #, deel door #, tel er # bij op en doe keer #. Tim zegt dat de uitkomst # is. Klopt dat?",
+   "hint1": "Reken de stappen zelf uit, één voor één. Wat krijg jij?",
+   "hint2": "Schrijf na elke stap het getal op: na het delen, na het erbij tellen en na de keer-stap. Vergelijk jouw laatste getal met wat Tim zegt.",
+   "ouderzin": "Je kind rekent een rij stappen na en controleert of een uitkomst klopt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "keer als plus",
+     "claudeDenkfout": null,
+     "regel": "nee, het moet 15 zijn",
+     "tekst": "Wat staat er in de laatste stap: keer of plus? Keer een getal is iets anders dan dat getal erbij.",
+     "tekstSterker": "Schrijf de stappen onder elkaar met het teken erbij: delen, plus en keer. Doe bij elke stap precies wat het teken zegt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "plus-stap vergeten",
+     "claudeDenkfout": null,
+     "regel": "nee, het moet 16 zijn",
+     "tekst": "Heb je alle stappen gedaan? Er is ook een stap waarin je iets erbij telt.",
+     "tekstSterker": "Zet een vinkje bij elke stap die je gedaan hebt. Doe de stap zonder vinkje ook, op de goede plek in de rij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken alle stappen zelf uit, in de goede volgorde, en vergelijk met de uitkomst van Tim."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Er zijn vier stappen. Heb je de stap met plus 5 ook gedaan?",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "In de laatste stap staat keer 2. Dat is iets anders dan er 2 bij optellen.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 23,
+   "somtype": "Stappen: neem #, doe keer # en haal er # af. Lisa zegt dat de uitkomst # is. Klopt dat?",
+   "nrOrigineel": 20,
+   "somtypeOrigineel": "Stappen: neem #, doe keer # en haal er # af. Lisa zegt dat de uitkomst # is. Klopt dat?",
+   "hint1": "Reken de stappen zelf uit. Wat krijg jij?",
+   "hint2": "Schrijf na elke stap het getal op: na de keer-stap en na het eraf halen. Vergelijk jouw laatste getal met wat Lisa zegt.",
+   "ouderzin": "Je kind rekent een rij stappen na en controleert of een uitkomst klopt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "erbij in plaats van eraf",
+     "claudeDenkfout": null,
+     "regel": "nee, het moet 34 zijn",
+     "tekst": "Wat doe je in de laatste stap: erbij of eraf? Als je iets eraf haalt, wordt het getal kleiner.",
+     "tekstSterker": "Schrijf het getal na de keer-stap op. Haal er het getal van de min-stap af. Wordt jouw uitkomst kleiner? Zo hoort het bij eraf halen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "plus in plaats van keer",
+     "claudeDenkfout": null,
+     "regel": "nee, het moet 5 zijn",
+     "tekst": "Wat staat er in de tweede stap: keer of plus? Keer is iets anders dan erbij.",
+     "tekstSterker": "Doe bij de keer-stap het getal zo vaak als er staat, bijvoorbeeld door het steeds bij zichzelf op te tellen. Haal er tot slot het getal van de min-stap af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe de keer-stap en haal er het getal van de min-stap af. Vergelijk met de uitkomst van Lisa."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk nog eens naar stap 2. Daar staat keer 3, niet plus 3.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Bij stap 3 haal je 7 af. Wordt de uitkomst dan groter of kleiner?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 21,
+   "somtype": "Stap #: neem #. Stap #: haal er # af. Stap #: deel door #. Stap #: tel er # bij op. Iemand schreef na elke stap het getal op: #, #, #, #. Bij welke stap ging het mis?",
+   "nrOrigineel": 21,
+   "somtypeOrigineel": "Stappen: neem #, haal er # af, deel door # en tel er # bij op. Iemand schreef op. #, #, #, #. Bij welke stap ging het mis?",
+   "hint1": "Reken de stappen zelf uit. Vergelijk na elke stap jouw getal met het opgeschreven getal.",
+   "hint2": "Schrijf jouw getallen onder de opgeschreven getallen. De eerste plek waar ze verschillen, is de stap waar het misging.",
+   "ouderzin": "Je kind rekent een rij stappen na en zoekt de eerste stap waar het misging.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "stap die nog klopte",
+     "claudeDenkfout": null,
+     "regel": "bij stap 2",
+     "tekst": "Klopt het getal na het eraf halen? Reken het na.",
+     "tekstSterker": "Zet jouw getallen stap voor stap onder de opgeschreven getallen. Zoek de eerste stap waar het opgeschreven getal anders is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "laatste stap gekozen",
+     "claudeDenkfout": null,
+     "regel": "bij stap 4",
+     "tekst": "Ging het in de stap ervoor al goed? Reken elke stap na vanaf het begin.",
+     "tekstSterker": "Reken de stappen zelf uit en schrijf jouw getallen onder de getallen die iemand opschreef. Zoek het eerste getal dat anders is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken elke stap zelf uit en zoek de eerste stap waar het opgeschreven getal anders is."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Reken stap 2 na. 30 min 6. Klopt het getal dat er staat?",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Kijk of de stap ervoor al goed ging. Wat is 24 gedeeld door 4?",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Stappen: neem #, haal er # af, deel door # en tel er # bij op. Iemand schreef op. #, #, #, #. Bij welke stap ging het mis?",
+    "naar": "Stap #: neem #. Stap #: haal er # af. Stap #: deel door #. Stap #: tel er # bij op. Iemand schreef na elke stap het getal op: #, #, #, #. Bij welke stap ging het mis?",
+    "op": "2026-10-08"
+   }
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 24,
+   "somtype": "Verdeel # [ding] eerlijk over # [ding]. De knikkers die overblijven, leg je apart. Hoeveel [ding] liggen er apart?",
+   "nrOrigineel": 22,
+   "somtypeOrigineel": "Verdeel # [ding] eerlijk over # [ding]. De knikkers die overblijven, leg je apart. Hoeveel [ding] liggen er apart?",
+   "hint1": "Hoeveel knikkers krijgt elk zakje als je eerlijk verdeelt? Blijft er iets over?",
+   "hint2": "Zoek het grootste aantal dat in elk zakje kan, zonder dat je knikkers tekortkomt. Doe dat aantal keer het aantal zakjes. Haal die uitkomst van alle knikkers af: wat overblijft, ligt apart.",
+   "ouderzin": "Je kind deelt met rest en kijkt hoeveel er overblijft.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "aantal per zakje",
+     "claudeDenkfout": null,
+     "regel": "6 knikkers",
+     "tekst": "Is dat het aantal in één zakje? De vraag is hoeveel knikkers er overblijven.",
+     "tekstSterker": "Doe het aantal per zakje keer het aantal zakjes: zoveel knikkers zitten er in de zakjes. Haal dat van alle knikkers af. Wat overblijft, ligt apart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rest vergeten",
+     "claudeDenkfout": null,
+     "regel": "geen enkele",
+     "tekst": "Gaat het precies op? Doe het aantal per zakje keer het aantal zakjes en vergelijk met alle knikkers.",
+     "tekstSterker": "Reken uit hoeveel knikkers er in de zakjes zitten als elk zakje evenveel krijgt. Zitten er minder knikkers in de zakjes dan je had? Het stuk dat over is, ligt apart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Verdeel eerlijk, kijk hoeveel er in de zakjes zitten en haal dat van alle knikkers af."
+    }
+   ],
+   "contextgebonden": {
+    "woorden": [
+     "zakjes"
+    ]
+   },
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is het aantal in één zakje. De vraag gaat over de knikkers die niet meer passen.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Kijk of 50 precies in 8 gelijke groepen gaat. Blijft er echt niets over?",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 25,
+   "somtype": "Volg deze stappen: neem #, doe keer #, tel er # bij op en deel door #. Wat is de uitkomst?",
+   "nrOrigineel": 23,
+   "somtypeOrigineel": "Volg deze stappen: neem #, doe keer #, tel er # bij op en deel door #. Wat is de uitkomst?",
+   "hint1": "Doe de stappen in de volgorde van de vraag. Welk getal heb je na elke stap?",
+   "hint2": "Schrijf na elke stap het getal op: na de keer-stap, na de plus-stap en na de deel-stap. Doe de deel-stap als laatste, met het getal dat je na de plus-stap hebt.",
+   "ouderzin": "Je kind volgt een rij van vier stappen precies in de goede volgorde.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "deel-stap niet op het getal na de plus-stap",
+     "claudeDenkfout": null,
+     "regel": "26",
+     "tekst": "Welk getal heb je na de plus-stap? Dat hele getal deel je in de laatste stap.",
+     "tekstSterker": "Schrijf de vier stappen onder elkaar en reken ze één voor één uit, van boven naar beneden. Het getal na de plus-stap is het getal dat je deelt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "laatste stap vergeten",
+     "claudeDenkfout": null,
+     "regel": "40",
+     "tekst": "Is dat het getal na de plus-stap? Er is nog een laatste stap: delen.",
+     "tekstSterker": "Zet een vinkje bij elke stap die je gedaan hebt. Doe de stap zonder vinkje ook: deel het getal na de plus-stap."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe alle stappen in de volgorde van de vraag, de deel-stap als laatste."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je bent tot stap 3 goed gekomen. Er staat nog een vierde stap.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Let op de volgorde van de stappen. Delen doe je pas nadat je hebt opgeteld.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 26,
+   "somtype": "Voor # [ding] gebruik je # g boter. Je wilt # [ding] bakken. Iemand zegt dat je dan # g boter nodig hebt. Klopt dat?",
+   "nrOrigineel": 24,
+   "somtypeOrigineel": "Voor # [ding] gebruik je # g boter. Je wilt # [ding] bakken. Iemand zegt dat je dan # g boter nodig hebt. Klopt dat?",
+   "hint1": "Je wilt meer koekjes bakken. Hoeveel keer zoveel koekjes zijn dat?",
+   "hint2": "Deel het aantal koekjes dat je wilt bakken door het aantal koekjes uit de eerste zin. De uitkomst zegt hoeveel keer zoveel boter je nodig hebt. Reken het uit en vergelijk met wat iemand zegt.",
+   "ouderzin": "Je kind vergroot een hoeveelheid: hoeveel keer zoveel koekjes, zoveel keer zoveel boter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "bewering overgenomen",
+     "claudeDenkfout": null,
+     "regel": "ja, 120 g klopt",
+     "tekst": "Heb je het zelf nagerekend? Hoeveel keer past het aantal koekjes uit de eerste zin in het aantal dat je wilt bakken?",
+     "tekstSterker": "Maak een tabel met twee rijen: koekjes en boter. Zet de getallen uit de eerste zin in de eerste kolom. Tel in elke volgende kolom de eerste kolom er nog eens bij, bij de koekjes én bij de boter, tot je het aantal koekjes hebt dat je wilt bakken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "gedeeld in plaats van keer",
+     "claudeDenkfout": null,
+     "regel": "nee, het moet 20 g zijn",
+     "tekst": "Bak je meer of minder koekjes dan in de eerste zin? Heb je dan meer of minder boter nodig?",
+     "tekstSterker": "Meer koekjes vraagt meer boter. Reken uit hoeveel keer zoveel koekjes je bakt, en doe de boter uit de eerste zin ook zoveel keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel keer zoveel koekjes je bakt, en doe de boter ook zoveel keer."
+    }
+   ],
+   "contextgebonden": {
+    "woorden": [
+     "koekjes"
+    ]
+   },
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk hoe vaak 6 in 18 past. Met 240 g bak je niet genoeg koekjes.",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Je bakt meer koekjes dan in het recept staat. Heb je dan meer of minder boter nodig?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-04",
+   "nr": 1,
+   "somtype": "Zoek het verschil van # en #. Welke som maak je?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Zoek het verschil van # en #. Welke som maak je?",
+   "hint1": "Wat betekent het verschil van twee getallen? Hoeveel ligt het ene getal boven het andere?",
+   "hint2": "Reken zelf uit hoeveel het ene getal meer is dan het andere. Lees dan elke som precies zoals hij er staat. Welke som geeft die uitkomst?",
+   "ouderzin": "Je kind kiest de som bij 'het verschil': een minsom met het grootste getal vooraan.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleinste getal vooraan",
+     "claudeDenkfout": null,
+     "regel": "de minsom omgedraaid",
+     "tekst": "Kun je het grootste getal van het kleinste afhalen? Bij het verschil haal je het kleinste getal van het grootste af.",
+     "tekstSterker": "Zet de twee getallen op een getallenlijn. Het verschil is de afstand ertussen: begin bij het grootste getal en haal het kleinste eraf. Het grootste getal staat vooraan in de minsom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "plussom",
+     "claudeDenkfout": null,
+     "regel": "de plussom",
+     "tekst": "Komt er bij het verschil iets bij? Het verschil zegt hoeveel het ene getal meer is dan het andere.",
+     "tekstSterker": "Leg de twee getallen naast elkaar op een getallenlijn. Het verschil is de afstand ertussen. Die afstand vind je met een minsom, niet met een plussom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel is het ene getal meer dan het andere? Welke som rekent dat uit?",
+     "tekstSterker": "Het verschil is hoeveel het ene getal meer is dan het andere: haal het kleinste getal van het grootste af. Lees elke som precies zoals hij er staat."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Wat wil je weten, en waar deel je dan door? Zet het in een verhoudingstabel.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-04",
+   "nr": 2,
+   "somtype": "Hoe heet de # in # − # = #?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Hoe heet de # in # − # = #?",
+   "hint1": "Zoek het getal waar de vraag over gaat in de minsom. Staat het vooraan, achter het minteken of achter het isgelijkteken?",
+   "hint2": "Bij een minsom horen de namen aftrektal, aftrekker en verschil. De namen term en som horen bij een plussom. Welke naam past bij de plek van het getal waar de vraag over gaat?",
+   "ouderzin": "Je kind kent de namen van de getallen in een minsom: aftrektal, aftrekker en verschil.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "plus-naam (tweede term)",
+     "claudeDenkfout": null,
+     "regel": "de tweede term",
+     "tekst": "Hoort het woord term bij een minsom? Term hoort bij een plussom.",
+     "tekstSterker": "Term hoort niet bij een minsom. In een minsom heet het getal vooraan het aftrektal, het getal achter het minteken de aftrekker, en de uitkomst het verschil."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "plus-naam (eerste term)",
+     "claudeDenkfout": null,
+     "regel": "de eerste term",
+     "tekst": "Hoort het woord term bij een minsom? Term hoort bij een plussom.",
+     "tekstSterker": "Term hoort niet bij een minsom. In een minsom heet het getal vooraan het aftrektal, het getal achter het minteken de aftrekker, en de uitkomst het verschil."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "plus-naam (som)",
+     "claudeDenkfout": null,
+     "regel": "de som",
+     "tekst": "Hoort de naam som bij een minsom? De naam som hoort bij de uitkomst van een plussom.",
+     "tekstSterker": "De naam som hoort niet bij een minsom. In een minsom heet het getal vooraan het aftrektal, het getal achter het minteken de aftrekker, en de uitkomst het verschil."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "uitkomst gekozen",
+     "claudeDenkfout": null,
+     "regel": "het verschil",
+     "tekst": "Is het getal waar de vraag over gaat de uitkomst van de minsom? Het verschil staat achter het isgelijkteken.",
+     "tekstSterker": "Wijs het getal waar de vraag over gaat aan in de minsom. Vooraan staat het aftrektal, achter het minteken de aftrekker, achter het isgelijkteken het verschil."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vooraan gekozen",
+     "claudeDenkfout": null,
+     "regel": "het aftrektal",
+     "tekst": "Staat het getal waar de vraag over gaat vooraan in de minsom? Het aftrektal is het getal waar je iets van afhaalt.",
+     "tekstSterker": "Wijs het getal waar de vraag over gaat aan in de minsom. Vooraan staat het aftrektal, achter het minteken de aftrekker, achter het isgelijkteken het verschil."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal dat eraf gaat gekozen",
+     "claudeDenkfout": null,
+     "regel": "de aftrekker",
+     "tekst": "Gaat het getal waar de vraag over gaat eraf? De aftrekker is het getal achter het minteken.",
+     "tekstSterker": "Wijs het getal waar de vraag over gaat aan in de minsom. Vooraan staat het aftrektal, achter het minteken de aftrekker, achter het isgelijkteken het verschil."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Waar staat het getal waar de vraag over gaat: vooraan, achter het minteken of achter het isgelijkteken? Welke naam van een minsom hoort bij die plek?",
+     "tekstSterker": "Zoek het getal waar de vraag over gaat in de minsom. Vooraan is het aftrektal, achter het minteken de aftrekker, achter het isgelijkteken het verschil."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-04",
+   "nr": 3,
+   "somtype": "Hoe heet de # in # + # = #?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Hoe heet de # in # + # = #?",
+   "hint1": "Zoek het getal waar de vraag over gaat in de plussom. Staat het vooraan, achter het plusteken of achter het isgelijkteken?",
+   "hint2": "Bij een plussom horen de namen term en som. Aftrektal, aftrekker en verschil horen bij een minsom. Welke naam past bij de plek van het getal waar de vraag over gaat?",
+   "ouderzin": "Je kind kent de namen van de getallen in een plussom: eerste term, tweede term en som.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "min-naam (verschil)",
+     "claudeDenkfout": null,
+     "regel": "het verschil",
+     "tekst": "Hoort het verschil bij een plussom? Het verschil is de uitkomst van een minsom.",
+     "tekstSterker": "Het verschil hoort niet bij een plussom. In een plussom heet het getal vooraan de eerste term, het getal achter het plusteken de tweede term, en de uitkomst de som."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "min-naam (aftrekker)",
+     "claudeDenkfout": null,
+     "regel": "de aftrekker",
+     "tekst": "Hoort de aftrekker bij een plussom? Bij een plussom haal je niets af.",
+     "tekstSterker": "De aftrekker hoort niet bij een plussom. In een plussom heet het getal vooraan de eerste term, het getal achter het plusteken de tweede term, en de uitkomst de som."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "min-naam (aftrektal)",
+     "claudeDenkfout": null,
+     "regel": "het aftrektal",
+     "tekst": "Hoort het aftrektal bij een plussom? Bij een plussom haal je niets af.",
+     "tekstSterker": "Het aftrektal hoort niet bij een plussom. In een plussom heet het getal vooraan de eerste term, het getal achter het plusteken de tweede term, en de uitkomst de som."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vooraan gekozen",
+     "claudeDenkfout": null,
+     "regel": "de eerste term",
+     "tekst": "Staat het getal waar de vraag over gaat vooraan in de plussom? De eerste term is het getal vooraan.",
+     "tekstSterker": "Wijs het getal waar de vraag over gaat aan in de plussom. Vooraan staat de eerste term, achter het plusteken de tweede term, achter het isgelijkteken de som."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal achter het plusteken gekozen",
+     "claudeDenkfout": null,
+     "regel": "de tweede term",
+     "tekst": "Staat het getal waar de vraag over gaat achter het plusteken? De tweede term is het getal dat je erbij optelt.",
+     "tekstSterker": "Wijs het getal waar de vraag over gaat aan in de plussom. Vooraan staat de eerste term, achter het plusteken de tweede term, achter het isgelijkteken de som."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "uitkomst gekozen",
+     "claudeDenkfout": null,
+     "regel": "de som",
+     "tekst": "Is het getal waar de vraag over gaat de uitkomst van de plussom? Alleen het getal achter het isgelijkteken heet de som.",
+     "tekstSterker": "Wijs het getal waar de vraag over gaat aan in de plussom. Vooraan staat de eerste term, achter het plusteken de tweede term, achter het isgelijkteken de som."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Waar staat het getal waar de vraag over gaat: vooraan, achter het plusteken of achter het isgelijkteken? Welke naam van een plussom hoort bij die plek?",
+     "tekstSterker": "Zoek het getal waar de vraag over gaat in de plussom. Vooraan is de eerste term, achter het plusteken de tweede term, achter het isgelijkteken de som."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-04",
+   "nr": 4,
+   "somtype": "Hoe heet de # in # : # = #?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Hoe heet de # in # : # = #?",
+   "hint1": "Zoek het getal waar de vraag over gaat in de deelsom. Staat het vooraan, achter het deelteken of achter het isgelijkteken?",
+   "hint2": "Bij een deelsom horen de namen deeltal, deler en quotiënt. Factor en product horen bij een keersom. Welke naam past bij de plek van het getal waar de vraag over gaat?",
+   "ouderzin": "Je kind kent de namen van de getallen in een deelsom: deeltal, deler en quotiënt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "keer-naam (tweede factor)",
+     "claudeDenkfout": null,
+     "regel": "de tweede factor",
+     "tekst": "Hoort het woord factor bij een deelsom? Factor hoort bij een keersom.",
+     "tekstSterker": "Factor hoort niet bij een deelsom. In een deelsom heet het getal vooraan het deeltal, het getal achter het deelteken de deler, en de uitkomst het quotiënt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer-naam (eerste factor)",
+     "claudeDenkfout": null,
+     "regel": "de eerste factor",
+     "tekst": "Hoort het woord factor bij een deelsom? Factor hoort bij een keersom.",
+     "tekstSterker": "Factor hoort niet bij een deelsom. In een deelsom heet het getal vooraan het deeltal, het getal achter het deelteken de deler, en de uitkomst het quotiënt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer-naam (product)",
+     "claudeDenkfout": null,
+     "regel": "het product",
+     "tekst": "Hoort het product bij een deelsom? Het product is de uitkomst van een keersom.",
+     "tekstSterker": "Het product hoort niet bij een deelsom. In een deelsom heet het getal vooraan het deeltal, het getal achter het deelteken de deler, en de uitkomst het quotiënt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "uitkomst gekozen",
+     "claudeDenkfout": null,
+     "regel": "het quotiënt",
+     "tekst": "Is het getal waar de vraag over gaat de uitkomst van de deelsom? Het quotiënt staat achter het isgelijkteken.",
+     "tekstSterker": "Wijs het getal waar de vraag over gaat aan in de deelsom. Vooraan staat het deeltal, achter het deelteken de deler, achter het isgelijkteken het quotiënt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vooraan gekozen",
+     "claudeDenkfout": null,
+     "regel": "het deeltal",
+     "tekst": "Staat het getal waar de vraag over gaat vooraan in de deelsom? Het deeltal is het getal dat je verdeelt.",
+     "tekstSterker": "Wijs het getal waar de vraag over gaat aan in de deelsom. Vooraan staat het deeltal, achter het deelteken de deler, achter het isgelijkteken het quotiënt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal achter het deelteken gekozen",
+     "claudeDenkfout": null,
+     "regel": "de deler",
+     "tekst": "Deel je door het getal waar de vraag over gaat? De deler is het getal achter het deelteken.",
+     "tekstSterker": "Wijs het getal waar de vraag over gaat aan in de deelsom. Vooraan staat het deeltal, achter het deelteken de deler, achter het isgelijkteken het quotiënt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Waar staat het getal waar de vraag over gaat: vooraan, achter het deelteken of achter het isgelijkteken? Welke naam van een deelsom hoort bij die plek?",
+     "tekstSterker": "Zoek het getal waar de vraag over gaat in de deelsom. Vooraan is het deeltal, achter het deelteken de deler, achter het isgelijkteken het quotiënt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-04",
+   "nr": 5,
+   "somtype": "Zoek het quotiënt van # en #. Welke som maak je?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Zoek het quotiënt van # en #. Welke som maak je?",
+   "hint1": "Wat betekent het quotiënt? Bij welk soort som hoort dat woord?",
+   "hint2": "Het quotiënt is de uitkomst van een deelsom. Kijk bij elke som welk teken erin staat. Kijk ook welk getal vooraan staat, en vergelijk dat met de volgorde in de vraag.",
+   "ouderzin": "Je kind kiest de som bij 'het quotiënt': een deelsom, met het eerste getal uit de vraag vooraan.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "keersom",
+     "claudeDenkfout": null,
+     "regel": "de keersom",
+     "tekst": "Doe je keer bij het quotiënt? Het quotiënt is de uitkomst van een deling.",
+     "tekstSterker": "Een quotiënt krijg je door te delen. Zoek de som met het deelteken, en kijk welk getal vooraan staat: het eerste getal uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Staat het goede getal vooraan? Bij het quotiënt van twee getallen deel je het eerste getal door het tweede.",
+     "tekstSterker": "Lees de vraag: eerst komt het getal dat je deelt, als tweede het getal waardoor je deelt. Het getal dat je deelt, staat vooraan in de deelsom."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Wat wil je weten, en waar deel je dan door? Zet het in een verhoudingstabel.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-04",
+   "nr": 6,
+   "somtype": "Hoe heet de # in # × # = #?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Hoe heet de # in # × # = #?",
+   "hint1": "Zoek het getal waar de vraag over gaat in de keersom. Staat het vooraan, achter het keerteken of achter het isgelijkteken?",
+   "hint2": "Bij een keersom horen de namen factor en product. Deeltal, deler en quotiënt horen bij een deelsom. Welke naam past bij de plek van het getal waar de vraag over gaat?",
+   "ouderzin": "Je kind kent de namen van de getallen in een keersom: eerste factor, tweede factor en product.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal vooraan gekozen",
+     "claudeDenkfout": null,
+     "regel": "de eerste factor",
+     "tekst": "Staat het getal waar de vraag over gaat vooraan in de keersom? De eerste factor is het getal vooraan.",
+     "tekstSterker": "Wijs het getal waar de vraag over gaat aan in de keersom. Vooraan staat de eerste factor, achter het keerteken de tweede factor, achter het isgelijkteken het product."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "deel-naam (quotiënt)",
+     "claudeDenkfout": null,
+     "regel": "het quotiënt",
+     "tekst": "Hoort het quotiënt bij een keersom? Het quotiënt is de uitkomst van een deelsom.",
+     "tekstSterker": "Het quotiënt hoort niet bij een keersom. In een keersom heet het getal vooraan de eerste factor, het getal achter het keerteken de tweede factor, en de uitkomst het product."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Waar staat het getal waar de vraag over gaat: vooraan, achter het keerteken of achter het isgelijkteken? Welke naam van een keersom hoort bij die plek?",
+     "tekstSterker": "Zoek het getal waar de vraag over gaat in de keersom. Vooraan is de eerste factor, achter het keerteken de tweede factor, achter het isgelijkteken het product."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

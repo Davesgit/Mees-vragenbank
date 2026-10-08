@@ -49,13 +49,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 200 meter → De omtrek is de lijn helemaal rondom je tekening, niet het vlak erbinnen. · 30 meter → Een rechthoek heeft vier zijden. Ben je er alle vier langsgelopen?
     - **Uitleg (Claude):** Je loopt rond de rechthoek: 20 + 10 + 20 + 10. Dat is samen 60 meter. De omtrek is dus 60 meter.
 
-- **Hint 1 (te schrijven):** Lees goed welk getal de vraag zoekt. De omtrek is de rand rondom. De oppervlakte is het vlak binnen de rand.
-- **Hint 2 (te schrijven):** Zoekt de vraag de omtrek? Tel dan alle vier de zijden bij elkaar op. Zoekt de vraag de oppervlakte? Doe dan de lengte keer de breedte.
-- **Ouderzin:** Je kind rekent aan een rechthoek: de omtrek (alle vier de zijden opgeteld) of de oppervlakte (de lengte keer de breedte), net wat de vraag zoekt.
+- **Hint 1 (te schrijven):** De omtrek is de lengte van de rand helemaal rondom het veld.
+- **Hint 2 (te schrijven):** Loop in gedachten om het veld heen. Een rechthoek heeft twee lange en twee korte zijden. Tel alle vier de zijden bij elkaar op.
+- **Ouderzin:** Je kind rekent de omtrek van een rechthoek uit: alle vier de zijden bij elkaar opgeteld.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `oppervlakte` (200 meter) → Heb je de lengte keer de breedte gedaan? Zo krijg je de oppervlakte: het vlak binnen de rand. De omtrek is alleen de rand.  [nieuw]
   - `twee zijden` (30 meter) → Heb je maar twee zijden geteld? Een rechthoek heeft vier zijden. Loop helemaal om het veld heen.  [nieuw]
-  - `andere fout` (andere fout) → Zoek je de omtrek? Tel dan alle vier de zijden op. Zoek je de oppervlakte? Doe dan de lengte keer de breedte.  [nieuw]
+  - `andere fout` (andere fout) → De omtrek is de rand rondom. Tel alle vier de zijden van de rechthoek bij elkaar op.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 3: Er zijn # [ding] op het schoolplein. Een derde speelt bij de [ding]. Welke tekening past hier het beste bij?
@@ -76,10 +76,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Bij een derde verdeel je 18 kinderen in 3 gelijke groepjes. Elk groepje heeft 6 kinderen. Eén groepje speelt bij de zandbak.
 
 - **Hint 1 (te schrijven):** Een derde: je verdeelt alle kinderen in drie even grote groepjes.
-- **Hint 2 (te schrijven):** Hoeveel is een derde van de hele groep? Reken het uit. Tel bij elke tekening hoeveel er gekleurd zijn.
+- **Hint 2 (te schrijven):** Hoeveel is een derde van de hele groep? Reken het uit. Tel bij elke tekening hoeveel kinderen er bij de zandbak horen.
 - **Ouderzin:** Je kind kiest de tekening bij een derde van een groep: drie even grote groepjes, waarvan er één meedoet.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `alles gekleurd` (alle groepjes gekleurd) → Spelen alle kinderen bij de zandbak? Een derde is maar één van de drie even grote groepjes.  [nieuw]
+  - `alle groepjes` (alle groepjes) → Spelen alle kinderen bij de zandbak? Een derde is maar één van de drie even grote groepjes.  [nieuw]
   - `twee groepjes` (2 groepjes van 9) → Hoeveel groepjes horen bij een derde? Bij een derde verdeel je in drie even grote groepjes, niet in twee.  [nieuw]
   - `andere fout` (andere fout) → Bij een derde verdeel je de groep in drie even grote groepjes. Eén groepje hoort bij de vraag.  [nieuw]
 - Status: hints klaar

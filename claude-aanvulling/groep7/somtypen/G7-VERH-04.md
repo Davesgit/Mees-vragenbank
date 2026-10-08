@@ -52,7 +52,29 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 1 (te schrijven):** 
 - **Hint 2 (te schrijven):** 
 
-## Somtype 3: Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')
+## Somtype 3: #% van de [ding] is kapot. Schrijf dat als kommagetal.
+
+- Sleutel: nrOrigineel **3** · somtypeOrigineel “#% van de [ding] is kapot. Schrijf dat als kommagetal.” (koppeling: claudeId)
+- Items: **6** · Claude-doelen: B13 (6) · regel: G7-V01-breuk-procent
+- Getallenruimte: procenten · type: kale
+- Denkfouten (Claude): komma-verschoven (6), kommagetal-als-geheel (6)
+- Verschillende Claude-fout-hints: 5 (meest: “Procent is per honderd: de komma schuift twee plekken naar links, niet één.”)
+- Voorbeelden:
+  - `G7-VERH-04-claude-bank-004` (Claude B13, gegenereerd, niveau 2 → toepassen)
+    - **Opgave:** 50% van de stickers is kapot. Schrijf dat als kommagetal.
+    - **Antwoord:** 0,5  (controle: ok)
+    - **Fout-hints (Claude):** 5 → Procent is per honderd: de komma schuift twee plekken naar links, niet één. · 50 → 50% is 50 van de 100. Als kommagetal deel je door 100.
+    - **Uitleg (Claude):** Procent is per honderd: 50 : 100 = 0,50.
+  - `G7-VERH-04-claude-bank-002` (Claude B13, gegenereerd, niveau 2 → toepassen)
+    - **Opgave:** 50% van de poesjes is kapot. Schrijf dat als kommagetal.
+    - **Antwoord:** 0,5  (controle: ok)
+    - **Fout-hints (Claude):** 5 → Procent is per honderd: de komma schuift twee plekken naar links, niet één. · 50 → 50% is 50 van de 100. Als kommagetal deel je door 100.
+    - **Uitleg (Claude):** Procent is per honderd: 50 : 100 = 0,50.
+
+- **Hint 1 (te schrijven):** 
+- **Hint 2 (te schrijven):** 
+
+## Somtype 4: Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')
 
 - Sleutel: nrOrigineel **4** · somtypeOrigineel “Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')” (koppeling: claudeId)
 - Items: **7** · Claude-doelen: G7 (7) · regel: D-KANS-NAAR-DEEL
@@ -72,28 +94,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 1 op de 4  (controle: ok)
     - **Fout-hints (Claude):** 5 op de 15 → Vergelijk de sterkaartjes met alle kaartjes, niet met de kaartjes zonder ster. · 1 op de 5 → Het aantal sterren is niet meteen het antwoord. Kijk hoe vaak 5 in 20 past.
     - **Uitleg (Claude):** 5 van de 20 kaartjes heeft een ster. 20 : 5 = 4, dus dat is één van elke vier kaartjes. Dat is dus 1 op de 4.
-
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
-
-## Somtype 4: #% van de [ding] is kapot. Schrijf dat als kommagetal.
-
-- Sleutel: nrOrigineel **3** · somtypeOrigineel “#% van de [ding] is kapot. Schrijf dat als kommagetal.” (koppeling: claudeId)
-- Items: **6** · Claude-doelen: B13 (6) · regel: G7-V01-breuk-procent
-- Getallenruimte: procenten · type: kale
-- Denkfouten (Claude): komma-verschoven (6), kommagetal-als-geheel (6)
-- Verschillende Claude-fout-hints: 5 (meest: “Procent is per honderd: de komma schuift twee plekken naar links, niet één.”)
-- Voorbeelden:
-  - `G7-VERH-04-claude-bank-004` (Claude B13, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** 50% van de stickers is kapot. Schrijf dat als kommagetal.
-    - **Antwoord:** 0,5  (controle: ok)
-    - **Fout-hints (Claude):** 5 → Procent is per honderd: de komma schuift twee plekken naar links, niet één. · 50 → 50% is 50 van de 100. Als kommagetal deel je door 100.
-    - **Uitleg (Claude):** Procent is per honderd: 50 : 100 = 0,50.
-  - `G7-VERH-04-claude-bank-002` (Claude B13, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** 50% van de poesjes is kapot. Schrijf dat als kommagetal.
-    - **Antwoord:** 0,5  (controle: ok)
-    - **Fout-hints (Claude):** 5 → Procent is per honderd: de komma schuift twee plekken naar links, niet één. · 50 → 50% is 50 van de 100. Als kommagetal deel je door 100.
-    - **Uitleg (Claude):** Procent is per honderd: 50 : 100 = 0,50.
 
 - **Hint 1 (te schrijven):** 
 - **Hint 2 (te schrijven):** 
@@ -122,7 +122,25 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 1 (te schrijven):** 
 - **Hint 2 (te schrijven):** 
 
-## Somtype 6: [rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')
+## Somtype 6: Deel van een totaal: in welke zak is het deel het grootst? (delen vergelijken)
+
+- Sleutel: nrOrigineel **6** · somtypeOrigineel “Deel van een totaal: in welke zak is het deel het grootst? (delen vergelijken)” (koppeling: claudeId)
+- Items: **1** · Claude-doelen: G7 (1) · regel: D-KANS-NAAR-DEEL
+- Getallenruimte: 0–1.000 · type: meerkeuze
+- Denkfouten (Claude): verhoudingstabel-verkeerd (1), getal-overgenomen (1)
+- Verschillende Claude-fout-hints: 2 (meest: “Reken voor allebei uit welk deel van de knikkers rood is en vergelijk die delen.”)
+- Voorbeelden:
+  - `G7-VERH-04-claude-bank-133` (Claude G7, ai, niveau 2 → toepassen)
+    - **Opgave:** In zak A zijn 2 van de 4 knikkers rood. In zak B zijn 3 van de 9 knikkers rood. In welke zak is het deel rode knikkers het grootst?
+    - **Opties:** A) Even groot · B) Zak A · C) Zak B
+    - **Antwoord:** Zak A  (controle: ok)
+    - **Fout-hints (Claude):** Even groot → Reken voor allebei uit welk deel van de knikkers rood is en vergelijk die delen. · Zak B → Kijk niet alleen naar het aantal rode knikkers, maar ook naar het totaal in de zak.
+    - **Uitleg (Claude):** In zak A is 2 van de 4 rood, dat is de helft. In zak B is 3 van de 9 rood, dat is een derde. De helft is meer dan een derde, dus zak A.
+
+- **Hint 1 (te schrijven):** 
+- **Hint 2 (te schrijven):** 
+
+## Somtype 7: [rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')
 
 - Sleutel: nrOrigineel **7** · somtypeOrigineel “[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')” (koppeling: claudeId)
 - Items: **2** · Claude-doelen: G7 (2) · regel: D-KANS-NAAR-DEEL
@@ -144,24 +162,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 1 op de 4  (controle: ok)
     - **Fout-hints (Claude):** 1 op de 3 → Het aantal rode vakjes is niet meteen het antwoord. Kijk hoe vaak 3 in 12 past. · 3 op de 9 → Tel alle vakjes van het rad, ook de rode.
     - **Uitleg (Claude):** 3 van de 12 vakjes is rood. 12 : 3 = 4, dus dat is één van elke vier vakjes. Dat is dus 1 op de 4.
-
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
-
-## Somtype 7: Deel van een totaal: in welke zak is het deel het grootst? (delen vergelijken)
-
-- Sleutel: nrOrigineel **6** · somtypeOrigineel “Deel van een totaal: in welke zak is het deel het grootst? (delen vergelijken)” (koppeling: claudeId)
-- Items: **1** · Claude-doelen: G7 (1) · regel: D-KANS-NAAR-DEEL
-- Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): verhoudingstabel-verkeerd (1), getal-overgenomen (1)
-- Verschillende Claude-fout-hints: 2 (meest: “Reken voor allebei uit welk deel van de knikkers rood is en vergelijk die delen.”)
-- Voorbeelden:
-  - `G7-VERH-04-claude-bank-133` (Claude G7, ai, niveau 2 → toepassen)
-    - **Opgave:** In zak A zijn 2 van de 4 knikkers rood. In zak B zijn 3 van de 9 knikkers rood. In welke zak is het deel rode knikkers het grootst?
-    - **Opties:** A) Even groot · B) Zak A · C) Zak B
-    - **Antwoord:** Zak A  (controle: ok)
-    - **Fout-hints (Claude):** Even groot → Reken voor allebei uit welk deel van de knikkers rood is en vergelijk die delen. · Zak B → Kijk niet alleen naar het aantal rode knikkers, maar ook naar het totaal in de zak.
-    - **Uitleg (Claude):** In zak A is 2 van de 4 rood, dat is de helft. In zak B is 3 van de 9 rood, dat is een derde. De helft is meer dan een derde, dus zak A.
 
 - **Hint 1 (te schrijven):** 
 - **Hint 2 (te schrijven):** 
