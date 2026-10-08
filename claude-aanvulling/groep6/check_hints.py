@@ -286,6 +286,8 @@ def check(files):
 if __name__=="__main__":
     files=sys.argv[1:] or sorted(glob.glob(f"{BASE}/somtypen/G6-*.md"))
     fails,warns,info,k,o=check(files)
+    sys.path.insert(0, '/workspace/claude-merge/tools'); import huis_checks as _HC      # #540 KEERDELEN + #543 LETT-testtabel (eindcheck G6 r11)
+    fails = list(fails) + _HC.extra_fails(os.path.dirname(os.path.abspath(__file__)))
     for x in fails: print("FAIL",x)
     for x in warns: print("WARN",x)
     for x in info: print("INFO",x)

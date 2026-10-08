@@ -28,7 +28,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 1 hele is 1 × 8 = 8 8-de delen. Plus 4: 12/8.
 
 - **Hint 1 (te schrijven):** Eén hele bestaat uit zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel stukken zitten er in het hele getal?
-- **Hint 2 (te schrijven):** Tel bij de stukken van de hele getallen de stukken van de breuk op. Dat getal komt boven de streep.
+- **Hint 2 (te schrijven):** Tel bij de stukken van het hele getal de stukken van de breuk op. Dat getal komt boven de streep.
 - **Ouderzin:** Je kind schrijft een gemengd getal als één breuk: het hele getal omzetten in stukken en de stukken van de breuk erbij tellen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `heel en teller opgeteld` (fout = getal1 + getal2) → Heb je het hele getal en de teller opgeteld? Eén hele bestaat uit zoveel gelijke stukken als de noemer zegt.  [nieuw]

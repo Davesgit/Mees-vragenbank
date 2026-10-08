@@ -87,7 +87,7 @@ Dit is een kubus. Hoeveel ribben heeft een kubus? (Tel ook wat je niet ziet.)
     - **Uitleg (Claude):** Een kubus heeft 6 vlakken, 8 hoekpunten en 12 ribben.
 
 - **Hint 1 (te schrijven):** Tel eerst de ribben van het bovenvlak. Tel dan de ribben van het ondervlak.
-- **Hint 2 (te schrijven):** Tel tot slot de ribben die van boven naar beneden lopen. Tel ook de ribben die je niet ziet.
+- **Hint 2 (te schrijven):** Tel de ribben bovenop, de ribben onderaan en de ribben die van boven naar beneden lopen bij elkaar op. Tel ook de ribben die je niet ziet.
 - **Ouderzin:** Je kind telt de ribben van een kubus, ook de ribben die je niet ziet.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één te veel` (fout = antwoord + 1) → Bijna! Dat is er één te veel. Heb je er één dubbel geteld? Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden.  [nieuw]

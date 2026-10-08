@@ -34,7 +34,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Zoek twee getallen die vermenigvuldigd 24 geven, bijvoorbeeld 4 bij 6.
 
 - **Hint 1 (te schrijven):** De oppervlakte is hoeveel hokjes er binnen de rechthoek zitten. Hoeveel hokjes moet je kleuren?
-- **Hint 2 (te schrijven):** Bedenk een keersom met dit aantal als uitkomst. Het eerste getal is het aantal rijen, het tweede hoeveel hokjes er in elke rij komen. Kleur de rijen recht onder elkaar.
+- **Hint 2 (te schrijven):** Bedenk een keersom met het aantal hokjes uit de vraag als uitkomst. Het eerste getal is het aantal rijen, het tweede hoeveel hokjes er in elke rij komen. Kleur de rijen recht onder elkaar.
 - **Ouderzin:** Je kind kleurt een rechthoek met een gegeven oppervlakte (aantal hokjes) op een rooster.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één hokje te veel` (fout = getal + 1 (aantal gekleurde hokjes)) → Je hebt één hokje te veel gekleurd. Tel de hokjes nog eens.  [nieuw]

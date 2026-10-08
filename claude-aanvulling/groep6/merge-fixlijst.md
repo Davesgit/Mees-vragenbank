@@ -388,3 +388,40 @@ Nummering: Didactiek D-#403–D-#408, daarna #500 en hoger. Stand: check_hints 1
 ### Ronde 10c (8 okt, Overzicht; opdracht 11:49/11:53)
 G6 build 11:52:44 (apply 11:53:24). Motor (md5 25a689d8, G5–G8 gelijk): #502 (assert 'andere rij'/'andere cel') en #506 (minteken met spatie; één tokenisering voor guard en vergelijking). #503 fixlijst bijgewerkt. Hints Ronde 10c van Oefeningen zitten erin (#505, #507, #508, D-#418, #392 punt 3). Oef-#424 (motor, voorwaarde 'antwoord + 10/100' bij onthouden): na-ronde, niet in deze build.
 Stand: check_hints 0 FAIL · 0 WARN; merge-notatie ALLES OK (FIX6 0); REF 0; GELDIG 0; BIJNA390 0.
+
+## Oefeningen ronde 10c/10d (8 okt 2026, 11:48–12:10; G6 build 11:52:44 + zandbak `g6work/r9oef/sbx/g6`)
+Nummering (les 124): eigen punten Oef-#NNN onder #500; volgende vrije: Oef-#426. Punten van Didactiek (#500+) en Overzicht houden hun nummer. Sleutels geteld met `g6work/r10/tel10c.py` (zandbak).
+
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| V-#505 | Oefeningen | VERH-E01 #1 'opgeteld': «In een verhoudingstabel reken je met keer en delen» was fout (kolommen optellen mag; #272/les 62). Terug: «Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij.» + K282 + de #410-zin + slotzin | ✓ `g6/hints/patch_batch5.py` 'Ronde 10c'. 18 sleutels. `g6work/r10/r10b_410.py` toetst nu ook 'met keer en delen' (FAIL #505/les 138): FAIL 0 |
+| Z-#507 | Oefeningen | VERH-E01 #1: elke fout-hint eindigt weer met de stap «Wat je met het aantal doet, doe je ook met het andere getal.» (de 12 items met een hele factor houden hun stap, les 139); laag 2 'uit de vraag' → 'in de vraag' (zoals H1) | ✓ `patch_batch5.py` 'Ronde 10c'. 36 sleutels (alle fout-hints van VERH-E01 #1). r10b_410.py: FAIL 0 |
+| Z-#508 | Oefeningen | VERH-E02 #3 'een negende' viel op 'andere fout' met laag 1 = laag 2. Nu een letterlijke regel 'verkeerd deel (een negende)' met de L1 van Didactiek en H2 als laag 2 | ✓ `patch_batch5.py` 'Ronde 10c'. 1 sleutel (gen-001) |
+| D-#418 | Oefeningen | Terugval-H2 die naar een eerdere hint verwees, teksten van Didactiek: E09 #1–#3, E03 #2/#6/#7, M02 #1/#5, M04 #1, E04 #7, MEET-E01 strook | ✓ `patch_batch1.py` (M02), `patch_batch2.py` (E04 #7), `patch_batch3.py` (E03, M04, E09) 'Ronde 10c'; MEET-E01 strook stond al los te lezen sinds ronde 10b (Oef-#420, `patch_batch4.py`: «Maak van alle stukken meters, en tel ze daarna bij elkaar op. …»). Terugvalsleutels: E09 1010 + 410 + 25, E03 1463 + 57 + 19, M02 762 + 23, M04 51, E04 10, MEET-E01 4 (3834). Los-scan G6 (les 130/135, hele tekst): 0 |
+| Z-#392 p3 | Oefeningen | E04 #2/#8 'tien/honderd te veel' bij een plussom: de vraag «Neem je alleen één mee als …?» wees bij sleutels mét onthouden naar een fout die er niet was. Nu een tekst die in beide gevallen klopt («Komen de eenheden samen op tien of meer? Dan neem je precies één mee …, anders niets.») + eigen laag 2 | ✓ `patch_batch2.py` 'Ronde 10c'. 41 sleutels (E04 #2 33, #8 8; waarvan 23 mét onthouden) |
+| Oef-#424 | Overzicht (motor) | Datapunt: een voorwaarde '(onthouden naar de …)' bestaat alleen bij 'fout = antwoord − 10/100/1000'. Voor 'antwoord + 10/100' bij een plussom met onthouden is er geen; met zo'n voorwaarde kan #392 p3 weer twee gerichte teksten krijgen | open (na-ronde; niet in build 11:52:44) |
+| Oef-#425 | Oefeningen (eigen vondst, les 135) | Los-scan uitgebreid naar de hele tekst: 'die/dat' + een zelfstandig naamwoord dat eerder in de tekst niet staat (met stam: 'stuk'/'die stukken'; 'dat getal' na een reken-opdracht = de uitkomst), en 'Tot slot/Vervolgens' vooraan een latere zin. G6: 0 echte vondsten (8 sleutels GET-M01 'dat aantal tientallen' na «Kijk welk cijfer …» = goed, uitzondering in de scan). G5: 2 vondsten (zie G5-fixlijst) | ✓ `g6work/r10/los_l2b.py` (G5/G6/G7) |
+| (check) | Oefeningen | `g6work/b4/check.py` gaf 8 FAIL op de nieuwe contextitems MEET-E01/E04 gen-033..036 (build 11:52: «Een hardloopbaan is 4 hm lang. Hoeveel meter is dat?»): de toets eiste alleen 'N hm = □ m'. Toets bijgewerkt (les 125/133); de hints passen bij de contextvorm (H1/H2/laag 2 nagelezen) | ✓ b4/check.py FAIL 0 |
+
+Zandbak G6 (build 11:52:44 + alle patches): check_hints 102 klaar · 0 FAIL · 0 WARN · 9 INFO; notatie ALLES OK; BIJNA390 0; b1–b6, r9_*, hm_dl_test, r10_check, r10b_410: FAIL 0. Tweede run van alle patch_batchN.py: 0 wijzigingen.
+
+### Ronde 11 (8 okt, Overzicht; eindcheck r11 van Didactiek, opdracht 12:00/12:01)
+| # | Wie | Stand |
+|---|---|---|
+| 532 | Overzicht (motor) + Oefeningen (tekst) | ✓ motor: '(met\|zonder) overdracht naar de honderdtallen' achter 'fout = antwoord + 100' rekent de echte overdracht uit (getal1 mod 100 + getal2 mod 100 ≥ 100, dus ook via een 9). GET-E04 #2/#8 krijgen (in het geheugen, `fixlijst_g6.pas_entries_aan`) twee regels vóór de gewone; de gewone blijft als terugval met de tekst van Didactiek. 069 (5138 + 4269) en 078 (5556 + 2448) krijgen de tekst met overdracht (FIX6-guard). **TODO Oefeningen:** de twee teksten (`T532_MET`/`T532_ZONDER` in fixlijst_g6.py) nalopen of vervangen |
+| 530 | Overzicht | ✓ motor/BIJNA390 lezen bedragen; G6 0 treffers |
+| 540 | Overzicht | ✓ KEERDELEN in check_hints (G5–G8) |
+| 543 | Overzicht | ✓ LETT-testtabel (37 gevallen) in check_hints en als zelftest in de motor |
+| 534, 541, 542 | Oefeningen | open (zacht) |
+
+## Oefeningen ronde 11 (8 okt 2026, 12:01–12:10; Didactiek eindcheck-r11 G5/G6; G6 build 11:52:44 + zandbak, motor van Overzicht 12:05:46)
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| V-#532 | Oefeningen + Overzicht (motor) | E04 #2/#8 'honderd te veel' bij een plussom: de voorwaarde vergat de inkomende één (069: 5138 + 4269, 078: 5556 + 2448; tientallen 9 + 1). Terugvaltekst van Didactiek («Tel de tientallen samen, met de één die je misschien al meenam. Is dat tien of meer? …»). Overzicht maakte in de motor '(met/zonder) overdracht naar de honderdtallen' (= Oef-#424) en zette in fixlijst_g6 twee regels met bron 'TODO Oefeningen'; Oefeningen nam die over in de entry (bron 'nieuw', teksten letterlijk gelijk, guard532 blijft passen), met laag 2 L2_PLUS_VEEL. 'tien te veel' heeft het gat niet (geen inkomende één in de eenheden) | ✓ `g6/hints/patch_batch2.py` 'Ronde 11'. 21 sleutels: met overdracht 9 (incl. 069, 078), zonder 12, terugval 0; 'tien te veel' 20. `g6work/r11/r11_check.py` FAIL 0, mutant (oude zin terug) 2 FAIL = 069 en 078 (les 152/153); `b2/check.py` rekent de nieuwe soorten na: FAIL 0 |
+| Z-#541 (vervangt Z-#534) | Oefeningen | E03 nrO 4/6 laag 2 «net zoveel keer als de noemer» → «Hoeveel keer zo groot is de nieuwe noemer (onder de streep)? Doe de teller (boven de streep) ook zoveel keer. Dan blijft de breuk even groot.» De zin stond alleen in deze twee entries (rg G5–G7, les 151); alle items vergroten de noemer | ✓ `patch_batch3.py` 'Ronde 11'. 1520 terugvalsleutels (1463 + 57). Mutant 133 FAIL |
+| Z-#542 | Oefeningen | M04 #1 H2 'de hele getallen' → 'het hele getal' (zoals H1) | ✓ `patch_batch3.py` 'Ronde 11'. 51 terugvalsleutels |
+
+Zandbak G6: check_hints 102 klaar · 0 FAIL · 0 WARN; notatie ALLES OK; BIJNA390 0; b1–b6, r9_*, hm_dl_test, r10_check, r10b_410, r11_check: FAIL 0; los-scan 0. Tweede run: 0 wijzigingen.
+Datapunt Overzicht: `fout_regels.py` van 12:03:59 faalde in `_zelftest543` (KeyError 'fout_regels_g6') als hij via `fixlijst_g6.py` r. 903 (importlib) geladen werd; om 12:05:46 opgelost.
+| 532 (vervolg 12:10) | Overzicht | De twee overdrachtsregels staan nu woordelijk in de entry van Oefeningen; de stap in het geheugen is weg (alleen nog een assert dat ze er staan). guard532 (FIX6) blijft |
+| Oef-#426 | Overzicht (motor) | ✓ motorregel 'fout = het bedrag dat eraf gaat' (G5–G8 dezelfde motor) |

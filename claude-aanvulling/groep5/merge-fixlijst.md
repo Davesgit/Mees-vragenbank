@@ -527,9 +527,43 @@ Nummering: Didactiek D-#403–D-#408, daarna #500 en hoger; Oefeningen houdt Oef
 | D-#403, D-#407 | ✓ Oefeningen (tekst; in de build, #503) |
 | D-#404/#502 (tabel) | ✓ guard ook voor 'andere rij' (rij- of kolomtotaal) en 'andere cel' (vak uit `jsRender.rijen`): assert in de motor |
 | #506 | ✓ motor: '− 4 hokjes' (minteken met spatie) valt niet meer op '4 hokjes'; guard en vergelijking gebruiken dezelfde tokenisering ('1/4', '10.000', 'a4' stoppen de build niet meer) |
-| 'getal uit de vraag' (#503) | open, Oefeningen: VBN-E01 058/082/164 en MEET-E06 #1 (gen-001 '24') vallen na #390/D-#404 op 'andere fout', omdat de entry geen regel 'getal uit de vraag' heeft. MEET-E06 #1 gaat met zijn 220 items naar G7 (zie de G7-fixlijst) |
+| 'getal uit de vraag' (#503, #535) | ✓ VBN-E01 058/082/164 (Oefeningen Ronde 10c, in de build). **Alleen MEET-E06 #1 is uitgesteld** (gen-001 '24' valt op 'andere fout'; de regel gaf GEN #151 FAIL en is teruggedraaid); die 220 items gaan naar G7 (zie de G7-fixlijst). Let op: BIJNA390 controleert bedragen met € pas sinds #530 (eindcheck r11) |
 
 
 ### Ronde 10c (8 okt, Overzicht; opdracht 11:49/11:53)
 G5 build 11:54:17. Motor (md5 25a689d8, G5–G8 gelijk): #502 (assert 'andere rij'/'andere cel') en #506 (minteken met spatie; één tokenisering voor guard en vergelijking). #503 fixlijst bijgewerkt. Hints Ronde 10c van Oefeningen zitten erin (#500/#501, VBN-E01 #1/#2 getal uit de vraag). Oef-#424 (motor, voorwaarde 'antwoord + 10/100' bij onthouden): na-ronde, niet in deze build.
 Stand: check_hints 0 FAIL · 0 WARN; merge-notatie ALLES OK (#121 0, GEN 0); REF 0; GELDIG 0; BIJNA390 0.
+
+## Oefeningen ronde 10c/10d (8 okt 2026, 11:48–12:10; G5 build 11:54:17 + zandbak `g5work/r9oef/sbx/g5`)
+Nummering (les 124): eigen punten Oef-#NNN onder #500; volgende vrije: Oef-#426. Sleutels geteld met `g6work/r10/tel10c.py` (zandbak).
+
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| V-#500 | Oefeningen | Laag 2 (terugval-H2) gaf los gelezen een verkeerde aanpak. Teksten van Didactiek: VBN-E01 #1 «Zoek het getal vlak onder de top van de staaf. Kijk in de vraag hoeveel elk streepje is, en tel vanaf dat getal zo veel per streepje verder tot de top.»; MKU-E02 #2 «Tel de ribben bovenop, de ribben onderaan en de ribben die van boven naar beneden lopen bij elkaar op. Tel ook de ribben die je niet ziet.» | ✓ `g5/hints/patch_batch6.py` 'Ronde 10c'. Terugvalsleutels nu: VBN-E01 #1 227 (+ 3 die nu een eigen regel 'getal uit de vraag' hebben = de 230 van Didactiek), MKU-E02 #2 3 |
+| Z-#501 | Oefeningen | Vaag aanwijswoord in de terugval-H2: VBN-E01 #3 'die rij', #5 'die rij', VBN-E03 #2 'die stap', VERH-E01 (nrO 3) 'die groepjes': het naamwoord staat nu eerst in de tekst | ✓ `patch_batch6.py` 'Ronde 10c'; VBN-E03 #2 in de zandbak nagelopen (12:00). 197 sleutels (114 + 60 + 18 + 5) |
+| (punt 2) | Oefeningen | 'getal uit de vraag' als vraag + eigen laag 2: VBN-E01 #1 en #2 (058 '5', 082 '50', 164 '5'; op waarde, les 131), vóór ±1 | ✓ `patch_batch6.py` 'Ronde 10c'. 5 sleutels (3 + 2). MEET-E06 nrO 26: teruggedraaid (GEN #151), na-ronde hieronder |
+| Oef-#423 | Oefeningen (los-scan) | GET-E05 #21 (nrO 13): terugval-H2 begon met 'ook' | ✓ `patch_batch1.py` 'Ronde 10c'. 76 sleutels |
+| Oef-#425 | Oefeningen (los-scan hele tekst, les 135) | VBN-E01 #5 H2 «Het getal in dat vak …» ('vak' niet genoemd) → «Het getal waar die rij en die kolom elkaar raken, is het antwoord.» (60 sleutels); GET-E07 #4 (nrO 18) 'ander laatste cijfer' laag 2 «… van die keersom …» → «Kijk alleen naar de eenheden: doe het laatste cijfer van het ene getal keer het laatste cijfer van het andere. Het laatste cijfer daarvan is ook het laatste cijfer van de uitkomst.» (16 sleutels) | ✓ `patch_batch6.py` en `patch_batch7.py` 'Ronde 10d' (na build 11:54:17: nog inbouwen) |
+| (check) | Oefeningen | `g5work/b5d/check.py` eiste letterlijk een oude H2 (#22): bijgewerkt naar de eis (les 108/132) | ✓ FAIL 0 |
+
+Zandbak G5 (build 11:54:17 + alle patches incl. 10d): check_hints 139 klaar · 0 FAIL · 0 WARN · 130 INFO; notatie ALLES OK; BIJNA390 0; b5b–b7, r9b: FAIL 0; los-scan G5 0. Tweede run: 0 wijzigingen.
+
+### Ronde 11 (8 okt, Overzicht; eindcheck r11 van Didactiek, opdracht 12:00/12:01)
+| # | Wie | Stand |
+|---|---|---|
+| 530 | Overzicht (motor G5–G8 + BIJNA390) | ✓ `waarde416` leest ook bedragen ('€4,75' = '€ 4,75' = '4,75', op waarde zoals D-#416). Een bedrag wordt alleen vergeleken met de echte getallen uit de vraag (niet met de losse 4 en 75 uit '€4,75'). GET-E06 #2 1005 '€4,75', 1050 '€2,85' en 703 '€2,85' krijgen geen 'Bijna!' meer en vallen op 'andere fout'. BIJNA390 vindt ze op de oude build (3 treffers, alleen G5; G6/G7/G8 0) en geeft nu 0. **TODO Oefeningen:** een eigen regel/tekst voor 'het bedrag dat eraf gaat' (voorstel Didactiek: «Is dat het bedrag dat eraf gaat? Haal het van het eerste bedrag af.») |
+| 531 | Oefeningen | open (MKU-E02 #3 H2) |
+| 535 | Overzicht | ✓ regel 'getal uit de vraag' bijgewerkt: alleen MEET-E06 #1 uitgesteld; BIJNA390 controleert bedragen pas sinds #530 |
+| 540 | Overzicht (check_hints G5–G8) | ✓ KEERDELEN: 'verhoudingstabel' + 'met keer en delen'/'doe je keer' in één zin = FAIL, over alle entries en items (`tools/huis_checks.py`) |
+| 543 | Overzicht (motor + check_hints) | ✓ LETT-testtabel (37 gevallen) in `tools/huis_checks.py`; check_hints FAIL bij een afwijking en de motor stopt bij het laden (`_zelftest543`) |
+
+## Oefeningen ronde 11 (8 okt 2026, 12:01–12:10; Didactiek eindcheck-r11 G5, build 11:54:17 + zandbak)
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| V-#531 | Oefeningen | MKU-E02 #3 (item 003) had nog «Tel tot slot de ribben …»: nu dezelfde H2 als #2. De zin stond nergens anders (rg G5–G7, les 151) | ✓ `g5/hints/patch_batch6.py` 'Ronde 11'. 3 sleutels. r11_check: FAIL 0, mutant 1 FAIL |
+| V-#530 | Oefeningen (tekst) + Overzicht (motor, guard) | E06 #2: het bedrag dat eraf gaat overgeschreven (1005 '€4,75', 1050/703 '€2,85') kreeg «Bijna!». Entry klaar: vooraan de regel **'fout = het bedrag dat eraf gaat'** (soort 'bedrag dat eraf gaat'); laag 1 van Didactiek «Is dat het bedrag dat eraf gaat? Haal het van het eerste bedrag af.», laag 2 met de les van Overzicht «Je schreef het bedrag op dat eraf gaat. De vraag is wat er overblijft: haal het bedrag dat eraf gaat van het eerste bedrag af.» Niet 'fout = een getal uit de vraag': die gaf in de zandbak 1928 nieuwe generatorsleutels (de losse getallen 4, 19, 75, 95 uit '€19,95 − €4,75'); 'fout = de prijs' geeft ook het eerste bedrag, waar laag 1 niet klopt | ✓ `g5/hints/patch_batch2.py` 'Ronde 11'. Nu 0 sleutels (apply: 'LET OP regel niet te lezen', 483 items); werkt zodra Overzicht de regel maakt: **Oef-#426** |
+| Oef-#426 | Overzicht (motor) | Nieuwe regel 'fout = het bedrag dat eraf gaat': bij een minsom met geld het tweede bedrag, op waarde ('€4,75', '€ 4,75', '4,75'), alleen als ≠ antwoord. Zet hem vóór 'centen ernaast' (#390). In E06 #2 is elk overgeschreven bedrag het tweede (3 sleutels; nagerekend) | open |
+| Z-#533 | Oefeningen | MEET-E03 #1 H2 'met dit aantal' → 'met het aantal hokjes uit de vraag' (les 155) | ✓ `g5/hints/patch_batch4.py` 'Ronde 11'. 10 sleutels. Mutant 10 FAIL |
+
+Zandbak G5 (build 11:54:17 + alle patches incl. 10d en 11): check_hints 139 klaar · 0 FAIL · 0 WARN · 130 INFO; notatie ALLES OK; BIJNA390 0; b5b–b7, r9b, r11_check: FAIL 0; los-scan 0. Tweede run: 0 wijzigingen. Guardtabel (les 154, 15 vaste gevallen voor lett_guard en in_vraag390 met €): 0 afwijkend.
+| Oef-#426 | Overzicht (motor) | ✓ 'fout = het bedrag dat eraf gaat': bij een minsom met geld ('€a − €b', ook '4,75 euro', minteken '−'/'-'/'–') het tweede bedrag op waarde, alleen als ≠ antwoord en a − b = antwoord. 1005 '€4,75', 1050 '€2,85' en 703 '€2,85' vallen erop (geen 'Bijna!'). Normalisatie: `_cent` leest ook '4,75 euro' |

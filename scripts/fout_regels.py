@@ -128,7 +128,7 @@ def _cent(v):
     """Geldbedrag → centen (#19/#33): '€21,95', '€ 21,95', '21,95', '€3', '3', '€3,00', '8,8' → 2195 / 300 / 880. Geen punt als komma
     ('8.80' → None); een punt als duizendtal-scheider alleen in de vorm 1.250,00. None als het geen bedrag is."""
     v = str(v).strip().replace('\u00a0', ' ')
-    m = re.fullmatch(r'€?\s*(\d{1,3}(?:\.\d{3})+|\d+)(?:,(\d{1,2}))?', v)
+    m = re.fullmatch(r'€?\s*(\d{1,3}(?:\.\d{3})+|\d+)(?:,(\d{1,2}))?(?:\s*euro)?', v, re.I)      # ook '4,75 euro' (normalisatie 'euro', 8 okt)
     if not m: return None
     e = int(m.group(1).replace('.', '')); c = m.group(2)
     return e * 100 + (int(c.ljust(2, '0')) if c else 0)
@@ -311,23 +311,26 @@ def is_pm1_390(f):
 from fractions import Fraction as _F416
 _GETAL416 = r'(?:\d{1,3}(?:\.\d{3})+|\d+)(?:,\d+)?(?:/\d+)?'
 def waarde416(v):
-    """D-#416: de waarde van een sleutel (heel getal, kommagetal of breuk; n/n = 1). None bij geld (€) of geen getal; een eenheid erachter mag."""
-    v = str(v or '').strip()
-    if v.startswith('€'): return None
+    """D-#416: de waarde van een sleutel (heel getal, kommagetal of breuk; n/n = 1); een eenheid erachter mag. None als het geen getal is.
+    #530 (eindcheck G5 r11): ook bedragen: '€4,75', '€ 4,75' en '4,75' hebben dezelfde waarde (vóór #530 sloeg dit '€' over)."""
+    v = str(v or '').strip().replace('\u00a0', ' ')
+    v = re.sub(r'^€\s*', '', v)
     m = re.fullmatch(r'(' + _GETAL416 + r')(?:\s+[a-zA-Z]+)?', v)
     if not m: return None
     t = m.group(1); n, _, d = t.partition('/'); n = _F416(n.replace('.', '').replace(',', '.'))
     return n / int(d) if d else n
-def vraag_waarden416(opg):
-    """D-#416: alle getallen uit de vraag als waarde (ook kommagetallen en breuken), plus de losse hele getallen zoals vroeger."""
+def vraag_waarden416(opg, los=True):
+    """D-#416: alle getallen uit de vraag als waarde (ook kommagetallen en breuken), plus de losse hele getallen zoals vroeger.
+    #530: los=False zonder die losse hele getallen (voor een bedrag: €4 is niet de 4 uit '€4,75')."""
     t = re.sub(r'(?<!\d)\d{1,2}:\d{2}(?!\d)', ' ', (opg or '').replace('\n', ' '))
     w = {waarde416(x) for x in re.findall(r'(?<![\w:.,/])' + _GETAL416 + r'(?![\w:/]|[.,]\d)', t)}
-    w |= {_F416(int(x.replace('.', ''))) for x in re.findall(r'(?<![\w:.])(?:\d{1,3}(?:\.\d{3})+|\d+)(?![\w:]|\.\d)', t)}
+    if los: w |= {_F416(int(x.replace('.', ''))) for x in re.findall(r'(?<![\w:.])(?:\d{1,3}(?:\.\d{3})+|\d+)(?![\w:]|\.\d)', t)}
     return {x for x in w if x is not None}
 def in_vraag390(v, c):
     """#390/D-#416: is de sleutel op waarde gelijk aan een getal uit de vraag (ook breuken en kommagetallen: 2/2 = 1)? Dan valt hij terug op 'getal uit de vraag'
     (of een andere benoemde regel)."""
     x = waarde416(v)
+    if x is not None and str(v).strip().startswith('€'): return x in vraag_waarden416(c.opg, los=False)      # #530: bedrag op waarde
     return x is not None and (x in vraag_waarden416(c.opg) or (x.denominator == 1 and int(x) in set(c.nums)))
 def lett_past(r, v):
     """G6 merge-fixlijst #380: past de letterlijke regel r (kleine letters) op de optietekst v? '€…' exact; met een cijfer: het hele getal
@@ -434,6 +437,15 @@ def _compile_regel(regel, c):
         if geleend: ok = m_.group(1) == '+' and c.g1 - c.g2 == c.a and (c.g1 % k) < (c.g2 % k)
         else: ok = m_.group(1) == '-' and c.g1 + c.g2 == c.a and (c.g1 % k) + (c.g2 % k) >= k
         if not ok: return {'exact': set()}
+    # #532 (eindcheck G6 r11, les 140): '(met overdracht naar de honderdtallen)' / '(zonder overdracht naar de …)' achter 'fout = antwoord ± k' bij een
+    # plussom (getal1 + getal2 = antwoord): de motor rekent de echte overdracht naar die kolom uit, inclusief een één die al meekwam
+    # (getal1 mod k + getal2 mod k ≥ k; 5138 + 4269: 38 + 69 = 107 → met). Zo kiest de motor de tekst met of zonder 'er gaat er een mee'.
+    if (q := re.search(r'\s*\((met|zonder) overdracht naar de (tientallen|honderdtallen|duizendtallen)\)\s*$', regel, re.I)):
+        k = {'tientallen': 10, 'honderdtallen': 100, 'duizendtallen': 1000}[q.group(2).lower()]
+        regel = regel[:q.start()]; rq = regel.lower().replace('−', '-').strip()
+        m_ = re.fullmatch(r'fout = antwoord ([+-]) (\d+)', rq)
+        if not m_ or int(m_.group(2)) != k or c.g1 is None or c.g2 is None or c.a is None or c.g1 + c.g2 != c.a: return {'exact': set()}
+        if ((c.g1 % k) + (c.g2 % k) >= k) != (q.group(1).lower() == 'met'): return {'exact': set()}
     r = regel.lower().replace('−', '-').strip()
     a, g1, g2, n = c.a, c.g1, c.g2, c.nums
     if c.jr.get('soort') == 'lijngrafiek' and (r219 := _lijn219(r, c)) is not None: return r219      # G6 merge-fixlijst #219: lijngrafiek (VBN-E02)
@@ -638,6 +650,15 @@ def _compile_regel(regel, c):
         return {'exact': set(_punt(a // 10))} if a % 10 == 0 and a >= 10 else {'exact': set()}
     # G5 fixlijst #106 (Oefeningen 19:06): het kind typt de prijs in. Sleutel = elk bedrag in de opgave dat iets kost (niet het bedrag
     # waarmee je betaalt of dat je hebt), als het ≠ antwoord. In pas_toe gaat deze regel vóór 'antwoord ± 10 cent / ± €1' (zeker vóór onzeker).
+    # Oef-#426 (#530, eindcheck G5 r11): 'fout = het bedrag dat eraf gaat': bij een minsom met geld het tweede bedrag, op waarde ('€4,75', '€ 4,75',
+    # '4,75', '4,75 euro'), alleen als het ≠ antwoord en eerste − tweede = antwoord. Minteken '−', '-' of '–'.
+    if r.startswith('fout = het bedrag dat eraf gaat'):
+        BED = r'(€\s?\d+(?:,\d{1,2})?|\d+(?:,\d{1,2})?\s?euro\b|\d+,\d{2})'
+        m426 = re.search(BED + r'\s*[−\-–]\s*' + BED, c.opg.replace('\u00a0', ' '), re.I)
+        if not m426: return {'exact': set()}
+        a1, a2 = _cent(m426.group(1)), _cent(m426.group(2)); ans = c.ac if c.ac is not None else _cent(c.ans)
+        if a1 is None or a2 is None or ans is None or a2 == ans or a1 - a2 != ans: return {'exact': set()}
+        return {'exact': {geld(a2)} if c.ac is not None else {geld(a2)[1:]}, 'pred': lambda v, _a=a2: _cent(v) == _a}
     if r.startswith('fout = de prijs'):
         if c.ac is None: return None
         o_ = re.sub(r'(?:betaalt|betaal|hebt|heb) (?:met |nog )?€\s?\d+(?:,\d\d)?', '', c.opg)
@@ -1032,3 +1053,15 @@ def pas_toe(it, st, alle_cellen=None):
     it['controle']['zonderFoutHints'] = not out
     it['controle']['foutHintsNietToegepast'] = ongebruikt
     return [f['regel'] for f, comp, _ in regels if comp is None]
+
+# #543 (eindcheck G6 r11): het gedrag van lett_past/lett_guard ligt vast in tools/huis_checks.LETT_TABEL (37 gevallen). Wijkt het af, dan stopt de build.
+def _zelftest543():
+    import sys as _s, os as _o
+    _t = '/workspace/claude-merge/tools'
+    if not _o.path.isdir(_t): return      # kopie buiten de merge-werkplek (bijv. de repo): geen tabel, geen test
+    if _t not in _s.path: _s.path.insert(0, _t)
+    import huis_checks as _H
+    import types as _ty
+    _af = _H.lett_afwijkingen(_ty.SimpleNamespace(lett_past=lett_past, lett_guard=lett_guard))      # werkt ook als de motor onder een andere naam geladen is
+    assert not _af, '#543: lett_past/lett_guard wijkt af van de testtabel:\n' + '\n'.join(_af)
+_zelftest543()

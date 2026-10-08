@@ -72,7 +72,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `duizend te weinig (onthouden)` (fout = antwoord − 1000 (onthouden naar de duizendtallen)) → Dat is duizend te weinig. Kwamen de honderdtallen samen op tien of meer? Dan gaat er één duizendtal mee naar de duizendtallen.  [nieuw]
   - `duizend te weinig` (fout = antwoord − 1000) → Dat is duizend te weinig. Reken de duizendtallen nog eens na.  [nieuw]
   - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Tel de tientallen nog eens. Komen de eenheden samen op tien of meer? Dan neem je precies één mee naar de tientallen, anders niets.  [nieuw]
-  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Tel de honderdtallen nog eens. Komen de tientallen samen op tien of meer? Dan neem je precies één mee naar de honderdtallen, anders niets.  [nieuw]
+  - `honderd te veel (met overdracht)` (fout = antwoord + 100 (met overdracht naar de honderdtallen)) → Dat is honderd te veel. Tel de honderdtallen nog eens. Tel de tientallen samen, met de één die je misschien al meenam. Dat komt op tien of meer. Dan neem je precies één mee naar de honderdtallen, niet meer.  [nieuw]
+  - `honderd te veel (zonder overdracht)` (fout = antwoord + 100 (zonder overdracht naar de honderdtallen)) → Dat is honderd te veel. Tel de honderdtallen nog eens. Tel de tientallen samen, met de één die je misschien al meenam. Dat blijft onder de tien. Dan neem je niets mee naar de honderdtallen.  [nieuw]
+  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Tel de honderdtallen nog eens. Tel de tientallen samen, met de één die je misschien al meenam. Is dat tien of meer? Dan neem je precies één mee naar de honderdtallen, anders niets.  [nieuw]
   - `andere fout` (andere fout) → Zet de getallen onder elkaar en tel kolom voor kolom op, van rechts naar links. Komt een kolom op tien of meer? Dan gaat er één mee naar links.  [nieuw]
 - Status: hints klaar
 
@@ -257,6 +259,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `duizend te weinig (onthouden)` (fout = antwoord − 1000 (onthouden naar de duizendtallen)) → Dat is duizend te weinig. Kwamen de honderdtallen samen op tien of meer? Dan gaat er één duizendtal mee naar de duizendtallen.  [nieuw]
   - `duizend te weinig` (fout = antwoord − 1000) → Dat is duizend te weinig. Reken de duizendtallen nog eens na.  [nieuw]
   - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Tel de tientallen nog eens. Komen de eenheden samen op tien of meer? Dan neem je precies één mee naar de tientallen, anders niets.  [nieuw]
-  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Tel de honderdtallen nog eens. Komen de tientallen samen op tien of meer? Dan neem je precies één mee naar de honderdtallen, anders niets.  [nieuw]
+  - `honderd te veel (met overdracht)` (fout = antwoord + 100 (met overdracht naar de honderdtallen)) → Dat is honderd te veel. Tel de honderdtallen nog eens. Tel de tientallen samen, met de één die je misschien al meenam. Dat komt op tien of meer. Dan neem je precies één mee naar de honderdtallen, niet meer.  [nieuw]
+  - `honderd te veel (zonder overdracht)` (fout = antwoord + 100 (zonder overdracht naar de honderdtallen)) → Dat is honderd te veel. Tel de honderdtallen nog eens. Tel de tientallen samen, met de één die je misschien al meenam. Dat blijft onder de tien. Dan neem je niets mee naar de honderdtallen.  [nieuw]
+  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Tel de honderdtallen nog eens. Tel de tientallen samen, met de één die je misschien al meenam. Is dat tien of meer? Dan neem je precies één mee naar de honderdtallen, anders niets.  [nieuw]
   - `andere fout` (andere fout) → Zet de getallen onder elkaar en tel kolom voor kolom op, van rechts naar links. Komt een kolom op tien of meer? Dan gaat er één mee naar links.  [nieuw]
 - Status: hints klaar

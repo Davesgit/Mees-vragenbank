@@ -17,3 +17,22 @@ Aangemaakt door Oefeningen (8 okt 2026) voor G7 hints batch 1. Elk team schrijft
 | # | Wie | Stand |
 |---|---|---|
 | 'getal uit de vraag' | Oefeningen | open: de geparkeerde G5-MEET-E06 #1 (220 items, dagen tussen twee datums): de entry (batch5 #1) heeft geen regel 'getal uit de vraag'. Na #390 krijgt een sleutel die een getal uit de vraag is geen ±1/'Bijna!' meer en valt hij op 'andere fout' (bijv. G5 gen-001 '24'). Voorstel: een regel 'fout = een getal uit de vraag' (als vraag) vóór ± 1 |
+
+## Oefeningen ronde 1b (8 okt 2026, 12:10–12:30; Didactiek review-batch1-didactiek.md; G7 build 12:00:13 + zandbak), zie `review-batch1b.md`
+Nummering: Oefeningen Oef-#NNN onder #500 (volgende vrije: Oef-#427); Didactiek #500+; Overzicht ongewijzigd.
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| V-#515 | Oefeningen | Verklappers bij meerkeuze: DENK-02 #3 (H2), #4 (H1+H2), #8 (H2), #9 (H2), #10 (H1+H2): teksten van Didactiek. #13 blijft | ✓ `hints/patch_batch1.py` 'Ronde 1b'. `g7work/b1b/verklap.py` (les 144): oud 7 FAIL, nieuw 0 |
+| V-#517 | Oefeningen | Vlag 'contextgebonden' (woorden + aanname) in 13 entries; guard in `g7work/b1/check.py` + `g7work/b1b/context.py` (één item, vlagwoord in de opgave, elk contextwoord in de vlag). DENK-02 #2: H1/H2/ALG/ouderzin voor omtrek én oppervlakte. DENK-03 nrO 5: 'vanaf nul' weg (H2, ouderzin, ALG, laag 1 '16', laag 2 '9') | ✓ 'Ronde 1b'. 13 gevlagd, guard FAIL 0 |
+| Z-#518 | Overzicht | Guard voor `contextgebonden` in check_hints (WARN bij > 1 item of een vlagwoord dat niet in de opgave staat). Onze guard staat in `g7work/b1/check.py` | open (Overzicht) |
+| V-#516 | Overzicht (data ✓ 12:00:13) + Oefeningen | DENK-03 nrO 7 in flesjes en deciliter: H1, H2, ALG, regels '9 dl'/'4 dl' met laag 1/laag 2. Routes samen nagerekend (les 145): geen verkeerde route op 7 | ✓ 'Ronde 1b'. 2 sleutels; 'LET OP regel niet te lezen' weg |
+| Z-#519 | Oefeningen | DENK-03 nrO 6 '11 dl': soort 'meer dan dag één of dag vergeten', laag 2 korter | ✓ 'Ronde 1b'; b1/check rekent beide routes na |
+| Z-#520 | Oefeningen (tekst); getallen: Overzicht | DENK-02 #5 '10' en DENK-03 nrO 1 '12': laag 1 past bij beide routes; soortnamen noemen beide. Getallenvoorstel van Didactiek (20/30; rust 7; DENK-03 nrO 4 begingetal 3, zwakke treffer nrO 10) blijft voor Overzicht | ✓ tekst; getallen open (Overzicht) |
+| Z-#522 | Oefeningen | Laag 2 ≈ H2 bij DENK-02 #14 '7 wielen', #1 '17', DENK-03 nrO 2 '302 g': nieuwe stap | ✓ 'Ronde 1b' |
+| Z-#523 | Oefeningen | 'dan' in laag 2 bij DENK-03 #3 en nrO 25 | ✓ 'Ronde 1b' |
+| Z-#524 | Oefeningen | DENK-03 nrO 2 H2, DENK-02 #10 'veel meer', DENK-02 #7/#11 zin over tekort | ✓ 'Ronde 1b' |
+| Z-#521, Z-#525 | Overzicht (data) | contexten (lantaarnpalen, eierdoos, sportveld, fietsen met 3 wielen); 'gekleurd' in de opties van DENK-02 #3 | genoteerd; de teksten noemen geen aantallen uit die contexten |
+| Oef-#421/#422 | Overzicht (motor) | Normalisatie '−'/'-' en 'euro'/'€' (Z-#411): nog niet in de motor van 12:11:17 (`compile_regel('6 − 4')` en `'13 euro'` → None). Omwegen blijven | open |
+| los-scan | Oefeningen | G7 met de uitgebreide los-scan (les 135): 3 vondsten (DENK-02 #1, #8, #9) opgelost | ✓ 0 |
+
+Checks (zandbak): check_hints 25 klaar · 130 open · 0 FAIL · 0 WARN · 0 INFO; notatie ALLES OK; b1/check FAIL 0; verklap FAIL 0; los-scan 0; tweede run 0 wijzigingen. Lessen 144–149: `hints/lessen_g7.md`.

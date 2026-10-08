@@ -130,3 +130,11 @@ Werkwijze uit ronde 1b: na een fixlijst van Overzicht eerst `scripts/fixlijst_g6
 138. **Een nieuwe zin in een bestaande fout-hint gaat langs de oude lessen van dat onderwerp.** #410 bracht de bewering terug die #272/les 62 eruit had gehaald ("met keer en delen"); een check op die bewering maakt zo een terugval zichtbaar.
 139. **Een zin die maar bij een deel van de items past ("Is dat geen heel getal?"), mag de stap voor de andere items niet wegduwen.** Controleer per itemgroep of laag 1 nog een volledige volgende stap geeft.
 140. **Een guard leest getallen precies zoals de vergelijking die hij bewaakt** (breuk, komma, punt-duizendtal, €, minteken met en zonder spatie, eenheid met ²). Te streng geeft een vals stopsein, te soepel een vals "goed".
+
+## Lessen 150–155 (Didactiek eindcheck ronde 11, G5 build 11:54:17 en G6 build 11:52:44; in ronde 11 toegepast)
+150. **Een guard die een vorm overslaat (bedragen, breuken), meldt dat als "niet gecontroleerd" in plaats van stil 0 te geven.** BIJNA390 gaf 0 omdat `waarde416` bij een € `None` gaf; drie G5-sleutels met «Bijna!» op een bedrag uit de vraag bleven zo onzichtbaar (#530).
+151. **Een scan die per tekst telt, noemt elk somtype waarin die tekst staat.** «Tel tot slot de ribben …» stond bij MKU-E02 #2 én #3; de slotcheck noemde alleen het eerste (#531). Zoek een te vervangen zin daarom altijd met `rg` over alle `batchN.json` van G5–G7.
+152. **Een voorwaarde voor onthouden telt de één die binnenkomt mee.** Toets op kolommen die pas mét die één op tien komen (tientallen 9 + 1: G6 E04 069 en 078, #532).
+153. **Test een check door de foute zin terug te zetten in een kopie**, en zet die mutatietest in de gedeelde checks (`g6work/r11/r11_check.py`): vangt de check de oude zin niet, dan beschermt hij niets.
+154. **Een guard die dezelfde functie gebruikt als wat hij bewaakt, beschermt niets.** Leg het gedrag vast in een vaste testtabel met verwachte uitkomsten (r11_check.py: `lett_guard` en `in_vraag390`, met €, breuk, minteken, punt-duizendtal).
+155. **Een laag 2 heeft geen halve vergelijking: noem de grootheid zelf.** «net zoveel keer als de noemer» (de helft staat in H1) → «Hoeveel keer zo groot is de nieuwe noemer? Doe de teller ook zoveel keer.»; «met dit aantal» → «met het aantal hokjes uit de vraag» (#541, #533).

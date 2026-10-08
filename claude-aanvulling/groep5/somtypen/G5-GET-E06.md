@@ -56,6 +56,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Heeft het eerste bedrag minder centen dan het tweede? Wissel dan een euro in voor honderd cent.
 - **Ouderzin:** Je kind haalt een geldbedrag met euro's en centen van een ander bedrag af.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `bedrag dat eraf gaat` (fout = het bedrag dat eraf gaat) → Is dat het bedrag dat eraf gaat? Haal het van het eerste bedrag af.  [nieuw]
   - `komma op de verkeerde plek` (Claudes sleutel: komma-verschoven) → De komma staat op de verkeerde plek. Hoeveel hele euro's zijn het ongeveer? Kijk of je antwoord daarbij past.  [Claude, taalfix]
   - `centen ernaast` (Claudes sleutel: tiende-of-honderdste-ernaast) → Bijna! De centen kloppen net niet. Reken de centen achter de komma nog eens na.  [Claude, taalfix]
   - `opgeteld` (Claudes sleutel: verkeerde-bewerking) → Kijk goed naar het teken: het is een minsom. Haal het tweede bedrag van het eerste af.  [Claude, taalfix]

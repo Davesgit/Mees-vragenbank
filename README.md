@@ -119,8 +119,8 @@ Wat nog hints nodig heeft: [`claude-aanvulling/hints_todo.md`](claude-aanvulling
 |---|---|---|---|---|
 | G3 | 44 leerdoelen · 284 items | 1.519 items · 26 leerdoelen | 83 van 83 | **Klaar** |
 | G4 | 46 leerdoelen · 368 items | 1.855 items · 24 leerdoelen | 93 van 97 | **Klaar**, behalve 4 schatting-somtypen in G4-GET-E05 (36 items) zonder hints |
-| G5 | 40 leerdoelen · 320 items | 4.845 items · 22 leerdoelen | 139 van 139 | **Ronde 10c verwerkt** (build 11:54:17; gate ronde 9, recheck 9b en slotcheck r10 van Didactiek, hints Ronde 10c #500/#501; checks 0 FAIL, 0 WARN). Vaste somtypenummers (`bevroren/somtype_weergave_nr.json`). Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`, blokken 'Ronde 10' en 'Ronde 10b' |
-| G6 | 44 leerdoelen · 352 items | 4.302 items · 23 leerdoelen | 102 van 102 | **Ronde 10c verwerkt** (build 11:52:44, hints 11:53:24; gate ronde 9 deel A/B, rechecks 9b en slotcheck r10 deel A/B, hints Ronde 10c #505/#507/#508; checks 0 FAIL, 0 WARN, FIX6 0). Nieuw: hm (MEET-E01 #7–#10) en dl (MEET-E04 #5–#8). Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`, blokken 'Ronde 10' en 'Ronde 10b' |
+| G5 | 40 leerdoelen · 320 items | 4.845 items · 22 leerdoelen | 139 van 139 | **Ronde 11 verwerkt** (build 12:13:37; eindcheck r11 van Didactiek: #530/Oef-#426 bedragen, #531, #540, #543; checks 0 FAIL, 0 WARN). Vaste somtypenummers (`bevroren/somtype_weergave_nr.json`). Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`, blokken 'Ronde 10' en 'Ronde 10b' |
+| G6 | 44 leerdoelen · 352 items | 4.302 items · 23 leerdoelen | 102 van 102 | **Ronde 11 verwerkt** (build 12:11:42; eindcheck r11 van Didactiek: #532 overdracht, #540, #543; checks 0 FAIL, 0 WARN, FIX6 0). Nieuw: hm (MEET-E01 #7–#10) en dl (MEET-E04 #5–#8). Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`, blokken 'Ronde 10' en 'Ronde 10b' |
 | G7 | 25 leerdoelen · 200 items (+ 16 in een Claude-set en 12 pilotbestanden) | 7.661 items · 17 leerdoelen | 0 van 154 | Ingedeeld, **nog zonder hints** |
 | G8 | 37 leerdoelen · 296 items | 1.458 items · 23 leerdoelen | 0 van 223 | Ingedeeld, **nog zonder hints** |
 

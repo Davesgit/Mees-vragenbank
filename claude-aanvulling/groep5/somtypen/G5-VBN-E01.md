@@ -172,7 +172,7 @@ Hoeveel stiften zijn er meer dan potloden?
     - **Fout-hints (Claude):** 460 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
 
 - **Hint 1 (te schrijven):** Zoek in de tabel de rij van het ding uit de vraag. Een rij loopt van links naar rechts.
-- **Hint 2 (te schrijven):** Zoek de rij van het ding uit de vraag. Ga in die rij naar de kolom van de dag uit de vraag. Een kolom loopt van boven naar beneden. Het getal in dat vak is het antwoord.
+- **Hint 2 (te schrijven):** Zoek de rij van het ding uit de vraag. Ga in die rij naar de kolom van de dag uit de vraag. Een kolom loopt van boven naar beneden. Het getal waar die rij en die kolom elkaar raken, is het antwoord.
 - **Ouderzin:** Je kind leest één getal af in een tabel.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `andere cel` (fout = andere cel) → Dat getal staat in een ander vak. Zoek de rij van het ding en de kolom van de dag. Waar die twee elkaar raken, staat het antwoord.  [nieuw]
