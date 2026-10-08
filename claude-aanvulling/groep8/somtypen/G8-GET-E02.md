@@ -943,8 +943,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Tel 12 en 7 op en doe dat maal 5. → De truien en de petten kosten niet hetzelfde. Reken elke soort eerst apart uit. · Reken 3 maal 12 en tel 2 en 7 erbij op. → Ook bij de petten koop je er meer dan één van dezelfde prijs.
     - **Uitleg (Claude):** Je rekent eerst per soort het bedrag uit met een vermenigvuldiging. Zo krijg je 36 euro en 14 euro. Die twee bedragen tel je op tot het totaal.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Je koopt van twee soorten meer dan één stuk, elke soort met een eigen prijs.
+- **Hint 2 (te schrijven):** Reken eerst zelf uit wat je in totaal betaalt. Reken dan elke aanpak uit. Welke komt op hetzelfde bedrag?
+- **Ouderzin:** Je kind kiest hoe je een totaalprijs uitrekent: eerst per soort het aantal keer de prijs, dan die bedragen optellen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `aantal bij de prijs` (Reken 3 maal 12 en tel 2 en 7 erbij op.) → Dan tel je bij één soort het aantal bij de prijs op. Ook van die soort koop je meer dan één stuk van dezelfde prijs: wat kost dat samen?  [nieuw]
+  - `prijzen samen` (Tel 12 en 7 op en doe dat maal 5.) → Dan reken je alsof elk stuk de twee prijzen samen kost. Elke soort heeft een eigen prijs en een eigen aantal: reken ze apart uit.  [nieuw]
+  - `andere fout` (andere fout) → Wat kost alles van één soort samen? Doe dat voor allebei de soorten, en tel de bedragen op.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 38: Je koopt een pen van # euro en een gum van # euro. Je betaalt met # euro. Hoe reken je uit hoeveel wisselgeld je terugkrijgt?
 
@@ -961,8 +967,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Tel de prijs op, tel die bij het betaalde bedrag op. → Je krijgt geld terug, dus het bedrag wordt kleiner. Welke bewerking hoort daarbij? · Tel de prijs op en noem die uitkomst het wisselgeld. → Het wisselgeld is niet de prijs zelf. Je moet de prijs nog met het betaalde bedrag vergelijken.
     - **Uitleg (Claude):** Eerst bepaal je het totaal van wat je koopt. Dat totaal haal je van het betaalde bedrag af. Wat overblijft, is het wisselgeld.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Wisselgeld is wat je terugkrijgt, omdat je meer gaf dan alles kost.
+- **Hint 2 (te schrijven):** Reken eerst zelf uit hoeveel je terugkrijgt. Reken dan elke aanpak uit. Welke komt op hetzelfde bedrag?
+- **Ouderzin:** Je kind kiest hoe je wisselgeld uitrekent: eerst wat alles kost, dan dat van het betaalde bedrag afhalen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `erbij in plaats van eraf` (Tel de prijzen op, tel die bij het betaalde bedrag op.) → Dan kom je op meer uit dan je betaalde. Kun je meer terugkrijgen dan je gaf?  [nieuw]
+  - `prijs als wisselgeld` (Tel de prijzen op en noem die uitkomst het wisselgeld.) → Dat is wat alles samen kost, niet wat je terugkrijgt. Hoeveel heb je meer betaald dan dat?  [nieuw]
+  - `andere fout` (andere fout) → Wat kost alles samen, en hoeveel heb je meer betaald dan dat?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 39: Je legt aan een klasgenoot uit hoe je een boek in de schoolbibliotheek vindt. Welke uitleg is het duidelijkst?
 
@@ -979,8 +991,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Pak het boek, zoek de letter, loop naar dat vak. → Let op de volgorde. Je kunt een boek pas pakken als je weet waar het staat. · Loop door de bibliotheek tot je iets leuks ziet. → Een goede uitleg werkt altijd, ook voor iemand anders. Zomaar rondlopen leidt niet steeds naar het juiste boek.
     - **Uitleg (Claude):** Een goede uitleg zet de stappen in de juiste volgorde. Eerst zoek je waar het boek hoort, dan loop je erheen. Pas daarna kun je het boek pakken.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een goede uitleg werkt altijd, ook voor iemand die de bibliotheek niet kent.
+- **Hint 2 (te schrijven):** Probeer elke uitleg in gedachten uit, stap voor stap. Kun je elke stap doen op het moment dat hij aan de beurt is? En vind je zo altijd het boek dat je zoekt?
+- **Ouderzin:** Je kind kiest de duidelijkste uitleg: stappen in een volgorde die altijd werkt.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `volgorde` (Pak het boek, zoek de letter, loop naar dat vak.) → Probeer die stappen in die volgorde. Kun je een boek pakken voordat je weet waar het staat?  [nieuw]
+  - `geen aanpak` (Loop door de bibliotheek tot je iets leuks ziet.) → Zo vind je misschien wel een boek, maar niet altijd het boek dat je zoekt. Een uitleg moet voor iedereen werken.  [nieuw]
+  - `andere fout` (andere fout) → Kun je elke stap doen op het moment dat hij aan de beurt is?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 40: Je moet # [ding] op alfabetische volgorde zetten. Welke aanpak werkt altijd?
 
@@ -997,8 +1015,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Zet de kortste namen vooraan → Alfabetische volgorde gaat niet over lengte. Waar kijk je dan wel naar? · Vergelijk alleen de eerste en de laatste naam → Alle namen moeten op hun plek komen. Elke naam moet dus een keer vergeleken worden.
     - **Uitleg (Claude):** Je zoekt telkens de naam die alfabetisch het eerst komt. Die zet je op de volgende plaats in de rij. Zo komen alle namen een keer aan de beurt.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Alfabetische volgorde gaat over de letters. Een aanpak werkt altijd als elk woord zo een plek krijgt.
+- **Hint 2 (te schrijven):** Probeer elke aanpak uit met een paar woorden, bijvoorbeeld kat, aap en boom. Komt bij elke aanpak elk woord op de goede plek in het alfabet?
+- **Ouderzin:** Je kind kiest een aanpak om te sorteren die altijd werkt: steeds het woord zoeken dat in het alfabet het eerst komt.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `lengte` (Zet de kortste namen vooraan) → Alfabetische volgorde gaat over de letters, niet over hoe lang een woord is. Waar kijk je dan naar?  [nieuw]
+  - `twee vergeleken` (Vergelijk alleen de eerste en de laatste naam) → Dan krijgen de woorden daartussen geen plek. Elk woord moet op zijn plek komen.  [nieuw]
+  - `andere fout` (andere fout) → Krijgt bij die aanpak elk woord een plek, alleen door naar de letters te kijken?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 41: Je spaart elke week # euro en wilt # euro hebben. Hoe reken je uit hoeveel weken je moet sparen?
 
@@ -1015,8 +1039,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Doe 45 keer 3 → Het aantal weken kan niet groter zijn dan het aantal euro's. Denk aan groepjes van 3 euro. · Trek 3 van 45 af → Je wilt weten hoe vaak 3 euro in 45 euro past. Welke bewerking hoort daarbij?
     - **Uitleg (Claude):** Je zoekt hoe vaak 3 euro in 45 euro past. Dat doe je met delen. 45 gedeeld door 3 is 15 weken.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Elke week komt er evenveel bij. Na hoeveel weken heb je het hele bedrag?
+- **Hint 2 (te schrijven):** Reken elke aanpak uit. Doe de uitkomst keer het bedrag van één week. Bij welke aanpak kom je precies op het bedrag dat je wilt hebben?
+- **Ouderzin:** Je kind kiest hoe je uitrekent hoeveel weken sparen nodig is: hoe vaak het weekbedrag in het spaardoel past.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `keer` (Doe 45 keer 3) → Dan krijg je een getal dat groter is dan het bedrag dat je wilt. Hoe vaak past het bedrag van één week in dat bedrag?  [nieuw]
+  - `één week eraf` (Trek 3 van 45 af) → Dan haal je maar één week sparen van het bedrag af. Hoe vaak past het bedrag van één week in het hele bedrag?  [nieuw]
+  - `andere fout` (andere fout) → Hoe vaak past het bedrag van één week in het bedrag dat je wilt hebben?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 42: Je verdeelt een pak sap van # liter over [bakken] van # [ding]. Je wilt weten hoeveel bekers je kunt vullen. Wat doe je eerst?
 
@@ -1033,8 +1063,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Deel 1,5 meteen door 250 → Je rekent nu met twee verschillende eenheden. Maak ze eerst gelijk. · Reken 1,5 liter om naar 150 milliliter → Kijk nog eens hoeveel milliliter er in één liter gaan. Dat zijn er meer dan honderd.
     - **Uitleg (Claude):** In 1 liter zitten 1000 milliliter, dus 1,5 liter is 1500 milliliter. Met dezelfde eenheid kun je pas goed delen. Daarna deel je 1500 door 250.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** De ene maat staat in liter, de andere in een kleinere maat. Kun je die meteen met elkaar delen?
+- **Hint 2 (te schrijven):** Hoeveel van de kleine maat gaan er in één liter? Reken elke stap na: klopt het omrekenen, en staan daarna allebei de getallen in dezelfde maat?
+- **Ouderzin:** Je kind ziet dat je eerst dezelfde maat nodig hebt: liter omrekenen naar de kleine maat.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `direct delen` (Deel 1,5 meteen door 250) → Dan deel je liters door een kleinere maat. Maak eerst van allebei dezelfde maat.  [nieuw]
+  - `verkeerd omgerekend` (Reken 1,5 liter om naar 150 milliliter) → Reken het na: hoeveel van de kleine maat gaan er in één liter? Past dit getal daarbij?  [nieuw]
+  - `andere fout` (andere fout) → Maak eerst van allebei dezelfde maat. Hoeveel van de kleine maat gaan er in één liter?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 43: Je wilt de omtrek van een rechthoekige tuin weten. Hoe reken je die uit?
 
@@ -1051,8 +1087,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Vermenigvuldig de lengte met de breedte. → Denk aan een hek rondom de tuin. Je loopt langs alle vier de zijden. · Tel lengte en breedte op en klaar. → Een rechthoek heeft vier zijden. Hoeveel zijden heb je nu geteld?
     - **Uitleg (Claude):** De omtrek is de som van alle vier de zijden. Lengte en breedte komen elk twee keer voor. Dus tel je ze op en verdubbel je die som.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** De omtrek is de lengte rondom: langs alle zijden van de tuin.
+- **Hint 2 (te schrijven):** Bedenk een tuin, bijvoorbeeld zes meter lang en vier meter breed. Loop in gedachten rondom en tel alle zijden op. Reken dan elke aanpak uit met die tuin. Welke geeft hetzelfde?
+- **Ouderzin:** Je kind kiest hoe je de omtrek uitrekent: alle zijden rondom, dus lengte en breedte samen, twee keer.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `oppervlakte` (Vermenigvuldig de lengte met de breedte.) → Lengte keer breedte is de oppervlakte: hoeveel ruimte er in de tuin is. De omtrek is de lengte rondom.  [nieuw]
+  - `twee zijden` (Tel lengte en breedte op en klaar.) → Dan heb je maar twee zijden. Een rechthoek heeft er vier: hoeveel zijden mis je nog?  [nieuw]
+  - `andere fout` (andere fout) → De omtrek is de lengte rondom. Tel je alle vier de zijden mee?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 44: Je wilt het gemiddelde van # [ding] weten. Hoe reken je dat uit?
 
@@ -1069,8 +1111,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Tel alle cijfers op en tel de som bij 5 op. → Bij een gemiddelde verdeel je het totaal eerlijk over alle cijfers. Welke bewerking verdeelt? · Zoek het hoogste cijfer en deel dat door 5. → Bij een gemiddelde doen alle cijfers mee, niet alleen één cijfer.
     - **Uitleg (Claude):** Een gemiddelde vind je door alles samen te nemen en het dan eerlijk te verdelen. Je telt de 5 cijfers op tot een totaal. Dat totaal deel je door het aantal cijfers, dus door 5.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een gemiddelde is wat je krijgt als je alles eerlijk verdeelt, zodat elk cijfer even groot wordt.
+- **Hint 2 (te schrijven):** Probeer elke aanpak met drie cijfers: zes, zeven en acht. Het gemiddelde daarvan is zeven. Gebruik drie waar de aanpak het aantal cijfers gebruikt. Welke aanpak komt op zeven uit?
+- **Ouderzin:** Je kind kiest hoe je een gemiddelde uitrekent: alles optellen en delen door het aantal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `erbij` (Tel alle cijfers op en tel de som bij 5 op.) → Dan wordt het getal alleen maar groter, groter dan elk cijfer. Een gemiddelde ligt tussen het laagste en het hoogste cijfer.  [nieuw]
+  - `hoogste` (Zoek het hoogste cijfer en deel dat door 5.) → Dan doet maar één cijfer mee. Bij een gemiddelde tellen alle cijfers mee.  [nieuw]
+  - `andere fout` (andere fout) → Bij een gemiddelde tellen alle cijfers mee, en verdeel je het totaal eerlijk.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 45: Jinte moet # × # [ding]. Welke aanpak is het handigst?
 
@@ -1087,8 +1135,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5 × 100 doen en er 2 afhalen → Je hebt vijf keer 2 te veel gerekend, niet één keer. Hoeveel is dat bij elkaar? · 98 vijf keer onder elkaar optellen → Dat mag wel, maar het kost veel stappen. 98 ligt heel dicht bij een rond getal.
     - **Uitleg (Claude):** 98 is 2 minder dan 100. Bij 5 keer reken je dus 5 × 2 = 10 te veel. Daarom haal je 10 van 500 af.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Het getal ligt dicht bij een rond getal. Met een rond getal reken je makkelijker.
+- **Hint 2 (te schrijven):** Reken de som eerst zelf uit. Reken dan elke aanpak uit. Welke komt op hetzelfde uit, en welke gaat het snelst?
+- **Ouderzin:** Je kind kiest een handige aanpak: rekenen met een rond getal en daarna verbeteren wat je te veel nam.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `één keer verbeterd` (5 × 100 doen en er 2 afhalen) → Bij elke keer reken je een beetje te veel. Hoe vaak reken je dat te veel? Dat moet er allemaal af, niet maar één keer.  [nieuw]
+  - `herhaald optellen` (98 vijf keer onder elkaar optellen) → Dat kan, maar het is niet handig: het kost veel stappen. Ligt het getal dicht bij een rond getal?  [nieuw]
+  - `andere fout` (andere fout) → Reken met het ronde getal, en haal daarna af wat je bij alle keren samen te veel nam.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 46: Kim moet # × # [ding]. Ze doet eerst # × # = # en neemt dan de helft. Klopt deze aanpak?
 
@@ -1106,8 +1160,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Nee, ze moet 360 verdubbelen → Vijf keer iets is minder dan tien keer iets. Wat doe je dan met de uitkomst van 36 × 10? · Nee, ze moet er 10 van afhalen → Je kijkt naar het verschil tussen 5 en 10 als getal. Kijk liever hoe die twee zich tot elkaar verhouden.
     - **Uitleg (Claude):** Keer 10 gaat heel makkelijk. Omdat 5 de helft van 10 is, halveer je daarna de uitkomst. 360 gedeeld door 2 is 180.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Kijk of de aanpak van Kim op hetzelfde uitkomt als de som zelf.
+- **Hint 2 (te schrijven):** Reken het zelf uit: wat is vijf keer het getal? Reken dan elke aanpak uit: wat Kim deed, en wat de andere antwoorden zeggen. Welke komt op dezelfde uitkomst?
+- **Ouderzin:** Je kind controleert een handige aanpak: keer tien en dan de helft is hetzelfde als keer vijf.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien eraf` (Nee, ze moet er 10 van afhalen) → Keer tien is twee keer zo groot als keer vijf, niet tien meer. Hoeveel moet er dan af?  [nieuw]
+  - `verdubbelen` (Nee, ze moet 360 verdubbelen) → Keer vijf is minder dan keer tien. Wordt de uitkomst dan groter of kleiner?  [nieuw]
+  - `andere fout` (andere fout) → Is vijf de helft van tien? Wat betekent dat voor de uitkomst?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 47: Lars zet # [ding] jam in [bakken] van #. Hij rekent # : # en schrijft # [ding] op. Wat is er mis met zijn aanpak?
 
@@ -1124,8 +1184,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Niets, 14 dozen is precies goed → Reken na hoeveel potjes er in 14 volle dozen passen. Blijft er dan nog iets over? · Hij moest 148 × 10 doen → Vermenigvuldigen maakt het aantal juist groter. Bij verdelen in gelijke groepen kies je iets anders.
     - **Uitleg (Claude):** In 14 dozen passen 140 potjes. Er blijven dan 8 potjes over en die moeten ook mee. Daarom zijn er 15 dozen nodig.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een deling in een verhaal kijk je daarna terug in het verhaal: wat betekent de uitkomst?
+- **Hint 2 (te schrijven):** Reken het na: hoeveel gaat er in het aantal dat Lars opschreef? Is daarmee alles ingepakt? Toets dan elke uitleg aan die berekening. Welke klopt?
+- **Ouderzin:** Je kind kijkt terug in het verhaal: bij inpakken moet alles mee, dus de rest heeft nog een plek nodig.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `rest vergeten` (Niets, 14 dozen is precies goed) → Reken het na: hoeveel gaat er in dat aantal? Is daarmee alles ingepakt?  [nieuw]
+  - `keer` (Hij moest 148 × 10 doen) → Dan wordt het getal veel groter dan wat er is. Bij verdelen in groepjes past delen. Wat blijft er bij de deling over?  [nieuw]
+  - `andere fout` (andere fout) → Wat blijft er bij de deling over, en moet dat ook mee?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 48: Mees moet # × # [ding]. Hij telt # + # + # + # op. Wat had handiger gekund?
 
@@ -1142,8 +1208,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Eerst 250 + 4 uitrekenen → Vier groepen van 250 is niet hetzelfde als 250 en 4 samen. Kijk nog eens naar het maalteken. · De som onder elkaar zetten met een streep → Onder elkaar zetten kost hier veel tijd. 250 is een mooi getal om mee te vermenigvuldigen.
     - **Uitleg (Claude):** Vier keer hetzelfde getal optellen is precies vermenigvuldigen. Met 4 × 250 ben je in één stap klaar. Dat scheelt tijd en je maakt minder fouten.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Zoek een aanpak die klopt en die minder stappen kost dan steeds hetzelfde getal optellen.
+- **Hint 2 (te schrijven):** Reken elke aanpak uit. Komt die op hetzelfde uit als steeds hetzelfde getal optellen? En welke aanpak die klopt, gaat in de minste stappen?
+- **Ouderzin:** Je kind ziet dat steeds hetzelfde getal optellen hetzelfde is als een keersom.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `plus` (Eerst 250 + 4 uitrekenen) → Dan tel je het aantal keer bij het getal op. Steeds hetzelfde getal optellen geeft veel meer dan het getal plus het aantal keer.  [nieuw]
+  - `onder elkaar` (De som onder elkaar zetten met een streep) → Dat kan, maar het is niet handig: je telt dan nog steeds alles op. Het kan in één stap.  [nieuw]
+  - `andere fout` (andere fout) → Steeds hetzelfde getal optellen: welke som doet dat in één stap?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 49: Noor moet # × # [ding] en telt acht keer # bij elkaar op. Wat had handiger gekund?
 
@@ -1160,8 +1232,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 25 en 8 bij elkaar optellen → Let op het teken in de som. Optellen en keer doen geven heel andere antwoorden. · 25 × 10 doen en er 2 afhalen → Als je met 10 rekent in plaats van met 8, haal je hele groepen van 25 te veel weg.
     - **Uitleg (Claude):** Je mag een keersom in stappen splitsen. 25 × 4 is 100 en dat verdubbel je tot 200. Dat gaat veel sneller dan acht keer optellen.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Zoek een aanpak die klopt en die sneller gaat dan steeds hetzelfde getal optellen.
+- **Hint 2 (te schrijven):** Reken elke aanpak uit. Komt die op hetzelfde uit als steeds hetzelfde getal optellen? En welke aanpak die klopt, gaat het snelst?
+- **Ouderzin:** Je kind kiest een handige aanpak voor een keersom: splitsen in een makkelijke keersom en dan verdubbelen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `plus` (25 en 8 bij elkaar optellen) → Dan tel je het aantal keer bij het getal op. Steeds hetzelfde getal optellen is een keersom. Komt dit daar in de buurt?  [nieuw]
+  - `te veel eraf` (25 × 10 doen en er 2 afhalen) → Met tien keer neem je twee hele keren te veel. Haal je dan twee af, of twee keer het getal?  [nieuw]
+  - `andere fout` (andere fout) → Kun je het aantal keer splitsen in een makkelijke keersom?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 50: Nout heeft # − # [ding] elkaar uitgerekend en kreeg #. Hij schatte vooraf ongeveer #. Wat moet hij nu doen?
 
@@ -1178,8 +1256,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** De schatting aanpassen naar 500 → Een schatting met ronde getallen is meestal betrouwbaar. Reken 800 − 400 nog eens na. · Het antwoord 505 gewoon laten staan → Je schatting waarschuwt je juist voor een fout. Negeer dat signaal niet.
     - **Uitleg (Claude):** 800 − 400 is ongeveer 400, dus 505 ligt er ver naast. Zo'n groot verschil wijst op een rekenfout. Het echte antwoord is 405.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een schatting met ronde getallen is een controle. Ligt het antwoord dicht bij de schatting?
+- **Hint 2 (te schrijven):** Rond allebei de getallen af op honderdtallen: kijk naar de tientallen, vijf of meer gaat naar boven. Reken de schatting zelf na. Hoe ver ligt het antwoord van Nout ervan af? Bekijk elke aanpak: welke hoort bij wat je ziet?
+- **Ouderzin:** Je kind gebruikt een schatting als controle: ligt het antwoord ver van de schatting, dan reken je opnieuw.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `schatting aangepast` (De schatting aanpassen naar 500) → Reken de schatting na met ronde getallen. Klopte die? Dan ligt de fout niet in de schatting.  [nieuw]
+  - `laten staan` (Het antwoord 505 gewoon laten staan) → Het antwoord ligt ver van de schatting af. Dat is een teken dat er iets mis is gegaan.  [nieuw]
+  - `andere fout` (andere fout) → Ligt het antwoord dicht bij de schatting? Zo niet, waar zit dan de fout?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 51: Op de fietstocht rijdt Tess # km. Ze schrijft op dat dit # meter is. Hoe merk je dat dit niet klopt?
 
@@ -1196,8 +1280,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Het klopt, je haalt gewoon de komma weg → De komma verplaatsen is niet hetzelfde als omrekenen. Hoeveel meter zit er in 1 kilometer? · Het moet 320 meter zijn → Je bent één stap te vroeg gestopt. Reken eerst uit hoeveel meter 3 km is.
     - **Uitleg (Claude):** Eén kilometer is 1000 meter. 3,2 km is dus 3200 meter. Met 32 meter kom je nog niet eens de straat uit.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Je controleert een omrekening van kilometer naar meter. Past het getal in meters bij de afstand?
+- **Hint 2 (te schrijven):** Hoeveel meter is één kilometer? Reken uit hoeveel meter de tocht dan ongeveer is. Toets elke uitleg aan dat getal: welke klopt?
+- **Ouderzin:** Je kind controleert een omrekening met een bekend getal: één kilometer is duizend meter.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `één stap` (Het moet 320 meter zijn) → Reken het na: één kilometer is al duizend meter. Is dit dan genoeg voor de hele tocht?  [nieuw]
+  - `komma weg` (Het klopt, je haalt gewoon de komma weg) → De komma weghalen is geen omrekenen. Hoeveel meter gaan er in één kilometer?  [nieuw]
+  - `andere fout` (andere fout) → Eén kilometer is al duizend meter. Hoeveel meter is de tocht dan ongeveer?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 52: Roos rekent # × # uit door # × # en # × # [ding] te doen. Ze schrijft alleen # op. Wat ging er mis?
 
@@ -1214,8 +1304,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Ze had niet mogen splitsen → Splitsen is juist een slimme aanpak. Kijk nog eens of ze alle stukjes heeft gebruikt. · Ze moest 140 en 24 optellen → Het tweede stukje was 7 × 4, niet 24. Reken dat stukje eerst uit.
     - **Uitleg (Claude):** Bij splitsen reken je beide delen uit en tel je ze op. 140 en 28 samen is 168. Roos stopte te vroeg met haar aanpak.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij splitsen reken je elk stuk apart uit. Wat doe je daarna met de stukken?
+- **Hint 2 (te schrijven):** Reken het zelf uit: wat zijn de twee stukken, en wat is de hele keersom? Vergelijk dat met wat Roos opschreef. Toets dan elke uitleg: welke klopt?
+- **Ouderzin:** Je kind ziet dat je bij splitsen alle stukken weer bij elkaar optelt.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de som` (Ze moest 140 en 24 optellen) → Dan tel je een getal uit de som erbij, niet de uitkomst van het kleine stuk. Hoeveel is het kleine stuk echt?  [nieuw]
+  - `niet splitsen` (Ze had niet mogen splitsen) → Splitsen is juist een handige aanpak. Heeft Roos alle stukken gebruikt?  [nieuw]
+  - `andere fout` (andere fout) → Heeft Roos alle stukken van de keersom bij elkaar opgeteld?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 53: Sam rekent # − # uit met een som onder elkaar en moet steeds lenen. Wat had handiger gekund?
 
@@ -1232,8 +1328,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1000 en 998 bij elkaar optellen → Kijk nog eens welk teken er tussen de getallen staat. · Eerst 900 eraf en dan 98 erbij → Als je een deel van een aftreksom afhaalt, moet je het andere deel er ook afhalen.
     - **Uitleg (Claude):** De getallen liggen heel dicht bij elkaar. Vanaf 998 tel je maar 2 stapjes door tot 1000. Onder elkaar rekenen is dan onnodig werk.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Zoek een aanpak die klopt en die zonder lenen kan.
+- **Hint 2 (te schrijven):** Reken elke aanpak uit en vergelijk de uitkomsten. Welke aanpak geeft het verschil tussen de twee getallen, en kost de minste stappen?
+- **Ouderzin:** Je kind ziet dat je bij twee getallen die dicht bij elkaar liggen, het verschil handig vindt door door te tellen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `opgeteld` (1000 en 998 bij elkaar optellen) → Bij elkaar optellen geeft geen verschil. Kijk welk teken er tussen de getallen staat.  [nieuw]
+  - `stuk erbij` (Eerst 900 eraf en dan 98 erbij) → Als je een getal in stukken afhaalt, moeten alle stukken eraf. Gaat er bij deze aanpak een stuk bij?  [nieuw]
+  - `andere fout` (andere fout) → Liggen de getallen dicht bij elkaar? Hoeveel moet je dan doortellen?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 54: Sanne rekent # + # uit door eerst # + # te doen en er daarna # af te halen. Klopt deze aanpak?
 
@@ -1251,8 +1353,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Nee, ze moet er 2 bij optellen → Ze heeft eerst een groter getal gebruikt dan 198. Wat doe je dan achteraf met dat verschil? · Nee, je mag alleen onder elkaar rekenen → Een som onder elkaar mag altijd, maar soms kan het slimmer. Denk aan mooie ronde getallen.
     - **Uitleg (Claude):** 198 ligt vlak bij 200, dus rekenen met 200 gaat makkelijk. Omdat je 2 te veel gebruikte, haal je er achteraf 2 af. Zo krijg je hetzelfde antwoord, maar sneller.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Kijk of de aanpak van Sanne op hetzelfde uitkomt als de som zelf.
+- **Hint 2 (te schrijven):** Reken de som zelf uit, en reken ook na wat Sanne doet. Komt Sanne daarop uit? Kijk dan welke uitleg past bij wat je ziet.
+- **Ouderzin:** Je kind controleert een handige aanpak: rekenen met een rond getal en daarna verbeteren wat je te veel nam.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `erbij in plaats van eraf` (Nee, ze moet er 2 bij optellen) → Sanne rekende met een getal dat iets te groot is. Moet dat stukje er dan bij, of eraf?  [nieuw]
+  - `alleen onder elkaar` (Nee, je mag alleen onder elkaar rekenen) → Onder elkaar rekenen kan, maar je mag ook een handige aanpak kiezen. Klopt de uitkomst van Sanne?  [nieuw]
+  - `andere fout` (andere fout) → Komt de aanpak van Sanne op hetzelfde uit als de som zelf?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 55: Tim rekent # + # uit met een staartsom onder elkaar. Wat is een handigere aanpak?
 
@@ -1269,8 +1377,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Eerst 100 erbij, dan 1 erbij → Je deed er 1 te veel bij. Bedenk wat je moet doen als je eerst een te groot getal pakt. · Eerst 90 erbij, dan 9 eraf → Kijk nog eens goed hoe dicht 99 bij een rond honderdtal ligt.
     - **Uitleg (Claude):** 99 ligt vlak bij 100. Je telt er eerst 100 bij op en haalt daarna de 1 die je te veel nam er weer af. Zo hoef je niet onder elkaar te rekenen.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Het getal ligt dicht bij een rond getal. Met een rond getal reken je makkelijker.
+- **Hint 2 (te schrijven):** Reken de som zelf uit, en reken daarna elke aanpak uit. Welke aanpak komt op hetzelfde uit?
+- **Ouderzin:** Je kind kiest een handige aanpak: rekenen met een rond getal en daarna verbeteren wat je te veel nam.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `te veel erbij` (Eerst 100 erbij, dan 1 erbij) → Met het ronde getal komt er al iets te veel bij. Moet dat stukje er dan nog bij, of eraf?  [nieuw]
+  - `ander rond getal` (Eerst 90 erbij, dan 9 eraf) → Reken het na: komt deze aanpak op hetzelfde uit als de som? Bij een kleiner rond getal tel je te weinig op. Moet het stukje er dan bij of eraf?  [nieuw]
+  - `andere fout` (andere fout) → Neem een rond getal, en verbeter daarna wat je te veel of te weinig nam.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 56: Voor een uitje gaan # [ding] mee. In een busje passen # [ding]. Lisa rekent # : # en schrijft # [ding] op. Wat is er mis met haar aanpak?
 
@@ -1287,8 +1401,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Ze had 50 × 12 moeten doen → Je verdeelt kinderen over busjes. Welke bewerking hoort bij verdelen? · Er zijn 6 busjes nodig → Reken na hoeveel kinderen er in 5 busjes passen. Zijn dat er genoeg?
     - **Uitleg (Claude):** In 4 busjes passen 48 kinderen. Er blijven er 2 over en die moeten ook mee. Daarom is er nog een extra busje nodig.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een deling in een verhaal kijk je daarna terug in het verhaal: wat betekent de uitkomst?
+- **Hint 2 (te schrijven):** Reken het na: hoeveel passen er in het aantal dat Lisa opschreef? Kan iedereen dan mee? Toets dan elke uitleg aan die berekening. Welke klopt?
+- **Ouderzin:** Je kind kijkt terug in het verhaal: iedereen moet mee, dus wie overblijft heeft nog een plek nodig.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `keer` (Ze had 50 × 12 moeten doen) → Dan wordt het getal veel groter dan het aantal dat meegaat. Bij verdelen in groepjes past delen. Wat blijft er bij de deling over?  [nieuw]
+  - `één te veel` (Er zijn 6 busjes nodig) → Reken het na: kan iedereen al mee met één minder dan dit aantal?  [nieuw]
+  - `andere fout` (andere fout) → Wat blijft er bij de deling over, en moet dat ook mee?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 57: Yara loopt # km naar school. Ze schrijft op dat dit # meter is. Hoe merk je dat dit niet kan?
 
@@ -1305,5 +1425,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Het klopt, want je zet de komma weg → Een komma weghalen is niet hetzelfde als omrekenen. Kijk hoeveel meter er in 1 kilometer gaan. · Het moet 25 meter zijn → 25 meter is korter dan een schoolplein. Vergelijk dat eens met 2,5 kilometer lopen.
     - **Uitleg (Claude):** In 1 kilometer gaan 1000 meter. 2,5 × 1000 is 2500 meter. Bij omrekenen let je altijd op de juiste stap.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Je controleert een omrekening van kilometer naar meter. Past het getal in meters bij de afstand?
+- **Hint 2 (te schrijven):** Hoeveel meter is één kilometer? Reken uit hoeveel meter de weg naar school dan ongeveer is. Toets elke uitleg aan dat getal: welke klopt?
+- **Ouderzin:** Je kind controleert een omrekening met een bekend getal: één kilometer is duizend meter.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `komma weg` (Het klopt, want je zet de komma weg) → De komma weghalen is geen omrekenen. Hoeveel meter gaan er in één kilometer?  [nieuw]
+  - `nog kleiner` (Het moet 25 meter zijn) → Dat is nog minder. Een kilometer is duizend meter: worden het in meters meer of minder?  [nieuw]
+  - `andere fout` (andere fout) → Eén kilometer is al duizend meter. Hoeveel meter is de weg naar school dan ongeveer?  [nieuw]
+- Status: hints klaar

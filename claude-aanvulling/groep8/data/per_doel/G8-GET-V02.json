@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T15:53:56+0200",
+ "gegenereerdOp": "2026-10-08T15:57:13+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-GET-V02",
  "bordtitel": "Rekenen tot 100.000 en rekenmachine herhalen",
@@ -42,28 +42,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "40 knikkers"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Gemiddeld betekent: als iedereen in de groep er evenveel had.",
+   "sterkereHint": "Gemiddeld betekent: ieder evenveel. Doe het aantal in de groep keer wat ieder gemiddeld heeft.",
    "foutHints": [
     {
      "stap": null,
      "fout": "13 knikkers",
-     "uitleg": "Je hebt de getallen opgeteld. Elk kind heeft gemiddeld 5 knikkers.",
-     "regel": "Didactiek G8 (STAT-NAAR-GEMIDDELDE)",
-     "soort": null,
-     "bron": "didactiek"
+     "uitleg": "Dan tel je het aantal in de groep en het gemiddelde bij elkaar op. Maar elk van hen heeft er gemiddeld evenveel: hoeveel zijn dat er samen?",
+     "uitlegSterker": "Gemiddeld betekent: ieder evenveel. Doe het aantal in de groep keer wat ieder gemiddeld heeft.",
+     "laag2": "tekstSterker",
+     "regel": "13 knikkers",
+     "soort": "opgeteld",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "1,6 knikkers",
-     "uitleg": "Bij een gemiddelde reken je terug met keer, niet met delen.",
-     "regel": "Didactiek G8 (STAT-NAAR-GEMIDDELDE)",
-     "soort": null,
-     "bron": "didactiek"
+     "uitleg": "Dat is minder dan wat ieder gemiddeld heeft. Samen hebben ze er juist meer.",
+     "uitlegSterker": "Gemiddeld betekent: ieder evenveel. Doe het aantal in de groep keer wat ieder gemiddeld heeft.",
+     "laag2": "tekstSterker",
+     "regel": "1,6 knikkers",
+     "soort": "gedeeld",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "13 knikkers → Je hebt de getallen opgeteld. Elk kind heeft gemiddeld 5 knikkers. · 1,6 knikkers → Bij een gemiddelde reken je terug door te vermenigvuldigen, niet door te delen.",
-   "ouderzin": "",
+   "foutHintsTekst": "13 knikkers → Dan tel je het aantal in de groep en het gemiddelde bij elkaar op. Maar elk van hen heeft er gemiddeld evenveel: hoeveel zijn dat er samen? · 1,6 knikkers → Dat is minder dan wat ieder gemiddeld heeft. Samen hebben ze er juist meer.",
+   "ouderzin": "Je kind rekent terug van een gemiddelde naar het totaal: het aantal keer het gemiddelde.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -173,7 +177,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een groep van # [ding] heeft gemiddeld # [ding]. Hoeveel knikkers hebben zij samen?"
+    "somtypeOrigineel": "Een groep van # [ding] heeft gemiddeld # [ding]. Hoeveel knikkers hebben zij samen?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "Een groep van # [ding] heeft gemiddeld # [ding]. Hoeveel knikkers hebben zij samen?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -189,11 +198,58 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "40 knikkers"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "13 knikkers",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Dan tel je het aantal in de groep en het gemiddelde bij elkaar op. Maar elk van hen heeft er gemiddeld evenveel: hoeveel zijn dat er samen?",
+     "tekstSterker": "Gemiddeld betekent: ieder evenveel. Doe het aantal in de groep keer wat ieder gemiddeld heeft.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "13 knikkers"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "1,6 knikkers",
+     "soort": "gedeeld",
+     "bron": "nieuw",
+     "tekst": "Dat is minder dan wat ieder gemiddeld heeft. Samen hebben ze er juist meer.",
+     "tekstSterker": "Gemiddeld betekent: ieder evenveel. Doe het aantal in de groep keer wat ieder gemiddeld heeft.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1,6 knikkers"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ieder heeft er gemiddeld evenveel. Hoeveel zijn dat er samen?",
+     "tekstSterker": "Gemiddeld betekent: ieder evenveel. Doe het aantal in de groep keer wat ieder gemiddeld heeft.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ieder heeft er gemiddeld evenveel. Hoeveel zijn dat er samen?"
   },
   {
    "id": "G8-GET-V02-claude-bank-002",
@@ -224,22 +280,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "300 mensen"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Gemiddeld per dag: als er elke dag evenveel hadden gezwommen, hoeveel was dat dan per dag?",
+   "sterkereHint": "Tel de aantallen van de twee dagen bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal dagen.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "600 mensen",
-     "uitleg": "Je hebt alleen opgeteld. Er zijn twee dagen, dus je moet nog delen."
+     "fout": "40 mensen",
+     "uitleg": "Dat is het verschil tussen de twee dagen. Een gemiddelde ligt tussen de twee aantallen in.",
+     "uitlegSterker": "Tel de aantallen van de twee dagen bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal dagen.",
+     "laag2": "tekstSterker",
+     "regel": "40 mensen",
+     "soort": "verschil",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "40 mensen",
-     "uitleg": "40 is het verschil tussen de dagen. Een gemiddelde reken je anders uit."
+     "fout": "600 mensen",
+     "uitleg": "Dat is het totaal van het weekend. Gemiddeld per dag is dat totaal eerlijk verdeeld over de dagen.",
+     "uitlegSterker": "Tel de aantallen van de twee dagen bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal dagen.",
+     "laag2": "tekstSterker",
+     "regel": "600 mensen",
+     "soort": "totaal",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "600 mensen → Je hebt alleen opgeteld. Er zijn twee dagen, dus je moet nog delen. · 40 mensen → 40 is het verschil tussen de dagen. Een gemiddelde reken je anders uit.",
-   "ouderzin": "",
+   "foutHintsTekst": "40 mensen → Dat is het verschil tussen de twee dagen. Een gemiddelde ligt tussen de twee aantallen in. · 600 mensen → Dat is het totaal van het weekend. Gemiddeld per dag is dat totaal eerlijk verdeeld over de dagen.",
+   "ouderzin": "Je kind rekent een gemiddelde uit: alles optellen en delen door het aantal dagen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -340,7 +406,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "In een zwembad zwemmen op zaterdag # [ding] en op zondag # [ding]. Hoeveel mensen zwommen er dat weekend gemiddeld per dag?"
+    "somtypeOrigineel": "In een zwembad zwemmen op zaterdag # [ding] en op zondag # [ding]. Hoeveel mensen zwommen er dat weekend gemiddeld per dag?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 2,
+     "somtype": "In een zwembad zwemmen op zaterdag # [ding] en op zondag # [ding]. Hoeveel mensen zwommen er dat weekend gemiddeld per dag?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -356,11 +427,58 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "300 mensen"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "600 mensen",
+     "soort": "totaal",
+     "bron": "nieuw",
+     "tekst": "Dat is het totaal van het weekend. Gemiddeld per dag is dat totaal eerlijk verdeeld over de dagen.",
+     "tekstSterker": "Tel de aantallen van de twee dagen bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal dagen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "600 mensen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "40 mensen",
+     "soort": "verschil",
+     "bron": "nieuw",
+     "tekst": "Dat is het verschil tussen de twee dagen. Een gemiddelde ligt tussen de twee aantallen in.",
+     "tekstSterker": "Tel de aantallen van de twee dagen bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal dagen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "40 mensen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel alles op en verdeel het eerlijk over de dagen.",
+     "tekstSterker": "Tel de aantallen van de twee dagen bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal dagen.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel alles op en verdeel het eerlijk over de dagen."
   },
   {
    "id": "G8-GET-V02-claude-bank-003",
@@ -391,28 +509,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "7"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij een gemiddelde tellen alle cijfers mee, ook als hetzelfde cijfer vaak voorkomt.",
+   "sterkereHint": "Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.",
    "foutHints": [
     {
      "stap": null,
      "fout": "140",
-     "uitleg": "Dat is het totaal van alle cijfers. Verdeel het nog eerlijk over de 20 kinderen.",
-     "regel": "Didactiek G8 (MODUS-NAAR-GEMIDDELDE)",
-     "soort": null,
-     "bron": "didactiek"
+     "uitleg": "Dat is het totaal van alle cijfers samen. Verdeel het nog eerlijk over alle kinderen.",
+     "uitlegSterker": "Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.",
+     "laag2": "tekstSterker",
+     "regel": "140",
+     "soort": "totaal",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "21",
-     "uitleg": "Je telde de drie verschillende cijfers op. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.",
-     "regel": "Didactiek G8 (MODUS-NAAR-GEMIDDELDE)",
-     "soort": null,
-     "bron": "didactiek"
+     "uitleg": "Dan telt elk cijfer maar één keer mee. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.",
+     "uitlegSterker": "Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.",
+     "laag2": "tekstSterker",
+     "regel": "21",
+     "soort": "elk cijfer één keer",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "8 → Kijk niet naar het hoogste cijfer, maar naar hoeveel kinderen elk cijfer hebben. · 20 → 20 is het aantal kinderen in de klas en geen cijfer van een toets.",
-   "ouderzin": "",
+   "foutHintsTekst": "140 → Dat is het totaal van alle cijfers samen. Verdeel het nog eerlijk over alle kinderen. · 21 → Dan telt elk cijfer maar één keer mee. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.",
+   "ouderzin": "Je kind rekent een gemiddelde uit als cijfers vaker voorkomen: elk cijfer telt zo vaak mee als het voorkomt.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -522,7 +644,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "In groep # [ding] # [ding] een cijfer voor een toets. Tien kinderen hebben een #, vijf kinderen een # en vijf kinderen een #. Wat is het gemiddelde cijfer?"
+    "somtypeOrigineel": "In groep # [ding] # [ding] een cijfer voor een toets. Tien kinderen hebben een #, vijf kinderen een # en vijf kinderen een #. Wat is het gemiddelde cijfer?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 3,
+     "somtype": "In groep # [ding] # [ding] een cijfer voor een toets. Tien kinderen hebben een #, vijf kinderen een # en vijf kinderen een #. Wat is het gemiddelde cijfer?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -538,11 +665,58 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "7"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "140",
+     "soort": "totaal",
+     "bron": "nieuw",
+     "tekst": "Dat is het totaal van alle cijfers samen. Verdeel het nog eerlijk over alle kinderen.",
+     "tekstSterker": "Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "140"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "21",
+     "soort": "elk cijfer één keer",
+     "bron": "nieuw",
+     "tekst": "Dan telt elk cijfer maar één keer mee. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.",
+     "tekstSterker": "Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "21"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Elk cijfer telt zo vaak mee als het voorkomt. Deel het totaal door het aantal kinderen.",
+     "tekstSterker": "Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Elk cijfer telt zo vaak mee als het voorkomt. Deel het totaal door het aantal kinderen."
   },
   {
    "id": "G8-GET-V02-claude-bank-004",
@@ -573,22 +747,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "4 km"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Gemiddeld per dag: als ze elke dag even ver had gefietst, hoe ver was dat dan?",
+   "sterkereHint": "Tel alle afstanden bij elkaar op: dat is het totaal. Deel het totaal door het aantal dagen.",
    "foutHints": [
     {
      "stap": null,
      "fout": "16 km",
-     "uitleg": "Je hebt alles opgeteld. Daarna moet je nog delen door het aantal dagen."
+     "uitleg": "Dat is het totaal van alle dagen. Verdeel het nog eerlijk over de dagen.",
+     "uitlegSterker": "Tel alle afstanden bij elkaar op: dat is het totaal. Deel het totaal door het aantal dagen.",
+     "laag2": "tekstSterker",
+     "regel": "16 km",
+     "soort": "totaal",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "5 km",
-     "uitleg": "5 km is de langste dag. Een gemiddelde ligt tussen de kleinste en de grootste waarde."
+     "uitleg": "Dat is de langste dag. Een gemiddelde ligt tussen de kortste en de langste dag in.",
+     "uitlegSterker": "Tel alle afstanden bij elkaar op: dat is het totaal. Deel het totaal door het aantal dagen.",
+     "laag2": "tekstSterker",
+     "regel": "5 km",
+     "soort": "langste dag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "16 km → Je hebt alles opgeteld. Daarna moet je nog delen door het aantal dagen. · 5 km → 5 km is de langste dag. Een gemiddelde ligt tussen de kleinste en de grootste waarde.",
-   "ouderzin": "",
+   "foutHintsTekst": "16 km → Dat is het totaal van alle dagen. Verdeel het nog eerlijk over de dagen. · 5 km → Dat is de langste dag. Een gemiddelde ligt tussen de kortste en de langste dag in.",
+   "ouderzin": "Je kind rekent een gemiddelde uit: alle afstanden optellen en delen door het aantal dagen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -691,7 +875,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Mila fietst vier dagen naar school. # km, # km, # km en # km. Hoeveel kilometer fietst zij gemiddeld per dag?"
+    "somtypeOrigineel": "Mila fietst vier dagen naar school. # km, # km, # km en # km. Hoeveel kilometer fietst zij gemiddeld per dag?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 4,
+     "somtype": "Mila fietst vier dagen naar school. # km, # km, # km en # km. Hoeveel kilometer fietst zij gemiddeld per dag?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -707,14 +896,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "4 km"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "16 km",
+     "soort": "totaal",
+     "bron": "nieuw",
+     "tekst": "Dat is het totaal van alle dagen. Verdeel het nog eerlijk over de dagen.",
+     "tekstSterker": "Tel alle afstanden bij elkaar op: dat is het totaal. Deel het totaal door het aantal dagen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "16 km"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "5 km",
+     "soort": "langste dag",
+     "bron": "nieuw",
+     "tekst": "Dat is de langste dag. Een gemiddelde ligt tussen de kortste en de langste dag in.",
+     "tekstSterker": "Tel alle afstanden bij elkaar op: dat is het totaal. Deel het totaal door het aantal dagen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5 km"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel alle afstanden op en deel door het aantal dagen.",
+     "tekstSterker": "Tel alle afstanden bij elkaar op: dat is het totaal. Deel het totaal door het aantal dagen.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel alle afstanden op en deel door het aantal dagen."
   }
  ],
- "hintsSyncOp": "2026-10-08T15:53:57+02:00",
+ "hintsSyncOp": "2026-10-08T15:57:14+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -723,9 +959,13 @@
   {
    "batch": "batch2.json",
    "md5": "c983c2399e29"
+  },
+  {
+   "batch": "batch3.json",
+   "md5": "153f2472c159"
   }
  ],
- "geschrevenOp": "2026-10-08T15:53:57+02:00",
+ "geschrevenOp": "2026-10-08T15:57:14+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

@@ -14,6 +14,7 @@ python3 check_hints.py             # alle 189 somtypen 'open' (nog geen hints) �
 ```
 
 ## Pool en stand
+- **Stand 8 okt 15:57 (build 15:57:13):** besluit kloktijden (Didactiek 15:46): 33 items '14.30 uur' (MEET-E06 typ-invoer '(Typ als 14.30.)', geldigeAntwoorden 14.30 uur / 14.30 / 14:30); KLOKTIJD 0 FAIL, digitaleKlok 0. Batch 3 gesynct: check_hints 74 klaar · 149 open · 0 FAIL · 0 WARN.
 - **Stand 8 okt 15:53 (build 15:53:56):** ronde 1b batch 1 en 2 (Oefeningen): check_hints 49 klaar · 174 open · 0 FAIL · 0 WARN; b1/b2 FAIL 0.
 - **Stand 8 okt 15:36 (build 15:36:15):** Didactiek batch 2: V-#781 (#16 kloktijden '14.35 uur'), V-#782 (#32 afleider 'Deel 100 door 40 en doe dat keer 15'), Z-#780 (kop 'deelbaar door 5'), Z-#781 (guard ochtendtemperatuur ≥ 0), Z-#782 (KLOKTIJD-check, FAIL; typ-invoer MEET-E06 WARN). check_hints 49 klaar · 174 open · 0 FAIL · 1 WARN (wacht op de regel van Oefeningen voor #32).
 - **Stand 8 okt 15:27 (build 15:27:54):** hints batch 1 en 2 (49 somtypes): check_hints 49 klaar · 174 open · 0 FAIL · 0 WARN. Even grote breuken tellen als goed (V-#760, breukvorm), Z-#766/#767/#768 en Oef-#472/#478/#480 verwerkt. Zie merge-fixlijst.md.

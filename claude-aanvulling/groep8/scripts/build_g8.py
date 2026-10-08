@@ -24,7 +24,7 @@ R, G, T = R7.R, R7.G, R7.T
 OURS = {d['id']: {'bordtitel': d['bordtitel'], 'korteNaam': d['korteNaam'], 'domein': d['domein'], 'aantalItems': d['aantalItems']}
         for g in EXP['groepen'] if g['groep'] == 8 for dm in g['domeinen'] for d in dm['doelen']}
 import besluiten_g8 as BG8                 # Didactiek-besluiten op de 1226 G8-twijfelitems + Dave 20:56
-sys.path.insert(0, "/workspace/claude-merge/tools"); import breukvorm as BV      # V-#760 (Didactiek G8 batch 1, 8 okt): even grote breuk telt als goed (#170, Dave 21:24)
+sys.path.insert(0, "/workspace/claude-merge/tools"); import breukvorm as BV, kloktijd_fix as KF      # V-#760 (Didactiek G8 batch 1, 8 okt): even grote breuk telt als goed (#170, Dave 21:24)
 BESLUIT_G8 = BG8.laad()
 _I8 = json.load(open(f'{OUT}/bevroren/ids_v1.json'))      # Dave 20:56 (5): ook via vorigeIds (het item kreeg in G5 een naar-id; anders valt de regel stil weg)
 E02_001 = next((c for c, i in _I8['ids'].items() if i == 'G8-GET-E02-claude-bank-001'), None) or next((c for c, vs in _I8.get('vorigeIds', {}).items() if 'G8-GET-E02-claude-bank-001' in vs), None)
@@ -308,6 +308,8 @@ def main():
         hercontrole_g8(it, q)
         it['licentie']['wijzigingen'] = sorted({f['soort'] for f in B3.FIXLOG if f['id'] == q['id']}); it['licentie']['gewijzigd'] = True
         it['merge']['somtype'] = kop_g8(BG7.somtype(it) or B7.somtype_g7(it))
+        if it['merge']['status'] == 'gemapt' and (n_kt := KF.zet_om(it)):      # besluit kloktijden (Didactiek 8 okt 15:46): '14.30 uur', typ-invoer '(Typ als 14.30.)'
+            slog(it, f"G8-KLOK (besluit Didactiek 15:46): kloktijd als '14.30 uur', geen ':' ({n_kt} tijden; typ-invoer: geldigeAntwoorden 14.30 uur / 14.30 / 14:30)", 'opgave', None, it['opgave'][:80])
         rows.append(it)
     # ids (bevroren)
     idp = f'{OUT}/bevroren/ids_v1.json'

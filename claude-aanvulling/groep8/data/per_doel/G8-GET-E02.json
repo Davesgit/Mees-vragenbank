@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T15:53:56+0200",
+ "gegenereerdOp": "2026-10-08T15:57:13+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-GET-E02",
  "bordtitel": "Schatten, bijstellen en je aanpak checken",
@@ -8342,22 +8342,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "Reken 3 maal 12 en 2 maal 7 en tel die uitkomsten op."
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Je koopt van twee soorten meer dan één stuk, elke soort met een eigen prijs.",
+   "sterkereHint": "Reken eerst zelf uit wat je in totaal betaalt. Reken dan elke aanpak uit. Welke komt op hetzelfde bedrag?",
    "foutHints": [
     {
      "stap": null,
-     "fout": "Tel 12 en 7 op en doe dat maal 5.",
-     "uitleg": "De truien en de petten kosten niet hetzelfde. Reken elke soort eerst apart uit."
+     "fout": "Reken 3 maal 12 en tel 2 en 7 erbij op.",
+     "uitleg": "Dan tel je bij één soort het aantal bij de prijs op. Ook van die soort koop je meer dan één stuk van dezelfde prijs: wat kost dat samen?",
+     "uitlegSterker": "Reken per soort: het aantal keer de prijs. Tel daarna die twee bedragen bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "Reken 3 maal 12 en tel 2 en 7 erbij op.",
+     "soort": "aantal bij de prijs",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "Reken 3 maal 12 en tel 2 en 7 erbij op.",
-     "uitleg": "Ook bij de petten koop je er meer dan één van dezelfde prijs."
+     "fout": "Tel 12 en 7 op en doe dat maal 5.",
+     "uitleg": "Dan reken je alsof elk stuk de twee prijzen samen kost. Elke soort heeft een eigen prijs en een eigen aantal: reken ze apart uit.",
+     "uitlegSterker": "Reken per soort: het aantal keer de prijs. Tel daarna die twee bedragen bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "Tel 12 en 7 op en doe dat maal 5.",
+     "soort": "prijzen samen",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Tel 12 en 7 op en doe dat maal 5. → De truien en de petten kosten niet hetzelfde. Reken elke soort eerst apart uit. · Reken 3 maal 12 en tel 2 en 7 erbij op. → Ook bij de petten koop je er meer dan één van dezelfde prijs.",
-   "ouderzin": "",
+   "foutHintsTekst": "Reken 3 maal 12 en tel 2 en 7 erbij op. → Dan tel je bij één soort het aantal bij de prijs op. Ook van die soort koop je meer dan één stuk van dezelfde prijs: wat kost dat samen? · Tel 12 en 7 op en doe dat maal 5. → Dan reken je alsof elk stuk de twee prijzen samen kost. Elke soort heeft een eigen prijs en een eigen aantal: reken ze apart uit.",
+   "ouderzin": "Je kind kiest hoe je een totaalprijs uitrekent: eerst per soort het aantal keer de prijs, dan die bedragen optellen.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -8446,7 +8456,12 @@
     "duplicaatVan": null,
     "somtypeNr": 37,
     "somtypeNrOrigineel": 30,
-    "somtypeOrigineel": "Je koopt # [ding] van # euro en # [ding] van # euro. Hoe reken je uit hoeveel je in totaal betaalt?"
+    "somtypeOrigineel": "Je koopt # [ding] van # euro en # [ding] van # euro. Hoe reken je uit hoeveel je in totaal betaalt?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 37,
+     "somtype": "Je koopt # [ding] van # euro en # [ding] van # euro. Hoe reken je uit hoeveel je in totaal betaalt?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -8462,8 +8477,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Reken 3 maal 12 en tel 2 en 7 erbij op.",
+     "soort": "aantal bij de prijs",
+     "bron": "nieuw",
+     "tekst": "Dan tel je bij één soort het aantal bij de prijs op. Ook van die soort koop je meer dan één stuk van dezelfde prijs: wat kost dat samen?",
+     "tekstSterker": "Reken per soort: het aantal keer de prijs. Tel daarna die twee bedragen bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Reken 3 maal 12 en tel 2 en 7 erbij op."
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Tel 12 en 7 op en doe dat maal 5.",
+     "soort": "prijzen samen",
+     "bron": "nieuw",
+     "tekst": "Dan reken je alsof elk stuk de twee prijzen samen kost. Elke soort heeft een eigen prijs en een eigen aantal: reken ze apart uit.",
+     "tekstSterker": "Reken per soort: het aantal keer de prijs. Tel daarna die twee bedragen bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Tel 12 en 7 op en doe dat maal 5."
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Wat kost alles van één soort samen? Doe dat voor allebei de soorten, en tel de bedragen op.",
+     "tekstSterker": "Reken per soort: het aantal keer de prijs. Tel daarna die twee bedragen bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Wat kost alles van één soort samen? Doe dat voor allebei de soorten, en tel de bedragen op."
   },
   {
    "id": "G8-GET-E02-claude-bank-039",
@@ -8494,22 +8556,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "Tel de prijzen op, trek die van het betaalde bedrag af."
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Wisselgeld is wat je terugkrijgt, omdat je meer gaf dan alles kost.",
+   "sterkereHint": "Reken eerst zelf uit hoeveel je terugkrijgt. Reken dan elke aanpak uit. Welke komt op hetzelfde bedrag?",
    "foutHints": [
     {
      "stap": null,
-     "fout": "Tel de prijs op, tel die bij het betaalde bedrag op.",
-     "uitleg": "Je krijgt geld terug, dus het bedrag wordt kleiner. Welke bewerking hoort daarbij?"
+     "fout": "Tel de prijzen op, tel die bij het betaalde bedrag op.",
+     "uitleg": "Dan kom je op meer uit dan je betaalde. Kun je meer terugkrijgen dan je gaf?",
+     "uitlegSterker": "Tel eerst de prijzen op: dat is wat alles kost. Haal dat van het betaalde bedrag af. Wat overblijft, krijg je terug.",
+     "laag2": "tekstSterker",
+     "regel": "Tel de prijzen op, tel die bij het betaalde bedrag op.",
+     "soort": "erbij in plaats van eraf",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "Tel de prijs op en noem die uitkomst het wisselgeld.",
-     "uitleg": "Het wisselgeld is niet de prijs zelf. Je moet de prijs nog met het betaalde bedrag vergelijken."
+     "fout": "Tel de prijzen op en noem die uitkomst het wisselgeld.",
+     "uitleg": "Dat is wat alles samen kost, niet wat je terugkrijgt. Hoeveel heb je meer betaald dan dat?",
+     "uitlegSterker": "Tel eerst de prijzen op: dat is wat alles kost. Haal dat van het betaalde bedrag af. Wat overblijft, krijg je terug.",
+     "laag2": "tekstSterker",
+     "regel": "Tel de prijzen op en noem die uitkomst het wisselgeld.",
+     "soort": "prijs als wisselgeld",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Tel de prijs op, tel die bij het betaalde bedrag op. → Je krijgt geld terug, dus het bedrag wordt kleiner. Welke bewerking hoort daarbij? · Tel de prijs op en noem die uitkomst het wisselgeld. → Het wisselgeld is niet de prijs zelf. Je moet de prijs nog met het betaalde bedrag vergelijken.",
-   "ouderzin": "",
+   "foutHintsTekst": "Tel de prijzen op, tel die bij het betaalde bedrag op. → Dan kom je op meer uit dan je betaalde. Kun je meer terugkrijgen dan je gaf? · Tel de prijzen op en noem die uitkomst het wisselgeld. → Dat is wat alles samen kost, niet wat je terugkrijgt. Hoeveel heb je meer betaald dan dat?",
+   "ouderzin": "Je kind kiest hoe je wisselgeld uitrekent: eerst wat alles kost, dan dat van het betaalde bedrag afhalen.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -8596,7 +8668,12 @@
     "duplicaatVan": null,
     "somtypeNr": 38,
     "somtypeNrOrigineel": 31,
-    "somtypeOrigineel": "Je koopt een pen van # euro en een gum van # euro. Je betaalt met # euro. Hoe reken je uit hoeveel wisselgeld je terugkrijgt?"
+    "somtypeOrigineel": "Je koopt een pen van # euro en een gum van # euro. Je betaalt met # euro. Hoe reken je uit hoeveel wisselgeld je terugkrijgt?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 38,
+     "somtype": "Je koopt een pen van # euro en een gum van # euro. Je betaalt met # euro. Hoe reken je uit hoeveel wisselgeld je terugkrijgt?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -8612,8 +8689,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Tel de prijzen op, tel die bij het betaalde bedrag op.",
+     "soort": "erbij in plaats van eraf",
+     "bron": "nieuw",
+     "tekst": "Dan kom je op meer uit dan je betaalde. Kun je meer terugkrijgen dan je gaf?",
+     "tekstSterker": "Tel eerst de prijzen op: dat is wat alles kost. Haal dat van het betaalde bedrag af. Wat overblijft, krijg je terug.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Tel de prijzen op, tel die bij het betaalde bedrag op."
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Tel de prijzen op en noem die uitkomst het wisselgeld.",
+     "soort": "prijs als wisselgeld",
+     "bron": "nieuw",
+     "tekst": "Dat is wat alles samen kost, niet wat je terugkrijgt. Hoeveel heb je meer betaald dan dat?",
+     "tekstSterker": "Tel eerst de prijzen op: dat is wat alles kost. Haal dat van het betaalde bedrag af. Wat overblijft, krijg je terug.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Tel de prijzen op en noem die uitkomst het wisselgeld."
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Wat kost alles samen, en hoeveel heb je meer betaald dan dat?",
+     "tekstSterker": "Tel eerst de prijzen op: dat is wat alles kost. Haal dat van het betaalde bedrag af. Wat overblijft, krijg je terug.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Wat kost alles samen, en hoeveel heb je meer betaald dan dat?"
   },
   {
    "id": "G8-GET-E02-claude-bank-040",
@@ -8644,22 +8768,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "Zoek de letter, loop naar dat vak, pak het boek."
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een goede uitleg werkt altijd, ook voor iemand die de bibliotheek niet kent.",
+   "sterkereHint": "Probeer elke uitleg in gedachten uit, stap voor stap. Kun je elke stap doen op het moment dat hij aan de beurt is? En vind je zo altijd het boek dat je zoekt?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Pak het boek, zoek de letter, loop naar dat vak.",
-     "uitleg": "Let op de volgorde. Je kunt een boek pas pakken als je weet waar het staat."
+     "uitleg": "Probeer die stappen in die volgorde. Kun je een boek pakken voordat je weet waar het staat?",
+     "uitlegSterker": "Een goede uitleg zet de stappen in een volgorde die kan. Eerst zoek je op waar het boek staat. Dan loop je erheen, en pas dan pak je het.",
+     "laag2": "tekstSterker",
+     "regel": "Pak het boek, zoek de letter, loop naar dat vak.",
+     "soort": "volgorde",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Loop door de bibliotheek tot je iets leuks ziet.",
-     "uitleg": "Een goede uitleg werkt altijd, ook voor iemand anders. Zomaar rondlopen leidt niet steeds naar het juiste boek."
+     "uitleg": "Zo vind je misschien wel een boek, maar niet altijd het boek dat je zoekt. Een uitleg moet voor iedereen werken.",
+     "uitlegSterker": "Een goede uitleg zet de stappen in een volgorde die kan. Eerst zoek je op waar het boek staat. Dan loop je erheen, en pas dan pak je het.",
+     "laag2": "tekstSterker",
+     "regel": "Loop door de bibliotheek tot je iets leuks ziet.",
+     "soort": "geen aanpak",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Pak het boek, zoek de letter, loop naar dat vak. → Let op de volgorde. Je kunt een boek pas pakken als je weet waar het staat. · Loop door de bibliotheek tot je iets leuks ziet. → Een goede uitleg werkt altijd, ook voor iemand anders. Zomaar rondlopen leidt niet steeds naar het juiste boek.",
-   "ouderzin": "",
+   "foutHintsTekst": "Pak het boek, zoek de letter, loop naar dat vak. → Probeer die stappen in die volgorde. Kun je een boek pakken voordat je weet waar het staat? · Loop door de bibliotheek tot je iets leuks ziet. → Zo vind je misschien wel een boek, maar niet altijd het boek dat je zoekt. Een uitleg moet voor iedereen werken.",
+   "ouderzin": "Je kind kiest de duidelijkste uitleg: stappen in een volgorde die altijd werkt.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -8746,7 +8880,12 @@
     "duplicaatVan": null,
     "somtypeNr": 39,
     "somtypeNrOrigineel": 32,
-    "somtypeOrigineel": "Je legt aan een klasgenoot uit hoe je een boek in de schoolbibliotheek vindt. Welke uitleg is het duidelijkst?"
+    "somtypeOrigineel": "Je legt aan een klasgenoot uit hoe je een boek in de schoolbibliotheek vindt. Welke uitleg is het duidelijkst?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 39,
+     "somtype": "Je legt aan een klasgenoot uit hoe je een boek in de schoolbibliotheek vindt. Welke uitleg is het duidelijkst?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -8762,8 +8901,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Pak het boek, zoek de letter, loop naar dat vak.",
+     "soort": "volgorde",
+     "bron": "nieuw",
+     "tekst": "Probeer die stappen in die volgorde. Kun je een boek pakken voordat je weet waar het staat?",
+     "tekstSterker": "Een goede uitleg zet de stappen in een volgorde die kan. Eerst zoek je op waar het boek staat. Dan loop je erheen, en pas dan pak je het.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Pak het boek, zoek de letter, loop naar dat vak."
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Loop door de bibliotheek tot je iets leuks ziet.",
+     "soort": "geen aanpak",
+     "bron": "nieuw",
+     "tekst": "Zo vind je misschien wel een boek, maar niet altijd het boek dat je zoekt. Een uitleg moet voor iedereen werken.",
+     "tekstSterker": "Een goede uitleg zet de stappen in een volgorde die kan. Eerst zoek je op waar het boek staat. Dan loop je erheen, en pas dan pak je het.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Loop door de bibliotheek tot je iets leuks ziet."
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Kun je elke stap doen op het moment dat hij aan de beurt is?",
+     "tekstSterker": "Een goede uitleg zet de stappen in een volgorde die kan. Eerst zoek je op waar het boek staat. Dan loop je erheen, en pas dan pak je het.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kun je elke stap doen op het moment dat hij aan de beurt is?"
   },
   {
    "id": "G8-GET-E02-claude-bank-041",
@@ -8794,22 +8980,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "Zoek steeds de eerste naam en zet die apart"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Alfabetische volgorde gaat over de letters. Een aanpak werkt altijd als elk woord zo een plek krijgt.",
+   "sterkereHint": "Probeer elke aanpak uit met een paar woorden, bijvoorbeeld kat, aap en boom. Komt bij elke aanpak elk woord op de goede plek in het alfabet?",
    "foutHints": [
     {
      "stap": null,
-     "fout": "Zet de kortste namen vooraan",
-     "uitleg": "Alfabetische volgorde gaat niet over lengte. Waar kijk je dan wel naar?"
+     "fout": "Vergelijk alleen de eerste en de laatste naam",
+     "uitleg": "Dan krijgen de woorden daartussen geen plek. Elk woord moet op zijn plek komen.",
+     "uitlegSterker": "Zoek steeds het woord dat in het alfabet het eerst komt, en zet dat apart. Doe dat opnieuw met de woorden die over zijn, tot ze allemaal een plek hebben.",
+     "laag2": "tekstSterker",
+     "regel": "Vergelijk alleen de eerste en de laatste naam",
+     "soort": "twee vergeleken",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "Vergelijk alleen de eerste en de laatste naam",
-     "uitleg": "Alle namen moeten op hun plek komen. Elke naam moet dus een keer vergeleken worden."
+     "fout": "Zet de kortste namen vooraan",
+     "uitleg": "Alfabetische volgorde gaat over de letters, niet over hoe lang een woord is. Waar kijk je dan naar?",
+     "uitlegSterker": "Zoek steeds het woord dat in het alfabet het eerst komt, en zet dat apart. Doe dat opnieuw met de woorden die over zijn, tot ze allemaal een plek hebben.",
+     "laag2": "tekstSterker",
+     "regel": "Zet de kortste namen vooraan",
+     "soort": "lengte",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Zet de kortste namen vooraan → Alfabetische volgorde gaat niet over lengte. Waar kijk je dan wel naar? · Vergelijk alleen de eerste en de laatste naam → Alle namen moeten op hun plek komen. Elke naam moet dus een keer vergeleken worden.",
-   "ouderzin": "",
+   "foutHintsTekst": "Vergelijk alleen de eerste en de laatste naam → Dan krijgen de woorden daartussen geen plek. Elk woord moet op zijn plek komen. · Zet de kortste namen vooraan → Alfabetische volgorde gaat over de letters, niet over hoe lang een woord is. Waar kijk je dan naar?",
+   "ouderzin": "Je kind kiest een aanpak om te sorteren die altijd werkt: steeds het woord zoeken dat in het alfabet het eerst komt.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -8896,7 +9092,12 @@
     "duplicaatVan": null,
     "somtypeNr": 40,
     "somtypeNrOrigineel": 33,
-    "somtypeOrigineel": "Je moet # [ding] op alfabetische volgorde zetten. Welke aanpak werkt altijd?"
+    "somtypeOrigineel": "Je moet # [ding] op alfabetische volgorde zetten. Welke aanpak werkt altijd?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 40,
+     "somtype": "Je moet # [ding] op alfabetische volgorde zetten. Welke aanpak werkt altijd?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -8912,8 +9113,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Zet de kortste namen vooraan",
+     "soort": "lengte",
+     "bron": "nieuw",
+     "tekst": "Alfabetische volgorde gaat over de letters, niet over hoe lang een woord is. Waar kijk je dan naar?",
+     "tekstSterker": "Zoek steeds het woord dat in het alfabet het eerst komt, en zet dat apart. Doe dat opnieuw met de woorden die over zijn, tot ze allemaal een plek hebben.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Zet de kortste namen vooraan"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Vergelijk alleen de eerste en de laatste naam",
+     "soort": "twee vergeleken",
+     "bron": "nieuw",
+     "tekst": "Dan krijgen de woorden daartussen geen plek. Elk woord moet op zijn plek komen.",
+     "tekstSterker": "Zoek steeds het woord dat in het alfabet het eerst komt, en zet dat apart. Doe dat opnieuw met de woorden die over zijn, tot ze allemaal een plek hebben.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Vergelijk alleen de eerste en de laatste naam"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Krijgt bij die aanpak elk woord een plek, alleen door naar de letters te kijken?",
+     "tekstSterker": "Zoek steeds het woord dat in het alfabet het eerst komt, en zet dat apart. Doe dat opnieuw met de woorden die over zijn, tot ze allemaal een plek hebben.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Krijgt bij die aanpak elk woord een plek, alleen door naar de letters te kijken?"
   },
   {
    "id": "G8-GET-E02-claude-bank-042",
@@ -8944,22 +9192,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "Deel 45 door 3"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Elke week komt er evenveel bij. Na hoeveel weken heb je het hele bedrag?",
+   "sterkereHint": "Reken elke aanpak uit. Doe de uitkomst keer het bedrag van één week. Bij welke aanpak kom je precies op het bedrag dat je wilt hebben?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Doe 45 keer 3",
-     "uitleg": "Het aantal weken kan niet groter zijn dan het aantal euro's. Denk aan groepjes van 3 euro."
+     "uitleg": "Dan krijg je een getal dat groter is dan het bedrag dat je wilt. Hoe vaak past het bedrag van één week in dat bedrag?",
+     "uitlegSterker": "Je zoekt hoe vaak het bedrag van één week in het hele bedrag past. Dat reken je uit met delen: het hele bedrag gedeeld door het bedrag per week.",
+     "laag2": "tekstSterker",
+     "regel": "Doe 45 keer 3",
+     "soort": "keer",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Trek 3 van 45 af",
-     "uitleg": "Je wilt weten hoe vaak 3 euro in 45 euro past. Welke bewerking hoort daarbij?"
+     "uitleg": "Dan haal je maar één week sparen van het bedrag af. Hoe vaak past het bedrag van één week in het hele bedrag?",
+     "uitlegSterker": "Je zoekt hoe vaak het bedrag van één week in het hele bedrag past. Dat reken je uit met delen: het hele bedrag gedeeld door het bedrag per week.",
+     "laag2": "tekstSterker",
+     "regel": "Trek 3 van 45 af",
+     "soort": "één week eraf",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Doe 45 keer 3 → Het aantal weken kan niet groter zijn dan het aantal euro's. Denk aan groepjes van 3 euro. · Trek 3 van 45 af → Je wilt weten hoe vaak 3 euro in 45 euro past. Welke bewerking hoort daarbij?",
-   "ouderzin": "",
+   "foutHintsTekst": "Doe 45 keer 3 → Dan krijg je een getal dat groter is dan het bedrag dat je wilt. Hoe vaak past het bedrag van één week in dat bedrag? · Trek 3 van 45 af → Dan haal je maar één week sparen van het bedrag af. Hoe vaak past het bedrag van één week in het hele bedrag?",
+   "ouderzin": "Je kind kiest hoe je uitrekent hoeveel weken sparen nodig is: hoe vaak het weekbedrag in het spaardoel past.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -9046,7 +9304,12 @@
     "duplicaatVan": null,
     "somtypeNr": 41,
     "somtypeNrOrigineel": 34,
-    "somtypeOrigineel": "Je spaart elke week # euro en wilt # euro hebben. Hoe reken je uit hoeveel weken je moet sparen?"
+    "somtypeOrigineel": "Je spaart elke week # euro en wilt # euro hebben. Hoe reken je uit hoeveel weken je moet sparen?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 41,
+     "somtype": "Je spaart elke week # euro en wilt # euro hebben. Hoe reken je uit hoeveel weken je moet sparen?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -9062,8 +9325,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Doe 45 keer 3",
+     "soort": "keer",
+     "bron": "nieuw",
+     "tekst": "Dan krijg je een getal dat groter is dan het bedrag dat je wilt. Hoe vaak past het bedrag van één week in dat bedrag?",
+     "tekstSterker": "Je zoekt hoe vaak het bedrag van één week in het hele bedrag past. Dat reken je uit met delen: het hele bedrag gedeeld door het bedrag per week.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Doe 45 keer 3"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Trek 3 van 45 af",
+     "soort": "één week eraf",
+     "bron": "nieuw",
+     "tekst": "Dan haal je maar één week sparen van het bedrag af. Hoe vaak past het bedrag van één week in het hele bedrag?",
+     "tekstSterker": "Je zoekt hoe vaak het bedrag van één week in het hele bedrag past. Dat reken je uit met delen: het hele bedrag gedeeld door het bedrag per week.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Trek 3 van 45 af"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Hoe vaak past het bedrag van één week in het bedrag dat je wilt hebben?",
+     "tekstSterker": "Je zoekt hoe vaak het bedrag van één week in het hele bedrag past. Dat reken je uit met delen: het hele bedrag gedeeld door het bedrag per week.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Hoe vaak past het bedrag van één week in het bedrag dat je wilt hebben?"
   },
   {
    "id": "G8-GET-E02-claude-bank-043",
@@ -9094,22 +9404,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "Reken 1,5 liter om naar 1500 milliliter"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De ene maat staat in liter, de andere in een kleinere maat. Kun je die meteen met elkaar delen?",
+   "sterkereHint": "Hoeveel van de kleine maat gaan er in één liter? Reken elke stap na: klopt het omrekenen, en staan daarna allebei de getallen in dezelfde maat?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Deel 1,5 meteen door 250",
-     "uitleg": "Je rekent nu met twee verschillende eenheden. Maak ze eerst gelijk."
+     "uitleg": "Dan deel je liters door een kleinere maat. Maak eerst van allebei dezelfde maat.",
+     "uitlegSterker": "Reken eerst de liters om naar de kleine maat: hoeveel daarvan gaan er in één liter? Staan allebei de getallen in dezelfde maat, dan kun je delen.",
+     "laag2": "tekstSterker",
+     "regel": "Deel 1,5 meteen door 250",
+     "soort": "direct delen",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Reken 1,5 liter om naar 150 milliliter",
-     "uitleg": "Kijk nog eens hoeveel milliliter er in één liter gaan. Dat zijn er meer dan honderd."
+     "uitleg": "Reken het na: hoeveel van de kleine maat gaan er in één liter? Past dit getal daarbij?",
+     "uitlegSterker": "Reken eerst de liters om naar de kleine maat: hoeveel daarvan gaan er in één liter? Staan allebei de getallen in dezelfde maat, dan kun je delen.",
+     "laag2": "tekstSterker",
+     "regel": "Reken 1,5 liter om naar 150 milliliter",
+     "soort": "verkeerd omgerekend",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Deel 1,5 meteen door 250 → Je rekent nu met twee verschillende eenheden. Maak ze eerst gelijk. · Reken 1,5 liter om naar 150 milliliter → Kijk nog eens hoeveel milliliter er in één liter gaan. Dat zijn er meer dan honderd.",
-   "ouderzin": "",
+   "foutHintsTekst": "Deel 1,5 meteen door 250 → Dan deel je liters door een kleinere maat. Maak eerst van allebei dezelfde maat. · Reken 1,5 liter om naar 150 milliliter → Reken het na: hoeveel van de kleine maat gaan er in één liter? Past dit getal daarbij?",
+   "ouderzin": "Je kind ziet dat je eerst dezelfde maat nodig hebt: liter omrekenen naar de kleine maat.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "midden",
    "visual": {
@@ -9196,7 +9516,12 @@
     "duplicaatVan": null,
     "somtypeNr": 42,
     "somtypeNrOrigineel": 35,
-    "somtypeOrigineel": "Je verdeelt een pak sap van # liter over [bakken] van # [ding]. Je wilt weten hoeveel bekers je kunt vullen. Wat doe je eerst?"
+    "somtypeOrigineel": "Je verdeelt een pak sap van # liter over [bakken] van # [ding]. Je wilt weten hoeveel bekers je kunt vullen. Wat doe je eerst?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 42,
+     "somtype": "Je verdeelt een pak sap van # liter over [bakken] van # [ding]. Je wilt weten hoeveel bekers je kunt vullen. Wat doe je eerst?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -9212,8 +9537,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Deel 1,5 meteen door 250",
+     "soort": "direct delen",
+     "bron": "nieuw",
+     "tekst": "Dan deel je liters door een kleinere maat. Maak eerst van allebei dezelfde maat.",
+     "tekstSterker": "Reken eerst de liters om naar de kleine maat: hoeveel daarvan gaan er in één liter? Staan allebei de getallen in dezelfde maat, dan kun je delen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Deel 1,5 meteen door 250"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Reken 1,5 liter om naar 150 milliliter",
+     "soort": "verkeerd omgerekend",
+     "bron": "nieuw",
+     "tekst": "Reken het na: hoeveel van de kleine maat gaan er in één liter? Past dit getal daarbij?",
+     "tekstSterker": "Reken eerst de liters om naar de kleine maat: hoeveel daarvan gaan er in één liter? Staan allebei de getallen in dezelfde maat, dan kun je delen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Reken 1,5 liter om naar 150 milliliter"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Maak eerst van allebei dezelfde maat. Hoeveel van de kleine maat gaan er in één liter?",
+     "tekstSterker": "Reken eerst de liters om naar de kleine maat: hoeveel daarvan gaan er in één liter? Staan allebei de getallen in dezelfde maat, dan kun je delen.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Maak eerst van allebei dezelfde maat. Hoeveel van de kleine maat gaan er in één liter?"
   },
   {
    "id": "G8-GET-E02-claude-bank-044",
@@ -9244,22 +9616,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "Tel lengte en breedte op en verdubbel die som."
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De omtrek is de lengte rondom: langs alle zijden van de tuin.",
+   "sterkereHint": "Bedenk een tuin, bijvoorbeeld zes meter lang en vier meter breed. Loop in gedachten rondom en tel alle zijden op. Reken dan elke aanpak uit met die tuin. Welke geeft hetzelfde?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Vermenigvuldig de lengte met de breedte.",
-     "uitleg": "Denk aan een hek rondom de tuin. Je loopt langs alle vier de zijden."
+     "uitleg": "Lengte keer breedte is de oppervlakte: hoeveel ruimte er in de tuin is. De omtrek is de lengte rondom.",
+     "uitlegSterker": "Een rechthoek heeft twee lange en twee korte zijden. Tel lengte en breedte op: dat is de helft van de weg rondom. Doe dat twee keer.",
+     "laag2": "tekstSterker",
+     "regel": "Vermenigvuldig de lengte met de breedte.",
+     "soort": "oppervlakte",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Tel lengte en breedte op en klaar.",
-     "uitleg": "Een rechthoek heeft vier zijden. Hoeveel zijden heb je nu geteld?"
+     "uitleg": "Dan heb je maar twee zijden. Een rechthoek heeft er vier: hoeveel zijden mis je nog?",
+     "uitlegSterker": "Een rechthoek heeft twee lange en twee korte zijden. Tel lengte en breedte op: dat is de helft van de weg rondom. Doe dat twee keer.",
+     "laag2": "tekstSterker",
+     "regel": "Tel lengte en breedte op en klaar.",
+     "soort": "twee zijden",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Vermenigvuldig de lengte met de breedte. → Denk aan een hek rondom de tuin. Je loopt langs alle vier de zijden. · Tel lengte en breedte op en klaar. → Een rechthoek heeft vier zijden. Hoeveel zijden heb je nu geteld?",
-   "ouderzin": "",
+   "foutHintsTekst": "Vermenigvuldig de lengte met de breedte. → Lengte keer breedte is de oppervlakte: hoeveel ruimte er in de tuin is. De omtrek is de lengte rondom. · Tel lengte en breedte op en klaar. → Dan heb je maar twee zijden. Een rechthoek heeft er vier: hoeveel zijden mis je nog?",
+   "ouderzin": "Je kind kiest hoe je de omtrek uitrekent: alle zijden rondom, dus lengte en breedte samen, twee keer.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -9346,7 +9728,12 @@
     "duplicaatVan": null,
     "somtypeNr": 43,
     "somtypeNrOrigineel": 36,
-    "somtypeOrigineel": "Je wilt de omtrek van een rechthoekige tuin weten. Hoe reken je die uit?"
+    "somtypeOrigineel": "Je wilt de omtrek van een rechthoekige tuin weten. Hoe reken je die uit?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 43,
+     "somtype": "Je wilt de omtrek van een rechthoekige tuin weten. Hoe reken je die uit?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -9362,8 +9749,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Vermenigvuldig de lengte met de breedte.",
+     "soort": "oppervlakte",
+     "bron": "nieuw",
+     "tekst": "Lengte keer breedte is de oppervlakte: hoeveel ruimte er in de tuin is. De omtrek is de lengte rondom.",
+     "tekstSterker": "Een rechthoek heeft twee lange en twee korte zijden. Tel lengte en breedte op: dat is de helft van de weg rondom. Doe dat twee keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Vermenigvuldig de lengte met de breedte."
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Tel lengte en breedte op en klaar.",
+     "soort": "twee zijden",
+     "bron": "nieuw",
+     "tekst": "Dan heb je maar twee zijden. Een rechthoek heeft er vier: hoeveel zijden mis je nog?",
+     "tekstSterker": "Een rechthoek heeft twee lange en twee korte zijden. Tel lengte en breedte op: dat is de helft van de weg rondom. Doe dat twee keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Tel lengte en breedte op en klaar."
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "De omtrek is de lengte rondom. Tel je alle vier de zijden mee?",
+     "tekstSterker": "Een rechthoek heeft twee lange en twee korte zijden. Tel lengte en breedte op: dat is de helft van de weg rondom. Doe dat twee keer.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "De omtrek is de lengte rondom. Tel je alle vier de zijden mee?"
   },
   {
    "id": "G8-GET-E02-claude-bank-045",
@@ -9394,22 +9828,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "Tel alle cijfers op en deel de som door 5."
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een gemiddelde is wat je krijgt als je alles eerlijk verdeelt, zodat elk cijfer even groot wordt.",
+   "sterkereHint": "Probeer elke aanpak met drie cijfers: zes, zeven en acht. Het gemiddelde daarvan is zeven. Gebruik drie waar de aanpak het aantal cijfers gebruikt. Welke aanpak komt op zeven uit?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Tel alle cijfers op en tel de som bij 5 op.",
-     "uitleg": "Bij een gemiddelde verdeel je het totaal eerlijk over alle cijfers. Welke bewerking verdeelt?"
+     "uitleg": "Dan wordt het getal alleen maar groter, groter dan elk cijfer. Een gemiddelde ligt tussen het laagste en het hoogste cijfer.",
+     "uitlegSterker": "Tel alle cijfers bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal cijfers.",
+     "laag2": "tekstSterker",
+     "regel": "Tel alle cijfers op en tel de som bij 5 op.",
+     "soort": "erbij",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Zoek het hoogste cijfer en deel dat door 5.",
-     "uitleg": "Bij een gemiddelde doen alle cijfers mee, niet alleen één cijfer."
+     "uitleg": "Dan doet maar één cijfer mee. Bij een gemiddelde tellen alle cijfers mee.",
+     "uitlegSterker": "Tel alle cijfers bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal cijfers.",
+     "laag2": "tekstSterker",
+     "regel": "Zoek het hoogste cijfer en deel dat door 5.",
+     "soort": "hoogste",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Tel alle cijfers op en tel de som bij 5 op. → Bij een gemiddelde verdeel je het totaal eerlijk over alle cijfers. Welke bewerking verdeelt? · Zoek het hoogste cijfer en deel dat door 5. → Bij een gemiddelde doen alle cijfers mee, niet alleen één cijfer.",
-   "ouderzin": "",
+   "foutHintsTekst": "Tel alle cijfers op en tel de som bij 5 op. → Dan wordt het getal alleen maar groter, groter dan elk cijfer. Een gemiddelde ligt tussen het laagste en het hoogste cijfer. · Zoek het hoogste cijfer en deel dat door 5. → Dan doet maar één cijfer mee. Bij een gemiddelde tellen alle cijfers mee.",
+   "ouderzin": "Je kind kiest hoe je een gemiddelde uitrekent: alles optellen en delen door het aantal.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -9496,7 +9940,12 @@
     "duplicaatVan": null,
     "somtypeNr": 44,
     "somtypeNrOrigineel": 37,
-    "somtypeOrigineel": "Je wilt het gemiddelde van # [ding] weten. Hoe reken je dat uit?"
+    "somtypeOrigineel": "Je wilt het gemiddelde van # [ding] weten. Hoe reken je dat uit?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 44,
+     "somtype": "Je wilt het gemiddelde van # [ding] weten. Hoe reken je dat uit?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -9512,8 +9961,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Tel alle cijfers op en tel de som bij 5 op.",
+     "soort": "erbij",
+     "bron": "nieuw",
+     "tekst": "Dan wordt het getal alleen maar groter, groter dan elk cijfer. Een gemiddelde ligt tussen het laagste en het hoogste cijfer.",
+     "tekstSterker": "Tel alle cijfers bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal cijfers.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Tel alle cijfers op en tel de som bij 5 op."
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Zoek het hoogste cijfer en deel dat door 5.",
+     "soort": "hoogste",
+     "bron": "nieuw",
+     "tekst": "Dan doet maar één cijfer mee. Bij een gemiddelde tellen alle cijfers mee.",
+     "tekstSterker": "Tel alle cijfers bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal cijfers.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Zoek het hoogste cijfer en deel dat door 5."
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Bij een gemiddelde tellen alle cijfers mee, en verdeel je het totaal eerlijk.",
+     "tekstSterker": "Tel alle cijfers bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal cijfers.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Bij een gemiddelde tellen alle cijfers mee, en verdeel je het totaal eerlijk."
   },
   {
    "id": "G8-GET-E02-claude-bank-046",
@@ -9544,22 +10040,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "5 × 100 doen en er 10 afhalen"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Het getal ligt dicht bij een rond getal. Met een rond getal reken je makkelijker.",
+   "sterkereHint": "Reken de som eerst zelf uit. Reken dan elke aanpak uit. Welke komt op hetzelfde uit, en welke gaat het snelst?",
    "foutHints": [
     {
      "stap": null,
      "fout": "5 × 100 doen en er 2 afhalen",
-     "uitleg": "Je hebt vijf keer 2 te veel gerekend, niet één keer. Hoeveel is dat bij elkaar?"
+     "uitleg": "Bij elke keer reken je een beetje te veel. Hoe vaak reken je dat te veel? Dat moet er allemaal af, niet maar één keer.",
+     "uitlegSterker": "Reken eerst met het ronde getal. Bij elke keer neem je dan een beetje te veel. Haal daarna al dat te veel samen eraf.",
+     "laag2": "tekstSterker",
+     "regel": "5 × 100 doen en er 2 afhalen",
+     "soort": "één keer verbeterd",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "98 vijf keer onder elkaar optellen",
-     "uitleg": "Dat mag wel, maar het kost veel stappen. 98 ligt heel dicht bij een rond getal."
+     "uitleg": "Dat kan, maar het is niet handig: het kost veel stappen. Ligt het getal dicht bij een rond getal?",
+     "uitlegSterker": "Reken eerst met het ronde getal. Bij elke keer neem je dan een beetje te veel. Haal daarna al dat te veel samen eraf.",
+     "laag2": "tekstSterker",
+     "regel": "98 vijf keer onder elkaar optellen",
+     "soort": "herhaald optellen",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "5 × 100 doen en er 2 afhalen → Je hebt vijf keer 2 te veel gerekend, niet één keer. Hoeveel is dat bij elkaar? · 98 vijf keer onder elkaar optellen → Dat mag wel, maar het kost veel stappen. 98 ligt heel dicht bij een rond getal.",
-   "ouderzin": "",
+   "foutHintsTekst": "5 × 100 doen en er 2 afhalen → Bij elke keer reken je een beetje te veel. Hoe vaak reken je dat te veel? Dat moet er allemaal af, niet maar één keer. · 98 vijf keer onder elkaar optellen → Dat kan, maar het is niet handig: het kost veel stappen. Ligt het getal dicht bij een rond getal?",
+   "ouderzin": "Je kind kiest een handige aanpak: rekenen met een rond getal en daarna verbeteren wat je te veel nam.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -9646,7 +10152,12 @@
     "duplicaatVan": null,
     "somtypeNr": 45,
     "somtypeNrOrigineel": 38,
-    "somtypeOrigineel": "Jinte moet # × # [ding]. Welke aanpak is het handigst?"
+    "somtypeOrigineel": "Jinte moet # × # [ding]. Welke aanpak is het handigst?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 45,
+     "somtype": "Jinte moet # × # [ding]. Welke aanpak is het handigst?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -9662,8 +10173,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "5 × 100 doen en er 2 afhalen",
+     "soort": "één keer verbeterd",
+     "bron": "nieuw",
+     "tekst": "Bij elke keer reken je een beetje te veel. Hoe vaak reken je dat te veel? Dat moet er allemaal af, niet maar één keer.",
+     "tekstSterker": "Reken eerst met het ronde getal. Bij elke keer neem je dan een beetje te veel. Haal daarna al dat te veel samen eraf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5 × 100 doen en er 2 afhalen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "98 vijf keer onder elkaar optellen",
+     "soort": "herhaald optellen",
+     "bron": "nieuw",
+     "tekst": "Dat kan, maar het is niet handig: het kost veel stappen. Ligt het getal dicht bij een rond getal?",
+     "tekstSterker": "Reken eerst met het ronde getal. Bij elke keer neem je dan een beetje te veel. Haal daarna al dat te veel samen eraf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "98 vijf keer onder elkaar optellen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken met het ronde getal, en haal daarna af wat je bij alle keren samen te veel nam.",
+     "tekstSterker": "Reken eerst met het ronde getal. Bij elke keer neem je dan een beetje te veel. Haal daarna al dat te veel samen eraf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken met het ronde getal, en haal daarna af wat je bij alle keren samen te veel nam."
   },
   {
    "id": "G8-GET-E02-claude-bank-047",
@@ -9694,22 +10252,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "Ja, 5 is de helft van 10"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Kijk of de aanpak van Kim op hetzelfde uitkomt als de som zelf.",
+   "sterkereHint": "Reken het zelf uit: wat is vijf keer het getal? Reken dan elke aanpak uit: wat Kim deed, en wat de andere antwoorden zeggen. Welke komt op dezelfde uitkomst?",
    "foutHints": [
     {
      "stap": null,
-     "fout": "Nee, ze moet 360 verdubbelen",
-     "uitleg": "Vijf keer iets is minder dan tien keer iets. Wat doe je dan met de uitkomst van 36 × 10?"
+     "fout": "Nee, ze moet er 10 van afhalen",
+     "uitleg": "Keer tien is twee keer zo groot als keer vijf, niet tien meer. Hoeveel moet er dan af?",
+     "uitlegSterker": "Vijf is de helft van tien. Reken keer tien uit en neem daarvan de helft: dat is hetzelfde als keer vijf.",
+     "laag2": "tekstSterker",
+     "regel": "Nee, ze moet er 10 van afhalen",
+     "soort": "tien eraf",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "Nee, ze moet er 10 van afhalen",
-     "uitleg": "Je kijkt naar het verschil tussen 5 en 10 als getal. Kijk liever hoe die twee zich tot elkaar verhouden."
+     "fout": "Nee, ze moet 360 verdubbelen",
+     "uitleg": "Keer vijf is minder dan keer tien. Wordt de uitkomst dan groter of kleiner?",
+     "uitlegSterker": "Vijf is de helft van tien. Reken keer tien uit en neem daarvan de helft: dat is hetzelfde als keer vijf.",
+     "laag2": "tekstSterker",
+     "regel": "Nee, ze moet 360 verdubbelen",
+     "soort": "verdubbelen",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Nee, ze moet 360 verdubbelen → Vijf keer iets is minder dan tien keer iets. Wat doe je dan met de uitkomst van 36 × 10? · Nee, ze moet er 10 van afhalen → Je kijkt naar het verschil tussen 5 en 10 als getal. Kijk liever hoe die twee zich tot elkaar verhouden.",
-   "ouderzin": "",
+   "foutHintsTekst": "Nee, ze moet er 10 van afhalen → Keer tien is twee keer zo groot als keer vijf, niet tien meer. Hoeveel moet er dan af? · Nee, ze moet 360 verdubbelen → Keer vijf is minder dan keer tien. Wordt de uitkomst dan groter of kleiner?",
+   "ouderzin": "Je kind controleert een handige aanpak: keer tien en dan de helft is hetzelfde als keer vijf.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -9798,7 +10366,12 @@
     "duplicaatVan": null,
     "somtypeNr": 46,
     "somtypeNrOrigineel": 39,
-    "somtypeOrigineel": "Kim moet # × # [ding]. Ze doet eerst # × # = # en neemt dan de helft. Klopt deze aanpak?"
+    "somtypeOrigineel": "Kim moet # × # [ding]. Ze doet eerst # × # = # en neemt dan de helft. Klopt deze aanpak?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 46,
+     "somtype": "Kim moet # × # [ding]. Ze doet eerst # × # = # en neemt dan de helft. Klopt deze aanpak?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -9814,8 +10387,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Nee, ze moet er 10 van afhalen",
+     "soort": "tien eraf",
+     "bron": "nieuw",
+     "tekst": "Keer tien is twee keer zo groot als keer vijf, niet tien meer. Hoeveel moet er dan af?",
+     "tekstSterker": "Vijf is de helft van tien. Reken keer tien uit en neem daarvan de helft: dat is hetzelfde als keer vijf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Nee, ze moet er 10 van afhalen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Nee, ze moet 360 verdubbelen",
+     "soort": "verdubbelen",
+     "bron": "nieuw",
+     "tekst": "Keer vijf is minder dan keer tien. Wordt de uitkomst dan groter of kleiner?",
+     "tekstSterker": "Vijf is de helft van tien. Reken keer tien uit en neem daarvan de helft: dat is hetzelfde als keer vijf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Nee, ze moet 360 verdubbelen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Is vijf de helft van tien? Wat betekent dat voor de uitkomst?",
+     "tekstSterker": "Vijf is de helft van tien. Reken keer tien uit en neem daarvan de helft: dat is hetzelfde als keer vijf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Is vijf de helft van tien? Wat betekent dat voor de uitkomst?"
   },
   {
    "id": "G8-GET-E02-claude-bank-048",
@@ -9846,22 +10466,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "Er blijven 8 potjes over, dus er is een extra doos nodig"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij een deling in een verhaal kijk je daarna terug in het verhaal: wat betekent de uitkomst?",
+   "sterkereHint": "Reken het na: hoeveel gaat er in het aantal dat Lars opschreef? Is daarmee alles ingepakt? Toets dan elke uitleg aan die berekening. Welke klopt?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Niets, 14 dozen is precies goed",
-     "uitleg": "Reken na hoeveel potjes er in 14 volle dozen passen. Blijft er dan nog iets over?"
+     "uitleg": "Reken het na: hoeveel gaat er in dat aantal? Is daarmee alles ingepakt?",
+     "uitlegSterker": "Deel, en kijk dan naar de rest. Moet de rest ook mee, dan heb je er nog één extra nodig.",
+     "laag2": "tekstSterker",
+     "regel": "Niets, 14 dozen is precies goed",
+     "soort": "rest vergeten",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Hij moest 148 × 10 doen",
-     "uitleg": "Vermenigvuldigen maakt het aantal juist groter. Bij verdelen in gelijke groepen kies je iets anders."
+     "uitleg": "Dan wordt het getal veel groter dan wat er is. Bij verdelen in groepjes past delen. Wat blijft er bij de deling over?",
+     "uitlegSterker": "Deel, en kijk dan naar de rest. Moet de rest ook mee, dan heb je er nog één extra nodig.",
+     "laag2": "tekstSterker",
+     "regel": "Hij moest 148 × 10 doen",
+     "soort": "keer",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Niets, 14 dozen is precies goed → Reken na hoeveel potjes er in 14 volle dozen passen. Blijft er dan nog iets over? · Hij moest 148 × 10 doen → Vermenigvuldigen maakt het aantal juist groter. Bij verdelen in gelijke groepen kies je iets anders.",
-   "ouderzin": "",
+   "foutHintsTekst": "Niets, 14 dozen is precies goed → Reken het na: hoeveel gaat er in dat aantal? Is daarmee alles ingepakt? · Hij moest 148 × 10 doen → Dan wordt het getal veel groter dan wat er is. Bij verdelen in groepjes past delen. Wat blijft er bij de deling over?",
+   "ouderzin": "Je kind kijkt terug in het verhaal: bij inpakken moet alles mee, dus de rest heeft nog een plek nodig.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -9948,7 +10578,12 @@
     "duplicaatVan": null,
     "somtypeNr": 47,
     "somtypeNrOrigineel": 40,
-    "somtypeOrigineel": "Lars zet # [ding] jam in [bakken] van #. Hij rekent # : # en schrijft # [ding] op. Wat is er mis met zijn aanpak?"
+    "somtypeOrigineel": "Lars zet # [ding] jam in [bakken] van #. Hij rekent # : # en schrijft # [ding] op. Wat is er mis met zijn aanpak?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 47,
+     "somtype": "Lars zet # [ding] jam in [bakken] van #. Hij rekent # : # en schrijft # [ding] op. Wat is er mis met zijn aanpak?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -9964,8 +10599,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Niets, 14 dozen is precies goed",
+     "soort": "rest vergeten",
+     "bron": "nieuw",
+     "tekst": "Reken het na: hoeveel gaat er in dat aantal? Is daarmee alles ingepakt?",
+     "tekstSterker": "Deel, en kijk dan naar de rest. Moet de rest ook mee, dan heb je er nog één extra nodig.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Niets, 14 dozen is precies goed"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Hij moest 148 × 10 doen",
+     "soort": "keer",
+     "bron": "nieuw",
+     "tekst": "Dan wordt het getal veel groter dan wat er is. Bij verdelen in groepjes past delen. Wat blijft er bij de deling over?",
+     "tekstSterker": "Deel, en kijk dan naar de rest. Moet de rest ook mee, dan heb je er nog één extra nodig.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Hij moest 148 × 10 doen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Wat blijft er bij de deling over, en moet dat ook mee?",
+     "tekstSterker": "Deel, en kijk dan naar de rest. Moet de rest ook mee, dan heb je er nog één extra nodig.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Wat blijft er bij de deling over, en moet dat ook mee?"
   },
   {
    "id": "G8-GET-E02-claude-bank-049",
@@ -9996,22 +10678,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "Meteen 4 × 250 vermenigvuldigen"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek een aanpak die klopt en die minder stappen kost dan steeds hetzelfde getal optellen.",
+   "sterkereHint": "Reken elke aanpak uit. Komt die op hetzelfde uit als steeds hetzelfde getal optellen? En welke aanpak die klopt, gaat in de minste stappen?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Eerst 250 + 4 uitrekenen",
-     "uitleg": "Vier groepen van 250 is niet hetzelfde als 250 en 4 samen. Kijk nog eens naar het maalteken."
+     "uitleg": "Dan tel je het aantal keer bij het getal op. Steeds hetzelfde getal optellen geeft veel meer dan het getal plus het aantal keer.",
+     "uitlegSterker": "Steeds hetzelfde getal optellen is een keersom. Doe het aantal keer het getal: dat is één stap.",
+     "laag2": "tekstSterker",
+     "regel": "Eerst 250 + 4 uitrekenen",
+     "soort": "plus",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "De som onder elkaar zetten met een streep",
-     "uitleg": "Onder elkaar zetten kost hier veel tijd. 250 is een mooi getal om mee te vermenigvuldigen."
+     "uitleg": "Dat kan, maar het is niet handig: je telt dan nog steeds alles op. Het kan in één stap.",
+     "uitlegSterker": "Steeds hetzelfde getal optellen is een keersom. Doe het aantal keer het getal: dat is één stap.",
+     "laag2": "tekstSterker",
+     "regel": "De som onder elkaar zetten met een streep",
+     "soort": "onder elkaar",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Eerst 250 + 4 uitrekenen → Vier groepen van 250 is niet hetzelfde als 250 en 4 samen. Kijk nog eens naar het maalteken. · De som onder elkaar zetten met een streep → Onder elkaar zetten kost hier veel tijd. 250 is een mooi getal om mee te vermenigvuldigen.",
-   "ouderzin": "",
+   "foutHintsTekst": "Eerst 250 + 4 uitrekenen → Dan tel je het aantal keer bij het getal op. Steeds hetzelfde getal optellen geeft veel meer dan het getal plus het aantal keer. · De som onder elkaar zetten met een streep → Dat kan, maar het is niet handig: je telt dan nog steeds alles op. Het kan in één stap.",
+   "ouderzin": "Je kind ziet dat steeds hetzelfde getal optellen hetzelfde is als een keersom.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -10098,7 +10790,12 @@
     "duplicaatVan": null,
     "somtypeNr": 48,
     "somtypeNrOrigineel": 41,
-    "somtypeOrigineel": "Mees moet # × # [ding]. Hij telt # + # + # + # op. Wat had handiger gekund?"
+    "somtypeOrigineel": "Mees moet # × # [ding]. Hij telt # + # + # + # op. Wat had handiger gekund?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 48,
+     "somtype": "Mees moet # × # [ding]. Hij telt # + # + # + # op. Wat had handiger gekund?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -10114,8 +10811,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Eerst 250 + 4 uitrekenen",
+     "soort": "plus",
+     "bron": "nieuw",
+     "tekst": "Dan tel je het aantal keer bij het getal op. Steeds hetzelfde getal optellen geeft veel meer dan het getal plus het aantal keer.",
+     "tekstSterker": "Steeds hetzelfde getal optellen is een keersom. Doe het aantal keer het getal: dat is één stap.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Eerst 250 + 4 uitrekenen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "De som onder elkaar zetten met een streep",
+     "soort": "onder elkaar",
+     "bron": "nieuw",
+     "tekst": "Dat kan, maar het is niet handig: je telt dan nog steeds alles op. Het kan in één stap.",
+     "tekstSterker": "Steeds hetzelfde getal optellen is een keersom. Doe het aantal keer het getal: dat is één stap.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "De som onder elkaar zetten met een streep"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Steeds hetzelfde getal optellen: welke som doet dat in één stap?",
+     "tekstSterker": "Steeds hetzelfde getal optellen is een keersom. Doe het aantal keer het getal: dat is één stap.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Steeds hetzelfde getal optellen: welke som doet dat in één stap?"
   },
   {
    "id": "G8-GET-E02-claude-bank-050",
@@ -10146,22 +10890,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "25 × 4 doen en dan verdubbelen"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek een aanpak die klopt en die sneller gaat dan steeds hetzelfde getal optellen.",
+   "sterkereHint": "Reken elke aanpak uit. Komt die op hetzelfde uit als steeds hetzelfde getal optellen? En welke aanpak die klopt, gaat het snelst?",
    "foutHints": [
     {
      "stap": null,
      "fout": "25 en 8 bij elkaar optellen",
-     "uitleg": "Let op het teken in de som. Optellen en keer doen geven heel andere antwoorden."
+     "uitleg": "Dan tel je het aantal keer bij het getal op. Steeds hetzelfde getal optellen is een keersom. Komt dit daar in de buurt?",
+     "uitlegSterker": "Splits het aantal keer in een makkelijk stuk: de helft ervan. Reken die keersom uit en verdubbel daarna de uitkomst.",
+     "laag2": "tekstSterker",
+     "regel": "25 en 8 bij elkaar optellen",
+     "soort": "plus",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "25 × 10 doen en er 2 afhalen",
-     "uitleg": "Als je met 10 rekent in plaats van met 8, haal je hele groepen van 25 te veel weg."
+     "uitleg": "Met tien keer neem je twee hele keren te veel. Haal je dan twee af, of twee keer het getal?",
+     "uitlegSterker": "Splits het aantal keer in een makkelijk stuk: de helft ervan. Reken die keersom uit en verdubbel daarna de uitkomst.",
+     "laag2": "tekstSterker",
+     "regel": "25 × 10 doen en er 2 afhalen",
+     "soort": "te veel eraf",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "25 en 8 bij elkaar optellen → Let op het teken in de som. Optellen en keer doen geven heel andere antwoorden. · 25 × 10 doen en er 2 afhalen → Als je met 10 rekent in plaats van met 8, haal je hele groepen van 25 te veel weg.",
-   "ouderzin": "",
+   "foutHintsTekst": "25 en 8 bij elkaar optellen → Dan tel je het aantal keer bij het getal op. Steeds hetzelfde getal optellen is een keersom. Komt dit daar in de buurt? · 25 × 10 doen en er 2 afhalen → Met tien keer neem je twee hele keren te veel. Haal je dan twee af, of twee keer het getal?",
+   "ouderzin": "Je kind kiest een handige aanpak voor een keersom: splitsen in een makkelijke keersom en dan verdubbelen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -10248,7 +11002,12 @@
     "duplicaatVan": null,
     "somtypeNr": 49,
     "somtypeNrOrigineel": 42,
-    "somtypeOrigineel": "Noor moet # × # [ding] en telt acht keer # bij elkaar op. Wat had handiger gekund?"
+    "somtypeOrigineel": "Noor moet # × # [ding] en telt acht keer # bij elkaar op. Wat had handiger gekund?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 49,
+     "somtype": "Noor moet # × # [ding] en telt acht keer # bij elkaar op. Wat had handiger gekund?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -10264,8 +11023,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "25 en 8 bij elkaar optellen",
+     "soort": "plus",
+     "bron": "nieuw",
+     "tekst": "Dan tel je het aantal keer bij het getal op. Steeds hetzelfde getal optellen is een keersom. Komt dit daar in de buurt?",
+     "tekstSterker": "Splits het aantal keer in een makkelijk stuk: de helft ervan. Reken die keersom uit en verdubbel daarna de uitkomst.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "25 en 8 bij elkaar optellen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "25 × 10 doen en er 2 afhalen",
+     "soort": "te veel eraf",
+     "bron": "nieuw",
+     "tekst": "Met tien keer neem je twee hele keren te veel. Haal je dan twee af, of twee keer het getal?",
+     "tekstSterker": "Splits het aantal keer in een makkelijk stuk: de helft ervan. Reken die keersom uit en verdubbel daarna de uitkomst.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "25 × 10 doen en er 2 afhalen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Kun je het aantal keer splitsen in een makkelijke keersom?",
+     "tekstSterker": "Splits het aantal keer in een makkelijk stuk: de helft ervan. Reken die keersom uit en verdubbel daarna de uitkomst.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kun je het aantal keer splitsen in een makkelijke keersom?"
   },
   {
    "id": "G8-GET-E02-claude-bank-051",
@@ -10296,22 +11102,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "De som opnieuw uitrekenen, want de schatting past niet"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een schatting met ronde getallen is een controle. Ligt het antwoord dicht bij de schatting?",
+   "sterkereHint": "Rond allebei de getallen af op honderdtallen: kijk naar de tientallen, vijf of meer gaat naar boven. Reken de schatting zelf na. Hoe ver ligt het antwoord van Nout ervan af? Bekijk elke aanpak: welke hoort bij wat je ziet?",
    "foutHints": [
     {
      "stap": null,
      "fout": "De schatting aanpassen naar 500",
-     "uitleg": "Een schatting met ronde getallen is meestal betrouwbaar. Reken 800 − 400 nog eens na."
+     "uitleg": "Reken de schatting na met ronde getallen. Klopte die? Dan ligt de fout niet in de schatting.",
+     "uitlegSterker": "Rond allebei de getallen af op honderdtallen: kijk naar de tientallen, vijf of meer gaat naar boven. Reken de schatting na. Ligt het antwoord daar ver vanaf, dan is er waarschijnlijk een rekenfout: reken de som opnieuw uit.",
+     "laag2": "tekstSterker",
+     "regel": "De schatting aanpassen naar 500",
+     "soort": "schatting aangepast",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Het antwoord 505 gewoon laten staan",
-     "uitleg": "Je schatting waarschuwt je juist voor een fout. Negeer dat signaal niet."
+     "uitleg": "Het antwoord ligt ver van de schatting af. Dat is een teken dat er iets mis is gegaan.",
+     "uitlegSterker": "Rond allebei de getallen af op honderdtallen: kijk naar de tientallen, vijf of meer gaat naar boven. Reken de schatting na. Ligt het antwoord daar ver vanaf, dan is er waarschijnlijk een rekenfout: reken de som opnieuw uit.",
+     "laag2": "tekstSterker",
+     "regel": "Het antwoord 505 gewoon laten staan",
+     "soort": "laten staan",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "De schatting aanpassen naar 500 → Een schatting met ronde getallen is meestal betrouwbaar. Reken 800 − 400 nog eens na. · Het antwoord 505 gewoon laten staan → Je schatting waarschuwt je juist voor een fout. Negeer dat signaal niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "De schatting aanpassen naar 500 → Reken de schatting na met ronde getallen. Klopte die? Dan ligt de fout niet in de schatting. · Het antwoord 505 gewoon laten staan → Het antwoord ligt ver van de schatting af. Dat is een teken dat er iets mis is gegaan.",
+   "ouderzin": "Je kind gebruikt een schatting als controle: ligt het antwoord ver van de schatting, dan reken je opnieuw.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -10400,7 +11216,12 @@
     "duplicaatVan": null,
     "somtypeNr": 50,
     "somtypeNrOrigineel": 43,
-    "somtypeOrigineel": "Nout heeft # − # [ding] elkaar uitgerekend en kreeg #. Hij schatte vooraf ongeveer #. Wat moet hij nu doen?"
+    "somtypeOrigineel": "Nout heeft # − # [ding] elkaar uitgerekend en kreeg #. Hij schatte vooraf ongeveer #. Wat moet hij nu doen?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 50,
+     "somtype": "Nout heeft # − # [ding] elkaar uitgerekend en kreeg #. Hij schatte vooraf ongeveer #. Wat moet hij nu doen?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -10416,8 +11237,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "De schatting aanpassen naar 500",
+     "soort": "schatting aangepast",
+     "bron": "nieuw",
+     "tekst": "Reken de schatting na met ronde getallen. Klopte die? Dan ligt de fout niet in de schatting.",
+     "tekstSterker": "Rond allebei de getallen af op honderdtallen: kijk naar de tientallen, vijf of meer gaat naar boven. Reken de schatting na. Ligt het antwoord daar ver vanaf, dan is er waarschijnlijk een rekenfout: reken de som opnieuw uit.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "De schatting aanpassen naar 500"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Het antwoord 505 gewoon laten staan",
+     "soort": "laten staan",
+     "bron": "nieuw",
+     "tekst": "Het antwoord ligt ver van de schatting af. Dat is een teken dat er iets mis is gegaan.",
+     "tekstSterker": "Rond allebei de getallen af op honderdtallen: kijk naar de tientallen, vijf of meer gaat naar boven. Reken de schatting na. Ligt het antwoord daar ver vanaf, dan is er waarschijnlijk een rekenfout: reken de som opnieuw uit.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Het antwoord 505 gewoon laten staan"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ligt het antwoord dicht bij de schatting? Zo niet, waar zit dan de fout?",
+     "tekstSterker": "Rond allebei de getallen af op honderdtallen: kijk naar de tientallen, vijf of meer gaat naar boven. Reken de schatting na. Ligt het antwoord daar ver vanaf, dan is er waarschijnlijk een rekenfout: reken de som opnieuw uit.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ligt het antwoord dicht bij de schatting? Zo niet, waar zit dan de fout?"
   },
   {
    "id": "G8-GET-E02-claude-bank-052",
@@ -12364,22 +13232,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "1 km is al 1000 meter, dus het moeten er veel meer zijn"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Je controleert een omrekening van kilometer naar meter. Past het getal in meters bij de afstand?",
+   "sterkereHint": "Hoeveel meter is één kilometer? Reken uit hoeveel meter de tocht dan ongeveer is. Toets elke uitleg aan dat getal: welke klopt?",
    "foutHints": [
     {
      "stap": null,
-     "fout": "Het klopt, je haalt gewoon de komma weg",
-     "uitleg": "De komma verplaatsen is niet hetzelfde als omrekenen. Hoeveel meter zit er in 1 kilometer?"
+     "fout": "Het moet 320 meter zijn",
+     "uitleg": "Reken het na: één kilometer is al duizend meter. Is dit dan genoeg voor de hele tocht?",
+     "uitlegSterker": "Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend: dat is het aantal meter.",
+     "laag2": "tekstSterker",
+     "regel": "Het moet 320 meter zijn",
+     "soort": "één stap",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "Het moet 320 meter zijn",
-     "uitleg": "Je bent één stap te vroeg gestopt. Reken eerst uit hoeveel meter 3 km is."
+     "fout": "Het klopt, je haalt gewoon de komma weg",
+     "uitleg": "De komma weghalen is geen omrekenen. Hoeveel meter gaan er in één kilometer?",
+     "uitlegSterker": "Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend: dat is het aantal meter.",
+     "laag2": "tekstSterker",
+     "regel": "Het klopt, je haalt gewoon de komma weg",
+     "soort": "komma weg",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Het klopt, je haalt gewoon de komma weg → De komma verplaatsen is niet hetzelfde als omrekenen. Hoeveel meter zit er in 1 kilometer? · Het moet 320 meter zijn → Je bent één stap te vroeg gestopt. Reken eerst uit hoeveel meter 3 km is.",
-   "ouderzin": "",
+   "foutHintsTekst": "Het moet 320 meter zijn → Reken het na: één kilometer is al duizend meter. Is dit dan genoeg voor de hele tocht? · Het klopt, je haalt gewoon de komma weg → De komma weghalen is geen omrekenen. Hoeveel meter gaan er in één kilometer?",
+   "ouderzin": "Je kind controleert een omrekening met een bekend getal: één kilometer is duizend meter.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -12466,7 +13344,12 @@
     "duplicaatVan": null,
     "somtypeNr": 51,
     "somtypeNrOrigineel": 44,
-    "somtypeOrigineel": "Op de fietstocht rijdt Tess # km. Ze schrijft op dat dit # meter is. Hoe merk je dat dit niet klopt?"
+    "somtypeOrigineel": "Op de fietstocht rijdt Tess # km. Ze schrijft op dat dit # meter is. Hoe merk je dat dit niet klopt?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 51,
+     "somtype": "Op de fietstocht rijdt Tess # km. Ze schrijft op dat dit # meter is. Hoe merk je dat dit niet klopt?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -12482,8 +13365,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Het moet 320 meter zijn",
+     "soort": "één stap",
+     "bron": "nieuw",
+     "tekst": "Reken het na: één kilometer is al duizend meter. Is dit dan genoeg voor de hele tocht?",
+     "tekstSterker": "Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend: dat is het aantal meter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Het moet 320 meter zijn"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Het klopt, je haalt gewoon de komma weg",
+     "soort": "komma weg",
+     "bron": "nieuw",
+     "tekst": "De komma weghalen is geen omrekenen. Hoeveel meter gaan er in één kilometer?",
+     "tekstSterker": "Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend: dat is het aantal meter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Het klopt, je haalt gewoon de komma weg"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Eén kilometer is al duizend meter. Hoeveel meter is de tocht dan ongeveer?",
+     "tekstSterker": "Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend: dat is het aantal meter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Eén kilometer is al duizend meter. Hoeveel meter is de tocht dan ongeveer?"
   },
   {
    "id": "G8-GET-E02-claude-bank-061",
@@ -23316,22 +24246,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "Ze vergat 28 erbij op te tellen"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij splitsen reken je elk stuk apart uit. Wat doe je daarna met de stukken?",
+   "sterkereHint": "Reken het zelf uit: wat zijn de twee stukken, en wat is de hele keersom? Vergelijk dat met wat Roos opschreef. Toets dan elke uitleg: welke klopt?",
    "foutHints": [
     {
      "stap": null,
-     "fout": "Ze had niet mogen splitsen",
-     "uitleg": "Splitsen is juist een slimme aanpak. Kijk nog eens of ze alle stukjes heeft gebruikt."
+     "fout": "Ze moest 140 en 24 optellen",
+     "uitleg": "Dan tel je een getal uit de som erbij, niet de uitkomst van het kleine stuk. Hoeveel is het kleine stuk echt?",
+     "uitlegSterker": "Bij splitsen reken je elk stuk uit en tel je de uitkomsten bij elkaar op. Pas dan heb je de hele keersom.",
+     "laag2": "tekstSterker",
+     "regel": "Ze moest 140 en 24 optellen",
+     "soort": "getal uit de som",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "Ze moest 140 en 24 optellen",
-     "uitleg": "Het tweede stukje was 7 × 4, niet 24. Reken dat stukje eerst uit."
+     "fout": "Ze had niet mogen splitsen",
+     "uitleg": "Splitsen is juist een handige aanpak. Heeft Roos alle stukken gebruikt?",
+     "uitlegSterker": "Bij splitsen reken je elk stuk uit en tel je de uitkomsten bij elkaar op. Pas dan heb je de hele keersom.",
+     "laag2": "tekstSterker",
+     "regel": "Ze had niet mogen splitsen",
+     "soort": "niet splitsen",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Ze had niet mogen splitsen → Splitsen is juist een slimme aanpak. Kijk nog eens of ze alle stukjes heeft gebruikt. · Ze moest 140 en 24 optellen → Het tweede stukje was 7 × 4, niet 24. Reken dat stukje eerst uit.",
-   "ouderzin": "",
+   "foutHintsTekst": "Ze moest 140 en 24 optellen → Dan tel je een getal uit de som erbij, niet de uitkomst van het kleine stuk. Hoeveel is het kleine stuk echt? · Ze had niet mogen splitsen → Splitsen is juist een handige aanpak. Heeft Roos alle stukken gebruikt?",
+   "ouderzin": "Je kind ziet dat je bij splitsen alle stukken weer bij elkaar optelt.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -23418,7 +24358,12 @@
     "duplicaatVan": null,
     "somtypeNr": 52,
     "somtypeNrOrigineel": 45,
-    "somtypeOrigineel": "Roos rekent # × # uit door # × # en # × # [ding] te doen. Ze schrijft alleen # op. Wat ging er mis?"
+    "somtypeOrigineel": "Roos rekent # × # uit door # × # en # × # [ding] te doen. Ze schrijft alleen # op. Wat ging er mis?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 52,
+     "somtype": "Roos rekent # × # uit door # × # en # × # [ding] te doen. Ze schrijft alleen # op. Wat ging er mis?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -23434,8 +24379,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Ze moest 140 en 24 optellen",
+     "soort": "getal uit de som",
+     "bron": "nieuw",
+     "tekst": "Dan tel je een getal uit de som erbij, niet de uitkomst van het kleine stuk. Hoeveel is het kleine stuk echt?",
+     "tekstSterker": "Bij splitsen reken je elk stuk uit en tel je de uitkomsten bij elkaar op. Pas dan heb je de hele keersom.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Ze moest 140 en 24 optellen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Ze had niet mogen splitsen",
+     "soort": "niet splitsen",
+     "bron": "nieuw",
+     "tekst": "Splitsen is juist een handige aanpak. Heeft Roos alle stukken gebruikt?",
+     "tekstSterker": "Bij splitsen reken je elk stuk uit en tel je de uitkomsten bij elkaar op. Pas dan heb je de hele keersom.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Ze had niet mogen splitsen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Heeft Roos alle stukken van de keersom bij elkaar opgeteld?",
+     "tekstSterker": "Bij splitsen reken je elk stuk uit en tel je de uitkomsten bij elkaar op. Pas dan heb je de hele keersom.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Heeft Roos alle stukken van de keersom bij elkaar opgeteld?"
   },
   {
    "id": "G8-GET-E02-claude-bank-115",
@@ -23466,22 +24458,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "Doortellen van 998 naar 1000"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek een aanpak die klopt en die zonder lenen kan.",
+   "sterkereHint": "Reken elke aanpak uit en vergelijk de uitkomsten. Welke aanpak geeft het verschil tussen de twee getallen, en kost de minste stappen?",
    "foutHints": [
     {
      "stap": null,
      "fout": "1000 en 998 bij elkaar optellen",
-     "uitleg": "Kijk nog eens welk teken er tussen de getallen staat."
+     "uitleg": "Bij elkaar optellen geeft geen verschil. Kijk welk teken er tussen de getallen staat.",
+     "uitlegSterker": "Liggen de getallen dicht bij elkaar? Tel dan door van het kleine getal naar het grote. Hoeveel stappen zijn dat?",
+     "laag2": "tekstSterker",
+     "regel": "1000 en 998 bij elkaar optellen",
+     "soort": "opgeteld",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Eerst 900 eraf en dan 98 erbij",
-     "uitleg": "Als je een deel van een aftreksom afhaalt, moet je het andere deel er ook afhalen."
+     "uitleg": "Als je een getal in stukken afhaalt, moeten alle stukken eraf. Gaat er bij deze aanpak een stuk bij?",
+     "uitlegSterker": "Liggen de getallen dicht bij elkaar? Tel dan door van het kleine getal naar het grote. Hoeveel stappen zijn dat?",
+     "laag2": "tekstSterker",
+     "regel": "Eerst 900 eraf en dan 98 erbij",
+     "soort": "stuk erbij",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1000 en 998 bij elkaar optellen → Kijk nog eens welk teken er tussen de getallen staat. · Eerst 900 eraf en dan 98 erbij → Als je een deel van een aftreksom afhaalt, moet je het andere deel er ook afhalen.",
-   "ouderzin": "",
+   "foutHintsTekst": "1000 en 998 bij elkaar optellen → Bij elkaar optellen geeft geen verschil. Kijk welk teken er tussen de getallen staat. · Eerst 900 eraf en dan 98 erbij → Als je een getal in stukken afhaalt, moeten alle stukken eraf. Gaat er bij deze aanpak een stuk bij?",
+   "ouderzin": "Je kind ziet dat je bij twee getallen die dicht bij elkaar liggen, het verschil handig vindt door door te tellen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -23570,7 +24572,12 @@
     "duplicaatVan": null,
     "somtypeNr": 53,
     "somtypeNrOrigineel": 46,
-    "somtypeOrigineel": "Sam rekent # − # uit met een som onder elkaar en moet steeds lenen. Wat had handiger gekund?"
+    "somtypeOrigineel": "Sam rekent # − # uit met een som onder elkaar en moet steeds lenen. Wat had handiger gekund?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 53,
+     "somtype": "Sam rekent # − # uit met een som onder elkaar en moet steeds lenen. Wat had handiger gekund?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -23586,8 +24593,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "1000 en 998 bij elkaar optellen",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Bij elkaar optellen geeft geen verschil. Kijk welk teken er tussen de getallen staat.",
+     "tekstSterker": "Liggen de getallen dicht bij elkaar? Tel dan door van het kleine getal naar het grote. Hoeveel stappen zijn dat?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1000 en 998 bij elkaar optellen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Eerst 900 eraf en dan 98 erbij",
+     "soort": "stuk erbij",
+     "bron": "nieuw",
+     "tekst": "Als je een getal in stukken afhaalt, moeten alle stukken eraf. Gaat er bij deze aanpak een stuk bij?",
+     "tekstSterker": "Liggen de getallen dicht bij elkaar? Tel dan door van het kleine getal naar het grote. Hoeveel stappen zijn dat?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Eerst 900 eraf en dan 98 erbij"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Liggen de getallen dicht bij elkaar? Hoeveel moet je dan doortellen?",
+     "tekstSterker": "Liggen de getallen dicht bij elkaar? Tel dan door van het kleine getal naar het grote. Hoeveel stappen zijn dat?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Liggen de getallen dicht bij elkaar? Hoeveel moet je dan doortellen?"
   },
   {
    "id": "G8-GET-E02-claude-bank-116",
@@ -23618,22 +24672,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "Ja, dat is een handige manier"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Kijk of de aanpak van Sanne op hetzelfde uitkomt als de som zelf.",
+   "sterkereHint": "Reken de som zelf uit, en reken ook na wat Sanne doet. Komt Sanne daarop uit? Kijk dan welke uitleg past bij wat je ziet.",
    "foutHints": [
     {
      "stap": null,
      "fout": "Nee, ze moet er 2 bij optellen",
-     "uitleg": "Ze heeft eerst een groter getal gebruikt dan 198. Wat doe je dan achteraf met dat verschil?"
+     "uitleg": "Sanne rekende met een getal dat iets te groot is. Moet dat stukje er dan bij, of eraf?",
+     "uitlegSterker": "Rekenen met een rond getal is handig. Neem je eerst een beetje te veel, haal dat er daarna weer af.",
+     "laag2": "tekstSterker",
+     "regel": "Nee, ze moet er 2 bij optellen",
+     "soort": "erbij in plaats van eraf",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Nee, je mag alleen onder elkaar rekenen",
-     "uitleg": "Een som onder elkaar mag altijd, maar soms kan het slimmer. Denk aan mooie ronde getallen."
+     "uitleg": "Onder elkaar rekenen kan, maar je mag ook een handige aanpak kiezen. Klopt de uitkomst van Sanne?",
+     "uitlegSterker": "Rekenen met een rond getal is handig. Neem je eerst een beetje te veel, haal dat er daarna weer af.",
+     "laag2": "tekstSterker",
+     "regel": "Nee, je mag alleen onder elkaar rekenen",
+     "soort": "alleen onder elkaar",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Nee, ze moet er 2 bij optellen → Ze heeft eerst een groter getal gebruikt dan 198. Wat doe je dan achteraf met dat verschil? · Nee, je mag alleen onder elkaar rekenen → Een som onder elkaar mag altijd, maar soms kan het slimmer. Denk aan mooie ronde getallen.",
-   "ouderzin": "",
+   "foutHintsTekst": "Nee, ze moet er 2 bij optellen → Sanne rekende met een getal dat iets te groot is. Moet dat stukje er dan bij, of eraf? · Nee, je mag alleen onder elkaar rekenen → Onder elkaar rekenen kan, maar je mag ook een handige aanpak kiezen. Klopt de uitkomst van Sanne?",
+   "ouderzin": "Je kind controleert een handige aanpak: rekenen met een rond getal en daarna verbeteren wat je te veel nam.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -23722,7 +24786,12 @@
     "duplicaatVan": null,
     "somtypeNr": 54,
     "somtypeNrOrigineel": 47,
-    "somtypeOrigineel": "Sanne rekent # + # uit door eerst # + # te doen en er daarna # af te halen. Klopt deze aanpak?"
+    "somtypeOrigineel": "Sanne rekent # + # uit door eerst # + # te doen en er daarna # af te halen. Klopt deze aanpak?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 54,
+     "somtype": "Sanne rekent # + # uit door eerst # + # te doen en er daarna # af te halen. Klopt deze aanpak?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -23738,8 +24807,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Nee, ze moet er 2 bij optellen",
+     "soort": "erbij in plaats van eraf",
+     "bron": "nieuw",
+     "tekst": "Sanne rekende met een getal dat iets te groot is. Moet dat stukje er dan bij, of eraf?",
+     "tekstSterker": "Rekenen met een rond getal is handig. Neem je eerst een beetje te veel, haal dat er daarna weer af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Nee, ze moet er 2 bij optellen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Nee, je mag alleen onder elkaar rekenen",
+     "soort": "alleen onder elkaar",
+     "bron": "nieuw",
+     "tekst": "Onder elkaar rekenen kan, maar je mag ook een handige aanpak kiezen. Klopt de uitkomst van Sanne?",
+     "tekstSterker": "Rekenen met een rond getal is handig. Neem je eerst een beetje te veel, haal dat er daarna weer af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Nee, je mag alleen onder elkaar rekenen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Komt de aanpak van Sanne op hetzelfde uit als de som zelf?",
+     "tekstSterker": "Rekenen met een rond getal is handig. Neem je eerst een beetje te veel, haal dat er daarna weer af.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Komt de aanpak van Sanne op hetzelfde uit als de som zelf?"
   },
   {
    "id": "G8-GET-E02-claude-bank-117",
@@ -23770,22 +24886,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "Eerst 100 erbij, dan 1 eraf"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Het getal ligt dicht bij een rond getal. Met een rond getal reken je makkelijker.",
+   "sterkereHint": "Reken de som zelf uit, en reken daarna elke aanpak uit. Welke aanpak komt op hetzelfde uit?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Eerst 100 erbij, dan 1 erbij",
-     "uitleg": "Je deed er 1 te veel bij. Bedenk wat je moet doen als je eerst een te groot getal pakt."
+     "uitleg": "Met het ronde getal komt er al iets te veel bij. Moet dat stukje er dan nog bij, of eraf?",
+     "uitlegSterker": "Neem het ronde getal dat vlak bij het getal ligt. Tel dat erbij, en haal daarna weg wat je te veel nam.",
+     "laag2": "tekstSterker",
+     "regel": "Eerst 100 erbij, dan 1 erbij",
+     "soort": "te veel erbij",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Eerst 90 erbij, dan 9 eraf",
-     "uitleg": "Kijk nog eens goed hoe dicht 99 bij een rond honderdtal ligt."
+     "uitleg": "Reken het na: komt deze aanpak op hetzelfde uit als de som? Bij een kleiner rond getal tel je te weinig op. Moet het stukje er dan bij of eraf?",
+     "uitlegSterker": "Neem het ronde getal dat vlak bij het getal ligt. Tel dat erbij, en haal daarna weg wat je te veel nam.",
+     "laag2": "tekstSterker",
+     "regel": "Eerst 90 erbij, dan 9 eraf",
+     "soort": "ander rond getal",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Eerst 100 erbij, dan 1 erbij → Je deed er 1 te veel bij. Bedenk wat je moet doen als je eerst een te groot getal pakt. · Eerst 90 erbij, dan 9 eraf → Kijk nog eens goed hoe dicht 99 bij een rond honderdtal ligt.",
-   "ouderzin": "",
+   "foutHintsTekst": "Eerst 100 erbij, dan 1 erbij → Met het ronde getal komt er al iets te veel bij. Moet dat stukje er dan nog bij, of eraf? · Eerst 90 erbij, dan 9 eraf → Reken het na: komt deze aanpak op hetzelfde uit als de som? Bij een kleiner rond getal tel je te weinig op. Moet het stukje er dan bij of eraf?",
+   "ouderzin": "Je kind kiest een handige aanpak: rekenen met een rond getal en daarna verbeteren wat je te veel nam.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -23872,7 +24998,12 @@
     "duplicaatVan": null,
     "somtypeNr": 55,
     "somtypeNrOrigineel": 48,
-    "somtypeOrigineel": "Tim rekent # + # uit met een staartsom onder elkaar. Wat is een handigere aanpak?"
+    "somtypeOrigineel": "Tim rekent # + # uit met een staartsom onder elkaar. Wat is een handigere aanpak?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 55,
+     "somtype": "Tim rekent # + # uit met een staartsom onder elkaar. Wat is een handigere aanpak?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -23888,8 +25019,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Eerst 100 erbij, dan 1 erbij",
+     "soort": "te veel erbij",
+     "bron": "nieuw",
+     "tekst": "Met het ronde getal komt er al iets te veel bij. Moet dat stukje er dan nog bij, of eraf?",
+     "tekstSterker": "Neem het ronde getal dat vlak bij het getal ligt. Tel dat erbij, en haal daarna weg wat je te veel nam.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Eerst 100 erbij, dan 1 erbij"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Eerst 90 erbij, dan 9 eraf",
+     "soort": "ander rond getal",
+     "bron": "nieuw",
+     "tekst": "Reken het na: komt deze aanpak op hetzelfde uit als de som? Bij een kleiner rond getal tel je te weinig op. Moet het stukje er dan bij of eraf?",
+     "tekstSterker": "Neem het ronde getal dat vlak bij het getal ligt. Tel dat erbij, en haal daarna weg wat je te veel nam.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Eerst 90 erbij, dan 9 eraf"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Neem een rond getal, en verbeter daarna wat je te veel of te weinig nam.",
+     "tekstSterker": "Neem het ronde getal dat vlak bij het getal ligt. Tel dat erbij, en haal daarna weg wat je te veel nam.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Neem een rond getal, en verbeter daarna wat je te veel of te weinig nam."
   },
   {
    "id": "G8-GET-E02-claude-bank-118",
@@ -23920,22 +25098,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "Ze vergat de 2 kinderen die overblijven"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij een deling in een verhaal kijk je daarna terug in het verhaal: wat betekent de uitkomst?",
+   "sterkereHint": "Reken het na: hoeveel passen er in het aantal dat Lisa opschreef? Kan iedereen dan mee? Toets dan elke uitleg aan die berekening. Welke klopt?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Ze had 50 × 12 moeten doen",
-     "uitleg": "Je verdeelt kinderen over busjes. Welke bewerking hoort bij verdelen?"
+     "uitleg": "Dan wordt het getal veel groter dan het aantal dat meegaat. Bij verdelen in groepjes past delen. Wat blijft er bij de deling over?",
+     "uitlegSterker": "Deel, en kijk dan naar de rest. Moet de rest ook mee, dan heb je er nog één extra nodig.",
+     "laag2": "tekstSterker",
+     "regel": "Ze had 50 × 12 moeten doen",
+     "soort": "keer",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Er zijn 6 busjes nodig",
-     "uitleg": "Reken na hoeveel kinderen er in 5 busjes passen. Zijn dat er genoeg?"
+     "uitleg": "Reken het na: kan iedereen al mee met één minder dan dit aantal?",
+     "uitlegSterker": "Deel, en kijk dan naar de rest. Moet de rest ook mee, dan heb je er nog één extra nodig.",
+     "laag2": "tekstSterker",
+     "regel": "Er zijn 6 busjes nodig",
+     "soort": "één te veel",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Ze had 50 × 12 moeten doen → Je verdeelt kinderen over busjes. Welke bewerking hoort bij verdelen? · Er zijn 6 busjes nodig → Reken na hoeveel kinderen er in 5 busjes passen. Zijn dat er genoeg?",
-   "ouderzin": "",
+   "foutHintsTekst": "Ze had 50 × 12 moeten doen → Dan wordt het getal veel groter dan het aantal dat meegaat. Bij verdelen in groepjes past delen. Wat blijft er bij de deling over? · Er zijn 6 busjes nodig → Reken het na: kan iedereen al mee met één minder dan dit aantal?",
+   "ouderzin": "Je kind kijkt terug in het verhaal: iedereen moet mee, dus wie overblijft heeft nog een plek nodig.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -24022,7 +25210,12 @@
     "duplicaatVan": null,
     "somtypeNr": 56,
     "somtypeNrOrigineel": 49,
-    "somtypeOrigineel": "Voor een uitje gaan # [ding] mee. In een busje passen # [ding]. Lisa rekent # : # en schrijft # [ding] op. Wat is er mis met haar aanpak?"
+    "somtypeOrigineel": "Voor een uitje gaan # [ding] mee. In een busje passen # [ding]. Lisa rekent # : # en schrijft # [ding] op. Wat is er mis met haar aanpak?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 56,
+     "somtype": "Voor een uitje gaan # [ding] mee. In een busje passen # [ding]. Lisa rekent # : # en schrijft # [ding] op. Wat is er mis met haar aanpak?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -24038,8 +25231,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Ze had 50 × 12 moeten doen",
+     "soort": "keer",
+     "bron": "nieuw",
+     "tekst": "Dan wordt het getal veel groter dan het aantal dat meegaat. Bij verdelen in groepjes past delen. Wat blijft er bij de deling over?",
+     "tekstSterker": "Deel, en kijk dan naar de rest. Moet de rest ook mee, dan heb je er nog één extra nodig.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Ze had 50 × 12 moeten doen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Er zijn 6 busjes nodig",
+     "soort": "één te veel",
+     "bron": "nieuw",
+     "tekst": "Reken het na: kan iedereen al mee met één minder dan dit aantal?",
+     "tekstSterker": "Deel, en kijk dan naar de rest. Moet de rest ook mee, dan heb je er nog één extra nodig.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Er zijn 6 busjes nodig"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Wat blijft er bij de deling over, en moet dat ook mee?",
+     "tekstSterker": "Deel, en kijk dan naar de rest. Moet de rest ook mee, dan heb je er nog één extra nodig.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Wat blijft er bij de deling over, en moet dat ook mee?"
   },
   {
    "id": "G8-GET-E02-claude-bank-119",
@@ -24070,22 +25310,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "1 km is 1000 meter, dus het zijn er meer"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Je controleert een omrekening van kilometer naar meter. Past het getal in meters bij de afstand?",
+   "sterkereHint": "Hoeveel meter is één kilometer? Reken uit hoeveel meter de weg naar school dan ongeveer is. Toets elke uitleg aan dat getal: welke klopt?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Het klopt, want je zet de komma weg",
-     "uitleg": "Een komma weghalen is niet hetzelfde als omrekenen. Kijk hoeveel meter er in 1 kilometer gaan."
+     "uitleg": "De komma weghalen is geen omrekenen. Hoeveel meter gaan er in één kilometer?",
+     "uitlegSterker": "Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend: dat is het aantal meter.",
+     "laag2": "tekstSterker",
+     "regel": "Het klopt, want je zet de komma weg",
+     "soort": "komma weg",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Het moet 25 meter zijn",
-     "uitleg": "25 meter is korter dan een schoolplein. Vergelijk dat eens met 2,5 kilometer lopen."
+     "uitleg": "Dat is nog minder. Een kilometer is duizend meter: worden het in meters meer of minder?",
+     "uitlegSterker": "Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend: dat is het aantal meter.",
+     "laag2": "tekstSterker",
+     "regel": "Het moet 25 meter zijn",
+     "soort": "nog kleiner",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Het klopt, want je zet de komma weg → Een komma weghalen is niet hetzelfde als omrekenen. Kijk hoeveel meter er in 1 kilometer gaan. · Het moet 25 meter zijn → 25 meter is korter dan een schoolplein. Vergelijk dat eens met 2,5 kilometer lopen.",
-   "ouderzin": "",
+   "foutHintsTekst": "Het klopt, want je zet de komma weg → De komma weghalen is geen omrekenen. Hoeveel meter gaan er in één kilometer? · Het moet 25 meter zijn → Dat is nog minder. Een kilometer is duizend meter: worden het in meters meer of minder?",
+   "ouderzin": "Je kind controleert een omrekening met een bekend getal: één kilometer is duizend meter.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -24172,7 +25422,12 @@
     "duplicaatVan": null,
     "somtypeNr": 57,
     "somtypeNrOrigineel": 50,
-    "somtypeOrigineel": "Yara loopt # km naar school. Ze schrijft op dat dit # meter is. Hoe merk je dat dit niet kan?"
+    "somtypeOrigineel": "Yara loopt # km naar school. Ze schrijft op dat dit # meter is. Hoe merk je dat dit niet kan?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 57,
+     "somtype": "Yara loopt # km naar school. Ze schrijft op dat dit # meter is. Hoe merk je dat dit niet kan?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -24188,8 +25443,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Het klopt, want je zet de komma weg",
+     "soort": "komma weg",
+     "bron": "nieuw",
+     "tekst": "De komma weghalen is geen omrekenen. Hoeveel meter gaan er in één kilometer?",
+     "tekstSterker": "Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend: dat is het aantal meter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Het klopt, want je zet de komma weg"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Het moet 25 meter zijn",
+     "soort": "nog kleiner",
+     "bron": "nieuw",
+     "tekst": "Dat is nog minder. Een kilometer is duizend meter: worden het in meters meer of minder?",
+     "tekstSterker": "Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend: dat is het aantal meter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Het moet 25 meter zijn"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Eén kilometer is al duizend meter. Hoeveel meter is de weg naar school dan ongeveer?",
+     "tekstSterker": "Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend: dat is het aantal meter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Eén kilometer is al duizend meter. Hoeveel meter is de weg naar school dan ongeveer?"
   },
   {
    "id": "G8-GET-E02-claude-bank-120",
@@ -64276,7 +65578,7 @@
    "algemeneFoutHint": "Kijk eerst waarop het antwoord eindigt, en daarna tussen welke ronde getallen het ligt."
   }
  ],
- "hintsSyncOp": "2026-10-08T15:53:57+02:00",
+ "hintsSyncOp": "2026-10-08T15:57:14+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -64285,9 +65587,13 @@
   {
    "batch": "batch2.json",
    "md5": "c983c2399e29"
+  },
+  {
+   "batch": "batch3.json",
+   "md5": "153f2472c159"
   }
  ],
- "geschrevenOp": "2026-10-08T15:53:57+02:00",
+ "geschrevenOp": "2026-10-08T15:57:14+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }
