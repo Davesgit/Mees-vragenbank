@@ -60,9 +60,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind schrijft een kommagetal als procent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma goed? Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?  [Claude, taalfix]
-  - `kommagetal met procentteken` (0,7%) → Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?  [nieuw]
-  - `kommagetal met procentteken (ook)` (0,9%) → Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?  [nieuw]
-  - `kommagetal met procentteken (nog een)` (0,3%) → Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?  [nieuw]
+  - `kommagetal met procentteken` (fout = kommagetal met procentteken) → Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?  [nieuw]
   - `andere fout` (andere fout) → Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?  [nieuw]
 - Status: hints klaar
 
@@ -143,7 +141,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.
 - **Ouderzin:** Je kind rekent uit hoeveel procent een deel van het geheel is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `getallen achter elkaar` (14%) → Heb je de getallen achter elkaar gezet? Samen zeggen ze welk deel van het hele aantal het is. Hoeveel is dat van de honderd?  [nieuw]
+  - `getallen achter elkaar` (fout = getallen achter elkaar (als %)) → Heb je de getallen achter elkaar gezet? Samen zeggen ze welk deel van het hele aantal het is. Hoeveel is dat van de honderd?  [nieuw]
   - `het deel zelf` (Claudes sleutel: getal-overgenomen) → Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?  [Claude, taalfix]
   - `het hele aantal` (Claudes sleutel: procent-verkeerde-basis) → Dat is het hele aantal. Het hele aantal is honderd procent. Hoeveel procent is het deel?  [Claude, taalfix]
   - `het andere deel` (Claudes sleutel: andere-deel-genomen) → Dat is het aantal van het andere deel. Hoeveel procent is het deel waar de vraag over gaat?  [Claude, taalfix]

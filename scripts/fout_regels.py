@@ -7,6 +7,7 @@ Nieuw 8 okt 12:4x (G7 batch 2, Oef-#421/#422/#429): norm421 = één notatie voor
   Oef-#444: Claudes sleutels met '-' worden '−' en de labelregel vergelijkt genormaliseerd (G7/G8).
   Z-#616: 'fout = getal1/getal2' als bedrag bij een geldvraag (G7/G8). Z-#633: 'fout = de bodem (l × b)', zeker, vóór '± 1'.
   Z-#607: 'fout = decimaal-nul weggelaten' ('2' bij 2,0 als de vraag om cijfers achter de komma vraagt; 'Bijna!' mag).
+  Oef-#453: 'fout = kommagetal met procentteken', 'fout = getallen achter elkaar (als %)'; #445-regels ook bij 'D/G' en tien keer zonder deel (alleen KOMMA437).
   Oef-#445: 'fout = het deel zelf (als %)' / 'fout = geheel min deel' (procent-vragen 'D van G', antwoord met '%').
   Oef-#442: 'fout = de som van de getallen' / 'fout = het middelste getal (op grootte)' (gemiddelde; alleen als de waarde zo uitkomt).
   Oef-#440: met KOMMA437 telt een antwoord '8,0' als 8, een sleutel '8,0' past op regelwaarde 8, en 'antwoord × 10 / : 10' werkt ook bij een kommagetal (1,1 → 11 / 0,11). Oef-#434: 'fout = het cijfer op de plek ernaast' (plaatswaarde: de cijfers links en rechts van de gevraagde plaats).
@@ -719,14 +720,33 @@ def _compile_regel(regel, c):
     # 'fout = geheel min deel' → '(G − D)%'. Geen sleutel als de waarde ≤ 0 is of gelijk aan het antwoord. Sleutel met en zonder spatie voor '%'.
     # Ook 'fout = tien keer het procent (als %)': antwoord × 10 of : 10 met '%' ('48%' → '480%', '4,8%'). De drie regels vallen nooit samen:
     # het deel zelf gaat voor, geheel min deel vervalt als het het deel is, tien keer vervalt als het het deel of geheel min deel is.
+    # Oef-#453 (alleen KOMMA437, G7/G8): 'fout = kommagetal met procentteken': het kommagetal uit de vraag met een '%' erachter
+    # ('Schrijf 0,7 in procenten.', antwoord '70%' → '0,7%'). Alleen als het antwoord op '%' eindigt en de vraag een kommagetal heeft.
+    if r.startswith('fout = kommagetal met procentteken'):
+        if not KOMMA437 or not re.fullmatch(r'\d+(?:,\d+)?\s?%', c.ans.strip()): return {'exact': set()}
+        k453 = [x for x in re.findall(r'(?<![\d,.])(\d+,\d+)(?![\d,.])', c.opg)]
+        w453 = {f'{x}%' for x in k453} | {f'{x} %' for x in k453}
+        return {'exact': {x for x in w453 if x.replace(' ', '') != c.ans.strip().replace(' ', '')}}
+    # Oef-#453 (alleen KOMMA437, G7/G8): 'fout = getallen achter elkaar (als %)': de eerste twee hele getallen uit de vraag aan elkaar met '%'
+    # ('1 op de 4 lootjes', antwoord '25%' → '14%'). Alleen als het antwoord op '%' eindigt.
+    if r.startswith('fout = getallen achter elkaar (als %)'):
+        if not KOMMA437 or not re.fullmatch(r'\d+(?:,\d+)?\s?%', c.ans.strip()): return {'exact': set()}
+        g453 = re.findall(r'(?<![\d,.])(\d+)(?![\d,.])', c.opg)
+        if len(g453) < 2: return {'exact': set()}
+        w453 = g453[0] + g453[1]
+        return {'exact': set() if w453 == re.sub(r'\s?%', '', c.ans.strip()) else {f'{w453}%', f'{w453} %'}}
     if r.startswith('fout = het deel zelf (als %)') or r.startswith('fout = geheel min deel') or r.startswith('fout = tien keer het procent (als %)'):
         m445 = re.search(r'(?<![\d,.])(\d+) van (?:de |het )?(\d+)(?![\d,.])', c.opg)
+        # Oef-#453 (alleen KOMMA437, dus G7/G8): ook een breuk 'D/G' ('Schrijf 32/50 in procenten.'); 'tien keer het procent' ook zonder deel
+        if not m445 and KOMMA437: m445 = re.search(r'(?<![\d,./])(\d+)/(\d+)(?![\d,./])', c.opg)
         a445 = re.fullmatch(r'(\d+)\s?%', c.ans.strip())
-        if not m445 or not a445: return {'exact': set()}
-        d445, g445, a445 = Fraction(int(m445.group(1))), Fraction(int(m445.group(2))), Fraction(int(a445.group(1)))
+        if not a445: return {'exact': set()}
+        if not m445 and not (KOMMA437 and r.startswith('fout = tien keer het procent')): return {'exact': set()}
+        a445 = Fraction(int(a445.group(1)))
+        d445, g445 = (Fraction(int(m445.group(1))), Fraction(int(m445.group(2)))) if m445 else (None, None)
         if r.startswith('fout = het deel zelf'): w445 = {d445}
         elif r.startswith('fout = geheel min deel'): w445 = {g445 - d445} - {d445}
-        else: w445 = {a445 * 10, a445 / 10} - {d445, g445 - d445}
+        else: w445 = {a445 * 10, a445 / 10} - ({d445, g445 - d445} if m445 else set())
         w445 = {_kg(x) for x in w445 if x > 0 and x != a445}
         return {'exact': {f'{x}%' for x in w445} | {f'{x} %' for x in w445}}
     # Z-#607 (Didactiek-besluit 8 okt, GET-02 'Rond af op één cijfer achter de komma', antwoord 2,0): vraagt de opgave een aantal cijfers achter

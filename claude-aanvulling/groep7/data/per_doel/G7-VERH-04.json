@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T14:35:51+0200",
+ "gegenereerdOp": "2026-10-08T14:41:45+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-VERH-04",
  "bordtitel": "Breuk, procent en verhouding koppelen",
@@ -1402,25 +1402,19 @@
      "leesbaar": true
     },
     {
-     "regel": "0,7%",
+     "regel": "fout = kommagetal met procentteken",
      "soort": "kommagetal met procentteken",
+     "bron": "nieuw",
      "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,9%",
-     "soort": "kommagetal met procentteken (ook)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,3%",
-     "soort": "kommagetal met procentteken (nog een)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0,1 %",
+       "0,1%"
+      ]
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -1620,25 +1614,19 @@
      "leesbaar": true
     },
     {
-     "regel": "0,7%",
+     "regel": "fout = kommagetal met procentteken",
      "soort": "kommagetal met procentteken",
+     "bron": "nieuw",
      "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,9%",
-     "soort": "kommagetal met procentteken (ook)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,3%",
-     "soort": "kommagetal met procentteken (nog een)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0,5 %",
+       "0,5%"
+      ]
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -1693,7 +1681,7 @@
      "uitleg": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
      "uitlegSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.",
      "laag2": "tekstSterker",
-     "regel": "0,7%",
+     "regel": "fout = kommagetal met procentteken",
      "soort": "kommagetal met procentteken",
      "bron": "nieuw"
     },
@@ -1756,6 +1744,11 @@
       "stap": null,
       "fout": "7%",
       "uitleg": "Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links."
+     },
+     {
+      "stap": null,
+      "fout": "0,7%",
+      "uitleg": null
      }
     ]
    },
@@ -1790,6 +1783,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf # in procenten.",
+    "oef452": {
+     "terug": [
+      "0,7%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
@@ -1834,7 +1833,7 @@
      "leesbaar": true
     },
     {
-     "regel": "0,7%",
+     "regel": "fout = kommagetal met procentteken",
      "soort": "kommagetal met procentteken",
      "bron": "nieuw",
      "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
@@ -1842,25 +1841,11 @@
      "perItem": false,
      "match": {
       "waarden": [
+       "0,7 %",
        "0,7%"
-      ],
-      "opOpties": true
+      ]
      },
      "leesbaar": true
-    },
-    {
-     "regel": "0,9%",
-     "soort": "kommagetal met procentteken (ook)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,3%",
-     "soort": "kommagetal met procentteken (nog een)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
     },
     {
      "regel": "andere fout",
@@ -2060,25 +2045,19 @@
      "leesbaar": true
     },
     {
-     "regel": "0,7%",
+     "regel": "fout = kommagetal met procentteken",
      "soort": "kommagetal met procentteken",
+     "bron": "nieuw",
      "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,9%",
-     "soort": "kommagetal met procentteken (ook)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,3%",
-     "soort": "kommagetal met procentteken (nog een)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0,8 %",
+       "0,8%"
+      ]
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -2143,8 +2122,8 @@
      "uitleg": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
      "uitlegSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.",
      "laag2": "tekstSterker",
-     "regel": "0,9%",
-     "soort": "kommagetal met procentteken (ook)",
+     "regel": "fout = kommagetal met procentteken",
+     "soort": "kommagetal met procentteken",
      "bron": "nieuw"
     }
    ],
@@ -2196,6 +2175,11 @@
       "stap": null,
       "fout": "9%",
       "uitleg": "Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links."
+     },
+     {
+      "stap": null,
+      "fout": "0,9%",
+      "uitleg": null
      }
     ]
    },
@@ -2230,6 +2214,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf # in procenten.",
+    "oef452": {
+     "terug": [
+      "0,9%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
@@ -2274,33 +2264,19 @@
      "leesbaar": true
     },
     {
-     "regel": "0,7%",
+     "regel": "fout = kommagetal met procentteken",
      "soort": "kommagetal met procentteken",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,9%",
-     "soort": "kommagetal met procentteken (ook)",
      "bron": "nieuw",
      "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
      "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.",
      "perItem": false,
      "match": {
       "waarden": [
+       "0,9 %",
        "0,9%"
-      ],
-      "opOpties": true
+      ]
      },
      "leesbaar": true
-    },
-    {
-     "regel": "0,3%",
-     "soort": "kommagetal met procentteken (nog een)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
     },
     {
      "regel": "andere fout",
@@ -2365,8 +2341,8 @@
      "uitleg": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
      "uitlegSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.",
      "laag2": "tekstSterker",
-     "regel": "0,3%",
-     "soort": "kommagetal met procentteken (nog een)",
+     "regel": "fout = kommagetal met procentteken",
+     "soort": "kommagetal met procentteken",
      "bron": "nieuw"
     }
    ],
@@ -2418,6 +2394,11 @@
       "stap": null,
       "fout": "3%",
       "uitleg": "Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links."
+     },
+     {
+      "stap": null,
+      "fout": "0,3%",
+      "uitleg": null
      }
     ]
    },
@@ -2452,6 +2433,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf # in procenten.",
+    "oef452": {
+     "terug": [
+      "0,3%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
@@ -2496,31 +2483,17 @@
      "leesbaar": true
     },
     {
-     "regel": "0,7%",
+     "regel": "fout = kommagetal met procentteken",
      "soort": "kommagetal met procentteken",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,9%",
-     "soort": "kommagetal met procentteken (ook)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,3%",
-     "soort": "kommagetal met procentteken (nog een)",
      "bron": "nieuw",
      "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
      "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.",
      "perItem": false,
      "match": {
       "waarden": [
+       "0,3 %",
        "0,3%"
-      ],
-      "opOpties": true
+      ]
      },
      "leesbaar": true
     },
@@ -2722,25 +2695,19 @@
      "leesbaar": true
     },
     {
-     "regel": "0,7%",
+     "regel": "fout = kommagetal met procentteken",
      "soort": "kommagetal met procentteken",
+     "bron": "nieuw",
      "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,9%",
-     "soort": "kommagetal met procentteken (ook)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,3%",
-     "soort": "kommagetal met procentteken (nog een)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0,4 %",
+       "0,4%"
+      ]
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -2940,25 +2907,19 @@
      "leesbaar": true
     },
     {
-     "regel": "0,7%",
+     "regel": "fout = kommagetal met procentteken",
      "soort": "kommagetal met procentteken",
+     "bron": "nieuw",
      "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,9%",
-     "soort": "kommagetal met procentteken (ook)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "0,3%",
-     "soort": "kommagetal met procentteken (nog een)",
-     "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0,2 %",
+       "0,2%"
+      ]
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -3071,7 +3032,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "32%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -3104,6 +3076,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "32%",
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -3268,7 +3247,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "20%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -3301,6 +3291,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "20%",
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -3470,6 +3467,11 @@
       "stap": null,
       "fout": "20%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "1%",
+      "uitleg": null
      }
     ]
    },
@@ -3504,6 +3506,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "1%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -3675,6 +3683,11 @@
       "stap": null,
       "fout": "9,8%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -3709,6 +3722,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -3880,6 +3899,11 @@
       "stap": null,
       "fout": "420%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -3914,6 +3938,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -4294,6 +4324,11 @@
       "stap": null,
       "fout": "840%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "21%",
+      "uitleg": null
      }
     ]
    },
@@ -4328,6 +4363,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "21%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -4499,6 +4540,11 @@
       "stap": null,
       "fout": "350%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "40%",
+      "uitleg": null
      }
     ]
    },
@@ -4533,6 +4579,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "40%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -4704,6 +4756,11 @@
       "stap": null,
       "fout": "550%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "40%",
+      "uitleg": null
      }
     ]
    },
@@ -4738,6 +4795,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "40%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -4909,6 +4972,11 @@
       "stap": null,
       "fout": "450%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "9%",
+      "uitleg": null
      }
     ]
    },
@@ -4943,6 +5011,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "9%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -5324,6 +5398,11 @@
       "stap": null,
       "fout": "250%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "40%",
+      "uitleg": null
      }
     ]
    },
@@ -5358,6 +5437,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "40%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -5529,6 +5614,11 @@
       "stap": null,
       "fout": "6%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "12%",
+      "uitleg": null
      }
     ]
    },
@@ -5563,6 +5653,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "12%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -5734,6 +5830,11 @@
       "stap": null,
       "fout": "3,6%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "18%",
+      "uitleg": null
      }
     ]
    },
@@ -5768,6 +5869,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "18%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -5939,6 +6046,11 @@
       "stap": null,
       "fout": "4,8%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "12%",
+      "uitleg": null
      }
     ]
    },
@@ -5973,6 +6085,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "12%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -6144,6 +6262,11 @@
       "stap": null,
       "fout": "850%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "17%",
+      "uitleg": null
      }
     ]
    },
@@ -6178,6 +6301,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "17%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -6349,6 +6478,11 @@
       "stap": null,
       "fout": "7%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "14%",
+      "uitleg": null
      }
     ]
    },
@@ -6383,6 +6517,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "14%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -6554,6 +6694,11 @@
       "stap": null,
       "fout": "6%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
      }
     ]
    },
@@ -6588,6 +6733,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -6759,6 +6910,11 @@
       "stap": null,
       "fout": "760%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "38%",
+      "uitleg": null
      }
     ]
    },
@@ -6793,6 +6949,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "38%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -6964,6 +7126,11 @@
       "stap": null,
       "fout": "300%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -6998,6 +7165,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -7164,7 +7337,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "3%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "5%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -7197,6 +7381,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "3%",
+      "5%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -7576,6 +7767,11 @@
       "stap": null,
       "fout": "7,5%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "30%",
+      "uitleg": null
      }
     ]
    },
@@ -7610,6 +7806,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "30%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -7781,6 +7983,11 @@
       "stap": null,
       "fout": "520%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -7815,6 +8022,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -7986,6 +8199,11 @@
       "stap": null,
       "fout": "80%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
      }
     ]
    },
@@ -8020,6 +8238,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -8191,6 +8415,11 @@
       "stap": null,
       "fout": "2%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "3%",
+      "uitleg": null
      }
     ]
    },
@@ -8234,6 +8463,12 @@
       "2%": "2%"
      },
      "reden": "V-#560: het goede antwoord was een getal uit de vraag"
+    },
+    "oef452": {
+     "terug": [
+      "3%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
     },
     "duplicaatVan": null,
     "somtypeNr": 1,
@@ -8406,6 +8641,11 @@
       "stap": null,
       "fout": "240%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "12%",
+      "uitleg": null
      }
     ]
    },
@@ -8440,6 +8680,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "12%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -8821,6 +9067,11 @@
       "stap": null,
       "fout": "900%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "45%",
+      "uitleg": null
      }
     ]
    },
@@ -8855,6 +9106,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "45%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -9021,7 +9278,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "23%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -9054,6 +9322,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "23%",
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -9223,6 +9498,11 @@
       "stap": null,
       "fout": "7%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "35%",
+      "uitleg": null
      }
     ]
    },
@@ -9257,6 +9537,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "35%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -9428,6 +9714,11 @@
       "stap": null,
       "fout": "9,5%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "20%",
+      "uitleg": null
      }
     ]
    },
@@ -9462,6 +9753,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "20%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -9633,6 +9930,11 @@
       "stap": null,
       "fout": "1%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "2%",
+      "uitleg": null
      }
     ]
    },
@@ -9667,6 +9969,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "2%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -9838,6 +10146,11 @@
       "stap": null,
       "fout": "160%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
      }
     ]
    },
@@ -9872,6 +10185,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -10043,6 +10362,11 @@
       "stap": null,
       "fout": "150%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "40%",
+      "uitleg": null
      }
     ]
    },
@@ -10077,6 +10401,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "40%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -10248,6 +10578,11 @@
       "stap": null,
       "fout": "880%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "44%",
+      "uitleg": null
      }
     ]
    },
@@ -10282,6 +10617,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "44%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -10453,6 +10794,11 @@
       "stap": null,
       "fout": "440%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -10487,6 +10833,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -10653,7 +11005,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "24%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -10686,6 +11049,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "24%",
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -10855,6 +11225,11 @@
       "stap": null,
       "fout": "1,5%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "3%",
+      "uitleg": null
      }
     ]
    },
@@ -10889,6 +11264,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "3%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -11060,6 +11441,11 @@
       "stap": null,
       "fout": "100%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "40%",
+      "uitleg": null
      }
     ]
    },
@@ -11094,6 +11480,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "40%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -11265,6 +11657,11 @@
       "stap": null,
       "fout": "50%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "20%",
+      "uitleg": null
      }
     ]
    },
@@ -11299,6 +11696,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "20%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -11470,6 +11873,11 @@
       "stap": null,
       "fout": "7,8%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -11504,6 +11912,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -11675,6 +12089,11 @@
       "stap": null,
       "fout": "200%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -11709,6 +12128,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -12090,6 +12515,11 @@
       "stap": null,
       "fout": "2%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "8%",
+      "uitleg": null
      }
     ]
    },
@@ -12124,6 +12554,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "8%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -12290,7 +12726,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "31%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -12323,6 +12770,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "31%",
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -12492,6 +12946,11 @@
       "stap": null,
       "fout": "5%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "2%",
+      "uitleg": null
      }
     ]
    },
@@ -12526,6 +12985,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "2%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -12697,6 +13162,11 @@
       "stap": null,
       "fout": "1,6%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "8%",
+      "uitleg": null
      }
     ]
    },
@@ -12731,6 +13201,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "8%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -12902,6 +13378,11 @@
       "stap": null,
       "fout": "7,2%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -12936,6 +13417,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -13328,6 +13815,11 @@
       "stap": null,
       "fout": "4,6%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -13362,6 +13854,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -13533,6 +14031,11 @@
       "stap": null,
       "fout": "5,6%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "28%",
+      "uitleg": null
      }
     ]
    },
@@ -13567,6 +14070,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "28%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -13738,6 +14247,11 @@
       "stap": null,
       "fout": "480%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -13772,6 +14286,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -13943,6 +14463,11 @@
       "stap": null,
       "fout": "560%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
      }
     ]
    },
@@ -13977,6 +14502,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -14148,6 +14679,11 @@
       "stap": null,
       "fout": "140%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -14182,6 +14718,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -14353,6 +14895,11 @@
       "stap": null,
       "fout": "7,4%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -14387,6 +14934,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -14558,6 +15111,11 @@
       "stap": null,
       "fout": "920%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "46%",
+      "uitleg": null
      }
     ]
    },
@@ -14592,6 +15150,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "46%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -14758,7 +15322,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "47%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -14791,6 +15366,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "47%",
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -14960,6 +15542,11 @@
       "stap": null,
       "fout": "0,4%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "1%",
+      "uitleg": null
      }
     ]
    },
@@ -14994,6 +15581,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "1%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -15160,7 +15753,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "7%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "20%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -15193,6 +15797,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "7%",
+      "20%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -15362,6 +15973,11 @@
       "stap": null,
       "fout": "7,6%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
      }
     ]
    },
@@ -15396,6 +16012,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -15562,7 +16184,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "18%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "20%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -15595,6 +16228,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "18%",
+      "20%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -15974,6 +16614,11 @@
       "stap": null,
       "fout": "1,2%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
      }
     ]
    },
@@ -16008,6 +16653,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -16179,6 +16830,11 @@
       "stap": null,
       "fout": "8,5%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "34%",
+      "uitleg": null
      }
     ]
    },
@@ -16213,6 +16869,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "34%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -16384,6 +17046,11 @@
       "stap": null,
       "fout": "7,5%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "15%",
+      "uitleg": null
      }
     ]
    },
@@ -16418,6 +17085,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "15%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -16584,7 +17257,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "8%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -16617,6 +17301,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "8%",
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -16786,6 +17477,11 @@
       "stap": null,
       "fout": "0,6%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "3%",
+      "uitleg": null
      }
     ]
    },
@@ -16820,6 +17516,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "3%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -16986,7 +17688,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "16%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -17019,6 +17732,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "16%",
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -17183,7 +17903,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "20%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -17216,6 +17947,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "20%",
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -17595,6 +18333,11 @@
       "stap": null,
       "fout": "7,2%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "18%",
+      "uitleg": null
      }
     ]
    },
@@ -17629,6 +18372,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "18%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -17800,6 +18549,11 @@
       "stap": null,
       "fout": "360%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
      }
     ]
    },
@@ -17834,6 +18588,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -18005,6 +18765,11 @@
       "stap": null,
       "fout": "540%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "27%",
+      "uitleg": null
      }
     ]
    },
@@ -18039,6 +18804,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "27%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -18205,7 +18976,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "5%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -18238,6 +19020,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "5%",
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -18407,6 +19196,11 @@
       "stap": null,
       "fout": "2,5%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "2%",
+      "uitleg": null
      }
     ]
    },
@@ -18441,6 +19235,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "2%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -18821,6 +19621,11 @@
       "stap": null,
       "fout": "0,4%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "2%",
+      "uitleg": null
      }
     ]
    },
@@ -18855,6 +19660,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "2%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -19235,6 +20046,11 @@
       "stap": null,
       "fout": "6%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "30%",
+      "uitleg": null
      }
     ]
    },
@@ -19269,6 +20085,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "30%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -19440,6 +20262,11 @@
       "stap": null,
       "fout": "8%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "40%",
+      "uitleg": null
      }
     ]
    },
@@ -19474,6 +20301,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "40%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -19645,6 +20478,11 @@
       "stap": null,
       "fout": "700%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "28%",
+      "uitleg": null
      }
     ]
    },
@@ -19679,6 +20517,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "28%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -19850,6 +20694,11 @@
       "stap": null,
       "fout": "900%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "40%",
+      "uitleg": null
      }
     ]
    },
@@ -19884,6 +20733,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "40%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -20055,6 +20910,11 @@
       "stap": null,
       "fout": "4,4%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
      }
     ]
    },
@@ -20089,6 +20949,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -20260,6 +21126,11 @@
       "stap": null,
       "fout": "6,6%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "33%",
+      "uitleg": null
      }
     ]
    },
@@ -20294,6 +21165,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "33%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -20896,6 +21773,11 @@
       "stap": null,
       "fout": "820%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "41%",
+      "uitleg": null
      }
     ]
    },
@@ -20930,6 +21812,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "41%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -21101,6 +21989,11 @@
       "stap": null,
       "fout": "220%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -21135,6 +22028,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -21306,6 +22205,11 @@
       "stap": null,
       "fout": "2,8%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -21340,6 +22244,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -21715,7 +22625,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "5%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -21748,6 +22669,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "5%",
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -21917,6 +22845,11 @@
       "stap": null,
       "fout": "6,8%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "34%",
+      "uitleg": null
      }
     ]
    },
@@ -21951,6 +22884,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "34%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -22122,6 +23061,11 @@
       "stap": null,
       "fout": "880%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
      }
     ]
    },
@@ -22156,6 +23100,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -22327,6 +23277,11 @@
       "stap": null,
       "fout": "2%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "5%",
+      "uitleg": null
      }
     ]
    },
@@ -22361,6 +23316,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "5%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -22532,6 +23493,11 @@
       "stap": null,
       "fout": "1,2%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -22566,6 +23532,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -22946,6 +23918,11 @@
       "stap": null,
       "fout": "450%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "18%",
+      "uitleg": null
      }
     ]
    },
@@ -22980,6 +23957,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "18%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -23151,6 +24134,11 @@
       "stap": null,
       "fout": "1,8%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -23185,6 +24173,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -23356,6 +24350,11 @@
       "stap": null,
       "fout": "860%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
      }
     ]
    },
@@ -23390,6 +24389,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -23561,6 +24566,11 @@
       "stap": null,
       "fout": "6%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "24%",
+      "uitleg": null
      }
     ]
    },
@@ -23595,6 +24605,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "24%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -23766,6 +24782,11 @@
       "stap": null,
       "fout": "5,2%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "13%",
+      "uitleg": null
      }
     ]
    },
@@ -23800,6 +24821,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "13%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -23971,6 +24998,11 @@
       "stap": null,
       "fout": "640%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "25%",
+      "uitleg": null
      }
     ]
    },
@@ -24005,6 +25037,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "25%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -24386,6 +25424,11 @@
       "stap": null,
       "fout": "2,8%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "7%",
+      "uitleg": null
      }
     ]
    },
@@ -24420,6 +25463,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "7%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -24591,6 +25640,11 @@
       "stap": null,
       "fout": "3,8%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "19%",
+      "uitleg": null
      }
     ]
    },
@@ -24625,6 +25679,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "19%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -25006,6 +26066,11 @@
       "stap": null,
       "fout": "50%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "2%",
+      "uitleg": null
      }
     ]
    },
@@ -25040,6 +26105,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "2%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -25211,6 +26282,11 @@
       "stap": null,
       "fout": "3%",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
+     },
+     {
+      "stap": null,
+      "fout": "20%",
+      "uitleg": null
      }
     ]
    },
@@ -25245,6 +26321,12 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "20%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -25411,7 +26493,18 @@
      }
     ],
     "mergeFoutHints": [],
-    "claudeFoutHints": []
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "42%",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "50%",
+      "uitleg": null
+     }
+    ]
    },
    "bron": {
     "bestand": "vragen.json",
@@ -25444,6 +26537,13 @@
     "regel": "G7-V01-breuk-procent",
     "reden": "breuk of kommagetal ↔ procent (G7-VERH-04)",
     "somtype": "Schrijf #/# in procenten.",
+    "oef452": {
+     "terug": [
+      "42%",
+      "50%"
+     ],
+     "reden": "Oef-#452: sleutel(s) terug in claudeFoutHints (vielen weg met de G4-sjabloontekst, D12b)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -25563,7 +26663,7 @@
      "uitleg": "Heb je de getallen achter elkaar gezet? Samen zeggen ze welk deel van het hele aantal het is. Hoeveel is dat van de honderd?",
      "uitlegSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "laag2": "tekstSterker",
-     "regel": "14%",
+     "regel": "fout = getallen achter elkaar (als %)",
      "soort": "getallen achter elkaar",
      "bron": "nieuw"
     }
@@ -25714,7 +26814,7 @@
    },
    "foutRegels": [
     {
-     "regel": "14%",
+     "regel": "fout = getallen achter elkaar (als %)",
      "soort": "getallen achter elkaar",
      "bron": "nieuw",
      "tekst": "Heb je de getallen achter elkaar gezet? Samen zeggen ze welk deel van het hele aantal het is. Hoeveel is dat van de honderd?",
@@ -25722,9 +26822,9 @@
      "perItem": false,
      "match": {
       "waarden": [
+       "14 %",
        "14%"
-      ],
-      "opOpties": true
+      ]
      },
      "leesbaar": true
     },
@@ -25985,11 +27085,19 @@
    },
    "foutRegels": [
     {
-     "regel": "14%",
+     "regel": "fout = getallen achter elkaar (als %)",
      "soort": "getallen achter elkaar",
+     "bron": "nieuw",
      "tekst": "Heb je de getallen achter elkaar gezet? Samen zeggen ze welk deel van het hele aantal het is. Hoeveel is dat van de honderd?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "105 %",
+       "105%"
+      ]
+     },
+     "leesbaar": true
     },
     {
      "regel": "Claudes sleutel: getal-overgenomen",
@@ -26814,11 +27922,19 @@
    },
    "foutRegels": [
     {
-     "regel": "14%",
+     "regel": "fout = getallen achter elkaar (als %)",
      "soort": "getallen achter elkaar",
+     "bron": "nieuw",
      "tekst": "Heb je de getallen achter elkaar gezet? Samen zeggen ze welk deel van het hele aantal het is. Hoeveel is dat van de honderd?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "306 %",
+       "306%"
+      ]
+     },
+     "leesbaar": true
     },
     {
      "regel": "Claudes sleutel: getal-overgenomen",
@@ -28274,7 +29390,7 @@
    }
   }
  ],
- "hintsSyncOp": "2026-10-08T14:35:58+02:00",
+ "hintsSyncOp": "2026-10-08T14:41:52+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -28298,10 +29414,10 @@
   },
   {
    "batch": "batch6.json",
-   "md5": "38ac5d1789a4"
+   "md5": "6c3d40d26043"
   }
  ],
- "geschrevenOp": "2026-10-08T14:35:58+02:00",
+ "geschrevenOp": "2026-10-08T14:41:52+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

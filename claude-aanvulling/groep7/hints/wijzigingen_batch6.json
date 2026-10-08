@@ -103,5 +103,187 @@
    }
   ],
   "waarom": "Ronde 1b (Oefeningen 8 okt; leesbare regels VERH-04 #5): Claudes labels in plaats van vier letterlijke opties"
+ },
+ {
+  "tijd": "14:40",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma goed? Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal met procentteken",
+    "claudeDenkfout": null,
+    "regel": "0,7%",
+    "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
+    "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal met procentteken (ook)",
+    "claudeDenkfout": null,
+    "regel": "0,9%",
+    "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
+    "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal met procentteken (nog een)",
+    "claudeDenkfout": null,
+    "regel": "0,3%",
+    "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
+    "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
+    "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "komma verschoven",
+    "claudeDenkfout": "komma-verschoven",
+    "regel": "Claudes sleutel: komma-verschoven",
+    "tekst": "Staat de komma goed? Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal met procentteken",
+    "claudeDenkfout": null,
+    "regel": "fout = kommagetal met procentteken",
+    "tekst": "Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
+    "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?",
+    "tekstSterker": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn."
+   }
+  ],
+  "waarom": "Oef-#453 (Overzicht): motorregel in plaats van letterlijke %-regels"
+ },
+ {
+  "tijd": "14:40",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 5,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getallen achter elkaar",
+    "claudeDenkfout": null,
+    "regel": "14%",
+    "tekst": "Heb je de getallen achter elkaar gezet? Samen zeggen ze welk deel van het hele aantal het is. Hoeveel is dat van de honderd?",
+    "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het deel zelf",
+    "claudeDenkfout": "getal-overgenomen",
+    "regel": "Claudes sleutel: getal-overgenomen",
+    "tekst": "Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel (de %-regels vragen D van G); vaste tekst nagerekend",
+    "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het hele aantal",
+    "claudeDenkfout": "procent-verkeerde-basis",
+    "regel": "Claudes sleutel: procent-verkeerde-basis",
+    "tekst": "Dat is het hele aantal. Het hele aantal is honderd procent. Hoeveel procent is het deel?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel (de %-regels vragen D van G); vaste tekst nagerekend",
+    "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het aantal van het andere deel. Hoeveel procent is het deel waar de vraag over gaat?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel (de %-regels vragen D van G); vaste tekst nagerekend",
+    "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het hele aantal is honderd procent. Hoeveel procent is het deel?",
+    "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "getallen achter elkaar",
+    "claudeDenkfout": null,
+    "regel": "fout = getallen achter elkaar (als %)",
+    "tekst": "Heb je de getallen achter elkaar gezet? Samen zeggen ze welk deel van het hele aantal het is. Hoeveel is dat van de honderd?",
+    "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het deel zelf",
+    "claudeDenkfout": "getal-overgenomen",
+    "regel": "Claudes sleutel: getal-overgenomen",
+    "tekst": "Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel (de %-regels vragen D van G); vaste tekst nagerekend",
+    "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het hele aantal",
+    "claudeDenkfout": "procent-verkeerde-basis",
+    "regel": "Claudes sleutel: procent-verkeerde-basis",
+    "tekst": "Dat is het hele aantal. Het hele aantal is honderd procent. Hoeveel procent is het deel?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel (de %-regels vragen D van G); vaste tekst nagerekend",
+    "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het aantal van het andere deel. Hoeveel procent is het deel waar de vraag over gaat?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel (de %-regels vragen D van G); vaste tekst nagerekend",
+    "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het hele aantal is honderd procent. Hoeveel procent is het deel?",
+    "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   }
+  ],
+  "waarom": "Oef-#453 (Overzicht): motorregel in plaats van letterlijke %-regels"
  }
 ]

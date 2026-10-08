@@ -340,10 +340,15 @@ Ronde 3c (V-#615, Z-#617, Z-#618, Z-#619, Oef-#434, Oef-#442, Z-#606) en ronde 1
 | nr | voor | wat | stand |
 |---|---|---|---|
 | Oef-#452 | Overzicht (data) | VERH-03 #1/#2: veel claudeDenkfouten staan niet in claudeFoutHints (530 van 662 en 446 van 528), dus routes als b × c, erbij optellen en ± de prijs van één worden nooit sleutels | ✓ build 14:35:51: oorzaak G4-regel D12b (sjabloontekst «Maak een verhoudingstabel.» / «Dat getal staat al in de som.» viel weg, en daarmee de sleutel). fixlijst_g7 _v452 zet 976 sleutels in VERH-03 terug (uitleg None). 547 daarvan (label 'verhoudingstabel-verkeerd': €8 bij 6 pennen €3 → 11, 72 bij 4:9=8:?) staan nu op 'andere fout': Oefeningen kan een regel 'Claudes sleutel: verhoudingstabel-verkeerd' maken |
-| Oef-#453 | Overzicht (data/motor) | VERH-04 #1 (109) en #2 ('0,7%', '0,9%', '0,3%'): Claudes '%'-sleutels met 'getal-overgenomen' staan niet in claudeFoutHints; de motor leest geen '%' buiten 'D van G'. Nu 'andere fout' (#1, algemene aanpak) en letterlijke regels (#2). Voorstel: sleutels in claudeFoutHints, of 'tien keer het procent (als %)' en een regel 'kommagetal met procentteken' ook zonder 'D van G' | open |
+| Oef-#453 | Overzicht (data/motor) | VERH-04 #1 (109) en #2 ('0,7%', '0,9%', '0,3%'): Claudes '%'-sleutels met 'getal-overgenomen' staan niet in claudeFoutHints; de motor leest geen '%' buiten 'D van G'. Nu 'andere fout' (#1, algemene aanpak) en letterlijke regels (#2). Voorstel: sleutels in claudeFoutHints, of 'tien keer het procent (als %)' en een regel 'kommagetal met procentteken' ook zonder 'D van G' | ✓ build 14:41:45: zelfde oorzaak als #452 (D12b); _v452 zet ook in VERH-04 de sleutels terug (109 in #1, 3 in #2). Motor (alleen KOMMA437, G5/G6 0 anders): #445-regels lezen ook 'D/G' ('32/50' → het deel zelf 32%, geheel min deel 18%), 'tien keer het procent (als %)' ook zonder deel; nieuw 'fout = kommagetal met procentteken' en 'fout = getallen achter elkaar (als %)'. patch_batch6 (blok Overzicht): #2 drie letterlijke regels → één motorregel, #5 '14%' → motorregel; tekst ongewijzigd. 'regel niet te lezen' in VERH-04 weg. Open voor Oefeningen: VERH-04 #1 '32%' staat op 'andere fout' (109): een regel 'fout = het deel zelf (als %)' met eigen tekst pakt ze nu |
 | Oef-#454 | Didactiek/Overzicht | VERH-03 #4/#6: «k keer zo groot» = elke zijde k keer zo lang, terwijl de oppervlakte in #6 k × k groeit; VERH-03 #17 legt alleen 1 : 100 uit, maar vergelijkt 1 : 10 en 1 : 100 | open |
 | Oef-#455 | Overzicht (data) | VERH-04 #5 bank-125: optie '40%' zonder Claude-route (geen denkfout); blijft op 'andere fout' | open |
 | Oef-#459 | Overzicht (data, les 206) | VERH-04 #2: in 5 van 8 items is het antwoord de middelste optie (opties × 10 en : 10); VERH-03 #13/#15/#20/#22/#23 (één item) ook | open |
 | – | Leerlijn | VERH-04 #4 (vereenvoudigen) en #7 (rad) wachten op Z-#564; niet geschreven | wacht |
 
-Nummering: volgende vrije Oef-#460.
+Nummering: volgende vrije Oef-#460 (zie onder: Oef-#460–#463 staan in g4/merge-fixlijst.md).
+
+
+### Oefeningen 8 okt: batch 5 ronde 1e
+- Geen nieuw punt: Z-#664 laag 2 van VERH-01 #4 zonder de gelijk-regel (review-batch5.md, ronde 1e).
+- Oef-#460–#463 gebruikt in g4/merge-fixlijst.md (G4 batch 5, GET-E05). Nummering: volgende vrije Oef-#464.

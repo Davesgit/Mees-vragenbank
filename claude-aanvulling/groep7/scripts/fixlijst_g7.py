@@ -670,7 +670,7 @@ def pas_toe(it, slog):
 # route. Herstel voor G7-VERH-03: de ontbrekende sleutels terug in claudeFoutHints, zonder Claudes sjabloontekst (uitleg None): de labelregels
 # en motorregels van de entry pakken ze; zonder passende regel vallen ze op 'andere fout' (Oefeningen kan dan regels maken).
 def _v452(it, slog):
-    if it.get('doelId') != 'G7-VERH-03': return
+    if it.get('doelId') not in ('G7-VERH-03', 'G7-VERH-04'): return   # Oef-#453: VERH-04 heeft dezelfde oorzaak ('32%', '0,7%')
     e = it['extraVelden']; n = lambda x: re.sub(r'^\s*[-–]', '−', str(x or ''))
     ks = {n(h.get('fout')) for h in e.get('claudeFoutHints') or []}
     terug = [d['fout'] for d in e.get('claudeDenkfouten') or [] if n(d.get('fout')) not in ks and d.get('fout') != it['antwoord']]
