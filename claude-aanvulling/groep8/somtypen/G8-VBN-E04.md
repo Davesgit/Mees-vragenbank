@@ -383,7 +383,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
   - `andere fout` (andere fout) → Wat is er anders in de maanden waarin beide lijnen stijgen?  [nieuw]
 - Status: hints klaar
 
-## Somtype 14: Een klas telt # kinderen. In een staafdiagram over huisdieren zijn de staven samen # hoog. Wat is hiervoor de beste verklaring?
+## Somtype 14: Een klas telt # kinderen. In een staafdiagram over huisdieren tellen de staven samen op tot #. Wat is hiervoor de beste verklaring?
 
 - Sleutel: nrOrigineel **35** · somtypeOrigineel “Een klas telt # [ding]. In een staafdiagram over huisdieren zijn de staven samen # [ding]. Wat is hiervoor de beste verklaring?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: G9 (1) · regel: D8-STAT-KRITISCH
@@ -392,7 +392,7 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
 - Verschillende Claude-fout-hints: 2 (meest: “Denk eerst na of er een gewone reden kan zijn waarom een kind twee keer meetelt.”)
 - Voorbeelden:
   - `G8-VBN-E04-claude-bank-041` (Claude G9, ai, niveau 3 → toepassen)
-    - **Opgave:** Een klas telt 25 kinderen. In een staafdiagram over huisdieren zijn de staven samen 30 hoog. Wat is hiervoor de beste verklaring?
+    - **Opgave:** Een klas telt 25 kinderen. In een staafdiagram over huisdieren tellen de staven samen op tot 30. Wat is hiervoor de beste verklaring?
     - **Opties:** A) Sommige kinderen hebben meer dan één huisdier · B) De grafiek is fout getekend · C) Er zitten 30 kinderen in de klas
     - **Antwoord:** Sommige kinderen hebben meer dan één huisdier  (controle: n.v.t.)
     - **Fout-hints (Claude):** De grafiek is fout getekend → Denk eerst na of er een gewone reden kan zijn waarom een kind twee keer meetelt. · Er zitten 30 kinderen in de klas → In de vraag staat duidelijk hoeveel kinderen er in de klas zitten. Lees dat nog eens.

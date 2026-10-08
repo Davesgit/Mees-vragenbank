@@ -48,6 +48,7 @@ def fouten(p, T, soort, bak=None):
     if (p * 100) % T == 0: F.append(f"omgekeerde deling {p} : {T} komt precies uit (Z-#911)")
     if soort == 'nodig' and a + 1 == p: F.append(f"antwoord + 1 = per stuk ({p}) (Z-#912)")
     if soort == 'over' and heel == p: F.append(f"hele getal = per stuk ({p}) (Z-#912)")
+    if soort == 'nodig' and rest == a + 1: F.append(f"de rest ({rest}) = antwoord + 1 (Z-#950: de rest houdt een eigen tekst, 'één te veel' botst)")
     for r, v in routes(p, T, soort).items():
         if v is not None and v == a: F.append(f"route '{r}' geeft het goede antwoord {a}")
     return F
@@ -133,6 +134,8 @@ MUTANTEN = [  # (naam, opgave, antwoord, verwacht aantal fouten > 0)
     ('krat met 5 (Z-#880)', 'In een krat passen 5 flesjes. Er zijn 63 flesjes. Op de rekenmachine staat 12,6. Hoeveel kratten zijn er nodig?', '13', True),
     ('goed busje (V-#880)', 'In een busje passen 8 kinderen. Er zijn 93 kinderen. Op de rekenmachine staat 11,625. Hoeveel busjes zijn er nodig?', '12', False),
     ('omgekeerde deling exact (029, Z-#911)', 'In een busje passen 8 kinderen. Er zijn 100 kinderen. Op de rekenmachine staat 12,5. Hoeveel busjes zijn er nodig?', '13', True),
+    ('rest = antwoord + 1 (031 oud, Z-#950)', 'In een busje passen 8 kinderen. Er zijn 38 kinderen. Op de rekenmachine staat 4,75. Hoeveel busjes zijn er nodig?', '5', True),
+    ('rest ≠ antwoord + 1 (031 nieuw, Z-#950)', 'In een busje passen 8 kinderen. Er zijn 39 kinderen. Op de rekenmachine staat 4,875. Hoeveel busjes zijn er nodig?', '5', False),
     ('antwoord + 1 = per stuk (079, Z-#912)', 'In een krat passen 12 flesjes. Er zijn 129 flesjes. Op de rekenmachine staat 10,75. Hoeveel kratten zijn er nodig?', '11', True),
     ('goed (nodig)', 'In een bak passen 8 potjes. Er zijn 141 potjes. Op de rekenmachine staat 17,625. Hoeveel bakken zijn er nodig?', '18', False),
     ('goed (over)', 'In een bak passen 8 potjes. Er zijn 141 potjes. Op de rekenmachine staat 17,625. De volle bakken gaan weg. Hoeveel potjes blijven er over?', '5', False),

@@ -185,7 +185,8 @@ if __name__ == '__main__':
     fail = (_GM.mutanten() and any(_v != _k for _n, _v, _k in _GM.mutanten())) or fail      # Z-#855: mutanten (oude 427/010/002) moeten kloppen
     import e05_routes as _ER      # V-#870/Z-#871/V-#871 (Didactiek batch 4, 16:35): E05-rekenmachineverhalen: geen foute route op het goede antwoord, rest ≥ 3, geen ',5', redelijke maten (FAIL)
     fail = (_ER.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
-    fail = any(bool(_ER.fouten_item({'id': _n, 'opgave': _o, 'antwoord': _a})) != _v for _n, _o, _a, _v in _ER.MUTANTEN) or fail      # mutanten 13/13 (V-#880: busjes ≤ 15, Z-#880: krat 6/12/24)
+    fail = any(bool(_ER.fouten_item({'id': _n, 'opgave': _o, 'antwoord': _a})) != _v for _n, _o, _a, _v in _ER.MUTANTEN) or fail      # item-mutanten (V-#880, Z-#880, Z-#911, Z-#912, Z-#950)
+    fail = (not _ER.sp_mutanten_ok()) or fail      # Z-#952 (les 357): ook de spreidingsmutanten van V-#910 ('zes keer 13' → FAIL, 'gespreid' → geen FAIL)
     import bouwsel_routes as _BR      # Oef-#1000/V-#891 (batch 6, 16:54): vol bouwwerk, geen foute route (ook 'drie kanten') op het goede antwoord (FAIL)
     fail = (_BR.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     fail = any(bool(_BR.fouten(*_m)) != _v for _n, _m, _v in _BR.MUTANTEN) or fail      # mutanten 6/6 (oud 007, 047, 066)

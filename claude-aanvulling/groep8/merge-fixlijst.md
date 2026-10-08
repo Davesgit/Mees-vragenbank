@@ -283,8 +283,8 @@ Checks: check_hints **121 klaar · 102 open · 0 FAIL · 0 WARN**; merge-notatie
 | V-#940 / V-#941 / V-#942 / V-#943 | **✓** H2 #8, #11, #27 en H1 #25 (teksten Didactiek), patch_batch7.py. |
 | Z-#941 / Z-#942 / Z-#944 | **✓** #13 H1↔H2; #23 H2 zonder 'verschillen'; woordkeus #7/#14/#18/#20/#21/#28. |
 | V-#946 | **✓** b7/check kent '×' én 'x'; mislukte match = FAIL (les 353). Klaar vóór Overzichts build. |
-| Z-#943 | **voorwaardelijk** in patch_batch7: '24 honden' + nieuwe L1 zodra de data '1 hondje = 6' heeft (Oef-#1004). |
-| V-#944 / V-#945 | wacht op Overzichts data; daarna hercheck en SNAP op een kopie. 029 gerekend op hond 30 / kat 10 (geen aflezing op 50). |
+| Z-#943 | **✓ aan** sinds build 17:30:20 (voorwaardelijk in patch_batch7: '24 honden' + nieuwe L1). |
+| V-#944 / V-#945 | **✓** data in build 17:30:20; hercheck op een kopie: b7 FAIL 0, SNAP=1, 57 mutanten 0 gemist. 029 hond 30 / kat 10 (geen aflezing op 50). |
 | lessen 350–354 | **✓** in hints/lessen_g8.md. |
 
 ## Overzicht: builds 17:03:20, 17:08:44, 17:14:34 en 17:24:12 (Z-#914)
@@ -335,3 +335,14 @@ Checks build 17:24:12 (op main als ef86a74): check_hints **172 klaar · 51 open 
 | lege map (Oefeningen 17:27) | **✓ oorzaak:** build_g8.py leegde bij de start data/per_doel/ en somtypen/ (os.remove per bestand) en schreef ze pas ~40 s later opnieuw. De build die om 17:20:38 begon, werd na 20 s onderbroken (vanaf 17:20:58 leeg) tot de build van 17:23:08 ze om ~17:24 weer schreef; ook elke gewone build had een gat van ~40 s. **Oplossing:** `scripts/bouw_veilig.py`; `python3 scripts/build_g8.py` gaat er nu altijd doorheen: bouwen (fase 1–5) in een kopie `claude-merge/.g8_bouw_*/g8`, controle (per_doel en somtypen elk zelfde aantal als live, niet leeg, per_doel geldige JSON met items), dan elk gewijzigd bestand atomair (os.replace) naar live; een bestand dat tijdens de build op live veranderde wordt niet overschreven (CONFLICT); mislukte build = live ongemoeid; bouwmap weg. Build 17:30:20: tijdens de build elke 2 s geteld, live nooit onder 23/23; daarna 38 bestanden atomair, 0 conflict; **per_doel 23 · somtypen 23 · alle gevuld**. (Alleen g4–g7/data/aanvulling_uit_g8.json schrijft de build nog direct; die staan buiten g8 en horen bij de G4–G7-builds.) |
 
 Checks build 17:30:20: check_hints **172 klaar · 51 open · 0 FAIL · 0 WARN**; merge-notatie **ALLES OK** (XSTER 0, STAAF-BESLIS 0, KLOKTIJD 0, TIJDSDUUR 0, E05-ROUTES 0); **b1 0 · b2 0 · b3 0 · b4 0 (141 items · 917 sleutels) · b5 0 · b6 0 · b7 0 (26 items · 52 sleutels)**. Mutanten: b1 25, b2 31, b3 50, b4 41, b5 56, b6 62, b7 57, allemaal 0 gemist; gate: STAAF-BESLIS 8/8, XSTER 8/8, TIJDSDUUR 8/8, E05 15/15, BOUWSEL 6/6.
+
+### Build 17:36:36 — zachte punten recheck b4 (Z-#950–#953, lessen 355–357) en Z-#894
+| punt | stand |
+|---|---|
+| Z-#950 | **✓** e05_routes: 'nodig' met de rest = antwoord + 1 → FAIL (de rest houdt een eigen tekst); 2 mutanten (031 oud 8/38 → FAIL, 031 nieuw 8/39 → geen FAIL). 031 → **8 per busje, 39 kinderen, 4,875 → 5 busjes, rest 7** (de getallen van Didactiek, eerst geprobeerd via E05_VOORKEUR; filter en spreiding ok); Claudes sleutels 4 (hele getal) en 7 (de rest). 092 → mand 40, 1516 peren, 37,9 → 38, rest 36 (generator); Claude-sleutel 37. **Diff over de hele GET-E05-groep (les 355): 2 van 125 items veranderd (031, 092), verder niets.** b4: 141 items · 919 sleutels (+2) · FAIL 0. |
+| Z-#951 | **✓** TIJDSDUUR vangt ook een duur zonder signaalwoord: 'Tel u.mm uur bij … op', 'u.mm uur later/eerder/onderweg/lang/…', 'een vlucht/reis/rit … van u.mm', 'in/binnen u.mm uur', 'na u.mm uur' (alleen bij u ≤ 2 of als de tekst nog een tijd noemt: 'Na 9.30 uur gaat de winkel dicht' blijft een kloktijd); '.' en ':'. 12 nieuwe mutanten (o.a. «Tel 5.45 uur bij 6.15 uur op.», «Na 1.20 uur komen ze aan.», «Je bent 2.30 uur onderweg.», «1.20 uur later …»; niet: «Om 9.30 uur …», «Het is 9.30 uur.», «Tel 2 uur bij 9.30 uur op.»): 20/20 in de gate. Scan: main G3–G6, G7, G8, r13 G3–G6 en branch na-ronde-r13 G3–G7: TIJDSDUUR 0. |
+| Z-#952 | **✓** check_merge_notatie toetst ook `sp_mutanten_ok()` (spreiding V-#910). **V-#910 zat voor het eerst in build 17:14:34** (nagerekend op de snapshot rv7 = 17:14:34: spreiding() 0); op main sinds 17:24:12 (ef86a74). De recheck van Didactiek liep op 17:24:12; beide zijn dus waar (les 357). Getoetst op de nieuwste build 17:36:36: spreiding 0. |
+| Z-#953 | **✓** E03 #1–#4: geldigeAntwoorden ook '3000 l', '3.000 liter', '3.000 l' (en 'L'); 002 idem met 1500. |
+| Z-#894 | **✓** VBN-E04 #35 041 «tellen de staven samen op tot 30» (opgave en kop). **b6/check FAIL 2 op 041: de regex in b6/check r. 243 zoekt nog 'zijn de staven samen (\d+) hoog' (Oefeningen: regex aanpassen).** |
+
+Checks build 17:36:36: check_hints **172 klaar · 0 FAIL · 0 WARN**; merge-notatie **ALLES OK** (E05-ROUTES 0, TIJDSDUUR 0, spreidingsmutanten ok); **b1 0 · b2 0 · b3 0 · b4 0 · b5 0 · b6 2 (alleen de #35-regex van b6/check) · b7 0**; mutanten b1 25, b2 31, b3 50, b4 41, b5 56, b6 62, b7 57, 0 gemist; e05_routes 19/19.

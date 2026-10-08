@@ -323,7 +323,7 @@ def main():
     # V-#946/Z-#945 (Didactiek b7): de koppen volgen de opgave ('(× #)', kop tussen aanhalingstekens)
     for r in rows:
         if B7VLAG.ACTIEF and r['merge']['status'] == 'gemapt' and r['merge'].get('doel') == 'G8-VBN-E04':
-            k_ = r['merge'].get('somtype', ''); k2 = k_.replace('aantal bezoekers (x #)', 'aantal bezoekers (× #)').replace('staat: Het aantal bezoekers is verdubbeld. De staaf', 'staat: "Het aantal bezoekers is verdubbeld." De staaf')
+            k_ = r['merge'].get('somtype', ''); k2 = k_.replace('zijn de staven samen # hoog', 'tellen de staven samen op tot #').replace('aantal bezoekers (x #)', 'aantal bezoekers (× #)').replace('staat: Het aantal bezoekers is verdubbeld. De staaf', 'staat: "Het aantal bezoekers is verdubbeld." De staaf')
             if k2 != k_: r['merge']['somtype'] = k2; slog(r, 'V-#946/Z-#945: kop volgt de opgave', 'somtype', k_, k2)
     # Oef-#1004 (b7, #21): nieuwe somtype-template uit merge-fixlijst.md ('[plek]' vangt 'Bij het asiel' niet; '[ding]' viel op 'hele'/'half'); na Oef-#1001, zodat [ding] blijft
     for r in rows:
@@ -631,7 +631,9 @@ def fix_g8(r, slog):
                 tel_['antwoord'][ER.antwoord(L_['p'], L_['T'], L_['soort'])] += 1; tel_['heel'][L_['T'] // L_['p']] += 1; L_ = None
         else: L_ = None
         if L_:
-            p_, T_ = ER.genereer(L_['bak'], L_['p'], L_['T'], L_['soort'], seed=int(c8, 16), bezet=E05_BEZET, tel=tel_)
+            vk_ = E05_VOORKEUR.get(c8)      # Z-#950 (Didactiek): de door Didactiek nagerekende getallen eerst, als ze door filter en spreiding komen
+            if vk_ and (L_['bak'],) + vk_ not in E05_BEZET and not ER.fouten(*vk_, L_['soort'], L_['bak']) and ER.past_spreiding(*vk_, L_['soort'], tel_): p_, T_ = vk_
+            else: p_, T_ = ER.genereer(L_['bak'], L_['p'], L_['T'], L_['soort'], seed=int(c8, 16), bezet=E05_BEZET, tel=tel_)
             E05_BEZET.add((L_['bak'], p_, T_)); tel_['antwoord'][ER.antwoord(p_, T_, L_['soort'])] += 1; tel_['heel'][T_ // p_] += 1
             o = r['opgave']; a_ = ER.antwoord(p_, T_, L_['soort']); heel_, rest_ = divmod(T_, p_)
             r['opgave'] = f"In een {L_['bak']} passen {p_} {L_['ding']}. Er zijn {T_} {L_['ding']}. Op de rekenmachine staat {ER.scherm(T_, p_)}. {L_['staart']}"
@@ -821,8 +823,12 @@ def fix_g8(r, slog):
                     slog(r, 'Z-#945: data-taal b7', 'opties', a9, b9)
         # Z-#931 (Didactiek, zacht; G8 MEET-E03 #1–#4): m³ → liter, geldigeAntwoorden met en zonder punt en met de gevraagde eenheid (liter)
         if (m_ := re.fullmatch(r'Een [\w ]+ heeft een inhoud van [\d,]+ m³\. Hoeveel liter is dat\?', r['opgave'])) and re.fullmatch(r'\d{4,6}', str(r['antwoord'])) and not r.get('geldigeAntwoorden'):
-            a_ = str(r['antwoord']); r['geldigeAntwoorden'] = [a_, f'{int(a_):,}'.replace(',', '.'), f'{a_} liter']
-            slog(r, 'Z-#931: geldigeAntwoorden (met/zonder punt, met eenheid liter)', 'geldigeAntwoorden', None, r['geldigeAntwoorden'])
+            a_ = str(r['antwoord']); pt_ = f'{int(a_):,}'.replace(',', '.')      # Z-#953: ook '3000 l', '3.000 liter', '3.000 l' (en 'L')
+            r['geldigeAntwoorden'] = [a_, pt_, f'{a_} liter', f'{pt_} liter', f'{a_} l', f'{pt_} l', f'{a_} L', f'{pt_} L']
+            slog(r, 'Z-#931/Z-#953: geldigeAntwoorden (met/zonder punt, met eenheid liter/l/L)', 'geldigeAntwoorden', None, r['geldigeAntwoorden'])
+        # Z-#894 (Didactiek batch 6, zacht): VBN-E04 #35 «zijn de staven samen 30 hoog» → «tellen de staven samen op tot 30» (kop volgt in de kop-pass)
+        if c8 == '77e26e67' and 'zijn de staven samen 30 hoog' in r['opgave']:
+            o = r['opgave']; r['opgave'] = o.replace('zijn de staven samen 30 hoog', 'tellen de staven samen op tot 30', 1); slog(r, "Z-#894: 'tellen de staven samen op tot 30'", 'opgave', o, r['opgave'])
         # Z-#825 (Didactiek batch 3): #55 'staartsom' → 'som onder elkaar'
         if c8 == '5a2c100b' and 'met een staartsom onder elkaar' in r['opgave']:
             o = r['opgave']; r['opgave'] = o.replace('met een staartsom onder elkaar', 'met een som onder elkaar')
@@ -882,6 +888,7 @@ KOP478 += [  # Oef-#496 (batch 5)
           (r'^(Een vliegtuig vertrekt om \S+(?: uur)? uit) het huis\.', r'\1 Groningen.')]
 E05_BEZET = set()
 E05_TEL = {}
+E05_VOORKEUR = {'b446e342': (8, 39)}      # Z-#950: 031 39 kinderen, busje van 8 → 5 busjes, rest 7 (Didactiek, recheck b4)
 KOP1001_DOELEN = {'G8-MEET-E07', 'G8-MEET-V01', 'G8-VBN-E01', 'G8-VBN-E03', 'G8-VBN-E04'}
 KOP478 += [  # V-#871c (Didactiek batch 4)
           (r'^\[wie\] heeft # miljoen (stickers|knikkers) verzameld\.', r'Een fabriek maakt in een jaar # miljoen \1.'),

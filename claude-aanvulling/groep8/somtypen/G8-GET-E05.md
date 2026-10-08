@@ -181,7 +181,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 5  (controle: ok)
     - **Fout-hints (Claude):** 10 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
   - `G8-GET-E05-claude-bank-031` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een busje passen 8 kinderen. Er zijn 38 kinderen. Op de rekenmachine staat 4,75. Hoeveel busjes zijn er nodig?
+    - **Opgave:** In een busje passen 8 kinderen. Er zijn 39 kinderen. Op de rekenmachine staat 4,875. Hoeveel busjes zijn er nodig?
     - **Antwoord:** 5  (controle: ok)
     - **Fout-hints (Claude):** 62 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
 
