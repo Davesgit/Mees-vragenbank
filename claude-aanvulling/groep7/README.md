@@ -154,4 +154,4 @@ Een rerun is stabiel: ids en somtypen veranderen niet, alleen de tijdstempel ver
 
 ## Vanuit G8 (1 okt 19:05)
 - `data/aanvulling_uit_g8.json`: de G8-merge (`g8/scripts/build_g8.py`) zet hier 46 items neer die terug moeten naar G7 en een G7-doel hebben (DENK-02/03, GET-04, MEET-02). De G7-build is daarvoor niet aangepast.
-- `scripts/fout_regels.py` is gelijk aan die van G5 (#92–#94, #103, #104). Rebuild 19:05: 7294 · 688 · 764, niet veranderd, ALLES OK.
+- `scripts/fout_regels.py` is gelijk aan die van G5 (#92–#94, #103, #104). Rebuild 19:05: 7294 · 688 · 764, niet veranderd, ALLES OK. Na-ronde 2 (build 15:41:07): V-#746 (strategie 'gunstig van totaal'), Z-#748 (bank-134 'groter dan 7' = 3 op de 10, bank-135 letter N = 2 op de 6; HELFT-check WARN 0), Z-#750 (nietLiveZonderBeeld op de rad-items), Z-#751 ('1 op de 4' bij bank-125; etiket '#4 (vereenvoudigen)' weg).

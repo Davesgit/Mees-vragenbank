@@ -345,7 +345,7 @@ Ronde 3c (V-#615, Z-#617, Z-#618, Z-#619, Oef-#434, Oef-#442, Z-#606) en ronde 1
 | Oef-#455 | Overzicht (data) | VERH-04 #5 bank-125: optie '40%' zonder Claude-route (geen denkfout); blijft op 'andere fout' | ✓ build 14:58:27: bank-125 '40%' → '4%' (het hele aantal als procent, label procent-verkeerde-basis; soort 'het hele aantal') |
 | Oef-#459 | Overzicht (data, les 206) | VERH-04 #2: in 5 van 8 items is het antwoord de middelste optie (opties × 10 en : 10); VERH-03 #13/#15/#20/#22/#23 (één item) ook | ✓ build 14:58:27: VERH-04 #2 bank-008 '500%' → '0,5%' (nu 4 van 8 midden, 4 grootste); VERH-04 nrO 4/7 via Z-#564; VERH-03 #13/#15/#20/#22/#23 (één item per somtype) niet: Didactiek Z-#711 'data hoeft nu niet'. Nieuwe check tools/optie_positie_check.py (WARN, G7/G8): plek op waarde, of de letter als het item niet husselt; vraagzinnen met grootst/kleinst tellen niet. G7 0 WARN; G8 2 WARN (MEET-V01, VERH-E06), G4/G5/G6 niet aangehaakt (ter info 2/6/2) |
 | Z-#564 | Leerlijn (optie b, steering 14:33) | VERH-04 nrO 4/7: getelde vorm is goed. bank-127: A 5 op de 15 · B 5 op de 20 (goed) · C 1 op de 5; bank-136 (rad): A 3 op de 12 (goed) · B 1 op de 3 · C 3 op de 9; «1 op de 4» weg (blijft geldig antwoord, zoals bij 131/137); claudeUitleg geteld; uitleg bij 1 op de 5 / 1 op de 3 (ging over vereenvoudigen) → None. De andere items hadden al de getelde vorm. Posities (Oef-#459): bank-131 → C, bank-137 → B; nrO 4 nu A2 · B3 · C2, nrO 7 A1 · B1. bank-134 '2 op de 10' en bank-135 '1 op de 6' hebben geen Claude-route | ✓ build 14:44:30 (fixlijst_g7 _z564); Oefeningen kan #4/#7 schrijven |
-| – | Leerlijn | VERH-04 #4 (vereenvoudigen) en #7 (rad) wachten op Z-#564; niet geschreven | wacht |
+| – | Leerlijn | VERH-04 #4 (deel van een totaal) en #7 (rad) wachtten op Z-#564 | klaar (batch 6; Z-#751) |
 
 Nummering: volgende vrije Oef-#460 (zie onder: Oef-#460–#463 staan in g4/merge-fixlijst.md).
 
@@ -387,7 +387,7 @@ Checks: z-#741 gedeelde guard `/workspace/g7work/huis_checks.py` (les 217, brede
 
 Nieuw gevonden met de gedeelde les-217-guard (buiten G7, ter info): G4 GET-E06 #5 «Je mag niet zomaar optellen.» en #6 «Je moet de kleren niet bij elkaar optellen.» (laag 1 'opgeteld'). Bij combinaties is herhaald optellen een geldige route; tekst nog niet aangepast (volgt na akkoord, G4 hoort niet bij deze ronde).
 
-Nummering: volgende vrije Oef-#482.
+Nummering: volgende vrije Oef-#485 (Oef-#482–#484 staan in g8/merge-fixlijst.md, G8 batch 1 ronde 1b).
 
 
 ## Review batch 6 (Didactiek 8 okt, build 14:41:45; review-batch6-didactiek.md) — door Overzicht, build 14:58:27
@@ -417,8 +417,19 @@ Batch 6 is taal: ok (Didactiek, build 15:13:54); VERH-04 #4/#7 wacht nog op Dida
 | Z-#747 | bank-127 (#4): '1 op de 5' kwam uit het vereenvoudig-ontwerp | **✓ Leerlijn akkoord (8 okt 15:25).** A '5 op de 15' (deel op rest) · B '5 op de 20' (goed) · C **'15 op de 20'** (het andere deel). Elke afleider hoort nu bij één fout ('deel op rest' of 'het andere deel'); geen vereenvoudigde vorm meer in een optie (de vereenvoudigde vorm blijft wel in geldigeAntwoorden). 'deel achter op de' heeft in #4/#7 nu 0 sleutels (Z-#749: Oefeningen beslist). |
 | Z-#744 (a) | VERH-03 #1: in 39 items is het antwoord een getal uit de vraag of de som/het verschil van twee getallen (ook bank-318/620 van V-#703) | **✓** fixlijst_g7 `R6_744` (_z744, na V-#703 en Oef-#466): 39 nieuwe drietallen met dezelfde k, niet in de bank, zonder zo'n treffer; Claudes sleutels met hun route (c × b, b + c − a, c, b, a, b : k, b × k ± b). Bij bank-318 viel de route b : k weg (geen heel getal). Nieuwe check `tools/som_verschil_check.py` (SOMVERSCHIL, WARN) in check_merge_notatie G7: **0**. |
 | Z-#744 (b) | '100 000' in de oude Claude-fout-hints in somtypen/G7-VERH-03.md | **open** (niet zichtbaar voor een kind; opruimen bij de volgende ronde) |
-| V-#746 | claudeStrategie 'deel vereenvoudigen' bij bank-127/136 | **open** (niet in deze opdracht) |
+| V-#746 | claudeStrategie 'deel vereenvoudigen' bij bank-127/136 | **✓ build 15:41:07** (zat niet in 15:31:04): `fix_g7 _r7` → 'gunstig van totaal' (zoals 129/131/132/137); de oude waarde staat in merge.extraVeldenVoorBesluit. |
 | sleutels 3.130 / 3.135 | Oefeningen telde 3.135, Overzicht meldde 3.130 | **Uitgezocht:** zelfde telmethode (b6/check.py telt de foutHints van VERH-03/04). 3.130 was gemeten op build 15:10:21, vóór Oef-#466; 3.135 op build 15:13:54, ná Oef-#466. De drie nieuwe items (bank-423/559/590) hebben 7 + 7 + 5 = 19 sleutels tegen 5 + 5 + 4 = 14 ervoor: +5. Geen sync-verschil. Na deze build: **3.166**. |
 
 Checks build 15:31:04: check_hints **155 klaar · 0 open · 0 FAIL · 0 WARN**, merge-notatie ALLES OK (SOMVERSCHIL 0), b6/check 779 items · 3.166 sleutels · FAIL 0. 41 items anders (VERH-03 #1: 39, VERH-04 #4: 1, #7: 1); verder niets verschoven.
 **Oefeningen opnieuw syncen:** VERH-03 #1 (39 items nieuwe getallen) en VERH-04 #4/#7 (bank-127/136 nieuwe afleider 'het andere deel').
+
+### Na-ronde G7 (2): recheck VERH-04 #4/#7 (review-verh04-4-7-didactiek.md, steering 15:37) — build 15:41:07
+| punt | zat in 15:31:04? | stand |
+|---|---|---|
+| V-#746 | nee (stond open) | **✓** claudeStrategie bank-127/136 → 'gunstig van totaal'; oude waarde in merge.extraVeldenVoorBesluit. |
+| Z-#748 | nee | **✓** bank-134 (ea6380a4): «… een getal groter dan 7?» → **3 op de 10**; opties A 4 op de 10 (een-ernaast) · B 7 op de 10 (het andere deel) · C 3 op de 10 (goed). bank-135 (a502ea00): «… de letter N?» → **2 op de 6**; opties A 2 op de 6 (goed) · B 1 op de 6 (2 ernaast, label andere-fout: b6/check telt 'een-ernaast' alleen bij ±1) · C 4 op de 6 (het andere deel). De goede optie blijft op dezelfde plek. Nieuwe check `tools/helft_deel_check.py` (HELFT, WARN) in check_merge_notatie G7: **0**. |
+| Z-#750 | nee | **✓** bank-136 en bank-137: visual.nietLiveZonderBeeld = True (les 248). |
+| Z-#751 | nee | **✓** bank-125 claudeUitleg «1 op 4 betekent» → «1 op de 4 betekent»; etiket '#4 (vereenvoudigen)' weg in hints/batches.md (rij 7, nu klaar), hints/make_batch6.py en merge-fixlijst rij 348. |
+
+Checks build 15:41:07: check_hints **155 klaar · 0 open · 0 FAIL · 0 WARN**, merge-notatie ALLES OK (HELFT 0, SOMVERSCHIL 0), b6/check FAIL 0. 4 items anders (bank-125/134/135/136/137: 125 alleen de uitleg, 127 alleen de strategie, 134/135 opgave+opties, 136/137 de vlag).
+**Oefeningen opnieuw syncen:** VERH-04 #4 bank-134 en bank-135 (nieuwe opgave, antwoord en afleiders) en #7 (nietLiveZonderBeeld; geen tekstwijziging).

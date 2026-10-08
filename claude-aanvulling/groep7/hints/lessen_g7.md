@@ -108,3 +108,11 @@ make_batchN.py --force: de verbeteringen van na de sync staan als 'Ronde 1a' in 
 - **242.** Een guard die op één beginfrase of een frasenlijst leunt, vangt alleen die vorm. Toets elke guard met eigen mutanten in een andere bewoording (bij les 223). (recheck-batch6; D216a/b, D217a–c)
 - **243.** Een huisregel-guard die alleen in de check van één batch staat, dekt de andere batches niet. Huisregels horen in de gedeelde check (/workspace/g7work/huis_checks.py). (recheck-batch6, Z-#741)
 - **244.** Een H2 die H1 als vraag herhaalt, is geen sterkere laag. H2 geeft altijd een stap meer dan H1. (recheck-batch6, Z-#742)
+
+## Lessen 250–255 (Didactiek review G8 batch 1, 8 okt 15:17): ook voor G7
+Volledige tekst en de G8-guards: `../../g8/hints/lessen_g8.md`. Voor G7 gelden vooral deze:
+- **250:** geen labelregel met een ±1-tekst op een waarde die #390 weigert.
+- **252:** één Claude-label kan meer routes dekken. Kijk naar de waarde, en schrijf anders een L1 die bij elke route past.
+- **253:** toets álle routes op toevalstreffers.
+- **254:** bij 'eet/neemt weg' ook de route 'aftrekken'.
+- **255:** lengte groep 7/8: L1 ±45 woorden, L2/H2 ±55. Schrap eerst de aankondiging.

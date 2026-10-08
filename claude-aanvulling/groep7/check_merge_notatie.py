@@ -187,5 +187,7 @@ if __name__ == '__main__':
     _OP.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
     import som_verschil_check as _SV      # Z-#744 (recheck batch 6, les 195/241): 'a : b = c : ?' met som/verschil van twee getallen als antwoord (WARN)
     _SV.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
+    import helft_deel_check as _HD      # Z-#748 (review VERH-04 #4/#7, les 247): goed deel 'k op de 2k' = de rest (WARN)
+    _HD.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
     print('\nG7 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

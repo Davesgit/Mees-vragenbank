@@ -847,3 +847,40 @@ _pas_toe_r6 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_r6(it, slog); _z744(it, slog)
 
+
+# ---------- Didactiek review VERH-04 #4/#7 (review-verh04-4-7-didactiek.md), na-ronde 2 (steering 15:37) ----------
+# V-#746 (les 246): claudeStrategie 'deel vereenvoudigen' bij bank-127/136 → 'gunstig van totaal' (zoals 129/131/132/137); oude waarde naar merge.extraVeldenVoorBesluit.
+# Z-#748 (les 247): deel = rest gaf toevallige treffers. bank-134 even (5 op de 10) → 'groter dan 7' (3 op de 10); bank-135 letter A (3 op de 6) → letter N (2 op de 6).
+#   Opties uit het rapport; de goede optie blijft op dezelfde plek (Oef-#459). Check tools/helft_deel_check.py (HELFT, WARN).
+# Z-#750 (les 248): de rad-items (bank-136/137, #7) krijgen visual.nietLiveZonderBeeld (tekening verplicht).
+# Z-#751: bank-125 claudeUitleg '1 op 4 betekent' → '1 op de 4 betekent'.
+Z748 = {'ea6380a4': ('Op 10 kaartjes staan de getallen 1 tot en met 10. Welk deel van de kaartjes heeft een getal groter dan 7?',
+                     ['4 op de 10', '7 op de 10', '3 op de 10'], '3 op de 10', ['3 op de 10'],
+                     [('4 op de 10', 'een-ernaast'), ('7 op de 10', 'andere-deel-genomen')],
+                     'De getallen groter dan 7 zijn 8, 9 en 10. Dat zijn er 3 van de 10 kaartjes. Dat is dus 3 op de 10.'),
+        'a502ea00': ('Van het woord BANAAN maak je 6 kaartjes, voor elke letter één. Welk deel van de kaartjes heeft de letter N?',
+                     ['2 op de 6', '1 op de 6', '4 op de 6'], '2 op de 6', ['2 op de 6', '1 op de 3'],
+                     [('1 op de 6', 'andere-fout'), ('4 op de 6', 'andere-deel-genomen')],   # 'een-ernaast' is in b6/check alleen ±1 (Z-#749); '1 op de 6' is 2 ernaast
+                     'In BANAAN staan 6 letters en daarvan zijn er 2 een N. Dat is dus 2 op de 6.')}
+def _r7(it, slog):
+    c8 = (it['bron'].get('claudeId') or '')[:8]
+    if it.get('doelId') != 'G7-VERH-04': return
+    e = it['extraVelden']
+    if c8 in ('7e1c1390', '573dac2a') and e.get('claudeStrategie') == 'deel vereenvoudigen':
+        it['merge'].setdefault('extraVeldenVoorBesluit', {})['claudeStrategie'] = e['claudeStrategie']
+        e['claudeStrategie'] = 'gunstig van totaal'
+        slog(it, "V-#746: claudeStrategie 'deel vereenvoudigen' → 'gunstig van totaal' (les 246)", 'extraVelden.claudeStrategie', 'deel vereenvoudigen', 'gunstig van totaal')
+    if c8 in Z748 and it['opgave'] != Z748[c8][0]:
+        opg, opties, goed, geldig, sl, uitleg = Z748[c8]
+        _opties(it, slog, 'z748', 'Z-#748 (les 247): deel en rest waren even groot (toevallige treffer bij de verkeerde groep)', opg, opties, goed,
+                [(f, l, None) for f, l in sl], uitleg=uitleg)
+        it['antwoordDetail']['geldigeAntwoorden'] = geldig
+    if c8 in ('573dac2a', '75a6fe75') and not it['visual'].get('nietLiveZonderBeeld'):
+        it['visual']['nietLiveZonderBeeld'] = True
+        slog(it, 'Z-#750 (les 248): rad-item, tekening verplicht → nietLiveZonderBeeld', 'visual.nietLiveZonderBeeld', None, True)
+    if c8 == 'e5f3a034' and (e.get('claudeUitleg') or '').startswith('1 op 4 betekent'):
+        o = e['claudeUitleg']; e['claudeUitleg'] = o.replace('1 op 4 betekent', '1 op de 4 betekent', 1)
+        slog(it, "Z-#751: '1 op 4' → '1 op de 4' (notatie)", 'extraVelden.claudeUitleg', o, e['claudeUitleg'])
+_pas_toe_z744 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_z744(it, slog); _r7(it, slog)

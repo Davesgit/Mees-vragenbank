@@ -2783,5 +2783,179 @@
    }
   ],
   "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6): V-#700 labelregel, V-#701 vraagtekst bij ±getal2 (ook de additieve route), Z-#705 laag 2"
+ },
+ {
+  "tijd": "15:40",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet met het totaal",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+    "tekst": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het deel tegen de rest of tegen zichzelf, niet tegen het totaal",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het andere deel tegen het totaal",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel achter op de",
+    "claudeDenkfout": "getal-overgenomen",
+    "regel": "Claudes sleutel: getal-overgenomen",
+    "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het aantal van het deel staat achter 'op de'",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel verkeerd geteld",
+    "claudeDenkfout": "een-ernaast",
+    "regel": "Claudes sleutel: een-ernaast",
+    "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: totaal goed, deel één ernaast",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet met het totaal",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+    "tekst": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het deel tegen de rest of tegen zichzelf, niet tegen het totaal",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het andere deel tegen het totaal",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel verkeerd geteld",
+    "claudeDenkfout": "een-ernaast",
+    "regel": "Claudes sleutel: een-ernaast",
+    "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: totaal goed, deel één ernaast",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   }
+  ],
+  "waarom": "Ronde 1f (Oefeningen 8 okt; review-verh04-4-7, Z-#749): labelregels alleen met label in de data (['andere-deel-genomen', 'deel-van-geheel-verkeerd', 'een-ernaast']); letterlijke regels 'deel verkeerd geteld (optie)': []"
+ },
+ {
+  "tijd": "15:40",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet met het totaal",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+    "tekst": "Achter 'op de' komt het totaal: alle vakjes van het rad samen. Tel ze allemaal.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het deel tegen de rest of tegen zichzelf, niet tegen het totaal",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel die vakjes.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het andere deel tegen het totaal",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel achter op de",
+    "claudeDenkfout": "getal-overgenomen",
+    "regel": "Claudes sleutel: getal-overgenomen",
+    "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het aantal van het deel staat achter 'op de'",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet met het totaal",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+    "tekst": "Achter 'op de' komt het totaal: alle vakjes van het rad samen. Tel ze allemaal.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het deel tegen de rest of tegen zichzelf, niet tegen het totaal",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel die vakjes.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het andere deel tegen het totaal",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   }
+  ],
+  "waarom": "Ronde 1f (Oefeningen 8 okt; review-verh04-4-7, Z-#749): labelregels alleen met label in de data (['andere-deel-genomen', 'deel-van-geheel-verkeerd']); letterlijke regels 'deel verkeerd geteld (optie)': []"
  }
 ]
