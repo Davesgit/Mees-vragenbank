@@ -587,3 +587,12 @@ Zandbak G5 (build 11:54:17 + alle patches incl. 10d en 11): check_hints 139 klaa
 |---|---|---|
 | Oef-#421/#422/#429 | Gedeelde motor: één minteken ('−', '-', '–') en 'euro'/'€' in letterlijke regels; nieuwe regel 'de deelsom omgedraaid' (G7). Regressie G5: 4845 items, 0 sleutels anders | ✓ geen verschuiving |
 | Oef-#427 | MEET-E06 nrO 26 gen-001 '24 oktober → 18 november' (25 dagen): de begindag 24 was ook antwoord − 1 en viel na #390 op 'andere fout'. Generator #84 vervangt nu een item met begindag = antwoord ± 1 uit een eigen reeks (g5-gen84-v427; de andere 19 items en de eerdere vervangers blijven gelijk), ook zonder begindag op een andere sleutel: gen-001 wordt '23 mei → 13 juni' (21 dagen; sleutels 10, 13, 8, 20, 22). De regel 'fout = getal1' van Oefeningen (patch_batch5, uitgecommentarieerd) zou nog dubbel tellen bij gen-007 '2' (= getal2) en gen-014 '15' (= antwoord − getal2) | ✓ data (build G5) · regel: Oefeningen |
+
+## Na-ronde r13 (8 okt, Leerlijn-besluit R9-4; nog NIET uitgevoerd, pas na het G7-werk; daarna naar Didactiek)
+Bron: `/workspace/leerlijn/rekenen-groep6/BESLUIT_R9-4_R10_NIVEAUS.md` §A. Verandert de goedgekeurde G5-build: eerst melden, niet pushen zonder akkoord.
+
+| # | Wat | Stand |
+|---|---|---|
+| L-R9-4a | G5-GET-E07 speelvolgorde: #9 (nrO 20) direct na #3 (nrO 3); #10 (nrO 21) na #8 (nrO 8) en vóór #5. Weergavenummers blijven bevroren (D-#408): alleen speel-/progressievolgorde | open (na-ronde) |
+| L-R9-4b | Niveau: `naar-002` (3 × 13 = 39) en `naar-026` (6 × 12 = 72) uit #10, en `naar-008` (98 : 7 = 14) uit #9 → basis (bewuste uitzondering op 'alleen omhoog'); de rest blijft toepassen | open (na-ronde) |
+| L-R9-4c | Optioneel (Leerlijn): #3 basis-items met driecijferig deeltal (001, 002, 008, 012, 014, 027, 028) → toepassen | niet gevraagd; bij Didactiek |

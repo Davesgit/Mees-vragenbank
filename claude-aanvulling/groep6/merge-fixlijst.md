@@ -437,3 +437,23 @@ Datapunt Overzicht: `fout_regels.py` van 12:03:59 faalde in `_zelftest543` (KeyE
 | # | Wat | Stand |
 |---|---|---|
 | Oef-#421/#422/#429 | Gedeelde motor: één minteken ('−', '-', '–') en 'euro'/'€' in letterlijke regels; nieuwe regel 'de deelsom omgedraaid' (G7). Regressie G6: 4302 items, 0 sleutels anders | ✓ geen verschuiving |
+
+## Na-ronde r13 (8 okt, na het G7-werk; daarna naar Didactiek). G6 is goedgekeurd: verschuift er iets, dan eerst melden en niet pushen
+
+### Titels en lege somtype-plekken (steering 14:33)
+| # | Wat | Stand |
+|---|---|---|
+| N13-1 | G6-VBN-E02 titel (samengevoegd doel) → «Beelddiagram, cirkeldiagram en lijngrafiek aflezen» | open |
+| N13-2 | G6-MEET-E05 titel → «Kilogram en gram vergelijken en omrekenen» | open |
+| N13-3 | Lege somtype-plekken voor Oefeningen (zelfde aanpak als hm en dl; Oefeningen schrijft items en hints, geen items zonder hun input): beelddiagram «1 plaatje is meer dan 1» en eenvoudig cirkeldiagram in G6-VBN-E02; een dm²-somtype in G6-MEET-E03 | open (wacht op input Oefeningen) |
+
+### Leerlijn-besluit ronde 10 (#382/#394), niveaus per somtype
+Bron: `/workspace/leerlijn/rekenen-groep6/BESLUIT_R9-4_R10_NIVEAUS.md` §B (tabel + Regel M).
+| # | Wat | Stand |
+|---|---|---|
+| L-R10a | 34 somtypes krijgen 3 niveaus volgens het kenmerk in de tabel (basis/toepassen/kritisch uit getallen of `visual.jsRender`; vast contextsjabloon telt niet als context). Omrekenen (MEET-E01/E04/E05): Regel M (basis = grootste maat heel getal ≤ 20, kale vorm; toepassen = > 20, komma of context; kritisch = factorfout of vergelijking) | open (na-ronde) |
+| L-R10b | Kritisch-vorm (generator): bewering met een echte denkfout + «Klopt dat?», 3 opties («Ja, dat klopt» / «Nee, het is [goed]» / «Nee, het is [tweede fout]»), goede antwoord op wisselende plekken, ongeveer de helft fout. Geen ':' in opgaven/opties (delen in woorden). Spreiding: per somtype ≥ 3 items per niveau, ≤ ~60 % op één niveau; huidige items blijven | open (na-ronde; generator nodig) |
+| L-R10c | VERH-E02 #4 (balk) en #3 (taart): alleen basis | open (na-ronde) |
+| L-R10d | De 53 dunne somtypes met één niveau: voorlopig het kenmerk van het grote somtype in hetzelfde doel | open (na-ronde) |
+| L-R10e | `niveauVoorlopig` (hm/dl) vervalt na toepassen | open (na-ronde) |
+| L-R10f | GET-E03 #1 (nrO 1, 550), #5 (nrO 5, 16) en #8 (nrO 8, 8): verhuizing naar park-G7, G7-GET-05 (vereenvoudigen verplicht = G7). **NIET uitvoeren: Dave moet eerst ja zeggen.** Stand nu: alle 574 staan live in de G6-build (12:11:42), status 'gemapt'; #5 heeft `nietLiveZonderBeeld` | wacht op Dave |
