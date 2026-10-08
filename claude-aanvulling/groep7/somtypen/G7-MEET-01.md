@@ -27,7 +27,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 11 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 1100 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
 - **Hint 1 (te schrijven):** Eén kilometer (km) is duizend meter (m). Wordt het getal in kilometer groter of kleiner?
-- **Hint 2 (te schrijven):** Deel door duizend: de komma schuift drie plekken naar links. Staat er geen komma, denk hem dan achter het getal. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul voor. Nullen aan het eind achter de komma vallen weg, en de komma ook als er niets meer achter staat.
+- **Hint 2 (te schrijven):** Deel door duizend: de komma schuift drie plekken naar links. Staat er geen komma, denk hem dan achter het getal. Een punt in een groot getal is geen komma. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul voor. Nullen aan het eind achter de komma vallen weg, en de komma ook als er niets meer achter staat.
 - **Ouderzin:** Je kind rekent meter om naar kilometer: delen door duizend.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `niet omgerekend` (fout = getal1) → Dat is het getal dat je moest omrekenen, nog in meter. Hoeveel kilometer is dat?  [nieuw]
@@ -54,7 +54,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1100 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 110.000 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
 
 - **Hint 1 (te schrijven):** Eén meter (m) is duizend millimeter (mm). Wordt het getal in meter groter of kleiner?
-- **Hint 2 (te schrijven):** Deel door duizend: de komma schuift drie plekken naar links. Staat er geen komma, denk hem dan achter het getal. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul voor. Nullen aan het eind achter de komma vallen weg, en de komma ook als er niets meer achter staat.
+- **Hint 2 (te schrijven):** Deel door duizend: de komma schuift drie plekken naar links. Staat er geen komma, denk hem dan achter het getal. Een punt in een groot getal is geen komma. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul voor. Nullen aan het eind achter de komma vallen weg, en de komma ook als er niets meer achter staat.
 - **Ouderzin:** Je kind rekent millimeter om naar meter: delen door duizend.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `niet omgerekend` (fout = getal1) → Dat is het getal dat je moest omrekenen, nog in millimeter. Hoeveel meter is dat?  [nieuw]

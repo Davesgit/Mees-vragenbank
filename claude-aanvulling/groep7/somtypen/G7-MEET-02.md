@@ -13,7 +13,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “[driehoek-in-rechthoek] Een driehoekig(e) [ding] heeft een basis van # m en een hoogte van # m. Wat is de oppervlakte in m²?” (koppeling: claudeId)
 - Items: **32** · Claude-doelen: M21 (32) · regel: D-DUBBEL-MATEN, D-DRIEHOEK-G7-FIX, D-DRIEHOEK-G7
 - Getallenruimte: 0–1.000 · type: kale
-- Denkfouten (Claude): optellen-ipv-vermenigvuldigen (31), omtrek-oppervlakte-verwisseld (26), verkeerde-bewerking (26), deel-vergeten-bij-splitsen (12)
+- Denkfouten (Claude): optellen-ipv-vermenigvuldigen (32), omtrek-oppervlakte-verwisseld (26), verkeerde-bewerking (26), deel-vergeten-bij-splitsen (12)
 - Verschillende Claude-fout-hints: 6 (meest: “Dat is de oppervlakte van de rechthoek eromheen. Een driehoek is de helft: deel door 2.”)
 - Voorbeelden:
   - `G7-MEET-02-claude-bank-029` (Claude M21, gegenereerd, niveau 1 → basis)
@@ -40,7 +40,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Reken basis keer hoogte en neem daarvan de helft.  [nieuw]
 - Status: hints klaar
 
-## Somtype 2: Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?
+## Somtype 2: Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?
 
 - Sleutel: nrOrigineel **3** · somtypeOrigineel “Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: M24 (8) · regel: G8-M24-samengesteld
@@ -49,12 +49,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 3 (meest: “Dat is één rechthoek. De andere hoort er ook bij.”)
 - Voorbeelden:
   - `G7-MEET-02-claude-bank-terug-001` (Claude M24, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een L-vormig hok bestaat uit een rechthoek van 6 bij 5 meter en een rechthoek van 2 bij 4 meter. Hoeveel m² is het hok?
+    - **Opgave:** Een L-vormige tuin bestaat uit een rechthoek van 6 bij 5 meter en een rechthoek van 2 bij 4 meter. Hoeveel m² is de tuin?
     - **Antwoord:** 38  (controle: n.v.t.)
     - **Fout-hints (Claude):** 30 → Dat is één rechthoek. De andere hoort er ook bij. · 72 → Een L-vorm is geen grote rechthoek. Reken de twee delen apart en tel ze op. · 17 → Oppervlakte is lengte keer breedte, per rechthoek.
     - **Uitleg (Claude):** Knip de figuur in twee rechthoeken. 6 × 5 = 30 m² en 2 × 4 = 8 m². Samen 38 m².
   - `G7-MEET-02-claude-bank-terug-005` (Claude M24, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een L-vormig hok bestaat uit een rechthoek van 7 bij 6 meter en een rechthoek van 2 bij 2 meter. Hoeveel m² is het hok?
+    - **Opgave:** Een L-vormige tuin bestaat uit een rechthoek van 7 bij 6 meter en een rechthoek van 2 bij 2 meter. Hoeveel m² is de tuin?
     - **Antwoord:** 46  (controle: n.v.t.)
     - **Fout-hints (Claude):** 42 → Dat is één rechthoek. De andere hoort er ook bij. · 72 → Een L-vorm is geen grote rechthoek. Reken de twee delen apart en tel ze op. · 17 → Oppervlakte is lengte keer breedte, per rechthoek.
     - **Uitleg (Claude):** Knip de figuur in twee rechthoeken. 7 × 6 = 42 m² en 2 × 2 = 4 m². Samen 46 m².
@@ -67,6 +67,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `één grote rechthoek` (Claudes sleutel: omtrek-oppervlakte-verwisseld) → Dat is te veel. Heb je van de twee stukken één grote rechthoek gemaakt? Het hok is een L.  [Claude, taalfix]
   - `maten opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je alle maten opgeteld? Oppervlakte reken je met keer: lengte keer breedte.  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken elke rechthoek uit en tel de twee uitkomsten op.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 3: Een tuin van # bij # meter heeft een vierkante vijver van # bij # meter. Hoeveel m² gras is er?
@@ -75,18 +76,18 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Items: **7** · Claude-doelen: M24 (7) · regel: G8-M24-samengesteld
 - Getallenruimte: 0–1.000 · type: kale
 - Denkfouten (Claude): deel-vergeten-bij-splitsen (7), omtrek-oppervlakte-verwisseld (7), verkeerde-bewerking (7)
-- Verschillende Claude-fout-hints: 4 (meest: “De vijver is geen gras. Haal die eraf.”)
+- Verschillende Claude-fout-hints: 3 (meest: “De vijver is geen gras. Haal die eraf.”)
 - Voorbeelden:
   - `G7-MEET-02-claude-bank-terug-009` (Claude M24, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een tuin van 6 bij 6 meter heeft een vierkante vijver van 2 bij 2 meter. Hoeveel m² gras is er?
-    - **Antwoord:** 32  (controle: n.v.t.)
+    - **Opgave:** Een tuin van 6 bij 6 meter heeft een vierkante vijver van 3 bij 3 meter. Hoeveel m² gras is er?
+    - **Antwoord:** 27  (controle: n.v.t.)
     - **Fout-hints (Claude):** 36 → De vijver is geen gras. Haal die eraf. · 34 → De vijver is 2 × 2 m², niet 2 m². · 40 → De vijver gaat eraf, niet erbij.
-    - **Uitleg (Claude):** Hele tuin: 6 × 6 = 36 m². Vijver: 2 × 2 = 4 m². Gras: 36 − 4 = 32 m².
+    - **Uitleg (Claude):** Hele tuin: 6 × 6 = 36 m². Vijver: 3 × 3 = 9 m². Gras: 36 − 9 = 27 m².
   - `G7-MEET-02-claude-bank-terug-013` (Claude M24, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een tuin van 9 bij 6 meter heeft een vierkante vijver van 2 bij 2 meter. Hoeveel m² gras is er?
-    - **Antwoord:** 50  (controle: n.v.t.)
+    - **Opgave:** Een tuin van 9 bij 6 meter heeft een vierkante vijver van 5 bij 5 meter. Hoeveel m² gras is er?
+    - **Antwoord:** 29  (controle: n.v.t.)
     - **Fout-hints (Claude):** 54 → De vijver is geen gras. Haal die eraf. · 52 → De vijver is 2 × 2 m², niet 2 m². · 58 → De vijver gaat eraf, niet erbij.
-    - **Uitleg (Claude):** Hele tuin: 9 × 6 = 54 m². Vijver: 2 × 2 = 4 m². Gras: 54 − 4 = 50 m².
+    - **Uitleg (Claude):** Hele tuin: 9 × 6 = 54 m². Vijver: 5 × 5 = 25 m². Gras: 54 − 25 = 29 m².
 
 - **Hint 1 (te schrijven):** Hoeveel m² (vierkante meter) is de hele tuin? En hoeveel is de vijver?
 - **Hint 2 (te schrijven):** Reken de tuin uit: lengte keer breedte. Reken de vijver uit: zijde keer zijde. Haal de vijver van de tuin af.

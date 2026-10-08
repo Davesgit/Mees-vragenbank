@@ -435,13 +435,11 @@
      "tekstSterker": "Schrijf het getal op. Wijs vanaf rechts de cijfers aan: eenheden, tientallen, honderdtallen, duizendtallen, tienduizendtallen. Typ alleen het cijfer waar je dan bent."
     },
     {
-     "bron": "claude-taalfix",
+     "bron": "nieuw",
      "soort": "cijfer ernaast",
-     "claudeDenkfout": "een-ernaast",
-     "regel": "Claudes sleutel: een-ernaast",
+     "regel": "fout = het cijfer op de plek ernaast",
      "tekst": "Staat dat cijfer bij de tienduizendtallen? Tel de plekken van rechts: eenheden, tientallen, honderdtallen, duizendtallen, tienduizendtallen.",
-     "claudeTekst": null,
-     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "waarom": "Motorregel (Oef-#434): de cijfers links en rechts van de gevraagde plaats; vaste tekst zonder getallen",
      "tekstSterker": "Schrijf het getal op en zet onder elk cijfer de naam van zijn plek, van rechts naar links. Welk cijfer staat boven het woord tienduizendtallen?"
     },
     {
@@ -703,7 +701,7 @@
    "nrOrigineel": 2,
    "somtypeOrigineel": "# − # =",
    "hint1": "Zet de getallen onder elkaar, met de komma’s precies onder elkaar.",
-   "hint2": "Heeft een getal geen of minder cijfers achter de komma? Zet er nullen achter. Haal van rechts naar links af: eerst de honderdsten, dan de tienden, dan de hele getallen. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links.",
+   "hint2": "Heeft een getal geen of minder cijfers achter de komma? Zet er nullen achter. Haal van rechts naar links af: eerst de honderdsten, dan de tienden, dan de hele getallen. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de plek ervoor één minder. Is het cijfer op de plek ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.",
    "ouderzin": "Je kind trekt kommagetallen van elkaar af door de komma’s onder elkaar te zetten.",
    "foutHints": [
     {
@@ -712,7 +710,7 @@
      "claudeDenkfout": null,
      "regel": "fout = antwoord ± 0,1",
      "tekst": "Dat is een tiende ernaast. Haal de tienden nog eens af. Moest je bij de honderdsten lenen? Dan is er bij de tienden één minder, anders niet.",
-     "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links."
+     "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de plek ervoor één minder. Is het cijfer op de plek ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links."
     },
     {
      "bron": "nieuw",
@@ -776,7 +774,7 @@
    "nrOrigineel": 3,
    "somtypeOrigineel": "[plek] heeft # [ding], [plek] heeft er #. Hoeveel [ding] heeft [plek]?",
    "hint1": "Hoeveel meer: dat is het verschil tussen de twee getallen. Welke som maak je?",
-   "hint2": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links.",
+   "hint2": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.",
    "ouderzin": "Je kind rekent uit hoeveel meer de een heeft dan de ander, met getallen tot honderdduizend.",
    "foutHints": [
     {
@@ -811,7 +809,7 @@
      "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
-     "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links."
+     "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links."
     },
     {
      "bron": "nieuw",
@@ -847,7 +845,7 @@
    "nrOrigineel": 4,
    "somtypeOrigineel": "het huis heeft # [ding], de klas heeft er #. Hoeveel [ding] heeft het huis?",
    "hint1": "Hoeveel meer: dat is het verschil tussen de twee getallen. Welke som maak je?",
-   "hint2": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links.",
+   "hint2": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.",
    "ouderzin": "Je kind rekent uit hoeveel meer de een heeft dan de ander, met getallen tot honderdduizend.",
    "foutHints": [
     {
@@ -882,7 +880,7 @@
      "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
-     "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links."
+     "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links."
     },
     {
      "bron": "nieuw",
@@ -1515,14 +1513,12 @@
      "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er meer uit dan wat je verdeelt? Dan is je antwoord te groot."
     },
     {
-     "bron": "claude-taalfix",
-     "soort": "komma verschoven",
-     "claudeDenkfout": "komma-verschoven",
-     "regel": "Claudes sleutel: komma-verschoven",
-     "tekst": "Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?",
-     "claudeTekst": null,
-     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
-     "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Zet de komma zo dat je antwoord bij die schatting past."
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Schat eerst: hoe groot is de uitkomst ongeveer?",
+     "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Past je antwoord bij die schatting? Zo niet, reken het opnieuw."
     },
     {
      "bron": "nieuw",
@@ -1807,7 +1803,7 @@
    "somtypeOrigineel": "Een [ding] weegt # gram. Hoeveel gram wegen # [ding]?",
    "hint1": "Wat weegt één? En hoeveel stuks zijn het? Alle stuks samen is een keersom.",
    "hint2": "Bij keer tien schuift de komma één plek naar rechts, bij keer honderd twee plekken. Tel de nullen van het aantal en schuif de komma zoveel plekken. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul bij.",
-   "ouderzin": "Je kind rekent een gewicht keer een rond aantal door de komma te verschuiven, en zet er een nul bij als er geen cijfer meer is.",
+   "ouderzin": "Je kind rekent een gewicht keer tien, honderd of duizend door de komma te verschuiven, en zet er een nul bij als er geen cijfer meer is.",
    "foutHints": [
     {
      "bron": "nieuw",

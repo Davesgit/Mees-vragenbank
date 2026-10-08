@@ -203,6 +203,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind zoekt het cijfer op een plek in een getal tot een miljoen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `het hele getal` (fout = getal1) → Dat is het hele getal. De vraag zoekt één cijfer: het cijfer bij de tienduizendtallen. Welk cijfer is dat?  [nieuw]
-  - `cijfer ernaast` (Claudes sleutel: een-ernaast) → Staat dat cijfer bij de tienduizendtallen? Tel de plekken van rechts: eenheden, tientallen, honderdtallen, duizendtallen, tienduizendtallen.  [Claude, taalfix]
+  - `cijfer ernaast` (fout = het cijfer op de plek ernaast) → Staat dat cijfer bij de tienduizendtallen? Tel de plekken van rechts: eenheden, tientallen, honderdtallen, duizendtallen, tienduizendtallen.  [nieuw]
   - `andere fout` (andere fout) → Tel de plekken van rechts naar links tot je bij de tienduizendtallen bent.  [nieuw]
 - Status: hints klaar

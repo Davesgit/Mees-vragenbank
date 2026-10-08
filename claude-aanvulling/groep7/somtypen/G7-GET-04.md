@@ -211,7 +211,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `één ernaast` (fout = antwoord ± 1) → Dat is één ernaast. Hoe vaak past het getal waardoor je deelt erin?  [nieuw]
   - `rest achter de komma` (Claudes sleutel: kommagetal-als-geheel) → Is dat de rest achter de komma gezet? Wat overblijft, deel je verder.  [Claude, taalfix]
   - `één te veel` (Claudes sleutel: tafelbuur) → Dat is één te veel. Hoe vaak past het getal waardoor je deelt in het hele getal?  [Claude, taalfix]
-  - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?  [Claude, taalfix]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Schat eerst: hoe groot is de uitkomst ongeveer?  [nieuw]
   - `andere fout` (andere fout) → Deel eerst het hele getal en verdeel wat overblijft verder achter de komma.  [nieuw]
 - Status: hints klaar
 
@@ -265,7 +265,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 
 - **Hint 1 (te schrijven):** Wat weegt één? En hoeveel stuks zijn het? Alle stuks samen is een keersom.
 - **Hint 2 (te schrijven):** Bij keer tien schuift de komma één plek naar rechts, bij keer honderd twee plekken. Tel de nullen van het aantal en schuif de komma zoveel plekken. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul bij.
-- **Ouderzin:** Je kind rekent een gewicht keer een rond aantal door de komma te verschuiven, en zet er een nul bij als er geen cijfer meer is.
+- **Ouderzin:** Je kind rekent een gewicht keer tien, honderd of duizend door de komma te verschuiven, en zet er een nul bij als er geen cijfer meer is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `komma een plek te ver` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen van het aantal: zoveel plekken schuift de komma.  [nieuw]
   - `komma de verkeerde kant op` (Claudes sleutel: komma-verschoven) → Is de uitkomst groter of kleiner dan het gewicht van één? Bij keer wordt het meer.  [Claude, taalfix]

@@ -56,7 +56,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 2,51 → Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na. · 3,3 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
 - **Hint 1 (te schrijven):** Zet de getallen onder elkaar, met de komma’s precies onder elkaar.
-- **Hint 2 (te schrijven):** Heeft een getal geen of minder cijfers achter de komma? Zet er nullen achter. Haal van rechts naar links af: eerst de honderdsten, dan de tienden, dan de hele getallen. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links.
+- **Hint 2 (te schrijven):** Heeft een getal geen of minder cijfers achter de komma? Zet er nullen achter. Haal van rechts naar links af: eerst de honderdsten, dan de tienden, dan de hele getallen. Is het bovenste cijfer te klein? Leen dan één van de plek ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de plek ervoor één minder. Is het cijfer op de plek ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.
 - **Ouderzin:** Je kind trekt kommagetallen van elkaar af door de komma’s onder elkaar te zetten.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `een tiende ernaast` (fout = antwoord ± 0,1) → Dat is een tiende ernaast. Haal de tienden nog eens af. Moest je bij de honderdsten lenen? Dan is er bij de tienden één minder, anders niet.  [nieuw]
@@ -87,7 +87,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Schat eerst: 85.000 − 9000 is ongeveer 76.000. Reken dan precies, kolom voor kolom met lenen: 75.777.
 
 - **Hint 1 (te schrijven):** Hoeveel meer: dat is het verschil tussen de twee getallen. Welke som maak je?
-- **Hint 2 (te schrijven):** Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links.
+- **Hint 2 (te schrijven):** Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.
 - **Ouderzin:** Je kind rekent uit hoeveel meer de een heeft dan de ander, met getallen tot honderdduizend.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.  [nieuw]
@@ -118,7 +118,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Schat eerst: 72.000 − 9000 is ongeveer 63.000. Reken dan precies, kolom voor kolom met lenen: 62.874.
 
 - **Hint 1 (te schrijven):** Hoeveel meer: dat is het verschil tussen de twee getallen. Welke som maak je?
-- **Hint 2 (te schrijven):** Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij. Is dat cijfer een nul? Dan wordt het een negen, en leen je verder naar links.
+- **Hint 2 (te schrijven):** Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.
 - **Ouderzin:** Je kind rekent uit hoeveel meer de een heeft dan de ander, met getallen tot honderdduizend.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.  [nieuw]

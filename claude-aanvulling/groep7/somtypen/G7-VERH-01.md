@@ -29,8 +29,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** —
     - **Uitleg (Claude):** 10% van 200 is 20. 50% is 5 keer 20 = 100.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?
+- **Hint 2 (te schrijven):** Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.
+- **Ouderzin:** Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.  [nieuw]
+  - `andere fout` (andere fout) → Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: [balk kleuren] Kleur #% van de balk.
 
@@ -54,8 +59,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1 → Elk stukje is 5%, niet 10%.
     - **Uitleg (Claude):** De hele balk is 100%. Elk stukje is 5%. 10% is 2 stukjes.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.
+- **Hint 2 (te schrijven):** Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?
+- **Ouderzin:** Je kind kleurt een percentage van een balk.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `elk stukje tien procent` (Claudes sleutel (alle, zonder label)) → Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: Bij de schaal # : # [ding] twee getallen. Welk getal hoort bij de [ding]?
 
@@ -73,8 +83,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Het getal 500 → Het getal achter de dubbele punt hoort bij het echte voorwerp. Welk getal blijft er dan over? · Het getal 5 → Lees de schaal precies zoals hij er staat. Er staat geen losse 5 in de schaal.
     - **Uitleg (Claude):** Bij een schaal staat vooraan altijd de maat op de tekening. Achter de dubbele punt staat de echte maat. Dus het getal 1 hoort bij de tekening.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een schaal heeft twee getallen met een dubbele punt (:) ertussen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.
+- **Hint 2 (te schrijven):** Op de tekening is alles kleiner dan echt. Welk getal hoort dan bij de tekening?
+- **Ouderzin:** Je kind leert wat een schaal (zoals op een plattegrond) betekent.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal van het echte voorwerp` (Het getal 500) → Dat getal hoort bij het echte voorwerp. Op de tekening is alles kleiner.  [nieuw]
+  - `getal niet uit de schaal` (Het getal 5) → Dat getal staat niet in de schaal. Kijk naar de twee getallen van de schaal.  [nieuw]
+  - `andere fout` (andere fout) → Kijk naar de twee getallen van de schaal.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: Op een tekening staat schaal # : #. Wat weet je dan over de tekening?
 
@@ -92,8 +108,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** De tekening is 2 keer zo klein → Kijk eens naar de twee getallen van deze schaal. Zijn ze verschillend of gelijk? · De tekening is 100 keer zo klein → Je denkt aan de schaal 1 : 100. Lees nog eens welk getal hier achter de dubbele punt staat.
     - **Uitleg (Claude):** Bij schaal 1 : 1 hoort bij 1 cm op de tekening ook 1 cm in het echt. Er wordt dus niets kleiner of groter gemaakt. De tekening is precies even groot als het echte voorwerp.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een schaal vergelijkt de tekening met het echte voorwerp. Een op tien betekent: één centimeter op de tekening is tien centimeter echt.
+- **Hint 2 (te schrijven):** Kijk naar de twee getallen van deze schaal. Zijn ze gelijk? Hoeveel keer zo groot is het echte voorwerp dan?
+- **Ouderzin:** Je kind leert wat een schaal (zoals op een plattegrond) betekent.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `past bij een andere schaal` (De tekening is 100 keer zo klein) → Dat past bij een schaal van een op honderd. Kijk naar de getallen van deze schaal.  [nieuw]
+  - `past bij een andere schaal (twee)` (De tekening is 2 keer zo klein) → Dat past bij een schaal van een op twee. Kijk naar de getallen van deze schaal.  [nieuw]
+  - `andere fout` (andere fout) → Kijk naar de twee getallen van deze schaal.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 5: Op een tekening van een huis staat schaal # : #. Wat betekent dat?
 
@@ -111,8 +133,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1 cm op de tekening is 10 cm echt → Kijk nog eens goed naar het tweede getal van de schaal. Staat er 10 of staat er meer? · 1 cm op de tekening is 100 m echt → Bij schaal hoort links en rechts dezelfde eenheid. Begin je met cm, dan blijf je bij cm.
     - **Uitleg (Claude):** Bij schaal 1 : 100 hoort bij 1 stukje op de tekening 100 van dezelfde stukjes in het echt. Meet je in cm, dan is 1 cm op papier 100 cm in het echt. De tekening is dus 100 keer kleiner.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een schaal vergelijkt de tekening met het echte voorwerp. Een op tien betekent: één centimeter op de tekening is tien centimeter echt.
+- **Hint 2 (te schrijven):** Bij een schaal horen beide getallen bij dezelfde maat, bijvoorbeeld centimeter. Welk getal hoort bij het echte huis?
+- **Ouderzin:** Je kind leert wat een schaal (zoals op een plattegrond) betekent.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `past bij een andere schaal` (1 cm op de tekening is 10 cm echt) → Dat past bij een schaal van een op tien. Kijk welk getal in deze schaal staat.  [nieuw]
+  - `andere maat` (1 cm op de tekening is 100 m echt) → Kijk naar de maat. Bij een schaal horen beide getallen bij dezelfde maat: centimeter op de tekening is centimeter echt.  [nieuw]
+  - `andere fout` (andere fout) → Kijk welk getal in de schaal staat, en welke maat erbij hoort.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 6: Waarom gebruik je een schaal als je een plattegrond van je huis tekent?
 
@@ -130,8 +158,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Omdat het huis dan echt kleiner wordt → Een tekening verandert niets aan het echte huis. Denk aan wat er op het papier past. · Omdat je dan niet hoeft te meten → Voor een plattegrond op schaal moet je de echte maten juist wel weten.
     - **Uitleg (Claude):** Een huis is veel te groot voor een blaadje papier. Met een schaal maak je alle maten net zoveel kleiner. Zo blijft de tekening toch kloppen.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Wat verandert er door een schaal: het echte huis, of de tekening?
+- **Hint 2 (te schrijven):** Met een schaal teken je alles evenveel keer kleiner. Het echte huis blijft zoals het is. Waarom maak je de tekening kleiner?
+- **Ouderzin:** Je kind leert wat een schaal (zoals op een plattegrond) betekent.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `huis wordt kleiner` (Omdat het huis dan echt kleiner wordt) → Het echte huis blijft even groot. Alleen de tekening is kleiner.  [nieuw]
+  - `niet meten` (Omdat je dan niet hoeft te meten) → Je meet juist wel: je meet het huis, en rekent de maten om voor de tekening.  [nieuw]
+  - `andere fout` (andere fout) → Denk aan het echte huis en aan het papier.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 7: Welke schrijfwijze is een schaal?
 
@@ -149,5 +183,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1 + 25 → Bij een schaal staat er geen plusteken tussen de getallen. · 1 × 25 → Bij een schaal staat er een ander teken tussen de twee getallen dan een maalteken.
     - **Uitleg (Claude):** Een schaal schrijf je met een dubbele punt tussen twee getallen. Vooraan staat de maat op de tekening, achteraan de echte maat. Daarom is 1 : 25 de schaal.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een schaal is geen som: je rekent er niets mee uit. Welk teken past daarbij?
+- **Hint 2 (te schrijven):** Een schaal schrijf je met een dubbele punt (:) tussen de twee getallen. Welke schrijfwijze heeft dat teken?
+- **Ouderzin:** Je kind leert wat een schaal (zoals op een plattegrond) betekent.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `keersom` (1 × 25) → Dat is een keersom. Een schaal is geen som.  [nieuw]
+  - `plussom` (1 + 25) → Dat is een plussom. Een schaal is geen som.  [nieuw]
+  - `andere fout` (andere fout) → Een schaal is geen som.  [nieuw]
+- Status: hints klaar

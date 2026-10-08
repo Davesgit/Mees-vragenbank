@@ -66,7 +66,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5 → Procent is per honderd: de komma schuift twee plekken naar links, niet één. · 50 → 50% is 50 van de 100. Als kommagetal deel je door 100.
     - **Uitleg (Claude):** Procent is per honderd: 50 : 100 = 0,50.
   - `G7-VERH-04-claude-bank-002` (Claude B13, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** 50% van de poesjes is kapot. Schrijf dat als kommagetal.
+    - **Opgave:** 50% van de lampjes is kapot. Schrijf dat als kommagetal.
     - **Antwoord:** 0,5  (controle: ok)
     - **Fout-hints (Claude):** 5 → Procent is per honderd: de komma schuift twee plekken naar links, niet één. · 50 → 50% is 50 van de 100. Als kommagetal deel je door 100.
     - **Uitleg (Claude):** Procent is per honderd: 50 : 100 = 0,50.

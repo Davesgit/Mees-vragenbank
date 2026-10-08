@@ -25,8 +25,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 75  (controle: ok)
     - **Fout-hints (Claude):** 81 → Dat is te veel. Tel in stukken: de dagen tot het eind van de eerste maand, de hele maanden ertussen, en de dagen in de laatste maand. · 76 → Bijna! Dat is één dag te veel. De dag waarop je begint, tel je niet mee. Kijk ook hoeveel dagen elke maand heeft. · 74 → Bijna! Dat is één dag te weinig. Kijk hoeveel dagen elke maand heeft: dertig of eenendertig? Tel tot en met de laatste dag.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Begin bij de maand waarin je start. Hoeveel dagen heeft die maand: dertig of eenendertig? Tel de dagen tot het eind van die maand.
+- **Hint 2 (te schrijven):** De begindag tel je niet mee. Tel daarna de hele maanden ertussen erbij, als die er zijn. Tel tot slot de dagen in de maand van de einddag erbij, tot en met die dag.
+- **Ouderzin:** Je kind telt hoeveel dagen het is van de ene datum tot de andere, over een paar maanden heen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `hele beginmaand geteld` (fout = antwoord + getal1) → Dat is te veel. Tel in de maand waarin je begint alleen de dagen na de begindag.  [nieuw]
+  - `maand van de einddag vergeten` (fout = antwoord - getal2) → Dat is te weinig. Tel je de dagen in de maand van de einddag ook mee?  [nieuw]
+  - `twee dagen te weinig` (fout = antwoord - 2) → Dat is twee dagen te weinig. Kijk bij elke maand: heeft hij dertig of eenendertig dagen?  [nieuw]
+  - `één dag ernaast` (fout = antwoord ± 1) → Je zit er één dag naast. Kijk bij elke maand: dertig of eenendertig dagen? De begindag tel je niet mee, de einddag wel.  [nieuw]
+  - `dag uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel dagen het duurt.  [nieuw]
+  - `andere fout` (andere fout) → Tel de dagen tot het eind van de maand waarin je begint, de hele maanden ertussen, en de dagen in de maand van de einddag.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: Het is −# graden. Het wordt # graden warmer. Hoe warm is het dan?
 
@@ -45,8 +54,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 8  (controle: ok)
     - **Fout-hints (Claude):** −8 → Teken een getallenlijn met nul in het midden. Waar sta je, waar ga je heen? · −20 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een min (−) voor een getal betekent: zoveel graden onder nul. Het wordt warmer, dus je telt omhoog.
+- **Hint 2 (te schrijven):** Tel eerst omhoog tot nul: dat zijn evenveel graden als het onder nul was. Hoeveel graden moet je dan nog verder? Zoveel graden boven nul wordt het.
+- **Ouderzin:** Je kind rekent met temperaturen onder nul: het wordt een aantal graden warmer, hoe warm wordt het dan?
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `onder nul gebleven` (Claudes sleutel: teken-vergeten) → Dat is onder nul. Het wordt zoveel warmer dat je boven nul uitkomt: typ dan geen min.  [Claude, taalfix]
+  - `kouder in plaats van warmer` (Claudes sleutel: verkeerde-bewerking) → Dat is nog kouder dan het was. Het wordt warmer: de temperatuur gaat omhoog.  [Claude, taalfix]
+  - `één graad ernaast` (fout = antwoord ± 1) → Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt de temperatuur als het warmer is geworden.  [nieuw]
+  - `andere fout` (andere fout) → Tel omhoog tot nul, en dan verder boven nul.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: Het is −# graden. Later is het # graden. Hoeveel graden is het warmer geworden?
 
@@ -65,8 +82,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 7  (controle: n.v.t.)
     - **Fout-hints (Claude):** −5 → Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan. · 6 → Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een min (−) voor een getal betekent: zoveel graden onder nul. Hoeveel stappen zijn het van de koude temperatuur naar de warme?
+- **Hint 2 (te schrijven):** Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op.
+- **Ouderzin:** Je kind rekent uit hoeveel graden het warmer is geworden, van onder nul naar boven nul.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `met een min` (Claudes sleutel: teken-vergeten) → Hoeveel graden het warmer is geworden, is een aantal graden. Dat typ je zonder min.  [Claude, taalfix]
+  - `de nieuwe temperatuur` (fout = getal2) → Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.  [nieuw]
+  - `verschil van de getallen` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.  [nieuw]
+  - `één graad ernaast` (fout = antwoord ± 1) → Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.  [nieuw]
+  - `andere fout` (andere fout) → Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: Het is # graden in [plek]. 's Nachts daalt de temperatuur # graden. Hoeveel graden is het dan? (Typ een min voor een getal onder nul, bijvoorbeeld −#.)
 
@@ -87,8 +113,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 7 → Je komt onder nul: het antwoord heeft een min ervoor. · −8 → Van 2 naar 0 is 2 graden, dan nog 7.
     - **Uitleg (Claude):** Van 2 naar 0 is 2 graden. Dan nog 7 graden verder onder nul: −7.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een min (−) voor een getal betekent: zoveel graden onder nul. De temperatuur daalt, dus je telt omlaag.
+- **Hint 2 (te schrijven):** Tel eerst omlaag tot nul: dat zijn evenveel graden als het boven nul was. Hoeveel graden moet je dan nog verder omlaag? Zoveel graden onder nul wordt het: typ een min voor dat getal.
+- **Ouderzin:** Je kind rekent uit hoe koud het wordt als de temperatuur onder nul zakt.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `min vergeten` (fout = getal1 - getal2 of getal2 - getal1) → Je komt onder nul uit. Typ dan een min voor het getal.  [nieuw]
+  - `één graad te koud` (Claudes sleutel: een-ernaast) → Dat is één graad te koud. Tel eerst de stappen tot nul. Ook van nul naar min één is een stap.  [Claude, taalfix]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt de temperatuur nadat hij is gedaald.  [nieuw]
+  - `andere fout` (andere fout) → Tel omlaag tot nul, en dan verder onder nul.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 5: 's Nachts is het in [plek] −# graden. Overdag werd het # graden. Hoeveel graden is het warmer geworden?
 
@@ -109,8 +142,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 0 → Onder nul telt ook mee. Van onder nul naar boven nul is verder dan je denkt. Ga via nul. · 4 → 4 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf −4. · 9 → Tel de stappen naar nul en de stappen vanaf nul apart, en tel ze dan op.
     - **Uitleg (Claude):** Ga via nul. Van −4 naar 0 is 4 graden. Van 0 naar 4 is 4 graden. Samen 4 + 4 = 8 graden.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een min (−) voor een getal betekent: zoveel graden onder nul. Hoeveel stappen zijn het van de koude temperatuur naar de warme?
+- **Hint 2 (te schrijven):** Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op.
+- **Ouderzin:** Je kind rekent uit hoeveel graden het warmer is geworden, van onder nul naar boven nul.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `de nieuwe temperatuur` (fout = getal2) → Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.  [nieuw]
+  - `verschil van de getallen` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.  [nieuw]
+  - `één graad ernaast` (fout = antwoord ± 1) → Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.  [nieuw]
+  - `andere fout` (andere fout) → Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 6: 's Ochtends is het in [plek] −# graden. 's Middags is het # graden. Hoeveel graden is het warmer geworden?
 
@@ -131,8 +172,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** −1 → Het begint onder nul. Tel eerst tot 0 (3 graden) en dan verder tot 2. · 1 → Je hebt de min bij het begingetal genegeerd. Onder nul telt ook mee.
     - **Uitleg (Claude):** Van −3 naar 0 is 3 graden. Van 0 naar 2 is 2 graden. Samen 3 + 2 = 5 graden.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een min (−) voor een getal betekent: zoveel graden onder nul. Hoeveel stappen zijn het van de koude temperatuur naar de warme?
+- **Hint 2 (te schrijven):** Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op.
+- **Ouderzin:** Je kind rekent uit hoeveel graden het warmer is geworden, van onder nul naar boven nul.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `de nieuwe temperatuur` (fout = getal2) → Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.  [nieuw]
+  - `verschil van de getallen` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.  [nieuw]
+  - `onder nul` (Claudes sleutel: teken-vergeten) → Dat is onder nul. Hoeveel graden het warmer is geworden, typ je zonder min.  [Claude, taalfix]
+  - `één graad ernaast` (fout = antwoord ± 1) → Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.  [nieuw]
+  - `andere fout` (andere fout) → Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 7: 's Nachts was het bij [plek] −# graden. Overdag werd het # graden. Hoeveel graden is het warmer geworden?
 
@@ -153,5 +203,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5 → Onder nul telt ook mee. Van onder nul naar boven nul is verder dan je denkt. Ga via nul. · 8 → 8 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf −3. · 12 → Tel de stappen naar nul en de stappen vanaf nul apart, en tel ze dan op.
     - **Uitleg (Claude):** Ga via nul. Van −3 naar 0 is 3 graden. Van 0 naar 8 is 8 graden. Samen 3 + 8 = 11 graden.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een min (−) voor een getal betekent: zoveel graden onder nul. Hoeveel stappen zijn het van de koude temperatuur naar de warme?
+- **Hint 2 (te schrijven):** Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op.
+- **Ouderzin:** Je kind rekent uit hoeveel graden het warmer is geworden, van onder nul naar boven nul.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `de nieuwe temperatuur` (fout = getal2) → Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.  [nieuw]
+  - `verschil van de getallen` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.  [nieuw]
+  - `één graad ernaast` (fout = antwoord ± 1) → Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.  [nieuw]
+  - `andere fout` (andere fout) → Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.  [nieuw]
+- Status: hints klaar

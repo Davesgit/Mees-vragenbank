@@ -219,9 +219,9 @@ def pas_toe(it, slog):
 # ---- Oef-#443 (data, les 184; steering 13:08): MEET-03 #9/#10 «Een bak in het bos/nest/moeras …» en «Een doos voor poesjes/sterren …» passen
 # niet bij inhoud. #9 (m³): een bak die zo groot kan zijn, naar de hoogte (≤ 1 m zandbak, ≤ 2 m aquarium, hoger container); een tweede item met
 # dezelfde getallen krijgt de tweede vorm (geen dubbele vraag). #10 (cm³): sterren → knikkers, poesjes → blokjes. De kop blijft 'Een bak is …'.
-V443_BAK = [(1, ('Een zandbak', 'Een vijver in het park')), (2, ('Een aquarium in de dierentuin', 'Een waterbak op de kinderboerderij')),
+V443_BAK = [(1, ('Een zandbak', 'Een vijver in het park')), (2, ('Een aquarium in de dierentuin', 'Een vijver in het park')),      # Z-#637: geen waterbak van 30 m³
             (99, ('Een container', 'Een opslagbak in de schuur'))]
-V443_DOOS = {'sterren': 'knikkers', 'poesjes': 'blokjes'}
+V443_DOOS = {'sterren': 'knikkers', 'poesjes': 'blokjes', 'truien': 'kralen', 'eieren': 'krijtjes'}      # + V-#631 (review batch 4): trui en ei passen niet
 _V443_GEZIEN = set()
 def _v443(it, slog):
     o = it.get('opgave') or ''
@@ -231,9 +231,10 @@ def _v443(it, slog):
         rest = m.group(1); nieuw = f'{vormen[0]} {rest}' if (vormen[0], rest) not in _V443_GEZIEN else f'{vormen[1]} {rest}'
         _V443_GEZIEN.add((nieuw.split(' is ')[0], rest))
     else:
-        m = re.match(r'^Een doos voor (sterren|poesjes) (is .* cm hoog\. Hoeveel cm³ past erin\?)$', o)
+        m = re.match(r'^Een doos voor (sterren|poesjes|truien|eieren) (is .* cm hoog\. Hoeveel cm³ past erin\?)$', o)
         if not m: return
         nieuw = f'Een doos voor {V443_DOOS[m.group(1)]} {m.group(2)}'
+    if nieuw.startswith('Een vijver'): nieuw = re.sub(r' m hoog\. Hoeveel m³ gaat erin\?$', ' m diep. Hoeveel m³ water gaat erin?', nieuw)      # Z-#637
     it['opgave'] = nieuw; it['extraVelden']['claudeThema'] = None
     it['merge']['oef443'] = {'opgaveOud': o, 'reden': 'Oef-#443: context past bij inhoud (les 184)'}
     slog(it, 'G7-Oef-#443: logische context bij inhoud (aquarium, zandbak, container, doos voor knikkers)', 'opgave', o, nieuw)
@@ -252,6 +253,143 @@ def _v440(it, slog):
         if veld in e: e[veld] = lijst
     it['merge']['oef440'] = {'sleutelsOud': oud}
     slog(it, "G7-Oef-#440: Claude-sleutel 'n,0' → het hele getal", 'claudeSleutels', oud, [d.get('fout') for d in e.get('claudeDenkfouten') or []])
+
+# ---- Review batch 4 Didactiek (build 13:13:00; opdracht 13:17) -----------------------------------------------------------------------------
+from fractions import Fraction as _Fr
+import json as _json, os as _os, random as _random, hashlib as _hashlib
+def _zet(it, slog, code, reden, opgave, antwoord=None, denk=None, kale=None, uitleg=None, jr=None):
+    """Zet opgave (en antwoord, Claude-sleutels als [(fout, denkfout, uitleg)], claudeKaleSom/claudeUitleg, visual.jsRender-velden) en logt het."""
+    oud = {'opgave': it['opgave'], 'antwoord': it['antwoord'], 'sleutels': [d.get('fout') for d in it['extraVelden'].get('claudeDenkfouten') or []]}
+    it['opgave'] = opgave
+    if antwoord is not None:
+        it['antwoord'] = antwoord
+        if isinstance(it.get('antwoordDetail'), dict) and 'accept' in it['antwoordDetail']: it['antwoordDetail']['accept'] = [antwoord]
+    e = it['extraVelden']
+    if denk is not None:
+        e['claudeDenkfouten'] = [{'fout': f, 'denkfout': d} for f, d, u in denk]
+        e['claudeFoutHints'] = [{'stap': None, 'fout': f, 'uitleg': u} for f, d, u in denk]
+        it['foutHints'] = []
+    if kale is not None: e['claudeKaleSom'] = kale
+    if uitleg is not None: e['claudeUitleg'] = uitleg
+    if jr: it['visual']['jsRender'].update(jr)
+    it['merge'][code] = dict(oud, reden=reden)
+    slog(it, f'G7-{code}: {reden}', 'opgave', oud['opgave'], opgave)
+
+# Z-#631 (MEET-02 nr 3, vijver): geen vijver van 2 × 2 (zijde + zijde = zijde × zijde); 3 × 3 of 5 × 5, niet 4 × 4.
+Z631 = {'1ad67d67-b8f0-46d9-aed9-9a80e703235c': (6, 6, 3), '7bfbbf0b-9738-4339-ad9e-45d232aabcca': (12, 6, 5),
+        '8c540a3d-62e4-418b-996b-3d1dd961cfcb': (9, 7, 3), '9d7f6cb3-0746-4dad-8d5e-a8f863604a8d': (9, 6, 5)}
+def _z631(it, slog):
+    if it['bron'].get('claudeId') not in Z631: return
+    l, b, z = Z631[it['bron']['claudeId']]; t = l * b; v = z * z; a = t - v
+    assert z + z != v and a > 0 and a not in (t, t - z, t + v)
+    _zet(it, slog, 'z631', 'Z-#631: vijver van 2 × 2 → %d × %d (review batch 4)' % (z, z),
+         f'Een tuin van {l} bij {b} meter heeft een vierkante vijver van {z} bij {z} meter. Hoeveel m² gras is er?', str(a),
+         [(str(t), 'deel-vergeten-bij-splitsen', 'De vijver is geen gras. Haal die eraf.'),
+          (str(t - z), 'omtrek-oppervlakte-verwisseld', f'De vijver is {z} × {z} m², niet {z} m².'),
+          (str(t + v), 'verkeerde-bewerking', 'De vijver gaat eraf, niet erbij.')],
+         f'{l} × {b} − {z} × {z}', f'Hele tuin: {l} × {b} = {t} m².\nVijver: {z} × {z} = {v} m².\nGras: {t} − {v} = {a} m².')
+
+# Z-#632 (MEET-02 nr 1, driehoek): 6 × 3 (basis + hoogte = 9 = het antwoord) → 6 × 9; 4 × 3 ('twee erbij' 14 = omtrek) → 4 × 6.
+# (Didactiek noemde 6 × 5 en 3 × 6: 6 × 5 is 014 met basis en hoogte omgedraaid, en bij 3 × 6 is basis + hoogte = 9 = het antwoord.)
+Z632 = {'2f4a9a88-9e60-463a-9b20-dd611e43370e': (6, 9), '0956141f-77ae-4de4-bae3-e6b733342af1': (4, 6)}
+def _z632(it, slog):
+    if it['bron'].get('claudeId') not in Z632: return
+    bs, h = Z632[it['bron']['claudeId']]; r = bs * h; a = r // 2
+    assert r % 2 == 0 and bs + h != a and r + 2 != 2 * (bs + h)
+    o = re.sub(r'basis van \d+ m en een hoogte van \d+ m', f'basis van {bs} m en een hoogte van {h} m', it['opgave'])
+    _zet(it, slog, 'z632', f'Z-#632: driehoek {bs} × {h} (geen toevallige treffer, review batch 4)', o, str(a),
+         [(str(r), 'omtrek-oppervlakte-verwisseld', 'Dat is de oppervlakte van de rechthoek eromheen. Een driehoek is de helft: deel door 2.'),
+          (str(bs + h), 'optellen-ipv-vermenigvuldigen', 'Oppervlakte is vermenigvuldigen: basis × hoogte, en dan delen door 2.'),
+          (str(r + 2), 'verkeerde-bewerking', 'Delen door 2, niet optellen.')],
+         f'{bs} × {h} : 2', f'Oppervlakte driehoek = basis × hoogte : 2 = {bs} × {h} : 2 = {r} : 2 = {a} m².', {'basis': bs, 'hoogte': h})
+
+# Z-#633 (MEET-03 nr 1): 30 cm³ op een bodem van 2 × 3 (lengte + breedte = 5 = de hoogte) → 78 / 84 cm³ (hoogte 13 / 14).
+# Geen treffer met l + b, l × b, l of b, ook niet ± 1.
+Z633 = {'f12b64a0-579a-490d-a491-025a91f1b573': (2, 3, 13), 'c772577a-643a-4743-953b-3b7044d90e49': (3, 2, 14)}
+def _z633(it, slog):
+    if it['bron'].get('claudeId') not in Z633: return
+    l, b, h = Z633[it['bron']['claudeId']]; v = l * b * h
+    assert not ({l + b, l * b, l, b} & {h - 1, h, h + 1})
+    _zet(it, slog, 'z633', f'Z-#633: {v} cm³ op {l} × {b} (hoogte {h}, review batch 4)',
+         f'Een balk heeft een inhoud van {v} cm³. De bodem is {l} bij {b} cm. Hoe hoog is de balk in cm?', str(h),
+         [(str(l + b), 'optellen-ipv-vermenigvuldigen', 'De bodem is lengte keer breedte, niet plus.'),
+          (str(h + 1), 'een-ernaast', f'Controleer: {l} × {b} × jouw antwoord moet {v} zijn.')],
+         f'{v} : ({l} × {b})', f'Bodem: {l} × {b} = {l * b} cm².\n{v} : {l * b} = {h}.\nDe balk is {h} cm hoog.')
+
+# Z-#635 (MEET-02 nr 2): een L-vormig hok van 31–84 m² → een L-vormige tuin.
+def _z635(it, slog):
+    o = it.get('opgave') or ''
+    if not o.startswith('Een L-vormig hok bestaat uit'): return
+    n = o.replace('Een L-vormig hok bestaat uit', 'Een L-vormige tuin bestaat uit').replace('Hoeveel m² is het hok?', 'Hoeveel m² is de tuin?')
+    assert n != o and 'hok' not in n
+    _zet(it, slog, 'z635', 'Z-#635: L-vormig hok → L-vormige tuin (review batch 4)', n)
+
+# Z-#636 (GET-05 nr 7): botten, noten en sterren zijn niet blauw → kralen, knikkers, ballonnen.
+Z636 = {'0a74a14b-7c5a-4dc7-9cfc-0d1c551b1e14': ('botten', 'kralen'), '569b7672-9dc8-4a7d-a71b-9e3c75204d22': ('botten', 'knikkers'),
+        'a873e473-4743-4fc8-a906-d310968de19c': ('noten', 'ballonnen'), 'ffe61033-c48b-43c2-bfd6-f5e923e033fd': ('sterren', 'kralen')}
+def _z636(it, slog):
+    if it['bron'].get('claudeId') not in Z636: return
+    a, b = Z636[it['bron']['claudeId']]; assert f' van de {a} is blauw' in it['opgave'], it['opgave']
+    it['extraVelden']['claudeThema'] = None
+    _zet(it, slog, 'z636', f'Z-#636: {a} → {b} (review batch 4)', it['opgave'].replace(f' van de {a} is', f' van de {b} is'))
+
+# VERH-04 nrO 3 (steering 13:17): «50% van de poesjes is kapot» / «75% van de stappen is kapot» → lampjes / ballonnen. Antwoord blijft (50 : 100 = 0,5; 75 : 100 = 0,75).
+V04K = {'34723c79-a658-468a-a1b1-54be025835d2': ('poesjes', 'lampjes'), 'e778d3b5-9e6c-474b-a2ad-f318366a6501': ('stappen', 'ballonnen')}
+def _v04k(it, slog):
+    if it['bron'].get('claudeId') not in V04K: return
+    a, b = V04K[it['bron']['claudeId']]; assert f'van de {a} is kapot' in it['opgave'], it['opgave']
+    p = int(re.match(r'(\d+)%', it['opgave']).group(1)); assert _Fr(it['antwoord'].replace(',', '.')) == _Fr(p, 100)
+    it['extraVelden']['claudeThema'] = None
+    _zet(it, slog, 'kapot', f'VERH-04 nrO 3: {a} → {b} (logische context, steering 13:17)', it['opgave'].replace(f'van de {a} is', f'van de {b} is'))
+
+# Z-#630 (GET-05 nr 1/2 = nrO 6/7, grootst/kleinst): in alle 318 items was het antwoord de breuk met de kleinste (grootst) of grootste
+# (kleinst) noemer. Elk derde item (op id, bevroren/z630_ids.json, 105 items) wordt nieuw: gelijke tellers (daar klopt de noemer-regel)
+# en items waar de noemer-truc het foute antwoord geeft (grootst: de breuk met de grootste noemer is het grootst; kleinst: die met de
+# kleinste noemer is het kleinst); een derde gelijke tellers, twee derde noemer-truc fout. Zelfde noemerbereik als het oude item; echte breuken, geen gelijke waarden of noemers, verschil ≥ 1/24.
+_Z630 = _json.load(open(_os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'bevroren', 'z630_ids.json')))['items']
+_Z630_GEZIEN = set()
+def _z630_maak(cid, grootst, soort, nmax):
+    rnd = _random.Random(int(_hashlib.md5(cid.encode()).hexdigest()[:8], 16))
+    for _ in range(5000):
+        ns = sorted(rnd.sample(range(3, nmax + 1), 3))
+        if soort == 'gelijke tellers':
+            t = rnd.randint(1, ns[0] - 1); fr = [(t, n) for n in ns]
+        else:
+            fr = [(rnd.randint(1, n - 1), n) for n in ns]
+        w = [_Fr(a, b) for a, b in fr]
+        if len(set(w)) < 3 or any(_Fr(a, b).denominator != b for a, b in fr if soort != 'gelijke tellers'): continue
+        if min(abs(x - y) for x in w for y in w if x != y) < _Fr(1, 24): continue
+        doel = max(w) if grootst else min(w); i = w.index(doel)
+        if soort == 'gelijke tellers': ok = i == (0 if grootst else 2)
+        else: ok = i == (2 if grootst else 0) and fr[1][0] != fr[i][0]
+        if not ok: continue
+        rnd.shuffle(fr)
+        o = f"Welke breuk is het {'grootst' if grootst else 'kleinst'}? Kies uit {fr[0][0]}/{fr[0][1]}, {fr[1][0]}/{fr[1][1]} of {fr[2][0]}/{fr[2][1]}."
+        if o in _Z630_GEZIEN: continue
+        _Z630_GEZIEN.add(o); return o, f'{doel.numerator}/{doel.denominator}' if (doel.numerator, doel.denominator) in fr else None, fr
+    raise AssertionError(('Z-#630 geen item', cid))
+def _z630(it, slog):
+    spec = _Z630.get(it['bron'].get('claudeId'))
+    if not spec: return
+    m = re.match(r'^Welke breuk is het (grootst|kleinst)\? Kies uit (\d+)/(\d+), (\d+)/(\d+) of (\d+)/(\d+)\.$', it['opgave'])
+    assert m and m.group(1) == spec['vraag'], (it['id'], it['opgave'])
+    grootst = spec['vraag'] == 'grootst'; nmax = max(int(m.group(k)) for k in (3, 5, 7))
+    o, ans, fr = _z630_maak(it['bron']['claudeId'], grootst, spec['type'], nmax)
+    w = {f'{a}/{b}': _Fr(a, b) for a, b in fr}
+    ans = max(w, key=w.get) if grootst else min(w, key=w.get)      # het antwoord zoals het in de vraag staat (nagerekend)
+    gelijk = spec['type'] == 'gelijke tellers'
+    if gelijk:
+        u = 'De tellers zijn gelijk. Hoe groter de noemer, hoe kleiner de stukken.'; dk = 'grotere-noemer-is-groter'
+    else:
+        u = 'Kijk niet alleen naar de noemer, maar ook naar de teller. Vergelijk met een half, of maak de noemers gelijk.'; dk = 'alleen-noemer-vergeleken'
+    _zet(it, slog, 'z630', f"Z-#630: {spec['type']} (review batch 4)", o, ans, [(k, dk, u) for k in w if k != ans])
+    it['merge']['z630']['soort'] = spec['type']
+
 _pas_toe_v608 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_v608(it, slog); _v443(it, slog); _v440(it, slog)
+    _z630(it, slog); _z631(it, slog); _z632(it, slog); _z633(it, slog); _z635(it, slog); _z636(it, slog); _v04k(it, slog)
+def pas_toe_av8(it, slog):
+    """Review batch 4 voor de aanvulling uit G8 (MEET-02 'claude-bank-terug-…', AV8.laad na de gewone pas_toe): Z-#631 en Z-#635, vóór de kop."""
+    if 'z631' not in it['merge']: _z631(it, slog)
+    if 'z635' not in it['merge']: _z635(it, slog)

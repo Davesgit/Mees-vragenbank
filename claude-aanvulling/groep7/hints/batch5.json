@@ -1,0 +1,1969 @@
+{
+ "batch": "batch5",
+ "geschreven": "2026-10-08",
+ "uitleg": "Hints per somtype (G7-merge, batch 5 = MEET-04 temperatuur en dagen (7), VBN-04 staafdiagram maken (4), VERH-01 procent op een balk en schaal (7), VERH-02 procenten (7)). Formaat als hints/batch1.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per sleutel een motorregel, of Claudes sleutel (label) met een vaste tekst, laag 1 'tekst' en laag 2 'tekstSterker'; 'andere fout' als laatste.",
+ "somtypen": [
+  {
+   "doel": "G7-MEET-04",
+   "nr": 2,
+   "somtype": "Het is −# graden. Het wordt # graden warmer. Hoe warm is het dan?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Het is −# graden. Het wordt # graden warmer. Hoe warm is het dan?",
+   "hint1": "Een min (−) voor een getal betekent: zoveel graden onder nul. Het wordt warmer, dus je telt omhoog.",
+   "hint2": "Tel eerst omhoog tot nul: dat zijn evenveel graden als het onder nul was. Hoeveel graden moet je dan nog verder? Zoveel graden boven nul wordt het.",
+   "ouderzin": "Je kind rekent met temperaturen onder nul: het wordt een aantal graden warmer, hoe warm wordt het dan?",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "onder nul gebleven",
+     "claudeDenkfout": "teken-vergeten",
+     "regel": "Claudes sleutel: teken-vergeten",
+     "tekst": "Dat is onder nul. Het wordt zoveel warmer dat je boven nul uitkomt: typ dan geen min.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tel eerst omhoog tot nul: dat zijn evenveel graden als het onder nul was. Hoeveel graden moet je dan nog verder? Zoveel graden boven nul wordt het."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "kouder in plaats van warmer",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is nog kouder dan het was. Het wordt warmer: de temperatuur gaat omhoog.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tel eerst omhoog tot nul: dat zijn evenveel graden als het onder nul was. Hoeveel graden moet je dan nog verder? Zoveel graden boven nul wordt het."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één graad ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.",
+     "tekstSterker": "Van min één naar nul is één stap, en van nul naar één ook. Tel elke stap één keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt de temperatuur als het warmer is geworden.",
+     "tekstSterker": "Tel eerst omhoog tot nul: dat zijn evenveel graden als het onder nul was. Hoeveel graden moet je dan nog verder? Zoveel graden boven nul wordt het."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel omhoog tot nul, en dan verder boven nul.",
+     "tekstSterker": "Tel eerst omhoog tot nul: dat zijn evenveel graden als het onder nul was. Hoeveel graden moet je dan nog verder? Zoveel graden boven nul wordt het."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Teken een getallenlijn met nul in het midden. Waar sta je, waar ga je heen?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-MEET-04",
+   "nr": 3,
+   "somtype": "Het is −# graden. Later is het # graden. Hoeveel graden is het warmer geworden?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Het is −# graden. Later is het # graden. Hoeveel graden is het warmer geworden?",
+   "hint1": "Een min (−) voor een getal betekent: zoveel graden onder nul. Hoeveel stappen zijn het van de koude temperatuur naar de warme?",
+   "hint2": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op.",
+   "ouderzin": "Je kind rekent uit hoeveel graden het warmer is geworden, van onder nul naar boven nul.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "met een min",
+     "claudeDenkfout": "teken-vergeten",
+     "regel": "Claudes sleutel: teken-vergeten",
+     "tekst": "Hoeveel graden het warmer is geworden, is een aantal graden. Dat typ je zonder min.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de nieuwe temperatuur",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verschil van de getallen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één graad ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.",
+     "tekstSterker": "Van min één naar nul is één stap, en van nul naar één ook. Tel elke stap één keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Teken een getallenlijn met nul in het midden. Waar sta je, waar ga je heen?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-MEET-04",
+   "nr": 4,
+   "somtype": "Het is # graden in [plek]. 's Nachts daalt de temperatuur # graden. Hoeveel graden is het dan? (Typ een min voor een getal onder nul, bijvoorbeeld −#.)",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Het is # graden in [plek]. 's Nachts daalt de temperatuur # graden. Hoeveel graden is het dan? (Typ een min voor een getal onder nul, bijvoorbeeld −#.)",
+   "hint1": "Een min (−) voor een getal betekent: zoveel graden onder nul. De temperatuur daalt, dus je telt omlaag.",
+   "hint2": "Tel eerst omlaag tot nul: dat zijn evenveel graden als het boven nul was. Hoeveel graden moet je dan nog verder omlaag? Zoveel graden onder nul wordt het: typ een min voor dat getal.",
+   "ouderzin": "Je kind rekent uit hoe koud het wordt als de temperatuur onder nul zakt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "min vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Je komt onder nul uit. Typ dan een min voor het getal.",
+     "tekstSterker": "Tel eerst omlaag tot nul: dat zijn evenveel graden als het boven nul was. Hoeveel graden moet je dan nog verder omlaag? Zoveel graden onder nul wordt het: typ een min voor dat getal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één graad te koud",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "Claudes sleutel: een-ernaast",
+     "tekst": "Dat is één graad te koud. Tel eerst de stappen tot nul. Ook van nul naar min één is een stap.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tel omlaag tot nul. Tel de graden die dan nog over zijn: zoveel graden onder nul wordt het."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt de temperatuur nadat hij is gedaald.",
+     "tekstSterker": "Tel eerst omlaag tot nul: dat zijn evenveel graden als het boven nul was. Hoeveel graden moet je dan nog verder omlaag? Zoveel graden onder nul wordt het: typ een min voor dat getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel omlaag tot nul, en dan verder onder nul.",
+     "tekstSterker": "Tel eerst omlaag tot nul: dat zijn evenveel graden als het boven nul was. Hoeveel graden moet je dan nog verder omlaag? Zoveel graden onder nul wordt het: typ een min voor dat getal."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je komt onder nul: het antwoord heeft een min ervoor.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Van 3 naar 0 is 3 graden, dan nog 8.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 5 naar 0 is 5 graden, dan nog 11.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 7 naar 0 is 7 graden, dan nog 8.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 2 naar 0 is 2 graden, dan nog 1.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 5 naar 0 is 5 graden, dan nog 9.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 2 naar 0 is 2 graden, dan nog 10.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 4 naar 0 is 4 graden, dan nog 1.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 6 naar 0 is 6 graden, dan nog 2.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 4 naar 0 is 4 graden, dan nog 11.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 5 naar 0 is 5 graden, dan nog 2.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 7 naar 0 is 7 graden, dan nog 10.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 2 naar 0 is 2 graden, dan nog 11.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 2 naar 0 is 2 graden, dan nog 12.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 8 naar 0 is 8 graden, dan nog 8.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 2 naar 0 is 2 graden, dan nog 9.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 8 naar 0 is 8 graden, dan nog 4.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 2 naar 0 is 2 graden, dan nog 2.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 2 naar 0 is 2 graden, dan nog 7.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 8 naar 0 is 8 graden, dan nog 11.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 5 naar 0 is 5 graden, dan nog 7.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 6 naar 0 is 6 graden, dan nog 4.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 9 naar 0 is 9 graden, dan nog 7.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 4 naar 0 is 4 graden, dan nog 5.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Van 5 naar 0 is 5 graden, dan nog 3.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-MEET-04",
+   "nr": 5,
+   "somtype": "'s Nachts is het in [plek] −# graden. Overdag werd het # graden. Hoeveel graden is het warmer geworden?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "'s Nachts is het in [plek] −# graden. Overdag werd het # graden. Hoeveel graden is het warmer geworden?",
+   "hint1": "Een min (−) voor een getal betekent: zoveel graden onder nul. Hoeveel stappen zijn het van de koude temperatuur naar de warme?",
+   "hint2": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op.",
+   "ouderzin": "Je kind rekent uit hoeveel graden het warmer is geworden, van onder nul naar boven nul.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "de nieuwe temperatuur",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verschil van de getallen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één graad ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.",
+     "tekstSterker": "Van min één naar nul is één stap, en van nul naar één ook. Tel elke stap één keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Onder nul telt ook mee. Van onder nul naar boven nul is verder dan je denkt. Ga via nul.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "8 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf -12.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Tel de stappen naar nul en de stappen vanaf nul apart, en tel ze dan op.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "7 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf -11.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "4 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf -7.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "4 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf -4.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "5 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf -2.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "6 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf -6.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "3 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf -2.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "7 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf -10.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "6 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf -4.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-MEET-04",
+   "nr": 7,
+   "somtype": "'s Nachts was het bij [plek] −# graden. Overdag werd het # graden. Hoeveel graden is het warmer geworden?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "'s Nachts was het bij [plek] −# graden. Overdag werd het # graden. Hoeveel graden is het warmer geworden?",
+   "hint1": "Een min (−) voor een getal betekent: zoveel graden onder nul. Hoeveel stappen zijn het van de koude temperatuur naar de warme?",
+   "hint2": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op.",
+   "ouderzin": "Je kind rekent uit hoeveel graden het warmer is geworden, van onder nul naar boven nul.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "de nieuwe temperatuur",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verschil van de getallen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één graad ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.",
+     "tekstSterker": "Van min één naar nul is één stap, en van nul naar één ook. Tel elke stap één keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Onder nul telt ook mee. Van onder nul naar boven nul is verder dan je denkt. Ga via nul.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "14 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf -6.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Tel de stappen naar nul en de stappen vanaf nul apart, en tel ze dan op.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "3 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf -10.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "8 is de temperatuur overdag. De vraag is hoeveel het gestegen is, vanaf -3.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-MEET-04",
+   "nr": 6,
+   "somtype": "'s Ochtends is het in [plek] −# graden. 's Middags is het # graden. Hoeveel graden is het warmer geworden?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "'s Ochtends is het in [plek] −# graden. 's Middags is het # graden. Hoeveel graden is het warmer geworden?",
+   "hint1": "Een min (−) voor een getal betekent: zoveel graden onder nul. Hoeveel stappen zijn het van de koude temperatuur naar de warme?",
+   "hint2": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op.",
+   "ouderzin": "Je kind rekent uit hoeveel graden het warmer is geworden, van onder nul naar boven nul.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "de nieuwe temperatuur",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verschil van de getallen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "onder nul",
+     "claudeDenkfout": "teken-vergeten",
+     "regel": "Claudes sleutel: teken-vergeten",
+     "tekst": "Dat is onder nul. Hoeveel graden het warmer is geworden, typ je zonder min.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één graad ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.",
+     "tekstSterker": "Van min één naar nul is één stap, en van nul naar één ook. Tel elke stap één keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+     "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Het begint onder nul. Tel eerst tot 0 (6 graden) en dan verder tot 3.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt de min bij het begingetal genegeerd. Onder nul telt ook mee.",
+     "claudeDenkfout": "teken-vergeten",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Het begint onder nul. Tel eerst tot 0 (11 graden) en dan verder tot 8.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Het begint onder nul. Tel eerst tot 0 (11 graden) en dan verder tot 6.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Het begint onder nul. Tel eerst tot 0 (3 graden) en dan verder tot 2.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Het begint onder nul. Tel eerst tot 0 (5 graden) en dan verder tot 2.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Het begint onder nul. Tel eerst tot 0 (12 graden) en dan verder tot 3.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Het begint onder nul. Tel eerst tot 0 (9 graden) en dan verder tot 2.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Het begint onder nul. Tel eerst tot 0 (12 graden) en dan verder tot 7.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-MEET-04",
+   "nr": 1,
+   "somtype": "Hoeveel dagen duurt het van # [ding] tot # [ding]?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Hoeveel dagen duurt het van # [ding] tot # [ding]?",
+   "hint1": "Begin bij de maand waarin je start. Hoeveel dagen heeft die maand: dertig of eenendertig? Tel de dagen tot het eind van die maand.",
+   "hint2": "De begindag tel je niet mee. Tel daarna de hele maanden ertussen erbij, als die er zijn. Tel tot slot de dagen in de maand van de einddag erbij, tot en met die dag.",
+   "ouderzin": "Je kind telt hoeveel dagen het is van de ene datum tot de andere, over een paar maanden heen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "hele beginmaand geteld",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is te veel. Tel in de maand waarin je begint alleen de dagen na de begindag.",
+     "tekstSterker": "Haal de begindag af van het aantal dagen van die maand. Dat zijn de dagen tot het eind van de maand."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "maand van de einddag vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - getal2",
+     "tekst": "Dat is te weinig. Tel je de dagen in de maand van de einddag ook mee?",
+     "tekstSterker": "In de maand van de einddag tel je vanaf het begin van de maand tot en met de einddag. Dat zijn evenveel dagen als het getal van de einddag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twee dagen te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 2",
+     "tekst": "Dat is twee dagen te weinig. Kijk bij elke maand: heeft hij dertig of eenendertig dagen?",
+     "tekstSterker": "Maanden met dertig dagen: april, juni, september en november. De andere maanden hebben er eenendertig, behalve februari."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één dag ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Je zit er één dag naast. Kijk bij elke maand: dertig of eenendertig dagen? De begindag tel je niet mee, de einddag wel.",
+     "tekstSterker": "Maanden met dertig dagen: april, juni, september en november. De andere maanden hebben er eenendertig, behalve februari."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "dag uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel dagen het duurt.",
+     "tekstSterker": "De begindag tel je niet mee. Tel daarna de hele maanden ertussen erbij, als die er zijn. Tel tot slot de dagen in de maand van de einddag erbij, tot en met die dag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de dagen tot het eind van de maand waarin je begint, de hele maanden ertussen, en de dagen in de maand van de einddag.",
+     "tekstSterker": "Maanden met dertig dagen: april, juni, september en november. De andere maanden hebben er eenendertig, behalve februari."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Tel via de maandgrens: eerst tot het eind van de maand, dan de dagen van de nieuwe maand. En kijk hoeveel dagen die maand echt heeft.",
+     "claudeDenkfout": "kalender-verkeerd-geteld",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VBN-04",
+   "nr": 1,
+   "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+   "hint1": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "hint2": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Elk stukje is 5, niet 1.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VBN-04",
+   "nr": 2,
+   "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?",
+   "hint1": "Een staaf is zo hoog als het getal in de tabel. Hoe groter het getal, hoe hoger de staaf.",
+   "hint2": "Zoek in de tabel het grootste getal. Bij welke naam hoort het? Dat wordt de hoogste staaf.",
+   "ouderzin": "Je kind leest een tabel en bedenkt welke staaf in een staafdiagram het hoogst wordt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere staaf",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "tekst": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek in de tabel het grootste getal.",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "groep 7 heeft 20. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "groep 4 heeft 10. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "vr heeft 25. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "wo heeft 35. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "aug heeft 5. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "juli heeft 25. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "week 3 heeft 60. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "week 2 heeft 30. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "mei heeft 15. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "sept heeft 40. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "wo heeft 30. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "vr heeft 50. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "week 2 heeft 8. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "week 3 heeft 4. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "ma heeft 50. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "vr heeft 70. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "ma heeft 20. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "do heeft 10. Is er een groter getal in de tabel?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VBN-04",
+   "nr": 3,
+   "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+   "hint1": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
+   "hint2": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+   "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te laag",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 10",
+     "tekst": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te hoog",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VBN-04",
+   "nr": 4,
+   "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?",
+   "hint1": "Zoek in de tabel het getal bij de staaf. Elk streepje op de as staat voor een vast getal.",
+   "hint2": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+   "ouderzin": "Je kind rekent uit hoeveel streepjes op de as een staaf hoog wordt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "getal uit de tabel",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "tekst": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één streepje ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel het getal uit de tabel door wat één streepje is.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Elk streepje is 10, niet 1. Deel de waarde door 10.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Reken na. 20 gedeeld door 10.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Reken na. 50 gedeeld door 10.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Reken na. 60 gedeeld door 10.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Elk streepje is 5, niet 1. Deel de waarde door 5.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Reken na. 5 gedeeld door 5.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Elk streepje is 2, niet 1. Deel de waarde door 2.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Reken na. 12 gedeeld door 2.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Reken na. 25 gedeeld door 5.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Reken na. 35 gedeeld door 5.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-01",
+   "nr": 1,
+   "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+   "hint1": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "hint2": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-01",
+   "nr": 2,
+   "somtype": "[balk kleuren] Kleur #% van de balk.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk.",
+   "hint1": "Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.",
+   "hint2": "Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?",
+   "ouderzin": "Je kind kleurt een percentage van een balk.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "elk stukje tien procent",
+     "claudeDenkfout": null,
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "tekst": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels hebben geen label; elke sleutel is de helft van het antwoord (elk stukje tien procent), nagerekend",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Elk stukje is 5%, niet 10%.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-01",
+   "nr": 3,
+   "somtype": "Bij de schaal # : # [ding] twee getallen. Welk getal hoort bij de [ding]?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Bij de schaal # : # [ding] twee getallen. Welk getal hoort bij de [ding]?",
+   "hint1": "Een schaal heeft twee getallen met een dubbele punt (:) ertussen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.",
+   "hint2": "Op de tekening is alles kleiner dan echt. Welk getal hoort dan bij de tekening?",
+   "ouderzin": "Je kind leert wat een schaal (zoals op een plattegrond) betekent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal van het echte voorwerp",
+     "claudeDenkfout": null,
+     "regel": "Het getal 500",
+     "tekst": "Dat getal hoort bij het echte voorwerp. Op de tekening is alles kleiner.",
+     "tekstSterker": "De tekening is kleiner dan echt. Het kleine getal van de schaal hoort bij de tekening."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal niet uit de schaal",
+     "claudeDenkfout": null,
+     "regel": "Het getal 5",
+     "tekst": "Dat getal staat niet in de schaal. Kijk naar de twee getallen van de schaal.",
+     "tekstSterker": "Een schaal heeft twee getallen. Eén ervan hoort bij de tekening."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar de twee getallen van de schaal."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Het getal achter de dubbele punt hoort bij het echte voorwerp. Welk getal blijft er dan over?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Lees de schaal precies zoals hij er staat. Er staat geen losse 5 in de schaal.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-01",
+   "nr": 4,
+   "somtype": "Op een tekening staat schaal # : #. Wat weet je dan over de tekening?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Op een tekening staat schaal # : #. Wat weet je dan over de tekening?",
+   "hint1": "Een schaal vergelijkt de tekening met het echte voorwerp. Een op tien betekent: één centimeter op de tekening is tien centimeter echt.",
+   "hint2": "Kijk naar de twee getallen van deze schaal. Zijn ze gelijk? Hoeveel keer zo groot is het echte voorwerp dan?",
+   "ouderzin": "Je kind leert wat een schaal (zoals op een plattegrond) betekent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "past bij een andere schaal",
+     "claudeDenkfout": null,
+     "regel": "De tekening is 100 keer zo klein",
+     "tekst": "Dat past bij een schaal van een op honderd. Kijk naar de getallen van deze schaal.",
+     "tekstSterker": "Vergelijk de twee getallen van de schaal. Als ze gelijk zijn, is de tekening even groot als echt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "past bij een andere schaal (twee)",
+     "claudeDenkfout": null,
+     "regel": "De tekening is 2 keer zo klein",
+     "tekst": "Dat past bij een schaal van een op twee. Kijk naar de getallen van deze schaal.",
+     "tekstSterker": "Vergelijk de twee getallen van de schaal. Als ze gelijk zijn, is de tekening even groot als echt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar de twee getallen van deze schaal."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eens naar de twee getallen van deze schaal. Zijn ze verschillend of gelijk?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je denkt aan de schaal 1 : 100. Lees nog eens welk getal hier achter de dubbele punt staat.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-01",
+   "nr": 5,
+   "somtype": "Op een tekening van een huis staat schaal # : #. Wat betekent dat?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Op een tekening van een huis staat schaal # : #. Wat betekent dat?",
+   "hint1": "Een schaal vergelijkt de tekening met het echte voorwerp. Een op tien betekent: één centimeter op de tekening is tien centimeter echt.",
+   "hint2": "Bij een schaal horen beide getallen bij dezelfde maat, bijvoorbeeld centimeter. Welk getal hoort bij het echte huis?",
+   "ouderzin": "Je kind leert wat een schaal (zoals op een plattegrond) betekent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "past bij een andere schaal",
+     "claudeDenkfout": null,
+     "regel": "1 cm op de tekening is 10 cm echt",
+     "tekst": "Dat past bij een schaal van een op tien. Kijk welk getal in deze schaal staat.",
+     "tekstSterker": "Het getal van het echte huis staat in de schaal. Eén centimeter op de tekening is zoveel centimeter echt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere maat",
+     "claudeDenkfout": null,
+     "regel": "1 cm op de tekening is 100 m echt",
+     "tekst": "Kijk naar de maat. Bij een schaal horen beide getallen bij dezelfde maat: centimeter op de tekening is centimeter echt.",
+     "tekstSterker": "Het getal van het echte huis staat in de schaal, in dezelfde maat als op de tekening."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk welk getal in de schaal staat, en welke maat erbij hoort."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk nog eens goed naar het tweede getal van de schaal. Staat er 10 of staat er meer?",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Bij schaal hoort links en rechts dezelfde eenheid. Begin je met cm, dan blijf je bij cm.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-01",
+   "nr": 6,
+   "somtype": "Waarom gebruik je een schaal als je een plattegrond van je huis tekent?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Waarom gebruik je een schaal als je een plattegrond van je huis tekent?",
+   "hint1": "Wat verandert er door een schaal: het echte huis, of de tekening?",
+   "hint2": "Met een schaal teken je alles evenveel keer kleiner. Het echte huis blijft zoals het is. Waarom maak je de tekening kleiner?",
+   "ouderzin": "Je kind leert wat een schaal (zoals op een plattegrond) betekent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "huis wordt kleiner",
+     "claudeDenkfout": null,
+     "regel": "Omdat het huis dan echt kleiner wordt",
+     "tekst": "Het echte huis blijft even groot. Alleen de tekening is kleiner.",
+     "tekstSterker": "Een schaal verandert niets aan het echte huis. Waarom zou je de tekening kleiner maken?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet meten",
+     "claudeDenkfout": null,
+     "regel": "Omdat je dan niet hoeft te meten",
+     "tekst": "Je meet juist wel: je meet het huis, en rekent de maten om voor de tekening.",
+     "tekstSterker": "Een schaal verandert niets aan het echte huis. Waarom zou je de tekening kleiner maken?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Denk aan het echte huis en aan het papier."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een tekening verandert niets aan het echte huis. Denk aan wat er op het papier past.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Voor een plattegrond op schaal moet je de echte maten juist wel weten.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-01",
+   "nr": 7,
+   "somtype": "Welke schrijfwijze is een schaal?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Welke schrijfwijze is een schaal?",
+   "hint1": "Een schaal is geen som: je rekent er niets mee uit. Welk teken past daarbij?",
+   "hint2": "Een schaal schrijf je met een dubbele punt (:) tussen de twee getallen. Welke schrijfwijze heeft dat teken?",
+   "ouderzin": "Je kind leert wat een schaal (zoals op een plattegrond) betekent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "keersom",
+     "claudeDenkfout": null,
+     "regel": "1 × 25",
+     "tekst": "Dat is een keersom. Een schaal is geen som.",
+     "tekstSterker": "Bij een schaal staat er een dubbele punt tussen de twee getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "plussom",
+     "claudeDenkfout": null,
+     "regel": "1 + 25",
+     "tekst": "Dat is een plussom. Een schaal is geen som.",
+     "tekstSterker": "Bij een schaal staat er een dubbele punt tussen de twee getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Een schaal is geen som.",
+     "tekstSterker": "Bij een schaal staat er een dubbele punt tussen de twee getallen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bij een schaal staat er geen plusteken tussen de getallen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Bij een schaal staat er een ander teken tussen de twee getallen dan een maalteken.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-02",
+   "nr": 1,
+   "somtype": "Hoeveel is #% van #?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Hoeveel is #% van #?",
+   "hint1": "Procent (%) betekent: zoveel van de honderd. Welk deel van het getal is dat procent?",
+   "hint2": "Reken eerst uit hoeveel tien procent van het getal is. Neem daarvan zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart.",
+   "ouderzin": "Je kind rekent uit hoeveel een percentage van een getal is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het hele getal",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+     "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het procent",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het procent uit de vraag. Je zoekt dat deel van het getal.",
+     "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te groot",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?",
+     "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te klein",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal?",
+     "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verschil van de getallen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
+     "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het andere deel",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is het andere deel: wat overblijft. Je zoekt het deel dat bij het procent uit de vraag hoort.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel tien procent van het getal is, en ga van daaruit verder.",
+     "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-02",
+   "nr": 2,
+   "somtype": "Hoeveel is #% van €#?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Hoeveel is #% van €#?",
+   "hint1": "Procent (%) betekent: zoveel van de honderd. Welk deel van het bedrag is dat procent?",
+   "hint2": "Reken eerst uit hoeveel tien procent van het bedrag is. Neem daarvan zo vaak als nodig. Vijftig procent is de helft, vijfentwintig procent een kwart.",
+   "ouderzin": "Je kind rekent uit hoeveel een percentage van een geldbedrag is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het hele bedrag",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het hele bedrag: honderd procent. Je zoekt maar een deel ervan.",
+     "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te groot",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het bedrag?",
+     "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te klein",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het bedrag?",
+     "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het andere deel",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is het andere deel: wat overblijft. Je zoekt het deel dat bij het procent uit de vraag hoort.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel tien procent van het bedrag is, en ga van daaruit verder.",
+     "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-02",
+   "nr": 3,
+   "somtype": "Hoeveel procent is # van #?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Hoeveel procent is # van #?",
+   "hint1": "Procent (%) betekent: zoveel van de honderd. Welk deel van het geheel is het?",
+   "hint2": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+   "ouderzin": "Je kind rekent uit hoeveel procent een deel van een geheel is.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "het andere deel",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is het andere deel: wat overblijft tot honderd procent. Je zoekt het procent van het deel uit de vraag.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het deel zelf",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien keer ernaast",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "tekst": "Dat is tien keer te groot of tien keer te klein. Reken het na met een verhoudingstabel.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verschil van de getallen",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+     "tekst": "Dat is het verschil van de twee getallen, nog geen procent. Welk deel van het geheel is het deel?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Het geheel is honderd procent. Hoeveel procent is het deel?",
+     "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-02",
+   "nr": 4,
+   "somtype": "In [plek] liggen # [ding]. #% ervan is rood. Hoeveel rode [ding] zijn er?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. #% ervan is rood. Hoeveel rode [ding] zijn er?",
+   "hint1": "Procent (%) betekent: zoveel van de honderd. Welk deel van het hele aantal is dat procent?",
+   "hint2": "Vijftig procent is de helft, vijfentwintig procent een kwart, tien procent een tiende deel. Neem dat deel van het hele aantal.",
+   "ouderzin": "Je kind rekent uit hoeveel een percentage van een aantal is (de helft, een kwart, een tiende deel).",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "ander deel",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "tekst": "Dat is een ander deel van het hele aantal. Welk deel hoort bij het procent uit de vraag?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Vijftig procent is de helft, vijfentwintig procent een kwart, tien procent een tiende deel. Neem dat deel van het hele aantal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is het hele aantal min het procent. Maar procent betekent: zoveel van de honderd.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Vijftig procent is de helft, vijfentwintig procent een kwart, tien procent een tiende deel. Neem dat deel van het hele aantal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Welk deel van het hele aantal is het procent uit de vraag?",
+     "tekstSterker": "Vijftig procent is de helft, vijfentwintig procent een kwart, tien procent een tiende deel. Neem dat deel van het hele aantal."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "10% is een tiende: delen door 10.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed. 10%, dus een tiende van 80.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Procent is een deel van het geheel, niet iets wat je eraf haalt. 10% van 80 betekent een tiende van 80.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "50% is de helft: delen door 2.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed. 50%, dus de helft van 44.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Procent is een deel van het geheel, niet iets wat je eraf haalt. 50% van 44 betekent de helft van 44.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "25% is een kwart: delen door 4.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed. 25%, dus een kwart van 40.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Procent is een deel van het geheel, niet iets wat je eraf haalt. 25% van 40 betekent een kwart van 40.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed. 25%, dus een kwart van 96.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Procent is een deel van het geheel, niet iets wat je eraf haalt. 25% van 96 betekent een kwart van 96.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed. 10%, dus een tiende van 120.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Procent is een deel van het geheel, niet iets wat je eraf haalt. 10% van 120 betekent een tiende van 120.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed. 50%, dus de helft van 28.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Procent is een deel van het geheel, niet iets wat je eraf haalt. 50% van 28 betekent de helft van 28.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed. 10%, dus een tiende van 40.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Procent is een deel van het geheel, niet iets wat je eraf haalt. 10% van 40 betekent een tiende van 40.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed. 50%, dus de helft van 48.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Procent is een deel van het geheel, niet iets wat je eraf haalt. 50% van 48 betekent de helft van 48.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed. 50%, dus de helft van 24.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Procent is een deel van het geheel, niet iets wat je eraf haalt. 50% van 24 betekent de helft van 24.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-02",
+   "nr": 5,
+   "somtype": "In [plek] zijn # [ding]. #% is beschadigd. Hoeveel [ding] zijn beschadigd?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "In [plek] zijn # [ding]. #% is beschadigd. Hoeveel [ding] zijn beschadigd?",
+   "hint1": "Procent (%) betekent: zoveel van de honderd. Hoeveel is tien procent van het hele aantal?",
+   "hint2": "Tien procent is een tiende deel: deel het hele aantal door tien. Neem dat zo vaak als nodig: zeventig procent is zeven keer tien procent. Vijfentwintig procent is een kwart.",
+   "ouderzin": "Je kind rekent uit hoeveel een percentage van een aantal is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "keer het procent",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Dat is meer dan het hele aantal. Procent betekent: zoveel van de honderd, dus deel ook door honderd.",
+     "tekstSterker": "Tien procent is een tiende deel: deel het hele aantal door tien. Neem dat zo vaak als nodig: zeventig procent is zeven keer tien procent. Vijfentwintig procent is een kwart."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen tien procent",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is tien procent. Het procent uit de vraag is meer: reken verder.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tien procent is een tiende deel: deel het hele aantal door tien. Neem dat zo vaak als nodig: zeventig procent is zeven keer tien procent. Vijfentwintig procent is een kwart."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het andere deel",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is het andere deel: wat niet beschadigd is. Je zoekt het deel dat beschadigd is.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tien procent is een tiende deel: deel het hele aantal door tien. Neem dat zo vaak als nodig: zeventig procent is zeven keer tien procent. Vijfentwintig procent is een kwart."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel tien procent van het hele aantal is, en ga van daaruit verder.",
+     "tekstSterker": "Tien procent is een tiende deel: deel het hele aantal door tien. Neem dat zo vaak als nodig: zeventig procent is zeven keer tien procent. Vijfentwintig procent is een kwart."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "12 is 10%. Je hebt 90% nodig, dus 9 keer zoveel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Procent is per honderd. Deel door 100, of ga via 10%.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "24 is 10%. Je hebt 90% nodig, dus 9 keer zoveel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "12 is 10%. Je hebt 70% nodig, dus 7 keer zoveel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Dat is het deel dat niet beschadigd is. De vraag is hoeveel wél.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "8 is 10%. Je hebt 30% nodig, dus 3 keer zoveel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "6 is 10%. Je hebt 60% nodig, dus 6 keer zoveel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "16 is 10%. Je hebt 70% nodig, dus 7 keer zoveel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "20 is 10%. Je hebt 90% nodig, dus 9 keer zoveel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "20 is 10%. Je hebt 30% nodig, dus 3 keer zoveel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "30 is 10%. Je hebt 40% nodig, dus 4 keer zoveel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "16 is 10%. Je hebt 75% nodig, dus 7.5 keer zoveel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "6 is 10%. Je hebt 90% nodig, dus 9 keer zoveel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "16 is 10%. Je hebt 80% nodig, dus 8 keer zoveel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-02",
+   "nr": 6,
+   "somtype": "Van de # [ding] hebben er # een [ding]. Hoeveel procent is dat?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Van de # [ding] hebben er # een [ding]. Hoeveel procent is dat?",
+   "hint1": "Procent (%) betekent: zoveel van de honderd. Welk deel van het hele aantal is het?",
+   "hint2": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+   "ouderzin": "Je kind rekent uit hoeveel procent een deel van een groep is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het aantal zelf",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de rest",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Dat is het aantal dat het niet heeft. Je zoekt welk deel het wel heeft, in procent.",
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "omgekeerd gedeeld",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "regel": "Claudes sleutel: omgekeerd-gedeeld",
+     "tekst": "Dat is het hele aantal gedeeld door het deel. Het moet andersom: welk deel van het hele aantal is het?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Het hele aantal is honderd procent. Hoeveel procent is het deel?",
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "4 is het aantal, niet het percentage. Zet het om naar per 100.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Dat is het aantal zonder. Zet om naar per 100.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Deel het deel door het geheel, niet andersom.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "40 is het aantal, niet het percentage. Zet het om naar per 100.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "10 is het aantal, niet het percentage. Zet het om naar per 100.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "20 is het aantal, niet het percentage. Zet het om naar per 100.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "2 is het aantal, niet het percentage. Zet het om naar per 100.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "6 is het aantal, niet het percentage. Zet het om naar per 100.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-02",
+   "nr": 7,
+   "somtype": "Een [ding] kost €#. Er is #% korting. Wat is de nieuwe prijs in euro's?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Een [ding] kost €#. Er is #% korting. Wat is de nieuwe prijs in euro's?",
+   "hint1": "Procent (%) betekent: zoveel van de honderd. Hoeveel euro is de korting?",
+   "hint2": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs. Haal de korting daarna van de oude prijs af.",
+   "ouderzin": "Je kind rekent een nieuwe prijs uit na korting in procenten.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent van de prijs afgehaald",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Dat is de prijs min het procent. Maar de korting is een deel van de prijs: zoveel van de honderd.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs. Haal de korting daarna van de oude prijs af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "korting niet goed verwerkt",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Reken eerst de korting in euro uit. Haal je die daarna van de oude prijs af?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs. Haal de korting daarna van de oude prijs af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken de korting in euro uit, en haal die van de oude prijs af.",
+     "tekstSterker": "Reken eerst uit hoeveel euro de korting is: tien procent is een tiende deel van de prijs. Haal de korting daarna van de oude prijs af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "24 is de korting. De vraag is wat je nog betaalt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "30% is niet 30 euro. Reken eerst uit hoeveel 30% van 80 is.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Korting gaat eraf, niet erbij.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "18 is de korting. De vraag is wat je nog betaalt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "30% is niet 30 euro. Reken eerst uit hoeveel 30% van 60 is.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "50% is niet 50 euro. Reken eerst uit hoeveel 50% van 60 is.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "50% is niet 50 euro. Reken eerst uit hoeveel 50% van 20 is.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

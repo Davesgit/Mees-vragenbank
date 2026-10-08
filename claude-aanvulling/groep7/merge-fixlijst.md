@@ -151,7 +151,7 @@ Stand (les 164): build 12:52:39 bevat ronde 2c (batch1.json caa201bcf1a0, batch2
 | ronde 2c (Oef-#421/#422) | Oefeningen | Omwegen weg: DENK-02 #8/#9 'afgehaald' van Claudes label 'verkeerde-bewerking' naar de letterlijke optie ('6 − 4', '8 − 5 = 3'); DENK-03 nrO 10 regels '13' → '13 euro' en '16' → '16 euro'. Teksten ongewijzigd. b1/check FAIL 0. `hints/patch_batch1.py` | ✓ live in build 12:52:39 |
 | Oef-#426 | Overzicht (motor) | Gesloten: in de motor sinds G5-build 12:13 (ook in g5/merge-fixlijst.md op ✓ gezet) | ✓ gesloten |
 | batch 4 | Oefeningen | GET-05, MEET-01, MEET-02, MEET-03 (27 somtypes, 2625 items, 9173 sleutels): `hints/make_batch4.py`, `hints/batch4.json`, `hints/patch_batch4.py` (ronde 1 leeg), `review-batch4.md`; checks `g7work/b4/check.py`, `mut.py`, `sbx4.sh` | wacht op sync |
-| Oef-#440 | Overzicht (motor of data) | MEET-03 #9 (bak in m³, hoogte 0,5/1,5/2,5 m): 42 sleutels staan als '8,0', '300,0', '16,0'. De motor leest die niet (zelfde oorzaak als Oef-#437: '8,0' wordt 8 en 0), dus 'fout = getal1 × getal2' en 'fout = antwoord × 10' missen ze. Nu gevangen via Claudes labels ('omtrek-oppervlakte-verwisseld', 'komma-verschoven', 'kommagetal-als-geheel'). Voorstel: sleutels zonder ',0' in de data ('8'), of #437 in de motor. Daarna laten we 'tien keer te veel' (komma-verschoven) vallen in patch_batch4 ronde 1b | open |
+| Oef-#440 | Overzicht (motor of data) | MEET-03 #9 (bak in m³, hoogte 0,5/1,5/2,5 m): 42 sleutels staan als '8,0', '300,0', '16,0'. De motor leest die niet (zelfde oorzaak als Oef-#437: '8,0' wordt 8 en 0), dus 'fout = getal1 × getal2' en 'fout = antwoord × 10' missen ze. Nu gevangen via Claudes labels ('omtrek-oppervlakte-verwisseld', 'komma-verschoven', 'kommagetal-als-geheel'). Voorstel: sleutels zonder ',0' in de data ('8'), of #437 in de motor. Daarna laten we 'tien keer te veel' (komma-verschoven) vallen in patch_batch4 ronde 1b | ✓ klaar (motor + data, build 13:13:00; Z-#639) |
 | Oef-#441 | Overzicht (data) | MEET-03 #1 kop «Een balk heeft een inhoud van # [ding].»: [ding] is in alle 838 items de eenheid 'cm³' en geen ding. Voorstel: 'cm³' vast in de kop (onze H1 zegt al «De inhoud staat in cm³»). Klein; geen invloed op de hints | open |
 
 Nummering: volgende vrije Oef-#442.
@@ -171,10 +171,10 @@ Stand (les 164): build 13:04:53 bevat alles hieronder (batch1.json a6a31a9daae0,
 | batch 4 ronde 1b | Oefeningen | hercheck les 180–185, zie review-batch4.md | ✓ build 13:04:53 |
 | Oef-#435, Oef-#439 | – | gesloten (Didactiek, twijfel 1 en 3) | ✓ |
 | Oef-#442 | Overzicht (motor) | Z-#603: regels 'fout = de som van de getallen' en 'fout = het middelste getal (op grootte)' voor GET-04 nrO 6 (gemiddeld). Nu staan 6 totalen en 5 middelste getallen onder Claudes 'verkeerde-bewerking' met een vraag die bij beide past. Met de regels krijgen ze de scherpere teksten van 'niet gedeeld' en 'middelste getal' | open |
-| Oef-#443 | Overzicht (data, [ding]) | MEET-03 #10 «Een doos voor poesjes/sterren is … Hoeveel cm³ past erin?» en #9 «Een bak in het bos/moeras/nest»: [ding]/[plek] maken geen echte vraag (les 184). Voorstel: dingen die je in een doos doet (knikkers, blokjes), plekken waar een bak staat (tuin, schuur) | open |
-| Oef-#440 | Overzicht | nog 42 sleutels met ',0' in MEET-03 #9 (build 13:04:53). Daarna: 'tien keer te veel' eruit (patch_batch4 ronde 1c) | wacht |
+| Oef-#443 | Overzicht (data, [ding]) | MEET-03 #10 «Een doos voor poesjes/sterren is … Hoeveel cm³ past erin?» en #9 «Een bak in het bos/moeras/nest»: [ding]/[plek] maken geen echte vraag (les 184). Voorstel: dingen die je in een doos doet (knikkers, blokjes), plekken waar een bak staat (tuin, schuur) | ✓ klaar (build 13:13:00; rest V-#631 in de build van ronde r4; Z-#639) |
+| Oef-#440 | Overzicht | nog 42 sleutels met ',0' in MEET-03 #9 (build 13:04:53). Daarna: 'tien keer te veel' eruit (patch_batch4 ronde 1c) | ✓ (build 13:13:00, ronde 1c) |
 
-Nummering: volgende vrije Oef-#444.
+Nummering: volgende vrije Oef-#444 (zie onder: #452).
 
 ## Overzicht 8 okt: review batch 3 (Didactiek), batch 4 (Oef-#440/#441), Oef-#442/#443 (build 13:13:00)
 Builds 13:02:22 → 13:05:00 → 13:10:18 → **13:13:00** (eindstand). Checks G7: check_hints 0 FAIL / 0 WARN (98 klaar · 57 open), merge-notatie ALLES OK. G5/G6/G8 merge-notatie ALLES OK met de nieuwe FAIL-checks; G5 #121 0, generator 0; G6 FIX6 0 FAIL. Motorregressie (tools/motor_regressie.py, oud = vóór #440): G5 0 en G6 0 van 4845/4302 items anders.
@@ -193,3 +193,58 @@ Builds 13:02:22 → 13:05:00 → 13:10:18 → **13:13:00** (eindstand). Checks G
 | Oef-#443 | Overzicht (data) | `_v443`: MEET-03 #9 (32) 'Een bak in het bos/nest …' → naar de hoogte: ≤ 1 m zandbak (5), ≤ 2 m aquarium in de dierentuin (11) / waterbak op de kinderboerderij (1, zelfde getallen), hoger container (15). #10: sterren → knikkers, poesjes → blokjes. Koppen ongewijzigd ('Een bak is …'). Ouderzin «inhoud van een bak» kan blijven of naar 'bak of doos' (Oefeningen) | ✓ |
 | V-#560 | Overzicht (data) | zes procentitems (VERH-02 #3 814/897/983, VERH-04 #1 040/064/101) staan al in de data sinds build 12:36:53 (commit c6afde5) | ✓ |
 | – | melding | VERH-04 #3 «50% van de poesjes is kapot» is geen logische context (batch 5) | open |
+
+## Oefeningen 8 okt: ronde 3c (batch 3) + ronde 1d (batch 4), recheck/review Didactiek op build 13:13:00
+Zandbak = live build 13:13:00 + patches t/m 3c/1d (+ batch5_wip): check_hints 0 FAIL / 0 WARN (122 klaar · 33 open), merge-notatie ALLES OK; b1 FAIL 0 (50), b2 FAIL 0 (324), b3 FAIL 0 (2406 items, 10.471 sleutels, 0 op 'andere fout'), b4 FAIL 0 (2625 items, 9219 sleutels, 0 op 'andere fout'). Tweede run patch_batch1–4: 0 wijzigingen.
+
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| V-#615 | Oefeningen | GET-03 nrO 2/3/4, H2 + elke 'Leen dan'-laag 2: «… jouw cijfer krijgt er tien bij, en het cijfer op de plek (kolom) ervoor één minder. Is het cijfer op de plek (kolom) ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.» (6 tekstplekken). GET-01 nrO 2/3 ongewijzigd: daar is 'het cijfer ervoor' het laatst genoemde cijfer (niet dubbelzinnig, Didactiek V-#600 ✓). `patch_batch3.py` ronde 3c | ✓ |
+| Z-#617 | Oefeningen | GET-04 nrO 5: 'komma verschoven' (Claudes label, 4 sleutels, alle antwoord × 10, ook 60 bij 18 : 3) → motorregel 'tien keer te veel' (fout = antwoord × 10) met «Dat is tien keer te veel. Schat eerst: hoe groot is de uitkomst ongeveer?» en een laag 2 zonder komma | ✓ |
+| Z-#618 | Oefeningen | guards3b: lenen over een nul ook in GET-03 nrO 2, gerekend met de aangevulde getallen (les 189): 2 + 1 + 0 items (8 − 1,75, 8 − 3,05, 86.204 − 9778); eist de zin van V-#615; FAIL op «Is dat cijfer» na «jouw cijfer». Mutanten M2b en 'oude zin' gevangen | ✓ |
+| Z-#619 | Oefeningen | b2/check regel 176 met re.I; M5, M6, M7 gevangen | ✓ |
+| Oef-#442 | Oefeningen | GET-04 nrO 6: 'niet gedeeld' → 'fout = de som van de getallen', 'middelste getal' → 'fout = het middelste getal (op grootte)' (zelfde teksten); 'optellen en delen' had daarna 0 sleutels en is weg (les 183) | ✓ gesloten |
+| Oef-#434 | Oefeningen | GET-01 #7 'cijfer ernaast' → 'fout = het cijfer op de plek ernaast' (bank-468 krijgt nu 7 en 6) | ✓ gesloten |
+| Z-#606 | Oefeningen | ouderzin GET-04 nrO 8: «… een gewicht keer tien, honderd of duizend …» (past bij H2; nu 4 items × 100) | ✓ |
+| Oef-#429 | – | al gedaan in ronde 2c (DENK-04 #5 'deelsom omgedraaid', 7 sleutels) | ✓ gesloten |
+| Oef-#431/#432/#433 | Overzicht (data) | nog niet in build 13:13:00 (sportveld, 'gekleurd', eierdoos 8, lantaarnpalen staan er nog). Regels voor #433 staan klaar als commentaar in patch_batch1 ronde 1d | open (Overzicht) |
+| V-#630 | Oefeningen | GET-05 nrO 6/7 (grootst/kleinst): «Een grotere noemer betekent kleinere stukken» weg uit H2; laag 1 «Is dat echt de grootste (kleinste) breuk? Een grote (kleine) noemer zegt nog niet dat de breuk groot (klein) is: kijk ook naar de teller. Vergelijk …». Guard: geen vuistregel over de noemer; telt eenzijdigheid (nu 190/190 en 128/128, Z-#630) | ✓ (hercheck na Z-#630) |
+| V-#632 | Oefeningen | GET-05 nrO 1/2/3 laag 1 'teller of noemer anders' als vraag naar de noemer | ✓ |
+| V-#633 | Oefeningen | GET-05 nrO 4 H2 + laag 2: «… Heeft de teller minder cijfers? Zet er dan nullen voor. Nullen aan het eind achter de komma vallen weg.»; laag 1 'komma verschoven' nieuw. Guard speelt elk item na (les 192) | ✓ |
+| V-#634 | Oefeningen | GET-05 nrO 3: «Haal de kleinere teller van de grotere af.» (H2 + twee lagen 2). Guard toetst het woord (eerste/tweede/derde/laatste/bovenste/onderste/middelste/vooraan/achteraan) over alle teksten van batch 4 (les 193) | ✓ |
+| Z-#634 / #636 / #637 / #638 | Oefeningen | MEET-03 #1 'net ernaast' weg; GET-05 nrO 5 H1 + laag 2 'Staat er één cijfer achter de komma, dan …'; MEET-03 #9 laag 2 'Is een maat een kommagetal'; MEET-01 #1/#2 en MEET-03 #3/#4 H2 + laag 2 «Een punt in een groot getal is geen komma.» (guard) | ✓ |
+| Oef-#440 | – | in build 13:13:00 (0 ',0'-sleutels); tijdelijke regel weg in ronde 1c. Kommagetal-antwoorden op '× 10' hebben overal een tekst met 'tien keer te veel' of de komma, nergens 'een nul te veel' | ✓ gesloten |
+| Oef-#443 | Overzicht + Oefeningen | data in 13:13:00; ouderzin MEET-03 #9/#10 zonder 'bak', laag 2 'De buitenkant tel je niet.' Rest: V-#631 (doos voor truien/eieren) | ✓ klaar (V-#631 in de build van ronde r4; Z-#639) |
+| hercheck | Oefeningen | na de volgende build van Overzicht: V-#631, Z-#630 (laag 1 van V-#630 bij gelijke tellers en 7/8 tegen 2/3), Z-#631, Z-#632/#633 (motorregel 'je gaf de bodem' → MEET-03 #1 labelregel erheen), Z-#635–#637 (contexten), Z-#616 (bedragen met €, GET-04 #11) | wacht op build |
+
+## Oefeningen 8 okt: batch 5 (MEET-04, VBN-04, VERH-01, VERH-02; 25 somtypes), datapunten
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| Oef-#444 | Overzicht (motor/data) | Minteken: claudeFoutHints hebben '-8' (koppelteken), claudeDenkfouten '−8'. In pas_toe valt een labelregel ('Claudes sleutel: …') dan nooit op die sleutel (vergelijking d['fout'] == k['fout']). 295 sleutels in batch 5 staan daardoor op 'andere fout' (MEET-04 #1 147, #2 111, #3 24, #5 8; VERH-02 #4 4, #7 1). Voorstel: norm421 op beide kanten, of claudeFoutHints.fout met '−'. Daarna gaan ze vanzelf naar de klaarstaande regels | open |
+| Oef-#445 | Overzicht (data/motor) | VERH-02 #3 (meerkeuze, opties '36%'): bij 33 items geen claudeFoutHints en bij 147 maar één van de twee; de labelregels bereiken de andere optie niet (213 sleutels op 'andere fout'). 'fout = getal1' leest '36%' niet (waarde416 haalt '%' niet weg). Voorstel: labelregel op claudeDenkfouten, of '%' in waarde416 | open |
+| Oef-#446 | Overzicht (data) | Kommagetal-sleutels met een punt: '7.5', '2.5', '0.5' (VERH-01 #2, en een half stukje kun je niet kleuren), '4.4', '9.6' (VERH-02 #4), '6.7' (VERH-02 #6, 40 : 6). Huisnotatie met komma, of weg | open |
+| Oef-#447 | Overzicht (data) | VBN-04 #2 'Welke staaf wordt het hoogst?': bank-032 juli en sept allebei 40, 'sept' is een optie en staat als fout; bank-030 juni en sept allebei 30 (sept geen optie, maar de vraag heeft twee antwoorden) | open |
+| Oef-#448 | Overzicht (data) | VERH-02 #7: antwoord '56' zonder €, sleutels '€24', '€104' met € (een kind dat '24' typt, raakt geen sleutel). Eén notatie (de vraag zegt 'in euro's') | open |
+| Oef-#449 | Overzicht (data) | 'Balk kleuren' (VBN-04 #1, VERH-01 #1/#2): jsRender null, het aantal stukjes staat nergens (VERH-01 #2 gaat uit van twintig). Graag in de data, dan kan de check het nalopen | open |
+| Oef-#450 | Overzicht (data) | VBN-04 #1: Claudes sleutel '10' bij 4 items zonder route (bv. ma 45, stukje 5 → 9). Weghalen of een route | open |
+| Oef-#451 | Overzicht (data, les 195) | Toevallige treffer: 'getal min procent' of 'som/verschil' geeft het antwoord: VERH-02 #1 50% van 100, 80% van 400, 60% van 150; #3 5 van 25, 5 van 20, 90 van 150. Andere getallen | open |
+| Oef-#427 | – | G5 MEET-E06 #1 gen-001 komt in G7 MEET-04 nrO 7 niet voor (220 claude-bank-items); niets te doen | ✓ gesloten (G7) |
+
+Nummering: volgende vrije Oef-#452.
+
+## Overzicht 8 okt: review batch 4 Didactiek, ronde r4 (build 13:26:46)
+Build **13:26:46** (met batch 5 van Oefeningen; patch_batch1..5: 0 wijzigingen). Checks: G7 check_hints 0 FAIL / 0 WARN (123 klaar · 32 open), merge-notatie ALLES OK; G5/G6/G8 merge-notatie ALLES OK, G5 #121 0, generator 0, G6 FIX6 0 FAIL. Motorregressie (oud = vóór r4): G5 0 en G6 0 van 4845/4302 items anders. Code: `fixlijst_g7` blok 'Review batch 4' (+ `pas_toe_av8` voor de aanvulling uit G8), `bevroren/z630_ids.json`.
+
+| # | Wie | Wat (data per somtype) | Stand |
+|---|---|---|---|
+| V-#631 | Overzicht (data) | MEET-03 nr 10 (nrO 10): doos voor truien (7×6×4) → kralen, eieren (10×3×2) → krijtjes; knikkers (11×4×4) en blokjes (10×8×6) passen. Maten en antwoorden gelijk | ✓ |
+| Z-#637 | Overzicht (data + kop) | MEET-03 nr 9: de waterbak (5×4×1,5 = 30 m³) → «Een vijver in het park is 5 m lang, 4 m breed en 1,5 m diep. Hoeveel m³ water gaat erin?» (kop blijft 'Een bak is …'). Kop nr 10 → «Een doos is # cm lang, # cm breed en # cm hoog. Hoeveel cm³ past erin?» (sync: kopGewijzigd in batch4.json) | ✓ |
+| Z-#630 | Overzicht (data) | GET-05 nr 1/2 (nrO 6/7): 105 van 318 items nieuw (elk derde op id). Een derde gelijke tellers (grootst 21, kleinst 14; Claude-label 'grotere-noemer-is-groter' → 'niet de grootste/kleinste'), twee derde waar de noemer-truc fout gaat (grootst 42: de breuk met de grootste noemer is het grootst; kleinst 28: die met de kleinste noemer is het kleinst; nieuw Claude-label **'alleen-noemer-vergeleken'**, 140 sleutels nu op 'andere fout'). Echte breuken, zelfde noemerbereik, verschil ≥ 1/24, alles met Fraction nagerekend. Truc 'kleinste noemer' bij grootst nu 148/190 (78%), 'grootste noemer' bij kleinst 100/128 (78%) | ✓ (regel: Oefeningen) |
+| Z-#631 | Overzicht (data) | MEET-02 nr 3 (nrO 4): vijvers 2×2 → 6×6 met 3×3 (27), 12×6 met 5×5 (47), 9×7 met 3×3 (54), 9×6 met 5×5 (29); sleutels tuin / tuin − zijde / tuin + vijver opnieuw | ✓ |
+| Z-#632 | Overzicht (data) | MEET-02 nr 1: driehoek 6×3 (b+h = 9 = antwoord) → 6×9 (27); 4×3 ('twee erbij' 14 = omtrek) → 4×6 (12). Niet 6×5 (= 014 omgedraaid) en niet 3×6 (b+h = 9 = antwoord). jsRender basis/hoogte mee | ✓ |
+| Z-#633 | Overzicht (data + motor) | MEET-03 nr 1: 30 cm³ op 2×3 / 3×2 (l+b = 5 = hoogte) → 78 cm³ op 2×3 (13) en 84 cm³ op 3×2 (14); geen treffer met l+b, l×b, l, b (ook niet ±1). Motorregel **'fout = de bodem (l × b)'**: zeker, gaat vóór '± 1' (ook als hij later in de entry staat). Met een proef-entry: 830 sleutels, waarvan 14 eerder op '± 1' | ✓ (entry: Oefeningen) |
+| Z-#635 | Overzicht (data) | MEET-02 nr 2 (nrO 3): «Een L-vormig hok … Hoeveel m² is het hok?» → «Een L-vormige tuin … Hoeveel m² is de tuin?» (8). Kop gewijzigd (sync); H1/L1 'Het hok' → 'De tuin' is voor Oefeningen | ✓ |
+| Z-#636 | Overzicht (data) | GET-05 nr 7 (nrO 5): botten → kralen / knikkers, noten → ballonnen, sterren → kralen (4 items; kaartjes blijft) | ✓ |
+| Z-#616 | Overzicht (motor) | 'fout = getal1 / getal2' geeft bij een geldantwoord een bedrag als het getal in de vraag een bedrag is ('€28', '€45,60'); alleen G7/G8 (KOMMA437). GET-04 nrO 11: 31/31 sleutels in geldnotatie; de 9 '€58'-sleutels (aantal 10) staan nu op 'bedrag voor alles' | ✓ |
+| VERH-04 nrO 3 | Overzicht (data) | «50% van de poesjes is kapot» → lampjes, «75% van de stappen is kapot» → ballonnen (antwoord 0,5 / 0,75 nagerekend) | ✓ |
+| Z-#639 | Overzicht | Oef-#440 en Oef-#443 hierboven op klaar gezet | ✓ |

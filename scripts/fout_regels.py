@@ -4,6 +4,7 @@ Regels gelden van boven naar beneden; de eerste die past, wint. Gebruikt door ap
 Nieuw 8 okt 12:4x (G7 batch 2, Oef-#421/#422/#429): norm421 = één notatie voor letterlijke regels en opties ('−'/'-'/'–' als minteken, 'euro'/'€');
   'de deelsom omgedraaid' = de deling met deeltal en deler omgewisseld (antwoord 'a : b' → optie 'b : a'; antwoord getal → b/a).
   Oef-#437: KOMMA437 (G7/G8) leest '8,4' als één getal; Oef-#436: 'fout = antwoord ± 0,1 / ± 0,01' ook bij een heel antwoord (vraag met kommagetal);
+  Z-#616: 'fout = getal1/getal2' als bedrag bij een geldvraag (G7/G8). Z-#633: 'fout = de bodem (l × b)', zeker, vóór '± 1'.
   Oef-#442: 'fout = de som van de getallen' / 'fout = het middelste getal (op grootte)' (gemiddelde; alleen als de waarde zo uitkomt).
   Oef-#440: met KOMMA437 telt een antwoord '8,0' als 8, een sleutel '8,0' past op regelwaarde 8, en 'antwoord × 10 / : 10' werkt ook bij een kommagetal (1,1 → 11 / 0,11). Oef-#434: 'fout = het cijfer op de plek ernaast' (plaatswaarde: de cijfers links en rechts van de gevraagde plaats).
 Per item komt er uit:
@@ -700,6 +701,14 @@ def _compile_regel(regel, c):
     # Oef-#442 (Z-#603, gemiddelde GET-04 nrO 6): 'fout = de som van de getallen' (niet gedeeld) en 'fout = het middelste getal (op grootte)'.
     # De rij is de langste reeks getallen met ', ' of ' en ' ertussen ('6, 13, 3, 15, 18'). Alleen een sleutel als de waarde echt zo uitkomt:
     # som/middelste ≠ antwoord, middelste alleen bij een oneven aantal (bij even: geen sleutel). Geen rij van minstens 3 getallen → geen sleutel.
+    # Z-#633 (G7 MEET-03 #1): 'fout = de bodem (l × b)': het kind gaf de oppervlakte van de bodem ('De bodem is 2 bij 3 cm' → 6), ≠ antwoord.
+    # Zeker (de maten staan in de vraag): in pas_toe gaat hij vóór de onzekere regels als 'antwoord ± 1', ook als de entry hem later zet.
+    if r.startswith('fout = de bodem'):
+        mb = re.search(r'bodem (?:is|van) (\d+(?:,\d+)?) (?:cm |m )?(?:bij|×|x) (\d+(?:,\d+)?)', c.opg)
+        if not mb: return {'exact': set()}
+        vb = Fraction(mb.group(1).replace(',', '.')) * Fraction(mb.group(2).replace(',', '.'))
+        if _dec(c.ans) == vb: return {'exact': set()}
+        return {'exact': {_kg(vb)}, 'pred': lambda v: _dec(v) == vb, 'zeker': True}
     if r.startswith('fout = de som van de getallen') or r.startswith('fout = het middelste getal'):
         rijen = [re.findall(r'\d+(?:,\d+)?', x.group(0)) for x in re.finditer(r'\d+(?:,\d+)?(?:(?:, | en )\d+(?:,\d+)?)+', c.opg)]
         rij = max(rijen, key=len) if rijen else []
@@ -827,6 +836,13 @@ def _compile_regel(regel, c):
         k = int(m.group(3)); st_ = g1 * k if m.group(2) == '×' else (g1 // k if g1 % k == 0 else None)
         if st_ is None: return {'exact': set()}
         return E(g2 + st_) if m.group(1) == '+' else (E(g2 - st_) if g2 - st_ >= 0 else {'exact': set()})
+    # Z-#616 (G7/G8, met KOMMA437): bij een geldantwoord is 'fout = getal1 / getal2' een bedrag als het getal in de vraag een bedrag is
+    # ('€28', '€45,60', niet '28' / '45,6'); dan raakt de sleutel ook '€58' van 'antwoord × 10' en wint hij door zijn plek in de entry.
+    if KOMMA437 and c.ac is not None and (m616 := re.fullmatch(r'fout = getal([12])', r.strip())):
+        g616 = g1 if m616.group(1) == '1' else g2
+        bedr616 = {_cent(x) for x in re.findall(r'€\s?\d+(?:\.\d{3})*(?:,\d{1,2})?', c.opg)}
+        if g616 is not None and (g616 * 100).denominator == 1 and int(g616 * 100) in bedr616 and int(g616 * 100) != c.ac:
+            k616 = int(g616 * 100); return {'exact': {geld(k616)}, 'pred': lambda v: _cent(v) == k616}
     if re.match(r'fout = getal1\b', r): return E(g1)
     if re.match(r'fout = getal2\b', r): return E(g2)
     if re.match(r'fout = getal \+ 10 of antwoord \+ 10', r): return E(g1 + 10, a + 10)
@@ -1045,7 +1061,7 @@ def pas_toe(it, st, alle_cellen=None):
                 ook = [x[0]['regel'] for x in regels if x not in zeker and x[1] and not x[1].get('alles') and _past(x[1], v)]
         if not tabel:
             # #106: 'fout = de prijs' is zeker (het bedrag staat in de opgave) en gaat vóór de onzekere geldregels ('± 10 cent', '± €1')
-            zp = [x for x in volgorde if x[1] and x[1].get('prijs') and _past(x[1], v)]
+            zp = [x for x in volgorde if x[1] and (x[1].get('prijs') or x[1].get('zeker')) and _past(x[1], v)]      # Z-#633: ook 'zeker' (de bodem)
             if zp:
                 volgorde = zp + [x for x in volgorde if x not in zp]
                 ook = ook + [x[0]['regel'] for x in regels if x not in zp and x[1] and not x[1].get('alles') and _past(x[1], v)]

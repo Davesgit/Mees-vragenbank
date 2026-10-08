@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T13:13:00+0200",
+ "gegenereerdOp": "2026-10-08T13:26:46+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-MEET-02",
  "bordtitel": "Oppervlakte berekenen",
@@ -1880,18 +1880,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een driehoekig stuk grond in de dierentuin heeft een basis van 6 m en een hoogte van 3 m. Wat is de oppervlakte in m²?",
+   "opgave": "Een driehoekig stuk grond in de dierentuin heeft een basis van 6 m en een hoogte van 9 m. Wat is de oppervlakte in m²?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "9",
+   "antwoord": "27",
    "antwoordDetail": null,
    "hint": "Een driehoek is de helft van een rechthoek met dezelfde basis en hoogte. De oppervlakte reken je in m² (vierkante meter).",
    "sterkereHint": "Reken eerst de rechthoek uit: basis keer hoogte. Neem daarvan de helft. Dat is de oppervlakte van de driehoek.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "18",
+     "fout": "54",
      "uitleg": "Dat is de hele rechthoek. Hoeveel is de driehoek daarvan?",
      "uitlegSterker": "Teken de rechthoek om de driehoek heen. De driehoek is precies de helft: deel de oppervlakte van de rechthoek door twee.",
      "laag2": "tekstSterker",
@@ -1901,7 +1901,17 @@
     },
     {
      "stap": null,
-     "fout": "20",
+     "fout": "15",
+     "uitleg": "Heb je de basis en de hoogte opgeteld? Oppervlakte reken je met keer.",
+     "uitlegSterker": "Reken basis keer hoogte: dat is de rechthoek eromheen. De driehoek is de helft daarvan.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 + getal2",
+     "soort": "basis en hoogte opgeteld",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "56",
      "uitleg": "Heb je er twee bij opgeteld in plaats van door twee te delen?",
      "uitlegSterker": "De helft nemen is delen door twee. Reken basis keer hoogte en deel de uitkomst door twee.",
      "laag2": "tekstSterker",
@@ -1910,7 +1920,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "18 → Dat is de hele rechthoek. Hoeveel is de driehoek daarvan? · 20 → Heb je er twee bij opgeteld in plaats van door twee te delen?",
+   "foutHintsTekst": "54 → Dat is de hele rechthoek. Hoeveel is de driehoek daarvan? · 15 → Heb je de basis en de hoogte opgeteld? Oppervlakte reken je met keer. · 56 → Heb je er twee bij opgeteld in plaats van door twee te delen?",
    "ouderzin": "Je kind rekent de oppervlakte van een driehoek uit: basis keer hoogte, en daarvan de helft (in m²).",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -1922,7 +1932,7 @@
     "jsRender": {
      "soort": "driehoek-in-rechthoek",
      "basis": 6,
-     "hoogte": 3,
+     "hoogte": 9,
      "eenheid": "m",
      "hoogteStippellijn": true,
      "arcering": "driehoek",
@@ -1938,8 +1948,8 @@
    "bronVariant": "claude-bank:M21:2f4a9a88-9e60-463a-9b20-dd611e43370e",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "6 × 3 : 2",
-    "claudeUitleg": "Oppervlakte driehoek = basis × hoogte : 2 = 6 × 3 : 2 = 18 : 2 = 9 m².",
+    "claudeKaleSom": "6 × 9 : 2",
+    "claudeUitleg": "Oppervlakte driehoek = basis × hoogte : 2 = 6 × 9 : 2 = 54 : 2 = 27 m².",
     "claudeStrategie": "basis × hoogte : 2",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -1948,11 +1958,15 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "18",
+      "fout": "54",
       "denkfout": "omtrek-oppervlakte-verwisseld"
      },
      {
-      "fout": "20",
+      "fout": "15",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "56",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -1960,12 +1974,17 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "18",
+      "fout": "54",
       "uitleg": "Dat is de oppervlakte van de rechthoek eromheen. Een driehoek is de helft: deel door 2."
      },
      {
       "stap": null,
-      "fout": "20",
+      "fout": "15",
+      "uitleg": "Oppervlakte is vermenigvuldigen: basis × hoogte, en dan delen door 2."
+     },
+     {
+      "stap": null,
+      "fout": "56",
       "uitleg": "Delen door 2, niet optellen."
      }
     ]
@@ -1989,7 +2008,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-z632: Z-#632: driehoek 6 × 9 (geen toevallige treffer, review batch 4)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -2011,6 +2032,15 @@
      "dave": null
     },
     "hintEis": "basis × hoogte is de rechthoek eromheen; de driehoek is de helft daarvan",
+    "z632": {
+     "opgave": "Een driehoekig stuk grond in de dierentuin heeft een basis van 6 m en een hoogte van 3 m. Wat is de oppervlakte in m²?",
+     "antwoord": "9",
+     "sleutels": [
+      "18",
+      "20"
+     ],
+     "reden": "Z-#632: driehoek 6 × 9 (geen toevallige treffer, review batch 4)"
+    },
     "vorigId": "G7-MEET-02-claude-bank-twijfel-011",
     "duplicaatVan": null,
     "somtypeNr": 1,
@@ -2024,7 +2054,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "9",
+    "verwacht": "27",
     "methode": "oppervlakte driehoek",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2050,7 +2080,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "18"
+       "54"
       ]
      },
      "leesbaar": true
@@ -2064,7 +2094,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "9"
+       "15"
       ]
      },
      "leesbaar": true
@@ -2090,7 +2120,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "20"
+       "56"
       ]
      },
      "leesbaar": true
@@ -7546,18 +7576,18 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een driehoekig stuk grond op het schoolplein heeft een basis van 4 m en een hoogte van 3 m. Wat is de oppervlakte in m²?",
+   "opgave": "Een driehoekig stuk grond op het schoolplein heeft een basis van 4 m en een hoogte van 6 m. Wat is de oppervlakte in m²?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "6",
+   "antwoord": "12",
    "antwoordDetail": null,
    "hint": "Een driehoek is de helft van een rechthoek met dezelfde basis en hoogte. De oppervlakte reken je in m² (vierkante meter).",
    "sterkereHint": "Reken eerst de rechthoek uit: basis keer hoogte. Neem daarvan de helft. Dat is de oppervlakte van de driehoek.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "12",
+     "fout": "24",
      "uitleg": "Dat is de hele rechthoek. Hoeveel is de driehoek daarvan?",
      "uitlegSterker": "Teken de rechthoek om de driehoek heen. De driehoek is precies de helft: deel de oppervlakte van de rechthoek door twee.",
      "laag2": "tekstSterker",
@@ -7567,7 +7597,7 @@
     },
     {
      "stap": null,
-     "fout": "7",
+     "fout": "10",
      "uitleg": "Heb je de basis en de hoogte opgeteld? Oppervlakte reken je met keer.",
      "uitlegSterker": "Reken basis keer hoogte: dat is de rechthoek eromheen. De driehoek is de helft daarvan.",
      "laag2": "tekstSterker",
@@ -7577,7 +7607,7 @@
     },
     {
      "stap": null,
-     "fout": "14",
+     "fout": "26",
      "uitleg": "Heb je er twee bij opgeteld in plaats van door twee te delen?",
      "uitlegSterker": "De helft nemen is delen door twee. Reken basis keer hoogte en deel de uitkomst door twee.",
      "laag2": "tekstSterker",
@@ -7586,7 +7616,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "12 → Dat is de hele rechthoek. Hoeveel is de driehoek daarvan? · 7 → Heb je de basis en de hoogte opgeteld? Oppervlakte reken je met keer. · 14 → Heb je er twee bij opgeteld in plaats van door twee te delen?",
+   "foutHintsTekst": "24 → Dat is de hele rechthoek. Hoeveel is de driehoek daarvan? · 10 → Heb je de basis en de hoogte opgeteld? Oppervlakte reken je met keer. · 26 → Heb je er twee bij opgeteld in plaats van door twee te delen?",
    "ouderzin": "Je kind rekent de oppervlakte van een driehoek uit: basis keer hoogte, en daarvan de helft (in m²).",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -7598,7 +7628,7 @@
     "jsRender": {
      "soort": "driehoek-in-rechthoek",
      "basis": 4,
-     "hoogte": 3,
+     "hoogte": 6,
      "eenheid": "m",
      "hoogteStippellijn": true,
      "arcering": "driehoek",
@@ -7614,8 +7644,8 @@
    "bronVariant": "claude-bank:M21:0956141f-77ae-4de4-bae3-e6b733342af1",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "4 × 3 : 2",
-    "claudeUitleg": "Oppervlakte driehoek = basis × hoogte : 2 = 4 × 3 : 2 = 12 : 2 = 6 m².",
+    "claudeKaleSom": "4 × 6 : 2",
+    "claudeUitleg": "Oppervlakte driehoek = basis × hoogte : 2 = 4 × 6 : 2 = 24 : 2 = 12 m².",
     "claudeStrategie": "basis × hoogte : 2",
     "claudeThema": "Voetbal",
     "claudeAntwoordType": "geheel",
@@ -7624,15 +7654,15 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "12",
+      "fout": "24",
       "denkfout": "omtrek-oppervlakte-verwisseld"
      },
      {
-      "fout": "7",
+      "fout": "10",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      },
      {
-      "fout": "14",
+      "fout": "26",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -7640,17 +7670,17 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "12",
+      "fout": "24",
       "uitleg": "Dat is de oppervlakte van de rechthoek eromheen. Een driehoek is de helft: deel door 2."
      },
      {
       "stap": null,
-      "fout": "7",
+      "fout": "10",
       "uitleg": "Oppervlakte is vermenigvuldigen: basis × hoogte, en dan delen door 2."
      },
      {
       "stap": null,
-      "fout": "14",
+      "fout": "26",
       "uitleg": "Delen door 2, niet optellen."
      }
     ]
@@ -7675,7 +7705,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D7-DRIE context (Didactiek: wijzigingen per id)"
+     "D7-DRIE context (Didactiek: wijzigingen per id)",
+     "G7-z632: Z-#632: driehoek 4 × 6 (geen toevallige treffer, review batch 4)"
     ]
    },
    "opBord": false,
@@ -7698,6 +7729,16 @@
      "dave": null
     },
     "hintEis": "basis × hoogte is de rechthoek eromheen; de driehoek is de helft daarvan",
+    "z632": {
+     "opgave": "Een driehoekig stuk grond op het schoolplein heeft een basis van 4 m en een hoogte van 3 m. Wat is de oppervlakte in m²?",
+     "antwoord": "6",
+     "sleutels": [
+      "12",
+      "7",
+      "14"
+     ],
+     "reden": "Z-#632: driehoek 4 × 6 (geen toevallige treffer, review batch 4)"
+    },
     "vorigId": "G7-MEET-02-claude-bank-twijfel-006",
     "duplicaatVan": null,
     "somtypeNr": 1,
@@ -7711,7 +7752,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "6",
+    "verwacht": "12",
     "methode": "oppervlakte driehoek",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -7737,7 +7778,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "12"
+       "24"
       ]
      },
      "leesbaar": true
@@ -7751,7 +7792,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "7"
+       "10"
       ]
      },
      "leesbaar": true
@@ -7777,7 +7818,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "14"
+       "26"
       ]
      },
      "leesbaar": true
@@ -9331,7 +9372,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een L-vormig hok bestaat uit een rechthoek van 6 bij 5 meter en een rechthoek van 2 bij 4 meter. Hoeveel m² is het hok?",
+   "opgave": "Een L-vormige tuin bestaat uit een rechthoek van 6 bij 5 meter en een rechthoek van 2 bij 4 meter. Hoeveel m² is de tuin?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -9459,7 +9500,7 @@
     "doel": "G7-MEET-02",
     "regel": "G8-M24-samengesteld",
     "reden": "oppervlakte van samengestelde rechthoeken (G7-MEET-02)",
-    "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?",
     "aanvullingG7": true,
     "duplicaatVan": null,
     "uitG8": {
@@ -9472,13 +9513,23 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "z635": {
+     "opgave": "Een L-vormig hok bestaat uit een rechthoek van 6 bij 5 meter en een rechthoek van 2 bij 4 meter. Hoeveel m² is het hok?",
+     "antwoord": "38",
+     "sleutels": [
+      "30",
+      "72",
+      "17"
+     ],
+     "reden": "Z-#635: L-vormig hok → L-vormige tuin (review batch 4)"
+    },
     "somtypeNr": 2,
     "somtypeNrOrigineel": 3,
     "somtypeOrigineel": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
     "hints": {
      "batch": "batch4.json",
      "nr": 2,
-     "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?"
+     "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?"
     }
    },
    "controle": {
@@ -9564,7 +9615,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een L-vormig hok bestaat uit een rechthoek van 12 bij 6 meter en een rechthoek van 4 bij 3 meter. Hoeveel m² is het hok?",
+   "opgave": "Een L-vormige tuin bestaat uit een rechthoek van 12 bij 6 meter en een rechthoek van 4 bij 3 meter. Hoeveel m² is de tuin?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -9692,7 +9743,7 @@
     "doel": "G7-MEET-02",
     "regel": "G8-M24-samengesteld",
     "reden": "oppervlakte van samengestelde rechthoeken (G7-MEET-02)",
-    "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?",
     "aanvullingG7": true,
     "duplicaatVan": null,
     "uitG8": {
@@ -9705,13 +9756,23 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "z635": {
+     "opgave": "Een L-vormig hok bestaat uit een rechthoek van 12 bij 6 meter en een rechthoek van 4 bij 3 meter. Hoeveel m² is het hok?",
+     "antwoord": "84",
+     "sleutels": [
+      "72",
+      "144",
+      "25"
+     ],
+     "reden": "Z-#635: L-vormig hok → L-vormige tuin (review batch 4)"
+    },
     "somtypeNr": 2,
     "somtypeNrOrigineel": 3,
     "somtypeOrigineel": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
     "hints": {
      "batch": "batch4.json",
      "nr": 2,
-     "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?"
+     "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?"
     }
    },
    "controle": {
@@ -9797,7 +9858,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een L-vormig hok bestaat uit een rechthoek van 7 bij 3 meter en een rechthoek van 2 bij 5 meter. Hoeveel m² is het hok?",
+   "opgave": "Een L-vormige tuin bestaat uit een rechthoek van 7 bij 3 meter en een rechthoek van 2 bij 5 meter. Hoeveel m² is de tuin?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -9925,7 +9986,7 @@
     "doel": "G7-MEET-02",
     "regel": "G8-M24-samengesteld",
     "reden": "oppervlakte van samengestelde rechthoeken (G7-MEET-02)",
-    "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?",
     "aanvullingG7": true,
     "duplicaatVan": null,
     "uitG8": {
@@ -9938,13 +9999,23 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "z635": {
+     "opgave": "Een L-vormig hok bestaat uit een rechthoek van 7 bij 3 meter en een rechthoek van 2 bij 5 meter. Hoeveel m² is het hok?",
+     "antwoord": "31",
+     "sleutels": [
+      "21",
+      "72",
+      "17"
+     ],
+     "reden": "Z-#635: L-vormig hok → L-vormige tuin (review batch 4)"
+    },
     "somtypeNr": 2,
     "somtypeNrOrigineel": 3,
     "somtypeOrigineel": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
     "hints": {
      "batch": "batch4.json",
      "nr": 2,
-     "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?"
+     "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?"
     }
    },
    "controle": {
@@ -10030,7 +10101,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een L-vormig hok bestaat uit een rechthoek van 11 bij 6 meter en een rechthoek van 3 bij 2 meter. Hoeveel m² is het hok?",
+   "opgave": "Een L-vormige tuin bestaat uit een rechthoek van 11 bij 6 meter en een rechthoek van 3 bij 2 meter. Hoeveel m² is de tuin?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -10158,7 +10229,7 @@
     "doel": "G7-MEET-02",
     "regel": "G8-M24-samengesteld",
     "reden": "oppervlakte van samengestelde rechthoeken (G7-MEET-02)",
-    "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?",
     "aanvullingG7": true,
     "duplicaatVan": null,
     "uitG8": {
@@ -10171,13 +10242,23 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "z635": {
+     "opgave": "Een L-vormig hok bestaat uit een rechthoek van 11 bij 6 meter en een rechthoek van 3 bij 2 meter. Hoeveel m² is het hok?",
+     "antwoord": "72",
+     "sleutels": [
+      "66",
+      "112",
+      "22"
+     ],
+     "reden": "Z-#635: L-vormig hok → L-vormige tuin (review batch 4)"
+    },
     "somtypeNr": 2,
     "somtypeNrOrigineel": 3,
     "somtypeOrigineel": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
     "hints": {
      "batch": "batch4.json",
      "nr": 2,
-     "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?"
+     "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?"
     }
    },
    "controle": {
@@ -10263,7 +10344,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een L-vormig hok bestaat uit een rechthoek van 7 bij 6 meter en een rechthoek van 2 bij 2 meter. Hoeveel m² is het hok?",
+   "opgave": "Een L-vormige tuin bestaat uit een rechthoek van 7 bij 6 meter en een rechthoek van 2 bij 2 meter. Hoeveel m² is de tuin?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -10391,7 +10472,7 @@
     "doel": "G7-MEET-02",
     "regel": "G8-M24-samengesteld",
     "reden": "oppervlakte van samengestelde rechthoeken (G7-MEET-02)",
-    "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?",
     "aanvullingG7": true,
     "duplicaatVan": null,
     "uitG8": {
@@ -10404,13 +10485,23 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "z635": {
+     "opgave": "Een L-vormig hok bestaat uit een rechthoek van 7 bij 6 meter en een rechthoek van 2 bij 2 meter. Hoeveel m² is het hok?",
+     "antwoord": "46",
+     "sleutels": [
+      "42",
+      "72",
+      "17"
+     ],
+     "reden": "Z-#635: L-vormig hok → L-vormige tuin (review batch 4)"
+    },
     "somtypeNr": 2,
     "somtypeNrOrigineel": 3,
     "somtypeOrigineel": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
     "hints": {
      "batch": "batch4.json",
      "nr": 2,
-     "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?"
+     "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?"
     }
    },
    "controle": {
@@ -10496,7 +10587,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een L-vormig hok bestaat uit een rechthoek van 8 bij 5 meter en een rechthoek van 4 bij 5 meter. Hoeveel m² is het hok?",
+   "opgave": "Een L-vormige tuin bestaat uit een rechthoek van 8 bij 5 meter en een rechthoek van 4 bij 5 meter. Hoeveel m² is de tuin?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -10624,7 +10715,7 @@
     "doel": "G7-MEET-02",
     "regel": "G8-M24-samengesteld",
     "reden": "oppervlakte van samengestelde rechthoeken (G7-MEET-02)",
-    "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?",
     "aanvullingG7": true,
     "duplicaatVan": null,
     "uitG8": {
@@ -10637,13 +10728,23 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "z635": {
+     "opgave": "Een L-vormig hok bestaat uit een rechthoek van 8 bij 5 meter en een rechthoek van 4 bij 5 meter. Hoeveel m² is het hok?",
+     "antwoord": "60",
+     "sleutels": [
+      "40",
+      "120",
+      "22"
+     ],
+     "reden": "Z-#635: L-vormig hok → L-vormige tuin (review batch 4)"
+    },
     "somtypeNr": 2,
     "somtypeNrOrigineel": 3,
     "somtypeOrigineel": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
     "hints": {
      "batch": "batch4.json",
      "nr": 2,
-     "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?"
+     "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?"
     }
    },
    "controle": {
@@ -10729,7 +10830,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een L-vormig hok bestaat uit een rechthoek van 8 bij 6 meter en een rechthoek van 4 bij 4 meter. Hoeveel m² is het hok?",
+   "opgave": "Een L-vormige tuin bestaat uit een rechthoek van 8 bij 6 meter en een rechthoek van 4 bij 4 meter. Hoeveel m² is de tuin?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -10857,7 +10958,7 @@
     "doel": "G7-MEET-02",
     "regel": "G8-M24-samengesteld",
     "reden": "oppervlakte van samengestelde rechthoeken (G7-MEET-02)",
-    "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?",
     "aanvullingG7": true,
     "duplicaatVan": null,
     "uitG8": {
@@ -10870,13 +10971,23 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "z635": {
+     "opgave": "Een L-vormig hok bestaat uit een rechthoek van 8 bij 6 meter en een rechthoek van 4 bij 4 meter. Hoeveel m² is het hok?",
+     "antwoord": "64",
+     "sleutels": [
+      "48",
+      "120",
+      "22"
+     ],
+     "reden": "Z-#635: L-vormig hok → L-vormige tuin (review batch 4)"
+    },
     "somtypeNr": 2,
     "somtypeNrOrigineel": 3,
     "somtypeOrigineel": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
     "hints": {
      "batch": "batch4.json",
      "nr": 2,
-     "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?"
+     "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?"
     }
    },
    "controle": {
@@ -10962,7 +11073,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een L-vormig hok bestaat uit een rechthoek van 12 bij 4 meter en een rechthoek van 2 bij 2 meter. Hoeveel m² is het hok?",
+   "opgave": "Een L-vormige tuin bestaat uit een rechthoek van 12 bij 4 meter en een rechthoek van 2 bij 2 meter. Hoeveel m² is de tuin?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -11090,7 +11201,7 @@
     "doel": "G7-MEET-02",
     "regel": "G8-M24-samengesteld",
     "reden": "oppervlakte van samengestelde rechthoeken (G7-MEET-02)",
-    "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?",
     "aanvullingG7": true,
     "duplicaatVan": null,
     "uitG8": {
@@ -11103,13 +11214,23 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
+    "z635": {
+     "opgave": "Een L-vormig hok bestaat uit een rechthoek van 12 bij 4 meter en een rechthoek van 2 bij 2 meter. Hoeveel m² is het hok?",
+     "antwoord": "52",
+     "sleutels": [
+      "48",
+      "84",
+      "20"
+     ],
+     "reden": "Z-#635: L-vormig hok → L-vormige tuin (review batch 4)"
+    },
     "somtypeNr": 2,
     "somtypeNrOrigineel": 3,
     "somtypeOrigineel": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
     "hints": {
      "batch": "batch4.json",
      "nr": 2,
-     "somtype": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?"
+     "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?"
     }
    },
    "controle": {
@@ -11195,11 +11316,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een tuin van 6 bij 6 meter heeft een vierkante vijver van 2 bij 2 meter. Hoeveel m² gras is er?",
+   "opgave": "Een tuin van 6 bij 6 meter heeft een vierkante vijver van 3 bij 3 meter. Hoeveel m² gras is er?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "32",
+   "antwoord": "27",
    "antwoordDetail": null,
    "hint": "Hoeveel m² (vierkante meter) is de hele tuin? En hoeveel is de vijver?",
    "sterkereHint": "Reken de tuin uit: lengte keer breedte. Reken de vijver uit: zijde keer zijde. Haal de vijver van de tuin af.",
@@ -11216,7 +11337,7 @@
     },
     {
      "stap": null,
-     "fout": "34",
+     "fout": "33",
      "uitleg": "Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde.",
      "uitlegSterker": "Reken de oppervlakte van de vijver uit: zijde keer zijde. Haal die van de tuin af.",
      "laag2": "tekstSterker",
@@ -11226,7 +11347,7 @@
     },
     {
      "stap": null,
-     "fout": "40",
+     "fout": "45",
      "uitleg": "Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.",
      "uitlegSterker": "Reken de tuin uit en reken de vijver uit. Gras is de tuin min de vijver.",
      "laag2": "tekstSterker",
@@ -11235,7 +11356,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "36 → Dat is de hele tuin. Waar de vijver ligt, groeit geen gras. Wat moet er nog af? · 34 → Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde. · 40 → Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.",
+   "foutHintsTekst": "36 → Dat is de hele tuin. Waar de vijver ligt, groeit geen gras. Wat moet er nog af? · 33 → Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde. · 45 → Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.",
    "ouderzin": "Je kind rekent uit hoeveel gras er is: de tuin min de vijver.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -11255,8 +11376,8 @@
    "bronVariant": "claude-bank:M24:1ad67d67-b8f0-46d9-aed9-9a80e703235c",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "6 × 6 − 2 × 2",
-    "claudeUitleg": "Hele tuin: 6 × 6 = 36 m².\nVijver: 2 × 2 = 4 m².\nGras: 36 − 4 = 32 m².",
+    "claudeKaleSom": "6 × 6 − 3 × 3",
+    "claudeUitleg": "Hele tuin: 6 × 6 = 36 m².\nVijver: 3 × 3 = 9 m².\nGras: 36 − 9 = 27 m².",
     "claudeStrategie": "geheel min het gat",
     "claudeThema": "Voetbal",
     "claudeAntwoordType": "geheel",
@@ -11269,11 +11390,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "34",
+      "fout": "33",
       "denkfout": "omtrek-oppervlakte-verwisseld"
      },
      {
-      "fout": "40",
+      "fout": "45",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -11286,12 +11407,12 @@
      },
      {
       "stap": null,
-      "fout": "34",
-      "uitleg": "De vijver is 2 × 2 m², niet 2 m²."
+      "fout": "33",
+      "uitleg": "De vijver is 3 × 3 m², niet 3 m²."
      },
      {
       "stap": null,
-      "fout": "40",
+      "fout": "45",
       "uitleg": "De vijver gaat eraf, niet erbij."
      }
     ]
@@ -11336,6 +11457,16 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Een tuin van # bij # meter heeft een vierkante vijver van # bij # meter. Hoeveel m² gras is er?",
+    "z631": {
+     "opgave": "Een tuin van 6 bij 6 meter heeft een vierkante vijver van 2 bij 2 meter. Hoeveel m² gras is er?",
+     "antwoord": "32",
+     "sleutels": [
+      "36",
+      "34",
+      "40"
+     ],
+     "reden": "Z-#631: vijver van 2 × 2 → 3 × 3 (review batch 4)"
+    },
     "somtypeNr": 3,
     "somtypeNrOrigineel": 4,
     "somtypeOrigineel": "Een tuin van # bij # meter heeft een vierkante vijver van # bij # meter. Hoeveel m² gras is er?",
@@ -11387,7 +11518,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "34"
+       "33"
       ]
      },
      "leesbaar": true
@@ -11401,7 +11532,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "40"
+       "45"
       ]
      },
      "leesbaar": true
@@ -11661,11 +11792,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een tuin van 12 bij 6 meter heeft een vierkante vijver van 2 bij 2 meter. Hoeveel m² gras is er?",
+   "opgave": "Een tuin van 12 bij 6 meter heeft een vierkante vijver van 5 bij 5 meter. Hoeveel m² gras is er?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "68",
+   "antwoord": "47",
    "antwoordDetail": null,
    "hint": "Hoeveel m² (vierkante meter) is de hele tuin? En hoeveel is de vijver?",
    "sterkereHint": "Reken de tuin uit: lengte keer breedte. Reken de vijver uit: zijde keer zijde. Haal de vijver van de tuin af.",
@@ -11682,7 +11813,7 @@
     },
     {
      "stap": null,
-     "fout": "70",
+     "fout": "67",
      "uitleg": "Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde.",
      "uitlegSterker": "Reken de oppervlakte van de vijver uit: zijde keer zijde. Haal die van de tuin af.",
      "laag2": "tekstSterker",
@@ -11692,7 +11823,7 @@
     },
     {
      "stap": null,
-     "fout": "76",
+     "fout": "97",
      "uitleg": "Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.",
      "uitlegSterker": "Reken de tuin uit en reken de vijver uit. Gras is de tuin min de vijver.",
      "laag2": "tekstSterker",
@@ -11701,7 +11832,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "72 → Dat is de hele tuin. Waar de vijver ligt, groeit geen gras. Wat moet er nog af? · 70 → Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde. · 76 → Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.",
+   "foutHintsTekst": "72 → Dat is de hele tuin. Waar de vijver ligt, groeit geen gras. Wat moet er nog af? · 67 → Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde. · 97 → Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.",
    "ouderzin": "Je kind rekent uit hoeveel gras er is: de tuin min de vijver.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -11721,8 +11852,8 @@
    "bronVariant": "claude-bank:M24:7bfbbf0b-9738-4339-ad9e-45d232aabcca",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "12 × 6 − 2 × 2",
-    "claudeUitleg": "Hele tuin: 12 × 6 = 72 m².\nVijver: 2 × 2 = 4 m².\nGras: 72 − 4 = 68 m².",
+    "claudeKaleSom": "12 × 6 − 5 × 5",
+    "claudeUitleg": "Hele tuin: 12 × 6 = 72 m².\nVijver: 5 × 5 = 25 m².\nGras: 72 − 25 = 47 m².",
     "claudeStrategie": "geheel min het gat",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -11735,11 +11866,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "70",
+      "fout": "67",
       "denkfout": "omtrek-oppervlakte-verwisseld"
      },
      {
-      "fout": "76",
+      "fout": "97",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -11752,12 +11883,12 @@
      },
      {
       "stap": null,
-      "fout": "70",
-      "uitleg": "De vijver is 2 × 2 m², niet 2 m²."
+      "fout": "67",
+      "uitleg": "De vijver is 5 × 5 m², niet 5 m²."
      },
      {
       "stap": null,
-      "fout": "76",
+      "fout": "97",
       "uitleg": "De vijver gaat eraf, niet erbij."
      }
     ]
@@ -11802,6 +11933,16 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Een tuin van # bij # meter heeft een vierkante vijver van # bij # meter. Hoeveel m² gras is er?",
+    "z631": {
+     "opgave": "Een tuin van 12 bij 6 meter heeft een vierkante vijver van 2 bij 2 meter. Hoeveel m² gras is er?",
+     "antwoord": "68",
+     "sleutels": [
+      "72",
+      "70",
+      "76"
+     ],
+     "reden": "Z-#631: vijver van 2 × 2 → 5 × 5 (review batch 4)"
+    },
     "somtypeNr": 3,
     "somtypeNrOrigineel": 4,
     "somtypeOrigineel": "Een tuin van # bij # meter heeft een vierkante vijver van # bij # meter. Hoeveel m² gras is er?",
@@ -11853,7 +11994,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "70"
+       "67"
       ]
      },
      "leesbaar": true
@@ -11867,7 +12008,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "76"
+       "97"
       ]
      },
      "leesbaar": true
@@ -11894,11 +12035,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een tuin van 9 bij 7 meter heeft een vierkante vijver van 2 bij 2 meter. Hoeveel m² gras is er?",
+   "opgave": "Een tuin van 9 bij 7 meter heeft een vierkante vijver van 3 bij 3 meter. Hoeveel m² gras is er?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "59",
+   "antwoord": "54",
    "antwoordDetail": null,
    "hint": "Hoeveel m² (vierkante meter) is de hele tuin? En hoeveel is de vijver?",
    "sterkereHint": "Reken de tuin uit: lengte keer breedte. Reken de vijver uit: zijde keer zijde. Haal de vijver van de tuin af.",
@@ -11915,7 +12056,7 @@
     },
     {
      "stap": null,
-     "fout": "61",
+     "fout": "60",
      "uitleg": "Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde.",
      "uitlegSterker": "Reken de oppervlakte van de vijver uit: zijde keer zijde. Haal die van de tuin af.",
      "laag2": "tekstSterker",
@@ -11925,7 +12066,7 @@
     },
     {
      "stap": null,
-     "fout": "67",
+     "fout": "72",
      "uitleg": "Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.",
      "uitlegSterker": "Reken de tuin uit en reken de vijver uit. Gras is de tuin min de vijver.",
      "laag2": "tekstSterker",
@@ -11934,7 +12075,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "63 → Dat is de hele tuin. Waar de vijver ligt, groeit geen gras. Wat moet er nog af? · 61 → Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde. · 67 → Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.",
+   "foutHintsTekst": "63 → Dat is de hele tuin. Waar de vijver ligt, groeit geen gras. Wat moet er nog af? · 60 → Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde. · 72 → Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.",
    "ouderzin": "Je kind rekent uit hoeveel gras er is: de tuin min de vijver.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -11954,8 +12095,8 @@
    "bronVariant": "claude-bank:M24:8c540a3d-62e4-418b-996b-3d1dd961cfcb",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "9 × 7 − 2 × 2",
-    "claudeUitleg": "Hele tuin: 9 × 7 = 63 m².\nVijver: 2 × 2 = 4 m².\nGras: 63 − 4 = 59 m².",
+    "claudeKaleSom": "9 × 7 − 3 × 3",
+    "claudeUitleg": "Hele tuin: 9 × 7 = 63 m².\nVijver: 3 × 3 = 9 m².\nGras: 63 − 9 = 54 m².",
     "claudeStrategie": "geheel min het gat",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -11968,11 +12109,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "61",
+      "fout": "60",
       "denkfout": "omtrek-oppervlakte-verwisseld"
      },
      {
-      "fout": "67",
+      "fout": "72",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -11985,12 +12126,12 @@
      },
      {
       "stap": null,
-      "fout": "61",
-      "uitleg": "De vijver is 2 × 2 m², niet 2 m²."
+      "fout": "60",
+      "uitleg": "De vijver is 3 × 3 m², niet 3 m²."
      },
      {
       "stap": null,
-      "fout": "67",
+      "fout": "72",
       "uitleg": "De vijver gaat eraf, niet erbij."
      }
     ]
@@ -12035,6 +12176,16 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Een tuin van # bij # meter heeft een vierkante vijver van # bij # meter. Hoeveel m² gras is er?",
+    "z631": {
+     "opgave": "Een tuin van 9 bij 7 meter heeft een vierkante vijver van 2 bij 2 meter. Hoeveel m² gras is er?",
+     "antwoord": "59",
+     "sleutels": [
+      "63",
+      "61",
+      "67"
+     ],
+     "reden": "Z-#631: vijver van 2 × 2 → 3 × 3 (review batch 4)"
+    },
     "somtypeNr": 3,
     "somtypeNrOrigineel": 4,
     "somtypeOrigineel": "Een tuin van # bij # meter heeft een vierkante vijver van # bij # meter. Hoeveel m² gras is er?",
@@ -12086,7 +12237,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "61"
+       "60"
       ]
      },
      "leesbaar": true
@@ -12100,7 +12251,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "67"
+       "72"
       ]
      },
      "leesbaar": true
@@ -12127,11 +12278,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een tuin van 9 bij 6 meter heeft een vierkante vijver van 2 bij 2 meter. Hoeveel m² gras is er?",
+   "opgave": "Een tuin van 9 bij 6 meter heeft een vierkante vijver van 5 bij 5 meter. Hoeveel m² gras is er?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "50",
+   "antwoord": "29",
    "antwoordDetail": null,
    "hint": "Hoeveel m² (vierkante meter) is de hele tuin? En hoeveel is de vijver?",
    "sterkereHint": "Reken de tuin uit: lengte keer breedte. Reken de vijver uit: zijde keer zijde. Haal de vijver van de tuin af.",
@@ -12148,7 +12299,7 @@
     },
     {
      "stap": null,
-     "fout": "52",
+     "fout": "49",
      "uitleg": "Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde.",
      "uitlegSterker": "Reken de oppervlakte van de vijver uit: zijde keer zijde. Haal die van de tuin af.",
      "laag2": "tekstSterker",
@@ -12158,7 +12309,7 @@
     },
     {
      "stap": null,
-     "fout": "58",
+     "fout": "79",
      "uitleg": "Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.",
      "uitlegSterker": "Reken de tuin uit en reken de vijver uit. Gras is de tuin min de vijver.",
      "laag2": "tekstSterker",
@@ -12167,7 +12318,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "54 → Dat is de hele tuin. Waar de vijver ligt, groeit geen gras. Wat moet er nog af? · 52 → Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde. · 58 → Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.",
+   "foutHintsTekst": "54 → Dat is de hele tuin. Waar de vijver ligt, groeit geen gras. Wat moet er nog af? · 49 → Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde. · 79 → Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.",
    "ouderzin": "Je kind rekent uit hoeveel gras er is: de tuin min de vijver.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -12187,8 +12338,8 @@
    "bronVariant": "claude-bank:M24:9d7f6cb3-0746-4dad-8d5e-a8f863604a8d",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "9 × 6 − 2 × 2",
-    "claudeUitleg": "Hele tuin: 9 × 6 = 54 m².\nVijver: 2 × 2 = 4 m².\nGras: 54 − 4 = 50 m².",
+    "claudeKaleSom": "9 × 6 − 5 × 5",
+    "claudeUitleg": "Hele tuin: 9 × 6 = 54 m².\nVijver: 5 × 5 = 25 m².\nGras: 54 − 25 = 29 m².",
     "claudeStrategie": "geheel min het gat",
     "claudeThema": "Dino's en fossielen",
     "claudeAntwoordType": "geheel",
@@ -12201,11 +12352,11 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "52",
+      "fout": "49",
       "denkfout": "omtrek-oppervlakte-verwisseld"
      },
      {
-      "fout": "58",
+      "fout": "79",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -12218,12 +12369,12 @@
      },
      {
       "stap": null,
-      "fout": "52",
-      "uitleg": "De vijver is 2 × 2 m², niet 2 m²."
+      "fout": "49",
+      "uitleg": "De vijver is 5 × 5 m², niet 5 m²."
      },
      {
       "stap": null,
-      "fout": "58",
+      "fout": "79",
       "uitleg": "De vijver gaat eraf, niet erbij."
      }
     ]
@@ -12268,6 +12419,16 @@
      "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Een tuin van # bij # meter heeft een vierkante vijver van # bij # meter. Hoeveel m² gras is er?",
+    "z631": {
+     "opgave": "Een tuin van 9 bij 6 meter heeft een vierkante vijver van 2 bij 2 meter. Hoeveel m² gras is er?",
+     "antwoord": "50",
+     "sleutels": [
+      "54",
+      "52",
+      "58"
+     ],
+     "reden": "Z-#631: vijver van 2 × 2 → 5 × 5 (review batch 4)"
+    },
     "somtypeNr": 3,
     "somtypeNrOrigineel": 4,
     "somtypeOrigineel": "Een tuin van # bij # meter heeft een vierkante vijver van # bij # meter. Hoeveel m² gras is er?",
@@ -12319,7 +12480,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "52"
+       "49"
       ]
      },
      "leesbaar": true
@@ -12333,7 +12494,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "58"
+       "79"
       ]
      },
      "leesbaar": true
@@ -12820,7 +12981,7 @@
    "algemeneFoutHint": "Reken de tuin uit en haal de vijver eraf."
   }
  ],
- "hintsSyncOp": "2026-10-08T13:13:05+02:00",
+ "hintsSyncOp": "2026-10-08T13:26:52+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -12832,14 +12993,18 @@
   },
   {
    "batch": "batch3.json",
-   "md5": "bfc36c283977"
+   "md5": "dd466f5c6095"
   },
   {
    "batch": "batch4.json",
-   "md5": "1d37cc1f6282"
+   "md5": "67e1e52fdbef"
+  },
+  {
+   "batch": "batch5.json",
+   "md5": "ed00628f66f3"
   }
  ],
- "geschrevenOp": "2026-10-08T13:13:05+02:00",
+ "geschrevenOp": "2026-10-08T13:26:52+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T13:13:00+0200",
+ "gegenereerdOp": "2026-10-08T13:26:46+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-VBN-04",
  "bordtitel": "Staaf- en cirkeldiagram",
@@ -26,17 +26,52 @@
    "optiesTekst": null,
    "antwoord": "1",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "sterkereHint": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
    "foutHints": [
     {
      "stap": null,
      "fout": "5",
-     "uitleg": "Elk stukje is 5, niet 1."
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "45",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "50",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "5 → Elk stukje is 5, niet 1.",
-   "ouderzin": "",
+   "foutHintsTekst": "5 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 45 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 50 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -110,7 +145,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -126,8 +166,42 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5",
+       "20",
+       "45",
+       "50"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één stukje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-002",
@@ -142,11 +216,42 @@
    "optiesTekst": null,
    "antwoord": "3",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "sterkereHint": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "1",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "6",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "1 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 2 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 6 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -209,7 +314,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -217,7 +327,7 @@
     "methode": "geen automatische controle",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -225,8 +335,42 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1",
+       "2",
+       "3",
+       "6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één stukje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-003",
@@ -241,17 +385,52 @@
    "optiesTekst": null,
    "antwoord": "2",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "sterkereHint": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
    "foutHints": [
     {
      "stap": null,
      "fout": "10",
-     "uitleg": "Elk stukje is 5, niet 1."
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "15",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "50",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "10 → Elk stukje is 5, niet 1.",
-   "ouderzin": "",
+   "foutHintsTekst": "10 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 5 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 15 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 50 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -325,7 +504,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -341,8 +525,42 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5",
+       "10",
+       "15",
+       "50"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één stukje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-004",
@@ -357,17 +575,62 @@
    "optiesTekst": null,
    "antwoord": "6",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "sterkereHint": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
    "foutHints": [
     {
      "stap": null,
      "fout": "10",
-     "uitleg": "Elk stukje is 5, niet 1."
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "30",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "40",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "45",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "10 → Elk stukje is 5, niet 1.",
-   "ouderzin": "",
+   "foutHintsTekst": "10 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 5 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 30 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 40 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 45 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -441,7 +704,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -457,8 +725,43 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5",
+       "10",
+       "30",
+       "40",
+       "45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één stukje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-005",
@@ -473,17 +776,52 @@
    "optiesTekst": null,
    "antwoord": "2",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "sterkereHint": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
    "foutHints": [
     {
      "stap": null,
      "fout": "10",
-     "uitleg": "Elk stukje is 5, niet 1."
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "30",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "45",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "10 → Elk stukje is 5, niet 1.",
-   "ouderzin": "",
+   "foutHintsTekst": "10 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 5 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 30 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 45 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -557,7 +895,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -573,8 +916,42 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5",
+       "10",
+       "30",
+       "45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één stukje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-006",
@@ -589,11 +966,52 @@
    "optiesTekst": null,
    "antwoord": "10",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "sterkereHint": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "30",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "40",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "50",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "5 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 30 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 40 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 50 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -656,7 +1074,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -664,7 +1087,7 @@
     "methode": "geen automatische controle",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -672,8 +1095,42 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5",
+       "30",
+       "40",
+       "50"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één stukje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-007",
@@ -688,17 +1145,72 @@
    "optiesTekst": null,
    "antwoord": "9",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "sterkereHint": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
    "foutHints": [
     {
      "stap": null,
      "fout": "10",
-     "uitleg": "Elk stukje is 5, niet 1."
+     "uitleg": "Deel het getal uit de tabel door wat één stukje is.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "25",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "30",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "45",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "10 → Elk stukje is 5, niet 1.",
-   "ouderzin": "",
+   "foutHintsTekst": "10 → Deel het getal uit de tabel door wat één stukje is. · 5 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 25 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 30 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 45 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -772,7 +1284,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -788,8 +1305,43 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5",
+       "20",
+       "25",
+       "30",
+       "45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één stukje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-008",
@@ -804,11 +1356,32 @@
    "optiesTekst": null,
    "antwoord": "1",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "sterkereHint": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "8",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "9",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "8 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 9 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -871,7 +1444,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -879,7 +1457,7 @@
     "methode": "geen automatische controle",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -887,8 +1465,41 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1",
+       "8",
+       "9"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één stukje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-009",
@@ -903,17 +1514,62 @@
    "optiesTekst": null,
    "antwoord": "5",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "sterkereHint": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
    "foutHints": [
     {
      "stap": null,
      "fout": "10",
-     "uitleg": "Elk stukje is 5, niet 1."
+     "uitleg": "Deel het getal uit de tabel door wat één stukje is.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "25",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "45",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "50",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "10 → Elk stukje is 5, niet 1.",
-   "ouderzin": "",
+   "foutHintsTekst": "10 → Deel het getal uit de tabel door wat één stukje is. · 20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 25 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 45 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 50 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -987,7 +1643,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1003,8 +1664,43 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5",
+       "20",
+       "25",
+       "45",
+       "50"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één stukje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-010",
@@ -1019,17 +1715,62 @@
    "optiesTekst": null,
    "antwoord": "5",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "sterkereHint": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
    "foutHints": [
     {
      "stap": null,
      "fout": "10",
-     "uitleg": "Elk stukje is 5, niet 1."
+     "uitleg": "Deel het getal uit de tabel door wat één stukje is.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "25",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "40",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "45",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "10 → Elk stukje is 5, niet 1.",
-   "ouderzin": "",
+   "foutHintsTekst": "10 → Deel het getal uit de tabel door wat één stukje is. · 20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 25 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 40 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 45 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -1103,7 +1844,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1119,8 +1865,43 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5",
+       "20",
+       "25",
+       "40",
+       "45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één stukje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-011",
@@ -1135,17 +1916,72 @@
    "optiesTekst": null,
    "antwoord": "8",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "sterkereHint": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
    "foutHints": [
     {
      "stap": null,
      "fout": "10",
-     "uitleg": "Elk stukje is 5, niet 1."
+     "uitleg": "Deel het getal uit de tabel door wat één stukje is.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "25",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "35",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "40",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "10 → Elk stukje is 5, niet 1.",
-   "ouderzin": "",
+   "foutHintsTekst": "10 → Deel het getal uit de tabel door wat één stukje is. · 5 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 25 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 35 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 40 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -1219,7 +2055,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1235,8 +2076,43 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5",
+       "20",
+       "25",
+       "35",
+       "40"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één stukje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-012",
@@ -1251,11 +2127,42 @@
    "optiesTekst": null,
    "antwoord": "6",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.",
+   "sterkereHint": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "1",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "8",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "10",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "1 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 8 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 10 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -1318,7 +2225,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    "somtypeOrigineel": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Tabel: [rij]. Maak de staaf van [naam]: elk stukje van de balk is #."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1326,7 +2238,7 @@
     "methode": "geen automatische controle",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -1334,8 +2246,42 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1",
+       "6",
+       "8",
+       "10"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+     "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één stukje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-013",
@@ -1366,22 +2312,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "20"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
+   "sterkereHint": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
    "foutHints": [
     {
      "stap": null,
      "fout": "10",
-     "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
+     "uitleg": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "30",
-     "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
+     "uitleg": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "10 → Kijk naar het grootste getal in de tabel: past die staaf nog op deze as? · 30 → Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?",
-   "ouderzin": "",
+   "foutHintsTekst": "10 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental. · 30 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+   "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1488,7 +2444,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1504,8 +2465,53 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw",
+     "tekst": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "10"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw",
+     "tekst": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt."
   },
   {
    "id": "G7-VBN-04-claude-bank-014",
@@ -1536,22 +2542,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "80"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
+   "sterkereHint": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "70",
-     "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
+     "fout": "90",
+     "uitleg": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "90",
-     "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
+     "fout": "70",
+     "uitleg": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "70 → Kijk naar het grootste getal in de tabel: past die staaf nog op deze as? · 90 → Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?",
-   "ouderzin": "",
+   "foutHintsTekst": "90 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen. · 70 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+   "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1658,7 +2674,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1674,8 +2695,53 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw",
+     "tekst": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "70"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw",
+     "tekst": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "90"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt."
   },
   {
    "id": "G7-VBN-04-claude-bank-015",
@@ -1706,22 +2772,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "40"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
+   "sterkereHint": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "30",
-     "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
+     "fout": "50",
+     "uitleg": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "50",
-     "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
+     "fout": "30",
+     "uitleg": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "30 → Kijk naar het grootste getal in de tabel: past die staaf nog op deze as? · 50 → Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?",
-   "ouderzin": "",
+   "foutHintsTekst": "50 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen. · 30 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+   "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1828,7 +2904,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1844,8 +2925,53 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw",
+     "tekst": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw",
+     "tekst": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "50"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt."
   },
   {
    "id": "G7-VBN-04-claude-bank-016",
@@ -1876,22 +3002,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "40"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
+   "sterkereHint": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
    "foutHints": [
     {
      "stap": null,
      "fout": "30",
-     "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
+     "uitleg": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "50",
-     "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
+     "uitleg": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "30 → Kijk naar het grootste getal in de tabel: past die staaf nog op deze as? · 50 → Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?",
-   "ouderzin": "",
+   "foutHintsTekst": "30 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental. · 50 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+   "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1998,7 +3134,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2014,8 +3155,53 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw",
+     "tekst": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw",
+     "tekst": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "50"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt."
   },
   {
    "id": "G7-VBN-04-claude-bank-017",
@@ -2046,22 +3232,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "70"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
+   "sterkereHint": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
    "foutHints": [
     {
      "stap": null,
      "fout": "60",
-     "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
+     "uitleg": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "80",
-     "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
+     "uitleg": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "60 → Kijk naar het grootste getal in de tabel: past die staaf nog op deze as? · 80 → Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?",
-   "ouderzin": "",
+   "foutHintsTekst": "60 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental. · 80 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+   "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -2168,7 +3364,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2184,8 +3385,53 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw",
+     "tekst": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "60"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw",
+     "tekst": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "80"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt."
   },
   {
    "id": "G7-VBN-04-claude-bank-018",
@@ -2216,22 +3462,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "40"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
+   "sterkereHint": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
    "foutHints": [
     {
      "stap": null,
      "fout": "30",
-     "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
+     "uitleg": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "50",
-     "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
+     "uitleg": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "30 → Kijk naar het grootste getal in de tabel: past die staaf nog op deze as? · 50 → Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?",
-   "ouderzin": "",
+   "foutHintsTekst": "30 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental. · 50 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+   "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -2340,7 +3596,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2356,8 +3617,53 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw",
+     "tekst": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw",
+     "tekst": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "50"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt."
   },
   {
    "id": "G7-VBN-04-claude-bank-019",
@@ -2388,22 +3694,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "70"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
+   "sterkereHint": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "60",
-     "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
+     "fout": "80",
+     "uitleg": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "80",
-     "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
+     "fout": "60",
+     "uitleg": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "60 → Kijk naar het grootste getal in de tabel: past die staaf nog op deze as? · 80 → Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?",
-   "ouderzin": "",
+   "foutHintsTekst": "80 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen. · 60 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+   "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -2512,7 +3828,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2528,8 +3849,53 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw",
+     "tekst": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "60"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw",
+     "tekst": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "80"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt."
   },
   {
    "id": "G7-VBN-04-claude-bank-020",
@@ -2560,22 +3926,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "30"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
+   "sterkereHint": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "20",
-     "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
+     "fout": "40",
+     "uitleg": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "40",
-     "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
+     "fout": "20",
+     "uitleg": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "20 → Kijk naar het grootste getal in de tabel: past die staaf nog op deze as? · 40 → Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?",
-   "ouderzin": "",
+   "foutHintsTekst": "40 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen. · 20 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+   "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -2684,7 +4060,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2700,8 +4081,53 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord - 10",
+     "soort": "een tiental te laag",
+     "bron": "nieuw",
+     "tekst": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10",
+     "soort": "een tiental te hoog",
+     "bron": "nieuw",
+     "tekst": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "40"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
+     "tekstSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt."
   },
   {
    "id": "G7-VBN-04-claude-bank-021",
@@ -2716,22 +4142,42 @@
    "optiesTekst": null,
    "antwoord": "2",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf. Elk streepje op de as staat voor een vast getal.",
+   "sterkereHint": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "20",
-     "uitleg": "Elk streepje is 10, niet 1. Deel de waarde door 10."
+     "uitleg": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "uitlegSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "3",
-     "uitleg": "Reken na. 20 gedeeld door 10."
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "1",
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "20 → Elk streepje is 10, niet 1. Deel de waarde door 10. · 3 → Reken na. 20 gedeeld door 10.",
-   "ouderzin": "",
+   "foutHintsTekst": "20 → Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn. · 3 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn. · 1 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+   "ouderzin": "Je kind rekent uit hoeveel streepjes op de as een staaf hoog wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -2836,7 +4282,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 4,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -2852,8 +4303,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "tekstSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw",
+     "tekst": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1",
+       "3"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één streepje is.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één streepje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-022",
@@ -2868,22 +4365,42 @@
    "optiesTekst": null,
    "antwoord": "5",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf. Elk streepje op de as staat voor een vast getal.",
+   "sterkereHint": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "50",
-     "uitleg": "Elk streepje is 10, niet 1. Deel de waarde door 10."
+     "uitleg": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "uitlegSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "6",
-     "uitleg": "Reken na. 50 gedeeld door 10."
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "4",
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "50 → Elk streepje is 10, niet 1. Deel de waarde door 10. · 6 → Reken na. 50 gedeeld door 10.",
-   "ouderzin": "",
+   "foutHintsTekst": "50 → Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn. · 6 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn. · 4 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+   "ouderzin": "Je kind rekent uit hoeveel streepjes op de as een staaf hoog wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -2990,7 +4507,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 4,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -3006,8 +4528,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "tekstSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "50"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw",
+     "tekst": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4",
+       "6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één streepje is.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één streepje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-023",
@@ -3022,22 +4590,42 @@
    "optiesTekst": null,
    "antwoord": "6",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf. Elk streepje op de as staat voor een vast getal.",
+   "sterkereHint": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "60",
-     "uitleg": "Elk streepje is 10, niet 1. Deel de waarde door 10."
+     "uitleg": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "uitlegSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "7",
-     "uitleg": "Reken na. 60 gedeeld door 10."
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "60 → Elk streepje is 10, niet 1. Deel de waarde door 10. · 7 → Reken na. 60 gedeeld door 10.",
-   "ouderzin": "",
+   "foutHintsTekst": "60 → Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn. · 7 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn. · 5 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+   "ouderzin": "Je kind rekent uit hoeveel streepjes op de as een staaf hoog wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -3142,7 +4730,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 4,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -3158,8 +4751,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "tekstSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "60"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw",
+     "tekst": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5",
+       "7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één streepje is.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één streepje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-024",
@@ -3174,22 +4813,42 @@
    "optiesTekst": null,
    "antwoord": "1",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf. Elk streepje op de as staat voor een vast getal.",
+   "sterkereHint": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "5",
-     "uitleg": "Elk streepje is 5, niet 1. Deel de waarde door 5."
+     "uitleg": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "uitlegSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "2",
-     "uitleg": "Reken na. 5 gedeeld door 5."
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "0",
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "5 → Elk streepje is 5, niet 1. Deel de waarde door 5. · 2 → Reken na. 5 gedeeld door 5.",
-   "ouderzin": "",
+   "foutHintsTekst": "5 → Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn. · 2 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn. · 0 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+   "ouderzin": "Je kind rekent uit hoeveel streepjes op de as een staaf hoog wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -3296,7 +4955,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 4,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -3312,8 +4976,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "tekstSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw",
+     "tekst": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0",
+       "2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één streepje is.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één streepje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-025",
@@ -3328,22 +5038,42 @@
    "optiesTekst": null,
    "antwoord": "6",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf. Elk streepje op de as staat voor een vast getal.",
+   "sterkereHint": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "12",
-     "uitleg": "Elk streepje is 2, niet 1. Deel de waarde door 2."
+     "uitleg": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "uitlegSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "7",
-     "uitleg": "Reken na. 12 gedeeld door 2."
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "12 → Elk streepje is 2, niet 1. Deel de waarde door 2. · 7 → Reken na. 12 gedeeld door 2.",
-   "ouderzin": "",
+   "foutHintsTekst": "12 → Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn. · 7 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn. · 5 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+   "ouderzin": "Je kind rekent uit hoeveel streepjes op de as een staaf hoog wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -3448,7 +5178,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 4,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -3464,8 +5199,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "tekstSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "12"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw",
+     "tekst": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5",
+       "7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één streepje is.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één streepje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-026",
@@ -3480,22 +5261,42 @@
    "optiesTekst": null,
    "antwoord": "5",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf. Elk streepje op de as staat voor een vast getal.",
+   "sterkereHint": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "25",
-     "uitleg": "Elk streepje is 5, niet 1. Deel de waarde door 5."
+     "uitleg": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "uitlegSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "6",
-     "uitleg": "Reken na. 25 gedeeld door 5."
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "4",
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "25 → Elk streepje is 5, niet 1. Deel de waarde door 5. · 6 → Reken na. 25 gedeeld door 5.",
-   "ouderzin": "",
+   "foutHintsTekst": "25 → Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn. · 6 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn. · 4 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+   "ouderzin": "Je kind rekent uit hoeveel streepjes op de as een staaf hoog wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -3600,7 +5401,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 4,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -3616,8 +5422,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "tekstSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "25"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw",
+     "tekst": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4",
+       "6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één streepje is.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één streepje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-027",
@@ -3632,22 +5484,42 @@
    "optiesTekst": null,
    "antwoord": "7",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek in de tabel het getal bij de staaf. Elk streepje op de as staat voor een vast getal.",
+   "sterkereHint": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "35",
-     "uitleg": "Elk streepje is 5, niet 1. Deel de waarde door 5."
+     "uitleg": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "uitlegSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "8",
-     "uitleg": "Reken na. 35 gedeeld door 5."
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "6",
+     "uitleg": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "uitlegSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "35 → Elk streepje is 5, niet 1. Deel de waarde door 5. · 8 → Reken na. 35 gedeeld door 5.",
-   "ouderzin": "",
+   "foutHintsTekst": "35 → Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn. · 8 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn. · 6 → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+   "ouderzin": "Je kind rekent uit hoeveel streepjes op de as een staaf hoog wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -3754,7 +5626,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 4,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -3770,8 +5647,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "getal uit de tabel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.",
+     "tekstSterker": "Tel in stappen van één streepje tot je bij het getal uit de tabel bent. Hoeveel stappen zijn het?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "35"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord ± 1",
+     "soort": "één streepje ernaast",
+     "bron": "nieuw",
+     "tekst": "Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6",
+       "8"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel het getal uit de tabel door wat één streepje is.",
+     "tekstSterker": "Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel het getal uit de tabel door wat één streepje is."
   },
   {
    "id": "G7-VBN-04-claude-bank-028",
@@ -3802,22 +5725,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "groep 5"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een staaf is zo hoog als het getal in de tabel. Hoe groter het getal, hoe hoger de staaf.",
+   "sterkereHint": "Zoek in de tabel het grootste getal. Bij welke naam hoort het? Dat wordt de hoogste staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "groep 7",
-     "uitleg": "groep 7 heeft 20. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "groep 4",
-     "uitleg": "groep 4 heeft 10. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "groep 7 → groep 7 heeft 20. Is er een groter getal in de tabel? · groep 4 → groep 4 heeft 10. Is er een groter getal in de tabel?",
-   "ouderzin": "",
+   "foutHintsTekst": "groep 7 → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal? · groep 4 → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+   "ouderzin": "Je kind leest een tabel en bedenkt welke staaf in een staafdiagram het hoogst wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -3924,7 +5857,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -3940,8 +5878,40 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix",
+     "tekst": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "groep 4",
+       "groep 7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek in de tabel het grootste getal.",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek in de tabel het grootste getal."
   },
   {
    "id": "G7-VBN-04-claude-bank-029",
@@ -3972,22 +5942,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "di"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een staaf is zo hoog als het getal in de tabel. Hoe groter het getal, hoe hoger de staaf.",
+   "sterkereHint": "Zoek in de tabel het grootste getal. Bij welke naam hoort het? Dat wordt de hoogste staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "vr",
-     "uitleg": "vr heeft 25. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "wo",
-     "uitleg": "wo heeft 35. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "vr → vr heeft 25. Is er een groter getal in de tabel? · wo → wo heeft 35. Is er een groter getal in de tabel?",
-   "ouderzin": "",
+   "foutHintsTekst": "vr → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal? · wo → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+   "ouderzin": "Je kind leest een tabel en bedenkt welke staaf in een staafdiagram het hoogst wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -4096,7 +6076,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -4112,8 +6097,40 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix",
+     "tekst": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "vr",
+       "wo"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek in de tabel het grootste getal.",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek in de tabel het grootste getal."
   },
   {
    "id": "G7-VBN-04-claude-bank-030",
@@ -4144,22 +6161,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "juni"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een staaf is zo hoog als het getal in de tabel. Hoe groter het getal, hoe hoger de staaf.",
+   "sterkereHint": "Zoek in de tabel het grootste getal. Bij welke naam hoort het? Dat wordt de hoogste staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "aug",
-     "uitleg": "aug heeft 5. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "juli",
-     "uitleg": "juli heeft 25. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "aug → aug heeft 5. Is er een groter getal in de tabel? · juli → juli heeft 25. Is er een groter getal in de tabel?",
-   "ouderzin": "",
+   "foutHintsTekst": "aug → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal? · juli → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+   "ouderzin": "Je kind leest een tabel en bedenkt welke staaf in een staafdiagram het hoogst wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -4268,7 +6295,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -4284,8 +6316,40 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix",
+     "tekst": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "aug",
+       "juli"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek in de tabel het grootste getal.",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek in de tabel het grootste getal."
   },
   {
    "id": "G7-VBN-04-claude-bank-031",
@@ -4316,22 +6380,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "week 1"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een staaf is zo hoog als het getal in de tabel. Hoe groter het getal, hoe hoger de staaf.",
+   "sterkereHint": "Zoek in de tabel het grootste getal. Bij welke naam hoort het? Dat wordt de hoogste staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "week 3",
-     "uitleg": "week 3 heeft 60. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "week 2",
-     "uitleg": "week 2 heeft 30. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "week 3 → week 3 heeft 60. Is er een groter getal in de tabel? · week 2 → week 2 heeft 30. Is er een groter getal in de tabel?",
-   "ouderzin": "",
+   "foutHintsTekst": "week 3 → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal? · week 2 → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+   "ouderzin": "Je kind leest een tabel en bedenkt welke staaf in een staafdiagram het hoogst wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -4438,7 +6512,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -4454,8 +6533,40 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix",
+     "tekst": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "week 2",
+       "week 3"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek in de tabel het grootste getal.",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek in de tabel het grootste getal."
   },
   {
    "id": "G7-VBN-04-claude-bank-032",
@@ -4486,22 +6597,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "juli"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een staaf is zo hoog als het getal in de tabel. Hoe groter het getal, hoe hoger de staaf.",
+   "sterkereHint": "Zoek in de tabel het grootste getal. Bij welke naam hoort het? Dat wordt de hoogste staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "mei",
-     "uitleg": "mei heeft 15. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "sept",
-     "uitleg": "sept heeft 40. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "mei → mei heeft 15. Is er een groter getal in de tabel? · sept → sept heeft 40. Is er een groter getal in de tabel?",
-   "ouderzin": "",
+   "foutHintsTekst": "mei → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal? · sept → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+   "ouderzin": "Je kind leest een tabel en bedenkt welke staaf in een staafdiagram het hoogst wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -4610,7 +6731,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -4626,8 +6752,40 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix",
+     "tekst": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "mei",
+       "sept"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek in de tabel het grootste getal.",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek in de tabel het grootste getal."
   },
   {
    "id": "G7-VBN-04-claude-bank-033",
@@ -4658,22 +6816,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "do"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een staaf is zo hoog als het getal in de tabel. Hoe groter het getal, hoe hoger de staaf.",
+   "sterkereHint": "Zoek in de tabel het grootste getal. Bij welke naam hoort het? Dat wordt de hoogste staaf.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "wo",
-     "uitleg": "wo heeft 30. Is er een groter getal in de tabel?"
+     "fout": "vr",
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
-     "fout": "vr",
-     "uitleg": "vr heeft 50. Is er een groter getal in de tabel?"
+     "fout": "wo",
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "wo → wo heeft 30. Is er een groter getal in de tabel? · vr → vr heeft 50. Is er een groter getal in de tabel?",
-   "ouderzin": "",
+   "foutHintsTekst": "vr → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal? · wo → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+   "ouderzin": "Je kind leest een tabel en bedenkt welke staaf in een staafdiagram het hoogst wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -4782,7 +6950,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -4798,8 +6971,40 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix",
+     "tekst": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "vr",
+       "wo"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek in de tabel het grootste getal.",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek in de tabel het grootste getal."
   },
   {
    "id": "G7-VBN-04-claude-bank-034",
@@ -4830,22 +7035,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "week 4"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een staaf is zo hoog als het getal in de tabel. Hoe groter het getal, hoe hoger de staaf.",
+   "sterkereHint": "Zoek in de tabel het grootste getal. Bij welke naam hoort het? Dat wordt de hoogste staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "week 2",
-     "uitleg": "week 2 heeft 8. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "week 3",
-     "uitleg": "week 3 heeft 4. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "week 2 → week 2 heeft 8. Is er een groter getal in de tabel? · week 3 → week 3 heeft 4. Is er een groter getal in de tabel?",
-   "ouderzin": "",
+   "foutHintsTekst": "week 2 → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal? · week 3 → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+   "ouderzin": "Je kind leest een tabel en bedenkt welke staaf in een staafdiagram het hoogst wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -4952,7 +7167,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -4968,8 +7188,40 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix",
+     "tekst": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "week 2",
+       "week 3"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek in de tabel het grootste getal.",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek in de tabel het grootste getal."
   },
   {
    "id": "G7-VBN-04-claude-bank-035",
@@ -5000,22 +7252,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "wo"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een staaf is zo hoog als het getal in de tabel. Hoe groter het getal, hoe hoger de staaf.",
+   "sterkereHint": "Zoek in de tabel het grootste getal. Bij welke naam hoort het? Dat wordt de hoogste staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "ma",
-     "uitleg": "ma heeft 50. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "vr",
-     "uitleg": "vr heeft 70. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "ma → ma heeft 50. Is er een groter getal in de tabel? · vr → vr heeft 70. Is er een groter getal in de tabel?",
-   "ouderzin": "",
+   "foutHintsTekst": "ma → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal? · vr → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+   "ouderzin": "Je kind leest een tabel en bedenkt welke staaf in een staafdiagram het hoogst wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -5124,7 +7386,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -5140,8 +7407,40 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix",
+     "tekst": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "ma",
+       "vr"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek in de tabel het grootste getal.",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek in de tabel het grootste getal."
   },
   {
    "id": "G7-VBN-04-claude-bank-036",
@@ -5172,22 +7471,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "wo"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een staaf is zo hoog als het getal in de tabel. Hoe groter het getal, hoe hoger de staaf.",
+   "sterkereHint": "Zoek in de tabel het grootste getal. Bij welke naam hoort het? Dat wordt de hoogste staaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "ma",
-     "uitleg": "ma heeft 20. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "do",
-     "uitleg": "do heeft 10. Is er een groter getal in de tabel?"
+     "uitleg": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "uitlegSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "ma → ma heeft 20. Is er een groter getal in de tabel? · do → do heeft 10. Is er een groter getal in de tabel?",
-   "ouderzin": "",
+   "foutHintsTekst": "ma → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal? · do → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+   "ouderzin": "Je kind leest een tabel en bedenkt welke staaf in een staafdiagram het hoogst wordt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -5296,7 +7605,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    "somtypeOrigineel": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -5312,11 +7626,43 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "soort": "andere staaf",
+     "bron": "claude-taalfix",
+     "tekst": "Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "do",
+       "ma"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek in de tabel het grootste getal.",
+     "tekstSterker": "Vergelijk de getallen in de tabel één voor één. Het grootste getal geeft de hoogste staaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek in de tabel het grootste getal."
   }
  ],
- "hintsSyncOp": "2026-10-08T13:13:05+02:00",
+ "hintsSyncOp": "2026-10-08T13:26:52+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -5328,14 +7674,18 @@
   },
   {
    "batch": "batch3.json",
-   "md5": "bfc36c283977"
+   "md5": "dd466f5c6095"
   },
   {
    "batch": "batch4.json",
-   "md5": "1d37cc1f6282"
+   "md5": "67e1e52fdbef"
+  },
+  {
+   "batch": "batch5.json",
+   "md5": "ed00628f66f3"
   }
  ],
- "geschrevenOp": "2026-10-08T13:13:05+02:00",
+ "geschrevenOp": "2026-10-08T13:26:52+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

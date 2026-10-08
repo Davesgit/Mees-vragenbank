@@ -29,8 +29,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** —
     - **Uitleg (Claude):** juni heeft 50. Elk stukje is 5, dus 50 : 5 = 10 stukjes.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Zoek in de tabel het getal bij de staaf die je maakt. Elk stukje van de balk staat voor een vast getal.
+- **Hint 2 (te schrijven):** Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je.
+- **Ouderzin:** Je kind maakt een staaf van een staafdiagram: hoeveel stukjes horen bij het getal uit de tabel?
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.  [nieuw]
+  - `andere fout` (andere fout) → Deel het getal uit de tabel door wat één stukje is.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: [tabel] Je maakt een staafdiagram van deze tabel. Welke staaf wordt het hoogst?
 
@@ -55,8 +60,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** aug → aug heeft 5. Is er een groter getal in de tabel? · juli → juli heeft 25. Is er een groter getal in de tabel?
     - **Uitleg (Claude):** De hoogste staaf hoort bij het grootste getal in de tabel: 30 bij juni.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een staaf is zo hoog als het getal in de tabel. Hoe groter het getal, hoe hoger de staaf.
+- **Hint 2 (te schrijven):** Zoek in de tabel het grootste getal. Bij welke naam hoort het? Dat wordt de hoogste staaf.
+- **Ouderzin:** Je kind leest een tabel en bedenkt welke staaf in een staafdiagram het hoogst wordt.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `andere staaf` (Claudes sleutel: grafiek-verkeerd-afgelezen) → Kijk nog eens in de tabel. Bij welke staaf hoort het grootste getal?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Zoek in de tabel het grootste getal.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: [tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?
 
@@ -81,8 +91,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 30 → Kijk naar het grootste getal in de tabel: past die staaf nog op deze as? · 50 → Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?
     - **Uitleg (Claude):** Het grootste getal in de tabel is 40. Het eerste tiental daarboven (of precies 40 als dat een tiental is) is 40. Verder hoeft de as niet te lopen.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?
+- **Hint 2 (te schrijven):** Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.
+- **Ouderzin:** Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een tiental te laag` (fout = antwoord - 10) → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.  [nieuw]
+  - `een tiental te hoog` (fout = antwoord + 10) → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.  [nieuw]
+  - `andere fout` (andere fout) → Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: [tabel] Je maakt een staafdiagram van deze tabel. Elk streepje op de as staat voor #. Hoeveel streepjes hoog wordt de staaf van [naam]?
 
@@ -105,5 +121,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 25 → Elk streepje is 5, niet 1. Deel de waarde door 5. · 6 → Reken na. 25 gedeeld door 5.
     - **Uitleg (Claude):** week 1 heeft 25. Elk streepje is 5, dus 25 : 5 = 5 streepjes hoog.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Zoek in de tabel het getal bij de staaf. Elk streepje op de as staat voor een vast getal.
+- **Hint 2 (te schrijven):** Deel het getal uit de tabel door wat één streepje is. Zoveel streepjes hoog wordt de staaf.
+- **Ouderzin:** Je kind rekent uit hoeveel streepjes op de as een staaf hoog wordt.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de tabel` (Claudes sleutel: grafiek-verkeerd-afgelezen) → Dat is het getal uit de tabel. De vraag is hoeveel streepjes dat zijn.  [Claude, taalfix]
+  - `één streepje ernaast` (fout = antwoord ± 1) → Je zit er één streepje naast. Tel in stappen van één streepje, en tel hoeveel stappen het zijn.  [nieuw]
+  - `andere fout` (andere fout) → Deel het getal uit de tabel door wat één streepje is.  [nieuw]
+- Status: hints klaar

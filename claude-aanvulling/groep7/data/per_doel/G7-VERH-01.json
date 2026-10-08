@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T13:13:00+0200",
+ "gegenereerdOp": "2026-10-08T13:26:46+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-VERH-01",
  "bordtitel": "Breuk, procent en schaal lezen",
@@ -42,22 +42,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "Het getal 1"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een schaal heeft twee getallen met een dubbele punt (:) ertussen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.",
+   "sterkereHint": "Op de tekening is alles kleiner dan echt. Welk getal hoort dan bij de tekening?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Het getal 500",
-     "uitleg": "Het getal achter de dubbele punt hoort bij het echte voorwerp. Welk getal blijft er dan over?"
+     "uitleg": "Dat getal hoort bij het echte voorwerp. Op de tekening is alles kleiner.",
+     "uitlegSterker": "De tekening is kleiner dan echt. Het kleine getal van de schaal hoort bij de tekening.",
+     "laag2": "tekstSterker",
+     "regel": "Het getal 500",
+     "soort": "getal van het echte voorwerp",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Het getal 5",
-     "uitleg": "Lees de schaal precies zoals hij er staat. Er staat geen losse 5 in de schaal."
+     "uitleg": "Dat getal staat niet in de schaal. Kijk naar de twee getallen van de schaal.",
+     "uitlegSterker": "Een schaal heeft twee getallen. Eén ervan hoort bij de tekening.",
+     "laag2": "tekstSterker",
+     "regel": "Het getal 5",
+     "soort": "getal niet uit de schaal",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Het getal 500 → Het getal achter de dubbele punt hoort bij het echte voorwerp. Welk getal blijft er dan over? · Het getal 5 → Lees de schaal precies zoals hij er staat. Er staat geen losse 5 in de schaal.",
-   "ouderzin": "",
+   "foutHintsTekst": "Het getal 500 → Dat getal hoort bij het echte voorwerp. Op de tekening is alles kleiner. · Het getal 5 → Dat getal staat niet in de schaal. Kijk naar de twee getallen van de schaal.",
+   "ouderzin": "Je kind leert wat een schaal (zoals op een plattegrond) betekent.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -149,7 +159,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "Bij de schaal # : # [ding] twee getallen. Welk getal hoort bij de [ding]?"
+    "somtypeOrigineel": "Bij de schaal # : # [ding] twee getallen. Welk getal hoort bij de [ding]?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "Bij de schaal # : # [ding] twee getallen. Welk getal hoort bij de [ding]?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -165,8 +180,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Het getal 500",
+     "soort": "getal van het echte voorwerp",
+     "bron": "nieuw",
+     "tekst": "Dat getal hoort bij het echte voorwerp. Op de tekening is alles kleiner.",
+     "tekstSterker": "De tekening is kleiner dan echt. Het kleine getal van de schaal hoort bij de tekening.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Het getal 500"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Het getal 5",
+     "soort": "getal niet uit de schaal",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat niet in de schaal. Kijk naar de twee getallen van de schaal.",
+     "tekstSterker": "Een schaal heeft twee getallen. Eén ervan hoort bij de tekening.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Het getal 5"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Kijk naar de twee getallen van de schaal.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk naar de twee getallen van de schaal."
   },
   {
    "id": "G7-VERH-01-claude-bank-002",
@@ -197,22 +259,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "De tekening is net zo groot als het echte voorwerp"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een schaal vergelijkt de tekening met het echte voorwerp. Een op tien betekent: één centimeter op de tekening is tien centimeter echt.",
+   "sterkereHint": "Kijk naar de twee getallen van deze schaal. Zijn ze gelijk? Hoeveel keer zo groot is het echte voorwerp dan?",
    "foutHints": [
     {
      "stap": null,
-     "fout": "De tekening is 2 keer zo klein",
-     "uitleg": "Kijk eens naar de twee getallen van deze schaal. Zijn ze verschillend of gelijk?"
+     "fout": "De tekening is 100 keer zo klein",
+     "uitleg": "Dat past bij een schaal van een op honderd. Kijk naar de getallen van deze schaal.",
+     "uitlegSterker": "Vergelijk de twee getallen van de schaal. Als ze gelijk zijn, is de tekening even groot als echt.",
+     "laag2": "tekstSterker",
+     "regel": "De tekening is 100 keer zo klein",
+     "soort": "past bij een andere schaal",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "De tekening is 100 keer zo klein",
-     "uitleg": "Je denkt aan de schaal 1 : 100. Lees nog eens welk getal hier achter de dubbele punt staat."
+     "fout": "De tekening is 2 keer zo klein",
+     "uitleg": "Dat past bij een schaal van een op twee. Kijk naar de getallen van deze schaal.",
+     "uitlegSterker": "Vergelijk de twee getallen van de schaal. Als ze gelijk zijn, is de tekening even groot als echt.",
+     "laag2": "tekstSterker",
+     "regel": "De tekening is 2 keer zo klein",
+     "soort": "past bij een andere schaal (twee)",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "De tekening is 2 keer zo klein → Kijk eens naar de twee getallen van deze schaal. Zijn ze verschillend of gelijk? · De tekening is 100 keer zo klein → Je denkt aan de schaal 1 : 100. Lees nog eens welk getal hier achter de dubbele punt staat.",
-   "ouderzin": "",
+   "foutHintsTekst": "De tekening is 100 keer zo klein → Dat past bij een schaal van een op honderd. Kijk naar de getallen van deze schaal. · De tekening is 2 keer zo klein → Dat past bij een schaal van een op twee. Kijk naar de getallen van deze schaal.",
+   "ouderzin": "Je kind leert wat een schaal (zoals op een plattegrond) betekent.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -304,7 +376,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Op een tekening staat schaal # : #. Wat weet je dan over de tekening?"
+    "somtypeOrigineel": "Op een tekening staat schaal # : #. Wat weet je dan over de tekening?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 4,
+     "somtype": "Op een tekening staat schaal # : #. Wat weet je dan over de tekening?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -320,8 +397,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "De tekening is 100 keer zo klein",
+     "soort": "past bij een andere schaal",
+     "bron": "nieuw",
+     "tekst": "Dat past bij een schaal van een op honderd. Kijk naar de getallen van deze schaal.",
+     "tekstSterker": "Vergelijk de twee getallen van de schaal. Als ze gelijk zijn, is de tekening even groot als echt.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "De tekening is 100 keer zo klein"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "De tekening is 2 keer zo klein",
+     "soort": "past bij een andere schaal (twee)",
+     "bron": "nieuw",
+     "tekst": "Dat past bij een schaal van een op twee. Kijk naar de getallen van deze schaal.",
+     "tekstSterker": "Vergelijk de twee getallen van de schaal. Als ze gelijk zijn, is de tekening even groot als echt.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "De tekening is 2 keer zo klein"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Kijk naar de twee getallen van deze schaal.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk naar de twee getallen van deze schaal."
   },
   {
    "id": "G7-VERH-01-claude-bank-003",
@@ -352,22 +476,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "1 cm op de tekening is 100 cm echt"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een schaal vergelijkt de tekening met het echte voorwerp. Een op tien betekent: één centimeter op de tekening is tien centimeter echt.",
+   "sterkereHint": "Bij een schaal horen beide getallen bij dezelfde maat, bijvoorbeeld centimeter. Welk getal hoort bij het echte huis?",
    "foutHints": [
     {
      "stap": null,
      "fout": "1 cm op de tekening is 10 cm echt",
-     "uitleg": "Kijk nog eens goed naar het tweede getal van de schaal. Staat er 10 of staat er meer?"
+     "uitleg": "Dat past bij een schaal van een op tien. Kijk welk getal in deze schaal staat.",
+     "uitlegSterker": "Het getal van het echte huis staat in de schaal. Eén centimeter op de tekening is zoveel centimeter echt.",
+     "laag2": "tekstSterker",
+     "regel": "1 cm op de tekening is 10 cm echt",
+     "soort": "past bij een andere schaal",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "1 cm op de tekening is 100 m echt",
-     "uitleg": "Bij schaal hoort links en rechts dezelfde eenheid. Begin je met cm, dan blijf je bij cm."
+     "uitleg": "Kijk naar de maat. Bij een schaal horen beide getallen bij dezelfde maat: centimeter op de tekening is centimeter echt.",
+     "uitlegSterker": "Het getal van het echte huis staat in de schaal, in dezelfde maat als op de tekening.",
+     "laag2": "tekstSterker",
+     "regel": "1 cm op de tekening is 100 m echt",
+     "soort": "andere maat",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1 cm op de tekening is 10 cm echt → Kijk nog eens goed naar het tweede getal van de schaal. Staat er 10 of staat er meer? · 1 cm op de tekening is 100 m echt → Bij schaal hoort links en rechts dezelfde eenheid. Begin je met cm, dan blijf je bij cm.",
-   "ouderzin": "",
+   "foutHintsTekst": "1 cm op de tekening is 10 cm echt → Dat past bij een schaal van een op tien. Kijk welk getal in deze schaal staat. · 1 cm op de tekening is 100 m echt → Kijk naar de maat. Bij een schaal horen beide getallen bij dezelfde maat: centimeter op de tekening is centimeter echt.",
+   "ouderzin": "Je kind leert wat een schaal (zoals op een plattegrond) betekent.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -459,7 +593,12 @@
     "duplicaatVan": null,
     "somtypeNr": 5,
     "somtypeNrOrigineel": 5,
-    "somtypeOrigineel": "Op een tekening van een huis staat schaal # : #. Wat betekent dat?"
+    "somtypeOrigineel": "Op een tekening van een huis staat schaal # : #. Wat betekent dat?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 5,
+     "somtype": "Op een tekening van een huis staat schaal # : #. Wat betekent dat?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -475,8 +614,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "1 cm op de tekening is 10 cm echt",
+     "soort": "past bij een andere schaal",
+     "bron": "nieuw",
+     "tekst": "Dat past bij een schaal van een op tien. Kijk welk getal in deze schaal staat.",
+     "tekstSterker": "Het getal van het echte huis staat in de schaal. Eén centimeter op de tekening is zoveel centimeter echt.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1 cm op de tekening is 10 cm echt"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "1 cm op de tekening is 100 m echt",
+     "soort": "andere maat",
+     "bron": "nieuw",
+     "tekst": "Kijk naar de maat. Bij een schaal horen beide getallen bij dezelfde maat: centimeter op de tekening is centimeter echt.",
+     "tekstSterker": "Het getal van het echte huis staat in de schaal, in dezelfde maat als op de tekening.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1 cm op de tekening is 100 m echt"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Kijk welk getal in de schaal staat, en welke maat erbij hoort.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk welk getal in de schaal staat, en welke maat erbij hoort."
   },
   {
    "id": "G7-VERH-01-claude-bank-004",
@@ -507,22 +693,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "Omdat het echte huis niet op papier past"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Wat verandert er door een schaal: het echte huis, of de tekening?",
+   "sterkereHint": "Met een schaal teken je alles evenveel keer kleiner. Het echte huis blijft zoals het is. Waarom maak je de tekening kleiner?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Omdat het huis dan echt kleiner wordt",
-     "uitleg": "Een tekening verandert niets aan het echte huis. Denk aan wat er op het papier past."
+     "uitleg": "Het echte huis blijft even groot. Alleen de tekening is kleiner.",
+     "uitlegSterker": "Een schaal verandert niets aan het echte huis. Waarom zou je de tekening kleiner maken?",
+     "laag2": "tekstSterker",
+     "regel": "Omdat het huis dan echt kleiner wordt",
+     "soort": "huis wordt kleiner",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Omdat je dan niet hoeft te meten",
-     "uitleg": "Voor een plattegrond op schaal moet je de echte maten juist wel weten."
+     "uitleg": "Je meet juist wel: je meet het huis, en rekent de maten om voor de tekening.",
+     "uitlegSterker": "Een schaal verandert niets aan het echte huis. Waarom zou je de tekening kleiner maken?",
+     "laag2": "tekstSterker",
+     "regel": "Omdat je dan niet hoeft te meten",
+     "soort": "niet meten",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Omdat het huis dan echt kleiner wordt → Een tekening verandert niets aan het echte huis. Denk aan wat er op het papier past. · Omdat je dan niet hoeft te meten → Voor een plattegrond op schaal moet je de echte maten juist wel weten.",
-   "ouderzin": "",
+   "foutHintsTekst": "Omdat het huis dan echt kleiner wordt → Het echte huis blijft even groot. Alleen de tekening is kleiner. · Omdat je dan niet hoeft te meten → Je meet juist wel: je meet het huis, en rekent de maten om voor de tekening.",
+   "ouderzin": "Je kind leert wat een schaal (zoals op een plattegrond) betekent.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -614,7 +810,12 @@
     "duplicaatVan": null,
     "somtypeNr": 6,
     "somtypeNrOrigineel": 6,
-    "somtypeOrigineel": "Waarom gebruik je een schaal als je een plattegrond van je huis tekent?"
+    "somtypeOrigineel": "Waarom gebruik je een schaal als je een plattegrond van je huis tekent?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 6,
+     "somtype": "Waarom gebruik je een schaal als je een plattegrond van je huis tekent?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -630,8 +831,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Omdat het huis dan echt kleiner wordt",
+     "soort": "huis wordt kleiner",
+     "bron": "nieuw",
+     "tekst": "Het echte huis blijft even groot. Alleen de tekening is kleiner.",
+     "tekstSterker": "Een schaal verandert niets aan het echte huis. Waarom zou je de tekening kleiner maken?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Omdat het huis dan echt kleiner wordt"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Omdat je dan niet hoeft te meten",
+     "soort": "niet meten",
+     "bron": "nieuw",
+     "tekst": "Je meet juist wel: je meet het huis, en rekent de maten om voor de tekening.",
+     "tekstSterker": "Een schaal verandert niets aan het echte huis. Waarom zou je de tekening kleiner maken?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Omdat je dan niet hoeft te meten"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Denk aan het echte huis en aan het papier.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Denk aan het echte huis en aan het papier."
   },
   {
    "id": "G7-VERH-01-claude-bank-005",
@@ -662,22 +910,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "1 : 25"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een schaal is geen som: je rekent er niets mee uit. Welk teken past daarbij?",
+   "sterkereHint": "Een schaal schrijf je met een dubbele punt (:) tussen de twee getallen. Welke schrijfwijze heeft dat teken?",
    "foutHints": [
     {
      "stap": null,
-     "fout": "1 + 25",
-     "uitleg": "Bij een schaal staat er geen plusteken tussen de getallen."
+     "fout": "1 × 25",
+     "uitleg": "Dat is een keersom. Een schaal is geen som.",
+     "uitlegSterker": "Bij een schaal staat er een dubbele punt tussen de twee getallen.",
+     "laag2": "tekstSterker",
+     "regel": "1 × 25",
+     "soort": "keersom",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "1 × 25",
-     "uitleg": "Bij een schaal staat er een ander teken tussen de twee getallen dan een maalteken."
+     "fout": "1 + 25",
+     "uitleg": "Dat is een plussom. Een schaal is geen som.",
+     "uitlegSterker": "Bij een schaal staat er een dubbele punt tussen de twee getallen.",
+     "laag2": "tekstSterker",
+     "regel": "1 + 25",
+     "soort": "plussom",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1 + 25 → Bij een schaal staat er geen plusteken tussen de getallen. · 1 × 25 → Bij een schaal staat er een ander teken tussen de twee getallen dan een maalteken.",
-   "ouderzin": "",
+   "foutHintsTekst": "1 × 25 → Dat is een keersom. Een schaal is geen som. · 1 + 25 → Dat is een plussom. Een schaal is geen som.",
+   "ouderzin": "Je kind leert wat een schaal (zoals op een plattegrond) betekent.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -769,7 +1027,12 @@
     "duplicaatVan": null,
     "somtypeNr": 7,
     "somtypeNrOrigineel": 7,
-    "somtypeOrigineel": "Welke schrijfwijze is een schaal?"
+    "somtypeOrigineel": "Welke schrijfwijze is een schaal?",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 7,
+     "somtype": "Welke schrijfwijze is een schaal?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -785,8 +1048,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "1 × 25",
+     "soort": "keersom",
+     "bron": "nieuw",
+     "tekst": "Dat is een keersom. Een schaal is geen som.",
+     "tekstSterker": "Bij een schaal staat er een dubbele punt tussen de twee getallen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1 × 25"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "1 + 25",
+     "soort": "plussom",
+     "bron": "nieuw",
+     "tekst": "Dat is een plussom. Een schaal is geen som.",
+     "tekstSterker": "Bij een schaal staat er een dubbele punt tussen de twee getallen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1 + 25"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Een schaal is geen som.",
+     "tekstSterker": "Bij een schaal staat er een dubbele punt tussen de twee getallen.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Een schaal is geen som."
   },
   {
    "id": "G7-VERH-01-claude-bank-006",
@@ -801,11 +1111,42 @@
    "optiesTekst": null,
    "antwoord": "2",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "40",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "400",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 40 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 400 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -868,7 +1209,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -876,7 +1222,7 @@
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -884,8 +1230,41 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20",
+       "40",
+       "400"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn."
   },
   {
    "id": "G7-VERH-01-claude-bank-007",
@@ -900,11 +1279,42 @@
    "optiesTekst": null,
    "antwoord": "1",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "10",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "50",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "500",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "10 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 50 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 500 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -967,7 +1377,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -975,7 +1390,7 @@
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -983,8 +1398,41 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "10",
+       "50",
+       "500"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn."
   },
   {
    "id": "G7-VERH-01-claude-bank-008",
@@ -999,11 +1447,42 @@
    "optiesTekst": null,
    "antwoord": "5",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "50",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "200",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 50 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 200 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -1066,7 +1545,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1074,7 +1558,7 @@
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -1082,8 +1566,41 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20",
+       "50",
+       "200"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn."
   },
   {
    "id": "G7-VERH-01-claude-bank-009",
@@ -1098,11 +1615,42 @@
    "optiesTekst": null,
    "antwoord": "4",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "30",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "40",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "300",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "30 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 40 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 300 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -1165,7 +1713,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1173,7 +1726,7 @@
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -1181,8 +1734,41 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30",
+       "40",
+       "300"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn."
   },
   {
    "id": "G7-VERH-01-claude-bank-010",
@@ -1197,11 +1783,42 @@
    "optiesTekst": null,
    "antwoord": "3",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "30",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "200",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 30 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 200 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -1264,7 +1881,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1272,7 +1894,7 @@
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -1280,8 +1902,41 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20",
+       "30",
+       "200"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn."
   },
   {
    "id": "G7-VERH-01-claude-bank-011",
@@ -1296,11 +1951,42 @@
    "optiesTekst": null,
    "antwoord": "2",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "50",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "500",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 50 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 500 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -1363,7 +2049,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1371,7 +2062,7 @@
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -1379,8 +2070,41 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20",
+       "50",
+       "500"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn."
   },
   {
    "id": "G7-VERH-01-claude-bank-012",
@@ -1395,11 +2119,42 @@
    "optiesTekst": null,
    "antwoord": "6",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "30",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "60",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "300",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "30 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 60 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 300 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -1462,7 +2217,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1470,7 +2230,7 @@
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -1478,8 +2238,41 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30",
+       "60",
+       "300"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn."
   },
   {
    "id": "G7-VERH-01-claude-bank-013",
@@ -1494,11 +2287,42 @@
    "optiesTekst": null,
    "antwoord": "3",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "30",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "50",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "500",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "30 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 50 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 500 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -1561,7 +2385,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1569,7 +2398,7 @@
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -1577,8 +2406,41 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30",
+       "50",
+       "500"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn."
   },
   {
    "id": "G7-VERH-01-claude-bank-014",
@@ -1593,11 +2455,32 @@
    "optiesTekst": null,
    "antwoord": "2",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "200",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 200 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -1660,7 +2543,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1668,7 +2556,7 @@
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -1676,8 +2564,40 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20",
+       "200"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn."
   },
   {
    "id": "G7-VERH-01-claude-bank-015",
@@ -1692,11 +2612,42 @@
    "optiesTekst": null,
    "antwoord": "4",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "40",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "200",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 40 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 200 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -1759,7 +2710,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1767,7 +2723,7 @@
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -1775,8 +2731,41 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20",
+       "40",
+       "200"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn."
   },
   {
    "id": "G7-VERH-01-claude-bank-016",
@@ -1791,11 +2780,42 @@
    "optiesTekst": null,
    "antwoord": "1",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "10",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "40",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "400",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "10 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 40 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 400 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -1858,7 +2878,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1866,7 +2891,7 @@
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -1874,8 +2899,41 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "10",
+       "40",
+       "400"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn."
   },
   {
    "id": "G7-VERH-01-claude-bank-017",
@@ -1890,11 +2948,42 @@
    "optiesTekst": null,
    "antwoord": "6",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "60",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "200",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 60 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 200 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -1957,7 +3046,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding]."
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1965,7 +3059,7 @@
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -1973,8 +3067,41 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20",
+       "60",
+       "200"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn.",
+     "tekstSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken uit hoeveel het procent is, en hoeveel stukjes dat zijn."
   },
   {
    "id": "G7-VERH-01-claude-bank-018",
@@ -1989,17 +3116,22 @@
    "optiesTekst": null,
    "antwoord": "10",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.",
+   "sterkereHint": "Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?",
    "foutHints": [
     {
      "stap": null,
      "fout": "5",
-     "uitleg": "Elk stukje is 5%, niet 10%."
+     "uitleg": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "uitlegSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "5 → Elk stukje is 5%, niet 10%.",
-   "ouderzin": "",
+   "foutHintsTekst": "5 → Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+   "ouderzin": "Je kind kleurt een percentage van een balk.",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -2078,7 +3210,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk."
+    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[balk kleuren] Kleur #% van de balk."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2094,8 +3231,39 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is."
   },
   {
    "id": "G7-VERH-01-claude-bank-019",
@@ -2110,17 +3278,22 @@
    "optiesTekst": null,
    "antwoord": "4",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.",
+   "sterkereHint": "Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?",
    "foutHints": [
     {
      "stap": null,
      "fout": "2",
-     "uitleg": "Elk stukje is 5%, niet 10%."
+     "uitleg": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "uitlegSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "2 → Elk stukje is 5%, niet 10%.",
-   "ouderzin": "",
+   "foutHintsTekst": "2 → Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+   "ouderzin": "Je kind kleurt een percentage van een balk.",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -2199,7 +3372,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk."
+    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[balk kleuren] Kleur #% van de balk."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2215,8 +3393,39 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is."
   },
   {
    "id": "G7-VERH-01-claude-bank-020",
@@ -2231,17 +3440,22 @@
    "optiesTekst": null,
    "antwoord": "12",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.",
+   "sterkereHint": "Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?",
    "foutHints": [
     {
      "stap": null,
      "fout": "6",
-     "uitleg": "Elk stukje is 5%, niet 10%."
+     "uitleg": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "uitlegSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "6 → Elk stukje is 5%, niet 10%.",
-   "ouderzin": "",
+   "foutHintsTekst": "6 → Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+   "ouderzin": "Je kind kleurt een percentage van een balk.",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -2320,7 +3534,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk."
+    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[balk kleuren] Kleur #% van de balk."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2336,8 +3555,39 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is."
   },
   {
    "id": "G7-VERH-01-claude-bank-021",
@@ -2352,17 +3602,22 @@
    "optiesTekst": null,
    "antwoord": "16",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.",
+   "sterkereHint": "Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?",
    "foutHints": [
     {
      "stap": null,
      "fout": "8",
-     "uitleg": "Elk stukje is 5%, niet 10%."
+     "uitleg": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "uitlegSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "8 → Elk stukje is 5%, niet 10%.",
-   "ouderzin": "",
+   "foutHintsTekst": "8 → Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+   "ouderzin": "Je kind kleurt een percentage van een balk.",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -2441,7 +3696,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk."
+    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[balk kleuren] Kleur #% van de balk."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2457,8 +3717,39 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is."
   },
   {
    "id": "G7-VERH-01-claude-bank-022",
@@ -2473,17 +3764,22 @@
    "optiesTekst": null,
    "antwoord": "6",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.",
+   "sterkereHint": "Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?",
    "foutHints": [
     {
      "stap": null,
      "fout": "3",
-     "uitleg": "Elk stukje is 5%, niet 10%."
+     "uitleg": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "uitlegSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "3 → Elk stukje is 5%, niet 10%.",
-   "ouderzin": "",
+   "foutHintsTekst": "3 → Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+   "ouderzin": "Je kind kleurt een percentage van een balk.",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -2562,7 +3858,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk."
+    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[balk kleuren] Kleur #% van de balk."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2578,8 +3879,39 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is."
   },
   {
    "id": "G7-VERH-01-claude-bank-023",
@@ -2594,17 +3926,22 @@
    "optiesTekst": null,
    "antwoord": "2",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.",
+   "sterkereHint": "Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?",
    "foutHints": [
     {
      "stap": null,
      "fout": "1",
-     "uitleg": "Elk stukje is 5%, niet 10%."
+     "uitleg": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "uitlegSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "1 → Elk stukje is 5%, niet 10%.",
-   "ouderzin": "",
+   "foutHintsTekst": "1 → Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+   "ouderzin": "Je kind kleurt een percentage van een balk.",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -2683,7 +4020,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk."
+    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[balk kleuren] Kleur #% van de balk."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2699,8 +4041,39 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is."
   },
   {
    "id": "G7-VERH-01-claude-bank-024",
@@ -2715,17 +4088,22 @@
    "optiesTekst": null,
    "antwoord": "15",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.",
+   "sterkereHint": "Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?",
    "foutHints": [
     {
      "stap": null,
      "fout": "7.5",
-     "uitleg": "Elk stukje is 5%, niet 10%."
+     "uitleg": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "uitlegSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "7.5 → Elk stukje is 5%, niet 10%.",
-   "ouderzin": "",
+   "foutHintsTekst": "7.5 → Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+   "ouderzin": "Je kind kleurt een percentage van een balk.",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -2804,7 +4182,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk."
+    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[balk kleuren] Kleur #% van de balk."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2820,8 +4203,39 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7.5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is."
   },
   {
    "id": "G7-VERH-01-claude-bank-025",
@@ -2836,17 +4250,22 @@
    "optiesTekst": null,
    "antwoord": "8",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.",
+   "sterkereHint": "Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?",
    "foutHints": [
     {
      "stap": null,
      "fout": "4",
-     "uitleg": "Elk stukje is 5%, niet 10%."
+     "uitleg": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "uitlegSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "4 → Elk stukje is 5%, niet 10%.",
-   "ouderzin": "",
+   "foutHintsTekst": "4 → Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+   "ouderzin": "Je kind kleurt een percentage van een balk.",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -2925,7 +4344,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk."
+    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[balk kleuren] Kleur #% van de balk."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2941,8 +4365,39 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is."
   },
   {
    "id": "G7-VERH-01-claude-bank-026",
@@ -2957,17 +4412,22 @@
    "optiesTekst": null,
    "antwoord": "5",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.",
+   "sterkereHint": "Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?",
    "foutHints": [
     {
      "stap": null,
      "fout": "2.5",
-     "uitleg": "Elk stukje is 5%, niet 10%."
+     "uitleg": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "uitlegSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "2.5 → Elk stukje is 5%, niet 10%.",
-   "ouderzin": "",
+   "foutHintsTekst": "2.5 → Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+   "ouderzin": "Je kind kleurt een percentage van een balk.",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -3046,7 +4506,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk."
+    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[balk kleuren] Kleur #% van de balk."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -3062,8 +4527,39 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2.5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is."
   },
   {
    "id": "G7-VERH-01-claude-bank-027",
@@ -3078,17 +4574,22 @@
    "optiesTekst": null,
    "antwoord": "18",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.",
+   "sterkereHint": "Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?",
    "foutHints": [
     {
      "stap": null,
      "fout": "9",
-     "uitleg": "Elk stukje is 5%, niet 10%."
+     "uitleg": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "uitlegSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "9 → Elk stukje is 5%, niet 10%.",
-   "ouderzin": "",
+   "foutHintsTekst": "9 → Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+   "ouderzin": "Je kind kleurt een percentage van een balk.",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -3167,7 +4668,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk."
+    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[balk kleuren] Kleur #% van de balk."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -3183,8 +4689,39 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "9"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is."
   },
   {
    "id": "G7-VERH-01-claude-bank-028",
@@ -3199,17 +4736,22 @@
    "optiesTekst": null,
    "antwoord": "1",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.",
+   "sterkereHint": "Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?",
    "foutHints": [
     {
      "stap": null,
      "fout": "0.5",
-     "uitleg": "Elk stukje is 5%, niet 10%."
+     "uitleg": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "uitlegSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "0.5 → Elk stukje is 5%, niet 10%.",
-   "ouderzin": "",
+   "foutHintsTekst": "0.5 → Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+   "ouderzin": "Je kind kleurt een percentage van een balk.",
    "getallenruimte": "procenten",
    "context": "laag",
    "visual": {
@@ -3288,7 +4830,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk."
+    "somtypeOrigineel": "[balk kleuren] Kleur #% van de balk.",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "[balk kleuren] Kleur #% van de balk."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -3304,11 +4851,42 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel (alle, zonder label)",
+     "soort": "elk stukje tien procent",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig. Heb je elk stukje als tien procent geteld? Tel eerst hoeveel stukjes de balk heeft.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0.5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is.",
+     "tekstSterker": "Deel honderd door het aantal stukjes: zoveel procent is één stukje. Hoe vaak past dat in het procent uit de vraag?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is."
   }
  ],
- "hintsSyncOp": "2026-10-08T13:13:05+02:00",
+ "hintsSyncOp": "2026-10-08T13:26:52+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -3320,14 +4898,18 @@
   },
   {
    "batch": "batch3.json",
-   "md5": "bfc36c283977"
+   "md5": "dd466f5c6095"
   },
   {
    "batch": "batch4.json",
-   "md5": "1d37cc1f6282"
+   "md5": "67e1e52fdbef"
+  },
+  {
+   "batch": "batch5.json",
+   "md5": "ed00628f66f3"
   }
  ],
- "geschrevenOp": "2026-10-08T13:13:05+02:00",
+ "geschrevenOp": "2026-10-08T13:26:52+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }
