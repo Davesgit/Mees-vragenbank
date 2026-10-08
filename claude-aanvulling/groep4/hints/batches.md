@@ -33,3 +33,5 @@ Open voor de volgende ronde:
 - Alle 4 batches zijn klaar. check_hints: 93 klaar, 0 open, 0 FAIL, 2 WARN. De 2 WARN zijn MEET-E05 '(1 kg)', een vals alarm (zie batch4_twijfels punt 8). check_merge_notatie: ALLES OK.
 - Ronde 2b staat in review-batch2b.md, ronde 3b in review-batch3b.md.
 - VBN-E01 #4/#5 volgt de hint-richting van Didactiek ('vlak onder de top van de staaf', 'spring verder met twee'). 'één streepje te veel/te weinig' = 'antwoord ± getal1'. 'streepjes geteld' heeft nog geen regel (fixlijst #40).
+
+- **Batch 5 ronde 1b (8 okt, Oefeningen):** review-batch5-didactiek (taal: fix) verwerkt in patch_batch5.py: V-#720, V-#721, tientallen-H2 (twijfel 1), Z-#720, Z-#722, Z-#723, Z-#724; check FAIL 0, zie merge-fixlijst.md.
