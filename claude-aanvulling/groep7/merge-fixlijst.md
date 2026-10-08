@@ -486,3 +486,7 @@ Alleen deze 5 items zijn veranderd (vergeleken met de repo: 5 items anders, verd
 
 ### Na-ronde r13 deel B (19:50)
 - MEET-04: 336 items met alleen sleutels erbij (getallen onder nul, '−12'/'-12'), uit de main-motor met Oef-#494 (NEG494). De G7-data op main is daarna niet opnieuw toegepast. Er gaan 0 sleutels weg en 0 veranderen. groep7 krijgt geen eigen motorkopie: de motor is scripts/fout_regels.py (md5 gelijk).
+
+### Vormcue één regel voor alle posities (Didactiek 19:57)
+- kleinste/middelste/grootste: FAIL bij > 50 % én p < 0,01 (kans 1/3); mutanten per positie 17/17. Stand per somtype: zie r13/R13.md. Data van de items niet aangepast (Didactiek stuurt voorstellen per item).
+- G7 check_hints draait nu ook in de repo zelf: de motor wordt gezocht in scripts/ van de repo (huis_checks.motor_map), zonder motorkopie.

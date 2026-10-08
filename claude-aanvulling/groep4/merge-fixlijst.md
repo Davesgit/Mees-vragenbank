@@ -163,3 +163,6 @@ De WARN komt uit de nieuwe check LES250 (Oef-#484, `tools/les250_check.py`, in c
 - **Oef-#1028 (motor, verplicht voor V-#1050):** `scripts/fout_regels.py` kent `fout = antwoord ± c cent` nu ook bij een antwoord in centen ('80 cent'), via Oefeningens hook `g8work/r13/vc/zet_motor1028.py`. Daarna zet `patch_r13_vormcue.py` in batch3 bij MEET-E07 #1 de regels 'te veel geteld' (5 cent en 10 cent). Alle 11 nieuwe sleutels (V-#1050) staan op die regel: «Dat is te veel. Heb je een munt twee keer geteld? …».
 - Diff per_doel: 11 items met andere foutHints. Bij de andere 13 items van MEET-E07 verandert alleen foutRegels (de regellijst van de entry: twee regels erbij).
 - check_hints 0 FAIL · check_r13_vc FAIL 0, mutanten 10/0 gemist · VORMCUE rang 0 FAIL. Middelste open: VBN-E01 #2 (37/58) en #3 (29/54), wacht op Didactiek.
+
+### Vormcue één regel voor alle posities (Didactiek 19:57)
+- kleinste/middelste/grootste: FAIL bij > 50 % én p < 0,01 (kans 1/3); mutanten per positie 17/17. Stand per somtype: zie r13/R13.md. Data van de items niet aangepast (Didactiek stuurt voorstellen per item).

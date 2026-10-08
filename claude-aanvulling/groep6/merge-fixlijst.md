@@ -485,3 +485,6 @@ L-R10f: niet aangeraakt (wacht op Dave). N13-3: open (wacht op Oefeningen).
 - Diff per_doel: 4 items met andere foutHints. Bij de andere 14 items verandert alleen foutRegels.
 - check_hints 0 FAIL · VORMCUE rang 0 FAIL. Middelste open: VBN-E02 #2 (34/60), wacht op Didactiek.
 - **Later, nu niet bouwen: N13-3 en Oef-#1029.** Het gaat om de renderer voor beelddiagram en cirkeldiagram, de labels en de getalgrenzen (`g8work/r13/n13_3/voorstel_n13_3.md`). Er zijn nog geen items met die koppen. De entries van Oefeningen blijven op 'wacht op Overzicht' staan. De bordtitel N13-1 en guard #276 gaan pas live als de renderer er is.
+
+### Vormcue één regel voor alle posities (Didactiek 19:57)
+- kleinste/middelste/grootste: FAIL bij > 50 % én p < 0,01 (kans 1/3); mutanten per positie 17/17. Stand per somtype: zie r13/R13.md. Data van de items niet aangepast (Didactiek stuurt voorstellen per item).

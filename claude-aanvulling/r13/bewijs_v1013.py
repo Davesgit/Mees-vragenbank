@@ -17,7 +17,7 @@ for naam, pad in STANDEN.items():
         vf = VC.fouten(its); r.update({'VORMCUE': len(vf), 'VORMCUE-rang': len([x for x in vf if 'middelste' not in x]), 'VORMCUE-midden': len([x for x in vf if 'middelste' in x]), 'VORMCUE-somtypes': vf})      # V-#1050–#1055 (rang), V-#1040 (middelste)
         uit[f'{naam} G{g}'] = r
 mut = {'tijdsduur': f'{KT.mutanten()}/{len(KT.MUTANTEN)}', 'V-#1012': f'{KT.mutanten1012()}/2', 'typvoorbeeld': KT.typvoorbeeld_mutant_ok(),
-       'optiesTekst': JO.mutanten_ok(), 'vormcue': f'{sum(bool(VC.fouten(L)) == v for _, L, v in VC.MUTANTEN)}/{len(VC.MUTANTEN)}', 'vormcue-zacht': f'{sum(VC.mutanten_z_ok())}/{len(VC.MUTANTEN_Z)}', 'samen': GM.samen_mutanten_ok(), 'gemiddelde': [(n, v, k) for n, v, k in GM.mutanten()]}
+       'optiesTekst': JO.mutanten_ok(), 'vormcue': f'{sum(VC._mut_ok(n_, L, v) for n_, L, v in VC.MUTANTEN)}/{len(VC.MUTANTEN)}', 'vormcue-zacht': f'{sum(VC.mutanten_z_ok())}/{len(VC.MUTANTEN_Z)}', 'samen': GM.samen_mutanten_ok(), 'gemiddelde': [(n, v, k) for n, v, k in GM.mutanten()]}
 v12 = {}
 for naam, pad in (('snap 983900d', '/workspace/r13work/snap/claude-aanvulling/groep5'), ('nu', '/workspace/claude-merge/r13/g5')):
     r = subprocess.run([sys.executable, '-B', '/workspace/claude-merge/r13/g5/scripts/check_v1012.py', pad], capture_output=True, text=True, env=dict(os.environ, PYTHONDONTWRITEBYTECODE='1'))

@@ -617,3 +617,6 @@ Checks op r13/g5 (8 okt ±18:20): check_hints 139 klaar · 0 open · 0 FAIL · 2
 - `patch_r13_vormcue.py`: batch6 VBN-E03 #1, 'een stap te ver', 3 teksten per item (V-#1052 3/3: 011 '39', 019 '60', 024 '105'). Batch7 GET-E05 nrO 32: 'tiental te veel' op `fout = antwoord + 10` (V-#1053 4/4: gen-012/014/016/018).
 - Diff per_doel: 3 + 4 items met andere foutHints. Bij de andere 12 + 4 items van die somtypen verandert alleen foutRegels (de regellijst).
 - check_hints 0 FAIL · VORMCUE rang 0 FAIL. Middelste open: MEET-E07 #1 (101/182), wacht op Didactiek.
+
+### Vormcue één regel voor alle posities (Didactiek 19:57)
+- kleinste/middelste/grootste: FAIL bij > 50 % én p < 0,01 (kans 1/3); mutanten per positie 17/17. Stand per somtype: zie r13/R13.md. Data van de items niet aangepast (Didactiek stuurt voorstellen per item).

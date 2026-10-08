@@ -207,6 +207,6 @@ if __name__ == '__main__':
     import vormcue_check as _VC      # V-#1050–#1055 (Didactiek 19:35, les 405): VORMCUE als FAIL in G3–G7 (rang grootste/kleinste, ook centbedragen Z-#1050; V-#1040 middelste)
     fail = (_VC.rapport(_ALLE) > 0) or fail
     fail = (not _VC.mutanten_ok()) or fail
-    print(f"  mutanten VORMCUE {sum(bool(_VC.fouten(_L)) == _v for _, _L, _v in _VC.MUTANTEN)}/{len(_VC.MUTANTEN)} · zacht {sum(_VC.mutanten_z_ok())}/{len(_VC.MUTANTEN_Z)}")
+    print(f"  mutanten VORMCUE {sum(_VC._mut_ok(_n, _L, _v) for _n, _L, _v in _VC.MUTANTEN)}/{len(_VC.MUTANTEN)} · zacht {sum(_VC.mutanten_z_ok())}/{len(_VC.MUTANTEN_Z)}")
     print('\nG7 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

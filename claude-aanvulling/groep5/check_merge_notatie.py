@@ -195,7 +195,7 @@ if __name__ == '__main__':
     import vormcue_check as _VC      # V-#1050–#1055 (Didactiek 19:35, les 405): VORMCUE als FAIL in G3–G7 (rang grootste/kleinste, ook centbedragen Z-#1050; V-#1040 middelste)
     fail = (_VC.rapport(_ALLE) > 0) or fail
     fail = (not _VC.mutanten_ok()) or fail
-    print(f"  mutanten VORMCUE {sum(bool(_VC.fouten(_L)) == _v for _, _L, _v in _VC.MUTANTEN)}/{len(_VC.MUTANTEN)} · zacht {sum(_VC.mutanten_z_ok())}/{len(_VC.MUTANTEN_Z)}")
+    print(f"  mutanten VORMCUE {sum(_VC._mut_ok(_n, _L, _v) for _n, _L, _v in _VC.MUTANTEN)}/{len(_VC.MUTANTEN)} · zacht {sum(_VC.mutanten_z_ok())}/{len(_VC.MUTANTEN_Z)}")
     import subprocess as _sp      # V-#1012 (Oefeningen 18:46, les 388): check_v1012 als FAIL in de vaste G5-check
     _V12 = _sp.run([sys.executable, '-B', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'scripts', 'check_v1012.py'), os.path.dirname(os.path.abspath(__file__))], capture_output=True, text=True, env=dict(os.environ, PYTHONDONTWRITEBYTECODE='1'))
     print('\n' + '\n'.join(_l for _l in _V12.stdout.splitlines() if _l.startswith(('FAIL', 'WARN', 'G5 V-#1012'))) + (('\n' + _V12.stderr[-800:]) if _V12.returncode not in (0, 1) else ''))
