@@ -415,3 +415,4 @@ Commit in mees-vragenbank (`/workspace/mees-vragenbank`, main): build 18:09:12 �
 | Oef-#1013 | Z-#973 **niet** naar g7/scripts/fout_regels.py geport (pas na overleg). |
 
 Checks build 18:20:30: check_hints **197 klaar · 26 open · 0 FAIL · 0 WARN**; merge-notatie **ALLES OK**; **b1–b8 FAIL 0 · WARN 0** (b8 368 items · 2016 sleutels); G5–G7 (main) ongewijzigd: 0 FAIL.
+Commit in mees-vragenbank (`/workspace/mees-vragenbank`, main): build 18:20:30 → **35672e4** (`git -C /workspace/mees-vragenbank show --stat 35672e4`).
