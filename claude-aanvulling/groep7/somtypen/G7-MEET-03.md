@@ -57,7 +57,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1188 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers. · 924 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.
 
 - **Hint 1 (te schrijven):** Inhoud is hoeveel kubusjes van één cm³ (kubieke centimeter) erin passen.
-- **Hint 2 (te schrijven):** Reken eerst de bodem uit: lengte keer breedte. Zoveel kubusjes passen er in één laagje. Doe dat keer de hoogte: zoveel laagjes liggen er op elkaar.
+- **Hint 2 (te schrijven):** Reken eerst de bodem uit: lengte keer breedte. Zoveel kubusjes passen er in één laagje. De hoogte zegt hoeveel laagjes er op elkaar liggen: doe de bodem keer de hoogte.
 - **Ouderzin:** Je kind rekent de inhoud van een balk uit: lengte keer breedte keer hoogte.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `alleen de bodem` (fout = getal1 × getal2) → Dat is alleen de bodem: één laagje. Hoeveel laagjes liggen er op elkaar?  [nieuw]
@@ -257,14 +257,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 
 - **Hint 1 (te schrijven):** Inhoud reken je in m³ (kubieke meter): hoeveel kubussen van één meter passen erin?
 - **Hint 2 (te schrijven):** Reken de bodem uit: lengte keer breedte. Doe dat keer de hoogte (of de diepte). Is een maat een kommagetal, reken dan ook het stuk achter de komma mee.
-- **Ouderzin:** Je kind rekent uit hoeveel kubieke meter (m³) erin past: lengte keer breedte keer hoogte, ook met een kommagetal.
+- **Ouderzin:** Je kind rekent uit hoeveel kubieke meter (m³) erin past: lengte keer breedte keer hoogte (of diepte), ook met een kommagetal.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `alleen de bodem` (fout = getal1 × getal2) → Dat is alleen de bodem. Doe je die nog keer de hoogte?  [nieuw]
-  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Reken lengte keer breedte keer hoogte nog eens na.  [nieuw]
-  - `oppervlakte in plaats van inhoud` (Claudes sleutel: omtrek-oppervlakte-verwisseld) → Heb je een oppervlakte uitgerekend? De inhoud is wat erin past: lengte keer breedte keer hoogte.  [Claude, taalfix]
+  - `alleen de bodem` (fout = getal1 × getal2) → Dat is alleen de bodem. Doe je die nog keer de hoogte (of de diepte)?  [nieuw]
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Reken lengte keer breedte keer hoogte (of diepte) nog eens na.  [nieuw]
+  - `oppervlakte in plaats van inhoud` (Claudes sleutel: omtrek-oppervlakte-verwisseld) → Heb je een oppervlakte uitgerekend? De inhoud is wat erin past: lengte keer breedte keer hoogte (of diepte).  [Claude, taalfix]
   - `alleen het hele getal` (Claudes sleutel: kommagetal-als-geheel) → Heb je bij de maat met een komma alleen het hele getal genomen? Het stuk achter de komma telt ook mee.  [Claude, taalfix]
-  - `maten opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je de drie maten opgeteld? Inhoud reken je met keer: lengte keer breedte keer hoogte.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Heb je lengte keer breedte keer hoogte gedaan, met elke maat precies zoals hij er staat?  [nieuw]
+  - `maten opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je de drie maten opgeteld? Inhoud reken je met keer: lengte keer breedte keer hoogte (of diepte).  [Claude, taalfix]
+  - `andere fout` (andere fout) → Heb je lengte keer breedte keer hoogte (of diepte) gedaan, met elke maat precies zoals hij er staat?  [nieuw]
 - Status: hints klaar
 
 ## Somtype 10: Een doos is # cm lang, # cm breed en # cm hoog. Hoeveel cm³ past erin?

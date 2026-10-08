@@ -162,7 +162,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 6,5 → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links. · 0,065 → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.
 
 - **Hint 1 (te schrijven):** Een breuk is een deling: de teller gedeeld door de noemer.
-- **Hint 2 (te schrijven):** Maak een even grote breuk met als noemer tien, honderd of duizend: doe de teller en de noemer keer hetzelfde getal. Tel de nullen van die noemer: zoveel cijfers komen er achter de komma. Heeft de teller minder cijfers? Zet er dan nullen voor. Nullen aan het eind achter de komma vallen weg.
+- **Hint 2 (te schrijven):** Maak een even grote breuk met als noemer tien, honderd of duizend: doe de teller en de noemer keer hetzelfde getal. Tel de nullen van die noemer: zoveel cijfers komen er achter de komma. Heeft de teller minder cijfers? Zet er dan nullen voor. Is er geen heel getal? Zet dan een nul voor de komma. Nullen aan het eind achter de komma vallen weg.
 - **Ouderzin:** Je kind schrijft een breuk als kommagetal, via een noemer van tien, honderd of duizend.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Maak eerst een breuk met noemer tien, honderd of duizend. Tel de nullen: zoveel cijfers komen er achter de komma.  [Claude, taalfix]

@@ -6,6 +6,7 @@ Nieuw 8 okt 12:4x (G7 batch 2, Oef-#421/#422/#429): norm421 = één notatie voor
   Oef-#437: KOMMA437 (G7/G8) leest '8,4' als één getal; Oef-#436: 'fout = antwoord ± 0,1 / ± 0,01' ook bij een heel antwoord (vraag met kommagetal);
   Oef-#444: Claudes sleutels met '-' worden '−' en de labelregel vergelijkt genormaliseerd (G7/G8).
   Z-#616: 'fout = getal1/getal2' als bedrag bij een geldvraag (G7/G8). Z-#633: 'fout = de bodem (l × b)', zeker, vóór '± 1'.
+  Oef-#445: 'fout = het deel zelf (als %)' / 'fout = geheel min deel' (procent-vragen 'D van G', antwoord met '%').
   Oef-#442: 'fout = de som van de getallen' / 'fout = het middelste getal (op grootte)' (gemiddelde; alleen als de waarde zo uitkomt).
   Oef-#440: met KOMMA437 telt een antwoord '8,0' als 8, een sleutel '8,0' past op regelwaarde 8, en 'antwoord × 10 / : 10' werkt ook bij een kommagetal (1,1 → 11 / 0,11). Oef-#434: 'fout = het cijfer op de plek ernaast' (plaatswaarde: de cijfers links en rechts van de gevraagde plaats).
 Per item komt er uit:
@@ -704,6 +705,16 @@ def _compile_regel(regel, c):
     # som/middelste ≠ antwoord, middelste alleen bij een oneven aantal (bij even: geen sleutel). Geen rij van minstens 3 getallen → geen sleutel.
     # Z-#633 (G7 MEET-03 #1): 'fout = de bodem (l × b)': het kind gaf de oppervlakte van de bodem ('De bodem is 2 bij 3 cm' → 6), ≠ antwoord.
     # Zeker (de maten staan in de vraag): in pas_toe gaat hij vóór de onzekere regels als 'antwoord ± 1', ook als de entry hem later zet.
+    # Oef-#445 (G7 VERH-02 nrO 3, 'Hoeveel procent is 36 van 75?', antwoord '48%'): de motor leest '%'. Twee regels, alleen als het antwoord op '%'
+    # eindigt en de vraag 'D van G' heeft (D = het deel, G = het geheel): 'fout = het deel zelf (als %)' → 'D%' (het deel overgenomen) en
+    # 'fout = geheel min deel' → '(G − D)%'. Geen sleutel als de waarde ≤ 0 is of gelijk aan het antwoord. Sleutel met en zonder spatie voor '%'.
+    if r.startswith('fout = het deel zelf (als %)') or r.startswith('fout = geheel min deel'):
+        m445 = re.search(r'(?<![\d,.])(\d+) van (?:de |het )?(\d+)(?![\d,.])', c.opg)
+        if not m445 or not c.ans.strip().endswith('%'): return {'exact': set()}
+        d445, g445 = int(m445.group(1)), int(m445.group(2))
+        v445 = d445 if r.startswith('fout = het deel zelf') else g445 - d445
+        if v445 <= 0 or f'{v445}%' == c.ans.strip().replace(' ', ''): return {'exact': set()}
+        return {'exact': {f'{v445}%', f'{v445} %'}}
     if r.startswith('fout = de bodem'):
         mb = re.search(r'bodem (?:is|van) (\d+(?:,\d+)?) (?:cm |m )?(?:bij|×|x) (\d+(?:,\d+)?)', c.opg)
         if not mb: return {'exact': set()}

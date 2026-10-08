@@ -233,7 +233,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Hoeveel zijn het er samen? Tel doos voor doos. Welke som heeft precies dat aantal als uitkomst?
 - **Ouderzin:** Je kind kiest de som bij een tekening met groepjes die even groot zijn: een keersom.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `opgeteld` (5 + 6 = 11) → Heb je één doos en het aantal dozen bij elkaar opgeteld? In elke doos zitten evenveel eieren. Welke som past bij steeds hetzelfde aantal?  [nieuw]
+  - `opgeteld` (5 + 6 = 11) → Heb je het aantal eieren in één doos en het aantal dozen bij elkaar opgeteld? In elke doos zitten evenveel eieren. Welke som past bij steeds hetzelfde aantal?  [nieuw]
   - `afgehaald` (6 − 5 = 1) → Gaan er eieren weg? Alle dozen samen horen bij het antwoord. Welke som past bij steeds hetzelfde aantal?  [nieuw]
   - `andere fout` (andere fout) → Steeds hetzelfde aantal, een paar keer: dat is een keersom.  [nieuw]
 - Status: hints klaar

@@ -2387,5 +2387,209 @@
   "was": "Je kind rekent een gewicht keer tien, honderd of duizend door de komma te verschuiven, en zet er een nul bij als er geen cijfer meer is.",
   "wordt": "Je kind rekent een gewicht keer honderd door de komma twee plekken te verschuiven, en zet er een nul bij als er geen cijfer meer is.",
   "waarom": "Ronde 3d (Oefeningen 8 okt; GET-04 nrO 8 alleen keer honderd): Z-#606"
+ },
+ {
+  "tijd": "13:52",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 3,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer in de kolom ervoor één minder. Is het cijfer in de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "waarom": "Ronde 3e (Oefeningen 8 okt; Didactiek recheck batch 3): Z-#647"
+ },
+ {
+  "tijd": "13:52",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 3,
+  "veld": "hint2",
+  "was": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.",
+  "wordt": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer in de kolom ervoor één minder. Is het cijfer in de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.",
+  "waarom": "Ronde 3e (Oefeningen 8 okt; Didactiek recheck batch 3): Z-#647"
+ },
+ {
+  "tijd": "13:52",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 4,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 + getal2",
+    "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+    "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "geleend maar niet afgehaald",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000 (geleend bij de duizendtallen)",
+    "tekst": "Dat is duizend te veel. Je hebt bij de duizendtallen geleend. Heb je daar de één afgehaald?",
+    "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt geleend. Haal die één bij die kolom eerst af, en reken dan verder."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1000",
+    "tekst": "Dat is duizend te veel. Reken de duizendtallen nog eens na.",
+    "tekstSterker": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Kijk bij de duizendtallen goed welk cijfer je van welk cijfer afhaalt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "kleinste cijfer van het grootste",
+    "claudeDenkfout": "kleinste-van-grootste",
+    "regel": "Claudes sleutel: kleinste-van-grootste",
+    "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer in de kolom ervoor één minder. Is het cijfer in de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+   }
+  ],
+  "waarom": "Ronde 3e (Oefeningen 8 okt; Didactiek recheck batch 3): Z-#647"
+ },
+ {
+  "tijd": "13:52",
+  "doel": "G7-GET-03",
+  "nrOrigineel": 4,
+  "veld": "hint2",
+  "was": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.",
+  "wordt": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer in de kolom ervoor één minder. Is het cijfer in de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.",
+  "waarom": "Ronde 3e (Oefeningen 8 okt; Didactiek recheck batch 3): Z-#647"
  }
 ]
