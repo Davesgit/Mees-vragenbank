@@ -26,7 +26,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 10 → Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap. · 10.000 → Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.
 
 - **Hint 1 (te schrijven):** Vergelijk de twee getallen cijfer voor cijfer. Welk cijfer is anders?
-- **Hint 2 (te schrijven):** Op welke plek staat dat cijfer? Het is één groter of één kleiner geworden. Eén op die plek is één tiental, honderdtal, duizendtal of tienduizendtal. Schrijf dat als getal.
+- **Hint 2 (te schrijven):** Op welke plek staat het cijfer dat veranderd is? Het is één groter of één kleiner geworden. Eén op die plek is één tiental, honderdtal, duizendtal of tienduizendtal. Schrijf dat als getal.
 - **Ouderzin:** Je kind ziet welk cijfer in een getal tot 100.000 verandert, en hoeveel dat waard is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één plek te ver naar links` (fout = antwoord × 10) → Dat is tien keer te veel. Het cijfer dat anders is, staat één plek verder naar rechts. Welke plek is dat?  [nieuw]
@@ -146,7 +146,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** In 1579 staat de 5 op de plek van de honderdtallen. Dus die is 500 waard.
 
 - **Hint 1 (te schrijven):** Op welke plek staat het cijfer: bij de duizendtallen, de honderdtallen, de tientallen of de eenheden?
-- **Hint 2 (te schrijven):** Tel hoeveel cijfers er rechts van dat cijfer staan. Zoveel nullen zet je achter het cijfer.
+- **Hint 2 (te schrijven):** Tel hoeveel cijfers er rechts van het cijfer uit de vraag staan. Zoveel nullen zet je achter het cijfer.
 - **Ouderzin:** Je kind zegt hoeveel een cijfer in een getal tot 10.000 waard is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `alleen het cijfer` (fout = getal2) → Dat is alleen het cijfer. Een cijfer is meer waard als het verder naar links staat. Op welke plek staat het?  [Claude, taalfix]

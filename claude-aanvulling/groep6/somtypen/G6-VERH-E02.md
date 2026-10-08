@@ -70,6 +70,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `helft van de hokjes` (fout = de helft van het aantal hokjes) → Dat is de helft van de strook. Het deel uit de vraag is kleiner dan de helft. Bij een derde verdeel je de strook in drie gelijke stukken, bij een kwart in vier. Hoeveel hokjes zitten er in één stuk?  [nieuw]
   - `aantal stukken (drie)` (3 hokjes) → Een derde betekent: verdeel de strook in drie gelijke stukken. Drie is het aantal stukken, niet het aantal hokjes. Hoeveel hokjes zitten er in één stuk?  [nieuw]
   - `aantal stukken (vier)` (4 hokjes) → Een kwart betekent: verdeel de strook in vier gelijke stukken. Vier is het aantal stukken, niet het aantal hokjes. Hoeveel hokjes zitten er in één stuk?  [nieuw]
+  - `verkeerd deel (een negende)` (een negende) → Hoeveel hokjes zijn gekleurd, en hoeveel hokjes heeft de hele strook? Hoe vaak passen de gekleurde hokjes in de hele strook?  [nieuw]
   - `andere fout` (andere fout) → Verdeel de strook in gelijke stukken. Hoeveel hokjes zitten er in één stuk, en hoeveel van die stukken horen bij de vraag?  [nieuw]
 - Status: hints klaar
 

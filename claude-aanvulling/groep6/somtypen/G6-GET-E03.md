@@ -55,7 +55,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 13/18 → De noemer zegt in hoeveel stukken de taart is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 12/18 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
 - **Hint 1 (te schrijven):** Hoeveel keer zo groot is de nieuwe noemer als de oude noemer (onder de streep)?
-- **Hint 2 (te schrijven):** Doe de teller (boven de streep) ook zoveel keer. Dan blijft de breuk even groot.
+- **Hint 2 (te schrijven):** Doe de teller (boven de streep) net zoveel keer als de noemer. Dan blijft de breuk even groot.
 - **Ouderzin:** Je kind schrijft een breuk met een grotere noemer: de teller en de noemer allebei keer hetzelfde getal.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `teller hetzelfde gelaten` (Claudes sleutel: deel-vergeten-bij-splitsen) → De noemer is groter geworden, maar de teller niet. Hoeveel keer zo groot is de noemer geworden? Doe de teller ook zoveel keer.  [Claude, taalfix]
@@ -168,7 +168,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Teller en noemer allebei keer 3: 2 × 3 = 6 en 5 × 3 = 15. Dus 2/5 = 6/15.
 
 - **Hint 1 (te schrijven):** Hoeveel keer zo groot is de nieuwe noemer (onder de streep) als de oude noemer?
-- **Hint 2 (te schrijven):** Doe de teller (boven de streep) ook zoveel keer. Dan blijft de breuk even groot.
+- **Hint 2 (te schrijven):** Doe de teller (boven de streep) net zoveel keer als de noemer. Dan blijft de breuk even groot.
 - **Ouderzin:** Je kind zoekt een gelijkwaardige breuk: de teller en de noemer allebei keer hetzelfde getal.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `de factor` (fout = de factor (nieuwe noemer : oude noemer)) → Hoeveel keer zo groot is de noemer geworden? Doe de teller (boven de streep) ook zoveel keer. Dat getal komt op het vraagteken.  [nieuw]
@@ -202,7 +202,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Verdeel de lijn in 8 gelijke stukken. 1/8 is 1 van die stukken vanaf 0.
 
 - **Hint 1 (te schrijven):** De streepjes verdelen de lijn van nul tot één in zoveel gelijke stukken als de noemer (onder de streep) zegt.
-- **Hint 2 (te schrijven):** De teller (boven de streep) zegt hoeveel van die stukken je vanaf nul verder gaat.
+- **Hint 2 (te schrijven):** De teller (boven de streep) zegt hoeveel gelijke stukken je vanaf nul verder gaat.
 - **Ouderzin:** Je kind zet een breuk op een getallenlijn van nul tot één.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `begin of eind van de lijn` (fout = een eindpunt van de lijn) → Je stip staat aan het begin of aan het eind van de lijn. Tel vanaf nul zoveel stukken als de teller (boven de streep) zegt.  [nieuw]

@@ -323,7 +323,7 @@ Hints in `hints/patch_batch{1,2,3,4,5}.py` (blokken 'Ronde 9' en 'Ronde 9b'); id
 | 392 | Oefeningen + **Overzicht (motor)** | GET-E04 #1/#2/#6/#8: lenen/onthouden alleen als het in die kolom echt gebeurt | **wacht op Overzicht**, zie #399. Voorwaardelijke regels en neutrale teksten staan klaar in `patch_batch2.py` (`_cond392`) |
 | hm/dl | Oefeningen | entries MEET-E01 nrO 8–11 en MEET-E04 nrO 5–8 (H1, H2, ouderzin, regels met tekst + tekstSterker, ALG) | ✓ in de entries sinds de build van 11:21:56 (8 × 8 items, 172 sleutels; nul keer 'andere fout'). `b4/check.py` FAIL 0, `hm_dl_test.py` FAIL 0. Voorstel: `hints/voorstel_hm_dl_r9.md`. Didactiek checkt ze na de build |
 | 396 | Oefeningen (eigen vondst, les 109) | zelfde fout als #393: GET-E08 H2 «Deel dat totaal …», GET-E03 #5 H2 (16 items); GET-E06 #1 'andere fout' laag 2 = bijna laag 1 | ✓ |
-| 397 | Oefeningen (eigen vondst, open) | 'getal uit de vraag' is nog een bewering («Je hebt een getal uit de vraag overgenomen.») bij GET-E09 #2/#3, GET-M04 #1 en VERH-E01 #1; huisregel: een vraag | open, volgende ronde |
+| 397 | Oefeningen (eigen vondst) | 'getal uit de vraag' is nog een bewering («Je hebt een getal uit de vraag overgenomen.») bij GET-E09 #2/#3, GET-M04 #1 en VERH-E01 #1; huisregel: een vraag | ✓ (Oef-#397; #503) |
 | 398 | **Overzicht (motor/guard)** | Na de #390-motor (± 1/'Bijna!' overslaan bij een getal uit de vraag) krijgt de sleutel '0' in GET-E03 1115, 1118, 1120 'andere fout'; FIX6 #203 verwacht 'een stuk te kort' → **3 FAIL** (ook zonder wijziging van Oefeningen: E03 #7 is byte-gelijk aan de backup). Voorstel: een motorregel `fout = een eindpunt van de lijn` (sleutel 0, 1 of n/n), vóór de stuk-regels, en #203 daarop aanpassen. Een regel 'fout = een getal uit de vraag' werkt hier niet: die maakt bij elk klik-item nieuwe sleutels '0' en '1' (12 FAIL #203 in de zandbak) | open |
 | 399 | **Overzicht (motor)** | #392: regels `fout = antwoord + 10/100/1000 (geleend bij de tientallen/honderdtallen/duizendtallen)` (min, a − b: geleend als a mod 10^k < b mod 10^k) en `fout = antwoord − 10/100/1000 (onthouden naar de tientallen/honderdtallen/duizendtallen)` (plus: onthouden als a mod 10^k + b mod 10^k ≥ 10^k), met k zo dat 10^k de foutgrootte is. Ze moeten vóór de gewone `fout = antwoord ± n` gelezen worden (die regex pakt anders het begin) | open |
 | 400 | **Overzicht** (in-geheugenregels) | VBN #2 'getal net boven de stip' (6 sleutels) en VBN #3 'een paar maanden (regel)' (2) hebben geen laag 2 (les 76). Voorstel: «Leg je vinger op de stip en schuif recht naar de getallen langs de zijkant. Begin bij het getal op of net onder je vinger en tel vanaf daar de streepjes omhoog tot de stip.» en «Wijs de maanden onder de grafiek één voor één aan. Lees bij elke maand het aantal af en schrijf het op. Tel daarna alle getallen op.» | open |
@@ -375,7 +375,7 @@ Nummering: Didactiek D-#403–D-#408, daarna #500 en hoger. Stand: check_hints 1
 | D-#417 | Overzicht | ✓ FIX6 0 (check #169 van 11:33:34, niet overschreven) |
 | D-#419 | Overzicht | ✓ (a) vaste weergavenummers (`bevroren/somtype_weergave_nr.json`, stand 10:58:34): de strook blijft MEET-E01 #6; hm in leerlijnvolgorde #7 hm→m, #8 m→hm, #9 km→hm, #10 hm→km; MEET-E04 #5–#8 L→dl, dl→L, dl→ml, ml→dl. (b) 8 contextitems (4 hm: hardloopbaan, fietsen, wandelroute, fietstocht; 4 dl: kan, emmer, glas, pakje sap). (c) niveau: Leerlijn |
 | 394 | Leerlijn | open (lijst hierboven) |
-| 397 | Oefeningen | open, volgende ronde |
+| 397 | Oefeningen | ✓ (Oef-#397, patch_batch3/5 'Ronde 10'; #503) |
 
 ### Slotcheck r10 deel B (Didactiek slotcheck-r10-deelB-didactiek.md; build 11:47:57)
 | # | Wie | Stand |
@@ -383,3 +383,8 @@ Nummering: Didactiek D-#403–D-#408, daarna #500 en hoger. Stand: check_hints 1
 | 510 | Overzicht | ✓ MEET-E04 gen-034: «In een emmer gaat 100 dl water. Hoeveel liter is dat?» → 10 (sleutels 100 'niet omgerekend', 1 'tien keer te weinig') |
 | 511 | Overzicht | ✓ REF-check (`tools/referentiematen_check.py`, G5–G8): hoeveelheid bij emmer/glas/bad omgerekend naar liter, WARN buiten 5–15 L / 0,15–0,3 L / 100–200 L (of `bandLiter` uit referentiematen.json; dat veld bestaat nog niet). Vond ook VERH-E01 gen-008 «1 emmer is 4 L» → nu 10 L (60 L; sleutels 16 L, 30 L). Daarna 0 WARN in G5–G8 |
 | 512 | Overzicht | ✓ de 8 contextitems hebben `context: 'midden'` |
+
+
+### Ronde 10c (8 okt, Overzicht; opdracht 11:49/11:53)
+G6 build 11:52:44 (apply 11:53:24). Motor (md5 25a689d8, G5–G8 gelijk): #502 (assert 'andere rij'/'andere cel') en #506 (minteken met spatie; één tokenisering voor guard en vergelijking). #503 fixlijst bijgewerkt. Hints Ronde 10c van Oefeningen zitten erin (#505, #507, #508, D-#418, #392 punt 3). Oef-#424 (motor, voorwaarde 'antwoord + 10/100' bij onthouden): na-ronde, niet in deze build.
+Stand: check_hints 0 FAIL · 0 WARN; merge-notatie ALLES OK (FIX6 0); REF 0; GELDIG 0; BIJNA390 0.

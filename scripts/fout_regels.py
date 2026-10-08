@@ -334,15 +334,23 @@ def lett_past(r, v):
     met een woordgrens ('4 hokjes' niet in '14 hokjes' of '4,5 hokjes'); zonder cijfer: een stukje tekst."""
     v = (v or '').lower()
     if r.startswith('€'): return v == r
-    if re.search(r'\d', r): return re.search(LETT_VOOR + re.escape(r) + LETT_NA, v) is not None
+    if re.search(r'\d', r): return _lett_tok(r, v)
     return r in v
-LETT_VOOR, LETT_NA = r'(?<![\w,.€/\-−])', r'(?![\w/]|[,.]\d)'      # #411: ook geen minteken ervoor ('4 hokjes' nooit in '−4 hokjes')
+LETT_VOOR, LETT_NA = r'(?<![\w,.€/\-−–])', r'(?![\w/]|[,.]\d)'      # #411: ook geen minteken ervoor ('4 hokjes' nooit in '−4 hokjes')
+def _lett_tok(r, v):
+    """#411/#506: de letterlijke regel r als één token in v: geen letter, cijfer, komma, punt, €, / of minteken ervoor (ook niet een minteken
+    met een spatie: '− 4 hokjes' is een aftreksom) en geen letter, cijfer, / of decimaal erachter. Vergelijking én guard gebruiken dit."""
+    for m in re.finditer(re.escape(r), v):
+        voor = v[:m.start()]
+        if re.search(LETT_VOOR + r'$', voor) is None or re.search(r'[\-−–]\s+$', voor): continue
+        if re.match(LETT_NA, v[m.end():]) is None: continue
+        return True
+    return False
 def lett_guard(r, v):
-    """#380/#411-guard: elk getal in een letterlijke regel staat als heel getal in de sleutel, met dezelfde grenzen als lett_past
-    (dus niet in '1.4 hokjes', '€4 hokjes', '1/4 hokjes' of '−4 hokjes'). Assert in pas_toe."""
-    v = (v or '').lower(); r = r.lower()
+    """#380/#411/#506-guard: dezelfde tokenisering als lett_past (niet strenger: '1/4' op '1/4', '10.000' op '10.000' en 'a4' op 'a4' passen). Assert in pas_toe."""
+    v = (v or '').lower(); r = (r or '').lower()
     if r.startswith('€'): return v == r
-    return all(re.search(LETT_VOOR + re.escape(g) + LETT_NA, v) for g in re.findall(r'\d+(?:,\d+)?', r))
+    return _lett_tok(r, v) if re.search(r'\d', r) else r in v
 _HELFT_STROOK = re.compile(r'strook van (\d+) hokjes')
 def _regels_r10(r, c):
     """G6 merge-fixlijst ronde 10 (#380): 'fout = de helft van het aantal hokjes' (VERH-E02 strook, Hoeveel-hokjes-vragen). None = geen regel van deze ronde."""
@@ -973,6 +981,12 @@ def pas_toe(it, st, alle_cellen=None):
         if hit is None and v in claude_txt and claude_txt[v] and claude_txt[v] not in vervangen:
             hit = {'fout': v, 'uitleg': claude_txt[v], 'regel': '(geen regel; Claude-tekst blijft)', 'soort': None, 'bron': 'claude (geen regel)'}
         if hit and ook and hit['regel'] in [x[0]['regel'] for x in regels]: hit['ookRegels'] = [r_ for r_ in ook if r_ != hit['regel']] or None
+        if hit and c.jr.get('soort') == 'tabel' and (hit.get('soort') or '').lower().startswith(('andere rij', 'andere cel')):      # G5 #502 (les 137)
+            _rij = [r_.get('waarden') or [] for r_ in c.jr.get('rijen') or [] if isinstance(r_, dict)]
+            _cel = {x for w_ in _rij for x in w_ if isinstance(x, int)}
+            _tot = {sum(w_) for w_ in _rij if all(isinstance(x, int) for x in w_)} | {sum(k_) for k_ in zip(*_rij) if all(isinstance(x, int) for x in k_)}
+            _ok = _int(v) in (_tot if (hit.get('soort') or '').lower().startswith('andere rij') else _cel)
+            assert _ok, ("#502: 'andere rij'/'andere cel' zonder rij of cel met die waarde", it.get('id'), v, hit.get('soort'))
         if hit and staaf_alle is not None and (hit.get('soort') or '').lower().startswith('andere staaf'):
             assert _int(v) in staaf_alle, ("D-#404: 'andere staaf' zonder staaf met die waarde", it.get('id'), v)
         if hit: hit['stap'] = None; out.append(hit)

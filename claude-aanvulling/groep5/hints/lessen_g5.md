@@ -35,3 +35,11 @@ Nummering van Didactiek (80–89). De lessen 1–67 staan in `g6/hints/lessen_ba
 122. **Verplaatst de motor een sleutel naar een andere soort, dan verhuizen de matchwaarden mee** (`foutRegels.match.waarden`). Kijk ook of het label waarop hij terugvalt feitelijk klopt.
 123. **Een los-scan zoekt ook 'dan' en 'daarna' in de eerste zin**, niet alleen een zin die met 'Dan' begint. Draai hem over alle terugval-sleutels (`g6work/r10/los_l2.py`, D-#407).
 124. **Elk team gebruikt zijn eigen nummerreeks**, ook voor een eigen vondst in de fixlijst. Oefeningen: Oef-#NNN onder #500; Didactiek: #500 en hoger.
+
+## Lessen 135–140 (Didactiek slotcheck ronde 10, G5 11:38:45 en G6 11:39:38)
+135. **De los-scan vangt ook "die"/"dat" + een zelfstandig naamwoord dat in dezelfde tekst nog niet genoemd is** ("die rij", "dat getal", "die stap", "die groepjes"), en volgordewoorden als "tot slot". Lees elke terugval-H2 en vraag: wat doet een kind met alleen deze zin?
+136. **Toets welke regel een sleutel krijgt door de motor na te spelen over alle sleutels** (eerste passende regel = regel van de sleutel), niet alleen over de sleutels waarvan je weet dat ze verschoven zijn.
+137. **Elk label dat zegt dat een waarde bestaat ("andere staaf", "andere rij", "andere cel") krijgt een feitenguard**, niet alleen het label waar de fout gevonden werd.
+138. **Een nieuwe zin in een bestaande fout-hint gaat langs de oude lessen van dat onderwerp.** #410 bracht de bewering terug die #272/les 62 eruit had gehaald ("met keer en delen"); een check op die bewering maakt zo een terugval zichtbaar.
+139. **Een zin die maar bij een deel van de items past ("Is dat geen heel getal?"), mag de stap voor de andere items niet wegduwen.** Controleer per itemgroep of laag 1 nog een volledige volgende stap geeft.
+140. **Een guard leest getallen precies zoals de vergelijking die hij bewaakt** (breuk, komma, punt-duizendtal, €, minteken met en zonder spatie, eenheid met ²). Te streng geeft een vals stopsein, te soepel een vals "goed".

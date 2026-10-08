@@ -646,7 +646,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Vul aan vanaf 112: 112 + 88 = 200. Dan nog 100 erbij tot 300. Samen: 88 + 100 = 188.
 
 - **Hint 1 (te schrijven):** Er worden dingen weggegeven, dus er blijven er minder over. Haal het tweede getal van het eerste af.
-- **Hint 2 (te schrijven):** Je kunt ook aanvullen: spring vanaf het tweede getal eerst naar het volgende hele tiental of honderdtal, en dan door naar het eerste getal. Hoe groot zijn je sprongen samen?
+- **Hint 2 (te schrijven):** In plaats van eraf halen kun je ook aanvullen: spring vanaf het kleinste getal eerst naar het volgende hele tiental of honderdtal, en dan door naar het grootste getal. Hoe groot zijn je sprongen samen?
 - **Ouderzin:** Je kind rekent uit hoeveel er overblijft als er iets wordt weggegeven (tot 1000).
 - **Fout-hints:** fout-hints Claude: deels ok — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2 (tekst per item)) → Er gaan … weg, dus het worden er minder. Aftrekken, niet optellen.  [Claude, ok]

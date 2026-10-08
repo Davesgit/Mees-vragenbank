@@ -64,7 +64,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Elke plek komt er 7 bij. Het getal op een plek is dus 7 keer het plaatsnummer. 9 keer 7 is 63.
 
 - **Hint 1 (te schrijven):** Kijk van het ene getal naar het volgende. Wat gebeurt er elke keer: komt er iets bij, gaat er iets af, of wordt het getal dubbel?
-- **Hint 2 (te schrijven):** Doe die stap steeds opnieuw. Wordt er naar een plek gevraagd? Tel de plekken mee tot je bij die plek bent.
+- **Hint 2 (te schrijven):** Kijk welke stap er elke keer gebeurt, en doe die stap steeds opnieuw. Wordt er naar een plek gevraagd? Tel de plekken mee tot je bij die plek bent.
 - **Ouderzin:** Je kind zoekt de regel in een getallenrij en gaat ermee verder.
 - **Fout-hints:** fout-hints Claude: deels ok — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één stap ernaast (per item)` (Claudes sleutel: een-ernaast) → 70 staat op plek 4. Ga van daaruit verder naar plek 6. / Je hebt een stap te ver gezet. Stop precies bij plek 6. / Tel hoeveel stappen van 8 terug je vanaf plek 1 zet om bij plek 8 te komen. / Je hebt één stap te ver gezet. Stop precies bij plek 8. / Kijk hoeveel je elke keer verder springt van het ene getal naar het volgende. / Tel goed hoeveel stappen je nog moet zetten na plek 4. Plek 8 is nog niet plek 9. / Je bent één stap te ver gegaan. Kijk nog eens welk getal precies bij plek 9 hoort. / Tel de plekken goed mee. 50 staat op plek 1. Ga door tot plek 7. / Reken het verschil tussen 2 en 9 nog eens na op de getallenlijn.  [Claude, taalfix]

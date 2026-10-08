@@ -51,7 +51,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Eerst 8 : 4 = 2, dat is één deel. Dan 3 delen: 3 × 2 = 6.
 
 - **Hint 1 (te schrijven):** Een kwart is één van vier gelijke delen. Verdeel de koekjes in vier gelijke groepjes.
-- **Hint 2 (te schrijven):** Drie kwart is drie van die groepjes. Kleur de koekjes van drie groepjes.
+- **Hint 2 (te schrijven):** Verdeel de koekjes in vier gelijke groepjes. Drie kwart is drie van die groepjes. Kleur de koekjes van drie groepjes.
 - **Ouderzin:** Je kind kleurt drie kwart van een aantal koekjes.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `alles gekleurd` (fout = getal1) → Je hebt alle koekjes gekleurd. Drie kwart is drie van de vier groepjes: één groepje blijft over.  [nieuw]

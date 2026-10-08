@@ -524,4 +524,12 @@ Nummering: Didactiek D-#403–D-#408, daarna #500 en hoger; Oefeningen houdt Oef
 | D-#406 | ✓ motor: een sleutel staat alleen in `foutRegels.match.waarden` van de regel die hem kreeg (MEET-E06 gen-001 '24', VBN-E01 058/082/164 en de 7 'één staaf'-sleutels). Guard (assert in de motor) |
 | D-#408 | ✓ vaste weergavenummers: `bevroren/somtype_weergave_nr.json` (stand 10:57:42, de nummers die Didactiek en Oefeningen kennen; bezoekers = E05 #17). Een kop- of aantalwijziging verschuift niets meer; een nieuw somtype krijgt het eerstvolgende vrije nummer. Guard: geen dubbel nummer per doel. 0 van 4845 items wijkt af van 10:57:42 |
 | D-#416 | ✓ BIJNA390 en de motor vergelijken op waarde (ook breuken en kommagetallen; 2/2 = 1) |
-| D-#403, D-#407 | open: Oefeningen (tekst) |
+| D-#403, D-#407 | ✓ Oefeningen (tekst; in de build, #503) |
+| D-#404/#502 (tabel) | ✓ guard ook voor 'andere rij' (rij- of kolomtotaal) en 'andere cel' (vak uit `jsRender.rijen`): assert in de motor |
+| #506 | ✓ motor: '− 4 hokjes' (minteken met spatie) valt niet meer op '4 hokjes'; guard en vergelijking gebruiken dezelfde tokenisering ('1/4', '10.000', 'a4' stoppen de build niet meer) |
+| 'getal uit de vraag' (#503) | open, Oefeningen: VBN-E01 058/082/164 en MEET-E06 #1 (gen-001 '24') vallen na #390/D-#404 op 'andere fout', omdat de entry geen regel 'getal uit de vraag' heeft. MEET-E06 #1 gaat met zijn 220 items naar G7 (zie de G7-fixlijst) |
+
+
+### Ronde 10c (8 okt, Overzicht; opdracht 11:49/11:53)
+G5 build 11:54:17. Motor (md5 25a689d8, G5–G8 gelijk): #502 (assert 'andere rij'/'andere cel') en #506 (minteken met spatie; één tokenisering voor guard en vergelijking). #503 fixlijst bijgewerkt. Hints Ronde 10c van Oefeningen zitten erin (#500/#501, VBN-E01 #1/#2 getal uit de vraag). Oef-#424 (motor, voorwaarde 'antwoord + 10/100' bij onthouden): na-ronde, niet in deze build.
+Stand: check_hints 0 FAIL · 0 WARN; merge-notatie ALLES OK (#121 0, GEN 0); REF 0; GELDIG 0; BIJNA390 0.

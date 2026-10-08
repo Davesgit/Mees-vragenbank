@@ -71,8 +71,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `honderd te weinig` (fout = antwoord − 100) → Dat is honderd te weinig. Reken de honderdtallen nog eens na.  [nieuw]
   - `duizend te weinig (onthouden)` (fout = antwoord − 1000 (onthouden naar de duizendtallen)) → Dat is duizend te weinig. Kwamen de honderdtallen samen op tien of meer? Dan gaat er één duizendtal mee naar de duizendtallen.  [nieuw]
   - `duizend te weinig` (fout = antwoord − 1000) → Dat is duizend te weinig. Reken de duizendtallen nog eens na.  [nieuw]
-  - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Tel de tientallen nog eens. Neem je alleen één mee als de eenheden samen op tien of meer komen?  [nieuw]
-  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Tel de honderdtallen nog eens. Neem je alleen één mee als de tientallen samen op tien of meer komen?  [nieuw]
+  - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Tel de tientallen nog eens. Komen de eenheden samen op tien of meer? Dan neem je precies één mee naar de tientallen, anders niets.  [nieuw]
+  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Tel de honderdtallen nog eens. Komen de tientallen samen op tien of meer? Dan neem je precies één mee naar de honderdtallen, anders niets.  [nieuw]
   - `andere fout` (andere fout) → Zet de getallen onder elkaar en tel kolom voor kolom op, van rechts naar links. Komt een kolom op tien of meer? Dan gaat er één mee naar links.  [nieuw]
 - Status: hints klaar
 
@@ -217,7 +217,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 636 − 400 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af? · 639 − 400 → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.
 
 - **Hint 1 (te schrijven):** Maak het getal dat eraf gaat rond. Hoeveel komt erbij?
-- **Hint 2 (te schrijven):** Doe bij het eerste getal evenveel erbij. Dan blijft de uitkomst gelijk.
+- **Hint 2 (te schrijven):** Doe bij het eerste getal evenveel erbij als bij het tweede getal. Dan blijft de uitkomst gelijk.
 - **Ouderzin:** Je kind kiest een minsom met dezelfde uitkomst: bij allebei de getallen evenveel erbij.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `eerste getal eraf` (Claudes sleutel: verkeerde-bewerking) → Je hebt bij het eerste getal iets afgehaald. Bij een minsom doe je bij allebei de getallen evenveel erbij; dan blijft de uitkomst gelijk.  [Claude, taalfix]
@@ -256,7 +256,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `honderd te weinig` (fout = antwoord − 100) → Dat is honderd te weinig. Reken de honderdtallen nog eens na.  [nieuw]
   - `duizend te weinig (onthouden)` (fout = antwoord − 1000 (onthouden naar de duizendtallen)) → Dat is duizend te weinig. Kwamen de honderdtallen samen op tien of meer? Dan gaat er één duizendtal mee naar de duizendtallen.  [nieuw]
   - `duizend te weinig` (fout = antwoord − 1000) → Dat is duizend te weinig. Reken de duizendtallen nog eens na.  [nieuw]
-  - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Tel de tientallen nog eens. Neem je alleen één mee als de eenheden samen op tien of meer komen?  [nieuw]
-  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Tel de honderdtallen nog eens. Neem je alleen één mee als de tientallen samen op tien of meer komen?  [nieuw]
+  - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Tel de tientallen nog eens. Komen de eenheden samen op tien of meer? Dan neem je precies één mee naar de tientallen, anders niets.  [nieuw]
+  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Tel de honderdtallen nog eens. Komen de tientallen samen op tien of meer? Dan neem je precies één mee naar de honderdtallen, anders niets.  [nieuw]
   - `andere fout` (andere fout) → Zet de getallen onder elkaar en tel kolom voor kolom op, van rechts naar links. Komt een kolom op tien of meer? Dan gaat er één mee naar links.  [nieuw]
 - Status: hints klaar

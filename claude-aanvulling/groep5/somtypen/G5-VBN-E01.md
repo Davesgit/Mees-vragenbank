@@ -34,11 +34,12 @@ Hoeveel peren zijn er?
     - **Fout-hints (Claude):** 3 → Leg je vinger op de rij of staaf uit de vraag en schuif hem naar de as. Kijk hoeveel elk streepje waard is. · 40 → Leg je vinger op de rij of staaf uit de vraag en schuif hem naar de as. Kijk hoeveel elk streepje waard is.
 
 - **Hint 1 (te schrijven):** Zoek de staaf van het ding uit de vraag. Welk getal hoort bij de top van de staaf? Staat daar geen getal, zoek dan het getal vlak eronder.
-- **Hint 2 (te schrijven):** Kijk in de vraag hoeveel elk streepje is. Tel vanaf dat getal verder, zo veel per streepje, tot de top van de staaf.
+- **Hint 2 (te schrijven):** Zoek het getal vlak onder de top van de staaf. Kijk in de vraag hoeveel elk streepje is, en tel vanaf dat getal zo veel per streepje verder tot de top.
 - **Ouderzin:** Je kind leest een staafdiagram af. Elk streepje is meer dan één.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `streepjes geteld` (fout = antwoord gedeeld door getal1) → Je hebt de streepjes geteld. Kijk in de vraag hoeveel elk streepje is. Tel bij elk streepje zo veel verder.  [nieuw]
   - `getal vlak onder de top` (fout = het getal vlak onder de top) → Dat is het getal vlak onder de top. Tel de streepjes erboven er nog bij: kijk in de vraag hoeveel elk streepje is.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Is dat wat één streepje waard is? De vraag gaat over de hele staaf. Hoeveel streepjes hoog is de staaf?  [nieuw]
   - `één streepje te veel` (fout = antwoord + getal1) → Bijna! Dat is één streepje te veel. Kijk goed waar de top van de staaf is.  [nieuw]
   - `één streepje te weinig` (fout = antwoord − getal1) → Bijna! Dat is één streepje te weinig. Kijk goed waar de top van de staaf is.  [nieuw]
   - `andere staaf` (Claudes sleutel: grafiek-verkeerd-afgelezen) → Dat is een andere staaf. Zoek de staaf van het ding uit de vraag.  [Claude, taalfix]
@@ -77,6 +78,7 @@ Hoeveel stiften zijn er meer dan potloden?
   - `opgeteld` (Claudes sleutel: verkeerde-bewerking) → Je hebt de twee staven opgeteld. De vraag is hoeveel meer: haal het kleinste getal van het grootste af.  [Claude, taalfix]
   - `één staaf` (Claudes sleutel: andere-deel-genomen) → Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af.  [Claude, taalfix]
   - `streepjes geteld` (fout = antwoord gedeeld door getal1) → Je hebt geteld hoeveel streepjes de ene staaf hoger is. Kijk in de vraag hoeveel elk streepje is. Tel per streepje zo veel verder.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Is dat wat één streepje waard is? De vraag is hoeveel meer. Lees allebei de staven af.  [nieuw]
   - `één streepje te veel` (fout = antwoord + getal1) → Bijna! Dat is één streepje te veel. Kijk nog eens goed waar de toppen van de twee staven zijn.  [nieuw]
   - `één streepje te weinig` (fout = antwoord − getal1) → Bijna! Dat is één streepje te weinig. Kijk nog eens goed waar de toppen van de twee staven zijn.  [nieuw]
   - `andere fout` (andere fout) → Lees de twee staven uit de vraag af. Kijk hoeveel elk streepje is. Hoeveel meer? Haal het kleinste getal van het grootste af.  [nieuw]
@@ -104,7 +106,7 @@ Hoeveel stiften zijn er meer dan potloden?
     - **Fout-hints (Claude):** 375 → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.
 
 - **Hint 1 (te schrijven):** Zoek in de tabel de rij van het ding uit de vraag. Een rij loopt van links naar rechts.
-- **Hint 2 (te schrijven):** Tel alle getallen in die rij bij elkaar. Sla er geen over.
+- **Hint 2 (te schrijven):** Zoek de rij van het ding uit de vraag. Tel alle getallen in die rij bij elkaar. Sla er geen over.
 - **Ouderzin:** Je kind telt alle getallen in één rij van een tabel bij elkaar op.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `andere rij` (fout = som van de rij) → Dat is het totaal van een andere rij. Zoek eerst de rij van het ding uit de vraag.  [nieuw]
@@ -170,7 +172,7 @@ Hoeveel stiften zijn er meer dan potloden?
     - **Fout-hints (Claude):** 460 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
 
 - **Hint 1 (te schrijven):** Zoek in de tabel de rij van het ding uit de vraag. Een rij loopt van links naar rechts.
-- **Hint 2 (te schrijven):** Ga in die rij naar de kolom van de dag uit de vraag. Een kolom loopt van boven naar beneden. Het getal in dat vak is het antwoord.
+- **Hint 2 (te schrijven):** Zoek de rij van het ding uit de vraag. Ga in die rij naar de kolom van de dag uit de vraag. Een kolom loopt van boven naar beneden. Het getal in dat vak is het antwoord.
 - **Ouderzin:** Je kind leest één getal af in een tabel.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `andere cel` (fout = andere cel) → Dat getal staat in een ander vak. Zoek de rij van het ding en de kolom van de dag. Waar die twee elkaar raken, staat het antwoord.  [nieuw]
