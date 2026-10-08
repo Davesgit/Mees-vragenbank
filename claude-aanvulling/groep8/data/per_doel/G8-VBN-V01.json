@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T18:20:30+0200",
+ "gegenereerdOp": "2026-10-08T18:54:28+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-VBN-V01",
  "bordtitel": "Assen, coördinaten en grafieken herhalen",
@@ -24,19 +24,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "6,1",
+   "antwoord": "(6, 1)",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "sterkereHint": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
    "foutHints": [
     {
      "stap": null,
      "fout": "1,6",
-     "uitleg": "Het eerste getal is opzij, het tweede omhoog."
+     "uitleg": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "1",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "6",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1,6 → Het eerste getal is opzij, het tweede omhoog.",
-   "ouderzin": "",
+   "foutHintsTekst": "1,6 → Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog. · 1 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma. · 6 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -97,7 +122,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "V-#1025: antwoord '(x, y)', niet live zonder plaatje"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -110,7 +137,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 1,
+     "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -126,8 +158,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "geldigeAntwoorden": [
+    "(6, 1)",
+    "(6,1)",
+    "6,1",
+    "6, 1"
+   ],
+   "nietLiveZonderBeeld": true,
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1,6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1",
+       "6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma."
   },
   {
    "id": "G8-VBN-V01-claude-bank-002",
@@ -140,19 +225,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "2,4",
+   "antwoord": "(2, 4)",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "sterkereHint": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
    "foutHints": [
     {
      "stap": null,
      "fout": "4,2",
-     "uitleg": "Het eerste getal is opzij, het tweede omhoog."
+     "uitleg": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "2",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "4",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "4,2 → Het eerste getal is opzij, het tweede omhoog.",
-   "ouderzin": "",
+   "foutHintsTekst": "4,2 → Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog. · 2 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma. · 4 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -213,7 +323,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "V-#1025: antwoord '(x, y)', niet live zonder plaatje"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -226,7 +338,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 1,
+     "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -242,8 +359,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "geldigeAntwoorden": [
+    "(2, 4)",
+    "(2,4)",
+    "2,4",
+    "2, 4"
+   ],
+   "nietLiveZonderBeeld": true,
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4,2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2",
+       "4"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma."
   },
   {
    "id": "G8-VBN-V01-claude-bank-003",
@@ -256,19 +426,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "1",
+   "antwoord": "(1, 0)",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "sterkereHint": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
    "foutHints": [
     {
      "stap": null,
      "fout": "0,1",
-     "uitleg": "Het eerste getal is opzij, het tweede omhoog."
+     "uitleg": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "0",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "1",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "0,1 → Het eerste getal is opzij, het tweede omhoog.",
-   "ouderzin": "",
+   "foutHintsTekst": "0,1 → Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog. · 0 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma. · 1 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -330,7 +525,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "G7-K1 kommagetal zo kort mogelijk (G7-bank)"
+     "G7-K1 kommagetal zo kort mogelijk (G7-bank)",
+     "V-#1025: antwoord '(x, y)', niet live zonder plaatje"
     ]
    },
    "opBord": false,
@@ -344,7 +540,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 1,
+     "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -360,8 +561,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "geldigeAntwoorden": [
+    "(1, 0)",
+    "(1,0)",
+    "1,0",
+    "1, 0"
+   ],
+   "nietLiveZonderBeeld": true,
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0,1"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0",
+       "1"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma."
   },
   {
    "id": "G8-VBN-V01-claude-bank-004",
@@ -374,19 +628,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "7,5",
+   "antwoord": "(7, 5)",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "sterkereHint": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
    "foutHints": [
     {
      "stap": null,
      "fout": "5,7",
-     "uitleg": "Het eerste getal is opzij, het tweede omhoog."
+     "uitleg": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "7",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "5,7 → Het eerste getal is opzij, het tweede omhoog.",
-   "ouderzin": "",
+   "foutHintsTekst": "5,7 → Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog. · 5 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma. · 7 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -447,7 +726,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "V-#1025: antwoord '(x, y)', niet live zonder plaatje"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -460,7 +741,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 1,
+     "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -476,8 +762,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "geldigeAntwoorden": [
+    "(7, 5)",
+    "(7,5)",
+    "7,5",
+    "7, 5"
+   ],
+   "nietLiveZonderBeeld": true,
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5,7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5",
+       "7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma."
   },
   {
    "id": "G8-VBN-V01-claude-bank-005",
@@ -490,19 +829,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "1,2",
+   "antwoord": "(1, 2)",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "sterkereHint": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
    "foutHints": [
     {
      "stap": null,
      "fout": "2,1",
-     "uitleg": "Het eerste getal is opzij, het tweede omhoog."
+     "uitleg": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "1",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "2,1 → Het eerste getal is opzij, het tweede omhoog.",
-   "ouderzin": "",
+   "foutHintsTekst": "2,1 → Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog. · 1 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma. · 2 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -563,7 +927,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "V-#1025: antwoord '(x, y)', niet live zonder plaatje"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -576,7 +942,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 1,
+     "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -592,8 +963,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "geldigeAntwoorden": [
+    "(1, 2)",
+    "(1,2)",
+    "1,2",
+    "1, 2"
+   ],
+   "nietLiveZonderBeeld": true,
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2,1"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1",
+       "2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma."
   },
   {
    "id": "G8-VBN-V01-claude-bank-006",
@@ -606,19 +1030,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "6,3",
+   "antwoord": "(6, 3)",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "sterkereHint": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
    "foutHints": [
     {
      "stap": null,
      "fout": "3,6",
-     "uitleg": "Het eerste getal is opzij, het tweede omhoog."
+     "uitleg": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "3",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "6",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "3,6 → Het eerste getal is opzij, het tweede omhoog.",
-   "ouderzin": "",
+   "foutHintsTekst": "3,6 → Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog. · 3 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma. · 6 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -679,7 +1128,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "V-#1025: antwoord '(x, y)', niet live zonder plaatje"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -692,7 +1143,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 1,
+     "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -708,8 +1164,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "geldigeAntwoorden": [
+    "(6, 3)",
+    "(6,3)",
+    "6,3",
+    "6, 3"
+   ],
+   "nietLiveZonderBeeld": true,
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3,6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3",
+       "6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma."
   },
   {
    "id": "G8-VBN-V01-claude-bank-007",
@@ -722,19 +1231,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "4,1",
+   "antwoord": "(4, 1)",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "sterkereHint": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
    "foutHints": [
     {
      "stap": null,
      "fout": "1,4",
-     "uitleg": "Het eerste getal is opzij, het tweede omhoog."
+     "uitleg": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "1",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "4",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1,4 → Het eerste getal is opzij, het tweede omhoog.",
-   "ouderzin": "",
+   "foutHintsTekst": "1,4 → Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog. · 1 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma. · 4 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -795,7 +1329,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "V-#1025: antwoord '(x, y)', niet live zonder plaatje"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -808,7 +1344,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 1,
+     "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -824,8 +1365,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "geldigeAntwoorden": [
+    "(4, 1)",
+    "(4,1)",
+    "4,1",
+    "4, 1"
+   ],
+   "nietLiveZonderBeeld": true,
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1,4"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1",
+       "4"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma."
   },
   {
    "id": "G8-VBN-V01-claude-bank-008",
@@ -838,19 +1432,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "6",
+   "antwoord": "(6, 0)",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "sterkereHint": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
    "foutHints": [
     {
      "stap": null,
      "fout": "0,6",
-     "uitleg": "Het eerste getal is opzij, het tweede omhoog."
+     "uitleg": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "0",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "6",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "0,6 → Het eerste getal is opzij, het tweede omhoog.",
-   "ouderzin": "",
+   "foutHintsTekst": "0,6 → Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog. · 0 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma. · 6 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -912,7 +1531,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "G7-K1 kommagetal zo kort mogelijk (G7-bank)"
+     "G7-K1 kommagetal zo kort mogelijk (G7-bank)",
+     "V-#1025: antwoord '(x, y)', niet live zonder plaatje"
     ]
    },
    "opBord": false,
@@ -926,7 +1546,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 1,
+     "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -942,8 +1567,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "geldigeAntwoorden": [
+    "(6, 0)",
+    "(6,0)",
+    "6,0",
+    "6, 0"
+   ],
+   "nietLiveZonderBeeld": true,
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0,6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0",
+       "6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma."
   },
   {
    "id": "G8-VBN-V01-claude-bank-009",
@@ -956,19 +1634,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "0,1",
+   "antwoord": "(0, 1)",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "sterkereHint": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
    "foutHints": [
     {
      "stap": null,
+     "fout": "1,0",
+     "uitleg": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "0",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
      "fout": "1",
-     "uitleg": "Het eerste getal is opzij, het tweede omhoog."
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1 → Het eerste getal is opzij, het tweede omhoog.",
-   "ouderzin": "",
+   "foutHintsTekst": "1,0 → Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog. · 0 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma. · 1 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -1029,7 +1732,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "V-#1025: antwoord '(x, y)', niet live zonder plaatje"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1042,7 +1747,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 1,
+     "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1058,8 +1768,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "geldigeAntwoorden": [
+    "(0, 1)",
+    "(0,1)",
+    "0,1",
+    "0, 1"
+   ],
+   "nietLiveZonderBeeld": true,
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1,0"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0",
+       "1"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma."
   },
   {
    "id": "G8-VBN-V01-claude-bank-010",
@@ -1072,19 +1835,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "8",
+   "antwoord": "(8, 0)",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "sterkereHint": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
    "foutHints": [
     {
      "stap": null,
      "fout": "0,8",
-     "uitleg": "Het eerste getal is opzij, het tweede omhoog."
+     "uitleg": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "0",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "8",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "0,8 → Het eerste getal is opzij, het tweede omhoog.",
-   "ouderzin": "",
+   "foutHintsTekst": "0,8 → Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog. · 0 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma. · 8 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -1146,7 +1934,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "G7-K1 kommagetal zo kort mogelijk (G7-bank)"
+     "G7-K1 kommagetal zo kort mogelijk (G7-bank)",
+     "V-#1025: antwoord '(x, y)', niet live zonder plaatje"
     ]
    },
    "opBord": false,
@@ -1160,7 +1949,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 1,
+     "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1176,8 +1970,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "geldigeAntwoorden": [
+    "(8, 0)",
+    "(8,0)",
+    "8,0",
+    "8, 0"
+   ],
+   "nietLiveZonderBeeld": true,
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0,8"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0",
+       "8"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma."
   },
   {
    "id": "G8-VBN-V01-claude-bank-011",
@@ -1190,19 +2037,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "2",
+   "antwoord": "(2, 0)",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "sterkereHint": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
    "foutHints": [
     {
      "stap": null,
      "fout": "0,2",
-     "uitleg": "Het eerste getal is opzij, het tweede omhoog."
+     "uitleg": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "0",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "0,2 → Het eerste getal is opzij, het tweede omhoog.",
-   "ouderzin": "",
+   "foutHintsTekst": "0,2 → Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog. · 0 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma. · 2 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -1264,7 +2136,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "G7-K1 kommagetal zo kort mogelijk (G7-bank)"
+     "G7-K1 kommagetal zo kort mogelijk (G7-bank)",
+     "V-#1025: antwoord '(x, y)', niet live zonder plaatje"
     ]
    },
    "opBord": false,
@@ -1278,7 +2151,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 1,
+     "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1294,8 +2172,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "geldigeAntwoorden": [
+    "(2, 0)",
+    "(2,0)",
+    "2,0",
+    "2, 0"
+   ],
+   "nietLiveZonderBeeld": true,
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0,2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0",
+       "2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma."
   },
   {
    "id": "G8-VBN-V01-claude-bank-012",
@@ -1308,13 +2239,24 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "2,2",
+   "antwoord": "(2, 2)",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": null,
-   "ouderzin": "",
+   "hint": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "sterkereHint": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "2",
+     "uitleg": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "uitlegSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "2 → Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -1364,7 +2306,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "V-#1025: antwoord '(x, y)', niet live zonder plaatje"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1377,7 +2321,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 1,
+     "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #)."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1385,7 +2334,7 @@
     "methode": "geen automatische controle",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
-    "zonderFoutHints": true,
+    "zonderFoutHints": false,
     "claudeVorm": {
      "antwoord": "n.v.t.",
      "verwacht": null,
@@ -1393,8 +2342,58 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "geldigeAntwoorden": [
+    "(2, 2)",
+    "(2,2)",
+    "2,2",
+    "2, 2"
+   ],
+   "nietLiveZonderBeeld": true,
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "soort": "omgewisseld",
+     "bron": "claude-taalfix",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "stip op de lijn van nul",
+     "bron": "nieuw",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma."
   },
   {
    "id": "G8-VBN-V01-claude-bank-013",
@@ -1425,35 +2424,59 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "De temperatuur daalt met 3 graden"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Zoek op de lijn de twee tijden uit de vraag. Gaat de lijn daartussen omhoog of omlaag?",
+   "sterkereHint": "Lees de temperatuur af bij de tijd waar het stuk begint en bij de tijd waar het stopt. Hoeveel graden is het verschil? Kijk ook of de lijn omhoog of omlaag gaat.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "De temperatuur stijgt met 3 graden",
-     "uitleg": "Kijk of de lijn tussen 12.00 uur en 16.00 uur omhoog of omlaag gaat.",
-     "regel": "Didactiek G8 (STAT-GRAFIEK-ERBIJ)",
-     "soort": null,
-     "bron": "didactiek"
+     "fout": "De temperatuur daalt met 6 graden",
+     "uitleg": "Dat verschil hoort bij een ander stuk van de lijn. Lees de temperatuur af bij de twee tijden uit de vraag.",
+     "uitlegSterker": "Lees de temperatuur af bij de tijd waar het stuk begint en bij de tijd waar het stopt. Hoeveel graden is het verschil? Kijk ook of de lijn omhoog of omlaag gaat.",
+     "laag2": "tekstSterker",
+     "regel": "De temperatuur daalt met 6 graden",
+     "soort": "verschil van een ander stuk",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "De temperatuur daalt met 6 graden",
-     "uitleg": "Je begon bij 8.00 uur. Begin bij de temperatuur van 12.00 uur.",
-     "regel": "Didactiek G8 (STAT-GRAFIEK-ERBIJ)",
-     "soort": null,
-     "bron": "didactiek"
+     "fout": "De temperatuur stijgt met 3 graden",
+     "uitleg": "Kijk of de lijn tussen die twee tijden omhoog of omlaag gaat.",
+     "uitlegSterker": "Lees de temperatuur af bij de tijd waar het stuk begint en bij de tijd waar het stopt. Hoeveel graden is het verschil? Kijk ook of de lijn omhoog of omlaag gaat.",
+     "laag2": "tekstSterker",
+     "regel": "De temperatuur stijgt met 3 graden",
+     "soort": "omhoog in plaats van omlaag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "De temperatuur stijgt met 3 graden → Kijk welk getal het grootst is en of de lijn omhoog of omlaag gaat. · De temperatuur daalt met 6 graden → Je gebruikt het verkeerde beginpunt. Begin bij het getal dat bij 12 uur hoort.",
-   "ouderzin": "",
+   "foutHintsTekst": "De temperatuur daalt met 6 graden → Dat verschil hoort bij een ander stuk van de lijn. Lees de temperatuur af bij de twee tijden uit de vraag. · De temperatuur stijgt met 3 graden → Kijk of de lijn tussen die twee tijden omhoog of omlaag gaat.",
+   "ouderzin": "Je kind leest in een lijngrafiek af hoe de temperatuur verandert.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
     "nodig": true,
     "toelichting": "jsRender lijngrafiek: punten (8.00 uur, 12 °C) · (12.00 uur, 18 °C) · (16.00 uur, 15 °C); as 'tijd' en as 'temperatuur in °C' met stappen van 2",
     "asciiSchets": false,
-    "jsRender": null,
+    "jsRender": {
+     "soort": "lijngrafiek",
+     "titel": "Temperatuur op een dag",
+     "punten": [
+      {
+       "naam": "8.00 uur",
+       "waarde": 12
+      },
+      {
+       "naam": "12.00 uur",
+       "waarde": 18
+      },
+      {
+       "naam": "16.00 uur",
+       "waarde": 15
+      }
+     ],
+     "max": 20,
+     "perstreep": 2,
+     "cijfer_om": 2
+    },
     "svgBestanden": []
    },
    "husselen": true,
@@ -1488,7 +2511,7 @@
      {
       "stap": null,
       "fout": "De temperatuur daalt met 6 graden",
-      "uitleg": "Je begon bij 8.00 uur. Begin bij de temperatuur van 12.00 uur."
+      "uitleg": "Lees de temperatuur af om 12.00 uur en om 16.00 uur. Het verschil tussen die twee is wat er verandert."
      }
     ]
    },
@@ -1513,7 +2536,9 @@
     "gewijzigd": true,
     "wijzigingen": [
      "D8 nieuwe opgave (Didactiek)",
-     "N2 - → −"
+     "N2 - → −",
+     "Oef-#1020: tekst bij 'daalt met 6 graden'",
+     "V-#1025: renderdata lijngrafiek"
     ]
    },
    "opBord": false,
@@ -1523,7 +2548,7 @@
     "voorstelDoel": null,
     "regel": "D8-STAT-GRAFIEK-ERBIJ",
     "reden": "Didactiek 1 okt (G8-twijfel G8-VBN-E04-claude-bank-twijfel-005): STAT-GRAFIEK-ERBIJ",
-    "somtype": "In de lijngrafiek zie je de temperatuur op een dag, van # uur tot # uur. Wat gebeurt er met de temperatuur tussen # uur en # uur?",
+    "somtype": "[lijngrafiek] In de lijngrafiek zie je de temperatuur op een dag, van # uur tot # uur. Wat gebeurt er met de temperatuur tussen # uur en # uur?",
     "didactiekG8": {
      "twijfelId": "G8-VBN-E04-claude-bank-twijfel-005",
      "groep": "statistiek-gemengd",
@@ -1555,9 +2580,14 @@
     ],
     "hintStatus": "Didactiek G8",
     "duplicaatVan": null,
-    "somtypeNr": 2,
+    "somtypeNr": 4,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "In de lijngrafiek zie je de temperatuur op een dag, van # uur tot # uur. Wat gebeurt er met de temperatuur tussen # uur en # uur?"
+    "somtypeOrigineel": "In de lijngrafiek zie je de temperatuur op een dag, van # uur tot # uur. Wat gebeurt er met de temperatuur tussen # uur en # uur?",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 4,
+     "somtype": "[lijngrafiek] In de lijngrafiek zie je de temperatuur op een dag, van # uur tot # uur. Wat gebeurt er met de temperatuur tussen # uur en # uur?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1573,11 +2603,58 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "De temperatuur daalt met 3 graden"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "De temperatuur stijgt met 3 graden",
+     "soort": "omhoog in plaats van omlaag",
+     "bron": "nieuw",
+     "tekst": "Kijk of de lijn tussen die twee tijden omhoog of omlaag gaat.",
+     "tekstSterker": "Lees de temperatuur af bij de tijd waar het stuk begint en bij de tijd waar het stopt. Hoeveel graden is het verschil? Kijk ook of de lijn omhoog of omlaag gaat.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "De temperatuur stijgt met 3 graden"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "De temperatuur daalt met 6 graden",
+     "soort": "verschil van een ander stuk",
+     "bron": "nieuw",
+     "tekst": "Dat verschil hoort bij een ander stuk van de lijn. Lees de temperatuur af bij de twee tijden uit de vraag.",
+     "tekstSterker": "Lees de temperatuur af bij de tijd waar het stuk begint en bij de tijd waar het stopt. Hoeveel graden is het verschil? Kijk ook of de lijn omhoog of omlaag gaat.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "De temperatuur daalt met 6 graden"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Lees de temperatuur af bij de twee tijden uit de vraag. Gaat de lijn omhoog of omlaag?",
+     "tekstSterker": "Lees de temperatuur af bij de tijd waar het stuk begint en bij de tijd waar het stopt. Hoeveel graden is het verschil? Kijk ook of de lijn omhoog of omlaag gaat.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Lees de temperatuur af bij de twee tijden uit de vraag. Gaat de lijn omhoog of omlaag?"
   },
   {
    "id": "G8-VBN-V01-claude-bank-014",
@@ -1608,28 +2685,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "12 kinderen"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Welk deel van de cirkel hoort bij voetbal?",
+   "sterkereHint": "Voetbal is de helft van de cirkel. Neem de helft van het aantal in de klas.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "6 kinderen",
-     "uitleg": "6 hoort bij een kwart. Voetbal is de helft, en dat is meer dan een kwart.",
-     "regel": "Didactiek G8 (STAT-KLEUR-WEG)",
-     "soort": null,
-     "bron": "didactiek"
+     "fout": "8 kinderen",
+     "uitleg": "Zo deel je de klas in drie gelijke stukken. Maar de stukken van de cirkel verschillen in grootte.",
+     "uitlegSterker": "Voetbal is de helft van de cirkel. Neem de helft van het aantal in de klas.",
+     "laag2": "tekstSterker",
+     "regel": "8 kinderen",
+     "soort": "drie gelijke stukken",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "8 kinderen",
-     "uitleg": "Je deelde in drie gelijke stukken. De drie stukken van de cirkel zijn niet even groot.",
-     "regel": "Didactiek G8 (STAT-KLEUR-WEG)",
-     "soort": null,
-     "bron": "didactiek"
+     "fout": "6 kinderen",
+     "uitleg": "Dat hoort bij een kwart van de klas. Voetbal is de helft: dat is meer dan een kwart.",
+     "uitlegSterker": "Voetbal is de helft van de cirkel. Neem de helft van het aantal in de klas.",
+     "laag2": "tekstSterker",
+     "regel": "6 kinderen",
+     "soort": "een kwart",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "6 kinderen → 6 hoort bij een kwart. Het blauwe deel is groter dan een kwart. · 8 kinderen → Je hebt in drie stukken gedeeld. De delen in de cirkel zijn niet even groot.",
-   "ouderzin": "",
+   "foutHintsTekst": "8 kinderen → Zo deel je de klas in drie gelijke stukken. Maar de stukken van de cirkel verschillen in grootte. · 6 kinderen → Dat hoort bij een kwart van de klas. Voetbal is de helft: dat is meer dan een kwart.",
+   "ouderzin": "Je kind rekent met een cirkeldiagram uit hoeveel een deel van de klas is.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -1653,7 +2734,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "G9",
-    "claudeUitleg": "De helft van de cirkel is blauw. De helft van 24 is 12. Dus 12 kinderen horen bij het blauwe deel.",
+    "claudeUitleg": "De helft van de cirkel is voetbal. De helft van 24 is 12. Dus 12 kinderen kiezen voetbal.",
     "claudeStrategie": "deel van het geheel",
     "claudeThema": null,
     "claudeAntwoordType": "tekst",
@@ -1695,7 +2776,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D8 nieuwe opgave (Didactiek)"
+     "D8 nieuwe opgave (Didactiek)",
+     "V-#1027: uitleg bij de sportnamen"
     ]
    },
    "opBord": false,
@@ -1737,9 +2819,14 @@
     ],
     "hintStatus": "Didactiek G8",
     "duplicaatVan": null,
-    "somtypeNr": 3,
+    "somtypeNr": 2,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "In een cirkeldiagram staat welke sport [wie] van een klas het liefst doen. De helft kiest voetbal, een kwart kiest hockey en een kwart kiest tennis. Er zitten # [ding] in [plek]. Hoeveel kinderen kiezen voetbal?"
+    "somtypeOrigineel": "In een cirkeldiagram staat welke sport [wie] van een klas het liefst doen. De helft kiest voetbal, een kwart kiest hockey en een kwart kiest tennis. Er zitten # [ding] in [plek]. Hoeveel kinderen kiezen voetbal?",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 2,
+     "somtype": "In een cirkeldiagram staat welke sport [wie] van een klas het liefst doen. De helft kiest voetbal, een kwart kiest hockey en een kwart kiest tennis. Er zitten # [ding] in [plek]. Hoeveel kinderen kiezen voetbal?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1755,11 +2842,58 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "12 kinderen"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "6 kinderen",
+     "soort": "een kwart",
+     "bron": "nieuw",
+     "tekst": "Dat hoort bij een kwart van de klas. Voetbal is de helft: dat is meer dan een kwart.",
+     "tekstSterker": "Voetbal is de helft van de cirkel. Neem de helft van het aantal in de klas.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6 kinderen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "8 kinderen",
+     "soort": "drie gelijke stukken",
+     "bron": "nieuw",
+     "tekst": "Zo deel je de klas in drie gelijke stukken. Maar de stukken van de cirkel verschillen in grootte.",
+     "tekstSterker": "Voetbal is de helft van de cirkel. Neem de helft van het aantal in de klas.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8 kinderen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Welk deel van de cirkel is voetbal? Neem dat deel van de hele klas.",
+     "tekstSterker": "Voetbal is de helft van de cirkel. Neem de helft van het aantal in de klas.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Welk deel van de cirkel is voetbal? Neem dat deel van de hele klas."
   },
   {
    "id": "G8-VBN-V01-claude-bank-015",
@@ -1768,7 +2902,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "meerkeuze",
-   "opgave": "In een grafiek loopt de as met stappen van 20. De staaf van groep 7 staat precies tussen 60 en 80. Hoeveel is dat?",
+   "opgave": "In een grafiek loopt de as met stappen van 20. De staaf van groep 7 staat precies tussen 60 en 80. Bij welk getal staat de staaf?",
    "opgaveStappen": null,
    "opties": [
     {
@@ -1790,22 +2924,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "70"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Precies tussen twee getallen ligt het getal in het midden.",
+   "sterkereHint": "Hoeveel is het van het kleinste getal tot het grootste? Neem daar de helft van. Tel die helft op bij het kleinste getal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "65",
-     "uitleg": "Kijk hoe groot de stap tussen twee streepjes is en neem daar de helft van."
+     "uitleg": "Dat ligt niet precies in het midden. Hoe groot is de stap van het kleinste getal naar het grootste? Neem daar de helft van.",
+     "uitlegSterker": "Hoeveel is het van het kleinste getal tot het grootste? Neem daar de helft van. Tel die helft op bij het kleinste getal.",
+     "laag2": "tekstSterker",
+     "regel": "65",
+     "soort": "niet in het midden",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "140",
-     "uitleg": "Je hebt de twee getallen opgeteld. De staaf ligt ertussenin."
+     "uitleg": "Dat zijn de twee getallen samen. Het getal dat je zoekt, ligt tussen die twee in.",
+     "uitlegSterker": "Hoeveel is het van het kleinste getal tot het grootste? Neem daar de helft van. Tel die helft op bij het kleinste getal.",
+     "laag2": "tekstSterker",
+     "regel": "140",
+     "soort": "opgeteld",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "65 → Kijk hoe groot de stap tussen twee streepjes is en neem daar de helft van. · 140 → Je hebt de twee getallen opgeteld. De staaf ligt ertussenin.",
-   "ouderzin": "",
+   "foutHintsTekst": "65 → Dat ligt niet precies in het midden. Hoe groot is de stap van het kleinste getal naar het grootste? Neem daar de helft van. · 140 → Dat zijn de twee getallen samen. Het getal dat je zoekt, ligt tussen die twee in.",
+   "ouderzin": "Je kind leest op een as een getal af dat precies tussen twee streepjes ligt.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -1879,7 +3023,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Z-#1024: vraag"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1888,7 +3034,7 @@
     "voorstelDoel": null,
     "regel": "D8-STAT-NAAR-VBN-V01",
     "reden": "Didactiek 1 okt (G8-twijfel G8-VBN-E04-claude-bank-twijfel-010): STAT-NAAR-VBN-V01",
-    "somtype": "In een grafiek loopt de as met stappen van #. De staaf van groep # [ding] precies tussen # en #. Hoeveel is dat?",
+    "somtype": "In een grafiek loopt de as met stappen van #. De staaf van groep # staat precies tussen # en #. Bij welk getal staat de [ding]?",
     "didactiekG8": {
      "twijfelId": "G8-VBN-E04-claude-bank-twijfel-010",
      "groep": "statistiek-gemengd",
@@ -1904,9 +3050,14 @@
      "hintStatus": "Didactiek G8"
     },
     "duplicaatVan": null,
-    "somtypeNr": 4,
+    "somtypeNr": 3,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "In een grafiek loopt de as met stappen van #. De staaf van groep # [ding] precies tussen # en #. Hoeveel is dat?"
+    "somtypeOrigineel": "In een grafiek loopt de as met stappen van #. De staaf van groep # [ding] precies tussen # en #. Hoeveel is dat?",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 3,
+     "somtype": "In een grafiek loopt de as met stappen van #. De staaf van groep # staat precies tussen # en #. Bij welk getal staat de [ding]?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1922,11 +3073,58 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "70"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "65",
+     "soort": "niet in het midden",
+     "bron": "nieuw",
+     "tekst": "Dat ligt niet precies in het midden. Hoe groot is de stap van het kleinste getal naar het grootste? Neem daar de helft van.",
+     "tekstSterker": "Hoeveel is het van het kleinste getal tot het grootste? Neem daar de helft van. Tel die helft op bij het kleinste getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "65"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "140",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Dat zijn de twee getallen samen. Het getal dat je zoekt, ligt tussen die twee in.",
+     "tekstSterker": "Hoeveel is het van het kleinste getal tot het grootste? Neem daar de helft van. Tel die helft op bij het kleinste getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "140"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Welk getal ligt precies in het midden van de twee getallen?",
+     "tekstSterker": "Hoeveel is het van het kleinste getal tot het grootste? Neem daar de helft van. Tel die helft op bij het kleinste getal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Welk getal ligt precies in het midden van de twee getallen?"
   },
   {
    "id": "G8-VBN-V01-claude-bank-016",
@@ -1958,27 +3156,31 @@
     "juisteOptieTekst": "Woensdag"
    },
    "hint": "Zoek de hoogste staaf.",
-   "sterkereHint": "Lees onder de hoogste staaf welke dag het is.",
+   "sterkereHint": "Vergelijk de staven: welke komt het hoogst? Lees af bij welke dag die staaf hoort.",
    "foutHints": [
     {
      "stap": null,
      "fout": "Maandag",
-     "uitleg": "Kijk naar de hoogste staaf. Op welke dag hoort die?",
-     "regel": "Dave 20:56 (2)",
-     "soort": null,
-     "bron": "didactiek"
+     "uitleg": "Die staaf is niet de hoogste. Welke staaf komt het hoogst? Bij welke dag hoort die?",
+     "uitlegSterker": "Vergelijk de staven: welke komt het hoogst? Lees af bij welke dag die staaf hoort.",
+     "laag2": "tekstSterker",
+     "regel": "Maandag",
+     "soort": "niet de hoogste staaf",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Dinsdag",
-     "uitleg": "Dat is de laagste staaf. Je zoekt de dag met de meeste boeken: de hoogste staaf.",
-     "regel": "Dave 20:56 (2)",
-     "soort": null,
-     "bron": "didactiek"
+     "uitleg": "Dat is de laagste staaf. De meeste boeken horen bij de hoogste staaf.",
+     "uitlegSterker": "Vergelijk de staven: welke komt het hoogst? Lees af bij welke dag die staaf hoort.",
+     "laag2": "tekstSterker",
+     "regel": "Dinsdag",
+     "soort": "de laagste staaf",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Maandag → Kijk nog eens welke staaf het hoogst is, dus welk getal het grootst is. · Dinsdag → Je hebt de kleinste staaf gekozen. De vraag gaat over de meeste boeken.",
-   "ouderzin": "",
+   "foutHintsTekst": "Maandag → Die staaf is niet de hoogste. Welke staaf komt het hoogst? Bij welke dag hoort die? · Dinsdag → Dat is de laagste staaf. De meeste boeken horen bij de hoogste staaf.",
+   "ouderzin": "Je kind leest in een staafdiagram af waar het meeste bij hoort.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -2111,7 +3313,12 @@
     "duplicaatVan": null,
     "somtypeNr": 5,
     "somtypeNrOrigineel": 5,
-    "somtypeOrigineel": "[staafdiagram] In het staafdiagram zie je hoeveel boeken er op [naam], [naam] en [naam] zijn geleend. Op welke dag zijn de meeste boeken geleend?"
+    "somtypeOrigineel": "[staafdiagram] In het staafdiagram zie je hoeveel boeken er op [naam], [naam] en [naam] zijn geleend. Op welke dag zijn de meeste boeken geleend?",
+    "hints": {
+     "batch": "batch9.json",
+     "nr": 5,
+     "somtype": "[staafdiagram] In het staafdiagram zie je hoeveel boeken er op [naam], [naam] en [naam] zijn geleend. Op welke dag zijn de meeste boeken geleend?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2127,11 +3334,58 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Maandag",
+     "soort": "niet de hoogste staaf",
+     "bron": "nieuw",
+     "tekst": "Die staaf is niet de hoogste. Welke staaf komt het hoogst? Bij welke dag hoort die?",
+     "tekstSterker": "Vergelijk de staven: welke komt het hoogst? Lees af bij welke dag die staaf hoort.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Maandag"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Dinsdag",
+     "soort": "de laagste staaf",
+     "bron": "nieuw",
+     "tekst": "Dat is de laagste staaf. De meeste boeken horen bij de hoogste staaf.",
+     "tekstSterker": "Vergelijk de staven: welke komt het hoogst? Lees af bij welke dag die staaf hoort.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Dinsdag"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek de hoogste staaf. Bij welke dag hoort die?",
+     "tekstSterker": "Vergelijk de staven: welke komt het hoogst? Lees af bij welke dag die staaf hoort.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek de hoogste staaf. Bij welke dag hoort die?"
   }
  ],
- "hintsSyncOp": "2026-10-08T18:20:33+02:00",
+ "hintsSyncOp": "2026-10-08T18:54:31+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -2163,10 +3417,14 @@
   },
   {
    "batch": "batch8.json",
-   "md5": "a678da6be4cc"
+   "md5": "c9bea63fc394"
+  },
+  {
+   "batch": "batch9.json",
+   "md5": "9877c9d54616"
   }
  ],
- "geschrevenOp": "2026-10-08T18:20:33+02:00",
+ "geschrevenOp": "2026-10-08T18:54:31+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

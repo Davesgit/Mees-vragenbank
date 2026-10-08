@@ -304,8 +304,25 @@ Zie review-batch8.md. Kopie van live na plaatsing (build 17:36:36 + batch 8): ch
 | Z-#985 (b8/check) | Oefeningen | E04 #2 data-eis en kop: 'krijgt hij/het/ze/zij'. Nagebootst met de vlag aan: b8 FAIL 0 · WARN 0. Overzicht: kop niet laten splitsen (zoals in build 18:04: 024/027 zonder hints). | **✓** (Oefeningen) |
 | Oef-#1012 | Overzicht (motor) | 'fout = het deel zelf (als %)' (Oef-#453) leest alleen een heel procent als antwoord; bij 21/40 = 52,5% geen sleutel. Nu een voorwaardelijke letterlijke regel in patch_batch8 (soort 'kommaprocent'), die wegvalt als het item verdwijnt. | open |
 | Oef-#1013 | Overzicht (motor G7) | Z-#973 staat alleen in g8/scripts/fout_regels.py. Bij overzetten naar G7: G7-GET-01 #6 «Eén nul te weinig» is onwaar voor een kommasleutel (andere G7-teksten bij 'antwoord : 10' blijven waar). | open |
+| Z-#960 | Oefeningen | patch_batch7 r1c geplaatst 18:23:45 (build 18:20:30): #21 twee kanten op ('24'/'16 honden' + bijbehorende L1), vier standen getoetst (les 361). Zie review-batch7.md. | **✓** |
 | Z-#963 / Z-#961 | Oefeningen | b7/check zonder SNAP_B7-tolerantie (mutant M_snapb7); generieke mutantrunner `g8work/mutrun.py` (elke mutant moet zijn eigen verwachte melding geven, crash = gemist), alle bN/runmut.sh en bN/verwacht.tsv. | **✓** |
 | V-#970/#972/#975, Oef-#1006–#1011 | Overzicht | in build 18:04/18:09; hercheck op een kopie: b1–b8 FAIL 0. | **✓** (hercheck) |
+| hercheck 18:20:30 | Oefeningen | kopie van build 18:20:30 (Z-#985 aan): check_hints 0 FAIL/WARN, merge-notatie OK, b1–b8 FAIL 0, mutanten b1–b8 0 gemist; 024/027 (speler … hij) houden hun hints, één kop. | **✓** |
+| b8 ronde 1c | Oefeningen | patch_batch8 geplaatst **18:36:10** (build 18:20:30, geen build bezig), md5 a95f48cd…. **V-#1000** voorwaardelijk uit de data: per optie '× 10' (350%/260%/550%/720%) een letterlijke regel, soort 'tien keer te groot (…)', tekst «Dat is tien keer te groot. Een breuk kleiner dan één is minder dan honderd procent. Hoe vaak past de noemer in honderd?» (alleen als dat per item klopt: teller < noemer, × 10 boven honderd, de noemer past in honderd; anders de algemene tekst). De motor leest 'fout = antwoord × 10' niet bij een procent (WARN ONLEESBAAR, nagespeeld). **Z-#983:** CL 'tien keer ernaast' zegt «tien keer te klein» zolang al zijn sleutels antwoord : 10 zijn (nu en na V-#1000). **Z-#990:** `_e06_3_punt()` kijkt alleen naar Claudes sleutels (extraVelden), dus fase 3 en de live uitkomst zien hetzelfde; tweede run op live = 0. **Z-#991:** M_971b/M_971c/M_971r8/M_971r11 vast in b8. Guards V-#1000 (optie × 10 op eigen regel, tekst waar per item) en Z-#983; mutanten M_1000, M_1000t, M_983. Vier standen: nu/nieuw b8 FAIL 0; V-#1000 nagebootst (g8work/zet_v1000.py, zelfde code als build_g8 r. 1027–1037) b8 FAIL 4 = alleen les 234 (SNAP na de build); V-hints terug op oude data: regels weg, FAIL 0. 72 mutanten, 0 gemist (beide standen). | **✓** (SNAP na de build) |
+| Z-#982 | Overzicht (data) | geldigeAntwoorden staan in per_doel (data), niet in de hints: Oefeningen kan ze niet patchen. Voorstel: '€60,00', '60,00', '57,6' naast '57,60' in build_g8 (G5 #300). | open |
+
+## Oefeningen: G8 batch 9 (VERH-E05 + VBN-V01), geplaatst 8 okt 18:30:12 (r1b 18:36:53)
+Zie review-batch9.md. Kopie van live na plaatsing (build 18:20:30 + b8 r1c + batch 9): check_hints 223 klaar · **0 FAIL · 0 WARN**; merge-notatie FAIL alleen VORMCUE-rang E06 #2 (V-#1000, data; met V-#1000 nagebootst ALLES OK); b1–b8 FAIL 0; b9 70 items · 177 sleutels · FAIL 0 · WARN 0; b9 53 mutanten, 0 gemist; patches idempotent.
+
+| # | Voor | Wat | Status |
+|---|---|---|---|
+| Oef-#1014 | Overzicht (data, les 147/370) | VERH-E05 'De prijs stijgt met #%. Wat kost de X nu?': het zelfstandig naamwoord aan het eind is geen [ding] → 14 koppen (#5–#17, #19) en vijf items met een ander ding in de vraag dan in de opgave: 021 schrift→knoop, 024 bal→stap, 025/026 knikker→steen, 035 zak noten→noot. Voorstel: 'Wat kost [ding] nu?' met hetzelfde ding. | open |
+| Oef-#1015 | Overzicht (data) | VERH-E05 rente: de namen Daan, Milan, Sanne, Fatima zijn geen [wie] → 5 koppen (#2, #4, #9, #10, #20). Eén kop met [wie]. | open |
+| Oef-#1016 | Overzicht (data, les 370) | VERH-E05 #18/#19 'zak noten' (twee woorden) splitst de kop van #1 en #5–#17. | open |
+| Oef-#1017 | Overzicht (data, zoals Oef-#1006/#1007) | VERH-E05: antwoord zonder '€' ('408'), Claudes sleutels met '€' ('€8') → alleen labelregels. #1/#18: de sleutel voor 'nieuwe prijs als basis' is een procent met '€' en afgerond ('€33' = 33,3; 17 sleutels, ook #3 '9'/'33'). | open |
+| Oef-#1018 | Overzicht (data, les 372) | VERH-E05 #21 (054): getalwoorden in een [ding]-plek ('zeventig'/'vijftig') en alleen de goede optie heeft 'Ongeveer' (vormcue). Voorstel: 'ongeveer' bij geen of bij alle opties, of een heel antwoord. | open |
+| Oef-#1019 | Overzicht (data) | VBN-V01 #1: bij (x, 0) staat het antwoord als 'x' (003 '1', 008 '6', 010 '8', 011 '2'): ',0' weggevallen. 012 (2, 2) heeft geen Claude-sleutel (omwisselen geeft dezelfde stip); nu gevangen met 'een getal uit de vraag' (r1b). Voorstel motor: rooster-regels 'getallen omgewisseld' en 'één stap ernaast' ('fout = antwoord ± 1' is bij een komma-antwoord niet te lezen). | open |
+| Oef-#1020 | Overzicht (data, les 369) | VBN-V01 #3 (014): claudeUitleg «De helft van de cirkel is blauw …», de visual heeft namen van sporten. Ook V01 #2: Claudes tekst bij 'daalt met 6 graden' («Je begon bij 8.00 uur») klopt niet (8.00 → 16.00 is +3); vervangen door eigen tekst. V01 #4: 'staat' is als [ding] gemarkeerd («groep # [ding] precies tussen»). | open |
 
 ## Overzicht: builds 17:03:20, 17:08:44, 17:14:34 en 17:24:12 (Z-#914)
 ### Build 17:03:20 — batch 6 + Didactiek batch 5/6-review (V-#880, V-#891, V-#893, V-#894, Oef-#498–#1002, V-#901–#904)
@@ -416,3 +433,22 @@ Commit in mees-vragenbank (`/workspace/mees-vragenbank`, main): build 18:09:12 �
 
 Checks build 18:20:30: check_hints **197 klaar · 26 open · 0 FAIL · 0 WARN**; merge-notatie **ALLES OK**; **b1–b8 FAIL 0 · WARN 0** (b8 368 items · 2016 sleutels); G5–G7 (main) ongewijzigd: 0 FAIL.
 Commit in mees-vragenbank (`/workspace/mees-vragenbank`, main): build 18:20:30 → **35672e4** (`git -C /workspace/mees-vragenbank show --stat 35672e4`).
+
+## Build 18:54:32 (bouw_veilig; b8 r1c + eerste b9-sync; Didactiek review-batch9 18:45)
+
+| punt | stand |
+|---|---|
+| V-#1000 (E06 #2) | ': 10' → '× 10' in 4 items (7ed68c70, ab56131e, ce8f7a73, d44aa1d9), sleutels en uitleg mee; VORMCUE E06 #2 nu 0 |
+| Z-#982 | E04: geldigeAntwoorden ook '€a,00' / 'a,00', en '57,6' naast '57,60' |
+| V-#1020 / Oef-#1014 / Oef-#1016 | vervangtabel Didactiek letterlijk (26 items, getallen gelijk; vraag noemt hetzelfde ding, lidwoord de/het) |
+| V-#1021 | 012 bal €40→€50 (25; sleutels 10, 20); 015 boek €30→€36 (20; sleutels 6, 17 + 16,7). Routes nagerekend: geen route geeft het antwoord |
+| V-#1023 / Oef-#1018 | 054 nieuwe opgave (eerste/tweede week, 60 → 48), antwoord '20 procent', opties 12/20/25 procent, husselen aan; Claude-sleutels 12/25 procent. **Oefeningen: hints (LT '12 procent'/'25 procent'; WARN '40 procent' onleesbaar)** |
+| V-#1025 / Oef-#1019 | 013 jsRender lijngrafiek (8.00 uur 12, 12.00 uur 18, 16.00 uur 15; max 20, perstreep 2); V01 #1 001–012 nietLiveZonderBeeld; antwoord '(x, y)' zoals de opgave, geldig ook '(x,y)', 'x,y', 'x, y'; goed antwoord nooit een fout-sleutel (gecontroleerd); '1' bij (1, 0) is sleutel via de motorregel 'een getal uit de vraag' |
+| V-#1026 / Oef-#1017 | E05: Claude-sleutels zonder '€'; bedrag: geldig [a, €a, € a, a euro]; procent: [a, a%, a %, a procent] |
+| V-#1027 / Oef-#1020 | 014 uitleg over voetbal; tekst bij 'daalt met 6 graden'; V01 #4 kop 'staat' geen [ding] |
+| Z-#1021 | afgeronde nieuwe-basis-sleutel ook met komma ('33,3', '16,7', '9,1') als Claude-sleutel. Oefeningen: LT-regel voor de kommavorm |
+| Z-#1022 | 'Een speler zet €…' → 'Een kind zet …' (geen voornaamwoord in de zin) |
+| Z-#1024 | V01 #4 'Hoeveel is dat?' → 'Bij welk getal staat de staaf?' |
+| **open: één kop (Oef-#1014/#1015, Z-#1022)** | Fase 1: de E05-koppen blijven die van build 18:20:30 (bevroren/kop_e05_fase1.json), anders vallen batch9 #1/#18/#19, #5–#17/#20 en #2/#4/#9/#10/#21 op één kop, terwijl hun hint-entries verschillen (2 inhouden per groep) → sync_hint_keys #30 stopt. Oefeningen: één hint-entry per samengevoegde kop, dan G8_KOP1014=1 |
+| open (zacht) | Z-#1020 (spreiding/dubbele items E05 #1/#3), E05 #3-contexten |
+| Z-#1023 (Leerlijn) | V01 #4 (015) op G5-niveau, V01 #5 (016) op G4-niveau; 014 toetst geen aflezen (visual 'mag'); 013 vormcue 'daalt met 3'; 014 goed = grootste optie |

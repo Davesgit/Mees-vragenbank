@@ -13,7 +13,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?” (koppeling: claudeId)
 - Items: **14** · Claude-doelen: V6 (14) · regel: G8-P00-park-G7
 - Getallenruimte: procenten met € · type: kale
-- Denkfouten (Claude): procent-verkeerde-basis (14), getal-overgenomen (14)
+- Denkfouten (Claude): procent-verkeerde-basis (17), getal-overgenomen (14)
 - Verschillende Claude-fout-hints: 12 (meest: “Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.”)
 - Voorbeelden:
   - `G8-VERH-E04-claude-bank-010` (Claude V6, gegenereerd, niveau 2 → toepassen)
@@ -152,7 +152,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **6** · somtypeOrigineel “Een zak noten kost na #% korting €#. Wat was de prijs vóór de korting?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: V6 (1) · regel: G8-P00-park-G7
 - Getallenruimte: procenten met € · type: kale
-- Denkfouten (Claude): procent-verkeerde-basis (1), getal-overgenomen (1)
+- Denkfouten (Claude): procent-verkeerde-basis (2), getal-overgenomen (1)
 - Verschillende Claude-fout-hints: 2 (meest: “De 50% ging van de óude prijs af, niet van €75. €75 is 50%.”)
 - Voorbeelden:
   - `G8-VERH-E04-claude-bank-020` (Claude V6, gegenereerd, niveau 2 → toepassen)

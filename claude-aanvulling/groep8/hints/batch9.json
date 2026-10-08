@@ -1,0 +1,1676 @@
+{
+ "batch": "batch9",
+ "geschreven": "2026-10-08",
+ "uitleg": "Hints per somtype (G8-merge, batch 9 = VERH-E05/VBN-V01: procent erbij, gestegen/gedaald, grafieken lezen). Formaat als g7/hints/batch*.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: rekenregels uit scripts/fout_regels.py met een vaste tekst, laag 1 'tekst' en laag 2 'tekstSterker'; 'andere fout' als laatste.",
+ "somtypen": [
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 1,
+   "somtype": "Een [ding] kostte €# en kost nu €#. Met hoeveel procent is de prijs gestegen?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Een [ding] kostte €# en kost nu €#. Met hoeveel procent is de prijs gestegen?",
+   "hint1": "Hoeveel euro komt er bij de prijs? Welk deel van de oude prijs is dat?",
+   "hint2": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+   "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "nog geen procent van de oude prijs",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Dat is nog geen procent van de oude prijs. De oude prijs is honderd procent: hoeveel procent komt erbij?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel euro komt erbij? De oude prijs is honderd procent: hoeveel procent is dat bedrag?",
+     "tekstSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de stijging in euro's. Hoeveel procent van de oude prijs is dat?",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 19,
+   "somtype": "Een zak noten kostte €# en kost nu €#. Met hoeveel procent is de prijs gestegen?",
+   "nrOrigineel": 18,
+   "somtypeOrigineel": "Een zak noten kostte €# en kost nu €#. Met hoeveel procent is de prijs gestegen?",
+   "hint1": "Hoeveel euro komt er bij de prijs? Welk deel van de oude prijs is dat?",
+   "hint2": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+   "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "nog geen procent van de oude prijs",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Dat is nog geen procent van de oude prijs. De oude prijs is honderd procent: hoeveel procent komt erbij?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel euro komt erbij? De oude prijs is honderd procent: hoeveel procent is dat bedrag?",
+     "tekstSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de stijging in euro's. Hoeveel procent van de oude prijs is dat?",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 3,
+   "somtype": "Vorig jaar waren er # [ding], nu #. Met hoeveel procent is dat gestegen?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Vorig jaar waren er # [ding], nu #. Met hoeveel procent is dat gestegen?",
+   "hint1": "Hoeveel zijn er nu meer dan vorig jaar? Welk deel van het oude aantal is dat?",
+   "hint2": "Haal het oude aantal van het nieuwe aantal af: zoveel zijn er nu meer. Het oude aantal is honderd procent. Hoeveel procent is dan dat verschil?",
+   "ouderzin": "Je kind rekent uit met hoeveel procent een aantal is gestegen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "verschil",
+     "claudeDenkfout": null,
+     "regel": "fout = verschil van de getallen",
+     "tekst": "Dat is hoeveel er nu meer zijn, nog geen procent. Hoeveel procent van het oude aantal is dat?",
+     "tekstSterker": "Haal het oude aantal van het nieuwe aantal af: zoveel zijn er nu meer. Het oude aantal is honderd procent. Hoeveel procent is dan dat verschil?"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "nieuwe aantal als basis",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Haal het oude aantal van het nieuwe aantal af: zoveel zijn er nu meer. Het oude aantal is honderd procent. Hoeveel procent is dan dat verschil?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Het oude aantal is honderd procent. Hoeveel procent is het verschil daarvan?",
+     "tekstSterker": "Haal het oude aantal van het nieuwe aantal af: zoveel zijn er nu meer. Het oude aantal is honderd procent. Hoeveel procent is dan dat verschil?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "4 is de toename in aantal. De vraag is hoeveel procent dat van 40 is.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vergelijk met het oude aantal (100%), niet met het nieuwe.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "5 is de toename in aantal. De vraag is hoeveel procent dat van 50 is.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "10 is de toename in aantal. De vraag is hoeveel procent dat van 20 is.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "50 is de toename in aantal. De vraag is hoeveel procent dat van 200 is.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 2,
+   "somtype": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel staat er na één jaar op de rekening?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel staat er na één jaar op de rekening?",
+   "hint1": "Procent betekent: zoveel van de honderd. Hoeveel euro rente komt er in één jaar bij?",
+   "hint2": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond.",
+   "ouderzin": "Je kind rekent uit hoeveel geld er na een jaar met rente op de rekening staat.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen de rente",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen de rente. Gevraagd is wat er na één jaar in totaal op de rekening staat.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien keer te veel rente",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Zo komt er tien keer te veel rente bij. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "rente eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Rente krijg je erbij. Na een jaar staat er dus meer op de rekening dan eerst.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de rente uit. Tel die op bij het bedrag dat er al op stond.",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de rente. Tel hem op bij het spaargeld.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "1% van 1000 is 10.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rente komt erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "1% van 400 is 4.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% van 300 is 3.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% van 1500 is 15.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 4,
+   "somtype": "Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel staat er na één jaar op de rekening?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel staat er na één jaar op de rekening?",
+   "hint1": "Procent betekent: zoveel van de honderd. Hoeveel euro rente komt er in één jaar bij?",
+   "hint2": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond.",
+   "ouderzin": "Je kind rekent uit hoeveel geld er na een jaar met rente op de rekening staat.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen de rente",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen de rente. Gevraagd is wat er na één jaar in totaal op de rekening staat.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien keer te veel rente",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Zo komt er tien keer te veel rente bij. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "rente eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Rente krijg je erbij. Na een jaar staat er dus meer op de rekening dan eerst.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de rente uit. Tel die op bij het bedrag dat er al op stond.",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de rente. Tel hem op bij het spaargeld.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "1% van 400 is 4.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rente komt erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "1% van 800 is 8.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1% van 1000 is 10.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 9,
+   "somtype": "Milan zet €# op een spaarrekening met #% rente per jaar. Hoeveel staat er na één jaar op de rekening?",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "Milan zet €# op een spaarrekening met #% rente per jaar. Hoeveel staat er na één jaar op de rekening?",
+   "hint1": "Procent betekent: zoveel van de honderd. Hoeveel euro rente komt er in één jaar bij?",
+   "hint2": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond.",
+   "ouderzin": "Je kind rekent uit hoeveel geld er na een jaar met rente op de rekening staat.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen de rente",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen de rente. Gevraagd is wat er na één jaar in totaal op de rekening staat.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien keer te veel rente",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Zo komt er tien keer te veel rente bij. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "rente eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Rente krijg je erbij. Na een jaar staat er dus meer op de rekening dan eerst.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de rente uit. Tel die op bij het bedrag dat er al op stond.",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de rente. Tel hem op bij het spaargeld.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "1% van 300 is 3.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rente komt erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "1% van 200 is 2.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 10,
+   "somtype": "Sanne zet €# op een spaarrekening met #% rente per jaar. Hoeveel staat er na één jaar op de rekening?",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "Sanne zet €# op een spaarrekening met #% rente per jaar. Hoeveel staat er na één jaar op de rekening?",
+   "hint1": "Procent betekent: zoveel van de honderd. Hoeveel euro rente komt er in één jaar bij?",
+   "hint2": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond.",
+   "ouderzin": "Je kind rekent uit hoeveel geld er na een jaar met rente op de rekening staat.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen de rente",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen de rente. Gevraagd is wat er na één jaar in totaal op de rekening staat.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien keer te veel rente",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Zo komt er tien keer te veel rente bij. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "rente eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Rente krijg je erbij. Na een jaar staat er dus meer op de rekening dan eerst.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de rente uit. Tel die op bij het bedrag dat er al op stond.",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de rente. Tel hem op bij het spaargeld.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "1% van 1500 is 15.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rente komt erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "1% van 200 is 2.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 21,
+   "somtype": "Fatima zet €# op een spaarrekening met #% rente per jaar. Hoeveel staat er na één jaar op de rekening?",
+   "nrOrigineel": 20,
+   "somtypeOrigineel": "Fatima zet €# op een spaarrekening met #% rente per jaar. Hoeveel staat er na één jaar op de rekening?",
+   "hint1": "Procent betekent: zoveel van de honderd. Hoeveel euro rente komt er in één jaar bij?",
+   "hint2": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond.",
+   "ouderzin": "Je kind rekent uit hoeveel geld er na een jaar met rente op de rekening staat.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen de rente",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen de rente. Gevraagd is wat er na één jaar in totaal op de rekening staat.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien keer te veel rente",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Zo komt er tien keer te veel rente bij. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "rente eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Rente krijg je erbij. Na een jaar staat er dus meer op de rekening dan eerst.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de rente uit. Tel die op bij het bedrag dat er al op stond.",
+     "tekstSterker": "Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent: dat is de rente. Tel de rente op bij het bedrag dat er al op stond."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de rente. Tel hem op bij het spaargeld.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "1% van 2000 is 20.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rente komt erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 5,
+   "somtype": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de bal nu?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de bal nu?",
+   "hint1": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
+   "hint2": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
+   "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen wat erbij komt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als euro",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro het procent van de oude prijs is. Tel dat op bij de oude prijs.",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de stijging. Tel hem op bij de oude prijs.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De prijs stijgt: erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "20% is een deel van €120, niet €20.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "10% is een deel van €120, niet €10.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 6,
+   "somtype": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de knuffel nu?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de knuffel nu?",
+   "hint1": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
+   "hint2": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
+   "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen wat erbij komt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als euro",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro het procent van de oude prijs is. Tel dat op bij de oude prijs.",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de stijging. Tel hem op bij de oude prijs.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De prijs stijgt: erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "5% is een deel van €40, niet €5.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "10% is een deel van €20, niet €10.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 7,
+   "somtype": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de steen nu?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de steen nu?",
+   "hint1": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
+   "hint2": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
+   "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen wat erbij komt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als euro",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro het procent van de oude prijs is. Tel dat op bij de oude prijs.",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de stijging. Tel hem op bij de oude prijs.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De prijs stijgt: erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "20% is een deel van €80, niet €20.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "10% is een deel van €20, niet €10.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 8,
+   "somtype": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost het ei nu?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost het ei nu?",
+   "hint1": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
+   "hint2": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
+   "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen wat erbij komt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als euro",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro het procent van de oude prijs is. Tel dat op bij de oude prijs.",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de stijging. Tel hem op bij de oude prijs.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "50% is een deel van €120, niet €50.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De prijs stijgt: erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "25% is een deel van €200, niet €25.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 11,
+   "somtype": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de knoop nu?",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de knoop nu?",
+   "hint1": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
+   "hint2": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
+   "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen wat erbij komt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als euro",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro het procent van de oude prijs is. Tel dat op bij de oude prijs.",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de stijging. Tel hem op bij de oude prijs.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De prijs stijgt: erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "5% is een deel van €80, niet €5.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 12,
+   "somtype": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de stap nu?",
+   "nrOrigineel": 12,
+   "somtypeOrigineel": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de stap nu?",
+   "hint1": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
+   "hint2": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
+   "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen wat erbij komt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als euro",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro het procent van de oude prijs is. Tel dat op bij de oude prijs.",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de stijging. Tel hem op bij de oude prijs.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De prijs stijgt: erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "5% is een deel van €40, niet €5.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 13,
+   "somtype": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de sticker nu?",
+   "nrOrigineel": 13,
+   "somtypeOrigineel": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de sticker nu?",
+   "hint1": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
+   "hint2": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
+   "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen wat erbij komt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als euro",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro het procent van de oude prijs is. Tel dat op bij de oude prijs.",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de stijging. Tel hem op bij de oude prijs.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De prijs stijgt: erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "25% is een deel van €80, niet €25.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 14,
+   "somtype": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de trui nu?",
+   "nrOrigineel": 14,
+   "somtypeOrigineel": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de trui nu?",
+   "hint1": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
+   "hint2": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
+   "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen wat erbij komt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als euro",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro het procent van de oude prijs is. Tel dat op bij de oude prijs.",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de stijging. Tel hem op bij de oude prijs.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De prijs stijgt: erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "5% is een deel van €40, niet €5.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 15,
+   "somtype": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de wortel nu?",
+   "nrOrigineel": 15,
+   "somtypeOrigineel": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost de wortel nu?",
+   "hint1": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
+   "hint2": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
+   "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen wat erbij komt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als euro",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro het procent van de oude prijs is. Tel dat op bij de oude prijs.",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de stijging. Tel hem op bij de oude prijs.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De prijs stijgt: erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "25% is een deel van €120, niet €25.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 16,
+   "somtype": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost het bot nu?",
+   "nrOrigineel": 16,
+   "somtypeOrigineel": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost het bot nu?",
+   "hint1": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
+   "hint2": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
+   "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen wat erbij komt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als euro",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro het procent van de oude prijs is. Tel dat op bij de oude prijs.",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de stijging. Tel hem op bij de oude prijs.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De prijs stijgt: erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "10% is een deel van €40, niet €10.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 17,
+   "somtype": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost het kaartje nu?",
+   "nrOrigineel": 17,
+   "somtypeOrigineel": "Een [ding] kostte €#. De prijs stijgt met #%. Wat kost het kaartje nu?",
+   "hint1": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
+   "hint2": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
+   "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen wat erbij komt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als euro",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro het procent van de oude prijs is. Tel dat op bij de oude prijs.",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de stijging. Tel hem op bij de oude prijs.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De prijs stijgt: erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "10% is een deel van €60, niet €10.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 20,
+   "somtype": "Een zak noten kostte €#. De prijs stijgt met #%. Wat kost de noot nu?",
+   "nrOrigineel": 19,
+   "somtypeOrigineel": "Een zak noten kostte €#. De prijs stijgt met #%. Wat kost de noot nu?",
+   "hint1": "De prijs stijgt: er komt een deel van de oude prijs bij. Hoeveel euro is dat procent van de oude prijs?",
+   "hint2": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs.",
+   "ouderzin": "Je kind rekent uit wat iets kost als de prijs met een procent stijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen wat erbij komt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is alleen wat erbij komt. Gevraagd is wat het nu kost: tel het op bij de oude prijs.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "De prijs stijgt: wat erbij komt, tel je op bij de oude prijs. Haal het er niet af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "procent als euro",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "tekst": "Zo komt het getal van het procent erbij als euro's. Hoeveel euro is dat procent van de oude prijs?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel euro het procent van de oude prijs is. Tel dat op bij de oude prijs.",
+     "tekstSterker": "Deel de oude prijs door honderd: dat is één procent. Doe dat keer het procent: zoveel komt er bij de prijs. Tel dat op bij de oude prijs."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is alleen de stijging. Tel hem op bij de oude prijs.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De prijs stijgt: erbij, niet eraf.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "10% is een deel van €200, niet €10.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VERH-E05",
+   "nr": 18,
+   "somtype": "Een winkel verkoopt in de eerste week # [ding] en in de tweede week # [ding]. Met hoeveel procent is de verkoop gedaald?",
+   "nrOrigineel": 21,
+   "somtypeOrigineel": "Een winkel verkoopt in week # [ding] broden en in week # [ding] broden. Met hoeveel procent is de verkoop gedaald?",
+   "hint1": "Hoeveel minder is er verkocht? Het aantal van het begin is honderd procent.",
+   "hint2": "Haal het nieuwe aantal van het oude aantal af: zoveel minder is het. Het oude aantal is honderd procent. Hoeveel procent is het verschil daarvan?",
+   "ouderzin": "Je kind rekent uit met hoeveel procent een aantal is gedaald.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "verschil als procent",
+     "claudeDenkfout": null,
+     "regel": "20 procent",
+     "tekst": "Dat is het verschil in aantal, nog geen procent. Hoeveel procent van het oude aantal is dat?",
+     "tekstSterker": "Haal het nieuwe aantal van het oude aantal af: zoveel minder is het. Het oude aantal is honderd procent. Hoeveel procent is het verschil daarvan?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nieuwe aantal als basis",
+     "claudeDenkfout": null,
+     "regel": "40 procent",
+     "tekst": "Zo vergelijk je met het nieuwe aantal. Bij een daling is het oude aantal honderd procent.",
+     "tekstSterker": "Haal het nieuwe aantal van het oude aantal af: zoveel minder is het. Het oude aantal is honderd procent. Hoeveel procent is het verschil daarvan?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Het oude aantal is honderd procent. Hoeveel procent is het verschil daarvan?",
+     "tekstSterker": "Haal het nieuwe aantal van het oude aantal af: zoveel minder is het. Het oude aantal is honderd procent. Hoeveel procent is het verschil daarvan?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "20 is het verschil in broden. Je moet dat verschil nog vergelijken met het beginaantal.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je vergelijkt met het nieuwe aantal. Bij een daling reken je met het begingetal.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een winkel verkoopt in week # [ding] broden en in week # [ding] broden. Met hoeveel procent is de verkoop gedaald?",
+    "naar": "Een winkel verkoopt in de eerste week # [ding] en in de tweede week # [ding]. Met hoeveel procent is de verkoop gedaald?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-V01",
+   "nr": 1,
+   "somtype": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[vak(ken) aantikken op rooster] Zet de stip op (#, #).",
+   "hint1": "Bij de stip horen twee getallen tussen haakjes. Welk getal hoort bij opzij, en welk bij omhoog?",
+   "hint2": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip.",
+   "ouderzin": "Je kind zet een punt in een rooster met twee getallen tussen haakjes.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "omgewisseld",
+     "claudeDenkfout": null,
+     "regel": "Claudes sleutel: getallen omgewisseld",
+     "tekst": "Daar staan de twee getallen omgewisseld. Het getal vóór de komma gaat opzij, het getal na de komma omhoog.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "stip op de lijn van nul",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Die stip ligt op de lijn van nul. Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Ga opzij zoveel als het getal vóór de komma. Ga dan omhoog zoveel als het getal na de komma.",
+     "tekstSterker": "Begin bij nul. Het getal vóór de komma zegt hoeveel stappen je opzij gaat, naar rechts. Het getal na de komma zegt hoeveel stappen je daarna omhoog gaat. Zet daar de stip."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Het eerste getal is opzij, het tweede omhoog.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-V01",
+   "nr": 4,
+   "somtype": "[lijngrafiek] In de lijngrafiek zie je de temperatuur op een dag, van # uur tot # uur. Wat gebeurt er met de temperatuur tussen # uur en # uur?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "In de lijngrafiek zie je de temperatuur op een dag, van # uur tot # uur. Wat gebeurt er met de temperatuur tussen # uur en # uur?",
+   "hint1": "Zoek op de lijn de twee tijden uit de vraag. Gaat de lijn daartussen omhoog of omlaag?",
+   "hint2": "Lees de temperatuur af bij de tijd waar het stuk begint en bij de tijd waar het stopt. Hoeveel graden is het verschil? Kijk ook of de lijn omhoog of omlaag gaat.",
+   "ouderzin": "Je kind leest in een lijngrafiek af hoe de temperatuur verandert.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "omhoog in plaats van omlaag",
+     "claudeDenkfout": null,
+     "regel": "De temperatuur stijgt met 3 graden",
+     "tekst": "Kijk of de lijn tussen die twee tijden omhoog of omlaag gaat.",
+     "tekstSterker": "Lees de temperatuur af bij de tijd waar het stuk begint en bij de tijd waar het stopt. Hoeveel graden is het verschil? Kijk ook of de lijn omhoog of omlaag gaat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verschil van een ander stuk",
+     "claudeDenkfout": null,
+     "regel": "De temperatuur daalt met 6 graden",
+     "tekst": "Dat verschil hoort bij een ander stuk van de lijn. Lees de temperatuur af bij de twee tijden uit de vraag.",
+     "tekstSterker": "Lees de temperatuur af bij de tijd waar het stuk begint en bij de tijd waar het stopt. Hoeveel graden is het verschil? Kijk ook of de lijn omhoog of omlaag gaat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees de temperatuur af bij de twee tijden uit de vraag. Gaat de lijn omhoog of omlaag?",
+     "tekstSterker": "Lees de temperatuur af bij de tijd waar het stuk begint en bij de tijd waar het stopt. Hoeveel graden is het verschil? Kijk ook of de lijn omhoog of omlaag gaat."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk of de lijn tussen 12.00 uur en 16.00 uur omhoog of omlaag gaat.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je begon bij 8.00 uur. Begin bij de temperatuur van 12.00 uur.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "In de lijngrafiek zie je de temperatuur op een dag, van # uur tot # uur. Wat gebeurt er met de temperatuur tussen # uur en # uur?",
+    "naar": "[lijngrafiek] In de lijngrafiek zie je de temperatuur op een dag, van # uur tot # uur. Wat gebeurt er met de temperatuur tussen # uur en # uur?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-V01",
+   "nr": 2,
+   "somtype": "In een cirkeldiagram staat welke sport [wie] van een klas het liefst doen. De helft kiest voetbal, een kwart kiest hockey en een kwart kiest tennis. Er zitten # [ding] in [plek]. Hoeveel kinderen kiezen voetbal?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "In een cirkeldiagram staat welke sport [wie] van een klas het liefst doen. De helft kiest voetbal, een kwart kiest hockey en een kwart kiest tennis. Er zitten # [ding] in [plek]. Hoeveel kinderen kiezen voetbal?",
+   "hint1": "Welk deel van de cirkel hoort bij voetbal?",
+   "hint2": "Voetbal is de helft van de cirkel. Neem de helft van het aantal in de klas.",
+   "ouderzin": "Je kind rekent met een cirkeldiagram uit hoeveel een deel van de klas is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een kwart",
+     "claudeDenkfout": null,
+     "regel": "6 kinderen",
+     "tekst": "Dat hoort bij een kwart van de klas. Voetbal is de helft: dat is meer dan een kwart.",
+     "tekstSterker": "Voetbal is de helft van de cirkel. Neem de helft van het aantal in de klas."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "drie gelijke stukken",
+     "claudeDenkfout": null,
+     "regel": "8 kinderen",
+     "tekst": "Zo deel je de klas in drie gelijke stukken. Maar de stukken van de cirkel verschillen in grootte.",
+     "tekstSterker": "Voetbal is de helft van de cirkel. Neem de helft van het aantal in de klas."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Welk deel van de cirkel is voetbal? Neem dat deel van de hele klas.",
+     "tekstSterker": "Voetbal is de helft van de cirkel. Neem de helft van het aantal in de klas."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "6 hoort bij een kwart. Voetbal is de helft, en dat is meer dan een kwart.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je deelde in drie gelijke stukken. De drie stukken van de cirkel zijn niet even groot.",
+     "claudeDenkfout": null,
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-V01",
+   "nr": 3,
+   "somtype": "In een grafiek loopt de as met stappen van #. De staaf van groep # staat precies tussen # en #. Bij welk getal staat de [ding]?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "In een grafiek loopt de as met stappen van #. De staaf van groep # [ding] precies tussen # en #. Hoeveel is dat?",
+   "hint1": "Precies tussen twee getallen ligt het getal in het midden.",
+   "hint2": "Hoeveel is het van het kleinste getal tot het grootste? Neem daar de helft van. Tel die helft op bij het kleinste getal.",
+   "ouderzin": "Je kind leest op een as een getal af dat precies tussen twee streepjes ligt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet in het midden",
+     "claudeDenkfout": null,
+     "regel": "65",
+     "tekst": "Dat ligt niet precies in het midden. Hoe groot is de stap van het kleinste getal naar het grootste? Neem daar de helft van.",
+     "tekstSterker": "Hoeveel is het van het kleinste getal tot het grootste? Neem daar de helft van. Tel die helft op bij het kleinste getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "140",
+     "tekst": "Dat zijn de twee getallen samen. Het getal dat je zoekt, ligt tussen die twee in.",
+     "tekstSterker": "Hoeveel is het van het kleinste getal tot het grootste? Neem daar de helft van. Tel die helft op bij het kleinste getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Welk getal ligt precies in het midden van de twee getallen?",
+     "tekstSterker": "Hoeveel is het van het kleinste getal tot het grootste? Neem daar de helft van. Tel die helft op bij het kleinste getal."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk hoe groot de stap tussen twee streepjes is en neem daar de helft van.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je hebt de twee getallen opgeteld. De staaf ligt ertussenin.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "In een grafiek loopt de as met stappen van #. De staaf van groep # [ding] precies tussen # en #. Hoeveel is dat?",
+    "naar": "In een grafiek loopt de as met stappen van #. De staaf van groep # staat precies tussen # en #. Bij welk getal staat de [ding]?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-V01",
+   "nr": 5,
+   "somtype": "[staafdiagram] In het staafdiagram zie je hoeveel boeken er op [naam], [naam] en [naam] zijn geleend. Op welke dag zijn de meeste boeken geleend?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "[staafdiagram] In het staafdiagram zie je hoeveel boeken er op [naam], [naam] en [naam] zijn geleend. Op welke dag zijn de meeste boeken geleend?",
+   "hint1": "Zoek de hoogste staaf.",
+   "hint2": "Vergelijk de staven: welke komt het hoogst? Lees af bij welke dag die staaf hoort.",
+   "ouderzin": "Je kind leest in een staafdiagram af waar het meeste bij hoort.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet de hoogste staaf",
+     "claudeDenkfout": null,
+     "regel": "Maandag",
+     "tekst": "Die staaf is niet de hoogste. Welke staaf komt het hoogst? Bij welke dag hoort die?",
+     "tekstSterker": "Vergelijk de staven: welke komt het hoogst? Lees af bij welke dag die staaf hoort."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de laagste staaf",
+     "claudeDenkfout": null,
+     "regel": "Dinsdag",
+     "tekst": "Dat is de laagste staaf. De meeste boeken horen bij de hoogste staaf.",
+     "tekstSterker": "Vergelijk de staven: welke komt het hoogst? Lees af bij welke dag die staaf hoort."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de hoogste staaf. Bij welke dag hoort die?",
+     "tekstSterker": "Vergelijk de staven: welke komt het hoogst? Lees af bij welke dag die staaf hoort."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk naar de hoogste staaf. Op welke dag hoort die?",
+     "claudeDenkfout": "niet-de-hoogste-staaf",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Dat is de laagste staaf. Je zoekt de dag met de meeste boeken: de hoogste staaf.",
+     "claudeDenkfout": "laagste-staaf",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

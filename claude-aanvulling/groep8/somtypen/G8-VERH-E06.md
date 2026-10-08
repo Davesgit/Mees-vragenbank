@@ -46,7 +46,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Voorbeelden:
   - `G8-VERH-E06-claude-bank-101` (Claude B13, bank, niveau 3 → toepassen)
     - **Opgave:** Schrijf 13/50 in procenten.
-    - **Opties:** A) 26% · B) 13% · C) 2,6%
+    - **Opties:** A) 26% · B) 13% · C) 260%
     - **Antwoord:** 26%  (controle: ok)
     - **Fout-hints (Claude):** 275% → Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan. · 2,75% → Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.
   - `G8-VERH-E06-claude-bank-098` (Claude B13, bank, niveau 3 → toepassen)
@@ -60,8 +60,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind schrijft een breuk als procent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de breuk` (fout = het deel zelf (als %)) → Dat is de teller met een procentteken erachter. Dat klopt alleen als de noemer honderd is. Reken de noemer eerst om naar honderd.  [nieuw]
+  - `tien keer te groot (260%)` (260%) → Dat is tien keer te groot. Een breuk kleiner dan één is minder dan honderd procent. Hoe vaak past de noemer in honderd?  [nieuw]
+  - `tien keer te groot (350%)` (350%) → Dat is tien keer te groot. Een breuk kleiner dan één is minder dan honderd procent. Hoe vaak past de noemer in honderd?  [nieuw]
+  - `tien keer te groot (550%)` (550%) → Dat is tien keer te groot. Een breuk kleiner dan één is minder dan honderd procent. Hoe vaak past de noemer in honderd?  [nieuw]
+  - `tien keer te groot (720%)` (720%) → Dat is tien keer te groot. Een breuk kleiner dan één is minder dan honderd procent. Hoe vaak past de noemer in honderd?  [nieuw]
   - `getal uit de breuk (kommaprocent)` (21%) → Dat is de teller met een procentteken erachter. Dat klopt alleen als de noemer honderd is. Reken de noemer eerst om naar honderd.  [nieuw]
-  - `tien keer ernaast` (Claudes sleutel: nul-fout-tientallen) → Dat is tien keer te groot of te klein. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.  [Claude, taalfix]
+  - `tien keer ernaast` (Claudes sleutel: nul-fout-tientallen) → Dat is tien keer te klein. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.  [nieuw]
 - Status: hints klaar
 
@@ -85,7 +89,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tien keer te groot` (fout = antwoord × 10) → Dat is tien keer te groot. Procent zijn honderdsten: deel het getal van het procent door honderd.  [nieuw]
   - `procent zonder komma` (fout = een getal uit de vraag) → Dat is het getal van het procent. Als kommagetal is het honderd keer zo klein.  [nieuw]
-  - `procent zonder komma (punt)` (Claudes sleutel: kommagetal-als-geheel) → Dat is het getal van het procent. Als kommagetal is het honderd keer zo klein.  [Claude, taalfix]
   - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma goed? Procent zijn honderdsten: de komma schuift twee plekken naar links.  [Claude, taalfix]
   - `andere fout` (andere fout) → Deel het getal van het procent door honderd.  [nieuw]
 - Status: hints klaar
