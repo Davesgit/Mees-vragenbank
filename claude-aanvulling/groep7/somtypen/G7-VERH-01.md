@@ -31,7 +31,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** —
     - **Uitleg (Claude):** 70% van 200 is 140. Elk stukje is 10, dus 140 : 10 = 14 stukjes.
 
-- **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?
+- **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van het hele aantal?
 - **Hint 2 (te schrijven):** Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.
 - **Ouderzin:** Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):

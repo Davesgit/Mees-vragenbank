@@ -323,3 +323,27 @@ Ronde 3c (V-#615, Z-#617, Z-#618, Z-#619, Oef-#434, Oef-#442, Z-#606) en ronde 1
 | Z-#667 | vuistregels in eenzijdige data | ✓ build 14:22:08: VBN-04 #3 opties bij 4 van 8 items anders (bank-014/019: antwoord, +10, +20 → goed = kleinste; bank-015/017: −20, −10, antwoord → goed = grootste); '± 20' valt nog op 'andere fout' (voorstel Oefeningen: regel 'twee tientallen te hoog/te laag'). VERH-01 #1 bij 5 van 12 items een ander stukje (200/70%/10 → 14 van 20; 300/40%/60 → 2 van 5; 500/20%/25 → 4 van 20; 200/60%/40 → 3 van 5; 400/75%/100 → 3 van 4), jsRender 'delen' = N : M |
 | Z-#651 | GET-05 #1/#2 noemer-truc | ✓ build 14:22:08: nog 89 items (bevroren/z651_ids.json: grootst 53, kleinst 36) als tegenvoorbeeld via de Z-#630-maker; truc werkt nu in 95/190 (grootst) en 64/128 (kleinst) = 50% |
 | Z-#664 (Overzicht-deel) | VERH-01 #4 opties «… keer zo klein» | ✓ build 14:25:42: bank-002 (enige item met deze opties; #5 heeft ze niet): «De tekening is 100/2 keer zo klein» → «Het echte voorwerp is 100/2 keer zo groot», goed antwoord → «Het echte voorwerp is net zo groot als de tekening» (zelfde zinsbegin, geen opvallende optie); literal-regels in de entry mee (patch_batch5, blok Z-#664), teksten van Oefeningen ongewijzigd |
+
+## Oefeningen 8 okt: batch 5 ronde 1d en batch 6 (live build 14:22:08 / 14:25:42, les 194)
+**Batch 5 ronde 1d** (`hints/patch_batch5.py`, blok R1D; log 42, tweede run 0):
+- **Z-#667 / VBN-04 #3:** 'twee tientallen te laag' (fout = antwoord − 20, laag 1 «Dan past de hoogste staaf er niet op …») en 'twee tientallen te hoog' (fout = antwoord + 20, «Dan past alles wel, maar het kan lager. …») na 'een tiental te hoog': 2 + 2 sleutels, 0 op 'andere fout'.
+- **Z-#660 ✓ (helemaal):** MEET-04 #2 'de twee temperaturen opgeteld' is nu een benoemde regel: Claudes label van precies die 35 sleutels (−p + q) is 'nul-fout-tientallen' (naam past niet, waarde wel); de labelloze regel is weg. Een motorregel kan het niet: de motor laat negatieve waarden vallen. Geen labelloze regel meer in batch 5 behalve VERH-01 #2 ('elk stukje tien procent', de helft).
+- **Z-#670 ✓:** VBN-04 #1 'andere dag' (Claudes 'grafiek-verkeerd-afgelezen'; de andere '10'-sleutels met dat label pakken 'getal uit de vraag' en '± 1' eerder): alleen bank-009 '10' (ma 50 : 5). Laag 1 «Dat zijn de stukjes van een andere staaf uit de tabel. Zoek het getal bij de staaf uit de vraag.» (zonder 'dag': ook maanden). Oef-#450 is daarmee klaar.
+- **VERH-01 #1 H1 (les 147):** 'van alles in de pot' → «van het hele aantal» (alle items zijn potten). Geen vast aantal stukjes in de teksten (balken van 20/5/4: H2 rekent per item, nagespeeld).
+- **Z-#607 (Overzicht):** de regel 'decimaal-nul weggelaten' in GET-02 #3 botst niet met mijn regels (eigen sleutel, staat vooraan); b3/check heeft er een check voor (2 sleutels, mutant gevangen).
+- **Data nagekeken:** V-#664 (bank-044 5 en 9 → −4) ✓; V-#665 (bank-030/032) ✓, merge-notatie ALLES OK, **Oef-#458 klaar**; GET-05 nrO 6/7 (Z-#651): truc in 95/190 en 64/128, V-#630/Z-#630/Z-#646-guards FAIL 0. **Oef-#457:** nog 3 items MEET-04 #3/#5 met vorst in de schuur (bank-016, 022, 040); een schuur kan vriezen, dus voor mij goed, Didactiek beslist (les 208).
+
+**Batch 6** (`hints/make_batch6.py`, `hints/batch6.json` in de sync sinds build 14:22:08, `hints/patch_batch6.py` ronde 1b; zie `review-batch6.md`):
+- Ronde 1b (Overzicht 14:26, letterlijke regels lezen niet bij de andere items): VERH-04 #5 nu Claudes labels ('getal-overgenomen' = het deel zelf, 'procent-verkeerde-basis' = het hele aantal, 'andere-deel-genomen' = het andere deel); alleen '14%' blijft letterlijk (label 'getal-overgenomen', maar '1 op de 4' → '14' is geen getal uit de vraag). De %-regels van Oef-#445 helpen hier niet: ze vragen 'D van G' in de vraag ('1 op de 4', '5 daarvan', 'Schrijf 0,7 in procenten' hebben dat niet). VERH-04 #2 '0,7%'/'0,9%'/'0,3%' blijven letterlijk: die sleutels staan niet in claudeFoutHints (Oef-#453).
+- **Datapunten (Overzicht/Leerlijn):**
+
+| nr | voor | wat | stand |
+|---|---|---|---|
+| Oef-#452 | Overzicht (data) | VERH-03 #1/#2: veel claudeDenkfouten staan niet in claudeFoutHints (530 van 662 en 446 van 528), dus routes als b × c, erbij optellen en ± de prijs van één worden nooit sleutels | open |
+| Oef-#453 | Overzicht (data/motor) | VERH-04 #1 (109) en #2 ('0,7%', '0,9%', '0,3%'): Claudes '%'-sleutels met 'getal-overgenomen' staan niet in claudeFoutHints; de motor leest geen '%' buiten 'D van G'. Nu 'andere fout' (#1, algemene aanpak) en letterlijke regels (#2). Voorstel: sleutels in claudeFoutHints, of 'tien keer het procent (als %)' en een regel 'kommagetal met procentteken' ook zonder 'D van G' | open |
+| Oef-#454 | Didactiek/Overzicht | VERH-03 #4/#6: «k keer zo groot» = elke zijde k keer zo lang, terwijl de oppervlakte in #6 k × k groeit; VERH-03 #17 legt alleen 1 : 100 uit, maar vergelijkt 1 : 10 en 1 : 100 | open |
+| Oef-#455 | Overzicht (data) | VERH-04 #5 bank-125: optie '40%' zonder Claude-route (geen denkfout); blijft op 'andere fout' | open |
+| Oef-#459 | Overzicht (data, les 206) | VERH-04 #2: in 5 van 8 items is het antwoord de middelste optie (opties × 10 en : 10); VERH-03 #13/#15/#20/#22/#23 (één item) ook | open |
+| – | Leerlijn | VERH-04 #4 (vereenvoudigen) en #7 (rad) wachten op Z-#564; niet geschreven | wacht |
+
+Nummering: volgende vrije Oef-#460.

@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T14:25:42+0200",
+ "gegenereerdOp": "2026-10-08T14:32:25+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-VERH-04",
  "bordtitel": "Breuk, procent en verhouding koppelen",
@@ -25729,9 +25729,9 @@
      "leesbaar": true
     },
     {
-     "regel": "5%",
+     "regel": "Claudes sleutel: getal-overgenomen",
      "soort": "het deel zelf",
-     "bron": "nieuw",
+     "bron": "claude-taalfix",
      "tekst": "Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?",
      "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "perItem": false,
@@ -25741,25 +25741,28 @@
      "leesbaar": true
     },
     {
-     "regel": "10%",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "het hele aantal",
+     "bron": "claude-taalfix",
      "tekst": "Dat is het hele aantal. Het hele aantal is honderd procent. Hoeveel procent is het deel?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
     },
     {
-     "regel": "24%",
+     "regel": "Claudes sleutel: andere-deel-genomen",
      "soort": "het andere deel",
+     "bron": "claude-taalfix",
      "tekst": "Dat is het aantal van het andere deel. Hoeveel procent is het deel waar de vraag over gaat?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "6%",
-     "soort": "het deel zelf (ook)",
-     "tekst": "Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -25817,9 +25820,9 @@
      "uitleg": "Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?",
      "uitlegSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "laag2": "tekstSterker",
-     "regel": "5%",
+     "regel": "Claudes sleutel: getal-overgenomen",
      "soort": "het deel zelf",
-     "bron": "nieuw"
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
@@ -25827,9 +25830,9 @@
      "uitleg": "Dat is het hele aantal. Het hele aantal is honderd procent. Hoeveel procent is het deel?",
      "uitlegSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "laag2": "tekstSterker",
-     "regel": "10%",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "het hele aantal",
-     "bron": "nieuw"
+     "bron": "claude-taalfix"
     }
    ],
    "foutHintsTekst": "5% → Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel? · 10% → Dat is het hele aantal. Het hele aantal is honderd procent. Hoeveel procent is het deel?",
@@ -25989,48 +25992,44 @@
      "leesbaar": false
     },
     {
-     "regel": "5%",
+     "regel": "Claudes sleutel: getal-overgenomen",
      "soort": "het deel zelf",
-     "bron": "nieuw",
+     "bron": "claude-taalfix",
      "tekst": "Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?",
      "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "perItem": false,
      "match": {
       "waarden": [
        "5%"
-      ],
-      "opOpties": true
+      ]
      },
      "leesbaar": true
     },
     {
-     "regel": "10%",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "het hele aantal",
-     "bron": "nieuw",
+     "bron": "claude-taalfix",
      "tekst": "Dat is het hele aantal. Het hele aantal is honderd procent. Hoeveel procent is het deel?",
      "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "perItem": false,
      "match": {
       "waarden": [
        "10%"
-      ],
-      "opOpties": true
+      ]
      },
      "leesbaar": true
     },
     {
-     "regel": "24%",
+     "regel": "Claudes sleutel: andere-deel-genomen",
      "soort": "het andere deel",
+     "bron": "claude-taalfix",
      "tekst": "Dat is het aantal van het andere deel. Hoeveel procent is het deel waar de vraag over gaat?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "6%",
-     "soort": "het deel zelf (ook)",
-     "tekst": "Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -26655,9 +26654,9 @@
      "uitleg": "Dat is het aantal van het andere deel. Hoeveel procent is het deel waar de vraag over gaat?",
      "uitlegSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "laag2": "tekstSterker",
-     "regel": "24%",
+     "regel": "Claudes sleutel: andere-deel-genomen",
      "soort": "het andere deel",
-     "bron": "nieuw"
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
@@ -26665,9 +26664,9 @@
      "uitleg": "Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?",
      "uitlegSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "laag2": "tekstSterker",
-     "regel": "6%",
-     "soort": "het deel zelf (ook)",
-     "bron": "nieuw"
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "het deel zelf",
+     "bron": "claude-taalfix"
     }
    ],
    "foutHintsTekst": "24% → Dat is het aantal van het andere deel. Hoeveel procent is het deel waar de vraag over gaat? · 6% → Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?",
@@ -26822,46 +26821,42 @@
      "leesbaar": false
     },
     {
-     "regel": "5%",
+     "regel": "Claudes sleutel: getal-overgenomen",
      "soort": "het deel zelf",
-     "tekst": "Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "10%",
-     "soort": "het hele aantal",
-     "tekst": "Dat is het hele aantal. Het hele aantal is honderd procent. Hoeveel procent is het deel?",
-     "match": null,
-     "leesbaar": false
-    },
-    {
-     "regel": "24%",
-     "soort": "het andere deel",
-     "bron": "nieuw",
-     "tekst": "Dat is het aantal van het andere deel. Hoeveel procent is het deel waar de vraag over gaat?",
-     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
-     "perItem": false,
-     "match": {
-      "waarden": [
-       "24%"
-      ],
-      "opOpties": true
-     },
-     "leesbaar": true
-    },
-    {
-     "regel": "6%",
-     "soort": "het deel zelf (ook)",
-     "bron": "nieuw",
+     "bron": "claude-taalfix",
      "tekst": "Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?",
      "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "perItem": false,
      "match": {
       "waarden": [
        "6%"
-      ],
-      "opOpties": true
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "het hele aantal",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het hele aantal. Het hele aantal is honderd procent. Hoeveel procent is het deel?",
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het aantal van het andere deel. Hoeveel procent is het deel waar de vraag over gaat?",
+     "tekstSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "24%"
+      ]
      },
      "leesbaar": true
     },
@@ -28279,7 +28274,7 @@
    }
   }
  ],
- "hintsSyncOp": "2026-10-08T14:25:49+02:00",
+ "hintsSyncOp": "2026-10-08T14:32:32+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -28299,14 +28294,14 @@
   },
   {
    "batch": "batch5.json",
-   "md5": "2b83466af344"
+   "md5": "157c2d534b51"
   },
   {
    "batch": "batch6.json",
-   "md5": "a2dfce01dcad"
+   "md5": "38ac5d1789a4"
   }
  ],
- "geschrevenOp": "2026-10-08T14:25:49+02:00",
+ "geschrevenOp": "2026-10-08T14:32:32+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

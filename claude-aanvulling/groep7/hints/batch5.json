@@ -132,8 +132,8 @@
     {
      "bron": "claude-taalfix",
      "soort": "de twee temperaturen opgeteld",
-     "claudeDenkfout": null,
-     "regel": "Claudes sleutel (alle, zonder label)",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
      "tekst": "Dat is onder nul. Hoeveel graden het warmer is geworden, is een aantal graden: dat is nooit onder nul. Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels zonder label-treffer (Z-#660): alle −p + q, onder nul (de twee temperaturen opgeteld); de tekst gaat over de waarde, met eigen laag 2",
@@ -736,6 +736,15 @@
      "tekstSterker": "Tel met sprongen zo groot als één stukje tot het getal uit de tabel. Tel hoeveel sprongen dat zijn: zoveel stukjes kleur je."
     },
     {
+     "bron": "claude-taalfix",
+     "soort": "andere dag",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "tekst": "Dat zijn de stukjes van een andere staaf uit de tabel. Zoek het getal bij de staaf uit de vraag.",
+     "waarom": "Z-#670: Claudes sleutel (een andere staaf afgelezen) kreeg geen regel",
+     "tekstSterker": "Zoek in de tabel het getal bij de staaf uit de vraag. Hoe vaak past één stukje daarin? Zoveel stukjes kleur je."
+    },
+    {
      "bron": "nieuw",
      "soort": "andere fout",
      "claudeDenkfout": null,
@@ -1038,7 +1047,7 @@
    "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
    "nrOrigineel": 1,
    "somtypeOrigineel": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
-   "hint1": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+   "hint1": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van het hele aantal?",
    "hint2": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
    "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "foutHints": [
@@ -1163,7 +1172,7 @@
      "claudeDenkfout": null,
      "regel": "Het echte voorwerp is 100 keer zo groot",
      "tekst": "Dat past bij een schaal van een op honderd. Kijk naar de getallen van deze schaal.",
-     "tekstSterker": "Vergelijk de twee getallen van de schaal. Als ze gelijk zijn, is de tekening even groot als echt."
+     "tekstSterker": "Het getal achter de dubbele punt zegt hoeveel centimeter echt bij één centimeter op de tekening hoort. Hoeveel is dat bij deze schaal?"
     },
     {
      "bron": "nieuw",
@@ -1171,7 +1180,7 @@
      "claudeDenkfout": null,
      "regel": "Het echte voorwerp is 2 keer zo groot",
      "tekst": "Dat past bij een schaal van een op twee. Kijk naar de getallen van deze schaal.",
-     "tekstSterker": "Vergelijk de twee getallen van de schaal. Als ze gelijk zijn, is de tekening even groot als echt."
+     "tekstSterker": "Het getal achter de dubbele punt zegt hoeveel centimeter echt bij één centimeter op de tekening hoort. Hoeveel is dat bij deze schaal?"
     },
     {
      "bron": "nieuw",

@@ -144,10 +144,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent uit hoeveel procent een deel van het geheel is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getallen achter elkaar` (14%) → Heb je de getallen achter elkaar gezet? Samen zeggen ze welk deel van het hele aantal het is. Hoeveel is dat van de honderd?  [nieuw]
-  - `het deel zelf` (5%) → Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?  [nieuw]
-  - `het hele aantal` (10%) → Dat is het hele aantal. Het hele aantal is honderd procent. Hoeveel procent is het deel?  [nieuw]
-  - `het andere deel` (24%) → Dat is het aantal van het andere deel. Hoeveel procent is het deel waar de vraag over gaat?  [nieuw]
-  - `het deel zelf (ook)` (6%) → Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?  [nieuw]
+  - `het deel zelf` (Claudes sleutel: getal-overgenomen) → Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?  [Claude, taalfix]
+  - `het hele aantal` (Claudes sleutel: procent-verkeerde-basis) → Dat is het hele aantal. Het hele aantal is honderd procent. Hoeveel procent is het deel?  [Claude, taalfix]
+  - `het andere deel` (Claudes sleutel: andere-deel-genomen) → Dat is het aantal van het andere deel. Hoeveel procent is het deel waar de vraag over gaat?  [Claude, taalfix]
   - `andere fout` (andere fout) → Het hele aantal is honderd procent. Hoeveel procent is het deel?  [nieuw]
 - Status: hints klaar
 

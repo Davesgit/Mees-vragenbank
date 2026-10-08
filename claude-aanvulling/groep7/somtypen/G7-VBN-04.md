@@ -37,6 +37,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.  [nieuw]
   - `één stukje ernaast` (fout = antwoord ± 1) → Dat is één stukje ernaast. Hoe vaak past één stukje precies in het getal uit de tabel?  [nieuw]
+  - `andere dag` (Claudes sleutel: grafiek-verkeerd-afgelezen) → Dat zijn de stukjes van een andere staaf uit de tabel. Zoek het getal bij de staaf uit de vraag.  [Claude, taalfix]
   - `andere fout` (andere fout) → Deel het getal uit de tabel door wat één stukje is.  [nieuw]
 - Status: hints klaar
 

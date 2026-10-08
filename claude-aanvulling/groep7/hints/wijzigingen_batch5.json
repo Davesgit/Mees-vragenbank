@@ -2522,5 +2522,270 @@
    }
   ],
   "waarom": "Z-#664: literal-regels mee met de nieuwe optieteksten"
+ },
+ {
+  "tijd": "14:27",
+  "doel": "G7-MEET-04",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "met een min",
+    "claudeDenkfout": "teken-vergeten",
+    "regel": "Claudes sleutel: teken-vergeten",
+    "tekst": "Hoeveel graden het warmer is geworden, is een aantal graden. Dat typ je zonder min.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "de nieuwe temperatuur",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "verschil van de getallen",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 - getal2 of getal2 - getal1",
+    "tekst": "Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één graad ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 1",
+    "tekst": "Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.",
+    "tekstSterker": "Van min één naar nul is één stap, en van nul naar één ook. Tel elke stap één keer."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "de twee temperaturen opgeteld",
+    "claudeDenkfout": null,
+    "regel": "Claudes sleutel (alle, zonder label)",
+    "tekst": "Dat is onder nul. Hoeveel graden het warmer is geworden, is een aantal graden: dat is nooit onder nul. Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels zonder label-treffer (Z-#660): alle −p + q, onder nul (de twee temperaturen opgeteld); de tekst gaat over de waarde, met eigen laag 2",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "met een min",
+    "claudeDenkfout": "teken-vergeten",
+    "regel": "Claudes sleutel: teken-vergeten",
+    "tekst": "Hoeveel graden het warmer is geworden, is een aantal graden. Dat typ je zonder min.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "de nieuwe temperatuur",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "verschil van de getallen",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 - getal2 of getal2 - getal1",
+    "tekst": "Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één graad ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 1",
+    "tekst": "Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.",
+    "tekstSterker": "Van min één naar nul is één stap, en van nul naar één ook. Tel elke stap één keer."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "de twee temperaturen opgeteld",
+    "claudeDenkfout": "nul-fout-tientallen",
+    "regel": "Claudes sleutel: nul-fout-tientallen",
+    "tekst": "Dat is onder nul. Hoeveel graden het warmer is geworden, is een aantal graden: dat is nooit onder nul. Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels zonder label-treffer (Z-#660): alle −p + q, onder nul (de twee temperaturen opgeteld); de tekst gaat over de waarde, met eigen laag 2",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   }
+  ],
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Didactiek review batch 5): Z-#660"
+ },
+ {
+  "tijd": "14:27",
+  "doel": "G7-VBN-04",
+  "nrOrigineel": 1,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+    "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één stukje ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 1",
+    "tekst": "Dat is één stukje ernaast. Hoe vaak past één stukje precies in het getal uit de tabel?",
+    "tekstSterker": "Tel met sprongen zo groot als één stukje tot het getal uit de tabel. Tel hoeveel sprongen dat zijn: zoveel stukjes kleur je."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+    "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+    "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één stukje ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 1",
+    "tekst": "Dat is één stukje ernaast. Hoe vaak past één stukje precies in het getal uit de tabel?",
+    "tekstSterker": "Tel met sprongen zo groot als één stukje tot het getal uit de tabel. Tel hoeveel sprongen dat zijn: zoveel stukjes kleur je."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "andere dag",
+    "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+    "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+    "tekst": "Dat zijn de stukjes van een andere staaf uit de tabel. Zoek het getal bij de staaf uit de vraag.",
+    "waarom": "Z-#670: Claudes sleutel (een andere staaf afgelezen) kreeg geen regel",
+    "tekstSterker": "Zoek in de tabel het getal bij de staaf uit de vraag. Hoe vaak past één stukje daarin? Zoveel stukjes kleur je."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Deel het getal uit de tabel door wat één stukje is.",
+    "tekstSterker": "Hoe vaak past één stukje in het getal uit de tabel? Deel het getal door wat één stukje is. Zoveel stukjes kleur je."
+   }
+  ],
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Z-#667 VBN-04 #3): Z-#670, andere dag"
+ },
+ {
+  "tijd": "14:27",
+  "doel": "G7-VERH-01",
+  "nrOrigineel": 1,
+  "veld": "hint1",
+  "was": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
+  "wordt": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van het hele aantal?",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Z-#667 VBN-04 #3): les 147, geen contextwoord (pot) in H1"
+ },
+ {
+  "tijd": "14:32",
+  "doel": "G7-VERH-01",
+  "nrOrigineel": 4,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "past bij een andere schaal",
+    "claudeDenkfout": null,
+    "regel": "Het echte voorwerp is 100 keer zo groot",
+    "tekst": "Dat past bij een schaal van een op honderd. Kijk naar de getallen van deze schaal.",
+    "tekstSterker": "Vergelijk de twee getallen van de schaal. Als ze gelijk zijn, is de tekening even groot als echt."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "past bij een andere schaal (twee)",
+    "claudeDenkfout": null,
+    "regel": "Het echte voorwerp is 2 keer zo groot",
+    "tekst": "Dat past bij een schaal van een op twee. Kijk naar de getallen van deze schaal.",
+    "tekstSterker": "Vergelijk de twee getallen van de schaal. Als ze gelijk zijn, is de tekening even groot als echt."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Kijk naar de twee getallen van deze schaal."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "past bij een andere schaal",
+    "claudeDenkfout": null,
+    "regel": "Het echte voorwerp is 100 keer zo groot",
+    "tekst": "Dat past bij een schaal van een op honderd. Kijk naar de getallen van deze schaal.",
+    "tekstSterker": "Het getal achter de dubbele punt zegt hoeveel centimeter echt bij één centimeter op de tekening hoort. Hoeveel is dat bij deze schaal?"
+   },
+   {
+    "bron": "nieuw",
+    "soort": "past bij een andere schaal (twee)",
+    "claudeDenkfout": null,
+    "regel": "Het echte voorwerp is 2 keer zo groot",
+    "tekst": "Dat past bij een schaal van een op twee. Kijk naar de getallen van deze schaal.",
+    "tekstSterker": "Het getal achter de dubbele punt zegt hoeveel centimeter echt bij één centimeter op de tekening hoort. Hoeveel is dat bij deze schaal?"
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Kijk naar de twee getallen van deze schaal."
+   }
+  ],
+  "waarom": "Z-#664: literal-regels mee met de nieuwe optieteksten"
  }
 ]
