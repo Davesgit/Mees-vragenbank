@@ -177,5 +177,9 @@ if __name__ == '__main__':
     print(f"\nOPT230 (#230: breukwoord-optie met hoofdletter, kommagetal met punt): {len(_o230)} (FAIL)")
     for _x in _o230[:20]: print('  FAIL OPT230', _x)
     fail = fail or bool(_o230)
+    import geldig_check as _GA      # #360 (G5 gate ronde 9): antwoord ∈ geldigeAntwoorden (FAIL, G5–G8)
+    fail = (_GA.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    import bijna390_check as _B390      # #390 (G6 gate ronde 9 deel B): getal uit de vraag nooit ±1/'Bijna!' (FAIL, G5–G8)
+    fail = (_B390.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     print('\nG6 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

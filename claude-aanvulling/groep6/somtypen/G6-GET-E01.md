@@ -94,7 +94,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Elk streepje is 10.000. 77.000 ligt tussen 70.000 en 80.000.
 
 - **Hint 1 (te schrijven):** Tussen welke twee tienduizendtallen ligt het getal? Zoek die eerst op de lijn.
-- **Hint 2 (te schrijven):** Tel dan vanaf het tienduizendtal eronder verder in stappen van duizend.
+- **Hint 2 (te schrijven):** Begin bij het tienduizendtal onder het getal. Tel vanaf daar verder in stappen van duizend.
 - **Ouderzin:** Je kind zet een getal tot 100.000 op een getallenlijn met tienduizendtallen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tienduizendtal te ver` (fout = antwoord + 10000) → Dat is één tienduizendtal te ver. Het cijfer vooraan zegt bij welk tienduizendtal je begint.  [nieuw]

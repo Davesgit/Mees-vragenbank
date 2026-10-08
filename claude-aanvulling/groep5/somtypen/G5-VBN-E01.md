@@ -52,7 +52,7 @@ Hoeveel peren zijn er?
 - Getallenruimte: 0–1.000, 0–10, 0–100, 0–20 · type: meerkeuze
 - Didactiek-besluit (G4-twijfel, 1 okt): getal om de 10, 1 streep = 5, getal om de 25, 1 streep = 5 — zie g4/besluiten_twijfel.md + besluit Dave
 - Hint-richting: Zoek het getal vlak onder de staaf. Spring dan verder met 5.
-- Denkfouten (Claude): grafiek-verkeerd-afgelezen (122), verkeerde-bewerking (52), andere-deel-genomen (38)
+- Denkfouten (Claude): grafiek-verkeerd-afgelezen (122), verkeerde-bewerking (47), andere-deel-genomen (42), streepjes-geteld (1)
 - Verschillende Claude-fout-hints: 3 (meest: “Leg je vinger op de rij of staaf uit de vraag en schuif hem naar de as. Kijk hoeveel elk streepje waard is.”)
 - Voorbeelden:
   - `G5-VBN-E01-claude-bank-040` (Claude G2, bank, niveau 2 → toepassen)

@@ -459,3 +459,69 @@ Code: `scripts/fixlijst_g5_r7b.py` (nu ingehaakt in `build_g5.py`), log `logs/fi
 | 303–306, 320, 328 | ✓ ronde 7b (Oefeningen) |
 
 Bugfix: `park_g7_hints.py` gaf de E07-hints aan 220 G7-items; nu alleen entries met 'naar' G7.
+
+## Oefeningen ronde 9 (8 okt 2026, 11:05–11:45; builds 10:57:42 en 11:20:45): stand van de punten voor Oefeningen
+Hints in `hints/patch_batch7.py` (blokken 'Ronde 9' en 'Ronde 9b') en `hints/patch_batch3.py` ('Ronde 9b'); idempotent. Zandbak `/workspace/g5work/r9oef/sbx/g5`: check_hints 139 klaar, 0 FAIL, 0 WARN; notatie ALLES OK. Zie `review-ronde9.md`.
+
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| 350–353 | Oefeningen | ronde 7c (Didactiek recheck-ronde7b) | ✓ goedgekeurd in de gate; #353 teruggezet bij datapunt #325 |
+| 362 | Oefeningen | ouderzin E05 #17 (nrO 32): «Je kind telt de bezoekers van vier dagen bij elkaar op.» | ✓ 8 items (053, gen-012…018); de ouderzin komt uit de entry |
+| 363 | Oefeningen (tekst) | L2 'tiental te weinig' E05 #17: «… en dan de honderdtallen als die er zijn.» | ✓ (waar bij elk item, ook als Overzicht gen-015/016 opnieuw maakt) |
+| 364 | Oefeningen | L2 'te groot'/'te klein' E05 #18/#26 (nrO 29/30), tekst van Didactiek | ✓ 12 items; elke grens per sleutel nagerekend (`g5work/r9oef/r9b_check.py`, FAIL 0) |
+| 367 | Oefeningen | L2 E07 #9 (nrO 20) 'één te veel/weinig' en 'tien vergeten' | ✓ |
+| 368 | Oefeningen | L2 'te ver weg' zonder «je schatting» (E05 nrO 21/28/29/30, E07 nrO 18) | ✓ 46 sleutels |
+| 369 | Oefeningen | M05 #10 'twee te veel' zonder 'Bijna!' | ✓ |
+| 372 | Oefeningen | E09 #2 'tweede stap vergeten': «Er gaan er nog een paar af.» | ✓ |
+| 402 | Oefeningen (eigen vondst, les 101/109, open) | bewering «Je bent … vergeten» buiten ronde 7: batch2 GET-E07 #3 («een stuk»), #4/#8 («iets»); batch4 MEET-E02 #1/#2 («een korte/lange zijde/kant») | open, volgende ronde |
+| 362 (label) | **Overzicht** | het somtype-label van E05 #17 zegt nog «In een tabel staat …» | open (datapunt) |
+| 373 | **Overzicht** | opgave E05 #17 «Dit zijn de bezoekers van …» leest stijf; voorstel «Zoveel bezoekers kwamen er bij …» | open (datapunt) |
+
+## Ronde 10 (8 okt 2026, build 11:20:45; Didactiek gate-ronde9-didactiek.md), uitgevoerd door Overzicht
+Code: `scripts/fixlijst_g5_r10.py` (ingehaakt in `build_g5.py` en `apply_hints.py`) en `scripts/fixlijst_g5_r7b.py` (generator, wisselgeld). Log `logs/fixlijst_g5_r10.json`. `guards_r10` stopt de build bij een fout. Gedeelde checks in `check_merge_notatie.py`: GELDIG (#360) en BIJNA390 (G6 #390), voor G5–G8. Stand: check_hints 139 klaar · 0 open · 0 FAIL · 0 WARN; merge-notatie ALLES OK (GELDIG 0, BIJNA390 0); #121 0; generatorcheck 0.
+
+| # | Stand |
+|---|---|
+| 360 | ✓ `geldigeAntwoorden` bij elk G5-item opnieuw uit het antwoord (23 waren fout, nu 0). De generator kopieert het veld niet meer van het sjabloon. Guard 'antwoord ∈ geldigeAntwoorden' in de build (G5) en in check_merge_notatie van G5–G8 (fails: G6 0, G7 0, G8 0) |
+| 361 | ✓ VBN-E01 #2 028/056/080/099 (→ 1000/800/800/1000, 'één staaf') en 102 (→ 7, 'streepjes geteld'). De #302-guard geldt nu voor heel G5. **Uitzondering G5-MEET-\*:** bij omrekenen van maten (1 L = 1000 ml, 1 kg = 1000 g) liggen het antwoord en de opties zelf vaak boven de 1000; de grens is daar 10.000 (#60) |
+| 362 | ✓ label van E05 #17 (nrO 32): 'Dit zijn de bezoekers van [plek]: …' (8 items). De md meldt 'LET OP kop gewijzigd'; de hints noemen geen tabel |
+| 363 | ✓ gen-015 museum 48/63/57/39 → 207; gen-016 dierentuin 86/74/92/68 → 320 (guard: elke dag < 100) |
+| 365 | ✓ 024: 6 schriften van €5, betalen met €50 → €20 (sleutels €30, €45, €39). Geen item betaalt meer met €100 terwijl €50 genoeg is (guard) |
+| 366 | ✓ 9 items naar 'toepassen' (247, 322–325, 394, 397–399), regel #327 |
+| 369 | ✓ M05 116 zonder 'Bijna!' (door Oefeningen in batch3). Vangnet in de build: 'Bijna!' weg bij 'fout = antwoord ± 2…9' (nu 0) |
+| 370 | ✓ gen-007: 4 × 208 ≈ 4 × 200 = 800 (exact 832). Guard: \|schatting − exact\| / exact < 10% |
+| 371 | ✓ E09 #2 016: 6 dozen × 5 stiften, er worden er 3 gebruikt → 27 (sleutels 30, 8, 12). Guard: geen sleutel is een getal uit de vraag |
+| 374 | ✓ E07-gen: `claudeKaleSom` met ≈-stap ('208 × 4 ≈ 200 × 4'). Generator-items: 51 `foutRegels` zonder sleutel weg (guard) |
+| 350–353 | ✓ in de build (hint-sync batch7.json 11:10) |
+| 380/390 (motor) | ✓ `scripts/fout_regels.py` (G5–G8): verschuiving G5 4 sleutels: VBN-E01 058 '5' en 082 '50' (±1 → 'andere fout'), 164 (→ Claudes label), MEET-E06 gen-001 '24' (±1 → 'andere fout'). **Voor Oefeningen:** 058/082 en MEET-E06 #1 hebben geen regel 'getal uit de vraag' in de entry |
+| 364, 367, 368, 372 | ✓ Oefeningen (batch7 ce068bce6399, in de build; Didactiek recheck-ronde9b) |
+| 373 | ✓ zie ronde 10b |
+
+## Oefeningen ronde 10 (8 okt 2026, 11:30–11:55; builds 11:20:45, 11:31:53 en daarna)
+Nummering (les 124): onze punten hieronder heten **Oef-#403 tot Oef-#406**; de punten van Didactiek met dezelfde nummers heten nu D-#403 tot D-#408. Vanaf nu: Oefeningen Oef-#NNN in een eigen reeks onder #500 (volgende vrije: Oef-#421; Oef-#420 staat in de G6-fixlijst), Didactiek #500 en hoger, Overzicht ongewijzigd.
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| Oef-#402 | Oefeningen | «Je bent … vergeten» als vraag + eigen laag 2: batch2 GET-E07 #3 ('tien vergeten'), #4/#8 ('een stuk vergeten'); batch4 MEET-E02 #1/#2 ('korte/lange zijde vergeten') | ✓ `patch_batch2.py`/`patch_batch4.py` 'Ronde 10'. 645 sleutels (E07 #3 32, #4 36, #8 14; MEET-E02 #1 547, #2 16); MEET-E02-waarden per sleutel nagerekend (a − breedte / a − lengte), geen vierkant. Patroon over heel G5 en G6 (les 101): verder alleen #403 en #404 |
+| Oef-#403 | Oefeningen (eigen vondst, open) | «Je hebt het getal uit de som overgenomen.» (MEET-E01 #1–#4, MEET-E04 #2/#4, MEET-E05 #1/#3; 77 sleutels): de regel is exact (getal1), dus waar, maar het is een bewering; in G6 is 'getal uit de vraag' nu overal een vraag. Voorstel: «Is dat het getal uit de som? …» | open, besluit Didactiek |
+| Oef-#404 | **Overzicht (data, per item)** | per-itemteksten in VBN-E03 met «Je bent … vergeten» (Claude): 012 '16 cm' → «Is de plant bij 0 cm begonnen? Hij is nu al 6 cm hoog. Tel de groei daar nog bij.»; 013 '30 euro' → «Was de spaarpot eerst leeg? Er zit nu al 12 euro in. Tel dat er nog bij.»; 023 '30' → «Heb je voor het eerste vierkant 4 lucifers geteld? Voor elk vierkant erbij komen er 3 bij.» | open (datapunt) |
+| Oef-#405 | Oefeningen (eigen vondst, open) | H2 begint met een terugverwijzing en is zo als laag 2 (terugval) niet los te lezen (zelfde soort als G6 Z-#393): GET-E02 #4 «Tel dan …», MEET-E06 #2 «Tel dan …», MEET-E07 #4 «Tel dan …», MKU-E02 #1 «Tel dan …», VBN-E03 #1 «Ga dan …» | open, volgende ronde |
+| Oef-#406 | Didactiek (twijfel) | GET-E07 #3 'tien vergeten': bij 002, 005, 022, 023, 032 is de sleutel ook het aantal waarover je verdeelt (7, 9, 3, 5, 5). Er is geen regel 'getal uit de vraag' in die entry; les 115 zegt dat de benoemde denkfout wint. Welke? | vraag |
+| D-#403 | Oefeningen | E07 #4 (batch7 E07 nrO 18): laag 2 'te ver weg' bij een keersom = tekst van Didactiek «Rond het grootste getal af en reken dat uit. Heeft dit antwoord evenveel cijfers? Is het veel groter of veel kleiner?». 28 sleutels; E05 (nrO 21/28/29/30, 18 sleutels) ongewijzigd | ✓ `patch_batch7.py` ronde 10b |
+| D-#407 | Oefeningen | H2 is laag 2 bij terugval en moet los te lezen zijn (vervangt Oef-#405). Alle 15 somtypes van Didactiek plus MEET-E07 #3 «Vul dan aan …» (90 sleutels, eigen scan) en #5 (samengevoegd met #3, entries gelijk gehouden): H2 noemt nu zelf het onderwerp (bv. «Kijk voor de minuten naar de grote wijzer.», «Zet na de grote wijzer de kleine wijzer.», «Tel al het geld, en haal de prijs ervan af.»). 2271 sleutels in 16 somtypes. Los-scan uitgebreid met 'dan'/'daarna' in het eerste zinsdeel (les 123; `g6work/r10/los_l2.py`, G5 en G6): G5 0 | ✓ `patch_batch1/2/5/6.py` ronde 10b |
+| Oef-#405 | — | vervangen door D-#407 | ✓ |
+| les 120–124 | Oefeningen | in `hints/lessen_g5.md` | ✓ |
+| checks | Oefeningen | zandbak: check_hints 139 klaar, 0 FAIL, 0 WARN; notatie ALLES OK; BIJNA390 0; b5b/b5c/b5e/b5e2/b7/r9b FAIL 0. `b5d/check.py` (ronde 5d) geeft 25 FAIL op een H2-tekst van MEET-E06 #9 (nrO 22) die al vóór deze ronde door een latere patch vervangen was: oude check, geen fout. Tweede run van alle patches: 0 wijzigingen | ✓ |
+
+## Ronde 10b (8 okt 2026, build 11:38:45; Didactiek recheck-ronde9b, uitgevoerd door Overzicht)
+Nummering: Didactiek D-#403–D-#408, daarna #500 en hoger; Oefeningen houdt Oef-#403–#406. Stand: check_hints 139 klaar · 0 open · 0 FAIL · 0 WARN; merge-notatie ALLES OK (GELDIG 0, BIJNA390 0); #121 0; generatorcheck 0.
+
+| # | Stand |
+|---|---|
+| 373 | ✓ opgave en label E05 'bezoekers': «Zoveel bezoekers kwamen er bij [plek]: maandag …» (8 items; guard) |
+| D-#404 | ✓ motor: 'andere staaf' alleen als de sleutel de waarde van een staaf is, anders de volgende regel ('getal uit de vraag' of 'andere fout'). VBN-E01 164 '5' → 'andere fout'. Guard (assert in de motor) |
+| Oef-#404 | ✓ VBN-E03 012/013/023: de per-itemteksten van Oefeningen (vraagvorm) |
+| D-#405 | ✓ het #374-filter geldt alleen bij meerkeuze; bereikregels (vanaf/totEnMet) blijven altijd. MEET-E06 #11: 20 items hebben 'te veel'/'te weinig' weer. Nu 24 regels weg (was 51) |
+| D-#406 | ✓ motor: een sleutel staat alleen in `foutRegels.match.waarden` van de regel die hem kreeg (MEET-E06 gen-001 '24', VBN-E01 058/082/164 en de 7 'één staaf'-sleutels). Guard (assert in de motor) |
+| D-#408 | ✓ vaste weergavenummers: `bevroren/somtype_weergave_nr.json` (stand 10:57:42, de nummers die Didactiek en Oefeningen kennen; bezoekers = E05 #17). Een kop- of aantalwijziging verschuift niets meer; een nieuw somtype krijgt het eerstvolgende vrije nummer. Guard: geen dubbel nummer per doel. 0 van 4845 items wijkt af van 10:57:42 |
+| D-#416 | ✓ BIJNA390 en de motor vergelijken op waarde (ook breuken en kommagetallen; 2/2 = 1) |
+| D-#403, D-#407 | open: Oefeningen (tekst) |

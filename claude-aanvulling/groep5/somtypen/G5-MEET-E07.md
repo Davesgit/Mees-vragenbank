@@ -62,7 +62,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €13,20 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af? · €21 → Tel eerst al het geld. Is een munt cent of euro? Haal dan de prijs eraf.
 
 - **Hint 1 (te schrijven):** Tel eerst al het geld. Begin bij het geld dat het meest waard is.
-- **Hint 2 (te schrijven):** Haal dan de prijs ervan af. Een euro is honderd cent.
+- **Hint 2 (te schrijven):** Tel al het geld, en haal de prijs ervan af. Een euro is honderd cent.
 - **Ouderzin:** Je kind telt munten en briefjes en rekent uit hoeveel er overblijft na een aankoop.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `prijs erbij gedaan` (Claudes sleutel: verkeerde-bewerking) → Je hebt de prijs bij het geld opgeteld. Je koopt iets: dan gaat het geld eraf.  [Claude, taalfix]
@@ -92,7 +92,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Eerst optellen: 2,49 + 1,85 + 3,20 = 7,54. Dan aanvullen tot 10: 2,46.
 
 - **Hint 1 (te schrijven):** Tel eerst de drie prijzen bij elkaar op. Dan weet je wat het samen kost.
-- **Hint 2 (te schrijven):** Vul dan aan tot het geld waarmee je betaalt: eerst tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij.
+- **Hint 2 (te schrijven):** Vul aan van wat het samen kost tot het geld waarmee je betaalt: eerst tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij.
 - **Ouderzin:** Je kind rekent uit hoeveel geld het terugkrijgt als het drie dingen koopt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `wat het kost` (Claudes sleutel: verkeerde-bewerking) → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af.  [Claude, taalfix]
@@ -125,7 +125,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Vul aan tot het volgende hele bedrag. Van €14,95 naar €15 is 5 cent. Van €15 naar €20 is €5. Samen: €5,05.
 
 - **Hint 1 (te schrijven):** Hoeveel is het van de prijs tot de volgende hele euro? Begin daarmee.
-- **Hint 2 (te schrijven):** Tel dan de hele euro's erbij tot het geld waarmee je betaalt.
+- **Hint 2 (te schrijven):** Tel vanaf de prijs eerst tot de volgende hele euro. Tel daarna de hele euro's erbij tot het geld waarmee je betaalt.
 - **Ouderzin:** Je kind rekent uit hoeveel geld het terugkrijgt bij één aankoop.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (Claudes sleutel: verkeerde-bewerking) → Je hebt de prijs en het geld waarmee je betaalt bij elkaar opgeteld. Terugkrijgen is het verschil: haal de prijs van het geld af.  [Claude, taalfix]

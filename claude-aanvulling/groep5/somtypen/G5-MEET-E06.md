@@ -26,7 +26,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 85 → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur. · 15 → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.
 
 - **Hint 1 (te schrijven):** Tel eerst de minuten tot het volgende hele uur.
-- **Hint 2 (te schrijven):** Tel dan de hele uren erbij, als die er zijn: elk uur is zestig minuten. Tel tot slot de minuten na het laatste hele uur erbij, als die er zijn.
+- **Hint 2 (te schrijven):** Tel de minuten tot het volgende hele uur, en tel daarna de hele uren erbij, als die er zijn: elk uur is zestig minuten. Tel tot slot de minuten na het laatste hele uur erbij, als die er zijn.
 - **Ouderzin:** Je kind rekent uit hoeveel minuten het is van de ene tijd tot de andere, over het hele uur heen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `een uur te veel` (fout = antwoord + 60) → Dat is zestig minuten te veel: een heel uur. Tel in stukken: eerst de minuten tot het volgende hele uur. Dan de hele uren van zestig minuten, als die er zijn. Dan de minuten die nog over zijn.  [nieuw]
@@ -115,7 +115,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 9:00 → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet. · 8:35 → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.
 
 - **Hint 1 (te schrijven):** Hoeveel minuten is het na het hele uur? Tel eerst terug tot dat hele uur.
-- **Hint 2 (te schrijven):** Hoeveel minuten moet je daarna nog terug? Tel die terug vanaf het hele uur. Een uur heeft zestig minuten.
+- **Hint 2 (te schrijven):** Tel eerst terug tot het hele uur. Hoeveel minuten moet je vanaf het hele uur nog terug? Tel die er ook af. Een uur heeft zestig minuten.
 - **Ouderzin:** Je kind rekent uit hoe laat het was een aantal minuten eerder, over het hele uur heen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `gestopt bij het hele uur` (Claudes sleutel: deel-vergeten-bij-splitsen) → Je bent gestopt bij het hele uur. Je moet nog verder terug: tel de rest terug vanaf het hele uur.  [Claude, taalfix]
@@ -144,7 +144,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5 september → Tel via de maandgrens: eerst tot het eind van de maand, dan de dagen van de nieuwe maand. En kijk hoeveel dagen die maand echt heeft. · 3 september → Tel via de maandgrens: eerst tot het eind van de maand, dan de dagen van de nieuwe maand. En kijk hoeveel dagen die maand echt heeft.
 
 - **Hint 1 (te schrijven):** Tel eerst tot de laatste dag van de maand. Hoeveel dagen heeft die maand: dertig of eenendertig?
-- **Hint 2 (te schrijven):** Hoeveel dagen heb je dan al geteld? Tel de rest verder in de nieuwe maand.
+- **Hint 2 (te schrijven):** Tel eerst tot de laatste dag van de maand, en schrijf op hoeveel dagen dat zijn. Tel de rest verder in de nieuwe maand.
 - **Ouderzin:** Je kind telt een aantal dagen verder op de kalender, over het eind van de maand heen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `gestopt bij de maandgrens` (fout = gestopt op de eerste dag van de maand) → Je bent gestopt waar de nieuwe maand begint. Tel nog verder, tot je alle dagen hebt geteld.  [nieuw]
@@ -206,7 +206,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 7:23 → Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna? · 7:19 → Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?
 
 - **Hint 1 (te schrijven):** Kijk eerst naar de kleine wijzer. Welk getal heeft hij het laatst gehad? Dat getal komt vóór de dubbele punt.
-- **Hint 2 (te schrijven):** Kijk dan naar de grote wijzer. Elk getal is vijf minuten: bij de één vijf minuten, bij de twee tien minuten. Tel vanaf het laatste getal de streepjes erbij: één minuut per streepje.
+- **Hint 2 (te schrijven):** Kijk voor de minuten naar de grote wijzer. Elk getal is vijf minuten: bij de één vijf minuten, bij de twee tien minuten. Tel vanaf het laatste getal de streepjes erbij: één minuut per streepje.
 - **Ouderzin:** Je kind leest een klok met wijzers af op de minuut en kiest de digitale tijd (minuten na het hele uur).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `een minuut te laat` (fout = klok een minuut te laat) → Bij die tijd staat de grote wijzer één streepje verder. Tel na het laatste getal de streepjes nog eens: één minuut per streepje.  [nieuw]
@@ -239,7 +239,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 10:49 → Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna? · 10:43 → Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?
 
 - **Hint 1 (te schrijven):** Kijk eerst naar de kleine wijzer. Welk getal heeft hij het laatst gehad? Dat getal komt vóór de dubbele punt.
-- **Hint 2 (te schrijven):** Kijk dan naar de grote wijzer. Elk getal is vijf minuten: bij de één vijf minuten, bij de twee tien minuten. Tel vanaf het laatste getal de streepjes erbij: één minuut per streepje.
+- **Hint 2 (te schrijven):** Kijk voor de minuten naar de grote wijzer. Elk getal is vijf minuten: bij de één vijf minuten, bij de twee tien minuten. Tel vanaf het laatste getal de streepjes erbij: één minuut per streepje.
 - **Ouderzin:** Je kind leest een klok met wijzers af op de minuut en kiest de digitale tijd (na half, tot het hele uur).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `een minuut te laat` (fout = klok een minuut te laat) → Bij die tijd staat de grote wijzer één streepje verder. Tel na het laatste getal de streepjes nog eens: één minuut per streepje.  [nieuw]
@@ -271,7 +271,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** —
 
 - **Hint 1 (te schrijven):** Zet eerst de grote wijzer. Hoeveel minuten is het na het hele uur? Elk getal is vijf minuten.
-- **Hint 2 (te schrijven):** Zet dan de kleine wijzer. Hoor je 'half' of 'voor' in de tijd? Dan staat hij nog vóór het uur uit de tijd. Anders staat hij net voorbij dat uur.
+- **Hint 2 (te schrijven):** Zet na de grote wijzer de kleine wijzer. Hoor je 'half' of 'voor' in de tijd? Dan staat hij nog vóór het uur uit de tijd. Anders staat hij net voorbij dat uur.
 - **Ouderzin:** Je kind zet de wijzers van een klok op een tijd in woorden.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → De kleine wijzer staat een uur te ver. De grote wijzer staat goed. Welk uur hoor je in de tijd? Hoor je 'half' of 'voor'? Dan staat de kleine wijzer nog vóór dat uur. Anders staat hij net voorbij dat uur.  [nieuw]
@@ -301,7 +301,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 2 uur → Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna? · tien over 7 → Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?
 
 - **Hint 1 (te schrijven):** Kijk eerst naar de grote wijzer: hoeveel minuten is het na het hele uur? Tot en met kwart over zeg je 'over'. Daarna zeg je 'voor half'.
-- **Hint 2 (te schrijven):** Kijk dan naar de kleine wijzer: welk getal heeft hij het laatst gehad? Bij 'over' noem je dat uur. Bij 'voor half' noem je het volgende uur.
+- **Hint 2 (te schrijven):** Kijk voor het uur naar de kleine wijzer: welk getal heeft hij het laatst gehad? Bij 'over' noem je dat uur. Bij 'voor half' noem je het volgende uur.
 - **Ouderzin:** Je kind leest een klok met wijzers af en kiest de tijd in woorden (vijf over, tien over, tien voor half …).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Het uur klopt niet. Kijk naar de kleine wijzer: welk getal heeft hij het laatst gehad? Bij 'over' noem je dat uur. Bij 'voor half' noem je het volgende uur.  [nieuw]
@@ -329,7 +329,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** —
 
 - **Hint 1 (te schrijven):** Tel eerst de dagen tot het eind van de eerste maand. Hoeveel dagen heeft die maand? Kijk op de kalender of tel op je knokkels. De dag waarop je begint, tel je niet mee.
-- **Hint 2 (te schrijven):** Tel daarna de dagen in de nieuwe maand, tot en met de dag waarop het eindigt. Tel de twee stukken bij elkaar op.
+- **Hint 2 (te schrijven):** Tel de dagen tot het eind van de eerste maand; de dag waarop je begint, tel je niet mee. Tel daarna de dagen in de nieuwe maand, tot en met de dag waarop het eindigt. Tel de twee stukken bij elkaar op.
 - **Ouderzin:** Je kind rekent uit hoeveel dagen het is van de ene datum tot de andere, over het eind van de maand heen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getallen afgetrokken` (fout = getal1 - getal2 of getal2 - getal1) → Heb je de twee getallen uit de vraag van elkaar afgetrokken? Je gaat over het eind van de maand heen. Tel eerst de dagen tot het eind van de eerste maand: hoeveel dagen heeft die maand? Tel daarna de dagen in de nieuwe maand erbij.  [nieuw]
@@ -364,7 +364,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 8 uur → Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna? · tien over half 9 → Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?
 
 - **Hint 1 (te schrijven):** Kijk eerst naar de grote wijzer: hoeveel minuten is het na het hele uur? Na half zeg je 'over half'. Vanaf kwart voor zeg je 'voor'.
-- **Hint 2 (te schrijven):** Kijk dan naar de kleine wijzer. Hij staat tussen twee getallen. Bij 'over half' en bij 'voor' noem je het getal waar hij naartoe gaat.
+- **Hint 2 (te schrijven):** Kijk voor het uur naar de kleine wijzer. Hij staat tussen twee getallen. Bij 'over half' en bij 'voor' noem je het getal waar hij naartoe gaat.
 - **Ouderzin:** Je kind leest een klok met wijzers af en kiest de tijd in woorden (vijf over half, tien voor …).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Het uur klopt niet. De kleine wijzer staat tussen twee getallen. Bij 'over half' en bij 'voor' noem je het getal waar hij naartoe gaat.  [nieuw]

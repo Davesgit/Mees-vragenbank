@@ -80,3 +80,38 @@ Werkwijze uit ronde 1b: na een fixlijst van Overzicht eerst `scripts/fixlijst_g6
 79. **Gebruik geen woord met twee betekenissen in de bank (kolom = cijferkolom) als een omschrijving net zo helder is** ('de rand met de letters', 'onder de letter', 'naast het cijfer').
 
 *Lessen 80–89 (Didactiek, G5 batch 7) staan in `g5/hints/lessen_g5.md`; ze gelden voor alle groepen.*
+
+## Lessen 90–94 (Didactiek recheck-ronde5c, G6 ronde 5d/9) en 95–99 (recheck-ronde4d6b)
+90. **Een guard test elke route die in de regel staat, en elk vakje van de tabel,** niet alleen de eerste route (#331: y1 + x2 en 'opgeteld' als goed vakje).
+91. **Verandert de data de woorden of de volgorde van de opgave, dan gaan de hints in dezelfde ronde mee.** Beschrijf op waarde ('het grootste aantal', 'het kleinste aantal'), niet op volgorde ('eerste', 'tweede'), en leg de volgorde vast met een guard (#330).
+92. **Bij 'X meer dan Y' mag het antwoord geen afleeswaarde uit de vraag zijn** (als X = 2 × Y is het antwoord de waarde van Y).
+93. **Een build kan veranderen terwijl je naar hem kijkt.** Maak per build een snapshot, vergelijk de inhoud zonder `gegenereerdOp` en rapporteer op de laatste.
+94. **Tel de sleutels per build opnieuw.** Een nieuwe invoervorm (een kaal '5' bij 'Typ een breuk') is een nieuwe sleutel; reken hem na zoals zijn broer (x/1).
+95. **Een tekst die alleen 'in de entry' staat en niet in het item, bestaat voor de app niet.** Controleer altijd het item zelf (`hint2MetPlaatje` stond eerst alleen in `batch6.json`).
+96. **Staat een fixlijstpunt in de code, controleer dan of de functie ook echt bij de items komt.** Tel het veld in de data (`niveau299`: eerst 0/400), niet de functie.
+97. **Verandert een opgave, dan veranderen ook alle velden die van het oude antwoord afhangen** (`antwoordOokGoed`, 852). Controleer ze opnieuw tegen het nieuwe antwoord.
+98. **Na een nieuwe regelvolgorde tel je per overlap welke soort wint,** en controleer je dat de winnende tekst ook klopt voor de andere formule die de sleutel heeft.
+99. **Een FAIL uit een andere stroom (bordtitels, FIX6) noteer je met de oorzaak en de buildtijd.** Hij blokkeert de taalgate niet; kijk na de volgende build of hij weg is. Komen er tijdens een recheck meerdere builds, reken dan elke build opnieuw na.
+
+*Lessen 100–104 (Didactiek, G5 ronde 7b) staan in `g5/hints/lessen_g5.md`; ze gelden voor alle groepen.*
+
+## Lessen 110–114 (Didactiek gate ronde 9, deel A)
+110. **Een letterlijke regel met een getal moet exact matchen.** Een match op een stukje tekst ('4 hokjes' in '14 hokjes') geeft een fout-hint die niet bij de waarde past. Test elke letterlijke regel tegen alle sleutels van het somtype (`g6work/r9oef/r9_letterlijk.py`).
+111. **'Elk vakje' betekent elk vakje op de weg naar de vraag** (van 1 tot en met x2). Bij een verhouding als 1 : 2 is elk heel getal ergens een vakje; een guard over alle vakjes geeft dan alleen ruis.
+112. **Gelijk verdeelde antwoorden zijn niet genoeg tegen raden.** Kijk ook naar de plek van het antwoord tussen de opties (kleinste, middelste, grootste).
+113. **Een verbeterde fout-hint gaat pas live als H2 en laag 2 mee veranderen.** Anders spreekt laag 2 de nieuwe hint tegen (VBN #1: 'kleinste van grootste' tegen 'eerste van tweede').
+114. **Tel de progressie ook bij oude somtypes opnieuw als er items bijkomen.** Een aanvulling met alleen basis en toepassen laat een somtype zonder kritisch niveau (les 48).
+
+## Lessen 115–119 (Didactiek gate ronde 9, deel B)
+115. **Valt één sleutel onder twee regels (± 1 én 'getal uit de vraag'), dan wint de benoemde denkfout.** Toets dat per sleutelwaarde over alle somtypes, niet per somtype (#390; `g6work/r9oef/r9_390.py` en `tools/bijna390_check.py`).
+116. **Controleer een samenvoeging van somtypes op vier dingen:** het aantal items per oud nummer, de sleutels per item, of de teksten per byte gelijk zijn aan het doel-somtype, en of het oude nummer in de merge-metadata bewaard is (#235).
+117. **Toets een niveauherindeling aan de geschreven regel** (#299), niet aan een eigen eerder voorstel.
+118. **Een tekst over een stap die misschien niet bestond (onthouden/lenen, eindpunt van de getallenlijn) hoort een voorwaarde in de motor of de generator te krijgen.** Vraagvorm maakt de hint zachter, maar dan klopt hij nog niet voor het item (#392, #391).
+119. **Draai je scripts van anderen op een snapshot, kopieer dan ook `tools/` en `bevroren/`, buig absolute paden om en zet bytecode uit** (`PYTHONDONTWRITEBYTECODE=1`, `python3 -B`); anders schrijven imports in de live map.
+
+## Lessen 125–129 (Didactiek recheck ronde 9 deel A, build 11:21:56; in ronde 10b toegepast)
+125. **Een aanvulling op een hoger niveau vraagt een nieuwe check van de hints.** Een hint die bij hele factoren klopt ('hoeveel keer zo groot'), leidt niet naar een route via een tussenvakje (VERH-E01 #1, gen-012/013/014, V-#410).
+126. **Beschrijf twee waarden in een hint op grootte ('kleinste/grootste'), niet op volgorde ('eerste/tweede').** Leg in de data vast welke de grootste is (guard).
+127. **Test een matcher met randgevallen** (getal in een groter getal, komma, breuk, minteken, €), en test de guard daarnaast. De guard moet even streng zijn als de matcher (`g6work/r10/r10b_410.py`, Z-#411).
+128. **Een laag 2 'klaar voor later' (bij 0 sleutels) telt niet als gedaan.** Tel per regel hoeveel sleutels hem echt krijgen (les 47/65).
+129. **Bij schatten kan afronden de verkeerde kant op toevallig het goede antwoord geven** (12 × 18 → 20 × 10). Test elke afrondcombinatie tegen het antwoord.

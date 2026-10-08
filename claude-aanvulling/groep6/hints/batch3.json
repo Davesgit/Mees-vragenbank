@@ -10,7 +10,7 @@
    "nrOrigineel": 1,
    "somtypeOrigineel": "Schrijf #/# zo eenvoudig mogelijk.",
    "hint1": "Zoek een getal waardoor je de teller (boven de streep) en de noemer (onder de streep) allebei precies kunt delen.",
-   "hint2": "Deel de teller en de noemer door dat getal. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.",
+   "hint2": "Deel de teller en de noemer allebei door een getal waardoor ze allebei precies te delen zijn. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.",
    "ouderzin": "Je kind schrijft een breuk zo eenvoudig mogelijk: de teller en de noemer door hetzelfde getal delen.",
    "foutHints": [
     {
@@ -27,7 +27,8 @@
      "claudeDenkfout": "omgekeerd-gedeeld",
      "regel": "Claudes sleutel: omgekeerd-gedeeld",
      "tekst": "Je hebt de breuk omgedraaid. De teller blijft boven de streep en de noemer blijft onder de streep.",
-     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "tekstSterker": "Schrijf de teller weer boven de streep en de noemer eronder. Zoek dan een getal waardoor ze allebei precies te delen zijn, en deel ze allebei."
     },
     {
      "bron": "claude-taalfix",
@@ -256,7 +257,7 @@
    "nrOrigineel": 5,
    "somtypeOrigineel": "#/# van de [ding]. Schrijf deze breuk zo eenvoudig mogelijk.",
    "hint1": "Zoek een getal waardoor je de teller (boven de streep) en de noemer (onder de streep) allebei precies kunt delen.",
-   "hint2": "Deel de teller en de noemer door dat getal. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.",
+   "hint2": "Deel de teller en de noemer allebei door een getal waardoor ze allebei precies te delen zijn. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.",
    "ouderzin": "Je kind schrijft een breuk van een groep dingen zo eenvoudig mogelijk.",
    "foutHints": [
     {
@@ -303,7 +304,7 @@
    "nrOrigineel": 8,
    "somtypeOrigineel": "#/# van de [wie] heeft een [ding]. Schrijf die breuk zo eenvoudig mogelijk.",
    "hint1": "Zoek een getal waardoor je de teller (boven de streep) en de noemer (onder de streep) allebei precies kunt delen.",
-   "hint2": "Deel de teller en de noemer door dat getal. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.",
+   "hint2": "Deel de teller en de noemer allebei door een getal waardoor ze allebei precies te delen zijn. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.",
    "ouderzin": "Je kind schrijft een breuk van een groep zo eenvoudig mogelijk.",
    "foutHints": [
     {
@@ -321,7 +322,8 @@
      "claudeDenkfout": "cijfers-verwisseld",
      "regel": "Claudes sleutel: cijfers-verwisseld",
      "tekst": "Je hebt de breuk omgedraaid. De teller blijft boven de streep en de noemer blijft onder de streep.",
-     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "tekstSterker": "Schrijf de teller weer boven de streep en de noemer eronder. Zoek dan een getal waardoor ze allebei precies te delen zijn, en deel ze allebei."
     },
     {
      "bron": "nieuw",
@@ -391,6 +393,14 @@
     },
     {
      "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Is dat een getal uit de vraag? Hoeveel keer zo groot is de nieuwe noemer? Doe de teller ook zoveel keer.",
+     "tekstSterker": "Deel de nieuwe noemer door de oude noemer. Doe de teller van de eerste breuk keer die uitkomst."
+    },
+    {
+     "bron": "nieuw",
      "soort": "één te veel",
      "claudeDenkfout": null,
      "regel": "fout = antwoord + 1",
@@ -402,13 +412,6 @@
      "claudeDenkfout": null,
      "regel": "fout = antwoord − 1",
      "tekst": "Bijna! Dat is één te weinig. Hoeveel keer zo groot is de noemer geworden? Doe de teller precies zoveel keer."
-    },
-    {
-     "bron": "nieuw",
-     "soort": "getal uit de vraag",
-     "claudeDenkfout": null,
-     "regel": "fout = een getal uit de vraag",
-     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het getal dat op het vraagteken hoort? Hoeveel keer zo groot is de nieuwe noemer? Doe de teller ook zoveel keer."
     },
     {
      "bron": "nieuw",
@@ -447,6 +450,14 @@
    "hint2": "De teller (boven de streep) zegt hoeveel van die stukken je vanaf nul verder gaat.",
    "ouderzin": "Je kind zet een breuk op een getallenlijn van nul tot één.",
    "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "begin of eind van de lijn",
+     "claudeDenkfout": null,
+     "regel": "fout = een eindpunt van de lijn",
+     "tekst": "Je stip staat aan het begin of aan het eind van de lijn. Tel vanaf nul zoveel stukken als de teller (boven de streep) zegt.",
+     "tekstSterker": "Tel eerst hoeveel gelijke stukken er tussen nul en één zijn: dat is de noemer. Ga dan vanaf nul zoveel stukken verder als de teller zegt."
+    },
     {
      "bron": "nieuw",
      "soort": "een stuk te ver",
@@ -565,6 +576,14 @@
     },
     {
      "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Is dat een getal uit de vraag? Hoeveel gelijke stukken zitten er in het hele getal? Tel daar de stukken van de breuk bij.",
+     "tekstSterker": "Een hele heeft zoveel gelijke stukken als de noemer zegt. Doe het hele getal keer de noemer, en tel de teller erbij. Dat getal komt boven de streep."
+    },
+    {
+     "bron": "nieuw",
      "soort": "één te veel",
      "claudeDenkfout": null,
      "regel": "fout = antwoord + 1",
@@ -576,13 +595,6 @@
      "claudeDenkfout": null,
      "regel": "fout = antwoord − 1",
      "tekst": "Bijna! Dat is één te weinig. Tel de stukken nog eens na."
-    },
-    {
-     "bron": "nieuw",
-     "soort": "getal uit de vraag",
-     "claudeDenkfout": null,
-     "regel": "fout = een getal uit de vraag",
-     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het getal dat op het vraagteken hoort? Hoeveel gelijke stukken zitten er in het hele getal? Tel daar de stukken van de breuk bij."
     },
     {
      "bron": "nieuw",
@@ -729,6 +741,14 @@
     },
     {
      "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Is dat een getal uit de breuk? Het antwoord is het aantal hele pizza's. Hoe vaak past de noemer in de teller?",
+     "tekstSterker": "Haal steeds de noemer van de teller af, zolang dat kan. Tel hoe vaak dat lukt: zoveel hele pizza's zijn het."
+    },
+    {
+     "bron": "nieuw",
      "soort": "één te veel",
      "claudeDenkfout": null,
      "regel": "fout = antwoord + 1",
@@ -740,13 +760,6 @@
      "claudeDenkfout": null,
      "regel": "fout = antwoord − 1",
      "tekst": "Dat is één hele pizza te weinig. De noemer past nog één keer meer in de teller."
-    },
-    {
-     "bron": "nieuw",
-     "soort": "getal uit de vraag",
-     "claudeDenkfout": null,
-     "regel": "fout = een getal uit de vraag",
-     "tekst": "Je hebt een getal uit de breuk overgenomen. Is dat echt het aantal hele pizza's? Hoe vaak past de noemer in de teller?"
     },
     {
      "bron": "nieuw",
@@ -924,7 +937,7 @@
    "nrOrigineel": 1,
    "somtypeOrigineel": "Hoeveel is #/# van €#?",
    "hint1": "Verdeel het bedrag eerst in zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel is één stuk? Komt dat niet uit in hele euro's? Reken dan met centen.",
-   "hint2": "Neem dan zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?",
+   "hint2": "Eén stuk is het bedrag gedeeld door de noemer (onder de streep). Neem zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?",
    "ouderzin": "Je kind rekent een breuk van een bedrag uit: eerst één gelijk stuk, dan zoveel stukken als de teller zegt.",
    "foutHints": [
     {
@@ -992,7 +1005,7 @@
    "nrOrigineel": 2,
    "somtypeOrigineel": "Hoeveel is #/# van #?",
    "hint1": "Verdeel het getal eerst in zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel is één stuk?",
-   "hint2": "Neem dan zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?",
+   "hint2": "Eén stuk is het getal gedeeld door de noemer (onder de streep). Neem zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?",
    "ouderzin": "Je kind rekent een breuk van een getal uit: eerst één gelijk stuk, dan zoveel stukken als de teller zegt.",
    "foutHints": [
     {
@@ -1015,7 +1028,8 @@
      "soort": "getal uit de vraag",
      "claudeDenkfout": null,
      "regel": "fout = een getal uit de vraag",
-     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het antwoord op de vraag? Verdeel het getal eerst in zoveel gelijke stukken als de noemer zegt."
+     "tekst": "Is dat een getal uit de vraag? Verdeel het getal eerst in zoveel gelijke stukken als de noemer zegt. Hoeveel is één stuk?",
+     "tekstSterker": "Deel het getal door de noemer: zoveel is één stuk. Doe dat keer de teller."
     },
     {
      "bron": "claude-taalfix",
@@ -1067,7 +1081,7 @@
    "nrOrigineel": 3,
    "somtypeOrigineel": "[wie] krijgt #/# van # [ding]. Hoeveel [ding] is dat?",
    "hint1": "Verdeel alles eerst in zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel is één stuk?",
-   "hint2": "Neem dan zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?",
+   "hint2": "Eén stuk is het aantal gedeeld door de noemer (onder de streep). Neem zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?",
    "ouderzin": "Je kind rekent uit hoeveel iemand krijgt bij een breuk van een aantal: eerst één gelijk stuk, dan zoveel stukken als de teller zegt.",
    "foutHints": [
     {
@@ -1082,7 +1096,8 @@
      "soort": "getal uit de vraag",
      "claudeDenkfout": null,
      "regel": "fout = een getal uit de vraag",
-     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het antwoord op de vraag? Verdeel alles eerst in zoveel gelijke stukken als de noemer zegt."
+     "tekst": "Is dat een getal uit de vraag? Verdeel alles eerst in zoveel gelijke stukken als de noemer zegt. Hoeveel is één stuk?",
+     "tekstSterker": "Deel het aantal door de noemer: zoveel is één stuk. Doe dat keer de teller."
     },
     {
      "bron": "claude-taalfix",

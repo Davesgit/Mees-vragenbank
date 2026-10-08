@@ -124,7 +124,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Elk streepje is 100. 860 ligt tussen 800 en 900.
 
 - **Hint 1 (te schrijven):** Zoek eerst het honderdtal: tussen welke twee honderdtallen ligt het getal?
-- **Hint 2 (te schrijven):** Tel dan vanaf dat honderdtal verder in stapjes van tien.
+- **Hint 2 (te schrijven):** Begin bij het honderdtal dat net onder het getal ligt, en tel vanaf dat honderdtal verder in stapjes van tien.
 - **Ouderzin:** Je kind zet een getal tot 1000 op een getallenlijn met honderdtallen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `honderdtal te ver` (fout = antwoord + 100) → Dat is één honderdtal te ver. Het cijfer vooraan zegt bij welk honderdtal je begint.  [nieuw]

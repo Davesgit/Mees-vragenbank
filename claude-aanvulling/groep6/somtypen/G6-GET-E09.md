@@ -27,7 +27,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €14 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers. · €7 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.
 
 - **Hint 1 (te schrijven):** Verdeel het bedrag eerst in zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel is één stuk? Komt dat niet uit in hele euro's? Reken dan met centen.
-- **Hint 2 (te schrijven):** Neem dan zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?
+- **Hint 2 (te schrijven):** Eén stuk is het bedrag gedeeld door de noemer (onder de streep). Neem zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?
 - **Ouderzin:** Je kind rekent een breuk van een bedrag uit: eerst één gelijk stuk, dan zoveel stukken als de teller zegt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `het hele bedrag` (fout = de prijs) → Dat is het hele bedrag. Verdeel het bedrag eerst in zoveel gelijke stukken als de noemer zegt. Neem dan zoveel stukken als de teller zegt.  [nieuw]
@@ -56,12 +56,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 14 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
 
 - **Hint 1 (te schrijven):** Verdeel het getal eerst in zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel is één stuk?
-- **Hint 2 (te schrijven):** Neem dan zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?
+- **Hint 2 (te schrijven):** Eén stuk is het getal gedeeld door de noemer (onder de streep). Neem zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?
 - **Ouderzin:** Je kind rekent een breuk van een getal uit: eerst één gelijk stuk, dan zoveel stukken als de teller zegt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één stuk (regel)` (fout = één stuk (het aantal : de noemer)) → Dat is één stuk. Neem nu zoveel stukken als de teller zegt.  [nieuw]
   - `één stuk` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is één stuk. Neem nu zoveel stukken als de teller zegt.  [Claude, taalfix]
-  - `getal uit de vraag` (fout = een getal uit de vraag) → Je hebt een getal uit de vraag overgenomen. Is dat echt het antwoord op de vraag? Verdeel het getal eerst in zoveel gelijke stukken als de noemer zegt.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Is dat een getal uit de vraag? Verdeel het getal eerst in zoveel gelijke stukken als de noemer zegt. Hoeveel is één stuk?  [nieuw]
   - `wat overblijft` (Claudes sleutel: andere-deel-genomen) → Is dat wat er overblijft? Je zoekt zoveel stukken als de teller zegt.  [Claude, taalfix]
   - `stuk te veel of te weinig` (Claudes sleutel: een-ernaast) → Kijk nog eens naar de teller. Neem je precies zoveel stukken als de teller zegt? Reken eerst uit hoeveel één stuk is.  [Claude, taalfix]
   - `andere fout` (andere fout) → Verdeel het getal in zoveel gelijke stukken als de noemer zegt. Neem dan zoveel stukken als de teller zegt.  [nieuw]
@@ -87,11 +87,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 1/6 × 18 = 1 × 18 : 6. 18 : 6 = 3, keer 1 = 3.
 
 - **Hint 1 (te schrijven):** Verdeel alles eerst in zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel is één stuk?
-- **Hint 2 (te schrijven):** Neem dan zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?
+- **Hint 2 (te schrijven):** Eén stuk is het aantal gedeeld door de noemer (onder de streep). Neem zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?
 - **Ouderzin:** Je kind rekent uit hoeveel iemand krijgt bij een breuk van een aantal: eerst één gelijk stuk, dan zoveel stukken als de teller zegt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één stuk` (fout = één stuk (het aantal : de noemer)) → Dat is één stuk. Neem nu zoveel stukken als de teller zegt.  [nieuw]
-  - `getal uit de vraag` (fout = een getal uit de vraag) → Je hebt een getal uit de vraag overgenomen. Is dat echt het antwoord op de vraag? Verdeel alles eerst in zoveel gelijke stukken als de noemer zegt.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Is dat een getal uit de vraag? Verdeel alles eerst in zoveel gelijke stukken als de noemer zegt. Hoeveel is één stuk?  [nieuw]
   - `wat overblijft` (Claudes sleutel: verkeerde-bewerking) → Is dat wat er overblijft? Je zoekt zoveel stukken als de teller zegt.  [Claude, taalfix]
   - `niet verdeeld` (Claudes sleutel: niet-verdeeld) → Kijk nog eens naar de breuk. Heb je alles eerst verdeeld in zoveel gelijke stukken als de noemer zegt? Neem dan zoveel stukken als de teller zegt.  [Claude, taalfix]
   - `andere fout` (andere fout) → Verdeel alles in zoveel gelijke stukken als de noemer zegt. Neem dan zoveel stukken als de teller zegt.  [nieuw]

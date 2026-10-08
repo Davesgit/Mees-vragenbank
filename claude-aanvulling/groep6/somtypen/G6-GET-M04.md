@@ -33,9 +33,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `heel en teller opgeteld` (fout = getal1 + getal2) → Heb je het hele getal en de teller opgeteld? Eén hele bestaat uit zoveel gelijke stukken als de noemer zegt.  [nieuw]
   - `teller niet erbij` (fout = antwoord − getal2) → Je hebt het hele getal omgezet in stukken. Tel de stukken van de breuk er nog bij.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Is dat een getal uit de vraag? Hoeveel gelijke stukken zitten er in het hele getal? Tel daar de stukken van de breuk bij.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Tel de stukken nog eens na.  [nieuw]
   - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Tel de stukken nog eens na.  [nieuw]
-  - `getal uit de vraag` (fout = een getal uit de vraag) → Je hebt een getal uit de vraag overgenomen. Is dat echt het getal dat op het vraagteken hoort? Hoeveel gelijke stukken zitten er in het hele getal? Tel daar de stukken van de breuk bij.  [nieuw]
   - `andere fout` (andere fout) → Doe het hele getal keer de noemer: zoveel gelijke stukken zitten er in het hele getal. Tel daar de teller bij.  [nieuw]
 - Status: hints klaar
 
@@ -65,9 +65,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `noemer eraf gehaald` (fout = getal1 - getal2 of getal2 - getal1) → Je hebt de noemer van de teller afgehaald. Zo weet je hoeveel stukken er na één hele pizza nog zijn. Hoe vaak past de noemer in de teller?  [nieuw]
   - `de rest` (fout = de rest van getal1 : getal2) → Zijn dat de stukken die overblijven? De vraag is hoeveel hele pizza's het zijn. Hoe vaak past de noemer in de teller?  [nieuw]
   - `steeds een hele eraf` (fout = getal1 − j × getal2 (j ≥ 2)) → Heb je steeds een hele pizza van de stukken afgehaald? Ga door tot dat niet meer kan, en tel hoe vaak het lukte.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Is dat een getal uit de breuk? Het antwoord is het aantal hele pizza's. Hoe vaak past de noemer in de teller?  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Dat is één hele pizza te veel. Zoveel stukken zijn er niet.  [nieuw]
   - `één te weinig` (fout = antwoord − 1) → Dat is één hele pizza te weinig. De noemer past nog één keer meer in de teller.  [nieuw]
-  - `getal uit de vraag` (fout = een getal uit de vraag) → Je hebt een getal uit de breuk overgenomen. Is dat echt het aantal hele pizza's? Hoe vaak past de noemer in de teller?  [nieuw]
   - `andere fout` (andere fout) → Hoe vaak past de noemer in de teller? Zoveel hele pizza's zijn het.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-01): de hints zijn geschreven voor 'Je hebt #/# [ding]. Hoeveel hele pizza's zijn dat? Er blijft ook nog een stuk over. Typ alleen het aantal hele pizza's.'. Nakijken of ze nog passen.
 - Status: hints klaar

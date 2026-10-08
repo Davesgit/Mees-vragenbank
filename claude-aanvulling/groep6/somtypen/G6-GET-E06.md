@@ -26,7 +26,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1044 → Je zit er één tiental naast. Tel de tientallen nog eens rustig na. · 1055 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.
 
 - **Hint 1 (te schrijven):** Splits het eerste getal in tientallen en eenheden.
-- **Hint 2 (te schrijven):** Doe elk stuk keer het tweede getal. Tel de uitkomsten daarna bij elkaar op.
+- **Hint 2 (te schrijven):** Splits het eerste getal in tientallen en eenheden. Doe elk stuk keer het tweede getal. Tel de uitkomsten daarna bij elkaar op.
 - **Ouderzin:** Je kind rekent een keersom uit met twee getallen van twee cijfers.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt de getallen opgeteld. Kijk naar het teken: het is een keersom.  [nieuw]

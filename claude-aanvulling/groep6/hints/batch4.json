@@ -918,7 +918,7 @@
    "nrOrigineel": 7,
    "somtypeOrigineel": "[schema] strook",
    "hint1": "Maak eerst van alles meters: één kilometer is duizend meter.",
-   "hint2": "Tel daarna alle stukken bij elkaar op. Zo lang is de hele strook.",
+   "hint2": "Maak van alle stukken meters, en tel ze daarna bij elkaar op. Zo lang is de hele strook.",
    "ouderzin": "Je kind tekent afstanden als één strook en rekent kilometers om naar meters.",
    "foutHints": [
     {
@@ -1377,6 +1377,374 @@
     "op": "2026-10-01"
    },
    "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E01",
+   "somtype": "# hm = □ m",
+   "somtypeOrigineel": "# hm = □ m",
+   "hint1": "Eén hectometer (hm) is honderd meter (m). Een meter is kleiner dan een hectometer, dus het getal wordt groter.",
+   "hint2": "Doe het aantal hectometer keer honderd: schrijf er twee nullen achter.",
+   "ouderzin": "Je kind rekent lengtematen om: van hectometer naar meter (keer honderd).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Eén hectometer is honderd meter: doe keer honderd.",
+     "tekstSterker": "Een hectometer is honderd meter: ongeveer zo lang als een voetbalveld. Bij elke hectometer horen honderd meter. Het getal wordt dus groter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je keer duizend gedaan? Eén hectometer is honderd meter: doe keer honderd.",
+     "tekstSterker": "Duizend meter is één kilometer, en een hectometer is kleiner dan een kilometer. Schrijf twee nullen achter het aantal hectometer, niet drie."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Heb je keer tien gedaan? Eén hectometer is honderd meter: doe keer honderd.",
+     "tekstSterker": "Een hectometer is honderd meter: ongeveer zo lang als een voetbalveld. Schrijf twee nullen achter het aantal hectometer, niet één."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter.",
+     "tekstSterker": "Honderd heeft twee nullen. Doe het aantal hectometer keer honderd, niet keer twee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén hectometer (hm) is honderd meter (m). Doe het aantal hectometer keer honderd.",
+     "tekstSterker": "Reken na: deel je antwoord door honderd. Komt daar het aantal hectometer uit de vraag uit?"
+    }
+   ],
+   "claudeVervangen": [],
+   "koppeling": "claudeId",
+   "nr": 7,
+   "nrOrigineel": 9
+  },
+  {
+   "doel": "G6-MEET-E01",
+   "somtype": "# m = □ hm",
+   "somtypeOrigineel": "# m = □ hm",
+   "hint1": "Eén hectometer (hm) is honderd meter (m). Een hectometer is groter dan een meter, dus het getal wordt kleiner.",
+   "hint2": "Deel het aantal meter door honderd: haal er twee nullen af.",
+   "ouderzin": "Je kind rekent lengtematen om: van meter naar hectometer (gedeeld door honderd).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Honderd meter is één hectometer: deel door honderd.",
+     "tekstSterker": "Een hectometer is honderd meter: ongeveer zo lang als een voetbalveld. Bij honderd meter hoort één hectometer. Het getal wordt dus kleiner."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je door tien gedeeld? Honderd meter is één hectometer: deel door honderd.",
+     "tekstSterker": "Een hectometer is honderd meter: ongeveer zo lang als een voetbalveld. Haal twee nullen van het aantal meter af, niet één."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Heb je door duizend gedeeld? Honderd meter is één hectometer: deel door honderd.",
+     "tekstSterker": "Duizend meter is één kilometer, en een hectometer is kleiner dan een kilometer. Haal twee nullen van het aantal meter af, niet drie."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af.",
+     "tekstSterker": "Honderd heeft twee nullen. Deel het aantal meter door honderd, niet door twee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén hectometer (hm) is honderd meter (m). Deel het aantal meter door honderd.",
+     "tekstSterker": "Reken na: doe je antwoord keer honderd. Komt daar het aantal meter uit de vraag uit?"
+    }
+   ],
+   "claudeVervangen": [],
+   "koppeling": "claudeId",
+   "nr": 8,
+   "nrOrigineel": 11
+  },
+  {
+   "doel": "G6-MEET-E01",
+   "somtype": "# km = □ hm",
+   "somtypeOrigineel": "# km = □ hm",
+   "hint1": "Eén kilometer (km) is tien hectometer (hm). Een hectometer is kleiner dan een kilometer, dus het getal wordt groter.",
+   "hint2": "Doe het aantal kilometer keer tien: schrijf er een nul achter.",
+   "ouderzin": "Je kind rekent lengtematen om: van kilometer naar hectometer (keer tien).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Eén kilometer is tien hectometer: doe keer tien.",
+     "tekstSterker": "Een hectometer is honderd meter: ongeveer zo lang als een voetbalveld. Bij elke kilometer horen tien hectometer. Het getal wordt dus groter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je keer honderd gedaan? Eén kilometer is tien hectometer: doe keer tien.",
+     "tekstSterker": "Honderd is het aantal meter in één hectometer. In één kilometer passen tien hectometer. Schrijf één nul achter het aantal kilometer, niet twee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kilometer (km) is tien hectometer (hm). Doe het aantal kilometer keer tien.",
+     "tekstSterker": "Reken na: deel je antwoord door tien. Komt daar het aantal kilometer uit de vraag uit?"
+    }
+   ],
+   "claudeVervangen": [],
+   "koppeling": "claudeId",
+   "nr": 9,
+   "nrOrigineel": 10
+  },
+  {
+   "doel": "G6-MEET-E01",
+   "somtype": "# hm = □ km",
+   "somtypeOrigineel": "# hm = □ km",
+   "hint1": "Eén kilometer (km) is tien hectometer (hm). Een kilometer is groter dan een hectometer, dus het getal wordt kleiner.",
+   "hint2": "Deel het aantal hectometer door tien: haal er een nul af.",
+   "ouderzin": "Je kind rekent lengtematen om: van hectometer naar kilometer (gedeeld door tien).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Tien hectometer is één kilometer: deel door tien.",
+     "tekstSterker": "Een hectometer is honderd meter: ongeveer zo lang als een voetbalveld. Bij tien hectometer hoort één kilometer. Het getal wordt dus kleiner."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Heb je door honderd gedeeld? Tien hectometer is één kilometer: deel door tien.",
+     "tekstSterker": "Honderd is het aantal meter in één hectometer. Tien hectometer is één kilometer. Haal één nul van het aantal hectometer af, niet twee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kilometer (km) is tien hectometer (hm). Deel het aantal hectometer door tien.",
+     "tekstSterker": "Reken na: doe je antwoord keer tien. Komt daar het aantal hectometer uit de vraag uit?"
+    }
+   ],
+   "claudeVervangen": [],
+   "koppeling": "claudeId",
+   "nr": 10,
+   "nrOrigineel": 8
+  },
+  {
+   "doel": "G6-MEET-E04",
+   "somtype": "# L = □ dl",
+   "somtypeOrigineel": "# L = □ dl",
+   "hint1": "Eén liter (L) is tien deciliter (dl). Een deciliter is kleiner dan een liter, dus het getal wordt groter.",
+   "hint2": "Doe het aantal liter keer tien: schrijf er een nul achter.",
+   "ouderzin": "Je kind rekent inhoudsmaten om: van liter naar deciliter (keer tien).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Eén liter is tien deciliter: doe keer tien.",
+     "tekstSterker": "Een deciliter is ongeveer een half glas: in een gewoon glas gaat ruim twee deciliter. Bij elke liter horen tien deciliter. Het getal wordt dus groter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je keer honderd gedaan? Eén liter is tien deciliter: doe keer tien.",
+     "tekstSterker": "Honderd hoort bij centiliter: één liter is honderd centiliter. Een deciliter is groter dan een centiliter. Schrijf één nul achter het aantal liter, niet twee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén liter (L) is tien deciliter (dl). Doe het aantal liter keer tien.",
+     "tekstSterker": "Reken na: deel je antwoord door tien. Komt daar het aantal liter uit de vraag uit?"
+    }
+   ],
+   "claudeVervangen": [],
+   "koppeling": "claudeId",
+   "nr": 5,
+   "nrOrigineel": 5
+  },
+  {
+   "doel": "G6-MEET-E04",
+   "somtype": "# dl = □ L",
+   "somtypeOrigineel": "# dl = □ L",
+   "hint1": "Eén liter (L) is tien deciliter (dl). Een liter is groter dan een deciliter, dus het getal wordt kleiner.",
+   "hint2": "Deel het aantal deciliter door tien: haal er een nul af.",
+   "ouderzin": "Je kind rekent inhoudsmaten om: van deciliter naar liter (gedeeld door tien).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Tien deciliter is één liter: deel door tien.",
+     "tekstSterker": "Een deciliter is ongeveer een half glas: in een gewoon glas gaat ruim twee deciliter. Bij tien deciliter hoort één liter. Het getal wordt dus kleiner."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Heb je door honderd gedeeld? Tien deciliter is één liter: deel door tien.",
+     "tekstSterker": "Honderd hoort bij centiliter: honderd centiliter is één liter. Een deciliter is groter dan een centiliter. Haal één nul van het aantal deciliter af, niet twee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén liter (L) is tien deciliter (dl). Deel het aantal deciliter door tien.",
+     "tekstSterker": "Reken na: doe je antwoord keer tien. Komt daar het aantal deciliter uit de vraag uit?"
+    }
+   ],
+   "claudeVervangen": [],
+   "koppeling": "claudeId",
+   "nr": 6,
+   "nrOrigineel": 6
+  },
+  {
+   "doel": "G6-MEET-E04",
+   "somtype": "# dl = □ ml",
+   "somtypeOrigineel": "# dl = □ ml",
+   "hint1": "Eén deciliter (dl) is honderd milliliter (ml). Een milliliter is kleiner dan een deciliter, dus het getal wordt groter.",
+   "hint2": "Doe het aantal deciliter keer honderd: schrijf er twee nullen achter.",
+   "ouderzin": "Je kind rekent inhoudsmaten om: van deciliter naar milliliter (keer honderd).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Eén deciliter is honderd milliliter: doe keer honderd.",
+     "tekstSterker": "Een deciliter is ongeveer een half glas: in een gewoon glas gaat ruim twee deciliter. Bij elke deciliter horen honderd milliliter. Het getal wordt dus groter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je keer duizend gedaan? Eén deciliter is honderd milliliter: doe keer honderd.",
+     "tekstSterker": "Duizend milliliter is één liter, en een deciliter is kleiner dan een liter. Schrijf twee nullen achter het aantal deciliter, niet drie."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Heb je keer tien gedaan? Eén deciliter is honderd milliliter: doe keer honderd.",
+     "tekstSterker": "Tien hoort bij centiliter: één deciliter is tien centiliter. Een milliliter is nog kleiner. Schrijf twee nullen achter het aantal deciliter, niet één."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter.",
+     "tekstSterker": "Honderd heeft twee nullen. Doe het aantal deciliter keer honderd, niet keer twee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén deciliter (dl) is honderd milliliter (ml). Doe het aantal deciliter keer honderd.",
+     "tekstSterker": "Reken na: deel je antwoord door honderd. Komt daar het aantal deciliter uit de vraag uit?"
+    }
+   ],
+   "claudeVervangen": [],
+   "koppeling": "claudeId",
+   "nr": 7,
+   "nrOrigineel": 7
+  },
+  {
+   "doel": "G6-MEET-E04",
+   "somtype": "# ml = □ dl",
+   "somtypeOrigineel": "# ml = □ dl",
+   "hint1": "Eén deciliter (dl) is honderd milliliter (ml). Een deciliter is groter dan een milliliter, dus het getal wordt kleiner.",
+   "hint2": "Deel het aantal milliliter door honderd: haal er twee nullen af.",
+   "ouderzin": "Je kind rekent inhoudsmaten om: van milliliter naar deciliter (gedeeld door honderd).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Honderd milliliter is één deciliter: deel door honderd.",
+     "tekstSterker": "Een deciliter is ongeveer een half glas: in een gewoon glas gaat ruim twee deciliter. Bij honderd milliliter hoort één deciliter. Het getal wordt dus kleiner."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je door tien gedeeld? Honderd milliliter is één deciliter: deel door honderd.",
+     "tekstSterker": "Tien milliliter is één centiliter. Een deciliter is groter: honderd milliliter. Haal twee nullen van het aantal milliliter af, niet één."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Heb je door duizend gedeeld? Honderd milliliter is één deciliter: deel door honderd.",
+     "tekstSterker": "Duizend milliliter is één liter, en een deciliter is kleiner dan een liter. Haal twee nullen van het aantal milliliter af, niet drie."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af.",
+     "tekstSterker": "Honderd heeft twee nullen. Deel het aantal milliliter door honderd, niet door twee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén deciliter (dl) is honderd milliliter (ml). Deel het aantal milliliter door honderd.",
+     "tekstSterker": "Reken na: doe je antwoord keer honderd. Komt daar het aantal milliliter uit de vraag uit?"
+    }
+   ],
+   "claudeVervangen": [],
+   "koppeling": "claudeId",
+   "nr": 8,
+   "nrOrigineel": 8
   }
  ]
 }

@@ -13,7 +13,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “[lijngrafiek] Hoeveel [ding] kwamen er bij van [maand] naar [maand]?” (koppeling: claudeId)
 - Items: **60** · Claude-doelen: G3 (60) · regel: G6-D01-lijngrafiek
 - Getallenruimte: grafiek tot 200 · type: meerkeuze
-- Denkfouten (Claude): grafiek-verkeerd-afgelezen (58), getal-overgenomen (32), verkeerde-bewerking (30)
+- Denkfouten (Claude): grafiek-verkeerd-afgelezen (55), getal-overgenomen (27), verkeerde-bewerking (23), streepjes-geteld (8), een-streepje-te-weinig (7)
 - Verschillende Claude-fout-hints: 1 (meest: “Lees de vraag nog eens: komt er iets bij, of gaat er iets af?”)
 - Voorbeelden:
   - `G6-VBN-E02-claude-bank-049` (Claude G3, bank, niveau 3 → toepassen)
@@ -29,19 +29,19 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 20  (controle: ok)
     - **Fout-hints (Claude):** 130 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** Zoek de twee maanden uit de vraag onder de grafiek. Lees bij allebei af hoe hoog de stip staat. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.
-- **Hint 2 (te schrijven):** Hoeveel kwamen er bij? Haal het aantal van de eerste maand af van het aantal van de tweede maand.
-- **Ouderzin:** Je kind leest in een lijngrafiek twee maanden af en rekent uit hoeveel er van de ene naar de andere maand bij kwamen.
+- **Hint 1 (te schrijven):** Zoek de twee maanden uit de vraag onder de grafiek. Lees bij allebei af hoe hoog de stip staat. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.
+- **Hint 2 (te schrijven):** In welke maand waren het er meer? Haal het kleinste aantal van het grootste aantal af.
+- **Ouderzin:** Je kind leest in een lijngrafiek twee maanden af en rekent uit hoeveel meer het er in de ene maand waren dan in de andere.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `de tweede maand` (Claudes sleutel: getal-overgenomen) → Dat is het aantal in de tweede maand van de vraag. Hoeveel waren het in de eerste maand? Haal het aantal van de eerste maand ervan af: dat is wat erbij kwam.  [Claude, taalfix]
-  - `opgeteld` (Claudes sleutel: verkeerde-bewerking) → Je hebt de twee maanden bij elkaar opgeteld. De vraag is hoeveel er bij kwamen. Hoeveel meer is de tweede maand dan de eerste?  [Claude, taalfix]
-  - `de tweede maand (regel)` (fout = de tweede maand uit de vraag) → Dat is het aantal in de tweede maand van de vraag. Hoeveel waren het in de eerste maand? Haal het aantal van de eerste maand ervan af: dat is wat erbij kwam.  [nieuw]
+  - `de tweede maand` (Claudes sleutel: getal-overgenomen) → Dat is het aantal van één maand uit de vraag. De vraag is hoeveel meer het in de ene maand was dan in de andere. Haal het kleinste aantal van het grootste aantal af.  [Claude, taalfix]
+  - `opgeteld` (Claudes sleutel: verkeerde-bewerking) → Je hebt de twee maanden bij elkaar opgeteld. De vraag is hoeveel meer het in de ene maand was dan in de andere. Haal het kleinste aantal van het grootste aantal af.  [Claude, taalfix]
+  - `de tweede maand (regel)` (fout = de tweede maand uit de vraag) → Dat is het aantal van één maand uit de vraag. De vraag is hoeveel meer het in de ene maand was dan in de andere. Haal het kleinste aantal van het grootste aantal af.  [nieuw]
   - `de andere maand (regel)` (fout = de andere maand uit de vraag) → Dat is het aantal van één maand uit de vraag. De vraag is hoeveel meer het in de ene maand was dan in de andere. Haal het kleinste aantal van het grootste aantal af.  [nieuw]
   - `streepjes geteld` (fout = antwoord : perstreep) → Is dat het aantal streepjes? Elk streepje is meer dan één. Hoeveel is elk streepje? Reken dan het aantal streepjes keer dat getal.  [nieuw]
   - `één streepje te veel` (fout = antwoord + perstreep) → Dat is één streepje te veel. Lees de twee stippen nog eens af en tel de streepjes goed.  [nieuw]
   - `één streepje te weinig` (fout = antwoord − perstreep) → Dat is één streepje te weinig. Lees de twee stippen nog eens af en tel de streepjes goed.  [nieuw]
-  - `anders afgelezen` (Claudes sleutel: grafiek-verkeerd-afgelezen) → Lees de twee stippen nog eens af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Haal dan de eerste maand van de tweede af.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Lees de twee maanden uit de vraag af. Haal het aantal van de eerste maand af van het aantal van de tweede maand.  [nieuw]
+  - `anders afgelezen` (Claudes sleutel: grafiek-verkeerd-afgelezen) → Lees de twee stippen nog eens af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Haal dan het kleinste aantal van het grootste af.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Lees de twee maanden uit de vraag af. Haal het kleinste aantal van het grootste aantal af.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 2: [lijngrafiek] Hoeveel [ding] waren er in [maand]?
@@ -66,7 +66,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 15 → Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?
 
 - **Hint 1 (te schrijven):** Zoek de maand uit de vraag onder de grafiek. Ga recht omhoog naar de stip.
-- **Hint 2 (te schrijven):** Zoek het getal langs de zijkant op dezelfde hoogte als de stip, of net eronder. Tel dan de streepjes tot de stip. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.
+- **Hint 2 (te schrijven):** Zoek het getal langs de zijkant op dezelfde hoogte als de stip, of net eronder. Tel dan de streepjes tot de stip. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.
 - **Ouderzin:** Je kind leest in een lijngrafiek af hoeveel het er in één maand waren.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `andere maand` (Claudes sleutel: klok-verkeerd-gelezen) → Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.  [Claude, taalfix]
@@ -77,7 +77,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `streepjes geteld` (fout = antwoord : perstreep) → Is dat het aantal streepjes? Elk streepje is meer dan één. Hoeveel is elk streepje? Reken dan het aantal streepjes keer dat getal.  [nieuw]
   - `één streepje te veel` (fout = antwoord + perstreep) → Dat is één streepje te veel. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens.  [nieuw]
   - `één streepje te weinig` (fout = antwoord − perstreep) → Dat is één streepje te weinig. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens.  [nieuw]
-  - `anders afgelezen` (Claudes sleutel: grafiek-verkeerd-afgelezen) → Lees de stip nog eens af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Tel dan vanaf het getal op of net onder de stip verder.  [Claude, taalfix]
+  - `anders afgelezen` (Claudes sleutel: grafiek-verkeerd-afgelezen) → Lees de stip nog eens af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Tel dan vanaf het getal op of net onder de stip verder.  [Claude, taalfix]
   - `andere fout` (andere fout) → Zoek de maand uit de vraag en ga recht omhoog naar de stip. Tel vanaf het getal langs de zijkant op of net onder de stip de streepjes verder.  [nieuw]
 - Status: hints klaar
 
@@ -102,7 +102,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 1600  (controle: ok)
     - **Fout-hints (Claude):** 1000 → Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?
 
-- **Hint 1 (te schrijven):** Lees bij elke maand af hoe hoog de stip staat. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.
+- **Hint 1 (te schrijven):** Lees bij elke maand af hoe hoog de stip staat. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.
 - **Hint 2 (te schrijven):** Tel de aantallen van alle maanden bij elkaar op. Tel elke maand precies één keer.
 - **Ouderzin:** Je kind leest in een lijngrafiek alle maanden af en telt ze bij elkaar op.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -113,7 +113,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `maand dubbel (regel)` (fout = alle maanden samen plus één maand) → Tel nog eens. Heb je elke maand precies één keer meegeteld? Tel de aantallen van alle maanden bij elkaar op.  [nieuw]
   - `één maand (regel)` (fout = de waarde van één maand) → Is dat het aantal van één maand? De vraag gaat over alle maanden samen. Tel de aantallen van alle maanden bij elkaar op.  [nieuw]
   - `streepjes geteld` (fout = antwoord : perstreep) → Is dat het aantal streepjes? Elk streepje is meer dan één. Hoeveel is elk streepje? Lees zo bij elke maand af hoeveel het er waren, en tel die aantallen op.  [nieuw]
-  - `anders afgelezen` (Claudes sleutel: grafiek-verkeerd-afgelezen) → Lees bij elke maand de stip goed af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Tel daarna alle maanden op.  [Claude, taalfix]
+  - `anders afgelezen` (Claudes sleutel: grafiek-verkeerd-afgelezen) → Lees bij elke maand de stip goed af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Tel daarna alle maanden op.  [Claude, taalfix]
   - `een paar maanden (regel)` (fout = de som van een deel van de maanden) → Dat is nog niet alles. Heb je elke maand precies één keer meegeteld? Tel de aantallen van alle maanden bij elkaar op.  [nieuw]
   - `andere fout` (andere fout) → Lees bij elke maand het aantal af en tel alle maanden bij elkaar op.  [nieuw]
 - Status: hints klaar

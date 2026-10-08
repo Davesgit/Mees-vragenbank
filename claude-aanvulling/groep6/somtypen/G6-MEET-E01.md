@@ -2,7 +2,7 @@
 
 Onze omschrijving: Hectometer; meetgetallen met komma; herleiden incl. hm · in onze bank: 8 items
 
-Claude-vragen gemapt: **113** in **6** somtypen · twijfel (voorstel dit doel): **0**
+Claude-vragen gemapt: **149** in **10** somtypen · twijfel (voorstel dit doel): **0**
 
 Invoer voor het schrijven van hint 1 (`hint`) en hint 2 (`sterkereHint`) per somtype. Velden `hint`, `sterkereHint` en `ouderzin` zijn nog leeg.
 Elk somtype heeft een vaste sleutel (nrOrigineel + somtypeOrigineel, bevroren/somtype_nr_v*.json): neem die over in hints/batch*.json, dan blijft de hint gekoppeld als de nummering of de kop verandert.
@@ -185,11 +185,127 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 2 km is 2000 meter. Samen met 1500 meter wordt de strook 2000 + 1500 meter. Dat is 3500 meter.
 
 - **Hint 1 (te schrijven):** Maak eerst van alles meters: één kilometer is duizend meter.
-- **Hint 2 (te schrijven):** Tel daarna alle stukken bij elkaar op. Zo lang is de hele strook.
+- **Hint 2 (te schrijven):** Maak van alle stukken meters, en tel ze daarna bij elkaar op. Zo lang is de hele strook.
 - **Ouderzin:** Je kind tekent afstanden als één strook en rekent kilometers om naar meters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `niet goed omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Reken de kilometers goed om naar meters: één kilometer is duizend meter. Tel daarna alles bij elkaar op.  [Claude, taalfix]
   - `in kilometers` (Claudes sleutel: plaatswaarde-verkeerd) → Dat is het aantal kilometer. Hoeveel meter is dat? Eén kilometer is duizend meter.  [Claude, taalfix]
   - `afgehaald` (Claudes sleutel: verkeerde-bewerking) → Je hebt de stukken van elkaar afgehaald. De strook is alles samen: tel de stukken bij elkaar op.  [Claude, taalfix]
   - `andere fout` (andere fout) → Maak van alle stukken meters: één kilometer is duizend meter. Tel de stukken daarna bij elkaar op.  [nieuw]
+- Status: hints klaar
+
+## Somtype 7: # hm = □ m
+
+- Sleutel: nrOrigineel **9** · somtypeOrigineel “# hm = □ m” (koppeling: claudeId)
+- Items: **10** · Claude-doelen: merge-generator G6 ronde 10 (hm/dl) (10) · regel: G6-r10 hm/dl generator, G6-r10 hm/dl contextitem (D-#419)
+- Getallenruimte: 0–100.000 · type: invullen
+- Denkfouten (Claude): —
+- Verschillende Claude-fout-hints: 2 (meest: “Kijk goed hoeveel nullen erbij of eraf moeten.”)
+- Voorbeelden:
+  - `G6-MEET-E01-merge-gen-001` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 3 hm = □ m
+    - **Antwoord:** 300  (controle: ok)
+    - **Fout-hints (Claude):** 4100 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 41.000 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 1 hm = 100 m, dus 3 × 100 = 300.
+  - `G6-MEET-E01-merge-gen-006` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 58 hm = □ m
+    - **Antwoord:** 5800  (controle: ok)
+    - **Fout-hints (Claude):** 4100 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 41.000 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 1 hm = 100 m, dus 58 × 100 = 5800.
+
+- **Hint 1 (te schrijven):** Eén hectometer (hm) is honderd meter (m). Een meter is kleiner dan een hectometer, dus het getal wordt groter.
+- **Hint 2 (te schrijven):** Doe het aantal hectometer keer honderd: schrijf er twee nullen achter.
+- **Ouderzin:** Je kind rekent lengtematen om: van hectometer naar meter (keer honderd).
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet omgerekend` (fout = getal1) → Je hebt het getal niet omgerekend. Eén hectometer is honderd meter: doe keer honderd.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Heb je keer duizend gedaan? Eén hectometer is honderd meter: doe keer honderd.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Heb je keer tien gedaan? Eén hectometer is honderd meter: doe keer honderd.  [nieuw]
+  - `aantal nullen als factor (keer)` (fout = getal1 keer het aantal nullen van de factor) → Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter.  [nieuw]
+  - `andere fout` (andere fout) → Eén hectometer (hm) is honderd meter (m). Doe het aantal hectometer keer honderd.  [nieuw]
+- Status: hints klaar
+
+## Somtype 8: # m = □ hm
+
+- Sleutel: nrOrigineel **11** · somtypeOrigineel “# m = □ hm” (koppeling: claudeId)
+- Items: **9** · Claude-doelen: merge-generator G6 ronde 10 (hm/dl) (9) · regel: G6-r10 hm/dl generator, G6-r10 hm/dl contextitem (D-#419)
+- Getallenruimte: 0–100.000 · type: invullen
+- Denkfouten (Claude): —
+- Verschillende Claude-fout-hints: 2 (meest: “Kijk goed hoeveel nullen erbij of eraf moeten.”)
+- Voorbeelden:
+  - `G6-MEET-E01-merge-gen-009` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 400 m = □ hm
+    - **Antwoord:** 4  (controle: ok)
+    - **Fout-hints (Claude):** 4100 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 41.000 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 100 m = 1 hm, dus 400 : 100 = 4.
+  - `G6-MEET-E01-merge-gen-014` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 5000 m = □ hm
+    - **Antwoord:** 50  (controle: ok)
+    - **Fout-hints (Claude):** 4100 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 41.000 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 100 m = 1 hm, dus 5000 : 100 = 50.
+
+- **Hint 1 (te schrijven):** Eén hectometer (hm) is honderd meter (m). Een hectometer is groter dan een meter, dus het getal wordt kleiner.
+- **Hint 2 (te schrijven):** Deel het aantal meter door honderd: haal er twee nullen af.
+- **Ouderzin:** Je kind rekent lengtematen om: van meter naar hectometer (gedeeld door honderd).
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet omgerekend` (fout = getal1) → Je hebt het getal niet omgerekend. Honderd meter is één hectometer: deel door honderd.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Heb je door tien gedeeld? Honderd meter is één hectometer: deel door honderd.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Heb je door duizend gedeeld? Honderd meter is één hectometer: deel door honderd.  [nieuw]
+  - `aantal nullen als factor (delen)` (fout = getal1 gedeeld door het aantal nullen van de factor) → Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af.  [nieuw]
+  - `andere fout` (andere fout) → Eén hectometer (hm) is honderd meter (m). Deel het aantal meter door honderd.  [nieuw]
+- Status: hints klaar
+
+## Somtype 9: # km = □ hm
+
+- Sleutel: nrOrigineel **10** · somtypeOrigineel “# km = □ hm” (koppeling: claudeId)
+- Items: **9** · Claude-doelen: merge-generator G6 ronde 10 (hm/dl) (9) · regel: G6-r10 hm/dl generator, G6-r10 hm/dl contextitem (D-#419)
+- Getallenruimte: 0–100.000 · type: invullen
+- Denkfouten (Claude): —
+- Verschillende Claude-fout-hints: 2 (meest: “Je hebt het getal niet omgerekend.”)
+- Voorbeelden:
+  - `G6-MEET-E01-merge-gen-017` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 2 km = □ hm
+    - **Antwoord:** 20  (controle: ok)
+    - **Fout-hints (Claude):** 4100 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 41.000 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 1 km = 10 hm, dus 2 × 10 = 20.
+  - `G6-MEET-E01-merge-gen-022` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 37 km = □ hm
+    - **Antwoord:** 370  (controle: ok)
+    - **Fout-hints (Claude):** 4100 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 41.000 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 1 km = 10 hm, dus 37 × 10 = 370.
+
+- **Hint 1 (te schrijven):** Eén kilometer (km) is tien hectometer (hm). Een hectometer is kleiner dan een kilometer, dus het getal wordt groter.
+- **Hint 2 (te schrijven):** Doe het aantal kilometer keer tien: schrijf er een nul achter.
+- **Ouderzin:** Je kind rekent lengtematen om: van kilometer naar hectometer (keer tien).
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet omgerekend` (fout = getal1) → Je hebt het getal niet omgerekend. Eén kilometer is tien hectometer: doe keer tien.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Heb je keer honderd gedaan? Eén kilometer is tien hectometer: doe keer tien.  [nieuw]
+  - `andere fout` (andere fout) → Eén kilometer (km) is tien hectometer (hm). Doe het aantal kilometer keer tien.  [nieuw]
+- Status: hints klaar
+
+## Somtype 10: # hm = □ km
+
+- Sleutel: nrOrigineel **8** · somtypeOrigineel “# hm = □ km” (koppeling: claudeId)
+- Items: **8** · Claude-doelen: merge-generator G6 ronde 10 (hm/dl) (8) · regel: G6-r10 hm/dl generator
+- Getallenruimte: 0–100.000 · type: invullen
+- Denkfouten (Claude): —
+- Verschillende Claude-fout-hints: 1 (meest: “Je hebt het getal niet omgerekend.”)
+- Voorbeelden:
+  - `G6-MEET-E01-merge-gen-025` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 30 hm = □ km
+    - **Antwoord:** 3  (controle: ok)
+    - **Fout-hints (Claude):** 4100 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 41.000 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 10 hm = 1 km, dus 30 : 10 = 3.
+  - `G6-MEET-E01-merge-gen-029` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 250 hm = □ km
+    - **Antwoord:** 25  (controle: ok)
+    - **Fout-hints (Claude):** 4100 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 41.000 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 10 hm = 1 km, dus 250 : 10 = 25.
+
+- **Hint 1 (te schrijven):** Eén kilometer (km) is tien hectometer (hm). Een kilometer is groter dan een hectometer, dus het getal wordt kleiner.
+- **Hint 2 (te schrijven):** Deel het aantal hectometer door tien: haal er een nul af.
+- **Ouderzin:** Je kind rekent lengtematen om: van hectometer naar kilometer (gedeeld door tien).
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet omgerekend` (fout = getal1) → Je hebt het getal niet omgerekend. Tien hectometer is één kilometer: deel door tien.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Heb je door honderd gedeeld? Tien hectometer is één kilometer: deel door tien.  [nieuw]
+  - `andere fout` (andere fout) → Eén kilometer (km) is tien hectometer (hm). Deel het aantal hectometer door tien.  [nieuw]
 - Status: hints klaar

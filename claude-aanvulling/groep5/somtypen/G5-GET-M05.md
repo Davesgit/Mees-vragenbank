@@ -314,7 +314,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `één groepje te weinig` (fout = antwoord − getal2) → Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
   - `in elk groepje één te veel` (fout = antwoord + getal1) → Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
   - `in elk groepje één te weinig` (fout = antwoord − getal1) → Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
-  - `twee te veel` (fout = antwoord + 2) → Bijna! Dat is twee te veel. Reken de tafel nog eens na.  [nieuw]
+  - `twee te veel` (fout = antwoord + 2) → Dat is twee te veel. Reken de tafel nog eens na.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `andere fout` (andere fout) → Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent.  [nieuw]

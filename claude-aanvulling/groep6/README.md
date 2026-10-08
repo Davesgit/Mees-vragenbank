@@ -150,3 +150,9 @@ Deze eisen volgen uit de merge-punten. De merge-data voldoen eraan, en de genoem
 8. **Breukplaatje (#277):** komt er een plaatje bij een breuk, dan is kleur niet het enige kenmerk (ook arcering of een lijn), net als #227.
 9. **Plattegrond met hoogtegetallen (#295):** de H2-tekst `hint2MetPlaatje` (MKU-E03 #1) gaat pas live als er een echt plaatje bij Hint 2 is. Tot dan toont de app de gewone Hint 2. De plattegrond is geen knop: het kind tikt niet op vakjes, het antwoord gaat via de invoer.
 10. **Op `id`, niet op `nr`** (G5 #329): somtypenummers schuiven als er een somtype bijkomt (ronde 9: GET-E06).
+
+## Ronde 10 (8 okt 2026, build 11:21:56; Didactiek gate-ronde9-deelA en -deelB, uitgevoerd door Overzicht)
+- Zie `merge-fixlijst.md` (ronde 10).
+- Volgorde in de keten: `bash keten_r8.sh` → `python3 hints/patch_batch4.py` (de hm/dl-entries komen pas in batch4 als de items er zijn) → `scripts/sync_hint_keys.py` → `scripts/apply_hints.py` → checks.
+- Nieuwe somtypes: MEET-E01 #8–#11 (hm) en MEET-E04 #5–#8 (dl), bevroren in `somtype_nr_v6.json`.
+- Motor: #380 (letterlijke regels alleen op het hele getal, plus de regel 'de helft van het aantal hokjes') en #390 (een getal uit de vraag krijgt nooit ±1 of 'Bijna!').

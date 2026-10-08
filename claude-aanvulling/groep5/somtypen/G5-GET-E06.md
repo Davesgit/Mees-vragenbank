@@ -82,7 +82,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Tel eerst de hele euro's: 1 + 1 = 2. Dan de centen: 80 + 70 = 150 cent. Samen €3,50.
 
 - **Hint 1 (te schrijven):** Tel de twee prijzen bij elkaar op. Begin met de hele euro's.
-- **Hint 2 (te schrijven):** Tel daarna de centen bij elkaar. Komen de centen samen op honderd cent of meer? Dan komt er een euro bij.
+- **Hint 2 (te schrijven):** Tel de hele euro's bij elkaar, en tel de centen bij elkaar. Komen de centen samen op honderd cent of meer? Dan komt er een euro bij.
 - **Ouderzin:** Je kind rekent uit hoeveel twee dingen in de winkel samen kosten.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `euro te veel` (Claudes sleutel: onthouden-vergeten) → Dat is een euro te veel. Komen de centen samen op honderd cent of meer? Alleen dan komt er een euro bij.  [Claude, taalfix]

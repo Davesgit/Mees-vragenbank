@@ -181,3 +181,8 @@ Script: `python3 scripts/build_g5.py`. Dat draait ook `sync_hint_keys.py` en `ap
 - **#329:** E05 #32 053 heeft een kop zonder tabel («Op de kinderboerderij tellen ze de bezoekers: …»). **Bord, app en rapporten werken op `id`, niet op `nr`:** `nr` is niet uniek (138 batch-7-items) en de somtypenummers schuiven als er een somtype bijkomt.
 - **#355:** `data/gemapt.json` en elk `per_doel`-bestand hebben `hintsSyncOp` (ISO, Amsterdam) en `hintsBatches` (batch + md5[:12]), ook in G6–G8.
 - Motor: `scripts/fout_regels.py` is gelijk in G5–G8 (md5 2e5f773d…); motor_regressie G5: 4845 items, 0 anders.
+
+## Ronde 10 (8 okt 2026, build 11:20:45; Didactiek gate-ronde9-didactiek.md, uitgevoerd door Overzicht)
+- Zie `merge-fixlijst.md` (ronde 10). Nieuw: `scripts/fixlijst_g5_r10.py`; GELDIG (#360) en BIJNA390 (#390) in `check_merge_notatie.py` (gedeeld met G6–G8, `tools/geldig_check.py`, `tools/bijna390_check.py`).
+- **Guard opties > 1000 (#302/#361)** geldt voor heel G5, **behalve G5-MEET-\***. Reden: bij Meten reken je maten om (1 L = 1000 ml, 1 kg = 1000 g, 1 km = 1000 m), dus het antwoord en de opties liggen daar vaak zelf boven de 1000. De grens is daar 10.000 (#60: 10.000 is G6). VBN-E01 (staafsommen) valt sinds #361 wél onder de guard.
+- Motor (`scripts/fout_regels.py`, G5–G8): letterlijke regels passen alleen op het hele getal (#380), en een sleutel die een getal uit de vraag is krijgt nooit ±1 of 'Bijna!' (#390).

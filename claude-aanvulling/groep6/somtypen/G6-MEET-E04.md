@@ -2,7 +2,7 @@
 
 Onze omschrijving: dl/cl + herleiden L↔dl/cl/ml; komma-notatie inhoud · in onze bank: 8 items
 
-Claude-vragen gemapt: **120** in **4** somtypen · twijfel (voorstel dit doel): **0**
+Claude-vragen gemapt: **156** in **8** somtypen · twijfel (voorstel dit doel): **0**
 
 Invoer voor het schrijven van hint 1 (`hint`) en hint 2 (`sterkereHint`) per somtype. Velden `hint`, `sterkereHint` en `ouderzin` zijn nog leeg.
 Elk somtype heeft een vaste sleutel (nrOrigineel + somtypeOrigineel, bevroren/somtype_nr_v*.json): neem die over in hints/batch*.json, dan blijft de hint gekoppeld als de nummering of de kop verandert.
@@ -130,4 +130,120 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `aantal nullen als factor (delen)` (fout = getal1 gedeeld door het aantal nullen van de factor) → Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af.  [nieuw]
   - `anders omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Reken nog eens om. Duizend milliliter is één liter: deel door duizend.  [Claude, taalfix]
   - `andere fout` (andere fout) → Eén liter (L) is duizend milliliter (ml). Deel het aantal milliliter door duizend.  [nieuw]
+- Status: hints klaar
+
+## Somtype 5: # L = □ dl
+
+- Sleutel: nrOrigineel **5** · somtypeOrigineel “# L = □ dl” (koppeling: claudeId)
+- Items: **9** · Claude-doelen: merge-generator G6 ronde 10 (hm/dl) (9) · regel: G6-r10 hm/dl generator, G6-r10 hm/dl contextitem (D-#419)
+- Getallenruimte: 0–10.000 · type: invullen
+- Denkfouten (Claude): —
+- Verschillende Claude-fout-hints: 2 (meest: “Je hebt het getal niet omgerekend.”)
+- Voorbeelden:
+  - `G6-MEET-E04-merge-gen-001` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 2 L = □ dl
+    - **Antwoord:** 20  (controle: ok)
+    - **Fout-hints (Claude):** 58 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 29 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 1 L = 10 dl, dus 2 × 10 = 20.
+  - `G6-MEET-E04-merge-gen-006` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 23 L = □ dl
+    - **Antwoord:** 230  (controle: ok)
+    - **Fout-hints (Claude):** 58 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 29 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 1 L = 10 dl, dus 23 × 10 = 230.
+
+- **Hint 1 (te schrijven):** Eén liter (L) is tien deciliter (dl). Een deciliter is kleiner dan een liter, dus het getal wordt groter.
+- **Hint 2 (te schrijven):** Doe het aantal liter keer tien: schrijf er een nul achter.
+- **Ouderzin:** Je kind rekent inhoudsmaten om: van liter naar deciliter (keer tien).
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet omgerekend` (fout = getal1) → Je hebt het getal niet omgerekend. Eén liter is tien deciliter: doe keer tien.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Heb je keer honderd gedaan? Eén liter is tien deciliter: doe keer tien.  [nieuw]
+  - `andere fout` (andere fout) → Eén liter (L) is tien deciliter (dl). Doe het aantal liter keer tien.  [nieuw]
+- Status: hints klaar
+
+## Somtype 6: # dl = □ L
+
+- Sleutel: nrOrigineel **6** · somtypeOrigineel “# dl = □ L” (koppeling: claudeId)
+- Items: **9** · Claude-doelen: merge-generator G6 ronde 10 (hm/dl) (9) · regel: G6-r10 hm/dl generator, G6-r10 hm/dl contextitem (D-#419)
+- Getallenruimte: 0–10.000 · type: invullen
+- Denkfouten (Claude): —
+- Verschillende Claude-fout-hints: 1 (meest: “Je hebt het getal niet omgerekend.”)
+- Voorbeelden:
+  - `G6-MEET-E04-merge-gen-009` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 20 dl = □ L
+    - **Antwoord:** 2  (controle: ok)
+    - **Fout-hints (Claude):** 58 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 29 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 10 dl = 1 L, dus 20 : 10 = 2.
+  - `G6-MEET-E04-merge-gen-014` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 240 dl = □ L
+    - **Antwoord:** 24  (controle: ok)
+    - **Fout-hints (Claude):** 58 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 29 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 10 dl = 1 L, dus 240 : 10 = 24.
+
+- **Hint 1 (te schrijven):** Eén liter (L) is tien deciliter (dl). Een liter is groter dan een deciliter, dus het getal wordt kleiner.
+- **Hint 2 (te schrijven):** Deel het aantal deciliter door tien: haal er een nul af.
+- **Ouderzin:** Je kind rekent inhoudsmaten om: van deciliter naar liter (gedeeld door tien).
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet omgerekend` (fout = getal1) → Je hebt het getal niet omgerekend. Tien deciliter is één liter: deel door tien.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Heb je door honderd gedeeld? Tien deciliter is één liter: deel door tien.  [nieuw]
+  - `andere fout` (andere fout) → Eén liter (L) is tien deciliter (dl). Deel het aantal deciliter door tien.  [nieuw]
+- Status: hints klaar
+
+## Somtype 7: # dl = □ ml
+
+- Sleutel: nrOrigineel **7** · somtypeOrigineel “# dl = □ ml” (koppeling: claudeId)
+- Items: **9** · Claude-doelen: merge-generator G6 ronde 10 (hm/dl) (9) · regel: G6-r10 hm/dl generator, G6-r10 hm/dl contextitem (D-#419)
+- Getallenruimte: 0–10.000 · type: invullen
+- Denkfouten (Claude): —
+- Verschillende Claude-fout-hints: 2 (meest: “Kijk goed hoeveel nullen erbij of eraf moeten.”)
+- Voorbeelden:
+  - `G6-MEET-E04-merge-gen-017` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 2 dl = □ ml
+    - **Antwoord:** 200  (controle: ok)
+    - **Fout-hints (Claude):** 58 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 29 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 1 dl = 100 ml, dus 2 × 100 = 200.
+  - `G6-MEET-E04-merge-gen-022` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 25 dl = □ ml
+    - **Antwoord:** 2500  (controle: ok)
+    - **Fout-hints (Claude):** 58 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 29 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 1 dl = 100 ml, dus 25 × 100 = 2500.
+
+- **Hint 1 (te schrijven):** Eén deciliter (dl) is honderd milliliter (ml). Een milliliter is kleiner dan een deciliter, dus het getal wordt groter.
+- **Hint 2 (te schrijven):** Doe het aantal deciliter keer honderd: schrijf er twee nullen achter.
+- **Ouderzin:** Je kind rekent inhoudsmaten om: van deciliter naar milliliter (keer honderd).
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet omgerekend` (fout = getal1) → Je hebt het getal niet omgerekend. Eén deciliter is honderd milliliter: doe keer honderd.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Heb je keer duizend gedaan? Eén deciliter is honderd milliliter: doe keer honderd.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Heb je keer tien gedaan? Eén deciliter is honderd milliliter: doe keer honderd.  [nieuw]
+  - `aantal nullen als factor (keer)` (fout = getal1 keer het aantal nullen van de factor) → Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter.  [nieuw]
+  - `andere fout` (andere fout) → Eén deciliter (dl) is honderd milliliter (ml). Doe het aantal deciliter keer honderd.  [nieuw]
+- Status: hints klaar
+
+## Somtype 8: # ml = □ dl
+
+- Sleutel: nrOrigineel **8** · somtypeOrigineel “# ml = □ dl” (koppeling: claudeId)
+- Items: **9** · Claude-doelen: merge-generator G6 ronde 10 (hm/dl) (9) · regel: G6-r10 hm/dl generator, G6-r10 hm/dl contextitem (D-#419)
+- Getallenruimte: 0–10.000 · type: invullen
+- Denkfouten (Claude): —
+- Verschillende Claude-fout-hints: 2 (meest: “Kijk goed hoeveel nullen erbij of eraf moeten.”)
+- Voorbeelden:
+  - `G6-MEET-E04-merge-gen-025` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 300 ml = □ dl
+    - **Antwoord:** 3  (controle: ok)
+    - **Fout-hints (Claude):** 58 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 29 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 100 ml = 1 dl, dus 300 : 100 = 3.
+  - `G6-MEET-E04-merge-gen-030` (Claude merge-generator G6 ronde 10 (hm/dl), None, niveau 2 → toepassen)
+    - **Opgave:** 3500 ml = □ dl
+    - **Antwoord:** 35  (controle: ok)
+    - **Fout-hints (Claude):** 58 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 29 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
+    - **Uitleg (Claude):** 100 ml = 1 dl, dus 3500 : 100 = 35.
+
+- **Hint 1 (te schrijven):** Eén deciliter (dl) is honderd milliliter (ml). Een deciliter is groter dan een milliliter, dus het getal wordt kleiner.
+- **Hint 2 (te schrijven):** Deel het aantal milliliter door honderd: haal er twee nullen af.
+- **Ouderzin:** Je kind rekent inhoudsmaten om: van milliliter naar deciliter (gedeeld door honderd).
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet omgerekend` (fout = getal1) → Je hebt het getal niet omgerekend. Honderd milliliter is één deciliter: deel door honderd.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Heb je door tien gedeeld? Honderd milliliter is één deciliter: deel door honderd.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Heb je door duizend gedeeld? Honderd milliliter is één deciliter: deel door honderd.  [nieuw]
+  - `aantal nullen als factor (delen)` (fout = getal1 gedeeld door het aantal nullen van de factor) → Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af.  [nieuw]
+  - `andere fout` (andere fout) → Eén deciliter (dl) is honderd milliliter (ml). Deel het aantal milliliter door honderd.  [nieuw]
 - Status: hints klaar

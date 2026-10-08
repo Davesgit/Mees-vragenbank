@@ -305,3 +305,74 @@ Alles zit in de build (`scripts/fixlijst_g6.py`, blok 'ronde 9'). `guards_r9` st
 | 334 | Oefeningen | zacht, tekst | **wacht op Oefeningen** |
 | 277, 295 | Overzicht (app) | eisen voor de app | ✓ in README.md ('Eisen voor de app, aanvulling ronde 9') |
 | hm/dl | Leerlijn/Oefeningen | hm en dl (en kommagetallen in lengtematen) zitten niet in de data | **wacht op Oefeningen** (somtypes en teksten); doelen/bordtitels via Leerlijn |
+
+## Oefeningen ronde 9 (8 okt 2026, 11:05–11:45; builds 10:58:34 en 11:21:56): stand van de punten voor Oefeningen
+Hints in `hints/patch_batch{1,2,3,4,5}.py` (blokken 'Ronde 9' en 'Ronde 9b'); idempotent (tweede run: 0 wijzigingen). Gecontroleerd in een zandbak
+(`/workspace/g6work/r9oef/sbx/g6`: kopie + sync + apply + checks; de live data niet aangeraakt). Zie `review-ronde9.md`.
+
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| 330 | Oefeningen | VBN #1: H2, ALG, 'de tweede maand', 'opgeteld', ouderzin op waarde ('het grootste/kleinste aantal'), laag 2 bij elke regel; 'de andere maand (regel)' in de entry | ✓ 60 items, 120 sleutels (28 + 23 + 5 + 36 + 8 + 20). Guard `g6work/r9oef/r9_vbn.py` (elke route en elke cel, les 90/92/101): FAIL 0 |
+| 334 | Oefeningen | (a) zin «Het streepje bij het onderste getal tel je niet mee.» (b) laag 2 bij 'andere maand' VBN #2 | ✓ (a) in VBN #1 H1, #2 H2, #3 H1 en de fout-hints met de streepjestelling; (b) 54 sleutels (42 + 12) |
+| 380 | Oefeningen (tekst) | VERH-E02 #3: één regel 'fout = de helft van het aantal hokjes' (tekst van Didactiek + eigen laag 2) in plaats van '12 hokjes' en '10 hokjes' | ✓ 5 sleutels (022, 024, gen-004, gen-005, gen-006); elke vraag gaat over een derde of een kwart. Guard `r9_strook.py` FAIL 0; les 110: `r9_letterlijk.py` FAIL 0 |
+| 384 | Oefeningen | GET-E06 #1 H2 (tekst van Didactiek); 'andere fout' kreeg een eigen laag 2 (anders herhaalt laag 2 laag 1) | ✓ 235 items, 1475 sleutels (alle items twee cijfers × twee cijfers) |
+| 390 | Oefeningen (volgorde + tekst) | GET-E03 #6 en GET-E08: 'getal uit de vraag' vóór ± 1, als vraag (tekst van Didactiek), met laag 2 | ✓ E03 #6: 31 sleutels op 'getal uit de vraag'; E08: 43. Over heel G6: BIJNA390 0 en `r9_390.py` FAIL 0 (les 115) |
+| 395 | Oefeningen | GET-E08: 'Bijna!' weg bij ± 1 | ✓ (en H2 «Deel het totaal van alle getallen …», zie #396) |
+| 393 | Oefeningen | laag 2 (terugval H2) los te lezen: GET-E03 #1/#5/#8 (en 'omgedraaid' eigen laag 2), M02 #2/#3, E07 #1, M03 #2, E01 #3, E04 #5 (+ 'verkeerd teken' eigen laag 2) | ✓ H2 noemt nu zelf het onderwerp |
+| 391 | Oefeningen + **Overzicht (motor)** | GET-E03 #7: geen 'Bijna!' bij de eindpunten 0 en n/n | **wacht op Overzicht**, zie #398. Tekst en laag 2 staan klaar in `patch_batch3.py` (TEKST391/L2_391) en gaan vanzelf in de entry zodra `fout_regels.py` de regel 'fout = een eindpunt van de lijn' kent |
+| 392 | Oefeningen + **Overzicht (motor)** | GET-E04 #1/#2/#6/#8: lenen/onthouden alleen als het in die kolom echt gebeurt | **wacht op Overzicht**, zie #399. Voorwaardelijke regels en neutrale teksten staan klaar in `patch_batch2.py` (`_cond392`) |
+| hm/dl | Oefeningen | entries MEET-E01 nrO 8–11 en MEET-E04 nrO 5–8 (H1, H2, ouderzin, regels met tekst + tekstSterker, ALG) | ✓ in de entries sinds de build van 11:21:56 (8 × 8 items, 172 sleutels; nul keer 'andere fout'). `b4/check.py` FAIL 0, `hm_dl_test.py` FAIL 0. Voorstel: `hints/voorstel_hm_dl_r9.md`. Didactiek checkt ze na de build |
+| 396 | Oefeningen (eigen vondst, les 109) | zelfde fout als #393: GET-E08 H2 «Deel dat totaal …», GET-E03 #5 H2 (16 items); GET-E06 #1 'andere fout' laag 2 = bijna laag 1 | ✓ |
+| 397 | Oefeningen (eigen vondst, open) | 'getal uit de vraag' is nog een bewering («Je hebt een getal uit de vraag overgenomen.») bij GET-E09 #2/#3, GET-M04 #1 en VERH-E01 #1; huisregel: een vraag | open, volgende ronde |
+| 398 | **Overzicht (motor/guard)** | Na de #390-motor (± 1/'Bijna!' overslaan bij een getal uit de vraag) krijgt de sleutel '0' in GET-E03 1115, 1118, 1120 'andere fout'; FIX6 #203 verwacht 'een stuk te kort' → **3 FAIL** (ook zonder wijziging van Oefeningen: E03 #7 is byte-gelijk aan de backup). Voorstel: een motorregel `fout = een eindpunt van de lijn` (sleutel 0, 1 of n/n), vóór de stuk-regels, en #203 daarop aanpassen. Een regel 'fout = een getal uit de vraag' werkt hier niet: die maakt bij elk klik-item nieuwe sleutels '0' en '1' (12 FAIL #203 in de zandbak) | open |
+| 399 | **Overzicht (motor)** | #392: regels `fout = antwoord + 10/100/1000 (geleend bij de tientallen/honderdtallen/duizendtallen)` (min, a − b: geleend als a mod 10^k < b mod 10^k) en `fout = antwoord − 10/100/1000 (onthouden naar de tientallen/honderdtallen/duizendtallen)` (plus: onthouden als a mod 10^k + b mod 10^k ≥ 10^k), met k zo dat 10^k de foutgrootte is. Ze moeten vóór de gewone `fout = antwoord ± n` gelezen worden (die regex pakt anders het begin) | open |
+| 400 | **Overzicht** (in-geheugenregels) | VBN #2 'getal net boven de stip' (6 sleutels) en VBN #3 'een paar maanden (regel)' (2) hebben geen laag 2 (les 76). Voorstel: «Leg je vinger op de stip en schuif recht naar de getallen langs de zijkant. Begin bij het getal op of net onder je vinger en tel vanaf daar de streepjes omhoog tot de stip.» en «Wijs de maanden onder de grafiek één voor één aan. Lees bij elke maand het aantal af en schrijf het op. Tel daarna alle getallen op.» | open |
+| 401 | **Overzicht (data)** | GET-E06 #8 uitg5-007 (12 × 18) en uitg5-010 (18 × 13): beide getallen de verkeerde kant op afronden geeft ook het goede antwoord (les 32/82). Zie ook Z-#383 ('800'/'900' zonder route) | open |
+| 385 | **Overzicht (data)** | VERH-E02 #3 gen-001: 'een negende' als afleider in plaats van 'de helft' (Didactiek) | open (datapunt) |
+| info | Overzicht | VBN #1: in 17 items is het antwoord de waarde van een andere maand (niet uit de vraag); geen afleesroute (Didactiek ✓). Motor: `fout = antwoord : 10` werkt alleen bij een veelvoud van 10 (hm/dl: 'tien keer te weinig' bij de deelsommen met factor honderd in 2 van de 16 items) | – |
+
+## Ronde 10 (8 okt 2026, build 11:21:56 + patch_batch4/sync/apply 11:23; Didactiek gate-ronde9-deelA en -deelB), uitgevoerd door Overzicht
+Code: `scripts/fixlijst_g6.py` (blok 'ronde 10': `na381`, `aanvul382`, `na383`, `aanvul_hmdl`, `guards_r10`), motor `scripts/fout_regels.py` (G5–G8). Stand: check_hints 102 klaar · 0 open · 0 FAIL · 0 WARN; merge-notatie ALLES OK (FIX6 0, GELDIG 0, BIJNA390 0).
+
+| # | Wie | Stand |
+|---|---|---|
+| 380 | Overzicht (motor) | ✓ letterlijke getalregels passen alleen op het hele getal (woordgrens); guard in `pas_toe` (een letterlijke regel die niet op het hele getal past stopt de build). Regel 'fout = de helft van het aantal hokjes' in de motor (tekst van Oefeningen, batch5). Verschuiving: G5 0, G6 5 sleutels (VERH-E02 022, 024, gen-004/005/006; gen-006 '14 hokjes' was '4 hokjes'), G7 0, G8 0 |
+| 381 | Overzicht | ✓ VBN-E02 #1: plek van het antwoord 20 klein / 20 midden / 20 groot (was 26/23/11; 15 wissels). Assert in de build |
+| 382 | Overzicht | ✓ 3 gen-items VERH-E01 #1 met tussenstap (012–014, kritisch). VERH-E01 #1 telt nu 18. Niveauspreiding van de andere somtypes: Leerlijn |
+| 383 | Overzicht | ✓ E06 #8 uitg5-001 800 → 600, uitg5-005 900 → 1000 |
+| 390 | Overzicht (motor) | ✓ een sleutel die een getal uit de vraag is krijgt nooit ±1 of 'Bijna!'; hij valt terug op de volgende regel ('getal uit de vraag' of 'andere fout'). Check BIJNA390 (G5–G8). Verschuiving (na de rebuild): G5 4, G6 8 (GET-M04 032/034/037/038/044 → 'getal uit de vraag'; GET-E03 1115/1118/1120 '0' → 'andere fout'), G7 0, G8 0. FIX6 #203 volgt #390 bij het eindpunt 0 |
+| 391 | Oefeningen | ✓ via #398 (tekst TEKST391/L2_391 in de entry) |
+| 392 | Overzicht/Oefeningen | ✓ via #399 (ronde 10b) |
+| 393, 395, 384 | Oefeningen | ✓ (Oefeningen ronde 9b) |
+| 394 | Leerlijn | open, bewust zo gelaten. Somtypes met één niveau (alles toepassen): GET-E01 #1, #2; E03 #1, #4; E04 #1; E09 #1, #2; M02 #1, #2, #3; M03 #1; M06 #1; MEET-E01 #1, #2, #3; MEET-E03 #1, #2; MEET-E04 #1, #2, #3; MEET-E05 #1 (21 in de lijst van Didactiek) |
+| hm/dl | Overzicht + Oefeningen | ✓ 8 somtypes × 8 items (MEET-E01: hm ↔ m, km ↔ hm; MEET-E04: L ↔ dl, dl ↔ ml), entries van Oefeningen via `hints/patch_batch4.py` |
+| 330 | Oefeningen | ✓ V-#330/Z-#334 in batch5 |
+
+## Oefeningen ronde 10 (8 okt 2026, 11:30–11:55; builds 11:21:56 en 11:32:19)
+Nummering (les 124): eigen punten van Oefeningen heten vanaf nu **Oef-#NNN** (eigen reeks onder #500; Oef-#420 hieronder, volgende vrije: Oef-#421). Didactiek gebruikt #500 en hoger; nummers van Overzicht blijven zoals ze zijn.
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| Oef-#397 | Oefeningen | 'getal uit de vraag' als vraag + eigen laag 2: GET-E09 #2/#3, GET-M04 #1/#2 (#2: zelfde patroon 'uit de breuk overgenomen'), VERH-E01 #1; M04 #1/#2 ook vóór ± 1 (#390) | ✓ `patch_batch3.py`/`patch_batch5.py` 'Ronde 10'. 669 sleutels (E09 #2 571, #3 33, M04 #1 32, #2 27, VERH-E01 #1 6). Check `g6work/r10/r10_check.py` FAIL 0 (G6); zandbak check_hints 0 FAIL/WARN, notatie ALLES OK |
+| 391, 392 | Oefeningen + Overzicht | De motorregels staan nu in een build (11:32:19): 'fout = een eindpunt van de lijn' en '(geleend bij de …)/(onthouden naar de …)'. De voorwaardelijke teksten uit `patch_batch3.py`/`patch_batch2.py` zijn live. Teksten niet veranderd; wel per sleutel nagerekend: E03 #7 'begin of eind van de lijn' 36 sleutels (alleen 0, 1 of n/n; `b3/check.py`, `r9_390.py` kennen nu ook n/n), E04 136 sleutels (geleend 103, onthouden 33): waarde klopt en het lenen/onthouden gebeurt echt in die kolom (`b2/check.py`). FAIL 0 | ✓ nagerekend |
+| V-#410 | Oefeningen | VERH-E01 #1: H2, ALG en de fout-hints krijgen de zin van Didactiek «Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder.» Samen met Oef-#397 ('getal uit de vraag' als vraag). Eigen laag 2 (los te lezen) voor 'opgeteld' 18, 'verhouding niet gelijk' 12, 'getal uit de vraag' 6 sleutels: «Zoek in de tabel het vakje dat je al weet. … Deel dan allebei de getallen van dat vakje door twee of door drie …». 'gedeeld' (0 sleutels) is een vraag geworden, zonder laag 2 (les 128). Route per item nagerekend: 15 × keer, gen-012/013 door twee, gen-014 door drie; alle 18 geven het antwoord (`g6work/r10/r10b_410.py`, FAIL 0) | ✓ `patch_batch5.py` ronde 10b |
+| Z-#411 | Overzicht (motor) | Les 127 nagelopen: `lett_past('4 hokjes', …)` geeft nog 'past' bij '−4 hokjes' en '-4 hokjes'; `lett_guard` geeft 'goed' bij '1.4 hokjes', '€4 hokjes', '1/4 hokjes' en '−4 hokjes'. `in_vraag390` is goed bij '14', '4,5', '−4' en '€4'. Komt in G6 nu niet voor | bevestigd, open (Overzicht) |
+| Oef-#420 | Oefeningen (eigen vondst, les 123) | Uitgebreide los-scan (`g6work/r10/los_l2.py`: 'dan'/'daarna' in het eerste zinsdeel, niet na een vergelijking of 'eerst'): GET-E09 #1/#2/#3 H2 «Neem dan zoveel stukken …» was laag 2 bij 1445 sleutels, MEET-E01 #10 (nrO 7) «Tel daarna alle stukken …» bij 4. Nieuw: «Eén stuk is het bedrag/getal/aantal gedeeld door de noemer (onder de streep). Neem zoveel stukken …» en «Maak van alle stukken meters, en tel ze daarna bij elkaar op. …». Los-scan G6: 0 | ✓ `patch_batch3.py`/`patch_batch4.py` ronde 10b |
+| les 125–129 | Oefeningen | in `hints/lessen_batch2.md` | ✓ |
+| checks | Oefeningen | zandbak (live + sync + apply): check_hints 102 klaar, 0 FAIL, 0 WARN; notatie ALLES OK; BIJNA390 0; b1–b6 FAIL 0; r9_* FAIL 0; r10b_410 FAIL 0; los-scan 0. Tweede run van alle patches: 0 wijzigingen | ✓ |
+
+## Ronde 10b (8 okt 2026, build 11:39:38; Oefeningen #396–#402, Didactiek recheck-ronde9b deel A en deel B), uitgevoerd door Overzicht
+Nummering: Didactiek D-#403–D-#408, daarna #500 en hoger. Stand: check_hints 102 klaar · 0 open · 0 FAIL · 0 WARN; merge-notatie ALLES OK (**FIX6 0**, GELDIG 0, BIJNA390 0).
+
+| # | Wie | Stand |
+|---|---|---|
+| 398 | Overzicht (motor) | ✓ besluit Overzicht: regel 'fout = een eindpunt van de lijn' (0, 1 en n/n, alleen bij 0 < t < n), in de entry vóór de stuk-regels (Oefeningen, patch_batch3). FIX6 #203 verwacht bij 0, 1 en n/n precies 'begin of eind van de lijn'; #169 (D-#417) vraagt alleen een stuk-sleutel als er een buur strikt tussen 0 en n/n ligt. 36 sleutels (31 nieuw, 5 verschoven) |
+| 399 | Overzicht (motor) | ✓ '(geleend bij de tientallen/honderdtallen/duizendtallen)' en '(onthouden naar de …)' achter 'fout = antwoord ± 10/100/1000': alleen als er in die kolom echt geleend (a mod k < b mod k) of onthouden (a mod k + b mod k ≥ k) wordt. GET-E04 #1/#2/#6/#8: 44 sleutels krijgen nu de neutrale tekst (#392) |
+| 400 | Overzicht | ✓ laag 2 van Oefeningen bij 'getal net boven de stip' (6 sleutels) en 'een paar maanden (regel)' (2) |
+| 401 | Overzicht | ✓ uitg5-007 12 × 28 ≈ 300 (sleutels 600/200/400, exact 336); uitg5-010 16 × 23 ≈ 400 (200/600/300, exact 368). Guard #301 over G6-GET-E06 (geen foute afrondroute geeft het antwoord) |
+| 385 | Overzicht | ✓ VERH-E02 #3 gen-001: 'een negende' in plaats van 'de helft' (valt op 'andere fout': «Verdeel de strook in gelijke stukken …») |
+| 411 | Overzicht (motor) | ✓ letterlijke regels: ook geen minteken vóór het getal; `lett_guard` gebruikt dezelfde grenzen als de vergelijking |
+| D-#416 | Overzicht | ✓ BIJNA390 en de motor (#390) vergelijken op waarde, ook breuken en kommagetallen (2/2 = 1) |
+| D-#417 | Overzicht | ✓ FIX6 0 (check #169 van 11:33:34, niet overschreven) |
+| D-#419 | Overzicht | ✓ (a) vaste weergavenummers (`bevroren/somtype_weergave_nr.json`, stand 10:58:34): de strook blijft MEET-E01 #6; hm in leerlijnvolgorde #7 hm→m, #8 m→hm, #9 km→hm, #10 hm→km; MEET-E04 #5–#8 L→dl, dl→L, dl→ml, ml→dl. (b) 8 contextitems (4 hm: hardloopbaan, fietsen, wandelroute, fietstocht; 4 dl: kan, emmer, glas, pakje sap). (c) niveau: Leerlijn |
+| 394 | Leerlijn | open (lijst hierboven) |
+| 397 | Oefeningen | open, volgende ronde |

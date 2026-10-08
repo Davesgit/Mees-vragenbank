@@ -63,7 +63,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 3/10 betekent 3 : 10. 3 : 10 = 0,3.
 
 - **Hint 1 (te schrijven):** Een meter is 100 centimeter. Hoeveel centimeter is dit stuk van een meter? Staat er boven de streep meer dan 1? Reken dan eerst uit hoeveel centimeter één gelijk deel is.
-- **Hint 2 (te schrijven):** Schrijf het dan als kommagetal in meters. Het eerste cijfer achter de komma telt de stukken van tien centimeter, het tweede cijfer de losse centimeters. Zo is 68 centimeter 0,68 meter.
+- **Hint 2 (te schrijven):** Schrijf het aantal centimeter als kommagetal in meters. Het eerste cijfer achter de komma telt de stukken van tien centimeter, het tweede cijfer de losse centimeters. Zo is 68 centimeter 0,68 meter.
 - **Ouderzin:** Je kind schrijft een breuk van een meter als kommagetal.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `niet zo omgezet` (Claudes sleutel: kommagetal-als-geheel) → Je hebt het getal boven de streep achter de komma gezet. Zo schrijf je die breuk niet als kommagetal. Reken eerst uit hoeveel centimeter het is: een meter is 100 centimeter.  [Claude, taalfix]

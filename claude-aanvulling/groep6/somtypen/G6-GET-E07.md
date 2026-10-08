@@ -59,7 +59,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 199 is bijna 200. 4 × 200 = 800, dat is 4 te veel. 800 − 4 = 796.
 
 - **Hint 1 (te schrijven):** De prijs is bijna een rond bedrag. Reken eerst het aantal keer dat ronde bedrag.
-- **Hint 2 (te schrijven):** Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.
+- **Hint 2 (te schrijven):** Met het ronde bedrag reken je voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.
 - **Ouderzin:** Je kind rekent handig met geld: een paar keer een prijs die bijna rond is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `de prijs` (fout = de prijs) → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.  [nieuw]

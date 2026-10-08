@@ -503,7 +503,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Rond beide getallen af op honderdtallen. Reken daarna uit met de ronde getallen.  [nieuw]
 - Status: hints klaar
 
-## Somtype 17: In een tabel staat het aantal bezoekers van [plek]: maandag #, dinsdag #, woensdag # en donderdag #. Hoeveel bezoekers waren er in die vier dagen samen?
+## Somtype 17: Zoveel bezoekers kwamen er bij [plek]: maandag #, dinsdag #, woensdag # en donderdag #. Hoeveel bezoekers waren er in die vier dagen samen?
 
 - Sleutel: nrOrigineel **32** · somtypeOrigineel “In een tabel staat het aantal bezoekers van [plek]: maandag #, dinsdag #, woensdag # en donderdag #. Hoeveel bezoekers waren er in die vier dagen samen?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: merge-generator G5 ronde 9 (#235) (7), G9 (1) · regel: D8-STAT-NAAR-G5, G5-r9 #235 generator
@@ -512,25 +512,26 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 4 (meest: “Dat is tien te weinig. Let goed op de tientallen.”)
 - Voorbeelden:
   - `G5-GET-E05-claude-bank-naar-053` (Claude G9, ai, niveau 2 → toepassen)
-    - **Opgave:** Dit zijn de bezoekers van de kinderboerderij: maandag 45, dinsdag 38, woensdag 92 en donderdag 55. Hoeveel bezoekers waren er in die vier dagen samen?
+    - **Opgave:** Zoveel bezoekers kwamen er bij de kinderboerderij: maandag 45, dinsdag 38, woensdag 92 en donderdag 55. Hoeveel bezoekers waren er in die vier dagen samen?
     - **Opties:** A) 220 bezoekers · B) 92 bezoekers · C) 230 bezoekers
     - **Antwoord:** 230 bezoekers  (controle: n.v.t.)
     - **Fout-hints (Claude):** 220 bezoekers → Tel de getallen nog een keer rustig op. Let goed op de tientallen. · 92 bezoekers → 92 hoort bij één dag. De vraag gaat over alle vier de dagen samen.
     - **Uitleg (Claude):** Je telt alle dagen op: 45 + 38 = 83 en 92 + 55 = 147. Samen is dat 83 + 147 = 230 bezoekers.
   - `G5-GET-E05-merge-gen-015` (Claude merge-generator G5 ronde 9 (#235), None, niveau 2 → toepassen)
-    - **Opgave:** Dit zijn de bezoekers van het museum: maandag 125, dinsdag 98, woensdag 143 en donderdag 76. Hoeveel bezoekers waren er in die vier dagen samen?
-    - **Opties:** A) 442 bezoekers · B) 432 bezoekers · C) 143 bezoekers
-    - **Antwoord:** 442 bezoekers  (controle: ok)
+    - **Opgave:** Zoveel bezoekers kwamen er bij het museum: maandag 48, dinsdag 63, woensdag 57 en donderdag 39. Hoeveel bezoekers waren er in die vier dagen samen?
+    - **Opties:** A) 207 bezoekers · B) 197 bezoekers · C) 63 bezoekers
+    - **Antwoord:** 207 bezoekers  (controle: ok)
     - **Fout-hints (Claude):** 220 bezoekers → Tel de getallen nog een keer rustig op. Let goed op de tientallen. · 92 bezoekers → 92 hoort bij één dag. De vraag gaat over alle vier de dagen samen.
-    - **Uitleg (Claude):** 125 + 98 + 143 + 76 = 442.
+    - **Uitleg (Claude):** 48 + 63 + 57 + 39 = 207.
 
 - **Hint 1 (te schrijven):** Tel de getallen van alle dagen bij elkaar op.
 - **Hint 2 (te schrijven):** Tel eerst twee dagen bij elkaar. Tel daar steeds de volgende dag bij, tot je alle dagen hebt gehad.
-- **Ouderzin:** Je kind telt de getallen uit een tabel bij elkaar op.
+- **Ouderzin:** Je kind telt de bezoekers van vier dagen bij elkaar op.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tiental te weinig` (Claudes sleutel: tiental-ernaast) → Dat is tien te weinig. Tel de getallen nog eens op. Let goed op de tientallen.  [Claude, taalfix]
   - `één dag` (Claudes sleutel: getal-overgenomen) → Dat is het getal van één dag. De vraag gaat over alle dagen samen.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel de getallen van alle dagen bij elkaar op.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een tabel staat het aantal bezoekers van [plek]: maandag #, dinsdag #, woensdag # en donderdag #. Hoeveel bezoekers waren er in die vier dagen samen?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 18: Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen? — met overschrijding van het tiental
@@ -622,7 +623,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te veel` (fout = antwoord + 10) → Dat is één tiental te veel. Tel de tientallen nog eens bij elkaar.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Tel de eenheden nog eens bij elkaar.  [nieuw]
   - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Tel de eenheden nog eens bij elkaar.  [nieuw]
-  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
+  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukken bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 21: [wie] heeft # [ding] en geeft er # weg. Hoeveel [ding] houdt [wie] over?
@@ -815,12 +816,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Denkfouten (Claude): tiental-ernaast (8), verkeerde-bewerking (4), onthouden-vergeten (2)
 - Verschillende Claude-fout-hints: 7 (meest: “Je zit één tiental te hoog. Tel de tientallen nog eens rustig na.”)
 - Voorbeelden:
-  - `G5-GET-E05-claude-bank-325` (Claude C2, gegenereerd, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-325` (Claude C2, gegenereerd, niveau 1 → toepassen)
     - **Opgave:** In de vallei liggen 593 stenen. Er komen 290 stenen bij. Hoeveel stenen liggen er nu?
     - **Antwoord:** 883  (controle: ok)
     - **Fout-hints (Claude):** 893 → Je zit één tiental te hoog. Tel de tientallen nog eens rustig na. · 873 → Je zit één tiental te laag. Tel de tientallen nog eens rustig na. · 783 → Als de tientallen samen boven de 100 komen, gaat er een honderdtal bij. Vergeet die niet. · 303 → Er komen stenen bij, dus je telt op. Niet aftrekken.
     - **Uitleg (Claude):** Rijg in stappen: eerst de honderdtallen, dan de tientallen. 593 + 200 = 793, dan + 90 = 883.
-  - `G5-GET-E05-claude-bank-323` (Claude C2, gegenereerd, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-323` (Claude C2, gegenereerd, niveau 1 → toepassen)
     - **Opgave:** In het bos liggen 146 dennenappels. Er komen 140 dennenappels bij. Hoeveel dennenappels liggen er nu?
     - **Antwoord:** 286  (controle: ok)
     - **Fout-hints (Claude):** 296 → Je zit één tiental te hoog. Tel de tientallen nog eens rustig na. · 276 → Je zit één tiental te laag. Tel de tientallen nog eens rustig na. · 6 → Er komen dennenappels bij, dus je telt op. Niet aftrekken.
@@ -848,7 +849,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Denkfouten (Claude): onthouden-vergeten (6), verkeerde-bewerking (3)
 - Verschillende Claude-fout-hints: 3 (meest: “Bij het lenen van een honderdtal wordt het honderdtal één minder. Tel de honderdtallen nog eens.”)
 - Voorbeelden:
-  - `G5-GET-E05-claude-bank-394` (Claude C5, gegenereerd, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-394` (Claude C5, gegenereerd, niveau 1 → toepassen)
     - **Opgave:** Op de kinderboerderij lagen 378 veren. Er zijn er 143 weggehaald. Hoeveel veren liggen er nog?
     - **Antwoord:** 235  (controle: ok)
     - **Fout-hints (Claude):** 335 → Bij het lenen van een honderdtal wordt het honderdtal één minder. Tel de honderdtallen nog eens. · 245 → Bij het lenen van een tiental wordt het tiental één minder. Tel de tientallen nog eens. · 521 → Er zijn er weggehaald: dit is een minsom.
@@ -883,7 +884,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Denkfouten (Claude): onthouden-vergeten (4), tiental-ernaast (2), verkeerde-bewerking (2)
 - Verschillende Claude-fout-hints: 4 (meest: “Tel de tientallen nog eens: als ze samen 100 of meer zijn, komt er een honderdtal bij.”)
 - Voorbeelden:
-  - `G5-GET-E05-claude-bank-247` (Claude C4, gegenereerd, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-247` (Claude C4, gegenereerd, niveau 1 → toepassen)
     - **Opgave:** In de dierentuin liggen 528 ballen en op de kinderboerderij 248. Hoeveel ballen zijn dat samen?
     - **Antwoord:** 776  (controle: ok)
     - **Fout-hints (Claude):** 676 → Tel de tientallen nog eens: als ze samen 100 of meer zijn, komt er een honderdtal bij. · 766 → Tel de eenheden nog eens: als ze samen 10 of meer zijn, komt er een tiental bij. · 786 → Controleer de tientallen: je hebt er een te veel. · 280 → Samen betekent optellen.
@@ -949,7 +950,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Denkfouten (Claude): onthouden-vergeten (4), tiental-ernaast (2), verkeerde-bewerking (2)
 - Verschillende Claude-fout-hints: 4 (meest: “Tel de tientallen nog eens: als ze samen 100 of meer zijn, komt er een honderdtal bij.”)
 - Voorbeelden:
-  - `G5-GET-E05-claude-bank-397` (Claude C4, gegenereerd, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-397` (Claude C4, gegenereerd, niveau 1 → toepassen)
     - **Opgave:** Op de kinderboerderij liggen 337 noten en in het bos 479. Hoeveel noten zijn dat samen?
     - **Antwoord:** 816  (controle: ok)
     - **Fout-hints (Claude):** 716 → Tel de tientallen nog eens: als ze samen 100 of meer zijn, komt er een honderdtal bij. · 806 → Tel de eenheden nog eens: als ze samen 10 of meer zijn, komt er een tiental bij. · 826 → Controleer de tientallen: je hebt er een te veel. · 142 → Samen betekent optellen.
@@ -982,12 +983,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Denkfouten (Claude): nul-fout-tientallen (4), een-ernaast (2)
 - Verschillende Claude-fout-hints: 6 (meest: “Na 500 kom je in de 400-en. 500 − 4 eindigt op 96.”)
 - Voorbeelden:
-  - `G5-GET-E05-claude-bank-399` (Claude C6, gegenereerd, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-399` (Claude C6, gegenereerd, niveau 1 → toepassen)
     - **Opgave:** Op de kinderboerderij liggen 502 noten. Er gaan er 6 weg. Hoeveel blijven er over?
     - **Antwoord:** 496  (controle: ok)
     - **Fout-hints (Claude):** 506 → Na 500 kom je in de 400-en. 500 − 4 eindigt op 96. · 596 → Je gaat onder 500, dus het honderdtal wordt één minder. · 495 → Ga eerst precies naar 500 (dat is 2 eraf), en dan de rest.
     - **Uitleg (Claude):** Ga eerst naar het ronde getal: 502 − 2 = 500. Dan de rest eraf: 500 − 4 = 496.
-  - `G5-GET-E05-claude-bank-398` (Claude C6, gegenereerd, niveau 1 → basis)
+  - `G5-GET-E05-claude-bank-398` (Claude C6, gegenereerd, niveau 1 → toepassen)
     - **Opgave:** Op de kinderboerderij liggen 304 eieren. Er gaan er 9 weg. Hoeveel blijven er over?
     - **Antwoord:** 295  (controle: ok)
     - **Fout-hints (Claude):** 305 → Na 300 kom je in de 200-en. 300 − 5 eindigt op 95. · 395 → Je gaat onder 300, dus het honderdtal wordt één minder. · 294 → Ga eerst precies naar 300 (dat is 4 eraf), en dan de rest.

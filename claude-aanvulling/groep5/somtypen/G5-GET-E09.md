@@ -14,7 +14,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Items: **27** · Claude-doelen: T8 (27) · regel: G8-T8-meerstaps
 - Getallenruimte: n.v.t. · type: kale
 - Denkfouten (Claude): deel-vergeten-bij-splitsen (27), verkeerde-bewerking (27), optellen-ipv-vermenigvuldigen (27)
-- Verschillende Claude-fout-hints: 35 (meest: “Dat is wat het kost. Gevraagd is wat hij terugkrijgt.”)
+- Verschillende Claude-fout-hints: 33 (meest: “Dat is wat het kost. Gevraagd is wat hij terugkrijgt.”)
 - Voorbeelden:
   - `G5-GET-E09-claude-bank-naar-003` (Claude T8, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Ayoub koopt 4 schriften van €3 per stuk en betaalt met €20. Hoeveel geld krijgt hij terug?
@@ -60,8 +60,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Haal er daarna af wat weggaat.
 - **Ouderzin:** Je kind rekent een verhaaltje in twee stappen uit: eerst een keersom, dan iets eraf.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `tweede stap vergeten` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is hoeveel het er samen zijn. Er gaan er nog een paar weg. Haal die er nog af.  [Claude, taalfix]
+  - `tweede stap vergeten` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is hoeveel het er eerst waren. Er gaan er nog een paar af. Haal die er nog af.  [Claude, taalfix]
   - `stappen door elkaar` (Claudes sleutel: verkeerde-bewerking) → Reken eerst uit hoeveel het er samen zijn met een keersom. Haal er daarna af wat weggaat.  [Claude, taalfix]
-  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.  [Claude, taalfix]
+  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Je hebt opgeteld. Het is steeds evenveel: dat is een keersom. Reken eerst het totaal uit, en haal er daarna af wat weggaat.  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken eerst het totaal uit met een keersom. Haal er daarna af wat weggaat.  [nieuw]
 - Status: hints klaar

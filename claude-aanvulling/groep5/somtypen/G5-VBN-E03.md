@@ -31,7 +31,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** In 10 weken komt er 10 keer 3 euro bij, dat is 30 euro. Daar hoort de 12 euro van het begin nog bij. Samen is dat 42 euro.
 
 - **Hint 1 (te schrijven):** Kijk wat er elke keer bijkomt, of wat er steeds terugkomt. Kijk ook waarmee het begint.
-- **Hint 2 (te schrijven):** Ga dan stap voor stap verder tot je bij de plek uit de vraag bent. Of reken het uit: hoeveel stappen zijn het, en hoeveel komt er per stap bij?
+- **Hint 2 (te schrijven):** Ga vanaf het begin stap voor stap verder tot je bij de plek uit de vraag bent. Of reken het uit: hoeveel stappen zijn het, en hoeveel komt er per stap bij?
 - **Ouderzin:** Je kind zoekt de regel in een patroon (een verhaal, figuur of herhaling) en gaat ermee verder.
 - **Fout-hints:** fout-hints Claude: deels ok — per soort fout, regels van boven naar beneden (de eerste die past):
   - `verkeerde bewerking (per item)` (Claudes sleutel: verkeerde-bewerking) → Je hebt 12 en 3 bij elkaar opgeteld. Bedenk hoe vaak er 3 blokken bijkomen. / Je hebt 6 en 8 opgeteld. Reken eerst uit hoeveel de plant in 8 weken groeit. / Alleen voor de eerste driehoek heb je 3 stokjes nodig. Voor de volgende driehoeken heb je minder nodig. / Je hebt 10 en 2 bij elkaar opgeteld. Kijk nog eens hoeveel blokken er per plek bijkomen. / Alleen voor het eerste vierkant heb je 4 lucifers nodig. De vierkanten erna delen een lucifer.  [Claude, taalfix]

@@ -26,7 +26,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 14/57 → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet. · 39/54 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
 - **Hint 1 (te schrijven):** Zoek een getal waardoor je de teller (boven de streep) en de noemer (onder de streep) allebei precies kunt delen.
-- **Hint 2 (te schrijven):** Deel de teller en de noemer door dat getal. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.
+- **Hint 2 (te schrijven):** Deel de teller en de noemer allebei door een getal waardoor ze allebei precies te delen zijn. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.
 - **Ouderzin:** Je kind schrijft een breuk zo eenvoudig mogelijk: de teller en de noemer door hetzelfde getal delen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één van de twee gedeeld` (Claudes sleutel: deel-vergeten-bij-splitsen) → Je hebt maar één van de twee gedeeld. Deel de teller én de noemer door hetzelfde getal, dan blijft de breuk even groot.  [Claude, taalfix]
@@ -139,7 +139,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Deel teller en noemer allebei door 3: 1/2.
 
 - **Hint 1 (te schrijven):** Zoek een getal waardoor je de teller (boven de streep) en de noemer (onder de streep) allebei precies kunt delen.
-- **Hint 2 (te schrijven):** Deel de teller en de noemer door dat getal. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.
+- **Hint 2 (te schrijven):** Deel de teller en de noemer allebei door een getal waardoor ze allebei precies te delen zijn. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.
 - **Ouderzin:** Je kind schrijft een breuk van een groep dingen zo eenvoudig mogelijk.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één van de twee gedeeld` (Claudes sleutel: deel-van-geheel-verkeerd) → Je hebt maar één van de twee gedeeld. Deel de teller én de noemer door hetzelfde getal, dan blijft de breuk even groot.  [Claude, taalfix]
@@ -174,9 +174,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `de factor` (fout = de factor (nieuwe noemer : oude noemer)) → Hoeveel keer zo groot is de noemer geworden? Doe de teller (boven de streep) ook zoveel keer. Dat getal komt op het vraagteken.  [nieuw]
   - `teller overgenomen` (fout = getal1) → Dat is de teller van de eerste breuk. De noemer is groter geworden. Hoeveel keer zo groot? Doe de teller ook zoveel keer.  [nieuw]
   - `hetzelfde erbij gedaan` (Claudes sleutel: teller-en-noemer-optellen) → Je hebt bij de teller hetzelfde erbij gedaan als bij de noemer. Zo blijft de breuk niet even groot. Hoeveel keer zo groot is de noemer geworden? Doe de teller ook zoveel keer.  [Claude, taalfix]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Is dat een getal uit de vraag? Hoeveel keer zo groot is de nieuwe noemer? Doe de teller ook zoveel keer.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Hoeveel keer zo groot is de noemer geworden? Doe de teller precies zoveel keer.  [nieuw]
   - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Hoeveel keer zo groot is de noemer geworden? Doe de teller precies zoveel keer.  [nieuw]
-  - `getal uit de vraag` (fout = een getal uit de vraag) → Je hebt een getal uit de vraag overgenomen. Is dat echt het getal dat op het vraagteken hoort? Hoeveel keer zo groot is de nieuwe noemer? Doe de teller ook zoveel keer.  [nieuw]
   - `andere fout` (andere fout) → Hoeveel keer zo groot is de nieuwe noemer als de oude noemer? Doe de teller ook zoveel keer.  [nieuw]
 - Status: hints klaar
 
@@ -205,6 +205,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** De teller (boven de streep) zegt hoeveel van die stukken je vanaf nul verder gaat.
 - **Ouderzin:** Je kind zet een breuk op een getallenlijn van nul tot één.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `begin of eind van de lijn` (fout = een eindpunt van de lijn) → Je stip staat aan het begin of aan het eind van de lijn. Tel vanaf nul zoveel stukken als de teller (boven de streep) zegt.  [nieuw]
   - `een stuk te ver` (fout = een stuk te ver) → Bijna! Je bent één stuk te ver. Tel vanaf nul de stukken nog eens.  [nieuw]
   - `een stuk te kort` (fout = een stuk te kort) → Bijna! Je bent één stuk te kort. Tel vanaf nul de stukken nog eens.  [nieuw]
   - `andere fout` (andere fout) → De streepjes verdelen de lijn in zoveel gelijke stukken als de noemer zegt. Ga vanaf nul zoveel stukken verder als de teller zegt.  [nieuw]
@@ -230,7 +231,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Zoek een getal waar teller en noemer allebei door deelbaar zijn: 3. 3 : 3 = 1, 6 : 3 = 2. Dus 1/2.
 
 - **Hint 1 (te schrijven):** Zoek een getal waardoor je de teller (boven de streep) en de noemer (onder de streep) allebei precies kunt delen.
-- **Hint 2 (te schrijven):** Deel de teller en de noemer door dat getal. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.
+- **Hint 2 (te schrijven):** Deel de teller en de noemer allebei door een getal waardoor ze allebei precies te delen zijn. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.
 - **Ouderzin:** Je kind schrijft een breuk van een groep zo eenvoudig mogelijk.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één van de twee gedeeld` (Claudes sleutel: een-van-de-twee-gedeeld) → Je hebt maar één van de twee gedeeld. Deel de teller én de noemer door hetzelfde getal, dan blijft de breuk even groot.  [Claude, taalfix]

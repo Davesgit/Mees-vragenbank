@@ -31,8 +31,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `twee zijden` (fout = getal1 + getal2) → Je hebt de lengte en de breedte één keer opgeteld. Maar er zijn vier zijden: twee lange en twee korte.  [nieuw]
   - `oppervlakte` (fout = getal1 × getal2) → Heb je keer gedaan? Dan heb je de oppervlakte: wat erbinnen zit. De omtrek is de lijn eromheen: tel de zijden op.  [nieuw]
-  - `korte zijde vergeten` (fout = antwoord − getal2) → Dat is te weinig. Je bent een korte zijde vergeten. Tel alle vier de zijden: twee lange en twee korte.  [nieuw]
-  - `lange zijde vergeten` (fout = antwoord − getal1) → Dat is te weinig. Je bent een lange zijde vergeten. Tel alle vier de zijden: twee lange en twee korte.  [nieuw]
+  - `korte zijde vergeten` (fout = antwoord − getal2) → Dat is te weinig. Heb je allebei de korte zijden meegeteld? Tel alle vier de zijden: twee lange en twee korte.  [nieuw]
+  - `lange zijde vergeten` (fout = antwoord − getal1) → Dat is te weinig. Heb je allebei de lange zijden meegeteld? Tel alle vier de zijden: twee lange en twee korte.  [nieuw]
   - `lange zijde te veel` (fout = antwoord + getal1) → Dat is te veel. Je hebt een lange zijde te veel geteld. Er zijn twee lange en twee korte zijden.  [nieuw]
   - `korte zijde te veel` (fout = antwoord + getal2) → Dat is te veel. Je hebt een korte zijde te veel geteld. Er zijn twee lange en twee korte zijden.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Tel de vier zijden nog eens bij elkaar.  [nieuw]
@@ -67,8 +67,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `twee zijden` (fout = getal1 + getal2) → Je hebt de lengte en de breedte één keer opgeteld. Maar er zijn vier kanten: twee lange en twee korte.  [nieuw]
   - `oppervlakte` (fout = getal1 × getal2) → Heb je keer gedaan? Dan heb je de oppervlakte: wat erbinnen zit. De omtrek is de lijn eromheen: tel de kanten op.  [nieuw]
-  - `korte zijde vergeten` (fout = antwoord − getal2) → Dat is te weinig. Je bent een korte kant vergeten. Tel alle vier de kanten: twee lange en twee korte.  [nieuw]
-  - `lange zijde vergeten` (fout = antwoord − getal1) → Dat is te weinig. Je bent een lange kant vergeten. Tel alle vier de kanten: twee lange en twee korte.  [nieuw]
+  - `korte zijde vergeten` (fout = antwoord − getal2) → Dat is te weinig. Heb je allebei de korte kanten meegeteld? Tel alle vier de kanten: twee lange en twee korte.  [nieuw]
+  - `lange zijde vergeten` (fout = antwoord − getal1) → Dat is te weinig. Heb je allebei de lange kanten meegeteld? Tel alle vier de kanten: twee lange en twee korte.  [nieuw]
   - `lange zijde te veel` (fout = antwoord + getal1) → Dat is te veel. Je hebt een lange kant te veel geteld. Er zijn twee lange en twee korte kanten.  [nieuw]
   - `korte zijde te veel` (fout = antwoord + getal2) → Dat is te veel. Je hebt een korte kant te veel geteld. Er zijn twee lange en twee korte kanten.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Tel de vier kanten nog eens bij elkaar.  [nieuw]

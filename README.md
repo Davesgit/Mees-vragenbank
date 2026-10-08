@@ -4,7 +4,7 @@ De vragenbank van **LeerMees**: een gratis, rustig en didactisch rekenplatform v
 
 Deze repo is de bron om verder te werken, voor mensen en voor AI-tools (ChatGPT, Claude en andere). Alle kindteksten zijn Nederlands.
 
-Stand: 8 oktober 2026. G5 en G6 zijn klaar voor de laatste tekstcheck van Didactiek (zie [Stand per groep](#stand-per-groep)).
+Stand: 8 oktober 2026. G5 en G6: ronde 10 (gate en rechecks van Didactiek) is verwerkt; alle checks 0 FAIL, 0 WARN (zie [Stand per groep](#stand-per-groep)).
 
 ## Mappen
 
@@ -119,8 +119,8 @@ Wat nog hints nodig heeft: [`claude-aanvulling/hints_todo.md`](claude-aanvulling
 |---|---|---|---|---|
 | G3 | 44 leerdoelen · 284 items | 1.519 items · 26 leerdoelen | 83 van 83 | **Klaar** |
 | G4 | 46 leerdoelen · 368 items | 1.855 items · 24 leerdoelen | 93 van 97 | **Klaar**, behalve 4 schatting-somtypen in G4-GET-E05 (36 items) zonder hints |
-| G5 | 40 leerdoelen · 320 items | 4.845 items · 22 leerdoelen | 139 van 139 | **Klaar voor de laatste tekstcheck van Didactiek** (ronde 9: alle verplichte fixes gedaan; checks 0 FAIL, 0 WARN). Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`, blok 'Ronde 9' |
-| G6 | 44 leerdoelen · 352 items | 4.227 items · 23 leerdoelen | 94 van 94 | **Klaar voor de laatste tekstcheck van Didactiek** (ronde 9: alle verplichte fixes gedaan; checks 0 FAIL, 0 WARN). Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`, blok 'Ronde 9' |
+| G5 | 40 leerdoelen · 320 items | 4.845 items · 22 leerdoelen | 139 van 139 | **Ronde 10 verwerkt** (build 11:38:45; gate ronde 9 en recheck 9b van Didactiek; checks 0 FAIL, 0 WARN). Vaste somtypenummers (`bevroren/somtype_weergave_nr.json`). Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`, blokken 'Ronde 10' en 'Ronde 10b' |
+| G6 | 44 leerdoelen · 352 items | 4.302 items · 23 leerdoelen | 102 van 102 | **Ronde 10 verwerkt** (build 11:39:38; gate ronde 9 deel A/B en rechecks 9b; checks 0 FAIL, 0 WARN, FIX6 0). Nieuw: hm (MEET-E01 #7–#10) en dl (MEET-E04 #5–#8). Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`, blokken 'Ronde 10' en 'Ronde 10b' |
 | G7 | 25 leerdoelen · 200 items (+ 16 in een Claude-set en 12 pilotbestanden) | 7.661 items · 17 leerdoelen | 0 van 154 | Ingedeeld, **nog zonder hints** |
 | G8 | 37 leerdoelen · 296 items | 1.458 items · 23 leerdoelen | 0 van 223 | Ingedeeld, **nog zonder hints** |
 

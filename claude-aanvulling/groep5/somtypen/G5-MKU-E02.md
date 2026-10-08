@@ -27,7 +27,7 @@ Dit is een kubus. Hoeveel hoekpunten heeft een kubus? (Tel ook wat je niet ziet.
     - **Uitleg (Claude):** Een kubus heeft 6 vlakken, 8 hoekpunten en 12 ribben.
 
 - **Hint 1 (te schrijven):** Tel eerst de hoekpunten aan de bovenkant van de kubus.
-- **Hint 2 (te schrijven):** Tel dan de hoekpunten aan de onderkant erbij. Tel ook de hoekpunten die je niet ziet.
+- **Hint 2 (te schrijven):** Tel de hoekpunten aan de bovenkant en aan de onderkant bij elkaar op. Tel ook de hoekpunten die je niet ziet.
 - **Ouderzin:** Je kind telt de hoekpunten van een kubus, ook de hoekpunten die je niet ziet.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één te veel` (fout = antwoord + 1) → Bijna! Dat is er één te veel. Heb je er één dubbel geteld? Tel eerst de bovenkant, dan de onderkant.  [nieuw]

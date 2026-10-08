@@ -9,32 +9,43 @@
    "somtype": "[lijngrafiek] Hoeveel [ding] kwamen er bij van [maand] naar [maand]?",
    "nrOrigineel": 1,
    "somtypeOrigineel": "[lijngrafiek] Hoeveel [ding] kwamen er bij van [maand] naar [maand]?",
-   "hint1": "Zoek de twee maanden uit de vraag onder de grafiek. Lees bij allebei af hoe hoog de stip staat. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.",
-   "hint2": "Hoeveel kwamen er bij? Haal het aantal van de eerste maand af van het aantal van de tweede maand.",
-   "ouderzin": "Je kind leest in een lijngrafiek twee maanden af en rekent uit hoeveel er van de ene naar de andere maand bij kwamen.",
+   "hint1": "Zoek de twee maanden uit de vraag onder de grafiek. Lees bij allebei af hoe hoog de stip staat. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.",
+   "hint2": "In welke maand waren het er meer? Haal het kleinste aantal van het grootste aantal af.",
+   "ouderzin": "Je kind leest in een lijngrafiek twee maanden af en rekent uit hoeveel meer het er in de ene maand waren dan in de andere.",
    "foutHints": [
     {
      "bron": "claude-taalfix",
      "soort": "de tweede maand",
      "claudeDenkfout": "getal-overgenomen",
      "regel": "Claudes sleutel: getal-overgenomen",
-     "tekst": "Dat is het aantal in de tweede maand van de vraag. Hoeveel waren het in de eerste maand? Haal het aantal van de eerste maand ervan af: dat is wat erbij kwam.",
-     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+     "tekst": "Dat is het aantal van één maand uit de vraag. De vraag is hoeveel meer het in de ene maand was dan in de andere. Haal het kleinste aantal van het grootste aantal af.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "tekstSterker": "Lees bij allebei de maanden uit de vraag af hoe hoog de stip staat. Welke stip staat het hoogst? Hoeveel moet er nog bij het kleinste aantal om het grootste aantal te krijgen?"
     },
     {
      "bron": "claude-taalfix",
      "soort": "opgeteld",
      "claudeDenkfout": "verkeerde-bewerking",
      "regel": "Claudes sleutel: verkeerde-bewerking",
-     "tekst": "Je hebt de twee maanden bij elkaar opgeteld. De vraag is hoeveel er bij kwamen. Hoeveel meer is de tweede maand dan de eerste?",
-     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+     "tekst": "Je hebt de twee maanden bij elkaar opgeteld. De vraag is hoeveel meer het in de ene maand was dan in de andere. Haal het kleinste aantal van het grootste aantal af.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "tekstSterker": "Bij 'hoeveel meer' tel je de twee maanden niet bij elkaar op. Lees bij allebei de maanden uit de vraag af hoe hoog de stip staat. Hoeveel moet er nog bij het kleinste aantal om het grootste aantal te krijgen?"
     },
     {
      "bron": "nieuw",
      "soort": "de tweede maand (regel)",
      "claudeDenkfout": null,
      "regel": "fout = de tweede maand uit de vraag",
-     "tekst": "Dat is het aantal in de tweede maand van de vraag. Hoeveel waren het in de eerste maand? Haal het aantal van de eerste maand ervan af: dat is wat erbij kwam."
+     "tekst": "Dat is het aantal van één maand uit de vraag. De vraag is hoeveel meer het in de ene maand was dan in de andere. Haal het kleinste aantal van het grootste aantal af.",
+     "tekstSterker": "Lees bij allebei de maanden uit de vraag af hoe hoog de stip staat. Welke stip staat het hoogst? Hoeveel moet er nog bij het kleinste aantal om het grootste aantal te krijgen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de andere maand (regel)",
+     "claudeDenkfout": null,
+     "regel": "fout = de andere maand uit de vraag",
+     "tekst": "Dat is het aantal van één maand uit de vraag. De vraag is hoeveel meer het in de ene maand was dan in de andere. Haal het kleinste aantal van het grootste aantal af.",
+     "tekstSterker": "Lees bij allebei de maanden uit de vraag af hoe hoog de stip staat. Welke stip staat het hoogst? Hoeveel moet er nog bij het kleinste aantal om het grootste aantal te krijgen?"
     },
     {
      "bron": "nieuw",
@@ -42,7 +53,7 @@
      "claudeDenkfout": null,
      "regel": "fout = antwoord : perstreep",
      "tekst": "Is dat het aantal streepjes? Elk streepje is meer dan één. Hoeveel is elk streepje? Reken dan het aantal streepjes keer dat getal.",
-     "tekstSterker": "Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Zo weet je hoeveel elk streepje is. Lees daarna bij de twee maanden uit de vraag af hoe hoog de stip staat."
+     "tekstSterker": "Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Zo weet je hoeveel elk streepje is. Lees daarna bij de twee maanden uit de vraag af hoe hoog de stip staat."
     },
     {
      "bron": "nieuw",
@@ -50,7 +61,7 @@
      "claudeDenkfout": null,
      "regel": "fout = antwoord + perstreep",
      "tekst": "Dat is één streepje te veel. Lees de twee stippen nog eens af en tel de streepjes goed.",
-     "tekstSterker": "Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Zo weet je hoeveel elk streepje is. Lees daarna bij de twee maanden uit de vraag af hoe hoog de stip staat."
+     "tekstSterker": "Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Zo weet je hoeveel elk streepje is. Lees daarna bij de twee maanden uit de vraag af hoe hoog de stip staat."
     },
     {
      "bron": "nieuw",
@@ -58,22 +69,24 @@
      "claudeDenkfout": null,
      "regel": "fout = antwoord − perstreep",
      "tekst": "Dat is één streepje te weinig. Lees de twee stippen nog eens af en tel de streepjes goed.",
-     "tekstSterker": "Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Zo weet je hoeveel elk streepje is. Lees daarna bij de twee maanden uit de vraag af hoe hoog de stip staat."
+     "tekstSterker": "Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Zo weet je hoeveel elk streepje is. Lees daarna bij de twee maanden uit de vraag af hoe hoog de stip staat."
     },
     {
      "bron": "claude-taalfix",
      "soort": "anders afgelezen",
      "claudeDenkfout": "grafiek-verkeerd-afgelezen",
      "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
-     "tekst": "Lees de twee stippen nog eens af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Haal dan de eerste maand van de tweede af.",
-     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+     "tekst": "Lees de twee stippen nog eens af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Haal dan het kleinste aantal van het grootste af.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "tekstSterker": "Zet een vinger op een maand uit de vraag, onder de grafiek. Schuif recht omhoog tot de stip. Zoek het getal langs de zijkant op of net onder de stip, en tel vanaf daar de streepjes tot de stip. Doe dat bij allebei de maanden uit de vraag."
     },
     {
      "bron": "nieuw",
      "soort": "andere fout",
      "claudeDenkfout": null,
      "regel": "andere fout",
-     "tekst": "Lees de twee maanden uit de vraag af. Haal het aantal van de eerste maand af van het aantal van de tweede maand."
+     "tekst": "Lees de twee maanden uit de vraag af. Haal het kleinste aantal van het grootste aantal af.",
+     "tekstSterker": "Zoek de twee maanden uit de vraag onder de grafiek. Ga bij allebei recht omhoog naar de stip en lees af hoeveel het er waren. Hoeveel moet er nog bij het kleinste aantal om het grootste aantal te krijgen?"
     }
    ],
    "claudeVervangen": [
@@ -92,7 +105,7 @@
    "nrOrigineel": 2,
    "somtypeOrigineel": "[lijngrafiek] Hoeveel [ding] waren er in [maand]?",
    "hint1": "Zoek de maand uit de vraag onder de grafiek. Ga recht omhoog naar de stip.",
-   "hint2": "Zoek het getal langs de zijkant op dezelfde hoogte als de stip, of net eronder. Tel dan de streepjes tot de stip. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.",
+   "hint2": "Zoek het getal langs de zijkant op dezelfde hoogte als de stip, of net eronder. Tel dan de streepjes tot de stip. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.",
    "ouderzin": "Je kind leest in een lijngrafiek af hoeveel het er in één maand waren.",
    "foutHints": [
     {
@@ -101,7 +114,8 @@
      "claudeDenkfout": "klok-verkeerd-gelezen",
      "regel": "Claudes sleutel: klok-verkeerd-gelezen",
      "tekst": "Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.",
-     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "tekstSterker": "Zet een vinger op de naam van de maand uit de vraag, onder de grafiek. Schuif recht omhoog tot je vinger bij de stip is. Lees daar af hoe hoog de stip staat."
     },
     {
      "bron": "claude-taalfix",
@@ -116,7 +130,8 @@
      "soort": "andere maand (regel)",
      "claudeDenkfout": null,
      "regel": "fout = een andere maand",
-     "tekst": "Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip."
+     "tekst": "Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.",
+     "tekstSterker": "Zet een vinger op de naam van de maand uit de vraag, onder de grafiek. Schuif recht omhoog tot je vinger bij de stip is. Lees daar af hoe hoog de stip staat."
     },
     {
      "bron": "nieuw",
@@ -151,7 +166,7 @@
      "soort": "anders afgelezen",
      "claudeDenkfout": "grafiek-verkeerd-afgelezen",
      "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
-     "tekst": "Lees de stip nog eens af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Tel dan vanaf het getal op of net onder de stip verder.",
+     "tekst": "Lees de stip nog eens af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Tel dan vanaf het getal op of net onder de stip verder.",
      "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
     },
     {
@@ -177,7 +192,7 @@
    "somtype": "[lijngrafiek] Hoeveel [ding] waren er in alle maanden samen?",
    "nrOrigineel": 3,
    "somtypeOrigineel": "[lijngrafiek] Hoeveel [ding] waren er in alle maanden samen?",
-   "hint1": "Lees bij elke maand af hoe hoog de stip staat. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.",
+   "hint1": "Lees bij elke maand af hoe hoog de stip staat. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.",
    "hint2": "Tel de aantallen van alle maanden bij elkaar op. Tel elke maand precies één keer.",
    "ouderzin": "Je kind leest in een lijngrafiek alle maanden af en telt ze bij elkaar op.",
    "foutHints": [
@@ -232,14 +247,14 @@
      "claudeDenkfout": null,
      "regel": "fout = antwoord : perstreep",
      "tekst": "Is dat het aantal streepjes? Elk streepje is meer dan één. Hoeveel is elk streepje? Lees zo bij elke maand af hoeveel het er waren, en tel die aantallen op.",
-     "tekstSterker": "Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Zo weet je hoeveel elk streepje is. Lees daarna bij elke maand af hoe hoog de stip staat."
+     "tekstSterker": "Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Zo weet je hoeveel elk streepje is. Lees daarna bij elke maand af hoe hoog de stip staat."
     },
     {
      "bron": "claude-taalfix",
      "soort": "anders afgelezen",
      "claudeDenkfout": "grafiek-verkeerd-afgelezen",
      "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
-     "tekst": "Lees bij elke maand de stip goed af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Tel daarna alle maanden op.",
+     "tekst": "Lees bij elke maand de stip goed af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Het streepje bij het onderste getal tel je niet mee. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Tel daarna alle maanden op.",
      "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
     },
     {
@@ -271,7 +286,7 @@
    "nrOrigineel": 1,
    "somtypeOrigineel": "[schema] verhoudingstabel",
    "hint1": "In een verhoudingstabel horen twee getallen bij elkaar. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
-   "hint2": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+   "hint2": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal. Zo blijft de verhouding gelijk.",
    "ouderzin": "Je kind rekent met een verhoudingstabel. Wordt het ene getal een aantal keer zo groot, dan wordt het andere getal ook zoveel keer zo groot.",
    "foutHints": [
     {
@@ -279,31 +294,34 @@
      "soort": "opgeteld",
      "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
-     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
-     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+     "tekst": "Heb je er iets bij opgeteld? In een verhoudingstabel reken je met keer en delen. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "tekstSterker": "Zoek in de tabel het vakje dat je al weet. Past dat aantal een heel aantal keer in het aantal uit de vraag? Doe dan het getal dat erbij hoort ook zoveel keer. Past het niet precies? Deel dan allebei de getallen van dat vakje door twee of door drie, tot je een kleiner vakje hebt dat wel precies past. Reken vanaf dat kleinere vakje verder."
     },
     {
      "bron": "claude-taalfix",
      "soort": "verhouding niet gelijk",
      "claudeDenkfout": "verhoudingstabel-verkeerd",
      "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
-     "tekst": "Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
-     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+     "tekst": "Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "tekstSterker": "Zoek in de tabel het vakje dat je al weet. Past dat aantal een heel aantal keer in het aantal uit de vraag? Doe dan het getal dat erbij hoort ook zoveel keer. Past het niet precies? Deel dan allebei de getallen van dat vakje door twee of door drie, tot je een kleiner vakje hebt dat wel precies past. Reken vanaf dat kleinere vakje verder."
     },
     {
      "bron": "claude-taalfix",
      "soort": "getal uit de vraag",
      "claudeDenkfout": "getal-overgenomen",
      "regel": "Claudes sleutel: getal-overgenomen",
-     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het getal bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
-     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+     "tekst": "Is dat een getal uit de vraag? Bij het vakje uit de vraag hoort een ander getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "tekstSterker": "Zoek in de tabel het vakje dat je al weet. Past dat aantal een heel aantal keer in het aantal uit de vraag? Doe dan het getal dat erbij hoort ook zoveel keer. Past het niet precies? Deel dan allebei de getallen van dat vakje door twee of door drie, tot je een kleiner vakje hebt dat wel precies past. Reken vanaf dat kleinere vakje verder."
     },
     {
      "bron": "claude-taalfix",
      "soort": "gedeeld",
      "claudeDenkfout": "verkeerde-bewerking",
      "regel": "Claudes sleutel: verkeerde-bewerking",
-     "tekst": "Je hebt gedeeld. Bij een groter aantal hoort ook een groter getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekst": "Heb je gedeeld? Bij een groter aantal hoort ook een groter getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder.",
      "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
     },
     {
@@ -311,7 +329,7 @@
      "soort": "andere fout",
      "claudeDenkfout": null,
      "regel": "andere fout",
-     "tekst": "Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk."
+     "tekst": "Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal."
     }
    ],
    "claudeVervangen": [
@@ -542,17 +560,11 @@
     },
     {
      "bron": "nieuw",
-     "soort": "helft van de hokjes (twaalf)",
+     "soort": "helft van de hokjes",
      "claudeDenkfout": null,
-     "regel": "12 hokjes",
-     "tekst": "Dat is de helft van de strook. Een derde is minder dan de helft. Verdeel de strook in drie gelijke stukken. Hoeveel hokjes zitten er in één stuk?"
-    },
-    {
-     "bron": "nieuw",
-     "soort": "helft van de hokjes (tien)",
-     "claudeDenkfout": null,
-     "regel": "10 hokjes",
-     "tekst": "Dat is de helft van de strook. Een kwart is minder dan de helft. Verdeel de strook in vier gelijke stukken. Hoeveel hokjes zitten er in één stuk?"
+     "regel": "fout = de helft van het aantal hokjes",
+     "tekst": "Dat is de helft van de strook. Het deel uit de vraag is kleiner dan de helft. Bij een derde verdeel je de strook in drie gelijke stukken, bij een kwart in vier. Hoeveel hokjes zitten er in één stuk?",
+     "tekstSterker": "Deel het aantal hokjes van de strook door het aantal gelijke stukken: door drie bij een derde, door vier bij een kwart. Zoveel hokjes horen bij het deel uit de vraag."
     },
     {
      "bron": "nieuw",

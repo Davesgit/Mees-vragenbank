@@ -52,7 +52,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 35.121 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.
 
 - **Hint 1 (te schrijven):** Kijk naar het getal vooraan in de vraag. Bij welke plek komt er één bij: de honderdtallen of de duizendtallen?
-- **Hint 2 (te schrijven):** Op die plek staat een negen. Komt er één bij, dan wordt die negen een nul en gaat het cijfer ervoor één omhoog. Is dat cijfer ook een negen? Dan wordt dat ook een nul, en gaat het cijfer daarvoor één omhoog.
+- **Hint 2 (te schrijven):** Op de plek waar er één bijkomt, staat een negen. Komt er één bij, dan wordt die negen een nul en gaat het cijfer ervoor één omhoog. Is dat cijfer ook een negen? Dan wordt dat ook een nul, en gaat het cijfer daarvoor één omhoog.
 - **Ouderzin:** Je kind telt er honderd of duizend bij, over een tienduizendtal of duizendtal heen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `eraf gehaald` (fout = getal1 - getal2 of getal2 - getal1) → Je hebt eraf gehaald. Meer dan betekent dat er iets bijkomt: het getal wordt groter.  [nieuw]
@@ -83,7 +83,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 29.128 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af? · 29.027 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
 - **Hint 1 (te schrijven):** Kijk naar het getal vooraan in de vraag. Bij welke plek gaat er één af: de honderdtallen of de duizendtallen?
-- **Hint 2 (te schrijven):** Op die plek staat een nul. Dan leen je van het cijfer ervoor: de nul wordt een negen en het cijfer ervoor gaat één omlaag. Is dat cijfer ook een nul? Dan wordt dat ook een negen, en leen je van het cijfer daarvoor.
+- **Hint 2 (te schrijven):** Op de plek waar er één afgaat, staat een nul. Dan leen je van het cijfer ervoor: de nul wordt een negen en het cijfer ervoor gaat één omlaag. Is dat cijfer ook een nul? Dan wordt dat ook een negen, en leen je van het cijfer daarvoor.
 - **Ouderzin:** Je kind haalt er honderd of duizend af, over een tienduizendtal of duizendtal heen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `erbij gedaan` (fout = getal1 + getal2) → Je hebt erbij gedaan. Minder dan betekent dat er iets afgaat: het getal wordt kleiner.  [nieuw]

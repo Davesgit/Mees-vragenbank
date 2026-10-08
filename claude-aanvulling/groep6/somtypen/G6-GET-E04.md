@@ -32,9 +32,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent een minsom tot 10.000 onder elkaar uit, met lenen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt de getallen opgeteld. Er zijn er weggehaald: dat is een minsom.  [nieuw]
-  - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Kijk naar de tientallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden; een nul wordt een negen.  [nieuw]
-  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Kijk naar de honderdtallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden; een nul wordt een negen.  [nieuw]
-  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Kijk naar de duizendtallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden.  [nieuw]
+  - `tien te veel (geleend)` (fout = antwoord + 10 (geleend bij de tientallen)) → Dat is tien te veel. Kijk naar de tientallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden; een nul wordt een negen.  [nieuw]
+  - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Reken de tientallen nog eens na.  [nieuw]
+  - `honderd te veel (geleend)` (fout = antwoord + 100 (geleend bij de honderdtallen)) → Dat is honderd te veel. Kijk naar de honderdtallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden; een nul wordt een negen.  [nieuw]
+  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Reken de honderdtallen nog eens na.  [nieuw]
+  - `duizend te veel (geleend)` (fout = antwoord + 1000 (geleend bij de duizendtallen)) → Dat is duizend te veel. Kijk naar de duizendtallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden.  [nieuw]
+  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Reken de duizendtallen nog eens na.  [nieuw]
   - `andere fout` (andere fout) → Zet de getallen onder elkaar en begin bij de eenheden. Kun je een cijfer niet afhalen? Leen dan van links. Staat daar een nul? Dan leen je verder naar links.  [nieuw]
 - Status: hints klaar
 
@@ -62,9 +65,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind telt twee getallen tot 10.000 onder elkaar op.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `eraf gehaald` (fout = getal1 - getal2 of getal2 - getal1) → Je hebt eraf gehaald. Samen is een plussom: tel de getallen bij elkaar op.  [nieuw]
-  - `tien te weinig` (fout = antwoord − 10) → Dat is tien te weinig. Kwamen de eenheden samen op tien of meer? Dan gaat er één tiental mee naar de tientallen.  [nieuw]
-  - `honderd te weinig` (fout = antwoord − 100) → Dat is honderd te weinig. Kwamen de tientallen samen op tien of meer? Dan gaat er één honderdtal mee naar de honderdtallen.  [nieuw]
-  - `duizend te weinig` (fout = antwoord − 1000) → Dat is duizend te weinig. Kwamen de honderdtallen samen op tien of meer? Dan gaat er één duizendtal mee naar de duizendtallen.  [nieuw]
+  - `tien te weinig (onthouden)` (fout = antwoord − 10 (onthouden naar de tientallen)) → Dat is tien te weinig. Kwamen de eenheden samen op tien of meer? Dan gaat er één tiental mee naar de tientallen.  [nieuw]
+  - `tien te weinig` (fout = antwoord − 10) → Dat is tien te weinig. Reken de tientallen nog eens na.  [nieuw]
+  - `honderd te weinig (onthouden)` (fout = antwoord − 100 (onthouden naar de honderdtallen)) → Dat is honderd te weinig. Kwamen de tientallen samen op tien of meer? Dan gaat er één honderdtal mee naar de honderdtallen.  [nieuw]
+  - `honderd te weinig` (fout = antwoord − 100) → Dat is honderd te weinig. Reken de honderdtallen nog eens na.  [nieuw]
+  - `duizend te weinig (onthouden)` (fout = antwoord − 1000 (onthouden naar de duizendtallen)) → Dat is duizend te weinig. Kwamen de honderdtallen samen op tien of meer? Dan gaat er één duizendtal mee naar de duizendtallen.  [nieuw]
+  - `duizend te weinig` (fout = antwoord − 1000) → Dat is duizend te weinig. Reken de duizendtallen nog eens na.  [nieuw]
   - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Tel de tientallen nog eens. Neem je alleen één mee als de eenheden samen op tien of meer komen?  [nieuw]
   - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Tel de honderdtallen nog eens. Neem je alleen één mee als de tientallen samen op tien of meer komen?  [nieuw]
   - `andere fout` (andere fout) → Zet de getallen onder elkaar en tel kolom voor kolom op, van rechts naar links. Komt een kolom op tien of meer? Dan gaat er één mee naar links.  [nieuw]
@@ -148,7 +154,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 697 − 400 + 100 → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. Bij teruggeven: vul aan vanaf de prijs tot het betaalde bedrag. · 697 − 400 + 3 → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. Bij teruggeven: vul aan vanaf de prijs tot het betaalde bedrag.
 
 - **Hint 1 (te schrijven):** Maak het getal dat eraf gaat rond, naar een honderdtal. Het eerste getal blijft zoals het is.
-- **Hint 2 (te schrijven):** Haal je zo meer af dan nodig? Dan doe je het stukje er weer bij. Haal je minder af? Dan haal je het stukje er nog af.
+- **Hint 2 (te schrijven):** Haal je met het ronde getal meer af dan nodig? Dan doe je het stukje er weer bij. Haal je minder af? Dan haal je het stukje er nog af.
 - **Ouderzin:** Je kind kiest een handige manier voor een minsom: het getal dat eraf gaat rond maken en daarna bijstellen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `verkeerd teken` (Claudes sleutel: verkeerde-bewerking) → Het teken aan het eind klopt niet. Heb je meer afgehaald dan nodig? Dan doe je het stukje er weer bij. Heb je minder afgehaald? Dan haal je het stukje er nog af.  [Claude, taalfix]
@@ -182,9 +188,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt de getallen opgeteld. Er zijn er weg: haal het getal van nu af van het getal van eerst.  [nieuw]
   - `kleinste van grootste` (Claudes sleutel: kleinste-van-grootste) → Je hebt per kolom het kleinste cijfer van het grootste afgehaald. Het onderste cijfer gaat altijd van het bovenste af. Is het bovenste kleiner? Dan leen je van links.  [Claude, taalfix]
-  - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Kijk naar de tientallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden.  [nieuw]
-  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Kijk naar de honderdtallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden.  [nieuw]
-  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Kijk naar de duizendtallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden.  [nieuw]
+  - `tien te veel (geleend)` (fout = antwoord + 10 (geleend bij de tientallen)) → Dat is tien te veel. Kijk naar de tientallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden.  [nieuw]
+  - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Reken de tientallen nog eens na.  [nieuw]
+  - `honderd te veel (geleend)` (fout = antwoord + 100 (geleend bij de honderdtallen)) → Dat is honderd te veel. Kijk naar de honderdtallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden.  [nieuw]
+  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Reken de honderdtallen nog eens na.  [nieuw]
+  - `duizend te veel (geleend)` (fout = antwoord + 1000 (geleend bij de duizendtallen)) → Dat is duizend te veel. Kijk naar de duizendtallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden.  [nieuw]
+  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Reken de duizendtallen nog eens na.  [nieuw]
   - `andere fout` (andere fout) → Zet het getal van eerst bovenaan en het getal van nu eronder. Reken kolom voor kolom, van rechts naar links. Is het bovenste cijfer kleiner? Dan leen je van links.  [nieuw]
 - Status: hints klaar
 
@@ -241,9 +250,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind telt twee getallen tot 10.000 bij elkaar op.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `eraf gehaald` (fout = getal1 - getal2 of getal2 - getal1) → Je hebt eraf gehaald. Samen is een plussom: tel de getallen bij elkaar op.  [nieuw]
-  - `tien te weinig` (fout = antwoord − 10) → Dat is tien te weinig. Kwamen de eenheden samen op tien of meer? Dan gaat er één tiental mee naar de tientallen.  [nieuw]
-  - `honderd te weinig` (fout = antwoord − 100) → Dat is honderd te weinig. Kwamen de tientallen samen op tien of meer? Dan gaat er één honderdtal mee naar de honderdtallen.  [nieuw]
-  - `duizend te weinig` (fout = antwoord − 1000) → Dat is duizend te weinig. Kwamen de honderdtallen samen op tien of meer? Dan gaat er één duizendtal mee naar de duizendtallen.  [nieuw]
+  - `tien te weinig (onthouden)` (fout = antwoord − 10 (onthouden naar de tientallen)) → Dat is tien te weinig. Kwamen de eenheden samen op tien of meer? Dan gaat er één tiental mee naar de tientallen.  [nieuw]
+  - `tien te weinig` (fout = antwoord − 10) → Dat is tien te weinig. Reken de tientallen nog eens na.  [nieuw]
+  - `honderd te weinig (onthouden)` (fout = antwoord − 100 (onthouden naar de honderdtallen)) → Dat is honderd te weinig. Kwamen de tientallen samen op tien of meer? Dan gaat er één honderdtal mee naar de honderdtallen.  [nieuw]
+  - `honderd te weinig` (fout = antwoord − 100) → Dat is honderd te weinig. Reken de honderdtallen nog eens na.  [nieuw]
+  - `duizend te weinig (onthouden)` (fout = antwoord − 1000 (onthouden naar de duizendtallen)) → Dat is duizend te weinig. Kwamen de honderdtallen samen op tien of meer? Dan gaat er één duizendtal mee naar de duizendtallen.  [nieuw]
+  - `duizend te weinig` (fout = antwoord − 1000) → Dat is duizend te weinig. Reken de duizendtallen nog eens na.  [nieuw]
   - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Tel de tientallen nog eens. Neem je alleen één mee als de eenheden samen op tien of meer komen?  [nieuw]
   - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Tel de honderdtallen nog eens. Neem je alleen één mee als de tientallen samen op tien of meer komen?  [nieuw]
   - `andere fout` (andere fout) → Zet de getallen onder elkaar en tel kolom voor kolom op, van rechts naar links. Komt een kolom op tien of meer? Dan gaat er één mee naar links.  [nieuw]

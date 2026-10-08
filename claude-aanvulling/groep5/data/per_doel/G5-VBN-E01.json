@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T10:57:42+0200",
+ "gegenereerdOp": "2026-10-08T11:38:45+0200",
  "g4Basis": "g4/scripts build 14:35 (kopie in scripts/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G5-VBN-E01",
  "bordtitel": "Tabellen en staven begrijpen",
@@ -1945,7 +1945,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "20"
+      ]
      },
      "leesbaar": true
     },
@@ -1985,9 +1987,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "20"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -4515,7 +4515,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "5"
+      ]
      },
      "leesbaar": true
     },
@@ -4527,9 +4529,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "5"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -6795,7 +6795,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "20"
+      ]
      },
      "leesbaar": true
     },
@@ -6835,9 +6837,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "20"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -7089,7 +7089,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "5"
+      ]
      },
      "leesbaar": true
     },
@@ -7101,9 +7103,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "5"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -7754,10 +7754,10 @@
     },
     {
      "letter": "C",
-     "tekst": "1100"
+     "tekst": "1000"
     }
    ],
-   "optiesTekst": "A) 900 · B) 9 · C) 1100",
+   "optiesTekst": "A) 900 · B) 9 · C) 1000",
    "antwoord": "900",
    "antwoordDetail": {
     "juisteOptie": "A",
@@ -7778,16 +7778,19 @@
     },
     {
      "stap": null,
-     "fout": "1100",
-     "uitleg": "Je hebt de twee staven opgeteld. De vraag is hoeveel meer: haal het kleinste getal van het grootste af.",
+     "fout": "1000",
+     "uitleg": "Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af.",
      "uitlegSterker": "Hoeveel meer? Haal het kleinste getal van het grootste af.",
      "laag2": "terugval hint2 (somtype)",
-     "regel": "Claudes sleutel: verkeerde-bewerking",
-     "soort": "opgeteld",
-     "bron": "claude-taalfix"
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "één staaf",
+     "bron": "claude-taalfix",
+     "ookRegels": [
+      "fout = antwoord + getal1"
+     ]
     }
    ],
-   "foutHintsTekst": "9 → Je hebt geteld hoeveel streepjes de ene staaf hoger is. Kijk in de vraag hoeveel elk streepje is. Tel per streepje zo veel verder. · 1100 → Je hebt de twee staven opgeteld. De vraag is hoeveel meer: haal het kleinste getal van het grootste af.",
+   "foutHintsTekst": "9 → Je hebt geteld hoeveel streepjes de ene staaf hoger is. Kijk in de vraag hoeveel elk streepje is. Tel per streepje zo veel verder. · 1000 → Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af.",
    "ouderzin": "Je kind leest twee staven af in een staafdiagram en rekent uit hoeveel meer het ene is dan het andere.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -7848,8 +7851,9 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "1100",
-      "denkfout": "verkeerde-bewerking"
+      "fout": "1000",
+      "denkfout": "andere-deel-genomen",
+      "denkfoutVoor361": "verkeerde-bewerking"
      },
      {
       "fout": "9",
@@ -7860,8 +7864,8 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "1100",
-      "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
+      "fout": "1000",
+      "uitleg": "Dat is wat één staaf laat zien. De vraag is hoeveel meer het is."
      },
      {
       "stap": null,
@@ -7907,6 +7911,12 @@
      "voorstelDoel": "G5-VBN-E01",
      "regel": "G26-staaf"
     },
+    "optie361": {
+     "oud": "1100",
+     "nieuw": "1000",
+     "label": "andere-deel-genomen",
+     "door": "Overzicht (G5 ronde 10, 8 okt)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
@@ -7944,9 +7954,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "1100"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -7958,7 +7966,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "1000"
+      ]
      },
      "leesbaar": true
     },
@@ -7984,9 +7994,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "1000"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -11135,7 +11143,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "100"
+      ]
      },
      "leesbaar": true
     },
@@ -11175,9 +11185,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "100"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -15770,7 +15778,7 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "1100"
+     "tekst": "800"
     },
     {
      "letter": "B",
@@ -15781,7 +15789,7 @@
      "tekst": "400"
     }
    ],
-   "optiesTekst": "A) 1100 · B) 500 · C) 400",
+   "optiesTekst": "A) 800 · B) 500 · C) 400",
    "antwoord": "500",
    "antwoordDetail": {
     "juisteOptie": "B",
@@ -15792,12 +15800,12 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "1100",
-     "uitleg": "Je hebt de twee staven opgeteld. De vraag is hoeveel meer: haal het kleinste getal van het grootste af.",
+     "fout": "800",
+     "uitleg": "Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af.",
      "uitlegSterker": "Hoeveel meer? Haal het kleinste getal van het grootste af.",
      "laag2": "terugval hint2 (somtype)",
-     "regel": "Claudes sleutel: verkeerde-bewerking",
-     "soort": "opgeteld",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "één staaf",
      "bron": "claude-taalfix"
     },
     {
@@ -15811,7 +15819,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1100 → Je hebt de twee staven opgeteld. De vraag is hoeveel meer: haal het kleinste getal van het grootste af. · 400 → Bijna! Dat is één streepje te weinig. Kijk nog eens goed waar de toppen van de twee staven zijn.",
+   "foutHintsTekst": "800 → Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af. · 400 → Bijna! Dat is één streepje te weinig. Kijk nog eens goed waar de toppen van de twee staven zijn.",
    "ouderzin": "Je kind leest twee staven af in een staafdiagram en rekent uit hoeveel meer het ene is dan het andere.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -15872,8 +15880,9 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "1100",
-      "denkfout": "verkeerde-bewerking"
+      "fout": "800",
+      "denkfout": "andere-deel-genomen",
+      "denkfoutVoor361": "verkeerde-bewerking"
      },
      {
       "fout": "400",
@@ -15884,8 +15893,8 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "1100",
-      "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
+      "fout": "800",
+      "uitleg": "Dat is wat één staaf laat zien. De vraag is hoeveel meer het is."
      },
      {
       "stap": null,
@@ -15931,6 +15940,12 @@
      "voorstelDoel": "G5-VBN-E01",
      "regel": "G26-staaf"
     },
+    "optie361": {
+     "oud": "1100",
+     "nieuw": "800",
+     "label": "andere-deel-genomen",
+     "door": "Overzicht (G5 ronde 10, 8 okt)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
@@ -15968,9 +15983,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "1100"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -15982,7 +15995,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "800"
+      ]
      },
      "leesbaar": true
     },
@@ -16367,15 +16382,15 @@
     {
      "stap": null,
      "fout": "5",
-     "uitleg": "Bijna! Dat is één streepje te weinig. Kijk nog eens goed waar de toppen van de twee staven zijn.",
+     "uitleg": "Lees de twee staven uit de vraag af. Kijk hoeveel elk streepje is. Hoeveel meer? Haal het kleinste getal van het grootste af.",
      "uitlegSterker": "Hoeveel meer? Haal het kleinste getal van het grootste af.",
      "laag2": "terugval hint2 (somtype)",
-     "regel": "fout = antwoord − getal1",
-     "soort": "één streepje te weinig",
+     "regel": "andere fout",
+     "soort": "andere fout",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "2 → Je hebt geteld hoeveel streepjes de ene staaf hoger is. Kijk in de vraag hoeveel elk streepje is. Tel per streepje zo veel verder. · 5 → Bijna! Dat is één streepje te weinig. Kijk nog eens goed waar de toppen van de twee staven zijn.",
+   "foutHintsTekst": "2 → Je hebt geteld hoeveel streepjes de ene staaf hoger is. Kijk in de vraag hoeveel elk streepje is. Tel per streepje zo veel verder. · 5 → Lees de twee staven uit de vraag af. Kijk hoeveel elk streepje is. Hoeveel meer? Haal het kleinste getal van het grootste af.",
    "ouderzin": "Je kind leest twee staven af in een staafdiagram en rekent uit hoeveel meer het ene is dan het andere.",
    "getallenruimte": "0–10",
    "context": "laag",
@@ -16590,9 +16605,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "5"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -18839,7 +18852,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "5"
+      ]
      },
      "leesbaar": true
     },
@@ -18879,9 +18894,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "5"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -20252,7 +20265,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "100"
+      ]
      },
      "leesbaar": true
     },
@@ -20292,9 +20307,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "100"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -21686,7 +21699,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "5"
+      ]
      },
      "leesbaar": true
     },
@@ -21698,9 +21713,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "5"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -22610,7 +22623,7 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "1150"
+     "tekst": "800"
     },
     {
      "letter": "B",
@@ -22621,7 +22634,7 @@
      "tekst": "500"
     }
    ],
-   "optiesTekst": "A) 1150 · B) 450 · C) 500",
+   "optiesTekst": "A) 800 · B) 450 · C) 500",
    "antwoord": "450",
    "antwoordDetail": {
     "juisteOptie": "B",
@@ -22632,12 +22645,12 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "1150",
-     "uitleg": "Je hebt de twee staven opgeteld. De vraag is hoeveel meer: haal het kleinste getal van het grootste af.",
+     "fout": "800",
+     "uitleg": "Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af.",
      "uitlegSterker": "Hoeveel meer? Haal het kleinste getal van het grootste af.",
      "laag2": "terugval hint2 (somtype)",
-     "regel": "Claudes sleutel: verkeerde-bewerking",
-     "soort": "opgeteld",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "één staaf",
      "bron": "claude-taalfix"
     },
     {
@@ -22651,7 +22664,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1150 → Je hebt de twee staven opgeteld. De vraag is hoeveel meer: haal het kleinste getal van het grootste af. · 500 → Bijna! Dat is één streepje te veel. Kijk nog eens goed waar de toppen van de twee staven zijn.",
+   "foutHintsTekst": "800 → Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af. · 500 → Bijna! Dat is één streepje te veel. Kijk nog eens goed waar de toppen van de twee staven zijn.",
    "ouderzin": "Je kind leest twee staven af in een staafdiagram en rekent uit hoeveel meer het ene is dan het andere.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -22708,8 +22721,9 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "1150",
-      "denkfout": "verkeerde-bewerking"
+      "fout": "800",
+      "denkfout": "andere-deel-genomen",
+      "denkfoutVoor361": "verkeerde-bewerking"
      },
      {
       "fout": "500",
@@ -22720,8 +22734,8 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "1150",
-      "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
+      "fout": "800",
+      "uitleg": "Dat is wat één staaf laat zien. De vraag is hoeveel meer het is."
      },
      {
       "stap": null,
@@ -22767,6 +22781,12 @@
      "voorstelDoel": "G5-VBN-E01",
      "regel": "G26-staaf"
     },
+    "optie361": {
+     "oud": "1150",
+     "nieuw": "800",
+     "label": "andere-deel-genomen",
+     "door": "Overzicht (G5 ronde 10, 8 okt)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
@@ -22804,9 +22824,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "1150"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -22818,7 +22836,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "800"
+      ]
      },
      "leesbaar": true
     },
@@ -23205,15 +23225,15 @@
     {
      "stap": null,
      "fout": "50",
-     "uitleg": "Bijna! Dat is één streepje te weinig. Kijk nog eens goed waar de toppen van de twee staven zijn.",
+     "uitleg": "Lees de twee staven uit de vraag af. Kijk hoeveel elk streepje is. Hoeveel meer? Haal het kleinste getal van het grootste af.",
      "uitlegSterker": "Hoeveel meer? Haal het kleinste getal van het grootste af.",
      "laag2": "terugval hint2 (somtype)",
-     "regel": "fout = antwoord − getal1",
-     "soort": "één streepje te weinig",
+     "regel": "andere fout",
+     "soort": "andere fout",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "2 → Je hebt geteld hoeveel streepjes de ene staaf hoger is. Kijk in de vraag hoeveel elk streepje is. Tel per streepje zo veel verder. · 50 → Bijna! Dat is één streepje te weinig. Kijk nog eens goed waar de toppen van de twee staven zijn.",
+   "foutHintsTekst": "2 → Je hebt geteld hoeveel streepjes de ene staaf hoger is. Kijk in de vraag hoeveel elk streepje is. Tel per streepje zo veel verder. · 50 → Lees de twee staven uit de vraag af. Kijk hoeveel elk streepje is. Hoeveel meer? Haal het kleinste getal van het grootste af.",
    "ouderzin": "Je kind leest twee staven af in een staafdiagram en rekent uit hoeveel meer het ene is dan het andere.",
    "getallenruimte": "0–100",
    "context": "laag",
@@ -23426,9 +23446,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "50"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -23959,7 +23977,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "15"
+      ]
      },
      "leesbaar": true
     },
@@ -23985,9 +24005,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "15"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -25121,7 +25139,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "75"
+      ]
      },
      "leesbaar": true
     },
@@ -25161,9 +25181,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "75"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -28082,7 +28100,7 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "1300"
+     "tekst": "1000"
     },
     {
      "letter": "B",
@@ -28093,7 +28111,7 @@
      "tekst": "800"
     }
    ],
-   "optiesTekst": "A) 1300 · B) 700 · C) 800",
+   "optiesTekst": "A) 1000 · B) 700 · C) 800",
    "antwoord": "700",
    "antwoordDetail": {
     "juisteOptie": "B",
@@ -28104,12 +28122,12 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "1300",
-     "uitleg": "Je hebt de twee staven opgeteld. De vraag is hoeveel meer: haal het kleinste getal van het grootste af.",
+     "fout": "1000",
+     "uitleg": "Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af.",
      "uitlegSterker": "Hoeveel meer? Haal het kleinste getal van het grootste af.",
      "laag2": "terugval hint2 (somtype)",
-     "regel": "Claudes sleutel: verkeerde-bewerking",
-     "soort": "opgeteld",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "één staaf",
      "bron": "claude-taalfix"
     },
     {
@@ -28123,7 +28141,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1300 → Je hebt de twee staven opgeteld. De vraag is hoeveel meer: haal het kleinste getal van het grootste af. · 800 → Bijna! Dat is één streepje te veel. Kijk nog eens goed waar de toppen van de twee staven zijn.",
+   "foutHintsTekst": "1000 → Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af. · 800 → Bijna! Dat is één streepje te veel. Kijk nog eens goed waar de toppen van de twee staven zijn.",
    "ouderzin": "Je kind leest twee staven af in een staafdiagram en rekent uit hoeveel meer het ene is dan het andere.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -28184,8 +28202,9 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "1300",
-      "denkfout": "verkeerde-bewerking"
+      "fout": "1000",
+      "denkfout": "andere-deel-genomen",
+      "denkfoutVoor361": "verkeerde-bewerking"
      },
      {
       "fout": "800",
@@ -28196,8 +28215,8 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "1300",
-      "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
+      "fout": "1000",
+      "uitleg": "Dat is wat één staaf laat zien. De vraag is hoeveel meer het is."
      },
      {
       "stap": null,
@@ -28243,6 +28262,12 @@
      "voorstelDoel": "G5-VBN-E01",
      "regel": "G26-staaf"
     },
+    "optie361": {
+     "oud": "1300",
+     "nieuw": "1000",
+     "label": "andere-deel-genomen",
+     "door": "Overzicht (G5 ronde 10, 8 okt)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
@@ -28280,9 +28305,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "1300"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -28294,7 +28317,9 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "1000"
+      ]
      },
      "leesbaar": true
     },
@@ -28947,10 +28972,10 @@
     },
     {
      "letter": "C",
-     "tekst": "1300"
+     "tekst": "7"
     }
    ],
-   "optiesTekst": "A) 700 · B) 1000 · C) 1300",
+   "optiesTekst": "A) 700 · B) 1000 · C) 7",
    "antwoord": "700",
    "antwoordDetail": {
     "juisteOptie": "A",
@@ -28971,16 +28996,16 @@
     },
     {
      "stap": null,
-     "fout": "1300",
-     "uitleg": "Je hebt de twee staven opgeteld. De vraag is hoeveel meer: haal het kleinste getal van het grootste af.",
+     "fout": "7",
+     "uitleg": "Je hebt geteld hoeveel streepjes de ene staaf hoger is. Kijk in de vraag hoeveel elk streepje is. Tel per streepje zo veel verder.",
      "uitlegSterker": "Hoeveel meer? Haal het kleinste getal van het grootste af.",
      "laag2": "terugval hint2 (somtype)",
-     "regel": "Claudes sleutel: verkeerde-bewerking",
-     "soort": "opgeteld",
-     "bron": "claude-taalfix"
+     "regel": "fout = antwoord gedeeld door getal1",
+     "soort": "streepjes geteld",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1000 → Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af. · 1300 → Je hebt de twee staven opgeteld. De vraag is hoeveel meer: haal het kleinste getal van het grootste af.",
+   "foutHintsTekst": "1000 → Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af. · 7 → Je hebt geteld hoeveel streepjes de ene staaf hoger is. Kijk in de vraag hoeveel elk streepje is. Tel per streepje zo veel verder.",
    "ouderzin": "Je kind leest twee staven af in een staafdiagram en rekent uit hoeveel meer het ene is dan het andere.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -29041,8 +29066,9 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "1300",
-      "denkfout": "verkeerde-bewerking"
+      "fout": "7",
+      "denkfout": "streepjes-geteld",
+      "denkfoutVoor361": "verkeerde-bewerking"
      },
      {
       "fout": "1000",
@@ -29053,8 +29079,8 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "1300",
-      "uitleg": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
+      "fout": "7",
+      "uitleg": "Je hebt de streepjes geteld. Elk streepje is meer dan één."
      },
      {
       "stap": null,
@@ -29100,6 +29126,12 @@
      "voorstelDoel": "G5-VBN-E01",
      "regel": "G26-staaf"
     },
+    "optie361": {
+     "oud": "1300",
+     "nieuw": "7",
+     "label": "streepjes-geteld",
+     "door": "Overzicht (G5 ronde 10, 8 okt)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
@@ -29137,9 +29169,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "1300"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -30624,8 +30654,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "5",
-       "7"
+       "5"
       ]
      },
      "leesbaar": true
@@ -30911,9 +30940,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "7"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -31477,10 +31504,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "6",
-       "700"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -31770,7 +31794,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "350",
        "375"
       ]
      },
@@ -32051,10 +32074,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "5",
-       "120"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -32336,7 +32356,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "50",
        "60"
       ]
      },
@@ -32620,7 +32639,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "30",
        "65"
       ]
      },
@@ -32904,7 +32922,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "200",
        "400"
       ]
      },
@@ -33191,10 +33208,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "4",
-       "100"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -33475,10 +33489,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "4",
-       "60"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -33758,7 +33769,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "600",
        "800"
       ]
      },
@@ -34046,7 +34056,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "800",
        "1000"
       ]
      },
@@ -34330,7 +34339,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "140",
        "160"
       ]
      },
@@ -34623,10 +34631,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "3",
-       "20"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -34908,7 +34913,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "700",
        "750"
       ]
      },
@@ -35210,7 +35214,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "7",
        "45"
       ]
      },
@@ -35504,10 +35507,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "6",
-       "35"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -35788,9 +35788,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "900"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -36071,10 +36069,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "6",
-       "125"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -36359,10 +36354,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "3",
-       "40"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -36648,7 +36640,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "700",
        "800"
       ]
      },
@@ -36936,7 +36927,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "70",
        "100"
       ]
      },
@@ -37224,7 +37214,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "400",
        "500"
       ]
      },
@@ -37523,7 +37512,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "8",
        "50"
       ]
      },
@@ -37811,7 +37799,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "500",
        "700"
       ]
      },
@@ -38090,9 +38077,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "400"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -38378,7 +38363,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "80",
        "130"
       ]
      },
@@ -38666,7 +38650,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "120",
        "160"
       ]
      },
@@ -38956,7 +38939,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "8",
        "500"
       ]
      },
@@ -39245,10 +39227,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "8",
-       "225"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -39533,10 +39512,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "9",
-       "250"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -39817,10 +39793,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "3",
-       "40"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -40105,10 +40078,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "7",
-       "160"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -40397,7 +40367,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "3",
        "25"
       ]
      },
@@ -40684,9 +40653,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "7"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -40974,7 +40941,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "8",
        "500"
       ]
      },
@@ -41267,10 +41233,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "1",
-       "10"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -41562,7 +41525,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "20",
        "25"
       ]
      },
@@ -41845,9 +41807,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "13"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -42129,7 +42089,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "3",
        "600"
       ]
      },
@@ -42413,7 +42372,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "100",
        "120"
       ]
      },
@@ -42700,10 +42658,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "5",
-       "150"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -42984,9 +42939,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "275"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -43272,7 +43225,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "250",
        "350"
       ]
      },
@@ -43551,9 +43503,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "7"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -43835,7 +43785,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "120",
        "180"
       ]
      },
@@ -44127,7 +44076,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "25",
        "30"
       ]
      },
@@ -44421,10 +44369,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "6",
-       "35"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -44706,7 +44651,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "6",
        "800"
       ]
      },
@@ -44990,7 +44934,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "7",
        "120"
       ]
      },
@@ -45284,7 +45227,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "10",
        "15"
       ]
      },
@@ -45566,7 +45508,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "5",
        "35"
       ]
      },
@@ -45860,7 +45801,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "3",
        "25"
       ]
      },
@@ -46154,7 +46094,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "10",
        "15"
       ]
      },
@@ -46433,9 +46372,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "130"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -46717,7 +46654,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "150",
        "175"
       ]
      },
@@ -46773,11 +46709,11 @@
     {
      "stap": null,
      "fout": "5",
-     "uitleg": "Bijna! Dat is één streepje te weinig. Kijk goed waar de top van de staaf is.",
+     "uitleg": "Zoek de staaf van het ding uit de vraag. Staat er een getal bij de top? Dan is dat het antwoord. Staat er geen getal, zoek dan het getal vlak eronder. Tel de streepjes erboven erbij: kijk in de vraag hoeveel elk streepje is.",
      "uitlegSterker": "Kijk in de vraag hoeveel elk streepje is. Tel vanaf dat getal verder, zo veel per streepje, tot de top van de staaf.",
      "laag2": "terugval hint2 (somtype)",
-     "regel": "fout = antwoord − getal1",
-     "soort": "één streepje te weinig",
+     "regel": "andere fout",
+     "soort": "andere fout",
      "bron": "nieuw"
     },
     {
@@ -46791,7 +46727,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "5 → Bijna! Dat is één streepje te weinig. Kijk goed waar de top van de staaf is. · 2 → Je hebt de streepjes geteld. Kijk in de vraag hoeveel elk streepje is. Tel bij elk streepje zo veel verder.",
+   "foutHintsTekst": "5 → Zoek de staaf van het ding uit de vraag. Staat er een getal bij de top? Dan is dat het antwoord. Staat er geen getal, zoek dan het getal vlak eronder. Tel de streepjes erboven erbij: kijk in de vraag hoeveel elk streepje is. · 2 → Je hebt de streepjes geteld. Kijk in de vraag hoeveel elk streepje is. Tel bij elk streepje zo veel verder.",
    "ouderzin": "Je kind leest een staafdiagram af. Elk streepje is meer dan één.",
    "getallenruimte": "0–10",
    "context": "laag",
@@ -46994,9 +46930,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "5"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -47008,10 +46942,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "2",
-       "5"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -47309,7 +47240,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "8",
        "50"
       ]
      },
@@ -47603,7 +47533,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "1",
        "15"
       ]
      },
@@ -47887,7 +47816,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "40",
        "50"
       ]
      },
@@ -48175,7 +48103,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "11",
        "800"
       ]
      },
@@ -48461,7 +48388,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "45",
        "60"
       ]
      },
@@ -48745,7 +48671,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "300",
        "600"
       ]
      },
@@ -49032,10 +48957,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "16",
-       "170"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -49320,10 +49242,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "9",
-       "50"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -49888,7 +49807,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "1",
        "300"
       ]
      },
@@ -50176,7 +50094,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "60",
        "80"
       ]
      },
@@ -50475,10 +50392,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "8",
-       "35"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -50759,10 +50673,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "4",
-       "60"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -51056,7 +50967,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "35",
        "40"
       ]
      },
@@ -51348,7 +51258,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "2",
        "20"
       ]
      },
@@ -51650,7 +51559,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "7",
        "45"
       ]
      },
@@ -51941,10 +51849,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "4",
-       "25"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -52227,10 +52132,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "4",
-       "150"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -52519,7 +52421,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "4",
        "35"
       ]
      },
@@ -52810,10 +52711,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "4",
-       "25"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -53110,7 +53008,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "8",
        "50"
       ]
      },
@@ -53398,7 +53295,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "900",
        "1000"
       ]
      },
@@ -53686,7 +53582,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "200",
        "250"
       ]
      },
@@ -53980,7 +53875,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "20",
        "25"
       ]
      },
@@ -54268,7 +54162,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "40",
        "50"
       ]
      },
@@ -54552,7 +54445,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "600",
        "850"
       ]
      },
@@ -54836,7 +54728,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "11",
        "90"
       ]
      },
@@ -55132,7 +55023,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "6",
        "45"
       ]
      },
@@ -55420,7 +55310,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "300",
        "400"
       ]
      },
@@ -55708,7 +55597,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "8",
        "200"
       ]
      },
@@ -55995,10 +55883,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "7",
-       "600"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -56284,7 +56169,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "120",
        "180"
       ]
      },
@@ -56565,10 +56449,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "5",
-       "20"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -56850,7 +56731,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "300",
        "425"
       ]
      },
@@ -57136,7 +57016,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "5",
        "140"
       ]
      },
@@ -57420,7 +57299,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "140",
        "200"
       ]
      },
@@ -57707,10 +57585,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "3",
-       "20"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -57992,7 +57867,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "3",
        "500"
       ]
      },
@@ -58291,8 +58165,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "5",
-       "9"
+       "5"
       ]
      },
      "leesbaar": true
@@ -58570,9 +58443,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "550"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -58862,7 +58733,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "175",
        "300"
       ]
      },
@@ -59154,7 +59024,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "700",
        "750"
       ]
      },
@@ -59442,7 +59311,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "8",
        "200"
       ]
      },
@@ -59732,7 +59600,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "4",
        "200"
       ]
      },
@@ -60015,10 +59882,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "3",
-       "40"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -60305,10 +60169,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "4",
-       "150"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -60594,7 +60455,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "45",
        "50"
       ]
      },
@@ -60882,7 +60742,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "300",
        "350"
       ]
      },
@@ -61169,10 +61028,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "14",
-       "65"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -61451,10 +61307,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "5",
-       "20"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -61734,7 +61587,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "60",
        "70"
       ]
      },
@@ -62301,7 +62153,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "350",
        "375"
       ]
      },
@@ -62585,7 +62436,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "300",
        "350"
       ]
      },
@@ -62880,7 +62730,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "3",
        "25"
       ]
      },
@@ -63172,7 +63021,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "15",
        "35"
       ]
      },
@@ -63463,10 +63311,7 @@
      "tekstSterker": null,
      "perItem": false,
      "match": {
-      "waarden": [
-       "4",
-       "25"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -64195,7 +64040,6 @@
        "390",
        "400",
        "405",
-       "425",
        "440",
        "465"
       ]
@@ -64621,7 +64465,6 @@
        "425",
        "430",
        "440",
-       "465",
        "500"
       ]
      },
@@ -64987,13 +64830,11 @@
        "310",
        "315",
        "325",
-       "335",
        "340",
        "360",
        "365",
        "375",
        "380",
-       "400",
        "405",
        "440",
        "465"
@@ -66121,7 +65962,6 @@
        "335",
        "340",
        "365",
-       "375",
        "390",
        "400",
        "405",
@@ -67692,7 +67532,6 @@
        "350",
        "360",
        "365",
-       "375",
        "380",
        "390",
        "400",
@@ -67748,8 +67587,7 @@
        "155",
        "165",
        "180",
-       "190",
-       "215"
+       "190"
       ]
      },
      "leesbaar": true
@@ -69653,7 +69491,6 @@
        "285",
        "300",
        "310",
-       "335",
        "350",
        "365",
        "390",
@@ -71651,7 +71488,6 @@
        "365",
        "375",
        "390",
-       "400",
        "405",
        "425",
        "440",
@@ -71703,7 +71539,6 @@
        "155",
        "165",
        "180",
-       "190",
        "215"
       ]
      },
@@ -72019,7 +71854,6 @@
        "390",
        "400",
        "405",
-       "425",
        "440",
        "465",
        "500"
@@ -73164,7 +72998,6 @@
        "62",
        "64",
        "67",
-       "68",
        "70",
        "73",
        "74",
@@ -74062,8 +73895,7 @@
        "155",
        "165",
        "180",
-       "190",
-       "215"
+       "190"
       ]
      },
      "leesbaar": true
@@ -74852,7 +74684,6 @@
        "44",
        "45",
        "49",
-       "52",
        "56",
        "63"
       ]
@@ -75230,7 +75061,6 @@
        "390",
        "400",
        "405",
-       "425",
        "430",
        "440",
        "465"
@@ -76056,8 +75886,7 @@
        "155",
        "165",
        "180",
-       "190",
-       "215"
+       "190"
       ]
      },
      "leesbaar": true
@@ -76368,7 +76197,6 @@
        "62",
        "64",
        "67",
-       "68",
        "70",
        "73",
        "74",
@@ -76793,8 +76621,7 @@
        "425",
        "430",
        "440",
-       "465",
-       "500"
+       "465"
       ]
      },
      "leesbaar": true
@@ -77174,7 +77001,6 @@
        "83",
        "84",
        "86",
-       "87",
        "89",
        "91",
        "92",
@@ -77252,7 +77078,6 @@
        "45",
        "49",
        "50",
-       "52",
        "56",
        "57",
        "63"
@@ -77917,7 +77742,6 @@
        "62",
        "64",
        "67",
-       "68",
        "70",
        "75",
        "80",
@@ -78309,7 +78133,6 @@
        "70",
        "73",
        "74",
-       "75",
        "79",
        "80",
        "81",
@@ -78718,7 +78541,6 @@
        "310",
        "315",
        "325",
-       "335",
        "340",
        "350",
        "360",
@@ -79077,7 +78899,6 @@
        "67",
        "70",
        "73",
-       "75",
        "79",
        "80",
        "83",
@@ -79476,7 +79297,6 @@
        "62",
        "64",
        "67",
-       "68",
        "70",
        "73",
        "74",
@@ -79891,7 +79711,6 @@
        "98",
        "105",
        "106",
-       "112",
        "113",
        "119",
        "122",
@@ -79952,7 +79771,6 @@
        "43",
        "44",
        "49",
-       "52",
        "57",
        "63"
       ]
@@ -80992,7 +80810,6 @@
        "220",
        "225",
        "235",
-       "250",
        "260",
        "275",
        "285",
@@ -81423,8 +81240,7 @@
        "155",
        "165",
        "180",
-       "190",
-       "215"
+       "190"
       ]
      },
      "leesbaar": true
@@ -81736,7 +81552,6 @@
        "300",
        "315",
        "325",
-       "335",
        "340",
        "350",
        "360",
@@ -82552,7 +82367,6 @@
        "365",
        "375",
        "380",
-       "400",
        "425",
        "440"
       ]
@@ -82600,7 +82414,6 @@
        "140",
        "155",
        "165",
-       "190",
        "215"
       ]
      },
@@ -83724,7 +83537,6 @@
        "365",
        "375",
        "390",
-       "400",
        "405",
        "425",
        "430",
@@ -83774,8 +83586,7 @@
        "155",
        "165",
        "180",
-       "190",
-       "215"
+       "190"
       ]
      },
      "leesbaar": true
@@ -84086,7 +83897,6 @@
        "62",
        "64",
        "67",
-       "68",
        "70",
        "73",
        "75",
@@ -84486,7 +84296,6 @@
        "62",
        "64",
        "67",
-       "68",
        "70",
        "73",
        "74",
@@ -84887,7 +84696,6 @@
        "62",
        "64",
        "67",
-       "68",
        "70",
        "73",
        "75",
@@ -85276,7 +85084,6 @@
        "195",
        "210",
        "235",
-       "250",
        "260",
        "275",
        "285",
@@ -85657,7 +85464,6 @@
        "62",
        "64",
        "67",
-       "68",
        "70",
        "73",
        "75",
@@ -88234,8 +88040,7 @@
        "155",
        "165",
        "180",
-       "190",
-       "215"
+       "190"
       ]
      },
      "leesbaar": true
@@ -88929,8 +88734,7 @@
        "155",
        "165",
        "180",
-       "190",
-       "215"
+       "190"
       ]
      },
      "leesbaar": true
@@ -89274,7 +89078,6 @@
        "220",
        "225",
        "235",
-       "250",
        "260",
        "275",
        "285",
@@ -89627,7 +89430,6 @@
        "220",
        "225",
        "235",
-       "250",
        "260",
        "275",
        "285",
@@ -89680,7 +89482,6 @@
        "155",
        "165",
        "180",
-       "190",
        "215"
       ]
      },
@@ -89971,7 +89772,6 @@
        "220",
        "225",
        "235",
-       "250",
        "260",
        "275",
        "285",
@@ -90680,7 +90480,6 @@
        "220",
        "225",
        "235",
-       "250",
        "260",
        "275",
        "285",
@@ -91724,7 +91523,6 @@
        "210",
        "225",
        "235",
-       "250",
        "260",
        "275",
        "285",
@@ -92113,8 +91911,7 @@
        "155",
        "165",
        "180",
-       "190",
-       "215"
+       "190"
       ]
      },
      "leesbaar": true
@@ -92402,7 +92199,6 @@
        "195",
        "210",
        "235",
-       "250",
        "260",
        "275",
        "285",
@@ -92450,8 +92246,7 @@
        "140",
        "155",
        "165",
-       "190",
-       "215"
+       "190"
       ]
      },
      "leesbaar": true
@@ -92815,7 +92610,6 @@
        "100",
        "105",
        "115",
-       "125",
        "130",
        "140",
        "155",
@@ -93562,8 +93356,7 @@
        "140",
        "155",
        "165",
-       "180",
-       "215"
+       "180"
       ]
      },
      "leesbaar": true
@@ -94244,8 +94037,7 @@
        "155",
        "165",
        "180",
-       "190",
-       "215"
+       "190"
       ]
      },
      "leesbaar": true
@@ -94944,7 +94736,6 @@
        "155",
        "165",
        "180",
-       "190",
        "215"
       ]
      },
@@ -95618,7 +95409,6 @@
        "220",
        "225",
        "235",
-       "250",
        "260",
        "275",
        "285",
@@ -96059,7 +95849,6 @@
        "100",
        "105",
        "115",
-       "125",
        "130",
        "140",
        "155",
@@ -98380,7 +98169,6 @@
      "match": {
       "waarden": [
        "460",
-       "510",
        "590",
        "660"
       ]
@@ -100621,7 +100409,6 @@
      "match": {
       "waarden": [
        "510",
-       "570",
        "600",
        "650"
       ]
@@ -101214,7 +101001,6 @@
       "waarden": [
        "410",
        "510",
-       "550",
        "700"
       ]
      },
@@ -103156,7 +102942,6 @@
      "match": {
       "waarden": [
        "510",
-       "570",
        "600",
        "650"
       ]
@@ -103713,7 +103498,6 @@
      "match": {
       "waarden": [
        "420",
-       "510",
        "700"
       ]
      },
@@ -104006,7 +103790,6 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "460",
        "510",
        "550",
        "610"
@@ -104024,7 +103807,6 @@
      "match": {
       "waarden": [
        "460",
-       "510",
        "570",
        "590"
       ]
@@ -104880,35 +104662,35 @@
    "algemeneFoutHint": "Zoek de rij van het ding en de kolom van de dag. Waar die twee elkaar raken, staat het antwoord. Je hoeft niets uit te rekenen."
   }
  ],
- "hintsSyncOp": "2026-10-08T10:57:46+02:00",
+ "hintsSyncOp": "2026-10-08T11:38:49+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
-   "md5": "842699d208fd"
+   "md5": "d38ee8883235"
   },
   {
    "batch": "batch2.json",
-   "md5": "177896520b4a"
+   "md5": "2ba1746e4b5a"
   },
   {
    "batch": "batch3.json",
-   "md5": "6084f882b8c5"
+   "md5": "931c79d71c33"
   },
   {
    "batch": "batch4.json",
-   "md5": "8c2471f502ac"
+   "md5": "d42bd6272a4a"
   },
   {
    "batch": "batch5.json",
-   "md5": "73fd646d3959"
+   "md5": "c880e1c905bc"
   },
   {
    "batch": "batch6.json",
-   "md5": "6b0a808ef2f9"
+   "md5": "4991fb78dcc1"
   },
   {
    "batch": "batch7.json",
-   "md5": "39f62e9aae00"
+   "md5": "9d3a7af2dee6"
   }
  ]
 }

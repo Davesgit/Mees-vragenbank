@@ -92,7 +92,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Reken na met een keersom. [getal2] keer jouw antwoord is meer dan [getal1].  [nieuw]
   - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Reken na met een keersom. [getal2] keer jouw antwoord is minder dan [getal1].  [nieuw]
-  - `tien vergeten` (fout = antwoord − 10) → Dat is tien te weinig. Je bent een stuk vergeten. Verdeel eerst tien keer, en daarna de rest.  [nieuw]
+  - `tien vergeten` (fout = antwoord − 10) → Dat is tien te weinig. Heb je ieder eerst tien gegeven? Verdeel eerst tien keer, en daarna de rest.  [nieuw]
   - `andere fout` (andere fout) → Reken na met een keersom: jouw antwoord keer het aantal waarover je verdeelt, moet het totaal zijn.  [nieuw]
 - Status: hints klaar
 
@@ -150,7 +150,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind lost een verhaaltje op met een keersom.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom.  [nieuw]
-  - `een stuk vergeten` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is te weinig. Je bent iets vergeten. Splits het grootste getal in tientallen en eenheden. Doe allebei keer het andere getal en tel de stukken op.  [Claude, taalfix]
+  - `een stuk vergeten` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is te weinig. Heb je allebei de stukken keer het andere getal gedaan? Splits het grootste getal in tientallen en eenheden. Doe allebei keer het andere getal en tel de stukken op.  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken het in stukken uit en tel de stukken op. Kijk of je antwoord past: het is een keersom.  [nieuw]
 - Status: hints klaar
 
@@ -237,7 +237,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind lost een verhaaltje op met een keersom.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom.  [nieuw]
-  - `een stuk vergeten` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is te weinig. Je bent iets vergeten. Splits het grootste getal in tientallen en eenheden. Doe allebei keer het andere getal en tel de stukken op.  [Claude, taalfix]
+  - `een stuk vergeten` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is te weinig. Heb je allebei de stukken keer het andere getal gedaan? Splits het grootste getal in tientallen en eenheden. Doe allebei keer het andere getal en tel de stukken op.  [Claude, taalfix]
   - `cijfers omgedraaid` (Claudes sleutel: cijfers-verwisseld) → Je hebt de goede cijfers, maar in een andere volgorde. Kijk goed welk cijfer op welke plek hoort.  [Claude, taalfix]
   - `eenheden-stuk fout` (Claudes sleutel: tafelbuur) → Dat is te weinig. Reken het stuk met de eenheden nog eens na.  [Claude, taalfix]
   - `keer tien` (Claudes sleutel: nul-fout-tientallen) → Dat is te veel. Je hebt keer tien gedaan. Lees nog eens hoe vaak het is.  [Claude, taalfix]
@@ -263,11 +263,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 128 → Eerlijk verdelen is delen. · 34 → 4 × 34 = 136, dat is te veel.
     - **Uitleg (Claude):** 132 : 4 = 33, want 4 × 33 = 132.
 
-- **Hint 1 (te schrijven):** Eerlijk verdelen is een deelsom. Hoeveel komt er bij elk?
+- **Hint 1 (te schrijven):** Eerlijk verdelen is een deelsom. Overal komt evenveel: hoeveel is dat?
 - **Hint 2 (te schrijven):** Zoek een keersom die je kent: hoeveel keer het aantal waarover je verdeelt, is het totaal? Begin met tien keer.
 - **Ouderzin:** Je kind lost een verhaaltje op met een deelsom (eerlijk verdelen).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `afgetrokken` (fout = getal1 - getal2 of getal2 - getal1) → Je hebt het ene getal van het andere afgehaald. Eerlijk verdelen is delen. Hoeveel komt er bij elk?  [nieuw]
+  - `afgetrokken` (fout = getal1 - getal2 of getal2 - getal1) → Je hebt het ene getal van het andere afgehaald. Eerlijk verdelen is delen. Overal komt evenveel: hoeveel is dat?  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Reken na met een keersom. [getal2] keer jouw antwoord is meer dan [getal1].  [nieuw]
   - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Reken na met een keersom. [getal2] keer jouw antwoord is minder dan [getal1].  [nieuw]
   - `tien vergeten` (fout = antwoord − 10) → Dat is tien te weinig. Heb je alle stukken van je verdeling bij elkaar opgeteld? Verdeel eerst tien keer, en daarna de rest.  [nieuw]
@@ -298,7 +298,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind lost een verhaaltje op met een keersom.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom.  [nieuw]
-  - `een stuk vergeten` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is te weinig. Je bent iets vergeten. Splits het grootste getal in tientallen en eenheden. Doe allebei keer het andere getal en tel de stukken op.  [Claude, taalfix]
+  - `een stuk vergeten` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is te weinig. Heb je alle stukken bij elkaar opgeteld? Splits het grootste getal in tientallen en eenheden. Doe allebei keer het andere getal en tel de stukken op.  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken het in stukken uit en tel de stukken op. Kijk of je antwoord past: het is een keersom.  [nieuw]
 - Status: hints klaar
 

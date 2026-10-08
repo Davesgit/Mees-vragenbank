@@ -303,6 +303,62 @@ def compile_regel(regel, c):
         res = dict(res); res['exact'] = set(res['exact']) | {f'{v} {c.eenheid}' for v in res['exact'] if re.fullmatch(r'\d+', str(v))}
     return res
 
+_PM1_390 = re.compile(r'^fout = (?:het )?antwoord ?(?:±|\+|-|−) ?1(?![\d,])(?! ?cent)')
+def is_pm1_390(f):
+    """G6 merge-fixlijst #390 (Didactiek gate ronde 9 deel B, les 115): een ±1-regel (fout = antwoord ± 1, + 1, − 1) of een tekst met 'Bijna!'."""
+    r = (f.get('regel') or '').lower().replace('−', '-').strip()
+    return bool(_PM1_390.match(r)) or (f.get('tekst') or '').lstrip().startswith('Bijna')
+from fractions import Fraction as _F416
+_GETAL416 = r'(?:\d{1,3}(?:\.\d{3})+|\d+)(?:,\d+)?(?:/\d+)?'
+def waarde416(v):
+    """D-#416: de waarde van een sleutel (heel getal, kommagetal of breuk; n/n = 1). None bij geld (€) of geen getal; een eenheid erachter mag."""
+    v = str(v or '').strip()
+    if v.startswith('€'): return None
+    m = re.fullmatch(r'(' + _GETAL416 + r')(?:\s+[a-zA-Z]+)?', v)
+    if not m: return None
+    t = m.group(1); n, _, d = t.partition('/'); n = _F416(n.replace('.', '').replace(',', '.'))
+    return n / int(d) if d else n
+def vraag_waarden416(opg):
+    """D-#416: alle getallen uit de vraag als waarde (ook kommagetallen en breuken), plus de losse hele getallen zoals vroeger."""
+    t = re.sub(r'(?<!\d)\d{1,2}:\d{2}(?!\d)', ' ', (opg or '').replace('\n', ' '))
+    w = {waarde416(x) for x in re.findall(r'(?<![\w:.,/])' + _GETAL416 + r'(?![\w:/]|[.,]\d)', t)}
+    w |= {_F416(int(x.replace('.', ''))) for x in re.findall(r'(?<![\w:.])(?:\d{1,3}(?:\.\d{3})+|\d+)(?![\w:]|\.\d)', t)}
+    return {x for x in w if x is not None}
+def in_vraag390(v, c):
+    """#390/D-#416: is de sleutel op waarde gelijk aan een getal uit de vraag (ook breuken en kommagetallen: 2/2 = 1)? Dan valt hij terug op 'getal uit de vraag'
+    (of een andere benoemde regel)."""
+    x = waarde416(v)
+    return x is not None and (x in vraag_waarden416(c.opg) or (x.denominator == 1 and int(x) in set(c.nums)))
+def lett_past(r, v):
+    """G6 merge-fixlijst #380: past de letterlijke regel r (kleine letters) op de optietekst v? '€…' exact; met een cijfer: het hele getal
+    met een woordgrens ('4 hokjes' niet in '14 hokjes' of '4,5 hokjes'); zonder cijfer: een stukje tekst."""
+    v = (v or '').lower()
+    if r.startswith('€'): return v == r
+    if re.search(r'\d', r): return re.search(LETT_VOOR + re.escape(r) + LETT_NA, v) is not None
+    return r in v
+LETT_VOOR, LETT_NA = r'(?<![\w,.€/\-−])', r'(?![\w/]|[,.]\d)'      # #411: ook geen minteken ervoor ('4 hokjes' nooit in '−4 hokjes')
+def lett_guard(r, v):
+    """#380/#411-guard: elk getal in een letterlijke regel staat als heel getal in de sleutel, met dezelfde grenzen als lett_past
+    (dus niet in '1.4 hokjes', '€4 hokjes', '1/4 hokjes' of '−4 hokjes'). Assert in pas_toe."""
+    v = (v or '').lower(); r = r.lower()
+    if r.startswith('€'): return v == r
+    return all(re.search(LETT_VOOR + re.escape(g) + LETT_NA, v) for g in re.findall(r'\d+(?:,\d+)?', r))
+_HELFT_STROOK = re.compile(r'strook van (\d+) hokjes')
+def _regels_r10(r, c):
+    """G6 merge-fixlijst ronde 10 (#380): 'fout = de helft van het aantal hokjes' (VERH-E02 strook, Hoeveel-hokjes-vragen). None = geen regel van deze ronde."""
+    if r.startswith('fout = de helft van het aantal hokjes'):
+        m = _HELFT_STROOK.search(c.opg)
+        if not m or int(m.group(1)) % 2 or not re.search(r'hoeveel hokjes', c.opg, re.I): return {'exact': set()}
+        h = int(m.group(1)) // 2
+        return {'exact': {f'{h} hokjes', str(h)}}
+    # #398 (besluit Overzicht 11:28, voorstel Oefeningen): op de lijn van 0 tot 1 een eindpunt aangeklikt (0, 1 of n/n), niet het antwoord.
+    # Staat in de entry vóór de stuk-regels (#203); geen ±1-regel, dus de #390-guard slaat hem niet over.
+    if r.startswith('fout = een eindpunt van de lijn'):
+        m = re.fullmatch(r'(\d+)/(\d+)', c.ans.strip())
+        if not m or not (0 < int(m.group(1)) < int(m.group(2))): return {'exact': set()}
+        n_ = int(m.group(2)); return {'exact': {'0', '1', f'{n_}/{n_}'}}
+    return None
+
 def _regels_r8(r, c):
     """G6 merge-fixlijst ronde 8: nieuwe motorregels. None = geen regel van deze ronde."""
     a = c.a
@@ -359,10 +415,22 @@ def _compile_regel(regel, c):
     if (q := re.search(r'\s*\(antwoord (vanaf|onder) (\d+)\)\s*$', regel, re.I)):
         if c.a is None or ((c.a >= int(q.group(2))) != (q.group(1).lower() == 'vanaf')): return {'exact': set()}
         regel = regel[:q.start()]
+    # #399/#392 (ronde 10): '(geleend bij de tientallen)' / '(onthouden naar de honderdtallen)' achter 'fout = antwoord ± 10/100/1000':
+    # de regel geldt alleen als er in die kolom echt geleend (getal1 − getal2) of onthouden (getal1 + getal2) wordt; anders de gewone regel daarna.
+    if (q := re.search(r'\s*\((geleend bij|onthouden naar) de (tientallen|honderdtallen|duizendtallen)\)\s*$', regel, re.I)):
+        k = {'tientallen': 10, 'honderdtallen': 100, 'duizendtallen': 1000}[q.group(2).lower()]
+        regel = regel[:q.start()]; rq = regel.lower().replace('−', '-').strip()
+        m_ = re.fullmatch(r'fout = antwoord ([+-]) (\d+)', rq)
+        if not m_ or int(m_.group(2)) != k or c.g1 is None or c.g2 is None or c.a is None: return {'exact': set()}
+        geleend = q.group(1).lower().startswith('geleend')
+        if geleend: ok = m_.group(1) == '+' and c.g1 - c.g2 == c.a and (c.g1 % k) < (c.g2 % k)
+        else: ok = m_.group(1) == '-' and c.g1 + c.g2 == c.a and (c.g1 % k) + (c.g2 % k) >= k
+        if not ok: return {'exact': set()}
     r = regel.lower().replace('−', '-').strip()
     a, g1, g2, n = c.a, c.g1, c.g2, c.nums
     if c.jr.get('soort') == 'lijngrafiek' and (r219 := _lijn219(r, c)) is not None: return r219      # G6 merge-fixlijst #219: lijngrafiek (VBN-E02)
     if (r8 := _regels_r8(r, c)) is not None: return r8      # G6 merge-fixlijst ronde 8: #233, #271, G5 GET-E09
+    if (r10 := _regels_r10(r, c)) is not None: return r10   # G6 merge-fixlijst ronde 10: #380 helft van de strook
     E = lambda *vals: {'exact': {str(x) for x in vals if x is not None and (not isinstance(x, int) or x >= 0)}}
     if r.startswith('andere fout') or 'of een andere fout' in r or r.startswith('ander vak') or 'een andere vorm of kleur' in r or 'een klok met een ander uur' in r:
         return {'alles': True}
@@ -546,7 +614,10 @@ def _compile_regel(regel, c):
     # letterlijke optie ('het smalle glas'): de regel is (een deel van) de tekst van de foute optie
     if not r.startswith('fout'): r = re.sub(r'\b(\d+) euro\b', r'€\1', r)   # fixlijst #32: G4-geld als €N; regel '3 euro' leest ook '€3'
     if not r.startswith('fout') and any(r in (o['tekst'] or '').lower() for o in c.it['opties'] or []):
-        return {'pred': (lambda v: v.lower() == r) if r.startswith('€') else (lambda v: r in v.lower()), 'letterlijk': r}   # '€3' niet in '€30'
+        # G6 merge-fixlijst #380 (Didactiek gate ronde 9 deel A, les 110): een letterlijke regel met een getal matcht alleen het hele getal
+        # (woordgrens): '4 hokjes' pakt niet meer '14 hokjes'. Zonder getal blijft het een stukje tekst ('het smalle glas'); '€3' is exact.
+        if not any(lett_past(r, o['tekst']) for o in c.it['opties'] or []): return {'exact': set(), 'letterlijk': r}
+        return {'pred': lambda v: lett_past(r, v), 'letterlijk': r}
     # merge-punt #29: antwoord × 10 / : 10 (exact); bij geld het bedrag × 10 / : 10
     m = re.match(r'fout = (?:het )?antwoord (×|x|\*|:|÷|/) ?10\b', r)
     if m:
@@ -875,8 +946,12 @@ def pas_toe(it, st, alle_cellen=None):
             if zp:
                 volgorde = zp + [x for x in volgorde if x not in zp]
                 ook = ook + [x[0]['regel'] for x in regels if x not in zp and x[1] and not x[1].get('alles') and _past(x[1], v)]
+        uit_vraag = in_vraag390(v, c)
+        staaf_alle = {st_['waarde'] for st_ in c.jr.get('staven') or [] if isinstance(st_, dict) and isinstance(st_.get('waarde'), int)} if c.jr.get('soort') == 'staafdiagram' else None
         for f, comp, per_item in volgorde:
             if comp is None: continue
+            if uit_vraag and is_pm1_390(f): continue      # G6 merge-fixlijst #390: een getal uit de vraag krijgt nooit ±1 of 'Bijna!'
+            if staaf_alle is not None and (f.get('soort') or '').lower().startswith('andere staaf') and _int(v) not in staaf_alle: continue      # G5 D-#404: 'andere staaf' alleen bij een staafwaarde
             ok = _past(comp, v) or id(f) in gedwongen      # #94
             if not ok: continue
             if per_item and vul_in(f['tekst'], c):
@@ -891,20 +966,29 @@ def pas_toe(it, st, alle_cellen=None):
                 delen = tekst.split(' / ')
                 ct = claude_txt.get(v)
                 tekst = max(delen, key=lambda d: difflib.SequenceMatcher(None, d, ct).ratio()) if ct else delen[0]
+            assert not comp.get('letterlijk') or lett_guard(comp['letterlijk'], v), ('#380: letterlijke regel past niet op het hele getal', it.get('id'), f['regel'], v)
             hit = {'fout': v, 'uitleg': tekst, 'regel': f['regel'], 'soort': f.get('soort'), 'bron': f['bron'], '_f': f}; break
         if hit is None and v in merge:
             m = merge[v]; hit = {'fout': v, 'uitleg': m['uitleg'], 'regel': m['regel'], 'soort': None, 'bron': 'merge'}
         if hit is None and v in claude_txt and claude_txt[v] and claude_txt[v] not in vervangen:
             hit = {'fout': v, 'uitleg': claude_txt[v], 'regel': '(geen regel; Claude-tekst blijft)', 'soort': None, 'bron': 'claude (geen regel)'}
         if hit and ook and hit['regel'] in [x[0]['regel'] for x in regels]: hit['ookRegels'] = [r_ for r_ in ook if r_ != hit['regel']] or None
+        if hit and staaf_alle is not None and (hit.get('soort') or '').lower().startswith('andere staaf'):
+            assert _int(v) in staaf_alle, ("D-#404: 'andere staaf' zonder staaf met die waarde", it.get('id'), v)
         if hit: hit['stap'] = None; out.append(hit)
         elif v in claude_txt: ongebruikt.append(v)
     regels_out = []
+    hit_regel = {}
+    for h in out:
+        for w in _vormen(h['fout']): hit_regel[w] = h['regel']
     for f, comp, per_item in regels:
         if comp is None: regels_out.append({'regel': f['regel'], 'soort': f.get('soort'), 'tekst': f['tekst'], 'match': None, 'leesbaar': False}); continue
         mt = {}
         if comp.get('alles'): mt = {'alles': True}
-        elif 'exact' in comp: mt = {'waarden': sorted(comp['exact'], key=lambda x: (_int(x) is None, _int(x) or 0, x))}
+        elif 'exact' in comp:
+            # G5 D-#406 (les 122): een sleutel staat alleen in de waarden van de regel die hem echt kreeg (ook na #390/#404 of een gedwongen staafregel)
+            w_ = {x for x in comp['exact'] if x not in hit_regel or hit_regel[x] == f['regel']} | {k for k, r_ in hit_regel.items() if r_ == f['regel']}
+            mt = {'waarden': sorted(w_, key=lambda x: (_int(x) is None, _int(x) or 0, x))}
         for k in ('kleinerDan', 'vanaf', 'totEnMet'):
             if k in comp: mt = {k: comp[k]}
         if comp.get('pred') and not mt: mt = {'waarden': [h['fout'] for h in out if h['regel'] == f['regel']], 'opOpties': True}
@@ -925,6 +1009,9 @@ def pas_toe(it, st, alle_cellen=None):
         h['uitlegSterker'] = ts or h2; h['laag2'] = 'tekstSterker' if ts else ('terugval hint2 (somtype)' if h2 else None)
     it['foutHints'] = [dict({'stap': h['stap'], 'fout': h['fout'], 'uitleg': h['uitleg'], 'uitlegSterker': h['uitlegSterker'], 'laag2': h['laag2'], 'regel': h['regel'], 'soort': h['soort'], 'bron': h['bron']}, **({'ookRegels': h['ookRegels']} if h.get('ookRegels') else {})) for h in out]
     it['foutRegels'] = regels_out
+    for r_ in regels_out:      # D-#406-guard: geen sleutel in de waarden van een andere regel dan die hem kreeg
+        for w in (r_.get('match') or {}).get('waarden') or []:
+            assert w not in hit_regel or hit_regel[w] == r_['regel'], ('D-#406: sleutel in de waarden van een andere regel', it.get('id'), w, r_['regel'], hit_regel[w])
     # merge-punt #35a: 'andere fout' met [getal1]/[getal2]/[antwoord] → de per item ingevulde tekst (viel eerder weg: None)
     it['algemeneFoutHint'] = next(((vul_in(f['tekst'], c) if pi else f['tekst']) for f, comp, pi in regels if comp and comp.get('alles') and (not pi or vul_in(f['tekst'], c))), None)
     it['foutHintsTekst'] = ' · '.join(f"{h['fout']} → {h['uitleg']}" for h in out) or None

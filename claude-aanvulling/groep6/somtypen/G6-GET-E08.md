@@ -28,12 +28,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Tel alles op: 8 + 3 + 9 + 5 + 5 = 30. Deel door het aantal: 30 : 5 = 6.
 
 - **Hint 1 (te schrijven):** Tel eerst alle getallen bij elkaar op.
-- **Hint 2 (te schrijven):** Deel dat totaal door het aantal getallen. Zoveel is het gemiddeld.
+- **Hint 2 (te schrijven):** Deel het totaal van alle getallen door het aantal getallen. Zoveel is het gemiddeld.
 - **Ouderzin:** Je kind rekent een gemiddelde uit: alles optellen en delen door het aantal.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Reken na: het aantal keer jouw antwoord is dan meer dan het totaal.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Reken na: het aantal keer jouw antwoord is dan minder dan het totaal.  [nieuw]
-  - `getal uit de vraag` (fout = een getal uit de vraag) → Je hebt een van de getallen uit de vraag genomen. Het gemiddelde reken je uit: tel eerst alle getallen op en deel dan door het aantal.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Is dat een van de getallen uit de vraag? Het gemiddelde reken je uit: tel eerst alle getallen op en deel dan door het aantal.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is één te veel. Reken na: het aantal keer jouw antwoord is dan meer dan het totaal.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is één te weinig. Reken na: het aantal keer jouw antwoord is dan minder dan het totaal.  [nieuw]
   - `het totaal` (Claudes sleutel: verkeerde-bewerking) → Dat is alles samen. Deel dat nog door het aantal.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel alle getallen bij elkaar op. Deel dat totaal daarna door het aantal getallen.  [nieuw]
 - Status: hints klaar
@@ -58,12 +58,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Tel alles op: 6 + 3 + 7 + 4 = 20. Deel door het aantal: 20 : 4 = 5.
 
 - **Hint 1 (te schrijven):** Tel eerst alle getallen bij elkaar op.
-- **Hint 2 (te schrijven):** Deel dat totaal door het aantal getallen. Zoveel is het gemiddeld.
+- **Hint 2 (te schrijven):** Deel het totaal van alle getallen door het aantal getallen. Zoveel is het gemiddeld.
 - **Ouderzin:** Je kind rekent een gemiddelde uit: alles optellen en delen door het aantal.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Reken na: het aantal keer jouw antwoord is dan meer dan het totaal.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Reken na: het aantal keer jouw antwoord is dan minder dan het totaal.  [nieuw]
-  - `getal uit de vraag` (fout = een getal uit de vraag) → Je hebt een van de getallen uit de vraag genomen. Het gemiddelde reken je uit: tel eerst alle getallen op en deel dan door het aantal.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Is dat een van de getallen uit de vraag? Het gemiddelde reken je uit: tel eerst alle getallen op en deel dan door het aantal.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is één te veel. Reken na: het aantal keer jouw antwoord is dan meer dan het totaal.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is één te weinig. Reken na: het aantal keer jouw antwoord is dan minder dan het totaal.  [nieuw]
   - `het totaal` (Claudes sleutel: verkeerde-bewerking) → Dat is alles samen. Deel dat nog door het aantal.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel alle getallen bij elkaar op. Deel dat totaal daarna door het aantal getallen.  [nieuw]
 - Status: hints klaar

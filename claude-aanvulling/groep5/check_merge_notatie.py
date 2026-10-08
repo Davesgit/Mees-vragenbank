@@ -166,5 +166,9 @@ if __name__ == '__main__':
     import evenveel_check as _EV      # #192 (Didactiek 21:25): 'even veel' ook in ouderzin, hints en kop (FAIL)
     fail = (_EV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     fail = (_MC.rapport(5, [_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    import geldig_check as _GA      # #360 (G5 gate ronde 9): antwoord ∈ geldigeAntwoorden (FAIL, G5–G8)
+    fail = (_GA.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    import bijna390_check as _B390      # #390 (G6 gate ronde 9 deel B): getal uit de vraag nooit ±1/'Bijna!' (FAIL, G5–G8)
+    fail = (_B390.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     print('\nG5 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)
