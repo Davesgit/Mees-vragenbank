@@ -169,6 +169,8 @@ if __name__ == '__main__':
     # JUISTE-OPTIE (Oef-#467, 8 okt): antwoordDetail.juisteOptie(Tekst) past bij de opties (FAIL, alleen G8: in G5/G6 staan nog oude mismatches)
     import kloktijd_check as _KT      # Z-#782 (Didactiek G8 batch 2, 8 okt): kloktijd met ':' in een kindtekst (FAIL; typ-invoer 'uu:mm' WARN)
     fail = (_KT.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    import gemiddelde_check as _GM      # V-#820/Z-#823 (Didactiek G8 batch 3): gemiddelde-vragen (WARN)
+    _GM.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
     import juiste_optie_check as _JO
     fail = (_JO.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import optie_positie_check as _OP      # Oef-#459 (8 okt): goede antwoord >60% op één plek in een somtype met ≥4 items (WARN)

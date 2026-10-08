@@ -1016,7 +1016,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Je zoekt telkens de naam die alfabetisch het eerst komt. Die zet je op de volgende plaats in de rij. Zo komen alle namen een keer aan de beurt.
 
 - **Hint 1 (te schrijven):** Alfabetische volgorde gaat over de letters. Een aanpak werkt altijd als elk woord zo een plek krijgt.
-- **Hint 2 (te schrijven):** Probeer elke aanpak uit met een paar woorden, bijvoorbeeld kat, aap en boom. Komt bij elke aanpak elk woord op de goede plek in het alfabet?
+- **Hint 2 (te schrijven):** Probeer elke aanpak uit met een paar woorden, bijvoorbeeld kat, aap en boom. Staan ze daarna in de goede volgorde?
 - **Ouderzin:** Je kind kiest een aanpak om te sorteren die altijd werkt: steeds het woord zoeken dat in het alfabet het eerst komt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `lengte` (Zet de kortste namen vooraan) → Alfabetische volgorde gaat over de letters, niet over hoe lang een woord is. Waar kijk je dan naar?  [nieuw]
@@ -1142,7 +1142,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `één keer verbeterd` (5 × 100 doen en er 2 afhalen) → Bij elke keer reken je een beetje te veel. Hoe vaak reken je dat te veel? Dat moet er allemaal af, niet maar één keer.  [nieuw]
   - `herhaald optellen` (98 vijf keer onder elkaar optellen) → Dat kan, maar het is niet handig: het kost veel stappen. Ligt het getal dicht bij een rond getal?  [nieuw]
   - `andere fout` (andere fout) → Reken met het ronde getal, en haal daarna af wat je bij alle keren samen te veel nam.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Jinte moet # × # [ding]. Welke aanpak is het handigst?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 46: Kim moet # × # uitrekenen. Ze doet eerst # × # = # en neemt dan de helft. Klopt deze aanpak?
@@ -1168,7 +1167,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tien eraf` (Nee, ze moet er 10 van afhalen) → Keer tien is twee keer zo groot als keer vijf, niet tien meer. Hoeveel moet er dan af?  [nieuw]
   - `verdubbelen` (Nee, ze moet 360 verdubbelen) → Keer vijf is minder dan keer tien. Wordt de uitkomst dan groter of kleiner?  [nieuw]
   - `andere fout` (andere fout) → Is vijf de helft van tien? Wat betekent dat voor de uitkomst?  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Kim moet # × # [ding]. Ze doet eerst # × # = # en neemt dan de helft. Klopt deze aanpak?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 47: Lars zet # [ding] jam in [bakken] van #. Hij rekent # : # en schrijft # [ding] op. Wat is er mis met zijn aanpak?
@@ -1217,7 +1215,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `plus` (Eerst 250 + 4 uitrekenen) → Dan tel je het aantal keer bij het getal op. Steeds hetzelfde getal optellen geeft veel meer dan het getal plus het aantal keer.  [nieuw]
   - `onder elkaar` (De som onder elkaar zetten met een streep) → Dat kan, maar het is niet handig: je telt dan nog steeds alles op. Het kan in één stap.  [nieuw]
   - `andere fout` (andere fout) → Steeds hetzelfde getal optellen: welke som doet dat in één stap?  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Mees moet # × # [ding]. Hij telt # + # + # + # op. Wat had handiger gekund?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 49: Noor moet # × # uitrekenen en telt acht keer # bij elkaar op. Wat had handiger gekund?
@@ -1242,7 +1239,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `plus` (25 en 8 bij elkaar optellen) → Dan tel je het aantal keer bij het getal op. Steeds hetzelfde getal optellen is een keersom. Komt dit daar in de buurt?  [nieuw]
   - `te veel eraf` (25 × 10 doen en er 2 afhalen) → Met tien keer neem je twee hele keren te veel. Haal je dan twee af, of twee keer het getal?  [nieuw]
   - `andere fout` (andere fout) → Kun je het aantal keer splitsen in een makkelijke keersom?  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Noor moet # × # [ding] en telt acht keer # bij elkaar op. Wat had handiger gekund?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 50: Nout heeft # − # onder elkaar uitgerekend en kreeg #. Hij schatte vooraf ongeveer #. Wat moet hij nu doen?
@@ -1267,7 +1263,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `schatting aangepast` (De schatting aanpassen naar 500) → Reken de schatting na met ronde getallen. Klopte die? Dan ligt de fout niet in de schatting.  [nieuw]
   - `laten staan` (Het antwoord 505 gewoon laten staan) → Het antwoord ligt ver van de schatting af. Dat is een teken dat er iets mis is gegaan.  [nieuw]
   - `andere fout` (andere fout) → Ligt het antwoord dicht bij de schatting? Zo niet, waar zit dan de fout?  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Nout heeft # − # [ding] elkaar uitgerekend en kreeg #. Hij schatte vooraf ongeveer #. Wat moet hij nu doen?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 51: Op de fietstocht rijdt Tess # km. Ze schrijft op dat dit # meter is. Hoe merk je dat dit niet klopt?
@@ -1316,7 +1311,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `getal uit de som` (Ze moest 140 en 24 optellen) → Dan tel je een getal uit de som erbij, niet de uitkomst van het kleine stuk. Hoeveel is het kleine stuk echt?  [nieuw]
   - `niet splitsen` (Ze had niet mogen splitsen) → Splitsen is juist een handige aanpak. Heeft Roos alle stukken gebruikt?  [nieuw]
   - `andere fout` (andere fout) → Heeft Roos alle stukken van de keersom bij elkaar opgeteld?  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Roos rekent # × # uit door # × # en # × # [ding] te doen. Ze schrijft alleen # op. Wat ging er mis?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 53: Sam rekent # − # uit met een som onder elkaar en moet steeds lenen. Wat had handiger gekund?
@@ -1368,7 +1362,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Komt de aanpak van Sanne op hetzelfde uit als de som zelf?  [nieuw]
 - Status: hints klaar
 
-## Somtype 55: Tim rekent # + # uit met een staartsom onder elkaar. Wat is een handigere aanpak?
+## Somtype 55: Tim rekent # + # uit met een som onder elkaar. Wat is een handigere aanpak?
 
 - Sleutel: nrOrigineel **48** · somtypeOrigineel “Tim rekent # + # uit met een staartsom onder elkaar. Wat is een handigere aanpak?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W3 (1) · regel: G8-W3-aanpak
@@ -1377,7 +1371,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Je deed er 1 te veel bij. Bedenk wat je moet doen als je eerst een te groot getal pakt.”)
 - Voorbeelden:
   - `G8-GET-E02-claude-bank-117` (Claude W3, ai, niveau 1 → basis)
-    - **Opgave:** Tim rekent 99 + 47 uit met een staartsom onder elkaar. Wat is een handigere aanpak?
+    - **Opgave:** Tim rekent 99 + 47 uit met een som onder elkaar. Wat is een handigere aanpak?
     - **Opties:** A) Eerst 100 erbij, dan 1 eraf · B) Eerst 100 erbij, dan 1 erbij · C) Eerst 90 erbij, dan 9 eraf
     - **Antwoord:** Eerst 100 erbij, dan 1 eraf  (controle: n.v.t.)
     - **Fout-hints (Claude):** Eerst 100 erbij, dan 1 erbij → Je deed er 1 te veel bij. Bedenk wat je moet doen als je eerst een te groot getal pakt. · Eerst 90 erbij, dan 9 eraf → Kijk nog eens goed hoe dicht 99 bij een rond honderdtal ligt.
@@ -1390,6 +1384,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `te veel erbij` (Eerst 100 erbij, dan 1 erbij) → Met het ronde getal komt er al iets te veel bij. Moet dat stukje er dan nog bij, of eraf?  [nieuw]
   - `ander rond getal` (Eerst 90 erbij, dan 9 eraf) → Reken het na: komt deze aanpak op hetzelfde uit als de som? Bij een kleiner rond getal tel je te weinig op. Moet het stukje er dan bij of eraf?  [nieuw]
   - `andere fout` (andere fout) → Neem een rond getal, en verbeter daarna wat je te veel of te weinig nam.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Tim rekent # + # uit met een staartsom onder elkaar. Wat is een handigere aanpak?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 56: Voor een uitje gaan # [ding] mee. In een busje passen # [ding]. Lisa rekent # : # en schrijft # [ding] op. Wat is er mis met haar aanpak?

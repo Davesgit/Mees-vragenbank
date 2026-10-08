@@ -513,30 +513,34 @@ def fix_g8(r, slog):
             for d_ in ex.get('claudeDenkfouten') or []: d_['fout'] = kl(d_['fout'])
             for h_ in ex.get('claudeFoutHints') or []: h_['fout'] = kl(h_['fout']); h_['uitleg'] = kl(h_['uitleg']) if isinstance(h_.get('uitleg'), str) else h_.get('uitleg')
             slog(r, "V-#781: kloktijden als '14.35 uur' (geen ':')", 'opgave', o, r['opgave'])
-        # Oef-#485 (batch 3, les 195): V02 #3 — 7 was tegelijk gemiddelde, meest voorkomend en middelste cijfer → 10 × 6, 5 × 7, 5 × 9 (gemiddelde 7, meest 6, midden 6,5)
+        # V-#820 (Didactiek batch 3, vervangt Oef-#485): V02 #3 — 12 × 5, 6 × 7, 2 × 9 → (60 + 42 + 18) : 20 = 6; meest 5, midden 5; 6 is geen gegeven cijfer. Opties 6 · 7 · 120.
         if c8 == '0f2334ef' and 'Tien kinderen hebben een 7' in r['opgave']:
-            o = r['opgave']; r['opgave'] = o.replace('Tien kinderen hebben een 7, vijf kinderen een 8 en vijf kinderen een 6.', 'Tien kinderen hebben een 6, vijf kinderen een 7 en vijf kinderen een 9.')
-            for o_ in r['opties']:
-                if o_['tekst'] == '21': o_['tekst'] = '22'
+            o = r['opgave']; r['opgave'] = o.replace('Tien kinderen hebben een 7, vijf kinderen een 8 en vijf kinderen een 6.', 'Twaalf kinderen hebben een 5, zes kinderen een 7 en twee kinderen een 9.')
+            assert r['opgave'] != o, 'V-#820'
+            r['opties'] = [{'letter': L_, 'tekst': t_} for L_, t_ in zip('ABC', ['6', '7', '120'])]; r['antwoord'] = '6'
+            if 'geldigeAntwoorden' in r: r['geldigeAntwoorden'] = ['6']
             r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
-            ex = r['extraVelden']; ex['claudeUitleg'] = 'Tien kinderen hebben samen 60 punten, vijf kinderen samen 35 en vijf kinderen samen 45. Bij elkaar is dat 140. Je deelt door 20 kinderen: 140 : 20 = 7. Het gemiddelde cijfer is 7.'
-            for d_ in ex.get('claudeDenkfouten') or []:
-                if d_['fout'] == '21': d_['fout'] = '22'
-            for h_ in ex.get('claudeFoutHints') or []:
-                if h_['fout'] == '21': h_['fout'] = '22'
-            slog(r, 'Oef-#485: gemiddelde ≠ meest voorkomend ≠ middelste (les 195)', 'opgave', o, r['opgave'])
-        # Oef-#486 (batch 3, les 195): V02 #4 — 3, 5, 4, 4 km → 3, 6, 4, 3 km (gemiddelde 4, meest 3, midden 3,5); afleider 5 km → 6 km (de langste dag)
+            r['antwoordDetail'] = dict(r.get('antwoordDetail') or {}, juisteOptie='A', juisteOptieTekst='6')
+            ex = r['extraVelden']; ex['claudeUitleg'] = 'Twaalf kinderen hebben samen 60 punten, zes kinderen samen 42 en twee kinderen samen 18. Bij elkaar is dat 120. Je deelt door 20 kinderen: 120 : 20 = 6. Het gemiddelde cijfer is 6.'
+            ex['claudeDenkfouten'] = [{'fout': '120', 'denkfout': 'deel-vergeten-bij-splitsen'}, {'fout': '7', 'denkfout': None}]
+            ex['claudeFoutHints'] = [{'stap': None, 'fout': '120', 'uitleg': None}, {'stap': None, 'fout': '7', 'uitleg': None}]
+            slog(r, 'V-#820: gemiddelde 6 is geen gegeven cijfer, ≠ meest voorkomend (5) en ≠ middelste (5)', 'opgave', o, r['opgave'])
+        # Z-#823 + Z-#826 (Didactiek batch 3, vervangt Oef-#486): V02 #4 — «… naar school: 2 km, 7 km, 5 km en 2 km.» → 16 : 4 = 4 km; opties 4 km · 16 km · 4,5 km
         if c8 == 'd9572e3d' and '3 km, 5 km, 4 km en 4 km' in r['opgave']:
-            o = r['opgave']; r['opgave'] = o.replace('3 km, 5 km, 4 km en 4 km', '3 km, 6 km, 4 km en 3 km')
-            for o_ in r['opties']:
-                if o_['tekst'] == '5 km': o_['tekst'] = '6 km'
+            o = r['opgave']; r['opgave'] = o.replace('naar school. 3 km, 5 km, 4 km en 4 km.', 'naar school: 2 km, 7 km, 5 km en 2 km.')
+            assert r['opgave'] != o, 'Z-#823'
+            r['opties'] = [{'letter': L_, 'tekst': t_} for L_, t_ in zip('ABC', ['4 km', '16 km', '4,5 km'])]; r['antwoord'] = '4 km'
+            if 'geldigeAntwoorden' in r: r['geldigeAntwoorden'] = ['4 km']
             r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
-            ex = r['extraVelden']; ex['claudeUitleg'] = 'Je telt de afstanden op: 3 + 6 + 4 + 3 = 16. Daarna deel je door 4 dagen: 16 : 4 = 4. Het gemiddelde is 4 km per dag.'
-            for d_ in ex.get('claudeDenkfouten') or []:
-                if d_['fout'] == '5 km': d_['fout'] = '6 km'
-            for h_ in ex.get('claudeFoutHints') or []:
-                if h_['fout'] == '5 km': h_['fout'] = '6 km'
-            slog(r, 'Oef-#486: gemiddelde ≠ meest voorkomend ≠ middelste (les 195)', 'opgave', o, r['opgave'])
+            r['antwoordDetail'] = dict(r.get('antwoordDetail') or {}, juisteOptie='A', juisteOptieTekst='4 km')
+            ex = r['extraVelden']; ex['claudeUitleg'] = 'Je telt de afstanden op: 2 + 7 + 5 + 2 = 16. Daarna deel je door 4 dagen: 16 : 4 = 4. Het gemiddelde is 4 km per dag.'
+            ex['claudeDenkfouten'] = [{'fout': '16 km', 'denkfout': 'deel-vergeten-bij-splitsen'}, {'fout': '4,5 km', 'denkfout': None}]
+            ex['claudeFoutHints'] = [{'stap': None, 'fout': '16 km', 'uitleg': None}, {'stap': None, 'fout': '4,5 km', 'uitleg': None}]
+            slog(r, 'Z-#823/Z-#826: 2, 7, 5, 2 km (gemiddelde 4 is geen gegeven afstand); afstanden als zin', 'opgave', o, r['opgave'])
+        # Z-#825 (Didactiek batch 3): #55 'staartsom' → 'som onder elkaar'
+        if c8 == '5a2c100b' and 'met een staartsom onder elkaar' in r['opgave']:
+            o = r['opgave']; r['opgave'] = o.replace('met een staartsom onder elkaar', 'met een som onder elkaar')
+            slog(r, "Z-#825: 'staartsom' → 'som onder elkaar'", 'opgave', o, r['opgave'])
         # Oef-#487 (batch 3): E02 #40 'de eerste naam' was dubbelzinnig (bovenste naam in de lijst) → 'de naam die in het alfabet vooraan komt'
         if c8 == '43a76b21':
             oud, nieuw = 'Zoek steeds de eerste naam en zet die apart', 'Zoek steeds de naam die in het alfabet vooraan komt en zet die apart'
@@ -575,7 +579,8 @@ KOP478 = [(r'^(Kijk zonder uit te rekenen\. Welk antwoord bij # [×+−:] #) \[d
           (r'^De trein vertrekt om # uur en komt aan om # uur\.', 'De trein vertrekt om #.# uur en komt aan om #.# uur.'),
           # Oef-#488 (batch 3): [ding] op een werkwoord of voorzetsel
           (r'moet # × # \[ding\]', 'moet # × # uitrekenen'), (r'# − # \[ding\] elkaar uitgerekend', '# − # onder elkaar uitgerekend'),
-          (r'# × # \[ding\] te doen', '# × # apart te doen'), (r'^In groep # \[ding\] # \[ding\] een cijfer', 'In groep # hebben # kinderen een cijfer')]  # V-#781: '14.35' werd één '#'
+          (r'# × # \[ding\] te doen', '# × # apart te doen'), (r'^In groep # \[ding\] # \[ding\] een cijfer', 'In groep # hebben # kinderen een cijfer'),
+          (r'staartsom onder elkaar', 'som onder elkaar')]  # V-#781: '14.35' werd één '#'
 def kop_g8(s):
     for a, b in KOP478: s = re.sub(a, b, s)
     return s

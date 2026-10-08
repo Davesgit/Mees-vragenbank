@@ -52,6 +52,25 @@ Nummering: volgende vrije Oef-#485 (Oef-#481 = G7 Z-#744, zie g7/merge-fixlijst.
 
 Nummering: volgende vrije Oef-#489; na Oef-#499 verder met **Oef-#1000** (#500–#999 = Didactiek; besluit Overzicht 15:47).
 
+## Oefeningen: G8 batch 1 ronde 1c (8 okt ~16:00; recheck-batch1-didactiek «taal: ok», zachte punten)
+- **Z-#791 (les 197/272):** E04 #5/#8 'noemer van het kleine stuk' L1 = de tekst van Didactiek («Dat is de noemer van het kleine stuk (het getal onder de streep): zoveel …», 36 woorden). In b1/check is 'begint met Zoveel' nu een FAIL (mutant M_zoveel).
+- **Z-#790 (les 271):** E02 #11 (nrO 4): de L2's van 'precies uitgerekend', 'opgeteld' en 'andere fout' = de nieuwe H2; ook de optionele L1 van 'andere fout' (Didactiek, enkelvoud, 30 woorden). Les-271-check (`/workspace/g8work/l271.py`, in b1–b3/check): **b1 3 → 0, b2 0** (de 57 L2's in b2 die de oude H2 zijn, zijn bewust zo, V-#780), **b3 0**. Mutant M_271.
+- patch_batch1.py ronde 1c: 3 wijzigingen, tweede run 0; op live hints/batch1.json gezet om 15:59 (backup /tmp/bak_g8_resync_155941). Verse kopie van live + sync/apply: check_hints 74 klaar · 0 FAIL · 0 WARN, merge-notatie ALLES OK, b1/check FAIL 0 (25 mutanten, 0 gemist), b2 FAIL 0 (31/0), b3 FAIL 0 (39/0).
+- **Oef-#482:** besluit Dave: advies van Overzicht ('7,0' → '7', de 11 andere komma-sleutels weg), tenzij Didactiek bezwaar heeft. Overzicht doet de data; Oefeningen kijkt na die build of b1 groen blijft.
+- Les 273: `/workspace/g8work/breukvorm_mut.py` (vijf BREUKVORM-mutanten): G6, G7 en G8 vangen alle vijf.
+
+## Oefeningen: G8 batch 3 ronde 1b + 1c (8 okt 16:02 en 16:07; review-batch3-didactiek «taal: fix (voorlopig)»)
+- **Wat er om 16:02 veranderde:** Oefeningen draaide patch_batch3.py ronde 1b op live (log 16:02 in wijzigingen_batch3.json, 31 regels): letterlijke regels '22'/'6 km' (Oef-#485/#486), H2 #40, kopNagekeken (Oef-#488). Geen directe edit en geen make_batch3. De regels '22'/'6 km' zijn vervallen toen Overzicht V-#820/Z-#823 overnam (build 16:04:49/16:06:27). In ronde 1b staan ze niet meer; de definitieve regels staan in ronde 1c.
+- **Ronde 1c (16:07:54, 10 wijzigingen, tweede run 0):** V-#820 V02 #3 regels **'120'** (totaal) en **'7'** (L1 'elk cijfer één keer', ongewijzigd). Z-#823 V02 #4: **'4,5 km'** (soort 'midden', L1 van Didactiek) en '16 km'. V-#821.2: H2 #40 = de tekst van Didactiek. Z-#821: H2 #44 (vijf keer een zeven). Z-#822: H1 #45/#55 «Eén van de getallen ligt vlak bij een rond getal. …» en L2 #55 «vlak bij een van de getallen». Z-#825: de hints van #55 gebruiken al 'som onder elkaar' ('staartsom' komt nergens voor).
+- **Reproduceerbaar:** de verse kopie van live (build 16:06:27) + patch_batch3 is byte-gelijk aan de live hints/batch3.json van 16:07:54. Die is nog niet gesynct en toegepast: dat doet de volgende build_g8.
+- **Checks (zandbak = live 16:06:27 + patch + sync/apply):** check_hints 74 klaar · 0 FAIL · **0 WARN** (ONLEESBAAR weg), merge-notatie ALLES OK, b3/check 25 items · 50 sleutels · **FAIL 0 · WARN 0**, SNAP=1 (003/004/041; routes nagelopen), **48 mutanten, 0 gemist**.
+- **Nieuwe guards in b3/check:**
+  - les 285: V02 #3/#4, met het ongewogen gemiddelde, de modus, de mediaan, het midden van de laagste en de hoogste waarde, en het middelste genoemde getal. Uitkomst: 003 → 6 tegen 7/5/5/7/7, 004 → 4 tegen 14/3, 2, 7/2, 9/2, 5. Het antwoord is geen gegeven waarde, en er ligt een afleider binnen het bereik.
+  - Z-#820: aftrektal 0 telt voor les 263 (M_263z).
+  - Z-#824: een verklap-guard op de tekst van het goede antwoord. Die kijkt naar ≥ 2 eigen woorden of naar een reeks van 5 woorden (M_824a = m1, M_824b = m6).
+  - les 217: 'is niet goed' en 'mag niet' (M_217b/c/d = m7).
+  - Data: M_285a, M_285c, M_d3, M_dv4 (nieuwe data).
+
 Na build 15:17:54 (Overzicht, 8 okt): batch1.json (24 somtypes, 317 items) gesynct en toegepast: check_hints **24 klaar · 199 open · 0 FAIL · 0 WARN**, check_merge_notatie ALLES OK, g8work/b1/check.py op live 317 items · 1304 sleutels · FAIL 0 · WARN 0 · INFO 112. batch2.json (Oefeningen, 15:14, nog niet gemeld) is bewust buiten deze build gehouden en ongewijzigd teruggezet (geen sync). De volgende build_g8.py neemt hem wél mee.
 De build schrijft ook g4–g7/data/aanvulling_uit_g8.json: de items waren gelijk (alleen de tijdstempel anders), dus de oude bestanden zijn teruggezet. G4–G7 zijn niet geraakt.
 Oef-#468, #469, #471, #473 (data GET-E02) en #475 (dubbele vorm #3/#10) staan nog open voor een volgende G8-dataronde. #470 is een vraag voor Didactiek ('zo eenvoudig mogelijk' als eis of gelijkwaardige breuken goed). #472 (koppen met 'kan'/'ongeveer', zonder '[ding]') gaat samen met G4 Z-#726: de kop-generator maakt van 'kan' een '[ding]' («Welk antwoord bij # × # [ding] kloppen?»).
@@ -94,10 +113,24 @@ check_hints **49 klaar · 174 open · 0 FAIL · 0 WARN** (de WARN van #32 is weg
 ### Data batch 3 + Oef-#482 — Overzicht, build 16:00:03
 | punt | stand |
 |---|---|
-| Oef-#485 | **✓** V02 #3 (003): «Tien kinderen hebben een 6, vijf kinderen een 7 en vijf kinderen een 9» → gemiddelde 7 (totaal 140), meest 6, midden 6,5; afleider 21 → **22**; Claudes uitleg rekent nu het gemiddelde uit (stond: het vaakst). |
-| Oef-#486 | **✓** V02 #4 (004): «3 km, 6 km, 4 km en 3 km» → 4 km (totaal 16), meest 3, midden 3,5; afleider 5 km → **6 km**. |
+| Oef-#485 | **vervallen** (V-#820, build 16:06:26). Was: V02 #3 (003): «Tien kinderen hebben een 6, vijf kinderen een 7 en vijf kinderen een 9» → gemiddelde 7 (totaal 140), meest 6, midden 6,5; afleider 21 → **22**; Claudes uitleg rekent nu het gemiddelde uit (stond: het vaakst). |
+| Oef-#486 | **vervallen** (Z-#823, build 16:06:26). Was: V02 #4 (004): «3 km, 6 km, 4 km en 3 km» → 4 km (totaal 16), meest 3, midden 3,5; afleider 5 km → **6 km**. |
 | Oef-#487 | **✓** E02 #40 (041): antwoord/optie «Zoek steeds de naam die in het alfabet vooraan komt en zet die apart». |
 | Oef-#488 | **✓** KOP478: 'moet # × # uitrekenen' (nrO 38/39/41/42), '# − # onder elkaar uitgerekend' (43), '# × # apart te doen' (45), 'In groep # hebben # kinderen een cijfer' (V02 #3). kopGewijzigd. |
 | Oef-#482 | **✓** E03 #2 (021–032): de 11 komma-sleutels zijn weg, 028 '7,0' → '7' (b1/check 1214 → 1203 sleutels). |
 
 Checks build 16:00:03: check_hints **74 klaar · 149 open · 0 FAIL · 2 WARN** (ONLEESBAAR: de letterlijke regels '21' en '5 km' van V02 #3/#4 → **Oefeningen**: '22' en '6 km' in patch_batch3), merge-notatie ALLES OK (KLOKTIJD 0), b1 317 items · 1203 sleutels · FAIL 0, b2 FAIL 0, b3 FAIL 6 · WARN 2 — allemaal aan de kant van Oefeningen: regels 22 / 6 km (2 FAIL + 2 WARN), H2 van #40 deelt nu woorden met het nieuwe antwoord (les 260), SNAP=1 voor 003/004/041 (les 234).
+
+### Didactiek batch 3 taal: fix, voorlopig — Overzicht, build 16:06:26
+| punt | stand |
+|---|---|
+| V-#820 | **✓** V02 #3 (003): «Twaalf kinderen hebben een 5, zes kinderen een 7 en twee kinderen een 9.» → (60 + 42 + 18) : 20 = **6**; meest 5, midden 5, 6 is geen gegeven cijfer. Opties **6 (A, goed) · 7 · 120**; geldigeAntwoorden ['6']; claudeUitleg nieuw; claudeDenkfouten 120 = deel-vergeten-bij-splitsen, 7 = open. Kop: 'Twaalf kinderen hebben een #, zes kinderen een # en twee kinderen een #' (kopGewijzigd). |
+| Z-#823 | **✓** V02 #4 (004): 2, 7, 5 en 2 km → 16 : 4 = **4 km**. Opties **4 km (A, goed) · 16 km · 4,5 km**; claudeDenkfouten 16 km = deel-vergeten-bij-splitsen, 4,5 km = open. |
+| Z-#826 | **✓** «Mila fietst vier dagen naar school: 2 km, 7 km, 5 km en 2 km.» (kopGewijzigd: 'naar school: # km, …'). |
+| Z-#825 | **✓** E02 #55 (nrO 48): 'met een staartsom onder elkaar' → 'met een som onder elkaar' (opgave + KOP478, kopGewijzigd). |
+| WARN-check | **✓** `tools/gemiddelde_check.py` (repo: scripts/merge/), in check_merge_notatie G8: GEMIDDELDE (WARN). Bij een gemiddelde-vraag met een getal als antwoord: (1) het antwoord is een gegeven waarde uit de vraag (bij een opsomming 'a, b en c' alleen de opsomming, niet het aantal ervoor); (2) het antwoord is de middelste optie en alle andere opties liggen buiten de kleinste–grootste gegeven waarde. Getest: oude V02 #3/#4 geven allebei een WARN, nieuwe niet. **G8: 1 WARN**: V02 #2 (002) 300 mensen tussen 40 en 600 (beide buiten 280–320) → Didactiek: afleiders aanpassen? |
+| sync | `scripts/sync_hint_keys.py`: draagt een entry de opgeschoonde kop als somtypeOrigineel (batch3 V02 #3, na Oef-#488), dan koppelt hij op doel#nrOrigineel als die in precies één bevroren versie staat. Bevroren sleutels zijn niet veranderd. |
+
+Checks build 16:06:26: check_hints **74 klaar · 149 open · 0 FAIL · 2 WARN** (ONLEESBAAR '140' en '22' bij V02 #3: oude regels), merge-notatie ALLES OK (KLOKTIJD 0, GEMIDDELDE 1 WARN), b1 FAIL 0, b2 FAIL 0, b3 FAIL 6 · WARN 3: allemaal V02 #3/#4 en wachten op Oefeningen.
+**Oefeningen (patch_batch3):** V02 #3 regels voor '7' en '120' (de oude '22'/'140' weg); V02 #4 regel voor '4,5 km' (de '6 km'-regel weg; hint 'Dat is de langste dag' klopt niet meer, 7 km is de langste dag); daarna SNAP=1 voor 003/004 (les 234).
+Ter info Didactiek (geen G8, niet aangepast): dezelfde check vindt open items waarbij het gemiddelde een gegeven waarde is: G6 GET-E08 008 (9, 8, 10, 10, 8 → 9) en 010 (5, 6, 6, 7 → 6); G7 GET-04 427 (15, 11, 12, 9, 13 → 12) en 428 (10, 9, 5, 19, 7 → 10). G3–G5: 0.

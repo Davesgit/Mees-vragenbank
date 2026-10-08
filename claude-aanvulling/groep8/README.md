@@ -57,3 +57,4 @@ De vraag per categorie, met een voorstel en voorbeelden, staat in `twijfel_voor_
 - Hints: alle 189 somtypen zijn nog 'open' (Oefeningen).
 - Twijfel: 1226 items in 8 categorieën (Didactiek).
 - Contexten die nog vreemd zijn, maar niet fout: 'In het nest liggen 2640 schelpen', 'dozen met tanden'. Ze zijn niet aangepast.
+- Build 16:06:26 (Didactiek batch 3 taal: fix, voorlopig): V-#820 (V02 #3 → 6), Z-#823/Z-#826 (V02 #4 → 2, 7, 5, 2 km als zin, 4 km), Z-#825 (#55 som onder elkaar), WARN-check GEMIDDELDE (`tools/gemiddelde_check.py`). Zie merge-fixlijst.md.

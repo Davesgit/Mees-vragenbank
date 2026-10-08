@@ -56,51 +56,52 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Tel alles op en verdeel het eerlijk over de dagen.  [nieuw]
 - Status: hints klaar
 
-## Somtype 3: In groep # hebben # kinderen een cijfer voor een toets. Tien kinderen hebben een #, vijf kinderen een # en vijf kinderen een #. Wat is het gemiddelde cijfer?
+## Somtype 3: In groep # hebben # kinderen een cijfer voor een toets. Twaalf kinderen hebben een #, zes kinderen een # en twee kinderen een #. Wat is het gemiddelde cijfer?
 
 - Sleutel: nrOrigineel **3** · somtypeOrigineel “In groep # [ding] # [ding] een cijfer voor een toets. Tien kinderen hebben een #, vijf kinderen een # en vijf kinderen een #. Wat is het gemiddelde cijfer?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: G9 (1) · regel: D8-MODUS-NAAR-GEMIDDELDE
 - Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): —
+- Denkfouten (Claude): deel-vergeten-bij-splitsen (1), None (1)
 - Verschillende Claude-fout-hints: 2 (meest: “Dat is het totaal van alle cijfers. Verdeel het nog eerlijk over de 20 kinderen.”)
 - Voorbeelden:
   - `G8-GET-V02-claude-bank-003` (Claude G9, ai, niveau 1 → basis)
-    - **Opgave:** In groep 8 hebben 20 kinderen een cijfer voor een toets. Tien kinderen hebben een 6, vijf kinderen een 7 en vijf kinderen een 9. Wat is het gemiddelde cijfer?
-    - **Opties:** A) 7 · B) 140 · C) 22
-    - **Antwoord:** 7  (controle: n.v.t.)
+    - **Opgave:** In groep 8 hebben 20 kinderen een cijfer voor een toets. Twaalf kinderen hebben een 5, zes kinderen een 7 en twee kinderen een 9. Wat is het gemiddelde cijfer?
+    - **Opties:** A) 6 · B) 7 · C) 120
+    - **Antwoord:** 6  (controle: n.v.t.)
     - **Fout-hints (Claude):** 8 → Kijk niet naar het hoogste cijfer, maar naar hoeveel kinderen elk cijfer hebben. · 20 → 20 is het aantal kinderen in de klas en geen cijfer van een toets.
-    - **Uitleg (Claude):** Tien kinderen hebben samen 60 punten, vijf kinderen samen 35 en vijf kinderen samen 45. Bij elkaar is dat 140. Je deelt door 20 kinderen: 140 : 20 = 7. Het gemiddelde cijfer is 7.
+    - **Uitleg (Claude):** Twaalf kinderen hebben samen 60 punten, zes kinderen samen 42 en twee kinderen samen 18. Bij elkaar is dat 120. Je deelt door 20 kinderen: 120 : 20 = 6. Het gemiddelde cijfer is 6.
 
 - **Hint 1 (te schrijven):** Bij een gemiddelde tellen alle cijfers mee, ook als hetzelfde cijfer vaak voorkomt.
 - **Hint 2 (te schrijven):** Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.
 - **Ouderzin:** Je kind rekent een gemiddelde uit als cijfers vaker voorkomen: elk cijfer telt zo vaak mee als het voorkomt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `totaal` (140) → Dat is het totaal van alle cijfers samen. Verdeel het nog eerlijk over alle kinderen.  [nieuw]
-  - `elk cijfer één keer` (21) → Dan telt elk cijfer maar één keer mee. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.  [nieuw]
+  - `elk cijfer één keer` (22) → Dan telt elk cijfer maar één keer mee. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.  [nieuw]
   - `andere fout` (andere fout) → Elk cijfer telt zo vaak mee als het voorkomt. Deel het totaal door het aantal kinderen.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In groep # [ding] # [ding] een cijfer voor een toets. Tien kinderen hebben een #, vijf kinderen een # en vijf kinderen een #. Wat is het gemiddelde cijfer?'. Nakijken of ze nog passen.
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In groep # hebben # kinderen een cijfer voor een toets. Tien kinderen hebben een #, vijf kinderen een # en vijf kinderen een #. Wat is het gemiddelde cijfer?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 4: Mila fietst vier dagen naar school. # km, # km, # km en # km. Hoeveel kilometer fietst zij gemiddeld per dag?
+## Somtype 4: Mila fietst vier dagen naar school: # km, # km, # km en # km. Hoeveel kilometer fietst zij gemiddeld per dag?
 
 - Sleutel: nrOrigineel **4** · somtypeOrigineel “Mila fietst vier dagen naar school. # km, # km, # km en # km. Hoeveel kilometer fietst zij gemiddeld per dag?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: G9 (1) · regel: D8-STAT-NAAR-GEMIDDELDE
 - Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): deel-vergeten-bij-splitsen (1), andere-deel-genomen (1)
+- Denkfouten (Claude): deel-vergeten-bij-splitsen (1), None (1)
 - Verschillende Claude-fout-hints: 2 (meest: “Je hebt alles opgeteld. Daarna moet je nog delen door het aantal dagen.”)
 - Voorbeelden:
   - `G8-GET-V02-claude-bank-004` (Claude G9, ai, niveau 2 → toepassen)
-    - **Opgave:** Mila fietst vier dagen naar school. 3 km, 6 km, 4 km en 3 km. Hoeveel kilometer fietst zij gemiddeld per dag?
-    - **Opties:** A) 4 km · B) 16 km · C) 6 km
+    - **Opgave:** Mila fietst vier dagen naar school: 2 km, 7 km, 5 km en 2 km. Hoeveel kilometer fietst zij gemiddeld per dag?
+    - **Opties:** A) 4 km · B) 16 km · C) 4,5 km
     - **Antwoord:** 4 km  (controle: n.v.t.)
     - **Fout-hints (Claude):** 16 km → Je hebt alles opgeteld. Daarna moet je nog delen door het aantal dagen. · 5 km → 5 km is de langste dag. Een gemiddelde ligt tussen de kleinste en de grootste waarde.
-    - **Uitleg (Claude):** Je telt de afstanden op: 3 + 6 + 4 + 3 = 16. Daarna deel je door 4 dagen: 16 : 4 = 4. Het gemiddelde is 4 km per dag.
+    - **Uitleg (Claude):** Je telt de afstanden op: 2 + 7 + 5 + 2 = 16. Daarna deel je door 4 dagen: 16 : 4 = 4. Het gemiddelde is 4 km per dag.
 
 - **Hint 1 (te schrijven):** Gemiddeld per dag: als ze elke dag even ver had gefietst, hoe ver was dat dan?
 - **Hint 2 (te schrijven):** Tel alle afstanden bij elkaar op: dat is het totaal. Deel het totaal door het aantal dagen.
 - **Ouderzin:** Je kind rekent een gemiddelde uit: alle afstanden optellen en delen door het aantal dagen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `totaal` (16 km) → Dat is het totaal van alle dagen. Verdeel het nog eerlijk over de dagen.  [nieuw]
-  - `langste dag` (5 km) → Dat is de langste dag. Een gemiddelde ligt tussen de kortste en de langste dag in.  [nieuw]
+  - `langste dag` (6 km) → Dat is de langste dag. Een gemiddelde ligt tussen de kortste en de langste dag in.  [nieuw]
   - `andere fout` (andere fout) → Tel alle afstanden op en deel door het aantal dagen.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Mila fietst vier dagen naar school. # km, # km, # km en # km. Hoeveel kilometer fietst zij gemiddeld per dag?'. Nakijken of ze nog passen.
 - Status: hints klaar
