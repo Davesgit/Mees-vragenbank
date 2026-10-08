@@ -349,7 +349,7 @@ Code: `scripts/fixlijst_g6.py` (blok 'ronde 10': `na381`, `aanvul382`, `na383`, 
 | 330 | Oefeningen | ✓ V-#330/Z-#334 in batch5 |
 
 ## Oefeningen ronde 10 (8 okt 2026, 11:30–11:55; builds 11:21:56 en 11:32:19)
-Nummering (les 124): eigen punten van Oefeningen heten vanaf nu **Oef-#NNN** (eigen reeks onder #500; Oef-#420 hieronder, volgende vrije: Oef-#421). Didactiek gebruikt #500 en hoger; nummers van Overzicht blijven zoals ze zijn.
+Nummering (les 124): eigen punten van Oefeningen heten vanaf nu **Oef-#NNN** (eigen reeks onder #500; Oef-#420 hieronder, volgende vrije: Oef-#423; Oef-#421/#422 staan in de G7-fixlijst). Didactiek gebruikt #500 en hoger; nummers van Overzicht blijven zoals ze zijn.
 | # | Wie | Wat | Stand |
 |---|---|---|---|
 | Oef-#397 | Oefeningen | 'getal uit de vraag' als vraag + eigen laag 2: GET-E09 #2/#3, GET-M04 #1/#2 (#2: zelfde patroon 'uit de breuk overgenomen'), VERH-E01 #1; M04 #1/#2 ook vóór ± 1 (#390) | ✓ `patch_batch3.py`/`patch_batch5.py` 'Ronde 10'. 669 sleutels (E09 #2 571, #3 33, M04 #1 32, #2 27, VERH-E01 #1 6). Check `g6work/r10/r10_check.py` FAIL 0 (G6); zandbak check_hints 0 FAIL/WARN, notatie ALLES OK |
@@ -376,3 +376,10 @@ Nummering: Didactiek D-#403–D-#408, daarna #500 en hoger. Stand: check_hints 1
 | D-#419 | Overzicht | ✓ (a) vaste weergavenummers (`bevroren/somtype_weergave_nr.json`, stand 10:58:34): de strook blijft MEET-E01 #6; hm in leerlijnvolgorde #7 hm→m, #8 m→hm, #9 km→hm, #10 hm→km; MEET-E04 #5–#8 L→dl, dl→L, dl→ml, ml→dl. (b) 8 contextitems (4 hm: hardloopbaan, fietsen, wandelroute, fietstocht; 4 dl: kan, emmer, glas, pakje sap). (c) niveau: Leerlijn |
 | 394 | Leerlijn | open (lijst hierboven) |
 | 397 | Oefeningen | open, volgende ronde |
+
+### Slotcheck r10 deel B (Didactiek slotcheck-r10-deelB-didactiek.md; build 11:47:57)
+| # | Wie | Stand |
+|---|---|---|
+| 510 | Overzicht | ✓ MEET-E04 gen-034: «In een emmer gaat 100 dl water. Hoeveel liter is dat?» → 10 (sleutels 100 'niet omgerekend', 1 'tien keer te weinig') |
+| 511 | Overzicht | ✓ REF-check (`tools/referentiematen_check.py`, G5–G8): hoeveelheid bij emmer/glas/bad omgerekend naar liter, WARN buiten 5–15 L / 0,15–0,3 L / 100–200 L (of `bandLiter` uit referentiematen.json; dat veld bestaat nog niet). Vond ook VERH-E01 gen-008 «1 emmer is 4 L» → nu 10 L (60 L; sleutels 16 L, 30 L). Daarna 0 WARN in G5–G8 |
+| 512 | Overzicht | ✓ de 8 contextitems hebben `context: 'midden'` |

@@ -498,7 +498,7 @@ Code: `scripts/fixlijst_g5_r10.py` (ingehaakt in `build_g5.py` en `apply_hints.p
 | 373 | ✓ zie ronde 10b |
 
 ## Oefeningen ronde 10 (8 okt 2026, 11:30–11:55; builds 11:20:45, 11:31:53 en daarna)
-Nummering (les 124): onze punten hieronder heten **Oef-#403 tot Oef-#406**; de punten van Didactiek met dezelfde nummers heten nu D-#403 tot D-#408. Vanaf nu: Oefeningen Oef-#NNN in een eigen reeks onder #500 (volgende vrije: Oef-#421; Oef-#420 staat in de G6-fixlijst), Didactiek #500 en hoger, Overzicht ongewijzigd.
+Nummering (les 124): onze punten hieronder heten **Oef-#403 tot Oef-#406**; de punten van Didactiek met dezelfde nummers heten nu D-#403 tot D-#408. Vanaf nu: Oefeningen Oef-#NNN in een eigen reeks onder #500 (volgende vrije: Oef-#423; Oef-#420 staat in de G6-fixlijst, Oef-#421/#422 in de G7-fixlijst), Didactiek #500 en hoger, Overzicht ongewijzigd.
 | # | Wie | Wat | Stand |
 |---|---|---|---|
 | Oef-#402 | Oefeningen | «Je bent … vergeten» als vraag + eigen laag 2: batch2 GET-E07 #3 ('tien vergeten'), #4/#8 ('een stuk vergeten'); batch4 MEET-E02 #1/#2 ('korte/lange zijde vergeten') | ✓ `patch_batch2.py`/`patch_batch4.py` 'Ronde 10'. 645 sleutels (E07 #3 32, #4 36, #8 14; MEET-E02 #1 547, #2 16); MEET-E02-waarden per sleutel nagerekend (a − breedte / a − lengte), geen vierkant. Patroon over heel G5 en G6 (les 101): verder alleen #403 en #404 |
