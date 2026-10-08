@@ -1054,14 +1054,26 @@ def pas_toe(it, st, alle_cellen=None):
     it['controle']['foutHintsNietToegepast'] = ongebruikt
     return [f['regel'] for f, comp, _ in regels if comp is None]
 
-# #543 (eindcheck G6 r11): het gedrag van lett_past/lett_guard ligt vast in tools/huis_checks.LETT_TABEL (37 gevallen). Wijkt het af, dan stopt de build.
+# #543/#552 (eindcheck G6 r11 en r11b): het gedrag van lett_past/lett_guard ligt vast in deze testtabel (37 gevallen). De tabel staat in de motor zelf,
+# zodat de zelftest overal draait, ook in een kopie buiten de merge-werkplek (de repo). tools/huis_checks.LETT_TABEL moet gelijk zijn (check_hints FAIL).
+# Wijkt het gedrag af, dan stopt het laden van de motor (en dus de build).
+LETT_TABEL_543 = [
+    ('4 hokjes', '4 hokjes', True), ('4 hokjes', 'ruim 4 hokjes', True), ('3 hokjes', '(3 hokjes)', True), ('4 hokjes', '14 hokjes of 4 hokjes', True),
+    ('4 hokjes', '14 hokjes', False), ('4 hokjes', '44 hokjes', False), ('4 hokjes', '4,5 hokjes', False), ('4 hokjes', '0,4 hokjes', False),
+    ('4 hokjes', '1.4 hokjes', False), ('4 hokjes', '€4 hokjes', False), ('4 hokjes', '1/4 hokjes', False), ('4 hokjes', '−4 hokjes', False),
+    ('4 hokjes', '-4 hokjes', False), ('4 hokjes', '– 4 hokjes', False), ('4 hokjes', '− 4 hokjes', False), ('4 hokjes', '-  4 hokjes', False),
+    ('4 hokjes', '- 4 hokjes', False), ('4 hokjes', '8 − 4 hokjes', False), ('4 hokjes', '24 − 4 hokjes', False), ('4', '4/5', False),
+    ('4', '14', False), ('4', '44', False), ('4', '4,5', False), ('4', '0,4', False), ('4', '1.4', False), ('4', '−4', False),
+    ('1/4', '1/4', True), ('3/4', '3/4 deel', True), ('10.000', '10.000', True), ('a4', 'a4', True),
+    ('2 cm', '2 cm²', False), ('2 cm', '2 cm', True),
+    ('€3', '€3', True), ('€3', '€3,50', False), ('€3', '3', False),
+    ('het smalle glas', 'het smalle glas', True), ('het smalle glas', 'het brede glas', False),
+]
 def _zelftest543():
-    import sys as _s, os as _o
-    _t = '/workspace/claude-merge/tools'
-    if not _o.path.isdir(_t): return      # kopie buiten de merge-werkplek (bijv. de repo): geen tabel, geen test
-    if _t not in _s.path: _s.path.insert(0, _t)
-    import huis_checks as _H
-    import types as _ty
-    _af = _H.lett_afwijkingen(_ty.SimpleNamespace(lett_past=lett_past, lett_guard=lett_guard))      # werkt ook als de motor onder een andere naam geladen is
+    _af = []
+    for r, v, verwacht in LETT_TABEL_543:
+        a, b = lett_past(r.lower(), v), lett_guard(r, v)
+        if a != verwacht or b != verwacht: _af.append(f"regel {r!r} op {v!r}: verwacht {'past' if verwacht else 'past niet'}, lett_past={a}, lett_guard={b}")
     assert not _af, '#543: lett_past/lett_guard wijkt af van de testtabel:\n' + '\n'.join(_af)
+    return len(LETT_TABEL_543)
 _zelftest543()

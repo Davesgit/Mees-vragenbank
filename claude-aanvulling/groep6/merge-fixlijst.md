@@ -412,7 +412,7 @@ Zandbak G6 (build 11:52:44 + alle patches): check_hints 102 klaar · 0 FAIL · 0
 | 530 | Overzicht | ✓ motor/BIJNA390 lezen bedragen; G6 0 treffers |
 | 540 | Overzicht | ✓ KEERDELEN in check_hints (G5–G8) |
 | 543 | Overzicht | ✓ LETT-testtabel (37 gevallen) in check_hints en als zelftest in de motor |
-| 534, 541, 542 | Oefeningen | open (zacht) |
+| 534, 541, 542 | Oefeningen | ✓ (in build 12:11:42) |
 
 ## Oefeningen ronde 11 (8 okt 2026, 12:01–12:10; Didactiek eindcheck-r11 G5/G6; G6 build 11:52:44 + zandbak, motor van Overzicht 12:05:46)
 | # | Wie | Wat | Stand |
@@ -425,3 +425,10 @@ Zandbak G6: check_hints 102 klaar · 0 FAIL · 0 WARN; notatie ALLES OK; BIJNA39
 Datapunt Overzicht: `fout_regels.py` van 12:03:59 faalde in `_zelftest543` (KeyError 'fout_regels_g6') als hij via `fixlijst_g6.py` r. 903 (importlib) geladen werd; om 12:05:46 opgelost.
 | 532 (vervolg 12:10) | Overzicht | De twee overdrachtsregels staan nu woordelijk in de entry van Oefeningen; de stap in het geheugen is weg (alleen nog een assert dat ze er staan). guard532 (FIX6) blijft |
 | Oef-#426 | Overzicht (motor) | ✓ motorregel 'fout = het bedrag dat eraf gaat' (G5–G8 dezelfde motor) |
+
+### Na-ronde r11b (8 okt, Overzicht; eindcheck r11b van Didactiek: G5 en G6 taal: ok)
+| # | Wie | Stand |
+|---|---|---|
+| 550 | Overzicht (FIX6) | ✓ guard532 rekent bij elke sleutel 'honderd te veel' en 'tien te veel' in GET-E04 (plussom) de overdracht na (getal1 mod 100 + getal2 mod 100 ≥ 100) en eist de regel én de tekst uit de entry: 41 sleutels, 0 fout. Mutatietest in check_fixlijst_g6.py: bij 066 de tekst 'zonder' in plaats van 'met' → gevangen (FAIL als dat niet zo is) |
+| 551, 552 | Overzicht | ✓ zie de G5-fixlijst |
+| 553 | Overzicht | ✓ (c) #534, #541, #542 klaar. (d) De data om 12:16:54 opnieuw geschreven zonder nieuwe buildtijd: losse apply_hints van Overzicht voor `logs/regels_onleesbaar.json`; items gelijk. Nu krijgt elke schrijfactie `geschrevenOp`/`geschrevenDoor` en een regel in `logs/schrijflog.jsonl` (zie de G5-fixlijst) |

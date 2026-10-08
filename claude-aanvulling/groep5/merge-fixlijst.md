@@ -552,7 +552,7 @@ Zandbak G5 (build 11:54:17 + alle patches incl. 10d): check_hints 139 klaar · 0
 | # | Wie | Stand |
 |---|---|---|
 | 530 | Overzicht (motor G5–G8 + BIJNA390) | ✓ `waarde416` leest ook bedragen ('€4,75' = '€ 4,75' = '4,75', op waarde zoals D-#416). Een bedrag wordt alleen vergeleken met de echte getallen uit de vraag (niet met de losse 4 en 75 uit '€4,75'). GET-E06 #2 1005 '€4,75', 1050 '€2,85' en 703 '€2,85' krijgen geen 'Bijna!' meer en vallen op 'andere fout'. BIJNA390 vindt ze op de oude build (3 treffers, alleen G5; G6/G7/G8 0) en geeft nu 0. **TODO Oefeningen:** een eigen regel/tekst voor 'het bedrag dat eraf gaat' (voorstel Didactiek: «Is dat het bedrag dat eraf gaat? Haal het van het eerste bedrag af.») |
-| 531 | Oefeningen | open (MKU-E02 #3 H2) |
+| 531 | Oefeningen | ✓ MKU-E02 #3 H2 (in build 12:13:37) |
 | 535 | Overzicht | ✓ regel 'getal uit de vraag' bijgewerkt: alleen MEET-E06 #1 uitgesteld; BIJNA390 controleert bedragen pas sinds #530 |
 | 540 | Overzicht (check_hints G5–G8) | ✓ KEERDELEN: 'verhoudingstabel' + 'met keer en delen'/'doe je keer' in één zin = FAIL, over alle entries en items (`tools/huis_checks.py`) |
 | 543 | Overzicht (motor + check_hints) | ✓ LETT-testtabel (37 gevallen) in `tools/huis_checks.py`; check_hints FAIL bij een afwijking en de motor stopt bij het laden (`_zelftest543`) |
@@ -566,4 +566,18 @@ Zandbak G5 (build 11:54:17 + alle patches incl. 10d): check_hints 139 klaar · 0
 | Z-#533 | Oefeningen | MEET-E03 #1 H2 'met dit aantal' → 'met het aantal hokjes uit de vraag' (les 155) | ✓ `g5/hints/patch_batch4.py` 'Ronde 11'. 10 sleutels. Mutant 10 FAIL |
 
 Zandbak G5 (build 11:54:17 + alle patches incl. 10d en 11): check_hints 139 klaar · 0 FAIL · 0 WARN · 130 INFO; notatie ALLES OK; BIJNA390 0; b5b–b7, r9b, r11_check: FAIL 0; los-scan 0. Tweede run: 0 wijzigingen. Guardtabel (les 154, 15 vaste gevallen voor lett_guard en in_vraag390 met €): 0 afwijkend.
-| Oef-#426 | Overzicht (motor) | ✓ 'fout = het bedrag dat eraf gaat': bij een minsom met geld ('€a − €b', ook '4,75 euro', minteken '−'/'-'/'–') het tweede bedrag op waarde, alleen als ≠ antwoord en a − b = antwoord. 1005 '€4,75', 1050 '€2,85' en 703 '€2,85' vallen erop (geen 'Bijna!'). Normalisatie: `_cent` leest ook '4,75 euro' |
+| Oef-#426 | Overzicht (motor) | ✓ 'fout = het bedrag dat eraf gaat': bij een minsom met geld ('€a − €b', ook '4,75 euro', minteken '−'/'-'/'–') het tweede bedrag op waarde, alleen als ≠ antwoord en a − b = antwoord. 1005 '€4,75', 1050 '€2,85' en 703 '€2,85' vallen erop (geen 'Bijna!'). **Let op (#553):** de regel staat vooraan in de entry van E06 #2 en geldt dus voor het hele somtype: hij maakt **482 sleutels in 483 items** (479 nieuw plus de 3; item 1 niet, daar is het tweede bedrag gelijk aan het antwoord). Didactiek heeft alle 482 nagerekend: 0 fout. Normalisatie: `_cent` leest ook '4,75 euro' |
+
+## Oefeningen na-ronde MEET-E06 nrO 26 'getal uit de vraag' (8 okt 2026, 12:35; les 136)
+| # | Wie | Wat | Stand |
+|---|---|---|---|
+| (na-ronde) | Oefeningen | Per sleutel nagerekend met de motor over alle 20 items (`g5work/r11na/m26.py`): alleen gen-001 '24' (24 okt → 18 nov, 25 dagen) valt op 'andere fout' (begindag én antwoord − 1; #390 slaat 'Bijna!' over). Een regel die '24' vangt, telt bij GEN #151 altijd dubbel: 'een getal uit de vraag' 22 dubbel (de einddag = 'alleen de nieuwe maand'), 'getal1' 3 dubbel (001, 007 '2' = getal2, 014 '15' = antwoord − getal2) plus 17 nieuwe sleutels | geen regel toegevoegd; tekst klaar (commentaar in `hints/patch_batch5.py`, blok 'Na-ronde') |
+| Oef-#427 | Overzicht | Kies één: (a) vervang generatoritem gen-001 door een paar waarbij de begindag ≠ antwoord ± 1; of (b) laat GEN #151 (`check_generator_sleutels.py`) rekenen zoals de motor, met #390 én 'eerste passende regel'. Bij (b) blijft 'fout = getal1' toch dubbel bij 007 en 014 (daar is de begindag ook de waarde van een andere regel), dus Oefeningen raadt (a) aan: één item, geen motorwerk | open |
+
+### Na-ronde r11b (8 okt, Overzicht; eindcheck r11b van Didactiek: G5 en G6 taal: ok)
+| # | Wie | Stand |
+|---|---|---|
+| 550 | Overzicht (G6) | ✓ zie de G6-fixlijst |
+| 551 | Overzicht (check_hints G5–G8) | ✓ KEERDELEN vangt ook de bewering over twee zinnen en omschrijvingen ('vermenigvuldigen en delen', 'keer en gedeeld door', 'keer- en deelsommen', 'keer of delen'). Mutatietest: 6 van 6 gevangen, 'ook kolommen optellen' niet. Over G5–G8: 0 treffers |
+| 552 | Overzicht (motor) | ✓ de testtabel (37 gevallen) staat nu in fout_regels.py zelf (`LETT_TABEL_543`); de zelftest draait overal, ook in de repo. check_hints FAIL als de tabel in de motor afwijkt van tools/huis_checks |
+| 553 | Overzicht | ✓ (a) 482 sleutels bij Oef-#426 vermeld; (b) #531 klaar. (d) **Waarom de data om 12:16:50 opnieuw geschreven is zonder nieuwe buildtijd:** dat was Overzicht. Ik heb apply_hints los gedraaid (12:16:49) om `logs/regels_onleesbaar.json` voor de nieuwe ONLEESBAAR-check te maken. Daarbij schrijft apply_hints gemapt.json en per_doel opnieuw met een nieuwe `hintsSyncOp`; `gegenereerdOp` (de build) bleef 12:13:37. De items zijn niet veranderd (Didactiek: 0 verschillen). **Nu:** elke schrijfactie van apply_hints zet `geschrevenOp`, `geschrevenDoor` ('build (apply_hints)' of 'apply_hints (los, zonder nieuwe build)') en `itemsGewijzigdBijSchrijven` in gemapt.json en per_doel, en schrijft een regel in `logs/schrijflog.jsonl` met de buildtijd en de md5 van de items vóór en na (G5–G8) |

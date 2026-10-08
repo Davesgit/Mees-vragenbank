@@ -5,9 +5,17 @@
 - LETT (#543): vaste testtabel voor de letterlijke regels (fout_regels.lett_past en lett_guard; LETT_VOOR/LETT_NA, #380/#411/#506). Wijkt de motor af
   van de tabel, dan FAIL (check_hints) en stopt de build (assert_lett, aangeroepen vanuit fout_regels bij het laden)."""
 import json, glob, os, re
-_KD = re.compile(r'met keer en delen|doe je keer', re.I)
-def _zinnen(t): return re.split(r'(?<=[.?!])\s+', t or '')
-def _kd(t): return [z for z in _zinnen(t) if 'verhoudingstabel' in z.lower() and _KD.search(z)]
+# #551 (eindcheck r11b, les 158): ook omschrijvingen ('vermenigvuldigen en delen', 'keer en gedeeld door', 'keer- en deelsommen', 'keer of delen')
+# en de bewering verdeeld over twee zinnen ('verhoudingstabel' in de ene zin, de bewering in dezelfde of de volgende zin).
+_KD = re.compile(r'met keer en delen|doe je keer|keer\s*(?:en|of)\s*(?:delen|deel|gedeeld door)|vermenigvuldig\w*\s+(?:en|of)\s+(?:delen|deel)|keer-\s*(?:en|of)\s*deel(?:sommen)?|keersommen\s+(?:en|of)\s+deelsommen', re.I)
+def _zinnen(t): return [z for z in re.split(r'(?<=[.?!])\s+', t or '') if z]
+def _kd(t):
+    zs = _zinnen(t); uit = []
+    for i, z in enumerate(zs):
+        if 'verhoudingstabel' not in z.lower(): continue
+        for w in zs[i:i + 2]:
+            if _KD.search(w): uit.append(z if w is z else f'{z} {w}'); break
+    return uit
 def keerdelen(base):
     uit = []
     for p in sorted(glob.glob(f'{base}/hints/batch*.json')):
@@ -38,6 +46,8 @@ LETT_TABEL = [
 ]
 def lett_afwijkingen(FR):
     uit = []
+    if getattr(FR, 'LETT_TABEL_543', None) is not None and list(FR.LETT_TABEL_543) != LETT_TABEL:      # #552: de tabel in de motor is dezelfde
+        uit.append('LETT (#552) de testtabel in fout_regels.py (LETT_TABEL_543) wijkt af van tools/huis_checks.LETT_TABEL')
     for r, v, verwacht in LETT_TABEL:
         a, b = FR.lett_past(r.lower(), v), FR.lett_guard(r, v)
         if a != verwacht or b != verwacht: uit.append(f"LETT (#543) regel {r!r} op {v!r}: verwacht {'past' if verwacht else 'past niet'}, lett_past={a}, lett_guard={b}")
