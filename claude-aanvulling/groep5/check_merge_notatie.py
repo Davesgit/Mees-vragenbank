@@ -172,5 +172,7 @@ if __name__ == '__main__':
     fail = (_B390.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import antwoord_in_vraag_check as _AIV      # V-#560 (recheck G7 batch 1, Didactiek 8 okt): procent/breuk, goed antwoord = getal uit de vraag (FAIL, G5–G8)
     fail = (_AIV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    import hoofdletter_check as _HL      # V-#608 (review G7 batch 3, Didactiek 8 okt): een vraagzin begint met een hoofdletter (FAIL, G5–G8)
+    fail = (_HL.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     print('\nG5 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

@@ -4,7 +4,8 @@ Regels gelden van boven naar beneden; de eerste die past, wint. Gebruikt door ap
 Nieuw 8 okt 12:4x (G7 batch 2, Oef-#421/#422/#429): norm421 = één notatie voor letterlijke regels en opties ('−'/'-'/'–' als minteken, 'euro'/'€');
   'de deelsom omgedraaid' = de deling met deeltal en deler omgewisseld (antwoord 'a : b' → optie 'b : a'; antwoord getal → b/a).
   Oef-#437: KOMMA437 (G7/G8) leest '8,4' als één getal; Oef-#436: 'fout = antwoord ± 0,1 / ± 0,01' ook bij een heel antwoord (vraag met kommagetal);
-  Oef-#434: 'fout = het cijfer op de plek ernaast' (plaatswaarde: de cijfers links en rechts van de gevraagde plaats).
+  Oef-#442: 'fout = de som van de getallen' / 'fout = het middelste getal (op grootte)' (gemiddelde; alleen als de waarde zo uitkomt).
+  Oef-#440: met KOMMA437 telt een antwoord '8,0' als 8, een sleutel '8,0' past op regelwaarde 8, en 'antwoord × 10 / : 10' werkt ook bij een kommagetal (1,1 → 11 / 0,11). Oef-#434: 'fout = het cijfer op de plek ernaast' (plaatswaarde: de cijfers links en rechts van de gevraagde plaats).
 Per item komt er uit:
   foutHints   concrete sleutels (fout getal / optietekst / vak) met kindtekst, zoals het exportformaat ze kent
   foutRegels  de geordende regels met een matcher (waarden / kleinerDan / vanaf / totEnMet / alles) voor invoer
@@ -241,6 +242,9 @@ class Ctx:
         self.eenheid = None
         if self.a is None and (q := re.fullmatch(r'(\d+) ([A-Za-zà-ÿ²³]+(?: [a-zà-ÿ]+)?)', self.ans.strip())):
             self.a = int(q.group(1)); self.eenheid = q.group(2)
+        # Oef-#440 (G7 MEET-03 #9, met KOMMA437): een antwoord '8,0' / '300,0' heeft de waarde van het hele getal (8 / 300); regels als
+        # 'fout = antwoord × 10' lezen het dan (sleutel '80'). G5/G6 (zonder KOMMA437) blijven gelijk.
+        if KOMMA437 and self.a is None and (q := re.fullmatch(r'(\d+),0+', self.ans.strip())): self.a = int(q.group(1))
     def code(self, v):
         v = str(v)
         if re.fullmatch(r'[A-L][1-9]', v): return v
@@ -683,6 +687,9 @@ def _compile_regel(regel, c):
         if c.ac is not None:
             if keer: return {'exact': {geld(c.ac * 10)}, 'pred': lambda v: _cent(v) == c.ac * 10}
             return ({'exact': {geld(c.ac // 10)}, 'pred': lambda v: _cent(v) == c.ac // 10} if c.ac % 10 == 0 else {'exact': set()})
+        if a is None and KOMMA437 and c.d is not None:      # Oef-#440 (G7/G8): kommagetal-antwoord: de komma één plek verschoven (1,1 → 11 / 0,11)
+            w440 = c.d * 10 if keer else c.d / 10
+            return {'exact': {_kg(w440)}, 'pred': lambda v: _dec(v) == w440}
         if a is None: return None
         if keer: return {'exact': set(_punt(a * 10))}
         return {'exact': set(_punt(a // 10))} if a % 10 == 0 and a >= 10 else {'exact': set()}
@@ -690,6 +697,21 @@ def _compile_regel(regel, c):
     # waarmee je betaalt of dat je hebt), als het ≠ antwoord. In pas_toe gaat deze regel vóór 'antwoord ± 10 cent / ± €1' (zeker vóór onzeker).
     # Oef-#426 (#530, eindcheck G5 r11): 'fout = het bedrag dat eraf gaat': bij een minsom met geld het tweede bedrag, op waarde ('€4,75', '€ 4,75',
     # '4,75', '4,75 euro'), alleen als het ≠ antwoord en eerste − tweede = antwoord. Minteken '−', '-' of '–'.
+    # Oef-#442 (Z-#603, gemiddelde GET-04 nrO 6): 'fout = de som van de getallen' (niet gedeeld) en 'fout = het middelste getal (op grootte)'.
+    # De rij is de langste reeks getallen met ', ' of ' en ' ertussen ('6, 13, 3, 15, 18'). Alleen een sleutel als de waarde echt zo uitkomt:
+    # som/middelste ≠ antwoord, middelste alleen bij een oneven aantal (bij even: geen sleutel). Geen rij van minstens 3 getallen → geen sleutel.
+    if r.startswith('fout = de som van de getallen') or r.startswith('fout = het middelste getal'):
+        rijen = [re.findall(r'\d+(?:,\d+)?', x.group(0)) for x in re.finditer(r'\d+(?:,\d+)?(?:(?:, | en )\d+(?:,\d+)?)+', c.opg)]
+        rij = max(rijen, key=len) if rijen else []
+        if len(rij) < 3: return {'exact': set()}
+        w442 = [Fraction(x.replace(',', '.')) for x in rij]
+        if r.startswith('fout = de som'): v442 = sum(w442)
+        else:
+            if len(w442) % 2 == 0: return {'exact': set()}
+            v442 = sorted(w442)[len(w442) // 2]
+        k442 = _kg(v442)
+        if k442 is None or _dec(k442) == _dec(c.ans): return {'exact': set()}
+        return {'exact': {k442}, 'pred': lambda v: _dec(v) == v442}
     if r.startswith('fout = het bedrag dat eraf gaat'):
         BED = r'(€\s?\d+(?:,\d{1,2})?|\d+(?:,\d{1,2})?\s?euro\b|\d+,\d{2})'
         m426 = re.search(BED + r'\s*[−\-–]\s*' + BED, c.opg.replace('\u00a0', ' '), re.I)
@@ -994,7 +1016,10 @@ def pas_toe(it, st, alle_cellen=None):
     tabel = c.jr.get('soort') == 'tabel'
     staaf_vraag = {st_['waarde'] for st_ in c.jr.get('staven') or [] if c.jr.get('soort') == 'staafdiagram' and isinstance(st_, dict)
                    and isinstance(st_.get('waarde'), int) and st_.get('naam') and re.search(rf"\b{re.escape(str(st_['naam']))}\b", c.opg, re.I)}
-    def _past(comp, v): return bool(comp) and bool(comp.get('alles') or (v in comp.get('exact', ())) or (comp.get('pred') and comp['pred'](v)))
+    def _past(comp, v):
+        if bool(comp) and bool(comp.get('alles') or (v in comp.get('exact', ())) or (comp.get('pred') and comp['pred'](v))): return True
+        # Oef-#440 (met KOMMA437): een sleutel '8,0' / '300,0' heeft de waarde van het hele getal: hij past op een regelwaarde '8' / '300'
+        return bool(KOMMA437 and comp and (q_ := re.fullmatch(r'(\d+),0+', str(v).strip())) and q_.group(1) in comp.get('exact', ()))
     for v in kand:
         hit = None; volgorde = regels; ook = []; gedwongen = set()
         if tabel:

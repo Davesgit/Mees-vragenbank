@@ -2,7 +2,7 @@
 
 Onze omschrijving: Vermenigvuldigen/delen + combinaties · in onze bank: 8 items
 
-Claude-vragen gemapt: **896** in **11** somtypen · twijfel (voorstel dit doel): **0**
+Claude-vragen gemapt: **882** in **11** somtypen · twijfel (voorstel dit doel): **0**
 
 Invoer voor het schrijven van hint 1 (`hint`) en hint 2 (`sterkereHint`) per somtype. Velden `hint`, `sterkereHint` en `ouderzin` zijn nog leeg.
 Elk somtype heeft een vaste sleutel (nrOrigineel + somtypeOrigineel, bevroren/somtype_nr_v*.json): neem die over in hints/batch*.json, dan blijft de hint gekoppeld als de nummering of de kop verandert.
@@ -11,9 +11,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 ## Somtype 1: # : # =
 
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “# : # =” (koppeling: claudeId)
-- Items: **416** · Claude-doelen: B17 (385), C18 (31) · regel: G7-K02-komma-delen, G7-C01-staartdeling
-- Getallenruimte: 0–1.000, 0–10.000, kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma) · type: kale
-- Denkfouten (Claude): tiende-of-honderdste-ernaast (633), komma-verschoven (118), tiental-ernaast (28), een-ernaast (25), verkeerde-bewerking (19), deel-vergeten-bij-splitsen (9)
+- Items: **409** · Claude-doelen: B17 (378), C18 (31) · regel: G7-K02-komma-delen, G7-C01-staartdeling
+- Getallenruimte: 0–10.000, kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma) · type: kale
+- Denkfouten (Claude): tiende-of-honderdste-ernaast (623), komma-verschoven (114), tiental-ernaast (28), een-ernaast (25), verkeerde-bewerking (19), deel-vergeten-bij-splitsen (9)
 - Verschillende Claude-fout-hints: 6 (meest: “Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na.”)
 - Voorbeelden:
   - `G7-GET-04-claude-bank-276` (Claude B17, bank, niveau 3 → toepassen)
@@ -26,7 +26,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 67 → Je zit er één tiental naast. Tel de tientallen nog eens rustig na. · 47 → Je zit er één tiental naast. Tel de tientallen nog eens rustig na.
 
 - **Hint 1 (te schrijven):** Hoe vaak past het getal waardoor je deelt in het getal dat je deelt? Schat eerst met ronde getallen.
-- **Hint 2 (te schrijven):** Splits het getal dat je deelt in stukken die je makkelijk deelt. Deel elk stuk en tel de uitkomsten op. Staat er een komma in het getal? Zet die in je antwoord op dezelfde plek, en reken na met een keersom.
+- **Hint 2 (te schrijven):** Splits het getal dat je deelt in stukken die je makkelijk deelt. Deel elk stuk en tel de uitkomsten op. Staat er een komma in het getal? Zet die in je antwoord op dezelfde plek. Blijft er aan het eind iets over? Maak er tienden of honderdsten van en deel verder achter de komma. Reken na met een keersom.
 - **Ouderzin:** Je kind deelt, ook met kommagetallen, door te splitsen en na te rekenen met een keersom.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `een tiende ernaast` (fout = antwoord ± 0,1) → Dat is een tiende ernaast. Reken de tienden nog eens na. Klopt het?  [nieuw]
@@ -34,7 +34,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `één ernaast` (fout = antwoord ± 1) → Dat is één ernaast. Hoe vaak past het getal waardoor je deelt er precies in?  [nieuw]
   - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Klopt het cijfer van de tientallen?  [nieuw]
   - `tien te weinig` (fout = antwoord - 10) → Dat is tien te weinig. Klopt het cijfer van de tientallen?  [nieuw]
-  - `net ernaast (heel antwoord)` (Claudes sleutel: tiende-of-honderdste-ernaast) → Dat ligt net naast het goede antwoord. Reken het na met een keersom. Klopt het?  [Claude, taalfix]
   - `stuk vergeten bij splitsen` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is veel te weinig. Heb je de uitkomsten van alle stukken opgeteld?  [Claude, taalfix]
   - `keer in plaats van delen` (Claudes sleutel: verkeerde-bewerking) → Heb je keer gedaan in plaats van gedeeld? Kijk naar het teken.  [Claude, taalfix]
   - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?  [Claude, taalfix]
@@ -44,19 +43,19 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 ## Somtype 2: # × # =
 
 - Sleutel: nrOrigineel **2** · somtypeOrigineel “# × # =” (koppeling: claudeId)
-- Items: **376** · Claude-doelen: B16 (376) · regel: G7-K01-komma-keer
-- Getallenruimte: 0–1.000, kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma) · type: kale
-- Denkfouten (Claude): tiende-of-honderdste-ernaast (576), komma-verschoven (167), verkeerde-bewerking (9)
+- Items: **369** · Claude-doelen: B16 (369) · regel: G7-K01-komma-keer
+- Getallenruimte: kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma) · type: kale
+- Denkfouten (Claude): tiende-of-honderdste-ernaast (567), komma-verschoven (163), verkeerde-bewerking (8)
 - Verschillende Claude-fout-hints: 3 (meest: “Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na.”)
 - Voorbeelden:
   - `G7-GET-04-claude-bank-833` (Claude B16, bank, niveau 3 → toepassen)
     - **Opgave:** 0,2 × 3 =
     - **Antwoord:** 0,6  (controle: ok)
     - **Fout-hints (Claude):** 0,7 → Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na. · 0,61 → Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na.
-  - `G7-GET-04-claude-bank-579` (Claude B16, bank, niveau 3 → toepassen)
-    - **Opgave:** 2,09 × 5 =
-    - **Antwoord:** 10,45  (controle: ok)
-    - **Fout-hints (Claude):** 10,35 → Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na. · 10,44 → Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na.
+  - `G7-GET-04-claude-bank-841` (Claude B16, bank, niveau 3 → toepassen)
+    - **Opgave:** 2,02 × 9 =
+    - **Antwoord:** 18,18  (controle: ok)
+    - **Fout-hints (Claude):** 18,28 → Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na. · 18,19 → Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na.
 
 - **Hint 1 (te schrijven):** Hoe groot is de uitkomst ongeveer? Schat eerst met ronde getallen.
 - **Hint 2 (te schrijven):** Reken eerst zonder de komma. Tel daarna hoeveel cijfers er achter de komma staan in de som, en zet in je antwoord evenveel cijfers achter de komma. Kijk of het past bij je schatting.
@@ -64,7 +63,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `een tiende ernaast` (fout = antwoord ± 0,1) → Dat is een tiende ernaast. Reken de tienden nog eens na. Klopt het?  [nieuw]
   - `een honderdste ernaast` (fout = antwoord ± 0,01) → Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?  [nieuw]
-  - `net ernaast (heel antwoord)` (Claudes sleutel: tiende-of-honderdste-ernaast) → Dat ligt net naast het goede antwoord. Reken het nog eens na. Klopt het?  [Claude, taalfix]
   - `gedeeld in plaats van keer` (Claudes sleutel: verkeerde-bewerking) → Heb je gedeeld in plaats van keer gedaan? Kijk naar het teken.  [Claude, taalfix]
   - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken zonder komma en zet de komma terug met een schatting.  [nieuw]
@@ -122,6 +120,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Deel het bedrag door het aantal. Blijft er iets over? Maak er centen van en deel verder. Reken na met een keersom.
 - **Ouderzin:** Je kind rekent de prijs van één stuk uit door het bedrag te delen, tot op de cent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `bedrag voor alles` (fout = getal2) → Dat is het bedrag voor alles samen. Wat kost één?  [nieuw]
   - `komma verschoven` (fout = antwoord × 10) → Dat is tien keer te veel. Kan één stuk zoveel kosten? Vergelijk met het bedrag voor alles samen.  [nieuw]
   - `aantal eraf gehaald` (Claudes sleutel: verkeerde-bewerking) → Heb je het aantal eraf gehaald? Je wilt weten wat één kost: dan verdeel je het bedrag over alle stuks.  [Claude, taalfix]
   - `komma anders verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Schat eerst: hoeveel euro kost één ongeveer?  [Claude, taalfix]
@@ -151,9 +150,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Tel alle getallen bij elkaar op. Deel de uitkomst door hoeveel getallen het zijn. Dat is het gemiddelde.
 - **Ouderzin:** Je kind rekent het gemiddelde uit: alles optellen en delen door het aantal.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `niet gedeeld` (Claudes sleutel: totaal-niet-gedeeld) → Dat is alles samen. Deel je dat nog door hoeveel getallen het zijn?  [Claude, taalfix]
-  - `middelste getal` (Claudes sleutel: middelste-getal) → Dat is het middelste getal. Het gemiddelde is iets anders: tel alles op en deel door het aantal.  [Claude, taalfix]
-  - `optellen en delen` (Claudes sleutel: verkeerde-bewerking) → Heb je alle getallen opgeteld én daarna gedeeld door hoeveel getallen het zijn?  [Claude, taalfix]
+  - `niet gedeeld` (fout = de som van de getallen) → Dat is alles samen. Deel je dat nog door hoeveel getallen het zijn?  [nieuw]
+  - `middelste getal` (fout = het middelste getal (op grootte)) → Dat is het middelste getal als je de getallen van klein naar groot zet. Het gemiddelde is iets anders: tel alles op en deel door het aantal.  [nieuw]
   - `niet het gemiddelde` (Claudes sleutel: verhoudingstabel-verkeerd) → Heb je alle getallen opgeteld en daarna gedeeld door het aantal? Reken het na.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel alle getallen op en deel door hoeveel getallen het zijn.  [nieuw]
 - Status: hints klaar
@@ -190,20 +188,20 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 
 - Sleutel: nrOrigineel **5** · somtypeOrigineel “# kilo/liter [ding] wordt eerlijk verdeeld over # [wie]. Hoeveel krijgt elk(e) [wie]?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: B17 (8) · regel: G7-K02-komma-delen
-- Getallenruimte: kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma), kommagetallen (3 cijfers achter de komma) · type: kale
+- Getallenruimte: kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma) · type: kale
 - Denkfouten (Claude): komma-verschoven (4), tafelbuur (4), rest-vergeten (4), kommagetal-als-geheel (4)
 - Verschillende Claude-fout-hints: 12 (meest: “Komma terugzetten: het antwoord heeft één cijfer achter de komma.”)
 - Voorbeelden:
   - `G7-GET-04-claude-bank-473` (Claude B17, gegenereerd, niveau 3 → toepassen)
-    - **Opgave:** 4,5 liter water wordt eerlijk verdeeld over 3 tanden. Hoeveel liter krijgt elke tand?
+    - **Opgave:** 4,5 liter limonade wordt eerlijk verdeeld over 3 kannen. Hoeveel liter krijgt elke kan?
     - **Antwoord:** 1,5  (controle: ok)
     - **Fout-hints (Claude):** 15 → Komma terugzetten: het antwoord heeft één cijfer achter de komma. · 2,5 → Controleer. 3 × jouw antwoord moet 4,5 zijn.
     - **Uitleg (Claude):** Reken zonder komma: 45 : 3 = 15. Zet de komma terug: 1,5.
   - `G7-GET-04-claude-bank-471` (Claude B17, gegenereerd, niveau 3 → toepassen)
-    - **Opgave:** 241 kilo eieren wordt eerlijk verdeeld over 8 dino's. Hoeveel kilo krijgt elke dino?
-    - **Antwoord:** 30,125  (controle: ok)
+    - **Opgave:** 242 kilo appels wordt eerlijk verdeeld over 8 kratten. Hoeveel kilo krijgt elke krat?
+    - **Antwoord:** 30,25  (controle: ok)
     - **Fout-hints (Claude):** 30 → Er blijft 1 kilo over. Die verdeel je ook, in stukjes. · 30,1 → De rest 1 is niet zomaar het cijfer achter de komma. Deel de rest ook door 8.
-    - **Uitleg (Claude):** 8 × 30 = 240, blijft 1 over. 1 : 8 = 0,125. Samen 30,125.
+    - **Uitleg (Claude):** 8 × 30 = 240, blijft 2 over. 2 : 8 = 0,25. Samen 30,25.
 
 - **Hint 1 (te schrijven):** Verdeel eerst het hele getal. Wat overblijft, verdeel je verder achter de komma.
 - **Hint 2 (te schrijven):** Deel eerst het hele getal. Blijft er iets over? Maak er tienden van en deel die ook. Blijft er weer iets over, maak er dan honderdsten van.
@@ -266,8 +264,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Keer 100: de komma schuift twee plekken naar rechts. 3,3 × 100 = 330.
 
 - **Hint 1 (te schrijven):** Wat weegt één? En hoeveel stuks zijn het? Alle stuks samen is een keersom.
-- **Hint 2 (te schrijven):** Bij keer tien schuift de komma één plek naar rechts, bij keer honderd twee plekken. Tel de nullen van het aantal en schuif de komma zoveel plekken.
-- **Ouderzin:** Je kind rekent een kommagetal keer tien, honderd of duizend door de komma te verschuiven.
+- **Hint 2 (te schrijven):** Bij keer tien schuift de komma één plek naar rechts, bij keer honderd twee plekken. Tel de nullen van het aantal en schuif de komma zoveel plekken. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul bij.
+- **Ouderzin:** Je kind rekent een gewicht keer een rond aantal door de komma te verschuiven, en zet er een nul bij als er geen cijfer meer is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `komma een plek te ver` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen van het aantal: zoveel plekken schuift de komma.  [nieuw]
   - `komma de verkeerde kant op` (Claudes sleutel: komma-verschoven) → Is de uitkomst groter of kleiner dan het gewicht van één? Bij keer wordt het meer.  [Claude, taalfix]
@@ -284,12 +282,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Komma terugzetten: één cijfer achter de komma.”)
 - Voorbeelden:
   - `G7-GET-04-claude-bank-857` (Claude B16, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een pakket weegt 2,6 kg. Hoeveel wegen 3 eieren?
+    - **Opgave:** Een pakket weegt 2,6 kg. Hoeveel wegen 3 pakketten?
     - **Antwoord:** 7,8  (controle: ok)
     - **Fout-hints (Claude):** 78 → Komma terugzetten: één cijfer achter de komma. · 6,6 → Ook de tienden gaan keer het aantal.
     - **Uitleg (Claude):** Zonder komma: 3 × 26 = 78. Komma terug (één cijfer): 7,8.
   - `G7-GET-04-claude-bank-858` (Claude B16, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een pakket weegt 3,9 kg. Hoeveel wegen 12 poesjes?
+    - **Opgave:** Een pakket weegt 3,9 kg. Hoeveel wegen 12 pakketten?
     - **Antwoord:** 46,8  (controle: ok)
     - **Fout-hints (Claude):** 468 → Komma terugzetten: één cijfer achter de komma. · 36,9 → Ook de tienden gaan keer het aantal.
     - **Uitleg (Claude):** Zonder komma: 12 × 39 = 468. Komma terug (één cijfer): 46,8.

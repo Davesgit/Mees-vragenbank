@@ -26,8 +26,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 3/4  (controle: ok)
     - **Fout-hints (Claude):** 7/20 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter? · 9/14 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoe groot is elke breuk ongeveer: minder dan een half, ongeveer een half, of bijna één heel?
+- **Hint 2 (te schrijven):** Vergelijk elke breuk met een half en met één heel. Twijfel je nog? Maak de noemers gelijk, of schrijf de breuken als kommagetal. Een grotere noemer betekent kleinere stukken.
+- **Ouderzin:** Je kind zoekt de grootste van drie breuken met verschillende noemers.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet de grootste` (Claudes sleutel: grotere-noemer-is-groter) → Is dat echt de grootste breuk? Een grotere noemer betekent kleinere stukken.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Vergelijk de breuken met een half en met één heel, en kies de grootste.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: Welke breuk is het kleinst? Kies uit #/#, #/# of #/#.
 
@@ -47,8 +52,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 3/20  (controle: ok)
     - **Fout-hints (Claude):** 8/9 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter? · 2/11 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoe groot is elke breuk ongeveer: minder dan een half, ongeveer een half, of bijna één heel?
+- **Hint 2 (te schrijven):** Vergelijk elke breuk met een half en met één heel. Twijfel je nog? Maak de noemers gelijk, of schrijf de breuken als kommagetal. Een grotere noemer betekent kleinere stukken.
+- **Ouderzin:** Je kind zoekt de kleinste van drie breuken met verschillende noemers.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet de kleinste` (Claudes sleutel: grotere-noemer-is-groter) → Is dat echt de kleinste breuk? Een grotere noemer betekent kleinere stukken.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Vergelijk de breuken met een half en met één heel, en kies de kleinste.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: Reken uit: #/# + #/# = ? Typ een breuk. — uitkomst boven 1
 
@@ -68,8 +78,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 13/10  (controle: ok)
     - **Fout-hints (Claude):** 13/20 → De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 12/10 → Tel de stukjes nog eens: 5 + 8 = ?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** De noemers zijn gelijk. Wat doe je met de tellers?
+- **Hint 2 (te schrijven):** Tel alleen de tellers bij elkaar op. De noemer blijft hetzelfde. Is de teller groter dan de noemer? Dan is de uitkomst meer dan één heel: typ hem gewoon als breuk.
+- **Ouderzin:** Je kind telt breuken met dezelfde noemer op, ook als de uitkomst meer dan één heel is.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `teller of noemer anders` (Claudes sleutel: teller-en-noemer-optellen) → Reken de tellers nog eens na. De noemer blijft hetzelfde: je telt alleen de tellers op.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Tel de tellers op en laat de noemer hetzelfde.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: Reken uit: #/# + #/# = ? Typ een breuk.
 
@@ -90,8 +105,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 6/7  (controle: ok)
     - **Fout-hints (Claude):** 7/7 → Tel de stukjes nog eens: 5 + 1 = ? · 4/7 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** De noemers zijn gelijk. Wat doe je met de tellers?
+- **Hint 2 (te schrijven):** Tel alleen de tellers bij elkaar op. De noemer blijft hetzelfde.
+- **Ouderzin:** Je kind telt breuken met dezelfde noemer op.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `teller of noemer anders` (Claudes sleutel: teller-en-noemer-optellen) → Reken de tellers nog eens na. De noemer blijft hetzelfde: je telt alleen de tellers op.  [Claude, taalfix]
+  - `min in plaats van plus` (Claudes sleutel: verkeerde-bewerking) → Is het een plussom of een minsom? Kijk naar het teken.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Tel de tellers op en laat de noemer hetzelfde.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 5: Reken uit: #/# − #/# = ? Typ een breuk.
 
@@ -111,8 +132,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 5/9  (controle: ok)
     - **Fout-hints (Claude):** 5/18 → De noemer zegt in hoeveel stukken het geheel is verdeeld. Die verandert niet als je stukken bij elkaar doet. · 11/9 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** De noemers zijn gelijk. Wat doe je met de tellers?
+- **Hint 2 (te schrijven):** Haal de tweede teller van de eerste af. De noemer blijft hetzelfde.
+- **Ouderzin:** Je kind trekt breuken met dezelfde noemer van elkaar af.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `teller of noemer anders` (Claudes sleutel: teller-en-noemer-optellen) → Reken de tellers nog eens na. De noemer blijft hetzelfde: je haalt alleen de tellers van elkaar af.  [Claude, taalfix]
+  - `plus in plaats van min` (Claudes sleutel: verkeerde-bewerking) → Is het een plussom of een minsom? Kijk naar het teken.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Haal de tellers van elkaar af en laat de noemer hetzelfde.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 6: Schrijf #/# als kommagetal.
 
@@ -132,8 +159,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 0,65  (controle: ok)
     - **Fout-hints (Claude):** 6,5 → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links. · 0,065 → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een breuk is een deling: de teller gedeeld door de noemer.
+- **Hint 2 (te schrijven):** Maak een even grote breuk met als noemer tien, honderd of duizend: doe de teller en de noemer keer hetzelfde getal. Tel de nullen van die noemer: zoveel cijfers komen er achter de komma.
+- **Ouderzin:** Je kind schrijft een breuk als kommagetal, via een noemer van tien, honderd of duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Is de breuk kleiner dan één heel, dan begint het kommagetal met nul komma.  [Claude, taalfix]
+  - `teller en noemer achter de komma` (Claudes sleutel: teller-en-noemer-optellen) → Heb je de teller en de noemer achter de komma gezet? Een breuk is een deling: teller gedeeld door noemer.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Deel de teller door de noemer, of maak een noemer van tien, honderd of duizend.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 7: # van de [ding] is blauw. Schrijf dat als een zo eenvoudig mogelijke breuk.
 
@@ -154,5 +187,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5/2 → De cijfers achter de komma zijn tienden of honderdsten. Zet ze boven 10 of 100 en vereenvoudig. · 2/1 → Teller boven, noemer onder.
     - **Uitleg (Claude):** 0,50 is 500/1000. Vereenvoudigen geeft 1/2.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoeveel cijfers staan er achter de komma? Eén cijfer zijn tienden, twee cijfers honderdsten.
+- **Hint 2 (te schrijven):** Schrijf het kommagetal als breuk met noemer tien of honderd. Deel daarna de teller en de noemer door hetzelfde getal, tot het niet verder kan.
+- **Ouderzin:** Je kind schrijft een kommagetal als een zo eenvoudig mogelijke breuk.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `teller en noemer omgedraaid` (Claudes sleutel: cijfers-verwisseld) → Staan teller en noemer op de goede plek? Het deel staat boven de streep, het geheel eronder.  [Claude, taalfix]
+  - `andere breuk` (Claudes sleutel: kommagetal-als-geheel) → Klopt die breuk met het kommagetal? Schrijf het kommagetal eerst als tienden of honderdsten.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Schrijf het kommagetal als tienden of honderdsten en maak de breuk zo eenvoudig mogelijk.  [nieuw]
+- Status: hints klaar

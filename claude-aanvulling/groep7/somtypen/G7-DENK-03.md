@@ -127,7 +127,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Begin bij het begingetal en doe het keer twee. Doe de uitkomst weer keer twee. Houd met streepjes bij hoe vaak je verdubbelt, tot het aantal keer uit de vraag.
 - **Ouderzin:** Je kind verdubbelt een getal een paar keer achter elkaar en houdt bij hoe vaak.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `een keer te weinig` (24) → Heb je echt zo vaak verdubbeld als de vraag zegt? Schrijf na elke verdubbeling het getal op en tel de stappen.  [nieuw]
+  - `een keer te weinig of keer acht` (24) → Dat krijg je als je één keer minder verdubbelt. Schrijf na elke verdubbeling het getal op en tel de stappen.  [nieuw]
   - `steeds twee erbij` (11) → Heb je steeds twee erbij gedaan? Verdubbelen is keer twee: het getal wordt twee keer zo groot.  [nieuw]
   - `andere fout` (andere fout) → Verdubbelen is keer twee. Doe dat zo vaak als de vraag zegt.  [nieuw]
 - Status: hints klaar
@@ -174,7 +174,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** De dagen zijn 2, 3, 4 en 5 dl. Die tel je allemaal bij elkaar op. Samen is dat 14 dl.
 
 - **Hint 1 (te schrijven):** Schrijf voor elke dag op hoeveel water de plant krijgt.
-- **Hint 2 (te schrijven):** Op de eerste dag krijgt de plant de hoeveelheid uit de vraag. Elke volgende dag doe je er de extra hoeveelheid bij. Schrijf alle dagen onder elkaar en tel ze bij elkaar op.
+- **Hint 2 (te schrijven):** Op dag één krijgt de plant de hoeveelheid van dag één. Elke volgende dag doe je er de extra hoeveelheid bij. Schrijf alle dagen onder elkaar en tel ze bij elkaar op.
 - **Ouderzin:** Je kind maakt een rijtje dat elke dag wat groter wordt, en telt het op.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `meer dan dag één of dag vergeten` (11 dl) → Dat is te weinig. Heb je elke dag meegeteld, met de goede hoeveelheid? Elke volgende dag krijgt de plant meer dan de dag ervoor.  [nieuw]
@@ -428,7 +428,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent kilometers om naar meter en telt bij bordjes langs een route ook het bordje bij de finish mee.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `start of finish vergeten` (24 bordjes) → Heb je het bordje bij de start én het bordje bij de finish meegeteld? Er is één bordje meer dan er stukken zijn.  [nieuw]
-  - `helft genomen in plaats van hoe vaak het past` (6 bordjes) → Hoe vaak past de afstand tussen twee bordjes in één kilometer? Zoveel stukken liggen er in elke kilometer van de tocht.  [nieuw]
+  - `helft genomen in plaats van hoe vaak het past` (6 bordjes) → Hoe vaak past de afstand tussen twee bordjes in de hele tocht? Reken de tocht eerst om naar meter.  [nieuw]
   - `andere fout` (andere fout) → Reken de tocht om naar meter, deel door de afstand tussen de bordjes en tel er één bordje bij.  [nieuw]
 - Status: hints klaar
 

@@ -161,11 +161,19 @@ if __name__ == '__main__':
     fail = (_B390.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import antwoord_in_vraag_check as _AIV      # V-#560 (recheck G7 batch 1, Didactiek 8 okt): procent/breuk, goed antwoord = getal uit de vraag (FAIL, G5–G8)
     fail = (_AIV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    import hoofdletter_check as _HL      # V-#608 (review G7 batch 3, Didactiek 8 okt): een vraagzin begint met een hoofdletter (FAIL, G5–G8)
+    fail = (_HL.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     # Review G7 batch 1 (Didactiek 8 okt): Z-#518 CONTEXT (WARN), Z-#525 VISUAL (WARN), Z-#520/Z-#562 ROUTES (INFO, heel G7 per stuk)
     import contextgebonden_check as _CG, visual_somtype_check as _VS, routes_check as _RT
     _alle = [_it for _p in files for _it in json.load(open(_p))['items']]
     _CG.rapport(os.path.dirname(os.path.abspath(__file__))); _VS.rapport(_alle)
     # Z-#562 (recheck batch 1): alle meldingen per stuk, voor heel G7 (alle meerkeuze), met minder bijvangst; ook in logs/routes.json
     _RT.rapport(_alle, log=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logs', 'routes.json'))
+    # Z-#606 (review batch 3): GET-04 #8 is 'keer tien, honderd of duizend': het aantal in de vraag is 10, 100 of 1000 (WARN)
+    _z606 = [_i for _i in _alle if _i.get('merge', {}).get('doel') == 'G7-GET-04' and _i.get('merge', {}).get('somtypeNrOrigineel') == 8]
+    _z606f = [_i['id'] for _i in _z606 if not re.search(r'\b(10|100|1000|1\.000)\s+\w+\?', _i['opgave'])]
+    _z606n = sorted({_m.group(1) for _i in _z606 for _m in [re.search(r'(\d[\d.]*)\s+\w+\?', _i['opgave'])] if _m})
+    print(f"\nZ606 (GET-04 #8: aantal 10, 100 of 1000): {len(_z606)} items, {len(_z606f)} anders; aantallen in de vraag: {_z606n}")
+    for _x in _z606f: print('  WARN Z606', _x)
     print('\nG7 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

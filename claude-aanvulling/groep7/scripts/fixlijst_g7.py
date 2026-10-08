@@ -159,3 +159,99 @@ def _v428(it, slog):
 _pas_toe_v560 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_v560(it, slog); _v428(it, slog); _z576(it, slog)
+
+# ---- Review batch 3 Didactiek (builds 12:44:21 en 12:52:39; opdracht 12:55) -------------------------------------------------------------
+# V-#607 (verplicht): GET-04 nrO 9 hetzelfde ding in beide zinnen; nrO 5 logische contexten (kilo bij iets wat je weegt, verdelen over iets dat
+# kan krijgen) en 115 : 8 / 241 : 8 (duizendsten, V-#604) → delingen die op honderdsten uitkomen. Z-#609 (zacht): het goede antwoord was een
+# getal uit de vraag: GET-04 nrO 5 '9 liter : 3 = 3' en GET-03 nrO 2 '1,2 − 0,6 = 0,6'. Alles nagerekend (eerst het hele getal, rest achter de komma).
+# spec: (opgave, {oud: nieuw} voor antwoord en Claude-sleutels, {extraVelden-veld: waarde}, {Claude-sleutel: Claudes uitleg}, getallenruimte, nr)
+V607 = {
+    '34e916ac-94c0-41e8-975c-8bc1cea363b2': ('Een pakket weegt 6,3 kg. Hoeveel wegen 10 pakketten?', {}, {}, {}, None, 'V-#607'),
+    '44c39ce2-9454-48f7-8f27-c4775c359ca3': ('Een pakket weegt 4,7 kg. Hoeveel wegen 5 pakketten?', {}, {}, {}, None, 'V-#607'),
+    '94cab6bc-635d-4acc-a430-e967b0167dbb': ('Een pakket weegt 2,6 kg. Hoeveel wegen 3 pakketten?', {}, {}, {}, None, 'V-#607'),
+    'a9b3dbe7-38c3-44f0-b11e-d1ec953b29d6': ('Een pakket weegt 3,9 kg. Hoeveel wegen 12 pakketten?', {}, {}, {}, None, 'V-#607'),
+    '2f9c6bcd-6570-4851-b3d7-95c2cd82f102': ('114 kilo zand wordt eerlijk verdeeld over 8 zakken. Hoeveel kilo krijgt elke zak?', {'14,375': '14,25', '14': '14', '14,3': '14,2'},
+        {'claudeKaleSom': '114 : 8', 'claudeUitleg': '8 × 14 = 112, blijft 2 over.\n2 : 8 = 0,25.\nSamen 14,25.', 'claudeThema': None},
+        {'14': 'Er blijft 2 kilo over. Die verdeel je ook, in stukjes.', '14,2': 'De rest 2 is niet zomaar het cijfer achter de komma. Deel de rest ook door 8.'},
+        'kommagetallen (2 cijfers achter de komma)', 'V-#607'),
+    'b42049f4-e785-4306-9a98-ddd0d553be4b': ('242 kilo appels wordt eerlijk verdeeld over 8 kratten. Hoeveel kilo krijgt elke krat?', {'30,125': '30,25', '30': '30', '30,1': '30,2'},
+        {'claudeKaleSom': '242 : 8', 'claudeUitleg': '8 × 30 = 240, blijft 2 over.\n2 : 8 = 0,25.\nSamen 30,25.', 'claudeThema': None},
+        {'30': 'Er blijft 2 kilo over. Die verdeel je ook, in stukjes.', '30,2': 'De rest 2 is niet zomaar het cijfer achter de komma. Deel de rest ook door 8.'},
+        'kommagetallen (2 cijfers achter de komma)', 'V-#607'),
+    'b5096450-e218-4bc8-b9e3-9b97275fce3a': ('81 kilo aarde wordt eerlijk verdeeld over 4 bakken. Hoeveel kilo krijgt elke bak?', {}, {'claudeThema': None}, {}, None, 'V-#607'),
+    '45395d2c-9299-4bac-b771-9ad3277c263e': ('8,4 liter water wordt eerlijk verdeeld over 6 flessen. Hoeveel liter krijgt elke fles?', {}, {'claudeThema': None}, {}, None, 'V-#607'),
+    'a46cce53-ecd4-4108-823f-918585082315': ('7,6 liter water wordt eerlijk verdeeld over 4 emmers. Hoeveel liter krijgt elke emmer?', {}, {'claudeThema': None}, {}, None, 'V-#607'),
+    'cbe2514c-b4ec-4b64-9c1e-e1f655f44240': ('4,5 liter limonade wordt eerlijk verdeeld over 3 kannen. Hoeveel liter krijgt elke kan?', {}, {'claudeThema': None}, {}, None, 'V-#607'),
+    'cd78d15a-10b5-439c-aac2-264620ad32dd': ('18 liter water wordt eerlijk verdeeld over 3 drinkbakken. Hoeveel liter krijgt elke drinkbak?', {'3': '6', '30': '60', '4,0': '7'},
+        {'claudeKaleSom': '18,0 : 3', 'claudeUitleg': 'Reken zonder komma: 180 : 3 = 60.\nZet de komma terug: 6,0.'},
+        {'60': 'Komma terugzetten: het antwoord heeft één cijfer achter de komma.', '7': 'Controleer. 3 × jouw antwoord moet 18 zijn.'}, None, 'Z-#609'),
+    'c88c4cd3-a8ee-4e6f-98f4-271088797d45': ('1,4 − 0,6 =', {'0,6': '0,8', '6': '8', '0,7': '0,9'}, {'claudeKaleSom': '1,4 − 0,6'}, {}, None, 'Z-#609'),
+}
+REDEN607 = {'V-#607': 'context klopte niet (hetzelfde ding / logische context; 115 : 8 en 241 : 8 → honderdsten), review batch 3 Didactiek',
+            'Z-#609': 'het goede antwoord was een getal uit de vraag (review batch 3 Didactiek)'}
+def _v607(it, slog):
+    spec = V607.get(it['bron'].get('claudeId'))
+    if not spec: return
+    o_new, m, ev, cfh, gr, nr = spec; oud = it['opgave']
+    it['opgave'] = o_new
+    if m:
+        assert it['antwoord'] in m, (it['id'], it['antwoord'])
+        it['antwoord'] = m[it['antwoord']]
+        if isinstance(it.get('antwoordDetail'), dict) and 'accept' in it['antwoordDetail']: it['antwoordDetail']['accept'] = [it['antwoord']]
+        e = it['extraVelden']
+        e['claudeFoutHints'] = [dict(f, fout=m.get(f['fout'], f['fout']), uitleg=cfh.get(m.get(f['fout'], f['fout']), f['uitleg'])) for f in e.get('claudeFoutHints') or []]
+        e['claudeDenkfouten'] = [dict(d, fout=m.get(d['fout'], d['fout'])) for d in e.get('claudeDenkfouten') or []]
+        it['foutHints'] = [dict(f, fout=m.get(f['fout'], f['fout'])) for f in it.get('foutHints') or []]
+    for k, v in ev.items(): it['extraVelden'][k] = v
+    if gr: it['getallenruimte'] = gr
+    it['merge'][nr.replace('-#', '').lower()] = {'opgaveOud': oud, 'vervangen': m, 'reden': REDEN607[nr]}
+    slog(it, f'G7-{nr}: ' + REDEN607[nr], 'opgave', oud, o_new)
+# V-#608 (verplicht): een opgave die met een kleine letter begint (GET-03 nrO 3/4: «de kleedkamer heeft …», de kop begon met [plek]) → hoofdletter.
+def _v608(it, slog):
+    o = it.get('opgave') or ''
+    if o[:1].isalpha() and o[:1].islower():
+        it['opgave'] = o[0].upper() + o[1:]; it['merge']['v608'] = True
+        slog(it, 'G7-V608 (review batch 3 Didactiek): hoofdletter aan het begin van de vraag', 'opgave', o, it['opgave'])
+_pas_toe_z576 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_z576(it, slog); _v607(it, slog); _v608(it, slog)
+
+# ---- Oef-#443 (data, les 184; steering 13:08): MEET-03 #9/#10 «Een bak in het bos/nest/moeras …» en «Een doos voor poesjes/sterren …» passen
+# niet bij inhoud. #9 (m³): een bak die zo groot kan zijn, naar de hoogte (≤ 1 m zandbak, ≤ 2 m aquarium, hoger container); een tweede item met
+# dezelfde getallen krijgt de tweede vorm (geen dubbele vraag). #10 (cm³): sterren → knikkers, poesjes → blokjes. De kop blijft 'Een bak is …'.
+V443_BAK = [(1, ('Een zandbak', 'Een vijver in het park')), (2, ('Een aquarium in de dierentuin', 'Een waterbak op de kinderboerderij')),
+            (99, ('Een container', 'Een opslagbak in de schuur'))]
+V443_DOOS = {'sterren': 'knikkers', 'poesjes': 'blokjes'}
+_V443_GEZIEN = set()
+def _v443(it, slog):
+    o = it.get('opgave') or ''
+    m = re.match(r'^Een bak (?:in|op) (?:de|het) [a-zà-ÿ]+ (is ([\d,]+) m lang, [\d,]+ m breed en ([\d,]+) m hoog\. Hoeveel m³ gaat erin\?)$', o)
+    if m:
+        h = float(m.group(3).replace(',', '.')); vormen = next(v for g, v in V443_BAK if h <= g)
+        rest = m.group(1); nieuw = f'{vormen[0]} {rest}' if (vormen[0], rest) not in _V443_GEZIEN else f'{vormen[1]} {rest}'
+        _V443_GEZIEN.add((nieuw.split(' is ')[0], rest))
+    else:
+        m = re.match(r'^Een doos voor (sterren|poesjes) (is .* cm hoog\. Hoeveel cm³ past erin\?)$', o)
+        if not m: return
+        nieuw = f'Een doos voor {V443_DOOS[m.group(1)]} {m.group(2)}'
+    it['opgave'] = nieuw; it['extraVelden']['claudeThema'] = None
+    it['merge']['oef443'] = {'opgaveOud': o, 'reden': 'Oef-#443: context past bij inhoud (les 184)'}
+    slog(it, 'G7-Oef-#443: logische context bij inhoud (aquarium, zandbak, container, doos voor knikkers)', 'opgave', o, nieuw)
+# ---- Oef-#440 (data, steering 13:08): Claude-sleutels als '20,0' / '300,0' / '5,0' (MEET-03 #9, VERH-04 #3) worden het hele getal ('20');
+# een sleutel die dan dubbel is, valt weg (de eerste blijft). Niet bij afronden ('… cijfer achter de komma'): daar hoort de vorm bij de vraag.
+def _v440(it, slog):
+    if re.search(r'achter de komma', it.get('opgave') or ''): return
+    e = it['extraVelden']; oud = [d.get('fout') for d in e.get('claudeDenkfouten') or []] + [f.get('fout') for f in e.get('claudeFoutHints') or []]
+    if not any(re.fullmatch(r'\d+,0+', str(k)) for k in oud): return
+    for veld in ('claudeDenkfouten', 'claudeFoutHints'):
+        lijst, gezien = [], set()
+        for d in e.get(veld) or []:
+            k = re.sub(r'^(\d+),0+$', r'\1', str(d.get('fout')))
+            if k in gezien: continue
+            gezien.add(k); lijst.append(dict(d, fout=k))
+        if veld in e: e[veld] = lijst
+    it['merge']['oef440'] = {'sleutelsOud': oud}
+    slog(it, "G7-Oef-#440: Claude-sleutel 'n,0' → het hele getal", 'claudeSleutels', oud, [d.get('fout') for d in e.get('claudeDenkfouten') or []])
+_pas_toe_v608 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_v608(it, slog); _v443(it, slog); _v440(it, slog)

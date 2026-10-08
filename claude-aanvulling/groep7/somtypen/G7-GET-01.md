@@ -53,12 +53,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 269.517  (controle: ok)
     - **Fout-hints (Claude):** 271.517 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** Kijk naar het getal vooraan in de vraag. Bij welke plek gaat er één af?
+- **Hint 1 (te schrijven):** Kijk naar het getal dat eraf gaat. Bij welke plek gaat er één af?
 - **Hint 2 (te schrijven):** Zoek in het grote getal de plek waar er één afgaat. Staat daar een nul? Dan leen je van het cijfer ervoor: de nul wordt een negen en het cijfer ervoor gaat één omlaag. Is dat cijfer ook een nul? Dan wordt dat ook een negen, en leen je verder naar links.
 - **Ouderzin:** Je kind haalt een rond getal, zoals duizend of tienduizend, af van een getal tot een miljoen, ook als daar een nul staat.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `erbij gedaan` (fout = getal1 + getal2) → Komt er iets bij of gaat er iets af? Minder dan betekent dat het getal kleiner wordt.  [nieuw]
-  - `twee keer eraf` (fout = antwoord - getal1) → Dat is te weinig. Gaat er op die plek maar één af?  [nieuw]
+  - `twee keer eraf` (fout = antwoord - getal1) → Dat is te weinig. Er gaat maar één keer iets af. Bij welke plek?  [nieuw]
   - `één eraf gehaald` (fout = getal2 - 1) → Dat is maar één minder. Hoeveel gaat er volgens de vraag af?  [nieuw]
   - `het getal zelf` (fout = getal2) → Dat is het grote getal uit de vraag. Er moet nog iets af. Hoeveel?  [nieuw]
   - `andere fout` (andere fout) → Zoek de plek uit de vraag in het grote getal en haal daar één af.  [nieuw]
@@ -81,12 +81,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 380.889  (controle: ok)
     - **Fout-hints (Claude):** 381.889 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.
 
-- **Hint 1 (te schrijven):** Kijk naar het getal vooraan in de vraag. Bij welke plek komt er één bij?
+- **Hint 1 (te schrijven):** Kijk naar het getal dat erbij komt. Bij welke plek komt er één bij?
 - **Hint 2 (te schrijven):** Zoek in het grote getal de plek waar er één bijkomt. Staat daar een negen? Dan wordt de negen een nul en gaat het cijfer ervoor één omhoog. Is dat cijfer ook een negen? Dan wordt dat ook een nul, en ga je verder naar links.
 - **Ouderzin:** Je kind telt een rond getal, zoals duizend of tienduizend, op bij een getal tot een miljoen, ook als daar een negen staat.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `eraf gehaald` (fout = getal1 - getal2 of getal2 - getal1) → Komt er iets bij of gaat er iets af? Meer dan betekent dat het getal groter wordt.  [nieuw]
-  - `twee keer erbij` (fout = antwoord + getal1) → Dat is te veel. Komt er op die plek maar één bij?  [nieuw]
+  - `twee keer erbij` (fout = antwoord + getal1) → Dat is te veel. Er komt maar één keer iets bij. Bij welke plek?  [nieuw]
   - `één erbij gedaan` (fout = getal2 + 1) → Dat is maar één meer. Hoeveel komt er volgens de vraag bij?  [nieuw]
   - `het getal zelf` (fout = getal2) → Dat is het grote getal uit de vraag. Er moet nog iets bij. Hoeveel?  [nieuw]
   - `andere fout` (andere fout) → Zoek de plek uit de vraag in het grote getal en doe daar één bij.  [nieuw]

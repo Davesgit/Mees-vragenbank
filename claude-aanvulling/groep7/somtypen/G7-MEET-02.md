@@ -29,8 +29,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 40 → Dat is de oppervlakte van de rechthoek eromheen. Een driehoek is de helft: deel door 2. · 13 → Oppervlakte is vermenigvuldigen: basis × hoogte, en dan delen door 2. · 42 → Delen door 2, niet optellen.
     - **Uitleg (Claude):** Oppervlakte driehoek = basis × hoogte : 2 = 8 × 5 : 2 = 40 : 2 = 20 m².
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een driehoek is de helft van een rechthoek met dezelfde basis en hoogte. De oppervlakte reken je in m² (vierkante meter).
+- **Hint 2 (te schrijven):** Reken eerst de rechthoek uit: basis keer hoogte. Neem daarvan de helft. Dat is de oppervlakte van de driehoek.
+- **Ouderzin:** Je kind rekent de oppervlakte van een driehoek uit: basis keer hoogte, en daarvan de helft (in m²).
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `rechthoek niet gehalveerd` (fout = getal1 × getal2) → Dat is de hele rechthoek. Hoeveel is de driehoek daarvan?  [nieuw]
+  - `basis en hoogte opgeteld` (fout = getal1 + getal2) → Heb je de basis en de hoogte opgeteld? Oppervlakte reken je met keer.  [nieuw]
+  - `twee keer gehalveerd` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is te weinig. Heb je twee keer door twee gedeeld?  [Claude, taalfix]
+  - `twee erbij in plaats van halveren` (Claudes sleutel: verkeerde-bewerking) → Heb je er twee bij opgeteld in plaats van door twee te delen?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Reken basis keer hoogte en neem daarvan de helft.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?
 
@@ -51,8 +59,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 42 → Dat is één rechthoek. De andere hoort er ook bij. · 72 → Een L-vorm is geen grote rechthoek. Reken de twee delen apart en tel ze op. · 17 → Oppervlakte is lengte keer breedte, per rechthoek.
     - **Uitleg (Claude):** Knip de figuur in twee rechthoeken. 7 × 6 = 42 m² en 2 × 2 = 4 m². Samen 46 m².
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Het hok bestaat uit twee rechthoeken. Hoeveel m² (vierkante meter) is elke rechthoek?
+- **Hint 2 (te schrijven):** Reken elke rechthoek uit: lengte keer breedte. Tel de twee uitkomsten bij elkaar op.
+- **Ouderzin:** Je kind rekent de oppervlakte van een L-vorm uit door hem in twee rechthoeken te splitsen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `één rechthoek` (fout = getal1 × getal2) → Dat is maar één van de twee rechthoeken. Hoeveel m² is de andere?  [nieuw]
+  - `één grote rechthoek` (Claudes sleutel: omtrek-oppervlakte-verwisseld) → Dat is te veel. Heb je van de twee stukken één grote rechthoek gemaakt? Het hok is een L.  [Claude, taalfix]
+  - `maten opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je alle maten opgeteld? Oppervlakte reken je met keer: lengte keer breedte.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Reken elke rechthoek uit en tel de twee uitkomsten op.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: Een tuin van # bij # meter heeft een vierkante vijver van # bij # meter. Hoeveel m² gras is er?
 
@@ -73,8 +88,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 54 → De vijver is geen gras. Haal die eraf. · 52 → De vijver is 2 × 2 m², niet 2 m². · 58 → De vijver gaat eraf, niet erbij.
     - **Uitleg (Claude):** Hele tuin: 9 × 6 = 54 m². Vijver: 2 × 2 = 4 m². Gras: 54 − 4 = 50 m².
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoeveel m² (vierkante meter) is de hele tuin? En hoeveel is de vijver?
+- **Hint 2 (te schrijven):** Reken de tuin uit: lengte keer breedte. Reken de vijver uit: zijde keer zijde. Haal de vijver van de tuin af.
+- **Ouderzin:** Je kind rekent uit hoeveel gras er is: de tuin min de vijver.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `vijver niet afgehaald` (fout = getal1 × getal2) → Dat is de hele tuin. Waar de vijver ligt, groeit geen gras. Wat moet er nog af?  [nieuw]
+  - `zijde afgehaald` (Claudes sleutel: omtrek-oppervlakte-verwisseld) → Heb je alleen de zijde van de vijver afgetrokken? De vijver is een vierkant: zijde keer zijde.  [Claude, taalfix]
+  - `vijver erbij` (Claudes sleutel: verkeerde-bewerking) → Heb je de vijver erbij opgeteld? Waar de vijver ligt, groeit geen gras: haal hem eraf.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Reken de tuin uit en haal de vijver eraf.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: [driehoek-in-rechthoek] Een driehoekig(e) [ding] heeft een basis van # cm en een hoogte van # cm. Wat is de oppervlakte in cm²?
 
@@ -97,5 +119,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 126 → Dat is de hele rechthoek. Een driehoek is de helft. · 25 → Oppervlakte is keer, niet plus. · 31,5 → Eén keer delen door 2 is genoeg.
     - **Uitleg (Claude):** Een driehoek is de helft van een rechthoek. 18 × 7 = 126, gedeeld door 2 = 63 cm².
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een driehoek is de helft van een rechthoek met dezelfde basis en hoogte. De oppervlakte reken je in cm² (vierkante centimeter).
+- **Hint 2 (te schrijven):** Reken eerst de rechthoek uit: basis keer hoogte. Neem daarvan de helft. Dat is de oppervlakte van de driehoek.
+- **Ouderzin:** Je kind rekent de oppervlakte van een driehoek uit: basis keer hoogte, en daarvan de helft (in cm²).
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `rechthoek niet gehalveerd` (fout = getal1 × getal2) → Dat is de hele rechthoek. Hoeveel is de driehoek daarvan?  [nieuw]
+  - `basis en hoogte opgeteld` (fout = getal1 + getal2) → Heb je de basis en de hoogte opgeteld? Oppervlakte reken je met keer.  [nieuw]
+  - `twee keer gehalveerd` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is te weinig. Heb je twee keer door twee gedeeld?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Reken basis keer hoogte en neem daarvan de helft.  [nieuw]
+- Status: hints klaar

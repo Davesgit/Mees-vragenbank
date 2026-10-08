@@ -138,7 +138,8 @@ Een rerun is stabiel: ids en somtypen veranderen niet, alleen de tijdstempel ver
     - 'm2', 'm^2' en 'm²' worden m², 'cm3', 'cm^3' en 'cm³' worden cm³ (zo ook voor mm, dm, dam, hm, km);
     - 'vierkante (centi/deci/kilo…)meter' en 'kubieke …meter' worden het symbool, net als de mengvormen 'vierkante cm' en 'kubieke cm' (bij invoer mogen die);
     - 'kuub' wordt m³ (vanaf G7) en 'hectare' wordt ha;
-    - komma en punt als decimaalteken, en een duizendpunt mag.
+    - komma en punt als decimaalteken, en een duizendpunt mag;
+    - een slotnul na de komma verandert de waarde niet (Z-#607): bij antwoord 7,8 is '7,80' goed, bij antwoord 2,0 is '2' goed (en '2,00'), bij €3,50 ook '3,5'. Vergelijk dus op waarde, niet op tekst.
   - Goed is: het getal klopt, en de eenheid ontbreekt of is na normalisatie gelijk aan de gevraagde eenheid. Een andere eenheid is fout.
   - De screenreader leest het symbool als woord voor (aria-label: m² → «vierkante meter», cm³ → «kubieke centimeter», km² → «vierkante kilometer»).
   - De merge-data krijgen daarom geen extra antwoordvormen; zie notatie_machten.md §6 (Didactiek).

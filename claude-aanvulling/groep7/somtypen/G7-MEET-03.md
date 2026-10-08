@@ -8,7 +8,7 @@ Invoer voor het schrijven van hint 1 (`hint`) en hint 2 (`sterkereHint`) per som
 Elk somtype heeft een vaste sleutel (nrOrigineel + somtypeOrigineel, bevroren/somtype_nr_v*.json): neem die over in hints/batch*.json, dan blijft de hint gekoppeld als de nummering of de kop verandert.
 Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/Davesgit/leermees-vragenbank @ 7da3257
 
-## Somtype 1: Een balk heeft een inhoud van # [ding]. De bodem is # bij # cm. Hoe hoog is de balk in cm?
+## Somtype 1: Een balk heeft een inhoud van # cm³. De bodem is # bij # cm. Hoe hoog is de balk in cm?
 
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “Een balk heeft een inhoud van # [ding]. De bodem is # bij # cm. Hoe hoog is de balk in cm?” (koppeling: claudeId)
 - Items: **838** · Claude-doelen: M18 (838) · regel: G7-M04-inhoud-cm3
@@ -26,8 +26,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 4  (controle: ok)
     - **Fout-hints (Claude):** 18 → Let op het teken: het is een keersom. Keer betekent: zoveel groepjes van. Probeer het groepje steeds opnieuw erbij te tellen. · 5 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** De inhoud staat in cm³ (kubieke centimeter). Hoeveel cm² (vierkante centimeter) is de bodem?
+- **Hint 2 (te schrijven):** Reken de bodem uit: lengte keer breedte. Deel de inhoud door de bodem: zoveel laagjes liggen er op elkaar. Dat is de hoogte.
+- **Ouderzin:** Je kind rekent de hoogte van een balk uit: de inhoud gedeeld door de bodem.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `maat uit de vraag` (fout = een getal uit de vraag) → Dat is een maat uit de vraag. De hoogte reken je nog uit: deel de inhoud door de bodem.  [nieuw]
+  - `één ernaast` (fout = antwoord ± 1) → Dat is één ernaast. Reken na: bodem keer hoogte moet precies de inhoud geven.  [nieuw]
+  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je hier opgeteld? De bodem is lengte keer breedte. De hoogte is de inhoud gedeeld door de bodem.  [Claude, taalfix]
+  - `net ernaast` (Claudes sleutel: een-ernaast) → Dat ligt net naast het goede antwoord. Reken na: bodem keer hoogte moet precies de inhoud geven.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Reken de bodem uit en deel de inhoud door de bodem.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een balk heeft een inhoud van # [ding]. De bodem is # bij # cm. Hoe hoog is de balk in cm?'. Nakijken of ze nog passen.
+- Status: hints klaar
 
 ## Somtype 2: Een balk is # cm lang, # cm breed en # cm hoog. Hoeveel cm³ is de inhoud?
 
@@ -47,8 +56,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 1056  (controle: ok)
     - **Fout-hints (Claude):** 1188 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers. · 924 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Inhoud is hoeveel kubusjes van één cm³ (kubieke centimeter) erin passen.
+- **Hint 2 (te schrijven):** Reken eerst de bodem uit: lengte keer breedte. Zoveel kubusjes passen er in één laagje. Doe dat keer de hoogte: zoveel laagjes liggen er op elkaar.
+- **Ouderzin:** Je kind rekent de inhoud van een balk uit: lengte keer breedte keer hoogte.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `alleen de bodem` (fout = getal1 × getal2) → Dat is alleen de bodem: één laagje. Hoeveel laagjes liggen er op elkaar?  [nieuw]
+  - `een laagje ernaast` (Claudes sleutel: een-ernaast) → Dat is één laagje te veel of te weinig. Hoe hoog is de balk?  [Claude, taalfix]
+  - `maten opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je de drie maten opgeteld? Inhoud reken je met keer: lengte keer breedte keer hoogte.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Reken lengte keer breedte keer hoogte.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: # g = □ kg
 
@@ -68,8 +84,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 0,7  (controle: ok)
     - **Fout-hints (Claude):** 7 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 700 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eén kilogram (kg) is duizend gram (g). Wordt het getal in kilogram groter of kleiner?
+- **Hint 2 (te schrijven):** Deel door duizend: de komma schuift drie plekken naar links. Staat er geen komma, denk hem dan achter het getal. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul voor. Nullen aan het eind achter de komma vallen weg, en de komma ook als er niets meer achter staat.
+- **Ouderzin:** Je kind rekent gram om naar kilogram: delen door duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Hoeveel plekken schuift de komma van gram naar kilogram?  [nieuw]
+  - `een nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Hoeveel plekken schuift de komma van gram naar kilogram?  [nieuw]
+  - `niet omgerekend` (fout = getal1) → Dat is het getal dat je moest omrekenen, nog in gram. Hoeveel kilogram is dat?  [nieuw]
+  - `verkeerd omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Klopt het omrekenen? Eén kilogram (kg) is duizend gram (g). Van gram naar kilogram deel je door duizend.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén kilogram (kg) is duizend gram (g). Van gram naar kilogram deel je door duizend.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: # ml = □ L
 
@@ -89,8 +113,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 0,7  (controle: ok)
     - **Fout-hints (Claude):** 7 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 700 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eén liter (L) is duizend milliliter (ml). Wordt het getal in liter groter of kleiner?
+- **Hint 2 (te schrijven):** Deel door duizend: de komma schuift drie plekken naar links. Staat er geen komma, denk hem dan achter het getal. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul voor. Nullen aan het eind achter de komma vallen weg, en de komma ook als er niets meer achter staat.
+- **Ouderzin:** Je kind rekent milliliter om naar liter: delen door duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Hoeveel plekken schuift de komma van milliliter naar liter?  [nieuw]
+  - `een nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Hoeveel plekken schuift de komma van milliliter naar liter?  [nieuw]
+  - `niet omgerekend` (fout = getal1) → Dat is het getal dat je moest omrekenen, nog in milliliter. Hoeveel liter is dat?  [nieuw]
+  - `verkeerd omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Klopt het omrekenen? Eén liter (L) is duizend milliliter (ml). Van milliliter naar liter deel je door duizend.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén liter (L) is duizend milliliter (ml). Van milliliter naar liter deel je door duizend.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 5: Vul in. # L = ... ml
 
@@ -110,8 +142,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 3200  (controle: ok)
     - **Fout-hints (Claude):** 9,6 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 320 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eén liter (L) is duizend milliliter (ml). Wordt het getal in milliliter groter of kleiner?
+- **Hint 2 (te schrijven):** Doe keer duizend: de komma schuift drie plekken naar rechts. Vul lege plekken op met nullen.
+- **Ouderzin:** Je kind rekent liter om naar milliliter: keer duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Hoeveel plekken schuift de komma van liter naar milliliter?  [nieuw]
+  - `een nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Hoeveel plekken schuift de komma van liter naar milliliter?  [nieuw]
+  - `niet omgerekend` (Claudes sleutel: getal-overgenomen) → Dat is het getal dat je moest omrekenen, nog in liter. Hoeveel milliliter is dat?  [Claude, taalfix]
+  - `verkeerd omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Klopt het omrekenen? Eén liter (L) is duizend milliliter (ml). Van liter naar milliliter doe je keer duizend.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén liter (L) is duizend milliliter (ml). Van liter naar milliliter doe je keer duizend.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 6: Vul in. # kg = ... g
 
@@ -131,8 +171,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 3200  (controle: ok)
     - **Fout-hints (Claude):** 32.000 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 3,2 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eén kilogram (kg) is duizend gram (g). Wordt het getal in gram groter of kleiner?
+- **Hint 2 (te schrijven):** Doe keer duizend: de komma schuift drie plekken naar rechts. Vul lege plekken op met nullen.
+- **Ouderzin:** Je kind rekent kilogram om naar gram: keer duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Hoeveel plekken schuift de komma van kilogram naar gram?  [nieuw]
+  - `een nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Hoeveel plekken schuift de komma van kilogram naar gram?  [nieuw]
+  - `niet omgerekend` (Claudes sleutel: getal-overgenomen) → Dat is het getal dat je moest omrekenen, nog in kilogram. Hoeveel gram is dat?  [Claude, taalfix]
+  - `verkeerd omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Klopt het omrekenen? Eén kilogram (kg) is duizend gram (g). Van kilogram naar gram doe je keer duizend.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén kilogram (kg) is duizend gram (g). Van kilogram naar gram doe je keer duizend.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 7: # cl = □ L
 
@@ -151,8 +199,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 2,4  (controle: ok)
     - **Fout-hints (Claude):** 24 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 240 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eén liter (L) is honderd centiliter (cl). Wordt het getal in liter groter of kleiner?
+- **Hint 2 (te schrijven):** Deel door honderd: de komma schuift twee plekken naar links. Staat er geen komma, denk hem dan achter het getal. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul voor. Nullen aan het eind achter de komma vallen weg, en de komma ook als er niets meer achter staat.
+- **Ouderzin:** Je kind rekent centiliter om naar liter: delen door honderd.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet omgerekend` (fout = getal1) → Dat is het getal dat je moest omrekenen, nog in centiliter. Hoeveel liter is dat?  [nieuw]
+  - `verkeerd omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Klopt het omrekenen? Eén liter (L) is honderd centiliter (cl). Van centiliter naar liter deel je door honderd.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén liter (L) is honderd centiliter (cl). Van centiliter naar liter deel je door honderd.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 8: Vul in. # L = ... cl
 
@@ -171,8 +225,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 340  (controle: ok)
     - **Fout-hints (Claude):** 3400 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 34 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eén liter (L) is honderd centiliter (cl). Wordt het getal in centiliter groter of kleiner?
+- **Hint 2 (te schrijven):** Doe keer honderd: de komma schuift twee plekken naar rechts. Vul lege plekken op met nullen.
+- **Ouderzin:** Je kind rekent liter om naar centiliter: keer honderd.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Hoeveel plekken schuift de komma van liter naar centiliter?  [nieuw]
+  - `een nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Hoeveel plekken schuift de komma van liter naar centiliter?  [nieuw]
+  - `niet omgerekend` (Claudes sleutel: getal-overgenomen) → Dat is het getal dat je moest omrekenen, nog in liter. Hoeveel centiliter is dat?  [Claude, taalfix]
+  - `verkeerd omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Klopt het omrekenen? Eén liter (L) is honderd centiliter (cl). Van liter naar centiliter doe je keer honderd.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén liter (L) is honderd centiliter (cl). Van liter naar centiliter doe je keer honderd.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 9: Een bak is # m lang, # m breed en # m hoog. Hoeveel m³ gaat erin?
 
@@ -183,18 +245,27 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 8 (meest: “Dit is de oppervlakte van de bodem. Voor de inhoud vermenigvuldig je ook met de hoogte.”)
 - Voorbeelden:
   - `G7-MEET-03-claude-bank-206` (Claude M22, gegenereerd, niveau 1 → basis)
-    - **Opgave:** Een bak in het moeras is 7 m lang, 2 m breed en 3 m hoog. Hoeveel m³ gaat erin?
+    - **Opgave:** Een container is 7 m lang, 2 m breed en 3 m hoog. Hoeveel m³ gaat erin?
     - **Antwoord:** 42  (controle: ok)
     - **Fout-hints (Claude):** 14 → Dit is de oppervlakte van de bodem. Voor de inhoud vermenigvuldig je ook met de hoogte. · 12 → Inhoud bereken je door te vermenigvuldigen, niet op te tellen. · 82 → Dat is de buitenkant. Inhoud is lengte × breedte × hoogte.
     - **Uitleg (Claude):** Inhoud = lengte × breedte × hoogte = 7 × 2 × 3 = 42 m³.
   - `G7-MEET-03-claude-bank-217` (Claude M22, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een bak in de vallei is 2 m lang, 2 m breed en 1,5 m hoog. Hoeveel m³ gaat erin?
+    - **Opgave:** Een aquarium in de dierentuin is 2 m lang, 2 m breed en 1,5 m hoog. Hoeveel m³ gaat erin?
     - **Antwoord:** 6  (controle: ok)
     - **Fout-hints (Claude):** 4 → De hoogte is 1,5, niet 1. Reken de halve meter mee. · 60 → Let op de komma bij het vermenigvuldigen met de hoogte.
     - **Uitleg (Claude):** 2 × 2 = 4 m² bodem. 4 × 1,5 = 6,0 m³.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Inhoud reken je in m³ (kubieke meter): hoeveel kubussen van één meter passen erin?
+- **Hint 2 (te schrijven):** Reken de bodem uit: lengte keer breedte. Doe dat keer de hoogte. Is een maat een kommagetal, reken dan ook het stuk achter de komma mee.
+- **Ouderzin:** Je kind rekent de inhoud van een bak uit in m³: lengte keer breedte keer hoogte.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `alleen de bodem` (fout = getal1 × getal2) → Dat is alleen de bodem. Doe je die nog keer de hoogte?  [nieuw]
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Reken lengte keer breedte keer hoogte nog eens na.  [nieuw]
+  - `oppervlakte in plaats van inhoud` (Claudes sleutel: omtrek-oppervlakte-verwisseld) → Heb je een oppervlakte uitgerekend? De inhoud is wat erin past: lengte keer breedte keer hoogte.  [Claude, taalfix]
+  - `alleen het hele getal` (Claudes sleutel: kommagetal-als-geheel) → Heb je bij de maat met een komma alleen het hele getal genomen? Het stuk achter de komma telt ook mee.  [Claude, taalfix]
+  - `maten opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je de drie maten opgeteld? Inhoud reken je met keer: lengte keer breedte keer hoogte.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Heb je lengte keer breedte keer hoogte gedaan, met elke maat precies zoals hij er staat?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 10: Een bak is # cm lang, # cm breed en # cm hoog. Hoeveel cm³ gaat erin?
 
@@ -211,10 +282,18 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 30 → Dat is de bodem. Er zijn nog lagen erbovenop: keer de hoogte. · 15 → Inhoud is keer, keer, keer. Niet optellen. · 112 → Dat is de oppervlakte van alle zijkanten. Inhoud is wat erin past.
     - **Uitleg (Claude):** Inhoud is lengte × breedte × hoogte. Eerst de bodem: 10 × 3 = 30 cm². Dan 2 lagen: 30 × 2 = 60 cm³.
   - `G7-MEET-03-claude-bank-186` (Claude M18, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een doos voor poesjes is 10 cm lang, 8 cm breed en 6 cm hoog. Hoeveel cm³ past erin?
+    - **Opgave:** Een doos voor blokjes is 10 cm lang, 8 cm breed en 6 cm hoog. Hoeveel cm³ past erin?
     - **Antwoord:** 480  (controle: ok)
     - **Fout-hints (Claude):** 80 → Dat is de bodem. Er zijn nog lagen erbovenop: keer de hoogte. · 24 → Inhoud is keer, keer, keer. Niet optellen. · 376 → Dat is de oppervlakte van alle zijkanten. Inhoud is wat erin past.
     - **Uitleg (Claude):** Inhoud is lengte × breedte × hoogte. Eerst de bodem: 10 × 8 = 80 cm². Dan 6 lagen: 80 × 6 = 480 cm³.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Inhoud reken je in cm³ (kubieke centimeter): hoeveel kubussen van één centimeter passen erin?
+- **Hint 2 (te schrijven):** Reken de bodem uit: lengte keer breedte. Doe dat keer de hoogte.
+- **Ouderzin:** Je kind rekent de inhoud van een bak uit in cm³: lengte keer breedte keer hoogte.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `alleen de bodem` (fout = getal1 × getal2) → Dat is alleen de bodem. Doe je die nog keer de hoogte?  [nieuw]
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Reken lengte keer breedte keer hoogte nog eens na.  [nieuw]
+  - `oppervlakte in plaats van inhoud` (Claudes sleutel: omtrek-oppervlakte-verwisseld) → Heb je een oppervlakte uitgerekend? De inhoud is wat erin past: lengte keer breedte keer hoogte.  [Claude, taalfix]
+  - `maten opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je de drie maten opgeteld? Inhoud reken je met keer: lengte keer breedte keer hoogte.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Heb je alle drie de maten keer elkaar gedaan?  [nieuw]
+- Status: hints klaar

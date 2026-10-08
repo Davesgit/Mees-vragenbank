@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T12:52:39+0200",
+ "gegenereerdOp": "2026-10-08T13:13:00+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-GET-02",
  "bordtitel": "Kommagetallen tot drie cijfers",
@@ -33,7 +33,7 @@
      "stap": null,
      "fout": "2,1",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
@@ -53,14 +53,24 @@
      "stap": null,
      "fout": "1,9",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2,045",
+     "uitleg": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "uitlegSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "2,1 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 2,05 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 1,9 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+   "foutHintsTekst": "2,1 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 2,05 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 1,9 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 2,045 → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
    "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
    "getallenruimte": "kommagetallen (3 cijfers achter de komma)",
    "context": "laag",
@@ -179,11 +189,25 @@
    },
    "foutRegels": [
     {
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw",
+     "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2,045"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw",
      "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -242,7 +266,7 @@
      "stap": null,
      "fout": "1,3",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
@@ -260,16 +284,26 @@
     },
     {
      "stap": null,
+     "fout": "1,365",
+     "uitleg": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "uitlegSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
      "fout": "1,5",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1,3 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 1,37 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 1,5 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+   "foutHintsTekst": "1,3 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 1,37 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 1,365 → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma. · 1,5 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
    "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
    "getallenruimte": "kommagetallen (3 cijfers achter de komma)",
    "context": "laag",
@@ -388,11 +422,25 @@
    },
    "foutRegels": [
     {
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw",
+     "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1,365"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw",
      "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -451,7 +499,7 @@
      "stap": null,
      "fout": "7,9",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
@@ -471,14 +519,24 @@
      "stap": null,
      "fout": "7,7",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "7,815",
+     "uitleg": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "uitlegSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "7,9 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 7,82 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 7,7 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+   "foutHintsTekst": "7,9 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 7,82 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 7,7 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 7,815 → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
    "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
    "getallenruimte": "kommagetallen (3 cijfers achter de komma)",
    "context": "laag",
@@ -596,11 +654,25 @@
    },
    "foutRegels": [
     {
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw",
+     "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7,815"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw",
      "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -659,7 +731,7 @@
      "stap": null,
      "fout": "5,5",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
@@ -679,14 +751,24 @@
      "stap": null,
      "fout": "5,3",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "5,413",
+     "uitleg": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "uitlegSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "5,5 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 5,41 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 5,3 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+   "foutHintsTekst": "5,5 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 5,41 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 5,3 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 5,413 → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
    "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
    "getallenruimte": "kommagetallen (3 cijfers achter de komma)",
    "context": "laag",
@@ -805,11 +887,25 @@
    },
    "foutRegels": [
     {
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw",
+     "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5,413"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw",
      "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -868,7 +964,7 @@
      "stap": null,
      "fout": "9,6",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
@@ -888,14 +984,24 @@
      "stap": null,
      "fout": "9,4",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "9,513",
+     "uitleg": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "uitlegSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "9,6 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 9,51 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 9,4 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+   "foutHintsTekst": "9,6 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 9,51 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 9,4 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 9,513 → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
    "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
    "getallenruimte": "kommagetallen (3 cijfers achter de komma)",
    "context": "laag",
@@ -1013,11 +1119,25 @@
    },
    "foutRegels": [
     {
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw",
+     "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "9,513"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw",
      "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -1076,7 +1196,7 @@
      "stap": null,
      "fout": "1,9",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
@@ -1094,16 +1214,26 @@
     },
     {
      "stap": null,
+     "fout": "1,974",
+     "uitleg": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "uitlegSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
      "fout": "2,1",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1,9 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 1,97 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 2,1 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+   "foutHintsTekst": "1,9 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 1,97 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 1,974 → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma. · 2,1 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
    "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
    "getallenruimte": "kommagetallen (3 cijfers achter de komma)",
    "context": "laag",
@@ -1222,11 +1352,25 @@
    },
    "foutRegels": [
     {
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw",
+     "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1,974"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw",
      "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -1285,7 +1429,7 @@
      "stap": null,
      "fout": "4,2",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
@@ -1303,16 +1447,26 @@
     },
     {
      "stap": null,
+     "fout": "4,273",
+     "uitleg": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "uitlegSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
      "fout": "4,4",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "4,2 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 4,27 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 4,4 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+   "foutHintsTekst": "4,2 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 4,27 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 4,273 → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma. · 4,4 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
    "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
    "getallenruimte": "kommagetallen (3 cijfers achter de komma)",
    "context": "laag",
@@ -1430,11 +1584,25 @@
    },
    "foutRegels": [
     {
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw",
+     "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4,273"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw",
      "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -1493,7 +1661,7 @@
      "stap": null,
      "fout": "8,8",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
@@ -1513,14 +1681,24 @@
      "stap": null,
      "fout": "9",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "8,854",
+     "uitleg": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "uitlegSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "8,8 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 8,85 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 9 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+   "foutHintsTekst": "8,8 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 8,85 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 9 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 8,854 → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
    "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
    "getallenruimte": "kommagetallen (3 cijfers achter de komma)",
    "context": "laag",
@@ -1638,11 +1816,25 @@
    },
    "foutRegels": [
     {
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw",
+     "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8,854"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw",
      "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -1701,7 +1893,7 @@
      "stap": null,
      "fout": "7,2",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
@@ -1710,25 +1902,25 @@
     {
      "stap": null,
      "fout": "7,29",
-     "uitleg": "Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden.",
-     "uitlegSterker": "Afronden op één cijfer achter de komma: er blijft precies één cijfer achter de komma over. Kijk daarvoor naar het tweede cijfer achter de komma.",
+     "uitleg": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "uitlegSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
      "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: plaatswaarde-verkeerd",
-     "soort": "te veel cijfers achter de komma",
-     "bron": "claude-taalfix"
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "7,4",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "7,2 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 7,29 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 7,4 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+   "foutHintsTekst": "7,2 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 7,29 → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma. · 7,4 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
    "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
    "getallenruimte": "kommagetallen (3 cijfers achter de komma)",
    "context": "laag",
@@ -1847,11 +2039,25 @@
    },
    "foutRegels": [
     {
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw",
+     "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7,29"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw",
      "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -1869,9 +2075,7 @@
      "tekstSterker": "Afronden op één cijfer achter de komma: er blijft precies één cijfer achter de komma over. Kijk daarvoor naar het tweede cijfer achter de komma.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "7,29"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -1910,7 +2114,7 @@
      "stap": null,
      "fout": "5,2",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
@@ -1930,14 +2134,24 @@
      "stap": null,
      "fout": "5",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "5,105",
+     "uitleg": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "uitlegSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "5,2 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 5,11 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 5 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+   "foutHintsTekst": "5,2 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 5,11 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 5 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 5,105 → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
    "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
    "getallenruimte": "kommagetallen (3 cijfers achter de komma)",
    "context": "laag",
@@ -2056,11 +2270,25 @@
    },
    "foutRegels": [
     {
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw",
+     "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5,105"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw",
      "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -2119,7 +2347,7 @@
      "stap": null,
      "fout": "3,4",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
@@ -2137,16 +2365,26 @@
     },
     {
      "stap": null,
+     "fout": "3,457",
+     "uitleg": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "uitlegSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
      "fout": "3,6",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "3,4 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 3,46 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 3,6 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+   "foutHintsTekst": "3,4 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 3,46 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 3,457 → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma. · 3,6 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
    "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
    "getallenruimte": "kommagetallen (3 cijfers achter de komma)",
    "context": "laag",
@@ -2264,11 +2502,25 @@
    },
    "foutRegels": [
     {
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw",
+     "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3,457"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw",
      "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -2327,7 +2579,7 @@
      "stap": null,
      "fout": "1,8",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
@@ -2347,14 +2599,24 @@
      "stap": null,
      "fout": "2",
      "uitleg": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "uitlegSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "1,878",
+     "uitleg": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "uitlegSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "1,8 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 1,88 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 2 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+   "foutHintsTekst": "1,8 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 1,88 → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden. · 2 → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf? · 1,878 → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
    "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
    "getallenruimte": "kommagetallen (3 cijfers achter de komma)",
    "context": "laag",
@@ -2473,11 +2735,25 @@
    },
    "foutRegels": [
     {
+     "regel": "fout = getal1",
+     "soort": "niet afgerond",
+     "bron": "nieuw",
+     "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+     "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1,878"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "fout = antwoord ± 0,1",
      "soort": "een tiende ernaast",
      "bron": "nieuw",
      "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
-     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste.",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -106089,22 +106365,26 @@
    "algemeneFoutHint": "Vergelijk eerst de tienden, dan de honderdsten."
   }
  ],
- "hintsSyncOp": "2026-10-08T12:52:43+02:00",
+ "hintsSyncOp": "2026-10-08T13:13:05+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
-   "md5": "70001ae7e3df"
+   "md5": "8a461e439954"
   },
   {
    "batch": "batch2.json",
-   "md5": "a87af875ab03"
+   "md5": "5e37e689095a"
   },
   {
    "batch": "batch3.json",
-   "md5": "27ee48fd8a5d"
+   "md5": "bfc36c283977"
+  },
+  {
+   "batch": "batch4.json",
+   "md5": "1d37cc1f6282"
   }
  ],
- "geschrevenOp": "2026-10-08T12:52:43+02:00",
+ "geschrevenOp": "2026-10-08T13:13:05+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

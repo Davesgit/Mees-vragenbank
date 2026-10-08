@@ -26,8 +26,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 110  (controle: ok)
     - **Fout-hints (Claude):** 11 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 1100 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eén kilometer (km) is duizend meter (m). Wordt het getal in kilometer groter of kleiner?
+- **Hint 2 (te schrijven):** Deel door duizend: de komma schuift drie plekken naar links. Staat er geen komma, denk hem dan achter het getal. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul voor. Nullen aan het eind achter de komma vallen weg, en de komma ook als er niets meer achter staat.
+- **Ouderzin:** Je kind rekent meter om naar kilometer: delen door duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet omgerekend` (fout = getal1) → Dat is het getal dat je moest omrekenen, nog in meter. Hoeveel kilometer is dat?  [nieuw]
+  - `verkeerd omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Klopt het omrekenen? Eén kilometer (km) is duizend meter (m). Van meter naar kilometer deel je door duizend.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén kilometer (km) is duizend meter (m). Van meter naar kilometer deel je door duizend.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: # mm = □ m
 
@@ -47,8 +53,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 110  (controle: ok)
     - **Fout-hints (Claude):** 1100 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 110.000 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eén meter (m) is duizend millimeter (mm). Wordt het getal in meter groter of kleiner?
+- **Hint 2 (te schrijven):** Deel door duizend: de komma schuift drie plekken naar links. Staat er geen komma, denk hem dan achter het getal. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul voor. Nullen aan het eind achter de komma vallen weg, en de komma ook als er niets meer achter staat.
+- **Ouderzin:** Je kind rekent millimeter om naar meter: delen door duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet omgerekend` (fout = getal1) → Dat is het getal dat je moest omrekenen, nog in millimeter. Hoeveel meter is dat?  [nieuw]
+  - `verkeerd omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Klopt het omrekenen? Eén meter (m) is duizend millimeter (mm). Van millimeter naar meter deel je door duizend.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén meter (m) is duizend millimeter (mm). Van millimeter naar meter deel je door duizend.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: Vul in. # m = ... cm
 
@@ -68,8 +80,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 320  (controle: ok)
     - **Fout-hints (Claude):** 6,4 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 32 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eén meter (m) is honderd centimeter (cm). Wordt het getal in centimeter groter of kleiner?
+- **Hint 2 (te schrijven):** Doe keer honderd: de komma schuift twee plekken naar rechts. Staat er geen komma, denk hem dan achter het getal. Vul lege plekken op met nullen.
+- **Ouderzin:** Je kind rekent meter om naar centimeter: keer honderd.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Hoeveel plekken schuift de komma van meter naar centimeter?  [nieuw]
+  - `een nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Hoeveel plekken schuift de komma van meter naar centimeter?  [nieuw]
+  - `niet omgerekend` (Claudes sleutel: getal-overgenomen) → Dat is het getal dat je moest omrekenen, nog in meter. Hoeveel centimeter is dat?  [Claude, taalfix]
+  - `verkeerd omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Klopt het omrekenen? Eén meter (m) is honderd centimeter (cm). Van meter naar centimeter doe je keer honderd.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén meter (m) is honderd centimeter (cm). Van meter naar centimeter doe je keer honderd.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: # cm = □ m
 
@@ -88,8 +108,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 2,4  (controle: ok)
     - **Fout-hints (Claude):** 120 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 24 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eén meter (m) is honderd centimeter (cm). Wordt het getal in meter groter of kleiner?
+- **Hint 2 (te schrijven):** Deel door honderd: de komma schuift twee plekken naar links. Staat er geen komma, denk hem dan achter het getal. Is er geen cijfer meer om voorbij te schuiven? Zet er dan een nul voor. Nullen aan het eind achter de komma vallen weg, en de komma ook als er niets meer achter staat.
+- **Ouderzin:** Je kind rekent centimeter om naar meter: delen door honderd.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet omgerekend` (fout = getal1) → Dat is het getal dat je moest omrekenen, nog in centimeter. Hoeveel meter is dat?  [nieuw]
+  - `verkeerd omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Klopt het omrekenen? Eén meter (m) is honderd centimeter (cm). Van centimeter naar meter deel je door honderd.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén meter (m) is honderd centimeter (cm). Van centimeter naar meter deel je door honderd.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 5: Vul in. # km = ... m
 
@@ -108,8 +134,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 3400  (controle: ok)
     - **Fout-hints (Claude):** 340 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 3,4 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eén kilometer (km) is duizend meter (m). Wordt het getal in meter groter of kleiner?
+- **Hint 2 (te schrijven):** Doe keer duizend: de komma schuift drie plekken naar rechts. Vul lege plekken op met nullen.
+- **Ouderzin:** Je kind rekent kilometer om naar meter: keer duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Hoeveel plekken schuift de komma van kilometer naar meter?  [nieuw]
+  - `een nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Hoeveel plekken schuift de komma van kilometer naar meter?  [nieuw]
+  - `niet omgerekend` (Claudes sleutel: getal-overgenomen) → Dat is het getal dat je moest omrekenen, nog in kilometer. Hoeveel meter is dat?  [Claude, taalfix]
+  - `verkeerd omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Klopt het omrekenen? Eén kilometer (km) is duizend meter (m). Van kilometer naar meter doe je keer duizend.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén kilometer (km) is duizend meter (m). Van kilometer naar meter doe je keer duizend.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 6: Vul in. # m = ... mm
 
@@ -128,5 +162,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 3400  (controle: ok)
     - **Fout-hints (Claude):** 10,2 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 340 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Eén meter (m) is duizend millimeter (mm). Wordt het getal in millimeter groter of kleiner?
+- **Hint 2 (te schrijven):** Doe keer duizend: de komma schuift drie plekken naar rechts. Vul lege plekken op met nullen.
+- **Ouderzin:** Je kind rekent meter om naar millimeter: keer duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Hoeveel plekken schuift de komma van meter naar millimeter?  [nieuw]
+  - `een nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Hoeveel plekken schuift de komma van meter naar millimeter?  [nieuw]
+  - `niet omgerekend` (Claudes sleutel: getal-overgenomen) → Dat is het getal dat je moest omrekenen, nog in meter. Hoeveel millimeter is dat?  [Claude, taalfix]
+  - `verkeerd omgerekend` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Klopt het omrekenen? Eén meter (m) is duizend millimeter (mm). Van meter naar millimeter doe je keer duizend.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén meter (m) is duizend millimeter (mm). Van meter naar millimeter doe je keer duizend.  [nieuw]
+- Status: hints klaar
