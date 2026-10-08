@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T17:36:36+0200",
+ "gegenereerdOp": "2026-10-08T17:49:23+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-VERH-E01",
  "bordtitel": "Breuk, procent en 'op de'; ook boven 100%",
@@ -42,28 +42,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "6 op de 10"
    },
-   "hint": "Tel eerst alle knikkers in de bak.",
-   "sterkereHint": "Zoveel knikkers zijn er samen. Hoeveel daarvan zijn van de soort uit de vraag?",
+   "hint": "Welk deel van alle knikkers? Tel eerst hoeveel knikkers er samen in de bak zitten.",
+   "sterkereHint": "Tel alle knikkers in de bak bij elkaar op, van elke kleur. Tel ook hoeveel er de kleur uit de vraag hebben. Zet dat aantal tegenover alle knikkers samen.",
    "foutHints": [
     {
      "stap": null,
      "fout": "6 op de 4",
-     "uitleg": "Je zette 6 tegenover de andere knikkers. Tel alle knikkers in de bak, dus ook de 6.",
-     "regel": "Didactiek G8 (DEEL-VAN-DE-KNIKKERS)",
-     "soort": null,
-     "bron": "didactiek"
+     "uitleg": "Na 'op de' tel je alle knikkers samen, ook die met de kleur uit de vraag.",
+     "uitlegSterker": "Tel alle knikkers in de bak bij elkaar op, van elke kleur. Tel ook hoeveel er de kleur uit de vraag hebben. Zet dat aantal tegenover alle knikkers samen.",
+     "laag2": "tekstSterker",
+     "regel": "6 op de 4",
+     "soort": "zonder het deel",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "3 op de 10",
-     "uitleg": "Kijk nog eens welke knikkers de vraag bedoelt. Hoeveel zijn het er?",
-     "regel": "Didactiek G8 (DEEL-VAN-DE-KNIKKERS)",
-     "soort": null,
-     "bron": "didactiek"
+     "uitleg": "Kijk welke kleur de vraag noemt. Hoeveel knikkers hebben die kleur?",
+     "uitlegSterker": "Tel alle knikkers in de bak bij elkaar op, van elke kleur. Tel ook hoeveel er de kleur uit de vraag hebben. Zet dat aantal tegenover alle knikkers samen.",
+     "laag2": "tekstSterker",
+     "regel": "3 op de 10",
+     "soort": "andere kleur",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Blauw → Kijk van welke kleur er de meeste knikkers in de bak liggen. · Alle kleuren evenveel → De aantallen per kleur zijn niet gelijk. Vergelijk de aantallen nog eens.",
-   "ouderzin": "",
+   "foutHintsTekst": "6 op de 4 → Na 'op de' tel je alle knikkers samen, ook die met de kleur uit de vraag. · 3 op de 10 → Kijk welke kleur de vraag noemt. Hoeveel knikkers hebben die kleur?",
+   "ouderzin": "Je kind schrijft een deel van een groep als zoveel op de zoveel.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -176,7 +180,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "In een bak zitten # [ding], # [ding] en # [ding] knikker. Welk deel van de knikkers is rood?"
+    "somtypeOrigineel": "In een bak zitten # [ding], # [ding] en # [ding] knikker. Welk deel van de knikkers is rood?",
+    "hints": {
+     "batch": "batch8.json",
+     "nr": 1,
+     "somtype": "In een bak zitten # [ding], # [ding] en # [ding] knikker. Welk deel van de knikkers is rood?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -192,14 +201,61 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "6 op de 10"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "6 op de 4",
+     "soort": "zonder het deel",
+     "bron": "nieuw",
+     "tekst": "Na 'op de' tel je alle knikkers samen, ook die met de kleur uit de vraag.",
+     "tekstSterker": "Tel alle knikkers in de bak bij elkaar op, van elke kleur. Tel ook hoeveel er de kleur uit de vraag hebben. Zet dat aantal tegenover alle knikkers samen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6 op de 4"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "3 op de 10",
+     "soort": "andere kleur",
+     "bron": "nieuw",
+     "tekst": "Kijk welke kleur de vraag noemt. Hoeveel knikkers hebben die kleur?",
+     "tekstSterker": "Tel alle knikkers in de bak bij elkaar op, van elke kleur. Tel ook hoeveel er de kleur uit de vraag hebben. Zet dat aantal tegenover alle knikkers samen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3 op de 10"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel alle knikkers samen. Hoeveel daarvan hebben de kleur uit de vraag?",
+     "tekstSterker": "Tel alle knikkers in de bak bij elkaar op, van elke kleur. Tel ook hoeveel er de kleur uit de vraag hebben. Zet dat aantal tegenover alle knikkers samen.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel alle knikkers samen. Hoeveel daarvan hebben de kleur uit de vraag?"
   }
  ],
- "hintsSyncOp": "2026-10-08T17:36:39+02:00",
+ "hintsSyncOp": "2026-10-08T17:49:26+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -228,9 +284,13 @@
   {
    "batch": "batch7.json",
    "md5": "400d6f88fdb6"
+  },
+  {
+   "batch": "batch8.json",
+   "md5": "2a7d52a6cec5"
   }
  ],
- "geschrevenOp": "2026-10-08T17:36:39+02:00",
+ "geschrevenOp": "2026-10-08T17:49:26+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

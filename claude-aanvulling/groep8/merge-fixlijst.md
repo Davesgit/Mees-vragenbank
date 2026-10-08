@@ -287,6 +287,19 @@ Checks: check_hints **121 klaar · 102 open · 0 FAIL · 0 WARN**; merge-notatie
 | V-#944 / V-#945 | **✓** data in build 17:30:20; hercheck op een kopie: b7 FAIL 0, SNAP=1, 57 mutanten 0 gemist. 029 hond 30 / kat 10 (geen aflezing op 50). |
 | lessen 350–354 | **✓** in hints/lessen_g8.md. |
 
+## Oefeningen: G8 batch 8 (VERH-E01/E02/E03/E04/E06/V01), geplaatst 8 okt 17:37:18
+Zie review-batch8.md. Kopie van live na plaatsing (build 17:36:36 + batch 8): check_hints 197 klaar · 0 FAIL/WARN; merge-notatie ALLES OK; b1–b7 FAIL 0; b8 368 items · 1931 sleutels · FAIL 1 (Oef-#1010) · WARN 0; 57 mutanten, 0 gemist.
+
+| # | Voor | Wat | Status |
+|---|---|---|---|
+| Oef-#1006 | Overzicht (data) | VERH-E04 #1–#7: het antwoord staat zonder '€' ('24'), Claudes sleutels met '€' ('€240'). Motorsleutels en Claude-sleutels vallen daardoor niet samen; zonder ingreep vielen Claudes sleutels op 'andere fout'. Items: #1 28, #2 24, #3 12, #4 6, #5 3, #6 2, #7 3. Voorstel: één notatie (antwoord en sleutels allebei met of zonder '€'; geldigeAntwoorden met beide). Tot dan vangen labelregels (CL) alle sleutels. | open |
+| Oef-#1007 | Overzicht (data) | Afgeronde sleutels: E04 010 '€58' (moet 57,60), 011 '€59' (59,40), 017 '€230' (230,40), 020 '€113' (112,50); E06 #3 '1,3' (moet 1,25). | open |
+| Oef-#1008 | Overzicht (data) | E06 #3: sleutel '12.5' met een punt; de context «12,5% van de vissen is kapot» past niet bij de vraag. Nu gevangen met CL kommagetal-als-geheel. | open |
+| Oef-#1009 | Overzicht (data, les 147) | E04 #1 ongeloofwaardige prijzen: ei €60, wortel €80, knikker €80, pion €200, sticker €40/€200, bot €240, vis €150. | open |
+| Oef-#1010 | Overzicht (data, les 306) | E04 #8 032: de foute route 'geheel min het procent' (150 − 60 = 90) geeft het goede antwoord. De afleider '100 kinderen' heeft geen route op de getallen. Voorstel: andere getallen, en een afleider met een route (bijv. het procent als aantal). b8/check FAIL 1 tot dan. | open |
+| Oef-#1011 | Overzicht (data) | E02 claudeUitleg «Eén pet kost …» (het gaat over pakken sap) en '5 x 1,50' (G8: '×'). | open |
+| Z-#894 (b6/check) | Oefeningen | regex #35 041 kent nu ook 'tellen de staven samen op tot #'; b6 FAIL 2 → 0, 62 mutanten 0 gemist (8 okt 17:38). | **✓** |
+
 ## Overzicht: builds 17:03:20, 17:08:44, 17:14:34 en 17:24:12 (Z-#914)
 ### Build 17:03:20 — batch 6 + Didactiek batch 5/6-review (V-#880, V-#891, V-#893, V-#894, Oef-#498–#1002, V-#901–#904)
 | punt | stand |
@@ -346,3 +359,20 @@ Checks build 17:30:20: check_hints **172 klaar · 51 open · 0 FAIL · 0 WARN**;
 | Z-#894 | **✓** VBN-E04 #35 041 «tellen de staven samen op tot 30» (opgave en kop). **b6/check FAIL 2 op 041: de regex in b6/check r. 243 zoekt nog 'zijn de staven samen (\d+) hoog' (Oefeningen: regex aanpassen).** |
 
 Checks build 17:36:36: check_hints **172 klaar · 0 FAIL · 0 WARN**; merge-notatie **ALLES OK** (E05-ROUTES 0, TIJDSDUUR 0, spreidingsmutanten ok); **b1 0 · b2 0 · b3 0 · b4 0 · b5 0 · b6 2 (alleen de #35-regex van b6/check) · b7 0**; mutanten b1 25, b2 31, b3 50, b4 41, b5 56, b6 62, b7 57, 0 gemist; e05_routes 19/19.
+
+### Build 17:49:23 — Z-#962, Z-#765, Z-#766 (E03 #2), batch 8 (eerste sync) met Oef-#1006–#1011
+| punt | stand |
+|---|---|
+| Z-#962 (les 363) | **✓** build_g8 schrijft g4–g7/data/aanvulling_uit_g8.json niet meer live maar in de bouwkopie (`logs/aanvulling_uit_g8/g{N}.json`, G8_AANV_UIT). bouw_veilig controleert ze vóór er iets omgaat (geldige JSON, items-lijst, aantal = len(items)); een mislukte build of ongeldige aanvulling laat live ongemoeid. Daarna per bestand met os.replace, met dezelfde CONFLICT-regel. G4–G7 zijn goedgekeurde builds: zolang G8_AANVULLING_LIVE niet aan staat, blijft een aanvulling met andere items op live staan en meldt de wrapper het verschil (dat deed ik eerder met de hand terugzetten). Build 17:49:23: G6 531 en G7 49 items gelijk aan live; G4 16 en G5 53 items anders (alleen de G8-kop in merge.somtype, die build_g4/g5 zelf opnieuw maken) → live behouden. |
+| Z-#765 | **✓** `tools/eindcijfer_check.py` (filter + generator `zoek`; gate EINDCIJFER FAIL, mutanten 5/5). E02 #1, 11 items, eenheden gelijk waar het kan (antwoord en eenheid-routes blijven): 061 29 × 17, 064 112 × 14 (= 1568, antwoord 8; 2 + 2 = 4 = 2 × 2 kon niet blijven), 065 29 × 7, 070 32 × 6, 079 33 × 8, 084 15 × 27, 089 39 × 7, 091 26 × 9, 092 109 × 27, 098 69 × 3, 108 137 × 35. Claudes sleutel 'getal-overgenomen' volgt het cijfer op dezelfde plek (065, 091: 1 → 2); bij 065 viel 'een-ernaast' 2 samen met die sleutel. EINDCIJFER 0 · 53 items. |
+| Z-#766 rest | **✓** E03 #2 026 «15 : 3 + 6» = 11, 030 «18 : 2 + 5» = 14 (a − b, a − c, b + c, a + c, a + b, a : b allemaal ≠ antwoord); Claudes sleutel (a + c) 21 / 23; uitleg en kale som mee. |
+| Z-#744(b) | **✓** was al opgeruimd (Oef-#481 in G7): 0 keer '100 000' in somtypen/G7-VERH-03.md, live en op main; g7/merge-fixlijst bijgewerkt. |
+| batch 8 | **✓** eerste build die batch8.json/patch_batch8.py meeneemt (VERH-E01/E02/E03/E04/E06/V01, 25 somtypes, 368 items). |
+| Oef-#1006 | **✓** VERH-E04 #1–#7: Claudes sleutels zonder '€' (zoals het antwoord: '45', '300'); geldigeAntwoorden [a, '€a', '€ a', 'a euro']. |
+| Oef-#1007 | **✓** 'procent-verkeerde-basis' exact: 010 57,60 · 011 59,40 · 017 230,40 · 020 112,50 (overal na × (100 + p) / 100); E06 #3 001 '1,3' → 1,25. |
+| Oef-#1008 | **✓** E06 #3 001 '12.5' → '12,5'; context «12,5% van de appels in de kist is rot.» |
+| Oef-#1009 | **✓** E04 #1 andere dingen bij dezelfde prijzen (getallen en routes gelijk): ei → fietshelm (€60), wortel → skateboard (€80), knikker → koptelefoon (€80), pion → fiets (€200), sticker → bordspel (€40) / tent (€200), bot → telefoon (€240), vis → aquarium (€150); ook 013 schrift €80 → rugzak en 018 bot €80 → hondenmand (zelfde les 147). |
+| Oef-#1010 | **✓** E04 #8 032: «Van de 200 kinderen op school komt 30 procent met de fiets.» → 60 kinderen. Routes: procent als aantal 30, geheel min het procent 170, een tiende 20, de rest (70%) 140 — geen op 60. Afleiders '30 kinderen' (Claude 'getal-overgenomen') en '170 kinderen' (geheel min het procent); uitleg «… 3 × 20 = 60 …». **Oefeningen:** regels voor '30 kinderen'/'170 kinderen' (de oude regel '100 kinderen' is nu ONLEESBAAR, WARN), SNAP en de mutanten rond 032. |
+| Oef-#1011 | **✓** VERH-E02 001 «Eén pak sap kost …»; in alle G8-Claude-uitleg 'x' tussen getallen → '×' (032, VERH-E02 001, GET-V02 001). |
+
+Checks build 17:49:23: check_hints **197 klaar · 26 open · 0 FAIL · 1 WARN** (ONLEESBAAR '100 kinderen', Oef-#1010, Oefeningen); merge-notatie **ALLES OK** (EINDCIJFER 0); **b1–b7 FAIL 0**; **b8 368 items · 1929 sleutels · FAIL 5**, allemaal 032 na Oef-#1010 (nieuwe opties zonder eigen regel/fout-hint + SNAP; Oefeningen). Mutanten b1 25, b2 31, b3 50, b4 41, b5 56, b6 63, b7 57: 0 gemist; b8 59, 7 gemist (mutanten op de oude 032-data en 'vissen': Oefeningen).

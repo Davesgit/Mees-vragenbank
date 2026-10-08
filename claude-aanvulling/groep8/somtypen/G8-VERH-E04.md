@@ -27,8 +27,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €59 → De 10% ging van de óude prijs af, niet van €54. €54 is 90%. · €54 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.
     - **Uitleg (Claude):** €54 is 90% van de oude prijs. 1% is 54 : 90 = 0,60, dus 100% is €60.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Na de korting betaal je niet meer honderd procent van de oude prijs. Hoeveel procent betaal je nog?
+- **Hint 2 (te schrijven):** Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.
+- **Ouderzin:** Je kind rekent terug naar de prijs van vóór de korting.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `nieuwe prijs` (Claudes sleutel: getal-overgenomen) → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.  [Claude, taalfix]
+  - `procent van de nieuwe prijs` (Claudes sleutel: procent-verkeerde-basis) → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe.  [Claude, taalfix]
+  - `andere fout` (andere fout) → De nieuwe prijs is een deel van de oude prijs. Welk procent? Reken daarmee terug naar honderd procent.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: [wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?
 
@@ -49,8 +55,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €50 → 1% van 500 is 5, niet 50. · €505 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €1 → 1% is een deel van €500, niet €1.
     - **Uitleg (Claude):** 1% van 500 is 5. 1% is 1 × 5 = €5.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Hoeveel euro is één procent van het bedrag op de rekening?
+- **Hint 2 (te schrijven):** Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij.
+- **Ouderzin:** Je kind rekent uit hoeveel geld er in een jaar bij komt met een procent rente.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te veel` (Claudes sleutel: komma-verschoven) → Dat is tien keer te veel. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.  [Claude, taalfix]
+  - `bedrag erbij` (Claudes sleutel: getal-overgenomen) → Dat is het bedrag op de rekening met wat erbij komt samen. Gevraagd is alleen wat er in één jaar bij komt.  [Claude, taalfix]
+  - `procent als bedrag` (Claudes sleutel: procent-verkeerde-basis) → Dat is het getal van het procent. Wat erbij komt, is een deel van het bedrag: hoeveel euro is dat?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Deel het bedrag door honderd en doe dat keer het procent.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?
 
@@ -71,8 +84,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €120 → 1% van 400 is 4, niet 40. · €412 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €3 → 3% is een deel van €400, niet €3.
     - **Uitleg (Claude):** 1% van 400 is 4. 3% is 3 × 4 = €12.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Hoeveel euro is één procent van het bedrag op de rekening?
+- **Hint 2 (te schrijven):** Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij.
+- **Ouderzin:** Je kind rekent uit hoeveel geld er in een jaar bij komt met een procent rente.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te veel` (Claudes sleutel: komma-verschoven) → Dat is tien keer te veel. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.  [Claude, taalfix]
+  - `bedrag erbij` (Claudes sleutel: getal-overgenomen) → Dat is het bedrag op de rekening met wat erbij komt samen. Gevraagd is alleen wat er in één jaar bij komt.  [Claude, taalfix]
+  - `procent als bedrag` (Claudes sleutel: procent-verkeerde-basis) → Dat is het getal van het procent. Wat erbij komt, is een deel van het bedrag: hoeveel euro is dat?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Deel het bedrag door honderd en doe dat keer het procent.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: Fatima zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?
 
@@ -93,8 +113,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €600 → 1% van 2000 is 20, niet 200. · €2060 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €3 → 3% is een deel van €2.000, niet €3.
     - **Uitleg (Claude):** 1% van 2000 is 20. 3% is 3 × 20 = €60.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Hoeveel euro is één procent van het bedrag op de rekening?
+- **Hint 2 (te schrijven):** Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij.
+- **Ouderzin:** Je kind rekent uit hoeveel geld er in een jaar bij komt met een procent rente.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te veel` (Claudes sleutel: komma-verschoven) → Dat is tien keer te veel. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.  [Claude, taalfix]
+  - `bedrag erbij` (Claudes sleutel: getal-overgenomen) → Dat is het bedrag op de rekening met wat erbij komt samen. Gevraagd is alleen wat er in één jaar bij komt.  [Claude, taalfix]
+  - `procent als bedrag` (Claudes sleutel: procent-verkeerde-basis) → Dat is het getal van het procent. Wat erbij komt, is een deel van het bedrag: hoeveel euro is dat?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Deel het bedrag door honderd en doe dat keer het procent.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 5: Bram zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?
 
@@ -110,8 +137,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €300 → 1% van 1500 is 15, niet 150. · €1530 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €2 → 2% is een deel van €1.500, niet €2.
     - **Uitleg (Claude):** 1% van 1500 is 15. 2% is 2 × 15 = €30.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Hoeveel euro is één procent van het bedrag op de rekening?
+- **Hint 2 (te schrijven):** Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij.
+- **Ouderzin:** Je kind rekent uit hoeveel geld er in een jaar bij komt met een procent rente.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te veel` (Claudes sleutel: komma-verschoven) → Dat is tien keer te veel. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.  [Claude, taalfix]
+  - `bedrag erbij` (Claudes sleutel: getal-overgenomen) → Dat is het bedrag op de rekening met wat erbij komt samen. Gevraagd is alleen wat er in één jaar bij komt.  [Claude, taalfix]
+  - `procent als bedrag` (Claudes sleutel: procent-verkeerde-basis) → Dat is het getal van het procent. Wat erbij komt, is een deel van het bedrag: hoeveel euro is dat?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Deel het bedrag door honderd en doe dat keer het procent.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 6: Een zak noten kost na #% korting €#. Wat was de prijs vóór de korting?
 
@@ -127,8 +161,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €113 → De 50% ging van de óude prijs af, niet van €75. €75 is 50%. · €75 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.
     - **Uitleg (Claude):** €75 is 50% van de oude prijs. 1% is 75 : 50 = 1,50, dus 100% is €150.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Na de korting betaal je niet meer honderd procent van de oude prijs. Hoeveel procent betaal je nog?
+- **Hint 2 (te schrijven):** Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.
+- **Ouderzin:** Je kind rekent terug naar de prijs van vóór de korting.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `nieuwe prijs` (Claudes sleutel: getal-overgenomen) → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.  [Claude, taalfix]
+  - `procent van de nieuwe prijs` (Claudes sleutel: procent-verkeerde-basis) → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe.  [Claude, taalfix]
+  - `andere fout` (andere fout) → De nieuwe prijs is een deel van de oude prijs. Welk procent? Reken daarmee terug naar honderd procent.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 7: Sanne zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?
 
@@ -144,8 +184,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €40 → 1% van 400 is 4, niet 40. · €404 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €1 → 1% is een deel van €400, niet €1.
     - **Uitleg (Claude):** 1% van 400 is 4. 1% is 1 × 4 = €4.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Hoeveel euro is één procent van het bedrag op de rekening?
+- **Hint 2 (te schrijven):** Deel het bedrag door honderd: dat is één procent. Doe dat keer het procent. Dat krijg je er in één jaar bij.
+- **Ouderzin:** Je kind rekent uit hoeveel geld er in een jaar bij komt met een procent rente.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te veel` (Claudes sleutel: komma-verschoven) → Dat is tien keer te veel. Eén procent is het bedrag gedeeld door honderd. Doe dat keer het procent.  [Claude, taalfix]
+  - `bedrag erbij` (Claudes sleutel: getal-overgenomen) → Dat is het bedrag op de rekening met wat erbij komt samen. Gevraagd is alleen wat er in één jaar bij komt.  [Claude, taalfix]
+  - `procent als bedrag` (Claudes sleutel: procent-verkeerde-basis) → Dat is het getal van het procent. Wat erbij komt, is een deel van het bedrag: hoeveel euro is dat?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Deel het bedrag door honderd en doe dat keer het procent.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 8: Van de # [ding] op school komt # procent met de fiets. Hoeveel kinderen komen er met de fiets?
 
@@ -156,11 +203,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “60 is het percentage en niet het aantal kinderen. Reken het uit met 150.”)
 - Voorbeelden:
   - `G8-VERH-E04-claude-bank-032` (Claude G9, ai, niveau 3 → toepassen)
-    - **Opgave:** Van de 150 kinderen op school komt 60 procent met de fiets. Hoeveel kinderen komen er met de fiets?
-    - **Opties:** A) 60 kinderen · B) 100 kinderen · C) 90 kinderen
-    - **Antwoord:** 90 kinderen  (controle: n.v.t.)
+    - **Opgave:** Van de 200 kinderen op school komt 30 procent met de fiets. Hoeveel kinderen komen er met de fiets?
+    - **Opties:** A) 30 kinderen · B) 170 kinderen · C) 60 kinderen
+    - **Antwoord:** 60 kinderen  (controle: n.v.t.)
     - **Fout-hints (Claude):** 60 kinderen → 60 is het percentage en niet het aantal kinderen. Reken het uit met 150. · 100 kinderen → Je rekent met 100 kinderen. De school heeft een ander aantal leerlingen.
-    - **Uitleg (Claude):** 10 procent van 150 is 15 kinderen. 60 procent is dan 6 x 15 = 90. Dus 90 kinderen komen met de fiets.
+    - **Uitleg (Claude):** 10 procent van 200 is 20 kinderen. 30 procent is dan 3 × 20 = 60. Dus 60 kinderen komen met de fiets.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Iedereen op school samen is honderd procent.
+- **Hint 2 (te schrijven):** Reken uit hoeveel tien procent is: deel het aantal op school door tien. Hoe vaak heb je tien procent nodig?
+- **Ouderzin:** Je kind rekent een procent van een aantal uit.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `procent als aantal` (60 kinderen) → Dat is het getal van het procent, nog geen aantal. Hoeveel is dat procent van iedereen op school?  [nieuw]
+  - `te veel` (100 kinderen) → Dat is te veel. Reken uit hoeveel tien procent van iedereen op school is, en neem dat zo vaak als nodig.  [nieuw]
+  - `andere fout` (andere fout) → Iedereen op school samen is honderd procent. Hoeveel is tien procent? Hoe vaak heb je dat nodig?  [nieuw]
+- Status: hints klaar

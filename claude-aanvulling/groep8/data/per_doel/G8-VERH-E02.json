@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T17:36:36+0200",
+ "gegenereerdOp": "2026-10-08T17:49:23+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-VERH-E02",
  "bordtitel": "Lastige verhoudingssommen oplossen",
@@ -42,28 +42,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "€7,50"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Wat kost er één? Reken dat eerst uit.",
+   "sterkereHint": "Deel de prijs door het aantal dat samen zoveel kost: dan weet je wat er één kost. Doe dat keer het aantal dat gevraagd wordt.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€6,50",
-     "uitleg": "Je deed er €2 bij. Reken eerst uit wat één pak kost.",
-     "regel": "Didactiek G8 (STAT-NAAR-VERH-GELD)",
-     "soort": null,
-     "bron": "didactiek"
+     "uitleg": "Zo komt er voor de extra stuks maar een klein bedrag bij. Wat kost er één? Doe dat keer het aantal dat gevraagd wordt.",
+     "uitlegSterker": "Deel de prijs door het aantal dat samen zoveel kost: dan weet je wat er één kost. Doe dat keer het aantal dat gevraagd wordt.",
+     "laag2": "tekstSterker",
+     "regel": "€6,50",
+     "soort": "een klein bedrag erbij",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "€22,50",
-     "uitleg": "Je deed de prijs van 3 pakken keer 5. Reken eerst uit wat één pak kost.",
-     "regel": "Didactiek G8 (STAT-NAAR-VERH-GELD)",
-     "soort": null,
-     "bron": "didactiek"
+     "uitleg": "Dat is de prijs van de hele groep uit de vraag, keer het nieuwe aantal. Reken eerst uit wat er één kost.",
+     "uitlegSterker": "Deel de prijs door het aantal dat samen zoveel kost: dan weet je wat er één kost. Doe dat keer het aantal dat gevraagd wordt.",
+     "laag2": "tekstSterker",
+     "regel": "€22,50",
+     "soort": "keer het nieuwe aantal",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "6,5 euro → Je hebt er 2 euro bij gedaan. Reken eerst uit wat één pak kost. · 22,5 euro → Je hebt de totaalprijs met 5 vermenigvuldigd. Ga eerst terug naar één pak.",
-   "ouderzin": "",
+   "foutHintsTekst": "€6,50 → Zo komt er voor de extra stuks maar een klein bedrag bij. Wat kost er één? Doe dat keer het aantal dat gevraagd wordt. · €22,50 → Dat is de prijs van de hele groep uit de vraag, keer het nieuwe aantal. Reken eerst uit wat er één kost.",
+   "ouderzin": "Je kind rekent via de prijs van één stuk uit wat meer stuks kosten.",
    "getallenruimte": "kommagetallen (2 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -87,7 +91,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "G9",
-    "claudeUitleg": "Eén pet kost 4,50 : 3 = 1,50 euro. Dan kosten 5 pakken 5 x 1,50 = 7,50 euro.",
+    "claudeUitleg": "Eén pak sap kost 4,50 : 3 = 1,50 euro. Dan kosten 5 pakken 5 × 1,50 = 7,50 euro.",
     "claudeStrategie": "eerst één stuk",
     "claudeThema": null,
     "claudeAntwoordType": "tekst",
@@ -131,6 +135,8 @@
     "wijzigingen": [
      "D8 nieuwe opgave (Didactiek)",
      "G7-K1 kommagetal zo kort mogelijk (G7-bank)",
+     "Oef-#1011: 'pak sap'",
+     "Oef-#1011: '×' in Claudes uitleg",
      "W11 winkel: passende spullen"
     ]
    },
@@ -181,7 +187,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "In een winkel kosten # [ding] sap samen €#. Hoeveel kosten # van die pakken sap?"
+    "somtypeOrigineel": "In een winkel kosten # [ding] sap samen €#. Hoeveel kosten # van die pakken sap?",
+    "hints": {
+     "batch": "batch8.json",
+     "nr": 1,
+     "somtype": "In een winkel kosten # [ding] sap samen €#. Hoeveel kosten # van die pakken sap?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -197,17 +208,64 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "€7,50",
     "7,50",
     "€7,5",
     "7,5"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "€6,50",
+     "soort": "een klein bedrag erbij",
+     "bron": "nieuw",
+     "tekst": "Zo komt er voor de extra stuks maar een klein bedrag bij. Wat kost er één? Doe dat keer het aantal dat gevraagd wordt.",
+     "tekstSterker": "Deel de prijs door het aantal dat samen zoveel kost: dan weet je wat er één kost. Doe dat keer het aantal dat gevraagd wordt.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€6,50"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "€22,50",
+     "soort": "keer het nieuwe aantal",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van de hele groep uit de vraag, keer het nieuwe aantal. Reken eerst uit wat er één kost.",
+     "tekstSterker": "Deel de prijs door het aantal dat samen zoveel kost: dan weet je wat er één kost. Doe dat keer het aantal dat gevraagd wordt.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€22,50"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Wat kost er één? Doe dat keer het aantal dat gevraagd wordt.",
+     "tekstSterker": "Deel de prijs door het aantal dat samen zoveel kost: dan weet je wat er één kost. Doe dat keer het aantal dat gevraagd wordt.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Wat kost er één? Doe dat keer het aantal dat gevraagd wordt."
   }
  ],
- "hintsSyncOp": "2026-10-08T17:36:39+02:00",
+ "hintsSyncOp": "2026-10-08T17:49:26+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -236,9 +294,13 @@
   {
    "batch": "batch7.json",
    "md5": "400d6f88fdb6"
+  },
+  {
+   "batch": "batch8.json",
+   "md5": "2a7d52a6cec5"
   }
  ],
- "geschrevenOp": "2026-10-08T17:36:39+02:00",
+ "geschrevenOp": "2026-10-08T17:49:26+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

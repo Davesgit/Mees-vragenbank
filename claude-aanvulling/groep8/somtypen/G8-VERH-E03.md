@@ -25,8 +25,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 175  (controle: ok)
     - **Fout-hints (Claude):** 1750 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.
+- **Hint 2 (te schrijven):** Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart.
+- **Ouderzin:** Je kind rekent een afstand op een kaart om naar kilometers in het echt, met de schaal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `meters` (fout = antwoord × 1000) → Dat is het aantal meter. Gevraagd is kilometers: duizend meter is één kilometer.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Hoeveel kilometer is één centimeter op deze kaart? Reken daarmee verder.  [nieuw]
+  - `andere omrekening` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: De schaal van een kaart is # : #. Twee dorpen liggen op de kaart # cm uit elkaar. Hoeveel km is dat in het echt?
 
@@ -45,8 +54,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 150  (controle: ok)
     - **Fout-hints (Claude):** 1500 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.
+- **Hint 2 (te schrijven):** Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart.
+- **Ouderzin:** Je kind rekent een afstand op een kaart om naar kilometers in het echt, met de schaal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `meters` (fout = antwoord × 1000) → Dat is het aantal meter. Gevraagd is kilometers: duizend meter is één kilometer.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Hoeveel kilometer is één centimeter op deze kaart? Reken daarmee verder.  [nieuw]
+  - `andere omrekening` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: De schaal van een kaart is # : #. Twee plaatsen liggen op de kaart # cm uit elkaar. Hoeveel km is dat in het echt?
 
@@ -65,8 +83,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 400  (controle: ok)
     - **Fout-hints (Claude):** 40 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.
+- **Hint 2 (te schrijven):** Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart.
+- **Ouderzin:** Je kind rekent een afstand op een kaart om naar kilometers in het echt, met de schaal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `meters` (fout = antwoord × 1000) → Dat is het aantal meter. Gevraagd is kilometers: duizend meter is één kilometer.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Hoeveel kilometer is één centimeter op deze kaart? Reken daarmee verder.  [nieuw]
+  - `andere omrekening` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: De schaal van een kaart is # : #. Twee dorpen liggen in het echt # km uit elkaar. Hoeveel cm is dat op de kaart?
 
@@ -85,8 +112,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 16  (controle: ok)
     - **Fout-hints (Claude):** 256 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt tussen de getallen. Op de kaart is alles veel kleiner dan in het echt. Hoeveel kilometer is één centimeter op de kaart?
+- **Hint 2 (te schrijven):** Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart.
+- **Ouderzin:** Je kind rekent een echte afstand in kilometers om naar centimeters op een kaart, met de schaal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Op de kaart is de afstand veel kleiner dan in het echt.  [nieuw]
+  - `andere omrekening` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Hoe vaak past dat in de echte afstand?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Hoeveel kilometer is één centimeter op deze kaart? Hoe vaak past dat in de echte afstand?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 5: De schaal van een kaart is # : #. Twee plaatsen liggen in het echt # km uit elkaar. Hoeveel cm is dat op de kaart?
 
@@ -105,8 +140,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 16  (controle: ok)
     - **Fout-hints (Claude):** 10.000 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 1,6 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt tussen de getallen. Op de kaart is alles veel kleiner dan in het echt. Hoeveel kilometer is één centimeter op de kaart?
+- **Hint 2 (te schrijven):** Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart.
+- **Ouderzin:** Je kind rekent een echte afstand in kilometers om naar centimeters op een kaart, met de schaal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Op de kaart is de afstand veel kleiner dan in het echt.  [nieuw]
+  - `andere omrekening` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Hoe vaak past dat in de echte afstand?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Hoeveel kilometer is één centimeter op deze kaart? Hoe vaak past dat in de echte afstand?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 6: De schaal van een kaart is # : #. Twee steden liggen in het echt # km uit elkaar. Hoeveel cm is dat op de kaart?
 
@@ -125,8 +168,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 17  (controle: ok)
     - **Fout-hints (Claude):** 1,7 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 170 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt tussen de getallen. Op de kaart is alles veel kleiner dan in het echt. Hoeveel kilometer is één centimeter op de kaart?
+- **Hint 2 (te schrijven):** Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Hoe vaak past dat in de echte afstand? Zoveel centimeter is het op de kaart.
+- **Ouderzin:** Je kind rekent een echte afstand in kilometers om naar centimeters op een kaart, met de schaal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Op de kaart is de afstand veel kleiner dan in het echt.  [nieuw]
+  - `andere omrekening` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Hoe vaak past dat in de echte afstand?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Hoeveel kilometer is één centimeter op deze kaart? Hoe vaak past dat in de echte afstand?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 7: Op een kaart met schaal # : # is de afstand van [plek] naar [plek] # cm. Hoeveel meter is dat in het echt?
 
@@ -147,8 +198,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 30.000 → Dat is in centimeters. Reken om naar meters: delen door 100. · 30 → Van cm naar m is delen door 100, niet door 1000. · 3000 → Tel de nullen nog eens. Van cm naar m haal je twee nullen weg.
     - **Uitleg (Claude):** 1 cm op de kaart is 10.000 cm in het echt. 3 cm is 3 × 10.000 = 30.000 cm. Dat is 300 meter.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.
+- **Hint 2 (te schrijven):** Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg.
+- **Ouderzin:** Je kind rekent een afstand op een kaart om naar meters in het echt, met de schaal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `nog in centimeters` (fout = antwoord × 100) → Dat is het aantal centimeter in het echt. Gevraagd is meters: honderd centimeter is één meter.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens: honderd centimeter is één meter.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Tel de nullen nog eens: honderd centimeter is één meter.  [nieuw]
+  - `andere omrekening` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat past niet bij de schaal. Hoeveel centimeter is het in het echt? Reken dat om naar meters.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Hoeveel centimeter is het in het echt? Reken dat om naar meters: honderd centimeter is één meter.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 8: Op een kaart met schaal # : # is [plek] # cm van [plek]. Hoeveel kilometer is dat in het echt?
 
@@ -164,8 +223,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 9000 → Dat zijn meters. Een kilometer is 1000 meter. · 90 → Een nul te veel. 1 cm is hier 1 km.
     - **Uitleg (Claude):** 1 cm op de kaart is 100.000 cm = 1000 m = 1 km in het echt. 9 × 1 = 9 km.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.
+- **Hint 2 (te schrijven):** Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart.
+- **Ouderzin:** Je kind rekent een afstand op een kaart om naar kilometers in het echt, met de schaal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `meters` (fout = antwoord × 1000) → Dat is het aantal meter. Gevraagd is kilometers: duizend meter is één kilometer.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `andere omrekening` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 9: Op een kaart met schaal # : # is de afstand van de gymzaal naar de school # cm. Hoeveel meter is dat in het echt?
 
@@ -181,8 +247,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 50.000 → Dat is in centimeters. Reken om naar meters: delen door 100. · 50 → Van cm naar m is delen door 100, niet door 1000. · 5000 → Tel de nullen nog eens. Van cm naar m haal je twee nullen weg.
     - **Uitleg (Claude):** 1 cm op de kaart is 25.000 cm in het echt. 2 cm is 2 × 25.000 = 50.000 cm. Dat is 500 meter.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.
+- **Hint 2 (te schrijven):** Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg.
+- **Ouderzin:** Je kind rekent een afstand op een kaart om naar meters in het echt, met de schaal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `nog in centimeters` (fout = antwoord × 100) → Dat is het aantal centimeter in het echt. Gevraagd is meters: honderd centimeter is één meter.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens: honderd centimeter is één meter.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Tel de nullen nog eens: honderd centimeter is één meter.  [nieuw]
+  - `andere omrekening` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat past niet bij de schaal. Hoeveel centimeter is het in het echt? Reken dat om naar meters.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Hoeveel centimeter is het in het echt? Reken dat om naar meters: honderd centimeter is één meter.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 10: Op een kaart met schaal # : # is de afstand van de klas naar het huis # cm. Hoeveel meter is dat in het echt?
 
@@ -198,8 +272,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 500.000 → Dat is in centimeters. Reken om naar meters: delen door 100. · 500 → Van cm naar m is delen door 100, niet door 1000. · 50.000 → Tel de nullen nog eens. Van cm naar m haal je twee nullen weg.
     - **Uitleg (Claude):** 1 cm op de kaart is 100.000 cm in het echt. 5 cm is 5 × 100.000 = 500.000 cm. Dat is 5000 meter.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.
+- **Hint 2 (te schrijven):** Doe het aantal centimeter op de kaart keer het getal achter de dubbele punt: zoveel centimeter is het in het echt. Honderd centimeter is één meter: streep twee nullen weg.
+- **Ouderzin:** Je kind rekent een afstand op een kaart om naar meters in het echt, met de schaal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `nog in centimeters` (fout = antwoord × 100) → Dat is het aantal centimeter in het echt. Gevraagd is meters: honderd centimeter is één meter.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens: honderd centimeter is één meter.  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Tel de nullen nog eens: honderd centimeter is één meter.  [nieuw]
+  - `andere omrekening` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat past niet bij de schaal. Hoeveel centimeter is het in het echt? Reken dat om naar meters.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Hoeveel centimeter is het in het echt? Reken dat om naar meters: honderd centimeter is één meter.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 11: Op een kaart met schaal # : # is de klas # cm van de school. Hoeveel kilometer is dat in het echt?
 
@@ -215,5 +297,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 9000 → Dat zijn meters. Een kilometer is 1000 meter. · 90 → Een nul te veel. 1 cm is hier 1 km.
     - **Uitleg (Claude):** 1 cm op de kaart is 100.000 cm = 1000 m = 1 km in het echt. 9 × 1 = 9 km.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt tussen de getallen. Eén centimeter op de kaart is in het echt zoveel centimeter als het getal erachter.
+- **Hint 2 (te schrijven):** Honderdduizend centimeter is één kilometer. Streep bij het getal achter de dubbele punt vijf nullen weg: zoveel kilometer is één centimeter op de kaart. Doe dat keer het aantal centimeter op de kaart.
+- **Ouderzin:** Je kind rekent een afstand op een kaart om naar kilometers in het echt, met de schaal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `meters` (fout = antwoord × 1000) → Dat is het aantal meter. Gevraagd is kilometers: duizend meter is één kilometer.  [nieuw]
+  - `tien keer te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens: honderdduizend centimeter is één kilometer.  [nieuw]
+  - `andere omrekening` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat past niet bij de schaal. Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Hoeveel kilometer is één centimeter op deze kaart? Doe dat keer het aantal centimeter.  [nieuw]
+- Status: hints klaar

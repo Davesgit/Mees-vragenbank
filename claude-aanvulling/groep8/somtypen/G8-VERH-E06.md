@@ -27,8 +27,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 52,5%  (controle: ok)
     - **Fout-hints (Claude):** 5,25% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Eén hele is honderd procent.
+- **Hint 2 (te schrijven):** Doe het kommagetal keer honderd: de komma schuift twee plekken naar rechts. Zet daarna het procentteken erachter.
+- **Ouderzin:** Je kind schrijft een kommagetal als procent.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal met procentteken` (fout = kommagetal met procentteken) → Dat is het kommagetal met een procentteken erachter. Procent is zoveel van de honderd: doe het kommagetal eerst keer honderd.  [nieuw]
+  - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma goed? Bij keer honderd schuift de komma twee plekken naar rechts, niet één of drie.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Doe het kommagetal keer honderd. Staat de komma dan twee plekken verder naar rechts?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: Schrijf #/# in procenten.
 
@@ -49,10 +55,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 52,5%  (controle: n.v.t.)
     - **Fout-hints (Claude):** 5,25% → Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Een breuk met honderd als noemer kun je zo als procent schrijven.
+- **Hint 2 (te schrijven):** Maak een verhoudingstabel: de noemer hoort bij honderd procent, de teller bij het procent dat je zoekt. Reken de noemer om naar honderd en doe met de teller hetzelfde. Gaat dat niet in één keer? Deel dan eerst allebei door hetzelfde getal.
+- **Ouderzin:** Je kind schrijft een breuk als procent.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de breuk` (21%) → Dat is een getal uit de breuk met een procentteken erachter. Dat klopt alleen als de noemer honderd is.  [nieuw]
+  - `getal uit de breuk (noemer)` (40%) → Dat is een getal uit de breuk met een procentteken erachter. Dat klopt alleen als de noemer honderd is.  [nieuw]
+  - `tien keer ernaast` (Claudes sleutel: nul-fout-tientallen) → Dat is tien keer te groot of te klein. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.  [nieuw]
+- Status: hints klaar
 
-## Somtype 3: #% van de [ding] is kapot. Schrijf dat als kommagetal.
+## Somtype 3: #% van de appels in [plek] is rot. Schrijf dat als kommagetal.
 
 - Sleutel: nrOrigineel **3** · somtypeOrigineel “#% van de [ding] is kapot. Schrijf dat als kommagetal.” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: B13 (1) · regel: G8-P00-park-G7
@@ -61,10 +74,19 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Procent is per honderd: de komma schuift twee plekken naar links, niet één.”)
 - Voorbeelden:
   - `G8-VERH-E06-claude-bank-001` (Claude B13, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** 12,5% van de vissen is kapot. Schrijf dat als kommagetal.
-    - **Antwoord:** 0,125  (controle: ok)
+    - **Opgave:** 12,5% van de appels in de kist is rot. Schrijf dat als kommagetal.
+    - **Antwoord:** 0,125  (controle: n.v.t.)
     - **Fout-hints (Claude):** 1,3 → Procent is per honderd: de komma schuift twee plekken naar links, niet één. · 12.5 → 12.5% is 12.5 van de 100. Als kommagetal deel je door 100.
     - **Uitleg (Claude):** Procent is per honderd: 12,5 : 100 = 0,125.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Zoveel honderdsten kun je als kommagetal schrijven.
+- **Hint 2 (te schrijven):** Deel het getal van het procent door honderd: de komma schuift twee plekken naar links. Is er geen heel getal? Zet dan een nul voor de komma.
+- **Ouderzin:** Je kind schrijft een procent als kommagetal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te groot` (fout = antwoord × 10) → Dat is tien keer te groot. Procent zijn honderdsten: deel het getal van het procent door honderd.  [nieuw]
+  - `procent zonder komma` (fout = een getal uit de vraag) → Dat is het getal van het procent. Als kommagetal is het honderd keer zo klein.  [nieuw]
+  - `procent zonder komma (punt)` (Claudes sleutel: kommagetal-als-geheel) → Dat is het getal van het procent. Als kommagetal is het honderd keer zo klein.  [Claude, taalfix]
+  - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma goed? Procent zijn honderdsten: de komma schuift twee plekken naar links.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Deel het getal van het procent door honderd.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '#% van de [ding] is kapot. Schrijf dat als kommagetal.'. Nakijken of ze nog passen.
+- Status: hints klaar

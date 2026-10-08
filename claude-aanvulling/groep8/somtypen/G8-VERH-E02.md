@@ -21,7 +21,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Opties:** A) €6,50 · B) €22,50 · C) €7,50
     - **Antwoord:** €7,50  (controle: n.v.t.)
     - **Fout-hints (Claude):** 6,5 euro → Je hebt er 2 euro bij gedaan. Reken eerst uit wat één pak kost. · 22,5 euro → Je hebt de totaalprijs met 5 vermenigvuldigd. Ga eerst terug naar één pak.
-    - **Uitleg (Claude):** Eén pet kost 4,50 : 3 = 1,50 euro. Dan kosten 5 pakken 5 x 1,50 = 7,50 euro.
+    - **Uitleg (Claude):** Eén pak sap kost 4,50 : 3 = 1,50 euro. Dan kosten 5 pakken 5 × 1,50 = 7,50 euro.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Wat kost er één? Reken dat eerst uit.
+- **Hint 2 (te schrijven):** Deel de prijs door het aantal dat samen zoveel kost: dan weet je wat er één kost. Doe dat keer het aantal dat gevraagd wordt.
+- **Ouderzin:** Je kind rekent via de prijs van één stuk uit wat meer stuks kosten.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een klein bedrag erbij` (€6,50) → Zo komt er voor de extra stuks maar een klein bedrag bij. Wat kost er één? Doe dat keer het aantal dat gevraagd wordt.  [nieuw]
+  - `keer het nieuwe aantal` (€22,50) → Dat is de prijs van de hele groep uit de vraag, keer het nieuwe aantal. Reken eerst uit wat er één kost.  [nieuw]
+  - `andere fout` (andere fout) → Wat kost er één? Doe dat keer het aantal dat gevraagd wordt.  [nieuw]
+- Status: hints klaar

@@ -23,5 +23,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 40 procent → Het getal 40 is het aantal kinderen en nog geen percentage. Vergelijk het met 200. · 2 procent → Reken na hoeveel keer 40 in 200 past en maak daar een percentage van.
     - **Uitleg (Claude):** Je vergelijkt 40 met 200. 40 van de 200 is hetzelfde als 20 van de 100. Dus het is 20 procent.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Het hele aantal is honderd procent.
+- **Hint 2 (te schrijven):** Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.
+- **Ouderzin:** Je kind rekent uit hoeveel procent een deel van een groep is.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `aantal als procent` (40 procent) → Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd?  [nieuw]
+  - `tien keer te klein` (2 procent) → Dat is tien keer te klein. Hoe vaak past het deel in het hele aantal? Welk procent hoort daarbij?  [nieuw]
+  - `andere fout` (andere fout) → Het hele aantal is honderd procent. Hoeveel procent is het deel?  [nieuw]
+- Status: hints klaar

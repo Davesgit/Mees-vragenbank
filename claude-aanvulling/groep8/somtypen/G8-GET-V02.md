@@ -21,7 +21,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Opties:** A) 40 knikkers · B) 13 knikkers · C) 1,6 knikkers
     - **Antwoord:** 40 knikkers  (controle: n.v.t.)
     - **Fout-hints (Claude):** 13 knikkers → Je hebt de getallen opgeteld. Elk kind heeft gemiddeld 5 knikkers. · 1,6 knikkers → Bij een gemiddelde reken je terug door te vermenigvuldigen, niet door te delen.
-    - **Uitleg (Claude):** Gemiddeld 5 knikkers per kind betekent 8 x 5 knikkers in totaal. 8 x 5 = 40. Samen hebben zij 40 knikkers.
+    - **Uitleg (Claude):** Gemiddeld 5 knikkers per kind betekent 8 × 5 knikkers in totaal. 8 × 5 = 40. Samen hebben zij 40 knikkers.
 
 - **Hint 1 (te schrijven):** Gemiddeld betekent: als iedereen in de groep er evenveel had.
 - **Hint 2 (te schrijven):** Gemiddeld betekent: ieder evenveel. Doe het aantal in de groep keer wat ieder gemiddeld heeft.

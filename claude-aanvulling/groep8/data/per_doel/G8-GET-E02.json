@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T17:36:36+0200",
+ "gegenereerdOp": "2026-10-08T17:49:23+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-GET-E02",
  "bordtitel": "Schatten, bijstellen en je aanpak checken",
@@ -13424,7 +13424,7 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Op welk cijfer eindigt 19 × 17?",
+   "opgave": "Op welk cijfer eindigt 29 × 17?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -13511,7 +13511,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "Z-#765: geen foute route op het eindcijfer (19 × 17 → 29 × 17, antwoord 3)"
     ]
    },
    "opBord": false,
@@ -14021,11 +14022,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Op welk cijfer eindigt 112 × 12?",
+   "opgave": "Op welk cijfer eindigt 112 × 14?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "4",
+   "antwoord": "8",
    "antwoordDetail": null,
    "hint": "Je hoeft niet de hele som uit te rekenen. Op welk cijfer de uitkomst eindigt, hangt alleen af van de eenheden: het cijfer helemaal rechts in elk getal.",
    "sterkereHint": "Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt die kleine keersom? Daarop eindigt de hele som ook.",
@@ -14108,7 +14109,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "Z-#765: geen foute route op het eindcijfer (112 × 12 → 112 × 14, antwoord 8)"
     ]
    },
    "opBord": false,
@@ -14131,7 +14133,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "4",
+    "verwacht": "8",
     "methode": "G8 laatste cijfer",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -14220,7 +14222,7 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Op welk cijfer eindigt 19 × 7?",
+   "opgave": "Op welk cijfer eindigt 29 × 7?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -14231,26 +14233,16 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "1",
+     "fout": "2",
      "uitleg": "Dat is het cijfer waarmee de uitkomst begint. De vraag gaat over het cijfer waarop de uitkomst eindigt: helemaal rechts.",
      "uitlegSterker": "Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt die kleine keersom? Daarop eindigt de hele som ook.",
      "laag2": "tekstSterker",
      "regel": "Claudes sleutel: getal-overgenomen",
      "soort": "begincijfer",
      "bron": "claude-taalfix"
-    },
-    {
-     "stap": null,
-     "fout": "2",
-     "uitleg": "Dat hoort bij een keersom ernaast. Kijk nog eens welke eenheden er staan, en reken precies die keer elkaar.",
-     "uitlegSterker": "Schrijf de eenheden van allebei de getallen op. Reken die twee cijfers keer elkaar: op welk cijfer eindigt dat?",
-     "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: een-ernaast",
-     "soort": "keersom ernaast",
-     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "1 → Dat is het cijfer waarmee de uitkomst begint. De vraag gaat over het cijfer waarop de uitkomst eindigt: helemaal rechts. · 2 → Dat hoort bij een keersom ernaast. Kijk nog eens welke eenheden er staan, en reken precies die keer elkaar.",
+   "foutHintsTekst": "2 → Dat is het cijfer waarmee de uitkomst begint. De vraag gaat over het cijfer waarop de uitkomst eindigt: helemaal rechts.",
    "ouderzin": "Je kind zoekt op welk cijfer een keersom eindigt, zonder de hele som uit te rekenen: alleen de eenheden tellen mee.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -14280,25 +14272,16 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "1",
-      "denkfout": "getal-overgenomen"
-     },
-     {
       "fout": "2",
-      "denkfout": "een-ernaast"
+      "denkfout": "getal-overgenomen"
      }
     ],
     "mergeFoutHints": [],
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "1",
-      "uitleg": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking."
-     },
-     {
-      "stap": null,
       "fout": "2",
-      "uitleg": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers."
+      "uitleg": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking."
      }
     ]
    },
@@ -14321,7 +14304,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Z-#765: geen foute route op het eindcijfer (19 × 7 → 29 × 7, antwoord 3)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -14381,7 +14366,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "1"
+       "2"
       ]
      },
      "leesbaar": true
@@ -14394,9 +14379,7 @@
      "tekstSterker": "Schrijf de eenheden van allebei de getallen op. Reken die twee cijfers keer elkaar: op welk cijfer eindigt dat?",
      "perItem": false,
      "match": {
-      "waarden": [
-       "2"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -15290,7 +15273,7 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Op welk cijfer eindigt 42 × 6?",
+   "opgave": "Op welk cijfer eindigt 32 × 6?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -15391,7 +15374,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Z-#765: geen foute route op het eindcijfer (42 × 6 → 32 × 6, antwoord 2)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -17126,7 +17111,7 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Op welk cijfer eindigt 43 × 8?",
+   "opgave": "Op welk cijfer eindigt 33 × 8?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -17213,7 +17198,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "Z-#765: geen foute route op het eindcijfer (43 × 8 → 33 × 8, antwoord 4)"
     ]
    },
    "opBord": false,
@@ -18136,7 +18122,7 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Op welk cijfer eindigt 15 × 17?",
+   "opgave": "Op welk cijfer eindigt 15 × 27?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -18237,7 +18223,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Z-#765: geen foute route op het eindcijfer (15 × 17 → 15 × 27, antwoord 5)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -19161,7 +19149,7 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Op welk cijfer eindigt 49 × 7?",
+   "opgave": "Op welk cijfer eindigt 39 × 7?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -19248,7 +19236,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "Z-#765: geen foute route op het eindcijfer (49 × 7 → 39 × 7, antwoord 3)"
     ]
    },
    "opBord": false,
@@ -19559,7 +19548,7 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Op welk cijfer eindigt 16 × 9?",
+   "opgave": "Op welk cijfer eindigt 26 × 9?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -19580,7 +19569,7 @@
     },
     {
      "stap": null,
-     "fout": "1",
+     "fout": "2",
      "uitleg": "Dat is het cijfer waarmee de uitkomst begint. De vraag gaat over het cijfer waarop de uitkomst eindigt: helemaal rechts.",
      "uitlegSterker": "Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt die kleine keersom? Daarop eindigt de hele som ook.",
      "laag2": "tekstSterker",
@@ -19589,7 +19578,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "5 → Heb je opgeteld? Er staat een keerteken (×): reken de eenheden keer elkaar. · 1 → Dat is het cijfer waarmee de uitkomst begint. De vraag gaat over het cijfer waarop de uitkomst eindigt: helemaal rechts.",
+   "foutHintsTekst": "5 → Heb je opgeteld? Er staat een keerteken (×): reken de eenheden keer elkaar. · 2 → Dat is het cijfer waarmee de uitkomst begint. De vraag gaat over het cijfer waarop de uitkomst eindigt: helemaal rechts.",
    "ouderzin": "Je kind zoekt op welk cijfer een keersom eindigt, zonder de hele som uit te rekenen: alleen de eenheden tellen mee.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -19623,7 +19612,7 @@
       "denkfout": "optellen-ipv-vermenigvuldigen"
      },
      {
-      "fout": "1",
+      "fout": "2",
       "denkfout": "getal-overgenomen"
      }
     ],
@@ -19636,7 +19625,7 @@
      },
      {
       "stap": null,
-      "fout": "1",
+      "fout": "2",
       "uitleg": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking."
      }
     ]
@@ -19660,7 +19649,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Z-#765: geen foute route op het eindcijfer (16 × 9 → 26 × 9, antwoord 4)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -19722,7 +19713,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "1"
+       "2"
       ]
      },
      "leesbaar": true
@@ -19773,7 +19764,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Op welk cijfer eindigt 119 × 27?",
+   "opgave": "Op welk cijfer eindigt 109 × 27?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -19860,7 +19851,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "Z-#765: geen foute route op het eindcijfer (119 × 27 → 109 × 27, antwoord 3)"
     ]
    },
    "opBord": false,
@@ -20982,7 +20974,7 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Op welk cijfer eindigt 59 × 3?",
+   "opgave": "Op welk cijfer eindigt 69 × 3?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -21069,7 +21061,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "Z-#765: geen foute route op het eindcijfer (59 × 3 → 69 × 3, antwoord 7)"
     ]
    },
    "opBord": false,
@@ -23017,7 +23010,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Op welk cijfer eindigt 147 × 35?",
+   "opgave": "Op welk cijfer eindigt 137 × 35?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -23104,7 +23097,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "Z-#765: geen foute route op het eindcijfer (147 × 35 → 137 × 35, antwoord 5)"
     ]
    },
    "opBord": false,
@@ -65582,7 +65576,7 @@
    "algemeneFoutHint": "Kijk eerst waarop het antwoord eindigt, en daarna tussen welke ronde getallen het ligt."
   }
  ],
- "hintsSyncOp": "2026-10-08T17:36:39+02:00",
+ "hintsSyncOp": "2026-10-08T17:49:26+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -65611,9 +65605,13 @@
   {
    "batch": "batch7.json",
    "md5": "400d6f88fdb6"
+  },
+  {
+   "batch": "batch8.json",
+   "md5": "2a7d52a6cec5"
   }
  ],
- "geschrevenOp": "2026-10-08T17:36:39+02:00",
+ "geschrevenOp": "2026-10-08T17:49:26+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }
