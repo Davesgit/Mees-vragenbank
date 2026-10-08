@@ -31,13 +31,35 @@ def treffers(items):
                 if int(m.group(1)) > 24 or int(m.group(2)) > 59: continue
                 T.append((it, f"{it['id']} [{veld}]: {m.group(0)} in «{t[max(0, m.start() - 30):m.end() + 20]}»")); break
     return T
+DUUR = re.compile(r'(\+|\bduurt|\bduurde|\bduur van)\s*(\d{1,2})[.:](\d{2})(?: uur)?(?![\d:])')
+def duur_treffers(items):
+    """V-#904 (Didactiek G8 batch 5, les 331): een tijdsduur als kloktijd ('6.15 uur + 5.45 uur', 'duurt 1.30 uur') in een kindtekst of Claudes kindvelden (FAIL),
+    ook bij digitaleKlok (een duur is nooit een kloktijd)."""
+    T = []
+    for it in items:
+        ex = it.get('extraVelden') or {}
+        velden = list(teksten(it)) + [(k, ex.get(k)) for k in ('claudeUitleg', 'claudeKaleSom')]
+        for veld, t in velden:
+            if isinstance(t, str) and (m := DUUR.search(t)) and int(m.group(3)) <= 59:
+                T.append((it, f"{it['id']} [{veld}]: «{t[max(0, m.start() - 25):m.end() + 5]}»")); break
+    return T
 def invoer(it):
     """typ-invoer van een tijd ('(Typ als 14:30.)'): de motor en de app lezen 'uu:mm'; omzetten vraagt eerst motorsteun → WARN, niet FAIL"""
     return '(Typ als' in (it.get('opgave') or '')
 def rapport(items, ernst='FAIL', toon=True):
-    T = treffers(items); F = [x for it, x in T]; W = []; D = sum(1 for it in items if it.get('digitaleKlok'))
+    T = treffers(items); F = [x for it, x in T]; W = []; D = sum(1 for it in items if it.get('digitaleKlok')); DU = [x for it, x in duur_treffers(items)]
     if toon:
         print(f"\nKLOKTIJD (Z-#782: kloktijd met ':' in een kindtekst; schrijf '15.00 uur'): {len(F)} ({ernst}) · overgeslagen met digitaleKlok: {D}")
         for x in F[:15]: print(f'  {ernst} KLOKTIJD', x)
         for x in W[:3]: print('  WARN KLOKTIJD-INVOER', x)
-    return len(F)
+        print(f"TIJDSDUUR (V-#904: een duur als kloktijd, '6.15 uur + 5.45 uur'; schrijf '5 uur en 45 minuten'): {len(DU)} ({ernst})")
+        for x in DU[:10]: print(f'  {ernst} TIJDSDUUR', x)
+    return len(F) + len(DU)
+
+# les 348: de tijdsduur-check herkent zowel de '.'- als de ':'-notatie
+MUTANTEN = [('8:10 + 1:20', True), ('8.10 uur + 1.20 uur', True), ('De reis duurt 1:20.', True), ('duurt 1.20 uur', True), ('duurde 0:45', True),
+            ('8.10 uur + 1 uur en 20 minuten', False), ('Van 8.10 uur tot 9.30 uur', False), ('9.30 uur − 8.10 uur', False)]
+def mutanten():
+    """aantal mutanten dat goed gaat (moet len(MUTANTEN) zijn)"""
+    mk = lambda t: {'id': 'mut', 'opgave': t, 'extraVelden': {}, 'antwoord': 'x'}
+    return sum(bool(duur_treffers([mk(t)])) == verwacht for t, verwacht in MUTANTEN)

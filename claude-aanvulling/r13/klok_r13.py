@@ -19,7 +19,7 @@ def omzet(it, tel):
     klokzet = (it.get('merge') or {}).get('somtype', '').startswith('[klok-zetten')
     oud_kop = (it.get('merge') or {}).get('somtype')
     n = KF.zet_om(it, typ_erbij=True)
-    if isinstance(ad, dict): ad.update(bewaar)
+    if isinstance(it.get('antwoordDetail'), dict): it['antwoordDetail'].update(bewaar)      # zet_om maakt een nieuw dict: app-protocol (invoer/invoerUitleg) terugzetten
     if klokzet and re.fullmatch(r'\d{1,2}\.\d{2} uur', str(it.get('antwoord'))):
         ga = KF._lijst(list(it.get('geldigeAntwoorden') or []) + [it['antwoord']])
         if it.get('geldigeAntwoorden') != ga: it['geldigeAntwoorden'] = ga
