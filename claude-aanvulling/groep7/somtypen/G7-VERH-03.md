@@ -25,8 +25,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 40  (controle: ok)
     - **Fout-hints (Claude):** 10 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** De dubbele punt (:) staat hier voor een verhouding. Links en rechts van het isteken (=) horen de getallen op dezelfde manier bij elkaar.
+- **Hint 2 (te schrijven):** Vergelijk de getallen vóór de dubbele punt, links en rechts van het isteken: hoeveel keer zo groot is het getal rechts? Doe het getal links achter de dubbele punt evenveel keer.
+- **Ouderzin:** Je kind vult een verhouding aan (met een dubbele punt): wat je met het ene getal doet, doe je ook met het andere.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt het getal op de plek van het vraagteken.  [nieuw]
+  - `één keer te veel` (fout = antwoord + getal2) → Dat is één keer te veel. Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.  [nieuw]
+  - `één keer te weinig` (fout = antwoord - getal2) → Dat is één keer te weinig. Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.  [nieuw]
+  - `gedeeld in plaats van keer` (Claudes sleutel: verkeerde-bewerking) → Heb je gedeeld? Rechts van het isteken is het getal vóór de dubbele punt groter. Dan wordt het getal achter de dubbele punt ook groter: doe keer.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Vergelijk de getallen vóór de dubbele punt, en doe het getal erachter evenveel keer.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: # [ding] kosten €#. Hoeveel kosten # [ding]?
 
@@ -45,8 +53,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** €5,50  (controle: ok)
     - **Fout-hints (Claude):** —
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Het euroteken (€) betekent euro. Koop je meer stuks, dan betaal je evenveel keer zoveel.
+- **Hint 2 (te schrijven):** Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt.
+- **Ouderzin:** Je kind rekent met een verhouding uit wat een ander aantal kost, via de prijs van één.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `prijs uit de vraag` (fout = getal2) → Dat is de prijs uit de vraag. Die hoort bij een ander aantal. Wat kost één?  [nieuw]
+  - `prijs van één` (Claudes sleutel: andere-deel-genomen) → Dat is de prijs van één. Hoeveel kosten er zoveel als de vraag vraagt?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Reken uit wat één kost, en doe dat keer het aantal waar de vraag naar vraagt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: Een tekening van # cm breed wordt # keer zo klein gemaakt. Hoe breed wordt de kleine tekening?
 
@@ -67,8 +81,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 8 → Zoveel keer zo klein betekent delen door dat getal, niet dat getal eraf halen. · 48 → Verkleinen maakt kleiner. Je moet delen, niet vermenigvuldigen.
     - **Uitleg (Claude):** Verkleinen met factor 4 is delen door 4: 12 : 4 = 3 cm.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** In de vraag staat hoeveel keer zo klein de tekening wordt. Zo klein maken betekent: delen. Deel de breedte door dat aantal keer.
+- **Hint 2 (te schrijven):** Deel de breedte door het aantal keer. Controleer: doe je uitkomst keer dat aantal. Krijg je de breedte terug?
+- **Ouderzin:** Je kind rekent uit hoe breed een tekening wordt als hij zoveel keer zo klein wordt gemaakt.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `eraf gehaald` (fout = getal1 - getal2 of getal2 - getal1) → Heb je het getal eraf gehaald? Zo klein maken betekent: delen, niet eraf halen.  [nieuw]
+  - `keer gedaan` (fout = getal1 × getal2) → Dat is groter dan de tekening was. Zo klein betekent: delen, niet keer.  [nieuw]
+  - `andere fout` (andere fout) → Deel de breedte door het aantal keer.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: [rooster] Een rechthoek is # hokjes breed en # hokjes hoog. Kleur een rechthoek die # keer zo groot is: elke zijde # keer zo lang.
 
@@ -93,8 +113,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** een rechthoek van 3 hokjes breed en 3 hokjes hoog → 2 keer zo groot is vermenigvuldigen, niet 2 hokjes erbij. · een rechthoek van 2 hokjes breed en 1 hokjes hoog → Allebei de zijden worden langer, ook de hoogte.
     - **Uitleg (Claude):** Elke zijde wordt 2 keer zo lang: 1 × 2 = 2 breed en 1 × 2 = 2 hoog. Tik op de linkerbovenhoek en dan op de rechteronderhoek.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** In de vraag staat wat zo groot hier betekent: elke zijde wordt zoveel keer zo lang. Dat geldt voor de breedte én voor de hoogte.
+- **Hint 2 (te schrijven):** Doe de breedte keer het aantal keer, en de hoogte ook. Kleur een rechthoek met die nieuwe breedte en die nieuwe hoogte.
+- **Ouderzin:** Je kind kleurt een rechthoek waarvan elke zijde zoveel keer zo lang is.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `er iets bij opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je ergens iets bij opgeteld? Elke zijde wordt keer dat getal, niet erbij.  [Claude, taalfix]
+  - `hoogte niet langer` (Claudes sleutel: deel-vergeten-bij-splitsen) → Is de hoogte ook langer geworden? Elke zijde wordt zoveel keer zo lang: de breedte en de hoogte.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Doe de breedte en de hoogte allebei keer het aantal keer.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '[vak(ken) aantikken op rooster] Een rechthoek is # hokjes breed en # hokjes hoog. Kleur een rechthoek die # keer zo groot is: elke zijde # keer zo lang.'. Nakijken of ze nog passen.
+- Status: hints klaar
 
 ## Somtype 5: Een foto is # cm breed en # cm hoog. Hij wordt # keer zo groot afgedrukt. Hoe breed wordt de foto?
 
@@ -115,8 +142,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 8 → Zoveel keer zo groot betekent vermenigvuldigen, niet dat getal erbij optellen. · 32 → Alleen de breedte is gevraagd: één zijde keer de factor.
     - **Uitleg (Claude):** Elke zijde wordt 4 keer zo lang: 4 × 4 = 16 cm breed (en 2 × 4 = 8 cm hoog).
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** In de vraag staat hoeveel keer zo groot het wordt. Dan wordt elke maat zoveel keer zo lang. De vraag gaat over de breedte.
+- **Hint 2 (te schrijven):** Doe de breedte keer het aantal keer. De hoogte heb je voor deze vraag niet nodig.
+- **Ouderzin:** Je kind rekent uit hoe breed iets wordt als het zoveel keer zo groot wordt gemaakt.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `erbij opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je er iets bij opgeteld? Zo groot betekent: keer.  [Claude, taalfix]
+  - `hoogte meegerekend` (Claudes sleutel: verkeerde-bewerking) → Heb je de hoogte ook meegerekend? De vraag gaat alleen over de breedte.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Doe de breedte keer het aantal keer.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 6: Een vierkant van # bij # cm wordt # keer zo groot: elke zijde wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?
 
@@ -137,8 +170,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 4 → De zijden worden zoveel keer zo lang. De oppervlakte groeit in twee richtingen tegelijk. · 8 → Twee richtingen betekent factor keer factor, niet factor plus factor.
     - **Uitleg (Claude):** De oppervlakte was 4 × 4 = 16 cm². Nu is hij 16 × 16 = 256 cm². Dat is 4 × 4 = 16 keer zo groot.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** De oppervlakte is lengte keer breedte. Worden alle zijden langer, dan worden de lengte én de breedte langer.
+- **Hint 2 (te schrijven):** Leg kleine vierkanten naast elkaar zo vaak als elke zijde langer wordt, en evenveel rijen onder elkaar. Tel hoeveel kleine vierkanten je dan hebt.
+- **Ouderzin:** Je kind ontdekt dat de oppervlakte van een vierkant sneller groeit dan de zijden.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `alleen de zijde` (Claudes sleutel: omtrek-oppervlakte-verwisseld) → Dat is hoeveel keer zo lang elke zijde wordt. De oppervlakte groeit meer: de lengte én de breedte worden langer.  [Claude, taalfix]
+  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je opgeteld? De lengte en de breedte worden allebei zoveel keer zo lang. Hoeveel kleine vierkanten passen er dan in het grote?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Hoeveel kleine vierkanten passen er in het grote vierkant?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 7: Een [ding] is # m lang. Je tekent de tuin op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe lang wordt de tuin op de tekening?
 
@@ -157,8 +196,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 80 cm → Reken eerst 8 m om naar cm en deel dan door 100. · 8 m → Je hebt de echte maat overgenomen. Op de tekening past die lengte niet op papier.
     - **Uitleg (Claude):** 8 m is 800 cm. Op schaal 1 : 100 deel je door 100: 800 : 100 = 8. De tuin wordt dus 8 cm op de tekening.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.
+- **Hint 2 (te schrijven):** Maak van de echte maat eerst centimeters, als dat nog moet. Deel dan door het getal achter de dubbele punt. Zoveel centimeter wordt het op de tekening of in het model.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te lang` (80 cm) → Dat is tien keer te lang. Maak van de echte maat eerst centimeters, en deel dan door het getal achter de dubbele punt.  [nieuw]
+  - `de echte maat` (8 m) → Dat is de echte maat. Op de tekening of in het model is alles kleiner dan in het echt.  [nieuw]
+  - `andere fout` (andere fout) → Maak van de echte maat centimeters, en deel door het getal achter de dubbele punt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 8: Een [ding] is # m lang. Op een plattegrond met schaal # : # wordt het pad getekend. Hoe lang is het pad op de plattegrond?
 
@@ -176,8 +221,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 60 cm → Reken de 60 m eerst om naar cm en deel dat getal daarna door 1000. · 600 cm → Let goed op het aantal nullen bij het delen door 1000.
     - **Uitleg (Claude):** 60 m is 6000 cm. Op schaal 1 : 1000 deel je door 1000: 6000 : 1000 = 6. Op de plattegrond is het pad 6 cm.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.
+- **Hint 2 (te schrijven):** Maak van de echte maat eerst centimeters, als dat nog moet. Deel dan door het getal achter de dubbele punt. Zoveel centimeter wordt het op de tekening of in het model.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te lang` (60 cm) → Dat is tien keer te lang. Maak van de echte maat eerst centimeters, en deel dan door het getal achter de dubbele punt.  [nieuw]
+  - `honderd keer te lang` (600 cm) → Dat is honderd keer te lang. Maak eerst van de meters centimeters, en deel dan door het getal achter de dubbele punt.  [nieuw]
+  - `andere fout` (andere fout) → Maak van de echte maat centimeters, en deel door het getal achter de dubbele punt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 9: Een bank is in het echt # cm lang. Op een tekening met schaal # : # wordt de bank getekend. Hoe lang wordt hij?
 
@@ -195,8 +246,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 30 cm → Je hebt door 10 gedeeld. Lees het tweede getal van de schaal nog eens. · 400 cm → Je hebt 100 erbij geteld. Bij schaal reken je met keer of gedeeld door.
     - **Uitleg (Claude):** Op de tekening is alles 100 keer kleiner. Je rekent 300 : 100 = 3. De bank wordt dus 3 cm op de tekening.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.
+- **Hint 2 (te schrijven):** Maak van de echte maat eerst centimeters, als dat nog moet. Deel dan door het getal achter de dubbele punt. Zoveel centimeter wordt het op de tekening of in het model.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te lang` (30 cm) → Dat is tien keer te lang. Deel de echte maat door het getal achter de dubbele punt.  [nieuw]
+  - `opgeteld` (400 cm) → Heb je opgeteld? Bij een schaal doe je keer of gedeeld door, je telt niets op.  [nieuw]
+  - `andere fout` (andere fout) → Deel de echte maat door het getal achter de dubbele punt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 10: Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe lang wordt het model?
 
@@ -214,8 +271,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 120 cm → Je hebt met 20 vermenigvuldigd. Maar het model moet kleiner worden dan de echte boot. · 60 cm → Je hebt door 10 gedeeld. Kijk nog eens naar het tweede getal van de schaal.
     - **Uitleg (Claude):** 6 m is 600 cm. Op schaal 1 : 20 deel je door 20: 600 : 20 = 30. Het model wordt dus 30 cm lang.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.
+- **Hint 2 (te schrijven):** Maak van de echte maat eerst centimeters, als dat nog moet. Deel dan door het getal achter de dubbele punt. Zoveel centimeter wordt het op de tekening of in het model.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `keer gedaan` (120 cm) → Heb je keer gedaan? Het model is kleiner dan echt: deel door het getal achter de dubbele punt.  [nieuw]
+  - `door een ander getal gedeeld` (60 cm) → Heb je door een ander getal gedeeld? Deel de echte maat in centimeters door het getal achter de dubbele punt.  [nieuw]
+  - `andere fout` (andere fout) → Maak van de echte maat centimeters, en deel door het getal achter de dubbele punt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 11: Een muur is in het echt # cm lang. Je tekent hem op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe lang wordt de muur op je tekening?
 
@@ -233,8 +296,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 50 cm → Je hebt door 10 gedeeld. Kijk nog eens naar het tweede getal van de schaal. · 500 cm → Dit is de echte lengte. Op een tekening met schaal wordt alles juist kleiner.
     - **Uitleg (Claude):** Op de tekening is alles 100 keer kleiner. Je rekent 500 : 100 = 5. De muur wordt dus 5 cm op je tekening.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.
+- **Hint 2 (te schrijven):** Maak van de echte maat eerst centimeters, als dat nog moet. Deel dan door het getal achter de dubbele punt. Zoveel centimeter wordt het op de tekening of in het model.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te lang` (50 cm) → Dat is tien keer te lang. Deel de echte maat door het getal achter de dubbele punt.  [nieuw]
+  - `de echte maat` (500 cm) → Dat is de echte maat. Op de tekening of in het model is alles kleiner dan in het echt.  [nieuw]
+  - `andere fout` (andere fout) → Deel de echte maat door het getal achter de dubbele punt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 12: Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?
 
@@ -252,8 +321,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 900 cm → Je hebt vermenigvuldigd. In een poppenhuis is alles juist kleiner dan echt. · 90 cm → Dit is de echte hoogte. Die moet je nog verkleinen met de schaal.
     - **Uitleg (Claude):** In het poppenhuis is alles 10 keer kleiner. Je rekent 90 : 10 = 9. De stoel is dus 9 cm hoog.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.
+- **Hint 2 (te schrijven):** Maak van de echte maat eerst centimeters, als dat nog moet. Deel dan door het getal achter de dubbele punt. Zoveel centimeter wordt het op de tekening of in het model.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `keer gedaan` (900 cm) → Heb je keer gedaan? In het model is alles kleiner dan echt: deel door het getal achter de dubbele punt.  [nieuw]
+  - `de echte maat` (90 cm) → Dat is de echte maat. Op de tekening of in het model is alles kleiner dan in het echt.  [nieuw]
+  - `andere fout` (andere fout) → Deel de echte maat door het getal achter de dubbele punt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 13: Een speelgoedauto is gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. De auto is # cm lang. Hoe lang is de echte auto?
 
@@ -271,8 +346,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 4 cm → Je hebt gedeeld, maar het echte voorwerp is groter dan het speelgoed. · 4000 cm → Je hebt met 100 gerekend. Kijk nog eens naar het tweede getal van de schaal.
     - **Uitleg (Claude):** Bij schaal 1 : 10 is het echte voorwerp 10 keer zo groot. Je rekent 40 × 10 = 400. De echte auto is 400 cm lang.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.
+- **Hint 2 (te schrijven):** Doe de maat op de tekening keer het getal achter de dubbele punt. Zoveel centimeter is het in het echt.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `gedeeld` (4 cm) → Heb je gedeeld? Het echte voorwerp is groter dan het model: doe keer het getal achter de dubbele punt.  [nieuw]
+  - `tien keer te veel` (4000 cm) → Dat is tien keer te lang. Doe de maat van het model keer het getal achter de dubbele punt.  [nieuw]
+  - `andere fout` (andere fout) → Doe de maat van het model keer het getal achter de dubbele punt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 14: Een tekening heeft schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe groot is het echte voorwerp vergeleken met de tekening?
 
@@ -290,8 +371,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 2 keer zo klein → Het eerste getal hoort bij de tekening en het tweede bij het echte voorwerp. Welke van de twee is dan groter? · 2 cm groter → Bij schaal gaat het niet om erbij of eraf, maar om hoeveel keer.
     - **Uitleg (Claude):** Bij 1 : 2 hoort bij 1 cm op de tekening 2 cm in het echt. Het echte voorwerp is dus 2 keer zo groot. De tekening is de kleine versie.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.
+- **Hint 2 (te schrijven):** Lees wat één centimeter op de tekening in het echt is. Gaat het om erbij of om keer? En is het echte voorwerp groter of kleiner dan de tekening?
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `erbij in plaats van keer` (2 cm groter) → Bij een schaal gaat het om keer, niet om erbij. Hoeveel keer zo groot is het echte voorwerp?  [nieuw]
+  - `omgekeerd vergeleken` (2 keer zo klein) → Is het echte voorwerp kleiner dan de tekening? Eén centimeter op de tekening is in het echt meer centimeters.  [nieuw]
+  - `andere fout` (andere fout) → Lees wat één centimeter op de tekening in het echt is.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 15: Een tekening van een fiets heeft schaal # : #. Hoeveel cm is # cm op de tekening in het echt?
 
@@ -310,8 +397,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5 cm → Lees het tweede getal van de schaal nog eens precies. Hoeveel nullen staan er? · 51 cm → Bij schaal tel je niets op. Het tweede getal vertelt hoeveel keer groter het echte is.
     - **Uitleg (Claude):** Het tweede getal van de schaal zegt hoeveel keer groter het echte voorwerp is. Bij 1 : 50 hoort bij 1 cm op de tekening 50 cm echt. Je vermenigvuldigt dus met 50.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.
+- **Hint 2 (te schrijven):** Welk getal van de schaal hoort bij het echte voorwerp? Zoveel centimeter is één centimeter op de tekening in het echt.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te weinig` (5 cm) → Dat is tien keer te weinig. Kijk welk getal van de schaal bij het echte voorwerp hoort.  [nieuw]
+  - `opgeteld` (51 cm) → Heb je opgeteld? Bij een schaal doe je keer of gedeeld door, je telt niets op.  [nieuw]
+  - `andere fout` (andere fout) → Kijk welk getal van de schaal bij het echte voorwerp hoort.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 16: In een tabel staat schaal # : #. Bij # cm op de tekening hoort # cm echt. Wat hoort er bij # cm op de tekening?
 
@@ -330,8 +423,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 101 cm echt → In de tabel gaat de tekening van 1 naar 2 cm, dus keer 2. Doe met het andere getal precies hetzelfde. · 50 cm echt → Je hebt gehalveerd. Maar de tekening werd juist langer, dus het echte wordt ook langer.
     - **Uitleg (Claude):** Van 1 cm naar 2 cm op de tekening is keer 2. Dan doe je met de echte maat hetzelfde: 100 × 2 = 200. Dus bij 2 cm hoort 200 cm echt.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.
+- **Hint 2 (te schrijven):** Maak een verhoudingstabel: hoeveel keer zoveel centimeter is het nu op de tekening? Doe het getal voor in het echt evenveel keer.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `opgeteld` (101 cm echt) → Heb je er iets bij opgeteld? Is het op de tekening zoveel keer zo lang, dan is het in het echt ook zoveel keer zo lang.  [nieuw]
+  - `gedeeld` (50 cm echt) → Heb je gedeeld? Meer centimeters op de tekening horen bij meer centimeters in het echt.  [nieuw]
+  - `andere fout` (andere fout) → Op de tekening en in het echt doe je keer hetzelfde getal.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 17: Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Welke tekening wordt het grootst?
 
@@ -349,8 +448,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** De tekening op schaal 1 : 100 → Bij 1 : 100 wordt de boom 100 keer kleiner gemaakt. Is dat veel of weinig verkleinen? · Beide tekeningen zijn even groot → De schalen zijn niet hetzelfde, dus verklein je ook niet evenveel.
     - **Uitleg (Claude):** Bij 1 : 10 maak je de boom 10 keer kleiner, bij 1 : 100 maak je hem 100 keer kleiner. Hoe groter het tweede getal, hoe kleiner de tekening. Dus 1 : 10 geeft de grootste tekening.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Hoe groter het getal achter de dubbele punt, hoe meer centimeter in het echt bij één centimeter op de tekening hoort.
+- **Hint 2 (te schrijven):** Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `andere schaal gekozen` (De tekening op schaal 1 : 100) → Bij die schaal hoort bij één centimeter op de tekening juist meer in het echt. Wordt de tekening dan groter of kleiner?  [nieuw]
+  - `even groot` (Beide tekeningen zijn even groot) → Het is hetzelfde voorwerp, maar de schalen zijn verschillend. Dan worden de tekeningen ook verschillend groot.  [nieuw]
+  - `andere fout` (andere fout) → Reken voor elke schaal uit hoe lang de tekening wordt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 18: Marit tekent een boom op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Sem tekent dezelfde boom op schaal # : #. Wie krijgt de kleinste tekening?
 
@@ -368,8 +473,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Marit → Bij 1 : 25 verklein je 25 keer en bij 1 : 50 verklein je 50 keer. Welke verkleining is sterker? · Ze krijgen even grote tekeningen → De twee schalen zijn verschillend, dus de tekeningen worden ook niet even groot.
     - **Uitleg (Claude):** Bij schaal 1 : 50 maak je de boom 50 keer kleiner, bij 1 : 25 maar 25 keer. Hoe groter het tweede getal, hoe kleiner de tekening. Sem krijgt dus de kleinste tekening.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Hoe groter het getal achter de dubbele punt, hoe meer centimeter in het echt bij één centimeter op de tekening hoort.
+- **Hint 2 (te schrijven):** Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `andere schaal gekozen` (Marit) → Bij die schaal hoort bij één centimeter op de tekening minder in het echt. Wordt de tekening dan groter of kleiner?  [nieuw]
+  - `even groot` (Ze krijgen even grote tekeningen) → Het is hetzelfde voorwerp, maar de schalen zijn verschillend. Dan worden de tekeningen ook verschillend groot.  [nieuw]
+  - `andere fout` (andere fout) → Reken voor elke schaal uit hoe lang de tekening wordt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 19: Op een kaart van een park staat schaal # : #. Dat betekent: # cm op de kaart is # cm in het echt. Hoeveel meter is # cm op die kaart in het echt?
 
@@ -387,8 +498,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1000 m → 1 cm is 1000 cm echt. Reken die centimeters nog om naar meters. · 100 m → Denk eraan. 100 cm is 1 m. Hoeveel meter zit er dan in 1000 cm?
     - **Uitleg (Claude):** Bij 1 : 1000 hoort bij 1 cm op de kaart 1000 cm echt. 1000 cm is 10 m. Dus 1 cm op de kaart is 10 m in het park.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.
+- **Hint 2 (te schrijven):** Eén centimeter op de kaart of plattegrond is in het echt zoveel centimeter als het getal achter de dubbele punt. Reken dat om: honderd centimeter is één meter, duizend meter is één kilometer.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `centimeters als meters` (1000 m) → Kijk naar de maat. Het getal achter de dubbele punt is in centimeters, niet in meters.  [nieuw]
+  - `tien keer te veel` (100 m) → Dat is tien keer te veel. Honderd centimeter is één meter: hoeveel meter is het?  [nieuw]
+  - `andere fout` (andere fout) → Reken de centimeters om naar meters.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 20: Op een landkaart staat schaal # : # #. Hoeveel is # cm op de kaart in het echt?
 
@@ -406,8 +523,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 100 m → 1 cm is 100 000 cm echt. Reken dat eerst om naar meters en kijk dan of het al kilometers zijn. · 10 km → Tel de nullen nog eens rustig na bij het omrekenen van cm naar km.
     - **Uitleg (Claude):** 1 cm op de kaart is 100 000 cm in het echt. 100 000 cm is 1000 m, en 1000 m is 1 km. Dus 1 cm op de kaart is 1 km.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.
+- **Hint 2 (te schrijven):** Eén centimeter op de kaart of plattegrond is in het echt zoveel centimeter als het getal achter de dubbele punt. Reken dat om: honderd centimeter is één meter, duizend meter is één kilometer.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te weinig` (100 m) → Dat is tien keer te weinig. Reken de centimeters eerst om naar meters, en dan naar kilometers.  [nieuw]
+  - `tien keer te veel` (10 km) → Dat is tien keer te veel. Honderd centimeter is één meter, en duizend meter is één kilometer.  [nieuw]
+  - `andere fout` (andere fout) → Reken de centimeters om naar meters, en dan naar kilometers.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 21: Op een plattegrond staat schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoeveel is # cm op die plattegrond in het echt?
 
@@ -425,8 +548,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 20 m → 1 cm is 200 cm echt. Reken nu rustig van cm naar m. 100 cm is 1 m. · 200 m → Je hebt het getal van de schaal gewoon overgenomen, maar de eenheid verandert nog van cm naar m.
     - **Uitleg (Claude):** Bij 1 : 200 hoort bij 1 cm op papier 200 cm in het echt. En 200 cm is hetzelfde als 2 m. Dus 1 cm op de plattegrond is 2 m echt.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.
+- **Hint 2 (te schrijven):** Eén centimeter op de kaart of plattegrond is in het echt zoveel centimeter als het getal achter de dubbele punt. Reken dat om: honderd centimeter is één meter, duizend meter is één kilometer.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `centimeters als meters` (200 m) → Kijk naar de maat. Het getal achter de dubbele punt is in centimeters, niet in meters.  [nieuw]
+  - `tien keer te veel` (20 m) → Dat is tien keer te veel. Honderd centimeter is één meter: hoeveel meter is het?  [nieuw]
+  - `andere fout` (andere fout) → Reken de centimeters om naar meters.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 22: Op een plattegrond van een dierentuin met schaal # : # is een pad # cm lang. Hoe lang is het pad in het echt?
 
@@ -444,8 +573,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5000 m → 5 × 1000 geeft centimeters, geen meters. Reken die centimeters nog om. · 5 m → Je bent de vermenigvuldiging met de schaal bijna vergeten. Reken eerst 5 × 1000 uit.
     - **Uitleg (Claude):** Elke cm op de plattegrond is 1000 cm echt, dus 5 cm is 5000 cm. 5000 cm is 50 m. Het pad is dus 50 m lang.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.
+- **Hint 2 (te schrijven):** Doe de maat op de tekening keer het getal achter de dubbele punt. Zoveel centimeter is het in het echt. Maak van die centimeters daarna meters: honderd centimeter is één meter.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `centimeters als meters` (5000 m) → Kijk naar de maat. Keer het getal achter de dubbele punt geeft centimeters, nog geen meters.  [nieuw]
+  - `tien keer te weinig` (5 m) → Dat is tien keer te weinig. Reken eerst uit hoeveel centimeter het echt is, en maak daar meters van.  [nieuw]
+  - `andere fout` (andere fout) → Reken uit hoeveel centimeter het echt is, en maak daar meters van.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 23: Op een tekening met schaal # : # is een deur # cm hoog. Hoe hoog is de deur in het echt?
 
@@ -463,8 +598,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 54 cm → Je hebt 4 en 50 opgeteld. Bij schaal hoort een keerbewerking. · 20 m → Reken 4 × 50 uit in centimeters en kijk daarna hoeveel meter dat is.
     - **Uitleg (Claude):** Elke cm op de tekening is 50 cm echt. Je rekent 4 × 50 = 200. De deur is dus 200 cm hoog, en dat is 2 m.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.
+- **Hint 2 (te schrijven):** Doe de maat op de tekening keer het getal achter de dubbele punt. Zoveel centimeter is het in het echt.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `opgeteld` (54 cm) → Heb je opgeteld? Bij een schaal doe je keer of gedeeld door, je telt niets op.  [nieuw]
+  - `tien keer te veel` (20 m) → Dat is tien keer te veel. Reken de centimeters goed om: honderd centimeter is één meter.  [nieuw]
+  - `andere fout` (andere fout) → Doe de maat op de tekening keer het getal achter de dubbele punt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 24: Op een tekening met schaal # : # is een tafel # cm lang. Hoe lang is de tafel in het echt?
 
@@ -482,8 +623,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 103 cm → Je hebt 3 en 100 bij elkaar opgeteld. Bij schaal hoort een keerbewerking. · 30 cm → Je hebt met 10 gerekend. Kijk nog eens welk getal achter de dubbele punt staat.
     - **Uitleg (Claude):** Elke cm op de tekening is 100 cm echt. Bij 3 cm reken je 3 × 100. Dat is 300 cm.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.
+- **Hint 2 (te schrijven):** Doe de maat op de tekening keer het getal achter de dubbele punt. Zoveel centimeter is het in het echt.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te weinig` (30 cm) → Dat is tien keer te weinig. Doe de maat op de tekening keer het getal achter de dubbele punt.  [nieuw]
+  - `opgeteld` (103 cm) → Heb je opgeteld? Bij een schaal doe je keer of gedeeld door, je telt niets op.  [nieuw]
+  - `andere fout` (andere fout) → Doe de maat op de tekening keer het getal achter de dubbele punt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 25: Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?
 
@@ -501,5 +648,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 250 cm → Reken 25 m eerst om naar cm en let dan goed op de nullen bij het delen door 100. · 25 m → Dit is de echte lengte van de school. Een maquette is veel kleiner.
     - **Uitleg (Claude):** 25 m is 2500 cm. Op schaal 1 : 100 deel je door 100: 2500 : 100 = 25. De maquette wordt dus 25 cm lang.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.
+- **Hint 2 (te schrijven):** Maak van de echte maat eerst centimeters, als dat nog moet. Deel dan door het getal achter de dubbele punt. Zoveel centimeter wordt het op de tekening of in het model.
+- **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `de echte maat` (25 m) → Dat is de echte maat. Op de tekening of in het model is alles kleiner dan in het echt.  [nieuw]
+  - `tien keer te lang` (250 cm) → Dat is tien keer te lang. Maak van de echte maat eerst centimeters, en deel dan door het getal achter de dubbele punt.  [nieuw]
+  - `andere fout` (andere fout) → Maak van de echte maat centimeters, en deel door het getal achter de dubbele punt.  [nieuw]
+- Status: hints klaar

@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T14:17:46+0200",
+ "gegenereerdOp": "2026-10-08T14:22:08+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-VERH-01",
  "bordtitel": "Breuk, procent en schaal lezen",
@@ -1455,18 +1455,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een pot heeft 200 knikkers. Kleur 50% ervan. Elk stukje is 20 knikkers.",
+   "opgave": "Een pot heeft 200 knikkers. Kleur 70% ervan. Elk stukje is 10 knikkers.",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "5",
+   "antwoord": "14",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
    "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "20",
+     "fout": "10",
      "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
      "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
      "laag2": "tekstSterker",
@@ -1476,7 +1476,7 @@
     },
     {
      "stap": null,
-     "fout": "50",
+     "fout": "70",
      "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
      "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
      "laag2": "tekstSterker",
@@ -1495,7 +1495,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 50 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 200 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "foutHintsTekst": "10 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 70 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 200 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
    "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -1505,7 +1505,7 @@
     "asciiSchets": false,
     "jsRender": {
      "soort": "balk",
-     "delen": 10,
+     "delen": 20,
      "kleurbaar": true
     },
     "svgBestanden": []
@@ -1519,8 +1519,8 @@
    "bronVariant": "claude-bank:V3:720d77a4-72b3-440b-8b3a-7294b74954a2",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "50% van 200",
-    "claudeUitleg": "10% van 200 is 20. 50% is 5 keer 20 = 100.",
+    "claudeKaleSom": "70% van 200",
+    "claudeUitleg": "70% van 200 is 140. Elk stukje is 10, dus 140 : 10 = 14 stukjes.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -1550,7 +1550,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-z667: Z-#667: 70% van 200, stukje 10 (20 stukjes; antwoord niet procent : 10, review batch 5)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1562,6 +1564,12 @@
     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
     "v667": {
      "reden": "V-#667: balk van 10 stukjes in jsRender"
+    },
+    "z667": {
+     "opgave": "Een pot heeft 200 knikkers. Kleur 50% ervan. Elk stukje is 20 knikkers.",
+     "antwoord": "5",
+     "sleutels": [],
+     "reden": "Z-#667: 70% van 200, stukje 10 (20 stukjes; antwoord niet procent : 10, review batch 5)"
     },
     "duplicaatVan": null,
     "somtypeNr": 1,
@@ -1575,7 +1583,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "5",
+    "verwacht": "14",
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -1601,8 +1609,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "20",
-       "50",
+       "10",
+       "70",
        "200"
       ]
      },
@@ -1630,18 +1638,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een pot heeft 300 knikkers. Kleur 40% ervan. Elk stukje is 30 knikkers.",
+   "opgave": "Een pot heeft 300 knikkers. Kleur 40% ervan. Elk stukje is 60 knikkers.",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "4",
+   "antwoord": "2",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
    "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "30",
+     "fout": "40",
      "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
      "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
      "laag2": "tekstSterker",
@@ -1651,7 +1659,7 @@
     },
     {
      "stap": null,
-     "fout": "40",
+     "fout": "60",
      "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
      "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
      "laag2": "tekstSterker",
@@ -1670,7 +1678,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "30 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 40 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 300 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "foutHintsTekst": "40 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 60 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 300 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
    "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -1680,7 +1688,7 @@
     "asciiSchets": false,
     "jsRender": {
      "soort": "balk",
-     "delen": 10,
+     "delen": 5,
      "kleurbaar": true
     },
     "svgBestanden": []
@@ -1695,7 +1703,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "40% van 300",
-    "claudeUitleg": "10% van 300 is 30. 40% is 4 keer 30 = 120.",
+    "claudeUitleg": "40% van 300 is 120. Elk stukje is 60, dus 120 : 60 = 2 stukjes.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -1725,7 +1733,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-z667: Z-#667: 40% van 300, stukje 60 (5 stukjes; antwoord niet procent : 10, review batch 5)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1737,6 +1747,12 @@
     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
     "v667": {
      "reden": "V-#667: balk van 10 stukjes in jsRender"
+    },
+    "z667": {
+     "opgave": "Een pot heeft 300 knikkers. Kleur 40% ervan. Elk stukje is 30 knikkers.",
+     "antwoord": "4",
+     "sleutels": [],
+     "reden": "Z-#667: 40% van 300, stukje 60 (5 stukjes; antwoord niet procent : 10, review batch 5)"
     },
     "duplicaatVan": null,
     "somtypeNr": 1,
@@ -1750,7 +1766,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "4",
+    "verwacht": "2",
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -1776,8 +1792,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "30",
        "40",
+       "60",
        "300"
       ]
      },
@@ -1980,11 +1996,11 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een pot heeft 500 knikkers. Kleur 20% ervan. Elk stukje is 50 knikkers.",
+   "opgave": "Een pot heeft 500 knikkers. Kleur 20% ervan. Elk stukje is 25 knikkers.",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "2",
+   "antwoord": "4",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
    "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
@@ -2001,7 +2017,7 @@
     },
     {
      "stap": null,
-     "fout": "50",
+     "fout": "25",
      "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
      "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
      "laag2": "tekstSterker",
@@ -2020,7 +2036,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 50 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 500 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "foutHintsTekst": "20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 25 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 500 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
    "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -2030,7 +2046,7 @@
     "asciiSchets": false,
     "jsRender": {
      "soort": "balk",
-     "delen": 10,
+     "delen": 20,
      "kleurbaar": true
     },
     "svgBestanden": []
@@ -2045,7 +2061,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "20% van 500",
-    "claudeUitleg": "10% van 500 is 50. 20% is 2 keer 50 = 100.",
+    "claudeUitleg": "20% van 500 is 100. Elk stukje is 25, dus 100 : 25 = 4 stukjes.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -2075,7 +2091,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-z667: Z-#667: 20% van 500, stukje 25 (20 stukjes; antwoord niet procent : 10, review batch 5)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -2087,6 +2105,12 @@
     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
     "v667": {
      "reden": "V-#667: balk van 10 stukjes in jsRender"
+    },
+    "z667": {
+     "opgave": "Een pot heeft 500 knikkers. Kleur 20% ervan. Elk stukje is 50 knikkers.",
+     "antwoord": "2",
+     "sleutels": [],
+     "reden": "Z-#667: 20% van 500, stukje 25 (20 stukjes; antwoord niet procent : 10, review batch 5)"
     },
     "duplicaatVan": null,
     "somtypeNr": 1,
@@ -2100,7 +2124,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "2",
+    "verwacht": "4",
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2127,7 +2151,7 @@
      "match": {
       "waarden": [
        "20",
-       "50",
+       "25",
        "500"
       ]
      },
@@ -2844,18 +2868,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een pot heeft 400 knikkers. Kleur 10% ervan. Elk stukje is 40 knikkers.",
+   "opgave": "Een pot heeft 400 knikkers. Kleur 75% ervan. Elk stukje is 100 knikkers.",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "1",
+   "antwoord": "3",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
    "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "10",
+     "fout": "75",
      "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
      "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
      "laag2": "tekstSterker",
@@ -2865,7 +2889,7 @@
     },
     {
      "stap": null,
-     "fout": "40",
+     "fout": "100",
      "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
      "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
      "laag2": "tekstSterker",
@@ -2884,7 +2908,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "10 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 40 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 400 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "foutHintsTekst": "75 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 100 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 400 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
    "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -2894,7 +2918,7 @@
     "asciiSchets": false,
     "jsRender": {
      "soort": "balk",
-     "delen": 10,
+     "delen": 4,
      "kleurbaar": true
     },
     "svgBestanden": []
@@ -2908,8 +2932,8 @@
    "bronVariant": "claude-bank:V3:ea724bfc-bd79-467e-8d15-0b5382d2b272",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "10% van 400",
-    "claudeUitleg": "10% van 400 is 40. 10% is 1 keer 40 = 40.",
+    "claudeKaleSom": "75% van 400",
+    "claudeUitleg": "75% van 400 is 300. Elk stukje is 100, dus 300 : 100 = 3 stukjes.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -2939,7 +2963,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-z667: Z-#667: 75% van 400, stukje 100 (4 stukjes; antwoord niet procent : 10, review batch 5)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -2951,6 +2977,12 @@
     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
     "v667": {
      "reden": "V-#667: balk van 10 stukjes in jsRender"
+    },
+    "z667": {
+     "opgave": "Een pot heeft 400 knikkers. Kleur 10% ervan. Elk stukje is 40 knikkers.",
+     "antwoord": "1",
+     "sleutels": [],
+     "reden": "Z-#667: 75% van 400, stukje 100 (4 stukjes; antwoord niet procent : 10, review batch 5)"
     },
     "duplicaatVan": null,
     "somtypeNr": 1,
@@ -2964,7 +2996,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "1",
+    "verwacht": "3",
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2990,8 +3022,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "10",
-       "40",
+       "75",
+       "100",
        "400"
       ]
      },
@@ -3019,18 +3051,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een pot heeft 200 knikkers. Kleur 60% ervan. Elk stukje is 20 knikkers.",
+   "opgave": "Een pot heeft 200 knikkers. Kleur 60% ervan. Elk stukje is 40 knikkers.",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "6",
+   "antwoord": "3",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?",
    "sterkereHint": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "20",
+     "fout": "40",
      "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
      "uitlegSterker": "Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.",
      "laag2": "tekstSterker",
@@ -3059,7 +3091,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "20 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 60 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 200 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
+   "foutHintsTekst": "40 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 60 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt. · 200 → Dat getal staat al in de vraag. Je zoekt hoeveel stukjes je kleurt.",
    "ouderzin": "Je kind kleurt een deel van een balk: hoeveel stukjes horen bij het procent?",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -3069,7 +3101,7 @@
     "asciiSchets": false,
     "jsRender": {
      "soort": "balk",
-     "delen": 10,
+     "delen": 5,
      "kleurbaar": true
     },
     "svgBestanden": []
@@ -3084,7 +3116,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "60% van 200",
-    "claudeUitleg": "10% van 200 is 20. 60% is 6 keer 20 = 120.",
+    "claudeUitleg": "60% van 200 is 120. Elk stukje is 40, dus 120 : 40 = 3 stukjes.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -3114,7 +3146,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-z667: Z-#667: 60% van 200, stukje 40 (5 stukjes; antwoord niet procent : 10, review batch 5)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -3126,6 +3160,12 @@
     "somtype": "[balk kleuren] Een pot heeft # [ding]. Kleur #% ervan. Elk stukje is # [ding].",
     "v667": {
      "reden": "V-#667: balk van 10 stukjes in jsRender"
+    },
+    "z667": {
+     "opgave": "Een pot heeft 200 knikkers. Kleur 60% ervan. Elk stukje is 20 knikkers.",
+     "antwoord": "6",
+     "sleutels": [],
+     "reden": "Z-#667: 60% van 200, stukje 40 (5 stukjes; antwoord niet procent : 10, review batch 5)"
     },
     "duplicaatVan": null,
     "somtypeNr": 1,
@@ -3139,7 +3179,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "6",
+    "verwacht": "3",
     "methode": "procent kleuren (stukjes)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -3165,7 +3205,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "20",
+       "40",
        "60",
        "200"
       ]
@@ -4898,7 +4938,7 @@
    "algemeneFoutHint": "Tel de stukjes van de balk, en reken uit hoeveel procent één stukje is."
   }
  ],
- "hintsSyncOp": "2026-10-08T14:17:53+02:00",
+ "hintsSyncOp": "2026-10-08T14:22:16+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -4919,9 +4959,13 @@
   {
    "batch": "batch5.json",
    "md5": "a26e34579e2a"
+  },
+  {
+   "batch": "batch6.json",
+   "md5": "a2dfce01dcad"
   }
  ],
- "geschrevenOp": "2026-10-08T14:17:53+02:00",
+ "geschrevenOp": "2026-10-08T14:22:16+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

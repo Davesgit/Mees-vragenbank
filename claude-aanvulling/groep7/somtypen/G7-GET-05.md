@@ -14,7 +14,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Items: **190** · Claude-doelen: B5 (190) · regel: G7-B06-vergelijken-gelijknamig
 - Getallenruimte: breuken (noemer tot 10), breuken (noemer tot 11), breuken (noemer tot 12), breuken (noemer tot 14), breuken (noemer tot 15), breuken (noemer tot 16), breuken (noemer tot 18), breuken (noemer tot 20), breuken (noemer tot 21), breuken (noemer tot 22), breuken (noemer tot 24), breuken (noemer tot 8) · type: kale
 - Uit de G6-park: 190 items
-- Denkfouten (Claude): grotere-noemer-is-groter (296), alleen-noemer-vergeleken (84)
+- Denkfouten (Claude): grotere-noemer-is-groter (190), alleen-noemer-vergeleken (190)
 - Verschillende Claude-fout-hints: 1 (meest: “Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter?”)
 - Voorbeelden:
   - `G7-GET-05-claude-bank-406` (Claude B5, bank, niveau 1 → basis)
@@ -22,8 +22,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 1/3  (controle: ok)
     - **Fout-hints (Claude):** 1/11 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter? · 3/10 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter?
   - `G7-GET-05-claude-bank-444` (Claude B5, bank, niveau 3 → toepassen)
-    - **Opgave:** Welke breuk is het grootst? Kies uit 3/4, 7/20 of 9/14.
-    - **Antwoord:** 3/4  (controle: ok)
+    - **Opgave:** Welke breuk is het grootst? Kies uit 5/11, 1/5 of 11/13.
+    - **Antwoord:** 11/13  (controle: ok)
     - **Fout-hints (Claude):** 7/20 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter? · 9/14 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter?
 
 - **Hint 1 (te schrijven):** Hoe groot is elke breuk ongeveer: minder dan een half, ongeveer een half, of bijna één heel?
@@ -41,12 +41,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Items: **128** · Claude-doelen: B5 (128) · regel: G7-B06-vergelijken-gelijknamig
 - Getallenruimte: breuken (noemer tot 11), breuken (noemer tot 12), breuken (noemer tot 14), breuken (noemer tot 15), breuken (noemer tot 16), breuken (noemer tot 18), breuken (noemer tot 20), breuken (noemer tot 21), breuken (noemer tot 22), breuken (noemer tot 24), breuken (noemer tot 9) · type: kale
 - Uit de G6-park: 128 items
-- Denkfouten (Claude): grotere-noemer-is-groter (200), alleen-noemer-vergeleken (56)
+- Denkfouten (Claude): alleen-noemer-vergeleken (128), grotere-noemer-is-groter (128)
 - Verschillende Claude-fout-hints: 1 (meest: “Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter?”)
 - Voorbeelden:
   - `G7-GET-05-claude-bank-513` (Claude B5, bank, niveau 1 → basis)
-    - **Opgave:** Welke breuk is het kleinst? Kies uit 3/11, 2/7 of 3/4.
-    - **Antwoord:** 3/11  (controle: ok)
+    - **Opgave:** Welke breuk is het kleinst? Kies uit 3/5, 1/3 of 5/7.
+    - **Antwoord:** 1/3  (controle: ok)
     - **Fout-hints (Claude):** 3/4 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter? · 2/7 → Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter?
   - `G7-GET-05-claude-bank-549` (Claude B5, bank, niveau 3 → toepassen)
     - **Opgave:** Welke breuk is het kleinst? Kies uit 7/11, 7/14 of 7/16.

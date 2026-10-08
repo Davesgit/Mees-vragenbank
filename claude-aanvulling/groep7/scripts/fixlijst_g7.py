@@ -348,6 +348,8 @@ def _v04k(it, slog):
 # kleinste noemer is het kleinst); een derde gelijke tellers, twee derde noemer-truc fout. Zelfde noemerbereik als het oude item; echte breuken, geen gelijke waarden of noemers, verschil ≥ 1/24.
 _Z630 = _json.load(open(_os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'bevroren', 'z630_ids.json')))['items']
 _Z630_GEZIEN = set()
+# Z-#651 (review batch 5): nog 89 items (bevroren/z651_ids.json) als tegenvoorbeeld, zodat de noemer-truc in ongeveer de helft werkt
+_Z630.update(_json.load(open(_os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'bevroren', 'z651_ids.json')))['items'])
 def _z630_maak(cid, grootst, soort, nmax):
     rnd = _random.Random(int(_hashlib.md5(cid.encode()).hexdigest()[:8], 16))
     for _ in range(5000):
@@ -610,3 +612,35 @@ def _v451(it, slog):
 _pas_toe_rv5 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_rv5(it, slog); _v451(it, slog)
+
+# ---------- Z-#667 (review batch 5): vuistregels in eenzijdige data ----------
+# VBN-04 #3 'Tot welk getal moet de as minstens lopen?': opties waren altijd antwoord − 10 / antwoord / antwoord + 10 (de middelste is goed).
+#   Nu bij 2 items antwoord / + 10 / + 20 (goed = de kleinste) en bij 2 items − 20 / − 10 / antwoord (goed = de grootste); 4 blijven zo.
+#   '± 20' heeft nog geen eigen regel in de entry (valt op 'andere fout'; voorstel aan Oefeningen: 'twee tientallen te hoog/te laag').
+Z667_AS = {'1d984894': (10, 20), 'c52c0729': (10, 20), '2191ae42': (-20, -10), '82ed1ecf': (-20, -10)}
+# VERH-01 #1 'Een pot heeft N [ding]. Kleur p% ervan. Elk stukje is M [ding].': altijd tien stukjes (antwoord = procent : 10). Nu bij 5 van de
+#   12 items een ander stukje: 5% (twintig stukjes), 20% (vijf) of 25% (vier); jsRender 'delen' = N : M.
+Z667_POT = {'720d77a4': (70, 10), '8a1b2ca5': (40, 60), 'a8e37577': (20, 25), 'f3561f23': (60, 40), 'ea724bfc': (75, 100)}
+def _z667(it, slog):
+    cid = it['bron'].get('claudeId') or ''; c8 = cid[:8]; o = it['opgave']
+    if c8 in Z667_AS:
+        a = int(it['antwoord']); d1, d2 = Z667_AS[c8]
+        t = {d: ('Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?' if d > 0 else
+                 'Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?') for d in (d1, d2)}
+        denk = [(str(a + d), 'grafiek-verkeerd-afgelezen', t[d]) for d in (d1, d2)]
+        mx = max(it['visual']['jsRender']['rijen'][0]['waarden']); assert all(a + d > 0 and (d > 0 or a + d < mx) for d in (d1, d2))
+        opties = sorted([str(a)] + [x[0] for x in denk], key=int)
+        _opties(it, slog, 'z667', f"Z-#667: opties {'antwoord, +10, +20' if d1 > 0 else '−20, −10, antwoord'} (niet altijd de middelste, review batch 5)", o, opties, str(a), denk)
+    m = re.fullmatch(r'Een pot heeft (\d+) (\w+)\. Kleur (\d+)% ervan\. Elk stukje is (\d+) \w+\.', o)
+    if m and c8 in Z667_POT:
+        n, ding = int(m.group(1)), m.group(2); p, st = Z667_POT[c8]; v = n * p // 100; a = v // st
+        assert n * p % 100 == 0 and v % st == 0 and n % st == 0 and a != p // 10
+        _zet(it, slog, 'z667', f'Z-#667: {p}% van {n}, stukje {st} ({n // st} stukjes; antwoord niet procent : 10, review batch 5)',
+             f'Een pot heeft {n} {ding}. Kleur {p}% ervan. Elk stukje is {st} {ding}.', str(a), [], f'{p}% van {n}',
+             f'{p}% van {n} is {v}. Elk stukje is {st}, dus {v} : {st} = {a} stukjes.')
+    if m and it.get('ui') == 'balk kleuren':      # V-#667 met Z-#667: het aantal stukjes is N : M (ook bij de items die blijven: tien)
+        m2 = re.fullmatch(r'Een pot heeft (\d+) \w+\. Kleur \d+% ervan\. Elk stukje is (\d+) \w+\.', it['opgave'])
+        it['visual']['jsRender'] = {'soort': 'balk', 'delen': int(m2.group(1)) // int(m2.group(2)), 'kleurbaar': True}
+_pas_toe_v451 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_v451(it, slog); _z667(it, slog)

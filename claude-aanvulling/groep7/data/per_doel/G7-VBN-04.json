@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T14:17:46+0200",
+ "gegenereerdOp": "2026-10-08T14:22:08+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-VBN-04",
  "bordtitel": "Staaf- en cirkeldiagram",
@@ -2975,21 +2975,21 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "90"
-    },
-    {
-     "letter": "B",
      "tekst": "80"
     },
     {
+     "letter": "B",
+     "tekst": "90"
+    },
+    {
      "letter": "C",
-     "tekst": "70"
+     "tekst": "100"
     }
    ],
-   "optiesTekst": "A) 90 · B) 80 · C) 70",
+   "optiesTekst": "A) 80 · B) 90 · C) 100",
    "antwoord": "80",
    "antwoordDetail": {
-    "juisteOptie": "B",
+    "juisteOptie": "A",
     "juisteOptieTekst": "80"
    },
    "hint": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
@@ -3007,16 +3007,16 @@
     },
     {
      "stap": null,
-     "fout": "70",
-     "uitleg": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "fout": "100",
+     "uitleg": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
      "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
      "laag2": "tekstSterker",
-     "regel": "fout = antwoord - 10",
-     "soort": "een tiental te laag",
+     "regel": "andere fout",
+     "soort": "andere fout",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "90 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen. · 70 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+   "foutHintsTekst": "90 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen. · 100 → Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
    "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
@@ -3070,11 +3070,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "70",
+      "fout": "90",
       "denkfout": "grafiek-verkeerd-afgelezen"
      },
      {
-      "fout": "90",
+      "fout": "100",
       "denkfout": "grafiek-verkeerd-afgelezen"
      }
     ],
@@ -3082,12 +3082,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "70",
-      "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
+      "fout": "90",
+      "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
      },
      {
       "stap": null,
-      "fout": "90",
+      "fout": "100",
       "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
      }
     ]
@@ -3111,7 +3111,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-z667: Z-#667: opties antwoord, +10, +20 (niet altijd de middelste, review batch 5)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -3121,6 +3123,15 @@
     "regel": "G7-D01-staafdiagram",
     "reden": "staafdiagram maken bij een tabel (G7-VBN-04)",
     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+    "z667": {
+     "opgave": "Je tekent een staafdiagram van deze tabel over het aantal gelezen boeken per groep. De as loopt in stappen van 10. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+     "antwoord": "80",
+     "sleutels": [
+      "70",
+      "90"
+     ],
+     "reden": "Z-#667: opties antwoord, +10, +20 (niet altijd de middelste, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
@@ -3205,21 +3216,21 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "50"
+     "tekst": "20"
     },
     {
      "letter": "B",
-     "tekst": "40"
+     "tekst": "30"
     },
     {
      "letter": "C",
-     "tekst": "30"
+     "tekst": "40"
     }
    ],
-   "optiesTekst": "A) 50 · B) 40 · C) 30",
+   "optiesTekst": "A) 20 · B) 30 · C) 40",
    "antwoord": "40",
    "antwoordDetail": {
-    "juisteOptie": "B",
+    "juisteOptie": "C",
     "juisteOptieTekst": "40"
    },
    "hint": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
@@ -3227,12 +3238,12 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "50",
-     "uitleg": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+     "fout": "20",
+     "uitleg": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
      "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
      "laag2": "tekstSterker",
-     "regel": "fout = antwoord + 10",
-     "soort": "een tiental te hoog",
+     "regel": "andere fout",
+     "soort": "andere fout",
      "bron": "nieuw"
     },
     {
@@ -3246,7 +3257,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "50 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen. · 30 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+   "foutHintsTekst": "20 → Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt. · 30 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
    "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
@@ -3300,11 +3311,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "30",
+      "fout": "20",
       "denkfout": "grafiek-verkeerd-afgelezen"
      },
      {
-      "fout": "50",
+      "fout": "30",
       "denkfout": "grafiek-verkeerd-afgelezen"
      }
     ],
@@ -3312,13 +3323,13 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "30",
+      "fout": "20",
       "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
      },
      {
       "stap": null,
-      "fout": "50",
-      "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
+      "fout": "30",
+      "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
      }
     ]
    },
@@ -3341,7 +3352,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-z667: Z-#667: opties −20, −10, antwoord (niet altijd de middelste, review batch 5)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -3351,6 +3364,15 @@
     "regel": "G7-D01-staafdiagram",
     "reden": "staafdiagram maken bij een tabel (G7-VBN-04)",
     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+    "z667": {
+     "opgave": "Je tekent een staafdiagram van deze tabel over de regen per week in millimeters. De as loopt in stappen van 10. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+     "antwoord": "40",
+     "sleutels": [
+      "30",
+      "50"
+     ],
+     "reden": "Z-#667: opties −20, −10, antwoord (niet altijd de middelste, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
@@ -3665,7 +3687,7 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "70"
+     "tekst": "50"
     },
     {
      "letter": "B",
@@ -3673,18 +3695,28 @@
     },
     {
      "letter": "C",
-     "tekst": "80"
+     "tekst": "70"
     }
    ],
-   "optiesTekst": "A) 70 · B) 60 · C) 80",
+   "optiesTekst": "A) 50 · B) 60 · C) 70",
    "antwoord": "70",
    "antwoordDetail": {
-    "juisteOptie": "A",
+    "juisteOptie": "C",
     "juisteOptieTekst": "70"
    },
    "hint": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
    "sterkereHint": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
    "foutHints": [
+    {
+     "stap": null,
+     "fout": "50",
+     "uitleg": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
+     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
+     "laag2": "tekstSterker",
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw"
+    },
     {
      "stap": null,
      "fout": "60",
@@ -3694,19 +3726,9 @@
      "regel": "fout = antwoord - 10",
      "soort": "een tiental te laag",
      "bron": "nieuw"
-    },
-    {
-     "stap": null,
-     "fout": "80",
-     "uitleg": "Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
-     "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
-     "laag2": "tekstSterker",
-     "regel": "fout = antwoord + 10",
-     "soort": "een tiental te hoog",
-     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "60 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental. · 80 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen.",
+   "foutHintsTekst": "50 → Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt. · 60 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
    "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
@@ -3760,11 +3782,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "60",
+      "fout": "50",
       "denkfout": "grafiek-verkeerd-afgelezen"
      },
      {
-      "fout": "80",
+      "fout": "60",
       "denkfout": "grafiek-verkeerd-afgelezen"
      }
     ],
@@ -3772,13 +3794,13 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "60",
+      "fout": "50",
       "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
      },
      {
       "stap": null,
-      "fout": "80",
-      "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
+      "fout": "60",
+      "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
      }
     ]
    },
@@ -3801,7 +3823,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-z667: Z-#667: opties −20, −10, antwoord (niet altijd de middelste, review batch 5)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -3811,6 +3835,15 @@
     "regel": "G7-D01-staafdiagram",
     "reden": "staafdiagram maken bij een tabel (G7-VBN-04)",
     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+    "z667": {
+     "opgave": "Je tekent een staafdiagram van deze tabel over de regen per week in millimeters. De as loopt in stappen van 10. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+     "antwoord": "70",
+     "sleutels": [
+      "60",
+      "80"
+     ],
+     "reden": "Z-#667: opties −20, −10, antwoord (niet altijd de middelste, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
@@ -4127,21 +4160,21 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "80"
-    },
-    {
-     "letter": "B",
      "tekst": "70"
     },
     {
+     "letter": "B",
+     "tekst": "80"
+    },
+    {
      "letter": "C",
-     "tekst": "60"
+     "tekst": "90"
     }
    ],
-   "optiesTekst": "A) 80 · B) 70 · C) 60",
+   "optiesTekst": "A) 70 · B) 80 · C) 90",
    "antwoord": "70",
    "antwoordDetail": {
-    "juisteOptie": "B",
+    "juisteOptie": "A",
     "juisteOptieTekst": "70"
    },
    "hint": "De as moet minstens zo hoog lopen als de hoogste staaf. Welk getal in de tabel is het grootst?",
@@ -4159,16 +4192,16 @@
     },
     {
      "stap": null,
-     "fout": "60",
-     "uitleg": "Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+     "fout": "90",
+     "uitleg": "Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
      "uitlegSterker": "Zoek het grootste getal in de tabel. Tel in tientallen tot je erbij of erboven bent. Dat tiental is het antwoord.",
      "laag2": "tekstSterker",
-     "regel": "fout = antwoord - 10",
-     "soort": "een tiental te laag",
+     "regel": "andere fout",
+     "soort": "andere fout",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "80 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen. · 60 → Dan past de hoogste staaf er niet op. Het grootste getal in de tabel is hoger dan dat tiental.",
+   "foutHintsTekst": "80 → Dan past alles wel, maar het kan een tiental lager. De vraag is tot welk tiental de as minstens moet lopen. · 90 → Zoek het grootste getal in de tabel en het tiental dat er net boven of op ligt.",
    "ouderzin": "Je kind bedenkt hoe ver de as van een staafdiagram moet lopen, zodat elke staaf past.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
@@ -4224,11 +4257,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "60",
+      "fout": "80",
       "denkfout": "grafiek-verkeerd-afgelezen"
      },
      {
-      "fout": "80",
+      "fout": "90",
       "denkfout": "grafiek-verkeerd-afgelezen"
      }
     ],
@@ -4236,12 +4269,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "60",
-      "uitleg": "Kijk naar het grootste getal in de tabel: past die staaf nog op deze as?"
+      "fout": "80",
+      "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
      },
      {
       "stap": null,
-      "fout": "80",
+      "fout": "90",
       "uitleg": "Deze as is langer dan nodig. Welk tiental zit het dichtst boven het grootste getal?"
      }
     ]
@@ -4265,7 +4298,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-z667: Z-#667: opties antwoord, +10, +20 (niet altijd de middelste, review batch 5)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -4275,6 +4310,15 @@
     "regel": "G7-D01-staafdiagram",
     "reden": "staafdiagram maken bij een tabel (G7-VBN-04)",
     "somtype": "[tabel] Je maakt een staafdiagram van deze tabel. De as loopt in stappen van #. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+    "z667": {
+     "opgave": "Je tekent een staafdiagram van deze tabel over het aantal verkochte ijsjes. De as loopt in stappen van 10. Tot welk tiental moet de as minstens lopen, zodat elke staaf past?",
+     "antwoord": "70",
+     "sleutels": [
+      "60",
+      "80"
+     ],
+     "reden": "Z-#667: opties antwoord, +10, +20 (niet altijd de middelste, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
@@ -8134,7 +8178,7 @@
    "algemeneFoutHint": "Zoek in de tabel het grootste getal."
   }
  ],
- "hintsSyncOp": "2026-10-08T14:17:53+02:00",
+ "hintsSyncOp": "2026-10-08T14:22:16+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -8155,9 +8199,13 @@
   {
    "batch": "batch5.json",
    "md5": "a26e34579e2a"
+  },
+  {
+   "batch": "batch6.json",
+   "md5": "a2dfce01dcad"
   }
  ],
- "geschrevenOp": "2026-10-08T14:17:53+02:00",
+ "geschrevenOp": "2026-10-08T14:22:16+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

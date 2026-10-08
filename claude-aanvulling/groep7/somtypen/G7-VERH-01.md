@@ -24,12 +24,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** —
     - **Uitleg (Claude):** 10% van 400 is 40. 20% is 2 keer 40 = 80.
   - `G7-VERH-01-claude-bank-008` (Claude V3, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een pot heeft 200 knikkers. Kleur 50% ervan. Elk stukje is 20 knikkers.
-    - **Tekening:** `{"soort": "balk", "delen": 10, "kleurbaar": true}`
+    - **Opgave:** Een pot heeft 200 knikkers. Kleur 70% ervan. Elk stukje is 10 knikkers.
+    - **Tekening:** `{"soort": "balk", "delen": 20, "kleurbaar": true}`
     - **UI:** balk kleuren
-    - **Antwoord:** 5  (controle: ok)
+    - **Antwoord:** 14  (controle: ok)
     - **Fout-hints (Claude):** —
-    - **Uitleg (Claude):** 10% van 200 is 20. 50% is 5 keer 20 = 100.
+    - **Uitleg (Claude):** 70% van 200 is 140. Elk stukje is 10, dus 140 : 10 = 14 stukjes.
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Hoeveel is dat procent van alles in de pot?
 - **Hint 2 (te schrijven):** Reken eerst uit hoeveel het procent van het hele aantal is. Kijk dan hoe vaak één stukje daarin past. Zoveel stukjes kleur je.

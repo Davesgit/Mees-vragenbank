@@ -27,8 +27,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 35%  (controle: ok)
     - **Fout-hints (Claude):** 350% → Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Een breuk met honderd als noemer kun je zo als procent schrijven.
+- **Hint 2 (te schrijven):** Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.
+- **Ouderzin:** Je kind schrijft een breuk als procent.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer ernaast` (Claudes sleutel: nul-fout-tientallen) → Dat is tien keer te groot of te klein. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.  [Claude, taalfix]
+  - `noemer door teller` (Claudes sleutel: omgekeerd-gedeeld) → Heb je de noemer door de teller gedeeld? De teller is het deel: die hoort bij het procent dat je zoekt.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: Schrijf # in procenten.
 
@@ -49,8 +55,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 50%  (controle: ok)
     - **Fout-hints (Claude):** 500% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links. · 5% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten.
+- **Hint 2 (te schrijven):** Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.
+- **Ouderzin:** Je kind schrijft een kommagetal als procent.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma goed? Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?  [Claude, taalfix]
+  - `kommagetal met procentteken` (0,7%) → Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?  [nieuw]
+  - `kommagetal met procentteken (ook)` (0,9%) → Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?  [nieuw]
+  - `kommagetal met procentteken (nog een)` (0,3%) → Dat is het kommagetal met een procentteken erachter. Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?  [nieuw]
+  - `andere fout` (andere fout) → Procent zijn honderdsten: hoeveel honderdsten is het kommagetal?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: #% van de [ding] is kapot. Schrijf dat als kommagetal.
 
@@ -71,8 +85,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5 → Procent is per honderd: de komma schuift twee plekken naar links, niet één. · 50 → 50% is 50 van de 100. Als kommagetal deel je door 100.
     - **Uitleg (Claude):** Procent is per honderd: 50 : 100 = 0,50.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Zoveel honderdsten kun je als kommagetal schrijven.
+- **Hint 2 (te schrijven):** Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg.
+- **Ouderzin:** Je kind schrijft een procent als kommagetal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien keer te groot` (fout = antwoord × 10) → Dat is tien keer te groot. Procent zijn honderdsten: deel het getal van het procent door honderd.  [nieuw]
+  - `procent zonder komma` (fout = een getal uit de vraag) → Dat is het getal van het procent. Als kommagetal is het honderd keer zo klein.  [nieuw]
+  - `andere fout` (andere fout) → Deel het getal van het procent door honderd.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')
 
@@ -119,8 +139,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 24% → Je hebt gerekend met de lootjes zonder prijs. Lees nog eens wat er gevraagd wordt. · 6% → Het aantal prijslootjes is niet meteen het percentage. Kijk naar het deel van het totaal.
     - **Uitleg (Claude):** 6 van de 30 lootjes geeft een prijs. 30 : 6 = 5, dus dat is een vijfde deel. Een vijfde van 100 is 20, dus 20%.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Het hele aantal is honderd procent.
+- **Hint 2 (te schrijven):** Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.
+- **Ouderzin:** Je kind rekent uit hoeveel procent een deel van het geheel is.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getallen achter elkaar` (14%) → Heb je de getallen achter elkaar gezet? Samen zeggen ze welk deel van het hele aantal het is. Hoeveel is dat van de honderd?  [nieuw]
+  - `het deel zelf` (5%) → Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?  [nieuw]
+  - `het hele aantal` (10%) → Dat is het hele aantal. Het hele aantal is honderd procent. Hoeveel procent is het deel?  [nieuw]
+  - `het andere deel` (24%) → Dat is het aantal van het andere deel. Hoeveel procent is het deel waar de vraag over gaat?  [nieuw]
+  - `het deel zelf (ook)` (6%) → Dat is het aantal van het deel. Procent is zoveel van de honderd: hoeveel procent is dat deel?  [nieuw]
+  - `andere fout` (andere fout) → Het hele aantal is honderd procent. Hoeveel procent is het deel?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 6: Deel van een totaal: in welke zak is het deel het grootst? (delen vergelijken)
 
@@ -137,8 +166,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** Even groot → Reken voor allebei uit welk deel van de knikkers rood is en vergelijk die delen. · Zak B → Kijk niet alleen naar het aantal rode knikkers, maar ook naar het totaal in de zak.
     - **Uitleg (Claude):** In zak A is 2 van de 4 rood, dat is de helft. In zak B is 3 van de 9 rood, dat is een derde. De helft is meer dan een derde, dus zak A.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een deel vergelijk je met het hele aantal: hoeveel is het van het geheel?
+- **Hint 2 (te schrijven):** Schrijf elk deel als breuk: het deel boven de streep, het hele aantal eronder. Welke breuk is groter? Je kunt elke breuk vergelijken met een half.
+- **Ouderzin:** Je kind vergelijkt twee delen die bij een verschillend totaal horen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `alleen het deel` (Zak B) → Heb je alleen naar het deel gekeken? Vergelijk het deel met het hele aantal in elke zak.  [nieuw]
+  - `even groot` (Even groot) → Reken het na: schrijf elk deel als breuk. Zijn de breuken even groot?  [nieuw]
+  - `andere fout` (andere fout) → Vergelijk het deel met het hele aantal in elke zak.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 7: [rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')
 
