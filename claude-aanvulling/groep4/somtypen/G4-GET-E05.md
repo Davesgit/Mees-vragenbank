@@ -12,13 +12,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 
 - Sleutel: nrOrigineel **2** · somtypeOrigineel “Hoeveel is # + # [ding]? Rond beide getallen af op tientallen en reken dan uit.” (koppeling: claudeId)
 - Items: **12** · Claude-doelen: T3 (12) · regel: D8-SCHAT-NAAR-G4
-- Getallenruimte: 0–1.000 · type: kale
+- Getallenruimte: 0–100 · type: kale
+- Merge-fixlijst: #V-#722 getallenruimte 0–100 (12), #Z-#721 12 + 55 (≈ 70) → 12 + 53 (≈ 60) (1), #Z-#721 14 + 78 (≈ 90) → 14 + 72 (≈ 80) (1), #Z-#721 16 + 31 (≈ 50) → 16 + 37 (≈ 60) (1)
 - Denkfouten (Claude): —
 - Verschillende Claude-fout-hints: 4 (meest: “Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.”)
 - Voorbeelden:
   - `G4-GET-E05-claude-bank-naar-001` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Hoeveel is 16 + 31 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
-    - **Antwoord:** 50  (controle: n.v.t.)
+    - **Opgave:** Hoeveel is 16 + 37 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
+    - **Antwoord:** 60  (controle: n.v.t.)
     - **Fout-hints (Claude):** 51 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 60 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
   - `G4-GET-E05-claude-bank-naar-007` (Claude T3, bank, niveau 1 → basis)
     - **Opgave:** Hoeveel is 18 + 58 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
@@ -41,17 +42,18 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 
 - Sleutel: nrOrigineel **3** · somtypeOrigineel “Hoeveel is # − # [ding]? Rond beide getallen af op tientallen en reken dan uit.” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: T3 (8) · regel: D8-SCHAT-NAAR-G4
-- Getallenruimte: 0–1.000 · type: kale
+- Getallenruimte: 0–100 · type: kale
+- Merge-fixlijst: #V-#722 getallenruimte 0–100 (8), #Z-#721 51 − 12 (≈ 40) → 51 − 17 (≈ 30) (1), #Z-#721 54 − 32 (≈ 20) → 56 − 32 (≈ 30) (1), #Z-#721 82 − 14 (≈ 70) → 82 − 16 (≈ 60) (1), #Z-#722 44 − 20 (≈ 20) → 46 − 20 (≈ 30) (1)
 - Denkfouten (Claude): —
 - Verschillende Claude-fout-hints: 4 (meest: “Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.”)
 - Voorbeelden:
   - `G4-GET-E05-claude-bank-naar-013` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Hoeveel is 44 − 20 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
-    - **Antwoord:** 20  (controle: n.v.t.)
+    - **Opgave:** Hoeveel is 46 − 20 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
+    - **Antwoord:** 30  (controle: n.v.t.)
     - **Fout-hints (Claude):** 10 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven. · 40 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
   - `G4-GET-E05-claude-bank-naar-017` (Claude T3, bank, niveau 1 → basis)
-    - **Opgave:** Hoeveel is 54 − 32 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
-    - **Antwoord:** 20  (controle: n.v.t.)
+    - **Opgave:** Hoeveel is 56 − 32 ongeveer? Rond beide getallen af op tientallen en reken dan uit.
+    - **Antwoord:** 30  (controle: n.v.t.)
     - **Fout-hints (Claude):** 22 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 40 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
 
 - **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen. Je maakt eerst van elk getal een rond getal: een getal dat eindigt op een nul.
@@ -70,8 +72,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 
 - Sleutel: nrOrigineel **4** · somtypeOrigineel “Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: T3 (8) · regel: D8-KLOPPEN-NAAR-G4
-- Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): orde-van-grootte (7), bovengrens (4), laatste-cijfer (3), ondergrens (2)
+- Getallenruimte: 0–100 · type: meerkeuze
+- Merge-fixlijst: #V-#722 getallenruimte 0–100 (8)
+- Denkfouten (Claude): ondergrens (6), bovengrens (4), orde-van-grootte (3), laatste-cijfer (3)
 - Verschillende Claude-fout-hints: 16 (meest: “Rond allebei naar boven af. 40 + 40 is 80. De uitkomst kan dus niet groter zijn dan 80, en 84 is groter.”)
 - Voorbeelden:
   - `G4-GET-E05-claude-bank-naar-021` (Claude T3, bank, niveau 1 → basis)
@@ -81,9 +84,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 84 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 4 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
   - `G4-GET-E05-claude-bank-naar-025` (Claude T3, bank, niveau 1 → basis)
     - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 41 + 32 kan kloppen?
-    - **Opties:** A) 73 · B) 730 · C) 71
+    - **Opties:** A) 73 · B) 63 · C) 71
     - **Antwoord:** 73  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 83 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
+    - **Fout-hints (Claude):** 63 → Rond eerst af. 40 + 30 is 70. Ligt 730 daar dichtbij? · 71 → Kijk naar het laatste cijfer. De uitkomst van 41 + 32 eindigt op 3. Eindigt 71 daarop?
 
 - **Hint 1 (te schrijven):** Je hoeft niet precies te rekenen. Kijk eerst naar het laatste cijfer. Tel alleen de eenheden op. Op welk cijfer eindigt dat? Daar eindigt het antwoord ook op.
 - **Hint 2 (te schrijven):** Blijven er twee over? Neem van allebei de getallen alleen de tientallen en tel op. Het antwoord is groter dan dat. Maak van allebei de getallen het tiental erboven en tel op. Is een getal al rond? Dan blijft het zo. Groter kan het antwoord niet zijn.
@@ -101,8 +104,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 
 - Sleutel: nrOrigineel **5** · somtypeOrigineel “Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: T3 (8) · regel: D8-KLOPPEN-NAAR-G4
-- Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): bovengrens (6), laatste-cijfer (6), orde-van-grootte (4)
+- Getallenruimte: 0–100 · type: meerkeuze
+- Merge-fixlijst: #V-#722 getallenruimte 0–100 (8)
+- Denkfouten (Claude): bovengrens (8), laatste-cijfer (6), ondergrens (2)
 - Verschillende Claude-fout-hints: 16 (meest: “Rond 88 naar boven af en 33 naar beneden. 90 − 30 is 60. De uitkomst kan dus niet groter zijn dan 60, en 65 is groter.”)
 - Voorbeelden:
   - `G4-GET-E05-claude-bank-naar-029` (Claude T3, bank, niveau 1 → basis)
@@ -123,6 +127,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `plus in plaats van min` (fout = getal1 + getal2) → Heb je plus gedaan? Er staat een min: er gaat iets af. Het antwoord is dus kleiner dan het eerste getal.  [nieuw]
   - `veel te groot` (fout = antwoord × 10) → Dat is veel te groot. Schat eerst: maak van allebei de getallen een rond getal en reken daarmee. Het antwoord ligt daar dichtbij.  [nieuw]
   - `te groot` (Claudes sleutel: bovengrens) → Dat is te groot. Maak van het eerste getal het tiental erboven. Is het al rond? Dan blijft het zo. Neem van het tweede getal alleen de tientallen, en haal dat ervan af. Groter dan dat kan het antwoord niet zijn.  [Claude, taalfix]
+  - `te klein` (Claudes sleutel: ondergrens) → Dat is te klein. Neem van het eerste getal alleen de tientallen. Maak van het tweede getal het tiental erboven. Is het al rond? Dan blijft het zo. Haal dat ervan af. Kleiner dan dat kan het antwoord niet zijn.  [Claude, taalfix]
   - `laatste cijfer` (Claudes sleutel: laatste-cijfer) → Kijk naar het laatste cijfer. Haal de eenheden van elkaar af. Is het laatste cijfer van het eerste getal kleiner? Doe er dan eerst tien bij. Wat je krijgt, is het laatste cijfer van het antwoord.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk naar het laatste cijfer. Haal de eenheden van elkaar af. Is het laatste cijfer van het eerste getal kleiner? Doe er dan eerst tien bij. Wat je krijgt, is het laatste cijfer van het antwoord. Kijk dan of het antwoord niet te groot is.  [nieuw]
 - Status: hints klaar
