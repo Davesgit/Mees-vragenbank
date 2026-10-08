@@ -372,7 +372,22 @@ Nummering: volgende vrije Oef-#460 (zie onder: Oef-#460–#463 staan in g4/merge
 
 Na build 14:58:38 (V-#703/#704/#705, Z-#704): koppen VERH-03 #4/#6/#10/#12/#17/#20/#25 nagekeken (kopNagekeken), #12 laag 2 'in het model'; nieuwe regel 'verschil van twee getallen' in VERH-03 #1 (bank-352 «8 : 5 = 16 : ?»: Claudes label is daar 8 − 5, een derde route; de motor maakt het verschil nu bij elk item tot sleutel, 291). b6/check op een verse kopie van live: 770 items · 3112 sleutels · FAIL 0, geen WACHT meer (V-#703/#705 opgelost, VERH-04 #5 zonder 'andere fout'); check_hints 153 klaar · 2 open (VERH-04 #4/#7, Oef-#465) · 0 FAIL; mutanten 88, gemist 0.
 
-Nummering: volgende vrije Oef-#476 (Oef-#467–#475 staan in g8/merge-fixlijst.md, G8 batch 1).
+Na Overzichts fix van Oef-#465 (build 15:10:21), nagekeken door Oefeningen op een verse kopie van live: patch_batch6 0 wijzigingen (de entries VERH-04 #4/#7 stonden er al), check_hints **155 klaar · 0 open · 0 FAIL · 0 WARN**, b6/check 779 items · 3135 sleutels · FAIL 0, mutanten 95 · gemist 0. runmut.sh slaat nu regels zonder sleutel over (REV is daar niet te toetsen): VERH-04 #7 'deel verkeerd geteld' heeft na de koppeling geen sleutel (geen item met label een-ernaast in #7); de regel blijft staan en doet niets.
+
+Nummering (tot 15:20): volgende vrije Oef-#481 (Oef-#467–#480 staan in g8/merge-fixlijst.md, G8 batch 1 en 2).
+
+## Oefeningen: G7 batch 6 ronde 1e (recheck-batch6-didactiek.md, taal: ok, build 15:13:54), 8 okt 15:3x
+
+`hints/patch_batch6.py` ronde 1e: Z-#742 (VERH-03 #15 H2 met een echte stap, les 244), Z-#743 (#14 'erbij in plaats van keer' L1), Z-#740 (VERH-03 #1 'verschil van twee getallen' als vraag met beide routes: in bank-333 en bank-441 is het verschil ook de som van twee getallen uit de vraag), VERH-04 #7 'deel verkeerd geteld' weg (geen sleutel). Eerste run 4 wijzigingen, tweede run 0.
+Checks: z-#741 gedeelde guard `/workspace/g7work/huis_checks.py` (les 217, bredere regex) in b1–b6/check.py; b6/check les 216 breder (elke sleutel die ook c − a + b of de som van twee getallen uit de vraag is, op 'één keer te veel/te weinig', 'verschil van twee getallen' en 'gedeeld': laag 1 = vraag die de optelroute noemt). Mutanten D216a/b, D217a–c erbij. Verse kopie van live (build 15:13:54) + sync/apply: check_hints 155 klaar · 0 open · 0 FAIL · 0 WARN; merge-notatie ALLES OK; b6/check 779 items · 3135 sleutels · FAIL 0; b1–b5/check FAIL 0; runmut 100 mutanten, 0 gemist, 0 ONGEBRUIKT.
+
+| # | Voor | Wat | Status |
+|---|---|---|---|
+| Oef-#481 | Overzicht (data, Z-#744) | VERH-03 #1: (a) toevallige treffers (les 195/241): in 39 items is een som of verschil van twee getallen het antwoord (b+c 10, a+c 8, c−b 7, c−a 7, a+b 7), ook in twee vervangers uit V-#703: bank-318 (9 : 6 = 18 : ? → 12 = 18 − 6) en bank-620 (3 : 4 = 12 : ? → 16 = 4 + 12). Voorstel Didactiek: vervang minstens de 14 verschil-gevallen en 318/620. (b) In somtypen/G7-VERH-03.md staan op 2 plekken nog Claudes oude fout-hints met '1 cm is 100 000 cm echt…'; in gemapt.json 3× '100 000' (geschiedenis, origineel veld, reden). Een kind ziet het niet; opruimen is netjes. (c) Bij een vervanging: b6/check les 216 toetst elke nieuwe som/verschil-treffer op de teksten. | open |
+
+Nieuw gevonden met de gedeelde les-217-guard (buiten G7, ter info): G4 GET-E06 #5 «Je mag niet zomaar optellen.» en #6 «Je moet de kleren niet bij elkaar optellen.» (laag 1 'opgeteld'). Bij combinaties is herhaald optellen een geldige route; tekst nog niet aangepast (volgt na akkoord, G4 hoort niet bij deze ronde).
+
+Nummering: volgende vrije Oef-#482.
 
 
 ## Review batch 6 (Didactiek 8 okt, build 14:41:45; review-batch6-didactiek.md) — door Overzicht, build 14:58:27
@@ -393,3 +408,17 @@ Nummering: volgende vrije Oef-#476 (Oef-#467–#475 staan in g8/merge-fixlijst.m
 | Z-#711 | middelste optie / eenzijdige data | deels: VERH-04 #2 (Oef-#459); VERH-03 #1 'c > a' niet |
 | Z-#712 | VERH-04 #3 'kapot' | ✓ pakken → kopjes, kaartjes → tegels, stickers → borden, knopen → glazen, ballonnen → ruiten (lampjes blijft) |
 | Oef-#457 | MEET-04 bank-016/022/040 vorst in de schuur | ✓ naar buiten (park, bos, tuin), zoals V-#666 |
+
+### Na-ronde G7 (Overzicht, build 15:31:04)
+Batch 6 is taal: ok (Didactiek, build 15:13:54); VERH-04 #4/#7 wacht nog op Didactiek.
+| punt | wat | stand |
+|---|---|---|
+| V-#745 | bank-136 (#7, rad): '1 op de 3' en '3 op de 9' zijn even groot (deel : rest) | **✓ Leerlijn akkoord (8 okt 15:25).** fixlijst_g7 Z564/LAB745: A '3 op de 12' (goed) · B **'9 op de 12'** (andere-deel-genomen → 'het andere deel') · C '3 op de 9' (deel op rest). Waarden 1/4, 3/4, 1/3. |
+| Z-#747 | bank-127 (#4): '1 op de 5' kwam uit het vereenvoudig-ontwerp | **✓ Leerlijn akkoord (8 okt 15:25).** A '5 op de 15' (deel op rest) · B '5 op de 20' (goed) · C **'15 op de 20'** (het andere deel). Elke afleider hoort nu bij één fout ('deel op rest' of 'het andere deel'); geen vereenvoudigde vorm meer in een optie (de vereenvoudigde vorm blijft wel in geldigeAntwoorden). 'deel achter op de' heeft in #4/#7 nu 0 sleutels (Z-#749: Oefeningen beslist). |
+| Z-#744 (a) | VERH-03 #1: in 39 items is het antwoord een getal uit de vraag of de som/het verschil van twee getallen (ook bank-318/620 van V-#703) | **✓** fixlijst_g7 `R6_744` (_z744, na V-#703 en Oef-#466): 39 nieuwe drietallen met dezelfde k, niet in de bank, zonder zo'n treffer; Claudes sleutels met hun route (c × b, b + c − a, c, b, a, b : k, b × k ± b). Bij bank-318 viel de route b : k weg (geen heel getal). Nieuwe check `tools/som_verschil_check.py` (SOMVERSCHIL, WARN) in check_merge_notatie G7: **0**. |
+| Z-#744 (b) | '100 000' in de oude Claude-fout-hints in somtypen/G7-VERH-03.md | **open** (niet zichtbaar voor een kind; opruimen bij de volgende ronde) |
+| V-#746 | claudeStrategie 'deel vereenvoudigen' bij bank-127/136 | **open** (niet in deze opdracht) |
+| sleutels 3.130 / 3.135 | Oefeningen telde 3.135, Overzicht meldde 3.130 | **Uitgezocht:** zelfde telmethode (b6/check.py telt de foutHints van VERH-03/04). 3.130 was gemeten op build 15:10:21, vóór Oef-#466; 3.135 op build 15:13:54, ná Oef-#466. De drie nieuwe items (bank-423/559/590) hebben 7 + 7 + 5 = 19 sleutels tegen 5 + 5 + 4 = 14 ervoor: +5. Geen sync-verschil. Na deze build: **3.166**. |
+
+Checks build 15:31:04: check_hints **155 klaar · 0 open · 0 FAIL · 0 WARN**, merge-notatie ALLES OK (SOMVERSCHIL 0), b6/check 779 items · 3.166 sleutels · FAIL 0. 41 items anders (VERH-03 #1: 39, VERH-04 #4: 1, #7: 1); verder niets verschoven.
+**Oefeningen opnieuw syncen:** VERH-03 #1 (39 items nieuwe getallen) en VERH-04 #4/#7 (bank-127/136 nieuwe afleider 'het andere deel').

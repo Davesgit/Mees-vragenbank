@@ -99,7 +99,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **4** · somtypeOrigineel “Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')” (koppeling: claudeId)
 - Items: **7** · Claude-doelen: G7 (7) · regel: D-KANS-NAAR-DEEL
 - Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): deel-van-geheel-verkeerd (6), andere-deel-genomen (4), getal-overgenomen (1), een-ernaast (1)
+- Denkfouten (Claude): deel-van-geheel-verkeerd (6), andere-deel-genomen (5), een-ernaast (1)
 - Verschillende Claude-fout-hints: 10 (meest: “Kijk goed naar welke kleur er in de vraag wordt gevraagd.”)
 - Voorbeelden:
   - `G7-VERH-04-claude-bank-132` (Claude G7, ai, niveau 1 → basis)
@@ -110,7 +110,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** In het zakje zitten samen 3 + 7 = 10 knikkers. Daarvan zijn er 3 rood. Dat is dus 3 op de 10.
   - `G7-VERH-04-claude-bank-127` (Claude G7, ai, niveau 2 → toepassen)
     - **Opgave:** In een doos liggen 20 kaartjes en op 5 kaartjes staat een ster. Welk deel van de kaartjes heeft een ster?
-    - **Opties:** A) 5 op de 15 · B) 5 op de 20 · C) 1 op de 5
+    - **Opties:** A) 5 op de 15 · B) 5 op de 20 · C) 15 op de 20
     - **Antwoord:** 5 op de 20  (controle: ok)
     - **Fout-hints (Claude):** 5 op de 15 → Vergelijk de sterkaartjes met alle kaartjes, niet met de kaartjes zonder ster. · 1 op de 5 → Het aantal sterren is niet meteen het antwoord. Kijk hoe vaak 5 in 20 past.
     - **Uitleg (Claude):** Er zijn in totaal 20 kaartjes. Op 5 daarvan staat een ster. Dat is dus 5 op de 20.
@@ -187,7 +187,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **7** · somtypeOrigineel “[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')” (koppeling: claudeId)
 - Items: **2** · Claude-doelen: G7 (2) · regel: D-KANS-NAAR-DEEL
 - Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): deel-van-geheel-verkeerd (2), andere-deel-genomen (1), getal-overgenomen (1)
+- Denkfouten (Claude): andere-deel-genomen (2), deel-van-geheel-verkeerd (2)
 - Claude-fout-hints: geen
 - Voorbeelden:
   - `G7-VERH-04-claude-bank-137` (Claude G7, ai, niveau 1 → basis)
@@ -200,7 +200,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G7-VERH-04-claude-bank-136` (Claude G7, ai, niveau 3 → toepassen)
     - **Opgave:** Een rad heeft 12 even grote vakjes en 3 daarvan zijn rood. Welk deel van de vakjes is rood?
     - **Tekening:** `{"soort": "rad", "vakjes": 12, "gemarkeerd": {"aantal": 3, "kleur": "rood", "letter": "R", "patroon": "gestreept"}, "pijl": false}`
-    - **Opties:** A) 3 op de 12 · B) 1 op de 3 · C) 3 op de 9
+    - **Opties:** A) 3 op de 12 · B) 9 op de 12 · C) 3 op de 9
     - **Antwoord:** 3 op de 12  (controle: ok)
     - **Fout-hints (Claude):** 1 op de 3 → Het aantal rode vakjes is niet meteen het antwoord. Kijk hoe vaak 3 in 12 past. · 3 op de 9 → Tel alle vakjes van het rad, ook de rode.
     - **Uitleg (Claude):** Het rad heeft in totaal 12 vakjes. Daarvan zijn er 3 rood. Dat is dus 3 op de 12.
@@ -212,6 +212,5 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `niet met het totaal` (Claudes sleutel: deel-van-geheel-verkeerd) → Achter 'op de' komt het totaal: alle vakjes van het rad samen. Tel ze allemaal.  [Claude, taalfix]
   - `het andere deel` (Claudes sleutel: andere-deel-genomen) → Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel die vakjes.  [Claude, taalfix]
   - `deel achter op de` (Claudes sleutel: getal-overgenomen) → Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.  [Claude, taalfix]
-  - `deel verkeerd geteld` (Claudes sleutel: een-ernaast) → Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.  [Claude, taalfix]
   - `andere fout` (andere fout) → Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.  [nieuw]
 - Status: hints klaar

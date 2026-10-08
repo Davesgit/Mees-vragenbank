@@ -13,7 +13,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “Vul in. # : # = # : ?” (koppeling: claudeId)
 - Items: **331** · Claude-doelen: V2 (331) · regel: G7-V02-verhouding-ab
 - Getallenruimte: 0–1.000 · type: kale
-- Denkfouten (Claude): verhoudingstabel-verkeerd (414), grafiek-verkeerd-afgelezen (116), getal-overgenomen (102), verkeerde-bewerking (30)
+- Denkfouten (Claude): verhoudingstabel-verkeerd (414), grafiek-verkeerd-afgelezen (116), getal-overgenomen (102), verkeerde-bewerking (28)
 - Verschillende Claude-fout-hints: 2 (meest: “Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.”)
 - Voorbeelden:
   - `G7-VERH-03-claude-bank-623` (Claude V2, bank, niveau 3 → toepassen)
@@ -33,7 +33,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `één keer te veel` (fout = antwoord + getal2) → Is dat één keer te veel? Of heb je het verschil erbij opgeteld? Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.  [nieuw]
   - `één keer te weinig` (fout = antwoord - getal2) → Is dat één keer te weinig? Of heb je het verschil erbij opgeteld? Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.  [nieuw]
   - `gedeeld in plaats van keer` (Claudes sleutel: verkeerde-bewerking) → Heb je gedeeld? Rechts van het isteken is het getal vóór de dubbele punt groter. Dan wordt het getal achter de dubbele punt ook groter: doe keer.  [Claude, taalfix]
-  - `verschil van twee getallen` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het verschil tussen twee getallen uit de vraag. Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.  [nieuw]
+  - `verschil van twee getallen` (fout = getal1 - getal2 of getal2 - getal1) → Heb je twee getallen uit de vraag van elkaar afgehaald, of bij elkaar opgeteld? Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.  [nieuw]
   - `verschil opgeteld of keer elkaar` (Claudes sleutel: verhoudingstabel-verkeerd) → Heb je het verschil erbij opgeteld, of twee getallen uit de vraag keer elkaar gedaan? Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot wordt het? Doe het getal achter de dubbele punt precies zoveel keer.  [Claude, taalfix]
   - `andere fout` (andere fout) → Vergelijk de getallen vóór de dubbele punt, en doe het getal erachter evenveel keer.  [nieuw]
 - Status: hints klaar
@@ -377,7 +377,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Lees wat één centimeter op de tekening in het echt is. Gaat het om erbij of om keer? En is het echte voorwerp groter of kleiner dan de tekening?
 - **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `erbij in plaats van keer` (2 cm groter) → Bij een schaal is elke centimeter op de tekening in het echt evenveel keer zo groot. Hoeveel keer zo groot is het echte voorwerp?  [nieuw]
+  - `erbij in plaats van keer` (2 cm groter) → Bij een schaal is alles in het echt hetzelfde aantal keer zo groot als op de tekening. Hoeveel keer zo groot is het echte voorwerp?  [nieuw]
   - `omgekeerd vergeleken` (2 keer zo klein) → Is het echte voorwerp kleiner dan de tekening? Eén centimeter op de tekening is in het echt meer centimeters.  [nieuw]
   - `andere fout` (andere fout) → Lees wat één centimeter op de tekening in het echt is.  [nieuw]
 - Status: hints klaar
@@ -400,7 +400,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Het tweede getal van de schaal zegt hoeveel keer groter het echte voorwerp is. Bij 1 : 50 hoort bij 1 cm op de tekening 50 cm echt. Je vermenigvuldigt dus met 50.
 
 - **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.
-- **Hint 2 (te schrijven):** Welk getal van de schaal hoort bij de tekening, en welk bij het echte voorwerp?
+- **Hint 2 (te schrijven):** Bij een schaal hoort het getal van de tekening bij één centimeter. Zoek het andere getal: zoveel centimeter is het in het echt.
 - **Ouderzin:** Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tien keer te weinig` (5 cm) → Dat is tien keer te weinig. Kijk welk getal van de schaal bij het echte voorwerp hoort.  [nieuw]

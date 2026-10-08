@@ -185,5 +185,7 @@ if __name__ == '__main__':
     fail = (_SD.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import optie_positie_check as _OP      # Oef-#459 (8 okt): goede antwoord >60% op één plek in een somtype met ≥4 items (WARN)
     _OP.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
+    import som_verschil_check as _SV      # Z-#744 (recheck batch 6, les 195/241): 'a : b = c : ?' met som/verschil van twee getallen als antwoord (WARN)
+    _SV.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
     print('\nG7 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

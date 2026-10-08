@@ -686,9 +686,12 @@ def pas_toe(it, slog):
 # bank-136 (573dac2a, rad 3 van 12): A «3 op de 12» (goed), B «1 op de 3», C «3 op de 9» (deel-rest); «1 op de 4» weg.
 # De andere items hadden al de getelde vorm als antwoord. Oef-#459: goede optie over de posities: bank-131 (634fada3) → C, bank-137 (75a6fe75) → B.
 # De vereenvoudigde vorm blijft als geldig antwoord staan (zoals bij 131 en 137); de uitleg bij «1 op de 5»/«1 op de 3» ging over vereenvoudigen → None.
-Z564 = {'7e1c1390': (['5 op de 15', '5 op de 20', '1 op de 5'], '5 op de 20', ['5 op de 20', '1 op de 4'],
+# V-#745 / Z-#747 (Didactiek review VERH-04 #4/#7; Leerlijn akkoord 8 okt 15:25): bank-136 B «1 op de 3» → «9 op de 12», bank-127 C «1 op de 5» → «15 op de 20»
+# (allebei 'andere-deel-genomen'). Elke afleider hoort nu bij één fout: 'deel op rest' of 'het andere deel'; geen vereenvoudigde vorm meer in de opties.
+LAB745 = {'9 op de 12': 'andere-deel-genomen', '15 op de 20': 'andere-deel-genomen'}
+Z564 = {'7e1c1390': (['5 op de 15', '5 op de 20', '15 op de 20'], '5 op de 20', ['5 op de 20', '1 op de 4'],
                      'Er zijn in totaal 20 kaartjes. Op 5 daarvan staat een ster. Dat is dus 5 op de 20.'),
-        '573dac2a': (['3 op de 12', '1 op de 3', '3 op de 9'], '3 op de 12', ['3 op de 12', '1 op de 4'],
+        '573dac2a': (['3 op de 12', '9 op de 12', '3 op de 9'], '3 op de 12', ['3 op de 12', '1 op de 4'],
                      'Het rad heeft in totaal 12 vakjes. Daarvan zijn er 3 rood. Dat is dus 3 op de 12.'),
         '634fada3': (['8 op de 12', '4 op de 8', '4 op de 12'], '4 op de 12', None, None),
         '75a6fe75': (['6 op de 8', '2 op de 8', '2 op de 6'], '2 op de 8', None, None)}
@@ -698,7 +701,7 @@ def _z564(it, slog):
     opties, goed, geldig, uitleg = Z564[c8]; e = it['extraVelden']
     if [o['tekst'] for o in it['opties']] == opties: return
     oudU = {h['fout']: h.get('uitleg') for h in e.get('claudeFoutHints') or []}
-    lab = {d['fout']: d['denkfout'] for d in e.get('claudeDenkfouten') or []}
+    lab = {d['fout']: d['denkfout'] for d in e.get('claudeDenkfouten') or []}; lab.update(LAB745)
     denk = [(t, lab[t], None if t in ('1 op de 5', '1 op de 3') and geldig else oudU.get(t)) for t in opties if t != goed]
     ad = dict(it.get('antwoordDetail') or {})
     _opties(it, slog, 'z564', 'Z-#564 (Leerlijn b): getelde vorm goed' if geldig else 'Oef-#459/Z-#564: goede optie op een andere plek', it['opgave'], opties, goed, denk,
@@ -784,3 +787,63 @@ def _opt_vervang(it, slog, code, reden, oud, nieuw, label):
 _pas_toe_z564 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_z564(it, slog); _r6(it, slog)
+
+# Z-#744 (a) (Didactiek recheck batch 6, 8 okt; les 195/241): VERH-03 #1 'a : b = c : ?' waarin een getal uit de vraag, of de som of het verschil van twee
+# getallen uit de vraag, het antwoord is (39 items, ook de V-#703-vervangers bank-318 en bank-620). Nieuwe drietallen met dezelfde k (c : a), niet in de bank,
+# zonder zo'n treffer; Claudes sleutels gaan mee met hun route (c × b, b + c − a, c, b, a, b : k, b × k ± b …; een route die geen heel getal geeft, valt weg).
+# Gemaakt met een zoekscript (8 okt 15:30) op build 15:13:54; guard: tools/som_verschil_check.py (WARN).
+R6_744 = {
+    '0ca3ee29': ((9, 6, 18), (9, 5, 18), [('5', 'getal-overgenomen')]),      # bank-318
+    '159fb63a': ((6, 9, 18), (8, 9, 24), [('25', 'verhoudingstabel-verkeerd'), ('216', 'verhoudingstabel-verkeerd')]),      # bank-326
+    '17c09c24': ((10, 8, 50), (12, 8, 60), [('8', 'getal-overgenomen'), ('60', 'grafiek-verkeerd-afgelezen')]),      # bank-330
+    '1e13c844': ((5, 10, 10), (5, 12, 10), [('17', 'verhoudingstabel-verkeerd'), ('5', 'verkeerde-bewerking')]),      # bank-340
+    '2c899c7d': ((4, 2, 12), (7, 6, 21), [('7', 'verhoudingstabel-verkeerd'), ('21', 'grafiek-verkeerd-afgelezen')]),      # bank-357
+    '4303e116': ((2, 3, 4), (2, 12, 4), [('14', 'verhoudingstabel-verkeerd'), ('4', 'grafiek-verkeerd-afgelezen')]),      # bank-386
+    '46a1ac1e': ((8, 10, 32), (8, 12, 32), [('60', 'verhoudingstabel-verkeerd'), ('384', 'verhoudingstabel-verkeerd')]),      # bank-390
+    '47b129a4': ((4, 6, 8), (3, 12, 6), [('15', 'verhoudingstabel-verkeerd'), ('36', 'verhoudingstabel-verkeerd')]),      # bank-394
+    '519aa9a7': ((6, 8, 18), (5, 6, 15), [('24', 'verhoudingstabel-verkeerd'), ('90', 'verhoudingstabel-verkeerd')]),      # bank-408
+    '5358468c': ((6, 8, 24), (6, 12, 24), [('12', 'getal-overgenomen'), ('3', 'verkeerde-bewerking')]),      # bank-409
+    '588016ab': ((8, 4, 24), (13, 4, 39), [('30', 'verhoudingstabel-verkeerd'), ('4', 'getal-overgenomen')]),      # bank-414
+    '58926883': ((4, 3, 16), (12, 2, 48), [('6', 'verhoudingstabel-verkeerd'), ('96', 'verhoudingstabel-verkeerd')]),      # bank-415
+    '610558a1': ((6, 5, 30), (12, 5, 60), [('5', 'getal-overgenomen'), ('1', 'verkeerde-bewerking')]),      # bank-427
+    '6c10a4e4': ((8, 6, 32), (12, 7, 48), [('7', 'getal-overgenomen'), ('48', 'grafiek-verkeerd-afgelezen')]),      # bank-444
+    '78608c92': ((3, 6, 6), (3, 13, 6), [('16', 'verhoudingstabel-verkeerd'), ('3', 'verkeerde-bewerking')]),      # bank-461
+    '7e12b3bb': ((6, 9, 12), (6, 13, 12), [('19', 'verhoudingstabel-verkeerd'), ('156', 'verhoudingstabel-verkeerd')]),      # bank-468
+    '7e93d5ef': ((4, 6, 12), (3, 12, 9), [('18', 'verhoudingstabel-verkeerd'), ('12', 'getal-overgenomen')]),      # bank-470
+    '83d6f0c7': ((4, 5, 16), (4, 12, 16), [('12', 'getal-overgenomen'), ('16', 'grafiek-verkeerd-afgelezen')]),      # bank-473
+    '8af824f1': ((5, 4, 20), (13, 4, 52), [('43', 'verhoudingstabel-verkeerd'), ('208', 'verhoudingstabel-verkeerd')]),      # bank-479
+    '8b5e8e21': ((4, 8, 8), (4, 13, 8), [('17', 'verhoudingstabel-verkeerd'), ('4', 'verkeerde-bewerking')]),      # bank-481
+    '8b9c71d0': ((8, 6, 24), (12, 7, 36), [('31', 'verhoudingstabel-verkeerd'), ('7', 'getal-overgenomen')]),      # bank-482
+    '8fcefda2': ((2, 3, 6), (2, 12, 6), [('48', 'verhoudingstabel-verkeerd'), ('72', 'verhoudingstabel-verkeerd')]),      # bank-488
+    '9d540830': ((9, 6, 27), (13, 6, 39), [('12', 'verhoudingstabel-verkeerd'), ('2', 'verkeerde-bewerking')]),      # bank-506
+    '9f534853': ((4, 3, 12), (12, 2, 36), [('4', 'verhoudingstabel-verkeerd'), ('2', 'getal-overgenomen')]),      # bank-510
+    'a76baf14': ((6, 4, 12), (6, 5, 12), [('60', 'verhoudingstabel-verkeerd')]),      # bank-516
+    'a8fa1708': ((5, 6, 25), (2, 5, 10), [('13', 'verhoudingstabel-verkeerd'), ('10', 'grafiek-verkeerd-afgelezen')]),      # bank-521
+    'ab7cd68b': ((5, 4, 25), (12, 4, 60), [('240', 'verhoudingstabel-verkeerd'), ('60', 'grafiek-verkeerd-afgelezen')]),      # bank-522
+    'bce32a85': ((3, 2, 6), (7, 3, 14), [('10', 'verhoudingstabel-verkeerd'), ('42', 'verhoudingstabel-verkeerd')]),      # bank-544
+    'be5af31b': ((3, 2, 9), (13, 2, 39), [('78', 'verhoudingstabel-verkeerd'), ('39', 'grafiek-verkeerd-afgelezen')]),      # bank-550
+    'bed5d479': ((3, 4, 9), (3, 13, 9), [('13', 'getal-overgenomen'), ('9', 'grafiek-verkeerd-afgelezen')]),      # bank-552
+    'c8af2dca': ((8, 2, 40), (13, 2, 65), [('130', 'verhoudingstabel-verkeerd'), ('2', 'getal-overgenomen')]),      # bank-570
+    'cb4d9f1f': ((9, 3, 36), (13, 3, 52), [('3', 'getal-overgenomen'), ('52', 'grafiek-verkeerd-afgelezen')]),      # bank-575
+    'd1401d20': ((6, 2, 24), (13, 2, 52), [('10', 'verhoudingstabel-verkeerd'), ('104', 'verhoudingstabel-verkeerd')]),      # bank-582
+    'd4931cc1': ((6, 4, 18), (13, 3, 39), [('117', 'verhoudingstabel-verkeerd'), ('39', 'grafiek-verkeerd-afgelezen')]),      # bank-587
+    'd90fac4d': ((10, 5, 30), (13, 5, 39), [('31', 'verhoudingstabel-verkeerd'), ('39', 'grafiek-verkeerd-afgelezen')]),      # bank-589
+    'd9a9abbd': ((2, 4, 4), (2, 13, 4), [('52', 'verhoudingstabel-verkeerd'), ('2', 'verkeerde-bewerking')]),      # bank-591
+    'de60bb5a': ((8, 10, 40), (8, 12, 40), [('44', 'verhoudingstabel-verkeerd'), ('12', 'getal-overgenomen')]),      # bank-598
+    'e7d8f074': ((6, 3, 18), (14, 3, 42), [('31', 'verhoudingstabel-verkeerd'), ('42', 'grafiek-verkeerd-afgelezen')]),      # bank-608
+    'f1f53039': ((3, 4, 12), (2, 12, 8), [('96', 'verhoudingstabel-verkeerd'), ('8', 'grafiek-verkeerd-afgelezen')]),      # bank-620
+}
+def _z744(it, slog):
+    c8 = (it['bron'].get('claudeId') or '')[:8]
+    if it.get('doelId') != 'G7-VERH-03' or c8 not in R6_744: return
+    (a0, b0, c0), (a, b, c), sl = R6_744[c8]; o = it['opgave']; e = it['extraVelden']
+    if o != f'Vul in. {a0} : {b0} = {c0} : ?': return
+    k = c // a; ans = b * k
+    assert c0 // a0 == k and c % a == 0 and ans not in (a, b, c, a + b, a + c, b + c, abs(c - b), abs(c - a), abs(a - b)), (it['id'], a, b, c)
+    uit = {dd['denkfout']: h.get('uitleg') for dd in e.get('claudeDenkfouten') or [] for h in e.get('claudeFoutHints') or [] if h.get('fout') == dd.get('fout')}
+    _zet(it, slog, 'z744', f'Z-#744: {o[8:]} → {a} : {b} = {c} : ? (som/verschil van twee getallen uit de vraag was het antwoord, recheck batch 6)',
+         f'Vul in. {a} : {b} = {c} : ?', str(ans), [(f, l, uit.get(l)) for f, l in sl], f'{a} : {b} = {c} : ?')
+_pas_toe_r6 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_r6(it, slog); _z744(it, slog)
+
