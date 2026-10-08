@@ -2591,5 +2591,91 @@
   "was": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer op de kolom ervoor één minder. Is het cijfer op de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.",
   "wordt": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Leen dan één van de kolom ervoor: jouw cijfer krijgt er tien bij, en het cijfer in de kolom ervoor één minder. Is het cijfer in de kolom ervoor een nul? Dan wordt die nul een negen, en leen je verder naar links.",
   "waarom": "Ronde 3e (Oefeningen 8 okt; Didactiek recheck batch 3): Z-#647"
+ },
+ {
+  "tijd": "14:11",
+  "doel": "G7-GET-02",
+  "nrOrigineel": 3,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "niet afgerond",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1",
+    "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+    "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+    "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "te veel cijfers achter de komma",
+    "claudeDenkfout": "plaatswaarde-verkeerd",
+    "regel": "Claudes sleutel: plaatswaarde-verkeerd",
+    "tekst": "Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Afronden op één cijfer achter de komma: er blijft precies één cijfer achter de komma over. Kijk daarvoor naar het tweede cijfer achter de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Rond af op tienden: kijk naar het tweede cijfer achter de komma."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "decimaal-nul weggelaten",
+    "claudeDenkfout": null,
+    "regel": "fout = decimaal-nul weggelaten",
+    "tekst": "Bijna! De waarde klopt. Je moest afronden op één cijfer achter de komma: schrijf dat cijfer er ook bij, ook als het een nul is.",
+    "tekstSterker": "Bij afronden op één cijfer achter de komma staat er altijd precies één cijfer achter de komma, ook als dat een nul is.",
+    "waarom": "Z-#607 (Didactiek-besluit 8 okt): bij 2,0 is 2 niet goed als de vraag om één cijfer achter de komma vraagt; eigen regel, Bijna! mag"
+   },
+   {
+    "bron": "nieuw",
+    "soort": "niet afgerond",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1",
+    "tekst": "Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.",
+    "tekstSterker": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "een tiende ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 0,1",
+    "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+    "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het grootste. Anders het kleinste."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "te veel cijfers achter de komma",
+    "claudeDenkfout": "plaatswaarde-verkeerd",
+    "regel": "Claudes sleutel: plaatswaarde-verkeerd",
+    "tekst": "Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Afronden op één cijfer achter de komma: er blijft precies één cijfer achter de komma over. Kijk daarvoor naar het tweede cijfer achter de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Rond af op tienden: kijk naar het tweede cijfer achter de komma."
+   }
+  ],
+  "waarom": "Z-#607 (Didactiek-besluit 8 okt): regel 'decimaal-nul weggelaten'"
  }
 ]

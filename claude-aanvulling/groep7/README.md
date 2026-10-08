@@ -140,6 +140,7 @@ Een rerun is stabiel: ids en somtypen veranderen niet, alleen de tijdstempel ver
     - 'kuub' wordt m³ (vanaf G7) en 'hectare' wordt ha;
     - komma en punt als decimaalteken, en een duizendpunt mag;
     - een slotnul na de komma verandert de waarde niet (Z-#607): bij antwoord 7,8 is '7,80' goed, bij antwoord 2,0 is '2' goed (en '2,00'), bij €3,50 ook '3,5'. Vergelijk dus op waarde, niet op tekst.
+    - uitzondering (Z-#607, besluit Didactiek 8 okt): vraagt de opgave een aantal cijfers achter de komma ('Rond af op één/twee cijfer(s) achter de komma'), dan is een antwoord met minder cijfers achter de komma niet goed. Bij 2,0 is '2' dan fout; die invoer heeft een eigen sleutel 'decimaal-nul weggelaten' (motorregel, 'Bijna!' mag). Geldt in G5–G8; nu alleen G7 GET-02 #3 (12 items, 2 met antwoord op 0: bank-001 en bank-006).
   - Goed is: het getal klopt, en de eenheid ontbreekt of is na normalisatie gelijk aan de gevraagde eenheid. Een andere eenheid is fout.
   - De screenreader leest het symbool als woord voor (aria-label: m² → «vierkante meter», cm³ → «kubieke centimeter», km² → «vierkante kilometer»).
   - De merge-data krijgen daarom geen extra antwoordvormen; zie notatie_machten.md §6 (Didactiek).

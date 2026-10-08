@@ -92,6 +92,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.
 - **Ouderzin:** Je kind rondt een kommagetal af op één cijfer achter de komma.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `decimaal-nul weggelaten` (fout = decimaal-nul weggelaten) → Bijna! De waarde klopt. Je moest afronden op één cijfer achter de komma: schrijf dat cijfer er ook bij, ook als het een nul is.  [nieuw]
   - `niet afgerond` (fout = getal1) → Dat is het gewicht zelf. Je rondt af op één cijfer achter de komma.  [nieuw]
   - `een tiende ernaast` (fout = antwoord ± 0,1) → Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?  [nieuw]
   - `te veel cijfers achter de komma` (Claudes sleutel: plaatswaarde-verkeerd) → Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden.  [Claude, taalfix]

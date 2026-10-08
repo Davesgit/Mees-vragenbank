@@ -6,6 +6,7 @@ Nieuw 8 okt 12:4x (G7 batch 2, Oef-#421/#422/#429): norm421 = één notatie voor
   Oef-#437: KOMMA437 (G7/G8) leest '8,4' als één getal; Oef-#436: 'fout = antwoord ± 0,1 / ± 0,01' ook bij een heel antwoord (vraag met kommagetal);
   Oef-#444: Claudes sleutels met '-' worden '−' en de labelregel vergelijkt genormaliseerd (G7/G8).
   Z-#616: 'fout = getal1/getal2' als bedrag bij een geldvraag (G7/G8). Z-#633: 'fout = de bodem (l × b)', zeker, vóór '± 1'.
+  Z-#607: 'fout = decimaal-nul weggelaten' ('2' bij 2,0 als de vraag om cijfers achter de komma vraagt; 'Bijna!' mag).
   Oef-#445: 'fout = het deel zelf (als %)' / 'fout = geheel min deel' (procent-vragen 'D van G', antwoord met '%').
   Oef-#442: 'fout = de som van de getallen' / 'fout = het middelste getal (op grootte)' (gemiddelde; alleen als de waarde zo uitkomt).
   Oef-#440: met KOMMA437 telt een antwoord '8,0' als 8, een sleutel '8,0' past op regelwaarde 8, en 'antwoord × 10 / : 10' werkt ook bij een kommagetal (1,1 → 11 / 0,11). Oef-#434: 'fout = het cijfer op de plek ernaast' (plaatswaarde: de cijfers links en rechts van de gevraagde plaats).
@@ -354,6 +355,14 @@ def in_vraag390(v, c):
     x = waarde416(v)
     if x is not None and str(v).strip().startswith('€'): return x in vraag_waarden416(c.opg, los=False)      # #530: bedrag op waarde
     return x is not None and (x in vraag_waarden416(c.opg) or (x.denominator == 1 and int(x) in set(c.nums)))
+_RX607 = re.compile(r'\b[Rr]ond\w*\b.*?\bop (?:één|een|twee|drie|1|2|3) cijfers? achter de komma')
+def d607(c):
+    """Z-#607: de vormen met minder slotnullen en dezelfde waarde, als de vraag om cijfers achter de komma vraagt ('2,0' → {'2'}; '3,50' → {'3,5'}; '4,00' → {'4', '4,0'})."""
+    a = str(c.ans).strip()
+    m = re.fullmatch(r'(\d+),(\d*?)(0+)', a)
+    if not m or not _RX607.search(c.opg or ''): return set()
+    heel, vast, nul = m.groups()
+    return {(f'{heel},{vast}{nul[:k]}' if vast or k else heel) for k in range(len(nul))}
 def norm421(t, geld=True):
     """Oef-#421/#422 (8 okt): één notatie voor de hele motor. Minteken: '–' (en-streep) en '-' tussen getallen of spaties → '−';
     geld: '4,75 euro' / '3 euro' → '€4,75' / '€3' en '€ 3' → '€3'. Woorden met een streepje ('rood-wit') blijven zoals ze zijn."""
@@ -720,6 +729,11 @@ def _compile_regel(regel, c):
         else: w445 = {a445 * 10, a445 / 10} - {d445, g445 - d445}
         w445 = {_kg(x) for x in w445 if x > 0 and x != a445}
         return {'exact': {f'{x}%' for x in w445} | {f'{x} %' for x in w445}}
+    # Z-#607 (Didactiek-besluit 8 okt, GET-02 'Rond af op één cijfer achter de komma', antwoord 2,0): vraagt de opgave een aantal cijfers achter
+    # de komma, dan is '2' bij 2,0 niet goed (uitzondering op 'slotnul telt niet', README). 'fout = decimaal-nul weggelaten' geeft de kortere vormen
+    # met dezelfde waarde ('2,0' → '2'; '3,50' → '3,5'); alleen als de vraag om cijfers achter de komma vraagt en het antwoord op 0 eindigt.
+    if r.startswith('fout = decimaal-nul weggelaten'):
+        return {'exact': d607(c), 'z607': True}
     if r.startswith('fout = de bodem'):
         mb = re.search(r'bodem (?:is|van) (\d+(?:,\d+)?) (?:cm |m )?(?:bij|×|x) (\d+(?:,\d+)?)', c.opg)
         if not mb: return {'exact': set()}
@@ -1029,7 +1043,8 @@ def pas_toe(it, st, alle_cellen=None):
         kand = list(dict.fromkeys([k['fout'] for k in claude] + sorted({v for f, comp, pi in regels if comp and (not pi or (not comp.get('claudeSleutels') and vul_in(f['tekst'], c))) for v in comp.get('exact', ())},
                                                                         key=lambda x: (_int(x) is None, _int(x) or 0, x))))
         kand = list(dict.fromkeys(w for v in kand for w in _vormen(v)))         # #60: sleutels ≥ 10.000 in beide vormen
-        kand = [v for v in kand if v != c.ans and (c.a is None or _int(v) != c.a) and (c.d is None or _dec(v) != c.d)]   # G6 #4: '1,40' = '1,4'
+        z607 = {v for f, comp, pi in regels if comp and comp.get('z607') for v in comp.get('exact', ())}      # Z-#607: '2' bij 2,0 blijft een sleutel
+        kand = [v for v in kand if v != c.ans and (v in z607 or ((c.a is None or _int(v) != c.a) and (c.d is None or _dec(v) != c.d)))]   # G6 #4: '1,40' = '1,4'
         # G5 merge-fixlijst #14: geen fout-sleutel buiten de getallenlijn (je kunt hem niet aantikken)
         if LIJN_BINNEN and c.jr.get('soort') == 'getallenlijn' and isinstance(c.jr.get('van'), int) and isinstance(c.jr.get('tot'), int):
             kand = [v for v in kand if _int(v) is None or c.jr['van'] <= _int(v) <= c.jr['tot']]
@@ -1087,11 +1102,13 @@ def pas_toe(it, st, alle_cellen=None):
             if zp:
                 volgorde = zp + [x for x in volgorde if x not in zp]
                 ook = ook + [x[0]['regel'] for x in regels if x not in zp and x[1] and not x[1].get('alles') and _past(x[1], v)]
+        z607v = [x for x in regels if x[1] and x[1].get('z607') and v in x[1].get('exact', ())]
+        if z607v: volgorde = z607v; ook = []      # Z-#607: de waarde is het antwoord, alleen de eigen regel past
         uit_vraag = in_vraag390(v, c)
         staaf_alle = {st_['waarde'] for st_ in c.jr.get('staven') or [] if isinstance(st_, dict) and isinstance(st_.get('waarde'), int)} if c.jr.get('soort') == 'staafdiagram' else None
         for f, comp, per_item in volgorde:
             if comp is None: continue
-            if uit_vraag and is_pm1_390(f): continue      # G6 merge-fixlijst #390: een getal uit de vraag krijgt nooit ±1 of 'Bijna!'
+            if uit_vraag and is_pm1_390(f) and not comp.get('z607'): continue      # Z-#607: 'Bijna!' mag bij decimaal-nul (geen getal uit de vraag)      # G6 merge-fixlijst #390: een getal uit de vraag krijgt nooit ±1 of 'Bijna!'
             if staaf_alle is not None and (f.get('soort') or '').lower().startswith('andere staaf') and _int(v) not in staaf_alle: continue      # G5 D-#404: 'andere staaf' alleen bij een staafwaarde
             ok = _past(comp, v) or id(f) in gedwongen      # #94
             if not ok: continue

@@ -37,6 +37,7 @@ def vind(items):
             x = waarde416(f.get('fout'))
             if x is None or x not in (n_geld if str(f.get('fout')).strip().startswith('€') else n): continue
             r = (f.get('regel') or '').lower().replace('−', '-').strip()
+            if r.startswith('fout = decimaal-nul weggelaten'): continue      # Z-#607 (Didactiek 8 okt): 'Bijna!' mag, de waarde is het antwoord (geen getal uit de vraag)
             if PM1.match(r) or (f.get('uitleg') or '').lstrip().startswith('Bijna'):
                 uit.append(f"{it.get('id')}: sleutel {f.get('fout')} staat in de vraag maar krijgt '{f.get('regel')}' / {(f.get('uitleg') or '')[:40]!r}")
     return uit
