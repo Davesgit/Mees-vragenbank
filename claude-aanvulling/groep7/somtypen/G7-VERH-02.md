@@ -91,9 +91,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent uit hoeveel procent een deel van een geheel is.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `het andere deel` (Claudes sleutel: andere-deel-genomen) → Dat is het andere deel: wat overblijft tot honderd procent. Je zoekt het procent van het deel uit de vraag.  [Claude, taalfix]
-  - `het deel zelf` (fout = het deel zelf (als %)) → Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?  [Claude, taalfix]
-  - `tien keer ernaast` (Claudes sleutel: nul-fout-tientallen) → Dat is tien keer te groot of tien keer te klein. Reken het na met een verhoudingstabel.  [Claude, taalfix]
-  - `verschil van de getallen` (fout = geheel min deel) → Dat is het verschil van de twee getallen, nog geen procent. Welk deel van het geheel is het deel?  [Claude, taalfix]
+  - `tien keer ernaast` (fout = tien keer het procent (als %)) → Dat is tien keer te groot of tien keer te klein. Reken het na met een verhoudingstabel.  [nieuw]
+  - `het deel zelf` (fout = het deel zelf (als %)) → Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?  [nieuw]
+  - `verschil van de getallen` (fout = geheel min deel) → Dat is het verschil van de twee getallen, nog geen procent. Welk deel van het geheel is het deel?  [nieuw]
   - `andere fout` (andere fout) → Het geheel is honderd procent. Hoeveel procent is het deel?  [nieuw]
 - Status: hints klaar
 

@@ -708,13 +708,18 @@ def _compile_regel(regel, c):
     # Oef-#445 (G7 VERH-02 nrO 3, 'Hoeveel procent is 36 van 75?', antwoord '48%'): de motor leest '%'. Twee regels, alleen als het antwoord op '%'
     # eindigt en de vraag 'D van G' heeft (D = het deel, G = het geheel): 'fout = het deel zelf (als %)' → 'D%' (het deel overgenomen) en
     # 'fout = geheel min deel' → '(G − D)%'. Geen sleutel als de waarde ≤ 0 is of gelijk aan het antwoord. Sleutel met en zonder spatie voor '%'.
-    if r.startswith('fout = het deel zelf (als %)') or r.startswith('fout = geheel min deel'):
+    # Ook 'fout = tien keer het procent (als %)': antwoord × 10 of : 10 met '%' ('48%' → '480%', '4,8%'). De drie regels vallen nooit samen:
+    # het deel zelf gaat voor, geheel min deel vervalt als het het deel is, tien keer vervalt als het het deel of geheel min deel is.
+    if r.startswith('fout = het deel zelf (als %)') or r.startswith('fout = geheel min deel') or r.startswith('fout = tien keer het procent (als %)'):
         m445 = re.search(r'(?<![\d,.])(\d+) van (?:de |het )?(\d+)(?![\d,.])', c.opg)
-        if not m445 or not c.ans.strip().endswith('%'): return {'exact': set()}
-        d445, g445 = int(m445.group(1)), int(m445.group(2))
-        v445 = d445 if r.startswith('fout = het deel zelf') else g445 - d445
-        if v445 <= 0 or f'{v445}%' == c.ans.strip().replace(' ', ''): return {'exact': set()}
-        return {'exact': {f'{v445}%', f'{v445} %'}}
+        a445 = re.fullmatch(r'(\d+)\s?%', c.ans.strip())
+        if not m445 or not a445: return {'exact': set()}
+        d445, g445, a445 = Fraction(int(m445.group(1))), Fraction(int(m445.group(2))), Fraction(int(a445.group(1)))
+        if r.startswith('fout = het deel zelf'): w445 = {d445}
+        elif r.startswith('fout = geheel min deel'): w445 = {g445 - d445} - {d445}
+        else: w445 = {a445 * 10, a445 / 10} - {d445, g445 - d445}
+        w445 = {_kg(x) for x in w445 if x > 0 and x != a445}
+        return {'exact': {f'{x}%' for x in w445} | {f'{x} %' for x in w445}}
     if r.startswith('fout = de bodem'):
         mb = re.search(r'bodem (?:is|van) (\d+(?:,\d+)?) (?:cm |m )?(?:bij|×|x) (\d+(?:,\d+)?)', c.opg)
         if not mb: return {'exact': set()}

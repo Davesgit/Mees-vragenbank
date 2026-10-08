@@ -436,3 +436,36 @@ def pas_toe_av8(it, slog):
     if 'z631' not in it['merge']: _z631(it, slog)
     if 'z635' not in it['merge']: _z635(it, slog)
     if 'oef433' not in it['merge']: _r5_av8(it, slog)
+
+# ---------- Review batch 5 (Didactiek, build 13:48:53) ----------
+# Z-#668 (Oef-#446): Claudes kommagetal-sleutels met een punt ('4.4', '6.7') in huisnotatie met een komma ('4,4'). Een punt met precies drie
+# cijfers erachter is een duizendtal-punt en blijft. Balk kleuren (VERH-01 nrO 2, balk van twintig stukjes): halve stukjes kun je niet kleuren,
+# dus geen sleutel '7.5'/'2.5'/'0.5': 75% → 70% en 25% → 100% (route 'elk stukje tien procent' komt dan op hele stukjes: 7 en 10);
+# bij 5% bestaat zo'n route op hele stukjes niet en de entry heeft geen andere regel: dat item (fe3199aa) is geschrapt (build_g7, geschrapt_review5.json).
+Z668_BALK = {'752ab991-37a9-42ec-8d56-b01775701a17': 70, 'bdd229da-3899-4842-92f8-47217067ac91': 100}
+def _z668(it, slog):
+    e = it['extraVelden']; cid = it['bron'].get('claudeId')
+    if cid in Z668_BALK:
+        p = Z668_BALK[cid]
+        if p is None:
+            weg = [d['fout'] for d in e.get('claudeDenkfouten') or [] if re.fullmatch(r'\d+\.\d', str(d.get('fout')))]
+            _zet(it, slog, 'z668', f"Z-#668: sleutel {weg} (half stukje) vervalt (review batch 5)", it['opgave'], denk=[])
+        else:
+            n = p // 5
+            _zet(it, slog, 'z668', f'Z-#668: {it["opgave"]} → {p}% (hele stukjes, review batch 5)', f'Kleur {p}% van de balk.', str(n),
+                 [(str(p // 10), None, 'Elk stukje is 5%, niet 10%.')], f'{p}% van de balk',
+                 f'De hele balk is 100%. Elk stukje is 5%. {p}% is {n} stukjes.')
+        return
+    for veld in ('claudeDenkfouten', 'claudeFoutHints'):
+        for d in e.get(veld) or []:
+            f = d.get('fout')
+            if isinstance(f, str) and re.fullmatch(r'\d+\.\d{1,2}', f.strip()):
+                d['fout'] = f.strip().replace('.', ',')
+                if veld == 'claudeDenkfouten': slog(it, f"G7-z668: Z-#668 sleutel '{f}' → '{d['fout']}' (huisnotatie)", 'sleutel', f, d['fout'])
+_pas_toe_r5 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_r5(it, slog); _z668(it, slog)
+_pas_toe_av8_r5 = pas_toe_av8
+def pas_toe_av8(it, slog):
+    _pas_toe_av8_r5(it, slog)
+    if 'z668' not in it['merge']: _z668(it, slog)

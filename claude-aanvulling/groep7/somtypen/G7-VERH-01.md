@@ -2,7 +2,7 @@
 
 Onze omschrijving: Notaties & betekenis · in onze bank: 8 items
 
-Claude-vragen gemapt: **28** in **7** somtypen · twijfel (voorstel dit doel): **0**
+Claude-vragen gemapt: **27** in **7** somtypen · twijfel (voorstel dit doel): **0**
 
 Invoer voor het schrijven van hint 1 (`hint`) en hint 2 (`sterkereHint`) per somtype. Velden `hint`, `sterkereHint` en `ouderzin` zijn nog leeg.
 Elk somtype heeft een vaste sleutel (nrOrigineel + somtypeOrigineel, bevroren/somtype_nr_v*.json): neem die over in hints/batch*.json, dan blijft de hint gekoppeld als de nummering of de kop verandert.
@@ -40,10 +40,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 ## Somtype 2: [balk kleuren] Kleur #% van de balk.
 
 - Sleutel: nrOrigineel **2** · somtypeOrigineel “[balk kleuren] Kleur #% van de balk.” (koppeling: claudeId)
-- Items: **11** · Claude-doelen: V1 (11) · regel: G7-V04-procent-balk
+- Items: **10** · Claude-doelen: V1 (10) · regel: G7-V04-procent-balk
 - Getallenruimte: procenten · type: kale
-- Uit de G6-park: 11 items
-- Denkfouten (Claude): None (11)
+- Uit de G6-park: 10 items
+- Denkfouten (Claude): None (10)
 - Verschillende Claude-fout-hints: 1 (meest: “Elk stukje is 5%, niet 10%.”)
 - Voorbeelden:
   - `G7-VERH-01-claude-bank-020` (Claude V1, gegenereerd, niveau 1 → basis)
@@ -52,12 +52,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 12  (controle: n.v.t.)
     - **Fout-hints (Claude):** 6 → Elk stukje is 5%, niet 10%.
     - **Uitleg (Claude):** De hele balk is 100%. Elk stukje is 5%. 60% is 12 stukjes.
-  - `G7-VERH-01-claude-bank-023` (Claude V1, gegenereerd, niveau 1 → basis)
-    - **Opgave:** Kleur 10% van de balk.
+  - `G7-VERH-01-claude-bank-019` (Claude V1, gegenereerd, niveau 1 → basis)
+    - **Opgave:** Kleur 20% van de balk.
     - **UI:** balk kleuren
-    - **Antwoord:** 2  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 1 → Elk stukje is 5%, niet 10%.
-    - **Uitleg (Claude):** De hele balk is 100%. Elk stukje is 5%. 10% is 2 stukjes.
+    - **Antwoord:** 4  (controle: n.v.t.)
+    - **Fout-hints (Claude):** 2 → Elk stukje is 5%, niet 10%.
+    - **Uitleg (Claude):** De hele balk is 100%. Elk stukje is 5%. 20% is 4 stukjes.
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. De hele balk is honderd procent.
 - **Hint 2 (te schrijven):** Tel hoeveel stukjes de balk heeft. Reken uit voor hoeveel procent één stukje staat. Hoe vaak past dat in het procent uit de vraag?

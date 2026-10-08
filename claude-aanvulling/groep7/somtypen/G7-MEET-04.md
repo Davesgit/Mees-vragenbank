@@ -181,10 +181,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `de nieuwe temperatuur` (fout = getal2) → Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.  [nieuw]
   - `verschil van de getallen` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.  [nieuw]
-  - `onder nul` (Claudes sleutel: teken-vergeten) → Dat is onder nul. Hoeveel graden het warmer is geworden, typ je zonder min.  [Claude, taalfix]
+  - `onder nul` (Claudes sleutel: teken-vergeten) → Dat is onder nul. Hoeveel graden het warmer is geworden, is een aantal graden: dat is nooit onder nul. Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.  [Claude, taalfix]
   - `één graad ernaast` (fout = antwoord ± 1) → Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.  [nieuw]
-  - `aantal met een min` (Claudes sleutel (alle, zonder label)) → Hoeveel graden het warmer is geworden, is een aantal graden: dat is nooit onder nul. Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.  [nieuw]
 - Status: hints klaar
 

@@ -809,5 +809,448 @@
    }
   ],
   "waarom": "Oef-#445 (motor leest '%'; regel per item i.p.v. Claudes label)"
+ },
+ {
+  "tijd": "13:55",
+  "doel": "G7-MEET-04",
+  "nrOrigineel": 5,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "de nieuwe temperatuur",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "verschil van de getallen",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 - getal2 of getal2 - getal1",
+    "tekst": "Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "onder nul",
+    "claudeDenkfout": "teken-vergeten",
+    "regel": "Claudes sleutel: teken-vergeten",
+    "tekst": "Dat is onder nul. Hoeveel graden het warmer is geworden, typ je zonder min.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één graad ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 1",
+    "tekst": "Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.",
+    "tekstSterker": "Van min één naar nul is één stap, en van nul naar één ook. Tel elke stap één keer."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aantal met een min",
+    "claudeDenkfout": null,
+    "regel": "Claudes sleutel (alle, zonder label)",
+    "tekst": "Hoeveel graden het warmer is geworden, is een aantal graden: dat is nooit onder nul. Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels onder nul (Oef-#444: 'teken-vergeten', 'nul-fout-tientallen'); 'zonder min typen' zou bij '-2' (antwoord zes) niet kloppen",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "de nieuwe temperatuur",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "verschil van de getallen",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 - getal2 of getal2 - getal1",
+    "tekst": "Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één graad ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 1",
+    "tekst": "Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.",
+    "tekstSterker": "Van min één naar nul is één stap, en van nul naar één ook. Tel elke stap één keer."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aantal met een min",
+    "claudeDenkfout": null,
+    "regel": "Claudes sleutel (alle, zonder label)",
+    "tekst": "Hoeveel graden het warmer is geworden, is een aantal graden: dat is nooit onder nul. Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels onder nul (Oef-#444: 'teken-vergeten', 'nul-fout-tientallen'); 'zonder min typen' zou bij '-2' (antwoord zes) niet kloppen",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   }
+  ],
+  "waarom": "Review batch 5 (LET OP): teken-vergeten tijdelijk uit tot V-#660"
+ },
+ {
+  "tijd": "13:56",
+  "doel": "G7-VERH-02",
+  "nrOrigineel": 3,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel: wat overblijft tot honderd procent. Je zoekt het procent van het deel uit de vraag.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het deel zelf",
+    "claudeDenkfout": null,
+    "regel": "fout = het deel zelf (als %)",
+    "tekst": "Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "tien keer ernaast",
+    "claudeDenkfout": "nul-fout-tientallen",
+    "regel": "Claudes sleutel: nul-fout-tientallen",
+    "tekst": "Dat is tien keer te groot of tien keer te klein. Reken het na met een verhoudingstabel.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "verschil van de getallen",
+    "claudeDenkfout": null,
+    "regel": "fout = geheel min deel",
+    "tekst": "Dat is het verschil van de twee getallen, nog geen procent. Welk deel van het geheel is het deel?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het geheel is honderd procent. Hoeveel procent is het deel?",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel: wat overblijft tot honderd procent. Je zoekt het procent van het deel uit de vraag.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het deel zelf",
+    "claudeDenkfout": null,
+    "regel": "fout = het deel zelf (als %)",
+    "tekst": "Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "tien keer ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = tien keer het procent (als %)",
+    "tekst": "Dat is tien keer te groot of tien keer te klein. Reken het na met een verhoudingstabel.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "verschil van de getallen",
+    "claudeDenkfout": null,
+    "regel": "fout = geheel min deel",
+    "tekst": "Dat is het verschil van de twee getallen, nog geen procent. Welk deel van het geheel is het deel?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het geheel is honderd procent. Hoeveel procent is het deel?",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   }
+  ],
+  "waarom": "Oef-#445 (motor leest '%'; regel per item i.p.v. Claudes label)"
+ },
+ {
+  "tijd": "13:57",
+  "doel": "G7-MEET-04",
+  "nrOrigineel": 5,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "de nieuwe temperatuur",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "verschil van de getallen",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 - getal2 of getal2 - getal1",
+    "tekst": "Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één graad ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 1",
+    "tekst": "Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.",
+    "tekstSterker": "Van min één naar nul is één stap, en van nul naar één ook. Tel elke stap één keer."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aantal met een min",
+    "claudeDenkfout": null,
+    "regel": "Claudes sleutel (alle, zonder label)",
+    "tekst": "Hoeveel graden het warmer is geworden, is een aantal graden: dat is nooit onder nul. Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels onder nul (Oef-#444: 'teken-vergeten', 'nul-fout-tientallen'); 'zonder min typen' zou bij '-2' (antwoord zes) niet kloppen",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "de nieuwe temperatuur",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is de nieuwe temperatuur. De vraag is hoeveel graden het warmer is geworden: tel ook de graden onder nul mee.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "verschil van de getallen",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 - getal2 of getal2 - getal1",
+    "tekst": "Dat is het verschil van de twee getallen. Maar je gaat eerst omhoog tot nul en dan verder: dat zijn twee stukken.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "onder nul",
+    "claudeDenkfout": "teken-vergeten",
+    "regel": "Claudes sleutel: teken-vergeten",
+    "tekst": "Dat is onder nul. Hoeveel graden het warmer is geworden, is een aantal graden: dat is nooit onder nul. Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels 'teken-vergeten' (V-#660): alle acht −p + q, onder nul; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Van de temperatuur onder nul tot nul zijn evenveel graden als het getal na de min. Tel daar de graden van nul tot de nieuwe temperatuur bij op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één graad ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord ± 1",
+    "tekst": "Je zit er één graad naast. Tel de stappen tot nul en de stappen vanaf nul apart, en tel ze dan op.",
+    "tekstSterker": "Van min één naar nul is één stap, en van nul naar één ook. Tel elke stap één keer."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel graden het warmer is geworden.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Tel de graden tot nul en de graden vanaf nul, en tel ze bij elkaar op.",
+    "tekstSterker": "Tel de graden van de temperatuur onder nul tot nul. Tel daarna de graden van nul tot de nieuwe temperatuur. Tel die twee aantallen bij elkaar op."
+   }
+  ],
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Didactiek review batch 5): V-#660, Z-#660"
+ },
+ {
+  "tijd": "13:57",
+  "doel": "G7-VERH-02",
+  "nrOrigineel": 3,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel: wat overblijft tot honderd procent. Je zoekt het procent van het deel uit de vraag.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het deel zelf",
+    "claudeDenkfout": null,
+    "regel": "fout = het deel zelf (als %)",
+    "tekst": "Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "tien keer ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = tien keer het procent (als %)",
+    "tekst": "Dat is tien keer te groot of tien keer te klein. Reken het na met een verhoudingstabel.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "verschil van de getallen",
+    "claudeDenkfout": null,
+    "regel": "fout = geheel min deel",
+    "tekst": "Dat is het verschil van de twee getallen, nog geen procent. Welk deel van het geheel is het deel?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het geheel is honderd procent. Hoeveel procent is het deel?",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel: wat overblijft tot honderd procent. Je zoekt het procent van het deel uit de vraag.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "tien keer ernaast",
+    "claudeDenkfout": null,
+    "regel": "fout = tien keer het procent (als %)",
+    "tekst": "Dat is tien keer te groot of tien keer te klein. Reken het na met een verhoudingstabel.",
+    "waarom": "Motorregel (Oef-#445): rekent elk item zelf uit; vaste tekst zonder getallen, met eigen laag 2 (V-#668: bron nieuw, tien keer vóór het deel zelf)",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het deel zelf",
+    "claudeDenkfout": null,
+    "regel": "fout = het deel zelf (als %)",
+    "tekst": "Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
+    "waarom": "Motorregel (Oef-#445): rekent elk item zelf uit; vaste tekst zonder getallen, met eigen laag 2 (V-#668: bron nieuw, tien keer vóór het deel zelf)",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "verschil van de getallen",
+    "claudeDenkfout": null,
+    "regel": "fout = geheel min deel",
+    "tekst": "Dat is het verschil van de twee getallen, nog geen procent. Welk deel van het geheel is het deel?",
+    "waarom": "Motorregel (Oef-#445): rekent elk item zelf uit; vaste tekst zonder getallen, met eigen laag 2 (V-#668: bron nieuw, tien keer vóór het deel zelf)",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het geheel is honderd procent. Hoeveel procent is het deel?",
+    "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort."
+   }
+  ],
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Didactiek review batch 5): V-#668"
  }
 ]
