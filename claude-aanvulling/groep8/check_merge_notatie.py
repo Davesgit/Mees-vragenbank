@@ -182,6 +182,10 @@ if __name__ == '__main__':
     fail = (_B7VLAG.ACTIEF and any(bool(XSTER_NIEUW.search(_t)) != _v for _t, _v in XSTER_MUTANTEN)) or fail      # Z-#940: XSTER-mutanten 8/8 (o.a. '(x 1000)')      # les 348: TIJDSDUUR herkent '.' én ':' (mutanten 8/8)
     import gemiddelde_check as _GM      # V-#820/Z-#823/Z-#841/Z-#855 (Didactiek 8 okt): gemiddelde-vragen, vijf foute routes (FAIL ≥ 1/3 of eigen sleutel; anders WARN)
     fail = (len(_GM.rapport([_it for _p in files for _it in json.load(open(_p))['items']], os.path.dirname(os.path.abspath(__file__)))[0]) > 0) or fail
+    _SA = _GM.samen_treffers([_it for _p in files for _it in json.load(open(_p))['items']])      # V-#1011/V-#1013 (Didactiek r13, les 385): 'alles samen' alleen bij de som (FAIL)
+    print(f"GEMIDDELDE-SAMEN (V-#1011: «alles samen»/«het totaal» alleen als de fout de som is): {len(_SA)} (FAIL) · mutant {'ok' if _GM.samen_mutanten_ok() else 'MIS'}"); [print('  FAIL GEMIDDELDE-SAMEN', _x) for _x in _SA[:10]]
+    fail = bool(_SA) or (not _GM.samen_mutanten_ok()) or fail
+    fail = (not _KT.alle_mutanten_ok()) or fail      # V-#1013: ook de V-#1012-mutanten (KLOKWOORD/KLOKSLEUTEL)
     fail = (_GM.mutanten() and any(_v != _k for _n, _v, _k in _GM.mutanten())) or fail      # Z-#855: mutanten (oude 427/010/002) moeten kloppen
     import e05_routes as _ER      # V-#870/Z-#871/V-#871 (Didactiek batch 4, 16:35): E05-rekenmachineverhalen: geen foute route op het goede antwoord, rest ≥ 3, geen ',5', redelijke maten (FAIL)
     fail = (_ER.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail

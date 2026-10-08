@@ -94,6 +94,27 @@ def rapport(items, base=None, toon=True, ernst='FAIL'):
         for key, P in sorted(per.items(), key=lambda kv: str(kv[0])):
             if P['hits']: print(f"  aandeel {key[0]} nrO {key[1]}: " + ', '.join(f"{r} {k}/{P['n']}" for r, k in P['hits'].items()))
     return Fl, W
+def samen_treffers(items):
+    """V-#1011 (Didactiek r13, les 385): een fout-hint «Dat is alles samen…» / «… is het totaal» alleen als de fout gelijk is aan de som van de gegeven waarden (FAIL).
+    Kijkt in foutRegels (tekst + match.waarden) en foutHints (fout + uitleg) van gemiddelde-items."""
+    T = []
+    for it in items:
+        if not is_gem(it): continue
+        v, bron = waarden(it.get('opgave') or '')
+        if bron != 'opsomming': continue      # gewogen gemiddelde ('Twaalf kinderen hebben een 5, …'): de som is niet de som van de genoemde getallen
+        som = sum(v) if v else None
+        paren = [(w, f.get('tekst') or '') for f in it.get('foutRegels') or [] for w in ((f.get('match') or {}).get('waarden') or [])]
+        paren += [(f.get('fout'), f.get('uitleg') or '') for f in it.get('foutHints') or []]
+        for w, t in paren:
+            if not re.search(r'alles samen|\bis het totaal\b', t, re.I): continue
+            g = _getal(w)
+            if som is None or g is None or g != som: T.append(f"{it['id']}: '{w}' krijgt «{t[:40]}…», maar de som is {som}")
+    return T
+def samen_mutanten_ok():
+    oud = {'id': 'mut-G6-E08-011', 'opgave': '4 kinderen verzamelden stickers. Ze hadden er 6, 3, 8 en 3. Hoeveel stickers is dat gemiddeld per kind?', 'antwoord': '5',
+           'foutRegels': [{'tekst': 'Dat is alles samen. Deel dat nog door het aantal.', 'match': {'waarden': ['7', '20']}}]}
+    nieuw = dict(oud, foutRegels=[{'tekst': 'Dat is alles samen. Deel dat nog door het aantal.', 'match': {'waarden': ['20']}}])
+    return bool(samen_treffers([oud])) and not samen_treffers([nieuw])
 def _item(id_, o, a, opties=None, doel='MUT', nro=1): return {'id': id_, 'opgave': o, 'antwoord': a, 'opties': [{'tekst': t} for t in opties or []], 'merge': {'doel': doel, 'somtypeNrOrigineel': nro}}
 MUTANTEN = [   # (naam, items, verwacht: 'FAIL' / 'WARN' / 'geen')
     ('oud G7 427 (middelste genoemde, mediaan, midden; 1 item = 1/1)', [_item('G7-427-oud', "5 dino's hebben 15, 11, 12, 9, 13 eieren. Hoeveel eieren hebben ze gemiddeld?", '12', doel='G7-GET-04', nro=5)], 'FAIL'),

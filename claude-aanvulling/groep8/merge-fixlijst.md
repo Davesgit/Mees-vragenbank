@@ -452,3 +452,12 @@ Commit in mees-vragenbank (`/workspace/mees-vragenbank`, main): build 18:20:30 �
 | **open: één kop (Oef-#1014/#1015, Z-#1022)** | Fase 1: de E05-koppen blijven die van build 18:20:30 (bevroren/kop_e05_fase1.json), anders vallen batch9 #1/#18/#19, #5–#17/#20 en #2/#4/#9/#10/#21 op één kop, terwijl hun hint-entries verschillen (2 inhouden per groep) → sync_hint_keys #30 stopt. Oefeningen: één hint-entry per samengevoegde kop, dan G8_KOP1014=1 |
 | open (zacht) | Z-#1020 (spreiding/dubbele items E05 #1/#3), E05 #3-contexten |
 | Z-#1023 (Leerlijn) | V01 #4 (015) op G5-niveau, V01 #5 (016) op G4-niveau; 014 toetst geen aflezen (visual 'mag'); 013 vormcue 'daalt met 3'; 014 goed = grootste optie |
+
+| 8 okt 18:54:44 | Oefeningen | **G8 b9 ronde 1c** (V-#1022 guard, V-#1024 tekst, V-#1023/V-#1025/Z-#1023 voorwaardelijk) geplaatst: `hints/patch_batch9.py` f7d008e5…. **Build 18:54:28 was 16 s eerder: live mist r1c (b9/check FAIL 44 op live). Volgende build nodig.** Nagespeeld: alles 0 FAIL, mutanten 0 gemist. Datapunten Oef-#1023 (motor 'lijn van nul' x,0/0,y), Oef-#1024 (kommavorm-sleutels), Oef-#1025 (koppen E05 #5–#19). Zie review-batch9.md, Ronde 1c. |
+
+## Build 19:01:49 (bouw_veilig; b9 ronde 1c van Oefeningen, patch_batch9.py 18:54:44; zonder G8_KOP1014)
+
+- Checks: hints 223 klaar · 0 FAIL · 0 WARN; merge-notatie ALLES OK (VORMCUE 0 FAIL/1 WARN MEET-V01 #1, KALESOM 0 FAIL, 328/1458 gelezen); b1–b9 FAIL 0.
+- **Oef-#1023 (motor, klein):** nieuwe regel `fout = stip op de lijn van nul` in scripts/fout_regels.py: bij antwoord '(x, y)' de sleutels 'x,0' en '0,y', nooit de goede stip (in alle vier de geldige vormen). Bijv. (6, 1) → 6,0 / 0,1; (1, 0) → 0,0. Werkt alleen als een hint-entry die regel noemt (Oefeningen: tekst 'lijn van nul' op deze regel; 'maar één getal' blijft op 'een getal uit de vraag').
+- **Z-#1024 / 014:** de Z-#1024-wijziging raakt alleen de vraag van V01 #4 (015). 014 is ongewijzigd: «De helft kiest …» staat er nog. Niets terug te zetten.
+- V-#1013 (G8-deel): GEMIDDELDE-SAMEN (V-#1011, 'alles samen' alleen bij de som; alleen bij een opsomming, niet bij een gewogen gemiddelde) en de V-#1012-mutanten van kloktijd_check als FAIL in check_merge_notatie; OPTIESTEKST (V-#1010) zit in juiste_optie_check. G8: alle 0.

@@ -31,7 +31,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?
 - **Ouderzin:** Je kind rekent uit met hoeveel procent een prijs is gestegen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `nog geen procent van de oude prijs` (Claudes sleutel: procent-verkeerde-basis) → Dat is nog geen procent van de oude prijs. De oude prijs is honderd procent: hoeveel procent komt erbij?  [Claude, taalfix]
+  - `nog geen procent van de oude prijs` (Claudes sleutel: procent-verkeerde-basis) → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?  [Claude, taalfix]
   - `andere fout` (andere fout) → Hoeveel euro komt erbij? De oude prijs is honderd procent: hoeveel procent is dat bedrag?  [nieuw]
 - Status: hints klaar
 
@@ -482,8 +482,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Haal het nieuwe aantal van het oude aantal af: zoveel minder is het. Het oude aantal is honderd procent. Hoeveel procent is het verschil daarvan?
 - **Ouderzin:** Je kind rekent uit met hoeveel procent een aantal is gedaald.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `verschil als procent` (20 procent) → Dat is het verschil in aantal, nog geen procent. Hoeveel procent van het oude aantal is dat?  [nieuw]
-  - `nieuwe aantal als basis` (40 procent) → Zo vergelijk je met het nieuwe aantal. Bij een daling is het oude aantal honderd procent.  [nieuw]
+  - `verschil als procent` (12 procent) → Dat is het verschil in aantal, nog geen procent. Hoeveel procent van het oude aantal is dat?  [nieuw]
+  - `nieuwe aantal als basis` (25 procent) → Zo vergelijk je met het nieuwe aantal. Bij een daling is het oude aantal honderd procent.  [nieuw]
   - `andere fout` (andere fout) → Het oude aantal is honderd procent. Hoeveel procent is het verschil daarvan?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een winkel verkoopt in week # [ding] broden en in week # [ding] broden. Met hoeveel procent is de verkoop gedaald?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -506,7 +506,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?
 - **Ouderzin:** Je kind rekent uit met hoeveel procent een prijs is gestegen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `nog geen procent van de oude prijs` (Claudes sleutel: procent-verkeerde-basis) → Dat is nog geen procent van de oude prijs. De oude prijs is honderd procent: hoeveel procent komt erbij?  [Claude, taalfix]
+  - `nog geen procent van de oude prijs` (Claudes sleutel: procent-verkeerde-basis) → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?  [Claude, taalfix]
   - `andere fout` (andere fout) → Hoeveel euro komt erbij? De oude prijs is honderd procent: hoeveel procent is dat bedrag?  [nieuw]
 - Status: hints klaar
 

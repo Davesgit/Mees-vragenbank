@@ -1000,6 +1000,11 @@ def _compile_regel(regel, c):
         cf = max(gs, key=lambda x: len(x.replace('.', ''))).replace('.', ''); i = len(cf) - 1 - PL.index(q.group(1))
         if not 0 <= i < len(cf) or cf[i] != c.ans.strip(): return {'exact': set()}
         return E(*[cf[j] for j in (i - 1, i + 1) if 0 <= j < len(cf) and cf[j] != c.ans.strip()])
+    if r.startswith('fout = stip op de lijn van nul'):      # Oef-#1023 (G8 VBN-V01 #1): antwoord '(x, y)' → sleutels 'x,0' en '0,y' (stip op een as), nooit de goede stip zelf
+        m_ = re.fullmatch(r'\((\d+), ?(\d+)\)', c.ans.strip())
+        if not m_: return {'exact': set()}
+        x_, y_ = m_.groups(); goed_ = {f'{x_},{y_}', f'{x_}, {y_}', f'({x_},{y_})', f'({x_}, {y_})'}
+        return {'exact': {k_ for k_ in (f'{x_},0', f'0,{y_}') if k_ not in goed_}}
     if r.startswith('fout = een getal uit de vraag'): return E(*[x for x in n if not (isinstance(x, Fraction) and _kg(x) == c.ans.strip())])      # #437: een kommagetal = het antwoord is geen fout
     if r.startswith('fout kleiner dan het kleinste getal'): m0 = min(n); return {'pred': lambda v: _int(v) is not None and _int(v) < m0, 'kleinerDan': m0}
     if r.startswith('fout kleiner dan het getal in de vraag'): return {'pred': lambda v: _int(v) is not None and _int(v) < g1, 'kleinerDan': g1}
