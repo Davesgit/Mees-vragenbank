@@ -26,8 +26,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 3,3  (controle: ok)
     - **Fout-hints (Claude):** 33 → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links. · 2,5 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Zet de getallen onder elkaar, met de komma’s precies onder elkaar.
+- **Hint 2 (te schrijven):** Heeft een getal minder cijfers achter de komma? Zet er nullen achter. Tel van rechts naar links: eerst de honderdsten, dan de tienden, dan de hele getallen. De komma in de uitkomst staat onder de komma’s.
+- **Ouderzin:** Je kind telt kommagetallen op door de komma’s onder elkaar te zetten.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een tiende ernaast` (fout = antwoord ± 0,1) → Dat is een tiende ernaast. Tel de tienden nog eens: kwam er een één bij uit de honderdsten?  [nieuw]
+  - `een honderdste ernaast` (fout = antwoord ± 0,01) → Dat is een honderdste ernaast. Tel de honderdsten nog eens. Klopt het?  [nieuw]
+  - `net ernaast (heel antwoord)` (Claudes sleutel: tiende-of-honderdste-ernaast) → Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?  [Claude, taalfix]
+  - `min in plaats van plus` (Claudes sleutel: verkeerde-bewerking) → Is dit een plussom of een minsom? Kijk naar het teken.  [Claude, taalfix]
+  - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Zet de komma’s onder elkaar en tel per plek op, van rechts naar links.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: # − # =
 
@@ -47,8 +56,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 2,5  (controle: ok)
     - **Fout-hints (Claude):** 2,51 → Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na. · 3,3 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Zet de getallen onder elkaar, met de komma’s precies onder elkaar.
+- **Hint 2 (te schrijven):** Heeft een getal geen of minder cijfers achter de komma? Zet er nullen achter. Haal van rechts naar links af: eerst de honderdsten, dan de tienden, dan de hele getallen. Is het bovenste cijfer te klein? Wissel dan één van de plek ervoor in voor tien.
+- **Ouderzin:** Je kind trekt kommagetallen van elkaar af door de komma’s onder elkaar te zetten.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een tiende ernaast` (fout = antwoord ± 0,1) → Dat is een tiende ernaast. Moest je bij de honderdsten een tiende inwisselen?  [nieuw]
+  - `een honderdste ernaast` (fout = antwoord ± 0,01) → Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?  [nieuw]
+  - `net ernaast (heel antwoord)` (Claudes sleutel: tiende-of-honderdste-ernaast) → Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?  [Claude, taalfix]
+  - `plus in plaats van min` (Claudes sleutel: verkeerde-bewerking) → Is dit een plussom of een minsom? Kijk naar het teken.  [Claude, taalfix]
+  - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Zet de komma’s onder elkaar en haal per plek af, van rechts naar links.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: [plek] heeft # [ding], [plek] heeft er #. Hoeveel [ding] heeft [plek]?
 
@@ -70,8 +88,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 76.777 → Heb je ergens geleend? Dan is de kolom links één minder. · 93.999 → Hoeveel méér is het verschil. Aftrekken. · 85.777 → Per kolom haal je het onderste van het bovenste af. Lukt dat niet, dan leen je.
     - **Uitleg (Claude):** Schat eerst: 85.000 − 9000 is ongeveer 76.000. Reken dan precies, kolom voor kolom met lenen: 75.777.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoeveel meer: dat is het verschil tussen de twee getallen. Welke som maak je?
+- **Hint 2 (te schrijven):** Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Wissel dan één in van de kolom ervoor.
+- **Ouderzin:** Je kind rekent uit hoeveel meer de een heeft dan de ander, met getallen tot honderdduizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `opgeteld` (fout = getal1 + getal2) → Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.  [nieuw]
+  - `ingewisseld maar niet afgehaald` (fout = antwoord + 1000) → Dat is duizend te veel. Heb je bij de duizendtallen de één afgehaald die je had ingewisseld?  [nieuw]
+  - `kleinste cijfer van het grootste` (Claudes sleutel: kleinste-van-grootste) → Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: het huis heeft # [ding], de klas heeft er #. Hoeveel [ding] heeft het huis?
 
@@ -93,5 +118,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 63.874 → Heb je ergens geleend? Dan is de kolom links één minder. · 81.648 → Hoeveel méér is het verschil. Aftrekken. · 77.126 → Per kolom haal je het onderste van het bovenste af. Lukt dat niet, dan leen je.
     - **Uitleg (Claude):** Schat eerst: 72.000 − 9000 is ongeveer 63.000. Reken dan precies, kolom voor kolom met lenen: 62.874.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoeveel meer: dat is het verschil tussen de twee getallen. Welke som maak je?
+- **Hint 2 (te schrijven):** Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Wissel dan één in van de kolom ervoor.
+- **Ouderzin:** Je kind rekent uit hoeveel meer de een heeft dan de ander, met getallen tot honderdduizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `opgeteld` (fout = getal1 + getal2) → Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.  [nieuw]
+  - `ingewisseld maar niet afgehaald` (fout = antwoord + 1000) → Dat is duizend te veel. Heb je bij de duizendtallen de één afgehaald die je had ingewisseld?  [nieuw]
+  - `kleinste cijfer van het grootste` (Claudes sleutel: kleinste-van-grootste) → Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom.  [nieuw]
+- Status: hints klaar

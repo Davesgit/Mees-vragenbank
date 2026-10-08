@@ -432,3 +432,8 @@ Datapunt Overzicht: `fout_regels.py` van 12:03:59 faalde in `_zelftest543` (KeyE
 | 550 | Overzicht (FIX6) | ✓ guard532 rekent bij elke sleutel 'honderd te veel' en 'tien te veel' in GET-E04 (plussom) de overdracht na (getal1 mod 100 + getal2 mod 100 ≥ 100) en eist de regel én de tekst uit de entry: 41 sleutels, 0 fout. Mutatietest in check_fixlijst_g6.py: bij 066 de tekst 'zonder' in plaats van 'met' → gevangen (FAIL als dat niet zo is) |
 | 551, 552 | Overzicht | ✓ zie de G5-fixlijst |
 | 553 | Overzicht | ✓ (c) #534, #541, #542 klaar. (d) De data om 12:16:54 opnieuw geschreven zonder nieuwe buildtijd: losse apply_hints van Overzicht voor `logs/regels_onleesbaar.json`; items gelijk. Nu krijgt elke schrijfactie `geschrevenOp`/`geschrevenDoor` en een regel in `logs/schrijflog.jsonl` (zie de G5-fixlijst) |
+
+## Na-ronde r12 (8 okt, voor Didactiek): motor
+| # | Wat | Stand |
+|---|---|---|
+| Oef-#421/#422/#429 | Gedeelde motor: één minteken ('−', '-', '–') en 'euro'/'€' in letterlijke regels; nieuwe regel 'de deelsom omgedraaid' (G7). Regressie G6: 4302 items, 0 sleutels anders | ✓ geen verschuiving |

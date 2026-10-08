@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T12:36:53+0200",
+ "gegenereerdOp": "2026-10-08T12:44:21+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-DENK-03",
  "bordtitel": "Stappenplannen bij rekenen",
@@ -694,30 +694,30 @@
     "juisteOptieTekst": "48"
    },
    "hint": "Verdubbelen is keer twee. Schrijf na elke stap het nieuwe getal op.",
-   "sterkereHint": "Begin bij het getal uit de vraag en doe het keer twee. Doe de uitkomst weer keer twee. Houd met streepjes bij hoe vaak je verdubbelt, tot het aantal keer uit de vraag.",
+   "sterkereHint": "Begin bij het begingetal en doe het keer twee. Doe de uitkomst weer keer twee. Houd met streepjes bij hoe vaak je verdubbelt, tot het aantal keer uit de vraag.",
    "foutHints": [
     {
      "stap": null,
      "fout": "24",
-     "uitleg": "Verdubbelen is keer twee. Doe dat zo vaak als de vraag zegt.",
-     "uitlegSterker": "Begin bij het getal uit de vraag en doe het keer twee. Doe de uitkomst weer keer twee. Houd met streepjes bij hoe vaak je verdubbelt, tot het aantal keer uit de vraag.",
-     "laag2": "terugval hint2 (somtype)",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "uitleg": "Heb je echt zo vaak verdubbeld als de vraag zegt? Schrijf na elke verdubbeling het getal op en tel de stappen.",
+     "uitlegSterker": "Schrijf een rijtje: het begingetal, en daarachter steeds het dubbele. Zet onder elk nieuw getal een streepje. Stop als je zoveel streepjes hebt als de vraag zegt.",
+     "laag2": "tekstSterker",
+     "regel": "24",
+     "soort": "een keer te weinig",
      "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "11",
-     "uitleg": "Verdubbelen is keer twee. Doe dat zo vaak als de vraag zegt.",
-     "uitlegSterker": "Begin bij het getal uit de vraag en doe het keer twee. Doe de uitkomst weer keer twee. Houd met streepjes bij hoe vaak je verdubbelt, tot het aantal keer uit de vraag.",
-     "laag2": "terugval hint2 (somtype)",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "uitleg": "Heb je steeds twee erbij gedaan? Verdubbelen is keer twee: het getal wordt twee keer zo groot.",
+     "uitlegSterker": "Verdubbelen is het getal bij zichzelf optellen. Doe dat met het begingetal, en daarna steeds met de nieuwe uitkomst.",
+     "laag2": "tekstSterker",
+     "regel": "11",
+     "soort": "steeds twee erbij",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "24 → Verdubbelen is keer twee. Doe dat zo vaak als de vraag zegt. · 11 → Verdubbelen is keer twee. Doe dat zo vaak als de vraag zegt.",
+   "foutHintsTekst": "24 → Heb je echt zo vaak verdubbeld als de vraag zegt? Schrijf na elke verdubbeling het getal op en tel de stappen. · 11 → Heb je steeds twee erbij gedaan? Verdubbelen is keer twee: het getal wordt twee keer zo groot.",
    "ouderzin": "Je kind verdubbelt een getal een paar keer achter elkaar en houdt bij hoe vaak.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
@@ -848,23 +848,34 @@
    },
    "foutRegels": [
     {
-     "regel": "8",
+     "regel": "24",
      "soort": "een keer te weinig",
      "bron": "nieuw",
      "tekst": "Heb je echt zo vaak verdubbeld als de vraag zegt? Schrijf na elke verdubbeling het getal op en tel de stappen.",
      "tekstSterker": "Schrijf een rijtje: het begingetal, en daarachter steeds het dubbele. Zet onder elk nieuw getal een streepje. Stop als je zoveel streepjes hebt als de vraag zegt.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "24"
+      ],
+      "opOpties": true
      },
      "leesbaar": true
     },
     {
-     "regel": "9",
+     "regel": "11",
      "soort": "steeds twee erbij",
+     "bron": "nieuw",
      "tekst": "Heb je steeds twee erbij gedaan? Verdubbelen is keer twee: het getal wordt twee keer zo groot.",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Verdubbelen is het getal bij zichzelf optellen. Doe dat met het begingetal, en daarna steeds met de nieuwe uitkomst.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "11"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -2013,11 +2024,11 @@
     {
      "stap": null,
      "fout": "16 euro",
-     "uitleg": "Tel het zakgeld erbij op en haal de prijs van wat je koopt eraf.",
-     "uitlegSterker": "Tel bij stap één het zakgeld op bij wat je gespaard had. Haal bij stap twee de prijs van het schrift ervan af.",
-     "laag2": "terugval hint2 (somtype)",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "uitleg": "Heb je de prijs van het schrift erbij opgeteld? Als je iets koopt, heb je minder geld.",
+     "uitlegSterker": "Zakgeld krijgen is erbij, iets kopen is eraf. Tel bij stap één het zakgeld op en haal bij stap twee de prijs eraf.",
+     "laag2": "tekstSterker",
+     "regel": "16",
+     "soort": "prijs erbij opgeteld",
      "bron": "nieuw"
     },
     {
@@ -2031,7 +2042,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "16 euro → Tel het zakgeld erbij op en haal de prijs van wat je koopt eraf. · 13 euro → Is dat wat je na stap één hebt? Bij stap twee koop je nog een schrift.",
+   "foutHintsTekst": "16 euro → Heb je de prijs van het schrift erbij opgeteld? Als je iets koopt, heb je minder geld. · 13 euro → Is dat wat je na stap één hebt? Bij stap twee koop je nog een schrift.",
    "ouderzin": "Je kind volgt een plan in twee stappen: eerst erbij, dan eraf.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
@@ -2177,11 +2188,19 @@
      "leesbaar": true
     },
     {
-     "regel": "17",
+     "regel": "16",
      "soort": "prijs erbij opgeteld",
+     "bron": "nieuw",
      "tekst": "Heb je de prijs van het schrift erbij opgeteld? Als je iets koopt, heb je minder geld.",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Zakgeld krijgen is erbij, iets kopen is eraf. Tel bij stap één het zakgeld op en haal bij stap twee de prijs eraf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "16 euro"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -2244,7 +2263,7 @@
      "stap": null,
      "fout": "6 km",
      "uitleg": "Klopt de eenheid? Een kilometer is duizend meter. Is de route echt zo lang?",
-     "uitlegSterker": "Tel de meters van de stukken op en schrijf het antwoord in meter. Duizend meter is één kilometer: de route is korter dan dat.",
+     "uitlegSterker": "Tel de meters van de stukken op en schrijf het antwoord in meter. Duizend meter is één kilometer: is de route langer of korter dan dat?",
      "laag2": "tekstSterker",
      "regel": "6 km",
      "soort": "meter als kilometer",
@@ -2392,7 +2411,7 @@
      "soort": "meter als kilometer",
      "bron": "nieuw",
      "tekst": "Klopt de eenheid? Een kilometer is duizend meter. Is de route echt zo lang?",
-     "tekstSterker": "Tel de meters van de stukken op en schrijf het antwoord in meter. Duizend meter is één kilometer: de route is korter dan dat.",
+     "tekstSterker": "Tel de meters van de stukken op en schrijf het antwoord in meter. Duizend meter is één kilometer: is de route langer of korter dan dat?",
      "perItem": false,
      "match": {
       "waarden": [
@@ -2883,7 +2902,7 @@
     "juisteOptieTekst": "15"
    },
    "hint": "Wat betekent verdubbelen? Doe de stappen één voor één.",
-   "sterkereHint": "Verdubbelen is keer twee: het getal wordt twee keer zo groot. Schrijf na elke stap het nieuwe getal op. Tel er bij de laatste stap het getal uit de vraag bij op.",
+   "sterkereHint": "Verdubbelen is keer twee: het getal wordt twee keer zo groot. Schrijf na elke stap het nieuwe getal op. Tel er bij de laatste stap het getal bij op dat in die stap staat.",
    "foutHints": [
     {
      "stap": null,
@@ -3984,7 +4003,7 @@
     {
      "stap": null,
      "fout": "Nee, het moet 15 zijn",
-     "uitleg": "Wat staat er in de laatste stap: keer of plus? Keer twee is iets anders dan twee erbij.",
+     "uitleg": "Wat staat er in de laatste stap: keer of plus? Keer een getal is iets anders dan dat getal erbij.",
      "uitlegSterker": "Schrijf de stappen onder elkaar met het teken erbij: delen, plus en keer. Doe bij elke stap precies wat het teken zegt.",
      "laag2": "tekstSterker",
      "regel": "nee, het moet 15 zijn",
@@ -4002,7 +4021,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Nee, het moet 15 zijn → Wat staat er in de laatste stap: keer of plus? Keer twee is iets anders dan twee erbij. · Nee, het moet 16 zijn → Heb je alle stappen gedaan? Er is ook een stap waarin je iets erbij telt.",
+   "foutHintsTekst": "Nee, het moet 15 zijn → Wat staat er in de laatste stap: keer of plus? Keer een getal is iets anders dan dat getal erbij. · Nee, het moet 16 zijn → Heb je alle stappen gedaan? Er is ook een stap waarin je iets erbij telt.",
    "ouderzin": "Je kind rekent een rij stappen na en controleert of een uitkomst klopt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
@@ -4125,7 +4144,7 @@
      "regel": "nee, het moet 15 zijn",
      "soort": "keer als plus",
      "bron": "nieuw",
-     "tekst": "Wat staat er in de laatste stap: keer of plus? Keer twee is iets anders dan twee erbij.",
+     "tekst": "Wat staat er in de laatste stap: keer of plus? Keer een getal is iets anders dan dat getal erbij.",
      "tekstSterker": "Schrijf de stappen onder elkaar met het teken erbij: delen, plus en keer. Doe bij elke stap precies wat het teken zegt.",
      "perItem": false,
      "match": {
@@ -4202,7 +4221,7 @@
      "stap": null,
      "fout": "Nee, het moet 34 zijn",
      "uitleg": "Wat doe je in de laatste stap: erbij of eraf? Als je iets eraf haalt, wordt het getal kleiner.",
-     "uitlegSterker": "Schrijf het getal na de keer-stap op. Haal er het laatste getal uit de vraag af. Wordt jouw uitkomst kleiner? Zo hoort het bij eraf halen.",
+     "uitlegSterker": "Schrijf het getal na de keer-stap op. Haal er het getal van de min-stap af. Wordt jouw uitkomst kleiner? Zo hoort het bij eraf halen.",
      "laag2": "tekstSterker",
      "regel": "nee, het moet 34 zijn",
      "soort": "erbij in plaats van eraf",
@@ -4212,7 +4231,7 @@
      "stap": null,
      "fout": "Nee, het moet 5 zijn",
      "uitleg": "Wat staat er in de tweede stap: keer of plus? Keer is iets anders dan erbij.",
-     "uitlegSterker": "Doe bij de keer-stap het getal zo vaak als er staat, bijvoorbeeld door het steeds bij zichzelf op te tellen. Haal er tot slot het laatste getal af.",
+     "uitlegSterker": "Doe bij de keer-stap het getal zo vaak als er staat, bijvoorbeeld door het steeds bij zichzelf op te tellen. Haal er tot slot het getal van de min-stap af.",
      "laag2": "tekstSterker",
      "regel": "nee, het moet 5 zijn",
      "soort": "plus in plaats van keer",
@@ -4343,7 +4362,7 @@
      "soort": "erbij in plaats van eraf",
      "bron": "nieuw",
      "tekst": "Wat doe je in de laatste stap: erbij of eraf? Als je iets eraf haalt, wordt het getal kleiner.",
-     "tekstSterker": "Schrijf het getal na de keer-stap op. Haal er het laatste getal uit de vraag af. Wordt jouw uitkomst kleiner? Zo hoort het bij eraf halen.",
+     "tekstSterker": "Schrijf het getal na de keer-stap op. Haal er het getal van de min-stap af. Wordt jouw uitkomst kleiner? Zo hoort het bij eraf halen.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -4358,7 +4377,7 @@
      "soort": "plus in plaats van keer",
      "bron": "nieuw",
      "tekst": "Wat staat er in de tweede stap: keer of plus? Keer is iets anders dan erbij.",
-     "tekstSterker": "Doe bij de keer-stap het getal zo vaak als er staat, bijvoorbeeld door het steeds bij zichzelf op te tellen. Haal er tot slot het laatste getal af.",
+     "tekstSterker": "Doe bij de keer-stap het getal zo vaak als er staat, bijvoorbeeld door het steeds bij zichzelf op te tellen. Haal er tot slot het getal van de min-stap af.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -4372,7 +4391,7 @@
      "regel": "andere fout",
      "soort": "andere fout",
      "bron": "nieuw",
-     "tekst": "Doe de keer-stap en haal er het laatste getal af. Vergelijk met de uitkomst van Lisa.",
+     "tekst": "Doe de keer-stap en haal er het getal van de min-stap af. Vergelijk met de uitkomst van Lisa.",
      "tekstSterker": null,
      "perItem": false,
      "match": {
@@ -4381,7 +4400,7 @@
      "leesbaar": true
     }
    ],
-   "algemeneFoutHint": "Doe de keer-stap en haal er het laatste getal af. Vergelijk met de uitkomst van Lisa."
+   "algemeneFoutHint": "Doe de keer-stap en haal er het getal van de min-stap af. Vergelijk met de uitkomst van Lisa."
   },
   {
    "id": "G7-DENK-03-claude-bank-021",
@@ -4413,16 +4432,16 @@
     "juisteOptieTekst": "Bij stap 3"
    },
    "hint": "Reken de stappen zelf uit. Vergelijk na elke stap jouw getal met het opgeschreven getal.",
-   "sterkereHint": "Het begingetal nemen is de eerste stap. Schrijf jouw getallen onder de opgeschreven getallen. De eerste plek waar ze verschillen, is de stap waar het misging.",
+   "sterkereHint": "Schrijf jouw getallen onder de opgeschreven getallen. De eerste plek waar ze verschillen, is de stap waar het misging.",
    "foutHints": [
     {
      "stap": null,
      "fout": "Bij stap 2",
-     "uitleg": "Klopt het getal na het eraf halen? Reken het na. Let op: het begingetal nemen is de eerste stap.",
-     "uitlegSterker": "Zet de stappen onder elkaar met een nummer: het begingetal nemen is stap één. Reken elke stap zelf uit en zoek de eerste stap waar het opgeschreven getal anders is.",
+     "uitleg": "Klopt het getal na het eraf halen? Reken het na.",
+     "uitlegSterker": "Zet jouw getallen stap voor stap onder de opgeschreven getallen. Zoek de eerste stap waar het opgeschreven getal anders is.",
      "laag2": "tekstSterker",
      "regel": "bij stap 2",
-     "soort": "goede stap gekozen of anders geteld",
+     "soort": "stap die nog klopte",
      "bron": "nieuw"
     },
     {
@@ -4436,7 +4455,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Bij stap 2 → Klopt het getal na het eraf halen? Reken het na. Let op: het begingetal nemen is de eerste stap. · Bij stap 4 → Ging het in de stap ervoor al goed? Reken elke stap na vanaf het begin.",
+   "foutHintsTekst": "Bij stap 2 → Klopt het getal na het eraf halen? Reken het na. · Bij stap 4 → Ging het in de stap ervoor al goed? Reken elke stap na vanaf het begin.",
    "ouderzin": "Je kind rekent een rij stappen na en zoekt de eerste stap waar het misging.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -4566,10 +4585,10 @@
    "foutRegels": [
     {
      "regel": "bij stap 2",
-     "soort": "goede stap gekozen of anders geteld",
+     "soort": "stap die nog klopte",
      "bron": "nieuw",
-     "tekst": "Klopt het getal na het eraf halen? Reken het na. Let op: het begingetal nemen is de eerste stap.",
-     "tekstSterker": "Zet de stappen onder elkaar met een nummer: het begingetal nemen is stap één. Reken elke stap zelf uit en zoek de eerste stap waar het opgeschreven getal anders is.",
+     "tekst": "Klopt het getal na het eraf halen? Reken het na.",
+     "tekstSterker": "Zet jouw getallen stap voor stap onder de opgeschreven getallen. Zoek de eerste stap waar het opgeschreven getal anders is.",
      "perItem": false,
      "match": {
       "waarden": [
@@ -4861,7 +4880,7 @@
     {
      "stap": null,
      "fout": "26",
-     "uitleg": "Welk getal heb je na de plus-stap? Dat hele getal deel je in de laatste stap door twee.",
+     "uitleg": "Welk getal heb je na de plus-stap? Dat hele getal deel je in de laatste stap.",
      "uitlegSterker": "Schrijf de vier stappen onder elkaar en reken ze één voor één uit, van boven naar beneden. Het getal na de plus-stap is het getal dat je deelt.",
      "laag2": "tekstSterker",
      "regel": "26",
@@ -4879,7 +4898,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "26 → Welk getal heb je na de plus-stap? Dat hele getal deel je in de laatste stap door twee. · 40 → Is dat het getal na de plus-stap? Er is nog een laatste stap: delen.",
+   "foutHintsTekst": "26 → Welk getal heb je na de plus-stap? Dat hele getal deel je in de laatste stap. · 40 → Is dat het getal na de plus-stap? Er is nog een laatste stap: delen.",
    "ouderzin": "Je kind volgt een rij van vier stappen precies in de goede volgorde.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -5006,7 +5025,7 @@
      "regel": "26",
      "soort": "deel-stap niet op het getal na de plus-stap",
      "bron": "nieuw",
-     "tekst": "Welk getal heb je na de plus-stap? Dat hele getal deel je in de laatste stap door twee.",
+     "tekst": "Welk getal heb je na de plus-stap? Dat hele getal deel je in de laatste stap.",
      "tekstSterker": "Schrijf de vier stappen onder elkaar en reken ze één voor één uit, van boven naar beneden. Het getal na de plus-stap is het getal dat je deelt.",
      "perItem": false,
      "match": {
@@ -5082,25 +5101,25 @@
     {
      "stap": null,
      "fout": "Ja, 120 g klopt",
-     "uitleg": "Reken uit hoeveel keer zoveel koekjes je bakt, en doe de boter ook zoveel keer.",
-     "uitlegSterker": "Deel het aantal koekjes dat je wilt bakken door het aantal koekjes uit de eerste zin. De uitkomst zegt hoeveel keer zoveel boter je nodig hebt. Reken het uit en vergelijk met wat iemand zegt.",
-     "laag2": "terugval hint2 (somtype)",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "uitleg": "Heb je het zelf nagerekend? Hoeveel keer past het aantal koekjes uit de eerste zin in het aantal dat je wilt bakken?",
+     "uitlegSterker": "Maak een tabel met twee rijen: koekjes en boter. Zet de getallen uit de eerste zin in de eerste kolom. Tel in elke volgende kolom de eerste kolom er nog eens bij, bij de koekjes én bij de boter, tot je het aantal koekjes hebt dat je wilt bakken.",
+     "laag2": "tekstSterker",
+     "regel": "ja, 120 g klopt",
+     "soort": "bewering overgenomen",
      "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Nee, het moet 20 g zijn",
-     "uitleg": "Reken uit hoeveel keer zoveel koekjes je bakt, en doe de boter ook zoveel keer.",
-     "uitlegSterker": "Deel het aantal koekjes dat je wilt bakken door het aantal koekjes uit de eerste zin. De uitkomst zegt hoeveel keer zoveel boter je nodig hebt. Reken het uit en vergelijk met wat iemand zegt.",
-     "laag2": "terugval hint2 (somtype)",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "uitleg": "Bak je meer of minder koekjes dan in de eerste zin? Heb je dan meer of minder boter nodig?",
+     "uitlegSterker": "Meer koekjes vraagt meer boter. Reken uit hoeveel keer zoveel koekjes je bakt, en doe de boter uit de eerste zin ook zoveel keer.",
+     "laag2": "tekstSterker",
+     "regel": "nee, het moet 20 g zijn",
+     "soort": "gedeeld in plaats van keer",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Ja, 120 g klopt → Reken uit hoeveel keer zoveel koekjes je bakt, en doe de boter ook zoveel keer. · Nee, het moet 20 g zijn → Reken uit hoeveel keer zoveel koekjes je bakt, en doe de boter ook zoveel keer.",
+   "foutHintsTekst": "Ja, 120 g klopt → Heb je het zelf nagerekend? Hoeveel keer past het aantal koekjes uit de eerste zin in het aantal dat je wilt bakken? · Nee, het moet 20 g zijn → Bak je meer of minder koekjes dan in de eerste zin? Heb je dan meer of minder boter nodig?",
    "ouderzin": "Je kind vergroot een hoeveelheid: hoeveel keer zoveel koekjes, zoveel keer zoveel boter.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
@@ -5231,18 +5250,34 @@
    },
    "foutRegels": [
     {
-     "regel": "ja, 240 g klopt",
+     "regel": "ja, 120 g klopt",
      "soort": "bewering overgenomen",
+     "bron": "nieuw",
      "tekst": "Heb je het zelf nagerekend? Hoeveel keer past het aantal koekjes uit de eerste zin in het aantal dat je wilt bakken?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Maak een tabel met twee rijen: koekjes en boter. Zet de getallen uit de eerste zin in de eerste kolom. Tel in elke volgende kolom de eerste kolom er nog eens bij, bij de koekjes én bij de boter, tot je het aantal koekjes hebt dat je wilt bakken.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Ja, 120 g klopt"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
-     "regel": "nee, het moet 40 g zijn",
+     "regel": "nee, het moet 20 g zijn",
      "soort": "gedeeld in plaats van keer",
+     "bron": "nieuw",
      "tekst": "Bak je meer of minder koekjes dan in de eerste zin? Heb je dan meer of minder boter nodig?",
-     "match": null,
-     "leesbaar": false
+     "tekstSterker": "Meer koekjes vraagt meer boter. Reken uit hoeveel keer zoveel koekjes je bakt, en doe de boter uit de eerste zin ook zoveel keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Nee, het moet 20 g zijn"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -5545,11 +5580,11 @@
     {
      "stap": null,
      "fout": "6 bordjes",
-     "uitleg": "Hoeveel keer past de afstand tussen twee bordjes in de hele tocht? Reken de tocht eerst om naar meter.",
+     "uitleg": "Hoe vaak past de afstand tussen twee bordjes in één kilometer? Zoveel stukken liggen er in elke kilometer van de tocht.",
      "uitlegSterker": "Schrijf de lengte van de tocht in meter: een kilometer is duizend meter. Deel dat door de afstand tussen twee bordjes. Tel er nog één bordje bij, want er staat er ook een bij de finish.",
      "laag2": "tekstSterker",
      "regel": "6 bordjes",
-     "soort": "niet omgerekend",
+     "soort": "helft genomen in plaats van hoe vaak het past",
      "bron": "nieuw"
     },
     {
@@ -5563,7 +5598,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "6 bordjes → Hoeveel keer past de afstand tussen twee bordjes in de hele tocht? Reken de tocht eerst om naar meter. · 24 bordjes → Heb je het bordje bij de start én het bordje bij de finish meegeteld? Er is één bordje meer dan er stukken zijn.",
+   "foutHintsTekst": "6 bordjes → Hoe vaak past de afstand tussen twee bordjes in één kilometer? Zoveel stukken liggen er in elke kilometer van de tocht. · 24 bordjes → Heb je het bordje bij de start én het bordje bij de finish meegeteld? Er is één bordje meer dan er stukken zijn.",
    "ouderzin": "Je kind rekent kilometers om naar meter en telt bij bordjes langs een route ook het bordje bij de finish mee.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
@@ -5725,9 +5760,9 @@
     },
     {
      "regel": "6 bordjes",
-     "soort": "niet omgerekend",
+     "soort": "helft genomen in plaats van hoe vaak het past",
      "bron": "nieuw",
-     "tekst": "Hoeveel keer past de afstand tussen twee bordjes in de hele tocht? Reken de tocht eerst om naar meter.",
+     "tekst": "Hoe vaak past de afstand tussen twee bordjes in één kilometer? Zoveel stukken liggen er in elke kilometer van de tocht.",
      "tekstSterker": "Schrijf de lengte van de tocht in meter: een kilometer is duizend meter. Deel dat door de afstand tussen twee bordjes. Tel er nog één bordje bij, want er staat er ook een bij de finish.",
      "perItem": false,
      "match": {
@@ -5754,18 +5789,22 @@
    "algemeneFoutHint": "Reken de tocht om naar meter, deel door de afstand tussen de bordjes en tel er één bordje bij."
   }
  ],
- "hintsSyncOp": "2026-10-08T12:36:57+02:00",
+ "hintsSyncOp": "2026-10-08T12:44:26+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
-   "md5": "99522aca3a7a"
+   "md5": "1106695c9148"
   },
   {
    "batch": "batch2.json",
-   "md5": "51b0ad888aad"
+   "md5": "8c699cd7b0a1"
+  },
+  {
+   "batch": "batch3.json",
+   "md5": "27ee48fd8a5d"
   }
  ],
- "geschrevenOp": "2026-10-08T12:36:57+02:00",
+ "geschrevenOp": "2026-10-08T12:44:26+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

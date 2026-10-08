@@ -29,12 +29,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 81 − 780 → Wat wil je weten, en waar deel je dan door? Zet het in een verhoudingstabel. · 780 + 81 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
 - **Hint 1 (te schrijven):** Wat betekent het verschil van twee getallen? Hoeveel ligt het ene getal boven het andere?
-- **Hint 2 (te schrijven):** Reken zelf uit hoeveel het ene getal meer is dan het andere. Reken ook elke som uit. Welke som geeft precies die uitkomst?
+- **Hint 2 (te schrijven):** Reken zelf uit hoeveel het ene getal meer is dan het andere. Lees dan elke som precies zoals hij er staat. Welke som geeft die uitkomst?
 - **Ouderzin:** Je kind kiest de som bij 'het verschil': een minsom met het grootste getal vooraan.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `kleinste getal vooraan` (de minsom omgedraaid) → Kun je het grootste getal van het kleinste afhalen? Bij het verschil haal je het kleinste getal van het grootste af.  [nieuw]
   - `plussom` (de plussom) → Komt er bij het verschil iets bij? Het verschil zegt hoeveel het ene getal meer is dan het andere.  [nieuw]
-  - `andere fout` (andere fout) → Het verschil is hoeveel het ene getal meer is dan het andere: haal het kleinste getal van het grootste af.  [nieuw]
+  - `andere fout` (andere fout) → Hoeveel is het ene getal meer dan het andere? Welke som rekent dat uit?  [nieuw]
 - Status: hints klaar
 
 ## Somtype 2: Hoe heet de # in # − # = #?
@@ -57,17 +57,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** het aftrektal  (controle: n.v.t.)
     - **Fout-hints (Claude):** de aftrekker → Lees de vraag nog eens: komt er iets bij, of gaat er iets af? · de eerste term → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** Zoek het getal uit de vraag in de minsom. Staat het vooraan, achter het minteken of achter het isgelijkteken?
-- **Hint 2 (te schrijven):** Bij een minsom horen de namen aftrektal, aftrekker en verschil. Term en som horen bij een plussom. Welke naam past bij de plek van het getal uit de vraag?
+- **Hint 1 (te schrijven):** Zoek het getal waar de vraag over gaat in de minsom. Staat het vooraan, achter het minteken of achter het isgelijkteken?
+- **Hint 2 (te schrijven):** Bij een minsom horen de namen aftrektal, aftrekker en verschil. De namen term en som horen bij een plussom. Welke naam past bij de plek van het getal waar de vraag over gaat?
 - **Ouderzin:** Je kind kent de namen van de getallen in een minsom: aftrektal, aftrekker en verschil.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `plus-naam (tweede term)` (de tweede term) → Hoort het woord term bij een minsom? Term hoort bij een plussom.  [nieuw]
   - `plus-naam (eerste term)` (de eerste term) → Hoort het woord term bij een minsom? Term hoort bij een plussom.  [nieuw]
-  - `plus-naam (som)` (de som) → Hoort de som bij een minsom? De som is de uitkomst van een plussom.  [nieuw]
-  - `uitkomst gekozen` (het verschil) → Is het getal uit de vraag de uitkomst van de minsom? Het verschil staat achter het isgelijkteken.  [nieuw]
-  - `getal vooraan gekozen` (het aftrektal) → Staat het getal uit de vraag vooraan in de minsom? Het aftrektal is het getal waar je iets van afhaalt.  [nieuw]
-  - `getal dat eraf gaat gekozen` (de aftrekker) → Gaat het getal uit de vraag eraf? De aftrekker is het getal achter het minteken.  [nieuw]
-  - `andere fout` (andere fout) → Zoek het getal uit de vraag in de minsom. Vooraan is het aftrektal, achter het minteken de aftrekker, achter het isgelijkteken het verschil.  [nieuw]
+  - `plus-naam (som)` (de som) → Hoort de naam som bij een minsom? De naam som hoort bij de uitkomst van een plussom.  [nieuw]
+  - `uitkomst gekozen` (het verschil) → Is het getal waar de vraag over gaat de uitkomst van de minsom? Het verschil staat achter het isgelijkteken.  [nieuw]
+  - `getal vooraan gekozen` (het aftrektal) → Staat het getal waar de vraag over gaat vooraan in de minsom? Het aftrektal is het getal waar je iets van afhaalt.  [nieuw]
+  - `getal dat eraf gaat gekozen` (de aftrekker) → Gaat het getal waar de vraag over gaat eraf? De aftrekker is het getal achter het minteken.  [nieuw]
+  - `andere fout` (andere fout) → Waar staat het getal waar de vraag over gaat: vooraan, achter het minteken of achter het isgelijkteken? Welke naam van een minsom hoort bij die plek?  [nieuw]
 - Status: hints klaar
 
 ## Somtype 3: Hoe heet de # in # + # = #?
@@ -90,17 +90,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** de som  (controle: n.v.t.)
     - **Fout-hints (Claude):** de eerste term → Lees de vraag nog eens: komt er iets bij, of gaat er iets af? · het verschil → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** Zoek het getal uit de vraag in de plussom. Staat het vooraan, achter het plusteken of achter het isgelijkteken?
-- **Hint 2 (te schrijven):** Bij een plussom horen de namen term en som. Aftrektal, aftrekker en verschil horen bij een minsom. Welke naam past bij de plek van het getal uit de vraag?
+- **Hint 1 (te schrijven):** Zoek het getal waar de vraag over gaat in de plussom. Staat het vooraan, achter het plusteken of achter het isgelijkteken?
+- **Hint 2 (te schrijven):** Bij een plussom horen de namen term en som. Aftrektal, aftrekker en verschil horen bij een minsom. Welke naam past bij de plek van het getal waar de vraag over gaat?
 - **Ouderzin:** Je kind kent de namen van de getallen in een plussom: eerste term, tweede term en som.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `min-naam (verschil)` (het verschil) → Hoort het verschil bij een plussom? Het verschil is de uitkomst van een minsom.  [nieuw]
   - `min-naam (aftrekker)` (de aftrekker) → Hoort de aftrekker bij een plussom? Bij een plussom haal je niets af.  [nieuw]
   - `min-naam (aftrektal)` (het aftrektal) → Hoort het aftrektal bij een plussom? Bij een plussom haal je niets af.  [nieuw]
-  - `getal vooraan gekozen` (de eerste term) → Staat het getal uit de vraag vooraan in de plussom? De eerste term is het getal vooraan.  [nieuw]
-  - `getal achter het plusteken gekozen` (de tweede term) → Staat het getal uit de vraag achter het plusteken? De tweede term is het getal dat je erbij optelt.  [nieuw]
-  - `uitkomst gekozen` (de som) → Is het getal uit de vraag de uitkomst van de plussom? De som staat achter het isgelijkteken.  [nieuw]
-  - `andere fout` (andere fout) → Zoek het getal uit de vraag in de plussom. Vooraan is de eerste term, achter het plusteken de tweede term, achter het isgelijkteken de som.  [nieuw]
+  - `getal vooraan gekozen` (de eerste term) → Staat het getal waar de vraag over gaat vooraan in de plussom? De eerste term is het getal vooraan.  [nieuw]
+  - `getal achter het plusteken gekozen` (de tweede term) → Staat het getal waar de vraag over gaat achter het plusteken? De tweede term is het getal dat je erbij optelt.  [nieuw]
+  - `uitkomst gekozen` (de som) → Is het getal waar de vraag over gaat de uitkomst van de plussom? Alleen het getal achter het isgelijkteken heet de som.  [nieuw]
+  - `andere fout` (andere fout) → Waar staat het getal waar de vraag over gaat: vooraan, achter het plusteken of achter het isgelijkteken? Welke naam van een plussom hoort bij die plek?  [nieuw]
 - Status: hints klaar
 
 ## Somtype 4: Hoe heet de # in # : # = #?
@@ -123,17 +123,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** het quotiënt  (controle: n.v.t.)
     - **Fout-hints (Claude):** het deeltal → Lees de vraag nog eens: komt er iets bij, of gaat er iets af? · het product → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** Zoek het getal uit de vraag in de deelsom. Staat het vooraan, achter het deelteken of achter het isgelijkteken?
-- **Hint 2 (te schrijven):** Bij een deelsom horen de namen deeltal, deler en quotiënt. Factor en product horen bij een keersom. Welke naam past bij de plek van het getal uit de vraag?
+- **Hint 1 (te schrijven):** Zoek het getal waar de vraag over gaat in de deelsom. Staat het vooraan, achter het deelteken of achter het isgelijkteken?
+- **Hint 2 (te schrijven):** Bij een deelsom horen de namen deeltal, deler en quotiënt. Factor en product horen bij een keersom. Welke naam past bij de plek van het getal waar de vraag over gaat?
 - **Ouderzin:** Je kind kent de namen van de getallen in een deelsom: deeltal, deler en quotiënt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `keer-naam (tweede factor)` (de tweede factor) → Hoort het woord factor bij een deelsom? Factor hoort bij een keersom.  [nieuw]
   - `keer-naam (eerste factor)` (de eerste factor) → Hoort het woord factor bij een deelsom? Factor hoort bij een keersom.  [nieuw]
   - `keer-naam (product)` (het product) → Hoort het product bij een deelsom? Het product is de uitkomst van een keersom.  [nieuw]
-  - `uitkomst gekozen` (het quotiënt) → Is het getal uit de vraag de uitkomst van de deelsom? Het quotiënt staat achter het isgelijkteken.  [nieuw]
-  - `getal vooraan gekozen` (het deeltal) → Staat het getal uit de vraag vooraan in de deelsom? Het deeltal is het getal dat je verdeelt.  [nieuw]
-  - `getal achter het deelteken gekozen` (de deler) → Deel je door het getal uit de vraag? De deler is het getal achter het deelteken.  [nieuw]
-  - `andere fout` (andere fout) → Zoek het getal uit de vraag in de deelsom. Vooraan is het deeltal, achter het deelteken de deler, achter het isgelijkteken het quotiënt.  [nieuw]
+  - `uitkomst gekozen` (het quotiënt) → Is het getal waar de vraag over gaat de uitkomst van de deelsom? Het quotiënt staat achter het isgelijkteken.  [nieuw]
+  - `getal vooraan gekozen` (het deeltal) → Staat het getal waar de vraag over gaat vooraan in de deelsom? Het deeltal is het getal dat je verdeelt.  [nieuw]
+  - `getal achter het deelteken gekozen` (de deler) → Deel je door het getal waar de vraag over gaat? De deler is het getal achter het deelteken.  [nieuw]
+  - `andere fout` (andere fout) → Waar staat het getal waar de vraag over gaat: vooraan, achter het deelteken of achter het isgelijkteken? Welke naam van een deelsom hoort bij die plek?  [nieuw]
 - Status: hints klaar
 
 ## Somtype 5: Zoek het quotiënt van # en #. Welke som maak je?
@@ -184,11 +184,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** het product  (controle: n.v.t.)
     - **Fout-hints (Claude):** de eerste factor → Lees de vraag nog eens: komt er iets bij, of gaat er iets af? · het quotiënt → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** Zoek het getal uit de vraag in de keersom. Staat het vooraan, achter het keerteken of achter het isgelijkteken?
-- **Hint 2 (te schrijven):** Bij een keersom horen de namen factor en product. Deeltal, deler en quotiënt horen bij een deelsom. Welke naam past bij de plek van het getal uit de vraag?
+- **Hint 1 (te schrijven):** Zoek het getal waar de vraag over gaat in de keersom. Staat het vooraan, achter het keerteken of achter het isgelijkteken?
+- **Hint 2 (te schrijven):** Bij een keersom horen de namen factor en product. Deeltal, deler en quotiënt horen bij een deelsom. Welke naam past bij de plek van het getal waar de vraag over gaat?
 - **Ouderzin:** Je kind kent de namen van de getallen in een keersom: eerste factor, tweede factor en product.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `getal vooraan gekozen` (de eerste factor) → Staat het getal uit de vraag vooraan in de keersom? De eerste factor is het getal vooraan.  [nieuw]
+  - `getal vooraan gekozen` (de eerste factor) → Staat het getal waar de vraag over gaat vooraan in de keersom? De eerste factor is het getal vooraan.  [nieuw]
   - `deel-naam (quotiënt)` (het quotiënt) → Hoort het quotiënt bij een keersom? Het quotiënt is de uitkomst van een deelsom.  [nieuw]
-  - `andere fout` (andere fout) → Zoek het getal uit de vraag in de keersom. Vooraan is de eerste factor, achter het keerteken de tweede factor, achter het isgelijkteken het product.  [nieuw]
+  - `andere fout` (andere fout) → Waar staat het getal waar de vraag over gaat: vooraan, achter het keerteken of achter het isgelijkteken? Welke naam van een keersom hoort bij die plek?  [nieuw]
 - Status: hints klaar

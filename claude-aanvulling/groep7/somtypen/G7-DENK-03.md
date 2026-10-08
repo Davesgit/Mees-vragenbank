@@ -124,11 +124,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Je krijgt na elke stap 6, 12, 24 en 48. Dat zijn vier verdubbelingen. De uitkomst is 48.
 
 - **Hint 1 (te schrijven):** Verdubbelen is keer twee. Schrijf na elke stap het nieuwe getal op.
-- **Hint 2 (te schrijven):** Begin bij het getal uit de vraag en doe het keer twee. Doe de uitkomst weer keer twee. Houd met streepjes bij hoe vaak je verdubbelt, tot het aantal keer uit de vraag.
+- **Hint 2 (te schrijven):** Begin bij het begingetal en doe het keer twee. Doe de uitkomst weer keer twee. Houd met streepjes bij hoe vaak je verdubbelt, tot het aantal keer uit de vraag.
 - **Ouderzin:** Je kind verdubbelt een getal een paar keer achter elkaar en houdt bij hoe vaak.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `een keer te weinig` (8) → Heb je echt zo vaak verdubbeld als de vraag zegt? Schrijf na elke verdubbeling het getal op en tel de stappen.  [nieuw]
-  - `steeds twee erbij` (9) → Heb je steeds twee erbij gedaan? Verdubbelen is keer twee: het getal wordt twee keer zo groot.  [nieuw]
+  - `een keer te weinig` (24) → Heb je echt zo vaak verdubbeld als de vraag zegt? Schrijf na elke verdubbeling het getal op en tel de stappen.  [nieuw]
+  - `steeds twee erbij` (11) → Heb je steeds twee erbij gedaan? Verdubbelen is keer twee: het getal wordt twee keer zo groot.  [nieuw]
   - `andere fout` (andere fout) → Verdubbelen is keer twee. Doe dat zo vaak als de vraag zegt.  [nieuw]
 - Status: hints klaar
 
@@ -279,7 +279,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind volgt een plan in twee stappen: eerst erbij, dan eraf.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tweede stap vergeten` (13) → Is dat wat je na stap één hebt? Bij stap twee koop je nog een schrift.  [nieuw]
-  - `prijs erbij opgeteld` (17) → Heb je de prijs van het schrift erbij opgeteld? Als je iets koopt, heb je minder geld.  [nieuw]
+  - `prijs erbij opgeteld` (16) → Heb je de prijs van het schrift erbij opgeteld? Als je iets koopt, heb je minder geld.  [nieuw]
   - `andere fout` (andere fout) → Tel het zakgeld erbij op en haal de prijs van wat je koopt eraf.  [nieuw]
 - Status: hints klaar
 
@@ -375,7 +375,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Eerst verdubbel je 6, dat is 12. Daarna tel je er 3 bij op. Zo kom je op 15.
 
 - **Hint 1 (te schrijven):** Wat betekent verdubbelen? Doe de stappen één voor één.
-- **Hint 2 (te schrijven):** Verdubbelen is keer twee: het getal wordt twee keer zo groot. Schrijf na elke stap het nieuwe getal op. Tel er bij de laatste stap het getal uit de vraag bij op.
+- **Hint 2 (te schrijven):** Verdubbelen is keer twee: het getal wordt twee keer zo groot. Schrijf na elke stap het nieuwe getal op. Tel er bij de laatste stap het getal bij op dat in die stap staat.
 - **Ouderzin:** Je kind volgt een rij stappen: eerst verdubbelen (keer twee), dan erbij.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `twee erbij in plaats van verdubbelen` (11) → Heb je twee erbij gedaan bij verdubbelen? Verdubbelen is keer twee: het getal wordt twee keer zo groot.  [nieuw]
@@ -428,7 +428,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent kilometers om naar meter en telt bij bordjes langs een route ook het bordje bij de finish mee.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `start of finish vergeten` (24 bordjes) → Heb je het bordje bij de start én het bordje bij de finish meegeteld? Er is één bordje meer dan er stukken zijn.  [nieuw]
-  - `niet omgerekend` (6 bordjes) → Hoeveel keer past de afstand tussen twee bordjes in de hele tocht? Reken de tocht eerst om naar meter.  [nieuw]
+  - `helft genomen in plaats van hoe vaak het past` (6 bordjes) → Hoe vaak past de afstand tussen twee bordjes in één kilometer? Zoveel stukken liggen er in elke kilometer van de tocht.  [nieuw]
   - `andere fout` (andere fout) → Reken de tocht om naar meter, deel door de afstand tussen de bordjes en tel er één bordje bij.  [nieuw]
 - Status: hints klaar
 
@@ -525,10 +525,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 30 min 6 is 24, dat klopt nog. Maar 24 gedeeld door 4 is 6 en niet 8. De fout zit dus in stap 3.
 
 - **Hint 1 (te schrijven):** Reken de stappen zelf uit. Vergelijk na elke stap jouw getal met het opgeschreven getal.
-- **Hint 2 (te schrijven):** Het begingetal nemen is de eerste stap. Schrijf jouw getallen onder de opgeschreven getallen. De eerste plek waar ze verschillen, is de stap waar het misging.
+- **Hint 2 (te schrijven):** Schrijf jouw getallen onder de opgeschreven getallen. De eerste plek waar ze verschillen, is de stap waar het misging.
 - **Ouderzin:** Je kind rekent een rij stappen na en zoekt de eerste stap waar het misging.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `goede stap gekozen of anders geteld` (bij stap 2) → Klopt het getal na het eraf halen? Reken het na. Let op: het begingetal nemen is de eerste stap.  [nieuw]
+  - `stap die nog klopte` (bij stap 2) → Klopt het getal na het eraf halen? Reken het na.  [nieuw]
   - `laatste stap gekozen` (bij stap 4) → Ging het in de stap ervoor al goed? Reken elke stap na vanaf het begin.  [nieuw]
   - `andere fout` (andere fout) → Reken elke stap zelf uit en zoek de eerste stap waar het opgeschreven getal anders is.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Stappen: neem #, haal er # af, deel door # en tel er # bij op. Iemand schreef op. #, #, #, #. Bij welke stap ging het mis?'. Nakijken of ze nog passen.
@@ -554,7 +554,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Schrijf na elke stap het getal op: na het delen, na het erbij tellen en na de keer-stap. Vergelijk jouw laatste getal met wat Tim zegt.
 - **Ouderzin:** Je kind rekent een rij stappen na en controleert of een uitkomst klopt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `keer als plus` (nee, het moet 15 zijn) → Wat staat er in de laatste stap: keer of plus? Keer twee is iets anders dan twee erbij.  [nieuw]
+  - `keer als plus` (nee, het moet 15 zijn) → Wat staat er in de laatste stap: keer of plus? Keer een getal is iets anders dan dat getal erbij.  [nieuw]
   - `plus-stap vergeten` (nee, het moet 16 zijn) → Heb je alle stappen gedaan? Er is ook een stap waarin je iets erbij telt.  [nieuw]
   - `andere fout` (andere fout) → Reken alle stappen zelf uit, in de goede volgorde, en vergelijk met de uitkomst van Tim.  [nieuw]
 - Status: hints klaar
@@ -581,7 +581,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `erbij in plaats van eraf` (nee, het moet 34 zijn) → Wat doe je in de laatste stap: erbij of eraf? Als je iets eraf haalt, wordt het getal kleiner.  [nieuw]
   - `plus in plaats van keer` (nee, het moet 5 zijn) → Wat staat er in de tweede stap: keer of plus? Keer is iets anders dan erbij.  [nieuw]
-  - `andere fout` (andere fout) → Doe de keer-stap en haal er het laatste getal af. Vergelijk met de uitkomst van Lisa.  [nieuw]
+  - `andere fout` (andere fout) → Doe de keer-stap en haal er het getal van de min-stap af. Vergelijk met de uitkomst van Lisa.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 24: Verdeel # [ding] eerlijk over # [ding]. De knikkers die overblijven, leg je apart. Hoeveel [ding] liggen er apart?
@@ -629,7 +629,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Schrijf na elke stap het getal op: na de keer-stap, na de plus-stap en na de deel-stap. Doe de deel-stap als laatste, met het getal dat je na de plus-stap hebt.
 - **Ouderzin:** Je kind volgt een rij van vier stappen precies in de goede volgorde.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `deel-stap niet op het getal na de plus-stap` (26) → Welk getal heb je na de plus-stap? Dat hele getal deel je in de laatste stap door twee.  [nieuw]
+  - `deel-stap niet op het getal na de plus-stap` (26) → Welk getal heb je na de plus-stap? Dat hele getal deel je in de laatste stap.  [nieuw]
   - `laatste stap vergeten` (40) → Is dat het getal na de plus-stap? Er is nog een laatste stap: delen.  [nieuw]
   - `andere fout` (andere fout) → Doe alle stappen in de volgorde van de vraag, de deel-stap als laatste.  [nieuw]
 - Status: hints klaar
@@ -654,7 +654,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Deel het aantal koekjes dat je wilt bakken door het aantal koekjes uit de eerste zin. De uitkomst zegt hoeveel keer zoveel boter je nodig hebt. Reken het uit en vergelijk met wat iemand zegt.
 - **Ouderzin:** Je kind vergroot een hoeveelheid: hoeveel keer zoveel koekjes, zoveel keer zoveel boter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `bewering overgenomen` (ja, 240 g klopt) → Heb je het zelf nagerekend? Hoeveel keer past het aantal koekjes uit de eerste zin in het aantal dat je wilt bakken?  [nieuw]
-  - `gedeeld in plaats van keer` (nee, het moet 40 g zijn) → Bak je meer of minder koekjes dan in de eerste zin? Heb je dan meer of minder boter nodig?  [nieuw]
+  - `bewering overgenomen` (ja, 120 g klopt) → Heb je het zelf nagerekend? Hoeveel keer past het aantal koekjes uit de eerste zin in het aantal dat je wilt bakken?  [nieuw]
+  - `gedeeld in plaats van keer` (nee, het moet 20 g zijn) → Bak je meer of minder koekjes dan in de eerste zin? Heb je dan meer of minder boter nodig?  [nieuw]
   - `andere fout` (andere fout) → Reken uit hoeveel keer zoveel koekjes je bakt, en doe de boter ook zoveel keer.  [nieuw]
 - Status: hints klaar

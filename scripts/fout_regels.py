@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Past de fout-hintregels van Oefeningen (hints/batch*.json: soort → regel → tekst) per item toe.
 Regels gelden van boven naar beneden; de eerste die past, wint. Gebruikt door apply_hints.py.
+Nieuw 8 okt 12:4x (G7 batch 2, Oef-#421/#422/#429): norm421 = één notatie voor letterlijke regels en opties ('−'/'-'/'–' als minteken, 'euro'/'€');
+  'de deelsom omgedraaid' = de deling met deeltal en deler omgewisseld (antwoord 'a : b' → optie 'b : a'; antwoord getal → b/a).
 Per item komt er uit:
   foutHints   concrete sleutels (fout getal / optietekst / vak) met kindtekst, zoals het exportformaat ze kent
   foutRegels  de geordende regels met een matcher (waarden / kleinerDan / vanaf / totEnMet / alles) voor invoer
@@ -306,7 +308,7 @@ def compile_regel(regel, c):
 _PM1_390 = re.compile(r'^fout = (?:het )?antwoord ?(?:±|\+|-|−) ?1(?![\d,])(?! ?cent)')
 def is_pm1_390(f):
     """G6 merge-fixlijst #390 (Didactiek gate ronde 9 deel B, les 115): een ±1-regel (fout = antwoord ± 1, + 1, − 1) of een tekst met 'Bijna!'."""
-    r = (f.get('regel') or '').lower().replace('−', '-').strip()
+    r = (f.get('regel') or '').lower().replace('−', '-').replace('\u2013', '-').strip()
     return bool(_PM1_390.match(r)) or (f.get('tekst') or '').lstrip().startswith('Bijna')
 from fractions import Fraction as _F416
 _GETAL416 = r'(?:\d{1,3}(?:\.\d{3})+|\d+)(?:,\d+)?(?:/\d+)?'
@@ -332,10 +334,18 @@ def in_vraag390(v, c):
     x = waarde416(v)
     if x is not None and str(v).strip().startswith('€'): return x in vraag_waarden416(c.opg, los=False)      # #530: bedrag op waarde
     return x is not None and (x in vraag_waarden416(c.opg) or (x.denominator == 1 and int(x) in set(c.nums)))
+def norm421(t, geld=True):
+    """Oef-#421/#422 (8 okt): één notatie voor de hele motor. Minteken: '–' (en-streep) en '-' tussen getallen of spaties → '−';
+    geld: '4,75 euro' / '3 euro' → '€4,75' / '€3' en '€ 3' → '€3'. Woorden met een streepje ('rood-wit') blijven zoals ze zijn."""
+    t = str(t or '').replace('\u00a0', ' ').replace('\u2013', '−')
+    t = re.sub(r'(?<=[\d\s)])-(?=[\s\d(])', '−', t)
+    if not geld: return t      # een regel zonder '€' ('16') leest '16 euro' zoals vroeger: alleen het minteken gelijk
+    t = re.sub(r'(?<![\w,.])(\d+(?:,\d{1,2})?)\s?euro\b', r'€\1', t, flags=re.I)
+    return re.sub(r'€\s+(?=\d)', '€', t)
 def lett_past(r, v):
     """G6 merge-fixlijst #380: past de letterlijke regel r (kleine letters) op de optietekst v? '€…' exact; met een cijfer: het hele getal
     met een woordgrens ('4 hokjes' niet in '14 hokjes' of '4,5 hokjes'); zonder cijfer: een stukje tekst."""
-    v = (v or '').lower()
+    r = norm421(r).lower(); v = norm421(v, geld=r.startswith('€')).lower()      # Oef-#421/#422 (geld alleen als de regel een bedrag is)
     if r.startswith('€'): return v == r
     if re.search(r'\d', r): return _lett_tok(r, v)
     return r in v
@@ -351,7 +361,7 @@ def _lett_tok(r, v):
     return False
 def lett_guard(r, v):
     """#380/#411/#506-guard: dezelfde tokenisering als lett_past (niet strenger: '1/4' op '1/4', '10.000' op '10.000' en 'a4' op 'a4' passen). Assert in pas_toe."""
-    v = (v or '').lower(); r = (r or '').lower()
+    r = norm421(r).lower(); v = norm421(v, geld=r.startswith('€')).lower()      # Oef-#421/#422 (geld alleen als de regel een bedrag is)
     if r.startswith('€'): return v == r
     return _lett_tok(r, v) if re.search(r'\d', r) else r in v
 _HELFT_STROOK = re.compile(r'strook van (\d+) hokjes')
@@ -430,7 +440,7 @@ def _compile_regel(regel, c):
     # de regel geldt alleen als er in die kolom echt geleend (getal1 − getal2) of onthouden (getal1 + getal2) wordt; anders de gewone regel daarna.
     if (q := re.search(r'\s*\((geleend bij|onthouden naar) de (tientallen|honderdtallen|duizendtallen)\)\s*$', regel, re.I)):
         k = {'tientallen': 10, 'honderdtallen': 100, 'duizendtallen': 1000}[q.group(2).lower()]
-        regel = regel[:q.start()]; rq = regel.lower().replace('−', '-').strip()
+        regel = regel[:q.start()]; rq = regel.lower().replace('−', '-').replace('\u2013', '-').strip()
         m_ = re.fullmatch(r'fout = antwoord ([+-]) (\d+)', rq)
         if not m_ or int(m_.group(2)) != k or c.g1 is None or c.g2 is None or c.a is None: return {'exact': set()}
         geleend = q.group(1).lower().startswith('geleend')
@@ -442,11 +452,12 @@ def _compile_regel(regel, c):
     # (getal1 mod k + getal2 mod k ≥ k; 5138 + 4269: 38 + 69 = 107 → met). Zo kiest de motor de tekst met of zonder 'er gaat er een mee'.
     if (q := re.search(r'\s*\((met|zonder) overdracht naar de (tientallen|honderdtallen|duizendtallen)\)\s*$', regel, re.I)):
         k = {'tientallen': 10, 'honderdtallen': 100, 'duizendtallen': 1000}[q.group(2).lower()]
-        regel = regel[:q.start()]; rq = regel.lower().replace('−', '-').strip()
+        regel = regel[:q.start()]; rq = regel.lower().replace('−', '-').replace('\u2013', '-').strip()
         m_ = re.fullmatch(r'fout = antwoord ([+-]) (\d+)', rq)
         if not m_ or int(m_.group(2)) != k or c.g1 is None or c.g2 is None or c.a is None or c.g1 + c.g2 != c.a: return {'exact': set()}
         if ((c.g1 % k) + (c.g2 % k) >= k) != (q.group(1).lower() == 'met'): return {'exact': set()}
-    r = regel.lower().replace('−', '-').strip()
+    r_lett = regel.strip()      # Oef-#421/#422: de letterlijke regel met zijn eigen minteken (norm421 maakt er '−' van)
+    r = regel.lower().replace('−', '-').replace('\u2013', '-').strip()
     a, g1, g2, n = c.a, c.g1, c.g2, c.nums
     if c.jr.get('soort') == 'lijngrafiek' and (r219 := _lijn219(r, c)) is not None: return r219      # G6 merge-fixlijst #219: lijngrafiek (VBN-E02)
     if (r8 := _regels_r8(r, c)) is not None: return r8      # G6 merge-fixlijst ronde 8: #233, #271, G5 GET-E09
@@ -519,9 +530,23 @@ def _compile_regel(regel, c):
         if r.startswith('fout = een niet-deelbaar getal bij deelbaar'): return E(*naar_wel)
         return E(*(naar_niet + naar_wel))
     if r.startswith('de minsom omgedraaid'):
-        return {'pred': lambda v: bool(re.fullmatch(r'(\d+) - (\d+)', v.replace('−', '-'))) and int(re.findall(r'\d+', v)[0]) < int(re.findall(r'\d+', v)[1])}
+        return {'pred': lambda v: bool(re.fullmatch(r'(\d+) - (\d+)', norm421(v).replace('−', '-'))) and int(re.findall(r'\d+', v)[0]) < int(re.findall(r'\d+', v)[1])}
+    if r.startswith('de deelsom omgedraaid'):
+        # Oef-#429 (G7 DENK-04 #5, '8 : 328'): alleen de deling met deeltal en deler omgewisseld. Antwoord 'a : b' → optie 'b : a';
+        # antwoord een getal en de vraag noemt 'a : b' → wat het kind dan opschrijft: b : a als breuk of kommagetal (b/a, '0,…').
+        def _deel(t):
+            m_ = re.fullmatch(r'\s*(\d+(?:,\d+)?)\s*[:÷]\s*(\d+(?:,\d+)?)\s*', str(t or ''))
+            return (m_.group(1), m_.group(2)) if m_ else None
+        da = _deel(c.ans)
+        if da: return {'pred': lambda v: _deel(v) == (da[1], da[0]) and da[0] != da[1]}
+        mq = re.search(r'(\d+)\s*[:÷]\s*(\d+)', c.opg)
+        if mq and c.a is not None and int(mq.group(2)) and int(mq.group(1)) == c.a * int(mq.group(2)) and int(mq.group(1)) != int(mq.group(2)):
+            from fractions import Fraction as _Fq
+            w = _Fq(int(mq.group(2)), int(mq.group(1)))
+            return {'pred': lambda v: waarde416(v) == w}
+        return {'exact': set()}
     if r.startswith('de plussom'): return {'pred': lambda v: '+' in v}
-    if r.startswith('de minsom'): return {'pred': lambda v: '−' in v or ' - ' in v}
+    if r.startswith('de minsom'): return {'pred': lambda v: '−' in norm421(v)}      # Oef-#421: '−', ' - ' en '–'
     if r.startswith('de keersom'): return {'pred': lambda v: '×' in v}
     # MKU-K03 vormnamen
     if r.startswith('fout = vierkant bij een rechthoek'):
@@ -632,8 +657,8 @@ def _compile_regel(regel, c):
         if r.startswith('fout = som van twee cellen'): return E(*[x + y for x, y in paren])
         return E(*[abs(x - y) for x, y in paren])
     # letterlijke optie ('het smalle glas'): de regel is (een deel van) de tekst van de foute optie
-    if not r.startswith('fout'): r = re.sub(r'\b(\d+) euro\b', r'€\1', r)   # fixlijst #32: G4-geld als €N; regel '3 euro' leest ook '€3'
-    if not r.startswith('fout') and any(r in (o['tekst'] or '').lower() for o in c.it['opties'] or []):
+    if not r.startswith('fout'): r = norm421(r_lett).lower()   # fixlijst #32 + Oef-#421/#422: regel '3 euro' leest ook '€3'; '−', '-' en '–' zijn één minteken
+    if not r.startswith('fout') and any(r in norm421(o['tekst'], geld=r.startswith('€')).lower() for o in c.it['opties'] or []):
         # G6 merge-fixlijst #380 (Didactiek gate ronde 9 deel A, les 110): een letterlijke regel met een getal matcht alleen het hele getal
         # (woordgrens): '4 hokjes' pakt niet meer '14 hokjes'. Zonder getal blijft het een stukje tekst ('het smalle glas'); '€3' is exact.
         if not any(lett_past(r, o['tekst']) for o in c.it['opties'] or []): return {'exact': set(), 'letterlijk': r}
@@ -1077,3 +1102,9 @@ def _zelftest543():
     assert not _af, '#543: lett_past/lett_guard wijkt af van de testtabel:\n' + '\n'.join(_af)
     return len(LETT_TABEL_543)
 _zelftest543()
+def _zelftest421():
+    """Oef-#421/#422 (8 okt): minteken en euro gelijk in letterlijke regels; '16' leest '16 euro' nog (geen '€' in de regel); woorden met '-' blijven."""
+    for r, v, ok in (('27 − 40', '27 - 40', True), ('27 - 40', '27 – 40', True), ('€3', '3 euro', True), ('3 euro', '€ 3', True), ('16', '16 euro', True),
+                     ('4 hokjes', '− 4 hokjes', False), ('rood-wit', 'rood-wit', True), ('€3', '€13', False)):
+        assert lett_past(r, v) == ok, ('#421', r, v)
+_zelftest421()

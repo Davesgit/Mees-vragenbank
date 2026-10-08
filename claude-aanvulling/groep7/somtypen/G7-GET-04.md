@@ -25,8 +25,21 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 57  (controle: ok)
     - **Fout-hints (Claude):** 67 → Je zit er één tiental naast. Tel de tientallen nog eens rustig na. · 47 → Je zit er één tiental naast. Tel de tientallen nog eens rustig na.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoe vaak past het getal waardoor je deelt in het getal dat je deelt? Schat eerst met ronde getallen.
+- **Hint 2 (te schrijven):** Splits het getal dat je deelt in stukken die je makkelijk deelt. Deel elk stuk en tel de uitkomsten op. Staat er een komma in het getal? Zet die in je antwoord op dezelfde plek, en reken na met een keersom.
+- **Ouderzin:** Je kind deelt, ook met kommagetallen, door te splitsen en na te rekenen met een keersom.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een tiende ernaast` (fout = antwoord ± 0,1) → Dat is een tiende ernaast. Reken de tienden nog eens na. Klopt het?  [nieuw]
+  - `een honderdste ernaast` (fout = antwoord ± 0,01) → Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?  [nieuw]
+  - `één ernaast` (fout = antwoord ± 1) → Dat is één ernaast. Hoe vaak past het getal waardoor je deelt er precies in?  [nieuw]
+  - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Klopt het cijfer van de tientallen?  [nieuw]
+  - `tien te weinig` (fout = antwoord - 10) → Dat is tien te weinig. Klopt het cijfer van de tientallen?  [nieuw]
+  - `net ernaast (heel antwoord)` (Claudes sleutel: tiende-of-honderdste-ernaast) → Dat ligt net naast het goede antwoord. Reken het na met een keersom. Klopt het?  [Claude, taalfix]
+  - `stuk vergeten bij splitsen` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is veel te weinig. Heb je de uitkomsten van alle stukken opgeteld?  [Claude, taalfix]
+  - `keer in plaats van delen` (Claudes sleutel: verkeerde-bewerking) → Heb je keer gedaan in plaats van gedeeld? Kijk naar het teken.  [Claude, taalfix]
+  - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Deel in stukken die je makkelijk deelt, en reken na met een keersom.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: # × # =
 
@@ -45,8 +58,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 10,45  (controle: ok)
     - **Fout-hints (Claude):** 10,35 → Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na. · 10,44 → Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoe groot is de uitkomst ongeveer? Schat eerst met ronde getallen.
+- **Hint 2 (te schrijven):** Reken eerst zonder de komma. Tel daarna hoeveel cijfers er achter de komma staan in de som, en zet in je antwoord evenveel cijfers achter de komma. Kijk of het past bij je schatting.
+- **Ouderzin:** Je kind rekent keersommen met kommagetallen en zet de komma op de goede plek met een schatting.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een tiende ernaast` (fout = antwoord ± 0,1) → Dat is een tiende ernaast. Reken de tienden nog eens na. Klopt het?  [nieuw]
+  - `een honderdste ernaast` (fout = antwoord ± 0,01) → Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?  [nieuw]
+  - `net ernaast (heel antwoord)` (Claudes sleutel: tiende-of-honderdste-ernaast) → Dat ligt net naast het goede antwoord. Reken het nog eens na. Klopt het?  [Claude, taalfix]
+  - `gedeeld in plaats van keer` (Claudes sleutel: verkeerde-bewerking) → Heb je gedeeld in plaats van keer gedaan? Kijk naar het teken.  [Claude, taalfix]
+  - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Reken zonder komma en zet de komma terug met een schatting.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: # [ding] worden verdeeld over # [ding]. Hoeveel krijgt [wie]? (Wat overblijft, blijft over.)
 
@@ -67,8 +89,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 351 → 9 × 351 = 3159, dat is meer dan 3156. · 340 → Tel alle stappen van de staartdeling bij elkaar op. · 6 → 6 is de rest. Gevraagd is de uitkomst.
     - **Uitleg (Claude):** 9 × 350 = 3150, en 3156 − 3150 = 6 over. Dus 350 rest 6.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoeveel krijgt elk? Wat overblijft, blijft over.
+- **Hint 2 (te schrijven):** Splits het aantal dat je verdeelt in stukken die je makkelijk deelt. Deel elk stuk en tel de uitkomsten op. Wat aan het eind overblijft, is de rest: die telt niet mee.
+- **Ouderzin:** Je kind verdeelt eerlijk met een deling met rest; de rest blijft over.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `één te veel` (fout = antwoord + 1) → Dat is één te veel. Kan iedereen er echt zoveel krijgen?  [nieuw]
+  - `tien te weinig` (fout = antwoord - 10) → Dat is tien te weinig. Heb je bij het splitsen een stuk vergeten?  [nieuw]
+  - `de rest` (fout = de rest van getal1 : getal2) → Dat is wat er overblijft. Hoeveel krijgt elk?  [nieuw]
+  - `andere fout` (andere fout) → Deel eerlijk en laat de rest over.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: Prijs per stuk: # [ding] kosten samen €#. Hoeveel kost één?
 
@@ -89,8 +118,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €55 → Let op de komma: de prijs per stuk is veel kleiner dan de prijs van de hele zak. · €36 → Per stuk is delen, niet aftrekken.
     - **Uitleg (Claude):** €44 : 8 = €5,50 per poesje.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Alle stuks kosten evenveel. Hoe verdeel je het bedrag?
+- **Hint 2 (te schrijven):** Deel het bedrag door het aantal. Blijft er iets over? Maak er centen van en deel verder. Reken na met een keersom.
+- **Ouderzin:** Je kind rekent de prijs van één stuk uit door het bedrag te delen, tot op de cent.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `komma verschoven` (fout = antwoord × 10) → Dat is tien keer te veel. Kan één stuk zoveel kosten? Vergelijk met het bedrag voor alles samen.  [nieuw]
+  - `aantal eraf gehaald` (Claudes sleutel: verkeerde-bewerking) → Heb je het aantal eraf gehaald? Je wilt weten wat één kost: dan verdeel je het bedrag over alle stuks.  [Claude, taalfix]
+  - `komma anders verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Schat eerst: hoeveel euro kost één ongeveer?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Deel het bedrag door het aantal, tot op de cent.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 5: # [ding] hebben #, #, #, #, # [ding]. Hoeveel [ding] hebben ze gemiddeld?
 
@@ -111,8 +147,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 13 → Dat is het middelste getal. Gemiddeld betekent eerlijk verdelen: tel alles op en deel door 5. · 55 → Dat is het totaal. Verdeel het nog eerlijk over de 5.
     - **Uitleg (Claude):** 18 + 13 + 2 + 13 + 9 = 55. 55 : 5 = 11.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Gemiddeld betekent: hoeveel heeft elk als je alles eerlijk verdeelt?
+- **Hint 2 (te schrijven):** Tel alle getallen bij elkaar op. Deel de uitkomst door hoeveel getallen het zijn. Dat is het gemiddelde.
+- **Ouderzin:** Je kind rekent het gemiddelde uit: alles optellen en delen door het aantal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet gedeeld` (Claudes sleutel: totaal-niet-gedeeld) → Dat is alles samen. Deel je dat nog door hoeveel getallen het zijn?  [Claude, taalfix]
+  - `middelste getal` (Claudes sleutel: middelste-getal) → Dat is het middelste getal. Het gemiddelde is iets anders: tel alles op en deel door het aantal.  [Claude, taalfix]
+  - `optellen en delen` (Claudes sleutel: verkeerde-bewerking) → Heb je alle getallen opgeteld én daarna gedeeld door hoeveel getallen het zijn?  [Claude, taalfix]
+  - `niet het gemiddelde` (Claudes sleutel: verhoudingstabel-verkeerd) → Heb je alle getallen opgeteld en daarna gedeeld door het aantal? Reken het na.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Tel alle getallen op en deel door hoeveel getallen het zijn.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 6: # [ding] gaan in [bakken] van #. Hoeveel blijven er over?
 
@@ -133,8 +177,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 22 → 22 is het aantal dozen. De vraag is hoeveel er óverblijft. · 38 → Dan past er nog een doos van 31 bij. De rest is altijd kleiner dan 31.
     - **Uitleg (Claude):** 31 × 22 = 682, dat past nog. 689 − 682 = 7 over.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoe vaak past het aantal per keer erin? En hoeveel blijven er dan over?
+- **Hint 2 (te schrijven):** Reken uit hoe vaak het aantal per keer erin past. Doe dat keer het aantal per keer, en haal de uitkomst van het totaal af. Wat overblijft, is het antwoord.
+- **Ouderzin:** Je kind rekent uit hoeveel er overblijft na een deling met rest.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een keer te weinig gevuld` (fout = antwoord + getal2) → Dat is te veel. Er past nog een volle keer in. Wat blijft er dan over?  [nieuw]
+  - `hoe vaak het past` (Claudes sleutel: rest-vergeten) → Dat is hoe vaak het past. De vraag is hoeveel er overblijven.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Reken uit hoe vaak het past, en haal dat stuk van het totaal af.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 7: # kilo/liter [ding] wordt eerlijk verdeeld over # [wie]. Hoeveel krijgt elk(e) [wie]?
 
@@ -155,8 +205,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 30 → Er blijft 1 kilo over. Die verdeel je ook, in stukjes. · 30,1 → De rest 1 is niet zomaar het cijfer achter de komma. Deel de rest ook door 8.
     - **Uitleg (Claude):** 8 × 30 = 240, blijft 1 over. 1 : 8 = 0,125. Samen 30,125.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Verdeel eerst het hele getal. Wat overblijft, verdeel je verder achter de komma.
+- **Hint 2 (te schrijven):** Deel eerst het hele getal. Blijft er iets over? Maak er tienden van en deel die ook. Blijft er weer iets over, maak er dan honderdsten van.
+- **Ouderzin:** Je kind deelt eerlijk tot achter de komma: wat overblijft, wordt tienden en honderdsten.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `alleen het hele getal` (fout = het hele getal van het kommagetal) → Dat is alleen het hele getal. Wat overblijft, kun je ook verdelen. Reken je verder achter de komma?  [nieuw]
+  - `één ernaast` (fout = antwoord ± 1) → Dat is één ernaast. Hoe vaak past het getal waardoor je deelt erin?  [nieuw]
+  - `rest achter de komma` (Claudes sleutel: kommagetal-als-geheel) → Is dat de rest achter de komma gezet? Wat overblijft, deel je verder.  [Claude, taalfix]
+  - `één te veel` (Claudes sleutel: tafelbuur) → Dat is één te veel. Hoe vaak past het getal waardoor je deelt in het hele getal?  [Claude, taalfix]
+  - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Deel eerst het hele getal en verdeel wat overblijft verder achter de komma.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 8: # [ding] worden eerlijk verdeeld over # [ding]. Hoeveel krijgt [wie]?
 
@@ -177,8 +236,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 382 → Controleer. 35 × 382 is meer dan 13.020. · 362 → Controleer. 35 × 362 is minder dan 13.020. Er blijft dan te veel over. · 3720 → Schat eerst. 35 × 3720 is veel te veel.
     - **Uitleg (Claude):** Hap in stukken. 35 × 100 = 3500: dat past 3 keer. Dan wat overblijft in kleinere happen. Samen 372 keer, dus 13.020 : 35 = 372.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Hoe vaak past het getal waardoor je deelt in het grote getal? Schat eerst met ronde getallen.
+- **Hint 2 (te schrijven):** Haal steeds een groot stuk af dat je makkelijk uitrekent, bijvoorbeeld honderd keer of tien keer het getal waardoor je deelt. Schrijf op hoe vaak je het afhaalt. Tel aan het eind alle keren op.
+- **Ouderzin:** Je kind deelt een groot getal door een getal van twee cijfers, met handige stukken.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tien te veel` (fout = antwoord + 10) → Dat is tien te veel. Hoe vaak heb je tien keer het getal waardoor je deelt eraf gehaald?  [nieuw]
+  - `tien te weinig` (fout = antwoord - 10) → Dat is tien te weinig. Hoe vaak heb je tien keer het getal waardoor je deelt eraf gehaald?  [nieuw]
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Heb je een nul te veel opgeschreven?  [nieuw]
+  - `andere fout` (andere fout) → Haal handige stukken af en tel op hoe vaak je het getal waardoor je deelt eraf haalt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 9: Een [ding] weegt # gram. Hoeveel gram wegen # [ding]?
 
@@ -199,8 +265,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 0,033 → Keer 10 of 100 maakt het getal groter: de komma gaat naar rechts. · 3300 → Je hebt de komma te ver geschoven. Keer 10 is één plek, keer 100 twee plekken. · 103,3 → 100 poesjes van elk 3,3 gram. Dat is een keersom.
     - **Uitleg (Claude):** Keer 100: de komma schuift twee plekken naar rechts. 3,3 × 100 = 330.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Wat weegt één? En hoeveel stuks zijn het? Alle stuks samen is een keersom.
+- **Hint 2 (te schrijven):** Bij keer tien schuift de komma één plek naar rechts, bij keer honderd twee plekken. Tel de nullen van het aantal en schuif de komma zoveel plekken.
+- **Ouderzin:** Je kind rekent een kommagetal keer tien, honderd of duizend door de komma te verschuiven.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `komma een plek te ver` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen van het aantal: zoveel plekken schuift de komma.  [nieuw]
+  - `komma de verkeerde kant op` (Claudes sleutel: komma-verschoven) → Is de uitkomst groter of kleiner dan het gewicht van één? Bij keer wordt het meer.  [Claude, taalfix]
+  - `aantal erbij opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je het aantal erbij opgeteld? Je wilt weten wat al die stuks samen wegen: dat is keer.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Doe het gewicht van één keer het aantal: schuif de komma.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 10: Een [ding] weegt # kg. Hoeveel wegen # [ding]?
 
@@ -221,8 +294,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 468 → Komma terugzetten: één cijfer achter de komma. · 36,9 → Ook de tienden gaan keer het aantal.
     - **Uitleg (Claude):** Zonder komma: 12 × 39 = 468. Komma terug (één cijfer): 46,8.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Wat weegt één? Hoeveel stuks zijn het? Schat eerst hoe zwaar alles samen ongeveer is.
+- **Hint 2 (te schrijven):** Splits het gewicht in het hele getal en het stuk achter de komma. Doe beide keer het aantal. Tel de uitkomsten bij elkaar op.
+- **Ouderzin:** Je kind rekent een kommagetal keer een aantal door het te splitsen in het hele getal en de tienden.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Staat de komma op de goede plek?  [nieuw]
+  - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma op de goede plek? Schat eerst: hoe zwaar is het ongeveer?  [Claude, taalfix]
+  - `stuk achter de komma niet keer gedaan` (Claudes sleutel: deel-vergeten-bij-splitsen) → Heb je ook het stuk achter de komma keer gedaan?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Splits het gewicht, doe beide stukken keer het aantal en tel op.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 11: In [plek] staan # [ding] met elk # [ding]. Hoeveel [ding] zijn dat?
 
@@ -244,5 +324,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 10.920 → 364 × 30 is het grote stuk. Er komt nog 364 × 4 bij. · 10.924 → Ook het kleine stuk is een keersom. 364 × 4. · 13.376 → Controleer het optellen van de twee stukken. Een duizendtal te veel?
     - **Uitleg (Claude):** Splits 34 in 30 en 4. 364 × 30 = 10.920. 364 × 4 = 1456. Samen 10.920 + 1456 = 12.376.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Alle groepjes zijn even groot. Welke keersom maak je?
+- **Hint 2 (te schrijven):** Splits het kleinste getal in tientallen en eenheden. Doe elk stuk keer het grote getal. Tel de twee uitkomsten bij elkaar op.
+- **Ouderzin:** Je kind rekent keer een getal van twee cijfers door het te splitsen in tientallen en eenheden.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Tel de uitkomsten van de stukken nog eens op, kolom voor kolom.  [nieuw]
+  - `stuk vergeten bij splitsen` (Claudes sleutel: deel-vergeten-bij-splitsen) → Heb je beide stukken keer het grote getal gedaan? Tel daarna beide uitkomsten op.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Splits het kleinste getal, doe elk stuk keer het grote getal en tel op.  [nieuw]
+- Status: hints klaar

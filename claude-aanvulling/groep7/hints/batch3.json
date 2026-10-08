@@ -1,0 +1,2089 @@
+{
+ "batch": "batch3",
+ "geschreven": "2026-10-08",
+ "uitleg": "Hints per somtype (G7-merge, batch 3 = GET-01 getallen tot een miljoen (7), GET-02 kommagetallen vergelijken en afronden (3), GET-03 optellen en aftrekken (4), GET-04 vermenigvuldigen en delen (11)). Formaat als hints/batch1.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per sleutel een motorregel, of Claudes sleutel (label) met een vaste tekst, laag 1 'tekst' en laag 2 'tekstSterker'; 'andere fout' als laatste.",
+ "somtypen": [
+  {
+   "doel": "G7-GET-01",
+   "nr": 1,
+   "somtype": "# wordt #. Met hoeveel verandert het getal?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# wordt #. Met hoeveel verandert het getal?",
+   "hint1": "Vergelijk de twee getallen cijfer voor cijfer. Welk cijfer is anders?",
+   "hint2": "Zoek de plek van het cijfer dat anders is: honderdtallen, duizendtallen, tienduizendtallen of honderdduizendtallen. Dat cijfer is één groter of één kleiner geworden. Het getal verandert dus met één van die plek: honderd, duizend, tienduizend of honderdduizend.",
+   "ouderzin": "Je kind ziet welk cijfer in een getal tot een miljoen verandert, en hoeveel dat waard is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één plek te ver naar links",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Het cijfer dat anders is, staat één plek verder naar rechts. Welke plek is dat?",
+     "tekstSterker": "Zet de twee getallen onder elkaar en wijs het cijfer aan dat anders is. Tel hoeveel cijfers er rechts van dat cijfer staan. Het getal verandert met een één met zoveel nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één plek te ver naar rechts",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Het cijfer dat anders is, staat één plek verder naar links. Welke plek is dat?",
+     "tekstSterker": "Zet de twee getallen onder elkaar en wijs het cijfer aan dat anders is. Tel hoeveel cijfers er rechts van dat cijfer staan. Het getal verandert met een één met zoveel nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verder naar links",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1 of meer",
+     "tekst": "Dat is te veel. Het cijfer dat anders is, staat verder naar rechts. Op welke plek staat het?",
+     "tekstSterker": "Schrijf onder de cijfers van het getal de plekken, van rechts naar links: eenheden, tientallen, honderdtallen, duizendtallen, tienduizendtallen, honderdduizendtallen. Lees af bij welke plek het cijfer anders is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verder naar rechts",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 1 of meer",
+     "tekst": "Dat is te weinig. Het cijfer dat anders is, staat verder naar links. Op welke plek staat het?",
+     "tekstSterker": "Schrijf onder de cijfers van het getal de plekken, van rechts naar links: eenheden, tientallen, honderdtallen, duizendtallen, tienduizendtallen, honderdduizendtallen. Lees af bij welke plek het cijfer anders is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek het cijfer dat anders is. Op welke plek staat het? Eén van die plek is wat het getal verandert."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-01",
+   "nr": 2,
+   "somtype": "Welk getal is # minder dan #?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Welk getal is # minder dan #?",
+   "hint1": "Kijk naar het getal vooraan in de vraag. Bij welke plek gaat er één af?",
+   "hint2": "Zoek in het grote getal de plek waar er één afgaat. Staat daar een nul? Dan leen je van het cijfer ervoor: de nul wordt een negen en het cijfer ervoor gaat één omlaag. Is dat cijfer ook een nul? Dan wordt dat ook een negen, en leen je verder naar links.",
+   "ouderzin": "Je kind haalt een rond getal, zoals duizend of tienduizend, af van een getal tot een miljoen, ook als daar een nul staat.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "erbij gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Komt er iets bij of gaat er iets af? Minder dan betekent dat het getal kleiner wordt.",
+     "tekstSterker": "Het antwoord is kleiner dan het grote getal uit de vraag. Zoek de plek waar er één afgaat, en zet daar het cijfer één lager. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twee keer eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - getal1",
+     "tekst": "Dat is te weinig. Gaat er op die plek maar één af?",
+     "tekstSterker": "Schrijf het grote getal op en zet een streepje onder de plek waar er één afgaat. Haal daar één af, en niet meer. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één eraf gehaald",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2 - 1",
+     "tekst": "Dat is maar één minder. Hoeveel gaat er volgens de vraag af?",
+     "tekstSterker": "Kijk naar het getal vooraan in de vraag: op welke plek staat de één? Zoek die plek in het grote getal en haal daar één af. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal zelf",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het grote getal uit de vraag. Er moet nog iets af. Hoeveel?",
+     "tekstSterker": "Zoek in het grote getal de plek van het getal vooraan in de vraag, en haal daar één af. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de plek uit de vraag in het grote getal en haal daar één af.",
+     "tekstSterker": "Schrijf het grote getal op. Zet een streepje onder de plek van het getal vooraan in de vraag. Haal daar één af. Leen alleen als daar een nul staat: dan wordt de nul een negen en gaat het cijfer ervoor één omlaag."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-01",
+   "nr": 3,
+   "somtype": "Welk getal is # meer dan #?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Welk getal is # meer dan #?",
+   "hint1": "Kijk naar het getal vooraan in de vraag. Bij welke plek komt er één bij?",
+   "hint2": "Zoek in het grote getal de plek waar er één bijkomt. Staat daar een negen? Dan wordt de negen een nul en gaat het cijfer ervoor één omhoog. Is dat cijfer ook een negen? Dan wordt dat ook een nul, en ga je verder naar links.",
+   "ouderzin": "Je kind telt een rond getal, zoals duizend of tienduizend, op bij een getal tot een miljoen, ook als daar een negen staat.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "eraf gehaald",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Komt er iets bij of gaat er iets af? Meer dan betekent dat het getal groter wordt.",
+     "tekstSterker": "Het antwoord is groter dan het grote getal uit de vraag. Zoek de plek waar er één bijkomt, en zet daar het cijfer één hoger. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twee keer erbij",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is te veel. Komt er op die plek maar één bij?",
+     "tekstSterker": "Schrijf het grote getal op en zet een streepje onder de plek waar er één bijkomt. Doe daar één bij, en niet meer. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één erbij gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2 + 1",
+     "tekst": "Dat is maar één meer. Hoeveel komt er volgens de vraag bij?",
+     "tekstSterker": "Kijk naar het getal vooraan in de vraag: op welke plek staat de één? Zoek die plek in het grote getal en doe daar één bij. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal zelf",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het grote getal uit de vraag. Er moet nog iets bij. Hoeveel?",
+     "tekstSterker": "Zoek in het grote getal de plek van het getal vooraan in de vraag, en doe daar één bij. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de plek uit de vraag in het grote getal en doe daar één bij.",
+     "tekstSterker": "Schrijf het grote getal op. Zet een streepje onder de plek van het getal vooraan in de vraag. Doe daar één bij. Wordt het cijfer daar tien? Dan wordt het een nul en gaat het cijfer ervoor één omhoog."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-01",
+   "nr": 4,
+   "somtype": "Rond # af op tienduizendtallen.",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Rond # af op tienduizendtallen.",
+   "hint1": "Welke twee tienduizendtallen liggen vlak bij het getal? Eén ligt eronder en één ligt erboven.",
+   "hint2": "Kijk naar het cijfer van de duizendtallen. Is het vijf of meer, dan rond je af naar het tienduizendtal erboven. Anders rond je af naar het tienduizendtal eronder. De laatste vier cijfers worden nullen.",
+   "ouderzin": "Je kind rondt een getal tot een miljoen af op tienduizendtallen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet afgerond",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het getal zelf. Rond je het nog af op tienduizendtallen? Kijk naar het cijfer van de duizendtallen.",
+     "tekstSterker": "Bij afronden op tienduizendtallen worden de laatste vier cijfers nullen. Is het cijfer van de duizendtallen vijf of meer, dan ga je naar het tienduizendtal erboven, anders naar het tienduizendtal eronder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant",
+     "claudeDenkfout": null,
+     "regel": "fout = het andere tienduizendtal naast getal1",
+     "tekst": "Dat is het tienduizendtal aan de andere kant van het getal. Is het cijfer van de duizendtallen vijf of meer, of minder dan vijf?",
+     "tekstSterker": "Schrijf de twee tienduizendtallen op die vlak onder en vlak boven het getal liggen. Kijk naar het cijfer van de duizendtallen. Vijf of meer: kies het bovenste. Minder dan vijf: kies het onderste."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgerond op duizendtallen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 afgerond op duizendtallen",
+     "tekst": "Dat is afgerond op duizendtallen. Op welke plek rond je hier af?",
+     "tekstSterker": "Op tienduizendtallen afronden betekent: de laatste vier cijfers worden nullen. Kijk daarvoor naar het cijfer van de duizendtallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10000",
+     "tekst": "Dat ligt te ver weg. Welke twee tienduizendtallen liggen vlak naast het getal?",
+     "tekstSterker": "Schrijf het tienduizendtal vlak onder het getal en het tienduizendtal vlak erboven op. Het antwoord is een van die twee. Kijk naar het cijfer van de duizendtallen om te kiezen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 10000",
+     "tekst": "Dat ligt te ver weg. Welke twee tienduizendtallen liggen vlak naast het getal?",
+     "tekstSterker": "Schrijf het tienduizendtal vlak onder het getal en het tienduizendtal vlak erboven op. Het antwoord is een van die twee. Kijk naar het cijfer van de duizendtallen om te kiezen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 20000 of meer",
+     "tekst": "Dat ligt te ver weg. Welke twee tienduizendtallen liggen vlak naast het getal?",
+     "tekstSterker": "Schrijf het tienduizendtal vlak onder het getal en het tienduizendtal vlak erboven op. Het antwoord is een van die twee. Kijk naar het cijfer van de duizendtallen om te kiezen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 20000 of meer",
+     "tekst": "Dat ligt te ver weg. Welke twee tienduizendtallen liggen vlak naast het getal?",
+     "tekstSterker": "Schrijf het tienduizendtal vlak onder het getal en het tienduizendtal vlak erboven op. Het antwoord is een van die twee. Kijk naar het cijfer van de duizendtallen om te kiezen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kies het tienduizendtal vlak onder of vlak boven het getal. Het cijfer van de duizendtallen beslist."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "claudeDenkfout": "schatting-verkeerd",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-01",
+   "nr": 5,
+   "somtype": "In [plek] zijn # [ding] geteld, in [plek] #. Typ het grootste getal.",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "In [plek] zijn # [ding] geteld, in [plek] #. Typ het grootste getal.",
+   "hint1": "Vergelijk de getallen van links naar rechts. Begin bij de honderdduizendtallen.",
+   "hint2": "Zijn de honderdduizendtallen gelijk? Kijk dan naar de tienduizendtallen, dan naar de duizendtallen, enzovoort. Het eerste cijfer dat verschilt, beslist. Typ het grootste getal precies over.",
+   "ouderzin": "Je kind zegt welk van twee getallen tot een miljoen het grootst is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het kleinste getal",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat is het kleinste van de twee getallen. Welk cijfer verschilt als eerste, als je van links naar rechts kijkt?",
+     "tekstSterker": "Zet de twee getallen onder elkaar, met de cijfers precies onder elkaar. Ga van links naar rechts. Het eerste cijfer dat verschilt, beslist: het getal met het grootste cijfer daar is het grootst."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "cijfers verwisseld",
+     "claudeDenkfout": "cijfers-verwisseld",
+     "regel": "Claudes sleutel: cijfers-verwisseld",
+     "tekst": "Staan de cijfers in de goede volgorde? Typ het getal precies zoals het in de vraag staat.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Zoek eerst welk getal het grootst is. Typ het daarna cijfer voor cijfer over, van links naar rechts. Kijk na elk groepje van drie cijfers of het klopt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Typ een van de twee getallen uit de vraag: het grootste. Vergelijk ze van links naar rechts."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Vergelijk van links naar rechts, cijfer voor cijfer. Bij het eerste verschil weet je welk getal groter is.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Typ het getal precies over, zonder de punten.",
+     "claudeDenkfout": "cijfers-verwisseld",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-01",
+   "nr": 6,
+   "somtype": "Op de teller van [plek] staat # [ding]. Hoeveel is de # in dit getal waard?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Op de teller van [plek] staat # [ding]. Hoeveel is de # in dit getal waard?",
+   "hint1": "Op welke plek staat het cijfer waar de vraag over gaat? Tel de plekken van rechts naar links.",
+   "hint2": "De plekken van rechts naar links zijn: eenheden, tientallen, honderdtallen, duizendtallen, tienduizendtallen, honderdduizendtallen. Staat het cijfer bij de duizendtallen, dan is het zoveel duizend waard.",
+   "ouderzin": "Je kind zegt hoeveel een cijfer in een getal tot een miljoen waard is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alleen het cijfer",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is alleen het cijfer. Een cijfer is meer waard als het verder naar links staat. Op welke plek staat het?",
+     "tekstSterker": "Zoek in het getal het cijfer waar de vraag over gaat. Tel hoeveel cijfers er rechts van dat cijfer staan, en zet zoveel nullen achter het cijfer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Eén nul te veel. Hoeveel cijfers staan er rechts van het cijfer?",
+     "tekstSterker": "Zoek in het getal het cijfer waar de vraag over gaat. Tel de cijfers die rechts ervan staan, en zet precies zoveel nullen achter het cijfer, niet meer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Eén nul te weinig. Hoeveel cijfers staan er rechts van het cijfer?",
+     "tekstSterker": "Zoek in het getal het cijfer waar de vraag over gaat. Tel de cijfers die rechts ervan staan, en zet precies zoveel nullen achter het cijfer, niet minder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek het cijfer waar de vraag over gaat. Tel de cijfers rechts ervan: zoveel nullen komen erachter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel de plekken rechts van het cijfer: zoveel nullen krijgt de waarde. Je zit er één naast.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Tel de plekken rechts van het cijfer: zoveel nullen krijgt de waarde. Je hebt er één te veel.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Een cijfer links in een getal is veel meer waard dan zichzelf. Kijk op welke plek de 6 staat.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Een cijfer links in een getal is veel meer waard dan zichzelf. Kijk op welke plek de 5 staat.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Een cijfer links in een getal is veel meer waard dan zichzelf. Kijk op welke plek de 3 staat.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Een cijfer links in een getal is veel meer waard dan zichzelf. Kijk op welke plek de 8 staat.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-01",
+   "nr": 7,
+   "somtype": "Welk cijfer staat op de plaats van de tienduizendtallen in #?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Welk cijfer staat op de plaats van de tienduizendtallen in #?",
+   "hint1": "Tel de plekken van rechts naar links: eenheden, tientallen, honderdtallen, duizendtallen, tienduizendtallen.",
+   "hint2": "Wijs vanaf rechts elk cijfer aan en zeg de naam van zijn plek. Het cijfer dat je aanwijst bij tienduizendtallen, is het antwoord.",
+   "ouderzin": "Je kind zoekt het cijfer op een plek in een getal tot een miljoen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het hele getal",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het hele getal. De vraag zoekt één cijfer: het cijfer bij de tienduizendtallen. Welk cijfer is dat?",
+     "tekstSterker": "Schrijf het getal op. Wijs vanaf rechts de cijfers aan: eenheden, tientallen, honderdtallen, duizendtallen, tienduizendtallen. Typ alleen het cijfer waar je dan bent."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "cijfer ernaast",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "Claudes sleutel: een-ernaast",
+     "tekst": "Staat dat cijfer bij de tienduizendtallen? Tel de plekken van rechts: eenheden, tientallen, honderdtallen, duizendtallen, tienduizendtallen.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Schrijf het getal op en zet onder elk cijfer de naam van zijn plek, van rechts naar links. Welk cijfer staat boven het woord tienduizendtallen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de plekken van rechts naar links tot je bij de tienduizendtallen bent."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-02",
+   "nr": 1,
+   "somtype": "Welk getal is het grootst?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Welk getal is het grootst? Kies uit #, # of #.",
+   "hint1": "Zet de getallen onder elkaar, met de komma’s onder elkaar.",
+   "hint2": "Vergelijk eerst de hele getallen. Zijn die gelijk? Vergelijk dan de tienden, daarna de honderdsten. Een getal met meer cijfers achter de komma is niet vanzelf groter.",
+   "ouderzin": "Je kind zoekt het grootste van drie kommagetallen door eerst de tienden te vergelijken.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tienden niet vergeleken",
+     "claudeDenkfout": "tienden-niet-vergeleken",
+     "regel": "Claudes sleutel: tienden-niet-vergeleken",
+     "tekst": "Is dat echt het grootste getal? Vergelijk eerst de tienden, dan de honderdsten.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Zet de getallen onder elkaar, met de komma’s precies onder elkaar. Vul aan met nullen tot ze even lang zijn. Vergelijk dan cijfer voor cijfer van links naar rechts: het eerste cijfer dat verschilt, beslist."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "langer is groter",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "tekst": "Is een getal met meer cijfers achter de komma ook groter? Vergelijk eerst de tienden: het cijfer vlak achter de komma.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Maak de getallen even lang door nullen achter de komma te zetten. Vergelijk ze daarna van links naar rechts. Meer cijfers achter de komma maakt een getal niet groter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Vergelijk eerst de tienden, dan de honderdsten."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar het eerste cijfer achter de komma: dat zijn de tienden. Welke is groter?",
+     "claudeDenkfout": "tienden-niet-vergeleken",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Welk getal is het grootst? Kies uit #, # of #.",
+    "naar": "Welk getal is het grootst?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-02",
+   "nr": 2,
+   "somtype": "Welk getal is het kleinst?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Welk getal is het kleinst? Kies uit #, # of #.",
+   "hint1": "Zet de getallen onder elkaar, met de komma’s onder elkaar.",
+   "hint2": "Vergelijk eerst de hele getallen. Zijn die gelijk? Vergelijk dan de tienden, daarna de honderdsten. Een getal met minder cijfers achter de komma is niet vanzelf kleiner.",
+   "ouderzin": "Je kind zoekt het kleinste van drie kommagetallen door eerst de tienden te vergelijken.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tienden niet vergeleken",
+     "claudeDenkfout": "tienden-niet-vergeleken",
+     "regel": "Claudes sleutel: tienden-niet-vergeleken",
+     "tekst": "Is dat echt het kleinste getal? Vergelijk eerst de tienden, dan de honderdsten.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Zet de getallen onder elkaar, met de komma’s precies onder elkaar. Vul aan met nullen tot ze even lang zijn. Vergelijk dan cijfer voor cijfer van links naar rechts: het eerste cijfer dat verschilt, beslist."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "korter is kleiner",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "tekst": "Is een getal met minder cijfers achter de komma ook kleiner? Vergelijk eerst de tienden: het cijfer vlak achter de komma.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Maak de getallen even lang door nullen achter de komma te zetten. Vergelijk ze daarna van links naar rechts. Minder cijfers achter de komma maakt een getal niet kleiner."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Vergelijk eerst de tienden, dan de honderdsten."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar het eerste cijfer achter de komma: dat zijn de tienden. Welke is kleiner?",
+     "claudeDenkfout": "tienden-niet-vergeleken",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Welk getal is het kleinst? Kies uit #, # of #.",
+    "naar": "Welk getal is het kleinst?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-02",
+   "nr": 3,
+   "somtype": "Een [ding] weegt precies # kg. Rond af op één cijfer achter de komma.",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Een [ding] weegt precies # kg. Rond af op één cijfer achter de komma.",
+   "hint1": "Welke twee getallen met één cijfer achter de komma liggen vlak bij het gewicht?",
+   "hint2": "Kijk naar het tweede cijfer achter de komma, de honderdsten. Is het vijf of meer, dan gaan de tienden één omhoog. Anders blijven de tienden gelijk. Schrijf maar één cijfer achter de komma.",
+   "ouderzin": "Je kind rondt een kommagetal af op één cijfer achter de komma.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een tiende ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 0,1",
+     "tekst": "Dat is een tiende ernaast. Kijk naar het tweede cijfer achter de komma: is het vijf of meer, of minder dan vijf?",
+     "tekstSterker": "Schrijf de twee getallen met één cijfer achter de komma op die vlak onder en vlak boven het gewicht liggen. Is het tweede cijfer achter de komma vijf of meer, kies dan het bovenste. Anders het onderste."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "te veel cijfers achter de komma",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "regel": "Claudes sleutel: plaatswaarde-verkeerd",
+     "tekst": "Hoeveel cijfers staan er achter de komma? Je rondt af op één cijfer achter de komma, dus op tienden.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Afronden op één cijfer achter de komma: er blijft precies één cijfer achter de komma over. Kijk daarvoor naar het tweede cijfer achter de komma."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Rond af op tienden: kijk naar het tweede cijfer achter de komma."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk naar het cijfer direct na de tienden. Vanaf 5 ga je naar boven.",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Eén cijfer achter de komma, dus je rondt af op tienden.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-03",
+   "nr": 1,
+   "somtype": "# + # =",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# + # =",
+   "hint1": "Zet de getallen onder elkaar, met de komma’s precies onder elkaar.",
+   "hint2": "Heeft een getal minder cijfers achter de komma? Zet er nullen achter. Tel van rechts naar links: eerst de honderdsten, dan de tienden, dan de hele getallen. De komma in de uitkomst staat onder de komma’s.",
+   "ouderzin": "Je kind telt kommagetallen op door de komma’s onder elkaar te zetten.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een tiende ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 0,1",
+     "tekst": "Dat is een tiende ernaast. Tel de tienden nog eens: kwam er een één bij uit de honderdsten?",
+     "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Tel eerst de honderdsten, dan de tienden. Komen de honderdsten op tien of meer? Dan gaat er een één naar de tienden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een honderdste ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 0,01",
+     "tekst": "Dat is een honderdste ernaast. Tel de honderdsten nog eens. Klopt het?",
+     "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal maar één cijfer achter de komma? Zet er een nul achter, zodat je honderdsten onder honderdsten telt."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net ernaast (heel antwoord)",
+     "claudeDenkfout": "tiende-of-honderdste-ernaast",
+     "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
+     "tekst": "Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Tel eerst de honderdsten, dan de tienden, dan de hele getallen. Worden de tienden samen tien? Dan schrijf je een nul en gaat er één naar de hele getallen."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "min in plaats van plus",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Is dit een plussom of een minsom? Kijk naar het teken.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Het teken is een plus: tel de twee getallen bij elkaar op. Zet ze onder elkaar met de komma’s onder elkaar."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "komma verschoven",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Schat eerst: hoe groot is de uitkomst ongeveer, als je alleen met de hele getallen rekent? Zet de komma zo dat je uitkomst daarbij past."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet de komma’s onder elkaar en tel per plek op, van rechts naar links."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na.",
+     "claudeDenkfout": "tiende-of-honderdste-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-03",
+   "nr": 2,
+   "somtype": "# − # =",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# − # =",
+   "hint1": "Zet de getallen onder elkaar, met de komma’s precies onder elkaar.",
+   "hint2": "Heeft een getal geen of minder cijfers achter de komma? Zet er nullen achter. Haal van rechts naar links af: eerst de honderdsten, dan de tienden, dan de hele getallen. Is het bovenste cijfer te klein? Wissel dan één van de plek ervoor in voor tien.",
+   "ouderzin": "Je kind trekt kommagetallen van elkaar af door de komma’s onder elkaar te zetten.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een tiende ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 0,1",
+     "tekst": "Dat is een tiende ernaast. Moest je bij de honderdsten een tiende inwisselen?",
+     "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar, en vul aan met nullen. Haal eerst de honderdsten af, dan de tienden. Is het bovenste cijfer te klein? Wissel dan één van de plek ervoor in voor tien."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een honderdste ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 0,01",
+     "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+     "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Heeft een getal geen of maar één cijfer achter de komma? Zet er nullen achter, zodat je honderdsten van honderdsten afhaalt."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net ernaast (heel antwoord)",
+     "claudeDenkfout": "tiende-of-honderdste-ernaast",
+     "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
+     "tekst": "Dat ligt net naast het goede antwoord. Reken de cijfers achter de komma nog eens na. Klopt het?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Zet de getallen onder elkaar met de komma’s onder elkaar. Haal eerst de honderdsten af, dan de tienden, dan de hele getallen. Blijft er achter de komma niets over? Dan is het antwoord een heel getal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "plus in plaats van min",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Is dit een plussom of een minsom? Kijk naar het teken.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Het teken is een min: haal het tweede getal van het eerste af. Zet ze onder elkaar met de komma’s onder elkaar."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "komma verschoven",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Staat de komma op de goede plek? Zet de getallen onder elkaar met de komma’s precies onder elkaar.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Schat eerst: hoe groot is de uitkomst ongeveer, als je alleen met de hele getallen rekent? Zet de komma zo dat je uitkomst daarbij past."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet de komma’s onder elkaar en haal per plek af, van rechts naar links."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na.",
+     "claudeDenkfout": "tiende-of-honderdste-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-03",
+   "nr": 3,
+   "somtype": "[plek] heeft # [ding], [plek] heeft er #. Hoeveel [ding] heeft [plek]?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[plek] heeft # [ding], [plek] heeft er #. Hoeveel [ding] heeft [plek]?",
+   "hint1": "Hoeveel meer: dat is het verschil tussen de twee getallen. Welke som maak je?",
+   "hint2": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Wissel dan één in van de kolom ervoor.",
+   "ouderzin": "Je kind rekent uit hoeveel meer de een heeft dan de ander, met getallen tot honderdduizend.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+     "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ingewisseld maar niet afgehaald",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1000",
+     "tekst": "Dat is duizend te veel. Heb je bij de duizendtallen de één afgehaald die je had ingewisseld?",
+     "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt ingewisseld. Haal die één bij die kolom eerst af, en reken dan verder."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "kleinste cijfer van het grootste",
+     "claudeDenkfout": "kleinste-van-grootste",
+     "regel": "Claudes sleutel: kleinste-van-grootste",
+     "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Wissel dan één van de kolom ervoor in voor tien."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Heb je ergens geleend? Dan is de kolom links één minder.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Hoeveel méér is het verschil. Aftrekken.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Per kolom haal je het onderste van het bovenste af. Lukt dat niet, dan leen je.",
+     "claudeDenkfout": "kleinste-van-grootste",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-03",
+   "nr": 4,
+   "somtype": "het huis heeft # [ding], de klas heeft er #. Hoeveel [ding] heeft het huis?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "het huis heeft # [ding], de klas heeft er #. Hoeveel [ding] heeft het huis?",
+   "hint1": "Hoeveel meer: dat is het verschil tussen de twee getallen. Welke som maak je?",
+   "hint2": "Zet het grootste getal bovenaan en het kleinste eronder, met de cijfers precies onder elkaar. Haal per kolom af, van rechts naar links. Is het bovenste cijfer kleiner? Wissel dan één in van de kolom ervoor.",
+   "ouderzin": "Je kind rekent uit hoeveel meer de een heeft dan de ander, met getallen tot honderdduizend.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Komt er iets bij of gaat er iets af? De vraag is hoeveel meer de een heeft dan de ander.",
+     "tekstSterker": "Hoeveel meer is het verschil tussen de twee getallen. Zet het grootste getal bovenaan en haal het kleinste eraf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ingewisseld maar niet afgehaald",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1000",
+     "tekst": "Dat is duizend te veel. Heb je bij de duizendtallen de één afgehaald die je had ingewisseld?",
+     "tekstSterker": "Zet een klein streepje boven een kolom als je daar één hebt ingewisseld. Haal die één bij die kolom eerst af, en reken dan verder."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "kleinste cijfer van het grootste",
+     "claudeDenkfout": "kleinste-van-grootste",
+     "regel": "Claudes sleutel: kleinste-van-grootste",
+     "tekst": "Heb je bij elke kolom het kleinste cijfer van het grootste afgehaald? Bij een minsom haal je altijd het onderste cijfer van het bovenste af.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Zet het grootste getal bovenaan. Haal per kolom het onderste cijfer van het bovenste af, van rechts naar links. Is het bovenste cijfer kleiner? Wissel dan één van de kolom ervoor in voor tien."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet het grootste getal bovenaan en haal het kleinste eraf, kolom voor kolom."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Heb je ergens geleend? Dan is de kolom links één minder.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Hoeveel méér is het verschil. Aftrekken.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Per kolom haal je het onderste van het bovenste af. Lukt dat niet, dan leen je.",
+     "claudeDenkfout": "kleinste-van-grootste",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-04",
+   "nr": 1,
+   "somtype": "# : # =",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# : # =",
+   "hint1": "Hoe vaak past het getal waardoor je deelt in het getal dat je deelt? Schat eerst met ronde getallen.",
+   "hint2": "Splits het getal dat je deelt in stukken die je makkelijk deelt. Deel elk stuk en tel de uitkomsten op. Staat er een komma in het getal? Zet die in je antwoord op dezelfde plek, en reken na met een keersom.",
+   "ouderzin": "Je kind deelt, ook met kommagetallen, door te splitsen en na te rekenen met een keersom.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een tiende ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 0,1",
+     "tekst": "Dat is een tiende ernaast. Reken de tienden nog eens na. Klopt het?",
+     "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een honderdste ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 0,01",
+     "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+     "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Dat is één ernaast. Hoe vaak past het getal waardoor je deelt er precies in?",
+     "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is tien te veel. Klopt het cijfer van de tientallen?",
+     "tekstSterker": "Splits het getal dat je deelt in stukken, bijvoorbeeld een stuk dat precies tien keer zo groot is als het getal waardoor je deelt. Deel elk stuk en tel de uitkomsten op. Reken na met een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 10",
+     "tekst": "Dat is tien te weinig. Klopt het cijfer van de tientallen?",
+     "tekstSterker": "Splits het getal dat je deelt in stukken, bijvoorbeeld een stuk dat precies tien keer zo groot is als het getal waardoor je deelt. Deel elk stuk en tel de uitkomsten op. Reken na met een keersom."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net ernaast (heel antwoord)",
+     "claudeDenkfout": "tiende-of-honderdste-ernaast",
+     "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
+     "tekst": "Dat ligt net naast het goede antwoord. Reken het na met een keersom. Klopt het?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "stuk vergeten bij splitsen",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is veel te weinig. Heb je de uitkomsten van alle stukken opgeteld?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Splits het getal dat je deelt in stukken die je makkelijk deelt. Schrijf bij elk stuk de uitkomst op. Tel alle uitkomsten bij elkaar op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "keer in plaats van delen",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Heb je keer gedaan in plaats van gedeeld? Kijk naar het teken.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Het teken is een deelteken. Bij delen door een getal groter dan één wordt de uitkomst kleiner dan het getal dat je deelt."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "komma verschoven",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Zet de komma zo dat je antwoord bij die schatting past."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel in stukken die je makkelijk deelt, en reken na met een keersom.",
+     "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je deelt? Zo niet, pas je antwoord aan."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na.",
+     "claudeDenkfout": "tiende-of-honderdste-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "zegt zeker wat het kind deed; nu een vraag (les 20/101), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-04",
+   "nr": 2,
+   "somtype": "# × # =",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# × # =",
+   "hint1": "Hoe groot is de uitkomst ongeveer? Schat eerst met ronde getallen.",
+   "hint2": "Reken eerst zonder de komma. Tel daarna hoeveel cijfers er achter de komma staan in de som, en zet in je antwoord evenveel cijfers achter de komma. Kijk of het past bij je schatting.",
+   "ouderzin": "Je kind rekent keersommen met kommagetallen en zet de komma op de goede plek met een schatting.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een tiende ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 0,1",
+     "tekst": "Dat is een tiende ernaast. Reken de tienden nog eens na. Klopt het?",
+     "tekstSterker": "Splits het kommagetal in het hele getal, de tienden en de honderdsten. Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een honderdste ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 0,01",
+     "tekst": "Dat is een honderdste ernaast. Reken de honderdsten nog eens na. Klopt het?",
+     "tekstSterker": "Splits het kommagetal in het hele getal, de tienden en de honderdsten. Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net ernaast (heel antwoord)",
+     "claudeDenkfout": "tiende-of-honderdste-ernaast",
+     "regel": "Claudes sleutel: tiende-of-honderdste-ernaast",
+     "tekst": "Dat ligt net naast het goede antwoord. Reken het nog eens na. Klopt het?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Splits het kommagetal in het hele getal, de tienden en de honderdsten. Doe elk stuk keer het andere getal, en tel de uitkomsten op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "gedeeld in plaats van keer",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Heb je gedeeld in plaats van keer gedaan? Kijk naar het teken.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Het teken is een keerteken. Bij keer een getal groter dan één wordt de uitkomst groter dan het kommagetal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "komma verschoven",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Zet de komma zo dat je antwoord bij die schatting past."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken zonder komma en zet de komma terug met een schatting."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Je komma staat goed, maar kijk nog eens naar de cijfers achter de komma. Tel de tienden en de honderdsten apart na.",
+     "claudeDenkfout": "tiende-of-honderdste-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-04",
+   "nr": 3,
+   "somtype": "# [ding] worden verdeeld over # [ding]. Hoeveel krijgt [wie]? (Wat overblijft, blijft over.)",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "# [ding] worden verdeeld over # [ding]. Hoeveel krijgt [wie]? (Wat overblijft, blijft over.)",
+   "hint1": "Hoeveel krijgt elk? Wat overblijft, blijft over.",
+   "hint2": "Splits het aantal dat je verdeelt in stukken die je makkelijk deelt. Deel elk stuk en tel de uitkomsten op. Wat aan het eind overblijft, is de rest: die telt niet mee.",
+   "ouderzin": "Je kind verdeelt eerlijk met een deling met rest; de rest blijft over.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Dat is één te veel. Kan iedereen er echt zoveel krijgen?",
+     "tekstSterker": "Doe je antwoord keer het aantal waarover je verdeelt. Komt er meer uit dan er te verdelen is? Dan is je antwoord te groot. Wat overblijft, blijft over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 10",
+     "tekst": "Dat is tien te weinig. Heb je bij het splitsen een stuk vergeten?",
+     "tekstSterker": "Splits het aantal dat je verdeelt in stukken die je makkelijk deelt. Deel elk stuk en tel alle uitkomsten op. Vergeet geen stuk."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de rest",
+     "claudeDenkfout": null,
+     "regel": "fout = de rest van getal1 : getal2",
+     "tekst": "Dat is wat er overblijft. Hoeveel krijgt elk?",
+     "tekstSterker": "Deel het aantal dat je verdeelt door het aantal waarover je verdeelt. De uitkomst is wat elk krijgt. Wat overblijft, telt niet mee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel eerlijk en laat de rest over."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "3 × 134 = 402, dat is meer dan 400.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Tel alle stappen van de staartdeling bij elkaar op.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "1 is de rest. Gevraagd is de uitkomst.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "4 × 324 = 1296, dat is meer dan 1294.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "2 is de rest. Gevraagd is de uitkomst.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "7 × 75 = 525, dat is meer dan 519.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "3 × 183 = 549, dat is meer dan 547.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "5 × 111 = 555, dat is meer dan 552.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "9 × 103 = 927, dat is meer dan 925.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Tel alle eieren van de staartdeling bij elkaar op.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "7 is de rest. Gevraagd is de uitkomst.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "5 × 312 = 1560, dat is meer dan 1556.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "7 × 338 = 2366, dat is meer dan 2364.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "5 is de rest. Gevraagd is de uitkomst.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "8 × 87 = 696, dat is meer dan 691.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "3 is de rest. Gevraagd is de uitkomst.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "9 × 331 = 2979, dat is meer dan 2977.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "8 × 66 = 528, dat is meer dan 527.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "8 × 144 = 1152, dat is meer dan 1150.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "6 is de rest. Gevraagd is de uitkomst.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "3 × 72 = 216, dat is meer dan 215.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "3 × 182 = 546, dat is meer dan 544.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "8 × 186 = 1488, dat is meer dan 1482.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "9 × 133 = 1197, dat is meer dan 1194.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "9 × 69 = 621, dat is meer dan 620.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "8 is de rest. Gevraagd is de uitkomst.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "4 × 353 = 1412, dat is meer dan 1410.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "4 × 114 = 456, dat is meer dan 455.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "3 × 264 = 792, dat is meer dan 791.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "3 × 397 = 1191, dat is meer dan 1190.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "9 × 351 = 3159, dat is meer dan 3156.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "4 × 227 = 908, dat is meer dan 907.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "7 × 339 = 2373, dat is meer dan 2372.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "6 × 120 = 720, dat is meer dan 718.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "4 is de rest. Gevraagd is de uitkomst.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "5 × 58 = 290, dat is meer dan 288.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "7 × 94 = 658, dat is meer dan 653.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "5 × 61 = 305, dat is meer dan 304.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "6 × 115 = 690, dat is meer dan 686.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "4 × 78 = 312, dat is meer dan 310.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "3 × 320 = 960, dat is meer dan 959.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "3 × 120 = 360, dat is meer dan 359.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-04",
+   "nr": 6,
+   "somtype": "# [ding] gaan in [bakken] van #. Hoeveel blijven er over?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "# [ding] gaan in [bakken] van #. Hoeveel blijven er over?",
+   "hint1": "Hoe vaak past het aantal per keer erin? En hoeveel blijven er dan over?",
+   "hint2": "Reken uit hoe vaak het aantal per keer erin past. Doe dat keer het aantal per keer, en haal de uitkomst van het totaal af. Wat overblijft, is het antwoord.",
+   "ouderzin": "Je kind rekent uit hoeveel er overblijft na een deling met rest.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een keer te weinig gevuld",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is te veel. Er past nog een volle keer in. Wat blijft er dan over?",
+     "tekstSterker": "Wat overblijft, is altijd minder dan het aantal dat er per keer in gaat. Is het meer? Vul dan nog een keer en haal dat eraf."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "hoe vaak het past",
+     "claudeDenkfout": "rest-vergeten",
+     "regel": "Claudes sleutel: rest-vergeten",
+     "tekst": "Dat is hoe vaak het past. De vraag is hoeveel er overblijven.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Doe hoe vaak het past keer het aantal per keer. Haal de uitkomst van het totaal af. Wat overblijft, is het antwoord."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoe vaak het past, en haal dat stuk van het totaal af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "54 is het aantal dozen. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Dan past er nog een doos van 18 bij. De rest is altijd kleiner dan 18.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "36 is het aantal dozen. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "53 is het aantal dozen. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Dan past er nog een doos van 16 bij. De rest is altijd kleiner dan 16.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "58 is het aantal dozen. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "24 is het aantal dozen. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Dan past er nog een doos van 30 bij. De rest is altijd kleiner dan 30.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "22 is het aantal dozen. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Dan past er nog een doos van 31 bij. De rest is altijd kleiner dan 31.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "75 is het aantal dozen. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "29 is het aantal dozen. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-04",
+   "nr": 7,
+   "somtype": "# kilo/liter [ding] wordt eerlijk verdeeld over # [wie]. Hoeveel krijgt elk(e) [wie]?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "# kilo/liter [ding] wordt eerlijk verdeeld over # [wie]. Hoeveel krijgt elk(e) [wie]?",
+   "hint1": "Verdeel eerst het hele getal. Wat overblijft, verdeel je verder achter de komma.",
+   "hint2": "Deel eerst het hele getal. Blijft er iets over? Maak er tienden van en deel die ook. Blijft er weer iets over, maak er dan honderdsten van.",
+   "ouderzin": "Je kind deelt eerlijk tot achter de komma: wat overblijft, wordt tienden en honderdsten.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alleen het hele getal",
+     "claudeDenkfout": null,
+     "regel": "fout = het hele getal van het kommagetal",
+     "tekst": "Dat is alleen het hele getal. Wat overblijft, kun je ook verdelen. Reken je verder achter de komma?",
+     "tekstSterker": "Deel het hele getal en kijk wat er overblijft. Een hele is tien tienden: maak van wat overblijft tienden en deel die ook. Ga zo door met honderdsten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Dat is één ernaast. Hoe vaak past het getal waardoor je deelt erin?",
+     "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er precies het getal uit dat je verdeelt? Zo niet, pas je antwoord aan."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "rest achter de komma",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "tekst": "Is dat de rest achter de komma gezet? Wat overblijft, deel je verder.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Schrijf wat overblijft als tienden: een hele is tien tienden. Deel die tienden ook eerlijk. Ga zo door met honderdsten tot er niets meer overblijft."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één te veel",
+     "claudeDenkfout": "tafelbuur",
+     "regel": "Claudes sleutel: tafelbuur",
+     "tekst": "Dat is één te veel. Hoe vaak past het getal waardoor je deelt in het hele getal?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Reken je antwoord na: doe het keer het getal waardoor je deelt. Komt er meer uit dan wat je verdeelt? Dan is je antwoord te groot."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "komma verschoven",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Staat de komma op de goede plek? Schat eerst: hoe groot is de uitkomst ongeveer?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Schat met ronde getallen hoe groot de uitkomst ongeveer is. Zet de komma zo dat je antwoord bij die schatting past."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel eerst het hele getal en verdeel wat overblijft verder achter de komma."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Er blijft 3 kilo over. Die verdeel je ook, in stukjes.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "De rest 3 is niet zomaar het cijfer achter de komma. Deel de rest ook door 8.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Komma terugzetten: het antwoord heeft één cijfer achter de komma.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Controleer. 6 × jouw antwoord moet 8,4 zijn.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Er blijft 4 kilo over. Die verdeel je ook, in stukjes.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "De rest 4 is niet zomaar het cijfer achter de komma. Deel de rest ook door 5.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 4 × jouw antwoord moet 7,6 zijn.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Er blijft 1 kilo over. Die verdeel je ook, in stukjes.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "De rest 1 is niet zomaar het cijfer achter de komma. Deel de rest ook door 8.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "De rest 1 is niet zomaar het cijfer achter de komma. Deel de rest ook door 4.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 3 × jouw antwoord moet 4,5 zijn.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 3 × jouw antwoord moet 9,0 zijn.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-04",
+   "nr": 5,
+   "somtype": "# [ding] hebben #, #, #, #, # [ding]. Hoeveel [ding] hebben ze gemiddeld?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "# [ding] hebben #, #, #, #, # [ding]. Hoeveel [ding] hebben ze gemiddeld?",
+   "hint1": "Gemiddeld betekent: hoeveel heeft elk als je alles eerlijk verdeelt?",
+   "hint2": "Tel alle getallen bij elkaar op. Deel de uitkomst door hoeveel getallen het zijn. Dat is het gemiddelde.",
+   "ouderzin": "Je kind rekent het gemiddelde uit: alles optellen en delen door het aantal.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "niet gedeeld",
+     "claudeDenkfout": "totaal-niet-gedeeld",
+     "regel": "Claudes sleutel: totaal-niet-gedeeld",
+     "tekst": "Dat is alles samen. Deel je dat nog door hoeveel getallen het zijn?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "middelste getal",
+     "claudeDenkfout": "middelste-getal",
+     "regel": "Claudes sleutel: middelste-getal",
+     "tekst": "Dat is het middelste getal. Het gemiddelde is iets anders: tel alles op en deel door het aantal.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "optellen en delen",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Heb je alle getallen opgeteld én daarna gedeeld door hoeveel getallen het zijn?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "niet het gemiddelde",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+     "tekst": "Heb je alle getallen opgeteld en daarna gedeeld door het aantal? Reken het na.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel alle getallen op en deel door hoeveel getallen het zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "55 is het totaal. Voor het gemiddelde deel je door 5.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Het zijn 5 konijnen, dus deel door 5.",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is het middelste getal. Gemiddeld is optellen en delen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Het zijn 5 kinderen, dus deel door 5.",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "60 is het totaal. Voor het gemiddelde deel je door 5.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Het zijn 5 dino's, dus deel door 5.",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "50 is het totaal. Voor het gemiddelde deel je door 5.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is het middelste getal. Gemiddeld betekent eerlijk verdelen: tel alles op en deel door 5.",
+     "claudeDenkfout": "middelste-getal",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is het totaal. Verdeel het nog eerlijk over de 5.",
+     "claudeDenkfout": "totaal-niet-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-04",
+   "nr": 8,
+   "somtype": "# [ding] worden eerlijk verdeeld over # [ding]. Hoeveel krijgt [wie]?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "# [ding] worden eerlijk verdeeld over # [ding]. Hoeveel krijgt [wie]?",
+   "hint1": "Hoe vaak past het getal waardoor je deelt in het grote getal? Schat eerst met ronde getallen.",
+   "hint2": "Haal steeds een groot stuk af dat je makkelijk uitrekent, bijvoorbeeld honderd keer of tien keer het getal waardoor je deelt. Schrijf op hoe vaak je het afhaalt. Tel aan het eind alle keren op.",
+   "ouderzin": "Je kind deelt een groot getal door een getal van twee cijfers, met handige stukken.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is tien te veel. Hoe vaak heb je tien keer het getal waardoor je deelt eraf gehaald?",
+     "tekstSterker": "Schrijf onder elkaar welke stukken je afhaalt en hoe vaak. Tel de keren pas op als er niets meer af kan. Reken na met een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 10",
+     "tekst": "Dat is tien te weinig. Hoe vaak heb je tien keer het getal waardoor je deelt eraf gehaald?",
+     "tekstSterker": "Schrijf onder elkaar welke stukken je afhaalt en hoe vaak. Tel de keren pas op als er niets meer af kan. Reken na met een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je een nul te veel opgeschreven?",
+     "tekstSterker": "Schat eerst: doe het getal waardoor je deelt keer honderd. Is dat meer of minder dan wat er verdeeld wordt? Zo weet je hoeveel cijfers je antwoord heeft."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Haal handige stukken af en tel op hoe vaak je het getal waardoor je deelt eraf haalt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Controleer. 36 × 159 is meer dan 5364.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 36 × 139 is minder dan 5364. Er blijft dan te veel over.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Schat eerst. 36 × 1490 is veel te veel.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 21 × 118 is meer dan 2268.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 21 × 98 is minder dan 2268. Er blijft dan te veel over.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Schat eerst. 21 × 1080 is veel te veel.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 23 × 166 is meer dan 3588.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 23 × 146 is minder dan 3588. Er blijft dan te veel over.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Schat eerst. 23 × 1560 is veel te veel.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 35 × 382 is meer dan 13.020.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 35 × 362 is minder dan 13.020. Er blijft dan te veel over.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Schat eerst. 35 × 3720 is veel te veel.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-04",
+   "nr": 9,
+   "somtype": "Een [ding] weegt # gram. Hoeveel gram wegen # [ding]?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "Een [ding] weegt # gram. Hoeveel gram wegen # [ding]?",
+   "hint1": "Wat weegt één? En hoeveel stuks zijn het? Alle stuks samen is een keersom.",
+   "hint2": "Bij keer tien schuift de komma één plek naar rechts, bij keer honderd twee plekken. Tel de nullen van het aantal en schuif de komma zoveel plekken.",
+   "ouderzin": "Je kind rekent een kommagetal keer tien, honderd of duizend door de komma te verschuiven.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "komma een plek te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen van het aantal: zoveel plekken schuift de komma.",
+     "tekstSterker": "Tel de nullen van het aantal en schuif de komma precies zoveel plekken naar rechts, niet meer."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "komma de verkeerde kant op",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Is de uitkomst groter of kleiner dan het gewicht van één? Bij keer wordt het meer.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Meer stuks wegen samen meer dan één. Tel de nullen van het aantal en schuif de komma zoveel plekken naar rechts."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "aantal erbij opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Heb je het aantal erbij opgeteld? Je wilt weten wat al die stuks samen wegen: dat is keer.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Elk stuk weegt evenveel. Doe het gewicht van één keer het aantal: tel de nullen van het aantal en schuif de komma zoveel plekken naar rechts."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe het gewicht van één keer het aantal: schuif de komma."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Keer 10 of 100 maakt het getal groter: de komma gaat naar rechts.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Je hebt de komma te ver geschoven. Keer 10 is één plek, keer 100 twee plekken.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "100 poesjes van elk 3,3 gram. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "100 kaartjes van elk 1,2 gram. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "100 stenen van elk 7,5 gram. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "100 blaadjes van elk 3,7 gram. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-04",
+   "nr": 10,
+   "somtype": "Een [ding] weegt # kg. Hoeveel wegen # [ding]?",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "Een [ding] weegt # kg. Hoeveel wegen # [ding]?",
+   "hint1": "Wat weegt één? Hoeveel stuks zijn het? Schat eerst hoe zwaar alles samen ongeveer is.",
+   "hint2": "Splits het gewicht in het hele getal en het stuk achter de komma. Doe beide keer het aantal. Tel de uitkomsten bij elkaar op.",
+   "ouderzin": "Je kind rekent een kommagetal keer een aantal door het te splitsen in het hele getal en de tienden.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Staat de komma op de goede plek?",
+     "tekstSterker": "Schat met het hele getal: doe het hele getal keer het aantal. Je antwoord ligt daar net boven. Zet de komma zo dat het daarbij past."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "komma verschoven",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Staat de komma op de goede plek? Schat eerst: hoe zwaar is het ongeveer?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Schat met het hele getal: doe het hele getal keer het aantal. Je antwoord ligt daar net boven. Zet de komma zo dat het daarbij past."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "stuk achter de komma niet keer gedaan",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Heb je ook het stuk achter de komma keer gedaan?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Splits het gewicht in het hele getal en het stuk achter de komma. Doe beide keer het aantal en tel de uitkomsten op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Splits het gewicht, doe beide stukken keer het aantal en tel op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Komma terugzetten: één cijfer achter de komma.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Ook de tienden gaan keer het aantal.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-04",
+   "nr": 11,
+   "somtype": "In [plek] staan # [ding] met elk # [ding]. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "In [plek] staan # [ding] met elk # [ding]. Hoeveel [ding] zijn dat?",
+   "hint1": "Alle groepjes zijn even groot. Welke keersom maak je?",
+   "hint2": "Splits het kleinste getal in tientallen en eenheden. Doe elk stuk keer het grote getal. Tel de twee uitkomsten bij elkaar op.",
+   "ouderzin": "Je kind rekent keer een getal van twee cijfers door het te splitsen in tientallen en eenheden.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "duizend te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1000",
+     "tekst": "Dat is duizend te veel. Tel de uitkomsten van de stukken nog eens op, kolom voor kolom.",
+     "tekstSterker": "Zet de uitkomsten van de stukken onder elkaar, met de cijfers precies onder elkaar. Tel ze kolom voor kolom op, van rechts naar links. Onthoud alleen wat er echt overgaat."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "stuk vergeten bij splitsen",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Heb je beide stukken keer het grote getal gedaan? Tel daarna beide uitkomsten op.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Splits het kleinste getal in tientallen en eenheden. Doe elk stuk keer het grote getal, en tel de twee uitkomsten bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Splits het kleinste getal, doe elk stuk keer het grote getal en tel op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "364 × 30 is het grote stuk. Er komt nog 364 × 4 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Ook het kleine stuk is een keersom. 364 × 4.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer het optellen van de twee stukken. Een duizendtal te veel?",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "343 × 30 is het grote stuk. Er komt nog 343 × 2 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Ook het kleine stuk is een keersom. 343 × 2.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (regel per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-GET-04",
+   "nr": 4,
+   "somtype": "Prijs per stuk: # [ding] kosten samen €#. Hoeveel kost één?",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "Prijs per stuk: # [ding] kosten samen €#. Hoeveel kost één?",
+   "hint1": "Alle stuks kosten evenveel. Hoe verdeel je het bedrag?",
+   "hint2": "Deel het bedrag door het aantal. Blijft er iets over? Maak er centen van en deel verder. Reken na met een keersom.",
+   "ouderzin": "Je kind rekent de prijs van één stuk uit door het bedrag te delen, tot op de cent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "komma verschoven",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Kan één stuk zoveel kosten? Vergelijk met het bedrag voor alles samen.",
+     "tekstSterker": "Deel de euro’s eerst. Wat overblijft, maak je centen: één euro is honderd cent. Deel die centen ook, en schrijf het antwoord met een komma: euro’s voor de komma, centen erachter."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "aantal eraf gehaald",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Heb je het aantal eraf gehaald? Je wilt weten wat één kost: dan verdeel je het bedrag over alle stuks.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Eén stuk kost een even groot deel van het hele bedrag. Deel het bedrag door het aantal. Reken na: je antwoord keer het aantal is weer het hele bedrag."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "komma anders verschoven",
+     "claudeDenkfout": "komma-verschoven",
+     "regel": "Claudes sleutel: komma-verschoven",
+     "tekst": "Staat de komma op de goede plek? Schat eerst: hoeveel euro kost één ongeveer?",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Deel de euro’s eerst. Wat overblijft, maak je centen: één euro is honderd cent. Deel die centen ook, en schrijf het antwoord met een komma."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel het bedrag door het aantal, tot op de cent."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Let op de komma: de prijs per stuk is veel kleiner dan de prijs van de hele zak.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Per stuk is delen, niet aftrekken.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}
