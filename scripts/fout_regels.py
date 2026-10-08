@@ -4,6 +4,7 @@ Regels gelden van boven naar beneden; de eerste die past, wint. Gebruikt door ap
 Nieuw 8 okt 12:4x (G7 batch 2, Oef-#421/#422/#429): norm421 = één notatie voor letterlijke regels en opties ('−'/'-'/'–' als minteken, 'euro'/'€');
   'de deelsom omgedraaid' = de deling met deeltal en deler omgewisseld (antwoord 'a : b' → optie 'b : a'; antwoord getal → b/a).
   Oef-#437: KOMMA437 (G7/G8) leest '8,4' als één getal; Oef-#436: 'fout = antwoord ± 0,1 / ± 0,01' ook bij een heel antwoord (vraag met kommagetal);
+  Oef-#444: Claudes sleutels met '-' worden '−' en de labelregel vergelijkt genormaliseerd (G7/G8).
   Z-#616: 'fout = getal1/getal2' als bedrag bij een geldvraag (G7/G8). Z-#633: 'fout = de bodem (l × b)', zeker, vóór '± 1'.
   Oef-#442: 'fout = de som van de getallen' / 'fout = het middelste getal (op grootte)' (gemiddelde; alleen als de waarde zo uitkomt).
   Oef-#440: met KOMMA437 telt een antwoord '8,0' als 8, een sleutel '8,0' past op regelwaarde 8, en 'antwoord × 10 / : 10' werkt ook bij een kommagetal (1,1 → 11 / 0,11). Oef-#434: 'fout = het cijfer op de plek ernaast' (plaatswaarde: de cijfers links en rechts van de gevraagde plaats).
@@ -965,6 +966,11 @@ def pas_toe(it, st, alle_cellen=None):
     """st = somtype-entry uit hints/batch*.json. Zet it['foutHints'], it['foutRegels'], it['foutHintsTekst']."""
     c = Ctx(it)
     claude = [dict(f) for f in it['extraVelden'].get('claudeFoutHints') or []]
+    # Oef-#444 (G7/G8, met KOMMA437): Claudes sleutels in huisnotatie: '-3' (koppelteken) in claudeFoutHints wordt '−3', zoals in claudeDenkfouten
+    # en in de opties; de labelregel vergelijkt beide kanten met dezelfde normalisatie (norm421 zonder geld).
+    def _n444(x):      # ook een minteken vooraan ('-3', '–3' → '−3'); norm421 doet alleen '-' tussen getallen of spaties
+        return re.sub(r'^\s*[-–](?=\s?\d)', '−', norm421(x, geld=False)) if KOMMA437 and isinstance(x, str) else x
+    if KOMMA437: claude = [dict(f, fout=_n444(f.get('fout'))) for f in claude]
     claude_txt = {f['fout']: f['uitleg'] for f in claude}
     vervangen = {v['claudeTekst'] for v in st.get('claudeVervangen', [])} | {f['claudeTekst'] for f in st['foutHints'] if f.get('claudeTekst')}
     merge = {m['fout']: m for m in it['extraVelden'].get('mergeFoutHints') or []}
@@ -977,7 +983,7 @@ def pas_toe(it, st, alle_cellen=None):
             # G5 fixlijst #71: een per item hersplitste denkfout (denkfoutClaude = Claudes label) valt onder de oude Claude-regel zolang
             # de entry nog geen regel voor het nieuwe label heeft (dan verdwijnt er geen sleutel); daarna onder de nieuwe regel
             eigen = {g.get('claudeDenkfout') for g in st['foutHints'] if g.get('claudeDenkfout')}
-            keys = {k['fout'] for k in claude if not dk or any(d['fout'] == k['fout'] and (d['denkfout'] == dk or (d.get('denkfoutClaude') == dk and d['denkfout'] not in eigen))
+            keys = {k['fout'] for k in claude if not dk or any(_n444(d['fout']) == k['fout'] and (d['denkfout'] == dk or (d.get('denkfoutClaude') == dk and d['denkfout'] not in eigen))
                                                                 for d in it['extraVelden'].get('claudeDenkfouten') or [])}
             comp = {'exact': keys, 'claudeSleutels': True}
             # fixlijst #48 (1): een taalfix met een vaste tekst (zonder '…') zet die vaste tekst op de Claude-sleutels; anders Claudes tekst per item
