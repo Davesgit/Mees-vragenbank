@@ -1134,7 +1134,7 @@ def fix_g8(r, slog):
                 r['opties'] = [dict(o_, tekst=str(nw_)) if o_['tekst'] == str(oud_) else o_ for o_ in r['opties']]
                 r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
                 tk_ = {'laag te veel': 'Je telde een laag te veel. Tel nog eens hoeveel lagen er op elkaar liggen.', 'laag te weinig': 'Je telde een laag te weinig. Tel nog eens hoeveel lagen er op elkaar liggen.',
-                       'drie kanten': 'Je telde alleen de blokjes die je aan de buitenkant ziet. Het bouwwerk is vol, dus er zitten ook blokjes binnenin.'}[route_]
+                       'drie kanten': 'Dat zijn de blokjes van drie kanten samen. Blokjes op een rand tel je zo twee of drie keer, en blokjes achter en onder zie je niet. Reken één laag uit en doe die keer het aantal lagen.'}[route_]      # Oef-#1030: tekst van V-#1061 (geen richting; 'binnenin' weg)
                 for f_ in ex.get('claudeFoutHints') or []:
                     if f_.get('fout') == str(oud_): f_.update(fout=str(nw_), uitleg=tk_)
                 for d_ in ex.get('claudeDenkfouten') or []:

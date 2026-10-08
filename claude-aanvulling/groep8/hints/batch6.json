@@ -348,11 +348,20 @@
    "ouderzin": "Je kind rekent uit hoeveel blokjes er in een vol bouwwerk zitten: de blokjes in één laag keer het aantal lagen.",
    "foutHints": [
     {
+     "bron": "nieuw",
+     "soort": "drie kanten",
+     "claudeDenkfout": null,
+     "regel": "fout = drie vlakken",
+     "tekst": "Dat zijn de blokjes van drie kanten samen. Blokjes op een rand tel je zo twee of drie keer, en blokjes achter en onder zie je niet. Reken één laag uit en doe die keer het aantal lagen.",
+     "tekstSterker": "Een vol bouwwerk heeft in elke laag evenveel blokjes. Reken één laag uit: blokjes langs de voorkant keer blokjes langs de zijkant. Doe dat keer het aantal lagen.",
+     "waarom": "V-#1061: eigen regel, zodat de CL-tekstkeuze (op gelijkenis) hem niet mist"
+    },
+    {
      "bron": "claude-taalfix",
      "soort": "route van Claude",
      "claudeDenkfout": null,
      "regel": "Claudes sleutels (alle): bouwwerk",
-     "tekst": "Dat zijn de drie maten bij elkaar opgeteld. Het bouwwerk is vol. Reken uit hoeveel blokjes er in één laag liggen, en dan in alle lagen samen. / Dat is de helft van alle blokjes. Reken eerst één laag uit en doe dat dan keer het aantal lagen. / Dat is een laag te veel. Tel nog eens hoeveel lagen er op elkaar liggen. / Dat zijn de blokjes van drie kanten samen: voorkant, zijkant en bovenkant. Het bouwwerk is vol, dus er zitten ook blokjes binnenin. / Dat is één laag. Er liggen meer lagen op elkaar: doe één laag keer het aantal lagen. / Reken eerst uit hoeveel blokjes er in één laag liggen. Doe dat daarna keer het aantal lagen. / Dat is een laag te weinig. Tel nog eens hoeveel lagen er op elkaar liggen. / Dat is een rij blokjes te weinig. Kijk nog eens hoe breed en hoe diep het bouwwerk is.",
+     "tekst": "Dat zijn de drie maten bij elkaar opgeteld. Het bouwwerk is vol. Reken uit hoeveel blokjes er in één laag liggen, en dan in alle lagen samen. / Dat is de helft van alle blokjes. Reken eerst één laag uit en doe dat dan keer het aantal lagen. / Dat is een laag te veel. Tel nog eens hoeveel lagen er op elkaar liggen. / Dat zijn de blokjes van drie kanten samen. Blokjes op een rand tel je zo twee of drie keer, en blokjes achter en onder zie je niet. Reken één laag uit en doe die keer het aantal lagen. / Dat is één laag. Er liggen meer lagen op elkaar: doe één laag keer het aantal lagen. / Reken eerst uit hoeveel blokjes er in één laag liggen. Doe dat daarna keer het aantal lagen. / Dat is een laag te weinig. Tel nog eens hoeveel lagen er op elkaar liggen. / Dat is een rij blokjes te weinig. Kijk nog eens hoe breed en hoe diep het bouwwerk is.",
      "claudeTekst": null,
      "waarom": "geen motorregel op de maten van het bouwwerk; per route een eigen tekst, per sleutel gekozen op Claudes tekst en in b6/check op de maten nagerekend",
      "tekstSterker": "Een vol bouwwerk heeft in elke laag evenveel blokjes. Reken één laag uit: blokjes langs de voorkant keer blokjes langs de zijkant. Doe dat keer het aantal lagen."
