@@ -190,5 +190,7 @@ if __name__ == '__main__':
     _SV.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
     import helft_deel_check as _HD      # Z-#748 (review VERH-04 #4/#7, les 247): goed deel 'k op de 2k' = de rest (WARN)
     _HD.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
+    sys.path.insert(0, '/workspace/claude-merge/tools'); import gemiddelde_check as _GM      # Z-#855 (Didactiek 8 okt 16:15): gemiddelde-vragen, vijf foute routes (FAIL in G7/G8)
+    fail = (len(_GM.rapport([_it for _p in files for _it in json.load(open(_p))['items']], os.path.dirname(os.path.abspath(__file__)))[0]) > 0) or fail
     print('\nG7 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T16:02:05+0200",
+ "gegenereerdOp": "2026-10-08T16:20:58+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-GET-04",
  "bordtitel": "Vermenigvuldigen en delen",
@@ -114222,7 +114222,7 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "5 dino's hebben 15, 11, 12, 9, 13 eieren. Hoeveel eieren hebben ze gemiddeld?",
+   "opgave": "5 dino's hebben 15, 11, 11, 10, 13 eieren. Hoeveel eieren hebben ze gemiddeld?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -114250,9 +114250,19 @@
      "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
      "soort": "niet het gemiddelde",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "11",
+     "uitleg": "Dat is het middelste getal als je de getallen van klein naar groot zet. Het gemiddelde is iets anders: tel alles op en deel door het aantal.",
+     "uitlegSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = het middelste getal (op grootte)",
+     "soort": "middelste getal",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "60 → Dat is alles samen. Deel je dat nog door hoeveel getallen het zijn? · 15 → Heb je alle getallen opgeteld en daarna gedeeld door het aantal? Reken het na.",
+   "foutHintsTekst": "60 → Dat is alles samen. Deel je dat nog door hoeveel getallen het zijn? · 15 → Heb je alle getallen opgeteld en daarna gedeeld door het aantal? Reken het na. · 11 → Dat is het middelste getal als je de getallen van klein naar groot zet. Het gemiddelde is iets anders: tel alles op en deel door het aantal.",
    "ouderzin": "Je kind rekent het gemiddelde uit: alles optellen en delen door het aantal.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -114273,7 +114283,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "gemiddelde van 15, 11, 12, 9, 13",
-    "claudeUitleg": "Tel op: 15 + 11 + 12 + 9 + 13 = 60.\nDeel door 5: 60 : 5 = 12.",
+    "claudeUitleg": "Tel op: 15 + 11 + 11 + 10 + 13 = 60.\nDeel door 5: 60 : 5 = 12.",
     "claudeStrategie": "gemiddelde",
     "claudeThema": "Dino's en fossielen",
     "claudeAntwoordType": "geheel",
@@ -114324,6 +114334,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "V-#853 (les 306/307): 15, 11, 12, 9, 13 → 15, 11, 11, 10, 13, gelijke som, geen foute route geeft het antwoord",
      "W5 woord kindvriendelijk (G4)"
     ]
    },
@@ -114335,6 +114346,9 @@
     "regel": "G7-D03-gemiddelde",
     "reden": "gemiddelde van 5 getallen (G7-GET-04, zoals in de G7-bank)",
     "somtype": "# [ding] hebben #, #, #, #, # [ding]. Hoeveel [ding] hebben ze gemiddeld?",
+    "v853": {
+     "reden": "V-#853: 15, 11, 12, 9, 13 → 15, 11, 11, 10, 13 (gelijke som 60, gemiddelde 12; geen foute route geeft 12)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 5,
     "somtypeNrOrigineel": 6,
@@ -114386,7 +114400,9 @@
      "tekstSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "11"
+      ]
      },
      "leesbaar": true
     },
@@ -114426,7 +114442,7 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "5 kinderen hebben 10, 9, 5, 19, 7 stickers. Hoeveel stickers hebben ze gemiddeld?",
+   "opgave": "5 kinderen hebben 11, 8, 5, 19, 7 stickers. Hoeveel stickers hebben ze gemiddeld?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -114457,7 +114473,7 @@
     },
     {
      "stap": null,
-     "fout": "9",
+     "fout": "8",
      "uitleg": "Dat is het middelste getal als je de getallen van klein naar groot zet. Het gemiddelde is iets anders: tel alles op en deel door het aantal.",
      "uitlegSterker": "Tel alle getallen bij elkaar op. Tel hoeveel getallen het zijn. Deel de som door dat aantal.",
      "laag2": "tekstSterker",
@@ -114466,7 +114482,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "50 → Dat is alles samen. Deel je dat nog door hoeveel getallen het zijn? · 13 → Heb je alle getallen opgeteld en daarna gedeeld door het aantal? Reken het na. · 9 → Dat is het middelste getal als je de getallen van klein naar groot zet. Het gemiddelde is iets anders: tel alles op en deel door het aantal.",
+   "foutHintsTekst": "50 → Dat is alles samen. Deel je dat nog door hoeveel getallen het zijn? · 13 → Heb je alle getallen opgeteld en daarna gedeeld door het aantal? Reken het na. · 8 → Dat is het middelste getal als je de getallen van klein naar groot zet. Het gemiddelde is iets anders: tel alles op en deel door het aantal.",
    "ouderzin": "Je kind rekent het gemiddelde uit: alles optellen en delen door het aantal.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -114487,7 +114503,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "gemiddelde van 10, 9, 5, 19, 7",
-    "claudeUitleg": "Tel op: 10 + 9 + 5 + 19 + 7 = 50.\nDeel door 5: 50 : 5 = 10.",
+    "claudeUitleg": "Tel op: 11 + 8 + 5 + 19 + 7 = 50.\nDeel door 5: 50 : 5 = 10.",
     "claudeStrategie": "gemiddelde",
     "claudeThema": "Ruimte",
     "claudeAntwoordType": "geheel",
@@ -114504,7 +114520,7 @@
       "denkfout": "verhoudingstabel-verkeerd"
      },
      {
-      "fout": "9",
+      "fout": "8",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -114522,7 +114538,7 @@
      },
      {
       "stap": null,
-      "fout": "9",
+      "fout": "8",
       "uitleg": "Dat is het middelste getal. Gemiddeld is optellen en delen."
      }
     ]
@@ -114548,7 +114564,8 @@
     "gewijzigd": true,
     "wijzigingen": [
      "D7-TAAL 'mediaan' → 'het middelste getal'; 'trainer'/'shirt' → 'kind'/'trui'",
-     "W5 woord kindvriendelijk (G4)"
+     "W5 woord kindvriendelijk (G4)",
+     "Z-#854 (les 306/307): 10, 9, 5, 19, 7 → 11, 8, 5, 19, 7, gelijke som, geen foute route geeft het antwoord"
     ]
    },
    "opBord": false,
@@ -114559,6 +114576,9 @@
     "regel": "G7-D03-gemiddelde",
     "reden": "gemiddelde van 5 getallen (G7-GET-04, zoals in de G7-bank)",
     "somtype": "# [ding] hebben #, #, #, #, # [ding]. Hoeveel [ding] hebben ze gemiddeld?",
+    "z854": {
+     "reden": "Z-#854: 10, 9, 5, 19, 7 → 11, 8, 5, 19, 7 (gelijke som 50, gemiddelde 10; geen foute route geeft 10)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 5,
     "somtypeNrOrigineel": 6,
@@ -114611,7 +114631,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "9"
+       "8"
       ]
      },
      "leesbaar": true
@@ -216619,7 +216639,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "5 pinguïns hebben 15, 17, 7, 8, 3 vissen. Hoeveel vissen hebben ze gemiddeld?",
+   "opgave": "5 pinguïns hebben 14, 18, 7, 8, 3 vissen. Hoeveel vissen hebben ze gemiddeld?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -216670,7 +216690,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "gemiddelde van 15, 17, 7, 8, 3",
-    "claudeUitleg": "15 + 17 + 7 + 8 + 3 = 50.\n50 : 5 = 10.",
+    "claudeUitleg": "14 + 18 + 7 + 8 + 3 = 50.\n50 : 5 = 10.",
     "claudeStrategie": "gemiddelde",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -216723,6 +216743,7 @@
     "wijzigingen": [
      "D7-MED extraVelden: gemiddelde in plaats van mediaan (Dave 17:17)",
      "D7-MED mediaan → gemiddelde (Didactiek)",
+     "V-#853 (les 306/307): 15, 17, 7, 8, 3 → 14, 18, 7, 8, 3, gelijke som, geen foute route geeft het antwoord",
      "W9 passend ding bij wie (G5)"
     ]
    },
@@ -216762,6 +216783,9 @@
       "uitleg": "Dat is ongeveer het gemiddelde. De mediaan is het middelste getal op volgorde."
      }
     ],
+    "v853": {
+     "reden": "V-#853: 15, 17, 7, 8, 3 → 14, 18, 7, 8, 3 (gelijke som 50, gemiddelde 10; geen foute route geeft 10)"
+    },
     "vorigId": "G7-VBN-05-claude-bank-twijfel-004",
     "duplicaatVan": null,
     "somtypeNr": 5,
@@ -217095,7 +217119,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "5 pinguïns hebben 12, 9, 14, 3, 2 vissen. Hoeveel vissen hebben ze gemiddeld?",
+   "opgave": "5 pinguïns hebben 11, 9, 15, 3, 2 vissen. Hoeveel vissen hebben ze gemiddeld?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -217146,7 +217170,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "gemiddelde van 12, 9, 14, 3, 2",
-    "claudeUitleg": "12 + 9 + 14 + 3 + 2 = 40.\n40 : 5 = 8.",
+    "claudeUitleg": "11 + 9 + 15 + 3 + 2 = 40.\n40 : 5 = 8.",
     "claudeStrategie": "gemiddelde",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -217199,6 +217223,7 @@
     "wijzigingen": [
      "D7-MED extraVelden: gemiddelde in plaats van mediaan (Dave 17:17)",
      "D7-MED mediaan → gemiddelde (Didactiek)",
+     "V-#853 (les 306/307): 12, 9, 14, 3, 2 → 11, 9, 15, 3, 2, gelijke som, geen foute route geeft het antwoord",
      "W9 passend ding bij wie (G5)"
     ]
    },
@@ -217243,6 +217268,9 @@
       "uitleg": "Bij 5 getallen is het derde getal het middelste."
      }
     ],
+    "v853": {
+     "reden": "V-#853: 12, 9, 14, 3, 2 → 11, 9, 15, 3, 2 (gelijke som 40, gemiddelde 8; geen foute route geeft 8)"
+    },
     "vorigId": "G7-VBN-05-claude-bank-twijfel-017",
     "duplicaatVan": null,
     "somtypeNr": 5,
@@ -217335,7 +217363,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "5 teams hebben 4, 11, 14, 5, 11 ballen. Hoeveel ballen hebben ze gemiddeld?",
+   "opgave": "5 teams hebben 3, 12, 14, 5, 11 ballen. Hoeveel ballen hebben ze gemiddeld?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -217386,7 +217414,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "gemiddelde van 4, 11, 14, 5, 11",
-    "claudeUitleg": "4 + 11 + 14 + 5 + 11 = 45.\n45 : 5 = 9.",
+    "claudeUitleg": "3 + 12 + 14 + 5 + 11 = 45.\n45 : 5 = 9.",
     "claudeStrategie": "gemiddelde",
     "claudeThema": "Voetbal",
     "claudeAntwoordType": "geheel",
@@ -217438,7 +217466,8 @@
     "gewijzigd": true,
     "wijzigingen": [
      "D7-MED extraVelden: gemiddelde in plaats van mediaan (Dave 17:17)",
-     "D7-MED mediaan → gemiddelde (Didactiek)"
+     "D7-MED mediaan → gemiddelde (Didactiek)",
+     "V-#853 (les 306/307): 4, 11, 14, 5, 11 → 3, 12, 14, 5, 11, gelijke som, geen foute route geeft het antwoord"
     ]
    },
    "opBord": false,
@@ -217482,6 +217511,9 @@
       "uitleg": "Bij 5 getallen is het derde getal het middelste."
      }
     ],
+    "v853": {
+     "reden": "V-#853: 4, 11, 14, 5, 11 → 3, 12, 14, 5, 11 (gelijke som 45, gemiddelde 9; geen foute route geeft 9)"
+    },
     "vorigId": "G7-VBN-05-claude-bank-twijfel-019",
     "duplicaatVan": null,
     "somtypeNr": 5,
@@ -225344,7 +225376,7 @@
    "algemeneFoutHint": "Deel het bedrag door het aantal, tot op de cent."
   }
  ],
- "hintsSyncOp": "2026-10-08T16:02:12+02:00",
+ "hintsSyncOp": "2026-10-08T16:21:05+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -225371,7 +225403,7 @@
    "md5": "8143204053a2"
   }
  ],
- "geschrevenOp": "2026-10-08T16:02:12+02:00",
+ "geschrevenOp": "2026-10-08T16:21:05+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

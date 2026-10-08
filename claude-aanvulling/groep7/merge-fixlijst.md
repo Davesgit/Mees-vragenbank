@@ -458,6 +458,7 @@ Checks build 15:41:07: check_hints **155 klaar · 0 open · 0 FAIL · 0 WARN**, 
 - **Z-#812a:** huis_checks.py UITSLUIT + de vier patronen van Didactiek («Je hoeft niets op te tellen», «Optellen is hier fout», «Gebruik geen plus» / «Dit is geen plussom», «Er komt niets bij»). Zelftest `python3 huis_checks.py --zelftest`: **11/11 gevangen, 0 vals alarm** (de 5 toegestane zinnen blijven vrij). Over alle 6 batches (zandbak én live): les 217 FAIL 0.
 - **Z-#812c (les 281):** b1–b4 gaven hun batch niet goed door (b1/b2: dict per sleutel, b3/b4: D3). Nu geven b1–b6 allemaal de batch in het geheugen door (`{'somtypen': …}` of D3/D). Mutant per batch `HUIS217MUT=1` (zin in hint1 in het geheugen): in **alle 6 batches gevangen**, basis FAIL 0.
 - **Z-#812b → Oef-#489 (Overzicht, tools/):** huis_checks staat nog in /workspace/g7work, dus de build-gate draait hem niet. Voorstel: `tools/huis_checks.py` (UITSLUIT + zelftest) en in de build-gate `les217()` over alle hints/batch*.json van G4–G8. Ik verander niets in tools/. **Open.**
+  - 16:09: Oefeningen nam de patronen van Z-#824 op (G8 review-batch3, m7: 'is niet goed' en 'mag niet' bij aftrekken/eraf/delen/erbij, 'je mag hier niet optellen'). Zelftest 15/15, 0 vals alarm, G7 b1–b6 FAIL 0. Wat Overzicht doet (blijft **open**): `/workspace/g7work/huis_checks.py` overnemen als `tools/huis_checks.py`, met `--zelftest` in de gate. De batches geven hun data in het geheugen door, via `les217(batch_dict)`. In G8 b3 staat dezelfde uitbreiding als LES217B.
 - Geen patch nodig: patch_batch6 blijft gelijk (tweede run 0).
 - Nummering: volgende vrije Oef-#490 (na #499: Oef-#1000).
 
@@ -466,3 +467,11 @@ Checks build 15:41:07: check_hints **155 klaar · 0 open · 0 FAIL · 0 WARN**, 
 - **Z-#812 ✓** `tools/les217_check.py` (kopie van g7work/huis_checks.py van Oefeningen, met de vijf nieuwe bewoordingen en de zelftest 11/11) zit in de build-gate check_hints: **FAIL in G7/G8** (0), **WARN in G3–G6** (goedgekeurd; alleen gemeld): G4 GET-E06 #5/#6 'niet zomaar optellen' / 'niet bij elkaar optellen' (2), G5 GET-E05 #13 'Aftrekken, niet optellen.' (1), G6 MEET-E03 #3/#4 'niets op te tellen', VBN-E02 #1 H2 'tel je de twee maanden niet bij elkaar op' (3). G3: 0.
 - **Z-#744 (bank-318/620):** al in build 15:31:04 (R6_744): 318 = 9 : 5 = 18 : ? → 10, 620 = 2 : 12 = 8 : ? → 48; geen getal uit de vraag en geen som/verschil (SOMVERSCHIL 0).
 Checks: check_hints 155 klaar · 0 FAIL · 0 WARN, merge-notatie ALLES OK, b6/check FAIL 0.
+
+### GEMIDDELDE (Didactiek 8 okt 16:15, g8/gemiddelde-check-didactiek.md) — Overzicht, build 16:20:58
+| punt | stand |
+|---|---|
+| V-#853 | **✓** GET-04 somtype 5 (nrO 6), gelijke som (les 307), in `fixlijst_g7._v853` (assert: som gelijk, antwoord gelijk, geen route geeft het antwoord): 427 «15, 11, 12, 9, 13» → **15, 11, 11, 10, 13** (60/12; mediaan 11, meest 11, middelste genoemde 11, midden 12,5; de sleutel 'middelste getal' komt terug: **11**), 861 → **14, 18, 7, 8, 3** (50/10), 863 → **11, 9, 15, 3, 2** (40/8), 864 → **3, 12, 14, 5, 11** (45/9). claudeUitleg: alleen de optelling. |
+| Z-#854 | **✓** 428 «10, 9, 5, 19, 7» → **11, 8, 5, 19, 7** (50/10; mediaan 8, midden 12, middelste genoemde 5). Claudes mediaan-sleutel 9 → **8** (regel 'middelste getal' geeft nu 8). |
+| Z-#855 | **✓** `tools/gemiddelde_check.py` met de vijf routes en het aandeel per somtype, in check_merge_notatie G7 (FAIL). Vóór: FAIL 2 (midden 4/11; 427 mediaan op de eigen sleutel 'middelste getal'), WARN 5. Na: **0 FAIL · 0 WARN**. |
+Alleen deze 5 items zijn veranderd (vergeleken met de repo: 5 items anders, verder niets). check_hints 155 klaar · 0 FAIL · 0 WARN, merge-notatie ALLES OK. **Didactiek:** korte nacheck. **Oefeningen:** niets te syncen (de regels rekenen zichzelf opnieuw uit; L1's blijven waar).

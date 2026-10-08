@@ -136,10 +136,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 9 (meest: “Dat is het middelste getal. Gemiddeld is optellen en delen.”)
 - Voorbeelden:
   - `G7-GET-04-claude-bank-427` (Claude G6, gegenereerd, niveau 1 → basis)
-    - **Opgave:** 5 dino's hebben 15, 11, 12, 9, 13 eieren. Hoeveel eieren hebben ze gemiddeld?
+    - **Opgave:** 5 dino's hebben 15, 11, 11, 10, 13 eieren. Hoeveel eieren hebben ze gemiddeld?
     - **Antwoord:** 12  (controle: ok)
     - **Fout-hints (Claude):** 60 → 60 is het totaal. Voor het gemiddelde deel je door 5. · 15 → Het zijn 5 dino's, dus deel door 5.
-    - **Uitleg (Claude):** Tel op: 15 + 11 + 12 + 9 + 13 = 60. Deel door 5: 60 : 5 = 12.
+    - **Uitleg (Claude):** Tel op: 15 + 11 + 11 + 10 + 13 = 60. Deel door 5: 60 : 5 = 12.
   - `G7-GET-04-claude-bank-862` (Claude G6, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** 5 dino's hebben 18, 13, 2, 13, 9 blaadjes. Hoeveel blaadjes hebben ze gemiddeld?
     - **Antwoord:** 11  (controle: ok)

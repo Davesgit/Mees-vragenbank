@@ -177,5 +177,7 @@ if __name__ == '__main__':
     import spatie_duizend_check as _SD      # V-#705 (review G7 batch 6, Didactiek 8 okt): spatie als duizendtalscheiding (FAIL, G4–G8)
     fail = (_SD.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     fail = (_SD.rapport_bestanden(os.path.dirname(os.path.abspath(__file__))) > 0) or fail      # Oef-#481: ook hintteksten (batch*.json, somtypen)
+    sys.path.insert(0, '/workspace/claude-merge/tools'); import gemiddelde_check as _GM      # Z-#855 (Didactiek 8 okt 16:15): gemiddelde-vragen; in G5 alleen gemeld (WARN), G5 is goedgekeurd
+    _GM.rapport([_it for _p in files for _it in json.load(open(_p))['items']], os.path.dirname(os.path.abspath(__file__)), ernst='WARN (hier niet blokkerend)')
     print('\nG5 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

@@ -899,3 +899,35 @@ def _z481(it, slog):
 _pas_toe_r7 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_r7(it, slog); _z481(it, slog)
+
+# V-#853 (verplicht) + Z-#854 (zacht), Didactiek 8 okt 16:15 (g8/gemiddelde-check-didactiek.md, les 306/307): GET-04 somtype 5 (gemiddelde, open).
+# Een foute route (midden van kleinste en grootste, mediaan, middelste genoemde, gegeven waarde) gaf het goede antwoord. Nieuwe data met GELIJKE SOM:
+# antwoord, totaal-sleutel en deling blijven; alleen de opgave, de optelling in claudeUitleg en (428) Claudes mediaan-sleutel 9 → 8 veranderen.
+V853 = {'910240fa': ('V-#853', [15, 11, 12, 9, 13], [15, 11, 11, 10, 13]), '25486976': ('V-#853', [15, 17, 7, 8, 3], [14, 18, 7, 8, 3]),
+        '9f2d7d65': ('V-#853', [12, 9, 14, 3, 2], [11, 9, 15, 3, 2]), 'a3886cf0': ('V-#853', [4, 11, 14, 5, 11], [3, 12, 14, 5, 11]),
+        'a1f6a52a': ('Z-#854', [10, 9, 5, 19, 7], [11, 8, 5, 19, 7])}
+def _v853(it, slog):
+    c8 = (it['bron'].get('claudeId') or '')[:8]
+    if c8 not in V853: return
+    code, oud, nieuw = V853[c8]; e = it['extraVelden']
+    so, sn = ', '.join(map(str, oud)), ', '.join(map(str, nieuw))
+    if so not in it['opgave']: return
+    assert sum(oud) == sum(nieuw) and sum(nieuw) % len(nieuw) == 0 and str(sum(nieuw) // len(nieuw)) == str(it['antwoord']), (code, c8)
+    gem = sum(nieuw) // len(nieuw); s_ = sorted(nieuw); mid = s_[len(s_) // 2]
+    assert gem not in nieuw and gem != mid and gem != nieuw[len(nieuw) // 2] and 2 * gem != min(nieuw) + max(nieuw), (code, c8, 'route geeft het antwoord')
+    o = it['opgave']; it['opgave'] = o.replace(so, sn)
+    plus_o, plus_n = ' + '.join(map(str, oud)), ' + '.join(map(str, nieuw))
+    if e.get('claudeUitleg') and plus_o in e['claudeUitleg']: e['claudeUitleg'] = e['claudeUitleg'].replace(plus_o, plus_n)
+    so_mid, sn_mid = str(sorted(oud)[len(oud) // 2]), str(mid)
+    if so_mid != sn_mid:      # Claudes mediaan-sleutel (428: 9 → 8)
+        for veld in ('claudeDenkfouten', 'claudeFoutHints'):
+            for d in e.get(veld) or []:
+                if d.get('fout') == so_mid: d['fout'] = sn_mid
+    it['merge'][code.replace('-#', '').lower()] = {'reden': f'{code}: {so} → {sn} (gelijke som {sum(nieuw)}, gemiddelde {gem}; geen foute route geeft {gem})'}
+    slog(it, f'{code} (les 306/307): {so} → {sn}, gelijke som, geen foute route geeft het antwoord', 'opgave', o, it['opgave'])
+_pas_toe_r481 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_r481(it, slog); _v853(it, slog)
+_pas_toe_av8_r853 = pas_toe_av8
+def pas_toe_av8(it, slog):
+    _pas_toe_av8_r853(it, slog); _v853(it, slog)
