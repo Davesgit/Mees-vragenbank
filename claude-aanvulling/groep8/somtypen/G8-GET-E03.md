@@ -41,7 +41,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **2** · somtypeOrigineel “Reken uit. # : # + #” (koppeling: claudeId)
 - Items: **12** · Claude-doelen: C21 (12) · regel: G8-P00-park-G7
 - Getallenruimte: 0–1.000 · type: kale
-- Denkfouten (Claude): verkeerde-bewerking (24)
+- Denkfouten (Claude): verkeerde-bewerking (13)
 - Verschillende Claude-fout-hints: 2 (meest: “Delen gaat vóór plus. Deel eerst, tel daarna op.”)
 - Voorbeelden:
   - `G8-GET-E03-claude-bank-026` (Claude C21, gegenereerd, niveau 2 → toepassen)

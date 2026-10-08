@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T15:57:13+0200",
+ "gegenereerdOp": "2026-10-08T16:00:03+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-GET-V02",
  "bordtitel": "Rekenen tot 100.000 en rekenmachine herhalen",
@@ -487,7 +487,7 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "meerkeuze",
-   "opgave": "In groep 8 hebben 20 kinderen een cijfer voor een toets. Tien kinderen hebben een 7, vijf kinderen een 8 en vijf kinderen een 6. Wat is het gemiddelde cijfer?",
+   "opgave": "In groep 8 hebben 20 kinderen een cijfer voor een toets. Tien kinderen hebben een 6, vijf kinderen een 7 en vijf kinderen een 9. Wat is het gemiddelde cijfer?",
    "opgaveStappen": null,
    "opties": [
     {
@@ -500,10 +500,10 @@
     },
     {
      "letter": "C",
-     "tekst": "21"
+     "tekst": "22"
     }
    ],
-   "optiesTekst": "A) 7 · B) 140 · C) 21",
+   "optiesTekst": "A) 7 · B) 140 · C) 22",
    "antwoord": "7",
    "antwoordDetail": {
     "juisteOptie": "A",
@@ -524,16 +524,16 @@
     },
     {
      "stap": null,
-     "fout": "21",
-     "uitleg": "Dan telt elk cijfer maar één keer mee. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.",
+     "fout": "22",
+     "uitleg": "Elk cijfer telt zo vaak mee als het voorkomt. Deel het totaal door het aantal kinderen.",
      "uitlegSterker": "Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.",
      "laag2": "tekstSterker",
-     "regel": "21",
-     "soort": "elk cijfer één keer",
+     "regel": "andere fout",
+     "soort": "andere fout",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "140 → Dat is het totaal van alle cijfers samen. Verdeel het nog eerlijk over alle kinderen. · 21 → Dan telt elk cijfer maar één keer mee. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.",
+   "foutHintsTekst": "140 → Dat is het totaal van alle cijfers samen. Verdeel het nog eerlijk over alle kinderen. · 22 → Elk cijfer telt zo vaak mee als het voorkomt. Deel het totaal door het aantal kinderen.",
    "ouderzin": "Je kind rekent een gemiddelde uit als cijfers vaker voorkomen: elk cijfer telt zo vaak mee als het voorkomt.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -558,7 +558,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "G9",
-    "claudeUitleg": "Je telt hoe vaak elk cijfer voorkomt. De 7 komt 10 keer voor, de 8 en de 6 allebei 5 keer. Dus de 7 komt het vaakst voor.",
+    "claudeUitleg": "Tien kinderen hebben samen 60 punten, vijf kinderen samen 35 en vijf kinderen samen 45. Bij elkaar is dat 140. Je deelt door 20 kinderen: 140 : 20 = 7. Het gemiddelde cijfer is 7.",
     "claudeStrategie": "vaakste waarde zoeken",
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -575,7 +575,7 @@
      },
      {
       "stap": null,
-      "fout": "21",
+      "fout": "22",
       "uitleg": "Je telde de drie verschillende cijfers op. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer."
      }
     ]
@@ -600,7 +600,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D8 nieuwe opgave (Didactiek)"
+     "D8 nieuwe opgave (Didactiek)",
+     "Oef-#485: gemiddelde ≠ meest voorkomend ≠ middelste (les 195)"
     ]
    },
    "opBord": false,
@@ -610,7 +611,7 @@
     "voorstelDoel": null,
     "regel": "D8-MODUS-NAAR-GEMIDDELDE",
     "reden": "Didactiek 1 okt (G8-twijfel G8-VBN-E04-claude-bank-twijfel-016): MODUS-NAAR-GEMIDDELDE",
-    "somtype": "In groep # [ding] # [ding] een cijfer voor een toets. Tien kinderen hebben een #, vijf kinderen een # en vijf kinderen een #. Wat is het gemiddelde cijfer?",
+    "somtype": "In groep # hebben # kinderen een cijfer voor een toets. Tien kinderen hebben een #, vijf kinderen een # en vijf kinderen een #. Wat is het gemiddelde cijfer?",
     "didactiekG8": {
      "twijfelId": "G8-VBN-E04-claude-bank-twijfel-016",
      "groep": "statistiek-gemengd",
@@ -648,7 +649,7 @@
     "hints": {
      "batch": "batch3.json",
      "nr": 3,
-     "somtype": "In groep # [ding] # [ding] een cijfer voor een toets. Tien kinderen hebben een #, vijf kinderen een # en vijf kinderen een #. Wat is het gemiddelde cijfer?"
+     "somtype": "In groep # hebben # kinderen een cijfer voor een toets. Tien kinderen hebben een #, vijf kinderen een # en vijf kinderen een #. Wat is het gemiddelde cijfer?"
     }
    },
    "controle": {
@@ -691,17 +692,9 @@
     {
      "regel": "21",
      "soort": "elk cijfer één keer",
-     "bron": "nieuw",
      "tekst": "Dan telt elk cijfer maar één keer mee. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.",
-     "tekstSterker": "Reken uit hoeveel punten alle kinderen samen hebben: elk cijfer keer het aantal kinderen met dat cijfer, en dat bij elkaar. Deel dat door het aantal kinderen.",
-     "perItem": false,
-     "match": {
-      "waarden": [
-       "21"
-      ],
-      "opOpties": true
-     },
-     "leesbaar": true
+     "match": null,
+     "leesbaar": false
     },
     {
      "regel": "andere fout",
@@ -725,7 +718,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "meerkeuze",
-   "opgave": "Mila fietst vier dagen naar school. 3 km, 5 km, 4 km en 4 km. Hoeveel kilometer fietst zij gemiddeld per dag?",
+   "opgave": "Mila fietst vier dagen naar school. 3 km, 6 km, 4 km en 3 km. Hoeveel kilometer fietst zij gemiddeld per dag?",
    "opgaveStappen": null,
    "opties": [
     {
@@ -738,10 +731,10 @@
     },
     {
      "letter": "C",
-     "tekst": "5 km"
+     "tekst": "6 km"
     }
    ],
-   "optiesTekst": "A) 4 km · B) 16 km · C) 5 km",
+   "optiesTekst": "A) 4 km · B) 16 km · C) 6 km",
    "antwoord": "4 km",
    "antwoordDetail": {
     "juisteOptie": "A",
@@ -762,16 +755,16 @@
     },
     {
      "stap": null,
-     "fout": "5 km",
-     "uitleg": "Dat is de langste dag. Een gemiddelde ligt tussen de kortste en de langste dag in.",
+     "fout": "6 km",
+     "uitleg": "Tel alle afstanden op en deel door het aantal dagen.",
      "uitlegSterker": "Tel alle afstanden bij elkaar op: dat is het totaal. Deel het totaal door het aantal dagen.",
      "laag2": "tekstSterker",
-     "regel": "5 km",
-     "soort": "langste dag",
+     "regel": "andere fout",
+     "soort": "andere fout",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "16 km → Dat is het totaal van alle dagen. Verdeel het nog eerlijk over de dagen. · 5 km → Dat is de langste dag. Een gemiddelde ligt tussen de kortste en de langste dag in.",
+   "foutHintsTekst": "16 km → Dat is het totaal van alle dagen. Verdeel het nog eerlijk over de dagen. · 6 km → Tel alle afstanden op en deel door het aantal dagen.",
    "ouderzin": "Je kind rekent een gemiddelde uit: alle afstanden optellen en delen door het aantal dagen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -796,7 +789,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "G9",
-    "claudeUitleg": "Je telt de afstanden op: 3 + 5 + 4 + 4 = 16. Daarna deel je door 4 dagen: 16 : 4 = 4. Het gemiddelde is 4 km per dag.",
+    "claudeUitleg": "Je telt de afstanden op: 3 + 6 + 4 + 3 = 16. Daarna deel je door 4 dagen: 16 : 4 = 4. Het gemiddelde is 4 km per dag.",
     "claudeStrategie": "optellen en delen",
     "claudeThema": null,
     "claudeAntwoordType": "tekst",
@@ -809,7 +802,7 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "5 km",
+      "fout": "6 km",
       "denkfout": "andere-deel-genomen"
      }
     ],
@@ -822,7 +815,7 @@
      },
      {
       "stap": null,
-      "fout": "5 km",
+      "fout": "6 km",
       "uitleg": "5 km is de langste dag. Een gemiddelde ligt tussen de kleinste en de grootste waarde."
      }
     ]
@@ -847,7 +840,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "N1 \":\" + getal → punt"
+     "N1 \":\" + getal → punt",
+     "Oef-#486: gemiddelde ≠ meest voorkomend ≠ middelste (les 195)"
     ]
    },
    "opBord": false,
@@ -922,17 +916,9 @@
     {
      "regel": "5 km",
      "soort": "langste dag",
-     "bron": "nieuw",
      "tekst": "Dat is de langste dag. Een gemiddelde ligt tussen de kortste en de langste dag in.",
-     "tekstSterker": "Tel alle afstanden bij elkaar op: dat is het totaal. Deel het totaal door het aantal dagen.",
-     "perItem": false,
-     "match": {
-      "waarden": [
-       "5 km"
-      ],
-      "opOpties": true
-     },
-     "leesbaar": true
+     "match": null,
+     "leesbaar": false
     },
     {
      "regel": "andere fout",
@@ -950,11 +936,11 @@
    "algemeneFoutHint": "Tel alle afstanden op en deel door het aantal dagen."
   }
  ],
- "hintsSyncOp": "2026-10-08T15:57:14+02:00",
+ "hintsSyncOp": "2026-10-08T16:00:04+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
-   "md5": "1b04c2521c1e"
+   "md5": "3361d1c29392"
   },
   {
    "batch": "batch2.json",
@@ -962,10 +948,10 @@
   },
   {
    "batch": "batch3.json",
-   "md5": "153f2472c159"
+   "md5": "5db099bfddc8"
   }
  ],
- "geschrevenOp": "2026-10-08T15:57:14+02:00",
+ "geschrevenOp": "2026-10-08T16:00:04+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

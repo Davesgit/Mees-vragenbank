@@ -325,7 +325,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot: er staat een nul te veel achter.  [nieuw]
   - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein: er mist een nul.  [nieuw]
   - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je opgeteld? Er staat 'met elk': dan reken je keer.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Kijk bij het getal dat je op honderdtallen afrondt naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af, anders naar beneden.  [nieuw]
+  - `andere fout` (andere fout) → Rond eerst af zoals de vraag zegt, en reken dan keer. Rond het getal af op honderdtallen: kijk naar de tientallen. Vijf of meer? Dan naar boven, anders naar beneden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 12: 's Ochtends is het # graden en 's middags # graden. Hoe reken je uit hoeveel graden het warmer is geworden?
@@ -1010,8 +1010,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Voorbeelden:
   - `G8-GET-E02-claude-bank-041` (Claude W6, ai, niveau 2 → toepassen)
     - **Opgave:** Je moet 12 namen op alfabetische volgorde zetten. Welke aanpak werkt altijd?
-    - **Opties:** A) Vergelijk alleen de eerste en de laatste naam · B) Zoek steeds de eerste naam en zet die apart · C) Zet de kortste namen vooraan
-    - **Antwoord:** Zoek steeds de eerste naam en zet die apart  (controle: n.v.t.)
+    - **Opties:** A) Vergelijk alleen de eerste en de laatste naam · B) Zoek steeds de naam die in het alfabet vooraan komt en zet die apart · C) Zet de kortste namen vooraan
+    - **Antwoord:** Zoek steeds de naam die in het alfabet vooraan komt en zet die apart  (controle: n.v.t.)
     - **Fout-hints (Claude):** Zet de kortste namen vooraan → Alfabetische volgorde gaat niet over lengte. Waar kijk je dan wel naar? · Vergelijk alleen de eerste en de laatste naam → Alle namen moeten op hun plek komen. Elke naam moet dus een keer vergeleken worden.
     - **Uitleg (Claude):** Je zoekt telkens de naam die alfabetisch het eerst komt. Die zet je op de volgende plaats in de rij. Zo komen alle namen een keer aan de beurt.
 
@@ -1120,7 +1120,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Bij een gemiddelde tellen alle cijfers mee, en verdeel je het totaal eerlijk.  [nieuw]
 - Status: hints klaar
 
-## Somtype 45: Jinte moet # × # [ding]. Welke aanpak is het handigst?
+## Somtype 45: Jinte moet # × # uitrekenen. Welke aanpak is het handigst?
 
 - Sleutel: nrOrigineel **38** · somtypeOrigineel “Jinte moet # × # [ding]. Welke aanpak is het handigst?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W3 (1) · regel: G8-W3-aanpak
@@ -1142,9 +1142,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `één keer verbeterd` (5 × 100 doen en er 2 afhalen) → Bij elke keer reken je een beetje te veel. Hoe vaak reken je dat te veel? Dat moet er allemaal af, niet maar één keer.  [nieuw]
   - `herhaald optellen` (98 vijf keer onder elkaar optellen) → Dat kan, maar het is niet handig: het kost veel stappen. Ligt het getal dicht bij een rond getal?  [nieuw]
   - `andere fout` (andere fout) → Reken met het ronde getal, en haal daarna af wat je bij alle keren samen te veel nam.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Jinte moet # × # [ding]. Welke aanpak is het handigst?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 46: Kim moet # × # [ding]. Ze doet eerst # × # = # en neemt dan de helft. Klopt deze aanpak?
+## Somtype 46: Kim moet # × # uitrekenen. Ze doet eerst # × # = # en neemt dan de helft. Klopt deze aanpak?
 
 - Sleutel: nrOrigineel **39** · somtypeOrigineel “Kim moet # × # [ding]. Ze doet eerst # × # = # en neemt dan de helft. Klopt deze aanpak?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W3 (1) · regel: G8-W3-aanpak
@@ -1167,6 +1168,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tien eraf` (Nee, ze moet er 10 van afhalen) → Keer tien is twee keer zo groot als keer vijf, niet tien meer. Hoeveel moet er dan af?  [nieuw]
   - `verdubbelen` (Nee, ze moet 360 verdubbelen) → Keer vijf is minder dan keer tien. Wordt de uitkomst dan groter of kleiner?  [nieuw]
   - `andere fout` (andere fout) → Is vijf de helft van tien? Wat betekent dat voor de uitkomst?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Kim moet # × # [ding]. Ze doet eerst # × # = # en neemt dan de helft. Klopt deze aanpak?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 47: Lars zet # [ding] jam in [bakken] van #. Hij rekent # : # en schrijft # [ding] op. Wat is er mis met zijn aanpak?
@@ -1193,7 +1195,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Wat blijft er bij de deling over, en moet dat ook mee?  [nieuw]
 - Status: hints klaar
 
-## Somtype 48: Mees moet # × # [ding]. Hij telt # + # + # + # op. Wat had handiger gekund?
+## Somtype 48: Mees moet # × # uitrekenen. Hij telt # + # + # + # op. Wat had handiger gekund?
 
 - Sleutel: nrOrigineel **41** · somtypeOrigineel “Mees moet # × # [ding]. Hij telt # + # + # + # op. Wat had handiger gekund?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W3 (1) · regel: G8-W3-aanpak
@@ -1215,9 +1217,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `plus` (Eerst 250 + 4 uitrekenen) → Dan tel je het aantal keer bij het getal op. Steeds hetzelfde getal optellen geeft veel meer dan het getal plus het aantal keer.  [nieuw]
   - `onder elkaar` (De som onder elkaar zetten met een streep) → Dat kan, maar het is niet handig: je telt dan nog steeds alles op. Het kan in één stap.  [nieuw]
   - `andere fout` (andere fout) → Steeds hetzelfde getal optellen: welke som doet dat in één stap?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Mees moet # × # [ding]. Hij telt # + # + # + # op. Wat had handiger gekund?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 49: Noor moet # × # [ding] en telt acht keer # bij elkaar op. Wat had handiger gekund?
+## Somtype 49: Noor moet # × # uitrekenen en telt acht keer # bij elkaar op. Wat had handiger gekund?
 
 - Sleutel: nrOrigineel **42** · somtypeOrigineel “Noor moet # × # [ding] en telt acht keer # bij elkaar op. Wat had handiger gekund?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W3 (1) · regel: G8-W3-aanpak
@@ -1239,9 +1242,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `plus` (25 en 8 bij elkaar optellen) → Dan tel je het aantal keer bij het getal op. Steeds hetzelfde getal optellen is een keersom. Komt dit daar in de buurt?  [nieuw]
   - `te veel eraf` (25 × 10 doen en er 2 afhalen) → Met tien keer neem je twee hele keren te veel. Haal je dan twee af, of twee keer het getal?  [nieuw]
   - `andere fout` (andere fout) → Kun je het aantal keer splitsen in een makkelijke keersom?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Noor moet # × # [ding] en telt acht keer # bij elkaar op. Wat had handiger gekund?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 50: Nout heeft # − # [ding] elkaar uitgerekend en kreeg #. Hij schatte vooraf ongeveer #. Wat moet hij nu doen?
+## Somtype 50: Nout heeft # − # onder elkaar uitgerekend en kreeg #. Hij schatte vooraf ongeveer #. Wat moet hij nu doen?
 
 - Sleutel: nrOrigineel **43** · somtypeOrigineel “Nout heeft # − # [ding] elkaar uitgerekend en kreeg #. Hij schatte vooraf ongeveer #. Wat moet hij nu doen?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W3 (1) · regel: G8-W3-aanpak
@@ -1263,6 +1267,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `schatting aangepast` (De schatting aanpassen naar 500) → Reken de schatting na met ronde getallen. Klopte die? Dan ligt de fout niet in de schatting.  [nieuw]
   - `laten staan` (Het antwoord 505 gewoon laten staan) → Het antwoord ligt ver van de schatting af. Dat is een teken dat er iets mis is gegaan.  [nieuw]
   - `andere fout` (andere fout) → Ligt het antwoord dicht bij de schatting? Zo niet, waar zit dan de fout?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Nout heeft # − # [ding] elkaar uitgerekend en kreeg #. Hij schatte vooraf ongeveer #. Wat moet hij nu doen?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 51: Op de fietstocht rijdt Tess # km. Ze schrijft op dat dit # meter is. Hoe merk je dat dit niet klopt?
@@ -1289,7 +1294,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Eén kilometer is al duizend meter. Hoeveel meter is de tocht dan ongeveer?  [nieuw]
 - Status: hints klaar
 
-## Somtype 52: Roos rekent # × # uit door # × # en # × # [ding] te doen. Ze schrijft alleen # op. Wat ging er mis?
+## Somtype 52: Roos rekent # × # uit door # × # en # × # apart te doen. Ze schrijft alleen # op. Wat ging er mis?
 
 - Sleutel: nrOrigineel **45** · somtypeOrigineel “Roos rekent # × # uit door # × # en # × # [ding] te doen. Ze schrijft alleen # op. Wat ging er mis?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W3 (1) · regel: G8-W3-aanpak
@@ -1311,6 +1316,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `getal uit de som` (Ze moest 140 en 24 optellen) → Dan tel je een getal uit de som erbij, niet de uitkomst van het kleine stuk. Hoeveel is het kleine stuk echt?  [nieuw]
   - `niet splitsen` (Ze had niet mogen splitsen) → Splitsen is juist een handige aanpak. Heeft Roos alle stukken gebruikt?  [nieuw]
   - `andere fout` (andere fout) → Heeft Roos alle stukken van de keersom bij elkaar opgeteld?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Roos rekent # × # uit door # × # en # × # [ding] te doen. Ze schrijft alleen # op. Wat ging er mis?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 53: Sam rekent # − # uit met een som onder elkaar en moet steeds lenen. Wat had handiger gekund?

@@ -513,6 +513,54 @@ def fix_g8(r, slog):
             for d_ in ex.get('claudeDenkfouten') or []: d_['fout'] = kl(d_['fout'])
             for h_ in ex.get('claudeFoutHints') or []: h_['fout'] = kl(h_['fout']); h_['uitleg'] = kl(h_['uitleg']) if isinstance(h_.get('uitleg'), str) else h_.get('uitleg')
             slog(r, "V-#781: kloktijden als '14.35 uur' (geen ':')", 'opgave', o, r['opgave'])
+        # Oef-#485 (batch 3, les 195): V02 #3 — 7 was tegelijk gemiddelde, meest voorkomend en middelste cijfer → 10 × 6, 5 × 7, 5 × 9 (gemiddelde 7, meest 6, midden 6,5)
+        if c8 == '0f2334ef' and 'Tien kinderen hebben een 7' in r['opgave']:
+            o = r['opgave']; r['opgave'] = o.replace('Tien kinderen hebben een 7, vijf kinderen een 8 en vijf kinderen een 6.', 'Tien kinderen hebben een 6, vijf kinderen een 7 en vijf kinderen een 9.')
+            for o_ in r['opties']:
+                if o_['tekst'] == '21': o_['tekst'] = '22'
+            r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+            ex = r['extraVelden']; ex['claudeUitleg'] = 'Tien kinderen hebben samen 60 punten, vijf kinderen samen 35 en vijf kinderen samen 45. Bij elkaar is dat 140. Je deelt door 20 kinderen: 140 : 20 = 7. Het gemiddelde cijfer is 7.'
+            for d_ in ex.get('claudeDenkfouten') or []:
+                if d_['fout'] == '21': d_['fout'] = '22'
+            for h_ in ex.get('claudeFoutHints') or []:
+                if h_['fout'] == '21': h_['fout'] = '22'
+            slog(r, 'Oef-#485: gemiddelde ≠ meest voorkomend ≠ middelste (les 195)', 'opgave', o, r['opgave'])
+        # Oef-#486 (batch 3, les 195): V02 #4 — 3, 5, 4, 4 km → 3, 6, 4, 3 km (gemiddelde 4, meest 3, midden 3,5); afleider 5 km → 6 km (de langste dag)
+        if c8 == 'd9572e3d' and '3 km, 5 km, 4 km en 4 km' in r['opgave']:
+            o = r['opgave']; r['opgave'] = o.replace('3 km, 5 km, 4 km en 4 km', '3 km, 6 km, 4 km en 3 km')
+            for o_ in r['opties']:
+                if o_['tekst'] == '5 km': o_['tekst'] = '6 km'
+            r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+            ex = r['extraVelden']; ex['claudeUitleg'] = 'Je telt de afstanden op: 3 + 6 + 4 + 3 = 16. Daarna deel je door 4 dagen: 16 : 4 = 4. Het gemiddelde is 4 km per dag.'
+            for d_ in ex.get('claudeDenkfouten') or []:
+                if d_['fout'] == '5 km': d_['fout'] = '6 km'
+            for h_ in ex.get('claudeFoutHints') or []:
+                if h_['fout'] == '5 km': h_['fout'] = '6 km'
+            slog(r, 'Oef-#486: gemiddelde ≠ meest voorkomend ≠ middelste (les 195)', 'opgave', o, r['opgave'])
+        # Oef-#487 (batch 3): E02 #40 'de eerste naam' was dubbelzinnig (bovenste naam in de lijst) → 'de naam die in het alfabet vooraan komt'
+        if c8 == '43a76b21':
+            oud, nieuw = 'Zoek steeds de eerste naam en zet die apart', 'Zoek steeds de naam die in het alfabet vooraan komt en zet die apart'
+            if any(o_['tekst'] == oud for o_ in r['opties']):
+                for o_ in r['opties']:
+                    if o_['tekst'] == oud: o_['tekst'] = nieuw
+                r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+                if r['antwoord'] == oud: r['antwoord'] = nieuw
+                ad_ = r.get('antwoordDetail')
+                if isinstance(ad_, dict) and ad_.get('juisteOptieTekst') == oud: ad_['juisteOptieTekst'] = nieuw
+                slog(r, "Oef-#487: 'de eerste naam' → 'de naam die in het alfabet vooraan komt'", 'antwoord', oud, nieuw)
+        # Oef-#482 (Didactiek Z-#764, Oefeningen akkoord 15:58): E03 #2 'Reken uit. a : b + c' — Claudes komma-sleutels a : (b + c) weg; '7,0' → '7'
+        if re.fullmatch(r'Reken uit\. \d+ : \d+ \+ \d+', r['opgave']):
+            ex = r['extraVelden']; voor = [d_['fout'] for d_ in ex.get('claudeDenkfouten') or []]
+            for k_ in ('claudeDenkfouten', 'claudeFoutHints'):
+                L_ = []
+                for d_ in ex.get(k_) or []:
+                    f_ = str(d_.get('fout'))
+                    if re.fullmatch(r'\d+,0', f_): d_['fout'] = f_[:-2]
+                    elif re.fullmatch(r'\d+,\d+', f_): continue
+                    L_.append(d_)
+                if ex.get(k_) is not None: ex[k_] = L_
+            na = [d_['fout'] for d_ in ex.get('claudeDenkfouten') or []]
+            if na != voor: slog(r, "Oef-#482: komma-sleutel weg ('7,0' → '7')", 'claudeDenkfouten', str(voor), str(na))
         # Z-#781 (Didactiek G8 batch 2): #12 'Tel … bij elkaar op' is alleen fout zolang de ochtendtemperatuur niet onder nul is (data-guard)
         m_ = re.match(r"'s Ochtends is het (\S+) graden", r['opgave'])
         if m_: assert not m_.group(1).startswith(('−', '-')), ('Z-#781: ochtendtemperatuur onder nul', r['id'])
@@ -524,7 +572,10 @@ KOP478 = [(r'^(Kijk zonder uit te rekenen\. Welk antwoord bij # [×+−:] #) \[d
           (r'nu €# \[ding\]\.', 'nu €# kost.'), (r'^Een jas van €# \[ding\] # procent', 'Een jas van €# gaat # procent'),
           (r'= # \[ding\]\. Hoe kan', '= # uitgerekend. Hoe kan'), (r'^Hoe zie je of een getal deelbaar is door #\?$', 'Hoe zie je of een getal deelbaar is door 5?'),  # Z-#780
           (r'^In groep # \[ding\] # \[ding\]\.', 'In groep # zitten # leerlingen.'),
-          (r'^De trein vertrekt om # uur en komt aan om # uur\.', 'De trein vertrekt om #.# uur en komt aan om #.# uur.')]  # V-#781: '14.35' werd één '#'
+          (r'^De trein vertrekt om # uur en komt aan om # uur\.', 'De trein vertrekt om #.# uur en komt aan om #.# uur.'),
+          # Oef-#488 (batch 3): [ding] op een werkwoord of voorzetsel
+          (r'moet # × # \[ding\]', 'moet # × # uitrekenen'), (r'# − # \[ding\] elkaar uitgerekend', '# − # onder elkaar uitgerekend'),
+          (r'# × # \[ding\] te doen', '# × # apart te doen'), (r'^In groep # \[ding\] # \[ding\] een cijfer', 'In groep # hebben # kinderen een cijfer')]  # V-#781: '14.35' werd één '#'
 def kop_g8(s):
     for a, b in KOP478: s = re.sub(a, b, s)
     return s

@@ -144,7 +144,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind deelt een breuk in kleinere stukken (breuk gedeeld door breuk): met dezelfde noemer kun je de tellers vergelijken.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één te veel` (fout = antwoord + 1) → Dat is één stuk te veel. Tel nog eens hoe vaak het kleine stuk in het deel past.  [nieuw]
-  - `noemer van het kleine stuk` (Claudes sleutel: een-ernaast) → Zoveel kleine stukken passen er in een hele. Je verdeelt geen hele, alleen een deel ervan: hoe vaak past het kleine stuk dáárin?  [Claude, taalfix]
+  - `noemer van het kleine stuk` (Claudes sleutel: een-ernaast) → Dat is de noemer van het kleine stuk (het getal onder de streep): zoveel kleine stukken passen er in een hele. Je verdeelt geen hele, alleen een deel ervan: hoe vaak past het kleine stuk dáárin?  [Claude, taalfix]
   - `teller overgenomen` (Claudes sleutel: getal-overgenomen) → Dat is de teller van het deel (het getal boven de streep). Je zoekt hoe vaak het kleine stuk in het deel past.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk hoe vaak het kleine stuk in het deel past.  [nieuw]
 - Status: hints klaar
@@ -229,7 +229,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind deelt een breuk in kleinere stukken (breuk gedeeld door breuk): met dezelfde noemer kun je de tellers vergelijken.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één te veel` (fout = antwoord + 1) → Dat is één stuk te veel. Tel nog eens hoe vaak het kleine stuk in het deel past.  [nieuw]
-  - `noemer van het kleine stuk` (Claudes sleutel: een-ernaast) → Zoveel kleine stukken passen er in een hele. Je verdeelt geen hele, alleen een deel ervan: hoe vaak past het kleine stuk dáárin?  [Claude, taalfix]
+  - `noemer van het kleine stuk` (Claudes sleutel: een-ernaast) → Dat is de noemer van het kleine stuk (het getal onder de streep): zoveel kleine stukken passen er in een hele. Je verdeelt geen hele, alleen een deel ervan: hoe vaak past het kleine stuk dáárin?  [Claude, taalfix]
   - `teller overgenomen` (Claudes sleutel: getal-overgenomen) → Dat is de teller van het deel (het getal boven de streep). Je zoekt hoe vaak het kleine stuk in het deel past.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk hoe vaak het kleine stuk in het deel past.  [nieuw]
 - Status: hints klaar

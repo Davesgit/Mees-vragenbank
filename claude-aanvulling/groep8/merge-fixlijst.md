@@ -90,3 +90,14 @@ check_hints **49 klaar · 174 open · 0 FAIL · 0 WARN** (de WARN van #32 is weg
 - **Check:** KLOKTIJD (FAIL) kijkt nu ook naar de kop ('#:#') en foutRegels; typ-invoer is geen WARN meer; items met digitaleKlok worden overgeslagen. Uitslag G8: **0 FAIL**, overgeslagen 0.
 - Ook gesynct: **batch 3** van Oefeningen (GET-E02 #37–#57 + GET-V02 #1–#4, geschreven 15:55; batches.md: 'wacht op sync'). check_hints **74 klaar · 149 open · 0 FAIL · 0 WARN**, merge-notatie ALLES OK, b1 FAIL 0 (1214 sleutels), b2 FAIL 0 (50), b3 25 items · 50 sleutels · FAIL 0. Aanvulling G4–G7 teruggezet.
 - **Oefeningen:** MEET-E06 heeft nog geen hints; schrijf de sleutels in de vorm 'h.mm uur' (de app normaliseert de drie vormen). App/motor: zie README §App-eisen (kloktijd).
+
+### Data batch 3 + Oef-#482 — Overzicht, build 16:00:03
+| punt | stand |
+|---|---|
+| Oef-#485 | **✓** V02 #3 (003): «Tien kinderen hebben een 6, vijf kinderen een 7 en vijf kinderen een 9» → gemiddelde 7 (totaal 140), meest 6, midden 6,5; afleider 21 → **22**; Claudes uitleg rekent nu het gemiddelde uit (stond: het vaakst). |
+| Oef-#486 | **✓** V02 #4 (004): «3 km, 6 km, 4 km en 3 km» → 4 km (totaal 16), meest 3, midden 3,5; afleider 5 km → **6 km**. |
+| Oef-#487 | **✓** E02 #40 (041): antwoord/optie «Zoek steeds de naam die in het alfabet vooraan komt en zet die apart». |
+| Oef-#488 | **✓** KOP478: 'moet # × # uitrekenen' (nrO 38/39/41/42), '# − # onder elkaar uitgerekend' (43), '# × # apart te doen' (45), 'In groep # hebben # kinderen een cijfer' (V02 #3). kopGewijzigd. |
+| Oef-#482 | **✓** E03 #2 (021–032): de 11 komma-sleutels zijn weg, 028 '7,0' → '7' (b1/check 1214 → 1203 sleutels). |
+
+Checks build 16:00:03: check_hints **74 klaar · 149 open · 0 FAIL · 2 WARN** (ONLEESBAAR: de letterlijke regels '21' en '5 km' van V02 #3/#4 → **Oefeningen**: '22' en '6 km' in patch_batch3), merge-notatie ALLES OK (KLOKTIJD 0), b1 317 items · 1203 sleutels · FAIL 0, b2 FAIL 0, b3 FAIL 6 · WARN 2 — allemaal aan de kant van Oefeningen: regels 22 / 6 km (2 FAIL + 2 WARN), H2 van #40 deelt nu woorden met het nieuwe antwoord (les 260), SNAP=1 voor 003/004/041 (les 234).
