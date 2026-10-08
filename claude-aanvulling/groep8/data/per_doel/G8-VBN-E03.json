@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T16:45:31+0200",
+ "gegenereerdOp": "2026-10-08T17:24:12+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-VBN-E03",
  "bordtitel": "Regelmaat vinden in rijen en regels",
@@ -24,24 +24,34 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "158",
+   "antwoord": "€158",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Kijk hoeveel er van week tot week bij komt. Dat is elke week hetzelfde.",
+   "sterkereHint": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€133",
-     "uitleg": "Je moet tot week 4 doortellen, niet één stap verder dan de tabel."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€100",
-     "uitleg": "Vergeet het startbedrag van €58 niet."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€133 → Je moet tot week 4 doortellen, niet één stap verder dan de tabel. · €100 → Vergeet het startbedrag van €58 niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "€133 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €100 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+   "ouderzin": "Je kind trekt een spaartabel door: het startbedrag plus voor elke week hetzelfde bedrag.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -112,7 +122,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "N9 geldnotatie €N / €N,CC (G5)"
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#499: antwoord met € (zoals G7 #448)"
     ]
    },
    "opBord": false,
@@ -128,10 +139,19 @@
      "voorstelDoel": "G8-VBN-E03",
      "regel": "G7-D05-rekenregel"
     },
+    "oef499": {
+     "antwoord": "158",
+     "reden": "Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -147,8 +167,52 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix",
+     "tekst": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€100",
+       "€133"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent."
   },
   {
    "id": "G8-VBN-E03-claude-bank-002",
@@ -161,29 +225,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "109",
+   "antwoord": "€109",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Kijk hoeveel er van week tot week bij komt. Dat is elke week hetzelfde.",
+   "sterkereHint": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€49",
-     "uitleg": "Je moet tot week 9 doortellen, niet één stap verder dan de tabel."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€90",
-     "uitleg": "Vergeet het startbedrag van €19 niet."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€99",
-     "uitleg": "Week 9 betekent 9 keer de stap erbij."
+     "uitleg": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€49 → Je moet tot week 9 doortellen, niet één stap verder dan de tabel. · €90 → Vergeet het startbedrag van €19 niet. · €99 → Week 9 betekent 9 keer de stap erbij.",
-   "ouderzin": "",
+   "foutHintsTekst": "€49 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €90 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €99 → Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+   "ouderzin": "Je kind trekt een spaartabel door: het startbedrag plus voor elke week hetzelfde bedrag.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -263,7 +342,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "N9 geldnotatie €N / €N,CC (G5)"
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#499: antwoord met € (zoals G7 #448)"
     ]
    },
    "opBord": false,
@@ -279,10 +359,19 @@
      "voorstelDoel": "G8-VBN-E03",
      "regel": "G7-D05-rekenregel"
     },
+    "oef499": {
+     "antwoord": "109",
+     "reden": "Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -298,8 +387,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix",
+     "tekst": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€49",
+       "€90"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€99"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent."
   },
   {
    "id": "G8-VBN-E03-claude-bank-003",
@@ -312,24 +447,34 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "87",
+   "antwoord": "€87",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Kijk hoeveel er van week tot week bij komt. Dat is elke week hetzelfde.",
+   "sterkereHint": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€77",
-     "uitleg": "Je moet tot week 4 doortellen, niet één stap verder dan de tabel."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€40",
-     "uitleg": "Vergeet het startbedrag van €47 niet."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€77 → Je moet tot week 4 doortellen, niet één stap verder dan de tabel. · €40 → Vergeet het startbedrag van €47 niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "€77 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €40 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+   "ouderzin": "Je kind trekt een spaartabel door: het startbedrag plus voor elke week hetzelfde bedrag.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -400,7 +545,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "N9 geldnotatie €N / €N,CC (G5)"
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#499: antwoord met € (zoals G7 #448)"
     ]
    },
    "opBord": false,
@@ -416,10 +562,19 @@
      "voorstelDoel": "G8-VBN-E03",
      "regel": "G7-D05-rekenregel"
     },
+    "oef499": {
+     "antwoord": "87",
+     "reden": "Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -435,8 +590,52 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix",
+     "tekst": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€40",
+       "€77"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent."
   },
   {
    "id": "G8-VBN-E03-claude-bank-004",
@@ -449,29 +648,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "127",
+   "antwoord": "€127",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Kijk hoeveel er van week tot week bij komt. Dat is elke week hetzelfde.",
+   "sterkereHint": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€77",
-     "uitleg": "Je moet tot week 8 doortellen, niet één stap verder dan de tabel."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€80",
-     "uitleg": "Vergeet het startbedrag van €47 niet."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€117",
-     "uitleg": "Week 8 betekent 8 keer de stap erbij."
+     "uitleg": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€77 → Je moet tot week 8 doortellen, niet één stap verder dan de tabel. · €80 → Vergeet het startbedrag van €47 niet. · €117 → Week 8 betekent 8 keer de stap erbij.",
-   "ouderzin": "",
+   "foutHintsTekst": "€77 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €80 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €117 → Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+   "ouderzin": "Je kind trekt een spaartabel door: het startbedrag plus voor elke week hetzelfde bedrag.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -551,7 +765,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "N9 geldnotatie €N / €N,CC (G5)"
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#499: antwoord met € (zoals G7 #448)"
     ]
    },
    "opBord": false,
@@ -567,10 +782,19 @@
      "voorstelDoel": "G8-VBN-E03",
      "regel": "G7-D05-rekenregel"
     },
+    "oef499": {
+     "antwoord": "127",
+     "reden": "Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -586,8 +810,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix",
+     "tekst": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€77",
+       "€80"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€117"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent."
   },
   {
    "id": "G8-VBN-E03-claude-bank-005",
@@ -600,24 +870,34 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "135",
+   "antwoord": "€135",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Kijk hoeveel er van week tot week bij komt. Dat is elke week hetzelfde.",
+   "sterkereHint": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€110",
-     "uitleg": "Je moet tot week 4 doortellen, niet één stap verder dan de tabel."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€100",
-     "uitleg": "Vergeet het startbedrag van €35 niet."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€110 → Je moet tot week 4 doortellen, niet één stap verder dan de tabel. · €100 → Vergeet het startbedrag van €35 niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "€110 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €100 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+   "ouderzin": "Je kind trekt een spaartabel door: het startbedrag plus voor elke week hetzelfde bedrag.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -688,7 +968,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "N9 geldnotatie €N / €N,CC (G5)"
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#499: antwoord met € (zoals G7 #448)"
     ]
    },
    "opBord": false,
@@ -704,10 +985,19 @@
      "voorstelDoel": "G8-VBN-E03",
      "regel": "G7-D05-rekenregel"
     },
+    "oef499": {
+     "antwoord": "135",
+     "reden": "Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -723,8 +1013,52 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix",
+     "tekst": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€100",
+       "€110"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent."
   },
   {
    "id": "G8-VBN-E03-claude-bank-006",
@@ -737,29 +1071,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "97",
+   "antwoord": "€97",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Kijk hoeveel er van week tot week bij komt. Dat is elke week hetzelfde.",
+   "sterkereHint": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€67",
-     "uitleg": "Je moet tot week 6 doortellen, niet één stap verder dan de tabel."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€60",
-     "uitleg": "Vergeet het startbedrag van €37 niet."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€87",
-     "uitleg": "Week 6 betekent 6 keer de stap erbij."
+     "uitleg": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€67 → Je moet tot week 6 doortellen, niet één stap verder dan de tabel. · €60 → Vergeet het startbedrag van €37 niet. · €87 → Week 6 betekent 6 keer de stap erbij.",
-   "ouderzin": "",
+   "foutHintsTekst": "€67 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €60 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €87 → Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+   "ouderzin": "Je kind trekt een spaartabel door: het startbedrag plus voor elke week hetzelfde bedrag.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -839,7 +1188,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "N9 geldnotatie €N / €N,CC (G5)"
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#499: antwoord met € (zoals G7 #448)"
     ]
    },
    "opBord": false,
@@ -855,10 +1205,19 @@
      "voorstelDoel": "G8-VBN-E03",
      "regel": "G7-D05-rekenregel"
     },
+    "oef499": {
+     "antwoord": "97",
+     "reden": "Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -874,8 +1233,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix",
+     "tekst": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€60",
+       "€67"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€87"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent."
   },
   {
    "id": "G8-VBN-E03-claude-bank-007",
@@ -888,29 +1293,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "193",
+   "antwoord": "€193",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Kijk hoeveel er van week tot week bij komt. Dat is elke week hetzelfde.",
+   "sterkereHint": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€118",
-     "uitleg": "Je moet tot week 6 doortellen, niet één stap verder dan de tabel."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€150",
-     "uitleg": "Vergeet het startbedrag van €43 niet."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€168",
-     "uitleg": "Week 6 betekent 6 keer de stap erbij."
+     "uitleg": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€118 → Je moet tot week 6 doortellen, niet één stap verder dan de tabel. · €150 → Vergeet het startbedrag van €43 niet. · €168 → Week 6 betekent 6 keer de stap erbij.",
-   "ouderzin": "",
+   "foutHintsTekst": "€118 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €150 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €168 → Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+   "ouderzin": "Je kind trekt een spaartabel door: het startbedrag plus voor elke week hetzelfde bedrag.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -990,7 +1410,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "N9 geldnotatie €N / €N,CC (G5)"
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#499: antwoord met € (zoals G7 #448)"
     ]
    },
    "opBord": false,
@@ -1006,10 +1427,19 @@
      "voorstelDoel": "G8-VBN-E03",
      "regel": "G7-D05-rekenregel"
     },
+    "oef499": {
+     "antwoord": "193",
+     "reden": "Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1025,8 +1455,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix",
+     "tekst": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€118",
+       "€150"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€168"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent."
   },
   {
    "id": "G8-VBN-E03-claude-bank-008",
@@ -1039,29 +1515,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "141",
+   "antwoord": "€141",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Kijk hoeveel er van week tot week bij komt. Dat is elke week hetzelfde.",
+   "sterkereHint": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€96",
-     "uitleg": "Je moet tot week 6 doortellen, niet één stap verder dan de tabel."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€90",
-     "uitleg": "Vergeet het startbedrag van €51 niet."
+     "uitleg": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€126",
-     "uitleg": "Week 6 betekent 6 keer de stap erbij."
+     "uitleg": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "uitlegSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€96 → Je moet tot week 6 doortellen, niet één stap verder dan de tabel. · €90 → Vergeet het startbedrag van €51 niet. · €126 → Week 6 betekent 6 keer de stap erbij.",
-   "ouderzin": "",
+   "foutHintsTekst": "€96 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €90 → Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij. · €126 → Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+   "ouderzin": "Je kind trekt een spaartabel door: het startbedrag plus voor elke week hetzelfde bedrag.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -1141,7 +1632,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "N9 geldnotatie €N / €N,CC (G5)"
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#499: antwoord met € (zoals G7 #448)"
     ]
    },
    "opBord": false,
@@ -1157,10 +1649,19 @@
      "voorstelDoel": "G8-VBN-E03",
      "regel": "G7-D05-rekenregel"
     },
+    "oef499": {
+     "antwoord": "141",
+     "reden": "Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1176,8 +1677,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "niet bij die week",
+     "bron": "claude-taalfix",
+     "tekst": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€90",
+       "€96"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€126"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent."
   },
   {
    "id": "G8-VBN-E03-claude-bank-009",
@@ -1186,33 +1733,48 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Je spaart voor ballen. Je begint met €38 en legt elke week €15 erbij. Hoeveel heb je na 5 weken?",
+   "opgave": "Je spaart voor voetbalschoenen. Je begint met €38 en legt elke week €15 erbij. Hoeveel heb je na 5 weken?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "113",
+   "antwoord": "€113",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Je begint niet bij nul: er is al een startbedrag. Daarna komt er elke week hetzelfde bedrag bij.",
+   "sterkereHint": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€75",
-     "uitleg": "Je begon al met €38. Die tel je erbij."
+     "uitleg": "Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij.",
+     "uitlegSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "startbedrag vergeten",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€128",
-     "uitleg": "Na 5 weken heb je 5 keer gespaard, niet 6 keer."
+     "uitleg": "Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij.",
+     "uitlegSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te veel",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€58",
-     "uitleg": "5 weken van €15: dat is een keersom."
+     "uitleg": "Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+     "uitlegSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "alles opgeteld",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€75 → Je begon al met €38. Die tel je erbij. · €128 → Na 5 weken heb je 5 keer gespaard, niet 6 keer. · €58 → 5 weken van €15: dat is een keersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "€75 → Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij. · €128 → Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij. · €58 → Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+   "ouderzin": "Je kind rekent uit hoeveel er gespaard is: het startbedrag plus het weekbedrag keer het aantal weken.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1292,7 +1854,9 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "N9 geldnotatie €N / €N,CC (G5)"
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#499: antwoord met € (zoals G7 #448)",
+     "V-#892/Z-#897: logisch spaardoel"
     ]
    },
    "opBord": false,
@@ -1302,16 +1866,25 @@
     "voorstelDoel": null,
     "regel": "G8-P00-park-G7",
     "reden": "uit de G7-park (voorstel G8-VBN-E03, regel G7-D05-rekenregel)",
-    "somtype": "Je spaart voor ballen. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+    "somtype": "Je spaart voor voetbalschoenen. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?",
     "g7Park": {
      "id": "G8-VBN-E03-claude-bank-park-009",
      "voorstelDoel": "G8-VBN-E03",
      "regel": "G7-D05-rekenregel"
     },
+    "oef499": {
+     "antwoord": "113",
+     "reden": "Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)"
+    },
     "duplicaatVan": null,
-    "somtypeNr": 2,
+    "somtypeNr": 5,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "Je spaart voor ballen. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?"
+    "somtypeOrigineel": "Je spaart voor ballen. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 5,
+     "somtype": "Je spaart voor voetbalschoenen. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1327,8 +1900,67 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "startbedrag vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€75"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te veel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€128"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "alles opgeteld",
+     "bron": "claude-taalfix",
+     "tekst": "Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€58"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
   },
   {
    "id": "G8-VBN-E03-claude-bank-010",
@@ -1341,29 +1973,44 @@
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "221",
+   "antwoord": "€221",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Je begint niet bij nul: er is al een startbedrag. Daarna komt er elke week hetzelfde bedrag bij.",
+   "sterkereHint": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€200",
-     "uitleg": "Je begon al met €21. Die tel je erbij."
+     "uitleg": "Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij.",
+     "uitlegSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "startbedrag vergeten",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€246",
-     "uitleg": "Na 8 weken heb je 8 keer gespaard, niet 9 keer."
+     "uitleg": "Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij.",
+     "uitlegSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te veel",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€54",
-     "uitleg": "8 weken van €25: dat is een keersom."
+     "uitleg": "Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+     "uitlegSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "alles opgeteld",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€200 → Je begon al met €21. Die tel je erbij. · €246 → Na 8 weken heb je 8 keer gespaard, niet 9 keer. · €54 → 8 weken van €25: dat is een keersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "€200 → Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij. · €246 → Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij. · €54 → Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+   "ouderzin": "Je kind rekent uit hoeveel er gespaard is: het startbedrag plus het weekbedrag keer het aantal weken.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1445,6 +2092,7 @@
     "wijzigingen": [
      "G8-R8/R9 het-woord/€-notatie/context",
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#499: antwoord met € (zoals G7 #448)",
      "W1 moeilijk woord vervangen"
     ]
    },
@@ -1455,16 +2103,25 @@
     "voorstelDoel": null,
     "regel": "G8-P00-park-G7",
     "reden": "uit de G7-park (voorstel G8-VBN-E03, regel G7-D05-rekenregel)",
-    "somtype": "Je spaart voor een fiets. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+    "somtype": "Je spaart voor een fiets. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?",
     "g7Park": {
      "id": "G8-VBN-E03-claude-bank-park-010",
      "voorstelDoel": "G8-VBN-E03",
      "regel": "G7-D05-rekenregel"
     },
+    "oef499": {
+     "antwoord": "221",
+     "reden": "Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)"
+    },
     "duplicaatVan": null,
-    "somtypeNr": 3,
+    "somtypeNr": 2,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "Je spaart voor een fiets. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?"
+    "somtypeOrigineel": "Je spaart voor een fiets. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 2,
+     "somtype": "Je spaart voor een fiets. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1480,8 +2137,67 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "startbedrag vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€200"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te veel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€246"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "alles opgeteld",
+     "bron": "claude-taalfix",
+     "tekst": "Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€54"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
   },
   {
    "id": "G8-VBN-E03-claude-bank-011",
@@ -1490,33 +2206,48 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Je spaart voor stappen. Je begint met €12 en legt elke week €10 erbij. Hoeveel heb je na 8 weken?",
+   "opgave": "Je spaart voor een step. Je begint met €12 en legt elke week €10 erbij. Hoeveel heb je na 8 weken?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "92",
+   "antwoord": "€92",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Je begint niet bij nul: er is al een startbedrag. Daarna komt er elke week hetzelfde bedrag bij.",
+   "sterkereHint": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€80",
-     "uitleg": "Je begon al met €12. Die tel je erbij."
+     "uitleg": "Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij.",
+     "uitlegSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "startbedrag vergeten",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€102",
-     "uitleg": "Na 8 weken heb je 8 keer gespaard, niet 9 keer."
+     "uitleg": "Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij.",
+     "uitlegSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te veel",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€30",
-     "uitleg": "8 weken van €10: dat is een keersom."
+     "uitleg": "Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+     "uitlegSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "alles opgeteld",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€80 → Je begon al met €12. Die tel je erbij. · €102 → Na 8 weken heb je 8 keer gespaard, niet 9 keer. · €30 → 8 weken van €10: dat is een keersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "€80 → Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij. · €102 → Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij. · €30 → Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+   "ouderzin": "Je kind rekent uit hoeveel er gespaard is: het startbedrag plus het weekbedrag keer het aantal weken.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1597,6 +2328,8 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#499: antwoord met € (zoals G7 #448)",
+     "V-#892/Z-#897: logisch spaardoel",
      "W1 moeilijk woord vervangen"
     ]
    },
@@ -1607,16 +2340,25 @@
     "voorstelDoel": null,
     "regel": "G8-P00-park-G7",
     "reden": "uit de G7-park (voorstel G8-VBN-E03, regel G7-D05-rekenregel)",
-    "somtype": "Je spaart voor stappen. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+    "somtype": "Je spaart voor een step. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?",
     "g7Park": {
      "id": "G8-VBN-E03-claude-bank-park-011",
      "voorstelDoel": "G8-VBN-E03",
      "regel": "G7-D05-rekenregel"
     },
+    "oef499": {
+     "antwoord": "92",
+     "reden": "Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Je spaart voor stappen. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?"
+    "somtypeOrigineel": "Je spaart voor stappen. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 4,
+     "somtype": "Je spaart voor een step. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1632,8 +2374,67 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "startbedrag vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€80"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te veel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€102"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "alles opgeteld",
+     "bron": "claude-taalfix",
+     "tekst": "Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
   },
   {
    "id": "G8-VBN-E03-claude-bank-012",
@@ -1642,33 +2443,48 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Je spaart voor sterren. Je begint met €14 en legt elke week €15 erbij. Hoeveel heb je na 6 weken?",
+   "opgave": "Je spaart voor een skateboard. Je begint met €14 en legt elke week €15 erbij. Hoeveel heb je na 6 weken?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "104",
+   "antwoord": "€104",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Je begint niet bij nul: er is al een startbedrag. Daarna komt er elke week hetzelfde bedrag bij.",
+   "sterkereHint": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
    "foutHints": [
     {
      "stap": null,
      "fout": "€90",
-     "uitleg": "Je begon al met €14. Die tel je erbij."
+     "uitleg": "Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij.",
+     "uitlegSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "startbedrag vergeten",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€119",
-     "uitleg": "Na 6 weken heb je 6 keer gespaard, niet 7 keer."
+     "uitleg": "Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij.",
+     "uitlegSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te veel",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "€35",
-     "uitleg": "6 weken van €15: dat is een keersom."
+     "uitleg": "Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+     "uitlegSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "alles opgeteld",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€90 → Je begon al met €14. Die tel je erbij. · €119 → Na 6 weken heb je 6 keer gespaard, niet 7 keer. · €35 → 6 weken van €15: dat is een keersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "€90 → Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij. · €119 → Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij. · €35 → Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+   "ouderzin": "Je kind rekent uit hoeveel er gespaard is: het startbedrag plus het weekbedrag keer het aantal weken.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1748,7 +2564,9 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "N9 geldnotatie €N / €N,CC (G5)"
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#499: antwoord met € (zoals G7 #448)",
+     "V-#892/Z-#897: logisch spaardoel"
     ]
    },
    "opBord": false,
@@ -1758,16 +2576,25 @@
     "voorstelDoel": null,
     "regel": "G8-P00-park-G7",
     "reden": "uit de G7-park (voorstel G8-VBN-E03, regel G7-D05-rekenregel)",
-    "somtype": "Je spaart voor sterren. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+    "somtype": "Je spaart voor een skateboard. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?",
     "g7Park": {
      "id": "G8-VBN-E03-claude-bank-park-012",
      "voorstelDoel": "G8-VBN-E03",
      "regel": "G7-D05-rekenregel"
     },
+    "oef499": {
+     "antwoord": "104",
+     "reden": "Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)"
+    },
     "duplicaatVan": null,
-    "somtypeNr": 5,
+    "somtypeNr": 3,
     "somtypeNrOrigineel": 5,
-    "somtypeOrigineel": "Je spaart voor sterren. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?"
+    "somtypeOrigineel": "Je spaart voor sterren. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 3,
+     "somtype": "Je spaart voor een skateboard. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1783,11 +2610,70 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "startbedrag vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€90"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "een week te veel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€119"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "alles opgeteld",
+     "bron": "claude-taalfix",
+     "tekst": "Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€35"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
   }
  ],
- "hintsSyncOp": "2026-10-08T16:45:33+02:00",
+ "hintsSyncOp": "2026-10-08T17:24:15+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -1807,10 +2693,18 @@
   },
   {
    "batch": "batch5.json",
-   "md5": "e88b62fcb51c"
+   "md5": "e5e40cd4f116"
+  },
+  {
+   "batch": "batch6.json",
+   "md5": "f30a9d051d38"
+  },
+  {
+   "batch": "batch7.json",
+   "md5": "8b977e04cbcd"
   }
  ],
- "geschrevenOp": "2026-10-08T16:45:33+02:00",
+ "geschrevenOp": "2026-10-08T17:24:15+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

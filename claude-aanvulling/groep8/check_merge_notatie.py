@@ -24,13 +24,22 @@ Gebruik: python3 check_merge_notatie.py [--detail] [doelbestand.json ...]"""
 import json, glob, os, re, sys, collections
 BASE = os.path.dirname(os.path.abspath(__file__))
 KLOK = re.compile(r'(?<![\d:])\d{1,2}:\d{2}(?!\d)')
+sys.path.insert(0, '/workspace/claude-merge/tools'); sys.path.insert(0, os.path.join(BASE, '..', '..', 'scripts', 'merge'))
+try: import g8_b7_vlag as _B7VLAG
+except ImportError:
+    class _B7VLAG: ACTIEF = False
+# XSTER: cijfer x cijfer; V-#946/Z-#940 (Didactiek b7, les 353): ook een keerteken zonder cijfer ervóór ('(x 1000)', 'x 3', '(*1000)'), actief met tools/g8_b7_vlag
+XSTER_OUD = re.compile(r'[\d□#]\s*[x*]\s*[\d□#]')
+XSTER_NIEUW = re.compile(r'[\d□#]\s*[x*]\s*[\d□#]|(?<![\w])x\s*[\d□#]|\(\s*\*\s*[\d□#]')
+XSTER_RX = XSTER_NIEUW if _B7VLAG.ACTIEF else XSTER_OUD
+XSTER_MUTANTEN = [('aantal bezoekers (x 1000)', True), ('aantal bezoekers (× 1000)', False), ('3 x 4', True), ('keer x 3', True), ('(*1000)', True), ('box 3', False), ('6 × 7', False), ('max 60', False)]
 DEEL = re.compile(r'[\d□#]\s:\s[\d□#−]')
 VERH = re.compile(r'(verhouding|schaal|staat tot|mengen|mengsel)[^.?!]*\d\s*:\s*\d|\d\s*:\s*\d[^.?!]*(verhouding|schaal)', re.I)
 R = [('DP',    "':' + getal",             re.compile(r':\s*[\d□#€]'), 'FAIL'),
      ('EVEN',  "'even veel' (schrijf 'evenveel')", re.compile(r'\b[Ee]ven veel\b'), 'FAIL'),      # Didactiek 21:25 (G6 #192)
      ('MIN',   "'-' tussen getallen",     re.compile(r'[\d□#]\s*[-–]\s*[\d□#]'), 'FAIL'),
      ('NEG',   "'-' als minteken",        re.compile(r'(?<![\w\d.,)\]])-\d'), 'FAIL'),
-     ('XSTER', "'x'/'*' als keerteken",   re.compile(r'[\d□#]\s*[x*]\s*[\d□#]'), 'FAIL'),
+     ('XSTER', "'x'/'*' als keerteken",   XSTER_RX, 'FAIL'),
      ('DEELT', "'÷'",                     re.compile(r'÷'), 'FAIL'),
      ('MACHT', 'macht',                   re.compile(r'\d\s?[²³]|\d\s?\^'), 'FAIL'),
      ('SOM',   "som klopt niet",          None, 'FAIL'),
@@ -169,12 +178,23 @@ if __name__ == '__main__':
     # JUISTE-OPTIE (Oef-#467, 8 okt): antwoordDetail.juisteOptie(Tekst) past bij de opties (FAIL, alleen G8: in G5/G6 staan nog oude mismatches)
     import kloktijd_check as _KT      # Z-#782 (Didactiek G8 batch 2, 8 okt): kloktijd met ':' in een kindtekst (FAIL; typ-invoer 'uu:mm' WARN)
     fail = (_KT.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    fail = (_KT.mutanten() != len(_KT.MUTANTEN)) or fail
+    fail = (_B7VLAG.ACTIEF and any(bool(XSTER_NIEUW.search(_t)) != _v for _t, _v in XSTER_MUTANTEN)) or fail      # Z-#940: XSTER-mutanten 8/8 (o.a. '(x 1000)')      # les 348: TIJDSDUUR herkent '.' én ':' (mutanten 8/8)
     import gemiddelde_check as _GM      # V-#820/Z-#823/Z-#841/Z-#855 (Didactiek 8 okt): gemiddelde-vragen, vijf foute routes (FAIL ≥ 1/3 of eigen sleutel; anders WARN)
     fail = (len(_GM.rapport([_it for _p in files for _it in json.load(open(_p))['items']], os.path.dirname(os.path.abspath(__file__)))[0]) > 0) or fail
     fail = (_GM.mutanten() and any(_v != _k for _n, _v, _k in _GM.mutanten())) or fail      # Z-#855: mutanten (oude 427/010/002) moeten kloppen
     import e05_routes as _ER      # V-#870/Z-#871/V-#871 (Didactiek batch 4, 16:35): E05-rekenmachineverhalen: geen foute route op het goede antwoord, rest ≥ 3, geen ',5', redelijke maten (FAIL)
     fail = (_ER.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
-    fail = any(bool(_ER.fouten_item({'id': _n, 'opgave': _o, 'antwoord': _a})) != _v for _n, _o, _a, _v in _ER.MUTANTEN) or fail      # mutanten 9/9
+    fail = any(bool(_ER.fouten_item({'id': _n, 'opgave': _o, 'antwoord': _a})) != _v for _n, _o, _a, _v in _ER.MUTANTEN) or fail      # mutanten 13/13 (V-#880: busjes ≤ 15, Z-#880: krat 6/12/24)
+    import bouwsel_routes as _BR      # Oef-#1000/V-#891 (batch 6, 16:54): vol bouwwerk, geen foute route (ook 'drie kanten') op het goede antwoord (FAIL)
+    fail = (_BR.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    fail = any(bool(_BR.fouten(*_m)) != _v for _n, _m, _v in _BR.MUTANTEN) or fail      # mutanten 6/6 (oud 007, 047, 066)
+    import staaf_beslis_check as _SB      # V-#893/V-#894 (batch 6, 16:54): beslissende staaf niet op een half streepje; aantal bij een heel totaal (FAIL)
+    fail = (_SB.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    fail = any(bool(_SB.fouten_item(_i)) != _v for _n, _i, _v in _SB.MUTANTEN) or fail      # mutanten 8/8 (025 fiets 55, 027 terug naar 12, 029 les 326)
+    import enkelvoud_check as _EV1      # V-#902 (batch 5, 16:58): na 1 het enkelvoud ('1 stap', '1 graad') (FAIL)
+    fail = (_EV1.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    fail = any(bool(_EV1.fouten_item(_i)) != _v for _n, _i, _v in _EV1.MUTANTEN) or fail
     import juiste_optie_check as _JO
     fail = (_JO.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import optie_positie_check as _OP      # Oef-#459 (8 okt): goede antwoord >60% op één plek in een somtype met ≥4 items (WARN)

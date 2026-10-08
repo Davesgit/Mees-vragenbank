@@ -27,8 +27,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 125 → Per uur betekent delen door de tijd, niet keer. · 25 → Deel door 2,5 uur, niet door 2. · 47.5 → Snelheid is afstand gedeeld door tijd.
     - **Uitleg (Claude):** Snelheid is afstand per uur: 50 : 2,5 = 20 km per uur. Controle: 20 × 2,5 = 50.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Per uur betekent: hoe ver kom je in één uur? Deel de afstand door het aantal uur.
+- **Hint 2 (te schrijven):** Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.
+- **Ouderzin:** Je kind rekent een snelheid uit: de afstand gedeeld door de tijd. Bij een half uur helpt het om eerst allebei te verdubbelen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.  [nieuw]
+  - `keer de tijd` (fout = getal1 × getal2) → Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.  [nieuw]
+  - `tijd eraf` (fout = getal1 - getal2 of getal2 - getal1) → Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?  [nieuw]
+  - `alleen hele uren` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: Een auto rijdt # uur met # km per uur. Hoeveel kilometer is dat?
 
@@ -44,8 +52,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 90 → Het halve uur telt ook mee: nog een halve keer de snelheid erbij. · 91.5 → Elk uur komt er 90 km bij. Dat is keer.
     - **Uitleg (Claude):** Per uur 90 km. In 1,5 uur: 90 × 1,5 = 135 km. (Half uur is de helft: 45 km.)
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Elk uur kom je zo ver als de snelheid. Doe de snelheid keer het aantal uur.
+- **Hint 2 (te schrijven):** Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.
+- **Ouderzin:** Je kind rekent een afstand uit: de snelheid keer de tijd. Een half uur is de helft van de snelheid.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is.  [nieuw]
+  - `tijd erbij` (fout = getal1 + getal2) → Dat is de tijd plus de snelheid. Elk uur komt de snelheid erbij: doe de snelheid keer het aantal uur.  [nieuw]
+  - `alleen hele uren` (Claudes sleutel: deel-vergeten-bij-splitsen) → Daar zitten alleen de hele uren in. Het halve uur moet er ook nog bij: dat is de helft van de snelheid.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Doe de snelheid keer het aantal uur. Een half uur is de helft van de snelheid.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?
 
@@ -61,10 +76,18 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 45 → Per uur betekent delen door de tijd, niet keer. · 30 → Deel door 1,5 uur, niet door 1. · 28.5 → Snelheid is afstand gedeeld door tijd.
     - **Uitleg (Claude):** Snelheid is afstand per uur: 30 : 1,5 = 20 km per uur. Controle: 20 × 1,5 = 30.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Per uur betekent: hoe ver kom je in één uur? Deel de afstand door het aantal uur.
+- **Hint 2 (te schrijven):** Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.
+- **Ouderzin:** Je kind rekent een snelheid uit: de afstand gedeeld door de tijd. Bij een half uur helpt het om eerst allebei te verdubbelen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.  [nieuw]
+  - `keer de tijd` (fout = getal1 × getal2) → Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.  [nieuw]
+  - `tijd eraf` (fout = getal1 - getal2 of getal2 - getal1) → Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?  [nieuw]
+  - `alleen hele uren` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven.  [nieuw]
+- Status: hints klaar
 
-## Somtype 4: [wie] reist # uur met # km per uur. Hoeveel kilometer is dat?
+## Somtype 4: [wie] reist # uur met de trein. De trein rijdt # km per uur. Hoeveel kilometer is dat?
 
 - Sleutel: nrOrigineel **4** · somtypeOrigineel “[wie] reist # uur met # km per uur. Hoeveel kilometer is dat?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: M23 (1) · regel: G8-P00-park-G7
@@ -73,10 +96,18 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Het halve uur telt ook mee: nog een halve keer de snelheid erbij.”)
 - Voorbeelden:
   - `G8-MEET-E07-claude-bank-007` (Claude M23, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een kind reist 2,5 uur met 80 km per uur. Hoeveel kilometer is dat?
-    - **Antwoord:** 200  (controle: ok)
+    - **Opgave:** Een kind reist 2,5 uur met de trein. De trein rijdt 80 km per uur. Hoeveel kilometer is dat?
+    - **Antwoord:** 200  (controle: n.v.t.)
     - **Fout-hints (Claude):** 160 → Het halve uur telt ook mee: nog een halve keer de snelheid erbij. · 82.5 → Elk uur komt er 80 km bij. Dat is keer.
     - **Uitleg (Claude):** Per uur 80 km. In 2,5 uur: 80 × 2,5 = 200 km. (Half uur is de helft: 40 km.)
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Elk uur kom je zo ver als de snelheid. Doe de snelheid keer het aantal uur.
+- **Hint 2 (te schrijven):** Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.
+- **Ouderzin:** Je kind rekent een afstand uit: de snelheid keer de tijd. Een half uur is de helft van de snelheid.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is.  [nieuw]
+  - `tijd erbij` (fout = getal1 + getal2) → Dat is de tijd plus de snelheid. Elk uur komt de snelheid erbij: doe de snelheid keer het aantal uur.  [nieuw]
+  - `alleen hele uren` (Claudes sleutel: deel-vergeten-bij-splitsen) → Daar zitten alleen de hele uren in. Het halve uur moet er ook nog bij: dat is de helft van de snelheid.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Doe de snelheid keer het aantal uur. Een half uur is de helft van de snelheid.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '[wie] reist # uur met # km per uur. Hoeveel kilometer is dat?'. Nakijken of ze nog passen.
+- Status: hints klaar

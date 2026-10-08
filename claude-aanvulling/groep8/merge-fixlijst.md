@@ -47,6 +47,14 @@ Meerkeuze-spreiding batch 2: het goede antwoord staat op plek A 9 · B 10 · C 6
 | Oef-#495 | Overzicht (motor, soft) | **G8 batch 5, MEET-E03 #5 (filmpjes op een kaart):** Claudes sleutel 'een nul te weinig' is afgekapt (64 GB → 6400 MB, 6400 : 250 = 25,6 → '25'); 'antwoord : 10' geeft alleen een sleutel als het antwoord op 0 eindigt. 5 sleutels (006, 012, 013, 017, 019) op 'andere fout' (tekst klopt). Voorstel: `fout = antwoord : 10, naar beneden afgerond`. | open |
 | Oef-#496 | Overzicht/Leerlijn (data en koppen, les 147) | **G8 batch 5:** (a) MEET-E03 #1–#4: «Een bak voor knopen/tanden/truien/wortels heeft een inhoud van 3 m³» = 3000 liter knopen; vier somtypes van één item die alleen in het ding verschillen. Voorstel: één kop met een passende context (een regenton, een zwembadje, een container). (b) MEET-E06 [plek]: een vliegtuig 'vertrekt uit de dierentuin / het bos / het nest / de kleedkamer / de kantine / de schuur / het veld / de vallei / het museum / het stadion', vast 'uit de school / de klas / het huis' (#4, #7–#12: somtypes van één item die alleen in de plek verschillen). Voorstel: 'van het vliegveld' of een stad, en de koppen samenvoegen per vraagsoort (landen; later; vroeger). (c) MEET-E05 #3: «Dat is 1 graden onder nul» (17 items: 164, 166, 172, 177, 178, 180, 184–186, 189, 190, 204, 212, 214, 224–226) → '1 graad'. De hints werken op elke indeling (batch5 per nrOrigineel). | open |
 | Oef-#497 | Overzicht (data/visual) | **G8 batch 5, MEET-E05 #1 (12 items, ui 'stip op getallenlijn zetten'):** `visual.jsRender` is null; het bereik (−10 tot 10) staat alleen in claudeKaleSom. De app heeft geen lijn om de stip op te zetten. Voorstel: jsRender met de lijn (−10 … 10), zoals de andere stip-items; anders type kaal met invoer. De hints werken voor beide ('links/rechts van de nul'). | open |
+| Oef-#498 | Overzicht (data, soft, zoals Oef-#444) | **G8 batch 6, MEET-E07:** 7 Claude-sleutels met een punt als komma: 001 '147.5', 002 '58.5', 003 '97.5', 004 '47.5', 005 '91.5', 006 '28.5', 007 '82.5' (= afstand − tijd of tijd + snelheid). Ze landen op 'andere fout'; de motor zet de kommavorm ('147,5') al op 'tijd eraf'/'tijd erbij', dus een kind krijgt de goede tekst. Voorstel: de sleutels met een komma (claudeFoutHints/claudeDenkfouten). | open |
+| Oef-#499 | Overzicht (data, zoals G7 Oef-#448) | **G8 batch 6, VBN-E03 (12 items, 001–012):** het antwoord staat zonder € ('158'), de vraag en Claudes sleutels met € ('€133', '€100'). Eén notatie: antwoord '€158' (zoals de vraag), of alles zonder €. De hints noemen geen bedrag en werken voor beide. | open |
+| Oef-#1000 | Overzicht (data + motor, soft, les 317) | **G8 batch 6, MEET-V01 #2 (vol bouwwerk, 151 items):** (a) bij 10 items geeft Claudes route 'drie kanten samen' (diep×breed + breed×hoog + diep×hoog) precies het antwoord: 007, 012, 028, 047, 066, 095, 099, 105, 133, 152 (maten 2×3×6, 2×4×4, 3×3×3 in elke volgorde). Geen sleutel (de motor laat hem weg) en geen hint op die route, maar een kind dat drie kanten telt, heeft het toevallig goed. Voorstel: andere maten (bv. 3×3×4 → 36, drie kanten 33). (b) De 302 Claude-sleutels hangen aan één taalfix-regel met acht routeteksten; de motor kiest per sleutel op gelijkenis met Claudes uitleg (nu 302/302 juist, b6/check rekent elke sleutel na op de maten uit jsRender). Voorstel: motorregels per route (som van de maten, helft, laag te veel/te weinig, één laag, drie kanten, rij te weinig), dan zet Oefeningen eigen regels. | open |
+| Oef-#1001 | Overzicht/Leerlijn (koppen, soft, zoals Oef-#491a/#496) | **G8 batch 6:** [ding]-plekken met een vast woord: MEET-V01 #1 'Een weiland is # [ding].' (altijd 'hectare', de maat zelf), #3 '… van # [ding].' (altijd 'milliliter'), VBN-E01 #1 'jaar # [ding] # [ding]' ('geeft', 'appels'), VBN-E03 #2–#5 '€# [ding]' ('erbij'), VBN-E04 #3/#35 ('kinderen', 'hoog'). b6/check staat 'hectare' en 'milliliter' toe (met een data-guard). Voorstel: die woorden vast in de kop. | open |
+| Oef-#1002 | Overzicht (data/visual, soft) | **G8 batch 6, VBN-E04 (staafdiagram, 'Elk streepje is 10'):** 13 items hebben staven op 5 (5, 15, 25, 35, 45, 55 %). Bij 025, 026 en 031 (#2/#4: de genoemde staaf is 55 %) en 040 (#34: samen 55 %) hangt het antwoord 'Ja' aan een half streepje. Voorstel: staven op tientallen, of 'Elk streepje is 5'. De hints werken voor beide ('lees af hoe hoog hij komt'). | open |
+| Oef-#1003 | Overzicht (data, les 326) | **G8 batch 7, VBN-E04 #30 (029):** de beslissende staven staan op een half streepje: hond 25 + kat 15 = 40, afgelezen op hele streepjes 30/40/50. Het antwoord 'Nee' slaat niet om, maar één aflezing ligt op de grens (les 326: minstens één streepje van 50). Voorstel: hond 20, kat 10, konijn 25, vis 45 (som 100, beslissend 30). Daarna b7/check FAIL 0. | open |
+| Oef-#1004 | Overzicht (kop/data, soft, zoals Oef-#1001) | **G8 batch 7, VBN-E04 #21 (016):** (a) de kop «… In [plek] staan # [ding] hondjes en # [ding] hondje. …» past niet op «Bij het asiel staan 3 hele hondjes en 1 half hondje.» ([plek] vangt 'Bij het asiel' niet; [ding] valt op 'hele'/'half'). Voorstel: «In een plaatjesgrafiek staat één hondje voor # [ding]. [Plek] staan # hele hondjes en # half hondje. Hoeveel [ding] zijn dat?». b7/check zet de contextwoorden tot dan met de hand. (b) Nu is 4 zowel het aantal plaatjes (3 + 1) als wat één hondje betekent; '4 honden' heeft daardoor twee routes. Voorstel: één hondje voor 6 honden (3 hele + 1 half = 21; afleiders 24 en 4). | open |
+| Oef-#1005 | Overzicht (proces, soft, zoals Oef-#479) | **G8 batch 7, VBN-E04 #6–#31:** elk somtype heeft precies één item; data-eisen en route-guards in b7/check zijn per item. Komen er items bij, dan b7/check en de mutanten opnieuw draaien. | open |
 
 ## Oefeningen: G8 batch 2 ronde 1b (8 okt 15:4x, na Didactiek review-batch2 «taal: fix»; build 15:36:15)
 - V-#780 (19 H2's, plus H1 van #16/#21), V-#783 (#16), V-#782 (#32: oude regel weg, letterlijke regel 'Deel 100 door 40 en doe dat keer 15', soort 'honderd door het aantal gedeeld', L1 = Didactiek (a)), Z-#783, Z-#784, Z-#785: in hints/patch_batch2.py ronde 1b (54 wijzigingen, tweede run 0), op live hints/batch2.json gezet om 15:43. **De ONLEESBAAR-WARN van #32 in de live build 15:36:15 verdwijnt bij de volgende build** (zandbak op live + patch: check_hints 0 WARN).
@@ -220,3 +228,87 @@ Checks: check_hints **97 klaar · 126 open · 0 FAIL · 0 WARN**, merge-notatie 
 
 Checks: check_hints **121 klaar · 102 open · 0 FAIL · 0 WARN**; merge-notatie ALLES OK (KLOKTIJD 0, GEMIDDELDE 0/0, E05-ROUTES 0); b1 0, b2 0, b3 0, **b4 141 items · FAIL 0 · WARN 0**; **b5 293 items · FAIL 187**: alleen twee predicaten in b5/check die de gevraagde wijzigingen nog niet kennen: (1) #3 regex 'graden onder nul' (Oef-#496 maakte '1 graad', 17 items), (2) 'getal uit de vraag' zonder teken (Oef-#494: '−4' uit de vraag is nu ook een sleutel). Met die twee aanpassingen in een proefkopie: **b5 FAIL 0**.
 **Oefeningen:** sync; b5/check: regex 'graa?d(en)? onder nul' en −start als getal uit de vraag; de nieuwe regels in patch_batch5 (teken vergeten / van nul af geteld / verkeerde richting / ±1 met teken voor MEET-E05: nu nog 282 sleutels op 'andere fout'; 'een nul te weinig (afgekapt)' voor E03 #5); V-#872 route-guard, SNAP en replay op de nieuwe E05-data.
+
+## Oefeningen: G8 batch 6 (8 okt 16:48, data build 16:45:31)
+- Nieuw: hints/make_batch6.py → batch6.json (MEET-E07 #1–#4, MEET-V01 #1–#3, VBN-E01 #1–#2, VBN-E03 #1–#5, VBN-E04 #1–#5 en #32–#37: 25 somtypes, 193 items (22 kaal, 171 meerkeuze), 88 fout-hints), patch_batch6.py ronde 1 leeg (0/0). Geplaatst om 16:48:21 zonder lopende build (laatste build 16:45:31–34). Zie review-batch6.md. Niet gesynct op live.
+- Zandbak (verse kopie van live na build 16:45:31 + sync/apply): check_hints 146 klaar · 0 FAIL · 0 WARN, merge-notatie ALLES OK, b6/check 193 items · 421 sleutels · FAIL 0 · WARN 10 (les 317, V01 #2 'drie kanten' = antwoord, Oef-#1000), 55 mutanten 0 gemist; b1–b4 FAIL 0; b5 FAIL 187 (bekend, patch_batch5 ronde 1b).
+- MEET-V01 #2: elke Claude-sleutel krijgt de routetekst die bij zijn waarde hoort (302/302, per sleutel nagerekend op diep × hoog × breed).
+- Datapunten Oef-#498, #499, #1000–#1002 (tabel hierboven).
+
+## Oefeningen: G8 batch 5 ronde 1b (8 okt 16:53, na build 16:45:31)
+- hints/patch_batch5.py ronde 1b (geplaatst zonder lopende build): MEET-E05 op de #494-regels (teken vergeten / van nul af geteld / verkeerde richting / antwoord ± 1), specifiekste tekst eerst (les 318); MEET-E03 #5 'een nul te weinig (afgekapt)' (#495). Zandbak: 4 wijzigingen, tweede run 0.
+- Claude-sleutels op 'andere fout' 287 → 0. b5/check met de '1 graad'-regex (#496) en 'getal uit de vraag' met teken (#494): 293 items · 2472 sleutels · FAIL 0 · WARN 0; 46 mutanten 0 gemist; check_hints 146 klaar · 0/0; merge-notatie ALLES OK; b1–b4, b6 FAIL 0. Zie review-batch5.md (ronde 1b).
+
+## Oefeningen: G8 b4 Z-#881 (8 okt 16:57) en b6 ronde 1b (8 okt ~17:01)
+- **b4 Z-#881:** replay en telling op build 16:45:31 staan in `g8work/b4/replay_na_v870.md`, met telling, check- en mutantlog.
+  - 289 Claude-sleutels · 914 sleutels · 0 op 'andere fout'.
+  - Per route (les 322): netto −10, waarvan 'één te veel' −14 en 'alleen de volle' +8. Antwoord + 1 is in alle 80 'nodig'-items een sleutel.
+  - Nieuwe guard **V-#880** in b4/check (busjes ≤ 15, mutant M_880): precies de 13 items van Didactiek. 41 mutanten, 0 gemist.
+  - Na de V-#880-build opnieuw draaien.
+- **b6 ronde 1b** (`hints/patch_batch6.py`, geplaatst om 17:01:33 zonder lopende build): V-#890, V-#895, Z-#892, Z-#895. Z-#896 komt na V-#894. Zie review-batch6.md, ronde 1b.
+- **Datapunten Overzicht** (b6/check FAIL 19, allemaal data):
+  - **V-#891** (Oef-#1000a): 007, 012, 028, 047, 066, 095, 099, 105, 133, 152 → de maten van Didactiek. **Aanvulling:** geef per nieuwe afleider een claudeFoutHints-tekst ('Je telde de drie maten op …' enzovoort). Zonder die tekst krijgen 12 sleutels de algemene tekst, want de motor kan niet op de maten rekenen (Oef-#1000b / Z-#890). Getest in de zandbak.
+  - **V-#893** (Oef-#1002): 025, 026, 031, 040 → de staafwaarden van Didactiek.
+  - **V-#894:** 027 (9), 028 (9), 032 (7), 033 (11), 038 (14).
+  - **Z-#891:** ratel 94 in b6/check (niet meer dan nu).
+  - Ook van Overzicht, uit dezelfde review: Z-#893, Z-#894, V-#892, Z-#897.
+
+## Oefeningen: G8 b5 ronde 1c (8 okt 17:05) en hercheck op build 17:03:20
+- **b5 ronde 1c** (`hints/patch_batch5.py`, geplaatst 17:05:29 zonder lopende build): V-#900, V-#903, Z-#900, Z-#903, Z-#904. Zie review-batch5.md, ronde 1c.
+  - Nieuwe guards in b5/check: les 330 (factor), V-#903/les 332 (zestig), Z-#904, en kindvelden (V-#901/#902/#904). 55 mutanten, 0 gemist.
+  - b5/check FAIL 3. **Datapunt Overzicht, rest van V-#901:** claudeKaleSom van 008, 014 en 020 hoort bij een ander item. Wordt: '64 GB : 200 MB', '16 GB : 100 MB', '32 GB : 800 MB'.
+- **Hercheck op de build van 17:03:20** (V-#880, V-#891, V-#893, V-#894, Oef-#1001, Z-#893, V-#901–#904 grotendeels):
+  - b4: FAIL 0, 41 mutanten, 0 gemist, 915 sleutels. Telling: 283 Claude-sleutels, 0 op 'andere fout' (`g8work/b4/telling_na_v880.txt`).
+  - b6: FAIL 0, 61 mutanten, 0 gemist.
+    - De 10 V-#891-items hebben de maten en afleiders van Didactiek, met Claude-tekst per afleider. De routetekst op waarde klopt overal. De SNAP is na controle vernieuwd.
+    - E07 #4-eis aangepast aan de nieuwe '… met de trein'-zin (Z-#893). M_ctx omgezet, want 'kinderen' staat nu vast in de kop.
+  - b1–b3: FAIL 0.
+
+## Oefeningen: G8 batch 7 (8 okt 17:13) en b6 ronde 1c (17:07)
+- **b6 ronde 1c (Z-#896)** (`hints/patch_batch6.py`, geplaatst 17:07:31 zonder lopende build): H1 van VBN-E04 #1/#3/#5 «Wat toont het diagram: aantallen of percentages? En wat noemt de zin eronder?». 3 wijzigingen, tweede run 0; verklaptoets (les 260/Z-#824/les 264) 0; zit in build 17:08:44. b6/check FAIL 0, 61 mutanten 0 gemist.
+- **G8 batch 7 = VBN-E04 #6–#31** (26 somtypes, 26 items): `hints/make_batch7.py` → `hints/batch7.json` (eenmalig gemaakt 17:13:24 zonder lopende build; 78 fout-hints, 52 claudeVervangen), `hints/patch_batch7.py` (ronde 1 leeg, 0/0). Zelf niet gesynct of toegepast; de build van 17:14:34 nam batch 7 mee. Zie review-batch7.md.
+  - Kopie van build 17:14:34: check_hints 172 klaar · 0 FAIL/WARN; merge-notatie ALLES OK; b7/check 52 sleutels · FAIL 1 (data, Oef-#1003) · WARN 0; 53 mutanten, 0 gemist; b1–b6/check FAIL 0.
+  - Datapunten Oef-#1003 t/m #1005 (tabel hierboven).
+
+## Oefeningen: na-ronde zacht (8 okt ~17:25): Z-#930, Z-#920, Z-#913, Z-#932; V-#910 nagecheckt
+- **Z-#930** (b5 ronde 1d) en **Z-#920** (b6 ronde 1d): `hints/patch_batch5.py` (md5 2029f32a…) en `hints/patch_batch6.py` (md5 ff7c1025…), geplaatst 17:18:47 zonder lopende build. Zie review-batch5.md en review-batch6.md, ronde 1d. Z824_OK in b6/check vervalt.
+- **Z-#913:** `g8work/b4/replay_na_v870.md` rechtgezet: −6 (16:45 → 17:03) komt uit krat (28 → 22), per groep nagerekend; antwoord + 1 op 17:03/17:08 76 × 'één te veel' + 4 × 'getal uit de vraag'; de +1 bij de sleutels (914 → 915) = de twee 0,…-sleutels (Z-#911) − 2 + 1.
+- **Z-#932:** alle `g8work/b*/runmut.sh` maken relatieve paden absoluut vóór de cd; alle `sbx.sh` bevriezen tools/ en referentiematen.json in de zandbak (`g8work/bevries_tools.sh`, met md5-lijst). Nieuw: `g8work/sbx_build.sh` (kopie van live + alle patches + sync/apply + alle checks, zoals de build vanaf fase 2).
+- **Z-#894** ('30 hoog', #35-opgave): data van Overzicht, niet van Oefeningen; niet aangeraakt.
+- **V-#910 (+ Z-#911, Z-#912) in build 17:14:34**, nagecheckt op een kopie: E05-ROUTES 0; b4/check 141 items · 917 sleutels · FAIL 0; 41 mutanten, 0 gemist; telling 281 Claude-sleutels, 0 op 'andere fout'. Per groep (les 337): 23 opgaven gewijzigd (busje 13, krat 6, bak 2, kist 1, mand 1); Claude-sleutels bak −2, verder 0. Antwoord + 1 nu in alle 80 'nodig'-items op 'één te veel', geen 0,…-sleutels meer.
+
+## Overzicht: builds 17:03:20, 17:08:44, 17:14:34 en 17:24:12 (Z-#914)
+### Build 17:03:20 — batch 6 + Didactiek batch 5/6-review (V-#880, V-#891, V-#893, V-#894, Oef-#498–#1002, V-#901–#904)
+| punt | stand |
+|---|---|
+| batch 6 | **✓** gesynct en toegepast (MEET-E07, MEET-V01, VBN-E01, VBN-E03, VBN-E04 #1–#5/#32–#37; 25 somtypes, 193 items), patch_batch6 1b mee. |
+| Oef-#498 / #499 | **✓** MEET-E07 kommagetal met komma, ontdubbeld; VBN-E03 euro's genormaliseerd. |
+| Oef-#1000 / V-#891 | **✓** MEET-V01 #2: 10 items naar de maten van Didactiek, geen foute route (ook 'drie kanten') op het antwoord; Claude-tekst per afleider; motorregels 'bouwsel'; guard `tools/bouwsel_routes.py` (BOUWSEL, FAIL, 6 mutanten). |
+| Oef-#1001 | **✓** vaste woorden op een [ding]-plek in de kop (`tools/kop_vast.py`, alleen de batch-6-doelen). |
+| Oef-#1002 / V-#893 | **✓** 025, 026, 031, 040: beslissende staaf op een heel streepje (som 100), claudeUitleg mee. |
+| V-#894 | **✓** 027 (9), 028 (9), 032 (7), 033 (11), 038 (14): aantal bij een heel totaal. Guard `tools/staaf_beslis_check.py` (STAAF-BESLIS, FAIL). |
+| V-#880 / Z-#880 | **✓** E05: busjes ≤ 15, krat 6/12/24 (e05_routes, mutanten). |
+| V-#892 / Z-#897 / Z-#893 | **✓** VBN-E03 logisch spaardoel (step/skateboard, voetbalschoenen); MEET-E07 007 «… met de trein. De trein rijdt 80 km per uur.» |
+| V-#901 / V-#902 / Z-#902 / V-#904 / Z-#905 | **✓** E03 #5 'filmpjes' + uitleg uit de getallen; '1 stap' (guard `tools/enkelvoud_check.py`, ENKELVOUD); E06 een duur in woorden, niet als kloktijd (kloktijd_fix + TIJDSDUUR-guard); E06 015/023 geloofwaardige vluchtduur. |
+
+### Build 17:08:44 — patch_batch5 1c, rest V-#901, b6 1c
+- patch_batch5 ronde 1c (17:05:29) en patch_batch6 ronde 1c (17:07:31, Z-#896) mee in fase 3.
+- V-#901 rest: claudeKaleSom van E03 #5 008/014/020 = '64 GB : 200 MB', '16 GB : 100 MB', '32 GB : 800 MB' (bij het eigen item).
+- check_hints 0 FAIL/WARN; merge-notatie ALLES OK; b4 en b6 FAIL 0; b5 FAIL 0 na 1c.
+
+### Build 17:14:34 — V-#910, Z-#911, Z-#912, batch 7
+- **V-#910** (spreiding E05): per somtype hoogstens 2 items met hetzelfde antwoord en hoogstens 2 met hetzelfde hele getal op de rekenmachine; busjes 5–15 (rotatie). Guard in E05-ROUTES (spreiding, FAIL).
+- **Z-#911**: geen deling die omgekeerd precies uitkomt. **Z-#912**: antwoord + 1 ≠ per stuk en heel getal ≠ per stuk. Mutanten 17/17.
+- Batch 7 (VBN-E04 #6–#31, 26 items) van Oefeningen meegenomen (fase 3 patch_batch7, ronde 1 leeg).
+- E05-ROUTES 0 · 125 items · 16 somtypes; check_hints 172 klaar · 0 FAIL/WARN; merge-notatie ALLES OK; b1–b6 FAIL 0; b7 FAIL 1 (029, data, Oef-#1003 → V-#945).
+
+### Build 17:24:12 — Z-#931, les 348, patch_batch5/6 1d; b7-data klaar maar nog niet actief
+| punt | stand |
+|---|---|
+| patch_batch5 1d (Z-#930) / patch_batch6 1d (Z-#920) | **✓** mee in fase 3 (geplaatst 17:18:47). |
+| Z-#931 | **✓** MEET-E03 #1–#4: geldigeAntwoorden ['3000', '3.000', '3000 liter'] (001, 003, 004) en ['1500', '1.500', '1500 liter'] (002); de vraag vraagt liter. |
+| les 348 | **✓** TIJDSDUUR herkent '.' én ':' ('8:10 + 1:20', '+ 1.20 uur', 'duurt 1:20'); kloktijd_fix zet ook een '.'-duur om naar woorden; 8 mutanten in de G8-gate. Scan r13 G3–G6 (12.521 items), G7 (7.646) en G8: TIJDSDUUR 0. |
+| b7-data (V-#944, V-#945, V-#946, Z-#943/Oef-#1004, Z-#945) | **klaar, niet actief** (steering 17:21: pas na patch_batch7 ronde 1b van Oefeningen). Alles achter `tools/g8_b7_vlag.py` (ACTIEF = False; G8_B7=1). Ook de guards: XSTER vangt dan '(x 1000)', 'x 3', '(*1000)' (Z-#940, 8 mutanten) en STAAF-BESLIS les 326/352 (beslissende staaf op een half streepje: geen aflezing < 1 streepje van 50; 029 oud = FAIL). |
+| Oef-#1003 | vervangen door **V-#945** (Didactiek beslist): 029 hond 30, kat 10, konijn 15, vis 45; beslissend 40; 'Nee' blijft. |
+
+Checks build 17:24:12: check_hints **172 klaar · 51 open · 0 FAIL · 0 WARN**; merge-notatie **ALLES OK** (KLOKTIJD 0, TIJDSDUUR 0, STAAF-BESLIS 0, E05-ROUTES 0); b1 0, b2 0, b3 0, **b4 141 items · 917 sleutels · FAIL 0**, b5 0, b6 0; **b7 FAIL 2**: 029 (les 326, data; gaat weg met V-#945 zodra de vlag aan staat) en #23 018 H2 (les 264 op H2, Z-#942; hints van Oefeningen).

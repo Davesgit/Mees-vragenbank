@@ -545,6 +545,22 @@ def _compile_regel(regel, c):
         if not NEG494 or an is None or not sn or sn[0] == 0: return {'exact': set()}
         d_ = an - sn[0]; w_ = d_ if 'nul' in r else sn[0] - d_
         return {'exact': set(_neg_vormen494(_sfmt494(w_)))} if d_ and w_ != an else {'exact': set()}
+    # Oef-#1000 (G8 batch 6, MEET-V01 #2): routes bij een vol bouwwerk van blokjes (jsRender soort 'bouwsel': diep, hoog, breed; antwoord = diep × hoog × breed).
+    #   de maten opgeteld (optellen in plaats van keer)  = diep + hoog + breed
+    #   twee maten keer elkaar (twee zijden in plaats van drie) = elk product van twee maten (voorkant, zijkant, bovenkant)
+    #   één vlak (de oppervlakte van één vlak, één laag) = diep × breed (de bovenkant; de lagen vergeten)
+    #   drie vlakken (de blokjes van drie kanten)        = diep × breed + breed × hoog + diep × hoog
+    # Alleen als het antwoord echt diep × hoog × breed is; een waarde gelijk aan het antwoord geeft nooit een sleutel (les 306).
+    if r.startswith(('fout = de maten opgeteld', 'fout = maten opgeteld', 'fout = optellen in plaats van keer', 'fout = twee maten keer elkaar', 'fout = twee zijden in plaats van drie',
+                     'fout = één vlak', 'fout = de oppervlakte van één vlak', 'fout = drie vlakken')):
+        jr_ = c.jr if c.jr.get('soort') == 'bouwsel' else {}
+        d_, h_, b_ = (jr_.get(k) for k in ('diep', 'hoog', 'breed'))
+        if not all(isinstance(x, int) and x > 0 for x in (d_, h_, b_)) or a != d_ * h_ * b_: return {'exact': set()}
+        if 'opgeteld' in r or 'optellen' in r: w_ = {d_ + h_ + b_}
+        elif 'twee' in r: w_ = {d_ * h_, d_ * b_, h_ * b_}
+        elif 'drie vlakken' in r: w_ = {d_ * b_ + b_ * h_ + d_ * h_}
+        else: w_ = {d_ * b_}
+        return {'exact': {str(x) for x in w_ if x != a}}
     if r.startswith('andere fout') or 'of een andere fout' in r or r.startswith('ander vak') or 'een andere vorm of kleur' in r or 'een klok met een ander uur' in r:
         return {'alles': True}
     if r.startswith('volgorde omgedraaid'): return E('|'.join(reversed(c.ans.split('|'))))

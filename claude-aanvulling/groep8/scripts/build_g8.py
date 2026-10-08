@@ -24,7 +24,7 @@ R, G, T = R7.R, R7.G, R7.T
 OURS = {d['id']: {'bordtitel': d['bordtitel'], 'korteNaam': d['korteNaam'], 'domein': d['domein'], 'aantalItems': d['aantalItems']}
         for g in EXP['groepen'] if g['groep'] == 8 for dm in g['domeinen'] for d in dm['doelen']}
 import besluiten_g8 as BG8                 # Didactiek-besluiten op de 1226 G8-twijfelitems + Dave 20:56
-sys.path.insert(0, "/workspace/claude-merge/tools"); import breukvorm as BV, kloktijd_fix as KF, e05_routes as ER      # V-#760 (Didactiek G8 batch 1, 8 okt): even grote breuk telt als goed (#170, Dave 21:24)
+sys.path.insert(0, "/workspace/claude-merge/tools"); import breukvorm as BV, kloktijd_fix as KF, e05_routes as ER, bouwsel_routes as BR, kop_vast as KV, g8_b7_vlag as B7VLAG      # (B7VLAG: b7-data pas na patch_batch7 1b) V-#760 (Didactiek G8 batch 1, 8 okt): even grote breuk telt als goed (#170, Dave 21:24)
 BESLUIT_G8 = BG8.laad()
 _I8 = json.load(open(f'{OUT}/bevroren/ids_v1.json'))      # Dave 20:56 (5): ook via vorigeIds (het item kreeg in G5 een naar-id; anders valt de regel stil weg)
 E02_001 = next((c for c, i in _I8['ids'].items() if i == 'G8-GET-E02-claude-bank-001'), None) or next((c for c, vs in _I8.get('vorigeIds', {}).items() if 'G8-GET-E02-claude-bank-001' in vs), None)
@@ -313,6 +313,23 @@ def main():
         if it['merge']['status'] == 'gemapt' and (n_kt := KF.zet_om(it)):      # besluit kloktijden (Didactiek 8 okt 15:46): '14.30 uur', typ-invoer '(Typ als 14.30.)'
             slog(it, f"G8-KLOK (besluit Didactiek 15:46): kloktijd als '14.30 uur', geen ':' ({n_kt} tijden; typ-invoer: geldigeAntwoorden 14.30 uur / 14.30 / 14:30)", 'opgave', None, it['opgave'][:80])
         rows.append(it)
+    # Oef-#1001 (G8 batch 6): staat op een [ding]-plek in elk item van het somtype hetzelfde woord (hectare, milliliter, erbij), dan staat dat woord vast in de kop
+    # (tools/kop_vast.py). Alleen de doelen van batch 6 (MEET-E07, MEET-V01, VBN-E01, VBN-E03, VBN-E04); de goedgekeurde batches 1–5 houden hun koppen.
+    K1001 = KV.vast_woorden([r for r in rows if r['merge']['status'] == 'gemapt' and r['merge'].get('doel') in KOP1001_DOELEN], min_items=1)
+    for r in rows:
+        k_ = (r['merge'].get('doel'), r['merge'].get('somtype'))
+        if r['merge']['status'] == 'gemapt' and k_ in K1001:
+            slog(r, 'Oef-#1001: vast woord op een [ding]-plek in de kop', 'somtype', k_[1], K1001[k_]); r['merge']['somtype'] = K1001[k_]
+    # V-#946/Z-#945 (Didactiek b7): de koppen volgen de opgave ('(× #)', kop tussen aanhalingstekens)
+    for r in rows:
+        if B7VLAG.ACTIEF and r['merge']['status'] == 'gemapt' and r['merge'].get('doel') == 'G8-VBN-E04':
+            k_ = r['merge'].get('somtype', ''); k2 = k_.replace('aantal bezoekers (x #)', 'aantal bezoekers (× #)').replace('staat: Het aantal bezoekers is verdubbeld. De staaf', 'staat: "Het aantal bezoekers is verdubbeld." De staaf')
+            if k2 != k_: r['merge']['somtype'] = k2; slog(r, 'V-#946/Z-#945: kop volgt de opgave', 'somtype', k_, k2)
+    # Oef-#1004 (b7, #21): nieuwe somtype-template uit merge-fixlijst.md ('[plek]' vangt 'Bij het asiel' niet; '[ding]' viel op 'hele'/'half'); na Oef-#1001, zodat [ding] blijft
+    for r in rows:
+        if B7VLAG.ACTIEF and r['merge']['status'] == 'gemapt' and r['merge'].get('somtype', '').startswith('In een plaatjesgrafiek staat één hondje voor # [ding]. In [plek] staan # [ding] hondjes en # [ding] hondje.'):
+            k_ = r['merge']['somtype']; r['merge']['somtype'] = 'In een plaatjesgrafiek staat één hondje voor # [ding]. [Plek] staan # hele hondjes en # half hondje. Hoeveel [ding] zijn dat?'
+            slog(r, 'Oef-#1004: somtype-template', 'somtype', k_, r['merge']['somtype'])
     # ids (bevroren)
     idp = f'{OUT}/bevroren/ids_v1.json'
     oud = json.load(open(idp))['ids'] if os.path.exists(idp) else {}
@@ -607,9 +624,15 @@ def fix_g8(r, slog):
         # (rest 1 of 2 bij 'nodig', ',5' bij 'over', antwoord = per stuk, rest = antwoord), 2 per stuk, of een busje met meer dan 8 kinderen → nieuwe getallen uit
         # de generator (tools/e05_routes.genereer: zelfde context en somtype, per stuk uit een redelijke verzameling, totaal dicht bij het oude). Claudes sleutels
         # gaan mee per denkfout (kommagetal-als-geheel / rest-vergeten = het hele getal; andere-deel-genomen = de rest ('nodig') of per stuk − rest ('over')).
-        if r['merge'].get('doel') == 'G8-GET-E05' and (L_ := ER.lees(r['opgave'])) and ER.fouten_item(r):
-            p_, T_ = ER.genereer(L_['bak'], L_['p'], L_['T'], L_['soort'], seed=int(c8, 16), bezet=E05_BEZET)
-            E05_BEZET.add((L_['bak'], p_, T_))
+        # V-#910 (hercheck 17:11): per somtype (bak × soort) hoogstens 2 items met hetzelfde antwoord / hele getal op de rekenmachine (E05_TEL); busjes 5–15
+        if r['merge'].get('doel') == 'G8-GET-E05' and (L_ := ER.lees(r['opgave'])):
+            tel_ = E05_TEL.setdefault((L_['bak'], L_['soort']), {'antwoord': collections.Counter(), 'heel': collections.Counter()})
+            if not ER.fouten_item(r) and ER.past_spreiding(L_['p'], L_['T'], L_['soort'], tel_):
+                tel_['antwoord'][ER.antwoord(L_['p'], L_['T'], L_['soort'])] += 1; tel_['heel'][L_['T'] // L_['p']] += 1; L_ = None
+        else: L_ = None
+        if L_:
+            p_, T_ = ER.genereer(L_['bak'], L_['p'], L_['T'], L_['soort'], seed=int(c8, 16), bezet=E05_BEZET, tel=tel_)
+            E05_BEZET.add((L_['bak'], p_, T_)); tel_['antwoord'][ER.antwoord(p_, T_, L_['soort'])] += 1; tel_['heel'][T_ // p_] += 1
             o = r['opgave']; a_ = ER.antwoord(p_, T_, L_['soort']); heel_, rest_ = divmod(T_, p_)
             r['opgave'] = f"In een {L_['bak']} passen {p_} {L_['ding']}. Er zijn {T_} {L_['ding']}. Op de rekenmachine staat {ER.scherm(T_, p_)}. {L_['staart']}"
             r['antwoord'] = str(a_)
@@ -637,6 +660,169 @@ def fix_g8(r, slog):
         # Z-#873: MEET-E01 003 (8 km, geen komma): claudeUitleg zonder '8,0 km' en zonder de kommazin
         if c8 == '0f4cc9f9' and '8,0 km' in str(r['extraVelden'].get('claudeUitleg') or ''):
             r['extraVelden']['claudeUitleg'] = '1 km = 1000 m.\n8 km = 8000 m.'; slog(r, "Z-#873: claudeUitleg '8,0 km' → '8 km'", 'claudeUitleg', '8,0 km', '8 km')
+        # ---------- G8 batch 5, review Didactiek (16:58): V-#901, V-#902, Z-#902, Z-#905 (V-#904 zit in tools/kloktijd_fix: een duur is geen kloktijd) ----------
+        # V-#901: E03 #5 filmpjes (Oef-#496): claudeUitleg opnieuw uit de getallen van het item ('foto's' → 'filmpjes'; bij 008/014/020 stond de uitleg van een ander item)
+        if (m_ := re.match(r'Een filmpje is (\d+) MB\. De geheugenkaart is (\d+) GB \(1 GB = 1000 MB\)\.', r['opgave'])) and isinstance(r['extraVelden'].get('claudeUitleg'), str):
+            mb_, gb_ = int(m_.group(1)), int(m_.group(2)); tot_ = gb_ * 1000; nl_ = lambda x: f'{x:,}'.replace(',', '.') if x >= 10000 else str(x)
+            assert tot_ % mb_ == 0 and str(tot_ // mb_) == str(r['antwoord']), ('V-#901', c8, r['antwoord'])
+            o = r['extraVelden']['claudeUitleg']; r['extraVelden']['claudeUitleg'] = f'{gb_} GB = {nl_(tot_)} MB.\n{nl_(tot_)} : {mb_} = {tot_ // mb_} filmpjes.'
+            if o != r['extraVelden']['claudeUitleg']: slog(r, "V-#901: claudeUitleg uit de getallen van het item ('foto's' → 'filmpjes')", 'claudeUitleg', o, r['extraVelden']['claudeUitleg'])
+            ks_ = r['extraVelden'].get('claudeKaleSom')
+            if isinstance(ks_, str) and ks_ != f'{gb_} GB : {mb_} MB':      # V-#901 (17:07): bij 008/014/020 hoorde de kale som bij een ander item
+                assert re.fullmatch(r'\d+ GB : \d+ MB', ks_), ('V-#901 kale som', c8, ks_)
+                r['extraVelden']['claudeKaleSom'] = f'{gb_} GB : {mb_} MB'; slog(r, 'V-#901: claudeKaleSom uit de getallen van het item', 'claudeKaleSom', ks_, r['extraVelden']['claudeKaleSom'])
+        # V-#902 (E05 bank-004) en Z-#902: '1 stappen' → '1 stap'; bij een stip rechts van 0 begint de uitleg met de kant van de vraag
+        if r['merge'].get('doel') == 'G8-MEET-E05' and isinstance(r['extraVelden'].get('claudeUitleg'), str):
+            o = r['extraVelden']['claudeUitleg']; u_ = re.sub(r'(?<![\d,.])1 stappen\b', '1 stap', o)
+            if u_.startswith('Links van 0 staan de getallen onder nul.') and 'naar rechts' in u_ and 'naar links' not in u_:
+                u_ = u_.replace('Links van 0 staan de getallen onder nul.', 'Rechts van 0 staan de getallen boven nul.', 1)
+            if u_ != o: r['extraVelden']['claudeUitleg'] = u_; slog(r, "V-#902/Z-#902: '1 stap'; rechts van 0 = boven nul", 'claudeUitleg', o, u_)
+        # Z-#905 (Didactiek batch 5, les 316): geloofwaardige vlucht bij het tijdsverschil. 023: 4 uur vliegen met 8 uur verschil → 9 uur vliegen, 3 uur later (antwoord blijft 1.45 uur);
+        # 015: 5 uur en 30 minuten met 6 uur verschil → 3 uur later (19.30 uur). Claudes sleutels gaan mee (tijd thuis, verkeerde kant op).
+        Z905 = {'ff798e6c': [(r'duurt 4 uur\.', 'duurt 9 uur.'), (r'\b8 uur later', '3 uur later'), (r'\+ 8\b', '+ 3'), (r'\+ 4([:.])00', r'+ 9\g<1>00'),
+                             (r'(?<![\d.:])17([:.])45', r'22\g<1>45'), (r'(?<![\d.:])9([:.])45', r'19\g<1>45')],
+                '78096f07': [(r'\b6 uur later', '3 uur later'), (r'\+ 6\b', '+ 3'), (r'(?<![\d.:])22([:.])30', r'19\g<1>30'), (r'(?<![\d.:])10([:.])30', r'13\g<1>30')]}
+        if c8 in Z905 and r['opgave'].startswith('Een vliegtuig vertrekt'):
+            def _z905(v):
+                if isinstance(v, str):
+                    for a9, b9 in Z905[c8]: v = re.sub(a9, b9, v)
+                    return v
+                if isinstance(v, list): return [_z905(x) for x in v]
+                if isinstance(v, dict): return {k: _z905(x) for k, x in v.items()}
+                return v
+            o = r['opgave']
+            for k_ in ('opgave', 'antwoord', 'geldigeAntwoorden', 'antwoordDetail'):
+                if r.get(k_) is not None: r[k_] = _z905(r[k_])
+            for k_ in [k for k in r['extraVelden'] if k.startswith('claude')]: r['extraVelden'][k_] = _z905(r['extraVelden'][k_])
+            assert re.search(r'(1[:.]45|19[:.]30)', str(r['antwoord'])), ('Z-#905', c8, r['antwoord'])
+            slog(r, 'Z-#905: geloofwaardige vluchtduur bij het tijdsverschil', 'opgave', o, r['opgave'])
+        # ---------- G8 batch 6 (Oefeningen 16:50 + Didactiek review-batch6 16:54) ----------
+        # Oef-#498: MEET-E07 Claude-sleutels met een punt als komma ('147.5') → '147,5'; dubbel daarna → weg
+        if r['merge'].get('doel') == 'G8-MEET-E07':
+            ex = r['extraVelden']
+            for k_ in ('claudeDenkfouten', 'claudeFoutHints'):
+                if not ex.get(k_): continue
+                L_ = []; gezien = set(); voor = [d_.get('fout') for d_ in ex[k_]]
+                for d_ in ex[k_]:
+                    f_ = str(d_.get('fout'))
+                    if re.fullmatch(r'\d+\.\d{1,2}', f_): d_ = dict(d_, fout=f_.replace('.', ','))
+                    if d_.get('fout') in gezien: continue
+                    gezien.add(d_.get('fout')); L_.append(d_)
+                if [d_.get('fout') for d_ in L_] != voor: ex[k_] = L_; slog(r, "Oef-#498: Claude-sleutel met punt als komma → komma ('147.5' → '147,5')", k_, str(voor), str([d_.get('fout') for d_ in L_]))
+        # Oef-#499 (zoals G7 Oef-#448): VBN-E03 spaarsommen, het antwoord met € zoals de sleutels ('158' → '€158')
+        if r['merge'].get('doel') == 'G8-VBN-E03' and re.fullmatch(r'\d+', str(r['antwoord'])) and '€' in r['opgave']:
+            oud = r['antwoord']; r['antwoord'] = f'€{oud}'
+            if isinstance(r.get('antwoordDetail'), dict) and 'accept' in r['antwoordDetail']: r['antwoordDetail']['accept'] = [r['antwoord']]
+            if r.get('geldigeAntwoorden'): r['geldigeAntwoorden'] = [r['antwoord'] if g_ == oud else g_ for g_ in r['geldigeAntwoorden']]
+            r['merge']['oef499'] = {'antwoord': oud, 'reden': 'Oef-#499: antwoord met € zoals de sleutels (G7 Oef-#448)'}
+            slog(r, 'Oef-#499: antwoord met € (zoals G7 #448)', 'antwoord', oud, r['antwoord'])
+        # V-#891 (Didactiek batch 6, twijfel 3; Oef-#1000, les 306): MEET-V01 #2 vol bouwwerk waarin 'drie kanten' (d·b + b·h + d·h) het antwoord gaf → maten van
+        # Didactiek (diep × hoog × breed). Het antwoord blijft op zijn plek; elke afleider volgt dezelfde route als ervoor (nagerekend in tools/bouwsel_routes).
+        V891 = {'06886f5b': ((3, 4, 3), {'11': '10', '42': '45'}), '0e749130': ((4, 3, 3), {'11': '10', '26': '24'}), '291b2b8b': ((3, 3, 4), {'11': '10', '12': '12'}),
+                '9ae14b9d': ((3, 4, 3), {'42': '45', '26': '24'}), 'dd2aa399': ((3, 4, 3), {'24': '27', '26': '24'}), 'f57656e1': ((3, 3, 4), {'11': '10', '26': '24'}),
+                '3e70fde2': ((3, 2, 5), {'10': '10', '23': '22'}), '970b9a33': ((2, 3, 5), {'23': '22', '10': '10'}), 'a20c582f': ((3, 5, 2), {'24': '24', '40': '36'}),
+                '63bc1070': ((2, 7, 2), {'18': '24', '19': '22'})}
+        if c8 in V891 and (r['visual'].get('jsRender') or {}).get('soort') == 'bouwsel':
+            (d_, h_, b_), om = V891[c8]; jr = r['visual']['jsRender']; od, oh, ob = jr['diep'], jr['hoog'], jr['breed']
+            R_oud, R_nw = BR.routes(od, oh, ob), BR.routes(d_, h_, b_); a_oud, a_ = str(r['antwoord']), str(d_ * h_ * b_)
+            for vo, vn in om.items():      # dezelfde route: de oude afleider is een route op de oude maten, de nieuwe dezelfde route op de nieuwe
+                assert any(str(R_oud[k]) == vo and str(R_nw[k]) == vn for k in R_oud), ('V-#891 route', c8, vo, vn)
+            assert not BR.fouten(d_, h_, b_) and set(om) | {a_oud} == {o_['tekst'] for o_ in r['opties']}, ('V-#891', c8)
+            jr.update(diep=d_, hoog=h_, breed=b_)
+            om = dict(om, **{a_oud: a_})
+            for o_ in r['opties']: o_['tekst'] = om[o_['tekst']]
+            r['antwoord'] = a_; r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+            if isinstance(r.get('antwoordDetail'), dict): r['antwoordDetail']['juisteOptieTekst'] = a_; r['antwoordDetail']['juisteOptie'] = next(o_['letter'] for o_ in r['opties'] if o_['tekst'] == a_)
+            if r.get('geldigeAntwoorden'): r['geldigeAntwoorden'] = [a_]
+            for k_ in ('claudeDenkfouten', 'claudeFoutHints'):
+                if r['extraVelden'].get(k_): r['extraVelden'][k_] = [dict(x_, fout=om.get(str(x_.get('fout')), x_.get('fout'))) for x_ in r['extraVelden'][k_]]
+            assert len({o_['tekst'] for o_ in r['opties']}) == 3 and a_ in {o_['tekst'] for o_ in r['opties']}
+            slog(r, f"V-#891: bouwwerk {od}×{oh}×{ob} → {d_}×{h_}×{b_} (drie kanten gaf het antwoord); antwoord {a_oud} → {a_}, afleiders zelfde route", 'jsRender', f'{od}×{oh}×{ob}', f'{d_}×{h_}×{b_}')
+        # V-#892 / Z-#897 (Didactiek batch 6): VBN-E03 zinloze spaardoelen → een step (€92), een skateboard (€104), voetbalschoenen (€113)
+        D892 = {'074d14f9': ('Je spaart voor stappen.', 'Je spaart voor een step.'), '3acd96dc': ('Je spaart voor sterren.', 'Je spaart voor een skateboard.'),
+                'c68ab442': ('Je spaart voor ballen.', 'Je spaart voor voetbalschoenen.')}
+        if c8 in D892 and r['opgave'].startswith(D892[c8][0]):
+            o = r['opgave']; r['opgave'] = o.replace(*D892[c8], 1); slog(r, 'V-#892/Z-#897: logisch spaardoel', 'opgave', o, r['opgave'])
+        # Z-#893 (Didactiek batch 6, les 316): MEET-E07 007 het kind gaat niet zelf 80 km per uur
+        if c8 == 'c74c6871' and r['opgave'].startswith('Een kind reist 2,5 uur met 80 km per uur.'):
+            o = r['opgave']; r['opgave'] = o.replace('Een kind reist 2,5 uur met 80 km per uur.', 'Een kind reist 2,5 uur met de trein. De trein rijdt 80 km per uur.', 1)
+            slog(r, 'Z-#893: de trein rijdt 80 km per uur, niet het kind', 'opgave', o, r['opgave'])
+        # V-#893 (Didactiek batch 6, twijfel 5; Oef-#1002): VBN-E04 de beslissende staaf niet op een half streepje (som blijft 100); claudeUitleg mee
+        V893 = {'5c275a7f': ({'fiets': 60, 'lopend': 20, 'auto': 5, 'bus': 15}, [('Fiets is 55%', 'Fiets is 60%')]),
+                'b8a10f32': ({'fiets': 20, 'lopend': 10, 'auto': 10, 'bus': 60}, [('Bus is 55%', 'Bus is 60%')]),
+                'b8408150': ({'hond': 60, 'kat': 20, 'konijn': 20, 'vis': 0}, [('Hond is 55%', 'Hond is 60%')]),
+                '6d7f8d4f': ({'water': 30, 'melk': 30, 'sap': 10, 'niets': 30}, [('25% + 30% = 55%', '30% + 30% = 60%')]),
+                }
+        if B7VLAG.ACTIEF:      # V-#945 (Didactiek b7, vervangt Oef-#1003; les 326/352): #30 029 hond 25 + kat 15 (aflezing 30/40/50) → hond 30 + kat 10 = 40, één streepje onder 50; 'Nee' blijft
+            V893['346c5527'] = ({'hond': 30, 'kat': 10, 'konijn': 15, 'vis': 45}, [('25% + 15% = 40%', '30% + 10% = 40%')])
+        if c8 in V893 and (r['visual'].get('jsRender') or {}).get('soort') == 'staafdiagram':
+            nw, uit = V893[c8]; st_ = r['visual']['jsRender']['staven']; voor = {x_['naam']: x_['waarde'] for x_ in st_}
+            assert set(voor) == set(nw) and sum(nw.values()) == 100, ('V-#893', c8, voor)
+            for x_ in st_: x_['waarde'] = nw[x_['naam']]
+            ex = r['extraVelden']
+            for a8, b8 in uit:
+                if isinstance(ex.get('claudeUitleg'), str): ex['claudeUitleg'] = ex['claudeUitleg'].replace(a8, b8)
+            slog(r, 'V-#893: beslissende staaf op een heel streepje', 'jsRender', str(voor), str(nw))
+        # V-#894 (Didactiek batch 6): '"N kinderen kozen X." Klopt dat?' → N past bij een heel totaal (het percentage blijft); 'Dat kun je hier niet zien' blijft
+        V894 = {'58a665be': ('"12 kinderen kozen vis."', '"9 kinderen kozen vis."'), '9c184aad': ('"15 kinderen kozen hond."', '"9 kinderen kozen hond."'),
+                '86455544': ('"15 kinderen kozen tekenen."', '"7 kinderen kozen tekenen."'), 'b87af28e': ('"15 kinderen kozen rekenen."', '"11 kinderen kozen rekenen."'),
+                'dcef0009': ('"12 kinderen kozen niets."', '"14 kinderen kozen niets."')}
+        if c8 in V894 and V894[c8][0] in r['opgave']:
+            o = r['opgave']; r['opgave'] = o.replace(*V894[c8], 1); slog(r, 'V-#894: het aantal past bij een heel totaal', 'opgave', o, r['opgave'])
+        # Oef-#1004 (b7, VBN-E04 #21 016): één hondje voor 6 honden i.p.v. 4, zodat het aantal plaatjes (4) en de waarde van een plaatje niet gelijk zijn.
+        # 3 hele + 1 half = 3 × 6 + 3 = 21; afleiders 24 (half als heel) en 4 (plaatjes geteld). De kop (nieuwe template) zet kop_1004 na Oef-#1001.
+        if B7VLAG.ACTIEF and c8 == 'dbb037fa' and 'één hondje voor 4 honden' in r['opgave']:      # ook Z-#943 (Didactiek b7)
+            o = r['opgave']; r['opgave'] = o.replace('één hondje voor 4 honden', 'één hondje voor 6 honden', 1)
+            W1004 = {'14 honden': '21 honden', '16 honden': '24 honden'}
+            for o_ in r['opties']: o_['tekst'] = W1004.get(o_['tekst'], o_['tekst'])
+            r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+            r['antwoord'] = W1004.get(r['antwoord'], r['antwoord'])
+            ad = r.get('antwoordDetail') or {}
+            if ad.get('juisteOptieTekst') in W1004: ad['juisteOptieTekst'] = W1004[ad['juisteOptieTekst']]
+            ex = r['extraVelden']
+            for k_ in ('claudeDenkfouten', 'claudeFoutHints'):
+                for d_ in ex.get(k_) or []: d_['fout'] = W1004.get(d_.get('fout'), d_.get('fout'))
+            ex['claudeUitleg'] = 'Drie hele hondjes zijn 3 keer 6, dus 18 honden. Een half hondje is de helft van 6, dus 3 honden. Samen zijn dat 21 honden.'
+            assert r['antwoord'] == '21 honden' and sorted(o_['tekst'] for o_ in r['opties']) == ['21 honden', '24 honden', '4 honden'], ('Oef-#1004', r['opties'])
+            slog(r, 'Oef-#1004: één hondje voor 6 honden (aantal plaatjes ≠ waarde van een plaatje); 21, afleiders 24/4', 'opgave', o, r['opgave'])
+        # V-#944 (Didactiek b7, les 316/320): #24 019 klas B 40% van 30 kinderen (niet 40): A = 10, B = 12; 'percentages vergeleken' blijft A, 'evenveel' fout
+        if B7VLAG.ACTIEF and c8 == 'ce8e8841' and 'kiest 40% van de 40 kinderen' in r['opgave']:
+            o = r['opgave']; r['opgave'] = o.replace('kiest 40% van de 40 kinderen', 'kiest 40% van de 30 kinderen', 1)
+            W944 = {'Klas B, want dat zijn 16 kinderen.': 'Klas B, want dat zijn 12 kinderen.'}
+            for o_ in r['opties']: o_['tekst'] = W944.get(o_['tekst'], o_['tekst'])
+            r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+            r['antwoord'] = W944.get(r['antwoord'], r['antwoord'])
+            if (ad := r.get('antwoordDetail') or {}).get('juisteOptieTekst') in W944: ad['juisteOptieTekst'] = W944[ad['juisteOptieTekst']]
+            ex = r['extraVelden']
+            if isinstance(ex.get('claudeUitleg'), str): ex['claudeUitleg'] = ex['claudeUitleg'].replace('40% van 40 is 16 kinderen', '40% van 30 is 12 kinderen')
+            assert r['antwoord'] == 'Klas B, want dat zijn 12 kinderen.' and '12 kinderen' in ex['claudeUitleg'], ('V-#944', r['antwoord'])
+            slog(r, 'V-#944: klas B 40% van 30 kinderen (redelijke klas); antwoord 12 kinderen', 'opgave', o, r['opgave'])
+        # V-#946 (Didactiek b7): #7 002 '(x 1000)' → '(× 1000)' (kop volgt in de kop-pass)
+        if B7VLAG.ACTIEF and c8 == '1df867a7' and '(x 1000)' in r['opgave']:
+            o = r['opgave']; r['opgave'] = o.replace('(x 1000)', '(× 1000)'); slog(r, "V-#946: keerteken '×'", 'opgave', o, r['opgave'])
+        # Z-#945 (Didactiek b7, data-taal): #9 kop tussen aanhalingstekens; #16 zonder 'juist' (verraadt de verrassing); #19/#22 'lijkt voor/bij … te staan/horen'
+        Z945 = {'d7a5da92': [('opgave', 'staat: Het aantal bezoekers is verdubbeld. De staaf', 'staat: "Het aantal bezoekers is verdubbeld." De staaf')],
+                '710da02d': [('optie', 'Het aantal wordt juist groter.', 'Het aantal wordt groter.')],
+                'd921591b': [('optie', 'Het grote plaatje lijkt veel meer stuks.', 'Het grote plaatje lijkt voor veel meer stuks te staan.')],
+                'eb4ee883': [('optie', 'De brede staaf lijkt een groter aantal.', 'De brede staaf lijkt bij een groter aantal te horen.')]}
+        if B7VLAG.ACTIEF and c8 in Z945:
+            for veld_, a9, b9 in Z945[c8]:
+                if veld_ == 'opgave' and a9 in r['opgave']:
+                    o = r['opgave']; r['opgave'] = o.replace(a9, b9, 1); slog(r, 'Z-#945: data-taal b7', 'opgave', o, r['opgave'])
+                elif veld_ == 'optie' and any(o_['tekst'] == a9 for o_ in r['opties']):
+                    for o_ in r['opties']:
+                        if o_['tekst'] == a9: o_['tekst'] = b9
+                    r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+                    if r['antwoord'] == a9: r['antwoord'] = b9
+                    if (ad := r.get('antwoordDetail') or {}).get('juisteOptieTekst') == a9: ad['juisteOptieTekst'] = b9
+                    for k_ in ('claudeDenkfouten', 'claudeFoutHints'):
+                        for d_ in r['extraVelden'].get(k_) or []:
+                            if d_.get('fout') == a9: d_['fout'] = b9
+                    slog(r, 'Z-#945: data-taal b7', 'opties', a9, b9)
+        # Z-#931 (Didactiek, zacht; G8 MEET-E03 #1–#4): m³ → liter, geldigeAntwoorden met en zonder punt en met de gevraagde eenheid (liter)
+        if (m_ := re.fullmatch(r'Een [\w ]+ heeft een inhoud van [\d,]+ m³\. Hoeveel liter is dat\?', r['opgave'])) and re.fullmatch(r'\d{4,6}', str(r['antwoord'])) and not r.get('geldigeAntwoorden'):
+            a_ = str(r['antwoord']); r['geldigeAntwoorden'] = [a_, f'{int(a_):,}'.replace(',', '.'), f'{a_} liter']
+            slog(r, 'Z-#931: geldigeAntwoorden (met/zonder punt, met eenheid liter)', 'geldigeAntwoorden', None, r['geldigeAntwoorden'])
         # Z-#825 (Didactiek batch 3): #55 'staartsom' → 'som onder elkaar'
         if c8 == '5a2c100b' and 'met een staartsom onder elkaar' in r['opgave']:
             o = r['opgave']; r['opgave'] = o.replace('met een staartsom onder elkaar', 'met een som onder elkaar')
@@ -695,6 +881,8 @@ KOP478 += [  # Oef-#496 (batch 5)
           (r'^(Een vliegtuig vertrekt om \S+(?: uur)? uit) de school\.', r'\1 Eindhoven.'), (r'^(Een vliegtuig vertrekt om \S+(?: uur)? uit) de klas\.', r'\1 Rotterdam.'),
           (r'^(Een vliegtuig vertrekt om \S+(?: uur)? uit) het huis\.', r'\1 Groningen.')]
 E05_BEZET = set()
+E05_TEL = {}
+KOP1001_DOELEN = {'G8-MEET-E07', 'G8-MEET-V01', 'G8-VBN-E01', 'G8-VBN-E03', 'G8-VBN-E04'}
 KOP478 += [  # V-#871c (Didactiek batch 4)
           (r'^\[wie\] heeft # miljoen (stickers|knikkers) verzameld\.', r'Een fabriek maakt in een jaar # miljoen \1.'),
           (r'^\[wie\] heeft # miljoen truien verzameld\.', 'In Nederland worden in een jaar # miljoen truien verkocht.'),

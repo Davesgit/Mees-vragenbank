@@ -1,0 +1,1311 @@
+{
+ "batch": "batch7",
+ "geschreven": "2026-10-08",
+ "uitleg": "Hints per somtype (G8-merge, batch 7 = VBN-E04 #6–#31: meerkeuze met tekstopties (misleidende grafieken, aflezen, percentages, onderzoek)). Formaat als g7/hints/batch*.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: rekenregels uit scripts/fout_regels.py met een vaste tekst, laag 1 'tekst' en laag 2 'tekstSterker'; 'andere fout' als laatste.",
+ "somtypen": [
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 6,
+   "somtype": "Bij de as van een grafiek staan de getallen #, #, #, # en # op gelijke afstand. Waarom is deze grafiek misleidend?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Bij de as van een grafiek staan de getallen #, #, #, # en # op gelijke afstand. Waarom is deze grafiek misleidend?",
+   "hint1": "Kijk hoe groot de sprong is van het ene getal naar het volgende.",
+   "hint2": "Reken bij elk paar getallen naast elkaar uit hoeveel erbij komt. Op papier is de afstand overal even groot. Komt er dan ook overal evenveel bij?",
+   "ouderzin": "Je kind ontdekt dat een grafiek misleidt als de getallen bij de as niet in gelijke sprongen oplopen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "eindgetal",
+     "claudeDenkfout": null,
+     "regel": "De as moet altijd bij 100 eindigen.",
+     "tekst": "Een as mag bij elk getal ophouden. Kijk naar wat er tussen de getallen gebeurt: komt er overal evenveel bij?",
+     "tekstSterker": "Op een eerlijke as staan de getallen op gelijke afstand, en komt er telkens evenveel bij. Anders lees je de grafiek verkeerd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel getallen",
+     "claudeDenkfout": null,
+     "regel": "Er staan te veel getallen bij de as.",
+     "tekst": "Het aantal getallen is geen probleem. Kijk hoeveel er telkens bij komt van het ene getal naar het volgende.",
+     "tekstSterker": "Op een eerlijke as staan de getallen op gelijke afstand, en komt er telkens evenveel bij. Anders lees je de grafiek verkeerd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoeveel er telkens bij komt van het ene getal naar het volgende. Is dat overal evenveel?",
+     "tekstSterker": "Op een eerlijke as staan de getallen op gelijke afstand, en komt er telkens evenveel bij. Anders lees je de grafiek verkeerd."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Vijf getallen is prima. Kijk eens hoe groot elke stap is.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Een as mag bij elk getal eindigen. Vergelijk de sprongen tussen de getallen.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 7,
+   "somtype": "Bij de as van een grafiek staat: aantal bezoekers (x #). De staaf van zaterdag stopt bij #. Hoeveel bezoekers waren er?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Bij de as van een grafiek staat: aantal bezoekers (x #). De staaf van zaterdag stopt bij #. Hoeveel [ding] waren er?",
+   "hint1": "Lees het tekstje bij de as: wat betekent het stukje tussen haakjes?",
+   "hint2": "Bij de as staat dat elk getal keer duizend gaat. Doe het getal waar de staaf stopt keer duizend.",
+   "ouderzin": "Je kind leest een grafiek waarbij de getallen op de as keer duizend gaan.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal van de as",
+     "claudeDenkfout": null,
+     "regel": "4 bezoekers",
+     "tekst": "Dat is alleen het getal bij de as. Lees het tekstje bij de as nog eens: keer hoeveel gaat elk getal?",
+     "tekstSterker": "Het getal bij de as is niet het echte aantal. Het tekstje bij de as zegt met hoeveel je het moet nemen: keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer honderd",
+     "claudeDenkfout": null,
+     "regel": "400 bezoekers",
+     "tekst": "Dat is keer honderd. Lees nog eens wat er bij de as staat: keer hoeveel?",
+     "tekstSterker": "Het getal bij de as is niet het echte aantal. Het tekstje bij de as zegt met hoeveel je het moet nemen: keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees het tekstje bij de as. Doe het getal waar de staaf stopt keer het getal tussen haakjes.",
+     "tekstSterker": "Het getal bij de as is niet het echte aantal. Het tekstje bij de as zegt met hoeveel je het moet nemen: keer duizend."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt het getal van de as overgenomen. Lees het tekstje bij de as nog eens.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt met 100 vermenigvuldigd. Kijk goed welk getal er achter het maalteken staat.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Bij de as van een grafiek staat: aantal bezoekers (x #). De staaf van zaterdag stopt bij #. Hoeveel [ding] waren er?",
+    "naar": "Bij de as van een grafiek staat: aantal bezoekers (x #). De staaf van zaterdag stopt bij #. Hoeveel bezoekers waren er?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 8,
+   "somtype": "Bij de as van een staafdiagram staan alleen de getallen #, #, #, # en #. De staaf van woensdag stopt precies tussen # en #. Hoeveel is dat?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "Bij de as van een staafdiagram staan alleen de getallen #, #, #, # en #. De staaf van woensdag stopt precies tussen # en #. Hoeveel is dat?",
+   "hint1": "Tussen welke twee getallen stopt de staaf? Daar zit het aantal tussen.",
+   "hint2": "De staaf stopt halverwege twee getallen op de as. Zoek wat er ongeveer in het midden ligt. Precies aflezen kan niet, dus je schat.",
+   "ouderzin": "Je kind schat een waarde die tussen twee getallen op de as ligt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "stukje erboven",
+     "claudeDenkfout": null,
+     "regel": "Ongeveer 2 of 3",
+     "tekst": "Zo groot is alleen het stukje boven het lagere getal. De staaf begint bij nul: hoe ver komt hij in totaal?",
+     "tekstSterker": "Zoek de twee getallen op de as waar de staaf tussen stopt. Het aantal ligt tussen die twee. Stopt hij halverwege, neem dan ongeveer het midden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "Precies 25",
+     "tekst": "Dat zijn de twee getallen samen. De staaf stopt tussen die twee getallen in, dus het aantal ligt daartussen.",
+     "tekstSterker": "Zoek de twee getallen op de as waar de staaf tussen stopt. Het aantal ligt tussen die twee. Stopt hij halverwege, neem dan ongeveer het midden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de twee getallen waar de staaf tussen stopt, en schat wat er in het midden ligt.",
+     "tekstSterker": "Zoek de twee getallen op de as waar de staaf tussen stopt. Het aantal ligt tussen die twee. Stopt hij halverwege, neem dan ongeveer het midden."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je telde de streepjes in plaats van de getallen. Kijk tussen welke twee getallen de staaf stopt.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt 10 en 15 opgeteld. De staaf stopt ergens tússen die twee getallen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 9,
+   "somtype": "Boven een staafdiagram staat: Het aantal bezoekers is verdubbeld. De staaf gaat van # naar #. Klopt die kop?",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "Boven een staafdiagram staat: Het aantal bezoekers is verdubbeld. De staaf gaat van # naar #. Klopt die kop?",
+   "hint1": "Verdubbeld betekent: twee keer zoveel. Hoeveel is twee keer het getal aan het begin?",
+   "hint2": "Reken uit wat er zou staan als het aantal echt twee keer zo groot was. Vergelijk dat met het getal waar de staaf nu stopt. Is het hetzelfde?",
+   "ouderzin": "Je kind controleert met de getallen of een kop boven een grafiek klopt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "staaf lijkt hoger",
+     "claudeDenkfout": null,
+     "regel": "Ja, de staaf is twee keer zo hoog.",
+     "tekst": "Kijk niet naar hoe hoog de staaf lijkt, maar naar de getallen. Is het nieuwe getal twee keer zo groot als het oude?",
+     "tekstSterker": "Verdubbelen is keer twee. De kop klopt alleen als het nieuwe getal twee keer het oude is. Reken het na met de getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een paar erbij",
+     "claudeDenkfout": null,
+     "regel": "Ja, er zijn 4 bezoekers bij gekomen.",
+     "tekst": "Er komen er wel een paar bij, maar verdubbelen is meer: twee keer zoveel. Is dat hier zo?",
+     "tekstSterker": "Verdubbelen is keer twee. De kop klopt alleen als het nieuwe getal twee keer het oude is. Reken het na met de getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel twee keer het oude getal is, en vergelijk dat met het nieuwe getal.",
+     "tekstSterker": "Verdubbelen is keer twee. De kop klopt alleen als het nieuwe getal twee keer het oude is. Reken het na met de getallen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De staaf lijkt misschien veel hoger. Kijk naar de getallen 20 en 24.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Verdubbelen is niet hetzelfde als er een paar bij krijgen. Wat is het dubbele van 20?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 10,
+   "somtype": "De verkoop van sap is verdubbeld. In de grafiek staat een flesje dat twee keer zo hoog én twee keer zo breed is getekend. Waarom fopt dit je?",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "De verkoop van sap is verdubbeld. In de grafiek staat een flesje dat twee keer zo hoog én twee keer zo breed is getekend. Waarom fopt dit je?",
+   "hint1": "Het plaatje is hoger én breder geworden. Wat gebeurt er dan met de ruimte die het inneemt?",
+   "hint2": "Stel je het oude flesje voor als een rechthoek. Maak hem twee keer zo hoog en twee keer zo breed. Hoe vaak past het oude flesje dan in het nieuwe?",
+   "ouderzin": "Je kind ziet dat een plaatje dat in hoogte én breedte groeit, groter lijkt dan het aantal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alleen de hoogte",
+     "claudeDenkfout": null,
+     "regel": "Niets, twee keer zo hoog is precies goed.",
+     "tekst": "Het flesje is niet alleen hoger, maar ook breder getekend. Kijk naar hoe groot het hele plaatje lijkt.",
+     "tekstSterker": "Twee keer zo hoog en twee keer zo breed: dan past het oude plaatje twee keer twee keer in het nieuwe. Zo lijkt de verkoop veel meer gegroeid dan hij is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "als een doos",
+     "claudeDenkfout": null,
+     "regel": "Het flesje lijkt acht keer zo groot.",
+     "tekst": "Een plaatje is plat: het heeft alleen een hoogte en een breedte. Hoe vaak past het oude plaatje in het nieuwe?",
+     "tekstSterker": "Twee keer zo hoog en twee keer zo breed: dan past het oude plaatje twee keer twee keer in het nieuwe. Zo lijkt de verkoop veel meer gegroeid dan hij is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoe vaak past het oude plaatje in het nieuwe, als het twee keer zo hoog en twee keer zo breed is?",
+     "tekstSterker": "Twee keer zo hoog en twee keer zo breed: dan past het oude plaatje twee keer twee keer in het nieuwe. Zo lijkt de verkoop veel meer gegroeid dan hij is."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Het plaatje is niet alleen hoger geworden, maar ook breder. Wat gebeurt er dan met het vlak?",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Reken met hoogte en breedte samen, dus met twee keer een verdubbeling.",
+     "claudeDenkfout": "schatting-verkeerd",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 11,
+   "somtype": "Een cirkeldiagram is schuin getekend, alsof het een taart met dikte is. Het voorste stuk is #%, net als het achterste stuk. Wat is het probleem?",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "Een cirkeldiagram is schuin getekend, alsof het een taart met dikte is. Het voorste stuk is #%, net als het achterste stuk. Wat is het probleem?",
+   "hint1": "Wat zeggen de percentages bij de twee stukken? En wat zie je met je ogen?",
+   "hint2": "Door de schuine tekening komt een stuk dichterbij. Wat dichterbij is, ziet er breder uit. Vertrouw op de getallen bij de stukken, niet op hoe groot ze eruitzien.",
+   "ouderzin": "Je kind ziet dat een schuin getekend cirkeldiagram de stukken anders laat lijken dan ze zijn.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "echt groter",
+     "claudeDenkfout": null,
+     "regel": "Het voorste stuk is echt groter dan 25%.",
+     "tekst": "Bij de stukken staan percentages. Wat zeggen die getallen: is het ene stuk echt groter dan het andere?",
+     "tekstSterker": "Een schuin getekend cirkeldiagram vertekent: wat dichterbij is, lijkt groter. De percentages blijven hetzelfde."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "kleuren",
+     "claudeDenkfout": null,
+     "regel": "Een cirkeldiagram mag geen kleuren hebben.",
+     "tekst": "Kleuren helpen juist bij het lezen. Het gaat hier om de schuine tekening.",
+     "tekstSterker": "Een schuin getekend cirkeldiagram vertekent: wat dichterbij is, lijkt groter. De percentages blijven hetzelfde."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar de percentages bij de stukken, en vergelijk dat met wat je ziet.",
+     "tekstSterker": "Een schuin getekend cirkeldiagram vertekent: wat dichterbij is, lijkt groter. De percentages blijven hetzelfde."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De percentages staan er gewoon bij. Vertrouw je meer op je ogen of op de getallen?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Kleuren helpen juist bij het lezen. Het gaat hier om de schuine tekening.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 12,
+   "somtype": "Een grafiek laat twee staven zien, maar bij de as staan helemaal geen getallen. Waarom is dat lastig?",
+   "nrOrigineel": 12,
+   "somtypeOrigineel": "Een grafiek laat twee staven zien, maar bij de as staan helemaal geen getallen. Waarom is dat lastig?",
+   "hint1": "Wat kun je zonder getallen nog wel zien, en wat niet?",
+   "hint2": "Zonder getallen bij de as zie je nog steeds welke staaf het hoogst is. Maar wat kun je dan niet aflezen?",
+   "ouderzin": "Je kind ziet dat je zonder getallen bij de as geen aantallen kunt aflezen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleuren",
+     "claudeDenkfout": null,
+     "regel": "Je kunt de kleuren niet meer uit elkaar houden.",
+     "tekst": "Met de kleuren is niets mis. Het gaat om wat er bij de as hoort te staan.",
+     "tekstSterker": "Getallen bij de as vertellen hoe groot elke staaf is. Zonder getallen zie je alleen welke hoger is, niet hoeveel."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "welke hoger",
+     "claudeDenkfout": null,
+     "regel": "Je ziet niet welke staaf hoger is.",
+     "tekst": "Welke staaf hoger is, zie je juist wel. Maar kun je ook zeggen hoeveel elke staaf is?",
+     "tekstSterker": "Getallen bij de as vertellen hoe groot elke staaf is. Zonder getallen zie je alleen welke hoger is, niet hoeveel."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Wat staat er normaal bij de as? Wat weet je niet als dat er niet bij staat?",
+     "tekstSterker": "Getallen bij de as vertellen hoe groot elke staaf is. Zonder getallen zie je alleen welke hoger is, niet hoeveel."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Welke staaf hoger is, zie je juist wel. Maar weet je ook hoevéél hoger?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Met de kleuren is niets mis. Het gaat om de informatie die bij de as hoort.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 13,
+   "somtype": "Een grafiek laat zien dat in warme maanden meer ijsjes worden verkocht en ook meer mensen zwemmen. Iemand zegt: door de ijsjes gaan mensen zwemmen. Klopt dat?",
+   "nrOrigineel": 13,
+   "somtypeOrigineel": "Een grafiek laat zien dat in warme maanden meer ijsjes worden verkocht en ook meer mensen zwemmen. Iemand zegt: door de ijsjes gaan mensen zwemmen. Klopt dat?",
+   "hint1": "Gaan twee dingen samen omhoog, dan hoeft het ene niet door het andere te komen.",
+   "hint2": "Wanneer stijgen beide lijnen? Bedenk wat er in die maanden anders is. Kan dat voor beide de reden zijn?",
+   "ouderzin": "Je kind leert dat twee lijnen die samen stijgen niet betekenen dat het ene door het andere komt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "dalen",
+     "claudeDenkfout": null,
+     "regel": "Nee, want de lijnen dalen juist samen.",
+     "tekst": "Lees nog eens wat er in de warme maanden met de lijnen gebeurt: gaan ze omhoog of omlaag?",
+     "tekstSterker": "Als twee dingen tegelijk stijgen, kan er iets anders achter zitten dat ze allebei laat stijgen. Uit een grafiek haal je niet zomaar een oorzaak."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "samen stijgen",
+     "claudeDenkfout": null,
+     "regel": "Ja, want beide lijnen stijgen samen.",
+     "tekst": "Twee lijnen die samen stijgen, hoeven niet door elkaar te komen. Wat hebben ze met elkaar gemeen?",
+     "tekstSterker": "Als twee dingen tegelijk stijgen, kan er iets anders achter zitten dat ze allebei laat stijgen. Uit een grafiek haal je niet zomaar een oorzaak."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Wat is er anders in de maanden waarin beide lijnen stijgen?",
+     "tekstSterker": "Als twee dingen tegelijk stijgen, kan er iets anders achter zitten dat ze allebei laat stijgen. Uit een grafiek haal je niet zomaar een oorzaak."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Twee lijnen die samen stijgen, hoeven elkaar niet te veroorzaken. Wat hebben ze allebei gemeen?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Lees nog eens wat er in de warme maanden met beide lijnen gebeurt.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 15,
+   "somtype": "Een winkel laat een grafiek van de verkoop zien, maar toont alleen de drie beste maanden van het jaar. Waarom is dat misleidend?",
+   "nrOrigineel": 14,
+   "somtypeOrigineel": "Een winkel laat een grafiek van de verkoop zien, maar toont alleen de drie beste maanden van het jaar. Waarom is dat misleidend?",
+   "hint1": "Een jaar heeft twaalf maanden. Welke maanden laat de winkel zien?",
+   "hint2": "De winkel kiest zelf welke maanden in de grafiek komen. Wat gebeurt er met je beeld van het hele jaar als je alleen de beste maanden ziet?",
+   "ouderzin": "Je kind ziet dat een grafiek misleidt als er gegevens weggelaten zijn.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getallen fout",
+     "claudeDenkfout": null,
+     "regel": "De getallen bij die maanden kloppen niet.",
+     "tekst": "De getallen zelf zijn goed gemeten. Denk aan de maanden die er niet bij staan.",
+     "tekstSterker": "Wie alleen de beste maanden laat zien, laat de verkoop beter lijken dan hij het hele jaar was. Een eerlijke grafiek toont alle maanden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "drie staven",
+     "claudeDenkfout": null,
+     "regel": "Drie staven zijn te weinig om te tekenen.",
+     "tekst": "Drie staven mag best. Het gaat erom welke maanden er weggelaten zijn.",
+     "tekstSterker": "Wie alleen de beste maanden laat zien, laat de verkoop beter lijken dan hij het hele jaar was. Een eerlijke grafiek toont alle maanden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Welke maanden staan er niet in de grafiek, en wat betekent dat?",
+     "tekstSterker": "Wie alleen de beste maanden laat zien, laat de verkoop beter lijken dan hij het hele jaar was. Een eerlijke grafiek toont alle maanden."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Drie staven mag best. Het gaat erom wélke maanden er zijn weggelaten.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De getallen zelf zijn gewoon goed gemeten. Denk aan de maanden die ontbreken.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 16,
+   "somtype": "In een cirkeldiagram over lievelingsfruit staan de stukken #%, #% en #%. Wat klopt hier niet?",
+   "nrOrigineel": 15,
+   "somtypeOrigineel": "In een cirkeldiagram over lievelingsfruit staan de stukken #%, #% en #%. Wat klopt hier niet?",
+   "hint1": "Alle stukken van een cirkeldiagram vormen bij elkaar de hele cirkel. Hoeveel procent is dat?",
+   "hint2": "Een hele cirkel is honderd procent. Tel de percentages van de stukken bij elkaar op. Wat valt je op?",
+   "ouderzin": "Je kind controleert of de stukken van een cirkeldiagram samen honderd procent zijn.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "grootste stuk",
+     "claudeDenkfout": null,
+     "regel": "Het grootste stuk moet 100% zijn.",
+     "tekst": "Eén stuk is altijd een deel van de cirkel. Hoeveel procent moeten alle stukken bij elkaar zijn?",
+     "tekstSterker": "Alle stukken bij elkaar zijn de hele cirkel: honderd procent. Komt het samen op meer uit, dan kan het diagram niet kloppen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig stukken",
+     "claudeDenkfout": null,
+     "regel": "Er zijn te weinig stukken getekend.",
+     "tekst": "Het aantal stukken is geen probleem. Tel de percentages eens bij elkaar op.",
+     "tekstSterker": "Alle stukken bij elkaar zijn de hele cirkel: honderd procent. Komt het samen op meer uit, dan kan het diagram niet kloppen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de percentages bij elkaar op. Hoeveel procent hoort een hele cirkel te zijn?",
+     "tekstSterker": "Alle stukken bij elkaar zijn de hele cirkel: honderd procent. Komt het samen op meer uit, dan kan het diagram niet kloppen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Drie stukken mag prima. Tel de percentages eens bij elkaar op.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Eén stuk is altijd een deel van het geheel. Kijk wat alle stukken samen moeten zijn.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 17,
+   "somtype": "In een grafiek staat onderaan de as het getal # en bovenaan het getal #. De lijn loopt naar [richting]. Wat betekent dat?",
+   "nrOrigineel": 16,
+   "somtypeOrigineel": "In een grafiek staat onderaan de as het getal # en bovenaan het getal #. De lijn loopt naar [richting]. Wat betekent dat?",
+   "hint1": "Kijk eerst welke getallen onderaan en bovenaan de as staan.",
+   "hint2": "Hier staan de hoge getallen onderaan en de lage bovenaan. Loopt de lijn omlaag, naar welke getallen gaat hij dan?",
+   "ouderzin": "Je kind leest een grafiek waarbij de getallen op de as omgekeerd staan.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "omlaag is minder",
+     "claudeDenkfout": null,
+     "regel": "Het aantal wordt steeds kleiner.",
+     "tekst": "Meestal betekent omlaag: minder. Maar lees hier eerst de getallen bij de as. Waar staan de hoge getallen?",
+     "tekstSterker": "Bij deze grafiek staan de getallen omgekeerd. Een lijn die omlaag gaat, gaat hier naar de grotere getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "gelijk",
+     "claudeDenkfout": null,
+     "regel": "Het aantal blijft de hele tijd gelijk.",
+     "tekst": "De lijn loopt niet recht, dus het aantal verandert. Kijk naar welke getallen de lijn gaat.",
+     "tekstSterker": "Bij deze grafiek staan de getallen omgekeerd. Een lijn die omlaag gaat, gaat hier naar de grotere getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees eerst de getallen bij de as. Naar welke getallen loopt de lijn?",
+     "tekstSterker": "Bij deze grafiek staan de getallen omgekeerd. Een lijn die omlaag gaat, gaat hier naar de grotere getallen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je bent gewend dat omhoog meer betekent. Lees hier eerst de getallen bij de as.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De lijn loopt duidelijk niet recht. Kijk naar de getallen waar de lijn langs gaat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 18,
+   "somtype": "In een grafiek stopt de staaf van maandag bij # en de staaf van dinsdag bij #. Hoeveel meer waren het er op dinsdag?",
+   "nrOrigineel": 17,
+   "somtypeOrigineel": "In een grafiek stopt de staaf van maandag bij # en de staaf van dinsdag bij #. Hoeveel meer waren het er op dinsdag?",
+   "hint1": "Hoeveel meer: dan zoek je het verschil tussen de twee getallen.",
+   "hint2": "Tel door van het kleinste getal naar het grootste. Hoeveel stapjes zijn dat? De staven kunnen ver uit elkaar lijken, maar lees de getallen.",
+   "ouderzin": "Je kind leest twee staven af en rekent het verschil uit.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tiental",
+     "claudeDenkfout": null,
+     "regel": "10 meer",
+     "tekst": "Tel nog eens rustig door, met stapjes van één. Hoeveel stapjes zijn het?",
+     "tekstSterker": "Het verschil reken je uit door het kleine getal van het grote af te halen, of door te tellen van het kleine naar het grote."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "196 meer",
+     "tekst": "Dat zijn de twee getallen samen. Bij hoeveel meer vergelijk je de getallen: trek ze van elkaar af.",
+     "tekstSterker": "Het verschil reken je uit door het kleine getal van het grote af te halen, of door te tellen van het kleine naar het grote."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel door van het kleinste getal naar het grootste. Hoeveel stapjes zijn dat?",
+     "tekstSterker": "Het verschil reken je uit door het kleine getal van het grote af te halen, of door te tellen van het kleine naar het grote."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel eens rustig door van 96 naar 100. Hoeveel stapjes zijn dat?",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Bij 'hoeveel meer' vergelijk je twee getallen. Je telt ze niet bij elkaar op.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 19,
+   "somtype": "In een grafiek zijn alle getallen afgerond op honderdtallen. Twee staven zijn allebei # hoog. Wat weet je zeker?",
+   "nrOrigineel": 18,
+   "somtypeOrigineel": "In een grafiek zijn alle getallen afgerond op honderdtallen. Twee staven zijn allebei # [ding]. Wat weet je zeker?",
+   "hint1": "Welke getallen worden allemaal hetzelfde getal als je afrondt op honderdtallen?",
+   "hint2": "Bij afronden kan een getal omhoog of omlaag gaan. Bedenk twee getallen die niet even groot zijn, maar allebei op hetzelfde honderdtal uitkomen. Wat zegt dat over de staven?",
+   "ouderzin": "Je kind ziet dat afgeronde getallen in een grafiek kleine verschillen kunnen verbergen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alleen omhoog",
+     "claudeDenkfout": null,
+     "regel": "Beide aantallen zijn meer dan 300.",
+     "tekst": "Bij afronden kun je omhoog en omlaag gaan. Kan een getal onder het honderdtal ook op dat honderdtal uitkomen?",
+     "tekstSterker": "Afronden verbergt kleine verschillen. Twee staven die na afronden gelijk zijn, kunnen bij heel andere getallen horen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "precies gelijk",
+     "claudeDenkfout": null,
+     "regel": "De echte aantallen zijn precies gelijk.",
+     "tekst": "Denk eens aan alle getallen die afgerond op hetzelfde honderdtal uitkomen. Zijn die allemaal even groot?",
+     "tekstSterker": "Afronden verbergt kleine verschillen. Twee staven die na afronden gelijk zijn, kunnen bij heel andere getallen horen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Welke getallen komen allemaal op hetzelfde honderdtal uit als je afrondt?",
+     "tekstSterker": "Afronden verbergt kleine verschillen. Twee staven die na afronden gelijk zijn, kunnen bij heel andere getallen horen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Denk eens aan welke getallen allemaal worden afgerond tot 300.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Bij afronden kun je omhoog én omlaag gaan. Kan een getal onder 300 ook 300 worden?",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "In een grafiek zijn alle getallen afgerond op honderdtallen. Twee staven zijn allebei # [ding]. Wat weet je zeker?",
+    "naar": "In een grafiek zijn alle getallen afgerond op honderdtallen. Twee staven zijn allebei # hoog. Wat weet je zeker?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 20,
+   "somtype": "In een plaatjesgrafiek staat bij appels een klein appeltje en bij peren een grote peer. Beide plaatjes staan voor # stuks. Waarom fopt dit je?",
+   "nrOrigineel": 19,
+   "somtypeOrigineel": "In een plaatjesgrafiek staat bij appels een klein appeltje en bij peren een grote peer. Beide plaatjes staan voor # [ding]. Waarom fopt dit je?",
+   "hint1": "Beide plaatjes staan voor hetzelfde aantal. Waar kijken je ogen naar?",
+   "hint2": "Bij een plaatjesgrafiek horen alle plaatjes dezelfde grootte te hebben. Wat denk je als je een groot plaatje naast een klein plaatje ziet?",
+   "ouderzin": "Je kind ziet dat plaatjes van verschillende grootte in een plaatjesgrafiek misleiden.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "echt fruit",
+     "claudeDenkfout": null,
+     "regel": "Peren zijn nu eenmaal groter dan appels.",
+     "tekst": "In een grafiek gaat het niet om het echte fruit, maar om de aantallen die de plaatjes laten zien.",
+     "tekstSterker": "Elk plaatje staat voor hetzelfde aantal. Een groter plaatje laat je denken aan een groter aantal, ook al is dat niet zo."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal plaatjes",
+     "claudeDenkfout": null,
+     "regel": "Er staan te weinig plaatjes bij appels.",
+     "tekst": "Het aantal plaatjes klopt juist wel. Let op hoe groot de plaatjes getekend zijn.",
+     "tekstSterker": "Elk plaatje staat voor hetzelfde aantal. Een groter plaatje laat je denken aan een groter aantal, ook al is dat niet zo."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Staan de plaatjes voor hetzelfde aantal? Kijk hoe groot ze getekend zijn.",
+     "tekstSterker": "Elk plaatje staat voor hetzelfde aantal. Een groter plaatje laat je denken aan een groter aantal, ook al is dat niet zo."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "In een grafiek gaat het niet om het echte fruit, maar om de aantallen die de plaatjes laten zien.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Het aantal plaatjes klopt juist wel. Let op het verschil in grootte.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "In een plaatjesgrafiek staat bij appels een klein appeltje en bij peren een grote peer. Beide plaatjes staan voor # [ding]. Waarom fopt dit je?",
+    "naar": "In een plaatjesgrafiek staat bij appels een klein appeltje en bij peren een grote peer. Beide plaatjes staan voor # stuks. Waarom fopt dit je?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 21,
+   "somtype": "In een plaatjesgrafiek staat een fietsje voor # kinderen. Bij groep # staan # fietsjes. Hoeveel kinderen zijn dat?",
+   "nrOrigineel": 20,
+   "somtypeOrigineel": "In een plaatjesgrafiek staat een fietsje voor # [ding]. Bij groep # [ding] # [ding]. Hoeveel [ding] zijn dat?",
+   "hint1": "Lees eerst voor hoeveel er één plaatje staat.",
+   "hint2": "Eén plaatje staat voor een groepje. Tel de plaatjes en doe dat aantal keer de grootte van het groepje.",
+   "ouderzin": "Je kind leest een plaatjesgrafiek: het aantal plaatjes keer wat één plaatje betekent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "plaatjes geteld",
+     "claudeDenkfout": null,
+     "regel": "6 kinderen",
+     "tekst": "Dat is het aantal plaatjes. Eén plaatje staat voor meer dan één: lees nog eens voor hoeveel.",
+     "tekstSterker": "Elk plaatje telt voor het getal dat erbij staat. Het aantal plaatjes keer dat getal is het echte aantal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "16 kinderen",
+     "tekst": "Dat zijn de twee getallen bij elkaar opgeteld. Elk plaatje staat voor een heel groepje: doe keer.",
+     "tekstSterker": "Elk plaatje telt voor het getal dat erbij staat. Het aantal plaatjes keer dat getal is het echte aantal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees voor hoeveel één plaatje staat. Doe het aantal plaatjes keer dat getal.",
+     "tekstSterker": "Elk plaatje telt voor het getal dat erbij staat. Het aantal plaatjes keer dat getal is het echte aantal."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt de plaatjes geteld. Kijk nog eens voor hoeveel kinderen één fietsje staat.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt 10 en 6 opgeteld. Elk fietsje staat voor een hele groep van 10.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "In een plaatjesgrafiek staat een fietsje voor # [ding]. Bij groep # [ding] # [ding]. Hoeveel [ding] zijn dat?",
+    "naar": "In een plaatjesgrafiek staat een fietsje voor # kinderen. Bij groep # staan # fietsjes. Hoeveel kinderen zijn dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 22,
+   "somtype": "In een plaatjesgrafiek staat één hondje voor # [ding]. In [plek] staan # [ding] hondjes en # [ding] hondje. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 21,
+   "somtypeOrigineel": "In een plaatjesgrafiek staat één hondje voor # [ding]. In [plek] staan # [ding] hondjes en # [ding] hondje. Hoeveel [ding] zijn dat?",
+   "hint1": "Een halve tekening staat voor de helft van wat één tekening betekent.",
+   "hint2": "Reken eerst de volle plaatjes uit: het aantal keer wat één plaatje betekent. Het halve plaatje is de helft daarvan. Tel die twee bij elkaar op.",
+   "ouderzin": "Je kind leest een plaatjesgrafiek met een half plaatje: dat telt voor de helft.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "halve als volle",
+     "claudeDenkfout": null,
+     "regel": "16 honden",
+     "tekst": "Zo telt het halve plaatje mee als een vol plaatje. Voor hoeveel staat het halve plaatje?",
+     "tekstSterker": "Tel de volle plaatjes keer wat één plaatje betekent. Een halve tekening telt voor de helft. Tel alles bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "plaatjes geteld",
+     "claudeDenkfout": null,
+     "regel": "4 honden",
+     "tekst": "Dat getal is het aantal plaatjes, en ook wat één plaatje betekent. Reken uit wat alle plaatjes samen betekenen.",
+     "tekstSterker": "Tel de volle plaatjes keer wat één plaatje betekent. Een halve tekening telt voor de helft. Tel alles bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken de volle plaatjes uit en tel de helft van één plaatje erbij.",
+     "tekstSterker": "Tel de volle plaatjes keer wat één plaatje betekent. Een halve tekening telt voor de helft. Tel alles bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt het halve plaatje als een heel plaatje geteld. Voor hoeveel honden staat een half hondje?",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt de plaatjes geteld in plaats van de honden. Elk heel plaatje staat voor meer dan één hond.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 23,
+   "somtype": "In een staafdiagram is de staaf van zwemmen net zo hoog als die van turnen, maar veel breder getekend. Waarom kan dat je foppen?",
+   "nrOrigineel": 22,
+   "somtypeOrigineel": "In een staafdiagram is de staaf van zwemmen net zo hoog als die van turnen, maar veel breder getekend. Waarom kan dat je foppen?",
+   "hint1": "Waaraan zie je in een staafdiagram hoeveel het is: aan de hoogte of aan de breedte?",
+   "hint2": "In een staafdiagram telt alleen de hoogte. Twee staven die even hoog zijn, staan voor evenveel. Wat doet een bredere staaf dan met je ogen?",
+   "ouderzin": "Je kind ziet dat de breedte van een staaf niets zegt, maar wel kan misleiden.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "breed is meer",
+     "claudeDenkfout": null,
+     "regel": "De brede staaf hoort bij meer kinderen.",
+     "tekst": "In een staafdiagram vertelt alleen de hoogte hoeveel het is. Wat zegt de breedte dan?",
+     "tekstSterker": "Alleen de hoogte van een staaf telt. Een bredere staaf ziet er groter uit, maar staat voor hetzelfde. Daarom horen alle staven even breed te zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "naast elkaar",
+     "claudeDenkfout": null,
+     "regel": "Staven mogen nooit naast elkaar staan.",
+     "tekst": "Staven naast elkaar is heel gewoon. Let op het verschil in breedte.",
+     "tekstSterker": "Alleen de hoogte van een staaf telt. Een bredere staaf ziet er groter uit, maar staat voor hetzelfde. Daarom horen alle staven even breed te zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk alleen naar de hoogte van de staven. Wat doet de breedte met je ogen?",
+     "tekstSterker": "Alleen de hoogte van een staaf telt. Een bredere staaf ziet er groter uit, maar staat voor hetzelfde. Daarom horen alle staven even breed te zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "In een staafdiagram vertelt alleen de hoogte het aantal. Wat zegt de breedte dan?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Staven naast elkaar is heel normaal. Let op het verschil in breedte.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 24,
+   "somtype": "In een staafdiagram over het aantal gelezen boeken begint de as niet bij #, maar bij #. Waarom kan die grafiek je foppen?",
+   "nrOrigineel": 23,
+   "somtypeOrigineel": "In een staafdiagram over het aantal gelezen boeken begint de as niet bij #, maar bij #. Waarom kan die grafiek je foppen?",
+   "hint1": "Bij welk getal begint de as? Welk stuk van de staven zie je dan niet?",
+   "hint2": "Begint de as niet bij nul, dan zie je van elke staaf alleen het stuk boven het begingetal. Hoe zien kleine verschillen tussen de staven er dan uit?",
+   "ouderzin": "Je kind ziet dat een as die niet bij nul begint verschillen groter laat lijken.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "te dicht",
+     "claudeDenkfout": null,
+     "regel": "De staven staan te dicht bij elkaar.",
+     "tekst": "De afstand tussen de staven maakt niets uit. Kijk nog eens bij welk getal de as begint.",
+     "tekstSterker": "Als de as niet bij nul begint, zie je maar een stukje van elke staaf. Een klein verschil lijkt dan groot."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig geteld",
+     "claudeDenkfout": null,
+     "regel": "Er zijn te weinig boeken geteld.",
+     "tekst": "Met de aantallen is niets mis. Kijk naar waar de as begint.",
+     "tekstSterker": "Als de as niet bij nul begint, zie je maar een stukje van elke staaf. Een klein verschil lijkt dan groot."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij welk getal de as begint. Wat zie je dan van de staven?",
+     "tekstSterker": "Als de as niet bij nul begint, zie je maar een stukje van elke staaf. Een klein verschil lijkt dan groot."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De afstand tussen de staven maakt niets uit. Kijk nog eens naar het getal waar de as begint.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Met de aantallen is niets mis. Het probleem zit in de verdeling van de as.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 25,
+   "somtype": "In klas A kiest #% van de # kinderen voor voetbal. In klas B kiest #% van de # kinderen voor voetbal. Welke klas heeft de meeste voetballers?",
+   "nrOrigineel": 24,
+   "somtypeOrigineel": "In klas A kiest #% van de # [ding] voor voetbal. In klas B kiest #% van de # [ding] voor voetbal. Welke klas heeft de meeste voetballers?",
+   "hint1": "Een percentage is een deel van een totaal. Zijn de twee klassen even groot?",
+   "hint2": "Reken voor elke klas uit hoeveel voetballers het zijn: het percentage van het aantal in die klas. Vergelijk daarna de aantallen, niet de percentages.",
+   "ouderzin": "Je kind vergelijkt aantallen in plaats van percentages als de groepen niet even groot zijn.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "percentages vergeleken",
+     "claudeDenkfout": null,
+     "regel": "Klas A, want 50% is meer dan 40%.",
+     "tekst": "Een groter percentage hoeft geen groter aantal te zijn. De klassen zijn niet even groot: reken de aantallen uit.",
+     "tekstSterker": "Een percentage hoort bij een totaal. Bij een grotere klas kan een kleiner percentage toch meer voetballers zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "evenveel",
+     "claudeDenkfout": null,
+     "regel": "Ze hebben allebei evenveel voetballers.",
+     "tekst": "Reken voor allebei de klassen het percentage om naar een echt aantal. Komt er hetzelfde uit?",
+     "tekstSterker": "Een percentage hoort bij een totaal. Bij een grotere klas kan een kleiner percentage toch meer voetballers zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken voor elke klas het aantal voetballers uit, en vergelijk de aantallen.",
+     "tekstSterker": "Een percentage hoort bij een totaal. Bij een grotere klas kan een kleiner percentage toch meer voetballers zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een percentage hoort altijd bij een totaal. De klassen zijn niet even groot.",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Reken beide percentages eerst om naar echte aantallen kinderen.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "In klas A kiest #% van de # [ding] voor voetbal. In klas B kiest #% van de # [ding] voor voetbal. Welke klas heeft de meeste voetballers?",
+    "naar": "In klas A kiest #% van de # kinderen voor voetbal. In klas B kiest #% van de # kinderen voor voetbal. Welke klas heeft de meeste voetballers?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 26,
+   "somtype": "Je ziet een cirkeldiagram met de stukken hond #%, kat #% en konijn #%. Hoeveel kinderen hebben een hond gekozen?",
+   "nrOrigineel": 25,
+   "somtypeOrigineel": "Je ziet een cirkeldiagram met de stukken hond #%, kat #% en konijn #%. Hoeveel kinderen hebben een hond gekozen?",
+   "hint1": "Een cirkeldiagram toont percentages. Staat er ook bij hoeveel er in totaal meededen?",
+   "hint2": "Een percentage is een deel van het totaal. Om een aantal uit te rekenen, heb je het totaal nodig. Staat dat ergens?",
+   "ouderzin": "Je kind ziet dat een cirkeldiagram met percentages zonder totaal geen aantallen geeft.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "percentage als aantal",
+     "claudeDenkfout": null,
+     "regel": "40 kinderen hebben een hond gekozen.",
+     "tekst": "Een percentage is geen aantal. Om een aantal te vinden, moet je weten hoeveel er in totaal meededen. Staat dat erbij?",
+     "tekstSterker": "Een cirkeldiagram toont hoe groot elk stuk is in procenten. Zonder het totaal kun je geen aantal uitrekenen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiende",
+     "claudeDenkfout": null,
+     "regel": "4 kinderen hebben een hond gekozen.",
+     "tekst": "Een percentage is geen aantal, en een tiende ervan ook niet. Zonder het totaal kun je geen aantal uitrekenen.",
+     "tekstSterker": "Een cirkeldiagram toont hoe groot elk stuk is in procenten. Zonder het totaal kun je geen aantal uitrekenen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Een cirkeldiagram toont percentages. Weet je hoeveel er in totaal meededen?",
+     "tekstSterker": "Een cirkeldiagram toont hoe groot elk stuk is in procenten. Zonder het totaal kun je geen aantal uitrekenen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "40% is een deel van het totaal. Staat het totale aantal kinderen er wel bij?",
+     "claudeDenkfout": "procent-verkeerde-basis",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Een percentage is geen aantal. Je hebt eerst het totaal nodig.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 27,
+   "somtype": "Op de onderste as van een lijngrafiek staan #, #, # en # op gelijke afstand van elkaar. Waarom klopt dat niet?",
+   "nrOrigineel": 26,
+   "somtypeOrigineel": "Op de onderste as van een lijngrafiek staan #, #, # en # op gelijke afstand van elkaar. Waarom klopt dat niet?",
+   "hint1": "Hoeveel jaren komen er telkens bij van het ene jaartal naar het volgende?",
+   "hint2": "Op een tijdas hoort dezelfde afstand bij dezelfde tijd. Reken bij elk paar jaartallen naast elkaar uit hoeveel jaar ertussen ligt. Is dat steeds evenveel?",
+   "ouderzin": "Je kind ziet dat een tijdas misleidt als de jaartallen niet in gelijke stappen oplopen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "volgorde",
+     "claudeDenkfout": null,
+     "regel": "De jaren staan in de verkeerde volgorde.",
+     "tekst": "De volgorde van klein naar groot klopt. Kijk naar hoeveel jaar er tussen de jaartallen zit.",
+     "tekstSterker": "Op een tijdas betekent dezelfde afstand ook dezelfde tijd. Zitten er tussen twee punten veel meer jaren, dan klopt de as niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal punten",
+     "claudeDenkfout": null,
+     "regel": "Er horen precies vier punten in een lijngrafiek.",
+     "tekst": "Het aantal punten mag je zelf kiezen. Let op hoeveel jaar er tussen twee punten zit.",
+     "tekstSterker": "Op een tijdas betekent dezelfde afstand ook dezelfde tijd. Zitten er tussen twee punten veel meer jaren, dan klopt de as niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel jaar er tussen twee jaartallen naast elkaar zit. Is dat steeds evenveel?",
+     "tekstSterker": "Op een tijdas betekent dezelfde afstand ook dezelfde tijd. Zitten er tussen twee punten veel meer jaren, dan klopt de as niet."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De volgorde van klein naar groot klopt. Kijk naar de afstand tussen de jaartallen.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Het aantal punten mag je zelf kiezen. Let op hoeveel jaren er tussen twee punten zitten.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 30,
+   "somtype": "Twee grafieken staan naast elkaar. Bij de ene loopt de as tot #, bij de andere tot #. Beide lijnen lijken even steil. Wat weet je nu?",
+   "nrOrigineel": 27,
+   "somtypeOrigineel": "Twee grafieken staan naast elkaar. Bij de ene loopt de as tot #, bij de andere tot #. Beide lijnen lijken even steil. Wat weet je nu?",
+   "hint1": "Kijk tot welk getal elke as loopt. Zijn de assen hetzelfde?",
+   "hint2": "Een even steile lijn betekent bij een as tot een hoog getal veel meer dan bij een as tot een laag getal. Vergelijk daarom eerst de assen, dan pas de lijnen.",
+   "ouderzin": "Je kind vergelijkt twee grafieken pas na het vergelijken van de assen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine as",
+     "claudeDenkfout": null,
+     "regel": "De grafiek met de as tot 50 stijgt het meest.",
+     "tekst": "Kijk hoeveel elke as per hokje omhoog gaat. Bij welke as hoort bij dezelfde steilheid het grootste aantal?",
+     "tekstSterker": "Je mag twee lijnen alleen vergelijken als de assen hetzelfde zijn. Anders hoort dezelfde steilheid bij heel andere aantallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "evenveel",
+     "claudeDenkfout": null,
+     "regel": "Beide grafieken stijgen precies evenveel.",
+     "tekst": "De lijnen lijken hetzelfde, maar de assen zijn dat niet. Vergelijk de getallen bij de assen.",
+     "tekstSterker": "Je mag twee lijnen alleen vergelijken als de assen hetzelfde zijn. Anders hoort dezelfde steilheid bij heel andere aantallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Vergelijk eerst tot welk getal elke as loopt, en dan pas de lijnen.",
+     "tekstSterker": "Je mag twee lijnen alleen vergelijken als de assen hetzelfde zijn. Anders hoort dezelfde steilheid bij heel andere aantallen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De lijnen lijken hetzelfde, maar de assen zijn dat niet. Vergelijk de getallen.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Kijk hoeveel elke as per hokje omhoog gaat voordat je kiest.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 31,
+   "somtype": "Voor een onderzoek over het lievelingsvak zijn # kinderen uit één klas gevraagd. De kop zegt: de hele school kiest rekenen. Klopt dat?",
+   "nrOrigineel": 28,
+   "somtypeOrigineel": "Voor een onderzoek over het lievelingsvak zijn # [ding] uit één klas gevraagd. De kop zegt: de hele school kiest rekenen. Klopt dat?",
+   "hint1": "Hoeveel zijn er gevraagd, en hoeveel zitten er op de hele school?",
+   "hint2": "Een kop over de hele school moet gaan over veel leerlingen uit verschillende klassen. Is dat hier zo?",
+   "ouderzin": "Je kind ziet dat een onderzoek bij een paar leerlingen uit één klas niets zegt over de hele school.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "allemaal rekenen",
+     "claudeDenkfout": null,
+     "regel": "Ja, want alle 5 kozen voor rekenen.",
+     "tekst": "Die paar kozen inderdaad rekenen. Maar hoeveel zitten er op de hele school?",
+     "tekstSterker": "Een handjevol uit één klas zegt weinig over de hele school. Je moet er veel meer vragen, uit verschillende groepen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één klas",
+     "claudeDenkfout": null,
+     "regel": "Ja, één klas lijkt op alle klassen.",
+     "tekst": "Denk aan de andere groepen. Zouden die precies hetzelfde kiezen?",
+     "tekstSterker": "Een handjevol uit één klas zegt weinig over de hele school. Je moet er veel meer vragen, uit verschillende groepen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel zijn er gevraagd? Zegt dat iets over de hele school?",
+     "tekstSterker": "Een handjevol uit één klas zegt weinig over de hele school. Je moet er veel meer vragen, uit verschillende groepen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Die 5 kinderen kozen inderdaad rekenen. Maar hoeveel kinderen zitten er op de hele school?",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Denk eens aan de andere groepen. Zouden die precies hetzelfde kiezen?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Voor een onderzoek over het lievelingsvak zijn # [ding] uit één klas gevraagd. De kop zegt: de hele school kiest rekenen. Klopt dat?",
+    "naar": "Voor een onderzoek over het lievelingsvak zijn # kinderen uit één klas gevraagd. De kop zegt: de hele school kiest rekenen. Klopt dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 32,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Hoe komen [wie] naar school?\" en toont percentages. Eronder staat: \"Fiets en [naam] zijn samen meer dan de helft.\" Klopt dat?",
+   "nrOrigineel": 29,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Hoe komen [wie] naar school?\" en toont percentages. Eronder staat: \"Fiets en [naam] zijn samen meer dan de helft.\" Klopt dat?",
+   "hint1": "Meer dan de helft betekent: meer dan vijftig procent. Het gaat om twee staven samen.",
+   "hint2": "Lees de twee staven af die in de zin staan. Tel hun percentages op. Is dat samen meer dan vijftig procent?",
+   "ouderzin": "Je kind telt twee percentages op en vergelijkt de som met de helft (vijftig procent).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nee",
+     "claudeDenkfout": null,
+     "regel": "Nee, dat klopt niet.",
+     "tekst": "Lees de twee staven nog eens af en tel hun percentages op. Is dat samen meer dan vijftig procent?",
+     "tekstSterker": "Tel de twee percentages op en vergelijk met vijftig procent. Is het samen meer, dan klopt de zin."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet te zien",
+     "claudeDenkfout": null,
+     "regel": "Dat kun je hier niet zien.",
+     "tekst": "De twee percentages staan in het diagram. Tel ze op en vergelijk met vijftig procent.",
+     "tekstSterker": "Tel de twee percentages op en vergelijk met vijftig procent. Is het samen meer, dan klopt de zin."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de twee percentages op en vergelijk met vijftig procent.",
+     "tekstSterker": "Tel de twee percentages op en vergelijk met vijftig procent. Is het samen meer, dan klopt de zin."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de percentages van de staven af en reken de bewering na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Alles wat je nodig hebt staat in het diagram: lees de percentages af en reken na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 33,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Huisdieren in [plek]\" en toont percentages. Eronder staat: \"Hond en [naam] zijn samen meer dan de helft.\" Klopt dat?",
+   "nrOrigineel": 30,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Huisdieren in [plek]\" en toont percentages. Eronder staat: \"Hond en [naam] zijn samen meer dan de helft.\" Klopt dat?",
+   "hint1": "Meer dan de helft betekent: meer dan vijftig procent. Het gaat om twee staven samen.",
+   "hint2": "Lees de twee staven af die in de zin staan. Tel hun percentages op. Is dat samen meer dan vijftig procent?",
+   "ouderzin": "Je kind telt twee percentages op en vergelijkt de som met de helft (vijftig procent).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "ja",
+     "claudeDenkfout": null,
+     "regel": "Ja, dat klopt.",
+     "tekst": "Lees de twee staven nog eens af en tel hun percentages op. Komt dat samen echt boven de vijftig procent uit?",
+     "tekstSterker": "Tel de twee percentages op en vergelijk met vijftig procent. Is het samen meer, dan klopt de zin."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet te zien",
+     "claudeDenkfout": null,
+     "regel": "Dat kun je hier niet zien.",
+     "tekst": "De twee percentages staan in het diagram. Tel ze op en vergelijk met vijftig procent.",
+     "tekstSterker": "Tel de twee percentages op en vergelijk met vijftig procent. Is het samen meer, dan klopt de zin."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de twee percentages op en vergelijk met vijftig procent.",
+     "tekstSterker": "Tel de twee percentages op en vergelijk met vijftig procent. Is het samen meer, dan klopt de zin."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de percentages van de staven af en reken de bewering na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Alles wat je nodig hebt staat in het diagram: lees de percentages af en reken na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 34,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Lievelingsvak in groep #\" en toont percentages. Eronder staat: \"Rekenen en [naam] zijn samen meer dan de helft.\" Klopt dat?",
+   "nrOrigineel": 31,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Lievelingsvak in groep #\" en toont percentages. Eronder staat: \"Rekenen en [naam] zijn samen meer dan de helft.\" Klopt dat?",
+   "hint1": "Meer dan de helft betekent: meer dan vijftig procent. Het gaat om twee staven samen.",
+   "hint2": "Lees de twee staven af die in de zin staan. Tel hun percentages op. Is dat samen meer dan vijftig procent?",
+   "ouderzin": "Je kind telt twee percentages op en vergelijkt de som met de helft (vijftig procent).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nee",
+     "claudeDenkfout": null,
+     "regel": "Nee, dat klopt niet.",
+     "tekst": "Lees de twee staven nog eens af en tel hun percentages op. Is dat samen meer dan vijftig procent?",
+     "tekstSterker": "Tel de twee percentages op en vergelijk met vijftig procent. Is het samen meer, dan klopt de zin."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet te zien",
+     "claudeDenkfout": null,
+     "regel": "Dat kun je hier niet zien.",
+     "tekst": "De twee percentages staan in het diagram. Tel ze op en vergelijk met vijftig procent.",
+     "tekstSterker": "Tel de twee percentages op en vergelijk met vijftig procent. Is het samen meer, dan klopt de zin."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de twee percentages op en vergelijk met vijftig procent.",
+     "tekstSterker": "Tel de twee percentages op en vergelijk met vijftig procent. Is het samen meer, dan klopt de zin."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de percentages van de staven af en reken de bewering na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Alles wat je nodig hebt staat in het diagram: lees de percentages af en reken na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

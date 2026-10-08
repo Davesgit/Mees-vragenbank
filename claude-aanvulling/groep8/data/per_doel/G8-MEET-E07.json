@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T16:45:31+0200",
+ "gegenereerdOp": "2026-10-08T17:24:12+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-MEET-E07",
  "bordtitel": "Wisselkoers, inwoners per km² en snelheid",
@@ -26,27 +26,62 @@
    "optiesTekst": null,
    "antwoord": "60",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Per uur betekent: hoe ver kom je in één uur? Deel de afstand door het aantal uur.",
+   "sterkereHint": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "375",
-     "uitleg": "Per uur betekent delen door de tijd, niet keer."
+     "uitleg": "Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 × getal2",
+     "soort": "keer de tijd",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "75",
-     "uitleg": "Deel door 2,5 uur, niet door 2."
+     "uitleg": "Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "alleen hele uren",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
-     "fout": "147.5",
-     "uitleg": "Snelheid is afstand gedeeld door tijd."
+     "fout": "147,5",
+     "uitleg": "Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "tijd eraf",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "150",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2,5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "375 → Per uur betekent delen door de tijd, niet keer. · 75 → Deel door 2,5 uur, niet door 2. · 147.5 → Snelheid is afstand gedeeld door tijd.",
-   "ouderzin": "",
+   "foutHintsTekst": "375 → Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur. · 75 → Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij. · 147,5 → Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur? · 150 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat. · 2,5 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+   "ouderzin": "Je kind rekent een snelheid uit: de afstand gedeeld door de tijd. Bij een half uur helpt het om eerst allebei te verdubbelen.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -83,7 +118,7 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "147.5",
+      "fout": "147,5",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -101,7 +136,7 @@
      },
      {
       "stap": null,
-      "fout": "147.5",
+      "fout": "147,5",
       "uitleg": "Snelheid is afstand gedeeld door tijd."
      }
     ]
@@ -126,7 +161,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "G8-R8/R9 het-woord/€-notatie/context"
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "Oef-#498: Claude-sleutel met punt als komma → komma ('147.5' → '147,5')"
     ]
    },
    "opBord": false,
@@ -145,7 +181,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?"
+    "somtypeOrigineel": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -161,8 +202,82 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "150",
+       "2,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = getal1 × getal2",
+     "soort": "keer de tijd",
+     "bron": "nieuw",
+     "tekst": "Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "375"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "tijd eraf",
+     "bron": "nieuw",
+     "tekst": "Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "147,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "alleen hele uren",
+     "bron": "claude-taalfix",
+     "tekst": "Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "75"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven."
   },
   {
    "id": "G8-MEET-E07-claude-bank-002",
@@ -177,27 +292,52 @@
    "optiesTekst": null,
    "antwoord": "40",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Per uur betekent: hoe ver kom je in één uur? Deel de afstand door het aantal uur.",
+   "sterkereHint": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "90",
-     "uitleg": "Per uur betekent delen door de tijd, niet keer."
+     "uitleg": "Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 × getal2",
+     "soort": "keer de tijd",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "60",
-     "uitleg": "Deel door 1,5 uur, niet door 1."
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "58.5",
-     "uitleg": "Snelheid is afstand gedeeld door tijd."
+     "fout": "58,5",
+     "uitleg": "Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "tijd eraf",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "1,5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "90 → Per uur betekent delen door de tijd, niet keer. · 60 → Deel door 1,5 uur, niet door 1. · 58.5 → Snelheid is afstand gedeeld door tijd.",
-   "ouderzin": "",
+   "foutHintsTekst": "90 → Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur. · 60 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat. · 58,5 → Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur? · 1,5 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+   "ouderzin": "Je kind rekent een snelheid uit: de afstand gedeeld door de tijd. Bij een half uur helpt het om eerst allebei te verdubbelen.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -234,7 +374,7 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "58.5",
+      "fout": "58,5",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -252,7 +392,7 @@
      },
      {
       "stap": null,
-      "fout": "58.5",
+      "fout": "58,5",
       "uitleg": "Snelheid is afstand gedeeld door tijd."
      }
     ]
@@ -278,6 +418,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "G8-R8/R9 het-woord/€-notatie/context",
+     "Oef-#498: Claude-sleutel met punt als komma → komma ('147.5' → '147,5')",
      "W8 woord kindvriendelijk (G5, enkelvoud)"
     ]
    },
@@ -297,7 +438,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?"
+    "somtypeOrigineel": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -313,8 +459,80 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "60",
+       "1,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = getal1 × getal2",
+     "soort": "keer de tijd",
+     "bron": "nieuw",
+     "tekst": "Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "90"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "tijd eraf",
+     "bron": "nieuw",
+     "tekst": "Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "58,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "alleen hele uren",
+     "bron": "claude-taalfix",
+     "tekst": "Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven."
   },
   {
    "id": "G8-MEET-E07-claude-bank-003",
@@ -329,27 +547,62 @@
    "optiesTekst": null,
    "antwoord": "40",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Per uur betekent: hoe ver kom je in één uur? Deel de afstand door het aantal uur.",
+   "sterkereHint": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "250",
-     "uitleg": "Per uur betekent delen door de tijd, niet keer."
+     "uitleg": "Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 × getal2",
+     "soort": "keer de tijd",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "50",
-     "uitleg": "Deel door 2,5 uur, niet door 2."
+     "uitleg": "Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "alleen hele uren",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
-     "fout": "97.5",
-     "uitleg": "Snelheid is afstand gedeeld door tijd."
+     "fout": "97,5",
+     "uitleg": "Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "tijd eraf",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "100",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2,5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "250 → Per uur betekent delen door de tijd, niet keer. · 50 → Deel door 2,5 uur, niet door 2. · 97.5 → Snelheid is afstand gedeeld door tijd.",
-   "ouderzin": "",
+   "foutHintsTekst": "250 → Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur. · 50 → Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij. · 97,5 → Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur? · 100 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat. · 2,5 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+   "ouderzin": "Je kind rekent een snelheid uit: de afstand gedeeld door de tijd. Bij een half uur helpt het om eerst allebei te verdubbelen.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -386,7 +639,7 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "97.5",
+      "fout": "97,5",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -404,7 +657,7 @@
      },
      {
       "stap": null,
-      "fout": "97.5",
+      "fout": "97,5",
       "uitleg": "Snelheid is afstand gedeeld door tijd."
      }
     ]
@@ -430,6 +683,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "G8-R8/R9 het-woord/€-notatie/context",
+     "Oef-#498: Claude-sleutel met punt als komma → komma ('147.5' → '147,5')",
      "W8 woord kindvriendelijk (G5, enkelvoud)"
     ]
    },
@@ -449,7 +703,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?"
+    "somtypeOrigineel": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -465,8 +724,82 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "100",
+       "2,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = getal1 × getal2",
+     "soort": "keer de tijd",
+     "bron": "nieuw",
+     "tekst": "Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "250"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "tijd eraf",
+     "bron": "nieuw",
+     "tekst": "Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "97,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "alleen hele uren",
+     "bron": "claude-taalfix",
+     "tekst": "Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "50"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven."
   },
   {
    "id": "G8-MEET-E07-claude-bank-004",
@@ -481,27 +814,62 @@
    "optiesTekst": null,
    "antwoord": "20",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Per uur betekent: hoe ver kom je in één uur? Deel de afstand door het aantal uur.",
+   "sterkereHint": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "125",
-     "uitleg": "Per uur betekent delen door de tijd, niet keer."
+     "uitleg": "Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 × getal2",
+     "soort": "keer de tijd",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "25",
-     "uitleg": "Deel door 2,5 uur, niet door 2."
+     "uitleg": "Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "alleen hele uren",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
-     "fout": "47.5",
-     "uitleg": "Snelheid is afstand gedeeld door tijd."
+     "fout": "47,5",
+     "uitleg": "Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "tijd eraf",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "50",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2,5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "125 → Per uur betekent delen door de tijd, niet keer. · 25 → Deel door 2,5 uur, niet door 2. · 47.5 → Snelheid is afstand gedeeld door tijd.",
-   "ouderzin": "",
+   "foutHintsTekst": "125 → Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur. · 25 → Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij. · 47,5 → Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur? · 50 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat. · 2,5 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+   "ouderzin": "Je kind rekent een snelheid uit: de afstand gedeeld door de tijd. Bij een half uur helpt het om eerst allebei te verdubbelen.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -538,7 +906,7 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "47.5",
+      "fout": "47,5",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -556,7 +924,7 @@
      },
      {
       "stap": null,
-      "fout": "47.5",
+      "fout": "47,5",
       "uitleg": "Snelheid is afstand gedeeld door tijd."
      }
     ]
@@ -582,6 +950,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "G8-R8/R9 het-woord/€-notatie/context",
+     "Oef-#498: Claude-sleutel met punt als komma → komma ('147.5' → '147,5')",
      "W8 woord kindvriendelijk (G5, enkelvoud)"
     ]
    },
@@ -601,7 +970,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?"
+    "somtypeOrigineel": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -617,8 +991,82 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "50",
+       "2,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = getal1 × getal2",
+     "soort": "keer de tijd",
+     "bron": "nieuw",
+     "tekst": "Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "125"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "tijd eraf",
+     "bron": "nieuw",
+     "tekst": "Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "47,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "alleen hele uren",
+     "bron": "claude-taalfix",
+     "tekst": "Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "25"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven."
   },
   {
    "id": "G8-MEET-E07-claude-bank-005",
@@ -633,22 +1081,42 @@
    "optiesTekst": null,
    "antwoord": "135",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Elk uur kom je zo ver als de snelheid. Doe de snelheid keer het aantal uur.",
+   "sterkereHint": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
    "foutHints": [
     {
      "stap": null,
      "fout": "90",
-     "uitleg": "Het halve uur telt ook mee: nog een halve keer de snelheid erbij."
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is.",
+     "uitlegSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "91.5",
-     "uitleg": "Elk uur komt er 90 km bij. Dat is keer."
+     "fout": "91,5",
+     "uitleg": "Dat is de tijd plus de snelheid. Elk uur komt de snelheid erbij: doe de snelheid keer het aantal uur.",
+     "uitlegSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 + getal2",
+     "soort": "tijd erbij",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "1,5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is.",
+     "uitlegSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "90 → Het halve uur telt ook mee: nog een halve keer de snelheid erbij. · 91.5 → Elk uur komt er 90 km bij. Dat is keer.",
-   "ouderzin": "",
+   "foutHintsTekst": "90 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is. · 91,5 → Dat is de tijd plus de snelheid. Elk uur komt de snelheid erbij: doe de snelheid keer het aantal uur. · 1,5 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is.",
+   "ouderzin": "Je kind rekent een afstand uit: de snelheid keer de tijd. Een half uur is de helft van de snelheid.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -681,7 +1149,7 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "91.5",
+      "fout": "91,5",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -694,7 +1162,7 @@
      },
      {
       "stap": null,
-      "fout": "91.5",
+      "fout": "91,5",
       "uitleg": "Elk uur komt er 90 km bij. Dat is keer."
      }
     ]
@@ -719,7 +1187,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "G8-R8/R9 het-woord/€-notatie/context"
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "Oef-#498: Claude-sleutel met punt als komma → komma ('147.5' → '147,5')"
     ]
    },
    "opBord": false,
@@ -738,7 +1207,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "Een auto rijdt # uur met # km per uur. Hoeveel kilometer is dat?"
+    "somtypeOrigineel": "Een auto rijdt # uur met # km per uur. Hoeveel kilometer is dat?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 2,
+     "somtype": "Een auto rijdt # uur met # km per uur. Hoeveel kilometer is dat?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -754,8 +1228,66 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "90",
+       "1,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = getal1 + getal2",
+     "soort": "tijd erbij",
+     "bron": "nieuw",
+     "tekst": "Dat is de tijd plus de snelheid. Elk uur komt de snelheid erbij: doe de snelheid keer het aantal uur.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "91,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "alleen hele uren",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren in. Het halve uur moet er ook nog bij: dat is de helft van de snelheid.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe de snelheid keer het aantal uur. Een half uur is de helft van de snelheid.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe de snelheid keer het aantal uur. Een half uur is de helft van de snelheid."
   },
   {
    "id": "G8-MEET-E07-claude-bank-006",
@@ -770,27 +1302,52 @@
    "optiesTekst": null,
    "antwoord": "20",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Per uur betekent: hoe ver kom je in één uur? Deel de afstand door het aantal uur.",
+   "sterkereHint": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "45",
-     "uitleg": "Per uur betekent delen door de tijd, niet keer."
+     "uitleg": "Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 × getal2",
+     "soort": "keer de tijd",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "30",
-     "uitleg": "Deel door 1,5 uur, niet door 1."
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "28.5",
-     "uitleg": "Snelheid is afstand gedeeld door tijd."
+     "fout": "28,5",
+     "uitleg": "Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "tijd eraf",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "1,5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "uitlegSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "45 → Per uur betekent delen door de tijd, niet keer. · 30 → Deel door 1,5 uur, niet door 1. · 28.5 → Snelheid is afstand gedeeld door tijd.",
-   "ouderzin": "",
+   "foutHintsTekst": "45 → Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur. · 30 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat. · 28,5 → Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur? · 1,5 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+   "ouderzin": "Je kind rekent een snelheid uit: de afstand gedeeld door de tijd. Bij een half uur helpt het om eerst allebei te verdubbelen.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -827,7 +1384,7 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "28.5",
+      "fout": "28,5",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -845,7 +1402,7 @@
      },
      {
       "stap": null,
-      "fout": "28.5",
+      "fout": "28,5",
       "uitleg": "Snelheid is afstand gedeeld door tijd."
      }
     ]
@@ -870,6 +1427,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#498: Claude-sleutel met punt als komma → komma ('147.5' → '147,5')",
      "W8 woord kindvriendelijk (G5, enkelvoud)"
     ]
    },
@@ -889,7 +1447,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "[wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?"
+    "somtypeOrigineel": "[wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 3,
+     "somtype": "[wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -905,8 +1468,80 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30",
+       "1,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = getal1 × getal2",
+     "soort": "keer de tijd",
+     "bron": "nieuw",
+     "tekst": "Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "tijd eraf",
+     "bron": "nieuw",
+     "tekst": "Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "28,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "alleen hele uren",
+     "bron": "claude-taalfix",
+     "tekst": "Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven."
   },
   {
    "id": "G8-MEET-E07-claude-bank-007",
@@ -915,28 +1550,58 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een kind reist 2,5 uur met 80 km per uur. Hoeveel kilometer is dat?",
+   "opgave": "Een kind reist 2,5 uur met de trein. De trein rijdt 80 km per uur. Hoeveel kilometer is dat?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "200",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Elk uur kom je zo ver als de snelheid. Doe de snelheid keer het aantal uur.",
+   "sterkereHint": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
    "foutHints": [
     {
      "stap": null,
      "fout": "160",
-     "uitleg": "Het halve uur telt ook mee: nog een halve keer de snelheid erbij."
+     "uitleg": "Daar zitten alleen de hele uren in. Het halve uur moet er ook nog bij: dat is de helft van de snelheid.",
+     "uitlegSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "alleen hele uren",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
-     "fout": "82.5",
-     "uitleg": "Elk uur komt er 80 km bij. Dat is keer."
+     "fout": "82,5",
+     "uitleg": "Dat is de tijd plus de snelheid. Elk uur komt de snelheid erbij: doe de snelheid keer het aantal uur.",
+     "uitlegSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 + getal2",
+     "soort": "tijd erbij",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "80",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is.",
+     "uitlegSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2,5",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is.",
+     "uitlegSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "160 → Het halve uur telt ook mee: nog een halve keer de snelheid erbij. · 82.5 → Elk uur komt er 80 km bij. Dat is keer.",
-   "ouderzin": "",
+   "foutHintsTekst": "160 → Daar zitten alleen de hele uren in. Het halve uur moet er ook nog bij: dat is de helft van de snelheid. · 82,5 → Dat is de tijd plus de snelheid. Elk uur komt de snelheid erbij: doe de snelheid keer het aantal uur. · 80 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is. · 2,5 → Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is.",
+   "ouderzin": "Je kind rekent een afstand uit: de snelheid keer de tijd. Een half uur is de helft van de snelheid.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -969,7 +1634,7 @@
       "denkfout": "deel-vergeten-bij-splitsen"
      },
      {
-      "fout": "82.5",
+      "fout": "82,5",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -982,7 +1647,7 @@
      },
      {
       "stap": null,
-      "fout": "82.5",
+      "fout": "82,5",
       "uitleg": "Elk uur komt er 80 km bij. Dat is keer."
      }
     ]
@@ -1007,7 +1672,9 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D7-TAAL 'mediaan' → 'het middelste getal'; 'trainer'/'shirt' → 'kind'/'trui'"
+     "D7-TAAL 'mediaan' → 'het middelste getal'; 'trainer'/'shirt' → 'kind'/'trui'",
+     "Oef-#498: Claude-sleutel met punt als komma → komma ('147.5' → '147,5')",
+     "Z-#893: de trein rijdt 80 km per uur, niet het kind"
     ]
    },
    "opBord": false,
@@ -1017,7 +1684,7 @@
     "voorstelDoel": null,
     "regel": "G8-P00-park-G7",
     "reden": "uit de G7-park (voorstel G8-MEET-E07, regel G7-M07-snelheid)",
-    "somtype": "[wie] reist # uur met # km per uur. Hoeveel kilometer is dat?",
+    "somtype": "[wie] reist # uur met de trein. De trein rijdt # km per uur. Hoeveel kilometer is dat?",
     "g7Park": {
      "id": "G8-MEET-E07-claude-bank-park-007",
      "voorstelDoel": "G8-MEET-E07",
@@ -1026,12 +1693,17 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "[wie] reist # uur met # km per uur. Hoeveel kilometer is dat?"
+    "somtypeOrigineel": "[wie] reist # uur met # km per uur. Hoeveel kilometer is dat?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 4,
+     "somtype": "[wie] reist # uur met de trein. De trein rijdt # km per uur. Hoeveel kilometer is dat?"
+    }
    },
    "controle": {
-    "antwoord": "ok",
-    "verwacht": "200",
-    "methode": "afstand",
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
     "zonderFoutHints": false,
@@ -1042,11 +1714,71 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "80",
+       "2,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = getal1 + getal2",
+     "soort": "tijd erbij",
+     "bron": "nieuw",
+     "tekst": "Dat is de tijd plus de snelheid. Elk uur komt de snelheid erbij: doe de snelheid keer het aantal uur.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "82,5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "alleen hele uren",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren in. Het halve uur moet er ook nog bij: dat is de helft van de snelheid.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "160"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe de snelheid keer het aantal uur. Een half uur is de helft van de snelheid.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe de snelheid keer het aantal uur. Een half uur is de helft van de snelheid."
   }
  ],
- "hintsSyncOp": "2026-10-08T16:45:33+02:00",
+ "hintsSyncOp": "2026-10-08T17:24:15+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -1066,10 +1798,18 @@
   },
   {
    "batch": "batch5.json",
-   "md5": "e88b62fcb51c"
+   "md5": "e5e40cd4f116"
+  },
+  {
+   "batch": "batch6.json",
+   "md5": "f30a9d051d38"
+  },
+  {
+   "batch": "batch7.json",
+   "md5": "8b977e04cbcd"
   }
  ],
- "geschrevenOp": "2026-10-08T16:45:33+02:00",
+ "geschrevenOp": "2026-10-08T17:24:15+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

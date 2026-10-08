@@ -1,0 +1,1579 @@
+{
+ "batch": "batch6",
+ "geschreven": "2026-10-08",
+ "uitleg": "Hints per somtype (G8-merge, batch 6 = MEET-E07 #1–#4 + MEET-V01 #1–#3 + VBN-E01 #1–#2 + VBN-E03 #1–#5 + VBN-E04 #1–#5 en #32–#37: kaal en meerkeuze (snelheid; hectare, bouwwerk, bekers; tabel en verschil; spaartabel; staafdiagram, onderzoek, meetfout)). Formaat als g7/hints/batch*.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: rekenregels uit scripts/fout_regels.py met een vaste tekst, laag 1 'tekst' en laag 2 'tekstSterker'; 'andere fout' als laatste.",
+ "somtypen": [
+  {
+   "doel": "G8-MEET-E07",
+   "nr": 1,
+   "somtype": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Een [wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?",
+   "hint1": "Per uur betekent: hoe ver kom je in één uur? Deel de afstand door het aantal uur.",
+   "hint2": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+   "ouderzin": "Je kind rekent een snelheid uit: de afstand gedeeld door de tijd. Bij een half uur helpt het om eerst allebei te verdubbelen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer de tijd",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tijd eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen hele uren",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Per uur betekent delen door de tijd, niet keer.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Deel door 2,5 uur, niet door 2.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Snelheid is afstand gedeeld door tijd.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Deel door 1,5 uur, niet door 1.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E07",
+   "nr": 3,
+   "somtype": "[wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[wie] legt # km af in # uur. Hoeveel kilometer per uur is dat?",
+   "hint1": "Per uur betekent: hoe ver kom je in één uur? Deel de afstand door het aantal uur.",
+   "hint2": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal.",
+   "ouderzin": "Je kind rekent een snelheid uit: de afstand gedeeld door de tijd. Bij een half uur helpt het om eerst allebei te verdubbelen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer er in één uur gaat.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer de tijd",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Dat is de afstand keer de tijd. Per uur betekent: hoeveel kilometer in één uur? Deel de afstand door het aantal uur.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tijd eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Dat is de afstand min de tijd. Snelheid is de afstand gedeeld door de tijd: hoeveel kilometer in één uur?",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen hele uren",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dan deel je alleen door de hele uren. Het halve uur hoort er ook bij: deel door de hele tijd, met het halve uur erbij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel de kilometers door het aantal uur. Kijk of het klopt: je antwoord keer het aantal uur moet de afstand geven.",
+     "tekstSterker": "Deel de kilometers door het aantal uur. Met een half uur is dat lastig: maak dan eerst allebei twee keer zo groot. Dan deel je door een heel getal."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Per uur betekent delen door de tijd, niet keer.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Deel door 1,5 uur, niet door 1.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Snelheid is afstand gedeeld door tijd.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E07",
+   "nr": 2,
+   "somtype": "Een auto rijdt # uur met # km per uur. Hoeveel kilometer is dat?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Een auto rijdt # uur met # km per uur. Hoeveel kilometer is dat?",
+   "hint1": "Elk uur kom je zo ver als de snelheid. Doe de snelheid keer het aantal uur.",
+   "hint2": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+   "ouderzin": "Je kind rekent een afstand uit: de snelheid keer de tijd. Een half uur is de helft van de snelheid.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tijd erbij",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Dat is de tijd plus de snelheid. Elk uur komt de snelheid erbij: doe de snelheid keer het aantal uur.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen hele uren",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Daar zitten alleen de hele uren in. Het halve uur moet er ook nog bij: dat is de helft van de snelheid.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe de snelheid keer het aantal uur. Een half uur is de helft van de snelheid.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Het halve uur telt ook mee: nog een halve keer de snelheid erbij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Elk uur komt er 90 km bij. Dat is keer.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E07",
+   "nr": 4,
+   "somtype": "[wie] reist # uur met de trein. De trein rijdt # km per uur. Hoeveel kilometer is dat?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "[wie] reist # uur met # km per uur. Hoeveel kilometer is dat?",
+   "hint1": "Elk uur kom je zo ver als de snelheid. Doe de snelheid keer het aantal uur.",
+   "hint2": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op.",
+   "ouderzin": "Je kind rekent een afstand uit: de snelheid keer de tijd. Een half uur is de helft van de snelheid.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel kilometer het in die hele tijd is.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tijd erbij",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Dat is de tijd plus de snelheid. Elk uur komt de snelheid erbij: doe de snelheid keer het aantal uur.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen hele uren",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Daar zitten alleen de hele uren in. Het halve uur moet er ook nog bij: dat is de helft van de snelheid.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe de snelheid keer het aantal uur. Een half uur is de helft van de snelheid.",
+     "tekstSterker": "Reken eerst de hele uren: de snelheid keer het aantal hele uren. Een half uur is de helft van de snelheid. Tel die twee bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Het halve uur telt ook mee: nog een halve keer de snelheid erbij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Elk uur komt er 80 km bij. Dat is keer.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "[wie] reist # uur met # km per uur. Hoeveel kilometer is dat?",
+    "naar": "[wie] reist # uur met de trein. De trein rijdt # km per uur. Hoeveel kilometer is dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-V01",
+   "nr": 2,
+   "somtype": "Een weiland is # hectare. Hoeveel m² is dat?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Een weiland is # [ding]. Hoeveel m² is dat?",
+   "hint1": "Eén hectare is een vierkant van honderd meter lang en honderd meter breed.",
+   "hint2": "Reken uit hoeveel vierkante meter één hectare is: honderd keer honderd. Doe dat keer het aantal hectare. Bij een kommagetal schuift de komma mee.",
+   "ouderzin": "Je kind rekent hectare om naar vierkante meter: één hectare is honderd keer honderd vierkante meter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat is het aantal hectare. De vraag wil vierkante meters: hoeveel vierkante meter is één hectare?",
+     "tekstSterker": "Reken uit hoeveel vierkante meter één hectare is: honderd keer honderd. Doe dat keer het aantal hectare. Bij een kommagetal schuift de komma mee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Eén hectare is honderd keer honderd vierkante meter. Tel de nullen nog eens.",
+     "tekstSterker": "Reken uit hoeveel vierkante meter één hectare is: honderd keer honderd. Doe dat keer het aantal hectare. Bij een kommagetal schuift de komma mee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderd keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 100",
+     "tekst": "Dat is honderd keer te weinig. Eén hectare is niet honderd vierkante meter, maar honderd keer honderd.",
+     "tekstSterker": "Reken uit hoeveel vierkante meter één hectare is: honderd keer honderd. Doe dat keer het aantal hectare. Bij een kommagetal schuift de komma mee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén hectare is honderd keer honderd vierkante meter. Doe dat keer het aantal hectare.",
+     "tekstSterker": "Reken uit hoeveel vierkante meter één hectare is: honderd keer honderd. Doe dat keer het aantal hectare. Bij een kommagetal schuift de komma mee."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een hectare is 100 × 100 meter. Reken dat uit.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Een hectare is 100 × 100 = 10.000 m².",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een weiland is # [ding]. Hoeveel m² is dat?",
+    "naar": "Een weiland is # hectare. Hoeveel m² is dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-V01",
+   "nr": 1,
+   "somtype": "[bouwsel] Dit bouwwerk is helemaal vol. Hoeveel blokjes zijn er gebruikt?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[bouwsel] Dit bouwwerk is helemaal vol. Hoeveel blokjes zijn er gebruikt?",
+   "hint1": "Het bouwwerk is helemaal vol, ook binnenin. Tel eerst hoeveel blokjes er in één laag liggen.",
+   "hint2": "Tel in één laag de blokjes langs de voorkant en langs de zijkant, en doe die keer elkaar. Tel daarna hoeveel lagen er op elkaar liggen. Doe één laag keer het aantal lagen.",
+   "ouderzin": "Je kind rekent uit hoeveel blokjes er in een vol bouwwerk zitten: de blokjes in één laag keer het aantal lagen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "route van Claude",
+     "claudeDenkfout": null,
+     "regel": "Claudes sleutels (alle): bouwwerk",
+     "tekst": "Dat zijn de drie maten bij elkaar opgeteld. Het bouwwerk is vol. Reken uit hoeveel blokjes er in één laag liggen, en dan in alle lagen samen. / Dat is de helft van alle blokjes. Reken eerst één laag uit en doe dat dan keer het aantal lagen. / Dat is een laag te veel. Tel nog eens hoeveel lagen er op elkaar liggen. / Dat zijn de blokjes van drie kanten samen: voorkant, zijkant en bovenkant. Het bouwwerk is vol, dus er zitten ook blokjes binnenin. / Dat is één laag. Er liggen meer lagen op elkaar: doe één laag keer het aantal lagen. / Reken eerst uit hoeveel blokjes er in één laag liggen. Doe dat daarna keer het aantal lagen. / Dat is een laag te weinig. Tel nog eens hoeveel lagen er op elkaar liggen. / Dat is een rij blokjes te weinig. Kijk nog eens hoe breed en hoe diep het bouwwerk is.",
+     "claudeTekst": null,
+     "waarom": "geen motorregel op de maten van het bouwwerk; per route een eigen tekst, per sleutel gekozen op Claudes tekst en in b6/check op de maten nagerekend",
+     "tekstSterker": "Een vol bouwwerk heeft in elke laag evenveel blokjes. Reken één laag uit: blokjes langs de voorkant keer blokjes langs de zijkant. Doe dat keer het aantal lagen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst uit hoeveel blokjes er in één laag liggen. Doe dat daarna keer het aantal lagen.",
+     "tekstSterker": "Een vol bouwwerk heeft in elke laag evenveel blokjes. Reken één laag uit: blokjes langs de voorkant keer blokjes langs de zijkant. Doe dat keer het aantal lagen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je telde de drie maten op. Het bouwwerk is vol. Reken eerst uit hoeveel blokjes er in één laag liggen, en dan voor alle lagen samen.",
+     "claudeDenkfout": null,
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je telde maar de helft. Reken eerst één laag uit en doe dat dan keer het aantal lagen.",
+     "claudeDenkfout": null,
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je telde een laag te veel. Tel nog eens hoeveel lagen er op elkaar liggen.",
+     "claudeDenkfout": null,
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je telde alleen de blokjes die je aan de buitenkant ziet. Het bouwwerk is vol, dus er zitten ook blokjes binnenin.",
+     "claudeDenkfout": null,
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Dat is één laag. Er liggen 3 lagen op elkaar.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Reken eerst uit hoeveel blokjes er in één laag liggen. Doe dat daarna keer het aantal lagen.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Dat is één laag. Er liggen 4 lagen op elkaar.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je telde een laag te weinig. Tel nog eens hoeveel lagen er op elkaar liggen.",
+     "claudeDenkfout": null,
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Dat is één laag. Er liggen 5 lagen op elkaar.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Dat is één laag. Er liggen 6 lagen op elkaar.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je telde een rij blokjes te weinig. Kijk nog eens hoe breed en hoe diep het bouwwerk is.",
+     "claudeDenkfout": null,
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Dat is één laag. Er liggen 2 lagen op elkaar.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Dat is één laag. Er liggen 7 lagen op elkaar.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-V01",
+   "nr": 3,
+   "somtype": "Een pak met # liter drinken wordt verdeeld over [bakken] van # milliliter. Hoeveel volle bekers krijg je?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Een pak met # liter drinken wordt verdeeld over [bakken] van # [ding]. Hoeveel volle bekers krijg je?",
+   "hint1": "Reken eerst om, zodat het pak en een beker in dezelfde maat staan.",
+   "hint2": "Eén liter is duizend milliliter. Reken het pak om naar milliliter. Deel dat door het aantal milliliter van één beker.",
+   "ouderzin": "Je kind rekent liters om naar milliliters (keer duizend) en deelt dan door wat er in één beker gaat.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één liter",
+     "claudeDenkfout": null,
+     "regel": "4 bekers",
+     "tekst": "Zo vul je alleen één liter. Het pak is meer dan één liter: reken het hele pak om naar milliliter.",
+     "tekstSterker": "Eén liter is duizend milliliter. Reken het pak om naar milliliter. Deel dat door het aantal milliliter van één beker."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nullen",
+     "claudeDenkfout": null,
+     "regel": "15 bekers",
+     "tekst": "Tel de nullen nog eens na, bij het omrekenen én bij het delen. Eén liter is duizend milliliter.",
+     "tekstSterker": "Eén liter is duizend milliliter. Reken het pak om naar milliliter. Deel dat door het aantal milliliter van één beker."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken het pak om naar milliliter en deel door wat er in één beker gaat.",
+     "tekstSterker": "Eén liter is duizend milliliter. Reken het pak om naar milliliter. Deel dat door het aantal milliliter van één beker."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Reken de liters eerst om naar milliliter en deel daarna pas.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Kijk goed naar het aantal nullen bij het omrekenen van liter naar milliliter.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een pak met # liter drinken wordt verdeeld over [bakken] van # [ding]. Hoeveel volle bekers krijg je?",
+    "naar": "Een pak met # liter drinken wordt verdeeld over [bakken] van # milliliter. Hoeveel volle bekers krijg je?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E01",
+   "nr": 1,
+   "somtype": "Een tabel laat zien hoeveel appels een boom geeft: jaar # geeft # appels, jaar # geeft # appels en jaar # geeft # appels. Hoeveel appels verwacht je in jaar #?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Een tabel laat zien hoeveel appels een boom geeft: jaar # [ding] # [ding], jaar # [ding] # [ding] en jaar # [ding] # [ding]. Hoeveel appels verwacht je in jaar #?",
+   "hint1": "Kijk hoeveel er elk jaar bij komt.",
+   "hint2": "Reken uit hoeveel er van het ene jaar naar het volgende bij komt. Komt dat er elk jaar bij? Doe het dan nog één keer erbij, bovenop het grootste aantal uit de tabel.",
+   "ouderzin": "Je kind trekt een tabel door: elk jaar komt er hetzelfde aantal bij, dus ook in het jaar daarna.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "jaar ervoor",
+     "claudeDenkfout": null,
+     "regel": "Ongeveer 60 appels",
+     "tekst": "Dat aantal staat al in de tabel, bij het jaar ervoor. Er komt elk jaar nog wat bij.",
+     "tekstSterker": "Reken uit hoeveel er van het ene jaar naar het volgende bij komt. Komt dat er elk jaar bij? Doe het dan nog één keer erbij, bovenop het grootste aantal uit de tabel."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verdubbeld",
+     "claudeDenkfout": null,
+     "regel": "Ongeveer 120 appels",
+     "tekst": "Dat is het dubbele. Elk jaar komt er hetzelfde aantal bij; het wordt niet elk jaar twee keer zo veel.",
+     "tekstSterker": "Reken uit hoeveel er van het ene jaar naar het volgende bij komt. Komt dat er elk jaar bij? Doe het dan nog één keer erbij, bovenop het grootste aantal uit de tabel."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoeveel er elk jaar bij komt, en doe dat nog één keer erbij.",
+     "tekstSterker": "Reken uit hoeveel er van het ene jaar naar het volgende bij komt. Komt dat er elk jaar bij? Doe het dan nog één keer erbij, bovenop het grootste aantal uit de tabel."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt het aantal van jaar 3 herhaald. Kijk naar de stap tussen de jaren.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt het aantal verdubbeld. Kijk hoeveel er elk jaar bij komt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een tabel laat zien hoeveel appels een boom geeft: jaar # [ding] # [ding], jaar # [ding] # [ding] en jaar # [ding] # [ding]. Hoeveel appels verwacht je in jaar #?",
+    "naar": "Een tabel laat zien hoeveel appels een boom geeft: jaar # geeft # appels, jaar # geeft # appels en jaar # geeft # appels. Hoeveel appels verwacht je in jaar #?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E01",
+   "nr": 2,
+   "somtype": "Vijf kinderen sprongen ver. Dit zijn hun sprongen: # m · # m · # m · # m · # m. Wat is het verschil tussen de verste en de kortste sprong?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Vijf kinderen sprongen ver. Dit zijn hun sprongen: # m · # m · # m · # m · # m. Wat is het verschil tussen de verste en de kortste sprong?",
+   "hint1": "Het verschil is hoeveel de verste sprong verder is dan de kortste.",
+   "hint2": "Zoek de verste en de kortste sprong. Let op: een sprong zonder komma is precies een hele meter. Trek de kortste van de verste af.",
+   "ouderzin": "Je kind zoekt de grootste en de kleinste waarde en trekt ze van elkaar af (het verschil).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "4,4 m",
+     "tekst": "Dat zijn de verste en de kortste sprong samen. Een verschil reken je uit met aftrekken.",
+     "tekstSterker": "Zoek de verste en de kortste sprong. Let op: een sprong zonder komma is precies een hele meter. Trek de kortste van de verste af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere sprongen",
+     "claudeDenkfout": null,
+     "regel": "0,2 m",
+     "tekst": "Dat is het verschil tussen twee andere sprongen. Zoek de verste en de allerkortste sprong. Kijk ook naar de sprong zonder komma.",
+     "tekstSterker": "Zoek de verste en de kortste sprong. Let op: een sprong zonder komma is precies een hele meter. Trek de kortste van de verste af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de verste en de kortste sprong, en trek ze van elkaar af.",
+     "tekstSterker": "Zoek de verste en de kortste sprong. Let op: een sprong zonder komma is precies een hele meter. Trek de kortste van de verste af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een verschil vind je door af te trekken, niet door op te tellen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Zoek eerst echt de allerkortste sprong op in de rij.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E03",
+   "nr": 1,
+   "somtype": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Een spaartabel: week # → €#, week # → €#, week # → €#. Wat staat er bij week #?",
+   "hint1": "Kijk hoeveel er van week tot week bij komt. Dat is elke week hetzelfde.",
+   "hint2": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag.",
+   "ouderzin": "Je kind trekt een spaartabel door: het startbedrag plus voor elke week hetzelfde bedrag.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "niet bij die week",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Klopt dat bedrag bij de week uit de vraag? Begin bij het bedrag van week nul en doe er voor elke week de stap bij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "een week te weinig",
+     "claudeDenkfout": "tafelbuur",
+     "regel": "Claudes sleutel: tafelbuur",
+     "tekst": "Dat is één week te weinig. Tel nog eens hoe vaak de stap erbij komt: één keer voor elke week.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Begin bij het bedrag van week nul. Doe er voor elke week de stap bij, tot je bij de week uit de vraag bent.",
+     "tekstSterker": "Reken de stap uit: het verschil tussen twee weken naast elkaar. Begin bij het bedrag van week nul. Doe de stap erbij, zo vaak als het nummer van de week uit de vraag."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je moet tot week 4 doortellen, niet één stap verder dan de tabel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vergeet het startbedrag van €58 niet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je moet tot week 9 doortellen, niet één stap verder dan de tabel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vergeet het startbedrag van €19 niet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Week 9 betekent 9 keer de stap erbij.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vergeet het startbedrag van €47 niet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je moet tot week 8 doortellen, niet één stap verder dan de tabel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Week 8 betekent 8 keer de stap erbij.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vergeet het startbedrag van €35 niet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je moet tot week 6 doortellen, niet één stap verder dan de tabel.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vergeet het startbedrag van €37 niet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Week 6 betekent 6 keer de stap erbij.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vergeet het startbedrag van €43 niet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vergeet het startbedrag van €51 niet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E03",
+   "nr": 5,
+   "somtype": "Je spaart voor voetbalschoenen. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Je spaart voor ballen. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+   "hint1": "Je begint niet bij nul: er is al een startbedrag. Daarna komt er elke week hetzelfde bedrag bij.",
+   "hint2": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+   "ouderzin": "Je kind rekent uit hoeveel er gespaard is: het startbedrag plus het weekbedrag keer het aantal weken.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "startbedrag vergeten",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "een week te veel",
+     "claudeDenkfout": "tafelbuur",
+     "regel": "Claudes sleutel: tafelbuur",
+     "tekst": "Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alles opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je begon al met €38. Die tel je erbij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Na 5 weken heb je 5 keer gespaard, niet 6 keer.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "5 weken van €15: dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Je spaart voor ballen. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+    "naar": "Je spaart voor voetbalschoenen. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E03",
+   "nr": 2,
+   "somtype": "Je spaart voor een fiets. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Je spaart voor een fiets. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+   "hint1": "Je begint niet bij nul: er is al een startbedrag. Daarna komt er elke week hetzelfde bedrag bij.",
+   "hint2": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+   "ouderzin": "Je kind rekent uit hoeveel er gespaard is: het startbedrag plus het weekbedrag keer het aantal weken.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "startbedrag vergeten",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "een week te veel",
+     "claudeDenkfout": "tafelbuur",
+     "regel": "Claudes sleutel: tafelbuur",
+     "tekst": "Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alles opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je begon al met €21. Die tel je erbij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Na 8 weken heb je 8 keer gespaard, niet 9 keer.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "8 weken van €25: dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Je spaart voor een fiets. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+    "naar": "Je spaart voor een fiets. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E03",
+   "nr": 4,
+   "somtype": "Je spaart voor een step. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Je spaart voor stappen. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+   "hint1": "Je begint niet bij nul: er is al een startbedrag. Daarna komt er elke week hetzelfde bedrag bij.",
+   "hint2": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+   "ouderzin": "Je kind rekent uit hoeveel er gespaard is: het startbedrag plus het weekbedrag keer het aantal weken.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "startbedrag vergeten",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "een week te veel",
+     "claudeDenkfout": "tafelbuur",
+     "regel": "Claudes sleutel: tafelbuur",
+     "tekst": "Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alles opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je begon al met €12. Die tel je erbij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Na 8 weken heb je 8 keer gespaard, niet 9 keer.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "8 weken van €10: dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Je spaart voor stappen. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+    "naar": "Je spaart voor een step. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E03",
+   "nr": 3,
+   "somtype": "Je spaart voor een skateboard. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Je spaart voor sterren. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+   "hint1": "Je begint niet bij nul: er is al een startbedrag. Daarna komt er elke week hetzelfde bedrag bij.",
+   "hint2": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+   "ouderzin": "Je kind rekent uit hoeveel er gespaard is: het startbedrag plus het weekbedrag keer het aantal weken.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "startbedrag vergeten",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is alleen wat er in die weken bij komt. Het startbedrag hoort er ook nog bij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "een week te veel",
+     "claudeDenkfout": "tafelbuur",
+     "regel": "Claudes sleutel: tafelbuur",
+     "tekst": "Dat is één week te veel. Tel nog eens: voor elke week komt het weekbedrag er één keer bij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alles opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Dat zijn de getallen uit de vraag bij elkaar opgeteld. Elke week komt hetzelfde bedrag bij: dat is een keersom.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op.",
+     "tekstSterker": "Reken eerst uit hoeveel er in al die weken bij komt: het weekbedrag keer het aantal weken. Tel daar het startbedrag bij op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je begon al met €14. Die tel je erbij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Na 6 weken heb je 6 keer gespaard, niet 7 keer.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "6 weken van €15: dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Je spaart voor sterren. Je begint met €# en legt elke week €# [ding]. Hoeveel heb je na # weken?",
+    "naar": "Je spaart voor een skateboard. Je begint met €# en legt elke week €# erbij. Hoeveel heb je na # weken?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 1,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Lievelingsvak in groep #\" en toont percentages. Eronder staat: \"# kinderen kozen [naam].\" Klopt dat?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Lievelingsvak in groep #\" en toont percentages. Eronder staat: \"# [ding] kozen [naam].\" Klopt dat?",
+   "hint1": "Wat toont het diagram: aantallen of percentages? En wat noemt de zin eronder?",
+   "hint2": "Een percentage zegt hoeveel van elke honderd. Om een aantal te vinden, moet je weten hoeveel er in totaal meededen. Staat dat ergens bij het diagram?",
+   "ouderzin": "Je kind ziet dat een diagram met percentages geen aantallen geeft: zonder het totaal kun je geen aantal uitrekenen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "ja",
+     "claudeDenkfout": null,
+     "regel": "Ja, dat klopt.",
+     "tekst": "Het diagram toont percentages, geen aantallen. Hoeveel er in totaal meededen, staat er niet bij. Kun je dan een aantal uitrekenen?",
+     "tekstSterker": "Een percentage is een deel van het totaal. Zonder het totaal kun je geen aantal uitrekenen, en dus ook niet zeggen of het klopt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nee",
+     "claudeDenkfout": null,
+     "regel": "Nee, dat klopt niet.",
+     "tekst": "Om te zeggen dat het niet klopt, moet je het aantal kunnen uitrekenen. Het diagram toont alleen percentages. Weet je hoeveel er in totaal meededen?",
+     "tekstSterker": "Een percentage is een deel van het totaal. Zonder het totaal kun je geen aantal uitrekenen, en dus ook niet zeggen of het klopt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Het diagram toont percentages. Weet je hoeveel er in totaal meededen?",
+     "tekstSterker": "Een percentage zegt hoeveel van elke honderd. Om een aantal te vinden, moet je weten hoeveel er in totaal meededen. Staat dat ergens bij het diagram?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk wat de as laat zien: percentages of aantallen? Kun je daarmee een aantal kinderen uitrekenen?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Lievelingsvak in groep #\" en toont percentages. Eronder staat: \"# [ding] kozen [naam].\" Klopt dat?",
+    "naar": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Lievelingsvak in groep #\" en toont percentages. Eronder staat: \"# kinderen kozen [naam].\" Klopt dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 3,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Huisdieren in [plek]\" en toont percentages. Eronder staat: \"# kinderen kozen [naam].\" Klopt dat?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Huisdieren in [plek]\" en toont percentages. Eronder staat: \"# [ding] kozen [naam].\" Klopt dat?",
+   "hint1": "Wat toont het diagram: aantallen of percentages? En wat noemt de zin eronder?",
+   "hint2": "Een percentage zegt hoeveel van elke honderd. Om een aantal te vinden, moet je weten hoeveel er in totaal meededen. Staat dat ergens bij het diagram?",
+   "ouderzin": "Je kind ziet dat een diagram met percentages geen aantallen geeft: zonder het totaal kun je geen aantal uitrekenen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "ja",
+     "claudeDenkfout": null,
+     "regel": "Ja, dat klopt.",
+     "tekst": "Het diagram toont percentages, geen aantallen. Hoeveel er in totaal meededen, staat er niet bij. Kun je dan een aantal uitrekenen?",
+     "tekstSterker": "Een percentage is een deel van het totaal. Zonder het totaal kun je geen aantal uitrekenen, en dus ook niet zeggen of het klopt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nee",
+     "claudeDenkfout": null,
+     "regel": "Nee, dat klopt niet.",
+     "tekst": "Om te zeggen dat het niet klopt, moet je het aantal kunnen uitrekenen. Het diagram toont alleen percentages. Weet je hoeveel er in totaal meededen?",
+     "tekstSterker": "Een percentage is een deel van het totaal. Zonder het totaal kun je geen aantal uitrekenen, en dus ook niet zeggen of het klopt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Het diagram toont percentages. Weet je hoeveel er in totaal meededen?",
+     "tekstSterker": "Een percentage zegt hoeveel van elke honderd. Om een aantal te vinden, moet je weten hoeveel er in totaal meededen. Staat dat ergens bij het diagram?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk wat de as laat zien: percentages of aantallen? Kun je daarmee een aantal kinderen uitrekenen?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Huisdieren in [plek]\" en toont percentages. Eronder staat: \"# [ding] kozen [naam].\" Klopt dat?",
+    "naar": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Huisdieren in [plek]\" en toont percentages. Eronder staat: \"# kinderen kozen [naam].\" Klopt dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 5,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Wat drinken kinderen bij de lunch?\" en toont percentages. Eronder staat: \"# kinderen kozen [naam].\" Klopt dat?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Wat drinken kinderen bij de [ding]?\" en toont percentages. Eronder staat: \"# [ding] kozen [naam].\" Klopt dat?",
+   "hint1": "Wat toont het diagram: aantallen of percentages? En wat noemt de zin eronder?",
+   "hint2": "Een percentage zegt hoeveel van elke honderd. Om een aantal te vinden, moet je weten hoeveel er in totaal meededen. Staat dat ergens bij het diagram?",
+   "ouderzin": "Je kind ziet dat een diagram met percentages geen aantallen geeft: zonder het totaal kun je geen aantal uitrekenen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "ja",
+     "claudeDenkfout": null,
+     "regel": "Ja, dat klopt.",
+     "tekst": "Het diagram toont percentages, geen aantallen. Hoeveel er in totaal meededen, staat er niet bij. Kun je dan een aantal uitrekenen?",
+     "tekstSterker": "Een percentage is een deel van het totaal. Zonder het totaal kun je geen aantal uitrekenen, en dus ook niet zeggen of het klopt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nee",
+     "claudeDenkfout": null,
+     "regel": "Nee, dat klopt niet.",
+     "tekst": "Om te zeggen dat het niet klopt, moet je het aantal kunnen uitrekenen. Het diagram toont alleen percentages. Weet je hoeveel er in totaal meededen?",
+     "tekstSterker": "Een percentage is een deel van het totaal. Zonder het totaal kun je geen aantal uitrekenen, en dus ook niet zeggen of het klopt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Het diagram toont percentages. Weet je hoeveel er in totaal meededen?",
+     "tekstSterker": "Een percentage zegt hoeveel van elke honderd. Om een aantal te vinden, moet je weten hoeveel er in totaal meededen. Staat dat ergens bij het diagram?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk wat de as laat zien: percentages of aantallen? Kun je daarmee een aantal kinderen uitrekenen?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Wat drinken kinderen bij de [ding]?\" en toont percentages. Eronder staat: \"# [ding] kozen [naam].\" Klopt dat?",
+    "naar": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Wat drinken kinderen bij de lunch?\" en toont percentages. Eronder staat: \"# kinderen kozen [naam].\" Klopt dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 2,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Hoe komen [wie] naar school?\" en toont percentages. Eronder staat: \"Meer dan de helft van [wie] kiest [naam].\" Klopt dat?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Hoe komen [wie] naar school?\" en toont percentages. Eronder staat: \"Meer dan de helft van [wie] kiest [naam].\" Klopt dat?",
+   "hint1": "Meer dan de helft betekent: meer dan vijftig procent.",
+   "hint2": "Zoek de staaf die in de zin genoemd wordt. Lees af hoe hoog hij komt: elk streepje is tien procent. Komt hij boven de vijftig procent uit?",
+   "ouderzin": "Je kind leest een percentage af in een staafdiagram en vergelijkt het met de helft (vijftig procent).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "ja",
+     "claudeDenkfout": null,
+     "regel": "Ja, dat klopt.",
+     "tekst": "Lees het percentage van die staaf nog eens af. Komt hij echt boven de vijftig procent uit?",
+     "tekstSterker": "De helft is vijftig procent. Lees de staaf af en vergelijk: is hij hoger dan vijftig procent, dan klopt de zin. Is hij niet hoger, dan klopt de zin niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nee",
+     "claudeDenkfout": null,
+     "regel": "Nee, dat klopt niet.",
+     "tekst": "Lees het percentage van die staaf nog eens af. Meer dan de helft is meer dan vijftig procent. Hoe hoog komt de staaf?",
+     "tekstSterker": "De helft is vijftig procent. Lees de staaf af en vergelijk: is hij hoger dan vijftig procent, dan klopt de zin. Is hij niet hoger, dan klopt de zin niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet te zien",
+     "claudeDenkfout": null,
+     "regel": "Dat kun je hier niet zien.",
+     "tekst": "Meer dan de helft is ook een percentage: meer dan vijftig procent. Dat lees je af aan de staaf.",
+     "tekstSterker": "De helft is vijftig procent. Lees de staaf af en vergelijk: is hij hoger dan vijftig procent, dan klopt de zin. Is hij niet hoger, dan klopt de zin niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees de staaf af en vergelijk met vijftig procent.",
+     "tekstSterker": "De helft is vijftig procent. Lees de staaf af en vergelijk: is hij hoger dan vijftig procent, dan klopt de zin. Is hij niet hoger, dan klopt de zin niet."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de percentages van de staven af en reken de bewering na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Alles wat je nodig hebt staat in het diagram: lees de percentages af en reken na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 4,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Huisdieren in [plek]\" en toont percentages. Eronder staat: \"Meer dan de helft van [wie] kiest [naam].\" Klopt dat?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Huisdieren in [plek]\" en toont percentages. Eronder staat: \"Meer dan de helft van [wie] kiest [naam].\" Klopt dat?",
+   "hint1": "Meer dan de helft betekent: meer dan vijftig procent.",
+   "hint2": "Zoek de staaf die in de zin genoemd wordt. Lees af hoe hoog hij komt: elk streepje is tien procent. Komt hij boven de vijftig procent uit?",
+   "ouderzin": "Je kind leest een percentage af in een staafdiagram en vergelijkt het met de helft (vijftig procent).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "ja",
+     "claudeDenkfout": null,
+     "regel": "Ja, dat klopt.",
+     "tekst": "Lees het percentage van die staaf nog eens af. Komt hij echt boven de vijftig procent uit?",
+     "tekstSterker": "De helft is vijftig procent. Lees de staaf af en vergelijk: is hij hoger dan vijftig procent, dan klopt de zin. Is hij niet hoger, dan klopt de zin niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nee",
+     "claudeDenkfout": null,
+     "regel": "Nee, dat klopt niet.",
+     "tekst": "Lees het percentage van die staaf nog eens af. Meer dan de helft is meer dan vijftig procent. Hoe hoog komt de staaf?",
+     "tekstSterker": "De helft is vijftig procent. Lees de staaf af en vergelijk: is hij hoger dan vijftig procent, dan klopt de zin. Is hij niet hoger, dan klopt de zin niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet te zien",
+     "claudeDenkfout": null,
+     "regel": "Dat kun je hier niet zien.",
+     "tekst": "Meer dan de helft is ook een percentage: meer dan vijftig procent. Dat lees je af aan de staaf.",
+     "tekstSterker": "De helft is vijftig procent. Lees de staaf af en vergelijk: is hij hoger dan vijftig procent, dan klopt de zin. Is hij niet hoger, dan klopt de zin niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees de staaf af en vergelijk met vijftig procent.",
+     "tekstSterker": "De helft is vijftig procent. Lees de staaf af en vergelijk: is hij hoger dan vijftig procent, dan klopt de zin. Is hij niet hoger, dan klopt de zin niet."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de percentages van de staven af en reken de bewering na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Alles wat je nodig hebt staat in het diagram: lees de percentages af en reken na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 36,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Wat drinken kinderen bij de lunch?\" en toont percentages. Eronder staat: \"Meer dan de helft van [wie] kiest [naam].\" Klopt dat?",
+   "nrOrigineel": 33,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Wat drinken kinderen bij de [ding]?\" en toont percentages. Eronder staat: \"Meer dan de helft van [wie] kiest [naam].\" Klopt dat?",
+   "hint1": "Meer dan de helft betekent: meer dan vijftig procent.",
+   "hint2": "Zoek de staaf die in de zin genoemd wordt. Lees af hoe hoog hij komt: elk streepje is tien procent. Komt hij boven de vijftig procent uit?",
+   "ouderzin": "Je kind leest een percentage af in een staafdiagram en vergelijkt het met de helft (vijftig procent).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "ja",
+     "claudeDenkfout": null,
+     "regel": "Ja, dat klopt.",
+     "tekst": "Lees het percentage van die staaf nog eens af. Komt hij echt boven de vijftig procent uit?",
+     "tekstSterker": "De helft is vijftig procent. Lees de staaf af en vergelijk: is hij hoger dan vijftig procent, dan klopt de zin. Is hij niet hoger, dan klopt de zin niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nee",
+     "claudeDenkfout": null,
+     "regel": "Nee, dat klopt niet.",
+     "tekst": "Lees het percentage van die staaf nog eens af. Meer dan de helft is meer dan vijftig procent. Hoe hoog komt de staaf?",
+     "tekstSterker": "De helft is vijftig procent. Lees de staaf af en vergelijk: is hij hoger dan vijftig procent, dan klopt de zin. Is hij niet hoger, dan klopt de zin niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet te zien",
+     "claudeDenkfout": null,
+     "regel": "Dat kun je hier niet zien.",
+     "tekst": "Meer dan de helft is ook een percentage: meer dan vijftig procent. Dat lees je af aan de staaf.",
+     "tekstSterker": "De helft is vijftig procent. Lees de staaf af en vergelijk: is hij hoger dan vijftig procent, dan klopt de zin. Is hij niet hoger, dan klopt de zin niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees de staaf af en vergelijk met vijftig procent.",
+     "tekstSterker": "De helft is vijftig procent. Lees de staaf af en vergelijk: is hij hoger dan vijftig procent, dan klopt de zin. Is hij niet hoger, dan klopt de zin niet."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de percentages van de staven af en reken de bewering na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Alles wat je nodig hebt staat in het diagram: lees de percentages af en reken na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Wat drinken kinderen bij de [ding]?\" en toont percentages. Eronder staat: \"Meer dan de helft van [wie] kiest [naam].\" Klopt dat?",
+    "naar": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Wat drinken kinderen bij de lunch?\" en toont percentages. Eronder staat: \"Meer dan de helft van [wie] kiest [naam].\" Klopt dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 35,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Lievelingsvak in groep #\" en toont percentages. Eronder staat: \"Tekenen is precies # keer zo vaak gekozen als [naam].\" Klopt dat?",
+   "nrOrigineel": 32,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Lievelingsvak in groep #\" en toont percentages. Eronder staat: \"Tekenen is precies # keer zo vaak gekozen als [naam].\" Klopt dat?",
+   "hint1": "Lees de twee staven af die in de zin staan.",
+   "hint2": "Lees de staaf van tekenen en de andere staaf uit de zin af. Doe de andere staaf keer het getal uit de zin. Komt dat precies uit op de staaf van tekenen?",
+   "ouderzin": "Je kind leest twee percentages af en controleert of het ene precies een aantal keer zo groot is als het andere.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "ja",
+     "claudeDenkfout": null,
+     "regel": "Ja, dat klopt.",
+     "tekst": "Reken het na: doe de andere staaf keer het getal uit de zin. Komt dat precies uit op tekenen?",
+     "tekstSterker": "Vergelijk de twee staven: hoeveel keer past de kleine staaf in de staaf van tekenen? Is dat precies het getal uit de zin, dan klopt het."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet te zien",
+     "claudeDenkfout": null,
+     "regel": "Dat kun je hier niet zien.",
+     "tekst": "De twee percentages staan in het diagram. Dan kun je ze vergelijken: lees ze af en reken het na.",
+     "tekstSterker": "Vergelijk de twee staven: hoeveel keer past de kleine staaf in de staaf van tekenen? Is dat precies het getal uit de zin, dan klopt het."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees de twee staven af en reken na of het klopt.",
+     "tekstSterker": "Vergelijk de twee staven: hoeveel keer past de kleine staaf in de staaf van tekenen? Is dat precies het getal uit de zin, dan klopt het."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de percentages van de staven af en reken de bewering na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Alles wat je nodig hebt staat in het diagram: lees de percentages af en reken na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 37,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Wat drinken kinderen bij de lunch?\" en toont percentages. Eronder staat: \"Water en [naam] zijn samen meer dan de helft.\" Klopt dat?",
+   "nrOrigineel": 34,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Wat drinken kinderen bij de [ding]?\" en toont percentages. Eronder staat: \"Water en [naam] zijn samen meer dan de helft.\" Klopt dat?",
+   "hint1": "Meer dan de helft betekent: meer dan vijftig procent. Het gaat om twee staven samen.",
+   "hint2": "Lees de twee staven af die in de zin staan. Tel hun percentages op. Is dat samen meer dan vijftig procent?",
+   "ouderzin": "Je kind telt twee percentages op en vergelijkt de som met de helft (vijftig procent).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nee",
+     "claudeDenkfout": null,
+     "regel": "Nee, dat klopt niet.",
+     "tekst": "Kijk naar de twee staven samen, niet naar één staaf. Tel hun percentages op.",
+     "tekstSterker": "Tel de twee percentages op en vergelijk met vijftig procent. Is het samen meer, dan klopt de zin."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet te zien",
+     "claudeDenkfout": null,
+     "regel": "Dat kun je hier niet zien.",
+     "tekst": "De twee percentages staan in het diagram. Tel ze op en vergelijk met vijftig procent.",
+     "tekstSterker": "Tel de twee percentages op en vergelijk met vijftig procent. Is het samen meer, dan klopt de zin."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de twee percentages op en vergelijk met vijftig procent.",
+     "tekstSterker": "Tel de twee percentages op en vergelijk met vijftig procent. Is het samen meer, dan klopt de zin."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de percentages van de staven af en reken de bewering na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Alles wat je nodig hebt staat in het diagram: lees de percentages af en reken na.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Wat drinken kinderen bij de [ding]?\" en toont percentages. Eronder staat: \"Water en [naam] zijn samen meer dan de helft.\" Klopt dat?",
+    "naar": "[staafdiagram] Elk streepje is #. ⏎ Dit staafdiagram heet \"Wat drinken kinderen bij de lunch?\" en toont percentages. Eronder staat: \"Water en [naam] zijn samen meer dan de helft.\" Klopt dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 14,
+   "somtype": "Een klas telt # kinderen. In een staafdiagram over huisdieren zijn de staven samen # hoog. Wat is hiervoor de beste verklaring?",
+   "nrOrigineel": 35,
+   "somtypeOrigineel": "Een klas telt # [ding]. In een staafdiagram over huisdieren zijn de staven samen # [ding]. Wat is hiervoor de beste verklaring?",
+   "hint1": "Tel je alle staven op, dan kom je boven het aantal in de klas uit. Hoe kan dat?",
+   "hint2": "Elke staaf telt de kinderen met dat dier. Wat moet er gebeuren om samen boven het aantal in de klas uit te komen? Kies de uitleg die dat kan verklaren zonder dat er iets fout is.",
+   "ouderzin": "Je kind zoekt een gewone verklaring voor een diagram dat optelt tot meer dan het aantal in de klas.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "fout getekend",
+     "claudeDenkfout": null,
+     "regel": "De grafiek is fout getekend",
+     "tekst": "Een diagram dat samen hoger uitkomt dan de klas, hoeft niet fout te zijn. Kan iemand bij twee staven meetellen?",
+     "tekstSterker": "Iemand met een hond en een kat telt bij twee staven mee. Zo worden de staven samen hoger dan het aantal in de klas, zonder dat er iets fout is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit het diagram",
+     "claudeDenkfout": null,
+     "regel": "Er zitten 30 kinderen in de klas",
+     "tekst": "Hoeveel er in de klas zitten, staat al in de vraag. Dat is minder dan de staven samen. Hoe kan dat dan?",
+     "tekstSterker": "Iemand met een hond en een kat telt bij twee staven mee. Zo worden de staven samen hoger dan het aantal in de klas, zonder dat er iets fout is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees de vraag nog eens: hoeveel zitten er in de klas? Kan iemand bij twee staven meetellen?",
+     "tekstSterker": "Iemand met een hond en een kat telt bij twee staven mee. Zo worden de staven samen hoger dan het aantal in de klas, zonder dat er iets fout is."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Denk eerst na of er een gewone reden kan zijn waarom een kind twee keer meetelt.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "In de vraag staat duidelijk hoeveel kinderen er in de klas zitten. Lees dat nog eens.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een klas telt # [ding]. In een staafdiagram over huisdieren zijn de staven samen # [ding]. Wat is hiervoor de beste verklaring?",
+    "naar": "Een klas telt # kinderen. In een staafdiagram over huisdieren zijn de staven samen # hoog. Wat is hiervoor de beste verklaring?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 28,
+   "somtype": "Sanne vraagt alleen aan kinderen van de schaakclub wat hun favoriete spel is. Bijna iedereen zegt schaken. Wat is er mis met haar onderzoek?",
+   "nrOrigineel": 36,
+   "somtypeOrigineel": "Sanne vraagt alleen aan kinderen van de schaakclub wat hun favoriete spel is. Bijna iedereen zegt schaken. Wat is er mis met haar onderzoek?",
+   "hint1": "Wie vroeg Sanne het? Houden die kinderen net zo veel van schaken als de rest van de school?",
+   "hint2": "Stel dat Sanne het aan alle kinderen van de school vraagt. Zou dan ook zo goed als iedereen schaken zeggen? Kies de uitleg die past bij dat verschil.",
+   "ouderzin": "Je kind ziet dat een onderzoek alleen eerlijk is als je het vraagt aan kinderen die lijken op iedereen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "Zij vroeg het aan te weinig kinderen",
+     "tekst": "Stel dat ze honderd schakers vraagt. Zou de uitkomst dan eerlijker zijn? Lijken die kinderen op alle kinderen van de school?",
+     "tekstSterker": "Een eerlijk onderzoek vraagt het aan kinderen die lijken op iedereen. Kinderen van een schaakclub kiezen vaak schaken, omdat ze daar al van houden. Zo'n groep heet eenzijdig."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niets mis",
+     "claudeDenkfout": null,
+     "regel": "Er is niets mis met haar onderzoek",
+     "tekst": "Op een schaakclub zitten kinderen die graag schaken. Lijken zij op alle kinderen van de school?",
+     "tekstSterker": "Een eerlijk onderzoek vraagt het aan kinderen die lijken op iedereen. Kinderen van een schaakclub kiezen vaak schaken, omdat ze daar al van houden. Zo'n groep heet eenzijdig."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lijken de kinderen die Sanne vroeg op alle kinderen van de school?",
+     "tekstSterker": "Een eerlijk onderzoek vraagt het aan kinderen die lijken op iedereen. Kinderen van een schaakclub kiezen vaak schaken, omdat ze daar al van houden. Zo'n groep heet eenzijdig."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Stel je voor dat zij honderd schakers vraagt. Zou de uitkomst dan eerlijker zijn?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Bedenk of deze groep wel lijkt op alle kinderen van de school.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-VBN-E04",
+   "nr": 29,
+   "somtype": "Tim meet vijf keer zijn plant. # cm, # cm, # cm, # cm en # cm. Welke meting klopt waarschijnlijk niet?",
+   "nrOrigineel": 37,
+   "somtypeOrigineel": "Tim meet vijf keer zijn plant. # cm, # cm, # cm, # cm en # cm. Welke meting klopt waarschijnlijk niet?",
+   "hint1": "Een plant groeit langzaam. Metingen die kloppen, liggen dicht bij elkaar.",
+   "hint2": "Zet de metingen op volgorde. Kijk hoe groot de stap is tussen twee metingen naast elkaar. Waar is die stap veel groter dan de rest?",
+   "ouderzin": "Je kind zoekt de meting die ver van de andere af ligt (een uitschieter): die is waarschijnlijk fout gemeten.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleinste",
+     "claudeDenkfout": null,
+     "regel": "10 cm",
+     "tekst": "Die meting ligt dicht bij de andere. Zoek de meting die er ver vandaan ligt.",
+     "tekstSterker": "Metingen die kloppen, liggen dicht bij elkaar. Een meting die ver van de rest af ligt, is waarschijnlijk fout gemeten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "dichtbij",
+     "claudeDenkfout": null,
+     "regel": "15 cm",
+     "tekst": "Die meting past bij de andere: het verschil is klein. Zoek de meting die er ver vandaan ligt.",
+     "tekstSterker": "Metingen die kloppen, liggen dicht bij elkaar. Een meting die ver van de rest af ligt, is waarschijnlijk fout gemeten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de meting die ver van de andere af ligt.",
+     "tekstSterker": "Metingen die kloppen, liggen dicht bij elkaar. Een meting die ver van de rest af ligt, is waarschijnlijk fout gemeten."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De kleinste waarde past hier goed bij de rest. Kijk naar de waarde die er ver naast ligt.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "15 cm ligt dicht bij de andere metingen. Zoek de waarde die er heel sterk uit springt.",
+     "claudeDenkfout": "schatting-verkeerd",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

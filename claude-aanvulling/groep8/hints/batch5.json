@@ -9,7 +9,7 @@
    "somtype": "Een vijver heeft een inhoud van # [ding]. Hoeveel liter is dat?",
    "nrOrigineel": 1,
    "somtypeOrigineel": "Een bak voor knopen heeft een inhoud van # [ding]. Hoeveel liter is dat?",
-   "hint1": "Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.",
+   "hint1": "Een kubieke meter (m³) is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.",
    "hint2": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
    "ouderzin": "Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.",
    "foutHints": [
@@ -71,7 +71,7 @@
    "somtype": "Een watertank heeft een inhoud van # [ding]. Hoeveel liter is dat?",
    "nrOrigineel": 2,
    "somtypeOrigineel": "Een bak voor tanden heeft een inhoud van # [ding]. Hoeveel liter is dat?",
-   "hint1": "Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.",
+   "hint1": "Een kubieke meter (m³) is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.",
    "hint2": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
    "ouderzin": "Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.",
    "foutHints": [
@@ -133,7 +133,7 @@
    "somtype": "Een regenput heeft een inhoud van # [ding]. Hoeveel liter is dat?",
    "nrOrigineel": 3,
    "somtypeOrigineel": "Een bak voor truien heeft een inhoud van # [ding]. Hoeveel liter is dat?",
-   "hint1": "Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.",
+   "hint1": "Een kubieke meter (m³) is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.",
    "hint2": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
    "ouderzin": "Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.",
    "foutHints": [
@@ -195,7 +195,7 @@
    "somtype": "Een opblaaszwembad heeft een inhoud van # [ding]. Hoeveel liter is dat?",
    "nrOrigineel": 4,
    "somtypeOrigineel": "Een bak voor wortels heeft een inhoud van # [ding]. Hoeveel liter is dat?",
-   "hint1": "Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.",
+   "hint1": "Een kubieke meter (m³) is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.",
    "hint2": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
    "ouderzin": "Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.",
    "foutHints": [
@@ -271,18 +271,18 @@
     },
     {
      "bron": "nieuw",
-     "soort": "nul te weinig",
-     "claudeDenkfout": null,
-     "regel": "fout = antwoord : 10",
-     "tekst": "Dat is tien keer te weinig. Tel de nullen nog eens na: hoeveel MB past er op de kaart?",
-     "tekstSterker": "Doe het aantal GB van de kaart keer duizend. Dan weet je hoeveel MB er op de kaart past. Deel dat door het aantal MB van één filmpje."
-    },
-    {
-     "bron": "nieuw",
      "soort": "getal uit de vraag",
      "claudeDenkfout": null,
      "regel": "fout = een getal uit de vraag",
      "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel filmpjes er op de kaart passen.",
+     "tekstSterker": "Doe het aantal GB van de kaart keer duizend. Dan weet je hoeveel MB er op de kaart past. Deel dat door het aantal MB van één filmpje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = een nul te weinig (afgekapt)",
+     "tekst": "Dan is er ergens een nul weggevallen. Tel de nullen nog eens na: hoeveel MB past er op de kaart, en hoeveel MB is één filmpje?",
      "tekstSterker": "Doe het aantal GB van de kaart keer duizend. Dan weet je hoeveel MB er op de kaart past. Deel dat door het aantal MB van één filmpje."
     },
     {
@@ -638,10 +638,10 @@
    "foutHints": [
     {
      "bron": "nieuw",
-     "soort": "getal uit de vraag",
+     "soort": "teken vergeten",
      "claudeDenkfout": null,
-     "regel": "fout = een getal uit de vraag",
-     "tekst": "Kijk goed naar het teken voor het getal. Een min betekent: onder nul, links van de nul.",
+     "regel": "fout = teken vergeten",
+     "tekst": "Kijk goed of er een min voor het getal staat. Met een min hoort het links van de nul, zonder min rechts.",
      "tekstSterker": "Staat er een min voor het getal? Ga dan vanaf de nul naar links. Zonder min ga je naar rechts. Tel de stappen."
     },
     {
@@ -690,10 +690,26 @@
     },
     {
      "bron": "nieuw",
+     "soort": "van nul af geteld",
+     "claudeDenkfout": null,
+     "regel": "fout = van nul af geteld",
+     "tekst": "Dat is alleen het aantal graden kouder, gerekend vanaf nul. Je begint boven nul: tel eerst de graden tot nul, en ga dan verder omlaag.",
+     "tekstSterker": "Ga eerst omlaag tot nul. Tel hoeveel graden je daarna nog verder omlaag moet. Het wordt dat aantal graden onder nul: zet er een min voor."
+    },
+    {
+     "bron": "nieuw",
      "soort": "getal uit de vraag",
      "claudeDenkfout": null,
      "regel": "fout = een getal uit de vraag",
      "tekst": "Dat getal staat al in de vraag. Je zoekt de temperatuur nadat het kouder is geworden.",
+     "tekstSterker": "Ga eerst omlaag tot nul. Tel hoeveel graden je daarna nog verder omlaag moet. Het wordt dat aantal graden onder nul: zet er een min voor."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Dat is één graad ernaast. Tel nog eens, graad voor graad: eerst omlaag tot nul, dan verder omlaag.",
      "tekstSterker": "Ga eerst omlaag tot nul. Tel hoeveel graden je daarna nog verder omlaag moet. Het wordt dat aantal graden onder nul: zet er een min voor."
     },
     {
@@ -736,10 +752,42 @@
    "foutHints": [
     {
      "bron": "nieuw",
+     "soort": "teken vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = teken vergeten",
+     "tekst": "Het was al onder nul en het wordt nog kouder. Dan blijf je onder nul: er hoort een min voor het getal.",
+     "tekstSterker": "Tel de graden onder nul en de graden die het kouder wordt bij elkaar op. Zo ver onder nul kom je: zet er een min voor."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde richting",
+     "claudeDenkfout": null,
+     "regel": "fout = verkeerde richting",
+     "tekst": "Dat is warmer dan aan het begin. Kouder betekent: nog verder omlaag op de thermometer.",
+     "tekstSterker": "Tel de graden onder nul en de graden die het kouder wordt bij elkaar op. Zo ver onder nul kom je: zet er een min voor."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "van nul af geteld",
+     "claudeDenkfout": null,
+     "regel": "fout = van nul af geteld",
+     "tekst": "Dat is alleen het aantal graden kouder, gerekend vanaf nul. Je begint al onder nul: tel de graden onder nul en de graden kouder bij elkaar op.",
+     "tekstSterker": "Tel de graden onder nul en de graden die het kouder wordt bij elkaar op. Zo ver onder nul kom je: zet er een min voor."
+    },
+    {
+     "bron": "nieuw",
      "soort": "getal uit de vraag",
      "claudeDenkfout": null,
      "regel": "fout = een getal uit de vraag",
      "tekst": "Dat getal staat al in de vraag. Je zoekt de temperatuur nadat het nog kouder is geworden.",
+     "tekstSterker": "Tel de graden onder nul en de graden die het kouder wordt bij elkaar op. Zo ver onder nul kom je: zet er een min voor."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Dat is één graad ernaast. Tel de graden onder nul en de graden die het kouder wordt nog eens bij elkaar op.",
      "tekstSterker": "Tel de graden onder nul en de graden die het kouder wordt bij elkaar op. Zo ver onder nul kom je: zet er een min voor."
     },
     {
@@ -777,7 +825,7 @@
    "nrOrigineel": 1,
    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
    "hint1": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
-   "hint2": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+   "hint2": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten.",
    "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "foutHints": [
     {
@@ -785,10 +833,10 @@
      "soort": "een uur te vroeg",
      "claudeDenkfout": "tijd-als-kommagetal",
      "regel": "Claudes sleutel: tijd-als-kommagetal",
-     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen een heel uur of meer worden.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten."
     },
     {
      "bron": "claude-taalfix",
@@ -798,7 +846,7 @@
      "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten."
     },
     {
      "bron": "nieuw",
@@ -806,7 +854,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
-     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten."
     }
    ],
    "claudeVervangen": [
@@ -835,7 +883,7 @@
    "nrOrigineel": 4,
    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
    "hint1": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
-   "hint2": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+   "hint2": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten.",
    "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "foutHints": [
     {
@@ -843,10 +891,10 @@
      "soort": "een uur te vroeg",
      "claudeDenkfout": "tijd-als-kommagetal",
      "regel": "Claudes sleutel: tijd-als-kommagetal",
-     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen een heel uur of meer worden.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten."
     },
     {
      "bron": "claude-taalfix",
@@ -856,7 +904,7 @@
      "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten."
     },
     {
      "bron": "nieuw",
@@ -864,7 +912,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
-     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten."
     }
    ],
    "claudeVervangen": [
@@ -893,7 +941,7 @@
    "nrOrigineel": 11,
    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
    "hint1": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
-   "hint2": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+   "hint2": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten.",
    "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "foutHints": [
     {
@@ -901,10 +949,10 @@
      "soort": "een uur te vroeg",
      "claudeDenkfout": "tijd-als-kommagetal",
      "regel": "Claudes sleutel: tijd-als-kommagetal",
-     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen een heel uur of meer worden.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten."
     },
     {
      "bron": "claude-taalfix",
@@ -914,7 +962,7 @@
      "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten."
     },
     {
      "bron": "nieuw",
@@ -922,7 +970,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
-     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten."
     }
    ],
    "claudeVervangen": [
@@ -1009,7 +1057,7 @@
    "nrOrigineel": 2,
    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
    "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
-   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Zestig minuten is een uur.",
    "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
    "foutHints": [
     {
@@ -1020,7 +1068,7 @@
      "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij."
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Zestig minuten is een uur."
     },
     {
      "bron": "claude-taalfix",
@@ -1030,7 +1078,7 @@
      "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij."
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Zestig minuten is een uur."
     },
     {
      "bron": "nieuw",
@@ -1038,7 +1086,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij."
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Zestig minuten is een uur."
     }
    ],
    "claudeVervangen": [
@@ -1135,7 +1183,7 @@
    "nrOrigineel": 10,
    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
    "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
-   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul. Zestig minuten is een uur.",
    "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
    "foutHints": [
     {
@@ -1146,7 +1194,7 @@
      "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul."
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul. Zestig minuten is een uur."
     },
     {
      "bron": "claude-taalfix",
@@ -1156,7 +1204,7 @@
      "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul."
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul. Zestig minuten is een uur."
     },
     {
      "bron": "nieuw",
@@ -1164,7 +1212,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul."
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul. Zestig minuten is een uur."
     }
    ],
    "claudeVervangen": [
@@ -1193,7 +1241,7 @@
    "nrOrigineel": 3,
    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
    "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
-   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Zestig minuten is een uur.",
    "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
    "foutHints": [
     {
@@ -1204,7 +1252,7 @@
      "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Zestig minuten is een uur."
     },
     {
      "bron": "claude-taalfix",
@@ -1214,7 +1262,7 @@
      "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Zestig minuten is een uur."
     },
     {
      "bron": "nieuw",
@@ -1222,7 +1270,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Zestig minuten is een uur."
     }
    ],
    "claudeVervangen": [
@@ -1314,7 +1362,7 @@
    "nrOrigineel": 7,
    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
    "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
-   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Zestig minuten is een uur.",
    "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
    "foutHints": [
     {
@@ -1325,7 +1373,7 @@
      "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Zestig minuten is een uur."
     },
     {
      "bron": "claude-taalfix",
@@ -1335,7 +1383,7 @@
      "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Zestig minuten is een uur."
     },
     {
      "bron": "nieuw",
@@ -1343,7 +1391,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Zestig minuten is een uur."
     }
    ],
    "claudeVervangen": [
@@ -1430,7 +1478,7 @@
    "nrOrigineel": 12,
    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
    "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
-   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor.",
+   "hint2": "Doe de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil eraf. Kom je na middernacht uit, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor. Zestig minuten is een uur.",
    "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
    "foutHints": [
     {
@@ -1441,7 +1489,7 @@
      "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor."
+     "tekstSterker": "Doe de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil eraf. Kom je na middernacht uit, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor. Zestig minuten is een uur."
     },
     {
      "bron": "claude-taalfix",
@@ -1451,7 +1499,7 @@
      "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor."
+     "tekstSterker": "Doe de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil eraf. Kom je na middernacht uit, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor. Zestig minuten is een uur."
     },
     {
      "bron": "nieuw",
@@ -1459,7 +1507,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
-     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor."
+     "tekstSterker": "Doe de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil eraf. Kom je na middernacht uit, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor. Zestig minuten is een uur."
     }
    ],
    "claudeVervangen": [

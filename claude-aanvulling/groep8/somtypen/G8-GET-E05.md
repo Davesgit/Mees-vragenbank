@@ -21,8 +21,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 23  (controle: ok)
     - **Fout-hints (Claude):** 24 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
   - `G8-GET-E05-claude-bank-059` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een kist passen 25 boeken. Er zijn 597 boeken. Op de rekenmachine staat 23,88. Hoeveel kisten zijn er nodig?
-    - **Antwoord:** 24  (controle: ok)
+    - **Opgave:** In een kist passen 25 boeken. Er zijn 653 boeken. Op de rekenmachine staat 26,12. Hoeveel kisten zijn er nodig?
+    - **Antwoord:** 27  (controle: ok)
     - **Fout-hints (Claude):** 26 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 48 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?
 
 - **Hint 1 (te schrijven):** Op de rekenmachine staat een kommagetal. Het getal voor de komma zegt hoeveel er helemaal vol raken.
@@ -177,12 +177,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?”)
 - Voorbeelden:
   - `G8-GET-E05-claude-bank-024` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een busje passen 6 kinderen. Er zijn 63 kinderen. Op de rekenmachine staat 10,5. Hoeveel busjes zijn er nodig?
-    - **Antwoord:** 11  (controle: ok)
+    - **Opgave:** In een busje passen 8 kinderen. Er zijn 35 kinderen. Op de rekenmachine staat 4,375. Hoeveel busjes zijn er nodig?
+    - **Antwoord:** 5  (controle: ok)
     - **Fout-hints (Claude):** 10 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
   - `G8-GET-E05-claude-bank-031` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een busje passen 4 kinderen. Er zijn 251 kinderen. Op de rekenmachine staat 62,75. Hoeveel busjes zijn er nodig?
-    - **Antwoord:** 63  (controle: ok)
+    - **Opgave:** In een busje passen 8 kinderen. Er zijn 38 kinderen. Op de rekenmachine staat 4,75. Hoeveel busjes zijn er nodig?
+    - **Antwoord:** 5  (controle: ok)
     - **Fout-hints (Claude):** 62 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
 
 - **Hint 1 (te schrijven):** Op de rekenmachine staat een kommagetal. Het getal voor de komma zegt hoeveel er helemaal vol raken.
@@ -205,16 +205,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **7** · somtypeOrigineel “In een bak passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. De volle bakken gaan weg. Hoeveel blijven er over?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: T4 (8) · regel: G8-T4-rekenmachine
 - Getallenruimte: kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma), kommagetallen (3 cijfers achter de komma) · type: kale
-- Denkfouten (Claude): andere-deel-genomen (10), kommagetal-als-geheel (6)
+- Denkfouten (Claude): andere-deel-genomen (9), kommagetal-als-geheel (5)
 - Verschillende Claude-fout-hints: 2 (meest: “Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?”)
 - Voorbeelden:
   - `G8-GET-E05-claude-bank-003` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een bak passen 5 potjes. Er zijn 29 potjes. Op de rekenmachine staat 5,8. De volle bakken gaan weg. Hoeveel potjes blijven er over?
-    - **Antwoord:** 4  (controle: ok)
+    - **Opgave:** In een bak passen 5 potjes. Er zijn 31 potjes. Op de rekenmachine staat 6,2. De volle bakken gaan weg. Hoeveel potjes blijven er over?
+    - **Antwoord:** 1  (controle: ok)
     - **Fout-hints (Claude):** 8 → Kijk eerst naar het eerste cijfer achter de komma: dat zijn de tienden. Welke is groter? · 5 → Kijk eerst naar het eerste cijfer achter de komma: dat zijn de tienden. Welke is groter?
   - `G8-GET-E05-claude-bank-007` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een bak passen 8 potjes. Er zijn 285 potjes. Op de rekenmachine staat 35,625. De volle bakken gaan weg. Hoeveel potjes blijven er over?
-    - **Antwoord:** 5  (controle: ok)
+    - **Opgave:** In een bak passen 8 potjes. Er zijn 286 potjes. Op de rekenmachine staat 35,75. De volle bakken gaan weg. Hoeveel potjes blijven er over?
+    - **Antwoord:** 6  (controle: ok)
     - **Fout-hints (Claude):** 3 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten? · 8 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
 
 - **Hint 1 (te schrijven):** Op de rekenmachine staat een kommagetal. Het getal voor de komma zegt hoeveel er helemaal vol raken.
@@ -237,15 +237,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **8** · somtypeOrigineel “In een krat passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. Hoeveel [ding] zijn er nodig?” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: T4 (8) · regel: G8-T4-rekenmachine
 - Getallenruimte: kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma) · type: kale
-- Denkfouten (Claude): rest-vergeten (11), andere-deel-genomen (5)
+- Denkfouten (Claude): rest-vergeten (8), andere-deel-genomen (5)
 - Verschillende Claude-fout-hints: 2 (meest: “Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?”)
 - Voorbeelden:
   - `G8-GET-E05-claude-bank-074` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een krat passen 4 flesjes. Er zijn 23 flesjes. Op de rekenmachine staat 5,75. Hoeveel kratten zijn er nodig?
+    - **Opgave:** In een krat passen 12 flesjes. Er zijn 69 flesjes. Op de rekenmachine staat 5,75. Hoeveel kratten zijn er nodig?
     - **Antwoord:** 6  (controle: ok)
     - **Fout-hints (Claude):** 5 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 7 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?
   - `G8-GET-E05-claude-bank-077` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een krat passen 5 flesjes. Er zijn 258 flesjes. Op de rekenmachine staat 51,6. Hoeveel kratten zijn er nodig?
+    - **Opgave:** In een krat passen 6 flesjes. Er zijn 309 flesjes. Op de rekenmachine staat 51,5. Hoeveel kratten zijn er nodig?
     - **Antwoord:** 52  (controle: ok)
     - **Fout-hints (Claude):** 54 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 3 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
 
@@ -373,8 +373,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 4  (controle: ok)
     - **Fout-hints (Claude):** 8 → Kijk eerst naar het eerste cijfer achter de komma: dat zijn de tienden. Welke is groter? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
   - `G8-GET-E05-claude-bank-021` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een busje passen 5 kinderen. Er zijn 93 kinderen. Op de rekenmachine staat 18,6. De volle busjes gaan weg. Hoeveel kinderen blijven er over?
-    - **Antwoord:** 3  (controle: ok)
+    - **Opgave:** In een busje passen 5 kinderen. Er zijn 69 kinderen. Op de rekenmachine staat 13,8. De volle busjes gaan weg. Hoeveel kinderen blijven er over?
+    - **Antwoord:** 4  (controle: ok)
     - **Fout-hints (Claude):** 18 → Kijk eerst naar het eerste cijfer achter de komma: dat zijn de tienden. Welke is groter? · 9 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
 
 - **Hint 1 (te schrijven):** Op de rekenmachine staat een kommagetal. Het getal voor de komma zegt hoeveel er helemaal vol raken.
@@ -397,16 +397,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **13** · somtypeOrigineel “In een krat passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. De volle kratten gaan weg. Hoeveel blijven er over?” (koppeling: claudeId)
 - Items: **6** · Claude-doelen: T4 (6) · regel: G8-T4-rekenmachine
 - Getallenruimte: kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma) · type: kale
-- Denkfouten (Claude): andere-deel-genomen (9), kommagetal-als-geheel (3)
+- Denkfouten (Claude): andere-deel-genomen (6), kommagetal-als-geheel (3)
 - Verschillende Claude-fout-hints: 2 (meest: “Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?”)
 - Voorbeelden:
   - `G8-GET-E05-claude-bank-067` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een krat passen 4 flesjes. Er zijn 23 flesjes. Op de rekenmachine staat 5,75. De volle kratten gaan weg. Hoeveel flesjes blijven er over?
+    - **Opgave:** In een krat passen 12 flesjes. Er zijn 63 flesjes. Op de rekenmachine staat 5,25. De volle kratten gaan weg. Hoeveel flesjes blijven er over?
     - **Antwoord:** 3  (controle: ok)
     - **Fout-hints (Claude):** 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten? · 4 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
   - `G8-GET-E05-claude-bank-070` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een krat passen 25 flesjes. Er zijn 210 flesjes. Op de rekenmachine staat 8,4. De volle kratten gaan weg. Hoeveel flesjes blijven er over?
-    - **Antwoord:** 10  (controle: ok)
+    - **Opgave:** In een krat passen 12 flesjes. Er zijn 99 flesjes. Op de rekenmachine staat 8,25. De volle kratten gaan weg. Hoeveel flesjes blijven er over?
+    - **Antwoord:** 3  (controle: ok)
     - **Fout-hints (Claude):** 8 → Kijk eerst naar het eerste cijfer achter de komma: dat zijn de tienden. Welke is groter? · 25 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
 
 - **Hint 1 (te schrijven):** Op de rekenmachine staat een kommagetal. Het getal voor de komma zegt hoeveel er helemaal vol raken.

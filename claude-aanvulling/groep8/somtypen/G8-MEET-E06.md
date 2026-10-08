@@ -28,10 +28,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 9.00 uur + 9 uur = 18.00 uur, + 15 minuten = 18.15 uur.
 
 - **Hint 1 (te schrijven):** Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.
-- **Hint 2 (te schrijven):** Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.
+- **Hint 2 (te schrijven):** Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten.
 - **Ouderzin:** Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `een uur te vroeg` (Claudes sleutel: tijd-als-kommagetal) → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.  [Claude, taalfix]
+  - `een uur te vroeg` (Claudes sleutel: tijd-als-kommagetal) → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen een heel uur of meer worden.  [Claude, taalfix]
   - `minuten vergeten` (Claudes sleutel: klok-verkeerd-gelezen) → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.  [Claude, taalfix]
   - `andere fout` (andere fout) → Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)'. Nakijken of ze nog passen.
@@ -51,13 +51,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 20.30 uur → Dat is de tijd thuis. Daar is het 1 uur later. · 19.30 uur → Later betekent erbij, niet andersom.
     - **Uitleg (Claude):** Thuis is het bij de landing 20.30 uur. Daar is het 1 uur later: 21.30 uur.
   - `G8-MEET-E06-claude-bank-015` (Claude M26, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een vliegtuig vertrekt om 11.00 uur uit Amsterdam. De vlucht duurt 5 uur en 30 minuten. Op de plek van aankomst is het 6 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)
-    - **Antwoord:** 22.30 uur  (controle: ok)
+    - **Opgave:** Een vliegtuig vertrekt om 11.00 uur uit Amsterdam. De vlucht duurt 5 uur en 30 minuten. Op de plek van aankomst is het 3 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)
+    - **Antwoord:** 19.30 uur  (controle: ok)
     - **Fout-hints (Claude):** 16.30 uur → Dat is de tijd thuis. Daar is het 6 uur later. · 10.30 uur → Later betekent erbij, niet andersom.
-    - **Uitleg (Claude):** Thuis is het bij de landing 16.30 uur. Daar is het 6 uur later: 22.30 uur.
+    - **Uitleg (Claude):** Thuis is het bij de landing 16.30 uur. Daar is het 3 uur later: 19.30 uur.
 
 - **Hint 1 (te schrijven):** Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.
-- **Hint 2 (te schrijven):** Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.
+- **Hint 2 (te schrijven):** Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Zestig minuten is een uur.
 - **Ouderzin:** Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tijd thuis` (Claudes sleutel: tijd-als-kommagetal) → Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.  [Claude, taalfix]
@@ -86,7 +86,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Thuis is het bij de landing 13.15 uur. Daar is het 5 uur vroeger: 8.15 uur.
 
 - **Hint 1 (te schrijven):** Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.
-- **Hint 2 (te schrijven):** Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.
+- **Hint 2 (te schrijven):** Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Zestig minuten is een uur.
 - **Ouderzin:** Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tijd thuis` (Claudes sleutel: tijd-als-kommagetal) → Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.  [Claude, taalfix]
@@ -115,10 +115,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 7.15 uur + 7 uur = 14.15 uur, + 45 minuten = 15.00 uur.
 
 - **Hint 1 (te schrijven):** Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.
-- **Hint 2 (te schrijven):** Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.
+- **Hint 2 (te schrijven):** Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten.
 - **Ouderzin:** Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `een uur te vroeg` (Claudes sleutel: tijd-als-kommagetal) → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.  [Claude, taalfix]
+  - `een uur te vroeg` (Claudes sleutel: tijd-als-kommagetal) → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen een heel uur of meer worden.  [Claude, taalfix]
   - `minuten vergeten` (Claudes sleutel: klok-verkeerd-gelezen) → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.  [Claude, taalfix]
   - `andere fout` (andere fout) → Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)'. Nakijken of ze nog passen.
@@ -139,7 +139,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Thuis is het bij de landing 1.15 uur. Daar is het 1 uur later: 2.15 uur.
 
 - **Hint 1 (te schrijven):** Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.
-- **Hint 2 (te schrijven):** Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.
+- **Hint 2 (te schrijven):** Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul. Zestig minuten is een uur.
 - **Ouderzin:** Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tijd thuis` (Claudes sleutel: tijd-als-kommagetal) → Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.  [Claude, taalfix]
@@ -163,10 +163,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 7.15 uur + 11 uur = 18.15 uur, + 30 minuten = 18.45 uur.
 
 - **Hint 1 (te schrijven):** Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.
-- **Hint 2 (te schrijven):** Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.
+- **Hint 2 (te schrijven):** Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je op zestig minuten of meer, dan schuift de klok een uur door. Wat boven de zestig overblijft, zijn de minuten.
 - **Ouderzin:** Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `een uur te vroeg` (Claudes sleutel: tijd-als-kommagetal) → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.  [Claude, taalfix]
+  - `een uur te vroeg` (Claudes sleutel: tijd-als-kommagetal) → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen een heel uur of meer worden.  [Claude, taalfix]
   - `minuten vergeten` (Claudes sleutel: klok-verkeerd-gelezen) → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.  [Claude, taalfix]
   - `andere fout` (andere fout) → Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)'. Nakijken of ze nog passen.
@@ -187,7 +187,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Thuis is het bij de landing 1.30 uur. Daar is het 5 uur vroeger: 20.30 uur.
 
 - **Hint 1 (te schrijven):** Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.
-- **Hint 2 (te schrijven):** Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor.
+- **Hint 2 (te schrijven):** Doe de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil eraf. Kom je na middernacht uit, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor. Zestig minuten is een uur.
 - **Ouderzin:** Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tijd thuis` (Claudes sleutel: tijd-als-kommagetal) → Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.  [Claude, taalfix]
@@ -211,7 +211,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Thuis is het bij de landing 17.00 uur. Daar is het 2 uur vroeger: 15.00 uur.
 
 - **Hint 1 (te schrijven):** Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.
-- **Hint 2 (te schrijven):** Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.
+- **Hint 2 (te schrijven):** Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Zestig minuten is een uur.
 - **Ouderzin:** Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tijd thuis` (Claudes sleutel: tijd-als-kommagetal) → Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.  [Claude, taalfix]
@@ -277,10 +277,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Dat is de tijd thuis. Daar is het 8 uur later.”)
 - Voorbeelden:
   - `G8-MEET-E06-claude-bank-023` (Claude M26, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een vliegtuig vertrekt om 13.45 uur uit Eindhoven. De vlucht duurt 4 uur. Op de plek van aankomst is het 8 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)
+    - **Opgave:** Een vliegtuig vertrekt om 13.45 uur uit Eindhoven. De vlucht duurt 9 uur. Op de plek van aankomst is het 3 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)
     - **Antwoord:** 1.45 uur  (controle: ok)
     - **Fout-hints (Claude):** 17.45 uur → Dat is de tijd thuis. Daar is het 8 uur later. · 9.45 uur → Later betekent erbij, niet andersom.
-    - **Uitleg (Claude):** Thuis is het bij de landing 17.45 uur. Daar is het 8 uur later: 1.45 uur.
+    - **Uitleg (Claude):** Thuis is het bij de landing 22.45 uur. Daar is het 3 uur later: 1.45 uur.
 
 - **Hint 1 (te schrijven):** Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.
 - **Hint 2 (te schrijven):** Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.

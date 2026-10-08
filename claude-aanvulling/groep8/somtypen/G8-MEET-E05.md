@@ -31,7 +31,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `warmer` (fout = getal1 + getal2) → Dat is warmer dan aan het begin. Kouder betekent omlaag op de thermometer.  [nieuw]
   - `min vergeten` (fout = getal1 - getal2 of getal2 - getal1) → Het wordt kouder dan nul. Onder nul zet je een min voor het getal.  [nieuw]
+  - `van nul af geteld` (fout = van nul af geteld) → Dat is alleen het aantal graden kouder, gerekend vanaf nul. Je begint boven nul: tel eerst de graden tot nul, en ga dan verder omlaag.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt de temperatuur nadat het kouder is geworden.  [nieuw]
+  - `één ernaast` (fout = antwoord ± 1) → Dat is één graad ernaast. Tel nog eens, graad voor graad: eerst omlaag tot nul, dan verder omlaag.  [nieuw]
   - `andere fout` (andere fout) → Tel nog eens, graad voor graad: eerst omlaag tot nul, dan verder omlaag. Onder nul komt er een min voor het getal.  [nieuw]
 - Status: hints klaar
 
@@ -56,7 +58,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Tel de graden onder nul en de graden die het kouder wordt bij elkaar op. Zo ver onder nul kom je: zet er een min voor.
 - **Ouderzin:** Je kind rekent met temperaturen onder nul: van onder nul nog verder omlaag. Het antwoord krijgt een min ervoor.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `teken vergeten` (fout = teken vergeten) → Het was al onder nul en het wordt nog kouder. Dan blijf je onder nul: er hoort een min voor het getal.  [nieuw]
+  - `verkeerde richting` (fout = verkeerde richting) → Dat is warmer dan aan het begin. Kouder betekent: nog verder omlaag op de thermometer.  [nieuw]
+  - `van nul af geteld` (fout = van nul af geteld) → Dat is alleen het aantal graden kouder, gerekend vanaf nul. Je begint al onder nul: tel de graden onder nul en de graden kouder bij elkaar op.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt de temperatuur nadat het nog kouder is geworden.  [nieuw]
+  - `één ernaast` (fout = antwoord ± 1) → Dat is één graad ernaast. Tel de graden onder nul en de graden die het kouder wordt nog eens bij elkaar op.  [nieuw]
   - `andere fout` (andere fout) → Je begint onder nul en gaat nog verder omlaag. Dan blijf je onder nul: er komt een min voor het getal. Tel de graden nog eens na.  [nieuw]
 - Status: hints klaar
 
@@ -86,6 +92,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Staat er een min voor het getal? Ga dan vanaf de nul naar links. Zonder min ga je naar rechts. Tel de stappen.
 - **Ouderzin:** Je kind zet een getal op de getallenlijn: met een min ervoor links van de nul, zonder min rechts.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `getal uit de vraag` (fout = een getal uit de vraag) → Kijk goed naar het teken voor het getal. Een min betekent: onder nul, links van de nul.  [nieuw]
+  - `teken vergeten` (fout = teken vergeten) → Kijk goed of er een min voor het getal staat. Met een min hoort het links van de nul, zonder min rechts.  [nieuw]
   - `andere fout` (andere fout) → Kijk of er een min voor het getal staat. Met een min staat het links van de nul, zonder min rechts.  [nieuw]
 - Status: hints klaar

@@ -20,20 +20,20 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Opgave:** Een filmpje is 400 MB. De geheugenkaart is 16 GB (1 GB = 1000 MB). Hoeveel van die filmpjes passen erop?
     - **Antwoord:** 40  (controle: n.v.t.)
     - **Fout-hints (Claude):** 4 → Zet eerst alles in MB: 16 GB = 16.000 MB. · 400 → 16.000 : 400, let op de nullen.
-    - **Uitleg (Claude):** 16 GB = 16.000 MB. 16.000 : 400 = 40 foto's.
+    - **Uitleg (Claude):** 16 GB = 16.000 MB. 16.000 : 400 = 40 filmpjes.
   - `G8-MEET-E03-claude-bank-007` (Claude M29, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Een filmpje is 500 MB. De geheugenkaart is 8 GB (1 GB = 1000 MB). Hoeveel van die filmpjes passen erop?
     - **Antwoord:** 16  (controle: n.v.t.)
     - **Fout-hints (Claude):** 1 → Zet eerst alles in MB: 8 GB = 8000 MB. · 160 → 8000 : 500, let op de nullen.
-    - **Uitleg (Claude):** 8 GB = 8000 MB. 8000 : 500 = 16 foto's.
+    - **Uitleg (Claude):** 8 GB = 8000 MB. 8000 : 500 = 16 filmpjes.
 
 - **Hint 1 (te schrijven):** Reken eerst de kaart om naar MB. Dan staan de kaart en het filmpje in dezelfde maat.
 - **Hint 2 (te schrijven):** Doe het aantal GB van de kaart keer duizend. Dan weet je hoeveel MB er op de kaart past. Deel dat door het aantal MB van één filmpje.
 - **Ouderzin:** Je kind rekent eerst GB om naar MB (keer duizend) en deelt dan door de grootte van één filmpje.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens na: hoeveel MB past er op de kaart?  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Tel de nullen nog eens na: hoeveel MB past er op de kaart?  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel filmpjes er op de kaart passen.  [nieuw]
+  - `nul te weinig` (fout = een nul te weinig (afgekapt)) → Dan is er ergens een nul weggevallen. Tel de nullen nog eens na: hoeveel MB past er op de kaart, en hoeveel MB is één filmpje?  [nieuw]
   - `andere fout` (andere fout) → Reken eerst de kaart om naar MB: keer duizend. Deel dan door het aantal MB van één filmpje. Tel de nullen goed.  [nieuw]
 - Status: hints klaar
 
@@ -162,7 +162,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 300 → Een m³ is duizend liter, niet honderd. · 30.000 → Een nul te veel. 1 m³ = 1000 liter.
     - **Uitleg (Claude):** 1 m³ = 1000 liter. 3 × 1000 = 3000 liter.
 
-- **Hint 1 (te schrijven):** Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.
+- **Hint 1 (te schrijven):** Een kubieke meter (m³) is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.
 - **Hint 2 (te schrijven):** Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.
 - **Ouderzin:** Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -187,7 +187,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 300 → Een m³ is duizend liter, niet honderd. · 30.000 → Een nul te veel. 1 m³ = 1000 liter.
     - **Uitleg (Claude):** 1 m³ = 1000 liter. 3 × 1000 = 3000 liter.
 
-- **Hint 1 (te schrijven):** Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.
+- **Hint 1 (te schrijven):** Een kubieke meter (m³) is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.
 - **Hint 2 (te schrijven):** Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.
 - **Ouderzin:** Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -212,7 +212,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 300 → Een m³ is duizend liter, niet honderd. · 30.000 → Een nul te veel. 1 m³ = 1000 liter.
     - **Uitleg (Claude):** 1 m³ = 1000 liter. 3 × 1000 = 3000 liter.
 
-- **Hint 1 (te schrijven):** Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.
+- **Hint 1 (te schrijven):** Een kubieke meter (m³) is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.
 - **Hint 2 (te schrijven):** Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.
 - **Ouderzin:** Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -237,7 +237,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 150 → Een m³ is duizend liter, niet honderd. · 15.000 → Een nul te veel. 1 m³ = 1000 liter.
     - **Uitleg (Claude):** 1 m³ = 1000 liter. 1,5 × 1000 = 1500 liter.
 
-- **Hint 1 (te schrijven):** Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.
+- **Hint 1 (te schrijven):** Een kubieke meter (m³) is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.
 - **Hint 2 (te schrijven):** Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.
 - **Ouderzin:** Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
