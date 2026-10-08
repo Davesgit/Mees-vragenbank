@@ -12,3 +12,5 @@
 Lessen: `hints/lessen_g7.md` (144–149, 156–170 (Didactiek) en O1–O2 (Oefeningen), met verwijzing naar `g6/hints/lessen_batch2.md` en `g5/hints/lessen_g5.md`, die ook voor G7 gelden).
 
 Let op voor de VERH-04-batch (Z-#525, build 12:16:26): VERH-04 heeft nu 7 somtypes. #4 is gesplitst; de twee rad-items zijn somtype #7 (nrO 7, tekening verplicht) en krijgen een eigen entry (vakjes tellen op het rad). hints_todo.md noemde nog 6.
+
+- **Batch 6 ronde 1d (8 okt, Oefeningen):** review-batch6-didactiek (taal: fix) verwerkt in patch_batch6.py (V-#700/#701/#702, Z-#702/#703/#705–#710); b6/check 660 → 0 FAIL in de zandbak; wacht op Overzicht-data V-#703/#704/#705. Batch 5 ronde 1f: VERH-01 #7 H2 (les 217). Zie merge-fixlijst.md.

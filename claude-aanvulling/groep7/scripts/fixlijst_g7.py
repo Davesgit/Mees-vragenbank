@@ -707,3 +707,68 @@ def _z564(it, slog):
 _pas_toe_v452 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_v452(it, slog); _z564(it, slog)
+
+# ---------- Review batch 6 (Didactiek 8 okt, build 14:41:45; review-batch6-didactiek.md) + open Oefeningen-punten (Oef-#455/#457/#459) ----------
+# V-#703: VERH-03 #1 'a : b = c : ?' met het antwoord als getal uit de vraag → nieuwe getallen (niet in de bank; guard in antwoord_in_vraag_check).
+# Claudes sleutels mee met hun route: b (getal-overgenomen), b : k (gedeeld i.p.v. keer), a − b / a + b, c × b, c (overgenomen).
+R6_V703 = {'0ca3ee29': (9, 6, 18, [('6', 'getal-overgenomen'), ('3', 'verkeerde-bewerking')]),
+           '27df4951': (8, 5, 16, [('3', 'verhoudingstabel-verkeerd'), ('5', 'getal-overgenomen')]),
+           'a80e9802': (4, 3, 8, [('3', 'getal-overgenomen'), ('8', 'grafiek-verkeerd-afgelezen')]),
+           'af5b7f03': (7, 5, 14, [('70', 'verhoudingstabel-verkeerd'), ('14', 'grafiek-verkeerd-afgelezen')]),
+           'bcf70e3a': (5, 3, 10, [('8', 'verhoudingstabel-verkeerd'), ('30', 'verhoudingstabel-verkeerd')]),
+           'f1f53039': (3, 4, 12, [('48', 'verhoudingstabel-verkeerd'), ('12', 'grafiek-verkeerd-afgelezen')])}
+# V-#704 (= Oef-#454): VERH-03 #6 zonder 'wordt k keer zo groot:'; zijde en oppervlakte ≠ k en ≠ k × k: (zijde, k)
+R6_V704 = {'37f616ca': (3, 4), '99865b36': (5, 4), 'b1cb4962': (4, 3)}
+# Z-#681: VERH-02 #2 bank-540, 25% van €20 = €5 = 25 − 20 → 25% van €80 = €20 (niet in de bank)
+# Oef-#455: VERH-04 #5 bank-125 optie '40%' zonder route → '4%' (het hele aantal als procent, label 'procent-verkeerde-basis')
+# Oef-#459 / Z-#711: VERH-04 #2 antwoord 5 van 8 keer de middelste optie → bank-008 '500%' → '0,5%'
+#   (kommagetal met procentteken: motorregel van Oef-#453); dan 4 van 8 midden, 4 van 8 grootste.
+R6_459 = {'Schrijf 0,5 in procenten.': ('500%', '0,5%')}
+# Z-#712: VERH-04 #3 dingen die echt kapot gaan
+R6_KAPOT = {'pakken': 'kopjes', 'kaartjes': 'tegels', 'stickers': 'borden', 'knopen': 'glazen', 'ballonnen': 'ruiten'}
+# Z-#704: VERH-03 schaal bij een model: 'op de tekening' → 'in het model'; #17 legt geen van beide schalen uit
+R6_MODEL = re.compile(r'(Je maakt een model|Een poppenhuis is gemaakt|wordt een maquette gemaakt)')
+def _r6(it, slog):
+    c8 = (it['bron'].get('claudeId') or '')[:8]; o = it['opgave']; e = it['extraVelden']; d = it.get('doelId')
+    if d == 'G7-VERH-03' and c8 in R6_V703:
+        a, b, c, sl = R6_V703[c8]; k = c // a; ans = b * k
+        assert c % a == 0 and ans not in (a, b, c) and b + c - a != ans and re.fullmatch(r'Vul in\. \d+ : \d+ = \d+ : \?', o)
+        uit = {dd['denkfout']: h.get('uitleg') for dd in e.get('claudeDenkfouten') or [] for h in e.get('claudeFoutHints') or [] if h.get('fout') == dd.get('fout')}
+        _zet(it, slog, 'v703', f'V-#703: {o[8:]} → {a} : {b} = {c} : ? (antwoord was een getal uit de vraag, review batch 6)',
+             f'Vul in. {a} : {b} = {c} : ?', str(ans), [(f, l, uit.get(l)) for f, l in sl], f'{a} : {b} = {c} : ?')
+    if d == 'G7-VERH-03' and c8 in R6_V704:
+        z, k = R6_V704[c8]; assert len({z, z * z} & {k, k * k}) == 0
+        _zet(it, slog, 'v704', "V-#704 (Oef-#454): zonder 'wordt k keer zo groot:'; zijde/oppervlakte ≠ k en ≠ k × k (review batch 6)",
+             f'Elke zijde van een vierkant van {z} bij {z} cm wordt {k} keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?', str(k * k),
+             [(str(k), 'omtrek-oppervlakte-verwisseld', None), (str(2 * k), 'optellen-ipv-vermenigvuldigen', None)],
+             uitleg=f'De oppervlakte was {z} × {z} = {z * z} cm². Nu is hij {z * k} × {z * k} = {z * k * z * k} cm². Dat is {k} × {k} = {k * k} keer zo groot.')
+    if '100 000' in o or '100 000' in (e.get('claudeUitleg') or ''):      # V-#705: duizendtal met een punt
+        _vervang(it, [('100 000', '100.000')]); _zet(it, slog, 'v705', "V-#705: '100 000' → '100.000' (review batch 6)", o.replace('100 000', '100.000'))
+    if c8 == '0091528e' and o == 'Hoeveel is 25% van €20?':      # Z-#681
+        _zet(it, slog, 'z681', 'Z-#681: 25% van €20 (= 25 − 20) → 25% van €80 (review batch 6)', 'Hoeveel is 25% van €80?', '€20',
+             [('€80', 'getal-overgenomen', None), ('€2', 'nul-fout-tientallen', 'Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.')])
+        if it.get('antwoordOokGoed'): it['antwoordOokGoed'] = ['20,00', '20.00']
+    if d == 'G7-VERH-04' and c8 == 'e5f3a034' and any(x['tekst'] == '40%' for x in it['opties'] or []):      # Oef-#455
+        _opt_vervang(it, slog, 'oef455', "Oef-#455: '40%' (geen route) → '4%' (het hele aantal als procent)", '40%', '4%', 'procent-verkeerde-basis')
+    if d == 'G7-VERH-04' and o in R6_459 and any(x['tekst'] == R6_459[o][0] for x in it['opties'] or []):      # Oef-#459 / Z-#711
+        oud, nieuw = R6_459[o]
+        _opt_vervang(it, slog, 'oef459', f"Oef-#459/Z-#711: '{oud}' → '{nieuw}' (antwoord niet meer de middelste optie)", oud, nieuw, 'getal-overgenomen')
+    if d == 'G7-VERH-04' and (m := re.fullmatch(r'(\d+)% van de (\w+) is kapot\. Schrijf dat als kommagetal\.', o)) and m.group(2) in R6_KAPOT:      # Z-#712
+        _zet(it, slog, 'z712', f'Z-#712: {m.group(2)} → {R6_KAPOT[m.group(2)]} (dingen die echt kapot gaan, review batch 6)', _vervang(it, [(m.group(2), R6_KAPOT[m.group(2)])]))
+    if d == 'G7-VERH-03' and R6_MODEL.search(o) and '1 cm op de tekening' in o:      # Z-#704
+        _zet(it, slog, 'z704', "Z-#704: model/poppenhuis/maquette: '1 cm op de tekening' → '1 cm in het model' (review batch 6)", _vervang(it, [('1 cm op de tekening', '1 cm in het model')]))
+    if d == 'G7-VERH-03' and (m := re.match(r'(Je tekent dezelfde \w+ twee keer: een keer op schaal \d+ : \d+ en een keer op schaal \d+ : \d+\.) Dat betekent: [^.]+\. ', o)):
+        _zet(it, slog, 'z704', "Z-#704: #17 legt geen van beide schalen uit (de 'Dat betekent'-zin sloeg op één schaal; review batch 6)", o.replace(m.group(0), m.group(1) + ' '))
+    if d == 'G7-MEET-04' and 'graden' in o and re.search(r'\bin de schuur\b', o):      # Oef-#457 (zoals V-#666): vorst in de schuur → buiten
+        cid = it['bron'].get('claudeId') or ''; bt = RV5_BUITEN[int(_hashlib.md5(cid.encode()).hexdigest(), 16) % len(RV5_BUITEN)]
+        _zet(it, slog, 'oef457', f'Oef-#457: in de schuur → {bt} (vorst, zoals V-#666)', re.sub(r'\bin de schuur\b', bt, o))
+def _opt_vervang(it, slog, code, reden, oud, nieuw, label):
+    e = it['extraVelden']; ops = [x['tekst'] for x in it['opties']]; assert nieuw not in ops
+    denk = [(dd['fout'], dd['denkfout'], next((h.get('uitleg') for h in e.get('claudeFoutHints') or [] if h.get('fout') == dd['fout']), None))
+            for dd in e.get('claudeDenkfouten') or [] if dd['fout'] != oud] + [(nieuw, label, None)]
+    gel = (it.get('antwoordDetail') or {}).get('geldigeAntwoorden')
+    _opties(it, slog, code, reden, it['opgave'], [nieuw if t == oud else t for t in ops], it['antwoord'], denk)
+    if gel: it['antwoordDetail']['geldigeAntwoorden'] = gel
+_pas_toe_z564 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_z564(it, slog); _r6(it, slog)

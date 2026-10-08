@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T14:44:30+0200",
+ "gegenereerdOp": "2026-10-08T14:58:27+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-VERH-02",
  "bordtitel": "Procenten van een geheel",
@@ -150249,18 +150249,28 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Hoeveel is 25% van €20?",
+   "opgave": "Hoeveel is 25% van €80?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "€5",
+   "antwoord": "€20",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het bedrag is dat procent?",
    "sterkereHint": "Reken eerst uit hoeveel tien procent van het bedrag is. Neem daarvan zo vaak als nodig. Vijf procent is de helft van tien procent. Vijftig procent is de helft, vijfentwintig procent een kwart.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "€0,50",
+     "fout": "€80",
+     "uitleg": "Dat is het hele bedrag: honderd procent. Je zoekt maar een deel ervan.",
+     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal2",
+     "soort": "het hele bedrag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "€2",
      "uitleg": "Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het bedrag?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -150280,17 +150290,7 @@
     },
     {
      "stap": null,
-     "fout": "€20",
-     "uitleg": "Dat is het hele bedrag: honderd procent. Je zoekt maar een deel ervan.",
-     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
-     "laag2": "tekstSterker",
-     "regel": "fout = getal2",
-     "soort": "het hele bedrag",
-     "bron": "nieuw"
-    },
-    {
-     "stap": null,
-     "fout": "€50",
+     "fout": "€200",
      "uitleg": "Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het bedrag?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -150299,7 +150299,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "€0,50 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het bedrag? · 25 → Is dat het procent uit de vraag? Je zoekt een bedrag: zoveel van de honderd van het hele bedrag. · €20 → Dat is het hele bedrag: honderd procent. Je zoekt maar een deel ervan. · €50 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het bedrag?",
+   "foutHintsTekst": "€80 → Dat is het hele bedrag: honderd procent. Je zoekt maar een deel ervan. · €2 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het bedrag? · 25 → Is dat het procent uit de vraag? Je zoekt een bedrag: zoveel van de honderd van het hele bedrag. · €200 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het bedrag?",
    "ouderzin": "Je kind rekent uit hoeveel een percentage van een geldbedrag is.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -150329,11 +150329,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "€20",
+      "fout": "€80",
       "denkfout": "getal-overgenomen"
      },
      {
-      "fout": "€0,50",
+      "fout": "€2",
       "denkfout": "nul-fout-tientallen"
      }
     ],
@@ -150341,7 +150341,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "€0,50",
+      "fout": "€80",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "€2",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
      }
     ]
@@ -150367,6 +150372,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "D12 ongepaste Claude-fout-hint vervallen",
+     "G7-z681: Z-#681: 25% van €20 (= 25 − 20) → 25% van €80 (review batch 6)",
      "N14 geldantwoord met €",
      "N9 geldnotatie €N / €N,CC (G5)"
     ]
@@ -150379,6 +150385,15 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "Hoeveel is #% van €#?",
+    "z681": {
+     "opgave": "Hoeveel is 25% van €20?",
+     "antwoord": "€5",
+     "sleutels": [
+      "€20",
+      "€0,50"
+     ],
+     "reden": "Z-#681: 25% van €20 (= 25 − 20) → 25% van €80 (review batch 6)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
@@ -150391,7 +150406,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "€5",
+    "verwacht": "€20",
     "methode": "procent van",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -150408,8 +150423,8 @@
     "foutHintsNietToegepast": []
    },
    "antwoordOokGoed": [
-    "5,00",
-    "5.00"
+    "20,00",
+    "20.00"
    ],
    "foutRegels": [
     {
@@ -150421,7 +150436,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€20"
+       "€80"
       ]
      },
      "leesbaar": true
@@ -150449,7 +150464,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€50"
+       "€200"
       ]
      },
      "leesbaar": true
@@ -150463,7 +150478,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "€0,50"
+       "€2"
       ]
      },
      "leesbaar": true
@@ -265122,7 +265137,7 @@
    "algemeneFoutHint": "Het geheel is honderd procent. Hoeveel procent is het deel?"
   }
  ],
- "hintsSyncOp": "2026-10-08T14:44:36+02:00",
+ "hintsSyncOp": "2026-10-08T14:58:33+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -265142,14 +265157,14 @@
   },
   {
    "batch": "batch5.json",
-   "md5": "157c2d534b51"
+   "md5": "b9e9e2da8cd4"
   },
   {
    "batch": "batch6.json",
-   "md5": "6c3d40d26043"
+   "md5": "dc872ad27da4"
   }
  ],
- "geschrevenOp": "2026-10-08T14:44:36+02:00",
+ "geschrevenOp": "2026-10-08T14:58:33+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

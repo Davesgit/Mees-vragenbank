@@ -168,7 +168,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** −3 → Het begint onder nul. Tel eerst tot 0 (6 graden) en dan verder tot 3. · 3 → Je hebt de min bij het begingetal genegeerd. Onder nul telt ook mee.
     - **Uitleg (Claude):** Van −6 naar 0 is 6 graden. Van 0 naar 3 is 3 graden. Samen 6 + 3 = 9 graden.
   - `G7-MEET-04-claude-bank-016` (Claude M28, gegenereerd, niveau 1 → basis)
-    - **Opgave:** 's Ochtends is het in de schuur −3 graden. 's Middags is het 2 graden. Hoeveel graden is het warmer geworden?
+    - **Opgave:** 's Ochtends is het in het park −3 graden. 's Middags is het 2 graden. Hoeveel graden is het warmer geworden?
     - **Antwoord:** 5  (controle: ok)
     - **Fout-hints (Claude):** −1 → Het begint onder nul. Tel eerst tot 0 (3 graden) en dan verder tot 2. · 1 → Je hebt de min bij het begingetal genegeerd. Onder nul telt ook mee.
     - **Uitleg (Claude):** Van −3 naar 0 is 3 graden. Van 0 naar 2 is 2 graden. Samen 3 + 2 = 5 graden.

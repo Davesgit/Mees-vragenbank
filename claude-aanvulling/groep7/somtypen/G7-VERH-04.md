@@ -28,11 +28,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 350% → Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Een breuk met honderd als noemer kun je zo als procent schrijven.
-- **Hint 2 (te schrijven):** Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.
+- **Hint 2 (te schrijven):** Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat.
 - **Ouderzin:** Je kind schrijft een breuk als procent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tien keer ernaast` (Claudes sleutel: nul-fout-tientallen) → Dat is tien keer te groot of te klein. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.  [Claude, taalfix]
   - `noemer door teller` (Claudes sleutel: omgekeerd-gedeeld) → Heb je de noemer door de teller gedeeld? De teller is het deel: die hoort bij het procent dat je zoekt.  [Claude, taalfix]
+  - `teller met procentteken` (fout = het deel zelf (als %)) → Dat is de teller met een procentteken. Dat klopt alleen als de noemer honderd is. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.  [nieuw]
+  - `noemer met procentteken` (Claudes sleutel: getal-overgenomen) → Dat is de noemer. Die hoort bij honderd procent. Welk procent hoort bij de teller?  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.  [nieuw]
 - Status: hints klaar
 
@@ -41,7 +43,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **2** · somtypeOrigineel “Schrijf # in procenten.” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: B13 (8) · regel: G7-V01-breuk-procent
 - Getallenruimte: procenten · type: meerkeuze
-- Denkfouten (Claude): komma-verschoven (13), getal-overgenomen (3)
+- Denkfouten (Claude): komma-verschoven (12), getal-overgenomen (4)
 - Verschillende Claude-fout-hints: 1 (meest: “Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.”)
 - Voorbeelden:
   - `G7-VERH-04-claude-bank-007` (Claude B13, bank, niveau 2 → toepassen)
@@ -51,11 +53,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 100% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links. · 1% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.
   - `G7-VERH-04-claude-bank-008` (Claude B13, bank, niveau 2 → toepassen)
     - **Opgave:** Schrijf 0,5 in procenten.
-    - **Opties:** A) 50% · B) 500% · C) 5%
+    - **Opties:** A) 50% · B) 0,5% · C) 5%
     - **Antwoord:** 50%  (controle: ok)
     - **Fout-hints (Claude):** 500% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links. · 5% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.
 
-- **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten.
+- **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten.
 - **Hint 2 (te schrijven):** Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.
 - **Ouderzin:** Je kind schrijft een kommagetal als procent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -73,7 +75,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 5 (meest: “Procent is per honderd: de komma schuift twee plekken naar links, niet één.”)
 - Voorbeelden:
   - `G7-VERH-04-claude-bank-004` (Claude B13, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** 50% van de stickers is kapot. Schrijf dat als kommagetal.
+    - **Opgave:** 50% van de borden is kapot. Schrijf dat als kommagetal.
     - **Antwoord:** 0,5  (controle: ok)
     - **Fout-hints (Claude):** 5 → Procent is per honderd: de komma schuift twee plekken naar links, niet één. · 50 → 50% is 50 van de 100. Als kommagetal deel je door 100.
     - **Uitleg (Claude):** Procent is per honderd: 50 : 100 = 0,50.
@@ -84,7 +86,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Procent is per honderd: 50 : 100 = 0,50.
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Zoveel honderdsten kun je als kommagetal schrijven.
-- **Hint 2 (te schrijven):** Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg.
+- **Hint 2 (te schrijven):** Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg.
 - **Ouderzin:** Je kind schrijft een procent als kommagetal.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `tien keer te groot` (fout = antwoord × 10) → Dat is tien keer te groot. Procent zijn honderdsten: deel het getal van het procent door honderd.  [nieuw]
@@ -121,8 +123,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **5** · somtypeOrigineel “Deel van een totaal: hoeveel procent van de [ding] is …?” (koppeling: claudeId)
 - Items: **3** · Claude-doelen: G7 (3) · regel: D-KANS-NAAR-DEEL
 - Getallenruimte: procenten · type: meerkeuze
-- Denkfouten (Claude): getal-overgenomen (3), procent-verkeerde-basis (1), andere-deel-genomen (1)
-- Verschillende Claude-fout-hints: 6 (meest: “Het aantal rode ballen is niet meteen het percentage. Denk aan hoeveel ballen er in totaal zijn.”)
+- Denkfouten (Claude): getal-overgenomen (3), procent-verkeerde-basis (2), andere-deel-genomen (1)
+- Verschillende Claude-fout-hints: 4 (meest: “Het aantal rode ballen is niet meteen het percentage. Denk aan hoeveel ballen er in totaal zijn.”)
 - Voorbeelden:
   - `G7-VERH-04-claude-bank-126` (Claude G7, ai, niveau 2 → toepassen)
     - **Opgave:** In een bak liggen 10 ballen en 5 daarvan zijn rood. Hoeveel procent van de ballen is rood?

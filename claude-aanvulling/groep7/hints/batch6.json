@@ -10,7 +10,7 @@
    "nrOrigineel": 1,
    "somtypeOrigineel": "Vul in. # : # = # : ?",
    "hint1": "De dubbele punt (:) staat hier voor een verhouding. Links en rechts van het isteken (=) horen de getallen op dezelfde manier bij elkaar.",
-   "hint2": "Vergelijk de getallen vóór de dubbele punt, links en rechts van het isteken: hoeveel keer zo groot is het getal rechts? Doe het getal links achter de dubbele punt evenveel keer.",
+   "hint2": "Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot is het getal in de verhouding met het vraagteken? Doe het getal achter de dubbele punt in de verhouding zonder vraagteken evenveel keer.",
    "ouderzin": "Je kind vult een verhouding aan (met een dubbele punt): wat je met het ene getal doet, doe je ook met het andere.",
    "foutHints": [
     {
@@ -19,23 +19,23 @@
      "claudeDenkfout": null,
      "regel": "fout = een getal uit de vraag",
      "tekst": "Dat getal staat al in de vraag. Je zoekt het getal op de plek van het vraagteken.",
-     "tekstSterker": "Vergelijk de getallen vóór de dubbele punt, links en rechts van het isteken: hoeveel keer zo groot is het getal rechts? Doe het getal links achter de dubbele punt evenveel keer."
+     "tekstSterker": "Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot is het getal in de verhouding met het vraagteken? Doe het getal achter de dubbele punt in de verhouding zonder vraagteken evenveel keer."
     },
     {
      "bron": "nieuw",
      "soort": "één keer te veel",
      "claudeDenkfout": null,
      "regel": "fout = antwoord + getal2",
-     "tekst": "Dat is één keer te veel. Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.",
-     "tekstSterker": "Deel het grotere getal vóór een dubbele punt door het kleinere: zoveel keer zo groot wordt het. Doe het getal achter de dubbele punt precies zoveel keer, niet één keer meer."
+     "tekst": "Is dat één keer te veel? Of heb je het verschil erbij opgeteld? Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.",
+     "tekstSterker": "Deel het grotere getal vóór een dubbele punt door het kleinere: zoveel keer zo groot wordt het. Doe het getal achter de dubbele punt precies zoveel keer."
     },
     {
      "bron": "nieuw",
      "soort": "één keer te weinig",
      "claudeDenkfout": null,
      "regel": "fout = antwoord - getal2",
-     "tekst": "Dat is één keer te weinig. Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.",
-     "tekstSterker": "Deel het grotere getal vóór een dubbele punt door het kleinere: zoveel keer zo groot wordt het. Doe het getal achter de dubbele punt precies zoveel keer, niet één keer minder."
+     "tekst": "Is dat één keer te weinig? Of heb je het verschil erbij opgeteld? Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.",
+     "tekstSterker": "Deel het grotere getal vóór een dubbele punt door het kleinere: zoveel keer zo groot wordt het. Doe het getal achter de dubbele punt precies zoveel keer."
     },
     {
      "bron": "claude-taalfix",
@@ -45,7 +45,17 @@
      "tekst": "Heb je gedeeld? Rechts van het isteken is het getal vóór de dubbele punt groter. Dan wordt het getal achter de dubbele punt ook groter: doe keer.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
-     "tekstSterker": "Vergelijk de getallen vóór de dubbele punt, links en rechts van het isteken: hoeveel keer zo groot is het getal rechts? Doe het getal links achter de dubbele punt evenveel keer."
+     "tekstSterker": "Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot is het getal in de verhouding met het vraagteken? Doe het getal achter de dubbele punt in de verhouding zonder vraagteken evenveel keer."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verschil opgeteld of keer elkaar",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+     "tekst": "Heb je het verschil erbij opgeteld, of twee getallen uit de vraag keer elkaar gedaan? Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot wordt het? Doe het getal achter de dubbele punt precies zoveel keer.",
+     "claudeTekst": null,
+     "waarom": "V-#700: label met twee routes (b + c − a en b × c, 105 + 97 sleutels): een vraagtekst, nagerekend per sleutel",
+     "tekstSterker": "Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot is het getal in de verhouding met het vraagteken? Doe het getal achter de dubbele punt in de verhouding zonder vraagteken evenveel keer."
     },
     {
      "bron": "nieuw",
@@ -53,7 +63,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Vergelijk de getallen vóór de dubbele punt, en doe het getal erachter evenveel keer.",
-     "tekstSterker": "Vergelijk de getallen vóór de dubbele punt, links en rechts van het isteken: hoeveel keer zo groot is het getal rechts? Doe het getal links achter de dubbele punt evenveel keer."
+     "tekstSterker": "Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot is het getal in de verhouding met het vraagteken? Doe het getal achter de dubbele punt in de verhouding zonder vraagteken evenveel keer."
     }
    ],
    "claudeVervangen": [
@@ -76,7 +86,7 @@
    "somtype": "# [ding] kosten €#. Hoeveel kosten # [ding]?",
    "nrOrigineel": 2,
    "somtypeOrigineel": "# [ding] kosten €#. Hoeveel kosten # [ding]?",
-   "hint1": "Het euroteken (€) betekent euro. Koop je meer stuks, dan betaal je evenveel keer zoveel.",
+   "hint1": "Het euroteken (€) betekent euro. Elk stuk kost evenveel: meer stuks kosten meer, minder stuks kosten minder.",
    "hint2": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt.",
    "ouderzin": "Je kind rekent met een verhouding uit wat een ander aantal kost, via de prijs van één.",
    "foutHints": [
@@ -97,6 +107,16 @@
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
      "tekstSterker": "Je weet nu wat één kost. Doe dat bedrag keer het aantal waar de vraag naar vraagt."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "stuk te veel of verschil erbij",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+     "tekst": "Heb je één stuk te veel of te weinig betaald? Of heb je het verschil in aantal bij de prijs opgeteld of ervan afgehaald? Reken uit wat één kost, en doe dat keer het aantal waar de vraag naar vraagt.",
+     "claudeTekst": null,
+     "waarom": "V-#700: label met drie routes (antwoord ± prijs van één, prijs ± verschil in aantal; 14 sleutels bij minder stuks: prijs − verschil): een vraagtekst, nagerekend per sleutel",
+     "tekstSterker": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt."
     },
     {
      "bron": "nieuw",
@@ -284,11 +304,11 @@
   {
    "doel": "G7-VERH-03",
    "nr": 6,
-   "somtype": "Een vierkant van # bij # cm wordt # keer zo groot: elke zijde wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?",
+   "somtype": "Elke zijde van een vierkant van # bij # cm wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?",
    "nrOrigineel": 6,
    "somtypeOrigineel": "Een vierkant van # bij # cm wordt # keer zo groot: elke zijde wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?",
    "hint1": "De oppervlakte is lengte keer breedte. Worden alle zijden langer, dan worden de lengte én de breedte langer.",
-   "hint2": "Leg kleine vierkanten naast elkaar zo vaak als elke zijde langer wordt, en evenveel rijen onder elkaar. Tel hoeveel kleine vierkanten je dan hebt.",
+   "hint2": "Leg zoveel kleine vierkanten naast elkaar als het aantal keer dat elke zijde langer wordt. Leg evenveel rijen onder elkaar. Tel ze.",
    "ouderzin": "Je kind ontdekt dat de oppervlakte van een vierkant sneller groeit dan de zijden.",
    "foutHints": [
     {
@@ -299,7 +319,7 @@
      "tekst": "Dat is hoeveel keer zo lang elke zijde wordt. De oppervlakte groeit meer: de lengte én de breedte worden langer.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
-     "tekstSterker": "Leg kleine vierkanten naast elkaar zo vaak als elke zijde langer wordt, en evenveel rijen onder elkaar. Tel hoeveel kleine vierkanten je dan hebt."
+     "tekstSterker": "Leg zoveel kleine vierkanten naast elkaar als het aantal keer dat elke zijde langer wordt. Leg evenveel rijen onder elkaar. Tel ze."
     },
     {
      "bron": "claude-taalfix",
@@ -309,7 +329,7 @@
      "tekst": "Heb je opgeteld? De lengte en de breedte worden allebei zoveel keer zo lang. Hoeveel kleine vierkanten passen er dan in het grote?",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
-     "tekstSterker": "Leg kleine vierkanten naast elkaar zo vaak als elke zijde langer wordt, en evenveel rijen onder elkaar. Tel hoeveel kleine vierkanten je dan hebt."
+     "tekstSterker": "Leg zoveel kleine vierkanten naast elkaar als het aantal keer dat elke zijde langer wordt. Leg evenveel rijen onder elkaar. Tel ze."
     },
     {
      "bron": "nieuw",
@@ -317,7 +337,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Hoeveel kleine vierkanten passen er in het grote vierkant?",
-     "tekstSterker": "Leg kleine vierkanten naast elkaar zo vaak als elke zijde langer wordt, en evenveel rijen onder elkaar. Tel hoeveel kleine vierkanten je dan hebt."
+     "tekstSterker": "Leg zoveel kleine vierkanten naast elkaar als het aantal keer dat elke zijde langer wordt. Leg evenveel rijen onder elkaar. Tel ze."
     }
    ],
    "claudeVervangen": [
@@ -332,7 +352,12 @@
      "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
     }
    ],
-   "koppeling": "claudeId"
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Een vierkant van # bij # cm wordt # keer zo groot: elke zijde wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?",
+    "naar": "Elke zijde van een vierkant van # bij # cm wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?",
+    "op": "2026-10-08"
+   }
   },
   {
    "doel": "G7-VERH-03",
@@ -455,7 +480,7 @@
      "soort": "opgeteld",
      "claudeDenkfout": null,
      "regel": "400 cm",
-     "tekst": "Heb je opgeteld? Bij een schaal doe je keer of gedeeld door, je telt niets op.",
+     "tekst": "Heb je de echte maat en het getal achter de dubbele punt opgeteld? Op de tekening wordt het kleiner: hoe vaak past het getal achter de dubbele punt in de echte maat?",
      "tekstSterker": "Hoe vaak past het getal achter de dubbele punt in de echte maat? Zoveel centimeter wordt het op de tekening."
     },
     {
@@ -484,7 +509,7 @@
   {
    "doel": "G7-VERH-03",
    "nr": 10,
-   "somtype": "Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe lang wordt het model?",
+   "somtype": "Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. Hoe lang wordt het model?",
    "nrOrigineel": 10,
    "somtypeOrigineel": "Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe lang wordt het model?",
    "hint1": "Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.",
@@ -528,7 +553,12 @@
      "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
     }
    ],
-   "koppeling": "claudeId"
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe lang wordt het model?",
+    "naar": "Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. Hoe lang wordt het model?",
+    "op": "2026-10-08"
+   }
   },
   {
    "doel": "G7-VERH-03",
@@ -582,7 +612,7 @@
   {
    "doel": "G7-VERH-03",
    "nr": 12,
-   "somtype": "Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?",
+   "somtype": "Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?",
    "nrOrigineel": 12,
    "somtypeOrigineel": "Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?",
    "hint1": "Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.",
@@ -626,7 +656,12 @@
      "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
     }
    ],
-   "koppeling": "claudeId"
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?",
+    "naar": "Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?",
+    "op": "2026-10-08"
+   }
   },
   {
    "doel": "G7-VERH-03",
@@ -692,7 +727,7 @@
      "soort": "erbij in plaats van keer",
      "claudeDenkfout": null,
      "regel": "2 cm groter",
-     "tekst": "Bij een schaal gaat het om keer, niet om erbij. Hoeveel keer zo groot is het echte voorwerp?",
+     "tekst": "Bij een schaal is elke centimeter op de tekening in het echt evenveel keer zo groot. Hoeveel keer zo groot is het echte voorwerp?",
      "tekstSterker": "Eén centimeter op de tekening is in het echt meer centimeters. Is het echte voorwerp dan groter of kleiner?"
     },
     {
@@ -708,7 +743,8 @@
      "soort": "andere fout",
      "claudeDenkfout": null,
      "regel": "andere fout",
-     "tekst": "Lees wat één centimeter op de tekening in het echt is."
+     "tekst": "Lees wat één centimeter op de tekening in het echt is.",
+     "tekstSterker": "Lees wat één centimeter op de tekening in het echt is. Gaat het om erbij of om keer? En is het echte voorwerp groter of kleiner dan de tekening?"
     }
    ],
    "claudeVervangen": [
@@ -732,7 +768,7 @@
    "nrOrigineel": 15,
    "somtypeOrigineel": "Een tekening van een fiets heeft schaal # : #. Hoeveel cm is # cm op de tekening in het echt?",
    "hint1": "Bij een schaal staat een dubbele punt (:) tussen de getallen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.",
-   "hint2": "Welk getal van de schaal hoort bij het echte voorwerp? Zoveel centimeter is één centimeter op de tekening in het echt.",
+   "hint2": "Welk getal van de schaal hoort bij de tekening, en welk bij het echte voorwerp?",
    "ouderzin": "Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.",
    "foutHints": [
     {
@@ -748,7 +784,7 @@
      "soort": "opgeteld",
      "claudeDenkfout": null,
      "regel": "51 cm",
-     "tekst": "Heb je opgeteld? Bij een schaal doe je keer of gedeeld door, je telt niets op.",
+     "tekst": "Heb je de twee getallen van de schaal opgeteld? Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.",
      "tekstSterker": "Welk getal van de schaal hoort bij het echte voorwerp? Zoveel centimeter is één centimeter op de tekening in het echt."
     },
     {
@@ -789,7 +825,7 @@
      "soort": "opgeteld",
      "claudeDenkfout": null,
      "regel": "101 cm echt",
-     "tekst": "Heb je er iets bij opgeteld? Is het op de tekening zoveel keer zo lang, dan is het in het echt ook zoveel keer zo lang.",
+     "tekst": "Heb je er maar één bij opgeteld? Komt er op de tekening een centimeter bij, dan komt er in het echt het hele getal achter de dubbele punt bij.",
      "tekstSterker": "Maak een verhoudingstabel: hoeveel keer zoveel centimeter is het nu op de tekening? Doe het getal voor in het echt evenveel keer."
     },
     {
@@ -826,11 +862,11 @@
   {
    "doel": "G7-VERH-03",
    "nr": 17,
-   "somtype": "Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Welke tekening wordt het grootst?",
+   "somtype": "Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Welke tekening wordt het grootst?",
    "nrOrigineel": 17,
    "somtypeOrigineel": "Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Welke tekening wordt het grootst?",
    "hint1": "Bij een schaal staat een dubbele punt (:) tussen de getallen. Hoe groter het getal achter de dubbele punt, hoe meer centimeter in het echt bij één centimeter op de tekening hoort.",
-   "hint2": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?",
+   "hint2": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?",
    "ouderzin": "Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.",
    "foutHints": [
     {
@@ -839,7 +875,7 @@
      "claudeDenkfout": null,
      "regel": "De tekening op schaal 1 : 100",
      "tekst": "Bij die schaal hoort bij één centimeter op de tekening juist meer in het echt. Wordt de tekening dan groter of kleiner?",
-     "tekstSterker": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?"
+     "tekstSterker": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?"
     },
     {
      "bron": "nieuw",
@@ -847,7 +883,7 @@
      "claudeDenkfout": null,
      "regel": "Beide tekeningen zijn even groot",
      "tekst": "Het is hetzelfde voorwerp, maar de schalen zijn verschillend. Dan worden de tekeningen ook verschillend groot.",
-     "tekstSterker": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?"
+     "tekstSterker": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?"
     },
     {
      "bron": "nieuw",
@@ -855,7 +891,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Reken voor elke schaal uit hoe lang de tekening wordt.",
-     "tekstSterker": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?"
+     "tekstSterker": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?"
     }
    ],
    "claudeVervangen": [
@@ -870,7 +906,12 @@
      "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
     }
    ],
-   "koppeling": "claudeId"
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Welke tekening wordt het grootst?",
+    "naar": "Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Welke tekening wordt het grootst?",
+    "op": "2026-10-08"
+   }
   },
   {
    "doel": "G7-VERH-03",
@@ -879,7 +920,7 @@
    "nrOrigineel": 18,
    "somtypeOrigineel": "Marit tekent een boom op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Sem tekent dezelfde boom op schaal # : #. Wie krijgt de kleinste tekening?",
    "hint1": "Bij een schaal staat een dubbele punt (:) tussen de getallen. Hoe groter het getal achter de dubbele punt, hoe meer centimeter in het echt bij één centimeter op de tekening hoort.",
-   "hint2": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?",
+   "hint2": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?",
    "ouderzin": "Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.",
    "foutHints": [
     {
@@ -888,7 +929,7 @@
      "claudeDenkfout": null,
      "regel": "Marit",
      "tekst": "Bij die schaal hoort bij één centimeter op de tekening minder in het echt. Wordt de tekening dan groter of kleiner?",
-     "tekstSterker": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?"
+     "tekstSterker": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?"
     },
     {
      "bron": "nieuw",
@@ -896,7 +937,7 @@
      "claudeDenkfout": null,
      "regel": "Ze krijgen even grote tekeningen",
      "tekst": "Het is hetzelfde voorwerp, maar de schalen zijn verschillend. Dan worden de tekeningen ook verschillend groot.",
-     "tekstSterker": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?"
+     "tekstSterker": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?"
     },
     {
      "bron": "nieuw",
@@ -904,7 +945,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Reken voor elke schaal uit hoe lang de tekening wordt.",
-     "tekstSterker": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?"
+     "tekstSterker": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?"
     }
    ],
    "claudeVervangen": [
@@ -936,7 +977,7 @@
      "soort": "centimeters als meters",
      "claudeDenkfout": null,
      "regel": "1000 m",
-     "tekst": "Kijk naar de maat. Het getal achter de dubbele punt is in centimeters, niet in meters.",
+     "tekst": "Kijk naar de maat. Het getal achter de dubbele punt is een aantal centimeters, geen meters. Reken het om: honderd centimeter is één meter.",
      "tekstSterker": "Eén centimeter op de kaart of plattegrond is in het echt zoveel centimeter als het getal achter de dubbele punt. Reken dat om: honderd centimeter is één meter, duizend meter is één kilometer."
     },
     {
@@ -973,7 +1014,7 @@
   {
    "doel": "G7-VERH-03",
    "nr": 20,
-   "somtype": "Op een landkaart staat schaal # : # #. Hoeveel is # cm op de kaart in het echt?",
+   "somtype": "Op een landkaart staat schaal # : #. Hoeveel is # cm op de kaart in het echt?",
    "nrOrigineel": 20,
    "somtypeOrigineel": "Op een landkaart staat schaal # : # #. Hoeveel is # cm op de kaart in het echt?",
    "hint1": "Bij een schaal staat een dubbele punt (:) tussen de getallen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.",
@@ -1017,7 +1058,12 @@
      "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
     }
    ],
-   "koppeling": "claudeId"
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Op een landkaart staat schaal # : # #. Hoeveel is # cm op de kaart in het echt?",
+    "naar": "Op een landkaart staat schaal # : #. Hoeveel is # cm op de kaart in het echt?",
+    "op": "2026-10-08"
+   }
   },
   {
    "doel": "G7-VERH-03",
@@ -1034,7 +1080,7 @@
      "soort": "centimeters als meters",
      "claudeDenkfout": null,
      "regel": "200 m",
-     "tekst": "Kijk naar de maat. Het getal achter de dubbele punt is in centimeters, niet in meters.",
+     "tekst": "Kijk naar de maat. Het getal achter de dubbele punt is een aantal centimeters, geen meters. Reken het om: honderd centimeter is één meter.",
      "tekstSterker": "Eén centimeter op de kaart of plattegrond is in het echt zoveel centimeter als het getal achter de dubbele punt. Reken dat om: honderd centimeter is één meter, duizend meter is één kilometer."
     },
     {
@@ -1132,7 +1178,7 @@
      "soort": "opgeteld",
      "claudeDenkfout": null,
      "regel": "54 cm",
-     "tekst": "Heb je opgeteld? Bij een schaal doe je keer of gedeeld door, je telt niets op.",
+     "tekst": "Heb je de maat op de tekening en het getal achter de dubbele punt opgeteld? Elke centimeter op de tekening is in het echt zoveel centimeter als het getal achter de dubbele punt.",
      "tekstSterker": "Doe de maat op de tekening keer het getal achter de dubbele punt. Zoveel centimeter is het in het echt."
     },
     {
@@ -1189,7 +1235,7 @@
      "soort": "opgeteld",
      "claudeDenkfout": null,
      "regel": "103 cm",
-     "tekst": "Heb je opgeteld? Bij een schaal doe je keer of gedeeld door, je telt niets op.",
+     "tekst": "Heb je de maat op de tekening en het getal achter de dubbele punt opgeteld? Elke centimeter op de tekening is in het echt zoveel centimeter als het getal achter de dubbele punt.",
      "tekstSterker": "Doe de maat op de tekening keer het getal achter de dubbele punt. Zoveel centimeter is het in het echt."
     },
     {
@@ -1218,7 +1264,7 @@
   {
    "doel": "G7-VERH-03",
    "nr": 25,
-   "somtype": "Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?",
+   "somtype": "Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?",
    "nrOrigineel": 25,
    "somtypeOrigineel": "Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?",
    "hint1": "Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.",
@@ -1262,7 +1308,12 @@
      "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
     }
    ],
-   "koppeling": "claudeId"
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?",
+    "naar": "Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?",
+    "op": "2026-10-08"
+   }
   },
   {
    "doel": "G7-VERH-04",
@@ -1271,7 +1322,7 @@
    "nrOrigineel": 1,
    "somtypeOrigineel": "Schrijf #/# in procenten.",
    "hint1": "Procent (%) betekent: zoveel van de honderd. Een breuk met honderd als noemer kun je zo als procent schrijven.",
-   "hint2": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.",
+   "hint2": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat.",
    "ouderzin": "Je kind schrijft een breuk als procent.",
    "foutHints": [
     {
@@ -1282,7 +1333,7 @@
      "tekst": "Dat is tien keer te groot of te klein. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
-     "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde."
+     "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat."
     },
     {
      "bron": "claude-taalfix",
@@ -1292,7 +1343,25 @@
      "tekst": "Heb je de noemer door de teller gedeeld? De teller is het deel: die hoort bij het procent dat je zoekt.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
-     "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde."
+     "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "teller met procentteken",
+     "claudeDenkfout": null,
+     "regel": "fout = het deel zelf (als %)",
+     "tekst": "Dat is de teller met een procentteken. Dat klopt alleen als de noemer honderd is. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.",
+     "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "noemer met procentteken",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is de noemer. Die hoort bij honderd procent. Welk procent hoort bij de teller?",
+     "claudeTekst": null,
+     "waarom": "V-#700: na de regel voor de teller vangt dit label alleen nog de noemer met een procentteken (52 sleutels, nagerekend)",
+     "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat."
     },
     {
      "bron": "nieuw",
@@ -1300,7 +1369,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.",
-     "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde."
+     "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat."
     }
    ],
    "claudeVervangen": [
@@ -1323,7 +1392,7 @@
    "somtype": "Schrijf # in procenten.",
    "nrOrigineel": 2,
    "somtypeOrigineel": "Schrijf # in procenten.",
-   "hint1": "Procent (%) betekent: zoveel van de honderd. Het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten.",
+   "hint1": "Procent (%) betekent: zoveel van de honderd. Het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten.",
    "hint2": "Procent zijn honderdsten. Zet een nul achter het cijfer na de komma: dan lees je hoeveel honderdsten het zijn.",
    "ouderzin": "Je kind schrijft een kommagetal als procent.",
    "foutHints": [
@@ -1370,7 +1439,7 @@
    "nrOrigineel": 3,
    "somtypeOrigineel": "#% van de [ding] is kapot. Schrijf dat als kommagetal.",
    "hint1": "Procent (%) betekent: zoveel van de honderd. Zoveel honderdsten kun je als kommagetal schrijven.",
-   "hint2": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg.",
+   "hint2": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg.",
    "ouderzin": "Je kind schrijft een procent als kommagetal.",
    "foutHints": [
     {
@@ -1379,7 +1448,7 @@
      "claudeDenkfout": null,
      "regel": "fout = antwoord × 10",
      "tekst": "Dat is tien keer te groot. Procent zijn honderdsten: deel het getal van het procent door honderd.",
-     "tekstSterker": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg."
+     "tekstSterker": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg."
     },
     {
      "bron": "nieuw",
@@ -1387,7 +1456,7 @@
      "claudeDenkfout": null,
      "regel": "fout = een getal uit de vraag",
      "tekst": "Dat is het getal van het procent. Als kommagetal is het honderd keer zo klein.",
-     "tekstSterker": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg."
+     "tekstSterker": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg."
     },
     {
      "bron": "nieuw",
@@ -1395,7 +1464,7 @@
      "claudeDenkfout": null,
      "regel": "andere fout",
      "tekst": "Deel het getal van het procent door honderd.",
-     "tekstSterker": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg."
+     "tekstSterker": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg."
     }
    ],
    "claudeVervangen": [
@@ -1563,6 +1632,222 @@
      "claudeTekst": "Kijk niet alleen naar het aantal rode knikkers, maar ook naar het totaal in de zak.",
      "claudeDenkfout": "getal-overgenomen",
      "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-04",
+   "nr": 4,
+   "somtype": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')",
+   "hint1": "Bij 'op de' komt eerst het deel waar de vraag over gaat. Achter 'op de' komt het totaal: alles samen.",
+   "hint2": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+   "ouderzin": "Je kind beschrijft een deel van een groep met 'op de': eerst het deel, dan het totaal.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "niet met het totaal",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "tekst": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "claudeTekst": null,
+     "waarom": "label nagerekend: het deel tegen de rest of tegen zichzelf, niet tegen het totaal",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het andere deel",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+     "claudeTekst": null,
+     "waarom": "label nagerekend: het andere deel tegen het totaal",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "deel achter op de",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "claudeTekst": null,
+     "waarom": "label nagerekend: het aantal van het deel staat achter 'op de'",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "deel verkeerd geteld",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "Claudes sleutel: een-ernaast",
+     "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+     "claudeTekst": null,
+     "waarom": "label nagerekend: totaal goed, deel één ernaast",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Vergelijk de sterkaartjes met alle kaartjes, niet met de kaartjes zonder ster.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Tel alle knikkers, ook de rode.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Er wordt gevraagd naar een knikker die juist niet rood is.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Tel alle sokken bij elkaar, ook de zwarte.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Kijk nog eens welke kleur sok in de vraag staat.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Je hebt de lootjes zonder prijs geteld. Lees nog eens wat er gevraagd wordt.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Vergelijk de prijslootjes met alle lootjes in de pot, niet alleen met de lege.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Kijk goed naar welke kleur er in de vraag wordt gevraagd.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Je moet het aantal rode knikkers vergelijken met alle knikkers samen, niet met de blauwe.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Schrijf alle even getallen tot en met 10 op en tel hoeveel het er zijn.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Vergeet bij het tellen van de even getallen de 10 zelf niet.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Tel alle kaartjes, dus alle letters samen.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Tel nog eens hoe vaak de letter A in het woord voorkomt.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Het aantal sterren is niet meteen het antwoord. Kijk hoe vaak 5 in 20 past.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-VERH-04",
+   "nr": 7,
+   "somtype": "[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')",
+   "hint1": "Bij 'op de' komt eerst het aantal vakjes waar de vraag over gaat. Achter 'op de' komt het aantal vakjes van het hele rad.",
+   "hint2": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+   "ouderzin": "Je kind beschrijft een deel van een rad met 'op de': eerst het aantal vakjes van het deel, dan alle vakjes.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "niet met het totaal",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "tekst": "Achter 'op de' komt het totaal: alle vakjes van het rad samen. Tel ze allemaal.",
+     "claudeTekst": null,
+     "waarom": "label nagerekend: het deel tegen de rest of tegen zichzelf, niet tegen het totaal",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het andere deel",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel die vakjes.",
+     "claudeTekst": null,
+     "waarom": "label nagerekend: het andere deel tegen het totaal",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "deel achter op de",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "claudeTekst": null,
+     "waarom": "label nagerekend: het aantal van het deel staat achter 'op de'",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "deel verkeerd geteld",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "Claudes sleutel: een-ernaast",
+     "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+     "claudeTekst": null,
+     "waarom": "label nagerekend: totaal goed, deel één ernaast",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel alle vakjes van het rad, ook de rode.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Je hebt de vakjes geteld die niet groen zijn. Lees nog eens wat er gevraagd wordt.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Tel alle vakjes van het rad, ook de groene.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+    },
+    {
+     "claudeTekst": "Het aantal rode vakjes is niet meteen het antwoord. Kijk hoe vaak 3 in 12 past.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
     }
    ],
    "koppeling": "claudeId"

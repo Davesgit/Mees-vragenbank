@@ -188,7 +188,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Een schaal schrijf je met een dubbele punt tussen twee getallen. Vooraan staat de maat op de tekening, achteraan de echte maat. Daarom is 1 : 25 de schaal.
 
 - **Hint 1 (te schrijven):** Een schaal zie je op een plattegrond of een kaart. Weet je nog welk teken er tussen de twee getallen staat?
-- **Hint 2 (te schrijven):** Bij een schaal tel je niets op: het teken is geen plusteken. Welk van de andere tekens staat er tussen de twee getallen?
+- **Hint 2 (te schrijven):** Het teken bij een schaal is geen plusteken. Welk van de andere tekens staat er tussen de twee getallen?
 - **Ouderzin:** Je kind leert wat een schaal (zoals op een plattegrond) betekent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `keersom` (1 × 25) → Dat is een keersom. Bij een schaal staat er geen keerteken tussen de twee getallen.  [nieuw]

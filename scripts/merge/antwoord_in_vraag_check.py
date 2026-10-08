@@ -7,6 +7,7 @@ Wie dan 'een getal uit de vraag' overneemt (een echte denkfout), heeft het goed 
   in de vraag): 'Kies uit …', 'Welke breuk is het grootst/kleinst', 'Zet a/b op de lijn …'.
 - som (Z-#609, review G7 batch 3): de vraag heeft een som 'a ∘ b' (+ − × :) en het goede antwoord (heel of kommagetal) is a of b
   ('1,2 − 0,6 = 0,6', met een kommagetal); of een verdeelsom 'x … verdeeld over n …' met antwoord n ('9 liter … over 3 … = 3').
+- verhouding (V-#703, review G7 batch 6): 'a : b = c : ?' met het antwoord a, b of c ('9 : 3 = 27 : ?' → 9).
 FAIL (check_merge_notatie G5–G8). Gebruik: rapport(items) → aantal."""
 import re
 from fractions import Fraction as F
@@ -24,6 +25,9 @@ def treffers(items):
             getallen = {_w(x) for x in re.findall(_GET, o2)} | {_w(x) for b in re.findall(r'(?<![\d,])(\d+)/(\d+)(?![\d/])', o2) for x in b}
             if _w(m.group(1)) in getallen: uit.append((it['id'], o, a, 'procent'))
             continue
+        # V-#703 (review G7 batch 6, les 215): verhouding 'a : b = c : ?' → het antwoord is geen getal uit de vraag
+        mv = re.search(r'(?<![\d,])(\d+(?:,\d+)?) : (\d+(?:,\d+)?) = (\d+(?:,\d+)?) : \?', o)
+        if mv and re.fullmatch(r'\d+(?:,\d+)?', a) and _w(a) in {_w(x) for x in mv.groups()}: uit.append((it['id'], o, a, 'verhouding')); continue
         g = re.fullmatch(r'\d+(?:,\d+)?', a)
         if g:
             w = _w(a); o3 = re.sub(r'(?<!\d)\d{1,2}:\d{2}(?!\d)', ' ', o); o3 = re.sub(r'\d{1,3}(?:\.\d{3})+', ' ', o3)      # geen kloktijd, geen duizendtal-punt

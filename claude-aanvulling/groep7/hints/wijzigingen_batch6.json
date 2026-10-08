@@ -285,5 +285,1377 @@
    }
   ],
   "waarom": "Oef-#453 (Overzicht): motorregel in plaats van letterlijke %-regels"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 1,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt het getal op de plek van het vraagteken.",
+    "tekstSterker": "Vergelijk de getallen vóór de dubbele punt, links en rechts van het isteken: hoeveel keer zo groot is het getal rechts? Doe het getal links achter de dubbele punt evenveel keer."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één keer te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + getal2",
+    "tekst": "Dat is één keer te veel. Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.",
+    "tekstSterker": "Deel het grotere getal vóór een dubbele punt door het kleinere: zoveel keer zo groot wordt het. Doe het getal achter de dubbele punt precies zoveel keer, niet één keer meer."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één keer te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord - getal2",
+    "tekst": "Dat is één keer te weinig. Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.",
+    "tekstSterker": "Deel het grotere getal vóór een dubbele punt door het kleinere: zoveel keer zo groot wordt het. Doe het getal achter de dubbele punt precies zoveel keer, niet één keer minder."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "gedeeld in plaats van keer",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Heb je gedeeld? Rechts van het isteken is het getal vóór de dubbele punt groter. Dan wordt het getal achter de dubbele punt ook groter: doe keer.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Vergelijk de getallen vóór de dubbele punt, links en rechts van het isteken: hoeveel keer zo groot is het getal rechts? Doe het getal links achter de dubbele punt evenveel keer."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Vergelijk de getallen vóór de dubbele punt, en doe het getal erachter evenveel keer.",
+    "tekstSterker": "Vergelijk de getallen vóór de dubbele punt, links en rechts van het isteken: hoeveel keer zo groot is het getal rechts? Doe het getal links achter de dubbele punt evenveel keer."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt het getal op de plek van het vraagteken.",
+    "tekstSterker": "Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot is het getal in de verhouding met het vraagteken? Doe het getal achter de dubbele punt in de verhouding zonder vraagteken evenveel keer."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één keer te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + getal2",
+    "tekst": "Is dat één keer te veel? Of heb je het verschil erbij opgeteld? Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.",
+    "tekstSterker": "Deel het grotere getal vóór een dubbele punt door het kleinere: zoveel keer zo groot wordt het. Doe het getal achter de dubbele punt precies zoveel keer."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één keer te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord - getal2",
+    "tekst": "Is dat één keer te weinig? Of heb je het verschil erbij opgeteld? Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.",
+    "tekstSterker": "Deel het grotere getal vóór een dubbele punt door het kleinere: zoveel keer zo groot wordt het. Doe het getal achter de dubbele punt precies zoveel keer."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "gedeeld in plaats van keer",
+    "claudeDenkfout": "verkeerde-bewerking",
+    "regel": "Claudes sleutel: verkeerde-bewerking",
+    "tekst": "Heb je gedeeld? Rechts van het isteken is het getal vóór de dubbele punt groter. Dan wordt het getal achter de dubbele punt ook groter: doe keer.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot is het getal in de verhouding met het vraagteken? Doe het getal achter de dubbele punt in de verhouding zonder vraagteken evenveel keer."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "verschil opgeteld of keer elkaar",
+    "claudeDenkfout": "verhoudingstabel-verkeerd",
+    "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+    "tekst": "Heb je het verschil erbij opgeteld, of twee getallen uit de vraag keer elkaar gedaan? Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot wordt het? Doe het getal achter de dubbele punt precies zoveel keer.",
+    "claudeTekst": null,
+    "waarom": "V-#700: label met twee routes (b + c − a en b × c, 105 + 97 sleutels): een vraagtekst, nagerekend per sleutel",
+    "tekstSterker": "Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot is het getal in de verhouding met het vraagteken? Doe het getal achter de dubbele punt in de verhouding zonder vraagteken evenveel keer."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Vergelijk de getallen vóór de dubbele punt, en doe het getal erachter evenveel keer.",
+    "tekstSterker": "Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot is het getal in de verhouding met het vraagteken? Doe het getal achter de dubbele punt in de verhouding zonder vraagteken evenveel keer."
+   }
+  ],
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6): V-#700 labelregel, V-#701 vraagtekst bij ±getal2 (ook de additieve route), Z-#705 laag 2"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 1,
+  "veld": "hint2",
+  "was": "Vergelijk de getallen vóór de dubbele punt, links en rechts van het isteken: hoeveel keer zo groot is het getal rechts? Doe het getal links achter de dubbele punt evenveel keer.",
+  "wordt": "Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot is het getal in de verhouding met het vraagteken? Doe het getal achter de dubbele punt in de verhouding zonder vraagteken evenveel keer.",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#705: getal via zijn rol"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "prijs uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is de prijs uit de vraag. Die hoort bij een ander aantal. Wat kost één?",
+    "tekstSterker": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "prijs van één",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is de prijs van één. Hoeveel kosten er zoveel als de vraag vraagt?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Je weet nu wat één kost. Doe dat bedrag keer het aantal waar de vraag naar vraagt."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken uit wat één kost, en doe dat keer het aantal waar de vraag naar vraagt.",
+    "tekstSterker": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "prijs uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is de prijs uit de vraag. Die hoort bij een ander aantal. Wat kost één?",
+    "tekstSterker": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "prijs van één",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is de prijs van één. Hoeveel kosten er zoveel als de vraag vraagt?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Je weet nu wat één kost. Doe dat bedrag keer het aantal waar de vraag naar vraagt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "stuk te veel of verschil erbij",
+    "claudeDenkfout": "verhoudingstabel-verkeerd",
+    "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+    "tekst": "Heb je één stuk te veel of te weinig betaald? Of heb je het verschil in aantal bij de prijs opgeteld? Reken uit wat één kost, en doe dat keer het aantal waar de vraag naar vraagt.",
+    "claudeTekst": null,
+    "waarom": "V-#700: label met drie routes (antwoord ± prijs van één, prijs + verschil in aantal): een vraagtekst, nagerekend per sleutel",
+    "tekstSterker": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken uit wat één kost, en doe dat keer het aantal waar de vraag naar vraagt.",
+    "tekstSterker": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt."
+   }
+  ],
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6): V-#700 labelregel"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 2,
+  "veld": "hint1",
+  "was": "Het euroteken (€) betekent euro. Koop je meer stuks, dan betaal je evenveel keer zoveel.",
+  "wordt": "Het euroteken (€) betekent euro. Elk stuk kost evenveel: meer stuks kosten meer, minder stuks kosten minder.",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#706: H1 past ook bij de items waar je minder koopt"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 6,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "alleen de zijde",
+    "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+    "regel": "Claudes sleutel: omtrek-oppervlakte-verwisseld",
+    "tekst": "Dat is hoeveel keer zo lang elke zijde wordt. De oppervlakte groeit meer: de lengte én de breedte worden langer.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Leg kleine vierkanten naast elkaar zo vaak als elke zijde langer wordt, en evenveel rijen onder elkaar. Tel hoeveel kleine vierkanten je dan hebt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "opgeteld",
+    "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+    "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+    "tekst": "Heb je opgeteld? De lengte en de breedte worden allebei zoveel keer zo lang. Hoeveel kleine vierkanten passen er dan in het grote?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Leg kleine vierkanten naast elkaar zo vaak als elke zijde langer wordt, en evenveel rijen onder elkaar. Tel hoeveel kleine vierkanten je dan hebt."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel kleine vierkanten passen er in het grote vierkant?",
+    "tekstSterker": "Leg kleine vierkanten naast elkaar zo vaak als elke zijde langer wordt, en evenveel rijen onder elkaar. Tel hoeveel kleine vierkanten je dan hebt."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "alleen de zijde",
+    "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+    "regel": "Claudes sleutel: omtrek-oppervlakte-verwisseld",
+    "tekst": "Dat is hoeveel keer zo lang elke zijde wordt. De oppervlakte groeit meer: de lengte én de breedte worden langer.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Leg zoveel kleine vierkanten naast elkaar als het aantal keer dat elke zijde langer wordt. Leg evenveel rijen onder elkaar. Tel ze."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "opgeteld",
+    "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+    "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+    "tekst": "Heb je opgeteld? De lengte en de breedte worden allebei zoveel keer zo lang. Hoeveel kleine vierkanten passen er dan in het grote?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Leg zoveel kleine vierkanten naast elkaar als het aantal keer dat elke zijde langer wordt. Leg evenveel rijen onder elkaar. Tel ze."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel kleine vierkanten passen er in het grote vierkant?",
+    "tekstSterker": "Leg zoveel kleine vierkanten naast elkaar als het aantal keer dat elke zijde langer wordt. Leg evenveel rijen onder elkaar. Tel ze."
+   }
+  ],
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#708: laag 2 los te lezen"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 6,
+  "veld": "hint2",
+  "was": "Leg kleine vierkanten naast elkaar zo vaak als elke zijde langer wordt, en evenveel rijen onder elkaar. Tel hoeveel kleine vierkanten je dan hebt.",
+  "wordt": "Leg zoveel kleine vierkanten naast elkaar als het aantal keer dat elke zijde langer wordt. Leg evenveel rijen onder elkaar. Tel ze.",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#708"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 9,
+  "veld": "foutHint[opgeteld].tekst",
+  "was": "Heb je opgeteld? Bij een schaal doe je keer of gedeeld door, je telt niets op.",
+  "wordt": "Heb je de echte maat en het getal achter de dubbele punt opgeteld? Op de tekening wordt het kleiner: hoe vaak past het getal achter de dubbele punt in de echte maat?",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), V-#702: geen bewerking uitsluiten (les 217)"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 14,
+  "veld": "foutHint[erbij in plaats van keer].tekst",
+  "was": "Bij een schaal gaat het om keer, niet om erbij. Hoeveel keer zo groot is het echte voorwerp?",
+  "wordt": "Bij een schaal is elke centimeter op de tekening in het echt evenveel keer zo groot. Hoeveel keer zo groot is het echte voorwerp?",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), V-#702/les 217: niet «niet om erbij»"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 14,
+  "veld": "foutHint[andere fout].tekstSterker",
+  "was": null,
+  "wordt": "Lees wat één centimeter op de tekening in het echt is. Gaat het om erbij of om keer? En is het echte voorwerp groter of kleiner dan de tekening?",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#708: laag 2 = H2"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 15,
+  "veld": "foutHint[opgeteld].tekst",
+  "was": "Heb je opgeteld? Bij een schaal doe je keer of gedeeld door, je telt niets op.",
+  "wordt": "Heb je de twee getallen van de schaal opgeteld? Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), V-#702: geen bewerking uitsluiten (les 217)"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 15,
+  "veld": "hint2",
+  "was": "Welk getal van de schaal hoort bij het echte voorwerp? Zoveel centimeter is één centimeter op de tekening in het echt.",
+  "wordt": "Welk getal van de schaal hoort bij de tekening, en welk bij het echte voorwerp?",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#707: H2 verklapt niet"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 16,
+  "veld": "foutHint[opgeteld].tekst",
+  "was": "Heb je er iets bij opgeteld? Is het op de tekening zoveel keer zo lang, dan is het in het echt ook zoveel keer zo lang.",
+  "wordt": "Heb je er maar één bij opgeteld? Komt er op de tekening een centimeter bij, dan komt er in het echt het hele getal achter de dubbele punt bij.",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#702: kolommen optellen mag"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 17,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "andere schaal gekozen",
+    "claudeDenkfout": null,
+    "regel": "De tekening op schaal 1 : 100",
+    "tekst": "Bij die schaal hoort bij één centimeter op de tekening juist meer in het echt. Wordt de tekening dan groter of kleiner?",
+    "tekstSterker": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?"
+   },
+   {
+    "bron": "nieuw",
+    "soort": "even groot",
+    "claudeDenkfout": null,
+    "regel": "Beide tekeningen zijn even groot",
+    "tekst": "Het is hetzelfde voorwerp, maar de schalen zijn verschillend. Dan worden de tekeningen ook verschillend groot.",
+    "tekstSterker": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?"
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken voor elke schaal uit hoe lang de tekening wordt.",
+    "tekstSterker": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?"
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "andere schaal gekozen",
+    "claudeDenkfout": null,
+    "regel": "De tekening op schaal 1 : 100",
+    "tekst": "Bij die schaal hoort bij één centimeter op de tekening juist meer in het echt. Wordt de tekening dan groter of kleiner?",
+    "tekstSterker": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?"
+   },
+   {
+    "bron": "nieuw",
+    "soort": "even groot",
+    "claudeDenkfout": null,
+    "regel": "Beide tekeningen zijn even groot",
+    "tekst": "Het is hetzelfde voorwerp, maar de schalen zijn verschillend. Dan worden de tekeningen ook verschillend groot.",
+    "tekstSterker": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?"
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken voor elke schaal uit hoe lang de tekening wordt.",
+    "tekstSterker": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?"
+   }
+  ],
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#703"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 17,
+  "veld": "hint2",
+  "was": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?",
+  "wordt": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#703: tussenuitkomst niet gelijk aan een afleider"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 18,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "andere schaal gekozen",
+    "claudeDenkfout": null,
+    "regel": "Marit",
+    "tekst": "Bij die schaal hoort bij één centimeter op de tekening minder in het echt. Wordt de tekening dan groter of kleiner?",
+    "tekstSterker": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?"
+   },
+   {
+    "bron": "nieuw",
+    "soort": "even groot",
+    "claudeDenkfout": null,
+    "regel": "Ze krijgen even grote tekeningen",
+    "tekst": "Het is hetzelfde voorwerp, maar de schalen zijn verschillend. Dan worden de tekeningen ook verschillend groot.",
+    "tekstSterker": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?"
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken voor elke schaal uit hoe lang de tekening wordt.",
+    "tekstSterker": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?"
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "andere schaal gekozen",
+    "claudeDenkfout": null,
+    "regel": "Marit",
+    "tekst": "Bij die schaal hoort bij één centimeter op de tekening minder in het echt. Wordt de tekening dan groter of kleiner?",
+    "tekstSterker": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?"
+   },
+   {
+    "bron": "nieuw",
+    "soort": "even groot",
+    "claudeDenkfout": null,
+    "regel": "Ze krijgen even grote tekeningen",
+    "tekst": "Het is hetzelfde voorwerp, maar de schalen zijn verschillend. Dan worden de tekeningen ook verschillend groot.",
+    "tekstSterker": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?"
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken voor elke schaal uit hoe lang de tekening wordt.",
+    "tekstSterker": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?"
+   }
+  ],
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#703"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 18,
+  "veld": "hint2",
+  "was": "Stel: het echte voorwerp is duizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?",
+  "wordt": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is kleiner?",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#703: tussenuitkomst niet gelijk aan een afleider"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 19,
+  "veld": "foutHint[centimeters als meters].tekst",
+  "was": "Kijk naar de maat. Het getal achter de dubbele punt is in centimeters, niet in meters.",
+  "wordt": "Kijk naar de maat. Het getal achter de dubbele punt is een aantal centimeters, geen meters. Reken het om: honderd centimeter is één meter.",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6): laag 1 met de omrekening"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 21,
+  "veld": "foutHint[centimeters als meters].tekst",
+  "was": "Kijk naar de maat. Het getal achter de dubbele punt is in centimeters, niet in meters.",
+  "wordt": "Kijk naar de maat. Het getal achter de dubbele punt is een aantal centimeters, geen meters. Reken het om: honderd centimeter is één meter.",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6): laag 1 met de omrekening"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 23,
+  "veld": "foutHint[opgeteld].tekst",
+  "was": "Heb je opgeteld? Bij een schaal doe je keer of gedeeld door, je telt niets op.",
+  "wordt": "Heb je de maat op de tekening en het getal achter de dubbele punt opgeteld? Elke centimeter op de tekening is in het echt zoveel centimeter als het getal achter de dubbele punt.",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), V-#702: geen bewerking uitsluiten (les 217)"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 24,
+  "veld": "foutHint[opgeteld].tekst",
+  "was": "Heb je opgeteld? Bij een schaal doe je keer of gedeeld door, je telt niets op.",
+  "wordt": "Heb je de maat op de tekening en het getal achter de dubbele punt opgeteld? Elke centimeter op de tekening is in het echt zoveel centimeter als het getal achter de dubbele punt.",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), V-#702: geen bewerking uitsluiten (les 217)"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 1,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "tien keer ernaast",
+    "claudeDenkfout": "nul-fout-tientallen",
+    "regel": "Claudes sleutel: nul-fout-tientallen",
+    "tekst": "Dat is tien keer te groot of te klein. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "noemer door teller",
+    "claudeDenkfout": "omgekeerd-gedeeld",
+    "regel": "Claudes sleutel: omgekeerd-gedeeld",
+    "tekst": "Heb je de noemer door de teller gedeeld? De teller is het deel: die hoort bij het procent dat je zoekt.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.",
+    "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "tien keer ernaast",
+    "claudeDenkfout": "nul-fout-tientallen",
+    "regel": "Claudes sleutel: nul-fout-tientallen",
+    "tekst": "Dat is tien keer te groot of te klein. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "noemer door teller",
+    "claudeDenkfout": "omgekeerd-gedeeld",
+    "regel": "Claudes sleutel: omgekeerd-gedeeld",
+    "tekst": "Heb je de noemer door de teller gedeeld? De teller is het deel: die hoort bij het procent dat je zoekt.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "teller met procentteken",
+    "claudeDenkfout": null,
+    "regel": "fout = het deel zelf (als %)",
+    "tekst": "Dat is de teller met een procentteken. Dat klopt alleen als de noemer honderd is. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.",
+    "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "noemer met procentteken",
+    "claudeDenkfout": "getal-overgenomen",
+    "regel": "Claudes sleutel: getal-overgenomen",
+    "tekst": "Dat is de noemer. Die hoort bij honderd procent. Welk procent hoort bij de teller?",
+    "claudeTekst": null,
+    "waarom": "V-#700: na de regel voor de teller vangt dit label alleen nog de noemer met een procentteken (52 sleutels, nagerekend)",
+    "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.",
+    "tekstSterker": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat."
+   }
+  ],
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6): V-#700 regel teller% en label noemer%, Z-#710 laag 2"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 1,
+  "veld": "hint2",
+  "was": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde.",
+  "wordt": "Maak een verhoudingstabel. Zet de noemer bij honderd procent en de teller bij het procent dat je zoekt. Reken de noemer om naar honderd, en doe met de teller precies hetzelfde. Lukt dat niet in één keer? Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat.",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#710: tussenstap (21 items: noemer 8, 15, 35, 40, 45)"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 2,
+  "veld": "hint1",
+  "was": "Procent (%) betekent: zoveel van de honderd. Het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten.",
+  "wordt": "Procent (%) betekent: zoveel van de honderd. Het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten.",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#709"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 3,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "tien keer te groot",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te groot. Procent zijn honderdsten: deel het getal van het procent door honderd.",
+    "tekstSterker": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "procent zonder komma",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat is het getal van het procent. Als kommagetal is het honderd keer zo klein.",
+    "tekstSterker": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Deel het getal van het procent door honderd.",
+    "tekstSterker": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "tien keer te groot",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te groot. Procent zijn honderdsten: deel het getal van het procent door honderd.",
+    "tekstSterker": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "procent zonder komma",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat is het getal van het procent. Als kommagetal is het honderd keer zo klein.",
+    "tekstSterker": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Deel het getal van het procent door honderd.",
+    "tekstSterker": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg."
+   }
+  ],
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#709"
+ },
+ {
+  "tijd": "14:49",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 3,
+  "veld": "hint2",
+  "was": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma zijn tienden, het cijfer daarna honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg.",
+  "wordt": "Procent zijn honderdsten. Schrijf het als kommagetal: het cijfer direct achter de komma geeft de tienden, het cijfer daarna de honderdsten. Is er geen heel getal? Zet dan een nul voor de komma. Een nul aan het eind achter de komma mag weg.",
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6), Z-#709"
+ },
+ {
+  "tijd": "14:51",
+  "doel": "G7-VERH-03",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "prijs uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is de prijs uit de vraag. Die hoort bij een ander aantal. Wat kost één?",
+    "tekstSterker": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "prijs van één",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is de prijs van één. Hoeveel kosten er zoveel als de vraag vraagt?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Je weet nu wat één kost. Doe dat bedrag keer het aantal waar de vraag naar vraagt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "stuk te veel of verschil erbij",
+    "claudeDenkfout": "verhoudingstabel-verkeerd",
+    "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+    "tekst": "Heb je één stuk te veel of te weinig betaald? Of heb je het verschil in aantal bij de prijs opgeteld? Reken uit wat één kost, en doe dat keer het aantal waar de vraag naar vraagt.",
+    "claudeTekst": null,
+    "waarom": "V-#700: label met drie routes (antwoord ± prijs van één, prijs + verschil in aantal): een vraagtekst, nagerekend per sleutel",
+    "tekstSterker": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken uit wat één kost, en doe dat keer het aantal waar de vraag naar vraagt.",
+    "tekstSterker": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "prijs uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = getal2",
+    "tekst": "Dat is de prijs uit de vraag. Die hoort bij een ander aantal. Wat kost één?",
+    "tekstSterker": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "prijs van één",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is de prijs van één. Hoeveel kosten er zoveel als de vraag vraagt?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+    "tekstSterker": "Je weet nu wat één kost. Doe dat bedrag keer het aantal waar de vraag naar vraagt."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "stuk te veel of verschil erbij",
+    "claudeDenkfout": "verhoudingstabel-verkeerd",
+    "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+    "tekst": "Heb je één stuk te veel of te weinig betaald? Of heb je het verschil in aantal bij de prijs opgeteld of ervan afgehaald? Reken uit wat één kost, en doe dat keer het aantal waar de vraag naar vraagt.",
+    "claudeTekst": null,
+    "waarom": "V-#700: label met drie routes (antwoord ± prijs van één, prijs ± verschil in aantal; 14 sleutels bij minder stuks: prijs − verschil): een vraagtekst, nagerekend per sleutel",
+    "tekstSterker": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Reken uit wat één kost, en doe dat keer het aantal waar de vraag naar vraagt.",
+    "tekstSterker": "Reken eerst uit wat één kost: deel de prijs door het aantal dat bij die prijs hoort. Doe dat bedrag daarna keer het aantal waar de vraag naar vraagt."
+   }
+  ],
+  "waarom": "Ronde 1d (Oefeningen 8 okt; Didactiek review batch 6): V-#700 labelregel"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "(entry)",
+  "was": null,
+  "wordt": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')",
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564): nieuwe entry (Z-#564 besloten)"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "(entry)",
+  "was": null,
+  "wordt": "[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')",
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564): nieuwe entry (Z-#564 besloten)"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "claudeVervangen",
+  "was": null,
+  "wordt": [
+   {
+    "claudeTekst": "Vergelijk de sterkaartjes met alle kaartjes, niet met de kaartjes zonder ster.",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Tel alle knikkers, ook de rode.",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Er wordt gevraagd naar een knikker die juist niet rood is.",
+    "claudeDenkfout": "andere-deel-genomen",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Tel alle sokken bij elkaar, ook de zwarte.",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Kijk nog eens welke kleur sok in de vraag staat.",
+    "claudeDenkfout": "andere-deel-genomen",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Je hebt de lootjes zonder prijs geteld. Lees nog eens wat er gevraagd wordt.",
+    "claudeDenkfout": "andere-deel-genomen",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Vergelijk de prijslootjes met alle lootjes in de pot, niet alleen met de lege.",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Kijk goed naar welke kleur er in de vraag wordt gevraagd.",
+    "claudeDenkfout": "andere-deel-genomen",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Je moet het aantal rode knikkers vergelijken met alle knikkers samen, niet met de blauwe.",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Schrijf alle even getallen tot en met 10 op en tel hoeveel het er zijn.",
+    "claudeDenkfout": null,
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Vergeet bij het tellen van de even getallen de 10 zelf niet.",
+    "claudeDenkfout": "een-ernaast",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Tel alle kaartjes, dus alle letters samen.",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Tel nog eens hoe vaak de letter A in het woord voorkomt.",
+    "claudeDenkfout": null,
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Het aantal sterren is niet meteen het antwoord. Kijk hoe vaak 5 in 20 past.",
+    "claudeDenkfout": "getal-overgenomen",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   }
+  ],
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564): Claudes teksten noemen de context of sturen naar vereenvoudigen ('hoe vaak 5 in 20 past', Z-#564)"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "doel",
+  "was": null,
+  "wordt": "G7-VERH-04",
+  "waarom": ""
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "foutHints",
+  "was": [],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet met het totaal",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+    "tekst": "Achter 'op de' komt het totaal. Tel alles samen, ook het deel waar de vraag over gaat.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het deel tegen de rest of tegen zichzelf, niet tegen het totaal",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het andere deel tegen het totaal",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel achter op de",
+    "claudeDenkfout": "getal-overgenomen",
+    "regel": "Claudes sleutel: getal-overgenomen",
+    "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het aantal van het deel staat achter 'op de'",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel verkeerd geteld",
+    "claudeDenkfout": "een-ernaast",
+    "regel": "Claudes sleutel: een-ernaast",
+    "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: totaal goed, deel één ernaast",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   }
+  ],
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564): vier labels met vaste tekst + andere fout"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "hint1",
+  "was": null,
+  "wordt": "Bij 'op de' komt eerst het deel waar de vraag over gaat. Achter 'op de' komt het totaal: alles samen.",
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564)"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "hint2",
+  "was": null,
+  "wordt": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564)"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "koppeling",
+  "was": null,
+  "wordt": "claudeId",
+  "waarom": ""
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "nr",
+  "was": null,
+  "wordt": 4,
+  "waarom": ""
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "nrOrigineel",
+  "was": null,
+  "wordt": 4,
+  "waarom": ""
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "ouderzin",
+  "was": null,
+  "wordt": "Je kind beschrijft een deel van een groep met 'op de': eerst het deel, dan het totaal.",
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564)"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "somtype",
+  "was": null,
+  "wordt": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')",
+  "waarom": ""
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "somtypeOrigineel",
+  "was": null,
+  "wordt": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')",
+  "waarom": ""
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "claudeVervangen",
+  "was": null,
+  "wordt": [
+   {
+    "claudeTekst": "Tel alle vakjes van het rad, ook de rode.",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Je hebt de vakjes geteld die niet groen zijn. Lees nog eens wat er gevraagd wordt.",
+    "claudeDenkfout": "andere-deel-genomen",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Tel alle vakjes van het rad, ook de groene.",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   },
+   {
+    "claudeTekst": "Het aantal rode vakjes is niet meteen het antwoord. Kijk hoe vaak 3 in 12 past.",
+    "claudeDenkfout": "getal-overgenomen",
+    "waarom": "vervangen door een vaste tekst per label, zonder context (les 147, 40)"
+   }
+  ],
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564): Claudes teksten noemen de context of sturen naar vereenvoudigen ('hoe vaak 5 in 20 past', Z-#564)"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "doel",
+  "was": null,
+  "wordt": "G7-VERH-04",
+  "waarom": ""
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "foutHints",
+  "was": [],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet met het totaal",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+    "tekst": "Achter 'op de' komt het totaal. Tel alle vakjes samen, ook de vakjes waar de vraag over gaat.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het deel tegen de rest of tegen zichzelf, niet tegen het totaal",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel de vakjes.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het andere deel tegen het totaal",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel achter op de",
+    "claudeDenkfout": "getal-overgenomen",
+    "regel": "Claudes sleutel: getal-overgenomen",
+    "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het aantal van het deel staat achter 'op de'",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel verkeerd geteld",
+    "claudeDenkfout": "een-ernaast",
+    "regel": "Claudes sleutel: een-ernaast",
+    "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: totaal goed, deel één ernaast",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   }
+  ],
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564): vier labels met vaste tekst + andere fout"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "hint1",
+  "was": null,
+  "wordt": "Bij 'op de' komt eerst het aantal vakjes waar de vraag over gaat. Achter 'op de' komt het aantal vakjes van het hele rad.",
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564)"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "hint2",
+  "was": null,
+  "wordt": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564)"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "koppeling",
+  "was": null,
+  "wordt": "claudeId",
+  "waarom": ""
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "nr",
+  "was": null,
+  "wordt": 7,
+  "waarom": ""
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "nrOrigineel",
+  "was": null,
+  "wordt": 7,
+  "waarom": ""
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "ouderzin",
+  "was": null,
+  "wordt": "Je kind beschrijft een deel van een rad met 'op de': eerst het aantal vakjes van het deel, dan alle vakjes.",
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564)"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "somtype",
+  "was": null,
+  "wordt": "[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')",
+  "waarom": ""
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "somtypeOrigineel",
+  "was": null,
+  "wordt": "[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')",
+  "waarom": ""
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 4,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet met het totaal",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+    "tekst": "Achter 'op de' komt het totaal. Tel alles samen, ook het deel waar de vraag over gaat.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het deel tegen de rest of tegen zichzelf, niet tegen het totaal",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het andere deel tegen het totaal",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel achter op de",
+    "claudeDenkfout": "getal-overgenomen",
+    "regel": "Claudes sleutel: getal-overgenomen",
+    "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het aantal van het deel staat achter 'op de'",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel verkeerd geteld",
+    "claudeDenkfout": "een-ernaast",
+    "regel": "Claudes sleutel: een-ernaast",
+    "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: totaal goed, deel één ernaast",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet met het totaal",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+    "tekst": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het deel tegen de rest of tegen zichzelf, niet tegen het totaal",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het andere deel tegen het totaal",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel achter op de",
+    "claudeDenkfout": "getal-overgenomen",
+    "regel": "Claudes sleutel: getal-overgenomen",
+    "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het aantal van het deel staat achter 'op de'",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel verkeerd geteld",
+    "claudeDenkfout": "een-ernaast",
+    "regel": "Claudes sleutel: een-ernaast",
+    "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: totaal goed, deel één ernaast",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+    "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal."
+   }
+  ],
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564): vier labels met vaste tekst + andere fout"
+ },
+ {
+  "tijd": "14:59",
+  "doel": "G7-VERH-04",
+  "nrOrigineel": 7,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet met het totaal",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+    "tekst": "Achter 'op de' komt het totaal. Tel alle vakjes samen, ook de vakjes waar de vraag over gaat.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het deel tegen de rest of tegen zichzelf, niet tegen het totaal",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel de vakjes.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het andere deel tegen het totaal",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel achter op de",
+    "claudeDenkfout": "getal-overgenomen",
+    "regel": "Claudes sleutel: getal-overgenomen",
+    "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het aantal van het deel staat achter 'op de'",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel verkeerd geteld",
+    "claudeDenkfout": "een-ernaast",
+    "regel": "Claudes sleutel: een-ernaast",
+    "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: totaal goed, deel één ernaast",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "claude-taalfix",
+    "soort": "niet met het totaal",
+    "claudeDenkfout": "deel-van-geheel-verkeerd",
+    "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+    "tekst": "Achter 'op de' komt het totaal: alle vakjes van het rad samen. Tel ze allemaal.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het deel tegen de rest of tegen zichzelf, niet tegen het totaal",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "het andere deel",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel die vakjes.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het andere deel tegen het totaal",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel achter op de",
+    "claudeDenkfout": "getal-overgenomen",
+    "regel": "Claudes sleutel: getal-overgenomen",
+    "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: het aantal van het deel staat achter 'op de'",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "deel verkeerd geteld",
+    "claudeDenkfout": "een-ernaast",
+    "regel": "Claudes sleutel: een-ernaast",
+    "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+    "claudeTekst": null,
+    "waarom": "label nagerekend: totaal goed, deel één ernaast",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+    "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal."
+   }
+  ],
+  "waarom": "Ronde 1c (Oefeningen 8 okt; Z-#564): vier labels met vaste tekst + andere fout"
  }
 ]

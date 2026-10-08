@@ -341,9 +341,9 @@ Ronde 3c (V-#615, Z-#617, Z-#618, Z-#619, Oef-#434, Oef-#442, Z-#606) en ronde 1
 |---|---|---|---|
 | Oef-#452 | Overzicht (data) | VERH-03 #1/#2: veel claudeDenkfouten staan niet in claudeFoutHints (530 van 662 en 446 van 528), dus routes als b × c, erbij optellen en ± de prijs van één worden nooit sleutels | ✓ build 14:35:51: oorzaak G4-regel D12b (sjabloontekst «Maak een verhoudingstabel.» / «Dat getal staat al in de som.» viel weg, en daarmee de sleutel). fixlijst_g7 _v452 zet 976 sleutels in VERH-03 terug (uitleg None). 547 daarvan (label 'verhoudingstabel-verkeerd': €8 bij 6 pennen €3 → 11, 72 bij 4:9=8:?) staan nu op 'andere fout': Oefeningen kan een regel 'Claudes sleutel: verhoudingstabel-verkeerd' maken |
 | Oef-#453 | Overzicht (data/motor) | VERH-04 #1 (109) en #2 ('0,7%', '0,9%', '0,3%'): Claudes '%'-sleutels met 'getal-overgenomen' staan niet in claudeFoutHints; de motor leest geen '%' buiten 'D van G'. Nu 'andere fout' (#1, algemene aanpak) en letterlijke regels (#2). Voorstel: sleutels in claudeFoutHints, of 'tien keer het procent (als %)' en een regel 'kommagetal met procentteken' ook zonder 'D van G' | ✓ build 14:41:45: zelfde oorzaak als #452 (D12b); _v452 zet ook in VERH-04 de sleutels terug (109 in #1, 3 in #2). Motor (alleen KOMMA437, G5/G6 0 anders): #445-regels lezen ook 'D/G' ('32/50' → het deel zelf 32%, geheel min deel 18%), 'tien keer het procent (als %)' ook zonder deel; nieuw 'fout = kommagetal met procentteken' en 'fout = getallen achter elkaar (als %)'. patch_batch6 (blok Overzicht): #2 drie letterlijke regels → één motorregel, #5 '14%' → motorregel; tekst ongewijzigd. 'regel niet te lezen' in VERH-04 weg. Open voor Oefeningen: VERH-04 #1 '32%' staat op 'andere fout' (109): een regel 'fout = het deel zelf (als %)' met eigen tekst pakt ze nu |
-| Oef-#454 | Didactiek/Overzicht | VERH-03 #4/#6: «k keer zo groot» = elke zijde k keer zo lang, terwijl de oppervlakte in #6 k × k groeit; VERH-03 #17 legt alleen 1 : 100 uit, maar vergelijkt 1 : 10 en 1 : 100 | open |
-| Oef-#455 | Overzicht (data) | VERH-04 #5 bank-125: optie '40%' zonder Claude-route (geen denkfout); blijft op 'andere fout' | open |
-| Oef-#459 | Overzicht (data, les 206) | VERH-04 #2: in 5 van 8 items is het antwoord de middelste optie (opties × 10 en : 10); VERH-03 #13/#15/#20/#22/#23 (één item) ook | open |
+| Oef-#454 | Didactiek/Overzicht | VERH-03 #4/#6: «k keer zo groot» = elke zijde k keer zo lang, terwijl de oppervlakte in #6 k × k groeit; VERH-03 #17 legt alleen 1 : 100 uit, maar vergelijkt 1 : 10 en 1 : 100 | ✓ build 14:58:27: #6 via V-#704 («Elke zijde van een vierkant van z bij z cm wordt k keer zo lang. …»; 3×3/k4 → 16, 5×5/k4 → 16, 4×4/k3 → 9; kop mee). #4 blijft (Didactiek: goed). #17 via Z-#704 (geen 'Dat betekent'-zin meer) |
+| Oef-#455 | Overzicht (data) | VERH-04 #5 bank-125: optie '40%' zonder Claude-route (geen denkfout); blijft op 'andere fout' | ✓ build 14:58:27: bank-125 '40%' → '4%' (het hele aantal als procent, label procent-verkeerde-basis; soort 'het hele aantal') |
+| Oef-#459 | Overzicht (data, les 206) | VERH-04 #2: in 5 van 8 items is het antwoord de middelste optie (opties × 10 en : 10); VERH-03 #13/#15/#20/#22/#23 (één item) ook | ✓ build 14:58:27: VERH-04 #2 bank-008 '500%' → '0,5%' (nu 4 van 8 midden, 4 grootste); VERH-04 nrO 4/7 via Z-#564; VERH-03 #13/#15/#20/#22/#23 (één item per somtype) niet: Didactiek Z-#711 'data hoeft nu niet'. Nieuwe check tools/optie_positie_check.py (WARN, G7/G8): plek op waarde, of de letter als het item niet husselt; vraagzinnen met grootst/kleinst tellen niet. G7 0 WARN; G8 2 WARN (MEET-V01, VERH-E06), G4/G5/G6 niet aangehaakt (ter info 2/6/2) |
 | Z-#564 | Leerlijn (optie b, steering 14:33) | VERH-04 nrO 4/7: getelde vorm is goed. bank-127: A 5 op de 15 · B 5 op de 20 (goed) · C 1 op de 5; bank-136 (rad): A 3 op de 12 (goed) · B 1 op de 3 · C 3 op de 9; «1 op de 4» weg (blijft geldig antwoord, zoals bij 131/137); claudeUitleg geteld; uitleg bij 1 op de 5 / 1 op de 3 (ging over vereenvoudigen) → None. De andere items hadden al de getelde vorm. Posities (Oef-#459): bank-131 → C, bank-137 → B; nrO 4 nu A2 · B3 · C2, nrO 7 A1 · B1. bank-134 '2 op de 10' en bank-135 '1 op de 6' hebben geen Claude-route | ✓ build 14:44:30 (fixlijst_g7 _z564); Oefeningen kan #4/#7 schrijven |
 | – | Leerlijn | VERH-04 #4 (vereenvoudigen) en #7 (rad) wachten op Z-#564; niet geschreven | wacht |
 
@@ -353,3 +353,38 @@ Nummering: volgende vrije Oef-#460 (zie onder: Oef-#460–#463 staan in g4/merge
 ### Oefeningen 8 okt: batch 5 ronde 1e
 - Geen nieuw punt: Z-#664 laag 2 van VERH-01 #4 zonder de gelijk-regel (review-batch5.md, ronde 1e).
 - Oef-#460–#463 gebruikt in g4/merge-fixlijst.md (G4 batch 5, GET-E05). Nummering: volgende vrije Oef-#464.
+
+## Oefeningen 8 okt: batch 6 ronde 1d (review-batch6-didactiek.md, taal: fix) en batch 4/5 zacht (recheck-batch4-5-didactiek.md)
+- Live build 14:41:45 (en 14:44:30, batch6.json gelijk): b6/check **660 FAIL** → na ronde 1d in de zandbak (kopie live + patch, sync/apply): **FAIL 0**, check_hints 153 klaar · 0 FAIL · 0 WARN, merge-notatie ALLES OK, hint-sync = live batch6.json; tweede run patch_batch6 = 0. Mutanten 87, gemist 0 (nieuw: M215, M216, M217, M218, M220, MV700, MV700b; les 223).
+- **V-#700 ✓** VERH-03 #1 labelregel 'verhoudingstabel-verkeerd' (202: b + c − a of b × c, vraagtekst); VERH-03 #2 labelregel (345: antwoord ± prijs van één, prijs ± verschil in aantal; let op: 14 sleutels zijn *prijs − verschil* bij minder stuks, daarom «opgeteld of ervan afgehaald»); VERH-04 #1 'fout = het deel zelf (als %)' (57, teller%) en label 'getal-overgenomen' (52, noemer%). Elk met eigen laag 2. b6/check telt 57/52; VERH-04 #1 van de WACHT-lijst (les 221); checks voor R453-regels erbij.
+- **V-#701 ✓** 'één keer te veel/te weinig' als vraag (ook de additieve route); laag 2 zonder 'niet één keer meer/minder'. Guard les 216: stellige ±-tekst op een additieve sleutel = FAIL.
+- **V-#702 ✓** 'opgeteld' in #9/#15/#23/#24 zonder uitgesloten bewerking; #14 'erbij in plaats van keer' ook zonder «niet om erbij»; G7 batch 5 VERH-01 #7 H2 «Bij een schaal tel je niets op» → «Het teken bij een schaal is geen plusteken.» (patch_batch5 ronde 1f). Guard les 217 in b5- en b6-check. #19/#21 «in centimeters, niet in meters»: waar volgens de vraag; laag 1 nu met de omrekening.
+- **Zacht ✓:** Z-#702 (#16), Z-#703 (tweeduizend; guard les 220 op tussenuitkomsten), Z-#705 (H2 #1 via de rol: 'in de verhouding met/zonder vraagteken'), Z-#706 (H1 #2), Z-#707 (H2 #15), Z-#708 (#6 laag 2 en H2; #14 laag 2), Z-#709 ('geeft de tienden'), Z-#710 (tussenstap: «Deel dan eerst de teller en de noemer door hetzelfde getal, tot de noemer wel in één keer naar honderd gaat»; per item nagerekend, 21 items). Z-#700/#701/#704/#711/#712: Overzicht.
+- **Wacht op data (Overzicht):** V-#703 (6 items antwoord uit de vraag; b6/check WACHT met eigen reden-toets, les 215), V-#704 (#6 vraagzin), V-#705 (bank-297 '100 000'; WACHT, les 218). Na hun build: b6/check op live opnieuw.
+- **Batch 4/5 zacht:** Z-#680 ✓ (b4/check: stam-guard noemer + 'getal onderaan/onder de streep'; 'zoveel lagen' over de hele tekst, laatste bewerking telt; N3/N4/N5/L2 nu gevangen, baseline FAIL 0). Z-#681 ✓ (b5/check les 195 ook #2: bank-540 → INFO). Z-#682 ✓ (gelijk-guard re.I, H1/H2/L1/L2, hetzelfde/evenveel/even groot/net zo groot; VERH-01 #7 telt opties na H1 + H2; contextwoorden ook uit de data als INFO-lijst, les 212). Mutanten G1/G2/G3/S7/U1 gevangen.
+
+| # | Voor | Wat | Status |
+|---|---|---|---|
+| Oef-#464 | Overzicht (README) | Z-#683: g7/README §App-eis keurt bij «Rond af op één cijfer achter de komma» alleen *minder* cijfers af; '2,00' / '3,80' tellen als goed (les 214). Niet ons bestand. | open |
+
+Nummering: volgende vrije Oef-#465.
+
+
+## Review batch 6 (Didactiek 8 okt, build 14:41:45; review-batch6-didactiek.md) — door Overzicht, build 14:58:27
+
+`scripts/fixlijst_g7.py` → `_r6` (+ `_opt_vervang`). G5/G6 0 verschil (checks ALLES OK). **Oefeningen synct na deze build** (V-#700/#701/#702 zijn tekst).
+
+| # | Wat | Gedaan |
+|---|---|---|
+| 'Kleur 5%' (VERH-01 #2) | Didactiek akkoord met schrappen | ✓ bevroren/geschrapt_review5.json is definitief |
+| V-#703 | VERH-03 #1, antwoord = getal uit de vraag (6 items) | ✓ bank-318 9 : 3 = 27 → 9 : 6 = 18 (12) · 352 8 : 2 = 32 → 8 : 5 = 16 (10) · 518 10 : 2 = 50 → 4 : 3 = 8 (6) · 531 4 : 2 = 8 → 7 : 5 = 14 (10) · 545 6 : 2 = 18 → 5 : 3 = 10 (6) · 620 8 : 4 = 16 → 3 : 4 = 12 (16); geen van zessen al in de bank; Claudes sleutels mee met hun route. Guard: tools/antwoord_in_vraag_check.py 'verhouding' (FAIL, G5–G8; G5/G6/G8 0) |
+| V-#704 (= Oef-#454) | VERH-03 #6 vraagzin | ✓ zie Oef-#454; zijde en oppervlakte nooit k of k × k (assert) |
+| V-#705 | VERH-03 #20 bank-297 «1 : 100 000» | ✓ «1 : 100.000» in opgave, claudeUitleg en Claudes fout-hint. Nieuwe check tools/spatie_duizend_check.py (FAIL) in check_merge_notatie G4–G8: overal 0 |
+| Z-#681 | VERH-02 #2 bank-540 25% van €20 = 25 − 20 | ✓ 25% van €80 = €20 (sleutels €80, €2; antwoordOokGoed 20,00) |
+| Z-#700 | vaste motorregels voor de routes bij verhoudingen | niet gedaan (motor + G5/G6-regressie; volgende ronde) |
+| Z-#701 | toevallige treffers VERH-03 #2/#4/#5, VERH-04 bank-089 | niet gedaan (volgende dataronde) |
+| Z-#704 | schaal: #17 één schaal uitgelegd; #10/#12/#25 'tekening' bij een model | ✓ #17 zonder 'Dat betekent'-zin; bank-268/277/302 «1 cm in het model» (koppen mee, sync op claudeId) |
+| Z-#710 | noemers 15/35/45 VERH-04 #1 | niet gedaan |
+| Z-#711 | middelste optie / eenzijdige data | deels: VERH-04 #2 (Oef-#459); VERH-03 #1 'c > a' niet |
+| Z-#712 | VERH-04 #3 'kapot' | ✓ pakken → kopjes, kaartjes → tegels, stickers → borden, knopen → glazen, ballonnen → ruiten (lampjes blijft) |
+| Oef-#457 | MEET-04 bank-016/022/040 vorst in de schuur | ✓ naar buiten (park, bos, tuin), zoals V-#666 |

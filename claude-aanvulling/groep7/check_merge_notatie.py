@@ -181,5 +181,9 @@ if __name__ == '__main__':
     print(f"\nV-#665 staaf-check (hoogste/laagste uniek): {len(_sg)} (FAIL)")
     for _x in _sg: print('  FAIL V-#665 gelijke %s staaf: %s (waarde %s in %s)' % (_x[1], _x[0], _x[2], _x[3]))
     fail = bool(_sg) or fail
+    import spatie_duizend_check as _SD      # V-#705 (review G7 batch 6, Didactiek 8 okt): spatie als duizendtalscheiding (FAIL, G4–G8)
+    fail = (_SD.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    import optie_positie_check as _OP      # Oef-#459 (8 okt): goede antwoord >60% op één plek in een somtype met ≥4 items (WARN)
+    _OP.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
     print('\nG7 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)
