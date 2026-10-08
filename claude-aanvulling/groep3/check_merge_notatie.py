@@ -87,5 +87,7 @@ if __name__=='__main__':
     import evenveel_check as _EV      # #192 (Didactiek 21:25): 'even veel' ook in ouderzin, hints en kop (FAIL)
     fail = (_EV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     fail = (_MC.rapport(3, [_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    sys.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge')); import gemiddelde_check as _GM      # Z-#855 (Didactiek 8 okt 16:15): gemiddelde-vragen; in G3 alleen gemeld
+    _GM.rapport([_it for _p in files for _it in json.load(open(_p))['items']], __import__('os').path.dirname(__import__('os').path.abspath(__file__)), ernst='WARN (hier niet blokkerend)')
     print('\nG3 merge-notatie:', 'FAIL (zie merge-fixlijst.md; opgaven niet aangepast)' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

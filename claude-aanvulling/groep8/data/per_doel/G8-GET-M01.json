@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T16:13:53+0200",
+ "gegenereerdOp": "2026-10-08T16:25:38+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-GET-M01",
  "bordtitel": "Miljoenen en miljarden, ook in woorden",
@@ -26,22 +26,82 @@
    "optiesTekst": null,
    "antwoord": "9.000.000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Hoeveel een cijfer waard is, hangt af van de plek in het getal: eenheden, tientallen, honderdtallen, enzovoort.",
+   "sterkereHint": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
    "foutHints": [
     {
      "stap": null,
      "fout": "900.000",
-     "uitleg": "Tel de cijfers rechts van de 9: zes. Dus zes nullen."
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "900000",
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "90.000.000",
-     "uitleg": "Een nul te veel. Een miljoen heeft zes nullen."
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "90000000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "9",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "9.567.000",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "9567000",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "900.000 → Tel de cijfers rechts van de 9: zes. Dus zes nullen. · 90.000.000 → Een nul te veel. Een miljoen heeft zes nullen.",
-   "ouderzin": "",
+   "foutHintsTekst": "900.000 → Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 900000 → Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 90.000.000 → Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 90000000 → Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 9 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat. · 9.567.000 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat. · 9567000 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+   "ouderzin": "Je kind zoekt wat één cijfer in een groot getal waard is: dat cijfer met een nul voor elke plek die erna komt.",
    "getallenruimte": "0–9.567.000",
    "context": "laag",
    "visual": {
@@ -132,7 +192,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?"
+    "somtypeOrigineel": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 1,
+     "somtype": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -148,12 +213,75 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "9.000.000",
     "9000000"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "9",
+       "9.567.000",
+       "9567000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "900.000",
+       "900000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "90.000.000",
+       "90000000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel hoeveel cijfers er na dat cijfer komen. Evenveel nullen komen erachter.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel hoeveel cijfers er na dat cijfer komen. Evenveel nullen komen erachter."
   },
   {
    "id": "G8-GET-M01-claude-bank-002",
@@ -168,22 +296,82 @@
    "optiesTekst": null,
    "antwoord": "8.000.000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Hoeveel een cijfer waard is, hangt af van de plek in het getal: eenheden, tientallen, honderdtallen, enzovoort.",
+   "sterkereHint": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
    "foutHints": [
     {
      "stap": null,
      "fout": "800.000",
-     "uitleg": "Tel de cijfers rechts van de 8: zes. Dus zes nullen."
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "800000",
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "80.000.000",
-     "uitleg": "Een nul te veel. Een miljoen heeft zes nullen."
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "80000000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "8",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "8.601.000",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "8601000",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "800.000 → Tel de cijfers rechts van de 8: zes. Dus zes nullen. · 80.000.000 → Een nul te veel. Een miljoen heeft zes nullen.",
-   "ouderzin": "",
+   "foutHintsTekst": "800.000 → Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 800000 → Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 80.000.000 → Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 80000000 → Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 8 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat. · 8.601.000 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat. · 8601000 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+   "ouderzin": "Je kind zoekt wat één cijfer in een groot getal waard is: dat cijfer met een nul voor elke plek die erna komt.",
    "getallenruimte": "0–8.601.000",
    "context": "laag",
    "visual": {
@@ -274,7 +462,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?"
+    "somtypeOrigineel": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 1,
+     "somtype": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -290,12 +483,75 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "8.000.000",
     "8000000"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8",
+       "8.601.000",
+       "8601000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "800.000",
+       "800000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "80.000.000",
+       "80000000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel hoeveel cijfers er na dat cijfer komen. Evenveel nullen komen erachter.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel hoeveel cijfers er na dat cijfer komen. Evenveel nullen komen erachter."
   },
   {
    "id": "G8-GET-M01-claude-bank-003",
@@ -310,22 +566,82 @@
    "optiesTekst": null,
    "antwoord": "3.000.000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Hoeveel een cijfer waard is, hangt af van de plek in het getal: eenheden, tientallen, honderdtallen, enzovoort.",
+   "sterkereHint": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
    "foutHints": [
     {
      "stap": null,
      "fout": "300.000",
-     "uitleg": "Tel de cijfers rechts van de 3: zes. Dus zes nullen."
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "300000",
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "30.000.000",
-     "uitleg": "Een nul te veel. Een miljoen heeft zes nullen."
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "30000000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "3",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "3.602.000",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "3602000",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "300.000 → Tel de cijfers rechts van de 3: zes. Dus zes nullen. · 30.000.000 → Een nul te veel. Een miljoen heeft zes nullen.",
-   "ouderzin": "",
+   "foutHintsTekst": "300.000 → Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 300000 → Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 30.000.000 → Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 30000000 → Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 3 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat. · 3.602.000 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat. · 3602000 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+   "ouderzin": "Je kind zoekt wat één cijfer in een groot getal waard is: dat cijfer met een nul voor elke plek die erna komt.",
    "getallenruimte": "0–3.602.000",
    "context": "laag",
    "visual": {
@@ -416,7 +732,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?"
+    "somtypeOrigineel": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 1,
+     "somtype": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -432,12 +753,75 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "3.000.000",
     "3000000"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3",
+       "3.602.000",
+       "3602000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "300.000",
+       "300000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30.000.000",
+       "30000000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel hoeveel cijfers er na dat cijfer komen. Evenveel nullen komen erachter.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel hoeveel cijfers er na dat cijfer komen. Evenveel nullen komen erachter."
   },
   {
    "id": "G8-GET-M01-claude-bank-004",
@@ -446,28 +830,88 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "In het stadion leven 2.242.000 insecten. Hoeveel is de 2 in dit getal waard?",
+   "opgave": "In het bos leven 2.418.000 insecten. Hoeveel is de 2 in dit getal waard?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "2.000.000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Hoeveel een cijfer waard is, hangt af van de plek in het getal: eenheden, tientallen, honderdtallen, enzovoort.",
+   "sterkereHint": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
    "foutHints": [
     {
      "stap": null,
      "fout": "200.000",
-     "uitleg": "Tel de cijfers rechts van de 2: zes. Dus zes nullen."
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "200000",
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "20.000.000",
-     "uitleg": "Een nul te veel. Een miljoen heeft zes nullen."
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20000000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2.418.000",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2418000",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "200.000 → Tel de cijfers rechts van de 2: zes. Dus zes nullen. · 20.000.000 → Een nul te veel. Een miljoen heeft zes nullen.",
-   "ouderzin": "",
+   "foutHintsTekst": "200.000 → Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 200000 → Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 20.000.000 → Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 20000000 → Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 2 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat. · 2.418.000 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat. · 2418000 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+   "ouderzin": "Je kind zoekt wat één cijfer in een groot getal waard is: dat cijfer met een nul voor elke plek die erna komt.",
    "getallenruimte": "0–2.242.000",
    "context": "laag",
    "visual": {
@@ -487,7 +931,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "de 2 in 2.242.000",
-    "claudeUitleg": "2.242.000 lees je als 2 miljoen 242.000.\nDe 2 staat op de plek van de miljoenen: 2.000.000.",
+    "claudeUitleg": "2.418.000 lees je als 2 miljoen 418.000.\nDe 2 staat op de plek van de miljoenen: 2.000.000.",
     "claudeStrategie": "in groepjes van drie lezen",
     "claudeThema": "Voetbal",
     "claudeAntwoordType": "geheel",
@@ -539,6 +983,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "F2a ≥10.000 krijgt punt",
+     "Oef-#492: '2.242.000' (de 2 drie keer) → '2.418.000'; insecten in het stadion → in het bos",
      "Z-#767: geldigeAntwoorden met en zonder duizendpunt"
     ]
    },
@@ -558,7 +1003,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?"
+    "somtypeOrigineel": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 1,
+     "somtype": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -574,12 +1024,75 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "2.000.000",
     "2000000"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2",
+       "2.418.000",
+       "2418000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "200.000",
+       "200000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20.000.000",
+       "20000000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel hoeveel cijfers er na dat cijfer komen. Evenveel nullen komen erachter.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel hoeveel cijfers er na dat cijfer komen. Evenveel nullen komen erachter."
   },
   {
    "id": "G8-GET-M01-claude-bank-005",
@@ -588,28 +1101,88 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "In de klas leven 2.873.000 insecten. Hoeveel is de 2 in dit getal waard?",
+   "opgave": "In de vallei leven 2.873.000 insecten. Hoeveel is de 2 in dit getal waard?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "2.000.000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Hoeveel een cijfer waard is, hangt af van de plek in het getal: eenheden, tientallen, honderdtallen, enzovoort.",
+   "sterkereHint": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
    "foutHints": [
     {
      "stap": null,
      "fout": "200.000",
-     "uitleg": "Tel de cijfers rechts van de 2: zes. Dus zes nullen."
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "200000",
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "20.000.000",
-     "uitleg": "Een nul te veel. Een miljoen heeft zes nullen."
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20000000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2.873.000",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2873000",
+     "uitleg": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "uitlegSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "200.000 → Tel de cijfers rechts van de 2: zes. Dus zes nullen. · 20.000.000 → Een nul te veel. Een miljoen heeft zes nullen.",
-   "ouderzin": "",
+   "foutHintsTekst": "200.000 → Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 200000 → Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 20.000.000 → Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 20000000 → Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen. · 2 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat. · 2.873.000 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat. · 2873000 → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+   "ouderzin": "Je kind zoekt wat één cijfer in een groot getal waard is: dat cijfer met een nul voor elke plek die erna komt.",
    "getallenruimte": "0–2.873.000",
    "context": "laag",
    "visual": {
@@ -681,6 +1254,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "F2a ≥10.000 krijgt punt",
+     "Oef-#492: insecten in de klas → in de vallei (les 147)",
      "W1 moeilijk woord vervangen",
      "Z-#767: geldigeAntwoorden met en zonder duizendpunt"
     ]
@@ -701,7 +1275,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?"
+    "somtypeOrigineel": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 1,
+     "somtype": "In [plek] leven # [ding]. Hoeveel is de # in dit getal waard?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -717,12 +1296,75 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "2.000.000",
     "2000000"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2",
+       "2.873.000",
+       "2873000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "200.000",
+       "200000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20.000.000",
+       "20000000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel hoeveel cijfers er na dat cijfer komen. Evenveel nullen komen erachter.",
+     "tekstSterker": "Tel hoeveel cijfers er na dat cijfer komen. Schrijf het cijfer op met evenveel nullen erachter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel hoeveel cijfers er na dat cijfer komen. Evenveel nullen komen erachter."
   },
   {
    "id": "G8-GET-M01-claude-bank-006",
@@ -737,22 +1379,72 @@
    "optiesTekst": null,
    "antwoord": "2.000.000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een miljoen is duizend keer duizend.",
+   "sterkereHint": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
    "foutHints": [
     {
      "stap": null,
      "fout": "200.000",
-     "uitleg": "Een miljoen heeft zes nullen. Tel ze na."
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "200000",
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "2000",
-     "uitleg": "Dat is duizend. Een miljoen is duizend keer duizend."
+     "uitleg": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "2",
+     "uitleg": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20.000.000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20000000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "200.000 → Een miljoen heeft zes nullen. Tel ze na. · 2000 → Dat is duizend. Een miljoen is duizend keer duizend.",
-   "ouderzin": "",
+   "foutHintsTekst": "200.000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 200000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 2000 → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen. · 2 → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij? · 20.000.000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen. · 20000000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+   "ouderzin": "Je kind schrijft een aantal miljoen als getal: het getal met zes nullen erachter.",
    "getallenruimte": "0–2.000.000",
    "context": "laag",
    "visual": {
@@ -835,7 +1527,7 @@
     "voorstelDoel": null,
     "regel": "G8-P00-park-G7",
     "reden": "uit de G7-park (voorstel G8-GET-M01, regel G7-G01-groot)",
-    "somtype": "In een land wonen # [ding] mensen. Schrijf dat als getal.",
+    "somtype": "In een land wonen # miljoen mensen. Schrijf dat als getal.",
     "g7Park": {
      "id": "G8-GET-M01-claude-bank-park-012",
      "voorstelDoel": "G8-GET-M01",
@@ -844,7 +1536,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "In een land wonen # [ding] mensen. Schrijf dat als getal."
+    "somtypeOrigineel": "In een land wonen # [ding] mensen. Schrijf dat als getal.",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 2,
+     "somtype": "In een land wonen # miljoen mensen. Schrijf dat als getal."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -860,12 +1557,87 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "2.000.000",
     "2000000"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "200.000",
+       "200000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20.000.000",
+       "20000000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?"
   },
   {
    "id": "G8-GET-M01-claude-bank-007",
@@ -880,22 +1652,72 @@
    "optiesTekst": null,
    "antwoord": "6.000.000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een miljoen is duizend keer duizend.",
+   "sterkereHint": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
    "foutHints": [
     {
      "stap": null,
      "fout": "600.000",
-     "uitleg": "Een miljoen heeft zes nullen. Tel ze na."
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "600000",
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "6000",
-     "uitleg": "Dat is duizend. Een miljoen is duizend keer duizend."
+     "uitleg": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "6",
+     "uitleg": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "60.000.000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "60000000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "600.000 → Een miljoen heeft zes nullen. Tel ze na. · 6000 → Dat is duizend. Een miljoen is duizend keer duizend.",
-   "ouderzin": "",
+   "foutHintsTekst": "600.000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 600000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 6000 → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen. · 6 → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij? · 60.000.000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen. · 60000000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+   "ouderzin": "Je kind schrijft een aantal miljoen als getal: het getal met zes nullen erachter.",
    "getallenruimte": "0–6.000.000",
    "context": "laag",
    "visual": {
@@ -979,7 +1801,7 @@
     "voorstelDoel": null,
     "regel": "G8-P00-park-G7",
     "reden": "uit de G7-park (voorstel G8-GET-M01, regel G7-G01-groot)",
-    "somtype": "In een land wonen # [ding] mensen. Schrijf dat als getal.",
+    "somtype": "In een land wonen # miljoen mensen. Schrijf dat als getal.",
     "g7Park": {
      "id": "G8-GET-M01-claude-bank-park-006",
      "voorstelDoel": "G8-GET-M01",
@@ -988,7 +1810,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "In een land wonen # [ding] mensen. Schrijf dat als getal."
+    "somtypeOrigineel": "In een land wonen # [ding] mensen. Schrijf dat als getal.",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 2,
+     "somtype": "In een land wonen # miljoen mensen. Schrijf dat als getal."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1004,12 +1831,87 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "6.000.000",
     "6000000"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "600.000",
+       "600000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "60.000.000",
+       "60000000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?"
   },
   {
    "id": "G8-GET-M01-claude-bank-008",
@@ -1024,22 +1926,72 @@
    "optiesTekst": null,
    "antwoord": "7.000.000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een miljoen is duizend keer duizend.",
+   "sterkereHint": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
    "foutHints": [
     {
      "stap": null,
      "fout": "700.000",
-     "uitleg": "Een miljoen heeft zes nullen. Tel ze na."
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "700000",
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "7000",
-     "uitleg": "Dat is duizend. Een miljoen is duizend keer duizend."
+     "uitleg": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "7",
+     "uitleg": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "70.000.000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "70000000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "700.000 → Een miljoen heeft zes nullen. Tel ze na. · 7000 → Dat is duizend. Een miljoen is duizend keer duizend.",
-   "ouderzin": "",
+   "foutHintsTekst": "700.000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 700000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 7000 → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen. · 7 → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij? · 70.000.000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen. · 70000000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+   "ouderzin": "Je kind schrijft een aantal miljoen als getal: het getal met zes nullen erachter.",
    "getallenruimte": "0–7.000.000",
    "context": "laag",
    "visual": {
@@ -1123,7 +2075,7 @@
     "voorstelDoel": null,
     "regel": "G8-P00-park-G7",
     "reden": "uit de G7-park (voorstel G8-GET-M01, regel G7-G01-groot)",
-    "somtype": "In een land wonen # [ding] mensen. Schrijf dat als getal.",
+    "somtype": "In een land wonen # miljoen mensen. Schrijf dat als getal.",
     "g7Park": {
      "id": "G8-GET-M01-claude-bank-park-008",
      "voorstelDoel": "G8-GET-M01",
@@ -1132,7 +2084,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "In een land wonen # [ding] mensen. Schrijf dat als getal."
+    "somtypeOrigineel": "In een land wonen # [ding] mensen. Schrijf dat als getal.",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 2,
+     "somtype": "In een land wonen # miljoen mensen. Schrijf dat als getal."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1148,12 +2105,87 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "7.000.000",
     "7000000"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "700.000",
+       "700000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "70.000.000",
+       "70000000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?"
   },
   {
    "id": "G8-GET-M01-claude-bank-009",
@@ -1168,22 +2200,72 @@
    "optiesTekst": null,
    "antwoord": "3.000.000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een miljoen is duizend keer duizend.",
+   "sterkereHint": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
    "foutHints": [
     {
      "stap": null,
      "fout": "300.000",
-     "uitleg": "Een miljoen heeft zes nullen. Tel ze na."
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "300000",
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "3000",
-     "uitleg": "Dat is duizend. Een miljoen is duizend keer duizend."
+     "uitleg": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "3",
+     "uitleg": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "30.000.000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "30000000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "300.000 → Een miljoen heeft zes nullen. Tel ze na. · 3000 → Dat is duizend. Een miljoen is duizend keer duizend.",
-   "ouderzin": "",
+   "foutHintsTekst": "300.000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 300000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 3000 → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen. · 3 → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij? · 30.000.000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen. · 30000000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+   "ouderzin": "Je kind schrijft een aantal miljoen als getal: het getal met zes nullen erachter.",
    "getallenruimte": "0–3.000.000",
    "context": "laag",
    "visual": {
@@ -1268,7 +2350,7 @@
     "voorstelDoel": null,
     "regel": "G8-P00-park-G7",
     "reden": "uit de G7-park (voorstel G8-GET-M01, regel G7-G01-groot)",
-    "somtype": "[wie] heeft # [ding] knikkers verzameld. Schrijf dat als getal.",
+    "somtype": "[wie] heeft # miljoen knikkers verzameld. Schrijf dat als getal.",
     "g7Park": {
      "id": "G8-GET-M01-claude-bank-park-007",
      "voorstelDoel": "G8-GET-M01",
@@ -1277,7 +2359,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "[wie] heeft # [ding] knikkers verzameld. Schrijf dat als getal."
+    "somtypeOrigineel": "[wie] heeft # [ding] knikkers verzameld. Schrijf dat als getal.",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 4,
+     "somtype": "[wie] heeft # miljoen knikkers verzameld. Schrijf dat als getal."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1293,12 +2380,87 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "3.000.000",
     "3000000"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "300.000",
+       "300000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30.000.000",
+       "30000000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?"
   },
   {
    "id": "G8-GET-M01-claude-bank-010",
@@ -1313,22 +2475,72 @@
    "optiesTekst": null,
    "antwoord": "2.000.000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een miljoen is duizend keer duizend.",
+   "sterkereHint": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
    "foutHints": [
     {
      "stap": null,
      "fout": "200.000",
-     "uitleg": "Een miljoen heeft zes nullen. Tel ze na."
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "200000",
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "2000",
-     "uitleg": "Dat is duizend. Een miljoen is duizend keer duizend."
+     "uitleg": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "2",
+     "uitleg": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20.000.000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20000000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "200.000 → Een miljoen heeft zes nullen. Tel ze na. · 2000 → Dat is duizend. Een miljoen is duizend keer duizend.",
-   "ouderzin": "",
+   "foutHintsTekst": "200.000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 200000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 2000 → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen. · 2 → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij? · 20.000.000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen. · 20000000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+   "ouderzin": "Je kind schrijft een aantal miljoen als getal: het getal met zes nullen erachter.",
    "getallenruimte": "0–2.000.000",
    "context": "laag",
    "visual": {
@@ -1411,7 +2623,7 @@
     "voorstelDoel": null,
     "regel": "G8-P00-park-G7",
     "reden": "uit de G7-park (voorstel G8-GET-M01, regel G7-G01-groot)",
-    "somtype": "[wie] heeft # [ding] stickers verzameld. Schrijf dat als getal.",
+    "somtype": "[wie] heeft # miljoen stickers verzameld. Schrijf dat als getal.",
     "g7Park": {
      "id": "G8-GET-M01-claude-bank-park-010",
      "voorstelDoel": "G8-GET-M01",
@@ -1420,7 +2632,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "[wie] heeft # [ding] stickers verzameld. Schrijf dat als getal."
+    "somtypeOrigineel": "[wie] heeft # [ding] stickers verzameld. Schrijf dat als getal.",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 3,
+     "somtype": "[wie] heeft # miljoen stickers verzameld. Schrijf dat als getal."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1436,12 +2653,87 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "2.000.000",
     "2000000"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "200.000",
+       "200000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20.000.000",
+       "20000000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?"
   },
   {
    "id": "G8-GET-M01-claude-bank-011",
@@ -1456,22 +2748,72 @@
    "optiesTekst": null,
    "antwoord": "6.000.000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een miljoen is duizend keer duizend.",
+   "sterkereHint": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
    "foutHints": [
     {
      "stap": null,
      "fout": "600.000",
-     "uitleg": "Een miljoen heeft zes nullen. Tel ze na."
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "600000",
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "6000",
-     "uitleg": "Dat is duizend. Een miljoen is duizend keer duizend."
+     "uitleg": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "6",
+     "uitleg": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "60.000.000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "60000000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "600.000 → Een miljoen heeft zes nullen. Tel ze na. · 6000 → Dat is duizend. Een miljoen is duizend keer duizend.",
-   "ouderzin": "",
+   "foutHintsTekst": "600.000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 600000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 6000 → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen. · 6 → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij? · 60.000.000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen. · 60000000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+   "ouderzin": "Je kind schrijft een aantal miljoen als getal: het getal met zes nullen erachter.",
    "getallenruimte": "0–6.000.000",
    "context": "laag",
    "visual": {
@@ -1555,7 +2897,7 @@
     "voorstelDoel": null,
     "regel": "G8-P00-park-G7",
     "reden": "uit de G7-park (voorstel G8-GET-M01, regel G7-G01-groot)",
-    "somtype": "[wie] heeft # [ding] stickers verzameld. Schrijf dat als getal.",
+    "somtype": "[wie] heeft # miljoen stickers verzameld. Schrijf dat als getal.",
     "g7Park": {
      "id": "G8-GET-M01-claude-bank-park-011",
      "voorstelDoel": "G8-GET-M01",
@@ -1564,7 +2906,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "[wie] heeft # [ding] stickers verzameld. Schrijf dat als getal."
+    "somtypeOrigineel": "[wie] heeft # [ding] stickers verzameld. Schrijf dat als getal.",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 3,
+     "somtype": "[wie] heeft # miljoen stickers verzameld. Schrijf dat als getal."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1580,12 +2927,87 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "6.000.000",
     "6000000"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "600.000",
+       "600000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "60.000.000",
+       "60000000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?"
   },
   {
    "id": "G8-GET-M01-claude-bank-012",
@@ -1600,22 +3022,72 @@
    "optiesTekst": null,
    "antwoord": "7.000.000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een miljoen is duizend keer duizend.",
+   "sterkereHint": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
    "foutHints": [
     {
      "stap": null,
      "fout": "700.000",
-     "uitleg": "Een miljoen heeft zes nullen. Tel ze na."
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "700000",
+     "uitleg": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "7000",
-     "uitleg": "Dat is duizend. Een miljoen is duizend keer duizend."
+     "uitleg": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "7",
+     "uitleg": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "70.000.000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "70000000",
+     "uitleg": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "uitlegSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "700.000 → Een miljoen heeft zes nullen. Tel ze na. · 7000 → Dat is duizend. Een miljoen is duizend keer duizend.",
-   "ouderzin": "",
+   "foutHintsTekst": "700.000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 700000 → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen. · 7000 → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen. · 7 → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij? · 70.000.000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen. · 70000000 → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+   "ouderzin": "Je kind schrijft een aantal miljoen als getal: het getal met zes nullen erachter.",
    "getallenruimte": "0–7.000.000",
    "context": "laag",
    "visual": {
@@ -1698,7 +3170,7 @@
     "voorstelDoel": null,
     "regel": "G8-P00-park-G7",
     "reden": "uit de G7-park (voorstel G8-GET-M01, regel G7-G01-groot)",
-    "somtype": "[wie] heeft # [ding] truien verzameld. Schrijf dat als getal.",
+    "somtype": "[wie] heeft # miljoen truien verzameld. Schrijf dat als getal.",
     "g7Park": {
      "id": "G8-GET-M01-claude-bank-park-009",
      "voorstelDoel": "G8-GET-M01",
@@ -1707,7 +3179,12 @@
     "duplicaatVan": null,
     "somtypeNr": 5,
     "somtypeNrOrigineel": 5,
-    "somtypeOrigineel": "[wie] heeft # [ding] truien verzameld. Schrijf dat als getal."
+    "somtypeOrigineel": "[wie] heeft # [ding] truien verzameld. Schrijf dat als getal.",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 5,
+     "somtype": "[wie] heeft # miljoen truien verzameld. Schrijf dat als getal."
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1723,15 +3200,90 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "7.000.000",
     "7000000"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "nul te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "700.000",
+       "700000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "nul te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "70.000.000",
+       "70000000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "soort": "duizend keer te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+     "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?"
   }
  ],
- "hintsSyncOp": "2026-10-08T16:13:54+02:00",
+ "hintsSyncOp": "2026-10-08T16:25:40+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -1743,10 +3295,14 @@
   },
   {
    "batch": "batch3.json",
-   "md5": "c6b38756f23a"
+   "md5": "f67e5da938c2"
+  },
+  {
+   "batch": "batch4.json",
+   "md5": "c1a475f62b2d"
   }
  ],
- "geschrevenOp": "2026-10-08T16:13:54+02:00",
+ "geschrevenOp": "2026-10-08T16:25:40+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

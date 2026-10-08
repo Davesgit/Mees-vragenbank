@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T16:13:53+0200",
+ "gegenereerdOp": "2026-10-08T16:25:38+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-MEET-E01",
  "bordtitel": "Het systeem van lengtematen doorzien",
@@ -26,22 +26,42 @@
    "optiesTekst": null,
    "antwoord": "6700",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een kilometer is duizend meter.",
+   "sterkereHint": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
    "foutHints": [
     {
      "stap": null,
      "fout": "670",
-     "uitleg": "Van km naar m is drie plekken, niet twee."
+     "uitleg": "Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "uitlegSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "tien keer te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "67",
-     "uitleg": "Haal niet zomaar de komma weg. Keer 1000."
+     "uitleg": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "uitlegSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "soort": "honderd keer te weinig",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "6,7",
+     "uitleg": "Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+     "uitlegSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "670 → Van km naar m is drie plekken, niet twee. · 67 → Haal niet zomaar de komma weg. Keer 1000.",
-   "ouderzin": "",
+   "foutHintsTekst": "670 → Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend. · 67 → Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend. · 6,7 → Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+   "ouderzin": "Je kind rekent kilometer om naar meter: keer duizend.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -128,7 +148,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een wandelaar loopt # km. Hoeveel meter is dat?"
+    "somtypeOrigineel": "Een wandelaar loopt # km. Hoeveel meter is dat?",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 1,
+     "somtype": "Een wandelaar loopt # km. Hoeveel meter is dat?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -144,8 +169,67 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6,7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "tien keer te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "670"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "soort": "honderd keer te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "67"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?"
   },
   {
    "id": "G8-MEET-E01-claude-bank-002",
@@ -160,22 +244,42 @@
    "optiesTekst": null,
    "antwoord": "8100",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een kilometer is duizend meter.",
+   "sterkereHint": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
    "foutHints": [
     {
      "stap": null,
      "fout": "810",
-     "uitleg": "Van km naar m is drie plekken, niet twee."
+     "uitleg": "Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "uitlegSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "tien keer te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "81",
-     "uitleg": "Haal niet zomaar de komma weg. Keer 1000."
+     "uitleg": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "uitlegSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "soort": "honderd keer te weinig",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "8,1",
+     "uitleg": "Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+     "uitlegSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "810 → Van km naar m is drie plekken, niet twee. · 81 → Haal niet zomaar de komma weg. Keer 1000.",
-   "ouderzin": "",
+   "foutHintsTekst": "810 → Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend. · 81 → Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend. · 8,1 → Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+   "ouderzin": "Je kind rekent kilometer om naar meter: keer duizend.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -263,7 +367,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een wandelaar loopt # km. Hoeveel meter is dat?"
+    "somtypeOrigineel": "Een wandelaar loopt # km. Hoeveel meter is dat?",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 1,
+     "somtype": "Een wandelaar loopt # km. Hoeveel meter is dat?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -279,8 +388,67 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8,1"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "tien keer te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "810"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "soort": "honderd keer te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "81"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?"
   },
   {
    "id": "G8-MEET-E01-claude-bank-003",
@@ -295,22 +463,42 @@
    "optiesTekst": null,
    "antwoord": "8000",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een kilometer is duizend meter.",
+   "sterkereHint": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
    "foutHints": [
     {
      "stap": null,
      "fout": "800",
-     "uitleg": "Van km naar m is drie plekken, niet twee."
+     "uitleg": "Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "uitlegSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "tien keer te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "80",
-     "uitleg": "Haal niet zomaar de komma weg. Keer 1000."
+     "uitleg": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "uitlegSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "soort": "honderd keer te weinig",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "8",
+     "uitleg": "Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+     "uitlegSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "800 → Van km naar m is drie plekken, niet twee. · 80 → Haal niet zomaar de komma weg. Keer 1000.",
-   "ouderzin": "",
+   "foutHintsTekst": "800 → Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend. · 80 → Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend. · 8 → Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+   "ouderzin": "Je kind rekent kilometer om naar meter: keer duizend.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -398,7 +586,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[wie] loopt # km. Hoeveel meter is dat?"
+    "somtypeOrigineel": "[wie] loopt # km. Hoeveel meter is dat?",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 2,
+     "somtype": "[wie] loopt # km. Hoeveel meter is dat?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -414,8 +607,67 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "tien keer te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "800"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "soort": "honderd keer te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "80"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?"
   },
   {
    "id": "G8-MEET-E01-claude-bank-004",
@@ -430,22 +682,42 @@
    "optiesTekst": null,
    "antwoord": "8200",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een kilometer is duizend meter.",
+   "sterkereHint": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
    "foutHints": [
     {
      "stap": null,
      "fout": "820",
-     "uitleg": "Van km naar m is drie plekken, niet twee."
+     "uitleg": "Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "uitlegSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "laag2": "tekstSterker",
+     "regel": "fout = antwoord : 10",
+     "soort": "tien keer te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "82",
-     "uitleg": "Haal niet zomaar de komma weg. Keer 1000."
+     "uitleg": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "uitlegSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "soort": "honderd keer te weinig",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "8,2",
+     "uitleg": "Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+     "uitlegSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "laag2": "tekstSterker",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "820 → Van km naar m is drie plekken, niet twee. · 82 → Haal niet zomaar de komma weg. Keer 1000.",
-   "ouderzin": "",
+   "foutHintsTekst": "820 → Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend. · 82 → Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend. · 8,2 → Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+   "ouderzin": "Je kind rekent kilometer om naar meter: keer duizend.",
    "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
    "context": "laag",
    "visual": {
@@ -532,7 +804,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "[wie] loopt # km. Hoeveel meter is dat?"
+    "somtypeOrigineel": "[wie] loopt # km. Hoeveel meter is dat?",
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 2,
+     "somtype": "[wie] loopt # km. Hoeveel meter is dat?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -548,11 +825,70 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8,2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "tien keer te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "820"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "soort": "honderd keer te weinig",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "82"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?",
+     "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?"
   }
  ],
- "hintsSyncOp": "2026-10-08T16:13:54+02:00",
+ "hintsSyncOp": "2026-10-08T16:25:40+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -564,10 +900,14 @@
   },
   {
    "batch": "batch3.json",
-   "md5": "c6b38756f23a"
+   "md5": "f67e5da938c2"
+  },
+  {
+   "batch": "batch4.json",
+   "md5": "c1a475f62b2d"
   }
  ],
- "geschrevenOp": "2026-10-08T16:13:54+02:00",
+ "geschrevenOp": "2026-10-08T16:25:40+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

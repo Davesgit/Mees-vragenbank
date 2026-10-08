@@ -537,6 +537,34 @@ def fix_g8(r, slog):
             ex['claudeDenkfouten'] = [{'fout': '16 km', 'denkfout': 'deel-vergeten-bij-splitsen'}, {'fout': '4,5 km', 'denkfout': None}]
             ex['claudeFoutHints'] = [{'stap': None, 'fout': '16 km', 'uitleg': None}, {'stap': None, 'fout': '4,5 km', 'uitleg': None}]
             slog(r, 'Z-#823/Z-#826: 2, 7, 5, 2 km (gemiddelde 4 is geen gegeven afstand); afstanden als zin', 'opgave', o, r['opgave'])
+        # V-#850 (Didactiek 8 okt 16:15, g8/gemiddelde-check-didactiek.md, les 305): V02 #2 had twee waarden (midden = gemiddelde): een derde dag erbij.
+        # 210 + 320 + 280 = 810, 810 : 3 = 270; routes: midden (210 + 320) : 2 = 265 (afleider), totaal 810 (afleider), : 2 = 405, mediaan 280, middelste genoemde 320, geen modus.
+        if c8 == '22716c04' and 'op zaterdag 320 mensen en op zondag 280 mensen' in r['opgave']:
+            o = r['opgave']
+            r['opgave'] = 'In een zwembad zwommen op vrijdag 210 mensen, op zaterdag 320 mensen en op zondag 280 mensen. Hoeveel mensen zwommen er in die drie dagen gemiddeld per dag?'
+            w850 = [210, 320, 280]; assert sum(w850) == 810 and sum(w850) % 3 == 0 and sum(w850) // 3 == 270 and 270 not in w850 and (min(w850) + max(w850)) / 2 == 265
+            assert sorted(w850)[1] != 270 and w850[1] != 270, 'V-#850: een route geeft het antwoord'
+            nieuw850 = {'40 mensen': '265 mensen', '300 mensen': '270 mensen', '600 mensen': '810 mensen'}
+            for o_ in r['opties']: o_['tekst'] = nieuw850.get(o_['tekst'], o_['tekst'])
+            assert sorted(o_['tekst'] for o_ in r['opties']) == ['265 mensen', '270 mensen', '810 mensen'], 'V-#850 opties'
+            r['antwoord'] = '270 mensen'
+            r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+            r['antwoordDetail'] = dict(r.get('antwoordDetail') or {}, juisteOptie=next(o_['letter'] for o_ in r['opties'] if o_['tekst'] == '270 mensen'), juisteOptieTekst='270 mensen')
+            if 'geldigeAntwoorden' in r: r['geldigeAntwoorden'] = ['270 mensen']
+            ex = r['extraVelden']; ex['claudeUitleg'] = 'Je telt op: 210 + 320 + 280 = 810. Daarna deel je door 3 dagen: 810 : 3 = 270. Gemiddeld zwommen er 270 mensen per dag.'
+            ex['claudeDenkfouten'] = [{'fout': '810 mensen', 'denkfout': 'deel-vergeten-bij-splitsen'}, {'fout': '265 mensen', 'denkfout': 'midden-van-uitersten'}]
+            ex['claudeFoutHints'] = [{'stap': None, 'fout': '810 mensen', 'uitleg': None}, {'stap': None, 'fout': '265 mensen', 'uitleg': None}]
+            slog(r, 'V-#850: derde dag erbij (210, 320, 280 → 270); afleiders 265 (midden van kleinste en grootste) en 810 (totaal)', 'opgave', o, r['opgave'])
+        # Oef-#492 (batch 4, les 147): M01 #1 004 '2.242.000' had de gevraagde 2 drie keer → 2.418.000 (de 2 één keer); insecten in het stadion/de klas → bos/vallei
+        if c8 == '8a49e4f4' and '2.242.000' in r['opgave']:
+            o = r['opgave']; r['opgave'] = o.replace('In het stadion leven 2.242.000 insecten', 'In het bos leven 2.418.000 insecten')
+            assert r['opgave'] != o and r['opgave'].count('2') == 2, 'Oef-#492 004'      # de 2 in het getal en de 2 in de vraag
+            ex = r['extraVelden']
+            if ex.get('claudeUitleg'): ex['claudeUitleg'] = ex['claudeUitleg'].replace('2.242.000', '2.418.000').replace('2 miljoen 242.000', '2 miljoen 418.000')
+            slog(r, "Oef-#492: '2.242.000' (de 2 drie keer) → '2.418.000'; insecten in het stadion → in het bos", 'opgave', o, r['opgave'])
+        if c8 == 'd7511a09' and r['opgave'].startswith('In de klas leven'):
+            o = r['opgave']; r['opgave'] = o.replace('In de klas leven', 'In de vallei leven', 1)
+            slog(r, 'Oef-#492: insecten in de klas → in de vallei (les 147)', 'opgave', o, r['opgave'])
         # Z-#825 (Didactiek batch 3): #55 'staartsom' → 'som onder elkaar'
         if c8 == '5a2c100b' and 'met een staartsom onder elkaar' in r['opgave']:
             o = r['opgave']; r['opgave'] = o.replace('met een staartsom onder elkaar', 'met een som onder elkaar')
@@ -580,7 +608,10 @@ KOP478 = [(r'^(Kijk zonder uit te rekenen\. Welk antwoord bij # [×+−:] #) \[d
           # Oef-#488 (batch 3): [ding] op een werkwoord of voorzetsel
           (r'moet # × # \[ding\]', 'moet # × # uitrekenen'), (r'# − # \[ding\] elkaar uitgerekend', '# − # onder elkaar uitgerekend'),
           (r'# × # \[ding\] te doen', '# × # apart te doen'), (r'^In groep # \[ding\] # \[ding\] een cijfer', 'In groep # hebben # kinderen een cijfer'),
-          (r'staartsom onder elkaar', 'som onder elkaar')]  # V-#781: '14.35' werd één '#'
+          (r'staartsom onder elkaar', 'som onder elkaar'),
+          # Oef-#491 (batch 4): 'miljoen' hoort in het vaste deel, niet op een [ding]-plek (M01 #2–#5); de E05-slotvraag noemt het [ding] ('Hoeveel potjes blijven er over?')
+          (r'^In een land wonen # \[ding\] mensen\.', 'In een land wonen # miljoen mensen.'), (r'^\[wie\] heeft # \[ding\] (\w+) verzameld\.', r'[wie] heeft # miljoen \1 verzameld.'),
+          (r'(De volle \w+ gaan weg\.) Hoeveel blijven er over\?$', r'\1 Hoeveel [ding] blijven er over?')]  # V-#781: '14.35' werd één '#'
 def kop_g8(s):
     for a, b in KOP478: s = re.sub(a, b, s)
     return s

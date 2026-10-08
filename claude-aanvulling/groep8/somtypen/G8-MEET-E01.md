@@ -27,8 +27,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 670 → Van km naar m is drie plekken, niet twee. · 67 → Haal niet zomaar de komma weg. Keer 1000.
     - **Uitleg (Claude):** 1 km = 1000 m. De komma schuift drie plekken. 6,7 km = 6700 m.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een kilometer is duizend meter.
+- **Hint 2 (te schrijven):** Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.
+- **Ouderzin:** Je kind rekent kilometer om naar meter: keer duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.  [nieuw]
+  - `honderd keer te weinig` (Claudes sleutel: kommagetal-als-geheel) → Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: [wie] loopt # km. Hoeveel meter is dat?
 
@@ -49,5 +56,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 820 → Van km naar m is drie plekken, niet twee. · 82 → Haal niet zomaar de komma weg. Keer 1000.
     - **Uitleg (Claude):** 1 km = 1000 m. De komma schuift drie plekken. 8,2 km = 8200 m.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Een kilometer is duizend meter.
+- **Hint 2 (te schrijven):** Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.
+- **Ouderzin:** Je kind rekent kilometer om naar meter: keer duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?  [nieuw]
+  - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.  [nieuw]
+  - `honderd keer te weinig` (Claudes sleutel: kommagetal-als-geheel) → Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?  [nieuw]
+- Status: hints klaar

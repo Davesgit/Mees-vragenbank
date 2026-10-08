@@ -348,7 +348,9 @@ def vraag_waarden416(opg, los=True):
     #530: los=False zonder die losse hele getallen (voor een bedrag: €4 is niet de 4 uit '€4,75')."""
     t = re.sub(r'(?<!\d)\d{1,2}:\d{2}(?!\d)', ' ', (opg or '').replace('\n', ' '))
     w = {waarde416(x) for x in re.findall(r'(?<![\w:.,/])' + _GETAL416 + r'(?![\w:/]|[.,]\d)', t)}
-    if los: w |= {_F416(int(x.replace('.', ''))) for x in re.findall(r'(?<![\w:.])(?:\d{1,3}(?:\.\d{3})+|\d+)(?![\w:]|\.\d)', t)}
+    if los and KOMMA437:      # Oef-#490 (G7/G8): de losse hele getallen met dezelfde kommalogica als KOMMA437: '14' en '84' uit '14,84' tellen niet als vraaggetal
+        w |= {_F416(int(x.replace('.', ''))) for x in re.findall(r'(?<![\w:.,])(?:\d{1,3}(?:\.\d{3})+|\d+)(?![\w:]|[.,]\d)', t)}
+    elif los: w |= {_F416(int(x.replace('.', ''))) for x in re.findall(r'(?<![\w:.])(?:\d{1,3}(?:\.\d{3})+|\d+)(?![\w:]|\.\d)', t)}
     return {x for x in w if x is not None}
 def in_vraag390(v, c):
     """#390/D-#416: is de sleutel op waarde gelijk aan een getal uit de vraag (ook breuken en kommagetallen: 2/2 = 1)? Dan valt hij terug op 'getal uit de vraag'
@@ -496,6 +498,23 @@ def _compile_regel(regel, c):
     if r.startswith('andere fout') or 'of een andere fout' in r or r.startswith('ander vak') or 'een andere vorm of kleur' in r or 'een klok met een ander uur' in r:
         return {'alles': True}
     if r.startswith('volgorde omgedraaid'): return E('|'.join(reversed(c.ans.split('|'))))
+    # Oef-#490 (G8 batch 4, GET-E05/M01/MEET-E01; 8 okt): de routes bij een uitkomst van de rekenmachine in een verhaal (getal1 = per stuk, getal2 = het totaal,
+    # het kommagetal in de vraag = de uitkomst op de rekenmachine). Geen ±1-regels, dus #390 laat ze heel. Elke regel geeft alleen een sleutel als hij uitkomt.
+    if r.startswith('fout = het hele getal van het kommagetal uit de vraag'):
+        m_ = re.search(r'(?<![\d.,])(\d+),(\d+)(?![\d,])', c.opg); return E(int(m_.group(1))) if m_ else {'exact': set()}
+    if r.startswith('fout = de cijfers achter de komma uit de vraag'):
+        m_ = re.search(r'(?<![\d.,])(\d+),(\d+)(?![\d,])', c.opg); return E(int(m_.group(2))) if m_ else {'exact': set()}
+    if r.startswith('fout = de rest van getal2 : getal1'):
+        return E(g2 % g1) if isinstance(g1, int) and isinstance(g2, int) and g1 and g2 % g1 else {'exact': set()}
+    if r.startswith('fout = hele getal + rest'):
+        return E(g2 // g1 + g2 % g1) if isinstance(g1, int) and isinstance(g2, int) and g1 and g2 % g1 else {'exact': set()}
+    if re.match(r'fout = getal1 [-−] antwoord', r):
+        return E(g1 - a) if isinstance(g1, int) and a is not None and 0 < g1 - a != a else {'exact': set()}
+    if (m_ := re.match(r'fout = (?:het )?antwoord (×|x|\*|:|÷|/) ?(100|1000|1\.000)\b', r)):
+        k_ = int(m_.group(2).replace('.', ''))
+        if a is None: return {'exact': set()}
+        if m_.group(1) in ('×', 'x', '*'): return {'exact': set(_vormen(a * k_))}
+        return {'exact': set(_vormen(a // k_))} if a % k_ == 0 and a // k_ else {'exact': set()}
     # G6 merge-fixlijst #169 (Dave 21:24): breuk op de lijn van 0 tot 1, één stuk (1/noemer) ernaast; 0 heet '0', niet voorbij de lijn
     if r.startswith('fout = één stuk ernaast'):
         m = re.fullmatch(r'(\d+)/(\d+)', c.ans.strip())
@@ -1012,7 +1031,7 @@ def _tabel_trede(f, v, c):
     if r.startswith('fout = som van de kolom'): return 2 if x in ks or (KOLOM_VOOR_DEEL and rs and not ks) else 4
     return 3
 
-def pas_toe(it, st, alle_cellen=None):
+def _pas_toe_kern(it, st, alle_cellen=None):
     """st = somtype-entry uit hints/batch*.json. Zet it['foutHints'], it['foutRegels'], it['foutHintsTekst']."""
     c = Ctx(it)
     claude = [dict(f) for f in it['extraVelden'].get('claudeFoutHints') or []]
@@ -1232,3 +1251,54 @@ def _zelftest421():
                      ('4 hokjes', '− 4 hokjes', False), ('rood-wit', 'rood-wit', True), ('€3', '€13', False)):
         assert lett_past(r, v) == ok, ('#421', r, v)
 _zelftest421()
+
+# Kloktijden (besluit Didactiek 8 okt 15:46): de motor rekent intern met 'h:mm'. Heeft een item zijn tijd in de huisvorm ('14.30 uur' als antwoord of
+# optie, of '(Typ als 14.30.)'), dan gaan een kopie van het item en van de hint-entry eerst naar 'h:mm'; daarna gaan foutHints, foutRegels en
+# algemeneFoutHint terug naar de huisvorm: sleutel '14.30 uur', in teksten '14.30 uur' (na 'Typ als' zonder 'uur'), foutRegels.match.waarden in alle
+# drie de vormen ('14.30 uur', '14.30', '14:30'). Een regel mag dus in beide vormen staan. Items met digitaleKlok: true en items zonder tijd in de
+# huisvorm gaan ongewijzigd door de motor. KLOK_PUNT = False zet dit uit.
+KLOK_PUNT = True
+import copy as _copy_klok
+_KP = re.compile(r'(?<![\d.,:])(\d{1,2})\.(\d{2})(?: uur)?(?![\d])')
+_KD = re.compile(r'(?<![\d:.,])(\d{1,2}):(\d{2})(?![\d:])')
+_KSKIP = {'bron', 'licentie', 'controle', 'merge', 'id', 'bronVariant', 'jsRender', 'husselPlan'}
+def _klok_ok(h, m): return int(h) <= 24 and int(m) <= 59
+def _klok_heeft_punt(it):
+    if it.get('digitaleKlok'): return False
+    w = [str(it.get('antwoord') or '')] + [str(o.get('tekst')) for o in it.get('opties') or []]
+    return any(re.fullmatch(r'\s*\d{1,2}\.\d{2} uur\s*', x) for x in w) or bool(re.search(r'\(Typ als \d{1,2}\.\d{2}\.\)', it.get('opgave') or ''))
+def _klok_naar_dubbelepunt(o):
+    if isinstance(o, dict): return {k: (v if k in _KSKIP else _klok_naar_dubbelepunt(v)) for k, v in o.items()}
+    if isinstance(o, list): return [_klok_naar_dubbelepunt(v) for v in o]
+    if isinstance(o, str): return _KP.sub(lambda m: f'{m.group(1)}:{m.group(2)}' if _klok_ok(m.group(1), m.group(2)) else m.group(0), o)
+    return o
+def _klok_tekst(t):
+    def r(m):
+        h, mi = m.group(1), m.group(2)
+        if not _klok_ok(h, mi): return m.group(0)
+        voor, na = t[:m.start()], t[m.end():]
+        if re.search(r'(Typ als|zoals)\s*$', voor): return f'{h}.{mi}'
+        return f'{h}.{mi}' if na.startswith(' uur') else f'{h}.{mi} uur'
+    return _KD.sub(r, t)
+def _klok_vormen(w):
+    m = re.fullmatch(r'\s*(\d{1,2})[:.](\d{2})(?: uur)?\s*', str(w))
+    if not m or not _klok_ok(*m.groups()): return [w]
+    return [f'{m.group(1)}.{m.group(2)} uur', f'{m.group(1)}.{m.group(2)}', f'{m.group(1)}:{m.group(2)}']
+def _klok_naar_punt(o, k=None):
+    if isinstance(o, dict): return {kk: _klok_naar_punt(v, kk) for kk, v in o.items()}
+    if isinstance(o, list):
+        if k == 'waarden': return list(dict.fromkeys(x for w in o for x in (_klok_vormen(w) if isinstance(w, str) else [w])))
+        return [_klok_naar_punt(v) for v in o]
+    if isinstance(o, str): return _klok_tekst(o)
+    return o
+def pas_toe(it, st, alle_cellen=None):
+    if not (KLOK_PUNT and _klok_heeft_punt(it)): return _pas_toe_kern(it, st, alle_cellen)
+    a, e = _klok_naar_dubbelepunt(it), _klok_naar_dubbelepunt(st)
+    oud = {k: _copy_klok.deepcopy(a.get(k)) for k in a}
+    regels = {json_klok(r2): r1 for r1, r2 in zip(_regels_van(st), _regels_van(e))}
+    terug = _pas_toe_kern(a, e, alle_cellen)
+    for k in a:
+        if k not in oud or a[k] != oud[k]: it[k] = _klok_naar_punt(a[k], k)
+    return [regels.get(json_klok(r), r) for r in terug] if isinstance(terug, list) else terug
+def _regels_van(st): return [f.get('regel') for f in st.get('foutHints') or []]
+def json_klok(r): return r if isinstance(r, str) else repr(r)

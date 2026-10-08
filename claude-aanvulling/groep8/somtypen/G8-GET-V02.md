@@ -32,28 +32,29 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Ieder heeft er gemiddeld evenveel. Hoeveel zijn dat er samen?  [nieuw]
 - Status: hints klaar
 
-## Somtype 2: In een zwembad zwemmen op zaterdag # [ding] en op zondag # [ding]. Hoeveel mensen zwommen er dat weekend gemiddeld per dag?
+## Somtype 2: In een zwembad zwommen op vrijdag # [ding], op zaterdag # [ding] en op zondag # [ding]. Hoeveel mensen zwommen er in die drie dagen gemiddeld per dag?
 
 - Sleutel: nrOrigineel **2** · somtypeOrigineel “In een zwembad zwemmen op zaterdag # [ding] en op zondag # [ding]. Hoeveel mensen zwommen er dat weekend gemiddeld per dag?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: G9 (1) · regel: D8-STAT-NAAR-GEMIDDELDE
 - Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): deel-vergeten-bij-splitsen (1), verkeerde-bewerking (1)
+- Denkfouten (Claude): deel-vergeten-bij-splitsen (1), midden-van-uitersten (1)
 - Verschillende Claude-fout-hints: 2 (meest: “Je hebt alleen opgeteld. Er zijn twee dagen, dus je moet nog delen.”)
 - Voorbeelden:
   - `G8-GET-V02-claude-bank-002` (Claude G9, ai, niveau 2 → toepassen)
-    - **Opgave:** In een zwembad zwemmen op zaterdag 320 mensen en op zondag 280 mensen. Hoeveel mensen zwommen er dat weekend gemiddeld per dag?
-    - **Opties:** A) 40 mensen · B) 300 mensen · C) 600 mensen
-    - **Antwoord:** 300 mensen  (controle: ok)
+    - **Opgave:** In een zwembad zwommen op vrijdag 210 mensen, op zaterdag 320 mensen en op zondag 280 mensen. Hoeveel mensen zwommen er in die drie dagen gemiddeld per dag?
+    - **Opties:** A) 265 mensen · B) 270 mensen · C) 810 mensen
+    - **Antwoord:** 270 mensen  (controle: ok)
     - **Fout-hints (Claude):** 600 mensen → Je hebt alleen opgeteld. Er zijn twee dagen, dus je moet nog delen. · 40 mensen → 40 is het verschil tussen de dagen. Een gemiddelde reken je anders uit.
-    - **Uitleg (Claude):** Je telt op: 320 + 280 = 600. Daarna deel je door 2 dagen: 600 : 2 = 300. Gemiddeld zwommen er 300 mensen per dag.
+    - **Uitleg (Claude):** Je telt op: 210 + 320 + 280 = 810. Daarna deel je door 3 dagen: 810 : 3 = 270. Gemiddeld zwommen er 270 mensen per dag.
 
 - **Hint 1 (te schrijven):** Gemiddeld per dag: als er elke dag evenveel hadden gezwommen, hoeveel was dat dan per dag?
-- **Hint 2 (te schrijven):** Tel de aantallen van de twee dagen bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal dagen.
+- **Hint 2 (te schrijven):** Tel de aantallen van alle dagen bij elkaar op: dat is het totaal. Verdeel dat eerlijk: deel het totaal door het aantal dagen.
 - **Ouderzin:** Je kind rekent een gemiddelde uit: alles optellen en delen door het aantal dagen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `totaal` (600 mensen) → Dat is het totaal van het weekend. Gemiddeld per dag is dat totaal eerlijk verdeeld over de dagen.  [nieuw]
-  - `verschil` (40 mensen) → Dat is het verschil tussen de twee dagen. Een gemiddelde ligt tussen de twee aantallen in.  [nieuw]
+  - `totaal` (810 mensen) → Dat is het totaal van de drie dagen. Gemiddeld per dag is dat totaal eerlijk verdeeld over de dagen.  [nieuw]
+  - `midden van kleinste en grootste` (265 mensen) → Je hebt alleen de kleinste en de grootste dag gebruikt. Bij gemiddeld per dag tellen alle dagen mee.  [nieuw]
   - `andere fout` (andere fout) → Tel alles op en verdeel het eerlijk over de dagen.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een zwembad zwemmen op zaterdag # [ding] en op zondag # [ding]. Hoeveel mensen zwommen er dat weekend gemiddeld per dag?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 3: In groep # hebben # kinderen een cijfer voor een toets. Twaalf kinderen hebben een #, zes kinderen een # en twee kinderen een #. Wat is het gemiddelde cijfer?
@@ -76,7 +77,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent een gemiddelde uit als cijfers vaker voorkomen: elk cijfer telt zo vaak mee als het voorkomt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `totaal` (120) → Dat is het totaal van alle cijfers samen. Verdeel het nog eerlijk over alle kinderen.  [nieuw]
-  - `elk cijfer één keer` (7) → Dan telt elk cijfer even zwaar mee. Maar het ene cijfer hebben veel meer kinderen dan het andere. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.  [nieuw]
+  - `elk cijfer één keer` (7) → Dan telt elk cijfer even zwaar mee. Maar sommige cijfers komen veel vaker voor dan andere. Elk cijfer telt zo vaak mee als er kinderen zijn met dat cijfer.  [nieuw]
   - `andere fout` (andere fout) → Elk cijfer telt zo vaak mee als het voorkomt. Deel het totaal door het aantal kinderen.  [nieuw]
 - Status: hints klaar
 
