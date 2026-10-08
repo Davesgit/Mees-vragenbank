@@ -245,7 +245,7 @@ def _klok_tekst(t):
     return _KD.sub(r, t)
 def _klok_vormen(w):
     m = re.fullmatch(r'\s*(\d{1,2})[:.](\d{2})(?: uur)?\s*', str(w))
-    if not m or not _klok_ok(*m.groups()): return [w]
+    if not m or int(m.group(1)) > 24: return [w]      # V-#1012 (Didactiek r13, les 387): ook een foutsleutel met minuten ≥ 60 ('12:85') in alle drie de vormen, want een kind typt volgens de instructie '12.85'
     return [f'{m.group(1)}.{m.group(2)} uur', f'{m.group(1)}.{m.group(2)}', f'{m.group(1)}:{m.group(2)}']
 def _klok_naar_punt(o, k=None):
     if isinstance(o, dict): return {kk: _klok_naar_punt(v, kk) for kk, v in o.items()}

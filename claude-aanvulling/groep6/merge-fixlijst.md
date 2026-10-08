@@ -469,3 +469,19 @@ Bron: `/workspace/leerlijn/rekenen-groep6/BESLUIT_R9-4_R10_NIVEAUS.md` §B (tabe
 Uitvoering: `python3 r13/r13_uitvoer.py` (idempotent). De niveaus en E08-data staan in `data/gemapt.json` (→ `apply_hints.py`); **na een nieuwe G6-build moet `r13_uitvoer.py` opnieuw draaien**. De titels zitten ook in `scripts/fixlijst_g6.py` (`BORD_N13`).
 Checks op r13/g6 (8 okt ±18:20): check_hints 102 klaar · 0 open · 0 FAIL · 3 WARN; merge-notatie ALLES OK; FIX6 0 FAIL (na het bijwerken van de titelguards #217/#261/#276 voor N13).
 L-R10f: niet aangeraakt (wacht op Dave). N13-3: open (wacht op Oefeningen).
+
+## Na-ronde r13 deel B (8 okt 19:40; Didactiek review-r13 + vormcue 19:35)
+| # | Wat | Stand |
+|---|---|---|
+| V-#1010 | GET-M04 019–030 optiesTekst = opties[] | ✓ 12 |
+| V-#1011 | GET-E08 008/011/012 Claudes 'hoogste getal'-sleutel | ✓ 3 |
+| V-#1054 | VBN-E02 #3 121–125 kleine afleider → 'maand dubbel' (160/300/125/85/210) | ✓ motorregel kent de waarden |
+| V-#1055 | VERH-E01 #1 001/002/gen-006/gen-014 → y1 × x2 (€30/€24/€30/€90) | ✓ data; Oef-#1027: eigen label 'keer-getal-uit-de-vraag' (geen motorregel in de goedgekeurde motor); **Oefeningen: regel/tekst** |
+| L-R10b | kritisch-vorm ronde 2 (concept, niet in de data) | zie r13/R13.md |
+| V-#1013 | gates incl. VORMCUE | G6 merge-notatie **FAIL 1**: VORMCUE 'middelste' VBN-E02 #2 34/60 (V-#1040-cue, geen datavoorstel) |
+
+### Na-ronde r13 deel B, Oefeningen 19:43 (vormcue-hints; N13-3 later)
+- `patch_r13_vormcue.py`: batch5 VERH-E01 #1, 'keer het aantal uit de vraag' op Claudes label `keer-getal-uit-de-vraag` (V-#1055 4/4: 001, 002, gen-006, gen-014).
+- Diff per_doel: 4 items met andere foutHints. Bij de andere 14 items verandert alleen foutRegels.
+- check_hints 0 FAIL · VORMCUE rang 0 FAIL. Middelste open: VBN-E02 #2 (34/60), wacht op Didactiek.
+- **Later, nu niet bouwen: N13-3 en Oef-#1029.** Het gaat om de renderer voor beelddiagram en cirkeldiagram, de labels en de getalgrenzen (`g8work/r13/n13_3/voorstel_n13_3.md`). Er zijn nog geen items met die koppen. De entries van Oefeningen blijven op 'wacht op Overzicht' staan. De bordtitel N13-1 en guard #276 gaan pas live als de renderer er is.

@@ -252,6 +252,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "45 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "50 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -510,6 +536,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "35 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -550,14 +602,14 @@
     },
     {
      "letter": "B",
-     "tekst": "50 cent"
+     "tekst": "85 cent"
     },
     {
      "letter": "C",
      "tekst": "80 cent"
     }
    ],
-   "optiesTekst": "A) 75 cent · B) 50 cent · C) 80 cent",
+   "optiesTekst": "A) 75 cent · B) 85 cent · C) 80 cent",
    "antwoord": "80 cent",
    "antwoordDetail": {
     "juisteOptie": "C",
@@ -576,14 +628,14 @@
     },
     {
      "stap": null,
-     "fout": "50 cent",
-     "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
-     "regel": "verkeerd geteld (tekst per item)",
-     "soort": "verkeerd geteld",
-     "bron": "claude (per item)"
+     "fout": "85 cent",
+     "uitleg": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "75 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · 50 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
+   "foutHintsTekst": "75 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · 85 cent → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
    "ouderzin": "Je kind telt munten bij elkaar op, ook munten van cent.",
    "getallenruimte": "0–2 euro (munten, zonder komma)",
    "context": "laag",
@@ -625,11 +677,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "50 cent",
+      "fout": "75 cent",
       "denkfout": "geld-verkeerd-geteld"
      },
      {
-      "fout": "75 cent",
+      "fout": "85 cent",
       "denkfout": "geld-verkeerd-geteld"
      }
     ],
@@ -637,12 +689,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "50 cent",
+      "fout": "75 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      },
      {
       "stap": null,
-      "fout": "75 cent",
+      "fout": "85 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      }
     ]
@@ -756,6 +808,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "85 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "90 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -763,8 +841,8 @@
      "perItem": true,
      "match": {
       "waarden": [
-       "50 cent",
-       "75 cent"
+       "75 cent",
+       "85 cent"
       ]
      },
      "leesbaar": true
@@ -795,7 +873,7 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "40 cent"
+     "tekst": "60 cent"
     },
     {
      "letter": "B",
@@ -806,7 +884,7 @@
      "tekst": "50 cent"
     }
    ],
-   "optiesTekst": "A) 40 cent · B) €50 · C) 50 cent",
+   "optiesTekst": "A) 60 cent · B) €50 · C) 50 cent",
    "antwoord": "50 cent",
    "antwoordDetail": {
     "juisteOptie": "C",
@@ -817,11 +895,11 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "40 cent",
-     "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
-     "regel": "verkeerd geteld (tekst per item)",
-     "soort": "verkeerd geteld",
-     "bron": "claude (per item)"
+     "fout": "60 cent",
+     "uitleg": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw"
     },
     {
      "stap": null,
@@ -832,7 +910,7 @@
      "bron": "claude (per item)"
     }
    ],
-   "foutHintsTekst": "40 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · €50 → Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op.",
+   "foutHintsTekst": "60 cent → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer. · €50 → Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op.",
    "ouderzin": "Je kind telt munten bij elkaar op, ook munten van cent.",
    "getallenruimte": "0–2 euro (munten, zonder komma)",
    "context": "laag",
@@ -873,25 +951,25 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "40 cent",
-      "denkfout": "geld-verkeerd-geteld"
-     },
-     {
       "fout": "€50",
       "denkfout": "kommagetal-als-geheel"
+     },
+     {
+      "fout": "60 cent",
+      "denkfout": "geld-verkeerd-geteld"
      }
     ],
     "mergeFoutHints": [],
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "40 cent",
-      "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
+      "fout": "€50",
+      "uitleg": "Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op."
      },
      {
       "stap": null,
-      "fout": "€50",
-      "uitleg": "Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op."
+      "fout": "60 cent",
+      "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      }
     ]
    },
@@ -1014,6 +1092,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "55 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "60 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -1021,7 +1125,7 @@
      "perItem": true,
      "match": {
       "waarden": [
-       "40 cent"
+       "60 cent"
       ]
      },
      "leesbaar": true
@@ -1279,6 +1383,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€2,05"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€2,10"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -1317,7 +1447,7 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "50 cent"
+     "tekst": "65 cent"
     },
     {
      "letter": "B",
@@ -1328,7 +1458,7 @@
      "tekst": "55 cent"
     }
    ],
-   "optiesTekst": "A) 50 cent · B) 60 cent · C) 55 cent",
+   "optiesTekst": "A) 65 cent · B) 60 cent · C) 55 cent",
    "antwoord": "60 cent",
    "antwoordDetail": {
     "juisteOptie": "B",
@@ -1339,11 +1469,11 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "50 cent",
-     "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
-     "regel": "verkeerd geteld (tekst per item)",
-     "soort": "verkeerd geteld",
-     "bron": "claude (per item)"
+     "fout": "65 cent",
+     "uitleg": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw"
     },
     {
      "stap": null,
@@ -1354,7 +1484,7 @@
      "bron": "claude (per item)"
     }
    ],
-   "foutHintsTekst": "50 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · 55 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
+   "foutHintsTekst": "65 cent → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer. · 55 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
    "ouderzin": "Je kind telt munten bij elkaar op, ook munten van cent.",
    "getallenruimte": "0–2 euro (munten, zonder komma)",
    "context": "laag",
@@ -1395,11 +1525,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "50 cent",
+      "fout": "55 cent",
       "denkfout": "geld-verkeerd-geteld"
      },
      {
-      "fout": "55 cent",
+      "fout": "65 cent",
       "denkfout": "geld-verkeerd-geteld"
      }
     ],
@@ -1407,12 +1537,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "50 cent",
+      "fout": "55 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      },
      {
       "stap": null,
-      "fout": "55 cent",
+      "fout": "65 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      }
     ]
@@ -1526,6 +1656,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "65 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "70 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -1533,8 +1689,8 @@
      "perItem": true,
      "match": {
       "waarden": [
-       "50 cent",
-       "55 cent"
+       "55 cent",
+       "65 cent"
       ]
      },
      "leesbaar": true
@@ -1569,14 +1725,14 @@
     },
     {
      "letter": "B",
-     "tekst": "70 cent"
+     "tekst": "80 cent"
     },
     {
      "letter": "C",
      "tekst": "€75"
     }
    ],
-   "optiesTekst": "A) 75 cent · B) 70 cent · C) €75",
+   "optiesTekst": "A) 75 cent · B) 80 cent · C) €75",
    "antwoord": "75 cent",
    "antwoordDetail": {
     "juisteOptie": "A",
@@ -1587,11 +1743,11 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "70 cent",
-     "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
-     "regel": "verkeerd geteld (tekst per item)",
-     "soort": "verkeerd geteld",
-     "bron": "claude (per item)"
+     "fout": "80 cent",
+     "uitleg": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw"
     },
     {
      "stap": null,
@@ -1602,7 +1758,7 @@
      "bron": "claude (per item)"
     }
    ],
-   "foutHintsTekst": "70 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · €75 → Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op.",
+   "foutHintsTekst": "80 cent → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer. · €75 → Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op.",
    "ouderzin": "Je kind telt munten bij elkaar op, ook munten van cent.",
    "getallenruimte": "0–2 euro (munten, zonder komma)",
    "context": "laag",
@@ -1643,25 +1799,25 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "70 cent",
-      "denkfout": "geld-verkeerd-geteld"
-     },
-     {
       "fout": "€75",
       "denkfout": "kommagetal-als-geheel"
+     },
+     {
+      "fout": "80 cent",
+      "denkfout": "geld-verkeerd-geteld"
      }
     ],
     "mergeFoutHints": [],
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "70 cent",
-      "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
+      "fout": "€75",
+      "uitleg": "Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op."
      },
      {
       "stap": null,
-      "fout": "€75",
-      "uitleg": "Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op."
+      "fout": "80 cent",
+      "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      }
     ]
    },
@@ -1784,6 +1940,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "80 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "85 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -1791,7 +1973,7 @@
      "perItem": true,
      "match": {
       "waarden": [
-       "70 cent"
+       "80 cent"
       ]
      },
      "leesbaar": true
@@ -1822,7 +2004,7 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "50 cent"
+     "tekst": "80 cent"
     },
     {
      "letter": "B",
@@ -1833,7 +2015,7 @@
      "tekst": "75 cent"
     }
    ],
-   "optiesTekst": "A) 50 cent · B) 70 cent · C) 75 cent",
+   "optiesTekst": "A) 80 cent · B) 70 cent · C) 75 cent",
    "antwoord": "75 cent",
    "antwoordDetail": {
     "juisteOptie": "C",
@@ -1844,11 +2026,11 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "50 cent",
-     "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
-     "regel": "verkeerd geteld (tekst per item)",
-     "soort": "verkeerd geteld",
-     "bron": "claude (per item)"
+     "fout": "80 cent",
+     "uitleg": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw"
     },
     {
      "stap": null,
@@ -1859,7 +2041,7 @@
      "bron": "claude (per item)"
     }
    ],
-   "foutHintsTekst": "50 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · 70 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
+   "foutHintsTekst": "80 cent → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer. · 70 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
    "ouderzin": "Je kind telt munten bij elkaar op, ook munten van cent.",
    "getallenruimte": "0–2 euro (munten, zonder komma)",
    "context": "laag",
@@ -1901,11 +2083,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "50 cent",
+      "fout": "70 cent",
       "denkfout": "geld-verkeerd-geteld"
      },
      {
-      "fout": "70 cent",
+      "fout": "80 cent",
       "denkfout": "geld-verkeerd-geteld"
      }
     ],
@@ -1913,12 +2095,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "50 cent",
+      "fout": "70 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      },
      {
       "stap": null,
-      "fout": "70 cent",
+      "fout": "80 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      }
     ]
@@ -2032,6 +2214,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "80 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "85 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -2039,8 +2247,8 @@
      "perItem": true,
      "match": {
       "waarden": [
-       "50 cent",
-       "70 cent"
+       "70 cent",
+       "80 cent"
       ]
      },
      "leesbaar": true
@@ -2075,14 +2283,14 @@
     },
     {
      "letter": "B",
-     "tekst": "10 cent"
+     "tekst": "25 cent"
     },
     {
      "letter": "C",
      "tekst": "20 cent"
     }
    ],
-   "optiesTekst": "A) €20 · B) 10 cent · C) 20 cent",
+   "optiesTekst": "A) €20 · B) 25 cent · C) 20 cent",
    "antwoord": "20 cent",
    "antwoordDetail": {
     "juisteOptie": "C",
@@ -2101,14 +2309,14 @@
     },
     {
      "stap": null,
-     "fout": "10 cent",
-     "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
-     "regel": "verkeerd geteld (tekst per item)",
-     "soort": "verkeerd geteld",
-     "bron": "claude (per item)"
+     "fout": "25 cent",
+     "uitleg": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "€20 → Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op. · 10 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
+   "foutHintsTekst": "€20 → Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op. · 25 cent → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
    "ouderzin": "Je kind telt munten bij elkaar op, ook munten van cent.",
    "getallenruimte": "0–2 euro (munten, zonder komma)",
    "context": "laag",
@@ -2149,25 +2357,25 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "10 cent",
-      "denkfout": "geld-verkeerd-geteld"
-     },
-     {
       "fout": "€20",
       "denkfout": "kommagetal-als-geheel"
+     },
+     {
+      "fout": "25 cent",
+      "denkfout": "geld-verkeerd-geteld"
      }
     ],
     "mergeFoutHints": [],
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "10 cent",
-      "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
+      "fout": "€20",
+      "uitleg": "Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op."
      },
      {
       "stap": null,
-      "fout": "€20",
-      "uitleg": "Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op."
+      "fout": "25 cent",
+      "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      }
     ]
    },
@@ -2290,6 +2498,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "25 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -2297,7 +2531,7 @@
      "perItem": true,
      "match": {
       "waarden": [
-       "10 cent"
+       "25 cent"
       ]
      },
      "leesbaar": true
@@ -2332,14 +2566,14 @@
     },
     {
      "letter": "B",
-     "tekst": "50 cent"
+     "tekst": "90 cent"
     },
     {
      "letter": "C",
      "tekst": "85 cent"
     }
    ],
-   "optiesTekst": "A) €4 · B) 50 cent · C) 85 cent",
+   "optiesTekst": "A) €4 · B) 90 cent · C) 85 cent",
    "antwoord": "85 cent",
    "antwoordDetail": {
     "juisteOptie": "C",
@@ -2358,14 +2592,14 @@
     },
     {
      "stap": null,
-     "fout": "50 cent",
-     "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
-     "regel": "verkeerd geteld (tekst per item)",
-     "soort": "verkeerd geteld",
-     "bron": "claude (per item)"
+     "fout": "90 cent",
+     "uitleg": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "€4 → Je hebt de munten geteld. De vraag is hoeveel geld het samen is. Kijk wat elke munt waard is. · 50 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
+   "foutHintsTekst": "€4 → Je hebt de munten geteld. De vraag is hoeveel geld het samen is. Kijk wat elke munt waard is. · 90 cent → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
    "ouderzin": "Je kind telt munten bij elkaar op, ook munten van cent.",
    "getallenruimte": "0–2 euro (munten, zonder komma)",
    "context": "laag",
@@ -2411,7 +2645,7 @@
       "denkfout": "getal-overgenomen"
      },
      {
-      "fout": "50 cent",
+      "fout": "90 cent",
       "denkfout": "geld-verkeerd-geteld"
      }
     ],
@@ -2419,7 +2653,7 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "50 cent",
+      "fout": "90 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      }
     ]
@@ -2549,6 +2783,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "90 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "95 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -2556,7 +2816,7 @@
      "perItem": true,
      "match": {
       "waarden": [
-       "50 cent"
+       "90 cent"
       ]
      },
      "leesbaar": true
@@ -2809,6 +3069,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "75 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "80 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -2845,7 +3131,7 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "20 cent"
+     "tekst": "40 cent"
     },
     {
      "letter": "B",
@@ -2856,7 +3142,7 @@
      "tekst": "35 cent"
     }
    ],
-   "optiesTekst": "A) 20 cent · B) 30 cent · C) 35 cent",
+   "optiesTekst": "A) 40 cent · B) 30 cent · C) 35 cent",
    "antwoord": "35 cent",
    "antwoordDetail": {
     "juisteOptie": "C",
@@ -2867,11 +3153,11 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "20 cent",
-     "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
-     "regel": "verkeerd geteld (tekst per item)",
-     "soort": "verkeerd geteld",
-     "bron": "claude (per item)"
+     "fout": "40 cent",
+     "uitleg": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw"
     },
     {
      "stap": null,
@@ -2882,7 +3168,7 @@
      "bron": "claude (per item)"
     }
    ],
-   "foutHintsTekst": "20 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · 30 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
+   "foutHintsTekst": "40 cent → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer. · 30 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
    "ouderzin": "Je kind telt munten bij elkaar op, ook munten van cent.",
    "getallenruimte": "0–2 euro (munten, zonder komma)",
    "context": "laag",
@@ -2923,11 +3209,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "20 cent",
+      "fout": "30 cent",
       "denkfout": "geld-verkeerd-geteld"
      },
      {
-      "fout": "30 cent",
+      "fout": "40 cent",
       "denkfout": "geld-verkeerd-geteld"
      }
     ],
@@ -2935,12 +3221,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "20 cent",
+      "fout": "30 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      },
      {
       "stap": null,
-      "fout": "30 cent",
+      "fout": "40 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      }
     ]
@@ -3054,6 +3340,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "40 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "45 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -3061,8 +3373,8 @@
      "perItem": true,
      "match": {
       "waarden": [
-       "20 cent",
-       "30 cent"
+       "30 cent",
+       "40 cent"
       ]
      },
      "leesbaar": true
@@ -3304,6 +3616,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€1,05"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€1,10"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -3347,14 +3685,14 @@
     },
     {
      "letter": "B",
-     "tekst": "50 cent"
+     "tekst": "75 cent"
     },
     {
      "letter": "C",
      "tekst": "70 cent"
     }
    ],
-   "optiesTekst": "A) 65 cent · B) 50 cent · C) 70 cent",
+   "optiesTekst": "A) 65 cent · B) 75 cent · C) 70 cent",
    "antwoord": "70 cent",
    "antwoordDetail": {
     "juisteOptie": "C",
@@ -3373,14 +3711,14 @@
     },
     {
      "stap": null,
-     "fout": "50 cent",
-     "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
-     "regel": "verkeerd geteld (tekst per item)",
-     "soort": "verkeerd geteld",
-     "bron": "claude (per item)"
+     "fout": "75 cent",
+     "uitleg": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "65 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · 50 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
+   "foutHintsTekst": "65 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · 75 cent → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
    "ouderzin": "Je kind telt munten bij elkaar op, ook munten van cent.",
    "getallenruimte": "0–2 euro (munten, zonder komma)",
    "context": "laag",
@@ -3422,11 +3760,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "50 cent",
+      "fout": "65 cent",
       "denkfout": "geld-verkeerd-geteld"
      },
      {
-      "fout": "65 cent",
+      "fout": "75 cent",
       "denkfout": "geld-verkeerd-geteld"
      }
     ],
@@ -3434,12 +3772,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "50 cent",
+      "fout": "65 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      },
      {
       "stap": null,
-      "fout": "65 cent",
+      "fout": "75 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      }
     ]
@@ -3553,6 +3891,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "75 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "80 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -3560,8 +3924,8 @@
      "perItem": true,
      "match": {
       "waarden": [
-       "50 cent",
-       "65 cent"
+       "65 cent",
+       "75 cent"
       ]
      },
      "leesbaar": true
@@ -3600,10 +3964,10 @@
     },
     {
      "letter": "C",
-     "tekst": "20 cent"
+     "tekst": "35 cent"
     }
    ],
-   "optiesTekst": "A) 30 cent · B) 25 cent · C) 20 cent",
+   "optiesTekst": "A) 30 cent · B) 25 cent · C) 35 cent",
    "antwoord": "30 cent",
    "antwoordDetail": {
     "juisteOptie": "A",
@@ -3622,14 +3986,14 @@
     },
     {
      "stap": null,
-     "fout": "20 cent",
-     "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
-     "regel": "verkeerd geteld (tekst per item)",
-     "soort": "verkeerd geteld",
-     "bron": "claude (per item)"
+     "fout": "35 cent",
+     "uitleg": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "25 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · 20 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
+   "foutHintsTekst": "25 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · 35 cent → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
    "ouderzin": "Je kind telt munten bij elkaar op, ook munten van cent.",
    "getallenruimte": "0–2 euro (munten, zonder komma)",
    "context": "laag",
@@ -3670,11 +4034,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "20 cent",
+      "fout": "25 cent",
       "denkfout": "geld-verkeerd-geteld"
      },
      {
-      "fout": "25 cent",
+      "fout": "35 cent",
       "denkfout": "geld-verkeerd-geteld"
      }
     ],
@@ -3682,12 +4046,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "20 cent",
+      "fout": "25 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      },
      {
       "stap": null,
-      "fout": "25 cent",
+      "fout": "35 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      }
     ]
@@ -3801,6 +4165,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "35 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "40 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -3808,8 +4198,8 @@
      "perItem": true,
      "match": {
       "waarden": [
-       "20 cent",
-       "25 cent"
+       "25 cent",
+       "35 cent"
       ]
      },
      "leesbaar": true
@@ -4046,6 +4436,32 @@
      "perItem": true,
      "match": {
       "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€1"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€1,05"
+      ]
      },
      "leesbaar": true
     },
@@ -4298,6 +4714,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "95 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€1"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -4345,10 +4787,10 @@
     },
     {
      "letter": "C",
-     "tekst": "50 cent"
+     "tekst": "90 cent"
     }
    ],
-   "optiesTekst": "A) 70 cent · B) 80 cent · C) 50 cent",
+   "optiesTekst": "A) 70 cent · B) 80 cent · C) 90 cent",
    "antwoord": "80 cent",
    "antwoordDetail": {
     "juisteOptie": "B",
@@ -4367,14 +4809,14 @@
     },
     {
      "stap": null,
-     "fout": "50 cent",
-     "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
-     "regel": "verkeerd geteld (tekst per item)",
-     "soort": "verkeerd geteld",
-     "bron": "claude (per item)"
+     "fout": "90 cent",
+     "uitleg": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "70 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · 50 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
+   "foutHintsTekst": "70 cent → Leg de munten op volgorde van groot naar klein en tel ze één voor één op. · 90 cent → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
    "ouderzin": "Je kind telt munten bij elkaar op, ook munten van cent.",
    "getallenruimte": "0–2 euro (munten, zonder komma)",
    "context": "laag",
@@ -4415,11 +4857,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "50 cent",
+      "fout": "70 cent",
       "denkfout": "geld-verkeerd-geteld"
      },
      {
-      "fout": "70 cent",
+      "fout": "90 cent",
       "denkfout": "geld-verkeerd-geteld"
      }
     ],
@@ -4427,12 +4869,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "50 cent",
+      "fout": "70 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      },
      {
       "stap": null,
-      "fout": "70 cent",
+      "fout": "90 cent",
       "uitleg": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
      }
     ]
@@ -4546,6 +4988,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "85 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "90 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -4553,8 +5021,8 @@
      "perItem": true,
      "match": {
       "waarden": [
-       "50 cent",
-       "70 cent"
+       "70 cent",
+       "90 cent"
       ]
      },
      "leesbaar": true
@@ -4802,6 +5270,32 @@
      "perItem": true,
      "match": {
       "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "50 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "55 cent"
+      ]
      },
      "leesbaar": true
     },
@@ -5068,6 +5562,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "50 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "55 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -5328,6 +5848,32 @@
      "leesbaar": true
     },
     {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "70 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "75 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "verkeerd geteld (tekst per item)",
      "soort": "verkeerd geteld",
      "bron": "claude",
@@ -5570,6 +6116,32 @@
      "perItem": true,
      "match": {
       "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "60 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "65 cent"
+      ]
      },
      "leesbaar": true
     },
@@ -5819,6 +6391,32 @@
      "perItem": true,
      "match": {
       "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "45 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "50 cent"
+      ]
      },
      "leesbaar": true
     },
@@ -6079,6 +6677,32 @@
      "perItem": true,
      "match": {
       "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 5 cent",
+     "soort": "te veel geteld (5 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "95 cent"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 10 cent",
+     "soort": "te veel geteld (10 cent)",
+     "bron": "nieuw",
+     "tekst": "Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€1"
+      ]
      },
      "leesbaar": true
     },

@@ -213,8 +213,12 @@ def compile_regel(regel, c):
     # merge-punten #19/#32: geld ± 1 cent, ± 10 cent, ± €1 (sleutels in huisnotatie; de invoer wordt genormaliseerd, #33)
     m = re.match(r'fout = antwoord (±|\+|-) (?:(\d+) cent|€ ?(\d+))\b', r)
     if m:
-        if c.ac is None: return None
         d = int(m.group(2)) if m.group(2) else int(m.group(3)) * 100
+        if c.ac is None and (q_ := re.fullmatch(r'(\d+) cent', c.ans.strip())):      # Oef-#1028 (Oefeningen 19:43, hook zet_motor1028.py; V-#1050): 'fout = antwoord ± c cent' ook bij een antwoord in centen
+            ac_ = int(q_.group(1)); dl_ = ([ac_ - d] if m.group(1) in ('±', '-') and ac_ - d >= 0 else []) + ([ac_ + d] if m.group(1) in ('±', '+') else [])
+            cc_ = lambda v: int(w_.group(1)) if (w_ := re.fullmatch(r'(\d+) cent', str(v).strip())) else _cent(v)
+            return {'exact': {f'{x} cent' if x < 100 else geld(x) for x in dl_}, 'pred': lambda v: cc_(v) in dl_}
+        if c.ac is None: return None
         doel = ([c.ac - d] if m.group(1) in ('±', '-') and c.ac - d >= 0 else []) + ([c.ac + d] if m.group(1) in ('±', '+') else [])
         return {'exact': {geld(x) for x in doel}, 'pred': lambda v: _cent(v) in doel}
     # getallen
@@ -419,7 +423,7 @@ def _klok_tekst(t):
     return _KD.sub(r, t)
 def _klok_vormen(w):
     m = re.fullmatch(r'\s*(\d{1,2})[:.](\d{2})(?: uur)?\s*', str(w))
-    if not m or not _klok_ok(*m.groups()): return [w]
+    if not m or int(m.group(1)) > 24: return [w]      # V-#1012 (Didactiek r13, les 387): ook een foutsleutel met minuten ≥ 60 ('12:85') in alle drie de vormen, want een kind typt volgens de instructie '12.85'
     return [f'{m.group(1)}.{m.group(2)} uur', f'{m.group(1)}.{m.group(2)}', f'{m.group(1)}:{m.group(2)}']
 def _klok_naar_punt(o, k=None):
     if isinstance(o, dict): return {kk: _klok_naar_punt(v, kk) for kk, v in o.items()}

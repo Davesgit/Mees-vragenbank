@@ -528,6 +528,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Tel eerst twee dagen bij elkaar. Tel daar steeds de volgende dag bij, tot je alle dagen hebt gehad.
 - **Ouderzin:** Je kind telt de bezoekers van vier dagen bij elkaar op.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tiental te veel` (fout = antwoord + 10) → Dat is tien te veel. Tel de getallen nog eens op. Let goed op de tientallen: tel je het tiental dat je onthoudt maar één keer mee?  [nieuw]
   - `tiental te weinig` (Claudes sleutel: tiental-ernaast) → Dat is tien te weinig. Tel de getallen nog eens op. Let goed op de tientallen.  [Claude, taalfix]
   - `één dag` (Claudes sleutel: getal-overgenomen) → Dat is het getal van één dag. De vraag gaat over alle dagen samen.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel de getallen van alle dagen bij elkaar op.  [nieuw]

@@ -27,9 +27,21 @@ def tekst(t):
         if re.search(r'schaal\s*$', voor, re.I): return m.group(0)
         n[0] += 1
         if re.search(r'(Typ als|zoals|Typ de tijd als)\s*$', voor): return f'{h}.{mi}'
+        if re.search(r'(\+|\bduurt|\bduurde|\bduur van)\s*$', voor): return duur(h, mi)      # V-#904: een tijdsduur ('6:15 + 5:45') is geen kloktijd
         if na.startswith(' uur'): return f'{h}.{mi}'
         return f'{h}.{mi} uur'
-    return TIJD.sub(r, t), n[0]
+    t = TIJD.sub(r, t)
+    def rp(m):   # les 348: ook een duur in '.'-notatie ('+ 1.20 uur', 'duurt 1.20 uur') wordt woorden
+        if int(m.group(3)) > 59: return m.group(0)
+        n[0] += 1; return m.group(1) + m.group(2) + duur(m.group(3), m.group(4))
+    t = DUUR_PUNT.sub(rp, t)
+    return t, n[0]
+DUUR_PUNT = re.compile(r'(\+|\bduurt|\bduurde|\bduur van)(\s*)(\d{1,2})\.(\d{2})(?: uur)?(?![\d:.,])')
+def duur(h, mi):
+    """V-#904 (Didactiek G8 batch 5, les 331): tijdsduur 'u:mm' → '5 uur en 45 minuten' / '4 uur' / '45 minuten' (nooit '5.45 uur', dat is een kloktijd)"""
+    h, mi = int(h), int(mi)
+    if not mi: return f'{h} uur'
+    return f'{mi} minuten' if not h else f'{h} uur en {mi} minuten'
 def varianten(w):
     """'14:30' / '14.30' / '14.30 uur' → alle drie"""
     m = re.fullmatch(r'\s*(\d{1,2})[:.](\d{2})(?: uur)?\s*', str(w))

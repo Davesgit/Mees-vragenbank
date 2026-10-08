@@ -114,7 +114,7 @@ if __name__ == '__main__':
     for _x in _opp[:20]: print('  FAIL OPP', _x)
     fail = fail or bool(_opp)
     # REF (G5 fixlijst #63): referentiematen uit /workspace/claude-merge/referentiematen.json: checkPatronen = FAIL, checkPatronenZacht = WARN
-    sys.path.insert(0, '/workspace/claude-merge/tools')
+    sys.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge'))
     import referentiematen_check as _RC
     fail = (_RC.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail      # checkPatronen = FAIL, zacht = WARN
     # MAAT (notatie_machten.md, Didactiek 18:00; aangezet 18:05): ²/³ per groep, mengvorm 'vierkante cm', m2/cm3, 'a' voor are, INTRO per somtype
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     _VK.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
     import machten_check as _MC
     # DOELID (G5 merge-fixlijst #122, Didactiek 20:04): elk item heeft het doelId van zijn bestand (FAIL)
-    sys.path.insert(0, '/workspace/claude-merge/tools'); import doelid_check as _DI
+    sys.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge')); import doelid_check as _DI
     fail = (_DI.rapport(files) > 0) or fail
     import evenveel_check as _EV      # #192 (Didactiek 21:25): 'even veel' ook in ouderzin, hints en kop (FAIL)
     fail = (_EV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
@@ -134,7 +134,24 @@ if __name__ == '__main__':
     import spatie_duizend_check as _SD      # V-#705 (review G7 batch 6, Didactiek 8 okt): spatie als duizendtalscheiding (FAIL, G4–G8)
     fail = (_SD.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     fail = (_SD.rapport_bestanden(os.path.dirname(os.path.abspath(__file__))) > 0) or fail      # Oef-#481: ook hintteksten (batch*.json, somtypen)
-    sys.path.insert(0, '/workspace/claude-merge/tools'); import gemiddelde_check as _GM      # Z-#855 (Didactiek 8 okt 16:15): gemiddelde-vragen; in G4 alleen gemeld (WARN), G4 is goedgekeurd
-    _GM.rapport([_it for _p in files for _it in json.load(open(_p))['items']], os.path.dirname(os.path.abspath(__file__)), ernst='WARN (hier niet blokkerend)')
+    sys.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge')); import gemiddelde_check as _GM      # Z-#855 (Didactiek 8 okt 16:15): gemiddelde-vragen; in G4 alleen gemeld (WARN), G4 is goedgekeurd
+    fail = (len(_GM.rapport([_it for _p in files for _it in json.load(open(_p))['items']], os.path.dirname(os.path.abspath(__file__)))[0]) > 0) or fail      # V-#1013/Z-#1016 (Didactiek r13): GEMIDDELDE als FAIL (was WARN)
+    fail = (_GM.mutanten() and any(_v != _k for _n, _v, _k in _GM.mutanten())) or fail
+    # V-#1013 (Didactiek review-r13, les 388: een guard die alleen in een rondescript draait, is geen guard): vaste gates in de groepscheck (FAIL)
+    sys.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge'))
+    _ALLE = [_it for _p in files for _it in json.load(open(_p))['items']]
+    import kloktijd_check as _KT      # KLOKTIJD, TIJDSDUUR, KLOKWOORD/KLOKSLEUTEL (V-#1012), TYPVOORBEELD (Oef-#1021)
+    fail = (_KT.rapport(_ALLE) > 0) or fail
+    fail = (not _KT.alle_mutanten_ok()) or fail      # tijdsduur 20/20, V-#1012 2/2, typvoorbeeld
+    import juiste_optie_check as _JO      # JUISTE-OPTIE + OPTIESTEKST (V-#1010)
+    fail = (_JO.rapport(_ALLE) > 0) or fail
+    import gemiddelde_check as _GM2      # GEMIDDELDE-SAMEN (V-#1011)
+    _SA = _GM2.samen_treffers(_ALLE)
+    print(f"GEMIDDELDE-SAMEN (V-#1011: «alles samen»/«het totaal» alleen als de fout de som is): {len(_SA)} (FAIL) · mutant {'ok' if _GM2.samen_mutanten_ok() else 'MIS'}"); [print('  FAIL GEMIDDELDE-SAMEN', _x) for _x in _SA[:10]]
+    fail = bool(_SA) or (not _GM2.samen_mutanten_ok()) or fail
+    import vormcue_check as _VC      # V-#1050–#1055 (Didactiek 19:35, les 405): VORMCUE als FAIL in G3–G7 (rang grootste/kleinste, ook centbedragen Z-#1050; V-#1040 middelste)
+    fail = (_VC.rapport(_ALLE) > 0) or fail
+    fail = (not _VC.mutanten_ok()) or fail
+    print(f"  mutanten VORMCUE {sum(bool(_VC.fouten(_L)) == _v for _, _L, _v in _VC.MUTANTEN)}/{len(_VC.MUTANTEN)} · zacht {sum(_VC.mutanten_z_ok())}/{len(_VC.MUTANTEN_Z)}")
     print('\nG4 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

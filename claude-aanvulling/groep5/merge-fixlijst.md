@@ -600,3 +600,20 @@ Bron: `/workspace/leerlijn/rekenen-groep6/BESLUIT_R9-4_R10_NIVEAUS.md` §A. Vera
 
 Uitvoering: `python3 r13/r13_uitvoer.py` (idempotent; rapport `r13/r13_rapport.json`). De wijzigingen staan in de data (`data/gemapt.json` → `apply_hints.py`). **Na een nieuwe G5-build moet `r13_uitvoer.py` opnieuw draaien**, anders gaan ze verloren.
 Checks op r13/g5 (8 okt ±18:20): check_hints 139 klaar · 0 open · 0 FAIL · 2 WARN; merge-notatie ALLES OK; #121 0 FAIL; generator-sleutels 0 FAIL.
+
+## Na-ronde r13 deel B (8 okt 19:40; Didactiek review-r13 + vormcue 19:35)
+| # | Wat | Stand |
+|---|---|---|
+| V-#1001 | MEET-E07 #1 centen-afleider | ✓ 114 |
+| V-#1012 | MEET-E06 1200–1211: tekst Oefeningen (batch5 md5 001c81b1) + motor; check_v1012 als FAIL in de G5-check | ✓ FAIL 24 (983900d) → 0 |
+| Oef-#1021 | 1211 «(Typ als 9.45.)» | ✓ 1 |
+| V-#1051 | VBN-E01 #4 280/282/283 'som van de rij' → 130/90/125 | ✓ (283: regel 'andere cel' wint, 125 is ook de cel van dinsdag) |
+| V-#1052 | VBN-E03 #1 011/019/024 → 39/60/105 'een stap te ver'; Claude-sleutel met de nieuwe tekst | ✓ data; **Oefeningen: teksten in de regel** (nu wint de oude tekst) |
+| V-#1053 | GET-E05 #17 gen-012/014/016/018: −10 → +10 | ✓ data; label 'tiental-te-veel'; **Oefeningen: regel 'fout = antwoord + 10'** |
+| V-#1013 | gates incl. VORMCUE | G5 merge-notatie **FAIL 1**: VORMCUE 'middelste' MEET-E07 #1 101/182 (V-#1040-cue, geen datavoorstel) |
+| Z-#1053 | VBN-E03 014 '9.00 uur' (r13) / '9:00 uur' (main) | melding; bij samenvoegen één notatie |
+
+### Na-ronde r13 deel B, Oefeningen 19:43 (vormcue-hints)
+- `patch_r13_vormcue.py`: batch6 VBN-E03 #1, 'een stap te ver', 3 teksten per item (V-#1052 3/3: 011 '39', 019 '60', 024 '105'). Batch7 GET-E05 nrO 32: 'tiental te veel' op `fout = antwoord + 10` (V-#1053 4/4: gen-012/014/016/018).
+- Diff per_doel: 3 + 4 items met andere foutHints. Bij de andere 12 + 4 items van die somtypen verandert alleen foutRegels (de regellijst).
+- check_hints 0 FAIL · VORMCUE rang 0 FAIL. Middelste open: MEET-E07 #1 (101/182), wacht op Didactiek.

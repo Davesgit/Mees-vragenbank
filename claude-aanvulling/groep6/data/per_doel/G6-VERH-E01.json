@@ -25,7 +25,7 @@
    "opties": [
     {
      "letter": "A",
-     "tekst": "€6"
+     "tekst": "€30"
     },
     {
      "letter": "B",
@@ -36,7 +36,7 @@
      "tekst": "€11"
     }
    ],
-   "optiesTekst": "A) €6 · B) €15 · C) €11",
+   "optiesTekst": "A) €30 · B) €15 · C) €11",
    "antwoord": "€15",
    "antwoordDetail": {
     "juisteOptie": "B",
@@ -47,12 +47,12 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "€6",
-     "uitleg": "Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal.",
-     "uitlegSterker": "Zoek in de tabel het vakje dat je al weet. Past dat aantal een heel aantal keer in het aantal in de vraag? Doe dan het getal dat erbij hoort ook zoveel keer. Past het niet precies? Deel dan allebei de getallen van dat vakje door twee of door drie, tot je een kleiner vakje hebt dat wel precies past. Reken vanaf dat kleinere vakje verder.",
-     "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
-     "soort": "verhouding niet gelijk",
+     "fout": "€30",
+     "uitleg": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "uitlegSterker": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal. Zo blijft de verhouding gelijk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
      "bron": "claude-taalfix"
     },
     {
@@ -66,7 +66,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "€6 → Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal. · €11 → Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal.",
+   "foutHintsTekst": "€30 → Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? · €11 → Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal.",
    "ouderzin": "Je kind rekent met een verhoudingstabel. Wordt het ene getal een aantal keer zo groot, dan wordt het andere getal ook zoveel keer zo groot.",
    "getallenruimte": "0–100",
    "context": "laag",
@@ -104,8 +104,8 @@
       "denkfout": "optellen-ipv-vermenigvuldigen"
      },
      {
-      "fout": "€6",
-      "denkfout": "verhoudingstabel-verkeerd"
+      "fout": "€30",
+      "denkfout": "keer-getal-uit-de-vraag"
      }
     ],
     "mergeFoutHints": [],
@@ -117,8 +117,8 @@
      },
      {
       "stap": null,
-      "fout": "€6",
-      "uitleg": "Ben je al bij het vakje uit de vraag? Ga verder in de tabel."
+      "fout": "€30",
+      "uitleg": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?"
      }
     ]
    },
@@ -223,6 +223,20 @@
      "leesbaar": true
     },
     {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix",
@@ -242,9 +256,7 @@
      "tekstSterker": "Zoek in de tabel het vakje dat je al weet. Past dat aantal een heel aantal keer in het aantal in de vraag? Doe dan het getal dat erbij hoort ook zoveel keer. Past het niet precies? Deel dan allebei de getallen van dat vakje door twee of door drie, tot je een kleiner vakje hebt dat wel precies past. Reken vanaf dat kleinere vakje verder.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "€6"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -307,10 +319,10 @@
     },
     {
      "letter": "C",
-     "tekst": "€4"
+     "tekst": "€24"
     }
    ],
-   "optiesTekst": "A) €8 · B) €7 · C) €4",
+   "optiesTekst": "A) €8 · B) €7 · C) €24",
    "antwoord": "€8",
    "antwoordDetail": {
     "juisteOptie": "A",
@@ -331,16 +343,16 @@
     },
     {
      "stap": null,
-     "fout": "€4",
-     "uitleg": "Is dat een getal uit de vraag? Bij het vakje uit de vraag hoort een ander getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal.",
-     "uitlegSterker": "Zoek in de tabel het vakje dat je al weet. Past dat aantal een heel aantal keer in het aantal in de vraag? Doe dan het getal dat erbij hoort ook zoveel keer. Past het niet precies? Deel dan allebei de getallen van dat vakje door twee of door drie, tot je een kleiner vakje hebt dat wel precies past. Reken vanaf dat kleinere vakje verder.",
-     "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: getal-overgenomen",
-     "soort": "getal uit de vraag",
+     "fout": "€24",
+     "uitleg": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "uitlegSterker": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal. Zo blijft de verhouding gelijk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€7 → Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal. · €4 → Is dat een getal uit de vraag? Bij het vakje uit de vraag hoort een ander getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal.",
+   "foutHintsTekst": "€7 → Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal. · €24 → Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
    "ouderzin": "Je kind rekent met een verhoudingstabel. Wordt het ene getal een aantal keer zo groot, dan wordt het andere getal ook zoveel keer zo groot.",
    "getallenruimte": "0–100",
    "context": "midden",
@@ -378,8 +390,8 @@
       "denkfout": "optellen-ipv-vermenigvuldigen"
      },
      {
-      "fout": "€4",
-      "denkfout": "getal-overgenomen"
+      "fout": "€24",
+      "denkfout": "keer-getal-uit-de-vraag"
      }
     ],
     "mergeFoutHints": [],
@@ -391,8 +403,8 @@
      },
      {
       "stap": null,
-      "fout": "€4",
-      "uitleg": "Dat getal staat al in de vraag. Reken uit wat er bij het vakje uit de vraag hoort."
+      "fout": "€24",
+      "uitleg": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?"
      }
     ]
    },
@@ -494,6 +506,20 @@
      "leesbaar": true
     },
     {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€24"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix",
@@ -525,9 +551,7 @@
      "tekstSterker": "Zoek in de tabel het vakje dat je al weet. Past dat aantal een heel aantal keer in het aantal in de vraag? Doe dan het getal dat erbij hoort ook zoveel keer. Past het niet precies? Deel dan allebei de getallen van dat vakje door twee of door drie, tot je een kleiner vakje hebt dat wel precies past. Reken vanaf dat kleinere vakje verder.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "€4"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -763,6 +787,18 @@
        "10",
        "10 glazen"
       ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -1043,6 +1079,18 @@
      "leesbaar": true
     },
     {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix",
@@ -1311,6 +1359,18 @@
      "leesbaar": true
     },
     {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix",
@@ -1573,6 +1633,18 @@
       "waarden": [
        "€13"
       ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -1845,6 +1917,18 @@
      "leesbaar": true
     },
     {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix",
@@ -2109,6 +2193,18 @@
        "9",
        "9 glazen"
       ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -2381,6 +2477,18 @@
      "leesbaar": true
     },
     {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix",
@@ -2465,10 +2573,10 @@
     },
     {
      "letter": "C",
-     "tekst": "€10"
+     "tekst": "€30"
     }
    ],
-   "optiesTekst": "A) €15 · B) €9 · C) €10",
+   "optiesTekst": "A) €15 · B) €9 · C) €30",
    "antwoord": "€15",
    "antwoordDetail": {
     "juisteOptie": "A",
@@ -2489,16 +2597,16 @@
     },
     {
      "stap": null,
-     "fout": "€10",
-     "uitleg": "Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal.",
-     "uitlegSterker": "Zoek in de tabel het vakje dat je al weet. Past dat aantal een heel aantal keer in het aantal in de vraag? Doe dan het getal dat erbij hoort ook zoveel keer. Past het niet precies? Deel dan allebei de getallen van dat vakje door twee of door drie, tot je een kleiner vakje hebt dat wel precies past. Reken vanaf dat kleinere vakje verder.",
-     "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
-     "soort": "verhouding niet gelijk",
+     "fout": "€30",
+     "uitleg": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "uitlegSterker": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal. Zo blijft de verhouding gelijk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€9 → Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal. · €10 → Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal.",
+   "foutHintsTekst": "€9 → Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal. · €30 → Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
    "ouderzin": "Je kind rekent met een verhoudingstabel. Wordt het ene getal een aantal keer zo groot, dan wordt het andere getal ook zoveel keer zo groot.",
    "getallenruimte": "0–100",
    "context": "laag",
@@ -2536,8 +2644,8 @@
       "denkfout": "optellen-ipv-vermenigvuldigen"
      },
      {
-      "fout": "€10",
-      "denkfout": "verhoudingstabel-verkeerd"
+      "fout": "€30",
+      "denkfout": "keer-getal-uit-de-vraag"
      }
     ],
     "mergeFoutHints": [],
@@ -2549,8 +2657,8 @@
      },
      {
       "stap": null,
-      "fout": "€10",
-      "uitleg": "Ben je al bij het vakje uit de vraag? Ga verder in de tabel."
+      "fout": "€30",
+      "uitleg": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?"
      }
     ]
    },
@@ -2647,6 +2755,20 @@
      "leesbaar": true
     },
     {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix",
@@ -2666,9 +2788,7 @@
      "tekstSterker": "Zoek in de tabel het vakje dat je al weet. Past dat aantal een heel aantal keer in het aantal in de vraag? Doe dan het getal dat erbij hoort ook zoveel keer. Past het niet precies? Deel dan allebei de getallen van dat vakje door twee of door drie, tot je een kleiner vakje hebt dat wel precies past. Reken vanaf dat kleinere vakje verder.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "€10"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -2911,6 +3031,18 @@
        "13",
        "13 appels"
       ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -3183,6 +3315,18 @@
      "leesbaar": true
     },
     {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix",
@@ -3447,6 +3591,18 @@
        "11",
        "11 broden"
       ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -3719,6 +3875,18 @@
      "leesbaar": true
     },
     {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix",
@@ -3981,6 +4149,18 @@
       "waarden": [
        "€14"
       ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -4248,6 +4428,18 @@
       "waarden": [
        "€12"
       ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -4521,6 +4713,18 @@
      "leesbaar": true
     },
     {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix",
@@ -4605,10 +4809,10 @@
     },
     {
      "letter": "C",
-     "tekst": "€3"
+     "tekst": "€90"
     }
    ],
-   "optiesTekst": "A) €15 · B) €13 · C) €3",
+   "optiesTekst": "A) €15 · B) €13 · C) €90",
    "antwoord": "€15",
    "antwoordDetail": {
     "juisteOptie": "A",
@@ -4629,16 +4833,16 @@
     },
     {
      "stap": null,
-     "fout": "€3",
-     "uitleg": "Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal.",
-     "uitlegSterker": "Zoek in de tabel het vakje dat je al weet. Past dat aantal een heel aantal keer in het aantal in de vraag? Doe dan het getal dat erbij hoort ook zoveel keer. Past het niet precies? Deel dan allebei de getallen van dat vakje door twee of door drie, tot je een kleiner vakje hebt dat wel precies past. Reken vanaf dat kleinere vakje verder.",
-     "laag2": "tekstSterker",
-     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
-     "soort": "verhouding niet gelijk",
+     "fout": "€90",
+     "uitleg": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "uitlegSterker": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal. Zo blijft de verhouding gelijk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "€13 → Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal. · €3 → Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal.",
+   "foutHintsTekst": "€13 → Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal. · €90 → Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
    "ouderzin": "Je kind rekent met een verhoudingstabel. Wordt het ene getal een aantal keer zo groot, dan wordt het andere getal ook zoveel keer zo groot.",
    "getallenruimte": "0–100",
    "context": "laag",
@@ -4676,8 +4880,8 @@
       "denkfout": "optellen-ipv-vermenigvuldigen"
      },
      {
-      "fout": "€3",
-      "denkfout": "verhoudingstabel-verkeerd"
+      "fout": "€90",
+      "denkfout": "keer-getal-uit-de-vraag"
      }
     ],
     "mergeFoutHints": [],
@@ -4689,8 +4893,8 @@
      },
      {
       "stap": null,
-      "fout": "€3",
-      "uitleg": "Ben je al bij het vakje uit de vraag? Ga verder in de tabel."
+      "fout": "€90",
+      "uitleg": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?"
      }
     ]
    },
@@ -4788,6 +4992,20 @@
      "leesbaar": true
     },
     {
+     "regel": "Claudes sleutel: keer-getal-uit-de-vraag",
+     "soort": "keer het aantal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je het getal keer het aantal uit de vraag gedaan? Dat klopt alleen als het eerste aantal 1 is. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€90"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
      "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
      "soort": "opgeteld",
      "bron": "claude-taalfix",
@@ -4807,9 +5025,7 @@
      "tekstSterker": "Zoek in de tabel het vakje dat je al weet. Past dat aantal een heel aantal keer in het aantal in de vraag? Doe dan het getal dat erbij hoort ook zoveel keer. Past het niet precies? Deel dan allebei de getallen van dat vakje door twee of door drie, tot je een kleiner vakje hebt dat wel precies past. Reken vanaf dat kleinere vakje verder.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "€3"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -4853,7 +5069,7 @@
    "algemeneFoutHint": "Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Is dat geen heel getal? Ga dan eerst terug naar een kleiner vakje: deel allebei de getallen door hetzelfde getal. Reken vanaf dat vakje verder. Wat je met het aantal doet, doe je ook met het andere getal."
   }
  ],
- "hintsSyncOp": "2026-10-08T18:12:40+02:00",
+ "hintsSyncOp": "2026-10-08T19:45:00+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -4873,7 +5089,7 @@
   },
   {
    "batch": "batch5.json",
-   "md5": "89be0564e22d"
+   "md5": "98ddb6824691"
   },
   {
    "batch": "batch6.json",
@@ -4884,7 +5100,7 @@
    "md5": "0f23a2211eaf"
   }
  ],
- "geschrevenOp": "2026-10-08T18:12:40+02:00",
+ "geschrevenOp": "2026-10-08T19:45:00+02:00",
  "geschrevenDoor": "apply_hints (los, zonder nieuwe build)",
  "itemsGewijzigdBijSchrijven": true
 }

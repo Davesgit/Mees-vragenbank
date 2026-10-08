@@ -40,6 +40,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `aantal munten (€3)` (€3) → Je hebt de munten geteld. De vraag is hoeveel geld het samen is. Kijk wat elke munt waard is.  [nieuw]
   - `aantal munten (€4)` (€4) → Je hebt de munten geteld. De vraag is hoeveel geld het samen is. Kijk wat elke munt waard is.  [nieuw]
   - `cent en euro door elkaar` (cent als euro geteld (tekst per item)) → Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op.  [Claude, ok]
+  - `te veel geteld (5 cent)` (fout = antwoord + 5 cent) → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.  [nieuw]
+  - `te veel geteld (10 cent)` (fout = antwoord + 10 cent) → Dat is te veel. Heb je een munt twee keer geteld? Leg de munten op volgorde en tel elke munt één keer.  [nieuw]
   - `verkeerd geteld` (verkeerd geteld (tekst per item)) → Leg de munten op volgorde van groot naar klein en tel ze één voor één op.  [Claude, ok]
   - `andere fout` (andere fout) → Begin bij de grootste munt. Tel de andere munten er één voor één bij. Kijk goed: cent of euro?  [nieuw]
 - Status: hints klaar

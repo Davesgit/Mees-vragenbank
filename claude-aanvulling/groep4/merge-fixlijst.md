@@ -151,3 +151,15 @@ Nummering: Oefeningen Oef-#NNN (gedeelde reeks met G7; volgende vrije daarna Oef
 ### Ronde 1c/1d GET-E05 (Oefeningen patch_batch5 15:41) — Overzicht, build 15:46:18
 check_hints **97 klaar · 0 open · 0 FAIL · 1 WARN**, merge-notatie ALLES OK, b5/check 36 items · FAIL 0 · WARN 0.
 De WARN komt uit de nieuwe check LES250 (Oef-#484, `tools/les250_check.py`, in check_hints van G3–G8): GET-M05 bank-059 «38 eieren, er gaan er 14 weg»: sleutel **14** heeft de tekst «Dat is één tiental te weinig», maar 14 staat ook in de vraag (#390). **Oefeningen:** een tekst die bij het overnemen van het getal past, of de sleutel weghalen. (G5 GET-E05 bank-092 sleutel 458 heeft hetzelfde; G5 is goedgekeurd, dus alleen gemeld.)
+
+## Na-ronde r13 deel B (8 okt 19:40)
+| # | Wat | Stand |
+|---|---|---|
+| V-#1002 | GET-E06 018/020/024 kale som = de som uit de opgave | ✓ 3 |
+| V-#1050 | MEET-E07 #1: in 11 items de laagste 'verkeerd geteld' → antwoord + kleinste munt ('munt dubbel geteld'); Claude-sleutel 'geld-verkeerd-geteld' verhuist mee (tekst per item) | ✓ 11; 'grootste centbedrag' 18/23 → 0 FAIL |
+| V-#1013 | gates incl. VORMCUE als FAIL | G4 merge-notatie **FAIL 2**: VORMCUE 'middelste' VBN-E01 #2 37/58 en #3 29/54 (nieuwe rang-cue V-#1040, geen datavoorstel) |
+
+### Na-ronde r13 deel B, Oefeningen 19:43 (Oef-#1028 + vormcue-hints)
+- **Oef-#1028 (motor, verplicht voor V-#1050):** `scripts/fout_regels.py` kent `fout = antwoord ± c cent` nu ook bij een antwoord in centen ('80 cent'), via Oefeningens hook `g8work/r13/vc/zet_motor1028.py`. Daarna zet `patch_r13_vormcue.py` in batch3 bij MEET-E07 #1 de regels 'te veel geteld' (5 cent en 10 cent). Alle 11 nieuwe sleutels (V-#1050) staan op die regel: «Dat is te veel. Heb je een munt twee keer geteld? …».
+- Diff per_doel: 11 items met andere foutHints. Bij de andere 13 items van MEET-E07 verandert alleen foutRegels (de regellijst van de entry: twee regels erbij).
+- check_hints 0 FAIL · check_r13_vc FAIL 0, mutanten 10/0 gemist · VORMCUE rang 0 FAIL. Middelste open: VBN-E01 #2 (37/58) en #3 (29/54), wacht op Didactiek.

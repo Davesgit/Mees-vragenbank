@@ -740,7 +740,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Komen de minuten op zestig of meer? Dan is dat een uur erbij. Een uur heeft zestig minuten.
 - **Ouderzin:** Je kind rekent uit hoe laat iets aankomt als de reis uren en minuten duurt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `zestig minuten of meer` (Claudes sleutel: tijd-als-kommagetal) → Zestig minuten of meer kan niet achter de dubbele punt. Een uur heeft zestig minuten: dan komt er een uur bij.  [Claude, taalfix]
+  - `zestig minuten of meer` (Claudes sleutel: tijd-als-kommagetal) → Achter de punt staan de minuten. Dat kunnen er niet zestig of meer zijn: een uur heeft zestig minuten. Dan komt er een uur bij.  [Claude, taalfix]
   - `een uur te vroeg` (fout = klok een uur te vroeg) → Dat is een uur te vroeg. Heb je alle hele uren van de reis erbij geteld?  [nieuw]
   - `een uur te laat` (fout = klok een uur te laat) → Dat is een uur te laat. Tel de hele uren van de reis nog eens.  [nieuw]
   - `tien minuten te laat` (fout = klok tien minuten te laat) → De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?  [nieuw]
@@ -773,7 +773,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Ga je over het hele uur heen? Tel dan eerst tot het hele uur, en daarna de minuten die nog over zijn. Een uur heeft zestig minuten.
 - **Ouderzin:** Je kind rekent uit hoe laat iets aankomt als de reis een aantal minuten duurt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `zestig minuten of meer` (Claudes sleutel: tijd-als-kommagetal) → Zestig minuten of meer kan niet achter de dubbele punt. Een uur heeft zestig minuten: dan komt er een uur bij.  [Claude, taalfix]
+  - `zestig minuten of meer` (Claudes sleutel: tijd-als-kommagetal) → Achter de punt staan de minuten. Dat kunnen er niet zestig of meer zijn: een uur heeft zestig minuten. Dan komt er een uur bij.  [Claude, taalfix]
   - `een uur te vroeg` (fout = klok een uur te vroeg) → Dat is een uur te vroeg: dan kom je aan vóór je vertrekt. Kom je over het hele uur heen? Dan komt er een uur bij.  [nieuw]
   - `een uur te laat` (fout = klok een uur te laat) → Dat is een uur te laat. De reis duurt korter dan een uur. Er komt alleen een uur bij als je over het hele uur heen gaat.  [nieuw]
   - `tien minuten te laat` (fout = klok tien minuten te laat) → De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?  [nieuw]
