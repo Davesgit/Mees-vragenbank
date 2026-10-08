@@ -14,6 +14,7 @@ python3 check_hints.py             # alle 189 somtypen 'open' (nog geen hints) �
 ```
 
 ## Pool en stand
+- **Stand 8 okt 15:36 (build 15:36:15):** Didactiek batch 2: V-#781 (#16 kloktijden '14.35 uur'), V-#782 (#32 afleider 'Deel 100 door 40 en doe dat keer 15'), Z-#780 (kop 'deelbaar door 5'), Z-#781 (guard ochtendtemperatuur ≥ 0), Z-#782 (KLOKTIJD-check, FAIL; typ-invoer MEET-E06 WARN). check_hints 49 klaar · 174 open · 0 FAIL · 1 WARN (wacht op de regel van Oefeningen voor #32).
 - **Stand 8 okt 15:27 (build 15:27:54):** hints batch 1 en 2 (49 somtypes): check_hints 49 klaar · 174 open · 0 FAIL · 0 WARN. Even grote breuken tellen als goed (V-#760, breukvorm), Z-#766/#767/#768 en Oef-#472/#478/#480 verwerkt. Zie merge-fixlijst.md.
 - **Stand 8 okt 15:17 (build 15:17:54):** hints batch 1 (GET-E02 #1–#11, GET-E03 #1–#5, GET-E04 #1–#8; 24 somtypes, 317 items) staat erin: check_hints 24 klaar · 199 open · 0 FAIL · 0 WARN, merge-notatie ALLES OK. Oef-#467: bij 'Welk antwoord … kan kloppen?' (GET-E02 #5/#9) staat de goede optie nu om de beurt op A/B/C. Zie merge-fixlijst.md.
 - De pool bestaat uit de Claude-items van de G8-doelen (T1, T2, T3, T4, T5, T6, T7, M24, M25, M26, M29, K7, K8, G8, G9, G13, T8, T9, W3, W6) plus de 688 items die G7 voor G8 parkeerde (`g7/data/geparkeerd_G8.json`), alle 688 in de pool.

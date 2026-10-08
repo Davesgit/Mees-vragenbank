@@ -57,11 +57,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Tel daarna de twee afgeronde getallen op.
 - **Ouderzin:** Je kind schat een plussom: eerst allebei de getallen afronden op duizendtallen, dan met de ronde getallen rekenen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `precies uitgerekend` (fout = getal1 + getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst allebei de getallen af op duizendtallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
-  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
-  - `duizend te weinig` (fout = antwoord - 1000) → Dat is duizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
-  - `tweeduizend te veel` (fout = antwoord + 2000) → Dat is tweeduizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
-  - `tweeduizend te weinig` (fout = antwoord - 2000) → Dat is tweeduizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `precies uitgerekend` (fout = getal1 + getal2) → Je hebt precies gerekend, maar de vraag wil een schatting. Rond allebei de getallen af op duizendtallen. Is het cijfer van de honderdtallen vijf of meer? Dan naar boven, anders naar beneden.  [nieuw]
+  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `duizend te weinig` (fout = antwoord - 1000) → Dat is duizend te weinig. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweeduizend te veel` (fout = antwoord + 2000) → Dat is tweeduizend te veel. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweeduizend te weinig` (fout = antwoord - 2000) → Dat is tweeduizend te weinig. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
   - `andere fout` (andere fout) → Rond eerst allebei de getallen af op duizendtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
 - Status: hints klaar
 
@@ -83,13 +83,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 9600 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 12.000 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
 
 - **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen met ronde getallen. Rond elk getal af zoals de vraag zegt, en reken daarna met de afgeronde getallen.
-- **Hint 2 (te schrijven):** Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter.
+- **Hint 2 (te schrijven):** Bij het getal dat op honderdtallen moet, kijk je naar de tientallen. Bij het getal dat op tientallen moet, kijk je naar de eenheden. Vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar en zet alle nullen erachter.
 - **Ouderzin:** Je kind schat een keersom: eerst afronden zoals de vraag zegt, dan de cijfers zonder nullen keer elkaar en de nullen erachter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `precies uitgerekend` (fout = getal1 × getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst af zoals de vraag zegt. Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden.  [nieuw]
+  - `precies uitgerekend` (fout = getal1 × getal2) → Je hebt precies gerekend, maar de vraag wil een schatting. Rond eerst af zoals de vraag zegt. Op honderdtallen: kijk naar de tientallen. Op tientallen: kijk naar de eenheden. Vijf of meer? Dan naar boven, anders naar beneden.  [nieuw]
   - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot: er staat een nul te veel achter.  [nieuw]
   - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein: er mist een nul.  [nieuw]
-  - `andere fout` (andere fout) → Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden.  [nieuw]
+  - `andere fout` (andere fout) → Rond eerst af zoals de vraag zegt, en reken dan keer. Op honderdtallen: kijk naar de tientallen. Op tientallen: kijk naar de eenheden. Vijf of meer? Dan naar boven, anders naar beneden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 4: Hoeveel is # × # [ding]? Rond beide getallen af op tientallen en reken dan uit.
@@ -113,7 +113,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Kijk bij elk getal naar de eenheden. Is dat vijf of meer? Dan rond je naar boven af op tientallen. Anders rond je naar beneden af. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter.
 - **Ouderzin:** Je kind schat een keersom: eerst afronden zoals de vraag zegt, dan de cijfers zonder nullen keer elkaar en de nullen erachter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `precies uitgerekend` (fout = getal1 × getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst af zoals de vraag zegt. Kijk bij elk getal naar de eenheden. Is dat vijf of meer? Dan rond je naar boven af op tientallen. Anders rond je naar beneden af.  [nieuw]
+  - `precies uitgerekend` (fout = getal1 × getal2) → Je hebt precies gerekend, maar de vraag wil een schatting. Rond allebei de getallen af op tientallen. Zijn de eenheden vijf of meer? Dan naar boven, anders naar beneden.  [nieuw]
   - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot: er staat een nul te veel achter.  [nieuw]
   - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein: er mist een nul.  [nieuw]
   - `andere fout` (andere fout) → Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Kijk bij elk getal naar de eenheden. Is dat vijf of meer? Dan rond je naar boven af op tientallen. Anders rond je naar beneden af.  [nieuw]
@@ -148,7 +148,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `veel te klein` (Claudes sleutel: orde-van-grootte) → Dat is te klein. Rond het grootste getal naar beneden af op honderdtallen en reken keer: kleiner kan het antwoord niet zijn.  [Claude, taalfix]
   - `eindcijfer` (Claudes sleutel: laatste-cijfer) → Kijk waarop het antwoord moet eindigen. Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt dat? Daarop eindigt het antwoord ook.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk eerst waarop het antwoord eindigt, en daarna tussen welke ronde getallen het ligt.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Kijk zonder uit te rekenen. Welk antwoord bij # × # [ding] kloppen?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 6: Hoeveel is # + # [ding]? Rond beide getallen af op honderdtallen en reken dan uit.
@@ -172,11 +171,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af. Tel daarna de twee afgeronde getallen op.
 - **Ouderzin:** Je kind schat een plussom: eerst allebei de getallen afronden op honderdtallen, dan met de ronde getallen rekenen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `precies uitgerekend` (fout = getal1 + getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst allebei de getallen af op honderdtallen. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
-  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
-  - `honderd te weinig` (fout = antwoord - 100) → Dat is honderd te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
-  - `tweehonderd te veel` (fout = antwoord + 200) → Dat is tweehonderd te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
-  - `tweehonderd te weinig` (fout = antwoord - 200) → Dat is tweehonderd te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
+  - `precies uitgerekend` (fout = getal1 + getal2) → Je hebt precies gerekend, maar de vraag wil een schatting. Rond allebei de getallen af op honderdtallen. Is het cijfer van de tientallen vijf of meer? Dan naar boven, anders naar beneden.  [nieuw]
+  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
+  - `honderd te weinig` (fout = antwoord - 100) → Dat is honderd te weinig. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweehonderd te veel` (fout = antwoord + 200) → Dat is tweehonderd te veel. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweehonderd te weinig` (fout = antwoord - 200) → Dat is tweehonderd te weinig. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
   - `andere fout` (andere fout) → Rond eerst allebei de getallen af op honderdtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
 - Status: hints klaar
 
@@ -198,14 +197,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 4991 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 7000 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
 
 - **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen met ronde getallen. Rond eerst allebei de getallen af op duizendtallen, zoals de vraag zegt. Reken daarna met de afgeronde getallen.
-- **Hint 2 (te schrijven):** Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Haal daarna het afgeronde getal achter het minteken van het andere afgeronde getal af.
+- **Hint 2 (te schrijven):** Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Haal daarna het kleinere afgeronde getal van het grotere af.
 - **Ouderzin:** Je kind schat een minsom: eerst allebei de getallen afronden op duizendtallen, dan met de ronde getallen rekenen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `precies uitgerekend` (fout = getal1 - getal2 of getal2 - getal1) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst allebei de getallen af op duizendtallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
-  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
-  - `duizend te weinig` (fout = antwoord - 1000) → Dat is duizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
-  - `tweeduizend te veel` (fout = antwoord + 2000) → Dat is tweeduizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
-  - `tweeduizend te weinig` (fout = antwoord - 2000) → Dat is tweeduizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `precies uitgerekend` (fout = getal1 - getal2 of getal2 - getal1) → Je hebt precies gerekend, maar de vraag wil een schatting. Rond allebei de getallen af op duizendtallen. Is het cijfer van de honderdtallen vijf of meer? Dan naar boven, anders naar beneden.  [nieuw]
+  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `duizend te weinig` (fout = antwoord - 1000) → Dat is duizend te weinig. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweeduizend te veel` (fout = antwoord + 2000) → Dat is tweeduizend te veel. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweeduizend te weinig` (fout = antwoord - 2000) → Dat is tweeduizend te weinig. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
   - `andere fout` (andere fout) → Rond eerst allebei de getallen af op duizendtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
 - Status: hints klaar
 
@@ -232,11 +231,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Tel daarna de twee afgeronde getallen op.
 - **Ouderzin:** Je kind schat een totaal: eerst allebei de getallen afronden op duizendtallen, dan optellen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `precies uitgerekend` (fout = getal1 + getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst allebei de getallen af op duizendtallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
-  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
-  - `duizend te weinig` (fout = antwoord - 1000) → Dat is duizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
-  - `tweeduizend te veel` (fout = antwoord + 2000) → Dat is tweeduizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
-  - `tweeduizend te weinig` (fout = antwoord - 2000) → Dat is tweeduizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `precies uitgerekend` (fout = getal1 + getal2) → Je hebt precies gerekend, maar de vraag wil een schatting. Rond allebei de getallen af op duizendtallen. Is het cijfer van de honderdtallen vijf of meer? Dan naar boven, anders naar beneden.  [nieuw]
+  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `duizend te weinig` (fout = antwoord - 1000) → Dat is duizend te weinig. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweeduizend te veel` (fout = antwoord + 2000) → Dat is tweeduizend te veel. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweeduizend te weinig` (fout = antwoord - 2000) → Dat is tweeduizend te weinig. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
   - `andere fout` (andere fout) → Rond eerst allebei de getallen af op duizendtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
 - Status: hints klaar
 
@@ -268,7 +267,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `veel te klein` (Claudes sleutel: orde-van-grootte) → Dat is te klein. Rond allebei de getallen naar beneden af op honderdtallen en tel op: kleiner kan het antwoord niet zijn.  [Claude, taalfix]
   - `eindcijfer` (Claudes sleutel: laatste-cijfer) → Kijk waarop het antwoord moet eindigen. Tel alleen de eenheden van de twee getallen op. Op welk cijfer eindigt dat? Daarop eindigt het antwoord ook.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk eerst waarop het antwoord eindigt, en daarna tussen welke ronde getallen het ligt.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 10: Ongeveer hoeveel is # × #? Rond # af op honderdtallen en # op tientallen, en reken dan uit.
@@ -291,13 +289,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 138 is ongeveer 100, 12 is ongeveer 10. 100 × 10 = 1000. Het echte antwoord (1656) ligt daar dichtbij.
 
 - **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen met ronde getallen. Rond elk getal af zoals de vraag zegt, en reken daarna met de afgeronde getallen.
-- **Hint 2 (te schrijven):** Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter.
+- **Hint 2 (te schrijven):** Bij het getal dat op honderdtallen moet, kijk je naar de tientallen. Bij het getal dat op tientallen moet, kijk je naar de eenheden. Vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar en zet alle nullen erachter.
 - **Ouderzin:** Je kind schat een keersom: eerst afronden zoals de vraag zegt, dan de cijfers zonder nullen keer elkaar en de nullen erachter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `precies uitgerekend` (fout = getal1 × getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst af zoals de vraag zegt. Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden.  [nieuw]
+  - `precies uitgerekend` (fout = getal1 × getal2) → Je hebt precies gerekend, maar de vraag wil een schatting. Rond eerst af zoals de vraag zegt. Op honderdtallen: kijk naar de tientallen. Op tientallen: kijk naar de eenheden. Vijf of meer? Dan naar boven, anders naar beneden.  [nieuw]
   - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot: er staat een nul te veel achter.  [nieuw]
   - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein: er mist een nul.  [nieuw]
-  - `andere fout` (andere fout) → Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden.  [nieuw]
+  - `andere fout` (andere fout) → Rond eerst af zoals de vraag zegt, en reken dan keer. Op honderdtallen: kijk naar de tientallen. Op tientallen: kijk naar de eenheden. Vijf of meer? Dan naar boven, anders naar beneden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 11: # [ding] met elk # [ding]. Schat hoeveel dat ongeveer is: rond # af op honderdtallen en reken dan uit.
@@ -320,10 +318,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 297 is bijna 300. 300 × 5 = 1500. Precies is het 1485, dus de schatting klopt goed.
 
 - **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen met ronde getallen. Rond het getal af op honderdtallen, zoals de vraag zegt, en reken dan.
-- **Hint 2 (te schrijven):** Kijk bij het getal dat je op honderdtallen afrondt naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af, anders naar beneden. Er staat 'met elk': reken het aantal keer het afgeronde getal. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter.
+- **Hint 2 (te schrijven):** Rond het getal af op honderdtallen: kijk naar de tientallen. Vijf of meer? Dan naar boven, anders naar beneden. Er staat 'met elk': reken het aantal keer het afgeronde getal. Reken zonder de nullen en zet de nullen van het afgeronde getal erachter.
 - **Ouderzin:** Je kind schat een keersom met een verhaal: eerst één getal afronden op honderdtallen, dan keer het aantal.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `precies uitgerekend` (fout = getal1 × getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst af zoals de vraag zegt. Kijk bij het getal dat je op honderdtallen afrondt naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af, anders naar beneden.  [nieuw]
+  - `precies uitgerekend` (fout = getal1 × getal2) → Je hebt precies gerekend, maar de vraag wil een schatting. Rond het getal af op honderdtallen: kijk naar de tientallen. Vijf of meer? Dan naar boven, anders naar beneden.  [nieuw]
   - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot: er staat een nul te veel achter.  [nieuw]
   - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein: er mist een nul.  [nieuw]
   - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je opgeteld? Er staat 'met elk': dan reken je keer.  [Claude, taalfix]
@@ -426,7 +424,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Hoeveel zitten er in één groep, en hoeveel groepen zijn er? Wat betekent dat voor het totaal?  [nieuw]
 - Status: hints klaar
 
-## Somtype 16: De trein vertrekt om #:# en komt aan om #:#. Hoe reken je handig uit hoe lang de reis duurt?
+## Somtype 16: De trein vertrekt om #.# uur en komt aan om #.# uur. Hoe reken je handig uit hoe lang de reis duurt?
 
 - Sleutel: nrOrigineel **9** · somtypeOrigineel “De trein vertrekt om #:# en komt aan om #:#. Hoe reken je handig uit hoe lang de reis duurt?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W6 (1) · regel: G8-W6-aanpak
@@ -435,11 +433,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Een uur heeft 60 minuten, niet 100. Werk in stappen naar een heel uur toe.”)
 - Voorbeelden:
   - `G8-GET-E02-claude-bank-009` (Claude W6, ai, niveau 3 → toepassen)
-    - **Opgave:** De trein vertrekt om 14:35 en komt aan om 16:10. Hoe reken je handig uit hoe lang de reis duurt?
-    - **Opties:** A) Reken eerst tot 15:00, dan verder tot 16:10. · B) Trek 35 van 10 af en tel de uren erbij. · C) Tel de twee tijden bij elkaar op.
-    - **Antwoord:** Reken eerst tot 15:00, dan verder tot 16:10.  (controle: n.v.t.)
+    - **Opgave:** De trein vertrekt om 14.35 uur en komt aan om 16.10 uur. Hoe reken je handig uit hoe lang de reis duurt?
+    - **Opties:** A) Reken eerst tot 15.00 uur, dan verder tot 16.10 uur. · B) Trek 35 van 10 af en tel de uren erbij. · C) Tel de twee tijden bij elkaar op.
+    - **Antwoord:** Reken eerst tot 15.00 uur, dan verder tot 16.10 uur.  (controle: n.v.t.)
     - **Fout-hints (Claude):** Trek 35 van 10 af en tel de uren erbij. → Een uur heeft 60 minuten, niet 100. Werk in stappen naar een heel uur toe. · Tel de twee tijden bij elkaar op. → Je zoekt het verschil tussen vertrek en aankomst, niet een som.
-    - **Uitleg (Claude):** Bij tijd reken je handig met stappen naar een heel uur. Van 14:35 naar 15:00 is 25 minuten. Daarna nog 1 uur en 10 minuten, samen 1 uur en 35 minuten.
+    - **Uitleg (Claude):** Bij tijd reken je handig met stappen naar een heel uur. Van 14.35 uur naar 15.00 uur is 25 minuten. Daarna nog 1 uur en 10 minuten, samen 1 uur en 35 minuten.
 
 - **Hint 1 (te schrijven):** Een uur heeft zestig minuten, geen honderd. Daarom reken je met tijden in sprongen.
 - **Hint 2 (te schrijven):** Spring eerst van de vertrektijd naar het volgende hele uur. Spring dan verder naar de aankomsttijd. Tel de sprongen bij elkaar op.
@@ -448,6 +446,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `minuten afgetrokken` (Trek 35 van 10 af en tel de uren erbij.) → De minuten bij aankomst zijn minder dan bij vertrek. Zo aftrekken loopt vast, want een uur heeft zestig minuten. Spring liever eerst naar het volgende hele uur.  [nieuw]
   - `tijden opgeteld` (Tel de twee tijden bij elkaar op.) → Twee tijden bij elkaar optellen geeft geen duur. Hoe lang is het van de vertrektijd tot de aankomsttijd?  [nieuw]
   - `andere fout` (andere fout) → Spring van de vertrektijd naar het volgende hele uur, en dan naar de aankomsttijd.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'De trein vertrekt om #:# en komt aan om #:#. Hoe reken je handig uit hoe lang de reis duurt?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 17: Een [ding] is # m lang en # m breed. Fleur wil weten hoeveel vierkante meter het bad is en rekent # + # + # + # = #. Wat is er fout aan haar aanpak?
@@ -693,7 +692,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Fenna heeft # + # = # [ding]. Hoe kan zij haar antwoord het beste controleren?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 27: Hoe zie je of een getal deelbaar is door #?
+## Somtype 27: Hoe zie je of een getal deelbaar is door 5?
 
 - Sleutel: nrOrigineel **20** · somtypeOrigineel “Hoe zie je of een getal deelbaar is door #?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W6 (1) · regel: G8-W6-aanpak
@@ -715,6 +714,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `cijfer links` (Kijk of het eerste cijfer 0 of 5 is) → De uitkomsten van de tafel beginnen met allerlei cijfers. Kijk naar het cijfer helemaal rechts, bij de eenheden.  [nieuw]
   - `even` (Kijk of het getal even is) → In die tafel zitten ook oneven getallen, en niet elk even getal zit erin. Kijk naar het cijfer helemaal rechts.  [nieuw]
   - `andere fout` (andere fout) → Kijk naar het cijfer helemaal rechts. Op welke cijfers eindigt de tafel?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Hoe zie je of een getal deelbaar is door #?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 28: Hoe zie je of een getal even is?
@@ -819,12 +819,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **25** · somtypeOrigineel “In groep # [ding] # [ding]. # procent doet mee aan de sportdag. Hoe reken je uit hoeveel leerlingen dat zijn?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W6 (1) · regel: G8-W6-aanpak
 - Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): verkeerde-bewerking (1), procent-verkeerde-basis (1)
+- Denkfouten (Claude): verkeerde-bewerking (2)
 - Verschillende Claude-fout-hints: 2 (meest: “Procenten zijn delen van het geheel, geen aantal dat je eraf haalt. Zoek eerst 1 procent.”)
 - Voorbeelden:
   - `G8-GET-E02-claude-bank-033` (Claude W6, ai, niveau 3 → toepassen)
     - **Opgave:** In groep 8 zitten 40 leerlingen. 15 procent doet mee aan de sportdag. Hoe reken je uit hoeveel leerlingen dat zijn?
-    - **Opties:** A) Deel 15 door 100 en doe dat keer 40 procent · B) Deel 40 door 100 en doe dat keer 15 · C) Trek 15 van 40 af
+    - **Opties:** A) Deel 100 door 40 en doe dat keer 15 · B) Deel 40 door 100 en doe dat keer 15 · C) Trek 15 van 40 af
     - **Antwoord:** Deel 40 door 100 en doe dat keer 15  (controle: n.v.t.)
     - **Fout-hints (Claude):** Trek 15 van 40 af → Procenten zijn delen van het geheel, geen aantal dat je eraf haalt. Zoek eerst 1 procent. · Deel 15 door 100 en doe dat keer 40 procent → Let goed op waarvan je het deel wilt weten. Van welk getal bereken je hier de procenten?
     - **Uitleg (Claude):** Eén procent van 40 is 40 gedeeld door 100, dus 0,4. Vijftien procent is 15 keer 0,4. Dat zijn 6 leerlingen.

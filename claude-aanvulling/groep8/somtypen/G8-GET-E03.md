@@ -59,7 +59,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Reken eerst de deelsom uit. Tel daarna het getal achter het plusteken erbij.
 - **Ouderzin:** Je kind oefent de rekenvolgorde: delen gaat vóór optellen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `volgorde` (Claudes sleutel: verkeerde-bewerking) → Let op de volgorde: eerst delen, daarna optellen.  [Claude, taalfix]
+  - `volgorde` (Claudes sleutel: verkeerde-bewerking) → Delen gaat vóór optellen: reken eerst de deelsom uit, en tel daarna het getal achter het plusteken erbij.  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken eerst de deelsom uit, en tel daarna het getal achter het plusteken erbij.  [nieuw]
 - Status: hints klaar
 

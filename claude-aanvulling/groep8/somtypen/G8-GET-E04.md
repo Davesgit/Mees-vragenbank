@@ -27,14 +27,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 3 → Delen door een breuk maakt groter: hoeveel van die stukken passen er in één hele? · 7 → Elke hele geeft evenveel stukken als de noemer zegt: dat is keer, niet plus.
     - **Uitleg (Claude):** Hoe vaak past 1/4 in 3? In één hele passen 4 stukken, dus 3 × 4 = 12.
 
-- **Hint 1 (te schrijven):** Je zoekt hoeveel stukken er in totaal zijn. Kijk eerst naar één heel: hoeveel stukken van deze grootte passen erin?
-- **Hint 2 (te schrijven):** In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele.
-- **Ouderzin:** Je kind deelt hele dingen in gelijke stukken (delen door een breuk): in één heel passen zoveel stukken als de noemer zegt.
+- **Hint 1 (te schrijven):** Je zoekt hoeveel stukken er in totaal zijn. Kijk eerst naar één hele: hoeveel stukken van deze grootte passen erin?
+- **Hint 2 (te schrijven):** In één hele passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele.
+- **Ouderzin:** Je kind deelt hele dingen in gelijke stukken (delen door een breuk): in één hele passen zoveel stukken als de noemer zegt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `hele overgenomen` (fout = getal1) → Dat is het aantal hele waar je mee begint. Elk heel wordt in stukken verdeeld, dus je krijgt meer stukken.  [nieuw]
-  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je opgeteld? Elk heel geeft zoveel stukken als de noemer (het getal onder de streep) zegt: reken keer.  [Claude, taalfix]
-  - `hele (label)` (Claudes sleutel: omgekeerd-gedeeld) → Dat is het aantal hele waar je mee begint. Elk heel wordt in stukken verdeeld, dus je krijgt meer stukken.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Kijk eerst hoeveel stukken er in één heel passen, en reken dan keer het aantal hele.  [nieuw]
+  - `hele overgenomen` (fout = getal1) → Dat is het aantal hele waar je mee begint. Elke hele wordt in stukken verdeeld, dus je krijgt meer stukken.  [nieuw]
+  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je opgeteld? Elke hele geeft zoveel stukken als de noemer (het getal onder de streep) zegt: reken keer.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Kijk eerst hoeveel stukken er in één hele passen, en reken dan keer het aantal hele.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 2: # liter limonade wordt in [bakken] van #/# liter geschonken. Hoeveel [ding] zijn dat?
@@ -85,12 +84,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Deel van een deel: vermenigvuldig tellers en noemers. 1 × 2 = 2, 2 × 3 = 6. Dus 2/6 = 1/3.
 
 - **Hint 1 (te schrijven):** Je neemt een deel ván wat er nog is. Een deel van een deel reken je uit met keer.
-- **Hint 2 (te schrijven):** Doe teller keer teller en noemer keer noemer (de teller is het getal boven de streep, de noemer het getal onder de streep). Maak de breuk daarna zo eenvoudig mogelijk.
-- **Ouderzin:** Je kind rekent een deel van een deel uit (breuk keer breuk) en maakt de breuk zo eenvoudig mogelijk.
+- **Hint 2 (te schrijven):** Doe teller keer teller en noemer keer noemer (de teller is het getal boven de streep, de noemer het getal onder de streep). Kan de breuk eenvoudiger? Dat mag, maar het hoeft niet.
+- **Ouderzin:** Je kind rekent een deel van een deel uit (breuk keer breuk).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `niet vereenvoudigd` (fout = gelijkwaardig maar niet zo eenvoudig mogelijk) → Die breuk is even groot als het antwoord, maar het kan eenvoudiger. Deel de teller (het getal boven de streep) en de noemer (het getal onder de streep) door hetzelfde getal.  [nieuw]
   - `opgeteld` (Claudes sleutel: teller-en-noemer-optellen) → Heb je de tellers (boven de streep) opgeteld en de noemers (onder de streep) ook? Een deel ván een deel is keer, niet plus.  [Claude, taalfix]
-  - `niet van de hele taart` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is niet het deel van de hele taart. Neem het deel ván wat er nog is: reken de twee breuken keer elkaar.  [Claude, taalfix]
+  - `niet van de hele taart` (Claudes sleutel: deel-vergeten-bij-splitsen) → Dat is nog niet het deel van de hele taart. Neem het deel ván wat er nog is: doe teller keer teller (boven de streep) en noemer keer noemer (onder de streep).  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken de twee breuken keer elkaar: teller keer teller (boven de streep) en noemer keer noemer (onder de streep).  [nieuw]
 - Status: hints klaar
 
@@ -113,14 +111,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1 → Delen door een breuk maakt groter: hoeveel van die stukken passen er in één hele? · 5 → Elke hele geeft evenveel stukken als de noemer zegt: dat is keer, niet plus.
     - **Uitleg (Claude):** Hoe vaak past 1/4 in 1? In één hele passen 4 stukken, dus 1 × 4 = 4.
 
-- **Hint 1 (te schrijven):** Je zoekt hoeveel stukken er in totaal zijn. Kijk eerst naar één heel: hoeveel stukken van deze grootte passen erin?
-- **Hint 2 (te schrijven):** In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele.
-- **Ouderzin:** Je kind deelt hele dingen in gelijke stukken (delen door een breuk): in één heel passen zoveel stukken als de noemer zegt.
+- **Hint 1 (te schrijven):** Je zoekt hoeveel stukken er in totaal zijn. Kijk eerst naar één hele: hoeveel stukken van deze grootte passen erin?
+- **Hint 2 (te schrijven):** In één hele passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele.
+- **Ouderzin:** Je kind deelt hele dingen in gelijke stukken (delen door een breuk): in één hele passen zoveel stukken als de noemer zegt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `hele overgenomen` (fout = getal1) → Dat is het aantal hele waar je mee begint. Elk heel wordt in stukken verdeeld, dus je krijgt meer stukken.  [nieuw]
-  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je opgeteld? Elk heel geeft zoveel stukken als de noemer (het getal onder de streep) zegt: reken keer.  [Claude, taalfix]
-  - `hele (label)` (Claudes sleutel: omgekeerd-gedeeld) → Dat is het aantal hele waar je mee begint. Elk heel wordt in stukken verdeeld, dus je krijgt meer stukken.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Kijk eerst hoeveel stukken er in één heel passen, en reken dan keer het aantal hele.  [nieuw]
+  - `hele overgenomen` (fout = getal1) → Dat is het aantal hele waar je mee begint. Elke hele wordt in stukken verdeeld, dus je krijgt meer stukken.  [nieuw]
+  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je opgeteld? Elke hele geeft zoveel stukken als de noemer (het getal onder de streep) zegt: reken keer.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Kijk eerst hoeveel stukken er in één hele passen, en reken dan keer het aantal hele.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 5: #/# [ding] wordt verdeeld in stukken van #/#. Hoeveel [ding] zijn dat?
@@ -147,7 +144,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind deelt een breuk in kleinere stukken (breuk gedeeld door breuk): met dezelfde noemer kun je de tellers vergelijken.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één te veel` (fout = antwoord + 1) → Dat is één stuk te veel. Tel nog eens hoe vaak het kleine stuk in het deel past.  [nieuw]
-  - `één te veel (label)` (Claudes sleutel: een-ernaast) → Dat is één stuk te veel. Tel nog eens hoe vaak het kleine stuk in het deel past.  [Claude, taalfix]
+  - `noemer van het kleine stuk` (Claudes sleutel: een-ernaast) → Zoveel kleine stukken passen er in een hele. Je verdeelt geen hele, alleen een deel ervan: hoe vaak past het kleine stuk dáárin?  [Claude, taalfix]
   - `teller overgenomen` (Claudes sleutel: getal-overgenomen) → Dat is de teller van het deel (het getal boven de streep). Je zoekt hoe vaak het kleine stuk in het deel past.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk hoe vaak het kleine stuk in het deel past.  [nieuw]
 - Status: hints klaar
@@ -175,8 +172,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Maak de breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep), en verander de tellers (de getallen boven de streep) mee. Tel daarna alleen de tellers op.
 - **Ouderzin:** Je kind telt twee breuken op: eerst gelijknamig maken (dezelfde noemer geven), dan de tellers optellen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `niet vereenvoudigd` (fout = gelijkwaardig maar niet zo eenvoudig mogelijk) → Die breuk is even groot als het antwoord, maar het kan eenvoudiger. Deel de teller (het getal boven de streep) en de noemer (het getal onder de streep) door hetzelfde getal.  [nieuw]
-  - `alles opgeteld` (Claudes sleutel: teller-en-noemer-optellen) → Bij breuken optellen tel je alleen de tellers op (boven de streep), en dat kan pas als de noemers (onder de streep) gelijk zijn.  [Claude, taalfix]
+  - `alles opgeteld` (Claudes sleutel: teller-en-noemer-optellen) → Maak eerst de noemers (onder de streep) gelijk. Tel dan alleen de tellers (boven de streep) op: de noemer blijft hetzelfde.  [Claude, taalfix]
   - `tellers niet mee` (Claudes sleutel: deel-vergeten-bij-splitsen) → De noemer (onder de streep) klopt, maar de tellers (boven de streep) moeten mee veranderen als je de noemers gelijk maakt.  [Claude, taalfix]
   - `andere fout` (andere fout) → Maak de breuken eerst gelijknamig (geef ze dezelfde noemer: het getal onder de streep), en tel dan de tellers (boven de streep) op.  [nieuw]
 - Status: hints klaar
@@ -200,14 +196,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 2 → Delen door een breuk maakt groter: hoeveel van die stukken passen er in één hele? · 10 → Elke hele geeft evenveel stukken als de noemer zegt: dat is keer, niet plus.
     - **Uitleg (Claude):** Hoe vaak past 1/8 in 2? In één hele passen 8 stukken, dus 2 × 8 = 16.
 
-- **Hint 1 (te schrijven):** Je zoekt hoeveel stukken er in totaal zijn. Kijk eerst naar één heel: hoeveel stukken van deze grootte passen erin?
-- **Hint 2 (te schrijven):** In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele.
-- **Ouderzin:** Je kind deelt hele dingen in gelijke stukken (delen door een breuk): in één heel passen zoveel stukken als de noemer zegt.
+- **Hint 1 (te schrijven):** Je zoekt hoeveel stukken er in totaal zijn. Kijk eerst naar één hele: hoeveel stukken van deze grootte passen erin?
+- **Hint 2 (te schrijven):** In één hele passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele.
+- **Ouderzin:** Je kind deelt hele dingen in gelijke stukken (delen door een breuk): in één hele passen zoveel stukken als de noemer zegt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `hele overgenomen` (fout = getal1) → Dat is het aantal hele waar je mee begint. Elk heel wordt in stukken verdeeld, dus je krijgt meer stukken.  [nieuw]
-  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je opgeteld? Elk heel geeft zoveel stukken als de noemer (het getal onder de streep) zegt: reken keer.  [Claude, taalfix]
-  - `hele (label)` (Claudes sleutel: omgekeerd-gedeeld) → Dat is het aantal hele waar je mee begint. Elk heel wordt in stukken verdeeld, dus je krijgt meer stukken.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Kijk eerst hoeveel stukken er in één heel passen, en reken dan keer het aantal hele.  [nieuw]
+  - `hele overgenomen` (fout = getal1) → Dat is het aantal hele waar je mee begint. Elke hele wordt in stukken verdeeld, dus je krijgt meer stukken.  [nieuw]
+  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je opgeteld? Elke hele geeft zoveel stukken als de noemer (het getal onder de streep) zegt: reken keer.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Kijk eerst hoeveel stukken er in één hele passen, en reken dan keer het aantal hele.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 8: #/# [ding] chocola wordt verdeeld in stukken van #/#. Hoeveel [ding] zijn dat?
@@ -234,7 +229,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind deelt een breuk in kleinere stukken (breuk gedeeld door breuk): met dezelfde noemer kun je de tellers vergelijken.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één te veel` (fout = antwoord + 1) → Dat is één stuk te veel. Tel nog eens hoe vaak het kleine stuk in het deel past.  [nieuw]
-  - `één te veel (label)` (Claudes sleutel: een-ernaast) → Dat is één stuk te veel. Tel nog eens hoe vaak het kleine stuk in het deel past.  [Claude, taalfix]
+  - `noemer van het kleine stuk` (Claudes sleutel: een-ernaast) → Zoveel kleine stukken passen er in een hele. Je verdeelt geen hele, alleen een deel ervan: hoe vaak past het kleine stuk dáárin?  [Claude, taalfix]
   - `teller overgenomen` (Claudes sleutel: getal-overgenomen) → Dat is de teller van het deel (het getal boven de streep). Je zoekt hoe vaak het kleine stuk in het deel past.  [Claude, taalfix]
   - `andere fout` (andere fout) → Kijk hoe vaak het kleine stuk in het deel past.  [nieuw]
 - Status: hints klaar

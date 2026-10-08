@@ -428,7 +428,7 @@ def main():
         subprocess.run([sys.executable, f'{HERE}/{sc}'], check=True)
     return rows, gem, twf, t7, bui, stats
 
-OEF476 = False      # Oef-#476 klaar ('Deel 40 door 15'); aan zodra patch_batch2 de regel voor de nieuwe optietekst heeft
+OEF476 = True       # V-#782 (= Oef-#476, Didactiek batch 2): afleider 'Deel 100 door 40 en doe dat keer 15'; Oefeningen schrijft regel en H1
 def fix_g8(r, slog):
     """Itemfixes G8 (8 okt): Z-#766, Z-#767, Z-#768, Oef-#476, Oef-#480. Per item, vóór BV.pas_toe, de hercontrole en de kop."""
     # Z-#766 (Didactiek G8 batch 1, 8 okt): E04 #3 bank-039 (1/3, 1/2) en bank-044 (2/4, 1/3): 1/2 − 1/3 = 1/6 = het antwoord (aftrekken gaf toevallig goed).
@@ -455,7 +455,6 @@ def fix_g8(r, slog):
             ex['claudeFoutHints'] = [{'stap': None, 'fout': '252', 'uitleg': 'Keer gaat vóór min. Eerst de keersom, dan pas aftrekken.'},
                                      {'stap': None, 'fout': '29', 'uitleg': 'Er staat een keerteken: eerst vermenigvuldigen, dan pas aftrekken.'}]
             ex['claudeKaleSom'] = '40 − 4 × 7'; ex['claudeUitleg'] = 'Eerst vermenigvuldigen: 4 × 7 = 28. Dan 40 − 28 = 12.'
-            r['foutHints'] = []
             slog(r, 'Z-#766: het antwoord stond in de vraag (35 − 4 × 7 = 7)', 'opgave', o, r['opgave'])
     # Z-#767 (Didactiek G8 batch 1): elk open antwoord met een duizendpunt heeft ook de vorm zonder punt in geldigeAntwoorden
     # (E02 #2/#3/#4/#6/#7 hadden die lijst al; #8/#10/#11 niet, o.a. 054 '10.000').
@@ -478,12 +477,12 @@ def fix_g8(r, slog):
             for k in ('claudeUitleg', 'claudeKaleSom'):
                 if isinstance(r['extraVelden'].get(k), str): r['extraVelden'][k] = r['extraVelden'][k].replace(a, b)
             slog(r, 'Z-#768: context die niet klopt', 'opgave', o, r['opgave'])
-    # Oef-#476 (8 okt): GET-E02 #32 (bank-033) afleider 'Deel 15 door 100 en doe dat keer 40 procent' gaf hetzelfde getal (6) als het antwoord → 'Deel 40 door 15'.
+    # Oef-#476 / V-#782 (8 okt): GET-E02 #32 (bank-033) afleider 'Deel 15 door 100 en doe dat keer 40 procent' gaf hetzelfde getal (6) als het antwoord → 'Deel 100 door 40 en doe dat keer 15' (noemt ook honderd, les 234).
     # Oef-#480: GET-E02 #29 (bank-030) 'In een grafiek' → 'In een staafgrafiek' (de opties gaan over staven).
     if True:
         c8 = (r['bron'].get('claudeId') or '')[:8]
         if c8 == '5617ea49' and OEF476:      # wacht op de literal-regel van Oefeningen in patch_batch2 (anders ONLEESBAAR-WARN)
-            oud, nieuw = 'Deel 15 door 100 en doe dat keer 40 procent', 'Deel 40 door 15'
+            oud, nieuw = 'Deel 15 door 100 en doe dat keer 40 procent', 'Deel 100 door 40 en doe dat keer 15'
             if any(o_['tekst'] == oud for o_ in r['opties']):
                 voor = r['optiesTekst']
                 for o_ in r['opties']:
@@ -493,16 +492,37 @@ def fix_g8(r, slog):
                 for d_ in ex.get('claudeDenkfouten') or []:
                     if d_['fout'] == oud: d_['fout'] = nieuw; d_['denkfout'] = 'verkeerde-bewerking'
                 for h_ in ex.get('claudeFoutHints') or []:
-                    if h_['fout'] == oud: h_['fout'] = nieuw; h_['uitleg'] = 'Je wilt een deel van 40 leerlingen weten. Delen door 15 geeft hoe vaak 15 in 40 past, niet 15 procent van 40.'
-                r['foutHints'] = []
+                    if h_['fout'] == oud: h_['fout'] = nieuw; h_['uitleg'] = 'Dan deel je honderd door het aantal leerlingen. Hoeveel leerlingen is één procent: welk getal deel je door honderd?'
                 slog(r, 'Oef-#476: afleider gaf hetzelfde getal als het antwoord', 'opties', voor, r['optiesTekst'])
+        # V-#781 (Didactiek G8 batch 2): #16 kloktijden zonder ':' ('14.35 uur'); meerkeuze, dus geen geldigeAntwoorden nodig
+        if c8 == '3d1a93e4' and '14:35' in r['opgave']:
+            vv = [('14:35', '14.35 uur'), ('16:10', '16.10 uur'), ('15:00', '15.00 uur')]
+            def kl(t):
+                for a_, b_ in vv: t = t.replace(a_, b_)
+                return t
+            o = r['opgave']; r['opgave'] = kl(o); r['antwoord'] = kl(r['antwoord'])
+            for o_ in r['opties']: o_['tekst'] = kl(o_['tekst'])
+            r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+            ad_ = r.get('antwoordDetail')
+            if isinstance(ad_, dict) and ad_.get('juisteOptieTekst'): ad_['juisteOptieTekst'] = kl(ad_['juisteOptieTekst'])
+            ex = r['extraVelden']
+            for k in ('claudeUitleg', 'claudeKaleSom'):
+                if isinstance(ex.get(k), str): ex[k] = kl(ex[k])
+            for d_ in ex.get('claudeDenkfouten') or []: d_['fout'] = kl(d_['fout'])
+            for h_ in ex.get('claudeFoutHints') or []: h_['fout'] = kl(h_['fout']); h_['uitleg'] = kl(h_['uitleg']) if isinstance(h_.get('uitleg'), str) else h_.get('uitleg')
+            slog(r, "V-#781: kloktijden als '14.35 uur' (geen ':')", 'opgave', o, r['opgave'])
+        # Z-#781 (Didactiek G8 batch 2): #12 'Tel … bij elkaar op' is alleen fout zolang de ochtendtemperatuur niet onder nul is (data-guard)
+        m_ = re.match(r"'s Ochtends is het (\S+) graden", r['opgave'])
+        if m_: assert not m_.group(1).startswith(('−', '-')), ('Z-#781: ochtendtemperatuur onder nul', r['id'])
         if c8 == '1c755b40' and r['opgave'].startswith('In een grafiek staat'):
             o = r['opgave']; r['opgave'] = o.replace('In een grafiek staat', 'In een staafgrafiek staat', 1); slog(r, "Oef-#480: 'staafgrafiek' (de opties gaan over staven)", 'opgave', o, r['opgave'])
 
 # Oef-#472 / #478 (G8 batch 1/2, 8 okt; zoals G4 Z-#726): de kop-generator maakte van 'kan' en van werkwoorden een '[ding]'.
 KOP478 = [(r'^(Kijk zonder uit te rekenen\. Welk antwoord bij # [×+−:] #) \[ding\] kloppen\?$', r'\1 kan kloppen?'),
           (r'nu €# \[ding\]\.', 'nu €# kost.'), (r'^Een jas van €# \[ding\] # procent', 'Een jas van €# gaat # procent'),
-          (r'= # \[ding\]\. Hoe kan', '= # uitgerekend. Hoe kan'), (r'^In groep # \[ding\] # \[ding\]\.', 'In groep # zitten # leerlingen.')]
+          (r'= # \[ding\]\. Hoe kan', '= # uitgerekend. Hoe kan'), (r'^Hoe zie je of een getal deelbaar is door #\?$', 'Hoe zie je of een getal deelbaar is door 5?'),  # Z-#780
+          (r'^In groep # \[ding\] # \[ding\]\.', 'In groep # zitten # leerlingen.'),
+          (r'^De trein vertrekt om # uur en komt aan om # uur\.', 'De trein vertrekt om #.# uur en komt aan om #.# uur.')]  # V-#781: '14.35' werd één '#'
 def kop_g8(s):
     for a, b in KOP478: s = re.sub(a, b, s)
     return s
