@@ -344,6 +344,7 @@ Ronde 3c (V-#615, Z-#617, Z-#618, Z-#619, Oef-#434, Oef-#442, Z-#606) en ronde 1
 | Oef-#454 | Didactiek/Overzicht | VERH-03 #4/#6: «k keer zo groot» = elke zijde k keer zo lang, terwijl de oppervlakte in #6 k × k groeit; VERH-03 #17 legt alleen 1 : 100 uit, maar vergelijkt 1 : 10 en 1 : 100 | open |
 | Oef-#455 | Overzicht (data) | VERH-04 #5 bank-125: optie '40%' zonder Claude-route (geen denkfout); blijft op 'andere fout' | open |
 | Oef-#459 | Overzicht (data, les 206) | VERH-04 #2: in 5 van 8 items is het antwoord de middelste optie (opties × 10 en : 10); VERH-03 #13/#15/#20/#22/#23 (één item) ook | open |
+| Z-#564 | Leerlijn (optie b, steering 14:33) | VERH-04 nrO 4/7: getelde vorm is goed. bank-127: A 5 op de 15 · B 5 op de 20 (goed) · C 1 op de 5; bank-136 (rad): A 3 op de 12 (goed) · B 1 op de 3 · C 3 op de 9; «1 op de 4» weg (blijft geldig antwoord, zoals bij 131/137); claudeUitleg geteld; uitleg bij 1 op de 5 / 1 op de 3 (ging over vereenvoudigen) → None. De andere items hadden al de getelde vorm. Posities (Oef-#459): bank-131 → C, bank-137 → B; nrO 4 nu A2 · B3 · C2, nrO 7 A1 · B1. bank-134 '2 op de 10' en bank-135 '1 op de 6' hebben geen Claude-route | ✓ build 14:44:30 (fixlijst_g7 _z564); Oefeningen kan #4/#7 schrijven |
 | – | Leerlijn | VERH-04 #4 (vereenvoudigen) en #7 (rad) wachten op Z-#564; niet geschreven | wacht |
 
 Nummering: volgende vrije Oef-#460 (zie onder: Oef-#460–#463 staan in g4/merge-fixlijst.md).

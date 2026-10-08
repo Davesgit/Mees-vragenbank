@@ -98,7 +98,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Items: **7** · Claude-doelen: G7 (7) · regel: D-KANS-NAAR-DEEL
 - Getallenruimte: 0–1.000 · type: meerkeuze
 - Denkfouten (Claude): deel-van-geheel-verkeerd (6), andere-deel-genomen (4), getal-overgenomen (1), een-ernaast (1)
-- Verschillende Claude-fout-hints: 14 (meest: “Kijk goed naar welke kleur er in de vraag wordt gevraagd.”)
+- Verschillende Claude-fout-hints: 10 (meest: “Kijk goed naar welke kleur er in de vraag wordt gevraagd.”)
 - Voorbeelden:
   - `G7-VERH-04-claude-bank-132` (Claude G7, ai, niveau 1 → basis)
     - **Opgave:** In een zakje zitten 3 rode en 7 blauwe knikkers. Welk deel van de knikkers is rood?
@@ -108,10 +108,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** In het zakje zitten samen 3 + 7 = 10 knikkers. Daarvan zijn er 3 rood. Dat is dus 3 op de 10.
   - `G7-VERH-04-claude-bank-127` (Claude G7, ai, niveau 2 → toepassen)
     - **Opgave:** In een doos liggen 20 kaartjes en op 5 kaartjes staat een ster. Welk deel van de kaartjes heeft een ster?
-    - **Opties:** A) 5 op de 15 · B) 1 op de 4 · C) 1 op de 5
-    - **Antwoord:** 1 op de 4  (controle: ok)
+    - **Opties:** A) 5 op de 15 · B) 5 op de 20 · C) 1 op de 5
+    - **Antwoord:** 5 op de 20  (controle: ok)
     - **Fout-hints (Claude):** 5 op de 15 → Vergelijk de sterkaartjes met alle kaartjes, niet met de kaartjes zonder ster. · 1 op de 5 → Het aantal sterren is niet meteen het antwoord. Kijk hoe vaak 5 in 20 past.
-    - **Uitleg (Claude):** 5 van de 20 kaartjes heeft een ster. 20 : 5 = 4, dus dat is één van elke vier kaartjes. Dat is dus 1 op de 4.
+    - **Uitleg (Claude):** Er zijn in totaal 20 kaartjes. Op 5 daarvan staat een ster. Dat is dus 5 op de 20.
 
 - **Hint 1 (te schrijven):** 
 - **Hint 2 (te schrijven):** 
@@ -178,22 +178,22 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Items: **2** · Claude-doelen: G7 (2) · regel: D-KANS-NAAR-DEEL
 - Getallenruimte: 0–1.000 · type: meerkeuze
 - Denkfouten (Claude): deel-van-geheel-verkeerd (2), andere-deel-genomen (1), getal-overgenomen (1)
-- Verschillende Claude-fout-hints: 4 (meest: “Tel alle vakjes van het rad, ook de groene.”)
+- Claude-fout-hints: geen
 - Voorbeelden:
   - `G7-VERH-04-claude-bank-137` (Claude G7, ai, niveau 1 → basis)
     - **Opgave:** Een rad heeft 8 even grote vakjes. Twee vakjes zijn groen. Welk deel van de vakjes is groen?
     - **Tekening:** `{"soort": "rad", "vakjes": 8, "gemarkeerd": {"aantal": 2, "kleur": "groen", "letter": "G", "patroon": "gestreept"}, "pijl": false}`
-    - **Opties:** A) 2 op de 8 · B) 2 op de 6 · C) 6 op de 8
+    - **Opties:** A) 6 op de 8 · B) 2 op de 8 · C) 2 op de 6
     - **Antwoord:** 2 op de 8  (controle: ok)
     - **Fout-hints (Claude):** 2 op de 6 → Tel alle vakjes van het rad, ook de groene. · 6 op de 8 → Je hebt de vakjes geteld die niet groen zijn. Lees nog eens wat er gevraagd wordt.
     - **Uitleg (Claude):** Het rad heeft in totaal 8 vakjes. Daarvan zijn er 2 groen. Dat is dus 2 op de 8.
   - `G7-VERH-04-claude-bank-136` (Claude G7, ai, niveau 3 → toepassen)
     - **Opgave:** Een rad heeft 12 even grote vakjes en 3 daarvan zijn rood. Welk deel van de vakjes is rood?
     - **Tekening:** `{"soort": "rad", "vakjes": 12, "gemarkeerd": {"aantal": 3, "kleur": "rood", "letter": "R", "patroon": "gestreept"}, "pijl": false}`
-    - **Opties:** A) 1 op de 4 · B) 1 op de 3 · C) 3 op de 9
-    - **Antwoord:** 1 op de 4  (controle: ok)
+    - **Opties:** A) 3 op de 12 · B) 1 op de 3 · C) 3 op de 9
+    - **Antwoord:** 3 op de 12  (controle: ok)
     - **Fout-hints (Claude):** 1 op de 3 → Het aantal rode vakjes is niet meteen het antwoord. Kijk hoe vaak 3 in 12 past. · 3 op de 9 → Tel alle vakjes van het rad, ook de rode.
-    - **Uitleg (Claude):** 3 van de 12 vakjes is rood. 12 : 3 = 4, dus dat is één van elke vier vakjes. Dat is dus 1 op de 4.
+    - **Uitleg (Claude):** Het rad heeft in totaal 12 vakjes. Daarvan zijn er 3 rood. Dat is dus 3 op de 12.
 
 - **Hint 1 (te schrijven):** 
 - **Hint 2 (te schrijven):** 

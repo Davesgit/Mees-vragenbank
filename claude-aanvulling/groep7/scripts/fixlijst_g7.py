@@ -680,3 +680,30 @@ def _v452(it, slog):
 _pas_toe_z664 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_z664(it, slog); _v452(it, slog)
+
+# ---------- Z-#564 (Leerlijn, optie b; steering 14:33): VERH-04 nrO 4/7, de getelde vorm is het goede antwoord ----------
+# bank-127 (7e1c1390, 5 van 20): A «5 op de 15» (deel-rest), B «5 op de 20» (goed), C «1 op de 5»; «1 op de 4» weg.
+# bank-136 (573dac2a, rad 3 van 12): A «3 op de 12» (goed), B «1 op de 3», C «3 op de 9» (deel-rest); «1 op de 4» weg.
+# De andere items hadden al de getelde vorm als antwoord. Oef-#459: goede optie over de posities: bank-131 (634fada3) → C, bank-137 (75a6fe75) → B.
+# De vereenvoudigde vorm blijft als geldig antwoord staan (zoals bij 131 en 137); de uitleg bij «1 op de 5»/«1 op de 3» ging over vereenvoudigen → None.
+Z564 = {'7e1c1390': (['5 op de 15', '5 op de 20', '1 op de 5'], '5 op de 20', ['5 op de 20', '1 op de 4'],
+                     'Er zijn in totaal 20 kaartjes. Op 5 daarvan staat een ster. Dat is dus 5 op de 20.'),
+        '573dac2a': (['3 op de 12', '1 op de 3', '3 op de 9'], '3 op de 12', ['3 op de 12', '1 op de 4'],
+                     'Het rad heeft in totaal 12 vakjes. Daarvan zijn er 3 rood. Dat is dus 3 op de 12.'),
+        '634fada3': (['8 op de 12', '4 op de 8', '4 op de 12'], '4 op de 12', None, None),
+        '75a6fe75': (['6 op de 8', '2 op de 8', '2 op de 6'], '2 op de 8', None, None)}
+def _z564(it, slog):
+    c8 = (it['bron'].get('claudeId') or '')[:8]
+    if it.get('doelId') != 'G7-VERH-04' or c8 not in Z564: return
+    opties, goed, geldig, uitleg = Z564[c8]; e = it['extraVelden']
+    if [o['tekst'] for o in it['opties']] == opties: return
+    oudU = {h['fout']: h.get('uitleg') for h in e.get('claudeFoutHints') or []}
+    lab = {d['fout']: d['denkfout'] for d in e.get('claudeDenkfouten') or []}
+    denk = [(t, lab[t], None if t in ('1 op de 5', '1 op de 3') and geldig else oudU.get(t)) for t in opties if t != goed]
+    ad = dict(it.get('antwoordDetail') or {})
+    _opties(it, slog, 'z564', 'Z-#564 (Leerlijn b): getelde vorm goed' if geldig else 'Oef-#459/Z-#564: goede optie op een andere plek', it['opgave'], opties, goed, denk,
+            uitleg=uitleg)
+    it['antwoordDetail']['geldigeAntwoorden'] = geldig or ad.get('geldigeAntwoorden')
+_pas_toe_v452 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_v452(it, slog); _z564(it, slog)
