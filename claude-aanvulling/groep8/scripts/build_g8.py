@@ -1196,6 +1196,16 @@ def fix_g8(r, slog):
                                 kv_ = f'{float(ex_):.1f}'.replace('.', ',')
                                 if kv_.endswith(',0'): continue      # 13,04 → '13,0' is geen kommavorm van een afgeronde sleutel
                                 if not any(x2.get('fout') == kv_ for x2 in ex['claudeDenkfouten']): ex['claudeDenkfouten'].append(dict(d_, fout=kv_)); slog(r, 'Z-#1021: afgeronde sleutel ook met komma', 'claudeSleutel', d_['fout'], kv_)
+                        # Oef-#1026 (Oef-#1024, les 397): een CL-regel leest alleen claudeFoutHints; de kommavorm krijgt daar dezelfde uitleg als zijn afgeronde vorm,
+                        # zodat '33,3' op dezelfde regel en tekst komt als '33' (nagebootst door Oefeningen, hook g8work/zet_1024.py: 17/17)
+                        cf_ = ex.get('claudeFoutHints') or []
+                        for d_ in ex.get('claudeDenkfouten') or []:
+                            kv_ = str(d_.get('fout') or '')
+                            if not re.fullmatch(r'\d+,\d+', kv_) or any(str(c_.get('fout') or '').lstrip('€') == kv_ for c_ in cf_): continue
+                            r_ = str(int(Fr(kv_.replace(',', '.')) + Fr(1, 2)))
+                            bron_ = next((c_ for c_ in cf_ if str(c_.get('fout') or '').lstrip('€') == r_), None)
+                            if bron_: cf_.append(dict(bron_, fout=kv_)); slog(r, 'Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)', 'claudeFoutHints', r_, kv_)
+                        if cf_: ex['claudeFoutHints'] = cf_
                 else: ga_ = [a_, f'€{a_}', f'€ {a_}', f'{a_} euro']
                 if r.get('geldigeAntwoorden') != ga_: r['geldigeAntwoorden'] = ga_
         if r['merge'].get('doel') == 'G8-VBN-V01':

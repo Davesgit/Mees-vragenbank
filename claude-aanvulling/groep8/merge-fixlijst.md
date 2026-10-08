@@ -491,3 +491,9 @@ Commit in mees-vragenbank (`/workspace/mees-vragenbank`, main): build 18:20:30 �
 - **Z-#1043 (zacht, niet gedaan):** de kop van E04 #2 zegt «… krijgt **hij** …», 6 items (025, 026, 028–031) zeggen «Een kind … krijgt **het**». De kop is intern; hem veranderen verschuift de hint-sleutels. Blijft staan.
 - **Z-#1044 (zacht, niet gedaan):** 062 (2×7×2, antwoord 28): 32 is de enige route boven het antwoord ('laag te veel' = 'drie kanten'); alle andere routes liggen eronder (24, 22, 14, 11, 4). Een lagere afleider maakt goed de grootste (70 > 69: b6 Z-#891 FAIL, geprobeerd in build 19:31:36). Twee routes op 32 blijven; de tekst 'laag te veel' is waar.
 - **Vormcue zacht (Didactiek 19:35, Z-#1050–#1052):** bedragen in centen vergelijken; rang binnen dezelfde notatie (cent/€: 'het grootste centbedrag', G4-MEET-E07); WARN bij > 60 % en n ≥ 8 ook als p ≥ 0,01; INFO 'nooit de grootste/kleinste' (n ≥ 8). Zachte mutanten 4/4.
+
+## Build 19:49:31 (8 okt, Oef-#1026; md5 gemapt 81c7f294… → caee0ecb…)
+- **Oef-#1026 (data, bij Oef-#1024 / Z-#1021, les 397):** in VERH-E05 krijgt elke kommasleutel uit claudeDenkfouten ook een claudeFoutHints-regel met de uitleg van zijn afgeronde vorm (zoals Oefeningens hook `g8work/zet_1024.py`). Zo komt '33,3' op dezelfde regel en tekst als '33'. 17 sleutels: 33,3 ×4 · 16,7 ×6 · 9,1 ×4 · 28,6 · 23,1 · 42,9 (Z-#1042, 034). Elke kommasleutel staat in de foutHints op dezelfde soort als zijn afgeronde vorm (nagerekend).
+- Checks: check_hints 0 FAIL · b1–b9 FAIL 0, WARN 0 (b9 Oef-#1024 WARN 1 → 0) · mutanten b9 62/0 gemist, b6 64/0 gemist · check_merge_notatie: alleen VORMCUE G8-VERH-E06 #1 middelste 49/96 (open bij Didactiek, zie build 19:34:49).
+- Atomisch live: BOUW-VEILIG 36 bestanden met os.replace, 0 conflict; per_doel 23 · somtypen 23 gevuld.
+- Daarna: Didactiek-hercheck aanvragen voor VBN-V01 en MEET-V01 #1 (V-#1040).

@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T19:34:49+0200",
+ "gegenereerdOp": "2026-10-08T19:49:28+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "aantal": 1458,
  "items": [
@@ -354245,9 +354245,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "33,3",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "40 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 33 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "40 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 33 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 33,3 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -354300,6 +354310,11 @@
       "stap": null,
       "fout": "33",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "33,3",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -354324,6 +354339,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "V-#1026: Claude-sleutel zonder '€'",
      "Z-#1021: afgeronde sleutel ook met komma"
@@ -354382,7 +354398,8 @@
      "match": {
       "waarden": [
        "33",
-       "40"
+       "40",
+       "33,3"
       ]
      },
      "leesbaar": true
@@ -354437,9 +354454,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "16,7",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "24 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 17 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "24 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 17 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 16,7 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -354492,6 +354519,11 @@
       "stap": null,
       "fout": "17",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "16,7",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -354516,6 +354548,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "V-#1026: Claude-sleutel zonder '€'",
      "W1 moeilijk woord vervangen",
@@ -354576,7 +354609,8 @@
      "match": {
       "waarden": [
        "17",
-       "24"
+       "24",
+       "16,7"
       ]
      },
      "leesbaar": true
@@ -354631,9 +354665,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "16,7",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "8 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 17 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "8 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 17 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 16,7 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -354686,6 +354730,11 @@
       "stap": null,
       "fout": "17",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "16,7",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -354710,6 +354759,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "V-#1026: Claude-sleutel zonder '€'",
      "W11 winkel: passende spullen",
@@ -354770,7 +354820,8 @@
      "match": {
       "waarden": [
        "8",
-       "17"
+       "17",
+       "16,7"
       ]
      },
      "leesbaar": true
@@ -355014,9 +355065,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "33,3",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "30 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 33 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "30 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 33 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 33,3 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -355069,6 +355130,11 @@
       "stap": null,
       "fout": "33",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "33,3",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -355093,6 +355159,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "V-#1026: Claude-sleutel zonder '€'",
      "Z-#1021: afgeronde sleutel ook met komma"
@@ -355151,7 +355218,8 @@
      "match": {
       "waarden": [
        "30",
-       "33"
+       "33",
+       "33,3"
       ]
      },
      "leesbaar": true
@@ -355206,9 +355274,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "9,1",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "12 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 9 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "12 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 9 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 9,1 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -355261,6 +355339,11 @@
       "stap": null,
       "fout": "9",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "9,1",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -355285,6 +355368,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "V-#1026: Claude-sleutel zonder '€'",
      "W1 moeilijk woord vervangen",
@@ -355345,7 +355429,8 @@
      "match": {
       "waarden": [
        "9",
-       "12"
+       "12",
+       "9,1"
       ]
      },
      "leesbaar": true
@@ -355400,9 +355485,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "9,1",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "8 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 9 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "8 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 9 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 9,1 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -355455,6 +355550,11 @@
       "stap": null,
       "fout": "9",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "9,1",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -355479,6 +355579,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "V-#1026: Claude-sleutel zonder '€'",
      "Z-#1021: afgeronde sleutel ook met komma"
@@ -355537,7 +355638,8 @@
      "match": {
       "waarden": [
        "8",
-       "9"
+       "9",
+       "9,1"
       ]
      },
      "leesbaar": true
@@ -355592,9 +355694,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "16,7",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "16 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 17 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "16 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 17 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 16,7 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -355647,6 +355759,11 @@
       "stap": null,
       "fout": "17",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "16,7",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -355671,6 +355788,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "V-#1026: Claude-sleutel zonder '€'",
      "W11 winkel: passende spullen",
@@ -355731,7 +355849,8 @@
      "match": {
       "waarden": [
        "16",
-       "17"
+       "17",
+       "16,7"
       ]
      },
      "leesbaar": true
@@ -355972,9 +356091,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "33,3",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "20 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 33 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "20 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 33 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 33,3 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -356027,6 +356156,11 @@
       "stap": null,
       "fout": "33",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "33,3",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -356051,6 +356185,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1026: Claude-sleutel zonder '€'",
      "Z-#1021: afgeronde sleutel ook met komma"
     ]
@@ -356108,7 +356243,8 @@
      "match": {
       "waarden": [
        "20",
-       "33"
+       "33",
+       "33,3"
       ]
      },
      "leesbaar": true
@@ -356353,9 +356489,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "16,7",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "6 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 17 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "6 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 17 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 16,7 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -356408,6 +356554,11 @@
       "stap": null,
       "fout": "17",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "16,7",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -356432,6 +356583,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "V-#1021: geen getal uit de vraag als antwoord",
      "Z-#1021: afgeronde sleutel ook met komma"
@@ -356490,7 +356642,8 @@
      "match": {
       "waarden": [
        "6",
-       "17"
+       "17",
+       "16,7"
       ]
      },
      "leesbaar": true
@@ -356545,9 +356698,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "28,6",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "48 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 29 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "48 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 29 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 28,6 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -356600,6 +356763,11 @@
       "stap": null,
       "fout": "29",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "28,6",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -356624,6 +356792,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "W11 winkel: passende spullen",
      "Z-#1020: antwoord en Claude-velden bij de nieuwe getallen",
@@ -356684,7 +356853,8 @@
      "match": {
       "waarden": [
        "29",
-       "48"
+       "48",
+       "28,6"
       ]
      },
      "leesbaar": true
@@ -356739,9 +356909,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "16,7",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "12 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 17 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "12 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 17 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 16,7 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -356794,6 +356974,11 @@
       "stap": null,
       "fout": "17",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "16,7",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -356818,6 +357003,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "V-#1026: Claude-sleutel zonder '€'",
      "W11 winkel: passende spullen",
@@ -356878,7 +357064,8 @@
      "match": {
       "waarden": [
        "12",
-       "17"
+       "17",
+       "16,7"
       ]
      },
      "leesbaar": true
@@ -356933,9 +357120,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "23,1",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "18 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 23 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "18 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 23 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 23,1 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -356988,6 +357185,11 @@
       "stap": null,
       "fout": "23",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "23,1",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -357012,6 +357214,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "W1 moeilijk woord vervangen",
      "W11 winkel: passende spullen",
@@ -357073,7 +357276,8 @@
      "match": {
       "waarden": [
        "18",
-       "23"
+       "23",
+       "23,1"
       ]
      },
      "leesbaar": true
@@ -360623,9 +360827,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nog geen procent van de oude prijs",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "42,9",
+     "uitleg": "Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+     "uitlegSterker": "Haal de oude prijs van de nieuwe prijs af: zoveel euro komt erbij. De oude prijs is honderd procent. Hoeveel procent is dan het bedrag dat erbij komt?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nog geen procent van de oude prijs",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "30 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 43 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
+   "foutHintsTekst": "30 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 43 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat? · 42,9 → Vergelijk met de oude prijs: die is honderd procent. Hoeveel euro komt erbij, en hoeveel procent van de oude prijs is dat?",
    "ouderzin": "Je kind rekent uit met hoeveel procent een prijs is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -360678,6 +360892,11 @@
       "stap": null,
       "fout": "43",
       "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "42,9",
+      "uitleg": "Reken de stijging uit ten opzichte van de oude prijs, niet de nieuwe."
      }
     ]
    },
@@ -360702,6 +360921,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "V-#1020: geloofwaardig ding, dezelfde naam in de vraag",
      "W11 winkel: passende spullen",
      "Z-#1020: antwoord en Claude-velden bij de nieuwe getallen",
@@ -360762,7 +360982,8 @@
      "match": {
       "waarden": [
        "30",
-       "43"
+       "43",
+       "42,9"
       ]
      },
      "leesbaar": true
@@ -362223,9 +362444,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nieuwe aantal als basis",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "9,1",
+     "uitleg": "Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
+     "uitlegSterker": "Haal het oude aantal van het nieuwe aantal af: zoveel zijn er nu meer. Het oude aantal is honderd procent. Hoeveel procent is dan dat verschil?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nieuwe aantal als basis",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "4 → Dat is hoeveel er nu meer zijn, nog geen procent. Hoeveel procent van het oude aantal is dat? · 9 → Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
+   "foutHintsTekst": "4 → Dat is hoeveel er nu meer zijn, nog geen procent. Hoeveel procent van het oude aantal is dat? · 9 → Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal. · 9,1 → Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
    "ouderzin": "Je kind rekent uit met hoeveel procent een aantal is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -362278,6 +362509,11 @@
       "stap": null,
       "fout": "9",
       "uitleg": "Vergelijk met het oude aantal (100%), niet met het nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "9,1",
+      "uitleg": "Vergelijk met het oude aantal (100%), niet met het nieuwe."
      }
     ]
    },
@@ -362301,6 +362537,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "Z-#1021: afgeronde sleutel ook met komma"
     ]
    },
@@ -362370,7 +362607,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "9"
+       "9",
+       "9,1"
       ]
      },
      "leesbaar": true
@@ -362425,9 +362663,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nieuwe aantal als basis",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "9,1",
+     "uitleg": "Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
+     "uitlegSterker": "Haal het oude aantal van het nieuwe aantal af: zoveel zijn er nu meer. Het oude aantal is honderd procent. Hoeveel procent is dan dat verschil?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nieuwe aantal als basis",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "5 → Dat is hoeveel er nu meer zijn, nog geen procent. Hoeveel procent van het oude aantal is dat? · 9 → Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
+   "foutHintsTekst": "5 → Dat is hoeveel er nu meer zijn, nog geen procent. Hoeveel procent van het oude aantal is dat? · 9 → Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal. · 9,1 → Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
    "ouderzin": "Je kind rekent uit met hoeveel procent een aantal is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -362480,6 +362728,11 @@
       "stap": null,
       "fout": "9",
       "uitleg": "Vergelijk met het oude aantal (100%), niet met het nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "9,1",
+      "uitleg": "Vergelijk met het oude aantal (100%), niet met het nieuwe."
      }
     ]
    },
@@ -362503,6 +362756,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "Z-#1021: afgeronde sleutel ook met komma"
     ]
    },
@@ -362572,7 +362826,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "9"
+       "9",
+       "9,1"
       ]
      },
      "leesbaar": true
@@ -362627,9 +362882,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nieuwe aantal als basis",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "16,7",
+     "uitleg": "Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
+     "uitlegSterker": "Haal het oude aantal van het nieuwe aantal af: zoveel zijn er nu meer. Het oude aantal is honderd procent. Hoeveel procent is dan dat verschil?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nieuwe aantal als basis",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "10 → Dat is hoeveel er nu meer zijn, nog geen procent. Hoeveel procent van het oude aantal is dat? · 17 → Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
+   "foutHintsTekst": "10 → Dat is hoeveel er nu meer zijn, nog geen procent. Hoeveel procent van het oude aantal is dat? · 17 → Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal. · 16,7 → Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
    "ouderzin": "Je kind rekent uit met hoeveel procent een aantal is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -362682,6 +362947,11 @@
       "stap": null,
       "fout": "17",
       "uitleg": "Vergelijk met het oude aantal (100%), niet met het nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "16,7",
+      "uitleg": "Vergelijk met het oude aantal (100%), niet met het nieuwe."
      }
     ]
    },
@@ -362705,6 +362975,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "Z-#1020: antwoord en Claude-velden bij de nieuwe getallen",
      "Z-#1020: spreiding/dubbel (E05 #1/#3)",
      "Z-#1021: afgeronde sleutel ook met komma"
@@ -362776,7 +363047,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "17"
+       "17",
+       "16,7"
       ]
      },
      "leesbaar": true
@@ -362831,9 +363103,19 @@
      "regel": "Claudes sleutel: procent-verkeerde-basis",
      "soort": "nieuwe aantal als basis",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "33,3",
+     "uitleg": "Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
+     "uitlegSterker": "Haal het oude aantal van het nieuwe aantal af: zoveel zijn er nu meer. Het oude aantal is honderd procent. Hoeveel procent is dan dat verschil?",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: procent-verkeerde-basis",
+     "soort": "nieuwe aantal als basis",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "10 → Dat is hoeveel er nu meer zijn, nog geen procent. Hoeveel procent van het oude aantal is dat? · 33 → Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
+   "foutHintsTekst": "10 → Dat is hoeveel er nu meer zijn, nog geen procent. Hoeveel procent van het oude aantal is dat? · 33 → Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal. · 33,3 → Vergelijk met het oude aantal: dat is honderd procent, niet het nieuwe aantal.",
    "ouderzin": "Je kind rekent uit met hoeveel procent een aantal is gestegen.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -362886,6 +363168,11 @@
       "stap": null,
       "fout": "33",
       "uitleg": "Vergelijk met het oude aantal (100%), niet met het nieuwe."
+     },
+     {
+      "stap": null,
+      "fout": "33,3",
+      "uitleg": "Vergelijk met het oude aantal (100%), niet met het nieuwe."
      }
     ]
    },
@@ -362909,6 +363196,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#1026: kommasleutel ook in claudeFoutHints (uitleg van de afgeronde vorm)",
      "Z-#1021: afgeronde sleutel ook met komma"
     ]
    },
@@ -362978,7 +363266,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "33"
+       "33",
+       "33,3"
       ]
      },
      "leesbaar": true
@@ -388037,7 +388326,7 @@
    "algemeneFoutHint": "Het hele aantal is honderd procent. Hoeveel procent is het deel?"
   }
  ],
- "hintsSyncOp": "2026-10-08T19:34:53+02:00",
+ "hintsSyncOp": "2026-10-08T19:49:31+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -388076,7 +388365,7 @@
    "md5": "2bbf318d2838"
   }
  ],
- "geschrevenOp": "2026-10-08T19:34:53+02:00",
+ "geschrevenOp": "2026-10-08T19:49:31+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }
