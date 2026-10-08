@@ -32,6 +32,27 @@ def treffers(items):
                 T.append((it, f"{it['id']} [{veld}]: {m.group(0)} in «{t[max(0, m.start() - 30):m.end() + 20]}»")); break
     return T
 DUUR = re.compile(r'(\+|\bduurt|\bduurde|\bduur van)\s*(\d{1,2})[.:](\d{2})(?: uur)?(?![\d:])')
+# Z-#951 (Didactiek, les 356): ook een duur zonder signaalwoord: 'Tel 5.45 uur bij … op', '2.30 uur onderweg', '1.20 uur later', 'een vlucht van 2.15 uur',
+# 'in 1.20 uur', 'Na 1.20 uur …'. Een kloktijd ('om 9.30 uur', 'Het is 9.30 uur', 'van 8.10 uur tot 9.30 uur', 'Tel 2 uur bij 9.30 uur op') telt niet.
+# 'na u.mm uur' is alleen een duur bij u ≤ 2 of als de tekst nog een andere tijd noemt (het beginpunt); 'Na 9.30 uur gaat de winkel dicht' blijft een kloktijd.
+_T = r'(\d{1,2})[.:](\d{2})'
+DUUR2 = [re.compile(r'\b[Tt]el ' + _T + r'(?: uur)? (?:erbij|bij)\b'),
+         re.compile(_T + r' uur (?:later|eerder|onderweg|lang|vliegen|rijden|varen|fietsen|lopen|wandelen|reizen|bezig|nodig)\b'),
+         re.compile(r'\b(?:vlucht|reis|rit|tocht|wandeling|film|treinreis|busreis|fietstocht) van ' + _T),
+         re.compile(r'\b(?:[Ii]n|[Bb]innen) ' + _T + r' uur\b')]
+NA = re.compile(r'\b[Nn]a ' + _T + r' uur\b')
+TIJD_ALG = re.compile(r'(?<![\d.,:])(\d{1,2})[.:](\d{2})(?![\d:])')
+def _duur_match(t):
+    m = DUUR.search(t)
+    if m and int(m.group(3)) <= 59: return m
+    for rx in DUUR2:
+        m = rx.search(t)
+        if m and int(m.group(2)) <= 59: return m
+    m = NA.search(t)
+    if m and int(m.group(2)) <= 59:
+        ander = [x for x in TIJD_ALG.finditer(t) if x.start() != m.start(1)]
+        if int(m.group(1)) <= 2 or ander: return m
+    return None
 def duur_treffers(items):
     """V-#904 (Didactiek G8 batch 5, les 331): een tijdsduur als kloktijd ('6.15 uur + 5.45 uur', 'duurt 1.30 uur') in een kindtekst of Claudes kindvelden (FAIL),
     ook bij digitaleKlok (een duur is nooit een kloktijd)."""
@@ -40,7 +61,7 @@ def duur_treffers(items):
         ex = it.get('extraVelden') or {}
         velden = list(teksten(it)) + [(k, ex.get(k)) for k in ('claudeUitleg', 'claudeKaleSom')]
         for veld, t in velden:
-            if isinstance(t, str) and (m := DUUR.search(t)) and int(m.group(3)) <= 59:
+            if isinstance(t, str) and (m := _duur_match(t)):
                 T.append((it, f"{it['id']} [{veld}]: «{t[max(0, m.start() - 25):m.end() + 5]}»")); break
     return T
 def invoer(it):
@@ -58,7 +79,12 @@ def rapport(items, ernst='FAIL', toon=True):
 
 # les 348: de tijdsduur-check herkent zowel de '.'- als de ':'-notatie
 MUTANTEN = [('8:10 + 1:20', True), ('8.10 uur + 1.20 uur', True), ('De reis duurt 1:20.', True), ('duurt 1.20 uur', True), ('duurde 0:45', True),
-            ('8.10 uur + 1 uur en 20 minuten', False), ('Van 8.10 uur tot 9.30 uur', False), ('9.30 uur − 8.10 uur', False)]
+            ('8.10 uur + 1 uur en 20 minuten', False), ('Van 8.10 uur tot 9.30 uur', False), ('9.30 uur − 8.10 uur', False),
+            # Z-#951 (les 356): zonder signaalwoord
+            ('Tel 5.45 uur bij 6.15 uur op.', True), ('Na 1.20 uur komen ze aan.', True), ('Je bent 2.30 uur onderweg.', True), ('1.20 uur later is het 9.30 uur.', True),
+            ('Het is een vlucht van 2.15 uur.', True), ('Ze vertrekken om 8.10 uur. Na 3.20 uur komen ze aan.', True), ('In 1:20 uur rijd je naar oma.', True),
+            ('Om 9.30 uur begint de les.', False), ('Het is 9.30 uur.', False), ('Na 9.30 uur gaat de winkel dicht.', False), ('Tel 2 uur bij 9.30 uur op.', False),
+            ('De les begint om 8.30 uur en duurt 45 minuten.', False)]
 def mutanten():
     """aantal mutanten dat goed gaat (moet len(MUTANTEN) zijn)"""
     mk = lambda t: {'id': 'mut', 'opgave': t, 'extraVelden': {}, 'antwoord': 'x'}
