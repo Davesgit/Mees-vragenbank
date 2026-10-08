@@ -433,3 +433,17 @@ Checks build 15:31:04: check_hints **155 klaar · 0 open · 0 FAIL · 0 WARN**, 
 
 Checks build 15:41:07: check_hints **155 klaar · 0 open · 0 FAIL · 0 WARN**, merge-notatie ALLES OK (HELFT 0, SOMVERSCHIL 0), b6/check FAIL 0. 4 items anders (bank-125/134/135/136/137: 125 alleen de uitleg, 127 alleen de strategie, 134/135 opgave+opties, 136/137 de vlag).
 **Oefeningen opnieuw syncen:** VERH-04 #4 bank-134 en bank-135 (nieuwe opgave, antwoord en afleiders) en #7 (nietLiveZonderBeeld; geen tekstwijziging).
+
+## Oefeningen: G7 batch 6 ronde 1f (8 okt 15:4x; review-verh04-4-7, build 15:31:04/15:41:10)
+- **Nagekeken (V-#745/Z-#747 in de data):** bank-136 '9 op de 12' → 'het andere deel' («Dat is het andere deel. … tel die vakjes.»), bank-127 '15 op de 20' → 'het andere deel'. Allebei kloppen ze, met het label andere-deel-genomen.
+- **patch_batch6 ronde 1f:** de labelregels van VERH-04 #4/#7 blijven alleen staan als hun Claude-label nog in de items van dat somtype voorkomt. Daardoor is 'deel achter op de' (getal-overgenomen) weg in #4 en #7: na V-#745/Z-#747 had die geen sleutel meer. 'deel verkeerd geteld' blijft in #4 (134 '4 op de 10') en blijft weg in #7 (sinds 1e; Z-#748 raakt #7 niet).
+  - De G7-build van 15:40/15:41 heeft dit al gedraaid. Live tweede run: 0.
+- **Z-#749 wacht** op de volgende G7-build (V-#746, Z-#748), vlag `Z749_WACHT = True` in ronde 1f. Daarna komen er letterlijke regels 'deel verkeerd geteld (optie)' voor foute opties zonder label met 'k op de [totaal]' (k ≠ deel, k ≠ rest), berekend uit de data. Nu zijn dat 134 '2 op de 10' en 135 '1 op de 6'.
+  - In de zandbak getoetst: beide landen op die soort, met predicaat + mutant M749.
+- **Nieuw in b6/check.py:** les 245 (geen twee even grote 'k op de n'-opties, mutant M245) en een predicaat voor 'deel verkeerd geteld (optie)'. De les-216-mutanten (M216/D216a/D216b) maken nu zelf hun randgeval, want de build van 15:31 had geen additieve-route-sleutel meer (les 233).
+- **Checks (verse kopie van live 15:41:10):** check_hints 155 klaar · 0 FAIL · 0 WARN; merge-notatie ALLES OK; b6/check 779 items · 3166 sleutels · FAIL 0; b1–b5 FAIL 0; runmut 99 mutanten · 0 gemist · 0 ongebruikt.
+
+### Ronde 1e/1f (Oefeningen patch_batch6 15:40) + Z-#749 + Oef-#481 — Overzicht, build 15:52:17
+- **Z-#749:** `Z749_WACHT = False` in patch_batch6 (na V-#746/Z-#748 in build 15:41:07). bank-135 '1 op de 6' heeft in de data geen Claude-label meer (Z-#748), dus de letterlijke regel 'deel verkeerd geteld (optie)' landt daar; bank-134 '4 op de 10' blijft op 'deel verkeerd geteld' (label een-ernaast). #7 heeft geen optie die erbij past (lijst leeg).
+- **Oef-#481:** de oude Claude-fout-hint «1 cm is 100 000 cm echt» → '100.000' in de data (fixlijst `_z481`), in somtypen/G7-VERH-03.md (build_g7 schrijft de somtypen met punt) en in hints/batch6.json (claudeTekst). `spatie_duizend_check.rapport_bestanden` kijkt nu ook in hints/batch*.json en somtypen/*.md (FAIL, in check_merge_notatie G4–G8): overal **0**.
+- Checks: check_hints **155 klaar · 0 open · 0 FAIL · 0 WARN** (ook LES250 0), merge-notatie ALLES OK, b6/check 779 items · 3.166 sleutels · FAIL 0.

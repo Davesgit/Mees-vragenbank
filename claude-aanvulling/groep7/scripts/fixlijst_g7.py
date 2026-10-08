@@ -860,7 +860,7 @@ Z748 = {'ea6380a4': ('Op 10 kaartjes staan de getallen 1 tot en met 10. Welk dee
                      'De getallen groter dan 7 zijn 8, 9 en 10. Dat zijn er 3 van de 10 kaartjes. Dat is dus 3 op de 10.'),
         'a502ea00': ('Van het woord BANAAN maak je 6 kaartjes, voor elke letter één. Welk deel van de kaartjes heeft de letter N?',
                      ['2 op de 6', '1 op de 6', '4 op de 6'], '2 op de 6', ['2 op de 6', '1 op de 3'],
-                     [('1 op de 6', 'andere-fout'), ('4 op de 6', 'andere-deel-genomen')],   # 'een-ernaast' is in b6/check alleen ±1 (Z-#749); '1 op de 6' is 2 ernaast
+                     [('1 op de 6', None), ('4 op de 6', 'andere-deel-genomen')],   # geen label: Z-#749 (patch_batch6) geeft een optie zonder label 'k op de n' de letterlijke regel 'deel verkeerd geteld (optie)'; 'een-ernaast' is alleen ±1
                      'In BANAAN staan 6 letters en daarvan zijn er 2 een N. Dat is dus 2 op de 6.')}
 def _r7(it, slog):
     c8 = (it['bron'].get('claudeId') or '')[:8]
@@ -884,3 +884,17 @@ def _r7(it, slog):
 _pas_toe_z744 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_z744(it, slog); _r7(it, slog)
+
+# Oef-#481 (8 okt): oude Claude-fout-hints met een spatie als duizendtalscheiding ('1 cm is 100 000 cm echt', Z-#744 b) → punt ('100.000').
+import re as _re481
+_RX481 = _re481.compile(r'(?<![\d,.])(\d{1,3})((?: \d{3})+)(?![\d,])')
+def _z481(it, slog):
+    def fx(t): return _RX481.sub(lambda m: m.group(1) + m.group(2).replace(' ', '.'), t) if isinstance(t, str) else t
+    for lijst in (it.get('foutHints') or [], it['extraVelden'].get('claudeFoutHints') or []):
+        for h in lijst:
+            for k in ('uitleg', 'tekst'):
+                if isinstance(h.get(k), str) and _RX481.search(h[k]):
+                    o = h[k]; h[k] = fx(o); slog(it, "Oef-#481: '100 000' → '100.000' (Claude-fout-hint)", 'foutHints', o, h[k])
+_pas_toe_r7 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_r7(it, slog); _z481(it, slog)

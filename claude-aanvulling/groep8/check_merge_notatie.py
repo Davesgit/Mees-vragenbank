@@ -162,6 +162,7 @@ if __name__ == '__main__':
     fail = (_HL.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import spatie_duizend_check as _SD      # V-#705 (review G7 batch 6, Didactiek 8 okt): spatie als duizendtalscheiding (FAIL, G4–G8)
     fail = (_SD.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    fail = (_SD.rapport_bestanden(os.path.dirname(os.path.abspath(__file__))) > 0) or fail      # Oef-#481: ook hintteksten (batch*.json, somtypen)
     # BREUKVORM (G6 merge-fixlijst #170, Dave 21:24; V-#760, Didactiek G8 batch 1, 8 okt): even grote breuk goed, behalve als de opgave een vorm vraagt (FAIL)
     import breukvorm as _BV
     fail = (_BV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail

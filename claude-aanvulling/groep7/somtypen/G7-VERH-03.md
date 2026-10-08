@@ -516,13 +516,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Getallenruimte: 0–1.000 · type: meerkeuze
 - Uit de G6-park: 1 items
 - Denkfouten (Claude): eenheid-verkeerd-omgerekend (1), tiental-ernaast (1)
-- Verschillende Claude-fout-hints: 2 (meest: “1 cm is 100 000 cm echt. Reken dat eerst om naar meters en kijk dan of het al kilometers zijn.”)
+- Verschillende Claude-fout-hints: 2 (meest: “1 cm is 100.000 cm echt. Reken dat eerst om naar meters en kijk dan of het al kilometers zijn.”)
 - Voorbeelden:
   - `G7-VERH-03-claude-bank-297` (Claude M19, ai, niveau 3 → toepassen)
     - **Opgave:** Op een landkaart staat schaal 1 : 100.000. Hoeveel is 1 cm op de kaart in het echt?
     - **Opties:** A) 100 m · B) 10 km · C) 1 km
     - **Antwoord:** 1 km  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 100 m → 1 cm is 100 000 cm echt. Reken dat eerst om naar meters en kijk dan of het al kilometers zijn. · 10 km → Tel de nullen nog eens rustig na bij het omrekenen van cm naar km.
+    - **Fout-hints (Claude):** 100 m → 1 cm is 100.000 cm echt. Reken dat eerst om naar meters en kijk dan of het al kilometers zijn. · 10 km → Tel de nullen nog eens rustig na bij het omrekenen van cm naar km.
     - **Uitleg (Claude):** 1 cm op de kaart is 100.000 cm in het echt. 100.000 cm is 1000 m, en 1000 m is 1 km. Dus 1 cm op de kaart is 1 km.
 
 - **Hint 1 (te schrijven):** Bij een schaal staat een dubbele punt (:) tussen de getallen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.

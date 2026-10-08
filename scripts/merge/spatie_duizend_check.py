@@ -25,3 +25,25 @@ def rapport(items):
     print(f"\nV-#705 spatie als duizendtalscheiding: {len(f)} (FAIL)")
     for x in f: print('  FAIL V-#705 %s [%s]: %r (schrijf met een punt)' % x)
     return len(f)
+
+def bestanden(root):
+    """Oef-#481 (8 okt): ook de hintteksten buiten de items: hints/batch*.json (alle tekstvelden, ook claudeTekst) en somtypen/*.md (oude Claude-fout-hints)."""
+    import glob, json, os
+    out = []
+    def walk(o, pad, f):
+        if isinstance(o, dict):
+            for k, v in o.items(): walk(v, f'{pad}.{k}', f)
+        elif isinstance(o, list):
+            for n, v in enumerate(o): walk(v, f'{pad}[{n}]', f)
+        elif isinstance(o, str):
+            for m in RX.finditer(o): out.append((os.path.relpath(f, root), pad[-60:], m.group(0)))
+    for f in sorted(glob.glob(os.path.join(root, 'hints', 'batch*.json'))): walk(json.load(open(f)), '', f)
+    for f in sorted(glob.glob(os.path.join(root, 'somtypen', '*.md'))):
+        for n, regel in enumerate(open(f), 1):
+            for m in RX.finditer(regel): out.append((os.path.relpath(f, root), f'r.{n}', m.group(0)))
+    return out
+def rapport_bestanden(root):
+    f = bestanden(root)
+    print(f"\nV-#705/Oef-#481 spatie als duizendtalscheiding in hints/batch*.json en somtypen/*.md: {len(f)} (FAIL)")
+    for x in f[:15]: print('  FAIL V-#705 %s [%s]: %r (schrijf met een punt)' % x)
+    return len(f)

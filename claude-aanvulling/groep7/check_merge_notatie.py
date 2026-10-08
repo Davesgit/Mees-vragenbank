@@ -183,6 +183,7 @@ if __name__ == '__main__':
     fail = bool(_sg) or fail
     import spatie_duizend_check as _SD      # V-#705 (review G7 batch 6, Didactiek 8 okt): spatie als duizendtalscheiding (FAIL, G4–G8)
     fail = (_SD.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    fail = (_SD.rapport_bestanden(os.path.dirname(os.path.abspath(__file__))) > 0) or fail      # Oef-#481: ook hintteksten (batch*.json, somtypen)
     import optie_positie_check as _OP      # Oef-#459 (8 okt): goede antwoord >60% op één plek in een somtype met ≥4 items (WARN)
     _OP.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
     import som_verschil_check as _SV      # Z-#744 (recheck batch 6, les 195/241): 'a : b = c : ?' met som/verschil van twee getallen als antwoord (WARN)

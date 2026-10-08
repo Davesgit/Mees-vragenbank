@@ -99,7 +99,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **4** · somtypeOrigineel “Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')” (koppeling: claudeId)
 - Items: **7** · Claude-doelen: G7 (7) · regel: D-KANS-NAAR-DEEL
 - Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): andere-deel-genomen (7), deel-van-geheel-verkeerd (5), andere-fout (1), een-ernaast (1)
+- Denkfouten (Claude): andere-deel-genomen (7), deel-van-geheel-verkeerd (5), None (1), een-ernaast (1)
 - Verschillende Claude-fout-hints: 6 (meest: “Kijk goed naar welke kleur er in de vraag wordt gevraagd.”)
 - Voorbeelden:
   - `G7-VERH-04-claude-bank-132` (Claude G7, ai, niveau 1 → basis)
@@ -122,6 +122,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `niet met het totaal` (Claudes sleutel: deel-van-geheel-verkeerd) → Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.  [Claude, taalfix]
   - `het andere deel` (Claudes sleutel: andere-deel-genomen) → Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.  [Claude, taalfix]
   - `deel verkeerd geteld` (Claudes sleutel: een-ernaast) → Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.  [Claude, taalfix]
+  - `deel verkeerd geteld (optie)` (1 op de 6) → Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.  [nieuw]
   - `andere fout` (andere fout) → Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.  [nieuw]
 - Status: hints klaar
 

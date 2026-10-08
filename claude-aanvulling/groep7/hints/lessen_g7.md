@@ -116,3 +116,9 @@ Volledige tekst en de G8-guards: `../../g8/hints/lessen_g8.md`. Voor G7 gelden v
 - **253:** toets álle routes op toevalstreffers.
 - **254:** bij 'eet/neemt weg' ook de route 'aftrekken'.
 - **255:** lengte groep 7/8: L1 ±45 woorden, L2/H2 ±55. Schrap eerst de aankondiging.
+
+## Lessen 245–248 (Didactiek review-verh04-4-7, 8 okt 15:25)
+- **245.** Vergelijk bij verhoudingsopties ook de afleiders onderling op waarde. *Guard in b6/check.py:* geen twee 'k op de n'-opties met dezelfde verhouding in VERH-04 (mutant M245: bank-136 met '1 op de 3' naast '3 op de 9').
+- **246.** Verandert een besluit de antwoordvorm, loop dan alle velden na die bij de oude vorm hoorden: opties, uitleg, strategie, labels en afleiders uit het oude ontwerp.
+- **247.** Bij 'welk deel'-items mogen het deel en de rest niet even groot zijn (les 195 voor tellen).
+- **248.** Een verplicht plaatje hoort als vlag in de data (nietLiveZonderBeeld).

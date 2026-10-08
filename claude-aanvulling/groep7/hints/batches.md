@@ -15,3 +15,5 @@ Let op voor de VERH-04-batch (Z-#525, build 12:16:26): VERH-04 heeft nu 7 somtyp
 
 - **Batch 6 ronde 1d (8 okt, Oefeningen):** review-batch6-didactiek (taal: fix) verwerkt in patch_batch6.py (V-#700/#701/#702, Z-#702/#703/#705–#710); b6/check 660 → 0 FAIL in de zandbak; wacht op Overzicht-data V-#703/#704/#705. Batch 5 ronde 1f: VERH-01 #7 H2 (les 217). Zie merge-fixlijst.md.
 - **Batch 6 ronde 1e (8 okt 15:3x, Oefeningen):** recheck Didactiek (taal: ok). Z-#740/#742/#743, dode regel VERH-04 #7 weg; gedeelde les-217-guard (g7work/huis_checks.py) in b1–b6. check_hints 155 klaar · 0 FAIL; runmut 100 · 0 gemist · 0 ongebruikt; tweede patch-run 0. Datapunt Oef-#481 (Z-#744).
+
+- 8 okt 15:4x, ronde 1f (batch 6, VERH-04 #4/#7): labelregels zonder label in de data zijn weg ('deel achter op de' in #4/#7). Z-#749 wacht op Z-#748 (vlag Z749_WACHT). Verse kopie van live 15:41:10: b6/check FAIL 0, runmut 99 · 0 gemist · 0 ongebruikt.
