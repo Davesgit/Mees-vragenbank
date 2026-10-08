@@ -497,3 +497,8 @@ Commit in mees-vragenbank (`/workspace/mees-vragenbank`, main): build 18:20:30 �
 - Checks: check_hints 0 FAIL · b1–b9 FAIL 0, WARN 0 (b9 Oef-#1024 WARN 1 → 0) · mutanten b9 62/0 gemist, b6 64/0 gemist · check_merge_notatie: alleen VORMCUE G8-VERH-E06 #1 middelste 49/96 (open bij Didactiek, zie build 19:34:49).
 - Atomisch live: BOUW-VEILIG 36 bestanden met os.replace, 0 conflict; per_doel 23 · somtypen 23 gevuld.
 - Daarna: Didactiek-hercheck aanvragen voor VBN-V01 en MEET-V01 #1 (V-#1040).
+
+## Vormcue: één regel voor alle posities (Didactiek 19:57, alleen checks, geen data)
+- `tools/vormcue_check.py`: kleinste, middelste en grootste vallen onder dezelfde regel als de vorm-cues: FAIL bij > 50 % én binomiaal p < 0,01 (kans 1/3). `fail_regel()` is de enige plek waar die regel staat, en de drempel blijft gelijk. Er zijn 6 nieuwe mutanten. Per positie is er één FAIL-mutant (32/60, de FAIL moet die positie noemen) en één grensmutant (30/60, geen FAIL). Totaal 17/17, zacht 4/4. Z-#1052 'nooit' (INFO) telt nu ook de middelste.
+- `tools/vormcue_posities.py` geeft per somtype de verdeling over de posities en het minimale aantal wissels (≤ 50 % en < 50 %, met en zonder ondergrens van 10 % per positie).
+- **G8-VERH-E06 #1** (n=96): kleinste 0 · middelste 49 (51,0 %, p = 2,6·10⁻⁴) · grootste 47 (49,0 %). FAIL op middelste. Om onder de 50 % te komen moeten 2 items wisselen (1 voor ≤ 50 %). Met de kleinste op ≥ 10 % zijn het 10 items, van middelste naar kleinste, met als uitkomst 10 / 39 / 47. Nu staat er ook INFO 'nooit de kleinste' (0/96). Data niet aangepast: Didactiek stuurt eerst voorstellen per item.
