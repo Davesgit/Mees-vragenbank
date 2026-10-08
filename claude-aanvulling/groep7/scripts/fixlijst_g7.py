@@ -552,3 +552,61 @@ def pas_toe(it, slog):
     _pas_toe_z668(it, slog)
     if RV5_AAN: _rv5(it, slog)
 RV5_AAN = True      # 'staaf' = alleen V-#665 (zo gebouwd om 14:07:01) voor de build van Oefeningen' rondes (14:05); daarna weer aan
+
+# ---------- Oef-#451 + Z-#665 + Z-#666 (#6): toevallige treffers in VERH-02 #1/#3/#6 (review batch 5) ----------
+# #1 'Hoeveel is p% van g?': geen route (het procent, het hele getal, getal min procent, som) geeft het antwoord; 'x% van 100' (antwoord = het
+#   procent, Z-#665) krijgt een ander geheel. Het procent blijft; het geheel wordt het eerste veelvoud van tien uit V451_G dat past en nog niet bestaat.
+# #3 'Hoeveel procent is d van g?': zelfde antwoord, andere getallen zonder treffer (geheel min deel, som). #6: bij 10% is omgekeerd delen (g : d)
+#   altijd tien → ander procent. Claudes sleutels worden per label opnieuw uitgerekend; opties (#3) ook.
+# Het nieuwe geheel (vast, uitgezocht op build 14:12:17): veelvoud van tien, ≠ het procent, geen treffer, nog niet als 'p% van g' in G7.
+V451_1 = {'0ce65488': 290, '24782b7c': 70, '37bb170d': 450, '55705678': 450, '949909a8': 450, 'aa4ab169': 70, 'd344eab0': 460, 'e9aa4f72': 460, 'fa1da4e1': 70}
+V451_3 = {'76caf17f': (7, 35), 'ae3eaf5c': (4, 16), 'fc3c63ae': (30, 50)}
+V451_6 = {'9cf999e3': (300, 60), 'bb88d650': (20, 3)}
+def _kg(x):
+    """Fraction → huisvorm met komma ('2', '1,5', '0,25'); alleen eindige decimalen."""
+    x = _Fr(x)
+    if x.denominator == 1: return str(x.numerator)
+    t = f'{float(x):.6f}'.rstrip('0').rstrip('.'); assert _Fr(t) == x, x
+    return t.replace('.', ',')
+def _v451(it, slog):
+    cid = it['bron'].get('claudeId') or ''; c8 = cid[:8]; o = it['opgave']; e = it['extraVelden']
+    if it.get('doelId') != 'G7-VERH-02' and not (it.get('merge') or {}).get('doel') == 'G7-VERH-02': return
+    uitleg = {d['denkfout']: h.get('uitleg') for d in e.get('claudeDenkfouten') or [] for h in e.get('claudeFoutHints') or [] if h.get('fout') == d.get('fout')}
+    if c8 in V451_1:
+        p, g0 = map(int, re.fullmatch(r'Hoeveel is (\d+)% van (\d+)\?', o).groups()); a0 = p * g0 // 100
+        g = V451_1[c8]; a = p * g // 100
+        assert p * g % 100 == 0 and a not in (p, g, g - p, g + p) and g != p
+        denk = []
+        for d in e.get('claudeDenkfouten') or []:
+            dk = d['denkfout']; oud = _Fr(d['fout'].replace(',', '.')) if re.fullmatch(r'\d+(?:,\d+)?', d['fout']) else None
+            if dk == 'getal-overgenomen': denk.append((str(g), dk, uitleg.get(dk)))
+            elif dk == 'nul-fout-tientallen' and oud is not None:      # ': 10' alleen als het een heel getal blijft (anders '× 10')
+                v = _Fr(a * 10) if oud > a0 or a % 10 else _Fr(a, 10)
+                if _kg(v) not in [x[0] for x in denk]: denk.append((_kg(v), dk, uitleg.get(dk)))
+        _zet(it, slog, 'oef451', f'Oef-#451/Z-#665: {p}% van {g0} → {p}% van {g} (toevallige treffer, review batch 5)', f'Hoeveel is {p}% van {g}?', str(a), denk,
+             f'{p}% van {g}', f'10% van {g} is {_kg(_Fr(g, 10))}.\n{p}% is {_kg(_Fr(p, 10))} × {_kg(_Fr(g, 10))} = {a}.')
+    elif c8 in V451_3:
+        d, g = V451_3[c8]; a = 100 * d // g; a0 = int(str(it['antwoord']).rstrip('%'))
+        assert 100 * d % g == 0 and a == a0 and a not in (d, g - d, d + g, 100 - a)
+        waarde = {'getal-overgenomen': _Fr(d), 'andere-deel-genomen': _Fr(100 - a), 'verhoudingstabel-verkeerd': _Fr(g - d)}
+        denk = []
+        for k in e.get('claudeDenkfouten') or []:
+            dk = k['denkfout']; oud = _Fr(k['fout'].rstrip('%').replace(',', '.'))
+            v = waarde.get(dk) if dk != 'nul-fout-tientallen' else (_Fr(a * 10) if oud > a0 else _Fr(a, 10))
+            if v is not None: denk.append((f'{_kg(v)}%', dk, uitleg.get(dk)))
+        opgave = f'Hoeveel procent is {d} van {g}?'; opties = [x[0] for x in denk]
+        opties.insert(int(_hashlib.md5(cid.encode()).hexdigest(), 16) % (len(opties) + 1), f'{a}%')
+        _opties(it, slog, 'oef451', f'Oef-#451: {o} → {opgave} (toevallige treffer, review batch 5)', opgave, opties, f'{a}%', denk,
+                f'Het geheel {g} is 100%.\n{d} van {g} is {d} : {g} = {a} van de 100, dus {a}%.')
+    elif c8 in V451_6:
+        g, d = V451_6[c8]; a = _Fr(100 * d, g); assert a.denominator == 1 and _Fr(g, d) != a and d != a and g - d != a; a = int(a)
+        ding = re.search(r'een (\w+)\. Hoeveel procent', o).group(1); wie = re.search(r'Van de \d+ (\S+)', o).group(1)
+        denk = [(str(d), 'procent-verkeerde-basis', f'{d} is het aantal, niet het percentage. Zet het om naar per 100.'),
+                (str(g - d), 'verkeerde-bewerking', 'Dat is het aantal zonder. Zet om naar per 100.')]
+        f = _Fr(100, g)
+        _zet(it, slog, 'z666', f'Z-#666: {d} van {g} (omgekeerd delen gaf ook het antwoord, review batch 5)',
+             f'Van de {g} {wie} hebben er {d} een {ding}. Hoeveel procent is dat?', str(a), denk, f'{d} van de {g} = ? %',
+             f'Maak er 100 van: {g} → 100 is keer {_kg(f)}.\n{d} × {_kg(f)} = {a}. Dus {a}%.' if f.denominator == 1 else f'Maak er 100 van: {g} → 100 is : {_kg(1 / f)}.\n{d} : {_kg(1 / f)} = {a}. Dus {a}%.')
+_pas_toe_rv5 = pas_toe
+def pas_toe(it, slog):
+    _pas_toe_rv5(it, slog); _v451(it, slog)

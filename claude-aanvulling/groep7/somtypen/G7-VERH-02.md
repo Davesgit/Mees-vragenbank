@@ -14,7 +14,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Items: **534** · Claude-doelen: V3 (375), V1 (159) · regel: G7-V05-procent-van
 - Getallenruimte: procenten · type: kale
 - Uit de G6-park: 159 items
-- Denkfouten (Claude): getal-overgenomen (456), andere-deel-genomen (357), nul-fout-tientallen (255)
+- Denkfouten (Claude): getal-overgenomen (456), andere-deel-genomen (357), nul-fout-tientallen (254)
 - Verschillende Claude-fout-hints: 2 (meest: “Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?”)
 - Voorbeelden:
   - `G7-VERH-02-claude-bank-112` (Claude V1, bank, niveau 2 → toepassen)
@@ -162,7 +162,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Items: **7** · Claude-doelen: V4 (7) · regel: G7-V06-hoeveel-procent
 - Getallenruimte: 0–1.000 · type: kale
 - Denkfouten (Claude): procent-verkeerde-basis (7), verkeerde-bewerking (7), omgekeerd-gedeeld (5)
-- Verschillende Claude-fout-hints: 8 (meest: “Dat is het aantal zonder. Zet om naar per 100.”)
+- Verschillende Claude-fout-hints: 7 (meest: “Dat is het aantal zonder. Zet om naar per 100.”)
 - Voorbeelden:
   - `G7-VERH-02-claude-bank-1030` (Claude V4, gegenereerd, niveau 3 → toepassen)
     - **Opgave:** Van de 40 dino's hebben er 2 een blaadje. Hoeveel procent is dat?
@@ -170,10 +170,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 2 → 2 is het aantal, niet het percentage. Zet het om naar per 100. · 38 → Dat is het aantal zonder. Zet om naar per 100. · 20 → Deel het deel door het geheel, niet andersom.
     - **Uitleg (Claude):** Maak er 100 van: 40 → 100 is keer 2.5. 2 × 2.5 = 5. Dus 5%.
   - `G7-VERH-02-claude-bank-1028` (Claude V4, gegenereerd, niveau 3 → toepassen)
-    - **Opgave:** Van de 20 eekhoorns hebben er 2 een noot. Hoeveel procent is dat?
-    - **Antwoord:** 10  (controle: ok)
+    - **Opgave:** Van de 20 eekhoorns hebben er 3 een noot. Hoeveel procent is dat?
+    - **Antwoord:** 15  (controle: ok)
     - **Fout-hints (Claude):** 2 → 2 is het aantal, niet het percentage. Zet het om naar per 100. · 18 → Dat is het aantal zonder. Zet om naar per 100.
-    - **Uitleg (Claude):** Maak er 100 van: 20 → 100 is keer 5. 2 × 5 = 10. Dus 10%.
+    - **Uitleg (Claude):** Maak er 100 van: 20 → 100 is keer 5. 3 × 5 = 15. Dus 15%.
 
 - **Hint 1 (te schrijven):** Procent (%) betekent: zoveel van de honderd. Welk deel van het hele aantal is het?
 - **Hint 2 (te schrijven):** Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.

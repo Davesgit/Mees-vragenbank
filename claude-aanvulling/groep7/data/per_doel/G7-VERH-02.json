@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T14:12:17+0200",
+ "gegenereerdOp": "2026-10-08T14:17:46+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-VERH-02",
  "bordtitel": "Procenten van een geheel",
@@ -2443,18 +2443,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Hoeveel is 50% van 100?",
+   "opgave": "Hoeveel is 50% van 290?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "50",
+   "antwoord": "145",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het getal is dat procent?",
    "sterkereHint": "Reken eerst uit hoeveel tien procent van het getal is. Neem daarvan zo vaak als nodig. Vijf procent is de helft van tien procent. Vijftig procent is de helft, vijfentwintig procent een kwart.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "500",
+     "fout": "1450",
      "uitleg": "Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -2464,17 +2464,27 @@
     },
     {
      "stap": null,
-     "fout": "5",
-     "uitleg": "Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal?",
+     "fout": "50",
+     "uitleg": "Dat is het procent uit de vraag. Je zoekt dat deel van het getal.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
-     "regel": "fout = antwoord : 10",
-     "soort": "tien keer te klein",
+     "regel": "fout = getal1",
+     "soort": "het procent",
      "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "100",
+     "fout": "240",
+     "uitleg": "Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
+     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "verschil van de getallen",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "290",
      "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -2483,7 +2493,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "500 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 5 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal? · 100 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+   "foutHintsTekst": "1450 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 50 → Dat is het procent uit de vraag. Je zoekt dat deel van het getal. · 240 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd. · 290 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
    "ouderzin": "Je kind rekent uit hoeveel een percentage van een getal is.",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -2503,8 +2513,8 @@
    "bronVariant": "claude-bank:V1:0ce65488-9efa-4754-a2b3-73c06c65a3b4",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "V1",
-    "claudeUitleg": null,
+    "claudeKaleSom": "50% van 290",
+    "claudeUitleg": "10% van 290 is 29.\n50% is 5 × 29 = 145.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -2513,11 +2523,7 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "500",
-      "denkfout": "nul-fout-tientallen"
-     },
-     {
-      "fout": "5",
+      "fout": "1450",
       "denkfout": "nul-fout-tientallen"
      }
     ],
@@ -2525,12 +2531,7 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "500",
-      "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
-     },
-     {
-      "stap": null,
-      "fout": "5",
+      "fout": "1450",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
      }
     ]
@@ -2554,7 +2555,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-oef451: Oef-#451/Z-#665: 50% van 100 → 50% van 290 (toevallige treffer, review batch 5)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -2569,6 +2572,15 @@
      "voorstelDoel": "G7-VERH-02",
      "regel": "G6-V01-procent"
     },
+    "oef451": {
+     "opgave": "Hoeveel is 50% van 100?",
+     "antwoord": "50",
+     "sleutels": [
+      "500",
+      "5"
+     ],
+     "reden": "Oef-#451/Z-#665: 50% van 100 → 50% van 290 (toevallige treffer, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -2581,7 +2593,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "50",
+    "verwacht": "145",
     "methode": "procent van",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2607,7 +2619,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "100"
+       "290"
       ]
      },
      "leesbaar": true
@@ -2635,7 +2647,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "500"
+       "1450"
       ]
      },
      "leesbaar": true
@@ -2648,9 +2660,7 @@
      "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "5"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -2663,7 +2673,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "50"
+       "240"
       ]
      },
      "leesbaar": true
@@ -33099,18 +33109,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Van de 200 kinderen hebben er 20 een ster. Hoeveel procent is dat?",
+   "opgave": "Van de 300 kinderen hebben er 60 een ster. Hoeveel procent is dat?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "10",
+   "antwoord": "20",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het hele aantal is het?",
    "sterkereHint": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "20",
+     "fout": "60",
      "uitleg": "Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
      "uitlegSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "laag2": "tekstSterker",
@@ -33120,7 +33130,7 @@
     },
     {
      "stap": null,
-     "fout": "180",
+     "fout": "240",
      "uitleg": "Dat is het aantal dat het niet heeft. Je zoekt welk deel het wel heeft, in procent.",
      "uitlegSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "laag2": "tekstSterker",
@@ -33129,7 +33139,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "20 → Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd? · 180 → Dat is het aantal dat het niet heeft. Je zoekt welk deel het wel heeft, in procent.",
+   "foutHintsTekst": "60 → Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd? · 240 → Dat is het aantal dat het niet heeft. Je zoekt welk deel het wel heeft, in procent.",
    "ouderzin": "Je kind rekent uit hoeveel procent een deel van een groep is.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -33149,8 +33159,8 @@
    "bronVariant": "claude-bank:V4:9cf999e3-a771-4fa9-ab51-e96564c02763",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "20 van de 200 = ? %",
-    "claudeUitleg": "Maak er 100 van: 200 → 100 is keer 0.5.\n20 × 0.5 = 10. Dus 10%.",
+    "claudeKaleSom": "60 van de 300 = ? %",
+    "claudeUitleg": "Maak er 100 van: 300 → 100 is : 3.\n60 : 3 = 20. Dus 20%.",
     "claudeStrategie": "verhoudingstabel naar 100",
     "claudeThema": "Ruimte",
     "claudeAntwoordType": "geheel",
@@ -33159,11 +33169,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "20",
+      "fout": "60",
       "denkfout": "procent-verkeerde-basis"
      },
      {
-      "fout": "180",
+      "fout": "240",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -33171,12 +33181,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "20",
-      "uitleg": "20 is het aantal, niet het percentage. Zet het om naar per 100."
+      "fout": "60",
+      "uitleg": "60 is het aantal, niet het percentage. Zet het om naar per 100."
      },
      {
       "stap": null,
-      "fout": "180",
+      "fout": "240",
       "uitleg": "Dat is het aantal zonder. Zet om naar per 100."
      }
     ]
@@ -33201,6 +33211,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "G7-z666: Z-#666: 60 van 300 (omgekeerd delen gaf ook het antwoord, review batch 5)",
      "W5 woord kindvriendelijk (G4)"
     ]
    },
@@ -33212,6 +33223,15 @@
     "regel": "G7-V06-hoeveel-procent",
     "reden": "hoeveel procent is a van b? (G7-VERH-02, zoals 5 van 20 in de G7-bank)",
     "somtype": "Van de # [ding] hebben er # een [ding]. Hoeveel procent is dat?",
+    "z666": {
+     "opgave": "Van de 200 kinderen hebben er 20 een ster. Hoeveel procent is dat?",
+     "antwoord": "10",
+     "sleutels": [
+      "20",
+      "180"
+     ],
+     "reden": "Z-#666: 60 van 300 (omgekeerd delen gaf ook het antwoord, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 6,
     "somtypeNrOrigineel": 6,
@@ -33224,7 +33244,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "10",
+    "verwacht": "20",
     "methode": "hoeveel procent (verhaal)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -33250,7 +33270,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "20"
+       "60"
       ]
      },
      "leesbaar": true
@@ -33264,7 +33284,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "180"
+       "240"
       ]
      },
      "leesbaar": true
@@ -33303,18 +33323,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Van de 20 eekhoorns hebben er 2 een noot. Hoeveel procent is dat?",
+   "opgave": "Van de 20 eekhoorns hebben er 3 een noot. Hoeveel procent is dat?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "10",
+   "antwoord": "15",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het hele aantal is het?",
    "sterkereHint": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "2",
+     "fout": "3",
      "uitleg": "Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
      "uitlegSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "laag2": "tekstSterker",
@@ -33324,7 +33344,7 @@
     },
     {
      "stap": null,
-     "fout": "18",
+     "fout": "17",
      "uitleg": "Dat is het aantal dat het niet heeft. Je zoekt welk deel het wel heeft, in procent.",
      "uitlegSterker": "Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "laag2": "tekstSterker",
@@ -33333,7 +33353,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "2 → Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd? · 18 → Dat is het aantal dat het niet heeft. Je zoekt welk deel het wel heeft, in procent.",
+   "foutHintsTekst": "3 → Dat is het aantal uit de vraag, nog geen procent. Hoeveel is dat van de honderd? · 17 → Dat is het aantal dat het niet heeft. Je zoekt welk deel het wel heeft, in procent.",
    "ouderzin": "Je kind rekent uit hoeveel procent een deel van een groep is.",
    "getallenruimte": "0–1.000",
    "context": "laag",
@@ -33353,8 +33373,8 @@
    "bronVariant": "claude-bank:V4:bb88d650-6e6f-4f96-95e7-1ebe805d6d5e",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "2 van de 20 = ? %",
-    "claudeUitleg": "Maak er 100 van: 20 → 100 is keer 5.\n2 × 5 = 10. Dus 10%.",
+    "claudeKaleSom": "3 van de 20 = ? %",
+    "claudeUitleg": "Maak er 100 van: 20 → 100 is keer 5.\n3 × 5 = 15. Dus 15%.",
     "claudeStrategie": "verhoudingstabel naar 100",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -33363,11 +33383,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "2",
+      "fout": "3",
       "denkfout": "procent-verkeerde-basis"
      },
      {
-      "fout": "18",
+      "fout": "17",
       "denkfout": "verkeerde-bewerking"
      }
     ],
@@ -33375,12 +33395,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "2",
-      "uitleg": "2 is het aantal, niet het percentage. Zet het om naar per 100."
+      "fout": "3",
+      "uitleg": "3 is het aantal, niet het percentage. Zet het om naar per 100."
      },
      {
       "stap": null,
-      "fout": "18",
+      "fout": "17",
       "uitleg": "Dat is het aantal zonder. Zet om naar per 100."
      }
     ]
@@ -33404,7 +33424,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-z666: Z-#666: 3 van 20 (omgekeerd delen gaf ook het antwoord, review batch 5)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -33414,6 +33436,15 @@
     "regel": "G7-V06-hoeveel-procent",
     "reden": "hoeveel procent is a van b? (G7-VERH-02, zoals 5 van 20 in de G7-bank)",
     "somtype": "Van de # [ding] hebben er # een [ding]. Hoeveel procent is dat?",
+    "z666": {
+     "opgave": "Van de 20 eekhoorns hebben er 2 een noot. Hoeveel procent is dat?",
+     "antwoord": "10",
+     "sleutels": [
+      "2",
+      "18"
+     ],
+     "reden": "Z-#666: 3 van 20 (omgekeerd delen gaf ook het antwoord, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 6,
     "somtypeNrOrigineel": 6,
@@ -33426,7 +33457,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "10",
+    "verwacht": "15",
     "methode": "hoeveel procent (verhaal)",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -33452,7 +33483,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "2"
+       "3"
       ]
      },
      "leesbaar": true
@@ -33466,7 +33497,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "18"
+       "17"
       ]
      },
      "leesbaar": true
@@ -65139,18 +65170,28 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Hoeveel is 30% van 100?",
+   "opgave": "Hoeveel is 30% van 70?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "30",
+   "antwoord": "21",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het getal is dat procent?",
    "sterkereHint": "Reken eerst uit hoeveel tien procent van het getal is. Neem daarvan zo vaak als nodig. Vijf procent is de helft van tien procent. Vijftig procent is de helft, vijfentwintig procent een kwart.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "300",
+     "fout": "70",
+     "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal2",
+     "soort": "het hele getal",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "210",
      "uitleg": "Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -65160,36 +65201,26 @@
     },
     {
      "stap": null,
-     "fout": "3",
-     "uitleg": "Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal?",
+     "fout": "30",
+     "uitleg": "Dat is het procent uit de vraag. Je zoekt dat deel van het getal.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
-     "regel": "fout = antwoord : 10",
-     "soort": "tien keer te klein",
+     "regel": "fout = getal1",
+     "soort": "het procent",
      "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "70",
+     "fout": "40",
      "uitleg": "Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
      "regel": "fout = getal1 - getal2 of getal2 - getal1",
      "soort": "verschil van de getallen",
      "bron": "nieuw"
-    },
-    {
-     "stap": null,
-     "fout": "100",
-     "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
-     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
-     "laag2": "tekstSterker",
-     "regel": "fout = getal2",
-     "soort": "het hele getal",
-     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "300 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 3 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal? · 70 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd. · 100 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+   "foutHintsTekst": "70 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan. · 210 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 30 → Dat is het procent uit de vraag. Je zoekt dat deel van het getal. · 40 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
    "ouderzin": "Je kind rekent uit hoeveel een percentage van een getal is.",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -65209,8 +65240,8 @@
    "bronVariant": "claude-bank:V3:24782b7c-3a03-493b-895b-f8ae251c468b",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "V3",
-    "claudeUitleg": null,
+    "claudeKaleSom": "30% van 70",
+    "claudeUitleg": "10% van 70 is 7.\n30% is 3 × 7 = 21.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -65219,11 +65250,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "100",
+      "fout": "70",
       "denkfout": "getal-overgenomen"
      },
      {
-      "fout": "300",
+      "fout": "210",
       "denkfout": "nul-fout-tientallen"
      }
     ],
@@ -65231,7 +65262,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "300",
+      "fout": "70",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "210",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
      }
     ]
@@ -65256,7 +65292,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "G7-oef451: Oef-#451/Z-#665: 30% van 100 → 30% van 70 (toevallige treffer, review batch 5)"
     ]
    },
    "opBord": false,
@@ -65267,6 +65304,15 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "Hoeveel is #% van #?",
+    "oef451": {
+     "opgave": "Hoeveel is 30% van 100?",
+     "antwoord": "30",
+     "sleutels": [
+      "100",
+      "300"
+     ],
+     "reden": "Oef-#451/Z-#665: 30% van 100 → 30% van 70 (toevallige treffer, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -65279,7 +65325,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "30",
+    "verwacht": "21",
     "methode": "procent van",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -65305,7 +65351,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "100"
+       "70"
       ]
      },
      "leesbaar": true
@@ -65333,7 +65379,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "300"
+       "210"
       ]
      },
      "leesbaar": true
@@ -65346,9 +65392,7 @@
      "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "3"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -65361,7 +65405,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "70"
+       "40"
       ]
      },
      "leesbaar": true
@@ -73856,18 +73900,28 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Hoeveel is 80% van 400?",
+   "opgave": "Hoeveel is 80% van 450?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "320",
+   "antwoord": "360",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het getal is dat procent?",
    "sterkereHint": "Reken eerst uit hoeveel tien procent van het getal is. Neem daarvan zo vaak als nodig. Vijf procent is de helft van tien procent. Vijftig procent is de helft, vijfentwintig procent een kwart.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "3200",
+     "fout": "450",
+     "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal2",
+     "soort": "het hele getal",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "3600",
      "uitleg": "Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -73877,7 +73931,7 @@
     },
     {
      "stap": null,
-     "fout": "32",
+     "fout": "36",
      "uitleg": "Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -73897,16 +73951,16 @@
     },
     {
      "stap": null,
-     "fout": "400",
-     "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+     "fout": "370",
+     "uitleg": "Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
-     "regel": "fout = getal2",
-     "soort": "het hele getal",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "verschil van de getallen",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "3200 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 32 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal? · 80 → Dat is het procent uit de vraag. Je zoekt dat deel van het getal. · 400 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+   "foutHintsTekst": "450 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan. · 3600 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 36 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal? · 80 → Dat is het procent uit de vraag. Je zoekt dat deel van het getal. · 370 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
    "ouderzin": "Je kind rekent uit hoeveel een percentage van een getal is.",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -73926,8 +73980,8 @@
    "bronVariant": "claude-bank:V3:37bb170d-a6a8-48f7-b9d0-6657065a8ce8",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "V3",
-    "claudeUitleg": null,
+    "claudeKaleSom": "80% van 450",
+    "claudeUitleg": "10% van 450 is 45.\n80% is 8 × 45 = 360.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -73936,11 +73990,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "400",
+      "fout": "450",
       "denkfout": "getal-overgenomen"
      },
      {
-      "fout": "3200",
+      "fout": "3600",
       "denkfout": "nul-fout-tientallen"
      }
     ],
@@ -73948,7 +74002,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "3200",
+      "fout": "450",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "3600",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
      }
     ]
@@ -73973,7 +74032,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "G7-oef451: Oef-#451/Z-#665: 80% van 400 → 80% van 450 (toevallige treffer, review batch 5)"
     ]
    },
    "opBord": false,
@@ -73984,6 +74044,15 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "Hoeveel is #% van #?",
+    "oef451": {
+     "opgave": "Hoeveel is 80% van 400?",
+     "antwoord": "320",
+     "sleutels": [
+      "400",
+      "3200"
+     ],
+     "reden": "Oef-#451/Z-#665: 80% van 400 → 80% van 450 (toevallige treffer, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -73996,7 +74065,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "320",
+    "verwacht": "360",
     "methode": "procent van",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -74022,7 +74091,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "400"
+       "450"
       ]
      },
      "leesbaar": true
@@ -74050,7 +74119,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "3200"
+       "3600"
       ]
      },
      "leesbaar": true
@@ -74064,7 +74133,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "32"
+       "36"
       ]
      },
      "leesbaar": true
@@ -74078,7 +74147,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "320"
+       "370"
       ]
      },
      "leesbaar": true
@@ -84199,18 +84268,28 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Hoeveel is 60% van 150?",
+   "opgave": "Hoeveel is 60% van 450?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "90",
+   "antwoord": "270",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het getal is dat procent?",
    "sterkereHint": "Reken eerst uit hoeveel tien procent van het getal is. Neem daarvan zo vaak als nodig. Vijf procent is de helft van tien procent. Vijftig procent is de helft, vijfentwintig procent een kwart.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "900",
+     "fout": "450",
+     "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal2",
+     "soort": "het hele getal",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2700",
      "uitleg": "Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -84220,7 +84299,7 @@
     },
     {
      "stap": null,
-     "fout": "9",
+     "fout": "27",
      "uitleg": "Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -84240,16 +84319,16 @@
     },
     {
      "stap": null,
-     "fout": "150",
-     "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+     "fout": "390",
+     "uitleg": "Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
-     "regel": "fout = getal2",
-     "soort": "het hele getal",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "verschil van de getallen",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "900 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 9 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal? · 60 → Dat is het procent uit de vraag. Je zoekt dat deel van het getal. · 150 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+   "foutHintsTekst": "450 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan. · 2700 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 27 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal? · 60 → Dat is het procent uit de vraag. Je zoekt dat deel van het getal. · 390 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
    "ouderzin": "Je kind rekent uit hoeveel een percentage van een getal is.",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -84269,8 +84348,8 @@
    "bronVariant": "claude-bank:V3:55705678-4c95-4021-b191-8bca5e7c6d62",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "V3",
-    "claudeUitleg": null,
+    "claudeKaleSom": "60% van 450",
+    "claudeUitleg": "10% van 450 is 45.\n60% is 6 × 45 = 270.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -84279,11 +84358,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "150",
+      "fout": "450",
       "denkfout": "getal-overgenomen"
      },
      {
-      "fout": "900",
+      "fout": "2700",
       "denkfout": "nul-fout-tientallen"
      }
     ],
@@ -84291,7 +84370,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "900",
+      "fout": "450",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "2700",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
      }
     ]
@@ -84316,7 +84400,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "G7-oef451: Oef-#451/Z-#665: 60% van 150 → 60% van 450 (toevallige treffer, review batch 5)"
     ]
    },
    "opBord": false,
@@ -84327,6 +84412,15 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "Hoeveel is #% van #?",
+    "oef451": {
+     "opgave": "Hoeveel is 60% van 150?",
+     "antwoord": "90",
+     "sleutels": [
+      "150",
+      "900"
+     ],
+     "reden": "Oef-#451/Z-#665: 60% van 150 → 60% van 450 (toevallige treffer, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -84339,7 +84433,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "90",
+    "verwacht": "270",
     "methode": "procent van",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -84365,7 +84459,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "150"
+       "450"
       ]
      },
      "leesbaar": true
@@ -84393,7 +84487,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "900"
+       "2700"
       ]
      },
      "leesbaar": true
@@ -84407,7 +84501,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "9"
+       "27"
       ]
      },
      "leesbaar": true
@@ -84421,7 +84515,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "90"
+       "390"
       ]
      },
      "leesbaar": true
@@ -105708,18 +105802,28 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Hoeveel is 90% van 100?",
+   "opgave": "Hoeveel is 90% van 450?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "90",
+   "antwoord": "405",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het getal is dat procent?",
    "sterkereHint": "Reken eerst uit hoeveel tien procent van het getal is. Neem daarvan zo vaak als nodig. Vijf procent is de helft van tien procent. Vijftig procent is de helft, vijfentwintig procent een kwart.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "900",
+     "fout": "450",
+     "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal2",
+     "soort": "het hele getal",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "4050",
      "uitleg": "Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -105729,36 +105833,26 @@
     },
     {
      "stap": null,
-     "fout": "9",
-     "uitleg": "Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal?",
+     "fout": "90",
+     "uitleg": "Dat is het procent uit de vraag. Je zoekt dat deel van het getal.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
-     "regel": "fout = antwoord : 10",
-     "soort": "tien keer te klein",
+     "regel": "fout = getal1",
+     "soort": "het procent",
      "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "10",
+     "fout": "360",
      "uitleg": "Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
      "regel": "fout = getal1 - getal2 of getal2 - getal1",
      "soort": "verschil van de getallen",
      "bron": "nieuw"
-    },
-    {
-     "stap": null,
-     "fout": "100",
-     "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
-     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
-     "laag2": "tekstSterker",
-     "regel": "fout = getal2",
-     "soort": "het hele getal",
-     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "900 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 9 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal? · 10 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd. · 100 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+   "foutHintsTekst": "450 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan. · 4050 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 90 → Dat is het procent uit de vraag. Je zoekt dat deel van het getal. · 360 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
    "ouderzin": "Je kind rekent uit hoeveel een percentage van een getal is.",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -105778,8 +105872,8 @@
    "bronVariant": "claude-bank:V3:949909a8-6542-49e2-9090-cdfb84f07738",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "V3",
-    "claudeUitleg": null,
+    "claudeKaleSom": "90% van 450",
+    "claudeUitleg": "10% van 450 is 45.\n90% is 9 × 45 = 405.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -105788,11 +105882,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "100",
+      "fout": "450",
       "denkfout": "getal-overgenomen"
      },
      {
-      "fout": "900",
+      "fout": "4050",
       "denkfout": "nul-fout-tientallen"
      }
     ],
@@ -105800,7 +105894,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "900",
+      "fout": "450",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "4050",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
      }
     ]
@@ -105825,7 +105924,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "G7-oef451: Oef-#451/Z-#665: 90% van 100 → 90% van 450 (toevallige treffer, review batch 5)"
     ]
    },
    "opBord": false,
@@ -105836,6 +105936,15 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "Hoeveel is #% van #?",
+    "oef451": {
+     "opgave": "Hoeveel is 90% van 100?",
+     "antwoord": "90",
+     "sleutels": [
+      "100",
+      "900"
+     ],
+     "reden": "Oef-#451/Z-#665: 90% van 100 → 90% van 450 (toevallige treffer, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -105848,7 +105957,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "90",
+    "verwacht": "405",
     "methode": "procent van",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -105874,7 +105983,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "100"
+       "450"
       ]
      },
      "leesbaar": true
@@ -105902,7 +106011,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "900"
+       "4050"
       ]
      },
      "leesbaar": true
@@ -105915,9 +106024,7 @@
      "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "9"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -105930,7 +106037,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "10"
+       "360"
       ]
      },
      "leesbaar": true
@@ -113115,18 +113222,28 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Hoeveel is 20% van 100?",
+   "opgave": "Hoeveel is 20% van 70?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "20",
+   "antwoord": "14",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het getal is dat procent?",
    "sterkereHint": "Reken eerst uit hoeveel tien procent van het getal is. Neem daarvan zo vaak als nodig. Vijf procent is de helft van tien procent. Vijftig procent is de helft, vijfentwintig procent een kwart.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "200",
+     "fout": "70",
+     "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal2",
+     "soort": "het hele getal",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "140",
      "uitleg": "Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -113136,36 +113253,26 @@
     },
     {
      "stap": null,
-     "fout": "2",
-     "uitleg": "Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal?",
+     "fout": "20",
+     "uitleg": "Dat is het procent uit de vraag. Je zoekt dat deel van het getal.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
-     "regel": "fout = antwoord : 10",
-     "soort": "tien keer te klein",
+     "regel": "fout = getal1",
+     "soort": "het procent",
      "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "80",
+     "fout": "50",
      "uitleg": "Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
      "regel": "fout = getal1 - getal2 of getal2 - getal1",
      "soort": "verschil van de getallen",
      "bron": "nieuw"
-    },
-    {
-     "stap": null,
-     "fout": "100",
-     "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
-     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
-     "laag2": "tekstSterker",
-     "regel": "fout = getal2",
-     "soort": "het hele getal",
-     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "200 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 2 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal? · 80 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd. · 100 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+   "foutHintsTekst": "70 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan. · 140 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 20 → Dat is het procent uit de vraag. Je zoekt dat deel van het getal. · 50 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
    "ouderzin": "Je kind rekent uit hoeveel een percentage van een getal is.",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -113185,8 +113292,8 @@
    "bronVariant": "claude-bank:V3:aa4ab169-1acd-483f-8462-e7380436f671",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "V3",
-    "claudeUitleg": null,
+    "claudeKaleSom": "20% van 70",
+    "claudeUitleg": "10% van 70 is 7.\n20% is 2 × 7 = 14.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -113195,11 +113302,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "100",
+      "fout": "70",
       "denkfout": "getal-overgenomen"
      },
      {
-      "fout": "200",
+      "fout": "140",
       "denkfout": "nul-fout-tientallen"
      }
     ],
@@ -113207,7 +113314,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "200",
+      "fout": "70",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "140",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
      }
     ]
@@ -113232,7 +113344,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "G7-oef451: Oef-#451/Z-#665: 20% van 100 → 20% van 70 (toevallige treffer, review batch 5)"
     ]
    },
    "opBord": false,
@@ -113243,6 +113356,15 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "Hoeveel is #% van #?",
+    "oef451": {
+     "opgave": "Hoeveel is 20% van 100?",
+     "antwoord": "20",
+     "sleutels": [
+      "100",
+      "200"
+     ],
+     "reden": "Oef-#451/Z-#665: 20% van 100 → 20% van 70 (toevallige treffer, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -113255,7 +113377,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "20",
+    "verwacht": "14",
     "methode": "procent van",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -113281,7 +113403,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "100"
+       "70"
       ]
      },
      "leesbaar": true
@@ -113309,7 +113431,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "200"
+       "140"
       ]
      },
      "leesbaar": true
@@ -113322,9 +113444,7 @@
      "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "2"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -113337,7 +113457,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "80"
+       "50"
       ]
      },
      "leesbaar": true
@@ -131483,38 +131603,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Hoeveel is 80% van 100?",
+   "opgave": "Hoeveel is 80% van 460?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "80",
+   "antwoord": "368",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het getal is dat procent?",
    "sterkereHint": "Reken eerst uit hoeveel tien procent van het getal is. Neem daarvan zo vaak als nodig. Vijf procent is de helft van tien procent. Vijftig procent is de helft, vijfentwintig procent een kwart.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "8",
-     "uitleg": "Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal?",
-     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
-     "laag2": "tekstSterker",
-     "regel": "fout = antwoord : 10",
-     "soort": "tien keer te klein",
-     "bron": "nieuw"
-    },
-    {
-     "stap": null,
-     "fout": "20",
-     "uitleg": "Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
-     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
-     "laag2": "tekstSterker",
-     "regel": "fout = getal1 - getal2 of getal2 - getal1",
-     "soort": "verschil van de getallen",
-     "bron": "nieuw"
-    },
-    {
-     "stap": null,
-     "fout": "100",
+     "fout": "460",
      "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -131524,16 +131624,36 @@
     },
     {
      "stap": null,
-     "fout": "800",
+     "fout": "3680",
      "uitleg": "Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord × 10",
      "soort": "tien keer te groot",
      "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "80",
+     "uitleg": "Dat is het procent uit de vraag. Je zoekt dat deel van het getal.",
+     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "het procent",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "380",
+     "uitleg": "Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
+     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "verschil van de getallen",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "8 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal? · 20 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd. · 100 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan. · 800 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?",
+   "foutHintsTekst": "460 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan. · 3680 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 80 → Dat is het procent uit de vraag. Je zoekt dat deel van het getal. · 380 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
    "ouderzin": "Je kind rekent uit hoeveel een percentage van een getal is.",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -131553,8 +131673,8 @@
    "bronVariant": "claude-bank:V3:d344eab0-c3cb-4d5a-a4c0-c256767e162d",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "V3",
-    "claudeUitleg": null,
+    "claudeKaleSom": "80% van 460",
+    "claudeUitleg": "10% van 460 is 46.\n80% is 8 × 46 = 368.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -131563,11 +131683,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "100",
+      "fout": "460",
       "denkfout": "getal-overgenomen"
      },
      {
-      "fout": "8",
+      "fout": "3680",
       "denkfout": "nul-fout-tientallen"
      }
     ],
@@ -131575,7 +131695,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "8",
+      "fout": "460",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "3680",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
      }
     ]
@@ -131600,7 +131725,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "G7-oef451: Oef-#451/Z-#665: 80% van 100 → 80% van 460 (toevallige treffer, review batch 5)"
     ]
    },
    "opBord": false,
@@ -131611,6 +131737,15 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "Hoeveel is #% van #?",
+    "oef451": {
+     "opgave": "Hoeveel is 80% van 100?",
+     "antwoord": "80",
+     "sleutels": [
+      "100",
+      "8"
+     ],
+     "reden": "Oef-#451/Z-#665: 80% van 100 → 80% van 460 (toevallige treffer, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -131623,7 +131758,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "80",
+    "verwacht": "368",
     "methode": "procent van",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -131649,7 +131784,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "100"
+       "460"
       ]
      },
      "leesbaar": true
@@ -131677,7 +131812,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "800"
+       "3680"
       ]
      },
      "leesbaar": true
@@ -131690,9 +131825,7 @@
      "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "8"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -131705,7 +131838,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "20"
+       "380"
       ]
      },
      "leesbaar": true
@@ -141064,18 +141197,28 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Hoeveel is 60% van 100?",
+   "opgave": "Hoeveel is 60% van 460?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "60",
+   "antwoord": "276",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het getal is dat procent?",
    "sterkereHint": "Reken eerst uit hoeveel tien procent van het getal is. Neem daarvan zo vaak als nodig. Vijf procent is de helft van tien procent. Vijftig procent is de helft, vijfentwintig procent een kwart.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "600",
+     "fout": "460",
+     "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal2",
+     "soort": "het hele getal",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2760",
      "uitleg": "Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -141085,36 +141228,26 @@
     },
     {
      "stap": null,
-     "fout": "6",
-     "uitleg": "Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal?",
+     "fout": "60",
+     "uitleg": "Dat is het procent uit de vraag. Je zoekt dat deel van het getal.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
-     "regel": "fout = antwoord : 10",
-     "soort": "tien keer te klein",
+     "regel": "fout = getal1",
+     "soort": "het procent",
      "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "40",
+     "fout": "400",
      "uitleg": "Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
      "regel": "fout = getal1 - getal2 of getal2 - getal1",
      "soort": "verschil van de getallen",
      "bron": "nieuw"
-    },
-    {
-     "stap": null,
-     "fout": "100",
-     "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
-     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
-     "laag2": "tekstSterker",
-     "regel": "fout = getal2",
-     "soort": "het hele getal",
-     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "600 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 6 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal? · 40 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd. · 100 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
+   "foutHintsTekst": "460 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan. · 2760 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 60 → Dat is het procent uit de vraag. Je zoekt dat deel van het getal. · 400 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
    "ouderzin": "Je kind rekent uit hoeveel een percentage van een getal is.",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -141134,8 +141267,8 @@
    "bronVariant": "claude-bank:V3:e9aa4f72-05db-48a5-979a-ab59de8d8ae9",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "V3",
-    "claudeUitleg": null,
+    "claudeKaleSom": "60% van 460",
+    "claudeUitleg": "10% van 460 is 46.\n60% is 6 × 46 = 276.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -141144,11 +141277,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "100",
+      "fout": "460",
       "denkfout": "getal-overgenomen"
      },
      {
-      "fout": "600",
+      "fout": "2760",
       "denkfout": "nul-fout-tientallen"
      }
     ],
@@ -141156,7 +141289,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "600",
+      "fout": "460",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "2760",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
      }
     ]
@@ -141181,7 +141319,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "G7-oef451: Oef-#451/Z-#665: 60% van 100 → 60% van 460 (toevallige treffer, review batch 5)"
     ]
    },
    "opBord": false,
@@ -141192,6 +141331,15 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "Hoeveel is #% van #?",
+    "oef451": {
+     "opgave": "Hoeveel is 60% van 100?",
+     "antwoord": "60",
+     "sleutels": [
+      "100",
+      "600"
+     ],
+     "reden": "Oef-#451/Z-#665: 60% van 100 → 60% van 460 (toevallige treffer, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -141204,7 +141352,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "60",
+    "verwacht": "276",
     "methode": "procent van",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -141230,7 +141378,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "100"
+       "460"
       ]
      },
      "leesbaar": true
@@ -141258,7 +141406,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "600"
+       "2760"
       ]
      },
      "leesbaar": true
@@ -141271,9 +141419,7 @@
      "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "6"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -141286,7 +141432,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "40"
+       "400"
       ]
      },
      "leesbaar": true
@@ -147447,38 +147593,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Hoeveel is 40% van 100?",
+   "opgave": "Hoeveel is 40% van 70?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "40",
+   "antwoord": "28",
    "antwoordDetail": null,
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het getal is dat procent?",
    "sterkereHint": "Reken eerst uit hoeveel tien procent van het getal is. Neem daarvan zo vaak als nodig. Vijf procent is de helft van tien procent. Vijftig procent is de helft, vijfentwintig procent een kwart.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "4",
-     "uitleg": "Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal?",
-     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
-     "laag2": "tekstSterker",
-     "regel": "fout = antwoord : 10",
-     "soort": "tien keer te klein",
-     "bron": "nieuw"
-    },
-    {
-     "stap": null,
-     "fout": "60",
-     "uitleg": "Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
-     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
-     "laag2": "tekstSterker",
-     "regel": "fout = getal1 - getal2 of getal2 - getal1",
-     "soort": "verschil van de getallen",
-     "bron": "nieuw"
-    },
-    {
-     "stap": null,
-     "fout": "100",
+     "fout": "70",
      "uitleg": "Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan.",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
@@ -147488,16 +147614,36 @@
     },
     {
      "stap": null,
-     "fout": "400",
+     "fout": "280",
      "uitleg": "Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?",
      "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "laag2": "tekstSterker",
      "regel": "fout = antwoord × 10",
      "soort": "tien keer te groot",
      "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "30",
+     "uitleg": "Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd.",
+     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "soort": "verschil van de getallen",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "40",
+     "uitleg": "Dat is het procent uit de vraag. Je zoekt dat deel van het getal.",
+     "uitlegSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
+     "laag2": "tekstSterker",
+     "regel": "fout = getal1",
+     "soort": "het procent",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "4 → Dat is tien keer te klein. Reken het na: hoeveel is tien procent van het getal? · 60 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd. · 100 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan. · 400 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal?",
+   "foutHintsTekst": "70 → Dat is het hele getal: honderd procent. Je zoekt maar een deel ervan. · 280 → Dat is tien keer te groot. Reken het na: hoeveel is tien procent van het getal? · 30 → Dat is het verschil van de twee getallen. Maar procent betekent: zoveel van de honderd. · 40 → Dat is het procent uit de vraag. Je zoekt dat deel van het getal.",
    "ouderzin": "Je kind rekent uit hoeveel een percentage van een getal is.",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -147517,8 +147663,8 @@
    "bronVariant": "claude-bank:V3:fa1da4e1-481e-49ed-be4d-2b00af43c856",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "V3",
-    "claudeUitleg": null,
+    "claudeKaleSom": "40% van 70",
+    "claudeUitleg": "10% van 70 is 7.\n40% is 4 × 7 = 28.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "geheel",
@@ -147527,11 +147673,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "100",
+      "fout": "70",
       "denkfout": "getal-overgenomen"
      },
      {
-      "fout": "4",
+      "fout": "280",
       "denkfout": "nul-fout-tientallen"
      }
     ],
@@ -147539,7 +147685,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "4",
+      "fout": "70",
+      "uitleg": null
+     },
+     {
+      "stap": null,
+      "fout": "280",
       "uitleg": "Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan."
      }
     ]
@@ -147564,7 +147715,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "G7-oef451: Oef-#451/Z-#665: 40% van 100 → 40% van 70 (toevallige treffer, review batch 5)"
     ]
    },
    "opBord": false,
@@ -147575,6 +147727,15 @@
     "regel": "G7-V05-procent-van",
     "reden": "procent van een getal of bedrag (G7-VERH-02)",
     "somtype": "Hoeveel is #% van #?",
+    "oef451": {
+     "opgave": "Hoeveel is 40% van 100?",
+     "antwoord": "40",
+     "sleutels": [
+      "100",
+      "4"
+     ],
+     "reden": "Oef-#451/Z-#665: 40% van 100 → 40% van 70 (toevallige treffer, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
@@ -147587,7 +147748,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "40",
+    "verwacht": "28",
     "methode": "procent van",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -147613,7 +147774,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "100"
+       "70"
       ]
      },
      "leesbaar": true
@@ -147641,7 +147802,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "400"
+       "280"
       ]
      },
      "leesbaar": true
@@ -147654,9 +147815,7 @@
      "tekstSterker": "Tien procent is een tiende deel: deel het getal door tien. Vijf procent is daar de helft van. Vijftig procent is de helft, vijfentwintig procent een kwart. Maak het procent uit de vraag met die stukken.",
      "perItem": false,
      "match": {
-      "waarden": [
-       "4"
-      ]
+      "waarden": []
      },
      "leesbaar": true
     },
@@ -147669,7 +147828,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "60"
+       "30"
       ]
      },
      "leesbaar": true
@@ -234067,26 +234226,26 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "meerkeuze",
-   "opgave": "Hoeveel procent is 5 van 25?",
+   "opgave": "Hoeveel procent is 7 van 35?",
    "opgaveStappen": null,
    "opties": [
     {
      "letter": "A",
-     "tekst": "5%"
+     "tekst": "7%"
     },
     {
      "letter": "B",
-     "tekst": "20%"
+     "tekst": "2%"
     },
     {
      "letter": "C",
-     "tekst": "2%"
+     "tekst": "20%"
     }
    ],
-   "optiesTekst": "A) 5% · B) 20% · C) 2%",
+   "optiesTekst": "A) 7% · B) 2% · C) 20%",
    "antwoord": "20%",
    "antwoordDetail": {
-    "juisteOptie": "B",
+    "juisteOptie": "C",
     "juisteOptieTekst": "20%"
    },
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het geheel is het?",
@@ -234094,7 +234253,7 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "5%",
+     "fout": "7%",
      "uitleg": "Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
      "uitlegSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "laag2": "tekstSterker",
@@ -234113,7 +234272,7 @@
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "5% → Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd? · 2% → Dat is tien keer te groot of tien keer te klein. Reken het na met een verhoudingstabel.",
+   "foutHintsTekst": "7% → Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd? · 2% → Dat is tien keer te groot of tien keer te klein. Reken het na met een verhoudingstabel.",
    "ouderzin": "Je kind rekent uit hoeveel procent een deel van een geheel is.",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -234138,7 +234297,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "V4",
-    "claudeUitleg": null,
+    "claudeUitleg": "Het geheel 35 is 100%.\n7 van 35 is 7 : 35 = 20 van de 100, dus 20%.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "tekst",
@@ -234147,7 +234306,7 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "5%",
+      "fout": "7%",
       "denkfout": "getal-overgenomen"
      },
      {
@@ -234157,6 +234316,11 @@
     ],
     "mergeFoutHints": [],
     "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "7%",
+      "uitleg": null
+     },
      {
       "stap": null,
       "fout": "2%",
@@ -234184,7 +234348,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "G7-oef451: Oef-#451: Hoeveel procent is 5 van 25? → Hoeveel procent is 7 van 35? (toevallige treffer, review batch 5)"
     ]
    },
    "opBord": false,
@@ -234195,6 +234360,15 @@
     "regel": "G7-V06-hoeveel-procent",
     "reden": "hoeveel procent is a van b? (G7-VERH-02, zoals 5 van 20 in de G7-bank)",
     "somtype": "Hoeveel procent is # van #?",
+    "oef451": {
+     "opgave": "Hoeveel procent is 5 van 25?",
+     "antwoord": "20%",
+     "sleutels": [
+      "5%",
+      "2%"
+     ],
+     "reden": "Oef-#451: Hoeveel procent is 5 van 25? → Hoeveel procent is 7 van 35? (toevallige treffer, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
@@ -234262,8 +234436,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "5 %",
-       "5%"
+       "7 %",
+       "7%"
       ]
      },
      "leesbaar": true
@@ -234276,7 +234450,10 @@
      "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "28 %",
+       "28%"
+      ]
      },
      "leesbaar": true
     },
@@ -248401,41 +248578,31 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "meerkeuze",
-   "opgave": "Hoeveel procent is 5 van 20?",
+   "opgave": "Hoeveel procent is 4 van 16?",
    "opgaveStappen": null,
    "opties": [
     {
      "letter": "A",
-     "tekst": "25%"
+     "tekst": "75%"
     },
     {
      "letter": "B",
-     "tekst": "5%"
+     "tekst": "25%"
     },
     {
      "letter": "C",
-     "tekst": "75%"
+     "tekst": "4%"
     }
    ],
-   "optiesTekst": "A) 25% · B) 5% · C) 75%",
+   "optiesTekst": "A) 75% · B) 25% · C) 4%",
    "antwoord": "25%",
    "antwoordDetail": {
-    "juisteOptie": "A",
+    "juisteOptie": "B",
     "juisteOptieTekst": "25%"
    },
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het geheel is het?",
    "sterkereHint": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
    "foutHints": [
-    {
-     "stap": null,
-     "fout": "5%",
-     "uitleg": "Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
-     "uitlegSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
-     "laag2": "tekstSterker",
-     "regel": "fout = het deel zelf (als %)",
-     "soort": "het deel zelf",
-     "bron": "nieuw"
-    },
     {
      "stap": null,
      "fout": "75%",
@@ -248445,9 +248612,19 @@
      "regel": "Claudes sleutel: andere-deel-genomen",
      "soort": "het andere deel",
      "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "4%",
+     "uitleg": "Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
+     "uitlegSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+     "laag2": "tekstSterker",
+     "regel": "fout = het deel zelf (als %)",
+     "soort": "het deel zelf",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "5% → Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd? · 75% → Dat is het andere deel: wat overblijft tot honderd procent. Je zoekt het procent van het deel uit de vraag.",
+   "foutHintsTekst": "75% → Dat is het andere deel: wat overblijft tot honderd procent. Je zoekt het procent van het deel uit de vraag. · 4% → Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
    "ouderzin": "Je kind rekent uit hoeveel procent een deel van een geheel is.",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -248472,7 +248649,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "V4",
-    "claudeUitleg": null,
+    "claudeUitleg": "Het geheel 16 is 100%.\n4 van 16 is 4 : 16 = 25 van de 100, dus 25%.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "tekst",
@@ -248485,7 +248662,7 @@
       "denkfout": "andere-deel-genomen"
      },
      {
-      "fout": "5%",
+      "fout": "4%",
       "denkfout": "getal-overgenomen"
      }
     ],
@@ -248495,6 +248672,11 @@
       "stap": null,
       "fout": "75%",
       "uitleg": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?"
+     },
+     {
+      "stap": null,
+      "fout": "4%",
+      "uitleg": null
      }
     ]
    },
@@ -248518,7 +248700,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "G7-oef451: Oef-#451: Hoeveel procent is 5 van 20? → Hoeveel procent is 4 van 16? (toevallige treffer, review batch 5)"
     ]
    },
    "opBord": false,
@@ -248529,6 +248712,15 @@
     "regel": "G7-V06-hoeveel-procent",
     "reden": "hoeveel procent is a van b? (G7-VERH-02, zoals 5 van 20 in de G7-bank)",
     "somtype": "Hoeveel procent is # van #?",
+    "oef451": {
+     "opgave": "Hoeveel procent is 5 van 20?",
+     "antwoord": "25%",
+     "sleutels": [
+      "75%",
+      "5%"
+     ],
+     "reden": "Oef-#451: Hoeveel procent is 5 van 20? → Hoeveel procent is 4 van 16? (toevallige treffer, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
@@ -248598,8 +248790,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "5 %",
-       "5%"
+       "4 %",
+       "4%"
       ]
      },
      "leesbaar": true
@@ -248613,8 +248805,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "15 %",
-       "15%"
+       "12 %",
+       "12%"
       ]
      },
      "leesbaar": true
@@ -263957,31 +264149,41 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "meerkeuze",
-   "opgave": "Hoeveel procent is 90 van 150?",
+   "opgave": "Hoeveel procent is 30 van 50?",
    "opgaveStappen": null,
    "opties": [
     {
      "letter": "A",
-     "tekst": "60%"
+     "tekst": "30%"
     },
     {
      "letter": "B",
-     "tekst": "6%"
+     "tekst": "60%"
     },
     {
      "letter": "C",
-     "tekst": "90%"
+     "tekst": "6%"
     }
    ],
-   "optiesTekst": "A) 60% · B) 6% · C) 90%",
+   "optiesTekst": "A) 30% · B) 60% · C) 6%",
    "antwoord": "60%",
    "antwoordDetail": {
-    "juisteOptie": "A",
+    "juisteOptie": "B",
     "juisteOptieTekst": "60%"
    },
    "hint": "Procent (%) betekent: zoveel van de honderd. Welk deel van het geheel is het?",
    "sterkereHint": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
    "foutHints": [
+    {
+     "stap": null,
+     "fout": "30%",
+     "uitleg": "Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
+     "uitlegSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
+     "laag2": "tekstSterker",
+     "regel": "fout = het deel zelf (als %)",
+     "soort": "het deel zelf",
+     "bron": "nieuw"
+    },
     {
      "stap": null,
      "fout": "6%",
@@ -263991,19 +264193,9 @@
      "regel": "fout = tien keer het procent (als %)",
      "soort": "tien keer ernaast",
      "bron": "nieuw"
-    },
-    {
-     "stap": null,
-     "fout": "90%",
-     "uitleg": "Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
-     "uitlegSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
-     "laag2": "tekstSterker",
-     "regel": "fout = het deel zelf (als %)",
-     "soort": "het deel zelf",
-     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "6% → Dat is tien keer te groot of tien keer te klein. Reken het na met een verhoudingstabel. · 90% → Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd?",
+   "foutHintsTekst": "30% → Dat is het deel uit de vraag, nog geen procent. Hoeveel is dat van de honderd? · 6% → Dat is tien keer te groot of tien keer te klein. Reken het na met een verhoudingstabel.",
    "ouderzin": "Je kind rekent uit hoeveel procent een deel van een geheel is.",
    "getallenruimte": "procenten",
    "context": "laag",
@@ -264028,7 +264220,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "V4",
-    "claudeUitleg": null,
+    "claudeUitleg": "Het geheel 50 is 100%.\n30 van 50 is 30 : 50 = 60 van de 100, dus 60%.",
     "claudeStrategie": null,
     "claudeThema": null,
     "claudeAntwoordType": "tekst",
@@ -264037,7 +264229,7 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "90%",
+      "fout": "30%",
       "denkfout": "getal-overgenomen"
      },
      {
@@ -264047,6 +264239,11 @@
     ],
     "mergeFoutHints": [],
     "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "30%",
+      "uitleg": null
+     },
      {
       "stap": null,
       "fout": "6%",
@@ -264074,7 +264271,8 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
-     "D12 ongepaste Claude-fout-hint vervallen"
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "G7-oef451: Oef-#451: Hoeveel procent is 90 van 150? → Hoeveel procent is 30 van 50? (toevallige treffer, review batch 5)"
     ]
    },
    "opBord": false,
@@ -264085,6 +264283,15 @@
     "regel": "G7-V06-hoeveel-procent",
     "reden": "hoeveel procent is a van b? (G7-VERH-02, zoals 5 van 20 in de G7-bank)",
     "somtype": "Hoeveel procent is # van #?",
+    "oef451": {
+     "opgave": "Hoeveel procent is 90 van 150?",
+     "antwoord": "60%",
+     "sleutels": [
+      "90%",
+      "6%"
+     ],
+     "reden": "Oef-#451: Hoeveel procent is 90 van 150? → Hoeveel procent is 30 van 50? (toevallige treffer, review batch 5)"
+    },
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
@@ -264152,8 +264359,8 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "90 %",
-       "90%"
+       "30 %",
+       "30%"
       ]
      },
      "leesbaar": true
@@ -264166,7 +264373,10 @@
      "tekstSterker": "Maak een verhoudingstabel: het geheel hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.",
      "perItem": false,
      "match": {
-      "waarden": []
+      "waarden": [
+       "20 %",
+       "20%"
+      ]
      },
      "leesbaar": true
     },
@@ -264912,7 +265122,7 @@
    "algemeneFoutHint": "Het geheel is honderd procent. Hoeveel procent is het deel?"
   }
  ],
- "hintsSyncOp": "2026-10-08T14:12:24+02:00",
+ "hintsSyncOp": "2026-10-08T14:17:53+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -264935,7 +265145,7 @@
    "md5": "a26e34579e2a"
   }
  ],
- "geschrevenOp": "2026-10-08T14:12:24+02:00",
+ "geschrevenOp": "2026-10-08T14:17:53+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }
