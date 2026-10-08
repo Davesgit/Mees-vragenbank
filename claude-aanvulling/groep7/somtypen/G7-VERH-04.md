@@ -115,8 +115,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5 op de 15 → Vergelijk de sterkaartjes met alle kaartjes, niet met de kaartjes zonder ster. · 1 op de 5 → Het aantal sterren is niet meteen het antwoord. Kijk hoe vaak 5 in 20 past.
     - **Uitleg (Claude):** Er zijn in totaal 20 kaartjes. Op 5 daarvan staat een ster. Dat is dus 5 op de 20.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij 'op de' komt eerst het deel waar de vraag over gaat. Achter 'op de' komt het totaal: alles samen.
+- **Hint 2 (te schrijven):** Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.
+- **Ouderzin:** Je kind beschrijft een deel van een groep met 'op de': eerst het deel, dan het totaal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet met het totaal` (Claudes sleutel: deel-van-geheel-verkeerd) → Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.  [Claude, taalfix]
+  - `het andere deel` (Claudes sleutel: andere-deel-genomen) → Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.  [Claude, taalfix]
+  - `deel achter op de` (Claudes sleutel: getal-overgenomen) → Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.  [Claude, taalfix]
+  - `deel verkeerd geteld` (Claudes sleutel: een-ernaast) → Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 5: Deel van een totaal: hoeveel procent van de [ding] is …?
 
@@ -197,5 +205,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1 op de 3 → Het aantal rode vakjes is niet meteen het antwoord. Kijk hoe vaak 3 in 12 past. · 3 op de 9 → Tel alle vakjes van het rad, ook de rode.
     - **Uitleg (Claude):** Het rad heeft in totaal 12 vakjes. Daarvan zijn er 3 rood. Dat is dus 3 op de 12.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Bij 'op de' komt eerst het aantal vakjes waar de vraag over gaat. Achter 'op de' komt het aantal vakjes van het hele rad.
+- **Hint 2 (te schrijven):** Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.
+- **Ouderzin:** Je kind beschrijft een deel van een rad met 'op de': eerst het aantal vakjes van het deel, dan alle vakjes.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `niet met het totaal` (Claudes sleutel: deel-van-geheel-verkeerd) → Achter 'op de' komt het totaal: alle vakjes van het rad samen. Tel ze allemaal.  [Claude, taalfix]
+  - `het andere deel` (Claudes sleutel: andere-deel-genomen) → Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel die vakjes.  [Claude, taalfix]
+  - `deel achter op de` (Claudes sleutel: getal-overgenomen) → Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.  [Claude, taalfix]
+  - `deel verkeerd geteld` (Claudes sleutel: een-ernaast) → Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.  [nieuw]
+- Status: hints klaar

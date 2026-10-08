@@ -717,6 +717,11 @@ R6_V703 = {'0ca3ee29': (9, 6, 18, [('6', 'getal-overgenomen'), ('3', 'verkeerde-
            'af5b7f03': (7, 5, 14, [('70', 'verhoudingstabel-verkeerd'), ('14', 'grafiek-verkeerd-afgelezen')]),
            'bcf70e3a': (5, 3, 10, [('8', 'verhoudingstabel-verkeerd'), ('30', 'verhoudingstabel-verkeerd')]),
            'f1f53039': (3, 4, 12, [('48', 'verhoudingstabel-verkeerd'), ('12', 'grafiek-verkeerd-afgelezen')])}
+# Oef-#466 (8 okt): VERH-03 #1 waar a − b het antwoord is (8 : 2 = 24 : ? → 6, 10 : 2 = 40 : ? → 8, 6 : 2 = 12 : ? → 4). Zelfde k; Claudes sleutels
+# met dezelfde route: c × b / c overgenomen (bank-423), b + c − a / a (bank-559), a / b : k gedeeld (bank-590). Drietal nog niet in de bank (8 okt nagekeken); a − b ≠ antwoord en ≠ een sleutel.
+R6_466 = {'5f3dd169': (12, 5, 36, [('180', 'verhoudingstabel-verkeerd'), ('36', 'grafiek-verkeerd-afgelezen')]),
+          'c16d74f1': (12, 5, 48, [('41', 'verhoudingstabel-verkeerd'), ('12', 'verhoudingstabel-verkeerd')]),
+          'd94705d2': (4, 12, 8, [('4', 'verhoudingstabel-verkeerd'), ('6', 'verkeerde-bewerking')])}
 # V-#704 (= Oef-#454): VERH-03 #6 zonder 'wordt k keer zo groot:'; zijde en oppervlakte ≠ k en ≠ k × k: (zijde, k)
 R6_V704 = {'37f616ca': (3, 4), '99865b36': (5, 4), 'b1cb4962': (4, 3)}
 # Z-#681: VERH-02 #2 bank-540, 25% van €20 = €5 = 25 − 20 → 25% van €80 = €20 (niet in de bank)
@@ -735,6 +740,13 @@ def _r6(it, slog):
         assert c % a == 0 and ans not in (a, b, c) and b + c - a != ans and re.fullmatch(r'Vul in\. \d+ : \d+ = \d+ : \?', o)
         uit = {dd['denkfout']: h.get('uitleg') for dd in e.get('claudeDenkfouten') or [] for h in e.get('claudeFoutHints') or [] if h.get('fout') == dd.get('fout')}
         _zet(it, slog, 'v703', f'V-#703: {o[8:]} → {a} : {b} = {c} : ? (antwoord was een getal uit de vraag, review batch 6)',
+             f'Vul in. {a} : {b} = {c} : ?', str(ans), [(f, l, uit.get(l)) for f, l in sl], f'{a} : {b} = {c} : ?')
+    if d == 'G7-VERH-03' and c8 in R6_466:      # Oef-#466: a − b mag niet het antwoord zijn (zelfde k, zelfde routes van Claudes sleutels)
+        a, b, c, sl = R6_466[c8]; k = c // a; ans = b * k
+        assert c % a == 0 and ans not in (a, b, c) and b + c - a != ans and a - b != ans and re.fullmatch(r'Vul in\. \d+ : \d+ = \d+ : \?', o)
+        assert a - b not in {int(f) for f, _ in sl}, (c8, a - b)
+        uit = {dd['denkfout']: h.get('uitleg') for dd in e.get('claudeDenkfouten') or [] for h in e.get('claudeFoutHints') or [] if h.get('fout') == dd.get('fout')}
+        _zet(it, slog, 'oef466', f'Oef-#466: {o[8:]} → {a} : {b} = {c} : ? (aftrekken a − b gaf toevallig het antwoord)',
              f'Vul in. {a} : {b} = {c} : ?', str(ans), [(f, l, uit.get(l)) for f, l in sl], f'{a} : {b} = {c} : ?')
     if d == 'G7-VERH-03' and c8 in R6_V704:
         z, k = R6_V704[c8]; assert len({z, z * z} & {k, k * k}) == 0

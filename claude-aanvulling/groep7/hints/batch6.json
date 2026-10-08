@@ -48,6 +48,14 @@
      "tekstSterker": "Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot is het getal in de verhouding met het vraagteken? Doe het getal achter de dubbele punt in de verhouding zonder vraagteken evenveel keer."
     },
     {
+     "bron": "nieuw",
+     "soort": "verschil van twee getallen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Dat is het verschil tussen twee getallen uit de vraag. Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.",
+     "tekstSterker": "Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot is het getal in de verhouding met het vraagteken? Doe het getal achter de dubbele punt in de verhouding zonder vraagteken evenveel keer."
+    },
+    {
      "bron": "claude-taalfix",
      "soort": "verschil opgeteld of keer elkaar",
      "claudeDenkfout": "verhoudingstabel-verkeerd",
@@ -190,7 +198,7 @@
    "nr": 4,
    "somtype": "[rooster] Een rechthoek is # hokjes breed en # hokjes hoog. Kleur een rechthoek die # keer zo groot is: elke zijde # keer zo lang.",
    "nrOrigineel": 4,
-   "somtypeOrigineel": "[vak(ken) aantikken op rooster] Een rechthoek is # hokjes breed en # hokjes hoog. Kleur een rechthoek die # keer zo groot is: elke zijde # keer zo lang.",
+   "somtypeOrigineel": "[rooster] Een rechthoek is # hokjes breed en # hokjes hoog. Kleur een rechthoek die # keer zo groot is: elke zijde # keer zo lang.",
    "hint1": "In de vraag staat wat zo groot hier betekent: elke zijde wordt zoveel keer zo lang. Dat geldt voor de breedte én voor de hoogte.",
    "hint2": "Doe de breedte keer het aantal keer, en de hoogte ook. Kleur een rechthoek met die nieuwe breedte en die nieuwe hoogte.",
    "ouderzin": "Je kind kleurt een rechthoek waarvan elke zijde zoveel keer zo lang is.",
@@ -241,12 +249,14 @@
      "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
     }
    ],
-   "kopGewijzigd": {
-    "van": "[vak(ken) aantikken op rooster] Een rechthoek is # hokjes breed en # hokjes hoog. Kleur een rechthoek die # keer zo groot is: elke zijde # keer zo lang.",
-    "naar": "[rooster] Een rechthoek is # hokjes breed en # hokjes hoog. Kleur een rechthoek die # keer zo groot is: elke zijde # keer zo lang.",
-    "op": "2026-10-08"
-   },
-   "koppeling": "claudeId"
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "[vak(ken) aantikken op rooster] Een rechthoek is # hokjes breed en # hokjes hoog. Kleur een rechthoek die # keer zo groot is: elke zijde # keer zo lang.",
+     "tot": "2026-10-08"
+    }
+   ],
+   "kopNagekeken": "2026-10-08"
   },
   {
    "doel": "G7-VERH-03",
@@ -306,7 +316,7 @@
    "nr": 6,
    "somtype": "Elke zijde van een vierkant van # bij # cm wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?",
    "nrOrigineel": 6,
-   "somtypeOrigineel": "Een vierkant van # bij # cm wordt # keer zo groot: elke zijde wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?",
+   "somtypeOrigineel": "Elke zijde van een vierkant van # bij # cm wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?",
    "hint1": "De oppervlakte is lengte keer breedte. Worden alle zijden langer, dan worden de lengte én de breedte langer.",
    "hint2": "Leg zoveel kleine vierkanten naast elkaar als het aantal keer dat elke zijde langer wordt. Leg evenveel rijen onder elkaar. Tel ze.",
    "ouderzin": "Je kind ontdekt dat de oppervlakte van een vierkant sneller groeit dan de zijden.",
@@ -352,12 +362,14 @@
      "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
     }
    ],
-   "koppeling": "claudeId",
-   "kopGewijzigd": {
-    "van": "Een vierkant van # bij # cm wordt # keer zo groot: elke zijde wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?",
-    "naar": "Elke zijde van een vierkant van # bij # cm wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?",
-    "op": "2026-10-08"
-   }
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "Een vierkant van # bij # cm wordt # keer zo groot: elke zijde wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?",
+     "tot": "2026-10-08"
+    }
+   ],
+   "kopNagekeken": "2026-10-08"
   },
   {
    "doel": "G7-VERH-03",
@@ -511,7 +523,7 @@
    "nr": 10,
    "somtype": "Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. Hoe lang wordt het model?",
    "nrOrigineel": 10,
-   "somtypeOrigineel": "Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe lang wordt het model?",
+   "somtypeOrigineel": "Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. Hoe lang wordt het model?",
    "hint1": "Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.",
    "hint2": "Maak van de echte maat eerst centimeters, als dat nog moet. Deel dan door het getal achter de dubbele punt. Zoveel centimeter wordt het op de tekening of in het model.",
    "ouderzin": "Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.",
@@ -553,12 +565,14 @@
      "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
     }
    ],
-   "koppeling": "claudeId",
-   "kopGewijzigd": {
-    "van": "Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe lang wordt het model?",
-    "naar": "Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. Hoe lang wordt het model?",
-    "op": "2026-10-08"
-   }
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe lang wordt het model?",
+     "tot": "2026-10-08"
+    }
+   ],
+   "kopNagekeken": "2026-10-08"
   },
   {
    "doel": "G7-VERH-03",
@@ -614,7 +628,7 @@
    "nr": 12,
    "somtype": "Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?",
    "nrOrigineel": 12,
-   "somtypeOrigineel": "Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?",
+   "somtypeOrigineel": "Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?",
    "hint1": "Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.",
    "hint2": "Maak van de echte maat eerst centimeters, als dat nog moet. Deel dan door het getal achter de dubbele punt. Zoveel centimeter wordt het op de tekening of in het model.",
    "ouderzin": "Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.",
@@ -625,7 +639,7 @@
      "claudeDenkfout": null,
      "regel": "900 cm",
      "tekst": "Heb je keer gedaan? In het model is alles kleiner dan echt: deel door het getal achter de dubbele punt.",
-     "tekstSterker": "Hoe vaak past het getal achter de dubbele punt in de echte maat? Zoveel centimeter wordt het op de tekening."
+     "tekstSterker": "Hoe vaak past het getal achter de dubbele punt in de echte maat? Zoveel centimeter wordt het in het model."
     },
     {
      "bron": "nieuw",
@@ -633,7 +647,7 @@
      "claudeDenkfout": null,
      "regel": "90 cm",
      "tekst": "Dat is de echte maat. Op de tekening of in het model is alles kleiner dan in het echt.",
-     "tekstSterker": "Hoe vaak past het getal achter de dubbele punt in de echte maat? Zoveel centimeter wordt het op de tekening."
+     "tekstSterker": "Hoe vaak past het getal achter de dubbele punt in de echte maat? Zoveel centimeter wordt het in het model."
     },
     {
      "bron": "nieuw",
@@ -656,12 +670,14 @@
      "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
     }
    ],
-   "koppeling": "claudeId",
-   "kopGewijzigd": {
-    "van": "Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?",
-    "naar": "Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?",
-    "op": "2026-10-08"
-   }
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?",
+     "tot": "2026-10-08"
+    }
+   ],
+   "kopNagekeken": "2026-10-08"
   },
   {
    "doel": "G7-VERH-03",
@@ -864,7 +880,7 @@
    "nr": 17,
    "somtype": "Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Welke tekening wordt het grootst?",
    "nrOrigineel": 17,
-   "somtypeOrigineel": "Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Welke tekening wordt het grootst?",
+   "somtypeOrigineel": "Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Welke tekening wordt het grootst?",
    "hint1": "Bij een schaal staat een dubbele punt (:) tussen de getallen. Hoe groter het getal achter de dubbele punt, hoe meer centimeter in het echt bij één centimeter op de tekening hoort.",
    "hint2": "Stel: het echte voorwerp is tweeduizend centimeter. Reken voor elke schaal uit hoe lang het op de tekening wordt. Welke tekening is groter?",
    "ouderzin": "Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.",
@@ -906,12 +922,14 @@
      "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
     }
    ],
-   "koppeling": "claudeId",
-   "kopGewijzigd": {
-    "van": "Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Welke tekening wordt het grootst?",
-    "naar": "Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Welke tekening wordt het grootst?",
-    "op": "2026-10-08"
-   }
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Welke tekening wordt het grootst?",
+     "tot": "2026-10-08"
+    }
+   ],
+   "kopNagekeken": "2026-10-08"
   },
   {
    "doel": "G7-VERH-03",
@@ -1016,7 +1034,7 @@
    "nr": 20,
    "somtype": "Op een landkaart staat schaal # : #. Hoeveel is # cm op de kaart in het echt?",
    "nrOrigineel": 20,
-   "somtypeOrigineel": "Op een landkaart staat schaal # : # #. Hoeveel is # cm op de kaart in het echt?",
+   "somtypeOrigineel": "Op een landkaart staat schaal # : #. Hoeveel is # cm op de kaart in het echt?",
    "hint1": "Bij een schaal staat een dubbele punt (:) tussen de getallen. Het ene getal hoort bij de tekening, het andere bij het echte voorwerp.",
    "hint2": "Eén centimeter op de kaart of plattegrond is in het echt zoveel centimeter als het getal achter de dubbele punt. Reken dat om: honderd centimeter is één meter, duizend meter is één kilometer.",
    "ouderzin": "Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.",
@@ -1058,12 +1076,14 @@
      "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
     }
    ],
-   "koppeling": "claudeId",
-   "kopGewijzigd": {
-    "van": "Op een landkaart staat schaal # : # #. Hoeveel is # cm op de kaart in het echt?",
-    "naar": "Op een landkaart staat schaal # : #. Hoeveel is # cm op de kaart in het echt?",
-    "op": "2026-10-08"
-   }
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "Op een landkaart staat schaal # : # #. Hoeveel is # cm op de kaart in het echt?",
+     "tot": "2026-10-08"
+    }
+   ],
+   "kopNagekeken": "2026-10-08"
   },
   {
    "doel": "G7-VERH-03",
@@ -1266,7 +1286,7 @@
    "nr": 25,
    "somtype": "Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?",
    "nrOrigineel": 25,
-   "somtypeOrigineel": "Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?",
+   "somtypeOrigineel": "Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?",
    "hint1": "Bij een schaal staat een dubbele punt (:) tussen de getallen. Het getal achter de dubbele punt zegt hoeveel keer zo groot het in het echt is.",
    "hint2": "Maak van de echte maat eerst centimeters, als dat nog moet. Deel dan door het getal achter de dubbele punt. Zoveel centimeter wordt het op de tekening of in het model.",
    "ouderzin": "Je kind rekent met een schaal (zoals op een plattegrond) tussen de tekening en het echte voorwerp.",
@@ -1308,12 +1328,14 @@
      "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
     }
    ],
-   "koppeling": "claudeId",
-   "kopGewijzigd": {
-    "van": "Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?",
-    "naar": "Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm in het model is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?",
-    "op": "2026-10-08"
-   }
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?",
+     "tot": "2026-10-08"
+    }
+   ],
+   "kopNagekeken": "2026-10-08"
   },
   {
    "doel": "G7-VERH-04",

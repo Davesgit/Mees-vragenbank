@@ -33,6 +33,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `één keer te veel` (fout = antwoord + getal2) → Is dat één keer te veel? Of heb je het verschil erbij opgeteld? Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.  [nieuw]
   - `één keer te weinig` (fout = antwoord - getal2) → Is dat één keer te weinig? Of heb je het verschil erbij opgeteld? Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.  [nieuw]
   - `gedeeld in plaats van keer` (Claudes sleutel: verkeerde-bewerking) → Heb je gedeeld? Rechts van het isteken is het getal vóór de dubbele punt groter. Dan wordt het getal achter de dubbele punt ook groter: doe keer.  [Claude, taalfix]
+  - `verschil van twee getallen` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het verschil tussen twee getallen uit de vraag. Hoeveel keer zo groot wordt het getal vóór de dubbele punt? Doe het getal achter de dubbele punt precies zoveel keer.  [nieuw]
   - `verschil opgeteld of keer elkaar` (Claudes sleutel: verhoudingstabel-verkeerd) → Heb je het verschil erbij opgeteld, of twee getallen uit de vraag keer elkaar gedaan? Vergelijk de getallen vóór de dubbele punt: hoeveel keer zo groot wordt het? Doe het getal achter de dubbele punt precies zoveel keer.  [Claude, taalfix]
   - `andere fout` (andere fout) → Vergelijk de getallen vóór de dubbele punt, en doe het getal erachter evenveel keer.  [nieuw]
 - Status: hints klaar
@@ -122,7 +123,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `er iets bij opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je ergens iets bij opgeteld? Elke zijde wordt keer dat getal, niet erbij.  [Claude, taalfix]
   - `hoogte niet langer` (Claudes sleutel: deel-vergeten-bij-splitsen) → Is de hoogte ook langer geworden? Elke zijde wordt zoveel keer zo lang: de breedte en de hoogte.  [Claude, taalfix]
   - `andere fout` (andere fout) → Doe de breedte en de hoogte allebei keer het aantal keer.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '[vak(ken) aantikken op rooster] Een rechthoek is # hokjes breed en # hokjes hoog. Kleur een rechthoek die # keer zo groot is: elke zijde # keer zo lang.'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 5: Een foto is # cm breed en # cm hoog. Hij wordt # keer zo groot afgedrukt. Hoe breed wordt de foto?
@@ -179,7 +179,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `alleen de zijde` (Claudes sleutel: omtrek-oppervlakte-verwisseld) → Dat is hoeveel keer zo lang elke zijde wordt. De oppervlakte groeit meer: de lengte én de breedte worden langer.  [Claude, taalfix]
   - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je opgeteld? De lengte en de breedte worden allebei zoveel keer zo lang. Hoeveel kleine vierkanten passen er dan in het grote?  [Claude, taalfix]
   - `andere fout` (andere fout) → Hoeveel kleine vierkanten passen er in het grote vierkant?  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een vierkant van # bij # cm wordt # keer zo groot: elke zijde wordt # keer zo lang. Hoeveel keer zo groot wordt de oppervlakte?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 7: Een [ding] is # m lang. Je tekent de tuin op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe lang wordt de tuin op de tekening?
@@ -281,7 +280,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `keer gedaan` (120 cm) → Heb je keer gedaan? Het model is kleiner dan echt: deel door het getal achter de dubbele punt.  [nieuw]
   - `door een ander getal gedeeld` (60 cm) → Heb je door een ander getal gedeeld? Deel de echte maat in centimeters door het getal achter de dubbele punt.  [nieuw]
   - `andere fout` (andere fout) → Maak van de echte maat centimeters, en deel door het getal achter de dubbele punt.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een echte boot is # m lang. Je maakt een model op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe lang wordt het model?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 11: Een muur is in het echt # cm lang. Je tekent hem op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoe lang wordt de muur op je tekening?
@@ -332,7 +330,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `keer gedaan` (900 cm) → Heb je keer gedaan? In het model is alles kleiner dan echt: deel door het getal achter de dubbele punt.  [nieuw]
   - `de echte maat` (90 cm) → Dat is de echte maat. Op de tekening of in het model is alles kleiner dan in het echt.  [nieuw]
   - `andere fout` (andere fout) → Deel de echte maat door het getal achter de dubbele punt.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een poppenhuis is gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Een echte stoel is # cm hoog. Hoe hoog is de stoel in het poppenhuis?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 13: Een speelgoedauto is gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. De auto is # cm lang. Hoe lang is de echte auto?
@@ -460,7 +457,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere schaal gekozen` (De tekening op schaal 1 : 100) → Bij die schaal hoort bij één centimeter op de tekening juist meer in het echt. Wordt de tekening dan groter of kleiner?  [nieuw]
   - `even groot` (Beide tekeningen zijn even groot) → Het is hetzelfde voorwerp, maar de schalen zijn verschillend. Dan worden de tekeningen ook verschillend groot.  [nieuw]
   - `andere fout` (andere fout) → Reken voor elke schaal uit hoe lang de tekening wordt.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Je tekent dezelfde boom twee keer: een keer op schaal # : # en een keer op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Welke tekening wordt het grootst?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 18: Marit tekent een boom op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Sem tekent dezelfde boom op schaal # : #. Wie krijgt de kleinste tekening?
@@ -536,7 +532,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tien keer te weinig` (100 m) → Dat is tien keer te weinig. Reken de centimeters eerst om naar meters, en dan naar kilometers.  [nieuw]
   - `tien keer te veel` (10 km) → Dat is tien keer te veel. Honderd centimeter is één meter, en duizend meter is één kilometer.  [nieuw]
   - `andere fout` (andere fout) → Reken de centimeters om naar meters, en dan naar kilometers.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Op een landkaart staat schaal # : # #. Hoeveel is # cm op de kaart in het echt?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 21: Op een plattegrond staat schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. Hoeveel is # cm op die plattegrond in het echt?
@@ -662,5 +657,4 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `de echte maat` (25 m) → Dat is de echte maat. Op de tekening of in het model is alles kleiner dan in het echt.  [nieuw]
   - `tien keer te lang` (250 cm) → Dat is tien keer te lang. Maak van de echte maat eerst centimeters, en deel dan door het getal achter de dubbele punt.  [nieuw]
   - `andere fout` (andere fout) → Maak van de echte maat centimeters, en deel door het getal achter de dubbele punt.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Van een school wordt een maquette gemaakt op schaal # : #. Dat betekent: # cm op de tekening is # cm in het echt. De school is # m lang. Hoe lang wordt de maquette?'. Nakijken of ze nog passen.
 - Status: hints klaar

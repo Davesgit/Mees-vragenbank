@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T14:58:27+0200",
+ "gegenereerdOp": "2026-10-08T15:13:54+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-VERH-04",
  "bordtitel": "Breuk, procent en verhouding koppelen",
@@ -30336,11 +30336,32 @@
      "1 op de 4"
     ]
    },
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": "5 op de 15 → Vergelijk de sterkaartjes met alle kaartjes, niet met de kaartjes zonder ster. · 1 op de 5 → Het aantal sterren is niet meteen het antwoord. Kijk hoe vaak 5 in 20 past.",
-   "ouderzin": "",
+   "hint": "Bij 'op de' komt eerst het deel waar de vraag over gaat. Achter 'op de' komt het totaal: alles samen.",
+   "sterkereHint": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "5 op de 15",
+     "uitleg": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "1 op de 5",
+     "uitleg": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "deel achter op de",
+     "bron": "claude-taalfix"
+    }
+   ],
+   "foutHintsTekst": "5 op de 15 → Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest. · 1 op de 5 → Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+   "ouderzin": "Je kind beschrijft een deel van een groep met 'op de': eerst het deel, dan het totaal.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -30472,7 +30493,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 4,
+     "somtype": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -30488,8 +30514,77 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5 op de 15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "deel achter op de",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1 op de 5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: een-ernaast",
+     "soort": "deel verkeerd geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens."
   },
   {
    "id": "G7-VERH-04-claude-bank-128",
@@ -30523,22 +30618,32 @@
      "4 op de 5"
     ]
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij 'op de' komt eerst het deel waar de vraag over gaat. Achter 'op de' komt het totaal: alles samen.",
+   "sterkereHint": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "4 op de 4",
-     "uitleg": "Tel alle knikkers, ook de rode."
+     "uitleg": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "1 op de 5",
-     "uitleg": "Er wordt gevraagd naar een knikker die juist niet rood is."
+     "uitleg": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "4 op de 4 → Tel alle knikkers, ook de rode. · 1 op de 5 → Er wordt gevraagd naar een knikker die juist niet rood is.",
-   "ouderzin": "",
+   "foutHintsTekst": "4 op de 4 → Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest. · 1 op de 5 → Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+   "ouderzin": "Je kind beschrijft een deel van een groep met 'op de': eerst het deel, dan het totaal.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -30661,7 +30766,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 4,
+     "somtype": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -30677,8 +30787,77 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4 op de 4"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1 op de 5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "deel achter op de",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: een-ernaast",
+     "soort": "deel verkeerd geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens."
   },
   {
    "id": "G7-VERH-04-claude-bank-129",
@@ -30713,22 +30892,32 @@
      "2 op de 5"
     ]
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij 'op de' komt eerst het deel waar de vraag over gaat. Achter 'op de' komt het totaal: alles samen.",
+   "sterkereHint": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "4 op de 6",
-     "uitleg": "Tel alle sokken bij elkaar, ook de zwarte."
+     "uitleg": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "6 op de 10",
-     "uitleg": "Kijk nog eens welke kleur sok in de vraag staat."
+     "uitleg": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "4 op de 6 → Tel alle sokken bij elkaar, ook de zwarte. · 6 op de 10 → Kijk nog eens welke kleur sok in de vraag staat.",
-   "ouderzin": "",
+   "foutHintsTekst": "4 op de 6 → Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest. · 6 op de 10 → Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+   "ouderzin": "Je kind beschrijft een deel van een groep met 'op de': eerst het deel, dan het totaal.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -30851,7 +31040,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 4,
+     "somtype": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -30867,8 +31061,77 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4 op de 6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6 op de 10"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "deel achter op de",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: een-ernaast",
+     "soort": "deel verkeerd geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens."
   },
   {
    "id": "G7-VERH-04-claude-bank-130",
@@ -31173,11 +31436,32 @@
      "1 op de 3"
     ]
    },
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": "8 op de 12 → Je hebt de lootjes zonder prijs geteld. Lees nog eens wat er gevraagd wordt. · 4 op de 8 → Vergelijk de prijslootjes met alle lootjes in de pot, niet alleen met de lege.",
-   "ouderzin": "",
+   "hint": "Bij 'op de' komt eerst het deel waar de vraag over gaat. Achter 'op de' komt het totaal: alles samen.",
+   "sterkereHint": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "8 op de 12",
+     "uitleg": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "4 op de 8",
+     "uitleg": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix"
+    }
+   ],
+   "foutHintsTekst": "8 op de 12 → Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel. · 4 op de 8 → Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+   "ouderzin": "Je kind beschrijft een deel van een groep met 'op de': eerst het deel, dan het totaal.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -31310,7 +31594,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 4,
+     "somtype": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -31326,8 +31615,77 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4 op de 8"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8 op de 12"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "deel achter op de",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: een-ernaast",
+     "soort": "deel verkeerd geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens."
   },
   {
    "id": "G7-VERH-04-claude-bank-132",
@@ -31361,22 +31719,32 @@
      "3 op de 10"
     ]
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij 'op de' komt eerst het deel waar de vraag over gaat. Achter 'op de' komt het totaal: alles samen.",
+   "sterkereHint": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "7 op de 10",
-     "uitleg": "Kijk goed naar welke kleur er in de vraag wordt gevraagd."
+     "uitleg": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "3 op de 7",
-     "uitleg": "Je moet het aantal rode knikkers vergelijken met alle knikkers samen, niet met de blauwe."
+     "uitleg": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "7 op de 10 → Kijk goed naar welke kleur er in de vraag wordt gevraagd. · 3 op de 7 → Je moet het aantal rode knikkers vergelijken met alle knikkers samen, niet met de blauwe.",
-   "ouderzin": "",
+   "foutHintsTekst": "7 op de 10 → Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel. · 3 op de 7 → Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+   "ouderzin": "Je kind beschrijft een deel van een groep met 'op de': eerst het deel, dan het totaal.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -31498,7 +31866,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 4,
+     "somtype": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -31514,8 +31887,77 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3 op de 7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7 op de 10"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "deel achter op de",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: een-ernaast",
+     "soort": "deel verkeerd geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens."
   },
   {
    "id": "G7-VERH-04-claude-bank-133",
@@ -31800,22 +32242,32 @@
      "1 op de 2"
     ]
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij 'op de' komt eerst het deel waar de vraag over gaat. Achter 'op de' komt het totaal: alles samen.",
+   "sterkereHint": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "2 op de 10",
-     "uitleg": "Schrijf alle even getallen tot en met 10 op en tel hoeveel het er zijn."
+     "uitleg": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "4 op de 10",
-     "uitleg": "Vergeet bij het tellen van de even getallen de 10 zelf niet."
+     "uitleg": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: een-ernaast",
+     "soort": "deel verkeerd geteld",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "2 op de 10 → Schrijf alle even getallen tot en met 10 op en tel hoeveel het er zijn. · 4 op de 10 → Vergeet bij het tellen van de even getallen de 10 zelf niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "2 op de 10 → Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens. · 4 op de 10 → Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+   "ouderzin": "Je kind beschrijft een deel van een groep met 'op de': eerst het deel, dan het totaal.",
    "getallenruimte": "0–1.000",
    "context": "midden",
    "visual": {
@@ -31934,7 +32386,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 4,
+     "somtype": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -31950,8 +32407,75 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "deel achter op de",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: een-ernaast",
+     "soort": "deel verkeerd geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4 op de 10"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens."
   },
   {
    "id": "G7-VERH-04-claude-bank-135",
@@ -31986,22 +32510,32 @@
      "1 op de 2"
     ]
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij 'op de' komt eerst het deel waar de vraag over gaat. Achter 'op de' komt het totaal: alles samen.",
+   "sterkereHint": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "3 op de 3",
-     "uitleg": "Tel alle kaartjes, dus alle letters samen."
+     "uitleg": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "1 op de 6",
-     "uitleg": "Tel nog eens hoe vaak de letter A in het woord voorkomt."
+     "uitleg": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "uitlegSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "3 op de 3 → Tel alle kaartjes, dus alle letters samen. · 1 op de 6 → Tel nog eens hoe vaak de letter A in het woord voorkomt.",
-   "ouderzin": "",
+   "foutHintsTekst": "3 op de 3 → Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest. · 1 op de 6 → Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+   "ouderzin": "Je kind beschrijft een deel van een groep met 'op de': eerst het deel, dan het totaal.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -32120,7 +32654,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    "somtypeOrigineel": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 4,
+     "somtype": "Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -32136,8 +32675,75 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt het totaal. Tel alles samen: het deel waar de vraag over gaat én de rest.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3 op de 3"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel dat deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "deel achter op de",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: een-ernaast",
+     "soort": "deel verkeerd geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "tekstSterker": "Tel eerst alles samen: dat is het totaal. Tel dan hoeveel er bij het deel horen waar de vraag over gaat. Kies het antwoord met eerst dat deel, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens."
   },
   {
    "id": "G7-VERH-04-claude-bank-136",
@@ -32172,11 +32778,32 @@
      "1 op de 4"
     ]
    },
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": "1 op de 3 → Het aantal rode vakjes is niet meteen het antwoord. Kijk hoe vaak 3 in 12 past. · 3 op de 9 → Tel alle vakjes van het rad, ook de rode.",
-   "ouderzin": "",
+   "hint": "Bij 'op de' komt eerst het aantal vakjes waar de vraag over gaat. Achter 'op de' komt het aantal vakjes van het hele rad.",
+   "sterkereHint": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "1 op de 3",
+     "uitleg": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "uitlegSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "deel achter op de",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "3 op de 9",
+     "uitleg": "Achter 'op de' komt het totaal: alle vakjes van het rad samen. Tel ze allemaal.",
+     "uitlegSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix"
+    }
+   ],
+   "foutHintsTekst": "1 op de 3 → Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel. · 3 op de 9 → Achter 'op de' komt het totaal: alle vakjes van het rad samen. Tel ze allemaal.",
+   "ouderzin": "Je kind beschrijft een deel van een rad met 'op de': eerst het aantal vakjes van het deel, dan alle vakjes.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -32318,7 +32945,12 @@
     "duplicaatVan": null,
     "somtypeNr": 7,
     "somtypeNrOrigineel": 7,
-    "somtypeOrigineel": "[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')"
+    "somtypeOrigineel": "[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 7,
+     "somtype": "[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -32334,8 +32966,77 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt het totaal: alle vakjes van het rad samen. Tel ze allemaal.",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3 op de 9"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel die vakjes.",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "deel achter op de",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1 op de 3"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: een-ernaast",
+     "soort": "deel verkeerd geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens."
   },
   {
    "id": "G7-VERH-04-claude-bank-137",
@@ -32370,11 +33071,32 @@
      "1 op de 4"
     ]
    },
-   "hint": "",
-   "sterkereHint": "",
-   "foutHints": [],
-   "foutHintsTekst": "2 op de 6 → Tel alle vakjes van het rad, ook de groene. · 6 op de 8 → Je hebt de vakjes geteld die niet groen zijn. Lees nog eens wat er gevraagd wordt.",
-   "ouderzin": "",
+   "hint": "Bij 'op de' komt eerst het aantal vakjes waar de vraag over gaat. Achter 'op de' komt het aantal vakjes van het hele rad.",
+   "sterkereHint": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "6 op de 8",
+     "uitleg": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel die vakjes.",
+     "uitlegSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "2 op de 6",
+     "uitleg": "Achter 'op de' komt het totaal: alle vakjes van het rad samen. Tel ze allemaal.",
+     "uitlegSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix"
+    }
+   ],
+   "foutHintsTekst": "6 op de 8 → Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel die vakjes. · 2 op de 6 → Achter 'op de' komt het totaal: alle vakjes van het rad samen. Tel ze allemaal.",
+   "ouderzin": "Je kind beschrijft een deel van een rad met 'op de': eerst het aantal vakjes van het deel, dan alle vakjes.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -32517,7 +33239,12 @@
     "duplicaatVan": null,
     "somtypeNr": 7,
     "somtypeNrOrigineel": 7,
-    "somtypeOrigineel": "[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')"
+    "somtypeOrigineel": "[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 7,
+     "somtype": "[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -32533,11 +33260,80 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "soort": "niet met het totaal",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt het totaal: alle vakjes van het rad samen. Tel ze allemaal.",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2 op de 6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "soort": "het andere deel",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het andere deel. Lees nog eens waar de vraag over gaat, en tel die vakjes.",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6 op de 8"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "deel achter op de",
+     "bron": "claude-taalfix",
+     "tekst": "Achter 'op de' komt niet het deel, maar het totaal. Hoeveel zijn het er samen? Voor 'op de' komt het deel.",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: een-ernaast",
+     "soort": "deel verkeerd geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Het totaal klopt. Tel het deel waar de vraag over gaat nog eens precies.",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens.",
+     "tekstSterker": "Tel alle vakjes van het rad: dat is het totaal. Tel dan de vakjes waar de vraag over gaat. Kies het antwoord met eerst dat aantal, dan 'op de', dan het totaal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Voor 'op de' komt het deel waar de vraag over gaat, achter 'op de' het totaal. Tel ze allebei nog eens."
   }
  ],
- "hintsSyncOp": "2026-10-08T14:58:33+02:00",
+ "hintsSyncOp": "2026-10-08T15:14:01+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -32561,10 +33357,10 @@
   },
   {
    "batch": "batch6.json",
-   "md5": "dc872ad27da4"
+   "md5": "b5dbb5f5c088"
   }
  ],
- "geschrevenOp": "2026-10-08T14:58:33+02:00",
+ "geschrevenOp": "2026-10-08T15:14:01+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }
