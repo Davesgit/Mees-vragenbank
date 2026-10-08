@@ -13,7 +13,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “Op welk cijfer eindigt # × #?” (koppeling: claudeId)
 - Items: **53** · Claude-doelen: T3 (53) · regel: G8-T3-laatste-cijfer
 - Getallenruimte: 0–1.000 · type: kale
-- Denkfouten (Claude): plaatswaarde-verkeerd (36), een-ernaast (28), optellen-ipv-vermenigvuldigen (20), getal-overgenomen (15), tafelbuur (6)
+- Denkfouten (Claude): plaatswaarde-verkeerd (36), een-ernaast (27), optellen-ipv-vermenigvuldigen (20), getal-overgenomen (15), tafelbuur (6)
 - Verschillende Claude-fout-hints: 4 (meest: “Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.”)
 - Voorbeelden:
   - `G8-GET-E02-claude-bank-071` (Claude T3, bank, niveau 1 → basis)

@@ -1,4 +1,4 @@
-# G8-merge: twijfel voor Didactiek (build 08-10 17:49)
+# G8-merge: twijfel voor Didactiek (build 08-10 18:09)
 
 Per categorie: aantal, voorstel, de vraag en voorbeelden. Volledige items: data/twijfel.json. Besluit per categorie (of per item) graag terug in een besluitenbestand, zoals bij G7.
 

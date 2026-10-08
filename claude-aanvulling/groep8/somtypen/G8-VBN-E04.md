@@ -393,8 +393,8 @@ Dit staafdiagram heet "Wat drinken kinderen bij de lunch?" en toont percentages.
 - Voorbeelden:
   - `G8-VBN-E04-claude-bank-041` (Claude G9, ai, niveau 3 → toepassen)
     - **Opgave:** Een klas telt 25 kinderen. In een staafdiagram over huisdieren tellen de staven samen op tot 30. Wat is hiervoor de beste verklaring?
-    - **Opties:** A) Sommige kinderen hebben meer dan één huisdier · B) De grafiek is fout getekend · C) Er zitten 30 kinderen in de klas
-    - **Antwoord:** Sommige kinderen hebben meer dan één huisdier  (controle: n.v.t.)
+    - **Opties:** A) Sommige kinderen hebben meer dan één soort huisdier · B) De grafiek is fout getekend · C) Er zitten 30 kinderen in de klas
+    - **Antwoord:** Sommige kinderen hebben meer dan één soort huisdier  (controle: n.v.t.)
     - **Fout-hints (Claude):** De grafiek is fout getekend → Denk eerst na of er een gewone reden kan zijn waarom een kind twee keer meetelt. · Er zitten 30 kinderen in de klas → In de vraag staat duidelijk hoeveel kinderen er in de klas zitten. Lees dat nog eens.
     - **Uitleg (Claude):** Een kind kan bij meerdere soorten huisdieren meegeteld worden. Daardoor is het totaal van de staven hoger dan het aantal kinderen. Dat is geen fout in de grafiek.
 

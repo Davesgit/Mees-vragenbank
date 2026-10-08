@@ -829,6 +829,8 @@ def fix_g8(r, slog):
         Z765 = {'0521e250': ((19, 17), (29, 17)), '134ef787': ((112, 12), (112, 14)), '1a909be3': ((19, 7), (29, 7)), '2aa05195': ((42, 6), (32, 6)),
                 '52efae1d': ((43, 8), (33, 8)), '6478ec2b': ((15, 17), (15, 27)), '906b269a': ((49, 7), (39, 7)), '95c4251c': ((16, 9), (26, 9)),
                 '962eb1b9': ((119, 27), (109, 27)), 'a2e9ba40': ((59, 3), (69, 3)), 'eb64ee33': ((147, 35), (137, 35))}
+        Z975 = {'061aa7b2': ((14, 16), (14, 17)), '2aa05195': ((32, 6), (27, 6)), '5f936e21': ((161, 27), (159, 27)), '61eadfa8': ((203, 31), (203, 29)),
+                '73f927aa': ((14, 6), (17, 6)), 'a08ac8d5': ((126, 32), (126, 27)), 'ceb54cf1': ((44, 6), (43, 6)), 'ecb0c2b6': ((21, 3), (18, 3)), 'ecda39ad': ((51, 7), (59, 7))}
         if c8 in Z765 and EC.lees(r) == Z765[c8][0]:
             (a0, b0), (a1, b1) = Z765[c8]; o = r['opgave']; r['opgave'] = f'Op welk cijfer eindigt {a1} × {b1}?'; ant = str(a1 * b1 % 10); r['antwoord'] = ant
             if isinstance(r.get('antwoordDetail'), dict):
@@ -847,12 +849,50 @@ def fix_g8(r, slog):
                     if v_ == ant or v_ in gezien: continue
                     gezien.add(v_); L2.append(dict(d_, fout=v_))
                 if ex.get(k_) is not None: ex[k_] = L2
-            assert not EC.fouten(a1, b1), ('Z-#765', c8)
+            if isinstance(ex.get('claudeKaleSom'), str) and EC.RX.match(ex['claudeKaleSom'].strip()): ex['claudeKaleSom'] = r['opgave']      # V-#975: kale som = de nieuwe opgave
+            assert not EC.fouten(a1, b1) or c8 in Z975, ('Z-#765', c8)
             slog(r, f'Z-#765: geen foute route op het eindcijfer ({a0} × {b0} → {a1} × {b1}, antwoord {ant})', 'opgave', o, r['opgave'])
+        # Z-#975 (Didactiek b8 deel A, les 306): het antwoord is niet het eenheidscijfer van een factor (behalve 5 × oneven); filter in EC.fouten.
+        # 9 items (062, 070, 082, 083, 086, 097, 102, 109, 110), nieuwe factoren met evenveel cijfers, geen eenheid 0/1/5, antwoorden 2–8 (spreiding 7–8 per cijfer).
+        # Claudes sleutels volgen hun label: plaatswaarde-verkeerd = de eenheid van dezelfde factor, optellen = (u1 + u2) mod 10, een-ernaast = antwoord ± 1,
+        # getal-overgenomen = het cijfer op dezelfde plek. Een sleutel = antwoord valt weg. V-#975: de kale som gaat mee.
+        if c8 in Z975 and EC.lees(r) == Z975[c8][0]:
+            (a0, b0), (a1, b1) = Z975[c8]; o = r['opgave']; ant0 = str(a0 * b0 % 10); ant = str(a1 * b1 % 10)
+            r['opgave'] = f'Op welk cijfer eindigt {a1} × {b1}?'; r['antwoord'] = ant
+            if isinstance(r.get('antwoordDetail'), dict):
+                for k_, v_ in list(r['antwoordDetail'].items()):
+                    if isinstance(v_, str) and v_ == ant0: r['antwoordDetail'][k_] = ant
+            if r.get('geldigeAntwoorden'): r['geldigeAntwoorden'] = [ant]
+            ex = r['extraVelden']
+            for k_ in ('claudeDenkfouten', 'claudeFoutHints'):
+                L2 = []; gezien = set()
+                for i_, d_ in enumerate(ex.get(k_) or []):
+                    lab = d_.get('denkfout') or ((ex.get('claudeDenkfouten') or [])[i_].get('denkfout') if i_ < len(ex.get('claudeDenkfouten') or []) else None)
+                    v_ = str(d_.get('fout'))
+                    # dezelfde route als bij de oude factoren (de route bepaalt de sleutel, niet het label): eerst de route die het label noemt
+                    R975 = [('optellen', lambda a, b: (a % 10 + b % 10) % 10), ('begincijfer', lambda a, b: int(str(a * b)[0])),
+                            ('tientallen', lambda a, b: int(str(a * b)[-2]) if a * b >= 10 else None),
+                            ('eenheid a', lambda a, b: a % 10), ('eenheid b', lambda a, b: b % 10),
+                            ('a − 1', lambda a, b: (a - 1) * b % 10), ('a + 1', lambda a, b: (a + 1) * b % 10), ('b − 1', lambda a, b: a * (b - 1) % 10), ('b + 1', lambda a, b: a * (b + 1) % 10)]
+                    voorkeur = {'optellen-ipv-vermenigvuldigen': ['optellen'], 'plaatswaarde-verkeerd': ['eenheid a', 'eenheid b'], 'getal-overgenomen': ['begincijfer', 'tientallen', 'eenheid a', 'eenheid b'],
+                                'een-ernaast': ['a − 1', 'a + 1', 'b − 1', 'b + 1']}.get(lab, [])
+                    volg = sorted(R975, key=lambda t: (t[0] not in voorkeur, voorkeur.index(t[0]) if t[0] in voorkeur else 0))
+                    for n_, f_ in volg:
+                        if v_.isdigit() and f_(a0, b0) is not None and str(f_(a0, b0)) == v_ and f_(a1, b1) is not None: v_ = str(f_(a1, b1)); break
+                    else:
+                        for x0, x1 in ((str(a0), str(a1)), (str(b0), str(b1))):
+                            if v_ in x0 and len(x0) == len(x1): v_ = x1[x0.index(v_)]; break
+                    if v_ == ant or v_ in gezien: continue
+                    gezien.add(v_); L2.append(dict(d_, fout=v_))
+                if ex.get(k_) is not None: ex[k_] = L2
+            if isinstance(ex.get('claudeKaleSom'), str) and EC.RX.match(ex['claudeKaleSom'].strip()): ex['claudeKaleSom'] = r['opgave']
+            assert not EC.fouten(a1, b1), ('Z-#975', c8, EC.fouten(a1, b1))
+            slog(r, f'Z-#975: antwoord niet het eenheidscijfer van een factor ({a0} × {b0} → {a1} × {b1}, antwoord {ant})', 'opgave', o, r['opgave'])
         # Z-#766 rest (Didactiek b1): E03 #2 026/030 «Reken uit. a : b + c» — a − b (026: 12 − 3 = 9) en a − c (030: 16 − 4 = 12) gaven het antwoord.
         # Nieuw: 026 15 : 3 + 6 = 11 (a − b 12, a − c 9, b + c 9, a + c 21, a + b 18, a : b 5); 030 18 : 2 + 5 = 14 (a − b 16, a − c 13, a + c 23, b + c 7, a : b 9).
         # Claudes sleutel 'eerst optellen/niet delen' = a + c gaat mee (17 → 21, 20 → 23).
-        Z766 = {'69623976': ('Reken uit. 12 : 3 + 5', 'Reken uit. 15 : 3 + 6', '9', '11', {'17': '21'}, 'Eerst delen: 15 : 3 = 5. Dan 5 + 6 = 11.'),
+        # Z-#976 (Didactiek b8 deel A, les 335): 026 gaf antwoord 11 (4 van de 12 items) → 20 : 4 + 7 = 12 (routes 16, 13, 11, 27, 24, 5 vrij; 20 : 11 niet heel); sleutel a + c = 27
+        Z766 = {'69623976': ('Reken uit. 12 : 3 + 5', 'Reken uit. 20 : 4 + 7', '9', '12', {'17': '27'}, 'Eerst delen: 20 : 4 = 5. Dan 5 + 7 = 12.'),
                 'adc711dd': ('Reken uit. 16 : 2 + 4', 'Reken uit. 18 : 2 + 5', '12', '14', {'20': '23'}, 'Eerst delen: 18 : 2 = 9. Dan 9 + 5 = 14.')}
         if c8 in Z766 and r['opgave'] == Z766[c8][0]:
             o0, o1, a0_, a1_, km, ui = Z766[c8]; r['opgave'] = o1; r['antwoord'] = a1_
@@ -864,7 +904,7 @@ def fix_g8(r, slog):
             if isinstance(ex.get('claudeKaleSom'), str) and ex['claudeKaleSom'].strip(): ex['claudeKaleSom'] = o1.replace('Reken uit. ', '') + f' = {a1_}'
             for k_ in ('claudeDenkfouten', 'claudeFoutHints'):
                 for d_ in ex.get(k_) or []: d_['fout'] = km.get(d_.get('fout'), d_.get('fout'))
-            slog(r, 'Z-#766: E03 #2 geen route (a − b, a − c) op het antwoord', 'opgave', o0, o1)
+            slog(r, 'Z-#766/Z-#976: E03 #2 geen route (a − b, a − c) op het antwoord' + ('; antwoord 12 (spreiding)' if c8 == '69623976' else ''), 'opgave', o0, o1)
         # Oef-#1006/#1007/#1009 (b8, VERH-E04 #1–#7): Claudes sleutels zonder '€' (zoals het antwoord; geldigeAntwoorden met en zonder '€'),
         # 'procent-verkeerde-basis' exact (na × (100 + p) / 100: 57,60 i.p.v. €58), en geloofwaardige prijzen bij #1 (les 147).
         if r['merge'].get('doel') == 'G8-VERH-E04' and re.fullmatch(r'\d+(?:,\d+)?', str(r['antwoord'])) and re.search(r'kost na \d+% korting €\d+\. Wat was de prijs vóór de korting\?|zet €\d+ op een spaarrekening met \d+% rente per jaar\.', r['opgave']):      # #1–#7 (somtypeNrOrigineel staat hier nog niet)
@@ -901,6 +941,89 @@ def fix_g8(r, slog):
                 for d_ in ex.get(k_) or []: d_['fout'] = W10.get(d_.get('fout'), d_.get('fout'))
             assert sorted(o_['tekst'] for o_ in r['opties']) == ['170 kinderen', '30 kinderen', '60 kinderen'], r['opties']
             slog(r, 'Oef-#1010: geen foute route op het antwoord; elke afleider een route (200, 30% → 60; 30 / 170)', 'opgave', o, r['opgave'])
+        # ---- b8 ronde 2 (Didactiek review-batch8a/8b, 8 okt 17:53/17:55; data letterlijk uit de rapporten) ----
+        ex = r['extraVelden']
+        def _sleutels(km, fh=None):
+            for k_ in ('claudeDenkfouten', 'claudeFoutHints'):
+                for d_ in ex.get(k_) or []: d_['fout'] = km.get(d_.get('fout'), d_.get('fout'))
+            for f_ in ex.get('claudeFoutHints') or []:
+                if fh and f_.get('fout') in fh: f_['uitleg'] = fh[f_['fout']]
+        # V-#970 (les 365): E03 #8 218 en #11 229 geen 1 : 100.000 bij een km-vraag ('getal overnemen' gaf goed); 229 ook niet 'de klas … van de school'
+        V970 = {'5b63f67f': ('Op een kaart met schaal 1 : 100.000 is het moeras 9 cm van het museum.', 'Op een kaart met schaal 1 : 200.000 is het meer 9 cm van de stad.', 9, 18),
+                '8dfe4ef4': ('Op een kaart met schaal 1 : 100.000 is de klas 9 cm van de school.', 'Op een kaart met schaal 1 : 200.000 is het pretpark 4 cm van de school.', 4, 8)}
+        if c8 in V970 and r['opgave'].startswith(V970[c8][0]):
+            v0, v1, cm, km = V970[c8]; o = r['opgave']; r['opgave'] = o.replace(v0, v1, 1); a0_ = str(r['antwoord']); r['antwoord'] = str(km)
+            ex['claudeUitleg'] = f'1 cm op de kaart is 200.000 cm = 2000 m = 2 km in het echt.\n{cm} × 2 = {km} km.'
+            ex['claudeKaleSom'] = f'{cm} cm bij 1 : 200.000 → km'
+            _sleutels({f'{a0_}000': f'{km * 1000:,}'.replace(',', '.') if km * 1000 >= 10000 else str(km * 1000), f'{a0_}0': str(km * 10)},
+                      {str(km * 10): 'Een nul te veel. 1 cm is hier 2 km.'})
+            assert str(cm) != r['antwoord'] and r['antwoord'] == str(cm * 2), ('V-#970', c8)
+            slog(r, 'V-#970: schaal 1 : 200.000 (getal overnemen geeft niet meer het antwoord)', 'opgave', o, r['opgave'])
+        # V-#972 (les 147/316/366): E03 #7 plekparen die bij een kaart en bij de afstand passen; getallen blijven
+        P972 = {'het stadion naar de kleedkamer 8 cm': 'het station naar het stadion 8 cm', 'het museum naar het moeras 5 cm': 'de camping naar het strand 5 cm',
+                'de vallei naar het nest 8 cm': 'het dorp naar de stad 8 cm', 'het stadion naar het veld 7 cm': 'de boerderij naar het meer 7 cm',
+                'de schuur naar de dierentuin 9 cm': 'de school naar het zwembad 9 cm', 'de schuur naar de dierentuin 6 cm': 'de haven naar de vuurtoren 6 cm',
+                'de schuur naar de dierentuin 2 cm': 'de bakker naar de bibliotheek 2 cm', 'de kantine naar de kleedkamer 3 cm': 'de kerk naar het plein 3 cm'}
+        if r['merge'].get('doel', '').endswith('VERH-E03') or r['opgave'].startswith('Op een kaart met schaal'):
+            for p0, p1 in P972.items():
+                if f'is de afstand van {p0}. Hoeveel meter' in r['opgave']:
+                    o = r['opgave']; r['opgave'] = o.replace(p0, p1, 1); slog(r, 'V-#972: plekpaar past bij een kaart en bij de afstand', 'opgave', o, r['opgave']); break
+            # Z-#970: #10 'van de klas naar het huis' → 'van school naar huis' (kop volgt)
+            if 'is de afstand van de klas naar het huis' in r['opgave']:
+                o = r['opgave']; r['opgave'] = o.replace('is de afstand van de klas naar het huis', 'is de afstand van school naar huis', 1); slog(r, "Z-#970: 'van school naar huis'", 'opgave', o, r['opgave'])
+        # V-#983 (les 316): E04 #6 020 zak noten €150 → na 25% korting €6 → 8; sleutels 6 (nieuwe prijs) en 7,50 (procent van de nieuwe prijs)
+        # Z-#980: minder 50%-items in E04 #1 (route 'nieuwe prijs × 2'): 006 40% €36 → 60 (36 / 50,40), 008 30% €140 → 200 (140 / 182), 014 40% €48 → 80 (48 / 67,20)
+        K980 = {'baceb1c1': ('na 50% korting €75.', 25, 6, '8', '7,50', 'V-#983'), '03d597d7': ('na 50% korting €30.', 40, 36, '60', '50,40', 'Z-#980'),
+                '16e6400d': ('na 50% korting €100.', 30, 140, '200', '182', 'Z-#980'), '844212d8': ('na 50% korting €40.', 40, 48, '80', '67,20', 'Z-#980')}
+        if c8 in K980 and K980[c8][0] in r['opgave']:
+            k0, pct, na, ant, vb, pnt = K980[c8]; o = r['opgave']; r['opgave'] = o.replace(k0, f'na {pct}% korting €{na}.', 1); a0_ = str(r['antwoord']); r['antwoord'] = ant
+            r['geldigeAntwoorden'] = [ant, f'€{ant}', f'€ {ant}', f'{ant} euro']
+            een = f'{na / (100 - pct):.2f}'.replace('.', ',')
+            ex['claudeUitleg'] = f'€{na} is {100 - pct}% van de oude prijs.\n1% is {na} : {100 - pct} = {een}, dus 100% is €{ant}.'
+            ex['claudeKaleSom'] = f'na {pct}% korting €{na}, was?'
+            for d_ in ex.get('claudeDenkfouten') or []:
+                d_['fout'] = {'procent-verkeerde-basis': vb, 'getal-overgenomen': str(na)}.get(d_.get('denkfout'), d_.get('fout'))
+            lab_ = {d_.get('fout'): d_.get('denkfout') for d_ in ex.get('claudeDenkfouten') or []}
+            for i_, f_ in enumerate(ex.get('claudeFoutHints') or []):
+                lb_ = (ex.get('claudeDenkfouten') or [{}] * (i_ + 1))[i_].get('denkfout') if i_ < len(ex.get('claudeDenkfouten') or []) else None
+                if lb_ == 'procent-verkeerde-basis': f_['fout'] = vb; f_['uitleg'] = f'De {pct}% ging van de óude prijs af, niet van €{na}. €{na} is {100 - pct}%.'
+                elif lb_ == 'getal-overgenomen': f_['fout'] = str(na)
+            assert int(ant) * (100 - pct) == na * 100 and str(na * 2) != ant, (pnt, c8)
+            slog(r, f'{pnt}: {pct}% korting, €{na} → {ant} (geen 50%-route, redelijke prijs)', 'opgave', o, r['opgave'])
+        # Z-#985: rente 'Een kind … hij' → 'het'; b6 041 de goede optie preciezer
+        if os.environ.get('G8_Z985_RENTE') == '1' and re.match(r'Een kind zet €\d+ op een spaarrekening met \d+% rente per jaar\. Hoeveel rente krijgt hij na één jaar\?', r['opgave']):
+            o = r['opgave']; r['opgave'] = o.replace('Hoeveel rente krijgt hij na', 'Hoeveel rente krijgt het na', 1); slog(r, "Z-#985: 'Een kind … het'", 'opgave', o, r['opgave'])
+        if c8 == '77e26e67':
+            oud_, nw_ = 'Sommige kinderen hebben meer dan één huisdier', 'Sommige kinderen hebben meer dan één soort huisdier'
+            if any(o_['tekst'] == oud_ for o_ in r['opties']):
+                for o_ in r['opties']:
+                    if o_['tekst'] == oud_: o_['tekst'] = nw_
+                r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+                if r['antwoord'] == oud_: r['antwoord'] = nw_
+                if isinstance(r.get('antwoordDetail'), dict) and r['antwoordDetail'].get('juisteOptieTekst') == oud_: r['antwoordDetail']['juisteOptieTekst'] = nw_
+                if r.get('geldigeAntwoorden'): r['geldigeAntwoorden'] = [nw_ if g_ == oud_ else g_ for g_ in r['geldigeAntwoorden']]
+                slog(r, "Z-#985: 'meer dan één soort huisdier'", 'antwoord', oud_, nw_)
+        # Z-#981 (V01 001): 40 van de 200 → 60 van de 200 = 30 procent; opties 60 / 3 / 30 procent
+        if r['opgave'].startswith('Bij een enquête zeggen 40 van de 200 kinderen') and r['antwoord'] == '20 procent':
+            o = r['opgave']; r['opgave'] = o.replace('zeggen 40 van de 200 kinderen', 'zeggen 60 van de 200 kinderen', 1)
+            W981 = {'40 procent': '60 procent', '2 procent': '3 procent', '20 procent': '30 procent'}
+            for o_ in r['opties']: o_['tekst'] = W981.get(o_['tekst'], o_['tekst'])
+            r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+            r['antwoord'] = '30 procent'
+            if isinstance(r.get('antwoordDetail'), dict): r['antwoordDetail']['juisteOptieTekst'] = W981.get(r['antwoordDetail'].get('juisteOptieTekst'), r['antwoordDetail'].get('juisteOptieTekst'))
+            if r.get('geldigeAntwoorden'): r['geldigeAntwoorden'] = [W981.get(g_, g_) for g_ in r['geldigeAntwoorden']]
+            ex['claudeUitleg'] = 'Je vergelijkt 60 met 200. 60 van de 200 is hetzelfde als 30 van de 100. Dus het is 30 procent.'
+            _sleutels(W981, {'60 procent': 'Het getal 60 is het aantal kinderen en nog geen percentage. Vergelijk het met 200.'})
+            slog(r, 'Z-#981: 60 van de 200 = 30 procent (200 : 10 = 20 was het antwoord)', 'opgave', o, r['opgave'])
+        # V-#984 (les 372): E06 #1/#2 vormcue weg; data in bevroren/v984_e06_v1.json (sleutel claudeId[:8])
+        if c8 in V984 and r['opgave'] == V984[c8]['oud']:
+            t_ = V984[c8]; o = r['opgave']; r['opgave'] = t_['opgave']; r['antwoord'] = t_['antwoord']
+            r['opties'] = [{**(r['opties'][i_] if i_ < len(r['opties']) else {}), 'letter': 'ABC'[i_], 'tekst': x_} for i_, x_ in enumerate(t_['opties'])]
+            r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+            if isinstance(r.get('antwoordDetail'), dict): r['antwoordDetail'].update(juisteOptie='ABC'[t_['opties'].index(t_['antwoord'])], juisteOptieTekst=t_['antwoord'])
+            if r.get('geldigeAntwoorden'): r['geldigeAntwoorden'] = [t_['antwoord']]
+            ex['claudeDenkfouten'] = [dict(d_) for d_ in t_['denkfouten']]; ex['claudeFoutHints'] = [dict(f_) for f_ in t_['foutHints']]
+            slog(r, 'V-#984: geen vormcue (aantal decimalen/lengte)', 'opgave', o, r['opgave'])
         # Oef-#1007/#1008 (b8, VERH-E06 #3 001): sleutels '1,3' → '1,25' (12,5 : 10) en '12.5' → '12,5'; logische context (rotte appels i.p.v. kapotte vissen)
         if c8 == 'c7db8f20' and r['opgave'].startswith('12,5% van de vissen is kapot.'):
             o = r['opgave']; r['opgave'] = o.replace('12,5% van de vissen is kapot.', '12,5% van de appels in de kist is rot.', 1)
@@ -980,6 +1103,7 @@ KOP478 += [  # Oef-#496 (batch 5)
           (r'^(Een vliegtuig vertrekt om \S+(?: uur)? uit) de school\.', r'\1 Eindhoven.'), (r'^(Een vliegtuig vertrekt om \S+(?: uur)? uit) de klas\.', r'\1 Rotterdam.'),
           (r'^(Een vliegtuig vertrekt om \S+(?: uur)? uit) het huis\.', r'\1 Groningen.')]
 E05_BEZET = set()
+V984 = json.load(open(os.path.join(os.path.dirname(HERE), 'bevroren', 'v984_e06_v1.json'), encoding='utf-8'))['items']      # V-#984 (b8 deel B)
 E05_TEL = {}
 E05_VOORKEUR = {'b446e342': (8, 39)}      # Z-#950: 031 39 kinderen, busje van 8 → 5 busjes, rest 7 (Didactiek, recheck b4)
 KOP1001_DOELEN = {'G8-MEET-E07', 'G8-MEET-V01', 'G8-VBN-E01', 'G8-VBN-E03', 'G8-VBN-E04'}
@@ -988,6 +1112,8 @@ KOP478 += [  # V-#871c (Didactiek batch 4)
           (r'^\[wie\] heeft # miljoen truien verzameld\.', 'In Nederland worden in een jaar # miljoen truien verkocht.'),
           (r'^Een fabriek maakt in een jaar # \[ding\] (stickers|knikkers)\.', r'Een fabriek maakt in een jaar # miljoen \1.'),
           (r'^In Nederland worden in een jaar # \[ding\] truien verkocht\.', 'In Nederland worden in een jaar # miljoen truien verkocht.')]
+PLEK972 = r'(?:het station|het stadion|de camping|het strand|het dorp|de stad|de boerderij|het meer|de school|het zwembad|de haven|de vuurtoren|de bakker|de bibliotheek|de kerk|het plein|\[plek\])'
+KOP478 += [(r'^(Op een kaart met schaal # : # is de afstand van )' + PLEK972 + r' naar ' + PLEK972 + r'( # cm\. Hoeveel meter is dat in het echt\?)$', r'\1[plek] naar [plek]\2')]      # V-#972: kop blijft '[plek] naar [plek]'; Z-#985-rente staat uit (G8_Z985_RENTE=1) tot Oefeningen de data-eis van b8/check E04 #2 aanpast
 def kop_g8(s):
     for a, b in KOP478: s = re.sub(a, b, s)
     return s

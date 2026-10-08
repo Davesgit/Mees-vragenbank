@@ -189,7 +189,13 @@ if __name__ == '__main__':
     fail = (not _ER.sp_mutanten_ok()) or fail      # Z-#952 (les 357): ook de spreidingsmutanten van V-#910 ('zes keer 13' → FAIL, 'gespreid' → geen FAIL)
     import eindcijfer_check as _EC      # Z-#765 (Didactiek b1): E02 #1 eindcijfer van a × b, geen foute route (begincijfer, tientallencijfer, eenheden opgeteld) (FAIL)
     fail = (_EC.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
-    fail = (not _EC.mutanten_ok()) or fail      # mutanten 5/5 (oud 061, 065, 064)
+    fail = (not _EC.mutanten_ok()) or fail      # mutanten 8/8 (oud 061, 065, 064; Z-#975 32 × 6, 14 × 16, 15 × 27 mag)
+    import kalesom_check as _KS      # V-#975 (Didactiek b8 deel A, les 369): claudeKaleSom hoort bij de opgave en komt uit op het antwoord (FAIL)
+    fail = (_KS.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    fail = (not _KS.mutanten_ok()) or fail      # mutanten 6/6 (oud 061, oud 064, oude E03 #2-som)
+    import vormcue_check as _VC      # V-#984 (Didactiek b8 deel B, les 372): goede optie niet aan zijn vorm te herkennen (decimalen, lengte) (FAIL)
+    fail = (_VC.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    fail = (not _VC.mutanten_ok()) or fail      # mutanten 3/3 (oud E06 #1 FAIL)
     import bouwsel_routes as _BR      # Oef-#1000/V-#891 (batch 6, 16:54): vol bouwwerk, geen foute route (ook 'drie kanten') op het goede antwoord (FAIL)
     fail = (_BR.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     fail = any(bool(_BR.fouten(*_m)) != _v for _n, _m, _v in _BR.MUTANTEN) or fail      # mutanten 6/6 (oud 007, 047, 066)

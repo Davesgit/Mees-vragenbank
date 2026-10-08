@@ -793,7 +793,10 @@ def _compile_regel(regel, c):
             return {'exact': {_kg(w440)}, 'pred': lambda v: _dec(v) == w440}
         if a is None: return None
         if keer: return {'exact': set(_punt(a * 10))}
-        return {'exact': set(_punt(a // 10))} if a % 10 == 0 and a >= 10 else {'exact': set()}
+        if a % 10 == 0 and a >= 10: return {'exact': set(_punt(a // 10))}
+        if KOMMA437 and a >= 1:      # Z-#973 (Didactiek b8 deel A): G7/G8: ': 10' bij een heel antwoord dat niet op 0 eindigt = kommagetal (14 → '1,4'), 'tien keer te weinig'
+            w973 = Fraction(a, 10); return {'exact': {_kg(w973)}, 'pred': lambda v: _dec(v) == w973}
+        return {'exact': set()}
     # G5 fixlijst #106 (Oefeningen 19:06): het kind typt de prijs in. Sleutel = elk bedrag in de opgave dat iets kost (niet het bedrag
     # waarmee je betaalt of dat je hebt), als het ≠ antwoord. In pas_toe gaat deze regel vóór 'antwoord ± 10 cent / ± €1' (zeker vóór onzeker).
     # Oef-#426 (#530, eindcheck G5 r11): 'fout = het bedrag dat eraf gaat': bij een minsom met geld het tweede bedrag, op waarde ('€4,75', '€ 4,75',

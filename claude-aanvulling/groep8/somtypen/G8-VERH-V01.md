@@ -17,11 +17,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Het getal 40 is het aantal kinderen en nog geen percentage. Vergelijk het met 200.”)
 - Voorbeelden:
   - `G8-VERH-V01-claude-bank-001` (Claude G9, ai, niveau 2 → toepassen)
-    - **Opgave:** Bij een enquête zeggen 40 van de 200 kinderen dat zij het liefst voetballen. Hoeveel procent van de kinderen is dat?
-    - **Opties:** A) 40 procent · B) 2 procent · C) 20 procent
-    - **Antwoord:** 20 procent  (controle: n.v.t.)
+    - **Opgave:** Bij een enquête zeggen 60 van de 200 kinderen dat zij het liefst voetballen. Hoeveel procent van de kinderen is dat?
+    - **Opties:** A) 60 procent · B) 3 procent · C) 30 procent
+    - **Antwoord:** 30 procent  (controle: n.v.t.)
     - **Fout-hints (Claude):** 40 procent → Het getal 40 is het aantal kinderen en nog geen percentage. Vergelijk het met 200. · 2 procent → Reken na hoeveel keer 40 in 200 past en maak daar een percentage van.
-    - **Uitleg (Claude):** Je vergelijkt 40 met 200. 40 van de 200 is hetzelfde als 20 van de 100. Dus het is 20 procent.
+    - **Uitleg (Claude):** Je vergelijkt 60 met 200. 60 van de 200 is hetzelfde als 30 van de 100. Dus het is 30 procent.
 
 - **Hint 1 (te schrijven):** Procent betekent: zoveel van de honderd. Het hele aantal is honderd procent.
 - **Hint 2 (te schrijven):** Maak een verhoudingstabel: het hele aantal hoort bij honderd procent. Reken uit hoeveel procent bij het deel hoort.

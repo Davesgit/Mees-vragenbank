@@ -12,6 +12,10 @@ def fouten(a, b):
     if int(s[0]) == ant: F.append(f'begincijfer van {p} = {ant}')
     if len(s) >= 2 and int(s[-2]) == ant: F.append(f'tientallencijfer van {p} = {ant}')
     if (a % 10 + b % 10) % 10 == ant: F.append(f'eenheden opgeteld ({a % 10} + {b % 10}) eindigt op {ant}')
+    # Z-#975 (Didactiek b8 deel A, les 306): het antwoord is niet het eenheidscijfer van een factor ('plaatswaarde-verkeerd'),
+    # behalve bij een factor op 5 en de andere oneven (5 × oneven eindigt altijd op 5: onvermijdelijk en leerzaam)
+    vijf_oneven = (a % 10 == 5 and b % 2 == 1) or (b % 10 == 5 and a % 2 == 1)
+    if ant in (a % 10, b % 10) and not vijf_oneven: F.append(f'eenheidscijfer van een factor ({a} × {b}) = {ant}')
     return F
 def lees(it):
     m = RX.match((it.get('opgave') or '').strip())
@@ -47,11 +51,12 @@ def rapport(items, toon=True, ernst='FAIL'):
         if str(it.get('antwoord')) != str(ab[0] * ab[1] % 10): F.append(f"{it['id']}: antwoord {it.get('antwoord')} ≠ {ab[0] * ab[1] % 10}")
         if (f := fouten(*ab)): F.append(f"{it['id']}: {ab[0]} × {ab[1]}: {'; '.join(f)}")
     if toon:
-        print(f"\nEINDCIJFER (Z-#765: geen foute route op het eindcijfer van a × b): {len(F)} ({ernst}) · items {n}")
+        print(f"\nEINDCIJFER (Z-#765/Z-#975: geen foute route op het eindcijfer van a × b): {len(F)} ({ernst}) · items {n}")
         for x in F[:12]: print(f'  {ernst} EINDCIJFER', x)
     return len(F)
 MUTANTEN = [('061 oud 19 × 17 (begincijfer)', (19, 17), True), ('065 oud 19 × 7 (tientallen)', (19, 7), True), ('064 oud 112 × 12 (u1 + u2)', (112, 12), True),
-            ('019 × 27', (19, 27), False), ('063 12 × 7', (12, 7), False)]
+            ('019 × 27', (19, 27), False), ('063 12 × 7', (12, 7), False),
+            ('Z-#975 32 × 6 (eenheid van a)', (32, 6), True), ('Z-#975 15 × 27 (5 × oneven, mag)', (15, 27), False), ('Z-#975 14 × 16 (eenheid van a)', (14, 16), True)]
 def mutanten_ok(): return all(bool(fouten(*ab)) == v for _, ab, v in MUTANTEN)
 if __name__ == '__main__' and '--mutanten' in sys.argv:
     for n, ab, v in MUTANTEN: print(('ok  ' if bool(fouten(*ab)) == v else 'MIS ') + n, fouten(*ab))

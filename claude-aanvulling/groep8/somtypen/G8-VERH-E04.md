@@ -156,10 +156,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “De 50% ging van de óude prijs af, niet van €75. €75 is 50%.”)
 - Voorbeelden:
   - `G8-VERH-E04-claude-bank-020` (Claude V6, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een zak noten kost na 50% korting €75. Wat was de prijs vóór de korting?
-    - **Antwoord:** 150  (controle: ok)
+    - **Opgave:** Een zak noten kost na 25% korting €6. Wat was de prijs vóór de korting?
+    - **Antwoord:** 8  (controle: ok)
     - **Fout-hints (Claude):** €113 → De 50% ging van de óude prijs af, niet van €75. €75 is 50%. · €75 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.
-    - **Uitleg (Claude):** €75 is 50% van de oude prijs. 1% is 75 : 50 = 1,50, dus 100% is €150.
+    - **Uitleg (Claude):** €6 is 75% van de oude prijs. 1% is 6 : 75 = 0,08, dus 100% is €8.
 
 - **Hint 1 (te schrijven):** Na de korting betaal je niet meer honderd procent van de oude prijs. Hoeveel procent betaal je nog?
 - **Hint 2 (te schrijven):** Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.
@@ -213,7 +213,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Reken uit hoeveel tien procent is: deel het aantal op school door tien. Hoe vaak heb je tien procent nodig?
 - **Ouderzin:** Je kind rekent een procent van een aantal uit.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `procent als aantal` (60 kinderen) → Dat is het getal van het procent, nog geen aantal. Hoeveel is dat procent van iedereen op school?  [nieuw]
-  - `te veel` (100 kinderen) → Dat is te veel. Reken uit hoeveel tien procent van iedereen op school is, en neem dat zo vaak als nodig.  [nieuw]
+  - `procent als aantal` (30 kinderen) → Dat is het getal van het procent, nog geen aantal. Hoeveel is dat procent van iedereen op school?  [nieuw]
+  - `geheel min het procent` (170 kinderen) → Je haalde het procent van het aantal op school af. Maar het procent is geen aantal kinderen. Hoeveel kinderen is dat procent van iedereen op school?  [nieuw]
   - `andere fout` (andere fout) → Iedereen op school samen is honderd procent. Hoeveel is tien procent? Hoe vaak heb je dat nodig?  [nieuw]
 - Status: hints klaar

@@ -13,13 +13,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “Schrijf # in procenten.” (koppeling: claudeId)
 - Items: **96** · Claude-doelen: B13 (96) · regel: G8-P00-park-G7
 - Getallenruimte: procenten · type: meerkeuze
-- Denkfouten (Claude): komma-verschoven (118), getal-overgenomen (74)
+- Denkfouten (Claude): komma-verschoven (102), getal-overgenomen (90)
 - Verschillende Claude-fout-hints: 1 (meest: “Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.”)
 - Voorbeelden:
   - `G8-VERH-E06-claude-bank-052` (Claude B13, bank, niveau 2 → toepassen)
-    - **Opgave:** Schrijf 0,025 in procenten.
-    - **Opties:** A) 25% · B) 0,25% · C) 2,5%
-    - **Antwoord:** 2,5%  (controle: ok)
+    - **Opgave:** Schrijf 0,52 in procenten.
+    - **Opties:** A) 0,52% · B) 520% · C) 52%
+    - **Antwoord:** 52%  (controle: ok)
     - **Fout-hints (Claude):** 25% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links. · 0,25% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.
   - `G8-VERH-E06-claude-bank-011` (Claude B13, bank, niveau 2 → toepassen)
     - **Opgave:** Schrijf 0,525 in procenten.
@@ -41,13 +41,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **2** · somtypeOrigineel “Schrijf #/# in procenten.” (koppeling: claudeId)
 - Items: **7** · Claude-doelen: B13 (7) · regel: G8-P00-park-G7
 - Getallenruimte: breuken (noemer tot 40) · type: meerkeuze
-- Denkfouten (Claude): nul-fout-tientallen (11), getal-overgenomen (3)
+- Denkfouten (Claude): getal-overgenomen (7), nul-fout-tientallen (7)
 - Verschillende Claude-fout-hints: 1 (meest: “Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.”)
 - Voorbeelden:
   - `G8-VERH-E06-claude-bank-101` (Claude B13, bank, niveau 3 → toepassen)
-    - **Opgave:** Schrijf 11/40 in procenten.
-    - **Opties:** A) 2,75% · B) 27,5% · C) 275%
-    - **Antwoord:** 27,5%  (controle: n.v.t.)
+    - **Opgave:** Schrijf 13/50 in procenten.
+    - **Opties:** A) 26% · B) 13% · C) 2,6%
+    - **Antwoord:** 26%  (controle: ok)
     - **Fout-hints (Claude):** 275% → Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan. · 2,75% → Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.
   - `G8-VERH-E06-claude-bank-098` (Claude B13, bank, niveau 3 → toepassen)
     - **Opgave:** Schrijf 21/40 in procenten.
@@ -88,5 +88,4 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `procent zonder komma (punt)` (Claudes sleutel: kommagetal-als-geheel) → Dat is het getal van het procent. Als kommagetal is het honderd keer zo klein.  [Claude, taalfix]
   - `komma verschoven` (Claudes sleutel: komma-verschoven) → Staat de komma goed? Procent zijn honderdsten: de komma schuift twee plekken naar links.  [Claude, taalfix]
   - `andere fout` (andere fout) → Deel het getal van het procent door honderd.  [nieuw]
-- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '#% van de [ding] is kapot. Schrijf dat als kommagetal.'. Nakijken of ze nog passen.
 - Status: hints klaar

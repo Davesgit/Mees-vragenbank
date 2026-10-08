@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T17:49:23+0200",
+ "gegenereerdOp": "2026-10-08T18:09:12+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-VERH-E04",
  "bordtitel": "Procenten uitrekenen: 1%-regel en korting",
@@ -1189,7 +1189,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een fietshelm kost na 50% korting €30. Wat was de prijs vóór de korting?",
+   "opgave": "Een fietshelm kost na 40% korting €36. Wat was de prijs vóór de korting?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -1200,7 +1200,7 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "45",
+     "fout": "50,40",
      "uitleg": "Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe.",
      "uitlegSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
      "laag2": "tekstSterker",
@@ -1210,7 +1210,7 @@
     },
     {
      "stap": null,
-     "fout": "30",
+     "fout": "36",
      "uitleg": "Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
      "uitlegSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
      "laag2": "tekstSterker",
@@ -1219,7 +1219,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "45 → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe. · 30 → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
+   "foutHintsTekst": "50,40 → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe. · 36 → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
    "ouderzin": "Je kind rekent terug naar de prijs van vóór de korting.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -1239,8 +1239,8 @@
    "bronVariant": "claude-bank:V6:03d597d7-b928-4d1e-b5aa-392c75684e6d",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "na 50% korting €30, was?",
-    "claudeUitleg": "€30 is 50% van de oude prijs.\n1% is 30 : 50 = 0,60, dus 100% is €60.",
+    "claudeKaleSom": "na 40% korting €36, was?",
+    "claudeUitleg": "€36 is 60% van de oude prijs.\n1% is 36 : 60 = 0,60, dus 100% is €60.",
     "claudeStrategie": "terugrekenen via 1%",
     "claudeThema": "Dino's en fossielen",
     "claudeAntwoordType": "geheel",
@@ -1249,11 +1249,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "45",
+      "fout": "50,40",
       "denkfout": "procent-verkeerde-basis"
      },
      {
-      "fout": "30",
+      "fout": "36",
       "denkfout": "getal-overgenomen"
      }
     ],
@@ -1261,12 +1261,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "45",
-      "uitleg": "De 50% ging van de óude prijs af, niet van €30. €30 is 50%."
+      "fout": "50,40",
+      "uitleg": "De 40% ging van de óude prijs af, niet van €36. €36 is 60%."
      },
      {
       "stap": null,
-      "fout": "30",
+      "fout": "36",
       "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
      }
     ]
@@ -1293,7 +1293,8 @@
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
      "Oef-#1006/#1007: Claude-sleutel zonder '€' en exact",
-     "Oef-#1009: geloofwaardige prijs (ander ding)"
+     "Oef-#1009: geloofwaardige prijs (ander ding)",
+     "Z-#980: 40% korting, €36 → 60 (geen 50%-route, redelijke prijs)"
     ]
    },
    "opBord": false,
@@ -1353,7 +1354,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "30"
+       "36"
       ]
      },
      "leesbaar": true
@@ -1367,7 +1368,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "45"
+       "50,40"
       ]
      },
      "leesbaar": true
@@ -1598,7 +1599,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een kaartje kost na 50% korting €100. Wat was de prijs vóór de korting?",
+   "opgave": "Een kaartje kost na 30% korting €140. Wat was de prijs vóór de korting?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -1609,7 +1610,7 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "150",
+     "fout": "182",
      "uitleg": "Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe.",
      "uitlegSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
      "laag2": "tekstSterker",
@@ -1619,7 +1620,7 @@
     },
     {
      "stap": null,
-     "fout": "100",
+     "fout": "140",
      "uitleg": "Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
      "uitlegSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
      "laag2": "tekstSterker",
@@ -1628,7 +1629,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "150 → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe. · 100 → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
+   "foutHintsTekst": "182 → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe. · 140 → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
    "ouderzin": "Je kind rekent terug naar de prijs van vóór de korting.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -1648,8 +1649,8 @@
    "bronVariant": "claude-bank:V6:16e6400d-ab40-4e9c-9962-938d9cc724ab",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "na 50% korting €100, was?",
-    "claudeUitleg": "€100 is 50% van de oude prijs.\n1% is 100 : 50 = 2,00, dus 100% is €200.",
+    "claudeKaleSom": "na 30% korting €140, was?",
+    "claudeUitleg": "€140 is 70% van de oude prijs.\n1% is 140 : 70 = 2,00, dus 100% is €200.",
     "claudeStrategie": "terugrekenen via 1%",
     "claudeThema": "Voetbal",
     "claudeAntwoordType": "geheel",
@@ -1658,11 +1659,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "150",
+      "fout": "182",
       "denkfout": "procent-verkeerde-basis"
      },
      {
-      "fout": "100",
+      "fout": "140",
       "denkfout": "getal-overgenomen"
      }
     ],
@@ -1670,12 +1671,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "150",
-      "uitleg": "De 50% ging van de óude prijs af, niet van €100. €100 is 50%."
+      "fout": "182",
+      "uitleg": "De 30% ging van de óude prijs af, niet van €140. €140 is 70%."
      },
      {
       "stap": null,
-      "fout": "100",
+      "fout": "140",
       "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
      }
     ]
@@ -1701,7 +1702,8 @@
     "gewijzigd": true,
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
-     "Oef-#1006/#1007: Claude-sleutel zonder '€' en exact"
+     "Oef-#1006/#1007: Claude-sleutel zonder '€' en exact",
+     "Z-#980: 30% korting, €140 → 200 (geen 50%-route, redelijke prijs)"
     ]
    },
    "opBord": false,
@@ -1761,7 +1763,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "100"
+       "140"
       ]
      },
      "leesbaar": true
@@ -1775,7 +1777,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "150"
+       "182"
       ]
      },
      "leesbaar": true
@@ -2830,7 +2832,7 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een koptelefoon kost na 50% korting €40. Wat was de prijs vóór de korting?",
+   "opgave": "Een koptelefoon kost na 40% korting €48. Wat was de prijs vóór de korting?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
@@ -2841,7 +2843,7 @@
    "foutHints": [
     {
      "stap": null,
-     "fout": "60",
+     "fout": "67,20",
      "uitleg": "Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe.",
      "uitlegSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
      "laag2": "tekstSterker",
@@ -2851,7 +2853,7 @@
     },
     {
      "stap": null,
-     "fout": "40",
+     "fout": "48",
      "uitleg": "Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
      "uitlegSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
      "laag2": "tekstSterker",
@@ -2860,7 +2862,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "60 → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe. · 40 → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
+   "foutHintsTekst": "67,20 → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe. · 48 → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
    "ouderzin": "Je kind rekent terug naar de prijs van vóór de korting.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -2880,8 +2882,8 @@
    "bronVariant": "claude-bank:V6:844212d8-636d-44e7-9141-95ad6366caac",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "na 50% korting €40, was?",
-    "claudeUitleg": "€40 is 50% van de oude prijs.\n1% is 40 : 50 = 0,80, dus 100% is €80.",
+    "claudeKaleSom": "na 40% korting €48, was?",
+    "claudeUitleg": "€48 is 60% van de oude prijs.\n1% is 48 : 60 = 0,80, dus 100% is €80.",
     "claudeStrategie": "terugrekenen via 1%",
     "claudeThema": "Ruimte",
     "claudeAntwoordType": "geheel",
@@ -2890,11 +2892,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "60",
+      "fout": "67,20",
       "denkfout": "procent-verkeerde-basis"
      },
      {
-      "fout": "40",
+      "fout": "48",
       "denkfout": "getal-overgenomen"
      }
     ],
@@ -2902,12 +2904,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "60",
-      "uitleg": "De 50% ging van de óude prijs af, niet van €40. €40 is 50%."
+      "fout": "67,20",
+      "uitleg": "De 40% ging van de óude prijs af, niet van €48. €48 is 60%."
      },
      {
       "stap": null,
-      "fout": "40",
+      "fout": "48",
       "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
      }
     ]
@@ -2936,7 +2938,8 @@
      "Oef-#1006/#1007: Claude-sleutel zonder '€' en exact",
      "Oef-#1009: geloofwaardige prijs (ander ding)",
      "W1 moeilijk woord vervangen",
-     "W11 winkel: passende spullen"
+     "W11 winkel: passende spullen",
+     "Z-#980: 40% korting, €48 → 80 (geen 50%-route, redelijke prijs)"
     ]
    },
    "opBord": false,
@@ -2996,7 +2999,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "40"
+       "48"
       ]
      },
      "leesbaar": true
@@ -3010,7 +3013,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "60"
+       "67,20"
       ]
      },
      "leesbaar": true
@@ -4064,18 +4067,18 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een zak noten kost na 50% korting €75. Wat was de prijs vóór de korting?",
+   "opgave": "Een zak noten kost na 25% korting €6. Wat was de prijs vóór de korting?",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
-   "antwoord": "150",
+   "antwoord": "8",
    "antwoordDetail": null,
    "hint": "Na de korting betaal je niet meer honderd procent van de oude prijs. Hoeveel procent betaal je nog?",
    "sterkereHint": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "112,50",
+     "fout": "7,50",
      "uitleg": "Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe.",
      "uitlegSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
      "laag2": "tekstSterker",
@@ -4085,7 +4088,7 @@
     },
     {
      "stap": null,
-     "fout": "75",
+     "fout": "6",
      "uitleg": "Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
      "uitlegSterker": "Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.",
      "laag2": "tekstSterker",
@@ -4094,7 +4097,7 @@
      "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "112,50 → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe. · 75 → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
+   "foutHintsTekst": "7,50 → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe. · 6 → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.",
    "ouderzin": "Je kind rekent terug naar de prijs van vóór de korting.",
    "getallenruimte": "procenten met €",
    "context": "laag",
@@ -4114,8 +4117,8 @@
    "bronVariant": "claude-bank:V6:baceb1c1-ae10-4811-9b45-a678867e2a90",
    "kopExtra": null,
    "extraVelden": {
-    "claudeKaleSom": "na 50% korting €75, was?",
-    "claudeUitleg": "€75 is 50% van de oude prijs.\n1% is 75 : 50 = 1,50, dus 100% is €150.",
+    "claudeKaleSom": "na 25% korting €6, was?",
+    "claudeUitleg": "€6 is 75% van de oude prijs.\n1% is 6 : 75 = 0,08, dus 100% is €8.",
     "claudeStrategie": "terugrekenen via 1%",
     "claudeThema": "Dieren verzorgen",
     "claudeAntwoordType": "geheel",
@@ -4124,11 +4127,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "112,50",
+      "fout": "7,50",
       "denkfout": "procent-verkeerde-basis"
      },
      {
-      "fout": "75",
+      "fout": "6",
       "denkfout": "getal-overgenomen"
      }
     ],
@@ -4136,12 +4139,12 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "112,50",
-      "uitleg": "De 50% ging van de óude prijs af, niet van €75. €75 is 50%."
+      "fout": "7,50",
+      "uitleg": "De 25% ging van de óude prijs af, niet van €6. €6 is 75%."
      },
      {
       "stap": null,
-      "fout": "75",
+      "fout": "6",
       "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
      }
     ]
@@ -4168,6 +4171,7 @@
     "wijzigingen": [
      "N9 geldnotatie €N / €N,CC (G5)",
      "Oef-#1006/#1007: Claude-sleutel zonder '€' en exact",
+     "V-#983: 25% korting, €6 → 8 (geen 50%-route, redelijke prijs)",
      "W11 winkel: passende spullen"
     ]
    },
@@ -4196,7 +4200,7 @@
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "150",
+    "verwacht": "8",
     "methode": "G8 prijs vóór korting",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -4213,10 +4217,10 @@
     "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
-    "150",
-    "€150",
-    "€ 150",
-    "150 euro"
+    "8",
+    "€8",
+    "€ 8",
+    "8 euro"
    ],
    "foutRegels": [
     {
@@ -4228,7 +4232,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "75"
+       "6"
       ]
      },
      "leesbaar": true
@@ -4242,7 +4246,7 @@
      "perItem": false,
      "match": {
       "waarden": [
-       "112,50"
+       "7,50"
       ]
      },
      "leesbaar": true
@@ -6876,25 +6880,25 @@
     {
      "stap": null,
      "fout": "30 kinderen",
-     "uitleg": "Iedereen op school samen is honderd procent. Hoeveel is tien procent? Hoe vaak heb je dat nodig?",
+     "uitleg": "Dat is het getal van het procent, nog geen aantal. Hoeveel is dat procent van iedereen op school?",
      "uitlegSterker": "Reken uit hoeveel tien procent is: deel het aantal op school door tien. Hoe vaak heb je tien procent nodig?",
      "laag2": "tekstSterker",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "regel": "30 kinderen",
+     "soort": "procent als aantal",
      "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "170 kinderen",
-     "uitleg": "Iedereen op school samen is honderd procent. Hoeveel is tien procent? Hoe vaak heb je dat nodig?",
+     "uitleg": "Je haalde het procent van het aantal op school af. Maar het procent is geen aantal kinderen. Hoeveel kinderen is dat procent van iedereen op school?",
      "uitlegSterker": "Reken uit hoeveel tien procent is: deel het aantal op school door tien. Hoe vaak heb je tien procent nodig?",
      "laag2": "tekstSterker",
-     "regel": "andere fout",
-     "soort": "andere fout",
+     "regel": "170 kinderen",
+     "soort": "geheel min het procent",
      "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "30 kinderen → Iedereen op school samen is honderd procent. Hoeveel is tien procent? Hoe vaak heb je dat nodig? · 170 kinderen → Iedereen op school samen is honderd procent. Hoeveel is tien procent? Hoe vaak heb je dat nodig?",
+   "foutHintsTekst": "30 kinderen → Dat is het getal van het procent, nog geen aantal. Hoeveel is dat procent van iedereen op school? · 170 kinderen → Je haalde het procent van het aantal op school af. Maar het procent is geen aantal kinderen. Hoeveel kinderen is dat procent van iedereen op school?",
    "ouderzin": "Je kind rekent een procent van een aantal uit.",
    "getallenruimte": "0–1.000",
    "context": "midden",
@@ -7028,24 +7032,34 @@
    ],
    "foutRegels": [
     {
-     "regel": "60 kinderen",
+     "regel": "30 kinderen",
      "soort": "procent als aantal",
      "bron": "nieuw",
      "tekst": "Dat is het getal van het procent, nog geen aantal. Hoeveel is dat procent van iedereen op school?",
      "tekstSterker": "Reken uit hoeveel tien procent is: deel het aantal op school door tien. Hoe vaak heb je tien procent nodig?",
      "perItem": false,
      "match": {
-      "waarden": [],
+      "waarden": [
+       "30 kinderen"
+      ],
       "opOpties": true
      },
      "leesbaar": true
     },
     {
-     "regel": "100 kinderen",
-     "soort": "te veel",
-     "tekst": "Dat is te veel. Reken uit hoeveel tien procent van iedereen op school is, en neem dat zo vaak als nodig.",
-     "match": null,
-     "leesbaar": false
+     "regel": "170 kinderen",
+     "soort": "geheel min het procent",
+     "bron": "nieuw",
+     "tekst": "Je haalde het procent van het aantal op school af. Maar het procent is geen aantal kinderen. Hoeveel kinderen is dat procent van iedereen op school?",
+     "tekstSterker": "Reken uit hoeveel tien procent is: deel het aantal op school door tien. Hoe vaak heb je tien procent nodig?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "170 kinderen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
     },
     {
      "regel": "andere fout",
@@ -7063,7 +7077,7 @@
    "algemeneFoutHint": "Iedereen op school samen is honderd procent. Hoeveel is tien procent? Hoe vaak heb je dat nodig?"
   }
  ],
- "hintsSyncOp": "2026-10-08T17:49:26+02:00",
+ "hintsSyncOp": "2026-10-08T18:09:15+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -7095,10 +7109,10 @@
   },
   {
    "batch": "batch8.json",
-   "md5": "2a7d52a6cec5"
+   "md5": "b10fde9d08b9"
   }
  ],
- "geschrevenOp": "2026-10-08T17:49:26+02:00",
+ "geschrevenOp": "2026-10-08T18:09:15+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }

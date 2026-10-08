@@ -45,10 +45,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Delen gaat vóór plus. Deel eerst, tel daarna op.”)
 - Voorbeelden:
   - `G8-GET-E03-claude-bank-026` (Claude C21, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Reken uit. 15 : 3 + 6
-    - **Antwoord:** 11  (controle: ok)
+    - **Opgave:** Reken uit. 20 : 4 + 7
+    - **Antwoord:** 12  (controle: ok)
     - **Fout-hints (Claude):** 1,5 → Delen gaat vóór plus. Deel eerst, tel daarna op. · 17 → Er staat een deelteken: eerst delen, dan pas optellen.
-    - **Uitleg (Claude):** Eerst delen: 15 : 3 = 5. Dan 5 + 6 = 11.
+    - **Uitleg (Claude):** Eerst delen: 20 : 4 = 5. Dan 5 + 7 = 12.
   - `G8-GET-E03-claude-bank-024` (Claude C21, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Reken uit. 42 : 7 + 9
     - **Antwoord:** 15  (controle: ok)
