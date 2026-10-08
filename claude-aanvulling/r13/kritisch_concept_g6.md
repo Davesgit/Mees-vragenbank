@@ -1,0 +1,127 @@
+# r13 L-R10b: kritisch-items G6 (CONCEPT, niet in data)
+
+120 items in 30 somtypes (4 per somtype: 3 beweringen fout, 1 klopt; goed antwoord wisselt A/B/C). Bron: `r13/kritisch_concept.py` (seed 13).
+Niet gegenereerd: G6-GET-M03 #1 (nrO 1) (getallenlijn nodig); G6-VBN-E02 #1 (nrO 1) (lijngrafiek nodig (bewering over een aflezing)); G6-VBN-E02 #2 (nrO 2) (lijngrafiek nodig); G6-VBN-E02 #3 (nrO 3) (lijngrafiek nodig (of schatten «meer of minder dan 200?»)).
+
+Nodig vóór de build: Didactiek (vorm/taal, ook de app-weergave ja/nee + getal, onduidelijk 6), Oefeningen (H1/H2 en een regel per foute optie).
+
+- `G6-GET-E01-r13-kritisch-01-1` Lisa rondt 43.948 af op duizendtallen en krijgt 43.000. Klopt dat? → **Nee, het is 44.000.** · opties: Nee, het is 44.000. / Ja, dat klopt. / Nee, het is 43.900.
+- `G6-GET-E01-r13-kritisch-01-2` Tom rondt 99.818 af op duizendtallen en krijgt 99.800. Klopt dat? → **Nee, het is 100.000.** · opties: Ja, dat klopt. / Nee, het is 100.000. / Nee, het is 99.000.
+- `G6-GET-E01-r13-kritisch-01-3` Kim rondt 99.663 af op duizendtallen en krijgt 99.000. Klopt dat? → **Nee, het is 100.000.** · opties: Ja, dat klopt. / Nee, het is 99.700. / Nee, het is 100.000.
+- `G6-GET-E01-r13-kritisch-01-4` Ali rondt 79.640 af op duizendtallen en krijgt 80.000. Klopt dat? → **Ja, dat klopt.** · opties: Ja, dat klopt. / Nee, het is 79.000. / Nee, het is 79.600.
+- `G6-GET-E01-r13-kritisch-02-1` Sanne rondt 1491 af op honderdtallen en krijgt 1400. Klopt dat? → **Nee, het is 1500.** · opties: Ja, dat klopt. / Nee, het is 1500. / Nee, het is 1490.
+- `G6-GET-E01-r13-kritisch-02-2` Bram rondt 8071 af op honderdtallen en krijgt 8070. Klopt dat? → **Nee, het is 8100.** · opties: Ja, dat klopt. / Nee, het is 8000. / Nee, het is 8100.
+- `G6-GET-E01-r13-kritisch-02-3` Jet rondt 3069 af op honderdtallen en krijgt 3000. Klopt dat? → **Nee, het is 3100.** · opties: Nee, het is 3100. / Ja, dat klopt. / Nee, het is 3070.
+- `G6-GET-E01-r13-kritisch-02-4` Daan rondt 2391 af op honderdtallen en krijgt 2400. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 2300. / Ja, dat klopt. / Nee, het is 2390.
+- `G6-GET-E03-r13-kritisch-02-1` Noor schrijft 4/5 met noemer 20 als 4/20. Klopt dat? → **Nee, het is 16/20.** · opties: Ja, dat klopt. / Nee, het is 19/20. / Nee, het is 16/20.
+- `G6-GET-E03-r13-kritisch-02-2` Milan schrijft 2/4 met noemer 16 als 14/16. Klopt dat? → **Nee, het is 8/16.** · opties: Nee, het is 8/16. / Ja, dat klopt. / Nee, het is 2/16.
+- `G6-GET-E03-r13-kritisch-02-3` Fleur schrijft 2/4 met noemer 16 als 2/16. Klopt dat? → **Nee, het is 8/16.** · opties: Ja, dat klopt. / Nee, het is 8/16. / Nee, het is 14/16.
+- `G6-GET-E03-r13-kritisch-02-4` Sem schrijft 3/8 met noemer 32 als 12/32. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 3/32. / Nee, het is 27/32. / Ja, dat klopt.
+- `G6-GET-E04-r13-kritisch-01-1` Lisa rekent 7002 − 4607 = 3605. Klopt dat? → **Nee, het is 2395.** · opties: Nee, het is 2395. / Ja, dat klopt. / Nee, het is 3405.
+- `G6-GET-E04-r13-kritisch-01-2` Tom rekent 9009 − 5281 = 4828. Klopt dat? → **Nee, het is 3728.** · opties: Ja, dat klopt. / Nee, het is 3728. / Nee, het is 4288.
+- `G6-GET-E04-r13-kritisch-01-3` Kim rekent 7084 − 4242 = 3242. Klopt dat? → **Nee, het is 2842.** · opties: Ja, dat klopt. / Nee, het is 3842. / Nee, het is 2842.
+- `G6-GET-E04-r13-kritisch-01-4` Ali rekent 5043 − 1536 = 3507. Klopt dat? → **Ja, dat klopt.** · opties: Ja, dat klopt. / Nee, het is 4513. / Nee, het is 4517.
+- `G6-GET-E09-r13-kritisch-01-1` Sanne zegt dat 3/4 van €72 €24 is. Klopt dat? → **Nee, het is €54.** · opties: Ja, dat klopt. / Nee, het is €54. / Nee, het is €18.
+- `G6-GET-E09-r13-kritisch-01-2` Bram zegt dat 5/8 van €40 €5 is. Klopt dat? → **Nee, het is €25.** · opties: Ja, dat klopt. / Nee, het is €8. / Nee, het is €25.
+- `G6-GET-E09-r13-kritisch-01-3` Jet zegt dat 2/5 van €40 €20 is. Klopt dat? → **Nee, het is €16.** · opties: Nee, het is €16. / Ja, dat klopt. / Nee, het is €8.
+- `G6-GET-E09-r13-kritisch-01-4` Daan zegt dat 7/8 van €168 €147 is. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is €24. / Ja, dat klopt. / Nee, het is €21.
+- `G6-GET-E09-r13-kritisch-02-1` Noor zegt dat 4/5 van 80 20 is. Klopt dat? → **Nee, het is 64.** · opties: Ja, dat klopt. / Nee, het is 16. / Nee, het is 64.
+- `G6-GET-E09-r13-kritisch-02-2` Milan zegt dat 4/5 van 60 12 is. Klopt dat? → **Nee, het is 48.** · opties: Nee, het is 48. / Ja, dat klopt. / Nee, het is 15.
+- `G6-GET-E09-r13-kritisch-02-3` Fleur zegt dat 4/5 van 40 10 is. Klopt dat? → **Nee, het is 32.** · opties: Ja, dat klopt. / Nee, het is 32. / Nee, het is 8.
+- `G6-GET-E09-r13-kritisch-02-4` Sem zegt dat 3/8 van 24 9 is. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 8. / Nee, het is 3. / Ja, dat klopt.
+- `G6-GET-M02-r13-kritisch-01-1` 86.136 wordt 85.136. Lisa zegt dat het getal verandert met 100. Klopt dat? → **Nee, het is 1000.** · opties: Nee, het is 1000. / Ja, dat klopt. / Nee, het is 6.
+- `G6-GET-M02-r13-kritisch-01-2` 57.100 wordt 56.100. Tom zegt dat het getal verandert met 7. Klopt dat? → **Nee, het is 1000.** · opties: Ja, dat klopt. / Nee, het is 1000. / Nee, het is 100.
+- `G6-GET-M02-r13-kritisch-01-3` 54.739 wordt 54.749. Kim zegt dat het getal verandert met 100. Klopt dat? → **Nee, het is 10.** · opties: Ja, dat klopt. / Nee, het is 3. / Nee, het is 10.
+- `G6-GET-M02-r13-kritisch-01-4` 31.559 wordt 30.559. Ali zegt dat het getal verandert met 1000. Klopt dat? → **Ja, dat klopt.** · opties: Ja, dat klopt. / Nee, het is 100. / Nee, het is 1.
+- `G6-GET-M02-r13-kritisch-02-1` Sanne telt 10 op bij 41.564 en krijgt 41.664. Klopt dat? → **Nee, het is 41.574.** · opties: Ja, dat klopt. / Nee, het is 41.574. / Nee, het is 42.564.
+- `G6-GET-M02-r13-kritisch-02-2` Bram telt 100 op bij 21.062 en krijgt 21.072. Klopt dat? → **Nee, het is 21.162.** · opties: Ja, dat klopt. / Nee, het is 22.062. / Nee, het is 21.162.
+- `G6-GET-M02-r13-kritisch-02-3` Jet telt 100 op bij 17.089 en krijgt 18.089. Klopt dat? → **Nee, het is 17.189.** · opties: Nee, het is 17.189. / Ja, dat klopt. / Nee, het is 17.099.
+- `G6-GET-M02-r13-kritisch-02-4` Daan telt 10 op bij 12.389 en krijgt 12.399. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 12.489. / Ja, dat klopt. / Nee, het is 13.389.
+- `G6-GET-M02-r13-kritisch-03-1` Noor haalt 10 af van 52.709 en krijgt 52.609. Klopt dat? → **Nee, het is 52.699.** · opties: Ja, dat klopt. / Nee, het is 51.709. / Nee, het is 52.699.
+- `G6-GET-M02-r13-kritisch-03-2` Milan haalt 100 af van 65.483 en krijgt 65.473. Klopt dat? → **Nee, het is 65.383.** · opties: Nee, het is 65.383. / Ja, dat klopt. / Nee, het is 64.483.
+- `G6-GET-M02-r13-kritisch-03-3` Fleur haalt 100 af van 22.148 en krijgt 21.148. Klopt dat? → **Nee, het is 22.048.** · opties: Ja, dat klopt. / Nee, het is 22.048. / Nee, het is 22.138.
+- `G6-GET-M02-r13-kritisch-03-4` Sem haalt 100 af van 80.422 en krijgt 80.322. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 79.422. / Nee, het is 80.412. / Ja, dat klopt.
+- `G6-GET-M06-r13-kritisch-01-1` Lisa rekent 249 × 3 = 627. Klopt dat? → **Nee, het is 747.** · opties: Nee, het is 747. / Ja, dat klopt. / Nee, het is 720.
+- `G6-GET-M06-r13-kritisch-01-2` Tom rekent 371 × 6 = 2220. Klopt dat? → **Nee, het is 2226.** · opties: Ja, dat klopt. / Nee, het is 2226. / Nee, het is 826.
+- `G6-GET-M06-r13-kritisch-01-3` Kim rekent 786 × 7 = 962. Klopt dat? → **Nee, het is 5502.** · opties: Ja, dat klopt. / Nee, het is 5460. / Nee, het is 5502.
+- `G6-GET-M06-r13-kritisch-01-4` Ali rekent 742 × 9 = 6678. Klopt dat? → **Ja, dat klopt.** · opties: Ja, dat klopt. / Nee, het is 368. / Nee, het is 6660.
+- `G6-GET-E06-r13-kritisch-01-1` Sanne rekent 43 × 27 = 821. Klopt dat? → **Nee, het is 1161.** · opties: Ja, dat klopt. / Nee, het is 1161. / Nee, het is 860.
+- `G6-GET-E06-r13-kritisch-01-2` Bram rekent 26 × 31 = 780. Klopt dat? → **Nee, het is 806.** · opties: Ja, dat klopt. / Nee, het is 606. / Nee, het is 806.
+- `G6-GET-E06-r13-kritisch-01-3` Jet rekent 15 × 37 = 335. Klopt dat? → **Nee, het is 555.** · opties: Nee, het is 555. / Ja, dat klopt. / Nee, het is 450.
+- `G6-GET-E06-r13-kritisch-01-4` Daan rekent 45 × 23 = 1035. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 815. / Ja, dat klopt. / Nee, het is 900.
+- `G6-MEET-E01-r13-kritisch-01-1` Noor zegt dat 11.000 cm gelijk is aan 1100 m. Klopt dat? → **Nee, het is 110 m.** · opties: Ja, dat klopt. / Nee, het is 11 m. / Nee, het is 110 m.
+- `G6-MEET-E01-r13-kritisch-01-2` Milan zegt dat 18.000 cm gelijk is aan 18 m. Klopt dat? → **Nee, het is 180 m.** · opties: Nee, het is 180 m. / Ja, dat klopt. / Nee, het is 1800 m.
+- `G6-MEET-E01-r13-kritisch-01-3` Fleur zegt dat 29.000 cm gelijk is aan 2900 m. Klopt dat? → **Nee, het is 290 m.** · opties: Ja, dat klopt. / Nee, het is 290 m. / Nee, het is 29 m.
+- `G6-MEET-E01-r13-kritisch-01-4` Sem zegt dat 15.000 cm gelijk is aan 150 m. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 1500 m. / Nee, het is 15 m. / Ja, dat klopt.
+- `G6-MEET-E01-r13-kritisch-02-1` Lisa zegt dat 18 km gelijk is aan 180.000 m. Klopt dat? → **Nee, het is 18.000 m.** · opties: Nee, het is 18.000 m. / Ja, dat klopt. / Nee, het is 1800 m.
+- `G6-MEET-E01-r13-kritisch-02-2` Tom zegt dat 29 km gelijk is aan 2900 m. Klopt dat? → **Nee, het is 29.000 m.** · opties: Ja, dat klopt. / Nee, het is 29.000 m. / Nee, het is 290.000 m.
+- `G6-MEET-E01-r13-kritisch-02-3` Kim zegt dat 39 km gelijk is aan 390.000 m. Klopt dat? → **Nee, het is 39.000 m.** · opties: Ja, dat klopt. / Nee, het is 3900 m. / Nee, het is 39.000 m.
+- `G6-MEET-E01-r13-kritisch-02-4` Ali zegt dat 17 km gelijk is aan 17.000 m. Klopt dat? → **Ja, dat klopt.** · opties: Ja, dat klopt. / Nee, het is 170.000 m. / Nee, het is 1700 m.
+- `G6-MEET-E01-r13-kritisch-03-1` Sanne zegt dat 24 m gelijk is aan 240.000 mm. Klopt dat? → **Nee, het is 24.000 mm.** · opties: Ja, dat klopt. / Nee, het is 24.000 mm. / Nee, het is 2400 mm.
+- `G6-MEET-E01-r13-kritisch-03-2` Bram zegt dat 17 m gelijk is aan 1700 mm. Klopt dat? → **Nee, het is 17.000 mm.** · opties: Ja, dat klopt. / Nee, het is 170.000 mm. / Nee, het is 17.000 mm.
+- `G6-MEET-E01-r13-kritisch-03-3` Jet zegt dat 39 m gelijk is aan 390.000 mm. Klopt dat? → **Nee, het is 39.000 mm.** · opties: Nee, het is 39.000 mm. / Ja, dat klopt. / Nee, het is 3900 mm.
+- `G6-MEET-E01-r13-kritisch-03-4` Daan zegt dat 20 m gelijk is aan 20.000 mm. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 200.000 mm. / Ja, dat klopt. / Nee, het is 2000 mm.
+- `G6-MEET-E01-r13-kritisch-07-1` Noor zegt dat 29 hm gelijk is aan 29.000 m. Klopt dat? → **Nee, het is 2900 m.** · opties: Ja, dat klopt. / Nee, het is 290 m. / Nee, het is 2900 m.
+- `G6-MEET-E01-r13-kritisch-07-2` Milan zegt dat 15 hm gelijk is aan 150 m. Klopt dat? → **Nee, het is 1500 m.** · opties: Nee, het is 1500 m. / Ja, dat klopt. / Nee, het is 15.000 m.
+- `G6-MEET-E01-r13-kritisch-07-3` Fleur zegt dat 24 hm gelijk is aan 24.000 m. Klopt dat? → **Nee, het is 2400 m.** · opties: Ja, dat klopt. / Nee, het is 2400 m. / Nee, het is 240 m.
+- `G6-MEET-E01-r13-kritisch-07-4` Sem zegt dat 29 hm gelijk is aan 2900 m. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 29.000 m. / Nee, het is 290 m. / Ja, dat klopt.
+- `G6-MEET-E01-r13-kritisch-08-1` Lisa zegt dat 4000 m gelijk is aan 400 hm. Klopt dat? → **Nee, het is 40 hm.** · opties: Nee, het is 40 hm. / Ja, dat klopt. / Nee, het is 4 hm.
+- `G6-MEET-E01-r13-kritisch-08-2` Tom zegt dat 22.000 m gelijk is aan 22 hm. Klopt dat? → **Nee, het is 220 hm.** · opties: Ja, dat klopt. / Nee, het is 220 hm. / Nee, het is 2200 hm.
+- `G6-MEET-E01-r13-kritisch-08-3` Kim zegt dat 27.000 m gelijk is aan 2700 hm. Klopt dat? → **Nee, het is 270 hm.** · opties: Ja, dat klopt. / Nee, het is 27 hm. / Nee, het is 270 hm.
+- `G6-MEET-E01-r13-kritisch-08-4` Ali zegt dat 31.000 m gelijk is aan 310 hm. Klopt dat? → **Ja, dat klopt.** · opties: Ja, dat klopt. / Nee, het is 3100 hm. / Nee, het is 31 hm.
+- `G6-MEET-E01-r13-kritisch-09-1` Sanne zegt dat 7 km gelijk is aan 700 hm. Klopt dat? → **Nee, het is 70 hm.** · opties: Ja, dat klopt. / Nee, het is 70 hm. / Nee, het is 7 hm.
+- `G6-MEET-E01-r13-kritisch-09-2` Bram zegt dat 6 km gelijk is aan 6 hm. Klopt dat? → **Nee, het is 60 hm.** · opties: Ja, dat klopt. / Nee, het is 600 hm. / Nee, het is 60 hm.
+- `G6-MEET-E01-r13-kritisch-09-3` Jet zegt dat 4 km gelijk is aan 400 hm. Klopt dat? → **Nee, het is 40 hm.** · opties: Nee, het is 40 hm. / Ja, dat klopt. / Nee, het is 4 hm.
+- `G6-MEET-E01-r13-kritisch-09-4` Daan zegt dat 40 km gelijk is aan 400 hm. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 4000 hm. / Ja, dat klopt. / Nee, het is 40 hm.
+- `G6-MEET-E01-r13-kritisch-10-1` Noor zegt dat 200 hm gelijk is aan 200 km. Klopt dat? → **Nee, het is 20 km.** · opties: Ja, dat klopt. / Nee, het is 2 km. / Nee, het is 20 km.
+- `G6-MEET-E01-r13-kritisch-10-2` Milan zegt dat 2100 hm gelijk is aan 21 km. Klopt dat? → **Nee, het is 210 km.** · opties: Nee, het is 210 km. / Ja, dat klopt. / Nee, het is 2100 km.
+- `G6-MEET-E01-r13-kritisch-10-3` Fleur zegt dat 1400 hm gelijk is aan 1400 km. Klopt dat? → **Nee, het is 140 km.** · opties: Ja, dat klopt. / Nee, het is 140 km. / Nee, het is 14 km.
+- `G6-MEET-E01-r13-kritisch-10-4` Sem zegt dat 3000 hm gelijk is aan 300 km. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 3000 km. / Nee, het is 30 km. / Ja, dat klopt.
+- `G6-MEET-E03-r13-kritisch-01-1` Lisa zegt dat een rechthoek van 10 cm bij 8 cm 36 cm² is. Klopt dat? → **Nee, het is 80 cm².** · opties: Nee, het is 80 cm². / Ja, dat klopt. / Nee, het is 18 cm².
+- `G6-MEET-E03-r13-kritisch-01-2` Tom zegt dat een rechthoek van 8 cm bij 2 cm 10 cm² is. Klopt dat? → **Nee, het is 16 cm².** · opties: Ja, dat klopt. / Nee, het is 16 cm². / Nee, het is 20 cm².
+- `G6-MEET-E03-r13-kritisch-01-3` Kim zegt dat een rechthoek van 7 cm bij 8 cm 30 cm² is. Klopt dat? → **Nee, het is 56 cm².** · opties: Ja, dat klopt. / Nee, het is 15 cm². / Nee, het is 56 cm².
+- `G6-MEET-E03-r13-kritisch-01-4` Ali zegt dat een rechthoek van 5 cm bij 4 cm 20 cm² is. Klopt dat? → **Ja, dat klopt.** · opties: Ja, dat klopt. / Nee, het is 18 cm². / Nee, het is 9 cm².
+- `G6-MEET-E03-r13-kritisch-02-1` De oppervlakte van een rechthoek is 36 cm². Eén zijde is 9 cm. Sanne zegt dat de andere zijde 27 cm is. Klopt dat? → **Nee, het is 4 cm.** · opties: Ja, dat klopt. / Nee, het is 4 cm. / Nee, het is 18 cm.
+- `G6-MEET-E03-r13-kritisch-02-2` De oppervlakte van een rechthoek is 54 cm². Eén zijde is 9 cm. Bram zegt dat de andere zijde 27 cm is. Klopt dat? → **Nee, het is 6 cm.** · opties: Ja, dat klopt. / Nee, het is 45 cm. / Nee, het is 6 cm.
+- `G6-MEET-E03-r13-kritisch-02-3` De oppervlakte van een rechthoek is 32 cm². Eén zijde is 4 cm. Jet zegt dat de andere zijde 28 cm is. Klopt dat? → **Nee, het is 8 cm.** · opties: Nee, het is 8 cm. / Ja, dat klopt. / Nee, het is 16 cm.
+- `G6-MEET-E03-r13-kritisch-02-4` De oppervlakte van een rechthoek is 48 cm². Eén zijde is 6 cm. Daan zegt dat de andere zijde 8 cm is. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 42 cm. / Ja, dat klopt. / Nee, het is 24 cm.
+- `G6-MEET-E04-r13-kritisch-01-1` Noor zegt dat 4 L gelijk is aan 4000 cl. Klopt dat? → **Nee, het is 400 cl.** · opties: Ja, dat klopt. / Nee, het is 40 cl. / Nee, het is 400 cl.
+- `G6-MEET-E04-r13-kritisch-01-2` Milan zegt dat 24 L gelijk is aan 240 cl. Klopt dat? → **Nee, het is 2400 cl.** · opties: Nee, het is 2400 cl. / Ja, dat klopt. / Nee, het is 24.000 cl.
+- `G6-MEET-E04-r13-kritisch-01-3` Fleur zegt dat 10 L gelijk is aan 10.000 cl. Klopt dat? → **Nee, het is 1000 cl.** · opties: Ja, dat klopt. / Nee, het is 1000 cl. / Nee, het is 100 cl.
+- `G6-MEET-E04-r13-kritisch-01-4` Sem zegt dat 8 L gelijk is aan 800 cl. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 8000 cl. / Nee, het is 80 cl. / Ja, dat klopt.
+- `G6-MEET-E04-r13-kritisch-02-1` Lisa zegt dat 25.000 cl gelijk is aan 2500 L. Klopt dat? → **Nee, het is 250 L.** · opties: Nee, het is 250 L. / Ja, dat klopt. / Nee, het is 25 L.
+- `G6-MEET-E04-r13-kritisch-02-2` Tom zegt dat 33.000 cl gelijk is aan 33 L. Klopt dat? → **Nee, het is 330 L.** · opties: Ja, dat klopt. / Nee, het is 330 L. / Nee, het is 3300 L.
+- `G6-MEET-E04-r13-kritisch-02-3` Kim zegt dat 30.000 cl gelijk is aan 3000 L. Klopt dat? → **Nee, het is 300 L.** · opties: Ja, dat klopt. / Nee, het is 30 L. / Nee, het is 300 L.
+- `G6-MEET-E04-r13-kritisch-02-4` Ali zegt dat 39.000 cl gelijk is aan 390 L. Klopt dat? → **Ja, dat klopt.** · opties: Ja, dat klopt. / Nee, het is 3900 L. / Nee, het is 39 L.
+- `G6-MEET-E04-r13-kritisch-03-1` Sanne zegt dat 39 L gelijk is aan 390.000 ml. Klopt dat? → **Nee, het is 39.000 ml.** · opties: Ja, dat klopt. / Nee, het is 39.000 ml. / Nee, het is 3900 ml.
+- `G6-MEET-E04-r13-kritisch-03-2` Bram zegt dat 29 L gelijk is aan 2900 ml. Klopt dat? → **Nee, het is 29.000 ml.** · opties: Ja, dat klopt. / Nee, het is 290.000 ml. / Nee, het is 29.000 ml.
+- `G6-MEET-E04-r13-kritisch-03-3` Jet zegt dat 4 L gelijk is aan 40.000 ml. Klopt dat? → **Nee, het is 4000 ml.** · opties: Nee, het is 4000 ml. / Ja, dat klopt. / Nee, het is 400 ml.
+- `G6-MEET-E04-r13-kritisch-03-4` Daan zegt dat 24 L gelijk is aan 24.000 ml. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 240.000 ml. / Ja, dat klopt. / Nee, het is 2400 ml.
+- `G6-MEET-E04-r13-kritisch-05-1` Noor zegt dat 36 L gelijk is aan 3600 dl. Klopt dat? → **Nee, het is 360 dl.** · opties: Ja, dat klopt. / Nee, het is 36 dl. / Nee, het is 360 dl.
+- `G6-MEET-E04-r13-kritisch-05-2` Milan zegt dat 20 L gelijk is aan 20 dl. Klopt dat? → **Nee, het is 200 dl.** · opties: Nee, het is 200 dl. / Ja, dat klopt. / Nee, het is 2000 dl.
+- `G6-MEET-E04-r13-kritisch-05-3` Fleur zegt dat 10 L gelijk is aan 1000 dl. Klopt dat? → **Nee, het is 100 dl.** · opties: Ja, dat klopt. / Nee, het is 100 dl. / Nee, het is 10 dl.
+- `G6-MEET-E04-r13-kritisch-05-4` Sem zegt dat 5 L gelijk is aan 50 dl. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 500 dl. / Nee, het is 5 dl. / Ja, dat klopt.
+- `G6-MEET-E04-r13-kritisch-06-1` Lisa zegt dat 2200 dl gelijk is aan 2200 L. Klopt dat? → **Nee, het is 220 L.** · opties: Nee, het is 220 L. / Ja, dat klopt. / Nee, het is 22 L.
+- `G6-MEET-E04-r13-kritisch-06-2` Tom zegt dat 1200 dl gelijk is aan 12 L. Klopt dat? → **Nee, het is 120 L.** · opties: Ja, dat klopt. / Nee, het is 120 L. / Nee, het is 1200 L.
+- `G6-MEET-E04-r13-kritisch-06-3` Kim zegt dat 3600 dl gelijk is aan 3600 L. Klopt dat? → **Nee, het is 360 L.** · opties: Ja, dat klopt. / Nee, het is 36 L. / Nee, het is 360 L.
+- `G6-MEET-E04-r13-kritisch-06-4` Ali zegt dat 1000 dl gelijk is aan 100 L. Klopt dat? → **Ja, dat klopt.** · opties: Ja, dat klopt. / Nee, het is 1000 L. / Nee, het is 10 L.
+- `G6-MEET-E04-r13-kritisch-07-1` Sanne zegt dat 2 dl gelijk is aan 2000 ml. Klopt dat? → **Nee, het is 200 ml.** · opties: Ja, dat klopt. / Nee, het is 200 ml. / Nee, het is 20 ml.
+- `G6-MEET-E04-r13-kritisch-07-2` Bram zegt dat 17 dl gelijk is aan 170 ml. Klopt dat? → **Nee, het is 1700 ml.** · opties: Ja, dat klopt. / Nee, het is 17.000 ml. / Nee, het is 1700 ml.
+- `G6-MEET-E04-r13-kritisch-07-3` Jet zegt dat 11 dl gelijk is aan 11.000 ml. Klopt dat? → **Nee, het is 1100 ml.** · opties: Nee, het is 1100 ml. / Ja, dat klopt. / Nee, het is 110 ml.
+- `G6-MEET-E04-r13-kritisch-07-4` Daan zegt dat 7 dl gelijk is aan 700 ml. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 7000 ml. / Ja, dat klopt. / Nee, het is 70 ml.
+- `G6-MEET-E04-r13-kritisch-08-1` Noor zegt dat 32.000 ml gelijk is aan 3200 dl. Klopt dat? → **Nee, het is 320 dl.** · opties: Ja, dat klopt. / Nee, het is 32 dl. / Nee, het is 320 dl.
+- `G6-MEET-E04-r13-kritisch-08-2` Milan zegt dat 25.000 ml gelijk is aan 25 dl. Klopt dat? → **Nee, het is 250 dl.** · opties: Nee, het is 250 dl. / Ja, dat klopt. / Nee, het is 2500 dl.
+- `G6-MEET-E04-r13-kritisch-08-3` Fleur zegt dat 6000 ml gelijk is aan 600 dl. Klopt dat? → **Nee, het is 60 dl.** · opties: Ja, dat klopt. / Nee, het is 60 dl. / Nee, het is 6 dl.
+- `G6-MEET-E04-r13-kritisch-08-4` Sem zegt dat 24.000 ml gelijk is aan 240 dl. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 2400 dl. / Nee, het is 24 dl. / Ja, dat klopt.
+- `G6-MEET-E05-r13-kritisch-01-1` Lisa zegt dat 18 kg gelijk is aan 180.000 g. Klopt dat? → **Nee, het is 18.000 g.** · opties: Nee, het is 18.000 g. / Ja, dat klopt. / Nee, het is 1800 g.
+- `G6-MEET-E05-r13-kritisch-01-2` Tom zegt dat 15 kg gelijk is aan 1500 g. Klopt dat? → **Nee, het is 15.000 g.** · opties: Ja, dat klopt. / Nee, het is 15.000 g. / Nee, het is 150.000 g.
+- `G6-MEET-E05-r13-kritisch-01-3` Kim zegt dat 5 kg gelijk is aan 50.000 g. Klopt dat? → **Nee, het is 5000 g.** · opties: Ja, dat klopt. / Nee, het is 500 g. / Nee, het is 5000 g.
+- `G6-MEET-E05-r13-kritisch-01-4` Ali zegt dat 17 kg gelijk is aan 17.000 g. Klopt dat? → **Ja, dat klopt.** · opties: Ja, dat klopt. / Nee, het is 170.000 g. / Nee, het is 1700 g.
+- `G6-VERH-E02-r13-kritisch-05-1` Er zijn 8 koekjes. Sanne zegt dat 3/4 van de koekjes 3 koekjes zijn. Klopt dat? → **Nee, het is 6 koekjes.** · opties: Ja, dat klopt. / Nee, het is 6 koekjes. / Nee, het is 2 koekjes.
+- `G6-VERH-E02-r13-kritisch-05-2` Er zijn 12 koekjes. Bram zegt dat 2/3 van de koekjes 4 koekjes zijn. Klopt dat? → **Nee, het is 8 koekjes.** · opties: Ja, dat klopt. / Nee, het is 2 koekjes. / Nee, het is 8 koekjes.
+- `G6-VERH-E02-r13-kritisch-05-3` Er zijn 16 koekjes. Jet zegt dat 3/4 van de koekjes 3 koekjes zijn. Klopt dat? → **Nee, het is 12 koekjes.** · opties: Nee, het is 12 koekjes. / Ja, dat klopt. / Nee, het is 4 koekjes.
+- `G6-VERH-E02-r13-kritisch-05-4` Er zijn 10 koekjes. Daan zegt dat 3/5 van de koekjes 6 koekjes zijn. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 3 koekjes. / Ja, dat klopt. / Nee, het is 2 koekjes.
+- `G6-VERH-E03-r13-kritisch-01-1` 2 taarten worden eerlijk verdeeld over 5 kinderen. Noor zegt dat elk kind 5/2 taart krijgt. Klopt dat? → **Nee, het is 2/5 taart.** · opties: Ja, dat klopt. / Nee, het is 1/5 taart. / Nee, het is 2/5 taart.
+- `G6-VERH-E03-r13-kritisch-01-2` 2 taarten worden eerlijk verdeeld over 3 kinderen. Milan zegt dat elk kind 1/3 taart krijgt. Klopt dat? → **Nee, het is 2/3 taart.** · opties: Nee, het is 2/3 taart. / Ja, dat klopt. / Nee, het is 3/2 taart.
+- `G6-VERH-E03-r13-kritisch-01-3` 2 taarten worden eerlijk verdeeld over 3 kinderen. Fleur zegt dat elk kind 3/2 taart krijgt. Klopt dat? → **Nee, het is 2/3 taart.** · opties: Ja, dat klopt. / Nee, het is 2/3 taart. / Nee, het is 1/3 taart.
+- `G6-VERH-E03-r13-kritisch-01-4` 2 taarten worden eerlijk verdeeld over 3 kinderen. Sem zegt dat elk kind 2/3 taart krijgt. Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 3/2 taart. / Nee, het is 1/3 taart. / Ja, dat klopt.

@@ -1,0 +1,4465 @@
+{
+ "uitleg": "r13 L-R10b: kritisch-generator, ALS CONCEPT (Leerlijn-besluit B, 'Kritisch-vorm (generator)'). Schrijft NIETS in data/: de items staan in\nr13/kritisch_concept_g6.json (+ .md) voor Didactiek (vorm, taal) en Oefeningen (hints, regels). Pas na hun akkoord gaan ze de build in.\nVorm: bewering van een kind met een echte denkfout + «Klopt dat?»; meerkeuze met 3 opties «Ja, dat klopt.» / «Nee, het is [goed].» / «Nee, het is [tweede fout].»;\ngoed antwoord op wisselende plek (A/B/C); per somtype 4 items: 3 beweringen fout (denkfouten om en om), 1 klopt. Geen ':' in opgave en opties.\nPer somtype de denkfouten uit de tabel van het besluit. Niet gegenereerd (heeft het plaatje nodig): VBN-E02 #1–#3, GET-M03 #1 → Oefeningen/Website.\nGebruik: python3 r13/kritisch_concept.py  (deterministisch, seed 13).",
+ "aantal": 120,
+ "somtypes": 30,
+ "nietGegenereerd": [
+  {
+   "somtype": "G6-GET-M03 #1 (nrO 1)",
+   "reden": "getallenlijn nodig"
+  },
+  {
+   "somtype": "G6-VBN-E02 #1 (nrO 1)",
+   "reden": "lijngrafiek nodig (bewering over een aflezing)"
+  },
+  {
+   "somtype": "G6-VBN-E02 #2 (nrO 2)",
+   "reden": "lijngrafiek nodig"
+  },
+  {
+   "somtype": "G6-VBN-E02 #3 (nrO 3)",
+   "reden": "lijngrafiek nodig (of schatten «meer of minder dan 200?»)"
+  }
+ ],
+ "items": [
+  {
+   "id": "G6-GET-E01-r13-kritisch-01-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E01",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "Rond # af op duizendtallen.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Lisa rondt 43.948 af op duizendtallen en krijgt 43.000. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 44.000."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 43.900."
+    }
+   ],
+   "antwoord": "Nee, het is 44.000.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 44.000."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (afgekapt in plaats van afgerond)",
+    "Nee, het is 43.900.": "afgerond op een andere plek (honderdtallen)"
+   }
+  },
+  {
+   "id": "G6-GET-E01-r13-kritisch-01-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E01",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "Rond # af op duizendtallen.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Tom rondt 99.818 af op duizendtallen en krijgt 99.800. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 100.000."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 99.000."
+    }
+   ],
+   "antwoord": "Nee, het is 100.000.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 100.000."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (afgerond op een andere plek (honderdtallen))",
+    "Nee, het is 99.000.": "afgekapt in plaats van afgerond"
+   }
+  },
+  {
+   "id": "G6-GET-E01-r13-kritisch-01-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E01",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "Rond # af op duizendtallen.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Kim rondt 99.663 af op duizendtallen en krijgt 99.000. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 99.700."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 100.000."
+    }
+   ],
+   "antwoord": "Nee, het is 100.000.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 100.000."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (afgekapt in plaats van afgerond)",
+    "Nee, het is 99.700.": "afgerond op een andere plek (honderdtallen)"
+   }
+  },
+  {
+   "id": "G6-GET-E01-r13-kritisch-01-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E01",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "Rond # af op duizendtallen.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Ali rondt 79.640 af op duizendtallen en krijgt 80.000. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 79.000."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 79.600."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 79.000.": "afgekapt in plaats van afgerond",
+    "Nee, het is 79.600.": "afgerond op een andere plek (honderdtallen)"
+   }
+  },
+  {
+   "id": "G6-GET-E01-r13-kritisch-02-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E01",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "Rond # af op honderdtallen.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sanne rondt 1491 af op honderdtallen en krijgt 1400. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 1500."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 1490."
+    }
+   ],
+   "antwoord": "Nee, het is 1500.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 1500."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (afgekapt in plaats van afgerond)",
+    "Nee, het is 1490.": "afgerond op een andere plek (tientallen)"
+   }
+  },
+  {
+   "id": "G6-GET-E01-r13-kritisch-02-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E01",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "Rond # af op honderdtallen.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Bram rondt 8071 af op honderdtallen en krijgt 8070. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 8000."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 8100."
+    }
+   ],
+   "antwoord": "Nee, het is 8100.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 8100."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (afgerond op een andere plek (tientallen))",
+    "Nee, het is 8000.": "afgekapt in plaats van afgerond"
+   }
+  },
+  {
+   "id": "G6-GET-E01-r13-kritisch-02-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E01",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "Rond # af op honderdtallen.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Jet rondt 3069 af op honderdtallen en krijgt 3000. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 3100."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 3070."
+    }
+   ],
+   "antwoord": "Nee, het is 3100.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 3100."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (afgekapt in plaats van afgerond)",
+    "Nee, het is 3070.": "afgerond op een andere plek (tientallen)"
+   }
+  },
+  {
+   "id": "G6-GET-E01-r13-kritisch-02-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E01",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "Rond # af op honderdtallen.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Daan rondt 2391 af op honderdtallen en krijgt 2400. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 2300."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2390."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 2300.": "afgekapt in plaats van afgerond",
+    "Nee, het is 2390.": "afgerond op een andere plek (tientallen)"
+   }
+  },
+  {
+   "id": "G6-GET-E03-r13-kritisch-02-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E03",
+   "somtypeNrOrigineel": 4,
+   "weergaveNr": 2,
+   "kop": "Schrijf #/# met noemer #.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Noor schrijft 4/5 met noemer 20 als 4/20. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 19/20."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 16/20."
+    }
+   ],
+   "antwoord": "Nee, het is 16/20.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 16/20."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (alleen de noemer veranderd)",
+    "Nee, het is 19/20.": "bij de teller hetzelfde opgeteld als bij de noemer"
+   }
+  },
+  {
+   "id": "G6-GET-E03-r13-kritisch-02-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E03",
+   "somtypeNrOrigineel": 4,
+   "weergaveNr": 2,
+   "kop": "Schrijf #/# met noemer #.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Milan schrijft 2/4 met noemer 16 als 14/16. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 8/16."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2/16."
+    }
+   ],
+   "antwoord": "Nee, het is 8/16.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 8/16."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (bij de teller hetzelfde opgeteld als bij de noemer)",
+    "Nee, het is 2/16.": "alleen de noemer veranderd"
+   }
+  },
+  {
+   "id": "G6-GET-E03-r13-kritisch-02-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E03",
+   "somtypeNrOrigineel": 4,
+   "weergaveNr": 2,
+   "kop": "Schrijf #/# met noemer #.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Fleur schrijft 2/4 met noemer 16 als 2/16. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 8/16."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 14/16."
+    }
+   ],
+   "antwoord": "Nee, het is 8/16.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 8/16."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (alleen de noemer veranderd)",
+    "Nee, het is 14/16.": "bij de teller hetzelfde opgeteld als bij de noemer"
+   }
+  },
+  {
+   "id": "G6-GET-E03-r13-kritisch-02-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E03",
+   "somtypeNrOrigineel": 4,
+   "weergaveNr": 2,
+   "kop": "Schrijf #/# met noemer #.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sem schrijft 3/8 met noemer 32 als 12/32. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 3/32."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 27/32."
+    },
+    {
+     "letter": "C",
+     "tekst": "Ja, dat klopt."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 3/32.": "alleen de noemer veranderd",
+    "Nee, het is 27/32.": "bij de teller hetzelfde opgeteld als bij de noemer"
+   }
+  },
+  {
+   "id": "G6-GET-E04-r13-kritisch-01-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E04",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "In [plek] lagen # [ding]. Er zijn er # weggehaald. Hoeveel [ding] zijn er nog?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Lisa rekent 7002 − 4607 = 3605. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 2395."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 3405."
+    }
+   ],
+   "antwoord": "Nee, het is 2395.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 2395."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (per kolom de kleinste van de grootste)",
+    "Nee, het is 3405.": "lenen vergeten (over de nul)"
+   }
+  },
+  {
+   "id": "G6-GET-E04-r13-kritisch-01-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E04",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "In [plek] lagen # [ding]. Er zijn er # weggehaald. Hoeveel [ding] zijn er nog?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Tom rekent 9009 − 5281 = 4828. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 3728."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 4288."
+    }
+   ],
+   "antwoord": "Nee, het is 3728.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 3728."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (lenen vergeten (over de nul))",
+    "Nee, het is 4288.": "per kolom de kleinste van de grootste"
+   }
+  },
+  {
+   "id": "G6-GET-E04-r13-kritisch-01-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E04",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "In [plek] lagen # [ding]. Er zijn er # weggehaald. Hoeveel [ding] zijn er nog?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Kim rekent 7084 − 4242 = 3242. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 3842."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2842."
+    }
+   ],
+   "antwoord": "Nee, het is 2842.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 2842."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (per kolom de kleinste van de grootste)",
+    "Nee, het is 3842.": "lenen vergeten (over de nul)"
+   }
+  },
+  {
+   "id": "G6-GET-E04-r13-kritisch-01-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E04",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "In [plek] lagen # [ding]. Er zijn er # weggehaald. Hoeveel [ding] zijn er nog?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Ali rekent 5043 − 1536 = 3507. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 4513."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 4517."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 4513.": "per kolom de kleinste van de grootste",
+    "Nee, het is 4517.": "lenen vergeten (over de nul)"
+   }
+  },
+  {
+   "id": "G6-GET-E09-r13-kritisch-01-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E09",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "Hoeveel is #/# van €#?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sanne zegt dat 3/4 van €72 €24 is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is €54."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is €18."
+    }
+   ],
+   "antwoord": "Nee, het is €54.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is €54."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (gedeeld door de teller in plaats van door de noemer)",
+    "Nee, het is €18.": "alleen één deel genomen"
+   }
+  },
+  {
+   "id": "G6-GET-E09-r13-kritisch-01-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E09",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "Hoeveel is #/# van €#?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Bram zegt dat 5/8 van €40 €5 is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is €8."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is €25."
+    }
+   ],
+   "antwoord": "Nee, het is €25.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is €25."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (alleen één deel genomen)",
+    "Nee, het is €8.": "gedeeld door de teller in plaats van door de noemer"
+   }
+  },
+  {
+   "id": "G6-GET-E09-r13-kritisch-01-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E09",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "Hoeveel is #/# van €#?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Jet zegt dat 2/5 van €40 €20 is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is €16."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is €8."
+    }
+   ],
+   "antwoord": "Nee, het is €16.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is €16."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (gedeeld door de teller in plaats van door de noemer)",
+    "Nee, het is €8.": "alleen één deel genomen"
+   }
+  },
+  {
+   "id": "G6-GET-E09-r13-kritisch-01-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E09",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "Hoeveel is #/# van €#?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Daan zegt dat 7/8 van €168 €147 is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is €24."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is €21."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is €24.": "gedeeld door de teller in plaats van door de noemer",
+    "Nee, het is €21.": "alleen één deel genomen"
+   }
+  },
+  {
+   "id": "G6-GET-E09-r13-kritisch-02-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E09",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "Hoeveel is #/# van #?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Noor zegt dat 4/5 van 80 20 is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 16."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 64."
+    }
+   ],
+   "antwoord": "Nee, het is 64.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 64."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (gedeeld door de teller in plaats van door de noemer)",
+    "Nee, het is 16.": "alleen één deel genomen"
+   }
+  },
+  {
+   "id": "G6-GET-E09-r13-kritisch-02-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E09",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "Hoeveel is #/# van #?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Milan zegt dat 4/5 van 60 12 is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 48."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 15."
+    }
+   ],
+   "antwoord": "Nee, het is 48.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 48."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (alleen één deel genomen)",
+    "Nee, het is 15.": "gedeeld door de teller in plaats van door de noemer"
+   }
+  },
+  {
+   "id": "G6-GET-E09-r13-kritisch-02-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E09",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "Hoeveel is #/# van #?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Fleur zegt dat 4/5 van 40 10 is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 32."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 8."
+    }
+   ],
+   "antwoord": "Nee, het is 32.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 32."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (gedeeld door de teller in plaats van door de noemer)",
+    "Nee, het is 8.": "alleen één deel genomen"
+   }
+  },
+  {
+   "id": "G6-GET-E09-r13-kritisch-02-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E09",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "Hoeveel is #/# van #?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sem zegt dat 3/8 van 24 9 is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 8."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 3."
+    },
+    {
+     "letter": "C",
+     "tekst": "Ja, dat klopt."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 8.": "gedeeld door de teller in plaats van door de noemer",
+    "Nee, het is 3.": "alleen één deel genomen"
+   }
+  },
+  {
+   "id": "G6-GET-M02-r13-kritisch-01-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M02",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# wordt #. Met hoeveel verandert het getal?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "86.136 wordt 85.136. Lisa zegt dat het getal verandert met 100. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 1000."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 6."
+    }
+   ],
+   "antwoord": "Nee, het is 1000.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 1000."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (naar de verkeerde plek gekeken)",
+    "Nee, het is 6.": "het cijfer genomen in plaats van de waarde"
+   }
+  },
+  {
+   "id": "G6-GET-M02-r13-kritisch-01-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M02",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# wordt #. Met hoeveel verandert het getal?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "57.100 wordt 56.100. Tom zegt dat het getal verandert met 7. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 1000."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 100."
+    }
+   ],
+   "antwoord": "Nee, het is 1000.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 1000."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (het cijfer genomen in plaats van de waarde)",
+    "Nee, het is 100.": "naar de verkeerde plek gekeken"
+   }
+  },
+  {
+   "id": "G6-GET-M02-r13-kritisch-01-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M02",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# wordt #. Met hoeveel verandert het getal?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "54.739 wordt 54.749. Kim zegt dat het getal verandert met 100. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 3."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 10."
+    }
+   ],
+   "antwoord": "Nee, het is 10.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 10."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (naar de verkeerde plek gekeken)",
+    "Nee, het is 3.": "het cijfer genomen in plaats van de waarde"
+   }
+  },
+  {
+   "id": "G6-GET-M02-r13-kritisch-01-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M02",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# wordt #. Met hoeveel verandert het getal?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "31.559 wordt 30.559. Ali zegt dat het getal verandert met 1000. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 100."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 1."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 100.": "naar de verkeerde plek gekeken",
+    "Nee, het is 1.": "het cijfer genomen in plaats van de waarde"
+   }
+  },
+  {
+   "id": "G6-GET-M02-r13-kritisch-02-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M02",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "Welk getal is # meer dan #?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sanne telt 10 op bij 41.564 en krijgt 41.664. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 41.574."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 42.564."
+    }
+   ],
+   "antwoord": "Nee, het is 41.574.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 41.574."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (op de verkeerde plek erbij/eraf)",
+    "Nee, het is 42.564.": "op de verkeerde plek erbij/eraf (andere plek)"
+   }
+  },
+  {
+   "id": "G6-GET-M02-r13-kritisch-02-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M02",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "Welk getal is # meer dan #?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Bram telt 100 op bij 21.062 en krijgt 21.072. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 22.062."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 21.162."
+    }
+   ],
+   "antwoord": "Nee, het is 21.162.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 21.162."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (op de verkeerde plek erbij/eraf (andere plek))",
+    "Nee, het is 22.062.": "op de verkeerde plek erbij/eraf"
+   }
+  },
+  {
+   "id": "G6-GET-M02-r13-kritisch-02-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M02",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "Welk getal is # meer dan #?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Jet telt 100 op bij 17.089 en krijgt 18.089. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 17.189."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 17.099."
+    }
+   ],
+   "antwoord": "Nee, het is 17.189.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 17.189."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (op de verkeerde plek erbij/eraf)",
+    "Nee, het is 17.099.": "op de verkeerde plek erbij/eraf (andere plek)"
+   }
+  },
+  {
+   "id": "G6-GET-M02-r13-kritisch-02-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M02",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "Welk getal is # meer dan #?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Daan telt 10 op bij 12.389 en krijgt 12.399. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 12.489."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 13.389."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 12.489.": "op de verkeerde plek erbij/eraf",
+    "Nee, het is 13.389.": "op de verkeerde plek erbij/eraf (andere plek)"
+   }
+  },
+  {
+   "id": "G6-GET-M02-r13-kritisch-03-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M02",
+   "somtypeNrOrigineel": 3,
+   "weergaveNr": 3,
+   "kop": "Welk getal is # minder dan #?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Noor haalt 10 af van 52.709 en krijgt 52.609. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 51.709."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 52.699."
+    }
+   ],
+   "antwoord": "Nee, het is 52.699.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 52.699."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (op de verkeerde plek erbij/eraf)",
+    "Nee, het is 51.709.": "op de verkeerde plek erbij/eraf (andere plek)"
+   }
+  },
+  {
+   "id": "G6-GET-M02-r13-kritisch-03-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M02",
+   "somtypeNrOrigineel": 3,
+   "weergaveNr": 3,
+   "kop": "Welk getal is # minder dan #?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Milan haalt 100 af van 65.483 en krijgt 65.473. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 65.383."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 64.483."
+    }
+   ],
+   "antwoord": "Nee, het is 65.383.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 65.383."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (op de verkeerde plek erbij/eraf (andere plek))",
+    "Nee, het is 64.483.": "op de verkeerde plek erbij/eraf"
+   }
+  },
+  {
+   "id": "G6-GET-M02-r13-kritisch-03-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M02",
+   "somtypeNrOrigineel": 3,
+   "weergaveNr": 3,
+   "kop": "Welk getal is # minder dan #?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Fleur haalt 100 af van 22.148 en krijgt 21.148. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 22.048."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 22.138."
+    }
+   ],
+   "antwoord": "Nee, het is 22.048.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 22.048."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (op de verkeerde plek erbij/eraf)",
+    "Nee, het is 22.138.": "op de verkeerde plek erbij/eraf (andere plek)"
+   }
+  },
+  {
+   "id": "G6-GET-M02-r13-kritisch-03-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M02",
+   "somtypeNrOrigineel": 3,
+   "weergaveNr": 3,
+   "kop": "Welk getal is # minder dan #?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sem haalt 100 af van 80.422 en krijgt 80.322. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 79.422."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 80.412."
+    },
+    {
+     "letter": "C",
+     "tekst": "Ja, dat klopt."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 79.422.": "op de verkeerde plek erbij/eraf",
+    "Nee, het is 80.412.": "op de verkeerde plek erbij/eraf (andere plek)"
+   }
+  },
+  {
+   "id": "G6-GET-M06-r13-kritisch-01-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M06",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# × # =",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Lisa rekent 249 × 3 = 627. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 747."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 720."
+    }
+   ],
+   "antwoord": "Nee, het is 747.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 747."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (onthouden vergeten)",
+    "Nee, het is 720.": "de eenheden vergeten"
+   }
+  },
+  {
+   "id": "G6-GET-M06-r13-kritisch-01-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M06",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# × # =",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Tom rekent 371 × 6 = 2220. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 2226."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 826."
+    }
+   ],
+   "antwoord": "Nee, het is 2226.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 2226."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (de eenheden vergeten)",
+    "Nee, het is 826.": "onthouden vergeten"
+   }
+  },
+  {
+   "id": "G6-GET-M06-r13-kritisch-01-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M06",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# × # =",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Kim rekent 786 × 7 = 962. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 5460."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 5502."
+    }
+   ],
+   "antwoord": "Nee, het is 5502.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 5502."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (onthouden vergeten)",
+    "Nee, het is 5460.": "de eenheden vergeten"
+   }
+  },
+  {
+   "id": "G6-GET-M06-r13-kritisch-01-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-M06",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# × # =",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Ali rekent 742 × 9 = 6678. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 368."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 6660."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 368.": "onthouden vergeten",
+    "Nee, het is 6660.": "de eenheden vergeten"
+   }
+  },
+  {
+   "id": "G6-GET-E06-r13-kritisch-01-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E06",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# × # =",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sanne rekent 43 × 27 = 821. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 1161."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 860."
+    }
+   ],
+   "antwoord": "Nee, het is 1161.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 1161."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (alleen tientallen × tientallen en eenheden × eenheden)",
+    "Nee, het is 860.": "de eenheden van de tweede factor vergeten"
+   }
+  },
+  {
+   "id": "G6-GET-E06-r13-kritisch-01-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E06",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# × # =",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Bram rekent 26 × 31 = 780. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 606."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 806."
+    }
+   ],
+   "antwoord": "Nee, het is 806.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 806."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (de eenheden van de tweede factor vergeten)",
+    "Nee, het is 606.": "alleen tientallen × tientallen en eenheden × eenheden"
+   }
+  },
+  {
+   "id": "G6-GET-E06-r13-kritisch-01-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E06",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# × # =",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Jet rekent 15 × 37 = 335. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 555."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 450."
+    }
+   ],
+   "antwoord": "Nee, het is 555.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 555."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (alleen tientallen × tientallen en eenheden × eenheden)",
+    "Nee, het is 450.": "de eenheden van de tweede factor vergeten"
+   }
+  },
+  {
+   "id": "G6-GET-E06-r13-kritisch-01-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-GET-E06",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# × # =",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Daan rekent 45 × 23 = 1035. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 815."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 900."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 815.": "alleen tientallen × tientallen en eenheden × eenheden",
+    "Nee, het is 900.": "de eenheden van de tweede factor vergeten"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-01-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# cm = □ m",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Noor zegt dat 11.000 cm gelijk is aan 1100 m. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 11 m."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 110 m."
+    }
+   ],
+   "antwoord": "Nee, het is 110 m.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 110 m."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 11 m.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-01-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# cm = □ m",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Milan zegt dat 18.000 cm gelijk is aan 18 m. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 180 m."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 1800 m."
+    }
+   ],
+   "antwoord": "Nee, het is 180 m.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 180 m."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 1800 m.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-01-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# cm = □ m",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Fleur zegt dat 29.000 cm gelijk is aan 2900 m. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 290 m."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 29 m."
+    }
+   ],
+   "antwoord": "Nee, het is 290 m.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 290 m."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 29 m.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-01-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# cm = □ m",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sem zegt dat 15.000 cm gelijk is aan 150 m. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 1500 m."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 15 m."
+    },
+    {
+     "letter": "C",
+     "tekst": "Ja, dat klopt."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 1500 m.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 15 m.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-02-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "# km = □ m",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Lisa zegt dat 18 km gelijk is aan 180.000 m. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 18.000 m."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 1800 m."
+    }
+   ],
+   "antwoord": "Nee, het is 18.000 m.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 18.000 m."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 1800 m.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-02-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "# km = □ m",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Tom zegt dat 29 km gelijk is aan 2900 m. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 29.000 m."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 290.000 m."
+    }
+   ],
+   "antwoord": "Nee, het is 29.000 m.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 29.000 m."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 290.000 m.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-02-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "# km = □ m",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Kim zegt dat 39 km gelijk is aan 390.000 m. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 3900 m."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 39.000 m."
+    }
+   ],
+   "antwoord": "Nee, het is 39.000 m.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 39.000 m."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 3900 m.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-02-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "# km = □ m",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Ali zegt dat 17 km gelijk is aan 17.000 m. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 170.000 m."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 1700 m."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 170.000 m.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 1700 m.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-03-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 3,
+   "weergaveNr": 3,
+   "kop": "# m = □ mm",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sanne zegt dat 24 m gelijk is aan 240.000 mm. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 24.000 mm."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2400 mm."
+    }
+   ],
+   "antwoord": "Nee, het is 24.000 mm.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 24.000 mm."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 2400 mm.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-03-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 3,
+   "weergaveNr": 3,
+   "kop": "# m = □ mm",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Bram zegt dat 17 m gelijk is aan 1700 mm. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 170.000 mm."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 17.000 mm."
+    }
+   ],
+   "antwoord": "Nee, het is 17.000 mm.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 17.000 mm."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 170.000 mm.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-03-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 3,
+   "weergaveNr": 3,
+   "kop": "# m = □ mm",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Jet zegt dat 39 m gelijk is aan 390.000 mm. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 39.000 mm."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 3900 mm."
+    }
+   ],
+   "antwoord": "Nee, het is 39.000 mm.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 39.000 mm."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 3900 mm.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-03-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 3,
+   "weergaveNr": 3,
+   "kop": "# m = □ mm",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Daan zegt dat 20 m gelijk is aan 20.000 mm. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 200.000 mm."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2000 mm."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 200.000 mm.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 2000 mm.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-07-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 9,
+   "weergaveNr": 7,
+   "kop": "# hm = □ m",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Noor zegt dat 29 hm gelijk is aan 29.000 m. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 290 m."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2900 m."
+    }
+   ],
+   "antwoord": "Nee, het is 2900 m.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 2900 m."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 290 m.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-07-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 9,
+   "weergaveNr": 7,
+   "kop": "# hm = □ m",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Milan zegt dat 15 hm gelijk is aan 150 m. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 1500 m."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 15.000 m."
+    }
+   ],
+   "antwoord": "Nee, het is 1500 m.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 1500 m."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 15.000 m.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-07-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 9,
+   "weergaveNr": 7,
+   "kop": "# hm = □ m",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Fleur zegt dat 24 hm gelijk is aan 24.000 m. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 2400 m."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 240 m."
+    }
+   ],
+   "antwoord": "Nee, het is 2400 m.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 2400 m."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 240 m.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-07-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 9,
+   "weergaveNr": 7,
+   "kop": "# hm = □ m",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sem zegt dat 29 hm gelijk is aan 2900 m. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 29.000 m."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 290 m."
+    },
+    {
+     "letter": "C",
+     "tekst": "Ja, dat klopt."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 29.000 m.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 290 m.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-08-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 11,
+   "weergaveNr": 8,
+   "kop": "# m = □ hm",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Lisa zegt dat 4000 m gelijk is aan 400 hm. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 40 hm."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 4 hm."
+    }
+   ],
+   "antwoord": "Nee, het is 40 hm.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 40 hm."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 4 hm.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-08-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 11,
+   "weergaveNr": 8,
+   "kop": "# m = □ hm",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Tom zegt dat 22.000 m gelijk is aan 22 hm. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 220 hm."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2200 hm."
+    }
+   ],
+   "antwoord": "Nee, het is 220 hm.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 220 hm."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 2200 hm.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-08-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 11,
+   "weergaveNr": 8,
+   "kop": "# m = □ hm",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Kim zegt dat 27.000 m gelijk is aan 2700 hm. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 27 hm."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 270 hm."
+    }
+   ],
+   "antwoord": "Nee, het is 270 hm.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 270 hm."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 27 hm.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-08-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 11,
+   "weergaveNr": 8,
+   "kop": "# m = □ hm",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Ali zegt dat 31.000 m gelijk is aan 310 hm. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 3100 hm."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 31 hm."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 3100 hm.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 31 hm.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-09-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 10,
+   "weergaveNr": 9,
+   "kop": "# km = □ hm",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sanne zegt dat 7 km gelijk is aan 700 hm. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 70 hm."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 7 hm."
+    }
+   ],
+   "antwoord": "Nee, het is 70 hm.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 70 hm."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 7 hm.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-09-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 10,
+   "weergaveNr": 9,
+   "kop": "# km = □ hm",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Bram zegt dat 6 km gelijk is aan 6 hm. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 600 hm."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 60 hm."
+    }
+   ],
+   "antwoord": "Nee, het is 60 hm.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 60 hm."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 600 hm.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-09-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 10,
+   "weergaveNr": 9,
+   "kop": "# km = □ hm",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Jet zegt dat 4 km gelijk is aan 400 hm. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 40 hm."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 4 hm."
+    }
+   ],
+   "antwoord": "Nee, het is 40 hm.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 40 hm."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 4 hm.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-09-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 10,
+   "weergaveNr": 9,
+   "kop": "# km = □ hm",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Daan zegt dat 40 km gelijk is aan 400 hm. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 4000 hm."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 40 hm."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 4000 hm.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 40 hm.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-10-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 8,
+   "weergaveNr": 10,
+   "kop": "# hm = □ km",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Noor zegt dat 200 hm gelijk is aan 200 km. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 2 km."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 20 km."
+    }
+   ],
+   "antwoord": "Nee, het is 20 km.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 20 km."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 2 km.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-10-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 8,
+   "weergaveNr": 10,
+   "kop": "# hm = □ km",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Milan zegt dat 2100 hm gelijk is aan 21 km. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 210 km."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2100 km."
+    }
+   ],
+   "antwoord": "Nee, het is 210 km.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 210 km."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 2100 km.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-10-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 8,
+   "weergaveNr": 10,
+   "kop": "# hm = □ km",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Fleur zegt dat 1400 hm gelijk is aan 1400 km. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 140 km."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 14 km."
+    }
+   ],
+   "antwoord": "Nee, het is 140 km.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 140 km."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 14 km.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E01-r13-kritisch-10-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E01",
+   "somtypeNrOrigineel": 8,
+   "weergaveNr": 10,
+   "kop": "# hm = □ km",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sem zegt dat 3000 hm gelijk is aan 300 km. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 3000 km."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 30 km."
+    },
+    {
+     "letter": "C",
+     "tekst": "Ja, dat klopt."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 3000 km.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 30 km.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E03-r13-kritisch-01-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E03",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "Een rechthoek is # cm lang en # cm breed. Hoeveel cm² is de oppervlakte?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Lisa zegt dat een rechthoek van 10 cm bij 8 cm 36 cm² is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 80 cm²."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 18 cm²."
+    }
+   ],
+   "antwoord": "Nee, het is 80 cm².",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 80 cm²."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (de omtrek uitgerekend)",
+    "Nee, het is 18 cm².": "lengte en breedte opgeteld"
+   }
+  },
+  {
+   "id": "G6-MEET-E03-r13-kritisch-01-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E03",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "Een rechthoek is # cm lang en # cm breed. Hoeveel cm² is de oppervlakte?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Tom zegt dat een rechthoek van 8 cm bij 2 cm 10 cm² is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 16 cm²."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 20 cm²."
+    }
+   ],
+   "antwoord": "Nee, het is 16 cm².",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 16 cm²."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (lengte en breedte opgeteld)",
+    "Nee, het is 20 cm².": "de omtrek uitgerekend"
+   }
+  },
+  {
+   "id": "G6-MEET-E03-r13-kritisch-01-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E03",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "Een rechthoek is # cm lang en # cm breed. Hoeveel cm² is de oppervlakte?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Kim zegt dat een rechthoek van 7 cm bij 8 cm 30 cm² is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 15 cm²."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 56 cm²."
+    }
+   ],
+   "antwoord": "Nee, het is 56 cm².",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 56 cm²."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (de omtrek uitgerekend)",
+    "Nee, het is 15 cm².": "lengte en breedte opgeteld"
+   }
+  },
+  {
+   "id": "G6-MEET-E03-r13-kritisch-01-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E03",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "Een rechthoek is # cm lang en # cm breed. Hoeveel cm² is de oppervlakte?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Ali zegt dat een rechthoek van 5 cm bij 4 cm 20 cm² is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 18 cm²."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 9 cm²."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 18 cm².": "de omtrek uitgerekend",
+    "Nee, het is 9 cm².": "lengte en breedte opgeteld"
+   }
+  },
+  {
+   "id": "G6-MEET-E03-r13-kritisch-02-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E03",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "De oppervlakte van een rechthoek is # cm². Eén zijde is # cm. Hoe lang is de andere zijde in cm?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "De oppervlakte van een rechthoek is 36 cm². Eén zijde is 9 cm. Sanne zegt dat de andere zijde 27 cm is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 4 cm."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 18 cm."
+    }
+   ],
+   "antwoord": "Nee, het is 4 cm.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 4 cm."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (de zijde afgetrokken in plaats van gedeeld)",
+    "Nee, het is 18 cm.": "de oppervlakte door 2 gedeeld"
+   }
+  },
+  {
+   "id": "G6-MEET-E03-r13-kritisch-02-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E03",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "De oppervlakte van een rechthoek is # cm². Eén zijde is # cm. Hoe lang is de andere zijde in cm?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "De oppervlakte van een rechthoek is 54 cm². Eén zijde is 9 cm. Bram zegt dat de andere zijde 27 cm is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 45 cm."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 6 cm."
+    }
+   ],
+   "antwoord": "Nee, het is 6 cm.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 6 cm."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (de oppervlakte door 2 gedeeld)",
+    "Nee, het is 45 cm.": "de zijde afgetrokken in plaats van gedeeld"
+   }
+  },
+  {
+   "id": "G6-MEET-E03-r13-kritisch-02-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E03",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "De oppervlakte van een rechthoek is # cm². Eén zijde is # cm. Hoe lang is de andere zijde in cm?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "De oppervlakte van een rechthoek is 32 cm². Eén zijde is 4 cm. Jet zegt dat de andere zijde 28 cm is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 8 cm."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 16 cm."
+    }
+   ],
+   "antwoord": "Nee, het is 8 cm.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 8 cm."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (de zijde afgetrokken in plaats van gedeeld)",
+    "Nee, het is 16 cm.": "de oppervlakte door 2 gedeeld"
+   }
+  },
+  {
+   "id": "G6-MEET-E03-r13-kritisch-02-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E03",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "De oppervlakte van een rechthoek is # cm². Eén zijde is # cm. Hoe lang is de andere zijde in cm?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "De oppervlakte van een rechthoek is 48 cm². Eén zijde is 6 cm. Daan zegt dat de andere zijde 8 cm is. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 42 cm."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 24 cm."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 42 cm.": "de zijde afgetrokken in plaats van gedeeld",
+    "Nee, het is 24 cm.": "de oppervlakte door 2 gedeeld"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-01-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# L = □ cl",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Noor zegt dat 4 L gelijk is aan 4000 cl. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 40 cl."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 400 cl."
+    }
+   ],
+   "antwoord": "Nee, het is 400 cl.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 400 cl."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 40 cl.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-01-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# L = □ cl",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Milan zegt dat 24 L gelijk is aan 240 cl. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 2400 cl."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 24.000 cl."
+    }
+   ],
+   "antwoord": "Nee, het is 2400 cl.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 2400 cl."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 24.000 cl.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-01-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# L = □ cl",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Fleur zegt dat 10 L gelijk is aan 10.000 cl. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 1000 cl."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 100 cl."
+    }
+   ],
+   "antwoord": "Nee, het is 1000 cl.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 1000 cl."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 100 cl.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-01-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# L = □ cl",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sem zegt dat 8 L gelijk is aan 800 cl. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 8000 cl."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 80 cl."
+    },
+    {
+     "letter": "C",
+     "tekst": "Ja, dat klopt."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 8000 cl.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 80 cl.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-02-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "# cl = □ L",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Lisa zegt dat 25.000 cl gelijk is aan 2500 L. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 250 L."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 25 L."
+    }
+   ],
+   "antwoord": "Nee, het is 250 L.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 250 L."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 25 L.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-02-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "# cl = □ L",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Tom zegt dat 33.000 cl gelijk is aan 33 L. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 330 L."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 3300 L."
+    }
+   ],
+   "antwoord": "Nee, het is 330 L.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 330 L."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 3300 L.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-02-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "# cl = □ L",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Kim zegt dat 30.000 cl gelijk is aan 3000 L. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 30 L."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 300 L."
+    }
+   ],
+   "antwoord": "Nee, het is 300 L.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 300 L."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 30 L.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-02-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 2,
+   "kop": "# cl = □ L",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Ali zegt dat 39.000 cl gelijk is aan 390 L. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 3900 L."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 39 L."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 3900 L.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 39 L.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-03-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 3,
+   "weergaveNr": 3,
+   "kop": "# L = □ ml",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sanne zegt dat 39 L gelijk is aan 390.000 ml. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 39.000 ml."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 3900 ml."
+    }
+   ],
+   "antwoord": "Nee, het is 39.000 ml.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 39.000 ml."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 3900 ml.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-03-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 3,
+   "weergaveNr": 3,
+   "kop": "# L = □ ml",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Bram zegt dat 29 L gelijk is aan 2900 ml. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 290.000 ml."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 29.000 ml."
+    }
+   ],
+   "antwoord": "Nee, het is 29.000 ml.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 29.000 ml."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 290.000 ml.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-03-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 3,
+   "weergaveNr": 3,
+   "kop": "# L = □ ml",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Jet zegt dat 4 L gelijk is aan 40.000 ml. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 4000 ml."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 400 ml."
+    }
+   ],
+   "antwoord": "Nee, het is 4000 ml.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 4000 ml."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 400 ml.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-03-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 3,
+   "weergaveNr": 3,
+   "kop": "# L = □ ml",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Daan zegt dat 24 L gelijk is aan 24.000 ml. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 240.000 ml."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2400 ml."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 240.000 ml.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 2400 ml.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-05-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 5,
+   "weergaveNr": 5,
+   "kop": "# L = □ dl",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Noor zegt dat 36 L gelijk is aan 3600 dl. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 36 dl."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 360 dl."
+    }
+   ],
+   "antwoord": "Nee, het is 360 dl.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 360 dl."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 36 dl.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-05-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 5,
+   "weergaveNr": 5,
+   "kop": "# L = □ dl",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Milan zegt dat 20 L gelijk is aan 20 dl. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 200 dl."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2000 dl."
+    }
+   ],
+   "antwoord": "Nee, het is 200 dl.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 200 dl."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 2000 dl.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-05-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 5,
+   "weergaveNr": 5,
+   "kop": "# L = □ dl",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Fleur zegt dat 10 L gelijk is aan 1000 dl. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 100 dl."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 10 dl."
+    }
+   ],
+   "antwoord": "Nee, het is 100 dl.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 100 dl."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 10 dl.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-05-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 5,
+   "weergaveNr": 5,
+   "kop": "# L = □ dl",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sem zegt dat 5 L gelijk is aan 50 dl. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 500 dl."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 5 dl."
+    },
+    {
+     "letter": "C",
+     "tekst": "Ja, dat klopt."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 500 dl.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 5 dl.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-06-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 6,
+   "weergaveNr": 6,
+   "kop": "# dl = □ L",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Lisa zegt dat 2200 dl gelijk is aan 2200 L. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 220 L."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 22 L."
+    }
+   ],
+   "antwoord": "Nee, het is 220 L.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 220 L."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 22 L.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-06-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 6,
+   "weergaveNr": 6,
+   "kop": "# dl = □ L",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Tom zegt dat 1200 dl gelijk is aan 12 L. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 120 L."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 1200 L."
+    }
+   ],
+   "antwoord": "Nee, het is 120 L.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 120 L."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 1200 L.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-06-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 6,
+   "weergaveNr": 6,
+   "kop": "# dl = □ L",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Kim zegt dat 3600 dl gelijk is aan 3600 L. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 36 L."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 360 L."
+    }
+   ],
+   "antwoord": "Nee, het is 360 L.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 360 L."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 36 L.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-06-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 6,
+   "weergaveNr": 6,
+   "kop": "# dl = □ L",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Ali zegt dat 1000 dl gelijk is aan 100 L. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 1000 L."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 10 L."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 1000 L.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 10 L.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-07-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 7,
+   "weergaveNr": 7,
+   "kop": "# dl = □ ml",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sanne zegt dat 2 dl gelijk is aan 2000 ml. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 200 ml."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 20 ml."
+    }
+   ],
+   "antwoord": "Nee, het is 200 ml.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 200 ml."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 20 ml.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-07-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 7,
+   "weergaveNr": 7,
+   "kop": "# dl = □ ml",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Bram zegt dat 17 dl gelijk is aan 170 ml. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 17.000 ml."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 1700 ml."
+    }
+   ],
+   "antwoord": "Nee, het is 1700 ml.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 1700 ml."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 17.000 ml.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-07-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 7,
+   "weergaveNr": 7,
+   "kop": "# dl = □ ml",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Jet zegt dat 11 dl gelijk is aan 11.000 ml. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 1100 ml."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 110 ml."
+    }
+   ],
+   "antwoord": "Nee, het is 1100 ml.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 1100 ml."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 110 ml.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-07-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 7,
+   "weergaveNr": 7,
+   "kop": "# dl = □ ml",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Daan zegt dat 7 dl gelijk is aan 700 ml. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 7000 ml."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 70 ml."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 7000 ml.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 70 ml.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-08-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 8,
+   "weergaveNr": 8,
+   "kop": "# ml = □ dl",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Noor zegt dat 32.000 ml gelijk is aan 3200 dl. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 32 dl."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 320 dl."
+    }
+   ],
+   "antwoord": "Nee, het is 320 dl.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 320 dl."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 32 dl.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-08-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 8,
+   "weergaveNr": 8,
+   "kop": "# ml = □ dl",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Milan zegt dat 25.000 ml gelijk is aan 25 dl. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 250 dl."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2500 dl."
+    }
+   ],
+   "antwoord": "Nee, het is 250 dl.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 250 dl."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 2500 dl.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-08-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 8,
+   "weergaveNr": 8,
+   "kop": "# ml = □ dl",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Fleur zegt dat 6000 ml gelijk is aan 600 dl. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 60 dl."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 6 dl."
+    }
+   ],
+   "antwoord": "Nee, het is 60 dl.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 60 dl."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 6 dl.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E04-r13-kritisch-08-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E04",
+   "somtypeNrOrigineel": 8,
+   "weergaveNr": 8,
+   "kop": "# ml = □ dl",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Sem zegt dat 24.000 ml gelijk is aan 240 dl. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 2400 dl."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 24 dl."
+    },
+    {
+     "letter": "C",
+     "tekst": "Ja, dat klopt."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 2400 dl.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 24 dl.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E05-r13-kritisch-01-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E05",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# kg = □ g",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Lisa zegt dat 18 kg gelijk is aan 180.000 g. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 18.000 g."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 1800 g."
+    }
+   ],
+   "antwoord": "Nee, het is 18.000 g.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 18.000 g."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 1800 g.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E05-r13-kritisch-01-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E05",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# kg = □ g",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Tom zegt dat 15 kg gelijk is aan 1500 g. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 15.000 g."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 150.000 g."
+    }
+   ],
+   "antwoord": "Nee, het is 15.000 g.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 15.000 g."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te klein))",
+    "Nee, het is 150.000 g.": "factor van een buurmaat (tien keer te groot)"
+   }
+  },
+  {
+   "id": "G6-MEET-E05-r13-kritisch-01-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E05",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# kg = □ g",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Kim zegt dat 5 kg gelijk is aan 50.000 g. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 500 g."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 5000 g."
+    }
+   ],
+   "antwoord": "Nee, het is 5000 g.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 5000 g."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (factor van een buurmaat (tien keer te groot))",
+    "Nee, het is 500 g.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-MEET-E05-r13-kritisch-01-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-MEET-E05",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# kg = □ g",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Ali zegt dat 17 kg gelijk is aan 17.000 g. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 170.000 g."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 1700 g."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 170.000 g.": "factor van een buurmaat (tien keer te groot)",
+    "Nee, het is 1700 g.": "factor van een buurmaat (tien keer te klein)"
+   }
+  },
+  {
+   "id": "G6-VERH-E02-r13-kritisch-05-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-VERH-E02",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 5,
+   "kop": "[groepjes] Er zijn # [ding]. Kleur #/# van de koekjes.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Er zijn 8 koekjes. Sanne zegt dat 3/4 van de koekjes 3 koekjes zijn. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 6 koekjes."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2 koekjes."
+    }
+   ],
+   "antwoord": "Nee, het is 6 koekjes.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 6 koekjes."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (de teller overgenomen)",
+    "Nee, het is 2 koekjes.": "alleen één deel genomen"
+   }
+  },
+  {
+   "id": "G6-VERH-E02-r13-kritisch-05-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-VERH-E02",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 5,
+   "kop": "[groepjes] Er zijn # [ding]. Kleur #/# van de koekjes.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Er zijn 12 koekjes. Bram zegt dat 2/3 van de koekjes 4 koekjes zijn. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 2 koekjes."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 8 koekjes."
+    }
+   ],
+   "antwoord": "Nee, het is 8 koekjes.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 8 koekjes."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (alleen één deel genomen)",
+    "Nee, het is 2 koekjes.": "de teller overgenomen"
+   }
+  },
+  {
+   "id": "G6-VERH-E02-r13-kritisch-05-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-VERH-E02",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 5,
+   "kop": "[groepjes] Er zijn # [ding]. Kleur #/# van de koekjes.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Er zijn 16 koekjes. Jet zegt dat 3/4 van de koekjes 3 koekjes zijn. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 12 koekjes."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 4 koekjes."
+    }
+   ],
+   "antwoord": "Nee, het is 12 koekjes.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 12 koekjes."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (de teller overgenomen)",
+    "Nee, het is 4 koekjes.": "alleen één deel genomen"
+   }
+  },
+  {
+   "id": "G6-VERH-E02-r13-kritisch-05-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-VERH-E02",
+   "somtypeNrOrigineel": 2,
+   "weergaveNr": 5,
+   "kop": "[groepjes] Er zijn # [ding]. Kleur #/# van de koekjes.",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "Er zijn 10 koekjes. Daan zegt dat 3/5 van de koekjes 6 koekjes zijn. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 3 koekjes."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2 koekjes."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 3 koekjes.": "de teller overgenomen",
+    "Nee, het is 2 koekjes.": "alleen één deel genomen"
+   }
+  },
+  {
+   "id": "G6-VERH-E03-r13-kritisch-01-1",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-VERH-E03",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# [ding] worden eerlijk verdeeld over # [ding]. Welk deel van een [ding] krijgt [wie]?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "2 taarten worden eerlijk verdeeld over 5 kinderen. Noor zegt dat elk kind 5/2 taart krijgt. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 1/5 taart."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 2/5 taart."
+    }
+   ],
+   "antwoord": "Nee, het is 2/5 taart.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Nee, het is 2/5 taart."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (teller en noemer omgedraaid)",
+    "Nee, het is 1/5 taart.": "alleen naar het aantal kinderen gekeken"
+   }
+  },
+  {
+   "id": "G6-VERH-E03-r13-kritisch-01-2",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-VERH-E03",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# [ding] worden eerlijk verdeeld over # [ding]. Welk deel van een [ding] krijgt [wie]?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "2 taarten worden eerlijk verdeeld over 3 kinderen. Milan zegt dat elk kind 1/3 taart krijgt. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 2/3 taart."
+    },
+    {
+     "letter": "B",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 3/2 taart."
+    }
+   ],
+   "antwoord": "Nee, het is 2/3 taart.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Nee, het is 2/3 taart."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (alleen naar het aantal kinderen gekeken)",
+    "Nee, het is 3/2 taart.": "teller en noemer omgedraaid"
+   }
+  },
+  {
+   "id": "G6-VERH-E03-r13-kritisch-01-3",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-VERH-E03",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# [ding] worden eerlijk verdeeld over # [ding]. Welk deel van een [ding] krijgt [wie]?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "2 taarten worden eerlijk verdeeld over 3 kinderen. Fleur zegt dat elk kind 3/2 taart krijgt. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Ja, dat klopt."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 2/3 taart."
+    },
+    {
+     "letter": "C",
+     "tekst": "Nee, het is 1/3 taart."
+    }
+   ],
+   "antwoord": "Nee, het is 2/3 taart.",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "Nee, het is 2/3 taart."
+   },
+   "husselen": false,
+   "beweringKlopt": false,
+   "denkfoutPerOptie": {
+    "Ja, dat klopt.": "de bewering geloofd (teller en noemer omgedraaid)",
+    "Nee, het is 1/3 taart.": "alleen naar het aantal kinderen gekeken"
+   }
+  },
+  {
+   "id": "G6-VERH-E03-r13-kritisch-01-4",
+   "status": "concept (niet in data; wacht op Didactiek en Oefeningen)",
+   "doelId": "G6-VERH-E03",
+   "somtypeNrOrigineel": 1,
+   "weergaveNr": 1,
+   "kop": "# [ding] worden eerlijk verdeeld over # [ding]. Welk deel van een [ding] krijgt [wie]?",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "meerkeuze",
+   "opgave": "2 taarten worden eerlijk verdeeld over 3 kinderen. Sem zegt dat elk kind 2/3 taart krijgt. Klopt dat?",
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Nee, het is 3/2 taart."
+    },
+    {
+     "letter": "B",
+     "tekst": "Nee, het is 1/3 taart."
+    },
+    {
+     "letter": "C",
+     "tekst": "Ja, dat klopt."
+    }
+   ],
+   "antwoord": "Ja, dat klopt.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Ja, dat klopt."
+   },
+   "husselen": false,
+   "beweringKlopt": true,
+   "denkfoutPerOptie": {
+    "Nee, het is 3/2 taart.": "teller en noemer omgedraaid",
+    "Nee, het is 1/3 taart.": "alleen naar het aantal kinderen gekeken"
+   }
+  }
+ ]
+}

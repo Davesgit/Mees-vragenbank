@@ -593,6 +593,10 @@ Bron: `/workspace/leerlijn/rekenen-groep6/BESLUIT_R9-4_R10_NIVEAUS.md` §A. Vera
 
 | # | Wat | Stand |
 |---|---|---|
-| L-R9-4a | G5-GET-E07 speelvolgorde: #9 (nrO 20) direct na #3 (nrO 3); #10 (nrO 21) na #8 (nrO 8) en vóór #5. Weergavenummers blijven bevroren (D-#408): alleen speel-/progressievolgorde | open (na-ronde) |
-| L-R9-4b | Niveau: `naar-002` (3 × 13 = 39) en `naar-026` (6 × 12 = 72) uit #10, en `naar-008` (98 : 7 = 14) uit #9 → basis (bewuste uitzondering op 'alleen omhoog'); de rest blijft toepassen | open (na-ronde) |
+| L-R9-4a | G5-GET-E07 speelvolgorde: #9 (nrO 20) direct na #3 (nrO 3); #10 (nrO 21) na #8 (nrO 8) en vóór #5. Weergavenummers blijven bevroren (D-#408): alleen speel-/progressievolgorde | **✓ (branch na-ronde-r13)**: volgorde nrO 1,2,3,9,4,6,7,8,10,5,11 in `bevroren/speelvolgorde.json` en `merge.speelVolgorde` bij alle 504 E07-items; weergavenummers ongewijzigd |
+| L-R9-4b | Niveau: `naar-002` (3 × 13 = 39) en `naar-026` (6 × 12 = 72) uit #10, en `naar-008` (98 : 7 = 14) uit #9 → basis (bewuste uitzondering op 'alleen omhoog'); de rest blijft toepassen | **✓ (branch na-ronde-r13)**: 3 items toepassen → basis (naar-002, naar-008, naar-026) |
 | L-R9-4c | Optioneel (Leerlijn): #3 basis-items met driecijferig deeltal (001, 002, 008, 012, 014, 027, 028) → toepassen | niet gevraagd; bij Didactiek |
+| JO | juisteOptie/juisteOptieTekst gelijk aan het antwoord (melding r13-wachtrij) | **✓ (branch na-ronde-r13)**: 2 items, MEET-E07 282 (C €0,90 → €1,20) en 287 (A €1 → €2,50); daarna 0 |
+
+Uitvoering: `python3 r13/r13_uitvoer.py` (idempotent; rapport `r13/r13_rapport.json`). De wijzigingen staan in de data (`data/gemapt.json` → `apply_hints.py`). **Na een nieuwe G5-build moet `r13_uitvoer.py` opnieuw draaien**, anders gaan ze verloren.
+Checks op r13/g5 (8 okt ±18:20): check_hints 139 klaar · 0 open · 0 FAIL · 2 WARN; merge-notatie ALLES OK; #121 0 FAIL; generator-sleutels 0 FAIL.

@@ -443,17 +443,29 @@ Datapunt Overzicht: `fout_regels.py` van 12:03:59 faalde in `_zelftest543` (KeyE
 ### Titels en lege somtype-plekken (steering 14:33)
 | # | Wat | Stand |
 |---|---|---|
-| N13-1 | G6-VBN-E02 titel (samengevoegd doel) → «Beelddiagram, cirkeldiagram en lijngrafiek aflezen» | open |
-| N13-2 | G6-MEET-E05 titel → «Kilogram en gram vergelijken en omrekenen» | open |
+| N13-1 | G6-VBN-E02 titel (samengevoegd doel) → «Beelddiagram, cirkeldiagram en lijngrafiek aflezen» | **✓ (branch na-ronde-r13)**: per_doel + `BORD_N13` in `scripts/fixlijst_g6.py` (blijft na een build); guard #276 'noemt beeld-/cirkeldiagram' laat deze titel bewust door (lege plekken N13-3) |
+| N13-2 | G6-MEET-E05 titel → «Kilogram en gram vergelijken en omrekenen» | **✓ (branch na-ronde-r13)**: per_doel + `BORD_N13` (vervangt #217/#261) |
 | N13-3 | Lege somtype-plekken voor Oefeningen (zelfde aanpak als hm en dl; Oefeningen schrijft items en hints, geen items zonder hun input): beelddiagram «1 plaatje is meer dan 1» en eenvoudig cirkeldiagram in G6-VBN-E02; een dm²-somtype in G6-MEET-E03 | open (wacht op input Oefeningen) |
 
 ### Leerlijn-besluit ronde 10 (#382/#394), niveaus per somtype
 Bron: `/workspace/leerlijn/rekenen-groep6/BESLUIT_R9-4_R10_NIVEAUS.md` §B (tabel + Regel M).
 | # | Wat | Stand |
 |---|---|---|
-| L-R10a | 34 somtypes krijgen 3 niveaus volgens het kenmerk in de tabel (basis/toepassen/kritisch uit getallen of `visual.jsRender`; vast contextsjabloon telt niet als context). Omrekenen (MEET-E01/E04/E05): Regel M (basis = grootste maat heel getal ≤ 20, kale vorm; toepassen = > 20, komma of context; kritisch = factorfout of vergelijking) | open (na-ronde) |
-| L-R10b | Kritisch-vorm (generator): bewering met een echte denkfout + «Klopt dat?», 3 opties («Ja, dat klopt» / «Nee, het is [goed]» / «Nee, het is [tweede fout]»), goede antwoord op wisselende plekken, ongeveer de helft fout. Geen ':' in opgaven/opties (delen in woorden). Spreiding: per somtype ≥ 3 items per niveau, ≤ ~60 % op één niveau; huidige items blijven | open (na-ronde; generator nodig) |
-| L-R10c | VERH-E02 #4 (balk) en #3 (taart): alleen basis | open (na-ronde) |
-| L-R10d | De 53 dunne somtypes met één niveau: voorlopig het kenmerk van het grote somtype in hetzelfde doel | open (na-ronde) |
-| L-R10e | `niveauVoorlopig` (hm/dl) vervalt na toepassen | open (na-ronde) |
+| L-R10a | 34 somtypes krijgen 3 niveaus volgens het kenmerk in de tabel (basis/toepassen/kritisch uit getallen of `visual.jsRender`; vast contextsjabloon telt niet als context). Omrekenen (MEET-E01/E04/E05): Regel M (basis = grootste maat heel getal ≤ 20, kale vorm; toepassen = > 20, komma of context; kritisch = factorfout of vergelijking) | **✓ (branch na-ronde-r13)**: 680 items van niveau veranderd via `r13/niveaus.py`; kritisch blijft kritisch. Telling = 'Nu' van Leerlijn, behalve GET-E09 #2 (basis 40 i.p.v. 49: 9 items met getal ≤ 100 maar één deel niet uit de tafel, streng gelezen → toepassen). MEET-E03 #1: contextregel = opgave begint niet met 'Een rechthoek is …'/'Een … is een rechthoek van …' (gelijk aan Leerlijn 33/220/0). GET-M06 #1: 15 tussenvormen (onthouden in 1 kolom) blijven |
+| L-R10b | Kritisch-vorm (generator): bewering met een echte denkfout + «Klopt dat?», 3 opties («Ja, dat klopt» / «Nee, het is [goed]» / «Nee, het is [tweede fout]»), goede antwoord op wisselende plekken, ongeveer de helft fout. Geen ':' in opgaven/opties (delen in woorden). Spreiding: per somtype ≥ 3 items per niveau, ≤ ~60 % op één niveau; huidige items blijven | **concept (branch na-ronde-r13)**: `r13/kritisch_concept.py` (seed 13) → `r13/kritisch_concept_g6.json` + `.md`: 120 items, 30 somtypes × 4, juiste optie A/B/C elk 40, bewering klopt 30 / fout 90, geen ':'. Schrijft niet in `data/`. Niet gemaakt (plaatje nodig): GET-M03 #1, VBN-E02 #1–#3. Wacht op Didactiek/Oefeningen (hints, denkfout-teksten) vóór het in de data gaat |
+| L-R10c | VERH-E02 #4 (balk) en #3 (taart): alleen basis | **✓**: stonden al op basis (0 wijzigingen) |
+| L-R10d | De 53 dunne somtypes met één niveau: voorlopig het kenmerk van het grote somtype in hetzelfde doel | **✓ deels**: 4 items aangepast; 42 dunne somtypes blijven zoals ze zijn (kenmerk niet op alle items te lezen, of geen groot somtype in het doel) |
+| L-R10e | `niveauVoorlopig` (hm/dl) vervalt na toepassen | **✓**: `niveauVoorlopig` = false bij 72 hm/dl-items |
 | L-R10f | GET-E03 #1 (nrO 1, 550), #5 (nrO 5, 16) en #8 (nrO 8, 8): verhuizing naar park-G7, G7-GET-05 (vereenvoudigen verplicht = G7). **NIET uitvoeren: Dave moet eerst ja zeggen.** Stand nu: alle 574 staan live in de G6-build (12:11:42), status 'gemapt'; #5 heeft `nietLiveZonderBeeld` | wacht op Dave |
+
+### Overige r13-punten (G6)
+| # | Wat | Stand |
+|---|---|---|
+| V-#851/#852 | GET-E08 data: gelijke som, getallenrij en som overal mee vervangen | **✓ (branch na-ronde-r13)**: 8 items |
+| JO | juisteOptie/juisteOptieTekst gelijk aan het antwoord | **✓ (branch na-ronde-r13)**: 16 items; daarna 0 |
+
+**Spreiding na L-R10a–e (eis L-R10b: ≥ 3 per niveau, ≤ ~60 % op één niveau): open.** Alle 34 somtypes missen nog kritisch (komt van de generator, zie concept). Ook basis te weinig: GET-E04 #1 (0/32/0), GET-M02 #2 (0/70/0), GET-M02 #3 (0/70/0), MEET-E01 #1 (0/31/0), MEET-E04 #2 (1/39/0), VERH-E02 #5 (2/6/0), VERH-E03 #1 (0/17/0). Toepassen te weinig: GET-M02 #1 (200/0/0). Details: `r13/r13_rapport.json` → G6.spreiding.
+
+Uitvoering: `python3 r13/r13_uitvoer.py` (idempotent). De niveaus en E08-data staan in `data/gemapt.json` (→ `apply_hints.py`); **na een nieuwe G6-build moet `r13_uitvoer.py` opnieuw draaien**. De titels zitten ook in `scripts/fixlijst_g6.py` (`BORD_N13`).
+Checks op r13/g6 (8 okt ±18:20): check_hints 102 klaar · 0 open · 0 FAIL · 3 WARN; merge-notatie ALLES OK; FIX6 0 FAIL (na het bijwerken van de titelguards #217/#261/#276 voor N13).
+L-R10f: niet aangeraakt (wacht op Dave). N13-3: open (wacht op Oefeningen).

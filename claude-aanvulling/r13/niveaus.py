@@ -85,7 +85,7 @@ def classificeer(it, doel, nro):
         return 'toepassen', f'grootste maat {groot} ' + ('met komma' if w.denominator != 1 else '> 20') + ' (Regel M)'
     if key == ('G6-MEET-E03', 1):
         m = re.search(r'(\d+) cm lang en (\d+) cm breed', o); l, b = int(m.group(1)), int(m.group(2))
-        ctx = not o.startswith('Een rechthoek is')
+        ctx = not re.match(r'Een (?:rechthoek is|\w+ is een rechthoek van) ', o)      # 'Een tegel is een rechthoek van …' is alleen een naam, geen context (zo telt Leerlijn: Nu 33/220/0)
         if l <= 10 and b <= 10 and not ctx: return 'basis', 'beide zijden ≤ 10, kale vorm'
         return 'toepassen', ('een zijde > 10' if max(l, b) > 10 else 'context')
     if key == ('G6-MEET-E03', 2):

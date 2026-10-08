@@ -35,6 +35,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `te veel` (fout = antwoord + 1 of meer) → Dat is te veel. Tel in stukken: eerst de minuten tot het volgende hele uur. Dan de hele uren, als die er zijn. Dan de minuten die nog over zijn.  [nieuw]
   - `te weinig` (fout = antwoord − 1 of meer) → Dat is te weinig. Heb je alle stukken opgeteld? Tel in stukken: eerst de minuten tot het volgende hele uur. Dan de hele uren, als die er zijn. Dan de minuten die nog over zijn.  [nieuw]
   - `andere fout` (andere fout) → Tel in stukken: eerst de minuten tot het volgende hele uur. Dan de hele uren, als die er zijn. Dan de minuten die nog over zijn. Een uur heeft zestig minuten.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Hoeveel minuten duurt het van #:# uur tot #:# uur?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 2: [klokkenrij] Welke klok wijst #:# [ding]? (tijd digitaal)
@@ -95,6 +96,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `een uur te vroeg` (fout = klok een uur te vroeg) → Dat is een uur te vroeg. Je gaat over het hele uur heen: dan komt er een uur bij.  [nieuw]
   - `te laat` (Claudes sleutel: tijd-als-kommagetal) → Dat is te laat. Een uur heeft zestig minuten. Tel eerst tot het hele uur en tel daarna de rest verder.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een uur heeft zestig minuten. Tel eerst tot het volgende hele uur. Tel daarna de minuten die nog over zijn verder.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Het is #:# uur. Hoe laat is het # minuten later?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 4: Het is #.# uur. Hoe laat was het # minuten eerder? (Typ als 14.30.)
@@ -122,6 +124,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `een uur te laat` (fout = klok een uur te laat) → Dat is een uur te laat. Je gaat terug over het hele uur heen: dan gaat er een uur af.  [nieuw]
   - `te vroeg` (Claudes sleutel: tijd-als-kommagetal) → Dat is te vroeg. Een uur heeft zestig minuten. Tel eerst terug tot het hele uur en tel daarna de rest verder terug.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een uur heeft zestig minuten. Tel eerst terug tot het hele uur. Tel daarna de minuten die nog over zijn verder terug.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Het is #:# uur. Hoe laat was het # minuten eerder?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 5: Het is # [ding]. Welke datum is het # dagen later?
@@ -541,6 +544,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `te veel` (fout = antwoord + 1 of meer) → Dat is te veel. Tel van de begintijd tot de eindtijd. Ga je over het hele uur heen? Tel dan in stukken: eerst tot het hele uur, dan de hele uren als die er zijn, dan de minuten erna.  [nieuw]
   - `te weinig` (fout = antwoord − 1 of meer) → Dat is te weinig. Heb je alle stukken opgeteld? Tel van de begintijd tot de eindtijd. Ga je over het hele uur heen? Tel dan in stukken: eerst tot het hele uur, dan de hele uren als die er zijn, dan de minuten erna.  [nieuw]
   - `andere fout` (andere fout) → Tel van de begintijd tot de eindtijd. Ga je over het hele uur heen? Tel dan in stukken: eerst tot het hele uur, dan de hele uren als die er zijn, dan de minuten erna. Een uur heeft zestig minuten.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '[wie] beginnen om #:# en zijn klaar om #:#. Hoeveel minuten duurde het?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 18: [klokkenrij] Welke klok wijst tien over half # [ding]? (tijd in woorden)
@@ -743,6 +747,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tien minuten te vroeg` (fout = klok tien minuten te vroeg) → De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?  [nieuw]
   - `uren of minuten ernaast` (Claudes sleutel: tiental-ernaast) → Dat klopt niet helemaal. Tel de uren en de minuten nog eens apart erbij. Kijk of je over het hele uur heen gaat.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel eerst de hele uren erbij, en daarna de minuten. Een uur heeft zestig minuten: kom je over het hele uur heen, dan komt er een uur bij.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '[wie] vertrekken om #:#. De reis duurt # uur en # minuten. Hoe laat komen ze aan? Typ de tijd, zoals #:#.'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 24: [wie] vertrekken om #.# uur. De reis duurt # minuten. Hoe laat komen ze aan? (Typ als 14.30.)
@@ -775,4 +780,5 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tien minuten te vroeg` (fout = klok tien minuten te vroeg) → De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?  [nieuw]
   - `uren of minuten ernaast` (Claudes sleutel: tiental-ernaast) → Dat klopt niet helemaal. Tel de uren en de minuten nog eens apart erbij. Kijk of je over het hele uur heen gaat.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel de minuten erbij. Een uur heeft zestig minuten: kom je over het hele uur heen, dan komt er een uur bij.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '[wie] vertrekken om #:#. De reis duurt # minuten. Hoe laat komen ze aan? Typ de tijd, zoals #:#.'. Nakijken of ze nog passen.
 - Status: hints klaar
