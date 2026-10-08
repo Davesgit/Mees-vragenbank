@@ -1045,6 +1045,20 @@ def fix_g8(r, slog):
                 for f_ in ex.get('claudeFoutHints') or []:
                     if f_.get('fout') == oud_: f_.update(fout=nw_, uitleg='Dat is tien keer te groot. Reken de noemer om naar honderd en doe met de teller precies hetzelfde.')
                 slog(r, "V-#1000: afleider ': 10' → '× 10'", 'opties', oud_, nw_)
+        # V-#1032 (Didactiek hercheck b8 19:01:49, Z-#1034 → verplicht; les 398): MEET-V01 #1 goed = grootste in 94/151; in 25 items de 'som'-afleider (d + h + b)
+        # → 'een laag te veel' d·b·(h+1) (zelfde plek). Per item nagerekend: nieuwe afleider ≠ antwoord en ≠ andere opties (assert); grootste → 69/151.
+        if c8 in V1032 and ((r.get('visual') or {}).get('jsRender') or {}).get('soort') == 'bouwsel':
+            jr_ = r['visual']['jsRender']; D_, H_, B_ = jr_['diep'], jr_['hoog'], jr_['breed']; som_, nw_ = D_ + H_ + B_, D_ * B_ * (H_ + 1)
+            ops_ = [o_['tekst'] for o_ in r['opties']]
+            if str(som_) in ops_:
+                assert (V1032[c8] == (som_, nw_)) and str(nw_) not in ops_ and nw_ != D_ * H_ * B_ and str(D_ * H_ * B_) == str(r['antwoord']), (c8, som_, nw_, ops_)
+                r['opties'] = [dict(o_, tekst=str(nw_)) if o_['tekst'] == str(som_) else o_ for o_ in r['opties']]
+                r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
+                for f_ in ex.get('claudeFoutHints') or []:
+                    if f_.get('fout') == str(som_): f_.update(fout=str(nw_), uitleg='Dat is een laag te veel. Tel nog eens hoeveel lagen er op elkaar liggen.')
+                for d_ in ex.get('claudeDenkfouten') or []:
+                    if d_.get('fout') == str(som_): d_['fout'] = str(nw_)
+                slog(r, "V-#1032: afleider 'som' → 'een laag te veel' (b·d·(h+1))", 'opties', str(som_), str(nw_))
         # b9-datapunten (Oefeningen 8 okt, Oef-#1014–#1020) + Didactiek review-batch9 (V-#1020–#1027, Z-#1021/#1022/#1024)
         if r['merge'].get('doel') == 'G8-VERH-E05':
             o = r['opgave']; nr_ = KOPPIN_E05.get(r['bron']['claudeId'][:8], {}).get('id', '')[-3:]      # ids komen later; de bevroren kop-pin kent het id
@@ -1075,6 +1089,27 @@ def fix_g8(r, slog):
                                          {'stap': None, 'fout': '25 procent', 'uitleg': 'Je vergelijkt met het nieuwe aantal. Bij een daling reken je met het begingetal.'}]
                 ex['claudeUitleg'] = 'Het verschil is 60 − 48 = 12 broden. Je vergelijkt 12 met het begingetal 60. 12 van de 60 is 20 procent.'
                 slog(r, "V-#1023: heel antwoord, cijfers, geen 'ongeveer'", 'opgave', o, r['opgave']); o = r['opgave']
+            # Z-#1020 (Didactiek review-batch9, zacht; data-voorbereiding achter de vlag G8_Z1020=1, gaat mee in de volgende build): spreiding en dubbele items in E05 #1/#3.
+            # Alleen de nieuwe prijs/het nieuwe aantal verandert; routes per item nagerekend (assert): verschil, nieuwe basis, nieuw/oud × 100, de twee getallen ≠ het antwoord.
+            if os.environ.get('G8_Z1020', '1') == '1' and (c8z_ := r['bron']['claudeId'][:8]) in Z1020:
+                mz_ = re.search(r'kostte €(\d+) en kost nu €(\d+)\.|waren er (\d+) (\w+), nu (\d+)\.', o)
+                x_, y0_ = (int(mz_.group(1)), int(mz_.group(2))) if mz_.group(1) else (int(mz_.group(3)), int(mz_.group(5)))
+                y_ = Z1020[c8z_]
+                if y0_ != y_:
+                    p_ = Fr((y_ - x_) * 100, x_); assert p_.denominator == 1, c8z_; p_ = int(p_); d0_, d_ = y0_ - x_, y_ - x_
+                    nb0_, nb_ = round(Fr(d0_ * 100, y0_)), round(Fr(d_ * 100, y_))
+                    routes_ = {d_, round(Fr(d_ * 100, y_)), y_ * 100 // x_, x_, y_}
+                    assert p_ not in routes_, (c8z_, p_, routes_)
+                    n_ = o[:mz_.start()] + (f'kostte €{x_} en kost nu €{y_}.' if mz_.group(1) else f'waren er {x_} {mz_.group(4)}, nu {y_}.') + o[mz_.end():]
+                    slog(r, 'Z-#1020: spreiding/dubbel (E05 #1/#3)', 'opgave', o, n_); r['opgave'] = n_; o = n_; a0_ = r['antwoord']; r['antwoord'] = str(p_)
+                    km_ = {str(d0_): str(d_), str(nb0_): str(nb_)}
+                    kz_ = lambda v: str(v or '').lstrip('€').strip()      # vóór V-#1026 staan de E05-sleutels nog met '€'
+                    ex['claudeDenkfouten'] = [dict(dz_, fout=km_[kz_(dz_.get('fout'))]) for dz_ in ex.get('claudeDenkfouten') or [] if kz_(dz_.get('fout')) in km_]      # kommavormen komen hieronder opnieuw (Z-#1021)
+                    ex['claudeFoutHints'] = [dict(fz_, fout=km_[kz_(fz_.get('fout'))], uitleg=re.sub(rf'^{d0_} ', f'{d_} ', fz_.get('uitleg') or '')) for fz_ in ex.get('claudeFoutHints') or [] if kz_(fz_.get('fout')) in km_]
+                    assert len(ex['claudeDenkfouten']) >= 2, (c8z_, 'Z-#1020: Claude-sleutels niet gevonden')
+                    ex['claudeKaleSom'] = (ex.get('claudeKaleSom') or '').replace(f'naar {y0_}', f'naar {y_}')
+                    ex['claudeUitleg'] = (f'De stijging is {y_} − {x_} = {d_}.\n{d_} van {x_} is {p_}%.' if mz_.group(1) else f'Erbij gekomen: {y_} − {x_} = {d_}.\nDat vergelijk je met het oude aantal: {d_} van {x_} is {p_}%.')
+                    slog(r, 'Z-#1020: antwoord en Claude-velden bij de nieuwe getallen', 'antwoord', a0_, r['antwoord'])
             # V-#1026 (Oef-#1017; zoals Oef-#1006 bij E04): sleutels zonder '€'; geldigeAntwoorden met en zonder '€' (bedrag) of met '%'/'procent' (procent)
             # Z-#1021: een afgeronde 'nieuwe basis'-sleutel ('33' = 33,3) krijgt ook de kommavorm als sleutel
             if re.fullmatch(r'\d+(?:,\d+)?', str(r['antwoord'])):
@@ -1092,6 +1127,7 @@ def fix_g8(r, slog):
                         for d_ in list(ex.get('claudeDenkfouten') or []):
                             if ex_.denominator != 1 and re.fullmatch(r'\d+', str(d_.get('fout'))) and int(d_['fout']) == round(ex_):
                                 kv_ = f'{float(ex_):.1f}'.replace('.', ',')
+                                if kv_.endswith(',0'): continue      # 13,04 → '13,0' is geen kommavorm van een afgeronde sleutel
                                 if not any(x2.get('fout') == kv_ for x2 in ex['claudeDenkfouten']): ex['claudeDenkfouten'].append(dict(d_, fout=kv_)); slog(r, 'Z-#1021: afgeronde sleutel ook met komma', 'claudeSleutel', d_['fout'], kv_)
                 else: ga_ = [a_, f'€{a_}', f'€ {a_}', f'{a_} euro']
                 if r.get('geldigeAntwoorden') != ga_: r['geldigeAntwoorden'] = ga_
@@ -1100,7 +1136,8 @@ def fix_g8(r, slog):
             if (m_ := re.fullmatch(r'Zet de stip op \((\d+), (\d+)\)\.', r['opgave'])):
                 x_, y_ = m_.groups(); a0 = r['antwoord']; r['antwoord'] = f'({x_}, {y_})'
                 r['geldigeAntwoorden'] = [f'({x_}, {y_})', f'({x_},{y_})', f'{x_},{y_}', f'{x_}, {y_}']
-                if not r.get('nietLiveZonderBeeld'): r['nietLiveZonderBeeld'] = True
+                r.pop('nietLiveZonderBeeld', None)      # V-#1030 (les 395): de vlag hoort in visual, daar kijken alle lezers
+                if not r.setdefault('visual', {}).get('nietLiveZonderBeeld'): r['visual']['nietLiveZonderBeeld'] = True
                 ex['claudeDenkfouten'] = [d_ for d_ in ex.get('claudeDenkfouten') or [] if d_.get('fout') not in r['geldigeAntwoorden']]
                 if x_ != y_ and not any(d_.get('fout') == f'{y_},{x_}' for d_ in ex['claudeDenkfouten']): ex['claudeDenkfouten'].append({'fout': f'{y_},{x_}', 'denkfout': 'omgewisseld'})
                 # '1' bij (1, 0) (alleen één getal) is een fout-sleutel via de motorregel 'fout = een getal uit de vraag' (Oefeningen, b9 r1b); geen Claude-sleutel,
@@ -1207,7 +1244,12 @@ V1021 = {'012': {'oud': 'Een bal kostte €20 en kost nu €25. Met hoeveel proc
                  'antwoord': '25', 'sleutels': ['10', '20'], 'kaleSom': 'van 40 naar 50 = +__%', 'uitleg': 'De stijging is 50 − 40 = 10.\n10 van 40 is 25%.'},
          '015': {'oud': 'Een ei kostte €20 en kost nu €24. Met hoeveel procent is de prijs gestegen?', 'opgave': 'Een ei kostte €30 en kost nu €36. Met hoeveel procent is de prijs gestegen?',
                  'antwoord': '20', 'sleutels': ['6', '17'], 'kaleSom': 'van 30 naar 36 = +__%', 'uitleg': 'De stijging is 36 − 30 = 6.\n6 van 30 is 20%.'}}      # V-#1021; 'ei' → 'boek' via V1020
+Z1020 = {'9a772298': 92, 'db8f17ef': 168, 'ebb7cc5c': 78, '5a73879c': 60}      # Z-#1020: 014 €80→€92 (15%), 016 €120→€168 (40%), 018 €60→€78 (30%), 043 50→60 (20%)
 KOPPIN_E05 = json.load(open(os.path.join(os.path.dirname(HERE), 'bevroren', 'kop_e05_fase1.json'), encoding='utf-8'))['items']
+V1032 = {'023be4f1': (15, 144), '0e717574': (13, 100), '0e749130': (10, 48), '0f7cd32b': (15, 140), '15f71b96': (13, 90), '197e0468': (12, 56), '1dddba65': (14, 108),
+         '2432ac03': (15, 150), '291b2b8b': (10, 48), '298cd898': (13, 84), '29c3bd48': (13, 84), '3449ddfd': (13, 100), '38f2d9c6': (10, 45), '397449da': (11, 60),
+         '3e70fde2': (10, 45), '3efc947b': (11, 42), '41023e89': (16, 147), '5153c129': (14, 120), '54171e5e': (15, 144), '5626d9b4': (11, 32), '58c0842d': (9, 30),
+         '5abd2ce6': (17, 216), '6831cb91': (13, 96), '699f2c0b': (16, 168), '6ac8c567': (12, 56)}      # V-#1032: MEET-V01 #1 005–071 (kandidatenlijst Didactiek), c8 → (som, laag te veel)
 V1000 = {'7ed68c70': ('Schrijf 7/20 in procenten.', '3,5%', '350%'), 'ab56131e': ('Schrijf 13/50 in procenten.', '2,6%', '260%'),      # V-#1000 (E06 #2)
          'ce8f7a73': ('Schrijf 11/20 in procenten.', '5,5%', '550%'), 'd44aa1d9': ('Schrijf 18/25 in procenten.', '7,2%', '720%')}
 V984 = json.load(open(os.path.join(os.path.dirname(HERE), 'bevroren', 'v984_e06_v1.json'), encoding='utf-8'))['items']      # V-#984 (b8 deel B)

@@ -387,9 +387,18 @@ def vraag_waarden416(opg, los=True):
         w |= {_F416(int(x.replace('.', ''))) for x in re.findall(r'(?<![\w:.,])(?:\d{1,3}(?:\.\d{3})+|\d+)(?![\w:]|[.,]\d)', t)}
     elif los: w |= {_F416(int(x.replace('.', ''))) for x in re.findall(r'(?<![\w:.])(?:\d{1,3}(?:\.\d{3})+|\d+)(?![\w:]|\.\d)', t)}
     return {x for x in w if x is not None}
+_RX1031 = re.compile(r'\((\d+), ?(\d+)\)')
+def stip1031(c):
+    """V-#1031 (G8 VBN-V01 #1): het antwoord is een stip '(x, y)'; dan is een sleutel 'a,b' een coördinatenpaar"""
+    return bool(_RX1031.fullmatch(str(getattr(c, 'ans', '') or '').strip()))
+def stip_vormen1032(w):
+    """Z-#1032: een stip-sleutel in dezelfde vier vormen als de geldige antwoorden: 'a,b', 'a, b', '(a,b)', '(a, b)'"""
+    m = re.fullmatch(r'\(?(\d+), ?(\d+)\)?', str(w).strip())
+    return [f'{m.group(1)},{m.group(2)}', f'{m.group(1)}, {m.group(2)}', f'({m.group(1)},{m.group(2)})', f'({m.group(1)}, {m.group(2)})'] if m else [w]
 def in_vraag390(v, c):
     """#390/D-#416: is de sleutel op waarde gelijk aan een getal uit de vraag (ook breuken en kommagetallen: 2/2 = 1)? Dan valt hij terug op 'getal uit de vraag'
     (of een andere benoemde regel)."""
+    if stip1031(c) and re.fullmatch(r'\(?\d+, ?\d+\)?', str(v).strip()): return False      # V-#1031 (les 396): in een stip-item is 'a,b' een stip, geen kommagetal
     x = waarde416(v)
     if x is not None and str(v).strip().startswith('€'): return x in vraag_waarden416(c.opg, los=False)      # #530: bedrag op waarde
     return x is not None and (x in vraag_waarden416(c.opg) or (x.denominator == 1 and int(x) in set(c.nums)))
@@ -1136,6 +1145,7 @@ def _pas_toe_kern(it, st, alle_cellen=None):
             per_item = f['bron'] == 'claude' or per_item
 
         if comp and comp.get('exact'): comp['exact'] = {w for x in comp['exact'] for w in _vormen(x)}     # #60: '10000' én '10.000'
+        if comp and comp.get('exact') and stip1031(c): comp['exact'] = {w for x in comp['exact'] for w in stip_vormen1032(x)}      # Z-#1032: ook met haakjes en spatie
         if c.neg and comp and comp.get('exact'):      # Oef-#494: '−9' én '-9'; het antwoord zelf (met teken) is nooit een regelwaarde
             comp['exact'] = {w for x in comp['exact'] for w in _neg_vormen494(x) if c.an is None or not str(w).lstrip().startswith(('−', '-', '–')) or _sint494(w) != c.an}
         # G5 fixlijst #121 (Dave 20:04): bij een tabel (VBN-E01) is een regelwaarde nooit het goede antwoord (de motor nam de goede rij of cel mee)
@@ -1191,7 +1201,7 @@ def _pas_toe_kern(it, st, alle_cellen=None):
     def _past(comp, v):
         if bool(comp) and bool(comp.get('alles') or (v in comp.get('exact', ())) or (comp.get('pred') and comp['pred'](v))): return True
         # Oef-#440 (met KOMMA437): een sleutel '8,0' / '300,0' heeft de waarde van het hele getal: hij past op een regelwaarde '8' / '300'
-        return bool(KOMMA437 and comp and (q_ := re.fullmatch(r'(\d+),0+', str(v).strip())) and q_.group(1) in comp.get('exact', ()))
+        return bool(KOMMA437 and comp and not stip1031(c) and (q_ := re.fullmatch(r'(\d+),0+', str(v).strip())) and q_.group(1) in comp.get('exact', ()))      # V-#1031: in een stip-item is '1,0' een stip
     for v in kand:
         hit = None; volgorde = regels; ook = []; gedwongen = set()
         if tabel:

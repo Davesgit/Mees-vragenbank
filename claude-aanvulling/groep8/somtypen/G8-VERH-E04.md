@@ -2,7 +2,7 @@
 
 Onze omschrijving: 1%-regel; % via breuk/decimaal; korting oud↔nieuw · in onze bank: 8 items
 
-Claude-vragen gemapt: **32** in **8** somtypen · twijfel (voorstel dit doel): **0**
+Claude-vragen gemapt: **32** in **7** somtypen · twijfel (voorstel dit doel): **0**
 
 Invoer voor het schrijven van hint 1 (`hint`) en hint 2 (`sterkereHint`) per somtype. Velden `hint`, `sterkereHint` en `ouderzin` zijn nog leeg.
 Elk somtype heeft een vaste sleutel (nrOrigineel + somtypeOrigineel, bevroren/somtype_nr_v*.json): neem die over in hints/batch*.json, dan blijft de hint gekoppeld als de nummering of de kop verandert.
@@ -11,21 +11,21 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 ## Somtype 1: Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?
 
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?” (koppeling: claudeId)
-- Items: **14** · Claude-doelen: V6 (14) · regel: G8-P00-park-G7
+- Items: **15** · Claude-doelen: V6 (15) · regel: G8-P00-park-G7
 - Getallenruimte: procenten met € · type: kale
-- Denkfouten (Claude): procent-verkeerde-basis (17), getal-overgenomen (14)
-- Verschillende Claude-fout-hints: 12 (meest: “Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.”)
+- Denkfouten (Claude): procent-verkeerde-basis (19), getal-overgenomen (15)
+- Verschillende Claude-fout-hints: 13 (meest: “Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.”)
 - Voorbeelden:
   - `G8-VERH-E04-claude-bank-010` (Claude V6, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Een kaart kost na 20% korting €48. Wat was de prijs vóór de korting?
     - **Antwoord:** 60  (controle: ok)
     - **Fout-hints (Claude):** €58 → De 20% ging van de óude prijs af, niet van €48. €48 is 80%. · €48 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.
     - **Uitleg (Claude):** €48 is 80% van de oude prijs. 1% is 48 : 80 = 0,60, dus 100% is €60.
-  - `G8-VERH-E04-claude-bank-011` (Claude V6, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een trui kost na 10% korting €54. Wat was de prijs vóór de korting?
-    - **Antwoord:** 60  (controle: ok)
-    - **Fout-hints (Claude):** €59 → De 10% ging van de óude prijs af, niet van €54. €54 is 90%. · €54 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.
-    - **Uitleg (Claude):** €54 is 90% van de oude prijs. 1% is 54 : 90 = 0,60, dus 100% is €60.
+  - `G8-VERH-E04-claude-bank-020` (Claude V6, gegenereerd, niveau 2 → toepassen)
+    - **Opgave:** Een zak noten kost na 25% korting €6. Wat was de prijs vóór de korting?
+    - **Antwoord:** 8  (controle: ok)
+    - **Fout-hints (Claude):** €113 → De 50% ging van de óude prijs af, niet van €75. €75 is 50%. · €75 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.
+    - **Uitleg (Claude):** €6 is 75% van de oude prijs. 1% is 6 : 75 = 0,08, dus 100% is €8.
 
 - **Hint 1 (te schrijven):** Na de korting betaal je niet meer honderd procent van de oude prijs. Hoeveel procent betaal je nog?
 - **Hint 2 (te schrijven):** Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.
@@ -147,30 +147,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Deel het bedrag door honderd en doe dat keer het procent.  [nieuw]
 - Status: hints klaar
 
-## Somtype 6: Een zak noten kost na #% korting €#. Wat was de prijs vóór de korting?
-
-- Sleutel: nrOrigineel **6** · somtypeOrigineel “Een zak noten kost na #% korting €#. Wat was de prijs vóór de korting?” (koppeling: claudeId)
-- Items: **1** · Claude-doelen: V6 (1) · regel: G8-P00-park-G7
-- Getallenruimte: procenten met € · type: kale
-- Denkfouten (Claude): procent-verkeerde-basis (2), getal-overgenomen (1)
-- Verschillende Claude-fout-hints: 2 (meest: “De 50% ging van de óude prijs af, niet van €75. €75 is 50%.”)
-- Voorbeelden:
-  - `G8-VERH-E04-claude-bank-020` (Claude V6, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een zak noten kost na 25% korting €6. Wat was de prijs vóór de korting?
-    - **Antwoord:** 8  (controle: ok)
-    - **Fout-hints (Claude):** €113 → De 50% ging van de óude prijs af, niet van €75. €75 is 50%. · €75 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.
-    - **Uitleg (Claude):** €6 is 75% van de oude prijs. 1% is 6 : 75 = 0,08, dus 100% is €8.
-
-- **Hint 1 (te schrijven):** Na de korting betaal je niet meer honderd procent van de oude prijs. Hoeveel procent betaal je nog?
-- **Hint 2 (te schrijven):** Haal het procent van de korting van honderd af: zoveel procent van de oude prijs is de nieuwe prijs. Reken uit hoeveel euro één procent is. Doe dat keer honderd.
-- **Ouderzin:** Je kind rekent terug naar de prijs van vóór de korting.
-- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `nieuwe prijs` (Claudes sleutel: getal-overgenomen) → Dat is de prijs na de korting. Gevraagd is de prijs van vóór de korting: die is hoger.  [Claude, taalfix]
-  - `procent van de nieuwe prijs` (Claudes sleutel: procent-verkeerde-basis) → Heb je het procent van de nieuwe prijs erbij gedaan? De korting ging van de oude prijs af, niet van de nieuwe.  [Claude, taalfix]
-  - `andere fout` (andere fout) → De nieuwe prijs is een deel van de oude prijs. Welk procent? Reken daarmee terug naar honderd procent.  [nieuw]
-- Status: hints klaar
-
-## Somtype 7: Sanne zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?
+## Somtype 6: Sanne zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?
 
 - Sleutel: nrOrigineel **7** · somtypeOrigineel “Sanne zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: T6 (1) · regel: G8-T6-rente
@@ -194,7 +171,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Deel het bedrag door honderd en doe dat keer het procent.  [nieuw]
 - Status: hints klaar
 
-## Somtype 8: Van de # [ding] op school komt # procent met de fiets. Hoeveel kinderen komen er met de fiets?
+## Somtype 7: Van de # [ding] op school komt # procent met de fiets. Hoeveel kinderen komen er met de fiets?
 
 - Sleutel: nrOrigineel **8** · somtypeOrigineel “Van de # [ding] op school komt # procent met de fiets. Hoeveel kinderen komen er met de fiets?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: G9 (1) · regel: D8-STAT-NAAR-VERH

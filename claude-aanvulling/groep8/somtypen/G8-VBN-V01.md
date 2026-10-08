@@ -13,6 +13,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “[vak(ken) aantikken op rooster] Zet de stip op (#, #).” (koppeling: claudeId)
 - Items: **12** · Claude-doelen: K7 (12) · regel: G8-K7-coordinaten
 - Getallenruimte: n.v.t. · type: kale
+- **Visual: nodig — niet live zonder beeld** (12 items): interactief: vak(ken) aantikken op rooster
 - Denkfouten (Claude): None (11)
 - Verschillende Claude-fout-hints: 1 (meest: “Het eerste getal is opzij, het tweede omhoog.”)
 - Voorbeelden:

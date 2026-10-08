@@ -94,6 +94,23 @@ def klokvorm_treffers(items):
             mis = [x for x in w if (m := re.fullmatch(r'(\d{1,2}):(\d{2})', x)) and f'{m.group(1)}.{m.group(2)}' not in w]
             if mis: T.append((it, f"{it['id']} [{r.get('regel')}]: alleen {mis[0]!r}, niet '{mis[0].replace(':', '.')}'")); break
     return T
+def typvoorbeeld_treffers(items):
+    """Oef-#1021 (les 234-achtig): het voorbeeld in «(Typ als 14.30.)» mag niet het antwoord of een fout-sleutel van het item zijn; wie het voorbeeld overtypt,
+    krijgt anders 'goed' of een fout-hint die niet over het voorbeeld gaat (FAIL)."""
+    T = []
+    for it in items:
+        m = re.search(r'\(Typ als (\d{1,2})[.:](\d{2})\.\)', it.get('opgave') or '')
+        if not m: continue
+        h, mi = m.groups(); vormen = {f'{h}.{mi}', f'{h}.{mi} uur', f'{h}:{mi}'}
+        sleutels = {w for f in it.get('foutRegels') or [] for w in ((f.get('match') or {}).get('waarden') or [])}
+        goed = {str(it.get('antwoord'))} | set(it.get('geldigeAntwoorden') or [])
+        if vormen & sleutels: T.append((it, f"{it['id']}: voorbeeld '{h}.{mi}' is een fout-sleutel ({sorted(vormen & sleutels)})"))
+        if vormen & goed: T.append((it, f"{it['id']}: voorbeeld '{h}.{mi}' is het goede antwoord"))
+    return T
+def typvoorbeeld_mutant_ok():
+    it = {'id': 'mut-1211', 'opgave': 'De kinderen vertrekken om 12.55 uur. De reis duurt 1 uur en 25 minuten. Hoe laat komen ze aan? (Typ als 14.30.)', 'antwoord': '14.20 uur',
+          'foutRegels': [{'match': {'waarden': ['14.30 uur', '14.30', '14:30']}}]}
+    return bool(typvoorbeeld_treffers([it])) and not typvoorbeeld_treffers([dict(it, opgave=it['opgave'].replace('14.30.)', '9.45.)'))])
 def invoer(it):
     """typ-invoer van een tijd ('(Typ als 14:30.)'): de motor en de app lezen 'uu:mm'; omzetten vraagt eerst motorsteun → WARN, niet FAIL"""
     return '(Typ als' in (it.get('opgave') or '')
@@ -112,7 +129,11 @@ def rapport(items, ernst='FAIL', toon=True):
         print(f"KLOKSLEUTEL (V-#1012: kloksleutel 'h:mm' ook in de '.'-vorm, ook bij minuten ≥ 60): {len(KV)} ({ernst})")
         for x in KV[:8]: print(f'  {ernst} KLOKSLEUTEL', x)
         print(f"  mutanten tijdsduur {mutanten()}/{len(MUTANTEN)} · V-#1012 {mutanten1012()}/2")
-    return len(F) + len(DU) + len(DP) + len(KV)
+    TV = [x for it, x in typvoorbeeld_treffers(items)]
+    if toon:
+        print(f"TYPVOORBEELD (Oef-#1021: het voorbeeld in '(Typ als …)' is geen antwoord en geen fout-sleutel): {len(TV)} ({ernst}) · mutant {'ok' if typvoorbeeld_mutant_ok() else 'MIS'}")
+        for x in TV[:8]: print(f'  {ernst} TYPVOORBEELD', x)
+    return len(F) + len(DU) + len(DP) + len(KV) + len(TV)
 
 # les 348: de tijdsduur-check herkent zowel de '.'- als de ':'-notatie
 MUTANTEN = [('8:10 + 1:20', True), ('8.10 uur + 1.20 uur', True), ('De reis duurt 1:20.', True), ('duurt 1.20 uur', True), ('duurde 0:45', True),
@@ -133,4 +154,4 @@ def mutanten1012():
           'foutHints': [{'fout': '12:85', 'uitleg': 'Zestig minuten of meer kan niet achter de dubbele punt.'}],
           'foutRegels': [{'regel': 'overloop', 'tekst': 'Zestig minuten of meer kan niet achter de dubbele punt.', 'match': {'waarden': ['12:85']}}]}
     return int(bool(dubbelepunt_treffers([it]))) + int(bool(klokvorm_treffers([it])))
-def alle_mutanten_ok(): return mutanten() == len(MUTANTEN) and mutanten1012() == 2
+def alle_mutanten_ok(): return mutanten() == len(MUTANTEN) and mutanten1012() == 2 and typvoorbeeld_mutant_ok()

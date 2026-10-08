@@ -209,6 +209,8 @@ if __name__ == '__main__':
     import enkelvoud_check as _EV1      # V-#902 (batch 5, 16:58): na 1 het enkelvoud ('1 stap', '1 graad') (FAIL)
     fail = (_EV1.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     fail = any(bool(_EV1.fouten_item(_i)) != _v for _n, _i, _v in _EV1.MUTANTEN) or fail
+    import nietlive_check as _NL      # V-#1030 (les 395): visual.nodig zonder beeld → visual.nietLiveZonderBeeld (FAIL)
+    fail = (_NL.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import juiste_optie_check as _JO
     fail = (_JO.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import optie_positie_check as _OP      # Oef-#459 (8 okt): goede antwoord >60% op één plek in een somtype met ≥4 items (WARN)

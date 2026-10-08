@@ -9,7 +9,7 @@ Per somtype (doel + somtypeNr, vanaf MIN_ITEMS items): aandeel items waarin een 
 (0,40: Didactiek liet 'ongeveer een derde' xx,5% toe). Oud E06 #1 (96/96 'dec') moet FAIL geven (mutant).
 Gebruik: import vormcue_check as VC; VC.rapport(items); python3 vormcue_check.py --mutanten"""
 import re, sys, collections, math
-GRENS = 0.50; MIN_ITEMS = 6; P_MAX = 0.01; GRENS_RANG = 0.80      # rang (Z-#1000/#1001): 'altijd de grootste/kleinste' = FAIL vanaf 80 %; > 50 % (en p < 0,01) = WARN      # Z-#1003 (Didactiek 18:35): grens boven 50% én binomiale toets t.o.v. 1/3 (p < 0,01); toeval bij weinig items gaat zo door
+GRENS = 0.50; MIN_ITEMS = 6; P_MAX = 0.01; GRENS_RANG = 0.50      # V-#1032 (Didactiek 19:09, lijn V-#984/#1000): rang > 50 % én p < 0,01 = FAIL (was WARN tot 80 %); rang (Z-#1000/#1001): 'altijd de grootste/kleinste' = FAIL vanaf 80 %; > 50 % (en p < 0,01) = WARN      # Z-#1003 (Didactiek 18:35): grens boven 50% én binomiale toets t.o.v. 1/3 (p < 0,01); toeval bij weinig items gaat zo door
 RX = re.compile(r'^(?:€ ?)?(\d+(?:\.\d{3})*(?:,(\d+))?)(?: ?(?:%|procent|[a-zA-Z²³]+))?$')
 def _dec(t):
     m = RX.match(str(t).strip())
