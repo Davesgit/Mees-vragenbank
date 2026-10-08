@@ -1,0 +1,6 @@
+# Twijfels batch 5 (GET-E05 nrO 2–5). Oefeningen, 2026-10-08 (Amsterdam)
+
+1. **Afronden zonder het woord 'afronden'.** In G4 staan 'afronden' en 'naar boven af' op de lijst moeilijke woorden (check_hints, batch1 GET-E08). De vraag zelf zegt wel 'Rond beide getallen af op tientallen'. De hints zeggen het met G4-woorden: 'alleen de tientallen houden' of 'één tiental meer nemen', met de vijf-of-meer-regel. Twijfel: past die vraagzin dan nog in G4, of moet de opgave ook zo (Oef-#463)?
+2. **Meerkeuze: laatste cijfer eerst, schatten pas als grens.** Met de vijf-of-meer-schatting kiest een kind bij 8 van de 16 items een afleider (of het staat gelijk). De hints sturen daarom op het laatste cijfer en de grenzen. Didactiek: is 'grenzen' (alleen de tientallen / het tiental erboven) haalbaar in G4, of liever de items aanpassen zodat de schatting wél beslist?
+3. **'vijf' voluit** in plaats van '5 of meer', net als 'twee' bij VBN-E01 (batch4_twijfels punt 6). Dat is G4-gewoon en geeft geen WARN; 5 is in dit doel nooit een antwoord.
+4. **Lange fout-hints bij de open items** (vijf korte zinnen: wat het is, de regel, rekenen). Korter kan alleen door de regel weg te laten, en die moet er volgens les 15 in.

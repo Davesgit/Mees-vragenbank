@@ -1,0 +1,264 @@
+{
+ "batch": "batch5",
+ "geschreven": "2026-10-08",
+ "uitleg": "Hints per somtype (G4-merge, batch 5 = GET-E05 nrO 2–5, schatten met plus en min, G8-aanvulling). Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint; 'claude-taalfix' met 'Claudes sleutel: <label>' = vaste tekst op Claudes sleutels met dat label; 'nieuw' = eigen tekst. Getal1/getal2 = de getallen in de opgave, in volgorde.",
+ "somtypen": [
+  {
+   "doel": "G4-GET-E05",
+   "nr": 1,
+   "somtype": "Hoeveel is # + # [ding]? Rond beide getallen af op tientallen en reken dan uit.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Hoeveel is # + # [ding]? Rond beide getallen af op tientallen en reken dan uit.",
+   "hint1": "Schatten is ongeveer uitrekenen. Je maakt eerst van elk getal een rond getal: een getal dat eindigt op een nul.",
+   "hint2": "Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Tel daarna de twee ronde getallen op.",
+   "ouderzin": "Je kind schat een plussom: eerst van allebei de getallen een rond getal maken (op tientallen), dan die optellen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "precies uitgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Dat is precies uitgerekend. Maak eerst van allebei de getallen een rond getal, zoals de vraag zegt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan met de ronde getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is tien te veel. Kijk nog eens hoe je van elk getal een rond getal maakt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan met de twee ronde getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 10",
+     "tekst": "Dat is tien te weinig. Kijk nog eens hoe je van elk getal een rond getal maakt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan met de twee ronde getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twintig te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 20",
+     "tekst": "Dat is twintig te veel. Kijk nog eens hoe je van elk getal een rond getal maakt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan met de twee ronde getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twintig te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 20",
+     "tekst": "Dat is twintig te weinig. Kijk nog eens hoe je van elk getal een rond getal maakt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan met de twee ronde getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Maak eerst van allebei de getallen een rond getal, zoals de vraag zegt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Tel daarna de twee ronde getallen op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "claudeDenkfout": null,
+     "waarom": "'het dichtstbijzijnde ronde getal' is geen G4-taal en geeft bij een midden (55) geen regel (les 2); nu de 5-of-meer-regel"
+    },
+    {
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.",
+     "claudeDenkfout": null,
+     "waarom": "'de plek waarop je afrondt' is te abstract voor G4; nu 'de eenheden'"
+    },
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een tekst per waarde"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E05",
+   "nr": 2,
+   "somtype": "Hoeveel is # − # [ding]? Rond beide getallen af op tientallen en reken dan uit.",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Hoeveel is # − # [ding]? Rond beide getallen af op tientallen en reken dan uit.",
+   "hint1": "Schatten is ongeveer uitrekenen. Je maakt eerst van elk getal een rond getal: een getal dat eindigt op een nul.",
+   "hint2": "Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Haal daarna het tweede ronde getal van het eerste af.",
+   "ouderzin": "Je kind schat een minsom: eerst van allebei de getallen een rond getal maken (op tientallen), dan het ene van het andere afhalen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "precies uitgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Dat is precies uitgerekend. Maak eerst van allebei de getallen een rond getal, zoals de vraag zegt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan met de ronde getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is tien te veel. Kijk nog eens hoe je van elk getal een rond getal maakt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan met de twee ronde getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 10",
+     "tekst": "Dat is tien te weinig. Kijk nog eens hoe je van elk getal een rond getal maakt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan met de twee ronde getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twintig te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 20",
+     "tekst": "Dat is twintig te veel. Kijk nog eens hoe je van elk getal een rond getal maakt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan met de twee ronde getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twintig te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 20",
+     "tekst": "Dat is twintig te weinig. Kijk nog eens hoe je van elk getal een rond getal maakt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Reken dan met de twee ronde getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Maak eerst van allebei de getallen een rond getal, zoals de vraag zegt. Kijk bij elk getal naar de eenheden. Zijn het er minder dan vijf? Dan houd je alleen de tientallen. Zijn het er vijf of meer? Dan neem je één tiental meer. Haal daarna het tweede ronde getal van het eerste af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "claudeDenkfout": null,
+     "waarom": "'het dichtstbijzijnde ronde getal' is geen G4-taal en geeft bij een midden (55) geen regel (les 2); nu de 5-of-meer-regel"
+    },
+    {
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.",
+     "claudeDenkfout": null,
+     "waarom": "'de plek waarop je afrondt' is te abstract voor G4; nu 'de eenheden'"
+    },
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een tekst per waarde"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E05",
+   "nr": 3,
+   "somtype": "Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?",
+   "hint1": "Je hoeft niet precies te rekenen. Kijk eerst naar het laatste cijfer. Tel alleen de eenheden op. Op welk cijfer eindigt dat? Daar eindigt het antwoord ook op.",
+   "hint2": "Blijven er twee over? Neem van allebei de getallen alleen de tientallen en tel op. Het antwoord is groter dan dat. Maak van allebei de getallen het tiental erboven en tel op. Is een getal al rond? Dan blijft het zo. Groter kan het antwoord niet zijn.",
+   "ouderzin": "Je kind kiest zonder precies te rekenen welk antwoord kan kloppen: door naar het laatste cijfer te kijken en te schatten hoe groot het is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "min in plaats van plus",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Heb je min gedaan? Er staat een plus: er komt iets bij. Het antwoord is dus groter dan allebei de getallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "veel te groot",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is veel te groot. Schat eerst: maak van allebei de getallen een rond getal en reken daarmee. Het antwoord ligt daar dichtbij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "te groot",
+     "claudeDenkfout": "bovengrens",
+     "regel": "Claudes sleutel: bovengrens",
+     "tekst": "Dat is te groot. Maak van allebei de getallen het tiental erboven en tel op. Is een getal al rond? Dan blijft het zo. Groter dan dat kan het antwoord niet zijn.",
+     "claudeTekst": null,
+     "waarom": "Claudes tekst noemt de getallen van het item of zegt 'dichtstbijzijnde'; nu één vaste tekst per soort fout (G4-taal)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "te klein",
+     "claudeDenkfout": "ondergrens",
+     "regel": "Claudes sleutel: ondergrens",
+     "tekst": "Dat is te klein. Neem van allebei de getallen alleen de tientallen en tel op. Kleiner dan dat kan het antwoord niet zijn.",
+     "claudeTekst": null,
+     "waarom": "Claudes tekst noemt de getallen van het item of zegt 'dichtstbijzijnde'; nu één vaste tekst per soort fout (G4-taal)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "laatste cijfer",
+     "claudeDenkfout": "laatste-cijfer",
+     "regel": "Claudes sleutel: laatste-cijfer",
+     "tekst": "Kijk naar het laatste cijfer. Tel alleen de eenheden op. Op welk cijfer eindigt dat? Daar eindigt het antwoord ook op.",
+     "claudeTekst": null,
+     "waarom": "Claudes tekst noemt de getallen van het item of zegt 'dichtstbijzijnde'; nu één vaste tekst per soort fout (G4-taal)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar het laatste cijfer. Tel alleen de eenheden op. Op welk cijfer eindigt dat? Daar eindigt het antwoord ook op. Kijk dan of het antwoord niet te groot en niet te klein is."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E05",
+   "nr": 4,
+   "somtype": "Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Kijk zonder uit te rekenen. Welk antwoord bij # − # [ding] kloppen?",
+   "hint1": "Je hoeft niet precies te rekenen. Kijk eerst naar het laatste cijfer. Haal de eenheden van elkaar af. Is het laatste cijfer van het eerste getal kleiner? Doe er dan eerst tien bij. Wat je krijgt, is het laatste cijfer van het antwoord.",
+   "hint2": "Blijven er twee over? Maak van het eerste getal het tiental erboven. Is het al rond? Dan blijft het zo. Neem van het tweede getal alleen de tientallen, en haal dat ervan af. Groter kan het antwoord niet zijn.",
+   "ouderzin": "Je kind kiest zonder precies te rekenen welk antwoord kan kloppen: door naar het laatste cijfer te kijken en te schatten hoe groot het is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "plus in plaats van min",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Heb je plus gedaan? Er staat een min: er gaat iets af. Het antwoord is dus kleiner dan het eerste getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "veel te groot",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is veel te groot. Schat eerst: maak van allebei de getallen een rond getal en reken daarmee. Het antwoord ligt daar dichtbij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "te groot",
+     "claudeDenkfout": "bovengrens",
+     "regel": "Claudes sleutel: bovengrens",
+     "tekst": "Dat is te groot. Maak van het eerste getal het tiental erboven. Is het al rond? Dan blijft het zo. Neem van het tweede getal alleen de tientallen, en haal dat ervan af. Groter dan dat kan het antwoord niet zijn.",
+     "claudeTekst": null,
+     "waarom": "Claudes tekst noemt de getallen van het item of zegt 'dichtstbijzijnde'; nu één vaste tekst per soort fout (G4-taal)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "laatste cijfer",
+     "claudeDenkfout": "laatste-cijfer",
+     "regel": "Claudes sleutel: laatste-cijfer",
+     "tekst": "Kijk naar het laatste cijfer. Haal de eenheden van elkaar af. Is het laatste cijfer van het eerste getal kleiner? Doe er dan eerst tien bij. Wat je krijgt, is het laatste cijfer van het antwoord.",
+     "claudeTekst": null,
+     "waarom": "Claudes tekst noemt de getallen van het item of zegt 'dichtstbijzijnde'; nu één vaste tekst per soort fout (G4-taal)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar het laatste cijfer. Haal de eenheden van elkaar af. Is het laatste cijfer van het eerste getal kleiner? Doe er dan eerst tien bij. Wat je krijgt, is het laatste cijfer van het antwoord. Kijk dan of het antwoord niet te groot is."
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

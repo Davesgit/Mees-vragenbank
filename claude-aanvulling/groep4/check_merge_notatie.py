@@ -114,7 +114,7 @@ if __name__ == '__main__':
     for _x in _opp[:20]: print('  FAIL OPP', _x)
     fail = fail or bool(_opp)
     # REF (G5 fixlijst #63): referentiematen uit /workspace/claude-merge/referentiematen.json: checkPatronen = FAIL, checkPatronenZacht = WARN
-    sys.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge'))
+    sys.path.insert(0, '/workspace/claude-merge/tools')
     import referentiematen_check as _RC
     fail = (_RC.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail      # checkPatronen = FAIL, zacht = WARN
     # MAAT (notatie_machten.md, Didactiek 18:00; aangezet 18:05): ²/³ per groep, mengvorm 'vierkante cm', m2/cm3, 'a' voor are, INTRO per somtype
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     _VK.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
     import machten_check as _MC
     # DOELID (G5 merge-fixlijst #122, Didactiek 20:04): elk item heeft het doelId van zijn bestand (FAIL)
-    sys.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge')); import doelid_check as _DI
+    sys.path.insert(0, '/workspace/claude-merge/tools'); import doelid_check as _DI
     fail = (_DI.rapport(files) > 0) or fail
     import evenveel_check as _EV      # #192 (Didactiek 21:25): 'even veel' ook in ouderzin, hints en kop (FAIL)
     fail = (_EV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail

@@ -8,6 +8,7 @@ Na de build van 14:31 kwamen er somtypes bij (GET-E09 #4, MEET-E07 #1, MKU-E03 #
 | batch2 | GET-M01 | 23 | 602 | klaar (14:49), review-batch2.md |
 | batch3 | GET-M02, M05, M06, MEET-E01, E02, E05, E07, MKU-E01, E02, E03, E04, E05 | 24 | 448 | klaar (15:06); ronde 3b (Didactiek b3 v1) 15:30, review-batch3b.md; review-batch3.md · twijfels: hints/batch3_twijfels.md · fixlijst #25–33 · Claude ok 24 · taalfix 10 · vervangen 16 · nieuw 67 |
 | batch4 | MEET-E06, VBN-E01, VERH-E01 | 23 | 510 | klaar (15:36), review-batch4.md · twijfels: hints/batch4_twijfels.md · fixlijst #38–44 · Claude ok 4 · taalfix 0 · vervangen 30 · nieuw 27 |
+| batch5 | GET-E05 nrO 2–5 (G8-aanvulling 'naar G4', 8 okt) | 4 | 36 | klaar (8 okt, Oefeningen), review-batch5.md · twijfels: hints/batch5_twijfels.md · fixlijst Oef-#460–#463 · Claude ok 0 · vervangen 3 · nieuw 23 (waarvan 5 vaste tekst op Claude-labels) · nog niet gesynct (volgende build_g4.py) |
 
 ## Besluiten Didactiek (besluiten_twijfel.md) en Overzicht (README 'Besluiten Overzicht'): welke somtypes ze raken
 Stand build 14:34. Overzicht heeft de opgaven al aangepast (fixes B1–B6 in `logs/fixes.csv`). Hieronder staat wat de **hints** nog moeten doen.

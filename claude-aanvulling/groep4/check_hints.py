@@ -30,7 +30,7 @@ Somtypes zonder 'hints klaar' tellen als 'open'.
 Gebruik: python3 check_hints.py [bestand.md ...]   (standaard alle somtypen/G4-*.md) · exit 1 bij FAIL.
 """
 import re,sys,os,glob,json
-import sys as _sys113; _sys113.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge')); import klok113_check as _K113
+import sys as _sys113; _sys113.path.insert(0, '/workspace/claude-merge/tools'); import klok113_check as _K113
 BASE=os.path.dirname(os.path.abspath(__file__))
 LETTER=re.compile(r"(?<![\w'’/.-])([A-D])(?![\w'’/-])")
 KLOK=re.compile(r'(?<![\d:])\d{1,2}:\d{2}(?!\d)')
