@@ -397,3 +397,4 @@ Commits in mees-vragenbank (`/workspace/mees-vragenbank`, branch main; procespun
 | Z-#982/#983/#984, V-#971/#981/#982 | Oefeningen. |
 
 Checks build 18:09:12: check_hints **197 klaar · 26 open · 0 FAIL · 3 WARN** (ONLEESBAAR '40%' E06 #2, '40 procent'/'2 procent' V01: oude letterlijke regels, Oefeningen); merge-notatie **ALLES OK** (EINDCIJFER 0, KALESOM 0, VORMCUE 0, alle mutanten); **b1 0 · b2 0 · b3 0 · b4 0 · b5 0 · b6 1** (les 234 SNAP 041, Oefeningen) **· b7 0 · b8 20** (V-#971 2, les 373 1 (V-#982), E06 #2 teller-afleiders 12, V01 4, les 234 SNAP 004 1; allemaal Oefeningen-regels/SNAP na de nieuwe data). Live per_doel 23 · somtypen 23, alle gevuld (bouw_veilig, 0 conflict).
+Commit in mees-vragenbank (`/workspace/mees-vragenbank`, main): build 18:09:12 → **cfc6ebf** (`git -C /workspace/mees-vragenbank show --stat cfc6ebf`).
