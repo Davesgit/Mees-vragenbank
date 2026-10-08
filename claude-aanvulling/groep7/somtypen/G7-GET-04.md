@@ -258,7 +258,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 0,037 → Keer 10 of 100 maakt het getal groter: de komma gaat naar rechts. · 3700 → Je hebt de komma te ver geschoven. Keer 10 is één plek, keer 100 twee plekken. · 103,7 → 100 blaadjes van elk 3,7 gram. Dat is een keersom.
     - **Uitleg (Claude):** Keer 100: de komma schuift twee plekken naar rechts. 3,7 × 100 = 370.
   - `G7-GET-04-claude-bank-851` (Claude B16, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Eén poesje weegt 3,3 gram. Hoeveel gram wegen 100 poesjes?
+    - **Opgave:** Eén knikker weegt 3,3 gram. Hoeveel gram wegen 100 knikkers?
     - **Antwoord:** 330  (controle: ok)
     - **Fout-hints (Claude):** 0,033 → Keer 10 of 100 maakt het getal groter: de komma gaat naar rechts. · 3300 → Je hebt de komma te ver geschoven. Keer 10 is één plek, keer 100 twee plekken. · 103,3 → 100 poesjes van elk 3,3 gram. Dat is een keersom.
     - **Uitleg (Claude):** Keer 100: de komma schuift twee plekken naar rechts. 3,3 × 100 = 330.

@@ -59,12 +59,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 42 → Dat is één rechthoek. De andere hoort er ook bij. · 72 → Een L-vorm is geen grote rechthoek. Reken de twee delen apart en tel ze op. · 17 → Oppervlakte is lengte keer breedte, per rechthoek.
     - **Uitleg (Claude):** Knip de figuur in twee rechthoeken. 7 × 6 = 42 m² en 2 × 2 = 4 m². Samen 46 m².
 
-- **Hint 1 (te schrijven):** Het hok bestaat uit twee rechthoeken. Hoeveel m² (vierkante meter) is elke rechthoek?
+- **Hint 1 (te schrijven):** De tuin bestaat uit twee rechthoeken. Hoeveel m² (vierkante meter) is elke rechthoek?
 - **Hint 2 (te schrijven):** Reken elke rechthoek uit: lengte keer breedte. Tel de twee uitkomsten bij elkaar op.
 - **Ouderzin:** Je kind rekent de oppervlakte van een L-vorm uit door hem in twee rechthoeken te splitsen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één rechthoek` (fout = getal1 × getal2) → Dat is maar één van de twee rechthoeken. Hoeveel m² is de andere?  [nieuw]
-  - `één grote rechthoek` (Claudes sleutel: omtrek-oppervlakte-verwisseld) → Dat is te veel. Heb je van de twee stukken één grote rechthoek gemaakt? Het hok is een L.  [Claude, taalfix]
+  - `één grote rechthoek` (Claudes sleutel: omtrek-oppervlakte-verwisseld) → Dat is te veel. Heb je van de twee stukken één grote rechthoek gemaakt? De tuin is een L.  [Claude, taalfix]
   - `maten opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je alle maten opgeteld? Oppervlakte reken je met keer: lengte keer breedte.  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken elke rechthoek uit en tel de twee uitkomsten op.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?'. Nakijken of ze nog passen.

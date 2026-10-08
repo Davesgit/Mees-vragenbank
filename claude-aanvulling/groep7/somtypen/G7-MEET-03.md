@@ -31,6 +31,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent de hoogte van een balk uit: de inhoud gedeeld door de bodem.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `maat uit de vraag` (fout = een getal uit de vraag) → Dat is een maat uit de vraag. De hoogte reken je nog uit: deel de inhoud door de bodem.  [nieuw]
+  - `de bodem` (fout = de bodem (l × b)) → Dat is de bodem: één laagje. Hoeveel laagjes passen er in de inhoud?  [nieuw]
   - `één ernaast` (fout = antwoord ± 1) → Dat is één ernaast. Reken na: bodem keer hoogte moet precies de inhoud geven.  [nieuw]
   - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je hier opgeteld? De bodem is lengte keer breedte. De hoogte is de inhoud gedeeld door de bodem.  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken de bodem uit en deel de inhoud door de bodem.  [nieuw]
@@ -255,7 +256,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 2 × 2 = 4 m² bodem. 4 × 1,5 = 6,0 m³.
 
 - **Hint 1 (te schrijven):** Inhoud reken je in m³ (kubieke meter): hoeveel kubussen van één meter passen erin?
-- **Hint 2 (te schrijven):** Reken de bodem uit: lengte keer breedte. Doe dat keer de hoogte. Is een maat een kommagetal, reken dan ook het stuk achter de komma mee.
+- **Hint 2 (te schrijven):** Reken de bodem uit: lengte keer breedte. Doe dat keer de hoogte (of de diepte). Is een maat een kommagetal, reken dan ook het stuk achter de komma mee.
 - **Ouderzin:** Je kind rekent uit hoeveel kubieke meter (m³) erin past: lengte keer breedte keer hoogte, ook met een kommagetal.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `alleen de bodem` (fout = getal1 × getal2) → Dat is alleen de bodem. Doe je die nog keer de hoogte?  [nieuw]

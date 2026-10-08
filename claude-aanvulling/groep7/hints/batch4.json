@@ -24,6 +24,16 @@
      "tekstSterker": "Schrijf elke breuk als kommagetal: deel de teller door de noemer. Of maak de noemers gelijk. Vergelijk dan de breuken."
     },
     {
+     "bron": "claude-taalfix",
+     "soort": "kleine noemer gekozen",
+     "claudeDenkfout": "alleen-noemer-vergeleken",
+     "regel": "Claudes sleutel: alleen-noemer-vergeleken",
+     "tekst": "Is dat echt de grootste breuk? Een kleine noemer zegt nog niet dat de breuk groot is: kijk ook naar de teller. Vergelijk de breuken met een half, of maak de noemers gelijk.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label (Z-#630): geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Schrijf elke breuk als kommagetal: deel de teller door de noemer. Of maak de noemers gelijk. Vergelijk dan de breuken."
+    },
+    {
      "bron": "nieuw",
      "soort": "andere fout",
      "claudeDenkfout": null,
@@ -58,6 +68,16 @@
      "tekst": "Is dat echt de kleinste breuk? Een kleine noemer zegt nog niet dat de breuk klein is: kijk ook naar de teller. Vergelijk de breuken met een half, of maak de noemers gelijk.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "Schrijf elke breuk als kommagetal: deel de teller door de noemer. Of maak de noemers gelijk. Vergelijk dan de breuken."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "grote noemer gekozen",
+     "claudeDenkfout": "alleen-noemer-vergeleken",
+     "regel": "Claudes sleutel: alleen-noemer-vergeleken",
+     "tekst": "Is dat echt de kleinste breuk? Een grote noemer zegt nog niet dat de breuk klein is: kijk ook naar de teller. Vergelijk de breuken met een half, of maak de noemers gelijk.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label (Z-#630): geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
      "tekstSterker": "Schrijf elke breuk als kommagetal: deel de teller door de noemer. Of maak de noemers gelijk. Vergelijk dan de breuken."
     },
     {
@@ -848,7 +868,7 @@
    "somtype": "Een L-vormige tuin bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is de tuin?",
    "nrOrigineel": 3,
    "somtypeOrigineel": "Een L-vormig hok bestaat uit een rechthoek van # bij # meter en een rechthoek van # bij # meter. Hoeveel m² is het hok?",
-   "hint1": "Het hok bestaat uit twee rechthoeken. Hoeveel m² (vierkante meter) is elke rechthoek?",
+   "hint1": "De tuin bestaat uit twee rechthoeken. Hoeveel m² (vierkante meter) is elke rechthoek?",
    "hint2": "Reken elke rechthoek uit: lengte keer breedte. Tel de twee uitkomsten bij elkaar op.",
    "ouderzin": "Je kind rekent de oppervlakte van een L-vorm uit door hem in twee rechthoeken te splitsen.",
    "foutHints": [
@@ -865,7 +885,7 @@
      "soort": "één grote rechthoek",
      "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
      "regel": "Claudes sleutel: omtrek-oppervlakte-verwisseld",
-     "tekst": "Dat is te veel. Heb je van de twee stukken één grote rechthoek gemaakt? Het hok is een L.",
+     "tekst": "Dat is te veel. Heb je van de twee stukken één grote rechthoek gemaakt? De tuin is een L.",
      "claudeTekst": null,
      "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, met eigen laag 2",
      "tekstSterker": "Reken elke rechthoek apart uit: lengte keer breedte. Tel daarna de twee uitkomsten bij elkaar op."
@@ -999,6 +1019,16 @@
      "regel": "fout = een getal uit de vraag",
      "tekst": "Dat is een maat uit de vraag. De hoogte reken je nog uit: deel de inhoud door de bodem.",
      "tekstSterker": "Reken de bodem uit: lengte keer breedte. Deel de inhoud door de bodem. Wat eruit komt, is de hoogte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de bodem",
+     "claudeDenkfout": null,
+     "regel": "fout = de bodem (l × b)",
+     "tekst": "Dat is de bodem: één laagje. Hoeveel laagjes passen er in de inhoud?",
+     "claudeTekst": null,
+     "waarom": "Motorregel (Z-#633): lengte keer breedte uit de vraag; vaste tekst zonder getallen, met eigen laag 2",
+     "tekstSterker": "De bodem is één laagje. Deel de inhoud door de bodem: zoveel laagjes liggen er op elkaar. Dat is de hoogte."
     },
     {
      "bron": "nieuw",
@@ -1523,7 +1553,7 @@
    "nrOrigineel": 9,
    "somtypeOrigineel": "Een bak is # m lang, # m breed en # m hoog. Hoeveel m³ gaat erin?",
    "hint1": "Inhoud reken je in m³ (kubieke meter): hoeveel kubussen van één meter passen erin?",
-   "hint2": "Reken de bodem uit: lengte keer breedte. Doe dat keer de hoogte. Is een maat een kommagetal, reken dan ook het stuk achter de komma mee.",
+   "hint2": "Reken de bodem uit: lengte keer breedte. Doe dat keer de hoogte (of de diepte). Is een maat een kommagetal, reken dan ook het stuk achter de komma mee.",
    "ouderzin": "Je kind rekent uit hoeveel kubieke meter (m³) erin past: lengte keer breedte keer hoogte, ook met een kommagetal.",
    "foutHints": [
     {

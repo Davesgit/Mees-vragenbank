@@ -33,7 +33,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere fout` (andere fout) → Oppervlakte reken je uit met hokjes van één bij één meter. Doe de lengte keer de breedte.  [nieuw]
 - Status: hints klaar
 
-## Somtype 2: Een sportveld is # meter lang en # meter breed. Je tekent het als rechthoek. Welk getal hoort bij de [ding]?
+## Somtype 2: Een speelveld is # meter lang en # meter breed. Je tekent het als rechthoek. Welk getal hoort bij de omtrek?
 
 - Sleutel: nrOrigineel **2** · somtypeOrigineel “Een sportveld is # meter lang en # meter breed. Je tekent het als rechthoek. Welk getal hoort bij de [ding]?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W4 (1) · regel: G7-W02-modelleren
@@ -43,7 +43,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “De omtrek is de lijn helemaal rondom je tekening, niet het vlak erbinnen.”)
 - Voorbeelden:
   - `G7-DENK-02-claude-bank-002` (Claude W4, ai, niveau 3 → toepassen)
-    - **Opgave:** Een sportveld is 20 meter lang en 10 meter breed. Je tekent het als rechthoek. Welk getal hoort bij de omtrek?
+    - **Opgave:** Een speelveld is 20 meter lang en 10 meter breed. Je tekent het als rechthoek. Welk getal hoort bij de omtrek?
     - **Opties:** A) 30 meter · B) 60 meter · C) 200 meter
     - **Antwoord:** 60 meter  (controle: n.v.t.)
     - **Fout-hints (Claude):** 200 meter → De omtrek is de lijn helemaal rondom je tekening, niet het vlak erbinnen. · 30 meter → Een rechthoek heeft vier zijden. Ben je er alle vier langsgelopen?
@@ -56,6 +56,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `oppervlakte` (200 meter) → Heb je de lengte keer de breedte gedaan? Zo krijg je de oppervlakte: het vlak binnen de rand. De omtrek is alleen de rand.  [nieuw]
   - `twee zijden` (30 meter) → Heb je maar twee zijden geteld? Een rechthoek heeft vier zijden. Loop helemaal om het veld heen.  [nieuw]
   - `andere fout` (andere fout) → De omtrek is de rand rondom. Tel alle vier de zijden van de rechthoek bij elkaar op.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een sportveld is # meter lang en # meter breed. Je tekent het als rechthoek. Welk getal hoort bij de [ding]?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 3: Er zijn # [ding] op het schoolplein. Een derde speelt bij de [ding]. Welke tekening past hier het beste bij?
@@ -66,12 +67,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Visual: nodig — niet live zonder beeld** (1 items): de vraag verwijst naar een tekening (welke tekening/som); zonder tekening niet live (Z-#525, zoals DENK-02 #4/#9/#10/#13)
 - Uit de G6-park: 1 items
 - Denkfouten (Claude): deel-van-geheel-verkeerd (2)
-- Verschillende Claude-fout-hints: 2 (meest: “Een derde betekent dat maar één van de gelijke groepjes telt.”)
+- Claude-fout-hints: geen
 - Voorbeelden:
   - `G7-DENK-02-claude-bank-003` (Claude W4, ai, niveau 2 → toepassen)
     - **Opgave:** Er zijn 18 kinderen op het schoolplein. Een derde speelt bij de zandbak. Welke tekening past hier het beste bij?
-    - **Opties:** A) 3 groepjes van 6, één groepje gekleurd · B) 3 groepjes van 6, alle groepjes gekleurd · C) 2 groepjes van 9, één groepje gekleurd
-    - **Antwoord:** 3 groepjes van 6, één groepje gekleurd  (controle: n.v.t.)
+    - **Opties:** A) 3 groepjes van 6, één groepje omcirkeld · B) 3 groepjes van 6, alle groepjes omcirkeld · C) 2 groepjes van 9, één groepje omcirkeld
+    - **Antwoord:** 3 groepjes van 6, één groepje omcirkeld  (controle: n.v.t.)
     - **Fout-hints (Claude):** 3 groepjes van 6, alle groepjes gekleurd → Een derde betekent dat maar één van de gelijke groepjes telt. · 2 groepjes van 9, één groepje gekleurd → Bij een derde teken je drie even grote groepjes, niet twee.
     - **Uitleg (Claude):** Bij een derde verdeel je 18 kinderen in 3 gelijke groepjes. Elk groepje heeft 6 kinderen. Eén groepje speelt bij de zandbak.
 
@@ -219,14 +220,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Visual: nodig — niet live zonder beeld** (1 items): de vraag verwijst naar een plaatje, maar Claude gaf geen tekening (Visual: nodig)
 - Uit de G6-park: 1 items
 - Denkfouten (Claude): optellen-ipv-vermenigvuldigen (1), verkeerde-bewerking (1)
-- Verschillende Claude-fout-hints: 2 (meest: “In elke doos zitten evenveel eieren. Dan tel je niet één keer op, maar steeds hetzelfde aantal erbij.”)
+- Claude-fout-hints: geen
 - Voorbeelden:
   - `G7-DENK-02-claude-bank-009` (Claude W4, ai, niveau 1 → basis)
-    - **Opgave:** Je tekent 5 dozen en in elke doos 8 eieren. Welke som hoort bij deze tekening?
-    - **Opties:** A) 5 + 8 = 13 · B) 8 − 5 = 3 · C) 5 × 8 = 40
-    - **Antwoord:** 5 × 8 = 40  (controle: n.v.t.)
+    - **Opgave:** Je tekent 5 dozen en in elke doos 6 eieren. Welke som hoort bij deze tekening?
+    - **Opties:** A) 5 + 6 = 11 · B) 6 − 5 = 1 · C) 5 × 6 = 30
+    - **Antwoord:** 5 × 6 = 30  (controle: n.v.t.)
     - **Fout-hints (Claude):** 5 + 8 = 13 → In elke doos zitten evenveel eieren. Dan tel je niet één keer op, maar steeds hetzelfde aantal erbij. · 8 − 5 = 3 → Je haalt niets weg. Je hebt juist meerdere dozen met eieren samen.
-    - **Uitleg (Claude):** Er zijn 5 dozen met elk 8 eieren. Dat is 8 + 8 + 8 + 8 + 8, en dat is hetzelfde als 5 × 8. Samen zijn dat 40 eieren.
+    - **Uitleg (Claude):** Er zijn 5 dozen met elk 6 eieren. Dat is 6 + 6 + 6 + 6 + 6, en dat is hetzelfde als 5 × 6. Samen zijn dat 30 eieren.
 
 - **Hint 1 (te schrijven):** In elke doos zitten evenveel eieren. Welke som hoort bij steeds hetzelfde aantal?
 - **Hint 2 (te schrijven):** Hoeveel zijn het er samen? Tel doos voor doos. Welke som heeft precies dat aantal als uitkomst?
@@ -295,14 +296,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Getallenruimte: n.v.t. · type: meerkeuze
 - Uit de G6-park: 1 items
 - Denkfouten (Claude): een-ernaast (2)
-- Verschillende Claude-fout-hints: 2 (meest: “Teken de palen als streepjes en tel de tussenruimtes. Dat zijn er minder dan het aantal palen.”)
+- Claude-fout-hints: geen
 - Voorbeelden:
   - `G7-DENK-02-claude-bank-012` (Claude W4, ai, niveau 3 → toepassen)
-    - **Opgave:** Langs een pad staan 7 lantaarnpalen op een rij. Tussen twee palen zit steeds 5 meter. Hoe lang is de rij van de eerste tot de laatste paal?
-    - **Opties:** A) 30 meter · B) 35 meter · C) 25 meter
-    - **Antwoord:** 30 meter  (controle: n.v.t.)
+    - **Opgave:** Langs een pad staan 7 lantaarnpalen op een rij. Tussen twee palen zit steeds 20 meter. Hoe lang is de rij van de eerste tot de laatste paal?
+    - **Opties:** A) 120 meter · B) 140 meter · C) 100 meter
+    - **Antwoord:** 120 meter  (controle: n.v.t.)
     - **Fout-hints (Claude):** 35 meter → Teken de palen als streepjes en tel de tussenruimtes. Dat zijn er minder dan het aantal palen. · 25 meter → Tel de tussenruimtes in je tekening nog eens na.
-    - **Uitleg (Claude):** Bij 7 palen op een rij zitten 6 tussenruimtes. Elke tussenruimte is 5 meter. 6 × 5 is 30 meter.
+    - **Uitleg (Claude):** Bij 7 palen op een rij zitten 6 tussenruimtes. Elke tussenruimte is 20 meter. 6 × 20 is 120 meter.
 
 - **Hint 1 (te schrijven):** Teken de palen als streepjes op een rij. Tel de stukken tussen de palen.
 - **Hint 2 (te schrijven):** Tussen twee palen zit steeds een stuk. Er is altijd één stuk minder dan er palen zijn. Doe het aantal stukken keer de afstand tussen twee palen.
@@ -348,11 +349,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Je hebt alleen de fietsen geteld. Elke fiets heeft meerdere wielen.”)
 - Voorbeelden:
   - `G7-DENK-02-claude-bank-naar-001` (Claude G9, ai, niveau 1 → basis)
-    - **Opgave:** Op een schoolplein staan 4 fietsen met 2 wielen en 3 fietsen met 3 wielen. Hoeveel wielen zijn dat samen?
+    - **Opgave:** Op een schoolplein staan 4 fietsen met 2 wielen en 3 bakfietsen met 3 wielen. Hoeveel wielen zijn dat samen?
     - **Opties:** A) 17 wielen · B) 7 wielen · C) 14 wielen
     - **Antwoord:** 17 wielen  (controle: n.v.t.)
     - **Fout-hints (Claude):** 7 wielen → Je hebt alleen de fietsen geteld. Elke fiets heeft meerdere wielen. · 14 wielen → Reken beide soorten fietsen apart uit en tel de uitkomsten daarna op.
-    - **Uitleg (Claude):** 4 fietsen met 2 wielen zijn 8 wielen. 3 fietsen met 3 wielen zijn 9 wielen. Samen is dat 8 + 9 = 17 wielen.
+    - **Uitleg (Claude):** 4 fietsen met 2 wielen zijn 8 wielen. 3 bakfietsen met 3 wielen zijn 9 wielen. Samen is dat 8 + 9 = 17 wielen.
 
 - **Hint 1 (te schrijven):** Er zijn twee soorten fietsen, met een verschillend aantal wielen. Reken elke soort apart uit.
 - **Hint 2 (te schrijven):** Doe bij elke soort het aantal fietsen keer het aantal wielen van één fiets. Tel de uitkomsten van de twee soorten bij elkaar op.

@@ -385,11 +385,54 @@ def _z630(it, slog):
     _zet(it, slog, 'z630', f"Z-#630: {spec['type']} (review batch 4)", o, ans, [(k, dk, u) for k in w if k != ans])
     it['merge']['z630']['soort'] = spec['type']
 
+
+# ---- Open punten batch 1 (Oef-#431/#432/#433, Z-#521/#525) en GET-04 nrO 8 (opdracht 13:29) ----------------------------------------------
+def _opties(it, slog, code, reden, opgave, opties, goed, denk, uitleg=None):
+    """Meerkeuze: opgave, opties (lijst teksten, letters A, B, C …), goed = tekst van de juiste optie; denk = [(fout, denkfout, uitleg)]."""
+    assert goed in opties and len(set(opties)) == len(opties)
+    _zet(it, slog, code, reden, opgave, goed, denk, uitleg=uitleg)
+    it['opties'] = [{'letter': chr(65 + k), 'tekst': t} for k, t in enumerate(opties)]
+    it['optiesTekst'] = ' · '.join(f"{o['letter']}) {o['tekst']}" for o in it['opties'])
+    L = next(o['letter'] for o in it['opties'] if o['tekst'] == goed)
+    it['antwoordDetail'] = dict(it.get('antwoordDetail') or {}, juisteOptie=L, juisteOptieTekst=goed)
+def _r5(it, slog):
+    cid = it['bron'].get('claudeId') or ''; o = it.get('opgave') or ''
+    if cid.startswith('c564f424') and 'sportveld' in o:      # Oef-#433/Z-#521: DENK-02 #2, een sportveld van 20 bij 10 m is klein → speelveld (getallen blijven)
+        _zet(it, slog, 'oef433', 'Oef-#433 (Z-#521): sportveld → speelveld (20 bij 10 m)', o.replace('Een sportveld is', 'Een speelveld is'))
+    elif cid.startswith('77fa6bb3') and 'gekleurd' in it.get('optiesTekst', ''):      # Oef-#432 (Z-#525): DENK-02 #3 opties zonder kleur
+        op = ['3 groepjes van 6, één groepje omcirkeld', '3 groepjes van 6, alle groepjes omcirkeld', '2 groepjes van 9, één groepje omcirkeld']
+        _opties(it, slog, 'oef432', "Oef-#432 (Z-#525): 'gekleurd' → 'omcirkeld' in de opties", o, op, op[0],
+                [(op[1], 'deel-van-geheel-verkeerd', 'Een derde betekent dat maar één van de gelijke groepjes telt.'),
+                 (op[2], 'deel-van-geheel-verkeerd', 'Bij een derde teken je drie even grote groepjes, niet twee.')],
+                'Bij een derde verdeel je 18 kinderen in 3 gelijke groepjes. Elk groepje heeft 6 kinderen. Eén groepje speelt bij de zandbak.')
+    elif cid.startswith('236d9cca') and '8 eieren' in o:      # Oef-#433/Z-#521: DENK-02 #9, een eierdoos heeft 6 eieren
+        op = ['5 + 6 = 11', '6 − 5 = 1', '5 × 6 = 30']; assert 5 * 6 == 30 and 5 + 6 == 11 and 6 - 5 == 1
+        _opties(it, slog, 'oef433', 'Oef-#433 (Z-#521): eierdoos van 8 → 6 eieren', o.replace('8 eieren', '6 eieren'), op, op[2],
+                [(op[0], 'optellen-ipv-vermenigvuldigen', 'In elke doos zitten evenveel eieren. Dan tel je niet één keer op, maar steeds hetzelfde aantal erbij.'),
+                 (op[1], 'verkeerde-bewerking', 'Je haalt niets weg. Je hebt juist meerdere dozen met eieren samen.')],
+                'Er zijn 5 dozen met elk 6 eieren. Dat is 6 + 6 + 6 + 6 + 6, en dat is hetzelfde als 5 × 6. Samen zijn dat 30 eieren.')
+    elif cid.startswith('d4ceaeff') and 'steeds 5 meter' in o:      # Oef-#433/Z-#521: DENK-02 #12, lantaarnpalen staan geen 5 m uit elkaar → 20 m
+        op = ['120 meter', '140 meter', '100 meter']; assert 6 * 20 == 120 and 7 * 20 == 140 and 5 * 20 == 100
+        _opties(it, slog, 'oef433', 'Oef-#433 (Z-#521): lantaarnpalen 5 m → 20 m uit elkaar (7 palen: 6 × 20 = 120)', o.replace('steeds 5 meter', 'steeds 20 meter'), op, op[0],
+                [(op[1], 'een-ernaast', 'Teken de palen als streepjes en tel de tussenruimtes. Dat zijn er minder dan het aantal palen.'),
+                 (op[2], 'een-ernaast', 'Tel de tussenruimtes in je tekening nog eens na.')],
+                'Bij 7 palen op een rij zitten 6 tussenruimtes. Elke tussenruimte is 20 meter. 6 × 20 is 120 meter.')
+    elif cid.startswith('1df3773f') and 'poesje' in o:      # GET-04 nrO 8: een poesje weegt geen 3,3 gram → knikker
+        n = o.replace('Eén poesje weegt', 'Eén knikker weegt').replace('100 poesjes', '100 knikkers'); assert 'poes' not in n
+        e = it['extraVelden']; e['claudeThema'] = None
+        e['claudeFoutHints'] = [dict(f, uitleg=f['uitleg'].replace('poesjes', 'knikkers')) for f in e.get('claudeFoutHints') or []]
+        _zet(it, slog, 'knikker', 'GET-04 nrO 8: een poesje van 3,3 gram → een knikker (logische context)', n)
+def _r5_av8(it, slog):
+    cid = it['bron'].get('claudeId') or ''; o = it.get('opgave') or ''
+    if cid.startswith('8f22bb4c') and 'fietsen met 3 wielen' in o:      # Oef-#433/Z-#521: DENK-02 #14, fietsen met 3 wielen → bakfietsen (getallen blijven)
+        e = it['extraVelden']; e['claudeUitleg'] = (e.get('claudeUitleg') or '').replace('3 fietsen met 3 wielen', '3 bakfietsen met 3 wielen')
+        _zet(it, slog, 'oef433', 'Oef-#433 (Z-#521): fietsen met 3 wielen → bakfietsen', o.replace('3 fietsen met 3 wielen', '3 bakfietsen met 3 wielen'))
 _pas_toe_v608 = pas_toe
 def pas_toe(it, slog):
     _pas_toe_v608(it, slog); _v443(it, slog); _v440(it, slog)
-    _z630(it, slog); _z631(it, slog); _z632(it, slog); _z633(it, slog); _z635(it, slog); _z636(it, slog); _v04k(it, slog)
+    _z630(it, slog); _z631(it, slog); _z632(it, slog); _z633(it, slog); _z635(it, slog); _z636(it, slog); _v04k(it, slog); _r5(it, slog)
 def pas_toe_av8(it, slog):
     """Review batch 4 voor de aanvulling uit G8 (MEET-02 'claude-bank-terug-…', AV8.laad na de gewone pas_toe): Z-#631 en Z-#635, vóór de kop."""
     if 'z631' not in it['merge']: _z631(it, slog)
     if 'z635' not in it['merge']: _z635(it, slog)
+    if 'oef433' not in it['merge']: _r5_av8(it, slog)

@@ -31,6 +31,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind zoekt de grootste van drie breuken met verschillende noemers.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `niet de grootste` (Claudes sleutel: grotere-noemer-is-groter) → Is dat echt de grootste breuk? Een grote noemer zegt nog niet dat de breuk groot is: kijk ook naar de teller. Vergelijk de breuken met een half, of maak de noemers gelijk.  [Claude, taalfix]
+  - `kleine noemer gekozen` (Claudes sleutel: alleen-noemer-vergeleken) → Is dat echt de grootste breuk? Een kleine noemer zegt nog niet dat de breuk groot is: kijk ook naar de teller. Vergelijk de breuken met een half, of maak de noemers gelijk.  [Claude, taalfix]
   - `andere fout` (andere fout) → Vergelijk de breuken met een half en met één heel, en kies de grootste.  [nieuw]
 - Status: hints klaar
 
@@ -57,6 +58,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind zoekt de kleinste van drie breuken met verschillende noemers.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `niet de kleinste` (Claudes sleutel: grotere-noemer-is-groter) → Is dat echt de kleinste breuk? Een kleine noemer zegt nog niet dat de breuk klein is: kijk ook naar de teller. Vergelijk de breuken met een half, of maak de noemers gelijk.  [Claude, taalfix]
+  - `grote noemer gekozen` (Claudes sleutel: alleen-noemer-vergeleken) → Is dat echt de kleinste breuk? Een grote noemer zegt nog niet dat de breuk klein is: kijk ook naar de teller. Vergelijk de breuken met een half, of maak de noemers gelijk.  [Claude, taalfix]
   - `andere fout` (andere fout) → Vergelijk de breuken met een half en met één heel, en kies de kleinste.  [nieuw]
 - Status: hints klaar
 
