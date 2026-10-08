@@ -63,12 +63,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?  [nieuw]
   - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.  [nieuw]
   - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.  [nieuw]
+  - `duizend in plaats van miljoen` (fout = antwoord : 1000) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [nieuw]
   - `duizend keer te weinig` (Claudes sleutel: nul-fout-tientallen) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een land wonen # [ding] mensen. Schrijf dat als getal.'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 3: [wie] heeft # miljoen stickers verzameld. Schrijf dat als getal.
+## Somtype 3: Een fabriek maakt in een jaar # miljoen stickers. Schrijf dat als getal.
 
 - Sleutel: nrOrigineel **3** · somtypeOrigineel “[wie] heeft # [ding] stickers verzameld. Schrijf dat als getal.” (koppeling: claudeId)
 - Items: **2** · Claude-doelen: C22 (2) · regel: G8-P00-park-G7
@@ -77,12 +78,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Een miljoen heeft zes nullen. Tel ze na.”)
 - Voorbeelden:
   - `G8-GET-M01-claude-bank-011` (Claude C22, gegenereerd, niveau 1 → basis)
-    - **Opgave:** Een kind heeft 6 miljoen stickers verzameld. Schrijf dat als getal.
+    - **Opgave:** Een fabriek maakt in een jaar 6 miljoen stickers. Schrijf dat als getal.
     - **Antwoord:** 6.000.000  (controle: n.v.t.)
     - **Fout-hints (Claude):** 600.000 → Een miljoen heeft zes nullen. Tel ze na. · 6000 → Dat is duizend. Een miljoen is duizend keer duizend.
     - **Uitleg (Claude):** Een miljoen is 1.000.000: een 1 met zes nullen. 6 miljoen is 6.000.000.
   - `G8-GET-M01-claude-bank-010` (Claude C22, gegenereerd, niveau 1 → basis)
-    - **Opgave:** Een kind heeft 2 miljoen stickers verzameld. Schrijf dat als getal.
+    - **Opgave:** Een fabriek maakt in een jaar 2 miljoen stickers. Schrijf dat als getal.
     - **Antwoord:** 2.000.000  (controle: n.v.t.)
     - **Fout-hints (Claude):** 200.000 → Een miljoen heeft zes nullen. Tel ze na. · 2000 → Dat is duizend. Een miljoen is duizend keer duizend.
     - **Uitleg (Claude):** Een miljoen is 1.000.000: een 1 met zes nullen. 2 miljoen is 2.000.000.
@@ -94,12 +95,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?  [nieuw]
   - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.  [nieuw]
   - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.  [nieuw]
+  - `duizend in plaats van miljoen` (fout = antwoord : 1000) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [nieuw]
   - `duizend keer te weinig` (Claudes sleutel: nul-fout-tientallen) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '[wie] heeft # [ding] stickers verzameld. Schrijf dat als getal.'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 4: [wie] heeft # miljoen knikkers verzameld. Schrijf dat als getal.
+## Somtype 4: Een fabriek maakt in een jaar # miljoen knikkers. Schrijf dat als getal.
 
 - Sleutel: nrOrigineel **4** · somtypeOrigineel “[wie] heeft # [ding] knikkers verzameld. Schrijf dat als getal.” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: C22 (1) · regel: G8-P00-park-G7
@@ -108,7 +110,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Een miljoen heeft zes nullen. Tel ze na.”)
 - Voorbeelden:
   - `G8-GET-M01-claude-bank-009` (Claude C22, gegenereerd, niveau 1 → basis)
-    - **Opgave:** Een kind heeft 3 miljoen knikkers verzameld. Schrijf dat als getal.
+    - **Opgave:** Een fabriek maakt in een jaar 3 miljoen knikkers. Schrijf dat als getal.
     - **Antwoord:** 3.000.000  (controle: n.v.t.)
     - **Fout-hints (Claude):** 300.000 → Een miljoen heeft zes nullen. Tel ze na. · 3000 → Dat is duizend. Een miljoen is duizend keer duizend.
     - **Uitleg (Claude):** Een miljoen is 1.000.000: een 1 met zes nullen. 3 miljoen is 3.000.000.
@@ -120,12 +122,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?  [nieuw]
   - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.  [nieuw]
   - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.  [nieuw]
+  - `duizend in plaats van miljoen` (fout = antwoord : 1000) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [nieuw]
   - `duizend keer te weinig` (Claudes sleutel: nul-fout-tientallen) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '[wie] heeft # [ding] knikkers verzameld. Schrijf dat als getal.'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 5: [wie] heeft # miljoen truien verzameld. Schrijf dat als getal.
+## Somtype 5: In Nederland worden in een jaar # miljoen truien verkocht. Schrijf dat als getal.
 
 - Sleutel: nrOrigineel **5** · somtypeOrigineel “[wie] heeft # [ding] truien verzameld. Schrijf dat als getal.” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: C22 (1) · regel: G8-P00-park-G7
@@ -134,7 +137,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Een miljoen heeft zes nullen. Tel ze na.”)
 - Voorbeelden:
   - `G8-GET-M01-claude-bank-012` (Claude C22, gegenereerd, niveau 1 → basis)
-    - **Opgave:** Een kind heeft 7 miljoen truien verzameld. Schrijf dat als getal.
+    - **Opgave:** In Nederland worden in een jaar 7 miljoen truien verkocht. Schrijf dat als getal.
     - **Antwoord:** 7.000.000  (controle: n.v.t.)
     - **Fout-hints (Claude):** 700.000 → Een miljoen heeft zes nullen. Tel ze na. · 7000 → Dat is duizend. Een miljoen is duizend keer duizend.
     - **Uitleg (Claude):** Een miljoen is 1.000.000: een 1 met zes nullen. 7 miljoen is 7.000.000.
@@ -146,6 +149,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?  [nieuw]
   - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.  [nieuw]
   - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.  [nieuw]
+  - `duizend in plaats van miljoen` (fout = antwoord : 1000) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [nieuw]
   - `duizend keer te weinig` (Claudes sleutel: nul-fout-tientallen) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '[wie] heeft # [ding] truien verzameld. Schrijf dat als getal.'. Nakijken of ze nog passen.

@@ -9,11 +9,11 @@ def laad(p, naam):
 sys.path.insert(0, f'{g}/scripts'); AH = laad(f'{g}/scripts/apply_hints.py', 'ah_' + os.path.basename(g))
 O, N = laad(oud, 'motor_oud'), laad(nieuw, 'motor_nieuw')
 for M in (O, N):
-    for k in ("BEREIK_AFRONDEN", "GELD_PUNT", "LIJN_BINNEN", "KOMMA437"): setattr(M, k, getattr(AH.fout_regels, k, False))
+    for k in ("BEREIK_AFRONDEN", "GELD_PUNT", "LIJN_BINNEN", "KOMMA437", "NEG494", "KOLOM_VOOR_DEEL", "ANTWOORD_UIT_WAARDEN"): setattr(M, k, getattr(AH.fout_regels, k, False))
 G = json.load(open(f'{g}/data/gemapt.json'))['items']
 idx = collections.defaultdict(list)
 for it in G: idx[(it['merge']['doel'], it['merge']['somtype'])].append(it)
-n = 0; diff = []
+n = 0; diff = []; erbij = []
 for b in sorted(glob.glob(f'{g}/hints/batch*.json')):
     for st in json.load(open(b))['somtypen']:
         for it in idx.get((st['doel'], st.get('somtype')), []):
@@ -21,5 +21,10 @@ for b in sorted(glob.glob(f'{g}/hints/batch*.json')):
             O.pas_toe(a, st, AH.cellen(a)); N.pas_toe(c, st, AH.cellen(c)); n += 1
             if (a['foutHints'], a['foutRegels'], a['algemeneFoutHint']) != (c['foutHints'], c['foutRegels'], c['algemeneFoutHint']):
                 diff.append((it['id'], [h['fout'] for h in a['foutHints']], [h['fout'] for h in c['foutHints']]))
-print(f'{g}: {n} items vergeleken · {len(diff)} anders')
+                # alleen sleutels erbij? (elke oude fout-hint staat ongewijzigd in de nieuwe, de algemene fout-hint is gelijk, en elke oude regelwaarde staat nog bij dezelfde regel)
+                oudw = {(r['regel'], w) for r in a['foutRegels'] for w in (r.get('match') or {}).get('waarden') or []}
+                nieuww = {(r['regel'], w) for r in c['foutRegels'] for w in (r.get('match') or {}).get('waarden') or []}
+                if all(h in c['foutHints'] for h in a['foutHints']) and a['algemeneFoutHint'] == c['algemeneFoutHint'] and oudw <= nieuww: erbij.append(it['id'])
+print(f'{g}: {n} items vergeleken · {len(diff)} anders, waarvan {len(erbij)} alleen met sleutels erbij')
+for d in [x for x in diff if x[0] not in erbij][:15]: print('  ANDERS', d)
 for d in diff[:15]: print('  ', d)

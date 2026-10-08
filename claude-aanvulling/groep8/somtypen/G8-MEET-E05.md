@@ -25,8 +25,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** −14  (controle: n.v.t.)
     - **Fout-hints (Claude):** 24 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af? · −15 → Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Kouder betekent: de temperatuur gaat omlaag op de thermometer.
+- **Hint 2 (te schrijven):** Ga eerst omlaag tot nul. Tel hoeveel graden je daarna nog verder omlaag moet. Het wordt dat aantal graden onder nul: zet er een min voor.
+- **Ouderzin:** Je kind rekent met temperaturen onder nul: eerst omlaag tot 0, dan verder omlaag. Onder nul staat er een min voor het getal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `warmer` (fout = getal1 + getal2) → Dat is warmer dan aan het begin. Kouder betekent omlaag op de thermometer.  [nieuw]
+  - `min vergeten` (fout = getal1 - getal2 of getal2 - getal1) → Het wordt kouder dan nul. Onder nul zet je een min voor het getal.  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt de temperatuur nadat het kouder is geworden.  [nieuw]
+  - `andere fout` (andere fout) → Tel nog eens, graad voor graad: eerst omlaag tot nul, dan verder omlaag. Onder nul komt er een min voor het getal.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: Het is −# °C. Dat is # graden onder nul. Het wordt # graden kouder. Hoe koud is het dan, in °C?
 
@@ -41,18 +48,24 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** −20  (controle: n.v.t.)
     - **Fout-hints (Claude):** 12 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af? · −19 → Kijk goed naar de nullen. Reken eerst de tafelsom, plak daarna de nul(len) er weer aan.
   - `G8-MEET-E05-claude-bank-212` (Claude C20, bank, niveau 3 → toepassen)
-    - **Opgave:** Het is −1 °C. Dat is 1 graden onder nul. Het wordt 8 graden kouder. Hoe koud is het dan, in °C?
+    - **Opgave:** Het is −1 °C. Dat is 1 graad onder nul. Het wordt 8 graden kouder. Hoe koud is het dan, in °C?
     - **Antwoord:** −9  (controle: n.v.t.)
     - **Fout-hints (Claude):** 7 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af? · 9 → Teken een getallenlijn met nul in het midden. Waar sta je, waar ga je heen?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Het is al onder nul. Kouder betekent: nog verder omlaag op de thermometer.
+- **Hint 2 (te schrijven):** Tel de graden onder nul en de graden die het kouder wordt bij elkaar op. Zo ver onder nul kom je: zet er een min voor.
+- **Ouderzin:** Je kind rekent met temperaturen onder nul: van onder nul nog verder omlaag. Het antwoord krijgt een min ervoor.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt de temperatuur nadat het nog kouder is geworden.  [nieuw]
+  - `andere fout` (andere fout) → Je begint onder nul en gaat nog verder omlaag. Dan blijf je onder nul: er komt een min voor het getal. Tel de graden nog eens na.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: [stip op getallenlijn zetten] Zet # op de getallenlijn.
 
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “[stip op getallenlijn zetten] Zet # op de getallenlijn.” (koppeling: claudeId)
 - Items: **12** · Claude-doelen: C20 (12) · regel: G8-P00-park-G7
 - Getallenruimte: 0–1.000 · type: kale
+- **Visual: nodig — niet live zonder beeld** (12 items): interactief: stip op getallenlijn zetten
 - Denkfouten (Claude): None (12)
 - Verschillende Claude-fout-hints: 1 (meest: “Let op het minteken: dat is links van de nul.”)
 - Voorbeelden:
@@ -69,5 +82,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5 → Let op het minteken: dat is links van de nul.
     - **Uitleg (Claude):** Links van 0 staan de getallen onder nul. 5 stappen naar links vanaf 0.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Getallen onder nul staan links van de nul. Getallen boven nul staan rechts van de nul.
+- **Hint 2 (te schrijven):** Staat er een min voor het getal? Ga dan vanaf de nul naar links. Zonder min ga je naar rechts. Tel de stappen.
+- **Ouderzin:** Je kind zet een getal op de getallenlijn: met een min ervoor links van de nul, zonder min rechts.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Kijk goed naar het teken voor het getal. Een min betekent: onder nul, links van de nul.  [nieuw]
+  - `andere fout` (andere fout) → Kijk of er een min voor het getal staat. Met een min staat het links van de nul, zonder min rechts.  [nieuw]
+- Status: hints klaar

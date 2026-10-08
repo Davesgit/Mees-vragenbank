@@ -108,6 +108,7 @@ KOLOM_VOOR_DEEL = False    # G5: True (merge-fixlijst #124), gezet in scripts/ap
 GELD_PUNT_TEKST = 'Bij geld schrijf je een komma.'
 ANTWOORD_UIT_WAARDEN = False   # G6: True (merge-fixlijst #223, Didactiek 3b): het goede antwoord nooit in foutRegels.match.waarden, ook buiten tabellen (assert)
 KOMMA437 = False           # Oef-#437: kommagetal in de vraag als één getal; True in G7/G8 (apply_hints); G5/G6 blijven gelijk (goedgekeurd)
+NEG494 = False             # Oef-#494 (G8 batch 5, MEET-E05): getallen onder nul ('−9', '-9') lezen; True in G7/G8 (apply_hints); G5/G6 blijven gelijk
 LIJN_BINNEN = False        # G5: True (merge-fixlijst #14: geen sleutel buiten de getallenlijn), gezet in scripts/apply_hints.py; G4 ongewijzigd
 
 def _int(v):
@@ -234,6 +235,28 @@ def _dag_erbij(d, k):
     while dag < 1: mi = (mi - 1) % 12; dag += DAGEN[mi]
     return f'{dag} {MAANDEN[mi]}'
 
+_SINT494 = re.compile(r'\s*([−\-–])?\s?(\d+)(?:\s?°C|\s+graden)?\s*')
+def _sint494(v):
+    """Oef-#494: geheel getal met teken ('−9', '-9', '−9 °C', '9') → int; None als het geen (geheel) getal is."""
+    m = _SINT494.fullmatch(str(v)) if v is not None else None
+    if not m: return None
+    return -int(m.group(2)) if m.group(1) else int(m.group(2))
+def _sfmt494(x):
+    """huisnotatie: −9 (min-teken U+2212), 9"""
+    return f'−{-x}' if x < 0 else str(x)
+def _snums494(t):
+    """Oef-#494: de hele getallen uit de vraag mét teken. Een minteken telt alleen als teken als het direct vóór het getal staat
+    (geen spatie ertussen) en er geen cijfer vlak voor staat ('Het is −3 °C' → −3; '8 − 3' blijft 8 en 3)."""
+    t = re.sub(r'(?<!\d)\d{1,2}:\d{2}(?!\d)', ' ', t)
+    uit = []
+    for m in re.finditer(r'(?<![\w:.,])((?<![\d\s])[−\-–]|(?<=\s)[−\-–]|^[−\-–])?(\d{1,3}(?:\.\d{3})+|\d+)(?![\w:]|[.,]\d)', t):
+        x = int(m.group(2).replace('.', ''))
+        uit.append(-x if m.group(1) else x)
+    return uit
+def _neg_vormen494(w):
+    """'−9' → ['−9', '-9'] (beide mintekens zijn een sleutel)"""
+    w = str(w); return [w, '-' + w[1:]] if w.startswith('−') else [w]
+
 class Ctx:
     def __init__(self, it):
         self.it = it; self.opg = (it['opgave'] or '').replace('\n', ' ')
@@ -250,6 +273,18 @@ class Ctx:
         # Oef-#440 (G7 MEET-03 #9, met KOMMA437): een antwoord '8,0' / '300,0' heeft de waarde van het hele getal (8 / 300); regels als
         # 'fout = antwoord × 10' lezen het dan (sleutel '80'). G5/G6 (zonder KOMMA437) blijven gelijk.
         if KOMMA437 and self.a is None and (q := re.fullmatch(r'(\d+),0+', self.ans.strip())): self.a = int(q.group(1))
+        # Oef-#494 (G7/G8, met NEG494): een item met een getal onder nul (in het antwoord of in de vraag) rekent met teken: het antwoord en
+        # de vraaggetallen zijn dan '−9' / −3. Andere items blijven precies zoals ze waren.
+        self.an = _sint494(self.ans) if NEG494 else None
+        self.neg = False
+        if NEG494:
+            sn = _snums494(self.opg)
+            self.neg = (self.an is not None and self.an < 0) or any(x < 0 for x in sn)
+            if self.neg:
+                if self.a is None and self.an is not None: self.a = self.an
+                # getal1/getal2 blijven zonder teken (zoals vóór #494: 'fout = getal1 − getal2' is juist de route 'teken genegeerd'); de getallen onder nul
+                # komen erbij als vraaggetal ('−4' is ook een getal uit de vraag). De routes met teken staan in de #494-regels (start = eerste getal mét teken).
+                self.nums = list(dict.fromkeys(self.nums + [x for x in sn if x < 0]))
     def code(self, v):
         v = str(v)
         if re.fullmatch(r'[A-L][1-9]', v): return v
@@ -495,6 +530,21 @@ def _compile_regel(regel, c):
     if (r8 := _regels_r8(r, c)) is not None: return r8      # G6 merge-fixlijst ronde 8: #233, #271, G5 GET-E09
     if (r10 := _regels_r10(r, c)) is not None: return r10   # G6 merge-fixlijst ronde 10: #380 helft van de strook
     E = lambda *vals: {'exact': {(_kg(x) if isinstance(x, Fraction) else str(x)) for x in vals if x is not None and (not isinstance(x, (int, Fraction)) or x >= 0) and not (isinstance(x, Fraction) and _kg(x) is None)}}      # Oef-#437: kommagetal als '8,4'
+    if getattr(c, 'neg', False):      # Oef-#494: in een item met getallen onder nul mag een sleutel onder nul ('−9'); hele getallen met teken
+        E = lambda *vals: {'exact': {(_sfmt494(x) if isinstance(x, int) else _kg(x) if isinstance(x, Fraction) else str(x)) for x in vals if x is not None
+                                     and (isinstance(x, int) or not isinstance(x, Fraction) or (x >= 0 and _kg(x) is not None))}}
+    # Oef-#494 (G7/G8): de routes bij getallen onder nul. start = het eerste getal uit de vraag (met teken, _snums494), verandering = antwoord − start.
+    #   teken vergeten      = het antwoord met het andere teken (−9 → 9; 3 → −3)
+    #   van nul af geteld   = alleen de verandering, vanaf 0 (7 °C, 16 graden kouder → −16)
+    #   verkeerde richting  = de verandering de andere kant op (7 °C, 16 graden kouder → 23)
+    if r.startswith(('fout = teken vergeten', 'fout = het teken vergeten', 'fout = min vergeten', 'fout = minteken vergeten')):
+        an = getattr(c, 'an', None)
+        return {'exact': set(_neg_vormen494(_sfmt494(-an)))} if NEG494 and an else {'exact': set()}
+    if r.startswith(('fout = van nul af geteld', 'fout = vanaf nul geteld', 'fout = verkeerde richting')):
+        an = getattr(c, 'an', None); sn = _snums494(c.opg) if NEG494 else []
+        if not NEG494 or an is None or not sn or sn[0] == 0: return {'exact': set()}
+        d_ = an - sn[0]; w_ = d_ if 'nul' in r else sn[0] - d_
+        return {'exact': set(_neg_vormen494(_sfmt494(w_)))} if d_ and w_ != an else {'exact': set()}
     if r.startswith('andere fout') or 'of een andere fout' in r or r.startswith('ander vak') or 'een andere vorm of kleur' in r or 'een klok met een ander uur' in r:
         return {'alles': True}
     if r.startswith('volgorde omgedraaid'): return E('|'.join(reversed(c.ans.split('|'))))
@@ -504,6 +554,9 @@ def _compile_regel(regel, c):
         m_ = re.search(r'(?<![\d.,])(\d+),(\d+)(?![\d,])', c.opg); return E(int(m_.group(1))) if m_ else {'exact': set()}
     if r.startswith('fout = de cijfers achter de komma uit de vraag'):
         m_ = re.search(r'(?<![\d.,])(\d+),(\d+)(?![\d,])', c.opg); return E(int(m_.group(2))) if m_ else {'exact': set()}
+    # Oef-#495 (G8 batch 5, MEET-E03 #5): een nul te weinig bij een deling (GB × 100 i.p.v. × 1000, dan gedeeld): het antwoord : 10, afgekapt (256 → 25, 16 → 1)
+    if r.startswith(('fout = een nul te weinig (afgekapt)', 'fout = antwoord : 10 (afgekapt)')):
+        return E(a // 10) if isinstance(a, int) and a >= 10 else {'exact': set()}
     if r.startswith('fout = de rest van getal2 : getal1'):
         return E(g2 % g1) if isinstance(g1, int) and isinstance(g2, int) and g1 and g2 % g1 else {'exact': set()}
     if r.startswith('fout = hele getal + rest'):
@@ -1059,6 +1112,8 @@ def _pas_toe_kern(it, st, alle_cellen=None):
             per_item = f['bron'] == 'claude' or per_item
 
         if comp and comp.get('exact'): comp['exact'] = {w for x in comp['exact'] for w in _vormen(x)}     # #60: '10000' én '10.000'
+        if c.neg and comp and comp.get('exact'):      # Oef-#494: '−9' én '-9'; het antwoord zelf (met teken) is nooit een regelwaarde
+            comp['exact'] = {w for x in comp['exact'] for w in _neg_vormen494(x) if c.an is None or not str(w).lstrip().startswith(('−', '-', '–')) or _sint494(w) != c.an}
         # G5 fixlijst #121 (Dave 20:04): bij een tabel (VBN-E01) is een regelwaarde nooit het goede antwoord (de motor nam de goede rij of cel mee)
         if comp and comp.get('exact') and c.jr.get('soort') == 'tabel':
             comp['exact'] = {w for w in comp['exact'] if w != c.ans and (c.a is None or _int(w) != c.a)}
@@ -1084,6 +1139,7 @@ def _pas_toe_kern(it, st, alle_cellen=None):
         kand = list(dict.fromkeys(w for v in kand for w in _vormen(v)))         # #60: sleutels ≥ 10.000 in beide vormen
         z607 = {v for f, comp, pi in regels if comp and comp.get('z607') for v in comp.get('exact', ())}      # Z-#607: '2' bij 2,0 blijft een sleutel
         kand = [v for v in kand if v != c.ans and (v in z607 or ((c.a is None or _int(v) != c.a) and (c.d is None or _dec(v) != c.d)))]   # G6 #4: '1,40' = '1,4'
+        if c.neg: kand = [v for v in kand if _sint494(v) is None or _sint494(v) != c.an]      # Oef-#494: '-9' is het antwoord '−9'
         # G5 merge-fixlijst #14: geen fout-sleutel buiten de getallenlijn (je kunt hem niet aantikken)
         if LIJN_BINNEN and c.jr.get('soort') == 'getallenlijn' and isinstance(c.jr.get('van'), int) and isinstance(c.jr.get('tot'), int):
             kand = [v for v in kand if _int(v) is None or c.jr['van'] <= _int(v) <= c.jr['tot']]

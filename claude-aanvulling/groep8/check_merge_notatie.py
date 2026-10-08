@@ -172,6 +172,9 @@ if __name__ == '__main__':
     import gemiddelde_check as _GM      # V-#820/Z-#823/Z-#841/Z-#855 (Didactiek 8 okt): gemiddelde-vragen, vijf foute routes (FAIL ≥ 1/3 of eigen sleutel; anders WARN)
     fail = (len(_GM.rapport([_it for _p in files for _it in json.load(open(_p))['items']], os.path.dirname(os.path.abspath(__file__)))[0]) > 0) or fail
     fail = (_GM.mutanten() and any(_v != _k for _n, _v, _k in _GM.mutanten())) or fail      # Z-#855: mutanten (oude 427/010/002) moeten kloppen
+    import e05_routes as _ER      # V-#870/Z-#871/V-#871 (Didactiek batch 4, 16:35): E05-rekenmachineverhalen: geen foute route op het goede antwoord, rest ≥ 3, geen ',5', redelijke maten (FAIL)
+    fail = (_ER.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    fail = any(bool(_ER.fouten_item({'id': _n, 'opgave': _o, 'antwoord': _a})) != _v for _n, _o, _a, _v in _ER.MUTANTEN) or fail      # mutanten 9/9
     import juiste_optie_check as _JO
     fail = (_JO.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import optie_positie_check as _OP      # Oef-#459 (8 okt): goede antwoord >60% op één plek in een somtype met ≥4 items (WARN)

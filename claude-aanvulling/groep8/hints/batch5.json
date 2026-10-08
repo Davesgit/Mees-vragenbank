@@ -1,0 +1,1485 @@
+{
+ "batch": "batch5",
+ "geschreven": "2026-10-08",
+ "uitleg": "Hints per somtype (G8-merge, batch 5 = MEET-E03 #1–#9 + MEET-E05 #1–#3 + MEET-E06 #1–#12: kale items (inhoud en digitale maten; getallenlijn en temperatuur onder nul; vliegtijd en tijdzones)). Formaat als g7/hints/batch*.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: rekenregels uit scripts/fout_regels.py met een vaste tekst, laag 1 'tekst' en laag 2 'tekstSterker'; 'andere fout' als laatste.",
+ "somtypen": [
+  {
+   "doel": "G8-MEET-E03",
+   "nr": 8,
+   "somtype": "Een vijver heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Een bak voor knopen heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+   "hint1": "Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.",
+   "hint2": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+   "ouderzin": "Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat is het aantal kubieke meter. De vraag wil liters: hoeveel liter past er in één kubieke meter?",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. In één kubieke meter past duizend liter, niet honderd.",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. In één kubieke meter past duizend liter.",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kubieke meter is duizend liter. Hoeveel liter is dan het aantal kubieke meter uit de vraag?",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een kubieke meter is duizend liter, niet honderd.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Een nul te veel. 1 m³ = 1000 liter.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een bak voor knopen heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+    "naar": "Een vijver heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E03",
+   "nr": 9,
+   "somtype": "Een watertank heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Een bak voor tanden heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+   "hint1": "Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.",
+   "hint2": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+   "ouderzin": "Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat is het aantal kubieke meter. De vraag wil liters: hoeveel liter past er in één kubieke meter?",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. In één kubieke meter past duizend liter, niet honderd.",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. In één kubieke meter past duizend liter.",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kubieke meter is duizend liter. Hoeveel liter is dan het aantal kubieke meter uit de vraag?",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een kubieke meter is duizend liter, niet honderd.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Een nul te veel. 1 m³ = 1000 liter.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een bak voor tanden heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+    "naar": "Een watertank heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E03",
+   "nr": 7,
+   "somtype": "Een regenput heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Een bak voor truien heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+   "hint1": "Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.",
+   "hint2": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+   "ouderzin": "Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat is het aantal kubieke meter. De vraag wil liters: hoeveel liter past er in één kubieke meter?",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. In één kubieke meter past duizend liter, niet honderd.",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. In één kubieke meter past duizend liter.",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kubieke meter is duizend liter. Hoeveel liter is dan het aantal kubieke meter uit de vraag?",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een kubieke meter is duizend liter, niet honderd.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Een nul te veel. 1 m³ = 1000 liter.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een bak voor truien heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+    "naar": "Een regenput heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E03",
+   "nr": 6,
+   "somtype": "Een opblaaszwembad heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Een bak voor wortels heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+   "hint1": "Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.",
+   "hint2": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.",
+   "ouderzin": "Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat is het aantal kubieke meter. De vraag wil liters: hoeveel liter past er in één kubieke meter?",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. In één kubieke meter past duizend liter, niet honderd.",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. In één kubieke meter past duizend liter.",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kubieke meter is duizend liter. Hoeveel liter is dan het aantal kubieke meter uit de vraag?",
+     "tekstSterker": "Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een kubieke meter is duizend liter, niet honderd.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Een nul te veel. 1 m³ = 1000 liter.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een bak voor wortels heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+    "naar": "Een opblaaszwembad heeft een inhoud van # [ding]. Hoeveel liter is dat?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E03",
+   "nr": 1,
+   "somtype": "Een filmpje is # MB. De geheugenkaart is # GB (# GB = # MB). Hoeveel van die filmpjes passen erop?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Een filmpje is # MB. De geheugenkaart is # GB (# GB = # MB). Hoeveel van die filmpjes passen erop?",
+   "hint1": "Reken eerst de kaart om naar MB. Dan staan de kaart en het filmpje in dezelfde maat.",
+   "hint2": "Doe het aantal GB van de kaart keer duizend. Dan weet je hoeveel MB er op de kaart past. Deel dat door het aantal MB van één filmpje.",
+   "ouderzin": "Je kind rekent eerst GB om naar MB (keer duizend) en deelt dan door de grootte van één filmpje.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens na: hoeveel MB past er op de kaart?",
+     "tekstSterker": "Doe het aantal GB van de kaart keer duizend. Dan weet je hoeveel MB er op de kaart past. Deel dat door het aantal MB van één filmpje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Tel de nullen nog eens na: hoeveel MB past er op de kaart?",
+     "tekstSterker": "Doe het aantal GB van de kaart keer duizend. Dan weet je hoeveel MB er op de kaart past. Deel dat door het aantal MB van één filmpje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel filmpjes er op de kaart passen.",
+     "tekstSterker": "Doe het aantal GB van de kaart keer duizend. Dan weet je hoeveel MB er op de kaart past. Deel dat door het aantal MB van één filmpje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de kaart om naar MB: keer duizend. Deel dan door het aantal MB van één filmpje. Tel de nullen goed.",
+     "tekstSterker": "Doe het aantal GB van de kaart keer duizend. Dan weet je hoeveel MB er op de kaart past. Deel dat door het aantal MB van één filmpje."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt een nul te weinig. Zet eerst alles in MB. 64 GB is 64.000 MB.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 64.000 : 250 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te weinig. Zet eerst alles in MB. 8 GB is 8000 MB.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 8000 : 500 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 64.000 : 200 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te weinig. Zet eerst alles in MB. 32 GB is 32.000 MB.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 32.000 : 400 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 64.000 : 800 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 32.000 : 200 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te weinig. Zet eerst alles in MB. 16 GB is 16.000 MB.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 16.000 : 500 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 32.000 : 500 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 16.000 : 100 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 16.000 : 800 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 16.000 : 400 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 64.000 : 500 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 16.000 : 200 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 16.000 : 250 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 32.000 : 800 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt een nul te veel. Reken 8000 : 400 en let goed op de nullen.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E03",
+   "nr": 2,
+   "somtype": "Een harde schijf heeft # TB. Hoeveel GB is dat? (# TB = # GB)",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Een harde schijf heeft # TB. Hoeveel GB is dat? (# TB = # GB)",
+   "hint1": "In de vraag staat hoeveel GB er in één TB gaan. Dat is duizend.",
+   "hint2": "Doe het aantal TB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op.",
+   "ouderzin": "Je kind rekent TB om naar GB: keer duizend.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel GB het is.",
+     "tekstSterker": "Doe het aantal TB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Eén TB is duizend GB, niet honderd.",
+     "tekstSterker": "Doe het aantal TB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Eén TB is duizend GB.",
+     "tekstSterker": "Doe het aantal TB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén TB is duizend GB. Hoeveel GB is dan het aantal TB uit de vraag?",
+     "tekstSterker": "Doe het aantal TB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "1 TB is 1000 GB, niet 100.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Keer 1000 betekent drie nullen erbij, niet vier.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E03",
+   "nr": 3,
+   "somtype": "Een foto is # MB. Hoeveel KB is dat? (# MB = # KB)",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Een foto is # MB. Hoeveel KB is dat? (# MB = # KB)",
+   "hint1": "In de vraag staat hoeveel KB er in één MB gaan. Dat is duizend.",
+   "hint2": "Doe het aantal MB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op.",
+   "ouderzin": "Je kind rekent MB om naar KB: keer duizend.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel KB het is.",
+     "tekstSterker": "Doe het aantal MB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Eén MB is duizend KB, niet honderd.",
+     "tekstSterker": "Doe het aantal MB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Eén MB is duizend KB.",
+     "tekstSterker": "Doe het aantal MB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén MB is duizend KB. Hoeveel KB is dan het aantal MB uit de vraag?",
+     "tekstSterker": "Doe het aantal MB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "1 MB is 1000 KB, niet 100.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Keer 1000 betekent drie nullen erbij, niet vier.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E03",
+   "nr": 4,
+   "somtype": "Een geheugenkaart heeft # GB. Hoeveel MB is dat? (# GB = # MB)",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "Een geheugenkaart heeft # GB. Hoeveel MB is dat? (# GB = # MB)",
+   "hint1": "In de vraag staat hoeveel MB er in één GB gaan. Dat is duizend.",
+   "hint2": "Doe het aantal GB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op.",
+   "ouderzin": "Je kind rekent GB om naar MB: keer duizend.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel MB het is.",
+     "tekstSterker": "Doe het aantal GB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Eén GB is duizend MB, niet honderd.",
+     "tekstSterker": "Doe het aantal GB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Eén GB is duizend MB.",
+     "tekstSterker": "Doe het aantal GB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén GB is duizend MB. Hoeveel MB is dan het aantal GB uit de vraag?",
+     "tekstSterker": "Doe het aantal GB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "1 GB is 1000 MB, niet 100.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Keer 1000 betekent drie nullen erbij, niet vier.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E03",
+   "nr": 5,
+   "somtype": "Een film is # GB. Hoeveel MB is dat? (# GB = # MB)",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "Een film is # GB. Hoeveel MB is dat? (# GB = # MB)",
+   "hint1": "In de vraag staat hoeveel MB er in één GB gaan. Dat is duizend.",
+   "hint2": "Doe het aantal GB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op.",
+   "ouderzin": "Je kind rekent GB om naar MB: keer duizend.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel MB het is.",
+     "tekstSterker": "Doe het aantal GB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Eén GB is duizend MB, niet honderd.",
+     "tekstSterker": "Doe het aantal GB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel: er staat een nul te veel. Eén GB is duizend MB.",
+     "tekstSterker": "Doe het aantal GB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén GB is duizend MB. Hoeveel MB is dan het aantal GB uit de vraag?",
+     "tekstSterker": "Doe het aantal GB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "1 GB is 1000 MB, niet 100.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Keer 1000 betekent drie nullen erbij, niet vier.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E05",
+   "nr": 3,
+   "somtype": "[stip op getallenlijn zetten] Zet # op de getallenlijn.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[stip op getallenlijn zetten] Zet # op de getallenlijn.",
+   "hint1": "Getallen onder nul staan links van de nul. Getallen boven nul staan rechts van de nul.",
+   "hint2": "Staat er een min voor het getal? Ga dan vanaf de nul naar links. Zonder min ga je naar rechts. Tel de stappen.",
+   "ouderzin": "Je kind zet een getal op de getallenlijn: met een min ervoor links van de nul, zonder min rechts.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Kijk goed naar het teken voor het getal. Een min betekent: onder nul, links van de nul.",
+     "tekstSterker": "Staat er een min voor het getal? Ga dan vanaf de nul naar links. Zonder min ga je naar rechts. Tel de stappen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk of er een min voor het getal staat. Met een min staat het links van de nul, zonder min rechts.",
+     "tekstSterker": "Staat er een min voor het getal? Ga dan vanaf de nul naar links. Zonder min ga je naar rechts. Tel de stappen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Let op het minteken: dat is links van de nul.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E05",
+   "nr": 1,
+   "somtype": "Het is # °C. Het wordt # graden kouder. Hoe koud is het dan, in °C?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Het is # °C. Het wordt # graden kouder. Hoe koud is het dan, in °C?",
+   "hint1": "Kouder betekent: de temperatuur gaat omlaag op de thermometer.",
+   "hint2": "Ga eerst omlaag tot nul. Tel hoeveel graden je daarna nog verder omlaag moet. Het wordt dat aantal graden onder nul: zet er een min voor.",
+   "ouderzin": "Je kind rekent met temperaturen onder nul: eerst omlaag tot 0, dan verder omlaag. Onder nul staat er een min voor het getal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "warmer",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Dat is warmer dan aan het begin. Kouder betekent omlaag op de thermometer.",
+     "tekstSterker": "Ga eerst omlaag tot nul. Tel hoeveel graden je daarna nog verder omlaag moet. Het wordt dat aantal graden onder nul: zet er een min voor."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "min vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Het wordt kouder dan nul. Onder nul zet je een min voor het getal.",
+     "tekstSterker": "Ga eerst omlaag tot nul. Tel hoeveel graden je daarna nog verder omlaag moet. Het wordt dat aantal graden onder nul: zet er een min voor."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt de temperatuur nadat het kouder is geworden.",
+     "tekstSterker": "Ga eerst omlaag tot nul. Tel hoeveel graden je daarna nog verder omlaag moet. Het wordt dat aantal graden onder nul: zet er een min voor."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel nog eens, graad voor graad: eerst omlaag tot nul, dan verder omlaag. Onder nul komt er een min voor het getal.",
+     "tekstSterker": "Ga eerst omlaag tot nul. Tel hoeveel graden je daarna nog verder omlaag moet. Het wordt dat aantal graden onder nul: zet er een min voor."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kouder betekent omlaag op de thermometer. Jij ging omhoog.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je zit er 1 naast. Tel op de thermometer nog eens, één streepje per graad. Ga eerst naar 0 en dan verder omlaag.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk waar je uitkomt: boven of onder nul? Onder nul schrijf je een − voor het getal.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E05",
+   "nr": 2,
+   "somtype": "Het is −# °C. Dat is # graden onder nul. Het wordt # graden kouder. Hoe koud is het dan, in °C?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Het is −# °C. Dat is # graden onder nul. Het wordt # graden kouder. Hoe koud is het dan, in °C?",
+   "hint1": "Het is al onder nul. Kouder betekent: nog verder omlaag op de thermometer.",
+   "hint2": "Tel de graden onder nul en de graden die het kouder wordt bij elkaar op. Zo ver onder nul kom je: zet er een min voor.",
+   "ouderzin": "Je kind rekent met temperaturen onder nul: van onder nul nog verder omlaag. Het antwoord krijgt een min ervoor.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je zoekt de temperatuur nadat het nog kouder is geworden.",
+     "tekstSterker": "Tel de graden onder nul en de graden die het kouder wordt bij elkaar op. Zo ver onder nul kom je: zet er een min voor."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Je begint onder nul en gaat nog verder omlaag. Dan blijf je onder nul: er komt een min voor het getal. Tel de graden nog eens na.",
+     "tekstSterker": "Tel de graden onder nul en de graden die het kouder wordt bij elkaar op. Zo ver onder nul kom je: zet er een min voor."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er 1 naast. Tel op de thermometer nog eens, één streepje per graad. Ga eerst naar 0 en dan verder omlaag.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk waar je uitkomt: boven of onder nul? Onder nul schrijf je een − voor het getal.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Kouder betekent omlaag op de thermometer. Jij ging omhoog.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E06",
+   "nr": 1,
+   "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+   "hint1": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "hint2": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "een uur te vroeg",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "minuten vergeten",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel de uren nog eens: je zit er een uur naast.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Vergeet de minuten niet.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "naar": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E06",
+   "nr": 4,
+   "somtype": "Een vliegtuig vertrekt om #.# uur uit Eindhoven. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+   "hint1": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "hint2": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "een uur te vroeg",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "minuten vergeten",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel de uren nog eens: je zit er een uur naast.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Vergeet de minuten niet.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "naar": "Een vliegtuig vertrekt om #.# uur uit Eindhoven. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E06",
+   "nr": 6,
+   "somtype": "Een vliegtuig vertrekt om #.# uur uit Groningen. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+   "hint1": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "hint2": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "een uur te vroeg",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "minuten vergeten",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel de uren nog eens: je zit er een uur naast.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Vergeet de minuten niet.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "naar": "Een vliegtuig vertrekt om #.# uur uit Groningen. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E06",
+   "nr": 9,
+   "somtype": "Een vliegtuig vertrekt om #.# uur uit Rotterdam. De vlucht duurt # uur. Hoe laat landt het? (Typ als #.#.)",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur. Hoe laat landt het? (Typ als #:#.)",
+   "hint1": "De vlucht duurt een aantal hele uren. Tel die op bij de vertrektijd.",
+   "hint2": "Doe de uren van de vlucht erbij. De minuten blijven hetzelfde als bij vertrek.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "een uur te vroeg",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren van de vlucht erbij. De minuten blijven hetzelfde als bij vertrek."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "minuten veranderd",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "tekst": "Dat is te vroeg. De vlucht duurt hele uren: de minuten blijven hetzelfde als bij vertrek.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren van de vlucht erbij. De minuten blijven hetzelfde als bij vertrek."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe de uren van de vlucht erbij. De minuten veranderen niet.",
+     "tekstSterker": "Doe de uren van de vlucht erbij. De minuten blijven hetzelfde als bij vertrek."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel de uren nog eens: je zit er een uur naast.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Vergeet de minuten niet.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur. Hoe laat landt het? (Typ als #:#.)",
+    "naar": "Een vliegtuig vertrekt om #.# uur uit Rotterdam. De vlucht duurt # uur. Hoe laat landt het? (Typ als #.#.)",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E06",
+   "nr": 2,
+   "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+   "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
+   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tijd thuis",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de tijd thuis. Daar is het 1 uur later.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Later betekent erbij, niet andersom.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Dat is de tijd thuis. Daar is het 6 uur later.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Dat is de tijd thuis. Daar is het 2 uur later.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "naar": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E06",
+   "nr": 11,
+   "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+   "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
+   "hint2": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tijd thuis",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de tijd thuis. Daar is het 8 uur later.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Later betekent erbij, niet andersom.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "naar": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E06",
+   "nr": 5,
+   "somtype": "Een vliegtuig vertrekt om #.# uur uit Eindhoven. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+   "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
+   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tijd thuis",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de tijd thuis. Daar is het 1 uur later.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Later betekent erbij, niet andersom.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "naar": "Een vliegtuig vertrekt om #.# uur uit Eindhoven. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E06",
+   "nr": 3,
+   "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+   "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tijd thuis",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de tijd thuis. Daar is het 2 uur vroeger.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vroeger betekent eraf, niet andersom.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Dat is de tijd thuis. Daar is het 5 uur vroeger.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "naar": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E06",
+   "nr": 12,
+   "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+   "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "hint2": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tijd thuis",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de tijd thuis. Daar is het 6 uur vroeger.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vroeger betekent eraf, niet andersom.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "naar": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E06",
+   "nr": 8,
+   "somtype": "Een vliegtuig vertrekt om #.# uur uit Rotterdam. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+   "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tijd thuis",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de tijd thuis. Daar is het 2 uur vroeger.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vroeger betekent eraf, niet andersom.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "naar": "Een vliegtuig vertrekt om #.# uur uit Rotterdam. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E06",
+   "nr": 10,
+   "somtype": "Een vliegtuig vertrekt om #.# uur uit Rotterdam. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+   "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "hint2": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tijd thuis",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de tijd thuis. Daar is het 2 uur vroeger.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vroeger betekent eraf, niet andersom.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "naar": "Een vliegtuig vertrekt om #.# uur uit Rotterdam. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-MEET-E06",
+   "nr": 7,
+   "somtype": "Een vliegtuig vertrekt om #.# uur uit Groningen. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+   "nrOrigineel": 12,
+   "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+   "hint1": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "hint2": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tijd thuis",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490/#494); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de tijd thuis. Daar is het 5 uur vroeger.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Vroeger betekent eraf, niet andersom.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "naar": "Een vliegtuig vertrekt om #.# uur uit Groningen. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId"
+  }
+ ]
+}

@@ -13,27 +13,30 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **1** · somtypeOrigineel “In een kist passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. Hoeveel [ding] zijn er nodig?” (koppeling: claudeId)
 - Items: **13** · Claude-doelen: T4 (13) · regel: G8-T4-rekenmachine
 - Getallenruimte: kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma), kommagetallen (3 cijfers achter de komma) · type: kale
-- Denkfouten (Claude): rest-vergeten (20), andere-deel-genomen (6)
+- Denkfouten (Claude): rest-vergeten (19), andere-deel-genomen (6)
 - Verschillende Claude-fout-hints: 2 (meest: “Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?”)
 - Voorbeelden:
   - `G8-GET-E05-claude-bank-053` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een kist passen 2 boeken. Er zijn 45 boeken. Op de rekenmachine staat 22,5. Hoeveel kisten zijn er nodig?
+    - **Opgave:** In een kist passen 8 boeken. Er zijn 180 boeken. Op de rekenmachine staat 22,5. Hoeveel kisten zijn er nodig?
     - **Antwoord:** 23  (controle: ok)
     - **Fout-hints (Claude):** 24 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
   - `G8-GET-E05-claude-bank-059` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een kist passen 25 boeken. Er zijn 624 boeken. Op de rekenmachine staat 24,96. Hoeveel kisten zijn er nodig?
-    - **Antwoord:** 25  (controle: ok)
+    - **Opgave:** In een kist passen 25 boeken. Er zijn 597 boeken. Op de rekenmachine staat 23,88. Hoeveel kisten zijn er nodig?
+    - **Antwoord:** 24  (controle: ok)
     - **Fout-hints (Claude):** 26 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 48 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?
 
 - **Hint 1 (te schrijven):** Op de rekenmachine staat een kommagetal. Het getal voor de komma zegt hoeveel er helemaal vol raken.
 - **Hint 2 (te schrijven):** Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal. Blijft er iets over, dan is er nog één nodig: naar boven afronden.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Dat is er één te veel. Reken het na: past alles ook in één minder?  [nieuw]
+  - `alleen de volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?  [nieuw]
+  - `volle en rest opgeteld` (fout = hele getal + rest) → Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?  [nieuw]
+  - `de rest` (fout = de rest van getal2 : getal1) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `rest nog niet erin` (Claudes sleutel: rest-vergeten) → Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?  [Claude, taalfix]
   - `wat overblijft` (Claudes sleutel: andere-deel-genomen) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `andere fout` (andere fout) → Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?  [nieuw]
 - Status: hints klaar
 
@@ -42,15 +45,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **2** · somtypeOrigineel “In een doos passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. Hoeveel [ding] zijn er nodig?” (koppeling: claudeId)
 - Items: **12** · Claude-doelen: T4 (12) · regel: G8-T4-rekenmachine
 - Getallenruimte: kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma), kommagetallen (3 cijfers achter de komma) · type: kale
-- Denkfouten (Claude): rest-vergeten (16), andere-deel-genomen (8)
+- Denkfouten (Claude): rest-vergeten (13), andere-deel-genomen (8)
 - Verschillende Claude-fout-hints: 2 (meest: “Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?”)
 - Voorbeelden:
   - `G8-GET-E05-claude-bank-045` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een doos passen 4 eieren. Er zijn 37 eieren. Op de rekenmachine staat 9,25. Hoeveel dozen zijn er nodig?
+    - **Opgave:** In een doos passen 4 eieren. Er zijn 39 eieren. Op de rekenmachine staat 9,75. Hoeveel dozen zijn er nodig?
     - **Antwoord:** 10  (controle: ok)
     - **Fout-hints (Claude):** 9 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
   - `G8-GET-E05-claude-bank-047` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een doos passen 20 eieren. Er zijn 762 eieren. Op de rekenmachine staat 38,1. Hoeveel dozen zijn er nodig?
+    - **Opgave:** In een doos passen 20 eieren. Er zijn 763 eieren. Op de rekenmachine staat 38,15. Hoeveel dozen zijn er nodig?
     - **Antwoord:** 39  (controle: ok)
     - **Fout-hints (Claude):** 38 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 40 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?
 
@@ -58,11 +61,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal. Blijft er iets over, dan is er nog één nodig: naar boven afronden.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Dat is er één te veel. Reken het na: past alles ook in één minder?  [nieuw]
+  - `alleen de volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?  [nieuw]
+  - `volle en rest opgeteld` (fout = hele getal + rest) → Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?  [nieuw]
+  - `de rest` (fout = de rest van getal2 : getal1) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `rest nog niet erin` (Claudes sleutel: rest-vergeten) → Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?  [Claude, taalfix]
   - `wat overblijft` (Claudes sleutel: andere-deel-genomen) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `andere fout` (andere fout) → Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?  [nieuw]
 - Status: hints klaar
 
@@ -71,11 +77,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **3** · somtypeOrigineel “In een mand passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. Hoeveel [ding] zijn er nodig?” (koppeling: claudeId)
 - Items: **11** · Claude-doelen: T4 (11) · regel: G8-T4-rekenmachine
 - Getallenruimte: kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma) · type: kale
-- Denkfouten (Claude): rest-vergeten (18), andere-deel-genomen (4)
+- Denkfouten (Claude): rest-vergeten (16), andere-deel-genomen (4)
 - Verschillende Claude-fout-hints: 2 (meest: “Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?”)
 - Voorbeelden:
   - `G8-GET-E05-claude-bank-090` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een mand passen 4 peren. Er zijn 33 peren. Op de rekenmachine staat 8,25. Hoeveel manden zijn er nodig?
+    - **Opgave:** In een mand passen 4 peren. Er zijn 35 peren. Op de rekenmachine staat 8,75. Hoeveel manden zijn er nodig?
     - **Antwoord:** 9  (controle: ok)
     - **Fout-hints (Claude):** 8 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 10 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?
   - `G8-GET-E05-claude-bank-096` (Claude T4, bank, niveau 1 → basis)
@@ -87,11 +93,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal. Blijft er iets over, dan is er nog één nodig: naar boven afronden.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Dat is er één te veel. Reken het na: past alles ook in één minder?  [nieuw]
+  - `alleen de volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?  [nieuw]
+  - `volle en rest opgeteld` (fout = hele getal + rest) → Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?  [nieuw]
+  - `de rest` (fout = de rest van getal2 : getal1) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `rest nog niet erin` (Claudes sleutel: rest-vergeten) → Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?  [Claude, taalfix]
   - `wat overblijft` (Claudes sleutel: andere-deel-genomen) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `andere fout` (andere fout) → Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?  [nieuw]
 - Status: hints klaar
 
@@ -104,7 +113,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?”)
 - Voorbeelden:
   - `G8-GET-E05-claude-bank-118` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een zak passen 2 appels. Er zijn 27 appels. Op de rekenmachine staat 13,5. Hoeveel zakken zijn er nodig?
+    - **Opgave:** In een zak passen 40 appels. Er zijn 540 appels. Op de rekenmachine staat 13,5. Hoeveel zakken zijn er nodig?
     - **Antwoord:** 14  (controle: ok)
     - **Fout-hints (Claude):** 13 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
   - `G8-GET-E05-claude-bank-124` (Claude T4, bank, niveau 1 → basis)
@@ -116,11 +125,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal. Blijft er iets over, dan is er nog één nodig: naar boven afronden.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Dat is er één te veel. Reken het na: past alles ook in één minder?  [nieuw]
+  - `alleen de volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?  [nieuw]
+  - `volle en rest opgeteld` (fout = hele getal + rest) → Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?  [nieuw]
+  - `de rest` (fout = de rest van getal2 : getal1) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `rest nog niet erin` (Claudes sleutel: rest-vergeten) → Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?  [Claude, taalfix]
   - `wat overblijft` (Claudes sleutel: andere-deel-genomen) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `andere fout` (andere fout) → Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?  [nieuw]
 - Status: hints klaar
 
@@ -145,11 +157,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal. Blijft er iets over, dan is er nog één nodig: naar boven afronden.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Dat is er één te veel. Reken het na: past alles ook in één minder?  [nieuw]
+  - `alleen de volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?  [nieuw]
+  - `volle en rest opgeteld` (fout = hele getal + rest) → Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?  [nieuw]
+  - `de rest` (fout = de rest van getal2 : getal1) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `rest nog niet erin` (Claudes sleutel: rest-vergeten) → Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?  [Claude, taalfix]
   - `wat overblijft` (Claudes sleutel: andere-deel-genomen) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `andere fout` (andere fout) → Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?  [nieuw]
 - Status: hints klaar
 
@@ -158,15 +173,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **6** · somtypeOrigineel “In een busje passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. Hoeveel [ding] zijn er nodig?” (koppeling: claudeId)
 - Items: **9** · Claude-doelen: T4 (9) · regel: G8-T4-rekenmachine
 - Getallenruimte: kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma) · type: kale
-- Denkfouten (Claude): rest-vergeten (12), andere-deel-genomen (6)
+- Denkfouten (Claude): rest-vergeten (9), andere-deel-genomen (6)
 - Verschillende Claude-fout-hints: 2 (meest: “Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?”)
 - Voorbeelden:
   - `G8-GET-E05-claude-bank-024` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een busje passen 2 kinderen. Er zijn 21 kinderen. Op de rekenmachine staat 10,5. Hoeveel busjes zijn er nodig?
+    - **Opgave:** In een busje passen 6 kinderen. Er zijn 63 kinderen. Op de rekenmachine staat 10,5. Hoeveel busjes zijn er nodig?
     - **Antwoord:** 11  (controle: ok)
     - **Fout-hints (Claude):** 10 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
   - `G8-GET-E05-claude-bank-031` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een busje passen 4 kinderen. Er zijn 249 kinderen. Op de rekenmachine staat 62,25. Hoeveel busjes zijn er nodig?
+    - **Opgave:** In een busje passen 4 kinderen. Er zijn 251 kinderen. Op de rekenmachine staat 62,75. Hoeveel busjes zijn er nodig?
     - **Antwoord:** 63  (controle: ok)
     - **Fout-hints (Claude):** 62 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
 
@@ -174,11 +189,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal. Blijft er iets over, dan is er nog één nodig: naar boven afronden.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Dat is er één te veel. Reken het na: past alles ook in één minder?  [nieuw]
+  - `alleen de volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?  [nieuw]
+  - `volle en rest opgeteld` (fout = hele getal + rest) → Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?  [nieuw]
+  - `de rest` (fout = de rest van getal2 : getal1) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `rest nog niet erin` (Claudes sleutel: rest-vergeten) → Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?  [Claude, taalfix]
   - `wat overblijft` (Claudes sleutel: andere-deel-genomen) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `andere fout` (andere fout) → Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?  [nieuw]
 - Status: hints klaar
 
@@ -203,10 +221,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal: de volle gaan weg, en het rekent uit hoeveel er nog over zijn.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.  [nieuw]
+  - `per stuk min wat overblijft` (fout = getal1 − antwoord) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [nieuw]
+  - `het aantal volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.  [nieuw]
+  - `cijfers achter de komma` (fout = de cijfers achter de komma uit de vraag) → Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [nieuw]
   - `aangevuld` (Claudes sleutel: andere-deel-genomen) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [Claude, taalfix]
   - `getal van de rekenmachine` (Claudes sleutel: kommagetal-als-geheel) → Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `andere fout` (andere fout) → Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een bak passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. De volle bakken gaan weg. Hoeveel blijven er over?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -232,11 +253,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal. Blijft er iets over, dan is er nog één nodig: naar boven afronden.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Dat is er één te veel. Reken het na: past alles ook in één minder?  [nieuw]
+  - `alleen de volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?  [nieuw]
+  - `volle en rest opgeteld` (fout = hele getal + rest) → Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?  [nieuw]
+  - `de rest` (fout = de rest van getal2 : getal1) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `rest nog niet erin` (Claudes sleutel: rest-vergeten) → Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?  [Claude, taalfix]
   - `wat overblijft` (Claudes sleutel: andere-deel-genomen) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `andere fout` (andere fout) → Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?  [nieuw]
 - Status: hints klaar
 
@@ -261,10 +285,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal: de volle gaan weg, en het rekent uit hoeveel er nog over zijn.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.  [nieuw]
+  - `per stuk min wat overblijft` (fout = getal1 − antwoord) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [nieuw]
+  - `het aantal volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.  [nieuw]
+  - `cijfers achter de komma` (fout = de cijfers achter de komma uit de vraag) → Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [nieuw]
   - `aangevuld` (Claudes sleutel: andere-deel-genomen) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [Claude, taalfix]
   - `getal van de rekenmachine` (Claudes sleutel: kommagetal-als-geheel) → Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `andere fout` (andere fout) → Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een mand passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. De volle manden gaan weg. Hoeveel blijven er over?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -278,7 +305,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in?”)
 - Voorbeelden:
   - `G8-GET-E05-claude-bank-102` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een tas passen 2 knikkers. Er zijn 31 knikkers. Op de rekenmachine staat 15,5. Hoeveel tassen zijn er nodig?
+    - **Opgave:** In een tas passen 4 knikkers. Er zijn 63 knikkers. Op de rekenmachine staat 15,75. Hoeveel tassen zijn er nodig?
     - **Antwoord:** 16  (controle: ok)
     - **Fout-hints (Claude):** 15 → Reken terug: klopt het als je de deling omdraait? Blijft er iets over? En moet dat wat overblijft ook nog ergens in? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
   - `G8-GET-E05-claude-bank-101` (Claude T4, bank, niveau 2 → toepassen)
@@ -290,11 +317,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal. Blijft er iets over, dan is er nog één nodig: naar boven afronden.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Dat is er één te veel. Reken het na: past alles ook in één minder?  [nieuw]
+  - `alleen de volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?  [nieuw]
+  - `volle en rest opgeteld` (fout = hele getal + rest) → Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?  [nieuw]
+  - `de rest` (fout = de rest van getal2 : getal1) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [nieuw]
   - `rest nog niet erin` (Claudes sleutel: rest-vergeten) → Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?  [Claude, taalfix]
   - `wat overblijft` (Claudes sleutel: andere-deel-genomen) → Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.  [nieuw]
   - `andere fout` (andere fout) → Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?  [nieuw]
 - Status: hints klaar
 
@@ -319,10 +349,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal: de volle gaan weg, en het rekent uit hoeveel er nog over zijn.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.  [nieuw]
+  - `per stuk min wat overblijft` (fout = getal1 − antwoord) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [nieuw]
+  - `het aantal volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.  [nieuw]
+  - `cijfers achter de komma` (fout = de cijfers achter de komma uit de vraag) → Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [nieuw]
   - `aangevuld` (Claudes sleutel: andere-deel-genomen) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [Claude, taalfix]
   - `getal van de rekenmachine` (Claudes sleutel: kommagetal-als-geheel) → Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `andere fout` (andere fout) → Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een zak passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. De volle zakken gaan weg. Hoeveel blijven er over?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -332,7 +365,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Sleutel: nrOrigineel **12** · somtypeOrigineel “In een busje passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. De volle busjes gaan weg. Hoeveel blijven er over?” (koppeling: claudeId)
 - Items: **6** · Claude-doelen: T4 (6) · regel: G8-T4-rekenmachine
 - Getallenruimte: kommagetallen (1 cijfers achter de komma), kommagetallen (2 cijfers achter de komma), kommagetallen (3 cijfers achter de komma) · type: kale
-- Denkfouten (Claude): andere-deel-genomen (7), kommagetal-als-geheel (5)
+- Denkfouten (Claude): andere-deel-genomen (6), kommagetal-als-geheel (5)
 - Verschillende Claude-fout-hints: 2 (meest: “Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?”)
 - Voorbeelden:
   - `G8-GET-E05-claude-bank-022` (Claude T4, bank, niveau 1 → basis)
@@ -340,18 +373,21 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 4  (controle: ok)
     - **Fout-hints (Claude):** 8 → Kijk eerst naar het eerste cijfer achter de komma: dat zijn de tienden. Welke is groter? · 1 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
   - `G8-GET-E05-claude-bank-021` (Claude T4, bank, niveau 1 → basis)
-    - **Opgave:** In een busje passen 20 kinderen. Er zijn 371 kinderen. Op de rekenmachine staat 18,55. De volle busjes gaan weg. Hoeveel kinderen blijven er over?
-    - **Antwoord:** 11  (controle: ok)
+    - **Opgave:** In een busje passen 5 kinderen. Er zijn 93 kinderen. Op de rekenmachine staat 18,6. De volle busjes gaan weg. Hoeveel kinderen blijven er over?
+    - **Antwoord:** 3  (controle: ok)
     - **Fout-hints (Claude):** 18 → Kijk eerst naar het eerste cijfer achter de komma: dat zijn de tienden. Welke is groter? · 9 → Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?
 
 - **Hint 1 (te schrijven):** Op de rekenmachine staat een kommagetal. Het getal voor de komma zegt hoeveel er helemaal vol raken.
 - **Hint 2 (te schrijven):** Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal: de volle gaan weg, en het rekent uit hoeveel er nog over zijn.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.  [nieuw]
+  - `per stuk min wat overblijft` (fout = getal1 − antwoord) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [nieuw]
+  - `het aantal volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.  [nieuw]
+  - `cijfers achter de komma` (fout = de cijfers achter de komma uit de vraag) → Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [nieuw]
   - `aangevuld` (Claudes sleutel: andere-deel-genomen) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [Claude, taalfix]
   - `getal van de rekenmachine` (Claudes sleutel: kommagetal-als-geheel) → Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `andere fout` (andere fout) → Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een busje passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. De volle busjes gaan weg. Hoeveel blijven er over?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -377,10 +413,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal: de volle gaan weg, en het rekent uit hoeveel er nog over zijn.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.  [nieuw]
+  - `per stuk min wat overblijft` (fout = getal1 − antwoord) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [nieuw]
+  - `het aantal volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.  [nieuw]
+  - `cijfers achter de komma` (fout = de cijfers achter de komma uit de vraag) → Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [nieuw]
   - `aangevuld` (Claudes sleutel: andere-deel-genomen) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [Claude, taalfix]
   - `getal van de rekenmachine` (Claudes sleutel: kommagetal-als-geheel) → Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `andere fout` (andere fout) → Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een krat passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. De volle kratten gaan weg. Hoeveel blijven er over?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -406,10 +445,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal: de volle gaan weg, en het rekent uit hoeveel er nog over zijn.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.  [nieuw]
+  - `per stuk min wat overblijft` (fout = getal1 − antwoord) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [nieuw]
+  - `het aantal volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.  [nieuw]
+  - `cijfers achter de komma` (fout = de cijfers achter de komma uit de vraag) → Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [nieuw]
   - `aangevuld` (Claudes sleutel: andere-deel-genomen) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [Claude, taalfix]
   - `getal van de rekenmachine` (Claudes sleutel: kommagetal-als-geheel) → Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `andere fout` (andere fout) → Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een kist passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. De volle kisten gaan weg. Hoeveel blijven er over?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -435,10 +477,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal: de volle gaan weg, en het rekent uit hoeveel er nog over zijn.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.  [nieuw]
+  - `per stuk min wat overblijft` (fout = getal1 − antwoord) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [nieuw]
+  - `het aantal volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.  [nieuw]
+  - `cijfers achter de komma` (fout = de cijfers achter de komma uit de vraag) → Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [nieuw]
   - `aangevuld` (Claudes sleutel: andere-deel-genomen) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [Claude, taalfix]
   - `getal van de rekenmachine` (Claudes sleutel: kommagetal-als-geheel) → Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `andere fout` (andere fout) → Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een doos passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. De volle dozen gaan weg. Hoeveel blijven er over?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -464,10 +509,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord.
 - **Ouderzin:** Je kind leest de uitkomst van de rekenmachine in een verhaal: de volle gaan weg, en het rekent uit hoeveel er nog over zijn.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.  [nieuw]
+  - `per stuk min wat overblijft` (fout = getal1 − antwoord) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [nieuw]
+  - `het aantal volle` (fout = het hele getal van het kommagetal uit de vraag) → Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.  [nieuw]
+  - `cijfers achter de komma` (fout = de cijfers achter de komma uit de vraag) → Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [nieuw]
   - `aangevuld` (Claudes sleutel: andere-deel-genomen) → Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.  [Claude, taalfix]
   - `getal van de rekenmachine` (Claudes sleutel: kommagetal-als-geheel) → Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.  [Claude, taalfix]
-  - `kommagetal` (fout = een kommagetal) → Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.  [nieuw]
   - `andere fout` (andere fout) → Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'In een tas passen # [ding]. Er zijn # [ding]. Op de rekenmachine staat #. De volle tassen gaan weg. Hoeveel blijven er over?'. Nakijken of ze nog passen.
 - Status: hints klaar

@@ -12,7 +12,7 @@ Ontdubbelen: zelfde doel + opgave + tekening + opties + antwoord. Zelfde opgave 
 Stap 3  somtypen per G8-doel (somtypen/G8-*.md) met vaste sleutels (bevroren/somtype_nr_v1.json + aanvullingen), twijfellijst.
 Leest alleen: claude-bank-src, claude-merge/g3–g7, exports. Schrijft in claude-merge/g8 en g7/data/aanvulling_uit_g8.json.
 Gebruik: python3 scripts/build_g8.py"""
-import json, re, csv, collections, subprocess, os, sys, math, datetime, hashlib
+import json, re, csv, collections, subprocess, os, sys, math, datetime, hashlib, glob
 from fractions import Fraction as Fr
 HERE = os.path.dirname(os.path.abspath(__file__)); OUT = os.path.dirname(HERE)
 G3, G4, G5, G6, G7 = (f'/workspace/claude-merge/g{n}' for n in (3, 4, 5, 6, 7))
@@ -24,7 +24,7 @@ R, G, T = R7.R, R7.G, R7.T
 OURS = {d['id']: {'bordtitel': d['bordtitel'], 'korteNaam': d['korteNaam'], 'domein': d['domein'], 'aantalItems': d['aantalItems']}
         for g in EXP['groepen'] if g['groep'] == 8 for dm in g['domeinen'] for d in dm['doelen']}
 import besluiten_g8 as BG8                 # Didactiek-besluiten op de 1226 G8-twijfelitems + Dave 20:56
-sys.path.insert(0, "/workspace/claude-merge/tools"); import breukvorm as BV, kloktijd_fix as KF      # V-#760 (Didactiek G8 batch 1, 8 okt): even grote breuk telt als goed (#170, Dave 21:24)
+sys.path.insert(0, "/workspace/claude-merge/tools"); import breukvorm as BV, kloktijd_fix as KF, e05_routes as ER      # V-#760 (Didactiek G8 batch 1, 8 okt): even grote breuk telt als goed (#170, Dave 21:24)
 BESLUIT_G8 = BG8.laad()
 _I8 = json.load(open(f'{OUT}/bevroren/ids_v1.json'))      # Dave 20:56 (5): ook via vorigeIds (het item kreeg in G5 een naar-id; anders valt de regel stil weg)
 E02_001 = next((c for c, i in _I8['ids'].items() if i == 'G8-GET-E02-claude-bank-001'), None) or next((c for c, vs in _I8.get('vorigeIds', {}).items() if 'G8-GET-E02-claude-bank-001' in vs), None)
@@ -308,6 +308,8 @@ def main():
         hercontrole_g8(it, q)
         it['licentie']['wijzigingen'] = sorted({f['soort'] for f in B3.FIXLOG if f['id'] == q['id']}); it['licentie']['gewijzigd'] = True
         it['merge']['somtype'] = kop_g8(BG7.somtype(it) or B7.somtype_g7(it))
+        if (pl_ := it.pop('_plek496', None)):      # Oef-#496: de kop volgt de oude indeling (somtypes blijven gelijk, geen nieuw bevroren somtype)
+            it['merge']['somtype'] = re.sub(r'uit (?:Amsterdam|Rotterdam|Eindhoven|Groningen|Maastricht)\.', 'uit ' + (PLEK496[pl_] if pl_ in ('de school', 'de klas', 'het huis') else '[plek]') + '.', it['merge']['somtype'], count=1)
         if it['merge']['status'] == 'gemapt' and (n_kt := KF.zet_om(it)):      # besluit kloktijden (Didactiek 8 okt 15:46): '14.30 uur', typ-invoer '(Typ als 14.30.)'
             slog(it, f"G8-KLOK (besluit Didactiek 15:46): kloktijd als '14.30 uur', geen ':' ({n_kt} tijden; typ-invoer: geldigeAntwoorden 14.30 uur / 14.30 / 14:30)", 'opgave', None, it['opgave'][:80])
         rows.append(it)
@@ -426,8 +428,21 @@ def main():
         p = f'{OUT}/somtypen/{f}'; s = open(p).read()
         open(p, 'w').write(s.replace('onze G7-bank', 'onze G8-bank').replace('Uit de G6-park', 'Uit de G6-park (n.v.t.)').replace('Lijkt op een G7-pilot', 'Lijkt op een G8-pilot'))
     twijfel_md(cats, bui, t7)
-    for sc in ('sync_hint_keys.py', 'apply_hints.py'):
-        subprocess.run([sys.executable, f'{HERE}/{sc}'], check=True)
+    # Oef-#493 (G8 batch 5): vaste volgorde voor patchrondes die van de data afhangen. 1 data (hierboven) → 2 sync → 3 alle hints/patch_batch*.py
+    # (idempotent; ze zien de nieuwe koppen en items) → 4 opnieuw sync (een patch kan een kop of nrOrigineel raken) → 5 apply. Elke fase staat met tijd in
+    # logs/build_fase.json, en een patch ziet de fase in de omgevingsvariabele G8_BUILD_FASE ('na-sync-1'); buiten de build is die leeg.
+    fase = {'build': nu, 'fasen': []}
+    def _fase(naam):
+        fase['fasen'].append({'fase': naam, 'op': subprocess.check_output(['date', '+%Y-%m-%dT%H:%M:%S%z']).decode().strip()})
+        json.dump(fase, open(f'{OUT}/logs/build_fase.json', 'w'), ensure_ascii=False, indent=1)
+    _fase('1 data geschreven')
+    subprocess.run([sys.executable, '-B', f'{HERE}/sync_hint_keys.py'], check=True); _fase('2 sync')
+    env = dict(os.environ, G8_BUILD_FASE='na-sync-1', PYTHONDONTWRITEBYTECODE='1')
+    pb = sorted(glob.glob(f'{OUT}/hints/patch_batch*.py'), key=lambda x: int(re.search(r'patch_batch(\d+)', x).group(1)))
+    for p_ in pb: subprocess.run([sys.executable, '-B', p_], check=True, env=env, cwd=OUT)
+    _fase('3 patches: ' + ', '.join(os.path.basename(x) for x in pb))
+    subprocess.run([sys.executable, '-B', f'{HERE}/sync_hint_keys.py'], check=True); _fase('4 sync opnieuw')
+    subprocess.run([sys.executable, '-B', f'{HERE}/apply_hints.py'], check=True); _fase('5 apply')
     return rows, gem, twf, t7, bui, stats
 
 OEF476 = True       # V-#782 (= Oef-#476, Didactiek batch 2): afleider 'Deel 100 door 40 en doe dat keer 15'; Oefeningen schrijft regel en H1
@@ -565,6 +580,63 @@ def fix_g8(r, slog):
         if c8 == 'd7511a09' and r['opgave'].startswith('In de klas leven'):
             o = r['opgave']; r['opgave'] = o.replace('In de klas leven', 'In de vallei leven', 1)
             slog(r, 'Oef-#492: insecten in de klas → in de vallei (les 147)', 'opgave', o, r['opgave'])
+        # Oef-#496 (batch 5): vreemde contexten. MEET-E03 #1–#4 'Een bak voor knopen …' (3 m³) → een echte bak met water; MEET-E06 'Een vliegtuig vertrekt … uit de dierentuin'
+        # → uit een stad (de kop met 'uit de school/klas/het huis' wordt 'uit Eindhoven/Rotterdam/Groningen', zie KOP478; de koppen blijven verschillend).
+        B496 = {'ad7cab10': ('Een bak voor knopen', 'Een vijver'), '126f27ed': ('Een bak voor tanden', 'Een watertank'),
+                '46c13eb4': ('Een bak voor truien', 'Een regenput'), '56326cb6': ('Een bak voor wortels', 'Een opblaaszwembad')}
+        if c8 in B496 and r['opgave'].startswith(B496[c8][0]):
+            o = r['opgave']; r['opgave'] = o.replace(B496[c8][0], B496[c8][1], 1)
+            slog(r, "Oef-#496: vreemde context (een bak voor knopen van 3 m³) → een bak met water", 'opgave', o, r['opgave'])
+        if (m_ := re.match(r'Een vliegtuig vertrekt om \S+ (?:uur )?uit (de dierentuin|het museum|het bos|de kantine|het stadion|de kleedkamer|de vallei|het nest|het veld|de schuur|de school|de klas|het huis)\.', r['opgave'])):
+            o = r['opgave']; stad = PLEK496[m_.group(1)]
+            r['opgave'] = o[:m_.start(1)] + stad + o[m_.end(1):]
+            r['_plek496'] = m_.group(1)      # voor de kop (zie main): [plek] blijft [plek]; de koppen met 'de school/klas/het huis' krijgen hun stad
+            slog(r, f"Oef-#496: vliegtuig uit {m_.group(1)} → uit {stad}", 'opgave', o, r['opgave'])
+        # Oef-#496: '1 graden' → '1 graad' (MEET-E05, 17 items), in de opgave en in Claudes uitleg
+        if re.search(r'(?<![\d,.])1 graden\b', r['opgave'] + ' ' + str(r['extraVelden'].get('claudeUitleg') or '')):
+            o = r['opgave']; r['opgave'] = re.sub(r'(?<![\d,.])1 graden\b', '1 graad', o)
+            ex = r['extraVelden']
+            if isinstance(ex.get('claudeUitleg'), str): ex['claudeUitleg'] = re.sub(r'(?<![\d,.])1 graden\b', '1 graad', ex['claudeUitleg'])
+            slog(r, "Oef-#496: '1 graden' → '1 graad'", 'opgave', o, r['opgave'])
+        # Oef-#497 (batch 5): MEET-E05 #1 'Zet −5 op de getallenlijn' heeft geen getallenlijn in jsRender → niet live zonder beeld (heel het somtype, Z-#525)
+        if re.fullmatch(r'Zet [−-]?\d+ op de getallenlijn\.', r['opgave']) and not (r['visual'].get('jsRender') or {}).get('soort'):
+            if not r['visual'].get('nietLiveZonderBeeld'):
+                r['visual']['nietLiveZonderBeeld'] = True
+                slog(r, 'Oef-#497: stip op een getallenlijn zonder gedefinieerde lijn → visual.nietLiveZonderBeeld', 'visual', None, 'nietLiveZonderBeeld')
+        # V-#870 / Z-#871 / V-#871a-b (Didactiek batch 4, 16:35; les 315/316): GET-E05 rekenmachine-verhalen waarin een foute route het goede antwoord geeft
+        # (rest 1 of 2 bij 'nodig', ',5' bij 'over', antwoord = per stuk, rest = antwoord), 2 per stuk, of een busje met meer dan 8 kinderen → nieuwe getallen uit
+        # de generator (tools/e05_routes.genereer: zelfde context en somtype, per stuk uit een redelijke verzameling, totaal dicht bij het oude). Claudes sleutels
+        # gaan mee per denkfout (kommagetal-als-geheel / rest-vergeten = het hele getal; andere-deel-genomen = de rest ('nodig') of per stuk − rest ('over')).
+        if r['merge'].get('doel') == 'G8-GET-E05' and (L_ := ER.lees(r['opgave'])) and ER.fouten_item(r):
+            p_, T_ = ER.genereer(L_['bak'], L_['p'], L_['T'], L_['soort'], seed=int(c8, 16), bezet=E05_BEZET)
+            E05_BEZET.add((L_['bak'], p_, T_))
+            o = r['opgave']; a_ = ER.antwoord(p_, T_, L_['soort']); heel_, rest_ = divmod(T_, p_)
+            r['opgave'] = f"In een {L_['bak']} passen {p_} {L_['ding']}. Er zijn {T_} {L_['ding']}. Op de rekenmachine staat {ER.scherm(T_, p_)}. {L_['staart']}"
+            r['antwoord'] = str(a_)
+            ex = r['extraVelden']; route_ = {'kommagetal-als-geheel': heel_, 'rest-vergeten': heel_, 'andere-deel-genomen': rest_ if L_['soort'] == 'nodig' else p_ - rest_}
+            for k_ in ('claudeDenkfouten', 'claudeFoutHints'):
+                L2 = []; gezien = set()
+                for i_, d_ in enumerate(ex.get(k_) or []):
+                    lab = d_.get('denkfout') or ((ex.get('claudeDenkfouten') or [{}] * (i_ + 1))[i_] if i_ < len(ex.get('claudeDenkfouten') or []) else {}).get('denkfout')
+                    v_ = route_.get(lab)
+                    if v_ is None or v_ == a_ or v_ in gezien: continue
+                    gezien.add(v_); L2.append(dict(d_, fout=str(v_)))
+                if ex.get(k_) is not None: ex[k_] = L2
+            assert not ER.fouten_item(r), ('V-#870: nieuw E05-item haalt het filter niet', r['id'], ER.fouten_item(r))
+            slog(r, f"V-#870/Z-#871/V-#871: E05 nieuwe getallen (generator, filter tools/e05_routes): {L_['p']} per {L_['bak']}, {L_['T']} → {p_}, {T_}; antwoord {a_}", 'opgave', o, r['opgave'])
+        # V-#871c (Didactiek batch 4): M01 #3–#5 'Een kind heeft # miljoen … verzameld' → een fabriek / verkocht in Nederland (koppen in KOP478)
+        M871 = [(r'^Een kind heeft (\d+) miljoen (stickers|knikkers) verzameld\.', r'Een fabriek maakt in een jaar \1 miljoen \2.'),
+                (r'^Een kind heeft (\d+) miljoen truien verzameld\.', r'In Nederland worden in een jaar \1 miljoen truien verkocht.')]
+        for a871, b871 in M871:
+            if re.match(a871, r['opgave']):
+                o = r['opgave']; r['opgave'] = re.sub(a871, b871, o, count=1)
+                slog(r, 'V-#871c: geen kind dat miljoenen verzamelt (fabriek / verkocht in Nederland)', 'opgave', o, r['opgave'])
+        # Z-#872: M01 #1 002 'In het nest leven 8.601.000 insecten' → 'in het park'
+        if c8 == '3458e1fb' and r['opgave'].startswith('In het nest leven'):
+            o = r['opgave']; r['opgave'] = o.replace('In het nest leven', 'In het park leven', 1); slog(r, "Z-#872: insecten in het nest → in het park", 'opgave', o, r['opgave'])
+        # Z-#873: MEET-E01 003 (8 km, geen komma): claudeUitleg zonder '8,0 km' en zonder de kommazin
+        if c8 == '0f4cc9f9' and '8,0 km' in str(r['extraVelden'].get('claudeUitleg') or ''):
+            r['extraVelden']['claudeUitleg'] = '1 km = 1000 m.\n8 km = 8000 m.'; slog(r, "Z-#873: claudeUitleg '8,0 km' → '8 km'", 'claudeUitleg', '8,0 km', '8 km')
         # Z-#825 (Didactiek batch 3): #55 'staartsom' → 'som onder elkaar'
         if c8 == '5a2c100b' and 'met een staartsom onder elkaar' in r['opgave']:
             o = r['opgave']; r['opgave'] = o.replace('met een staartsom onder elkaar', 'met een som onder elkaar')
@@ -612,6 +684,22 @@ KOP478 = [(r'^(Kijk zonder uit te rekenen\. Welk antwoord bij # [×+−:] #) \[d
           # Oef-#491 (batch 4): 'miljoen' hoort in het vaste deel, niet op een [ding]-plek (M01 #2–#5); de E05-slotvraag noemt het [ding] ('Hoeveel potjes blijven er over?')
           (r'^In een land wonen # \[ding\] mensen\.', 'In een land wonen # miljoen mensen.'), (r'^\[wie\] heeft # \[ding\] (\w+) verzameld\.', r'[wie] heeft # miljoen \1 verzameld.'),
           (r'(De volle \w+ gaan weg\.) Hoeveel blijven er over\?$', r'\1 Hoeveel [ding] blijven er over?')]  # V-#781: '14.35' werd één '#'
+PLEK496 = {'de dierentuin': 'Amsterdam', 'het museum': 'Rotterdam', 'het bos': 'Eindhoven', 'de kantine': 'Maastricht', 'het stadion': 'Groningen',
+           'de kleedkamer': 'Amsterdam', 'de vallei': 'Rotterdam', 'het nest': 'Eindhoven', 'het veld': 'Maastricht', 'de schuur': 'Groningen',
+           'de school': 'Eindhoven', 'de klas': 'Rotterdam', 'het huis': 'Groningen'}
+KOP478 += [  # Oef-#496 (batch 5)
+          (r'^Een bak voor knopen heeft een inhoud van # \[ding\]\.', 'Een vijver heeft een inhoud van # m³.'),
+          (r'^Een bak voor tanden heeft een inhoud van # \[ding\]\.', 'Een watertank heeft een inhoud van # m³.'),
+          (r'^Een bak voor truien heeft een inhoud van # \[ding\]\.', 'Een regenput heeft een inhoud van # m³.'),
+          (r'^Een bak voor wortels heeft een inhoud van # \[ding\]\.', 'Een opblaaszwembad heeft een inhoud van # m³.'),
+          (r'^(Een vliegtuig vertrekt om \S+(?: uur)? uit) de school\.', r'\1 Eindhoven.'), (r'^(Een vliegtuig vertrekt om \S+(?: uur)? uit) de klas\.', r'\1 Rotterdam.'),
+          (r'^(Een vliegtuig vertrekt om \S+(?: uur)? uit) het huis\.', r'\1 Groningen.')]
+E05_BEZET = set()
+KOP478 += [  # V-#871c (Didactiek batch 4)
+          (r'^\[wie\] heeft # miljoen (stickers|knikkers) verzameld\.', r'Een fabriek maakt in een jaar # miljoen \1.'),
+          (r'^\[wie\] heeft # miljoen truien verzameld\.', 'In Nederland worden in een jaar # miljoen truien verkocht.'),
+          (r'^Een fabriek maakt in een jaar # \[ding\] (stickers|knikkers)\.', r'Een fabriek maakt in een jaar # miljoen \1.'),
+          (r'^In Nederland worden in een jaar # \[ding\] truien verkocht\.', 'In Nederland worden in een jaar # miljoen truien verkocht.')]
 def kop_g8(s):
     for a, b in KOP478: s = re.sub(a, b, s)
     return s

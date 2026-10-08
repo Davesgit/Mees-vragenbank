@@ -33,6 +33,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?  [nieuw]
   - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.  [nieuw]
+  - `keer tien gedaan` (fout = antwoord : 100) → Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.  [nieuw]
   - `honderd keer te weinig` (Claudes sleutel: kommagetal-als-geheel) → Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.  [Claude, taalfix]
   - `andere fout` (andere fout) → Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?  [nieuw]
 - Status: hints klaar
@@ -49,7 +50,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Opgave:** Een kind loopt 8 km. Hoeveel meter is dat?
     - **Antwoord:** 8000  (controle: ok)
     - **Fout-hints (Claude):** 800 → Van km naar m is drie plekken, niet twee. · 80 → Haal niet zomaar de komma weg. Keer 1000.
-    - **Uitleg (Claude):** 1 km = 1000 m. De komma schuift drie plekken. 8,0 km = 8000 m.
+    - **Uitleg (Claude):** 1 km = 1000 m. 8 km = 8000 m.
   - `G8-MEET-E01-claude-bank-004` (Claude M25, gegenereerd, niveau 1 → basis)
     - **Opgave:** Een kind loopt 8,2 km. Hoeveel meter is dat?
     - **Antwoord:** 8200  (controle: ok)
@@ -62,6 +63,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?  [nieuw]
   - `tien keer te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.  [nieuw]
+  - `keer tien gedaan` (fout = antwoord : 100) → Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.  [nieuw]
   - `honderd keer te weinig` (Claudes sleutel: kommagetal-als-geheel) → Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.  [Claude, taalfix]
   - `andere fout` (andere fout) → Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?  [nieuw]
 - Status: hints klaar

@@ -27,8 +27,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1 → Zet eerst alles in MB: 8 GB = 8000 MB. · 160 → 8000 : 500, let op de nullen.
     - **Uitleg (Claude):** 8 GB = 8000 MB. 8000 : 500 = 16 foto's.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Reken eerst de kaart om naar MB. Dan staan de kaart en het filmpje in dezelfde maat.
+- **Hint 2 (te schrijven):** Doe het aantal GB van de kaart keer duizend. Dan weet je hoeveel MB er op de kaart past. Deel dat door het aantal MB van één filmpje.
+- **Ouderzin:** Je kind rekent eerst GB om naar MB (keer duizend) en deelt dan door de grootte van één filmpje.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens na: hoeveel MB past er op de kaart?  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Tel de nullen nog eens na: hoeveel MB past er op de kaart?  [nieuw]
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel filmpjes er op de kaart passen.  [nieuw]
+  - `andere fout` (andere fout) → Reken eerst de kaart om naar MB: keer duizend. Deel dan door het aantal MB van één filmpje. Tel de nullen goed.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: Een harde schijf heeft # TB. Hoeveel GB is dat? (# TB = # GB)
 
@@ -49,8 +56,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 3200 → 1 TB is 1000 GB, niet 100. · 32.768.000 → Eén stap: keer 1000.
     - **Uitleg (Claude):** 1 TB = 1000 GB, dus 32 TB = 32 × 1000 = 32.000 GB.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** In de vraag staat hoeveel GB er in één TB gaan. Dat is duizend.
+- **Hint 2 (te schrijven):** Doe het aantal TB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op.
+- **Ouderzin:** Je kind rekent TB om naar GB: keer duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel GB het is.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Eén TB is duizend GB, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Eén TB is duizend GB.  [nieuw]
+  - `andere fout` (andere fout) → Eén TB is duizend GB. Hoeveel GB is dan het aantal TB uit de vraag?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: Een foto is # MB. Hoeveel KB is dat? (# MB = # KB)
 
@@ -71,8 +85,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 400 → 1 MB is 1000 KB, niet 100. · 4.096.000 → Eén stap: keer 1000.
     - **Uitleg (Claude):** 1 MB = 1000 KB, dus 4 MB = 4 × 1000 = 4000 KB.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** In de vraag staat hoeveel KB er in één MB gaan. Dat is duizend.
+- **Hint 2 (te schrijven):** Doe het aantal MB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op.
+- **Ouderzin:** Je kind rekent MB om naar KB: keer duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel KB het is.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Eén MB is duizend KB, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Eén MB is duizend KB.  [nieuw]
+  - `andere fout` (andere fout) → Eén MB is duizend KB. Hoeveel KB is dan het aantal MB uit de vraag?  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: Een geheugenkaart heeft # GB. Hoeveel MB is dat? (# GB = # MB)
 
@@ -93,78 +114,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 800 → 1 GB is 1000 MB, niet 100. · 8.192.000 → Eén stap: keer 1000.
     - **Uitleg (Claude):** 1 GB = 1000 MB, dus 8 GB = 8 × 1000 = 8000 MB.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** In de vraag staat hoeveel MB er in één GB gaan. Dat is duizend.
+- **Hint 2 (te schrijven):** Doe het aantal GB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op.
+- **Ouderzin:** Je kind rekent GB om naar MB: keer duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel MB het is.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Eén GB is duizend MB, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Eén GB is duizend MB.  [nieuw]
+  - `andere fout` (andere fout) → Eén GB is duizend MB. Hoeveel MB is dan het aantal GB uit de vraag?  [nieuw]
+- Status: hints klaar
 
-## Somtype 5: Een bak voor knopen heeft een inhoud van # [ding]. Hoeveel liter is dat?
-
-- Sleutel: nrOrigineel **1** · somtypeOrigineel “Een bak voor knopen heeft een inhoud van # [ding]. Hoeveel liter is dat?” (koppeling: claudeId)
-- Items: **1** · Claude-doelen: M25 (1) · regel: G8-M25-m3-liter
-- Getallenruimte: 0–10.000 · type: kale
-- Denkfouten (Claude): eenheid-verkeerd-omgerekend (2)
-- Verschillende Claude-fout-hints: 2 (meest: “Een m³ is duizend liter, niet honderd.”)
-- Voorbeelden:
-  - `G8-MEET-E03-claude-bank-001` (Claude M25, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een bak voor knopen heeft een inhoud van 3 m³. Hoeveel liter is dat?
-    - **Antwoord:** 3000  (controle: ok)
-    - **Fout-hints (Claude):** 300 → Een m³ is duizend liter, niet honderd. · 30.000 → Een nul te veel. 1 m³ = 1000 liter.
-    - **Uitleg (Claude):** 1 m³ = 1000 liter. 3 × 1000 = 3000 liter.
-
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
-
-## Somtype 6: Een bak voor tanden heeft een inhoud van # [ding]. Hoeveel liter is dat?
-
-- Sleutel: nrOrigineel **2** · somtypeOrigineel “Een bak voor tanden heeft een inhoud van # [ding]. Hoeveel liter is dat?” (koppeling: claudeId)
-- Items: **1** · Claude-doelen: M25 (1) · regel: G8-M25-m3-liter
-- Getallenruimte: kommagetallen (1 cijfers achter de komma) · type: kale
-- Denkfouten (Claude): eenheid-verkeerd-omgerekend (2)
-- Verschillende Claude-fout-hints: 2 (meest: “Een m³ is duizend liter, niet honderd.”)
-- Voorbeelden:
-  - `G8-MEET-E03-claude-bank-002` (Claude M25, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een bak voor tanden heeft een inhoud van 1,5 m³. Hoeveel liter is dat?
-    - **Antwoord:** 1500  (controle: ok)
-    - **Fout-hints (Claude):** 150 → Een m³ is duizend liter, niet honderd. · 15.000 → Een nul te veel. 1 m³ = 1000 liter.
-    - **Uitleg (Claude):** 1 m³ = 1000 liter. 1,5 × 1000 = 1500 liter.
-
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
-
-## Somtype 7: Een bak voor truien heeft een inhoud van # [ding]. Hoeveel liter is dat?
-
-- Sleutel: nrOrigineel **3** · somtypeOrigineel “Een bak voor truien heeft een inhoud van # [ding]. Hoeveel liter is dat?” (koppeling: claudeId)
-- Items: **1** · Claude-doelen: M25 (1) · regel: G8-M25-m3-liter
-- Getallenruimte: 0–10.000 · type: kale
-- Denkfouten (Claude): eenheid-verkeerd-omgerekend (2)
-- Verschillende Claude-fout-hints: 2 (meest: “Een m³ is duizend liter, niet honderd.”)
-- Voorbeelden:
-  - `G8-MEET-E03-claude-bank-003` (Claude M25, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een bak voor truien heeft een inhoud van 3 m³. Hoeveel liter is dat?
-    - **Antwoord:** 3000  (controle: ok)
-    - **Fout-hints (Claude):** 300 → Een m³ is duizend liter, niet honderd. · 30.000 → Een nul te veel. 1 m³ = 1000 liter.
-    - **Uitleg (Claude):** 1 m³ = 1000 liter. 3 × 1000 = 3000 liter.
-
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
-
-## Somtype 8: Een bak voor wortels heeft een inhoud van # [ding]. Hoeveel liter is dat?
-
-- Sleutel: nrOrigineel **4** · somtypeOrigineel “Een bak voor wortels heeft een inhoud van # [ding]. Hoeveel liter is dat?” (koppeling: claudeId)
-- Items: **1** · Claude-doelen: M25 (1) · regel: G8-M25-m3-liter
-- Getallenruimte: 0–10.000 · type: kale
-- Denkfouten (Claude): eenheid-verkeerd-omgerekend (2)
-- Verschillende Claude-fout-hints: 2 (meest: “Een m³ is duizend liter, niet honderd.”)
-- Voorbeelden:
-  - `G8-MEET-E03-claude-bank-004` (Claude M25, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** Een bak voor wortels heeft een inhoud van 3 m³. Hoeveel liter is dat?
-    - **Antwoord:** 3000  (controle: ok)
-    - **Fout-hints (Claude):** 300 → Een m³ is duizend liter, niet honderd. · 30.000 → Een nul te veel. 1 m³ = 1000 liter.
-    - **Uitleg (Claude):** 1 m³ = 1000 liter. 3 × 1000 = 3000 liter.
-
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
-
-## Somtype 9: Een film is # GB. Hoeveel MB is dat? (# GB = # MB)
+## Somtype 5: Een film is # GB. Hoeveel MB is dat? (# GB = # MB)
 
 - Sleutel: nrOrigineel **9** · somtypeOrigineel “Een film is # GB. Hoeveel MB is dat? (# GB = # MB)” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: M29 (1) · regel: D8-GEHEUGEN-CONTEXT
@@ -178,5 +138,112 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 300 → 1 GB is 1000 MB, niet 100. · 3.072.000 → Eén stap: keer 1000.
     - **Uitleg (Claude):** 1 GB = 1000 MB, dus 3 GB = 3 × 1000 = 3000 MB.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** In de vraag staat hoeveel MB er in één GB gaan. Dat is duizend.
+- **Hint 2 (te schrijven):** Doe het aantal GB keer duizend: zet er drie nullen achter. Bij een kommagetal schuift de komma drie plekken op.
+- **Ouderzin:** Je kind rekent GB om naar MB: keer duizend.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel MB het is.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Eén GB is duizend MB, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Eén GB is duizend MB.  [nieuw]
+  - `andere fout` (andere fout) → Eén GB is duizend MB. Hoeveel MB is dan het aantal GB uit de vraag?  [nieuw]
+- Status: hints klaar
+
+## Somtype 6: Een opblaaszwembad heeft een inhoud van # [ding]. Hoeveel liter is dat?
+
+- Sleutel: nrOrigineel **4** · somtypeOrigineel “Een bak voor wortels heeft een inhoud van # [ding]. Hoeveel liter is dat?” (koppeling: claudeId)
+- Items: **1** · Claude-doelen: M25 (1) · regel: G8-M25-m3-liter
+- Getallenruimte: 0–10.000 · type: kale
+- Denkfouten (Claude): eenheid-verkeerd-omgerekend (2)
+- Verschillende Claude-fout-hints: 2 (meest: “Een m³ is duizend liter, niet honderd.”)
+- Voorbeelden:
+  - `G8-MEET-E03-claude-bank-004` (Claude M25, gegenereerd, niveau 2 → toepassen)
+    - **Opgave:** Een opblaaszwembad heeft een inhoud van 3 m³. Hoeveel liter is dat?
+    - **Antwoord:** 3000  (controle: ok)
+    - **Fout-hints (Claude):** 300 → Een m³ is duizend liter, niet honderd. · 30.000 → Een nul te veel. 1 m³ = 1000 liter.
+    - **Uitleg (Claude):** 1 m³ = 1000 liter. 3 × 1000 = 3000 liter.
+
+- **Hint 1 (te schrijven):** Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.
+- **Hint 2 (te schrijven):** Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.
+- **Ouderzin:** Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat is het aantal kubieke meter. De vraag wil liters: hoeveel liter past er in één kubieke meter?  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. In één kubieke meter past duizend liter, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. In één kubieke meter past duizend liter.  [nieuw]
+  - `andere fout` (andere fout) → Eén kubieke meter is duizend liter. Hoeveel liter is dan het aantal kubieke meter uit de vraag?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een bak voor wortels heeft een inhoud van # [ding]. Hoeveel liter is dat?'. Nakijken of ze nog passen.
+- Status: hints klaar
+
+## Somtype 7: Een regenput heeft een inhoud van # [ding]. Hoeveel liter is dat?
+
+- Sleutel: nrOrigineel **3** · somtypeOrigineel “Een bak voor truien heeft een inhoud van # [ding]. Hoeveel liter is dat?” (koppeling: claudeId)
+- Items: **1** · Claude-doelen: M25 (1) · regel: G8-M25-m3-liter
+- Getallenruimte: 0–10.000 · type: kale
+- Denkfouten (Claude): eenheid-verkeerd-omgerekend (2)
+- Verschillende Claude-fout-hints: 2 (meest: “Een m³ is duizend liter, niet honderd.”)
+- Voorbeelden:
+  - `G8-MEET-E03-claude-bank-003` (Claude M25, gegenereerd, niveau 2 → toepassen)
+    - **Opgave:** Een regenput heeft een inhoud van 3 m³. Hoeveel liter is dat?
+    - **Antwoord:** 3000  (controle: ok)
+    - **Fout-hints (Claude):** 300 → Een m³ is duizend liter, niet honderd. · 30.000 → Een nul te veel. 1 m³ = 1000 liter.
+    - **Uitleg (Claude):** 1 m³ = 1000 liter. 3 × 1000 = 3000 liter.
+
+- **Hint 1 (te schrijven):** Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.
+- **Hint 2 (te schrijven):** Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.
+- **Ouderzin:** Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat is het aantal kubieke meter. De vraag wil liters: hoeveel liter past er in één kubieke meter?  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. In één kubieke meter past duizend liter, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. In één kubieke meter past duizend liter.  [nieuw]
+  - `andere fout` (andere fout) → Eén kubieke meter is duizend liter. Hoeveel liter is dan het aantal kubieke meter uit de vraag?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een bak voor truien heeft een inhoud van # [ding]. Hoeveel liter is dat?'. Nakijken of ze nog passen.
+- Status: hints klaar
+
+## Somtype 8: Een vijver heeft een inhoud van # [ding]. Hoeveel liter is dat?
+
+- Sleutel: nrOrigineel **1** · somtypeOrigineel “Een bak voor knopen heeft een inhoud van # [ding]. Hoeveel liter is dat?” (koppeling: claudeId)
+- Items: **1** · Claude-doelen: M25 (1) · regel: G8-M25-m3-liter
+- Getallenruimte: 0–10.000 · type: kale
+- Denkfouten (Claude): eenheid-verkeerd-omgerekend (2)
+- Verschillende Claude-fout-hints: 2 (meest: “Een m³ is duizend liter, niet honderd.”)
+- Voorbeelden:
+  - `G8-MEET-E03-claude-bank-001` (Claude M25, gegenereerd, niveau 2 → toepassen)
+    - **Opgave:** Een vijver heeft een inhoud van 3 m³. Hoeveel liter is dat?
+    - **Antwoord:** 3000  (controle: ok)
+    - **Fout-hints (Claude):** 300 → Een m³ is duizend liter, niet honderd. · 30.000 → Een nul te veel. 1 m³ = 1000 liter.
+    - **Uitleg (Claude):** 1 m³ = 1000 liter. 3 × 1000 = 3000 liter.
+
+- **Hint 1 (te schrijven):** Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.
+- **Hint 2 (te schrijven):** Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.
+- **Ouderzin:** Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat is het aantal kubieke meter. De vraag wil liters: hoeveel liter past er in één kubieke meter?  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. In één kubieke meter past duizend liter, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. In één kubieke meter past duizend liter.  [nieuw]
+  - `andere fout` (andere fout) → Eén kubieke meter is duizend liter. Hoeveel liter is dan het aantal kubieke meter uit de vraag?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een bak voor knopen heeft een inhoud van # [ding]. Hoeveel liter is dat?'. Nakijken of ze nog passen.
+- Status: hints klaar
+
+## Somtype 9: Een watertank heeft een inhoud van # [ding]. Hoeveel liter is dat?
+
+- Sleutel: nrOrigineel **2** · somtypeOrigineel “Een bak voor tanden heeft een inhoud van # [ding]. Hoeveel liter is dat?” (koppeling: claudeId)
+- Items: **1** · Claude-doelen: M25 (1) · regel: G8-M25-m3-liter
+- Getallenruimte: kommagetallen (1 cijfers achter de komma) · type: kale
+- Denkfouten (Claude): eenheid-verkeerd-omgerekend (2)
+- Verschillende Claude-fout-hints: 2 (meest: “Een m³ is duizend liter, niet honderd.”)
+- Voorbeelden:
+  - `G8-MEET-E03-claude-bank-002` (Claude M25, gegenereerd, niveau 2 → toepassen)
+    - **Opgave:** Een watertank heeft een inhoud van 1,5 m³. Hoeveel liter is dat?
+    - **Antwoord:** 1500  (controle: ok)
+    - **Fout-hints (Claude):** 150 → Een m³ is duizend liter, niet honderd. · 15.000 → Een nul te veel. 1 m³ = 1000 liter.
+    - **Uitleg (Claude):** 1 m³ = 1000 liter. 1,5 × 1000 = 1500 liter.
+
+- **Hint 1 (te schrijven):** Een kubieke meter is een kubus van een meter lang, een meter breed en een meter hoog. Daar past duizend liter in.
+- **Hint 2 (te schrijven):** Doe het aantal kubieke meter keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen.
+- **Ouderzin:** Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `getal uit de vraag` (fout = een getal uit de vraag) → Dat is het aantal kubieke meter. De vraag wil liters: hoeveel liter past er in één kubieke meter?  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. In één kubieke meter past duizend liter, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. In één kubieke meter past duizend liter.  [nieuw]
+  - `andere fout` (andere fout) → Eén kubieke meter is duizend liter. Hoeveel liter is dan het aantal kubieke meter uit de vraag?  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een bak voor tanden heeft een inhoud van # [ding]. Hoeveel liter is dat?'. Nakijken of ze nog passen.
+- Status: hints klaar

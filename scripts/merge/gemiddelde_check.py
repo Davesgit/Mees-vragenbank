@@ -3,6 +3,7 @@ Bij een gemiddelde-vraag met een getal als antwoord:
   regel 1  het antwoord is een gegeven waarde uit de vraag (WARN per item);
   regel 2  meerkeuze: het antwoord is de middelste optie en alle andere opties liggen buiten kleinste–grootste gegeven waarde (WARN);
            alleen bij 3 of meer gegeven waarden (Z-#841; bij twee waarden is het midden altijd het gemiddelde, les 305);
+  Z-#860   twee waarden in een meerkeuze en geen afleider tussen die twee: WARN (schatten beslist; neem drie waarden, les 305).
   routes   (Z-#855, vanaf 3 waarden) vijf foute routes: mediaan (bij een even aantal: elk van de twee middelste en hun gemiddelde),
            meest voorkomend, middelste in de volgorde van de opgave, midden van kleinste en grootste, een gegeven waarde.
            Geeft een route het goede antwoord: WARN per item. FAIL als één route bij ≥ 1/3 van de gemiddelde-items van het somtype raakt,
@@ -64,6 +65,12 @@ def analyse(items, base=None):
             lo, hi = min(v), max(v); rest = [x for x in ops if x != a]
             if sorted(ops)[len(ops) // 2] == a and all(x < lo or x > hi for x in rest):
                 W.append(f"{it['id']}: het goede antwoord {it['antwoord']} is de middelste optie en de andere opties ({', '.join(str(x.get('tekst')) for x in it['opties'] if _getal(x.get('tekst')) != a)}) liggen buiten {float(lo):g}–{float(hi):g}")
+        # Z-#860 (Didactiek recheck gemiddelde, 16:3x; les 305): bij twee waarden in een meerkeuze is het midden altijd het gemiddelde. Ligt geen afleider
+        # tussen de twee waarden, dan beslist schatten (het oude probleem van G8 002): WARN 'neem drie waarden'.
+        if len(v) == 2 and bron != 'alle getallen' and len(ops) >= 3 and None not in ops:
+            lo, hi = min(v), max(v)
+            if not any(lo < x < hi for x in ops if x != a):
+                W.append(f"{it['id']}: twee waarden ({float(lo):g} en {float(hi):g}) en geen afleider ertussen: schatten beslist; neem drie waarden (Z-#860, les 305)")
         if len(v) >= 3 and bron != 'alle getallen':
             h = [r for r, X in routes(v).items() if a in X]
             for r in h:
@@ -91,7 +98,7 @@ def _item(id_, o, a, opties=None, doel='MUT', nro=1): return {'id': id_, 'opgave
 MUTANTEN = [   # (naam, items, verwacht: 'FAIL' / 'WARN' / 'geen')
     ('oud G7 427 (middelste genoemde, mediaan, midden; 1 item = 1/1)', [_item('G7-427-oud', "5 dino's hebben 15, 11, 12, 9, 13 eieren. Hoeveel eieren hebben ze gemiddeld?", '12', doel='G7-GET-04', nro=5)], 'FAIL'),
     ('oud G6 010 (alle vijf routes)', [_item('G6-010-oud', "4 dino's verzamelden eieren. Ze hadden er 5, 6, 6 en 7. Hoeveel eieren is dat gemiddeld per dino?", '6', doel='G6-GET-E08', nro=2)], 'FAIL'),
-    ('oud G8 002 (twee waarden: Z-#841, les 305: regel 2 en de routes gelden pas vanaf drie waarden)', [_item('G8-002-oud', 'In een zwembad zwemmen op zaterdag 320 mensen en op zondag 280 mensen. Hoeveel mensen zwommen er dat weekend gemiddeld per dag?', '300 mensen', ['40 mensen', '300 mensen', '600 mensen'], 'G8-GET-V02', 2)], 'geen'),
+    ('oud G8 002 (twee waarden, afleiders buiten het bereik: Z-#860 WARN; regel 2 en de routes pas vanaf drie waarden, Z-#841)', [_item('G8-002-oud', 'In een zwembad zwemmen op zaterdag 320 mensen en op zondag 280 mensen. Hoeveel mensen zwommen er dat weekend gemiddeld per dag?', '300 mensen', ['40 mensen', '300 mensen', '600 mensen'], 'G8-GET-V02', 2)], 'WARN'),
     ('nieuw G8 002 (V-#850)', [_item('G8-002-nieuw', 'In een zwembad zwommen op vrijdag 210 mensen, op zaterdag 320 mensen en op zondag 280 mensen. Hoeveel mensen zwommen er in die drie dagen gemiddeld per dag?', '270 mensen', ['270 mensen', '265 mensen', '810 mensen'], 'G8-GET-V02', 2)], 'geen'),
     ('G8 002 met 300 in het bereik, afleiders buiten (regel 2)', [_item('G8-002-mut', 'In een zwembad zwommen op vrijdag 300 mensen, op zaterdag 320 mensen en op zondag 280 mensen. Hoeveel mensen zwommen er in die drie dagen gemiddeld per dag?', '300 mensen', ['40 mensen', '300 mensen', '900 mensen'], 'G8-GET-V02', 2)], 'FAIL'),
     ('nieuw G7 427 (V-#853)', [_item('G7-427-nieuw', "5 dino's hebben 15, 11, 11, 10, 13 eieren. Hoeveel eieren hebben ze gemiddeld?", '12', doel='G7-GET-04', nro=5)], 'geen'),

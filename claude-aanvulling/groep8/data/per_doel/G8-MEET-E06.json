@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-08T16:25:38+0200",
+ "gegenereerdOp": "2026-10-08T16:45:31+0200",
  "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
  "doelId": "G8-MEET-E06",
  "bordtitel": "Tijdzones, tijdseenheden en de tijdbalk",
@@ -20,28 +20,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 6.15 uur uit de dierentuin. De vlucht duurt 5 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 6.15 uur uit Amsterdam. De vlucht duurt 5 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "12.00 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "11.00 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "11.15 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "11.00 uur → Tel de uren nog eens: je zit er een uur naast. · 11.15 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "11.00 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 11.15 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -111,7 +121,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit de dierentuin → uit Amsterdam"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -124,11 +136,16 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "12:00",
+    "verwacht": "12.00 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -140,13 +157,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "12.00 uur",
     "12.00",
     "12:00"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "11.00 uur",
+       "11.00",
+       "11:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "11.15 uur",
+       "11.15",
+       "11:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-002",
@@ -155,28 +221,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 9.30 uur uit het bos. De vlucht duurt 10 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 9.30 uur uit Eindhoven. De vlucht duurt 10 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "20.15 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "19.15 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "19.30 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "19.15 uur → Tel de uren nog eens: je zit er een uur naast. · 19.30 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "19.15 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 19.30 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -246,7 +322,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit het bos → uit Eindhoven"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -259,11 +337,16 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "20:15",
+    "verwacht": "20.15 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -275,13 +358,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "20.15 uur",
     "20.15",
     "20:15"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "19.15 uur",
+       "19.15",
+       "19:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "19.30 uur",
+       "19.30",
+       "19:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-003",
@@ -290,28 +422,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 13.45 uur uit het stadion. De vlucht duurt 9 uur en 30 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 13.45 uur uit Groningen. De vlucht duurt 9 uur en 30 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "23.15 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "22.15 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "22.45 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "22.15 uur → Tel de uren nog eens: je zit er een uur naast. · 22.45 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "22.15 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 22.45 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -381,7 +523,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit het stadion → uit Groningen"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -394,11 +538,16 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "23:15",
+    "verwacht": "23.15 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -410,13 +559,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "23.15 uur",
     "23.15",
     "23:15"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "22.15 uur",
+       "22.15",
+       "22:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "22.45 uur",
+       "22.45",
+       "22:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-004",
@@ -425,28 +623,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 9.00 uur uit de kleedkamer. De vlucht duurt 9 uur en 15 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 9.00 uur uit Amsterdam. De vlucht duurt 9 uur en 15 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "18.15 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "17.15 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "18.00 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "17.15 uur → Tel de uren nog eens: je zit er een uur naast. · 18.00 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "17.15 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 18.00 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -516,7 +724,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit de kleedkamer → uit Amsterdam"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -529,11 +739,16 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "18:15",
+    "verwacht": "18.15 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -545,13 +760,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "18.15 uur",
     "18.15",
     "18:15"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17.15 uur",
+       "17.15",
+       "17:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "18.00 uur",
+       "18.00",
+       "18:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-005",
@@ -560,28 +824,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 12.45 uur uit de dierentuin. De vlucht duurt 3 uur en 30 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 12.45 uur uit Amsterdam. De vlucht duurt 3 uur en 30 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "16.15 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "15.15 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "15.45 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "15.15 uur → Tel de uren nog eens: je zit er een uur naast. · 15.45 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "15.15 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 15.45 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -651,7 +925,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit de dierentuin → uit Amsterdam"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -664,11 +940,16 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "16:15",
+    "verwacht": "16.15 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -680,13 +961,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "16.15 uur",
     "16.15",
     "16:15"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "15.15 uur",
+       "15.15",
+       "15:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "15.45 uur",
+       "15.45",
+       "15:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-006",
@@ -695,28 +1025,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 12.45 uur uit de kantine. De vlucht duurt 5 uur en 15 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 12.45 uur uit Maastricht. De vlucht duurt 5 uur en 15 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "18.00 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "17.00 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "17.45 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "17.00 uur → Tel de uren nog eens: je zit er een uur naast. · 17.45 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "17.00 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 17.45 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -786,7 +1126,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit de kantine → uit Maastricht"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -799,11 +1141,16 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "18:00",
+    "verwacht": "18.00 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -815,13 +1162,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "18.00 uur",
     "18.00",
     "18:00"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17.00 uur",
+       "17.00",
+       "17:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17.45 uur",
+       "17.45",
+       "17:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-007",
@@ -830,28 +1226,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 8.15 uur uit het museum. De vlucht duurt 5 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 8.15 uur uit Rotterdam. De vlucht duurt 5 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "14.00 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "13.00 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "13.15 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "13.00 uur → Tel de uren nog eens: je zit er een uur naast. · 13.15 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "13.00 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 13.15 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -921,7 +1327,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit het museum → uit Rotterdam"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -934,11 +1342,16 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "14:00",
+    "verwacht": "14.00 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -950,13 +1363,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "14.00 uur",
     "14.00",
     "14:00"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "13.00 uur",
+       "13.00",
+       "13:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "13.15 uur",
+       "13.15",
+       "13:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-008",
@@ -965,28 +1427,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 9.30 uur uit de dierentuin. De vlucht duurt 8 uur en 15 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 9.30 uur uit Amsterdam. De vlucht duurt 8 uur en 15 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "17.45 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "16.45 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "17.30 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "16.45 uur → Tel de uren nog eens: je zit er een uur naast. · 17.30 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "16.45 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 17.30 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -1056,7 +1528,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit de dierentuin → uit Amsterdam"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1069,11 +1543,16 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "17:45",
+    "verwacht": "17.45 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -1085,13 +1564,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "17.45 uur",
     "17.45",
     "17:45"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "16.45 uur",
+       "16.45",
+       "16:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17.30 uur",
+       "17.30",
+       "17:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-009",
@@ -1100,28 +1628,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 7.45 uur uit de vallei. De vlucht duurt 11 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 7.45 uur uit Rotterdam. De vlucht duurt 11 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "19.30 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "18.30 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "18.45 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "18.30 uur → Tel de uren nog eens: je zit er een uur naast. · 18.45 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "18.30 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 18.45 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -1191,7 +1729,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit de vallei → uit Rotterdam"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1204,11 +1744,16 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "19:30",
+    "verwacht": "19.30 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -1220,13 +1765,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "19.30 uur",
     "19.30",
     "19:30"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "18.30 uur",
+       "18.30",
+       "18:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "18.45 uur",
+       "18.45",
+       "18:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-010",
@@ -1235,28 +1829,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 10.00 uur uit de vallei. De vlucht duurt 6 uur en 15 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 10.00 uur uit Rotterdam. De vlucht duurt 6 uur en 15 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "16.15 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "15.15 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "16.00 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "15.15 uur → Tel de uren nog eens: je zit er een uur naast. · 16.00 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "15.15 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 16.00 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -1326,7 +1930,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit de vallei → uit Rotterdam"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1339,11 +1945,16 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "16:15",
+    "verwacht": "16.15 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -1355,13 +1966,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "16.15 uur",
     "16.15",
     "16:15"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "15.15 uur",
+       "15.15",
+       "15:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "16.00 uur",
+       "16.00",
+       "16:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-011",
@@ -1370,28 +2030,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 7.45 uur uit het museum. De vlucht duurt 3 uur en 15 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 7.45 uur uit Rotterdam. De vlucht duurt 3 uur en 15 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "11.00 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "10.00 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "10.45 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "10.00 uur → Tel de uren nog eens: je zit er een uur naast. · 10.45 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "10.00 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 10.45 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -1461,7 +2131,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit het museum → uit Rotterdam"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1474,11 +2146,16 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "11:00",
+    "verwacht": "11.00 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -1490,13 +2167,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "11.00 uur",
     "11.00",
     "11:00"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "10.00 uur",
+       "10.00",
+       "10:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "10.45 uur",
+       "10.45",
+       "10:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-012",
@@ -1505,28 +2231,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 9.30 uur uit de kantine. De vlucht duurt 8 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 9.30 uur uit Maastricht. De vlucht duurt 8 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "18.15 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "17.15 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "17.30 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "17.15 uur → Tel de uren nog eens: je zit er een uur naast. · 17.30 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "17.15 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 17.30 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -1596,7 +2332,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit de kantine → uit Maastricht"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1609,11 +2347,16 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "18:15",
+    "verwacht": "18.15 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -1625,13 +2368,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "18.15 uur",
     "18.15",
     "18:15"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17.15 uur",
+       "17.15",
+       "17:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17.30 uur",
+       "17.30",
+       "17:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-013",
@@ -1640,28 +2432,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 11.45 uur uit de dierentuin. De vlucht duurt 8 uur en 30 minuten. Op de plek van aankomst is het 1 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 11.45 uur uit Amsterdam. De vlucht duurt 8 uur en 30 minuten. Op de plek van aankomst is het 1 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "21.15 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
    "foutHints": [
     {
      "stap": null,
      "fout": "20.15 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 1 uur later."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "19.15 uur",
-     "uitleg": "Later betekent erbij, niet andersom."
+     "uitleg": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "20.15 uur → Dat is de tijd thuis. Daar is het 1 uur later. · 19.15 uur → Later betekent erbij, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "20.15 uur → Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij. · 19.15 uur → Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -1731,7 +2533,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit de dierentuin → uit Amsterdam"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1744,11 +2548,16 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "21:15",
+    "verwacht": "21.15 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -1760,13 +2569,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "21.15 uur",
     "21.15",
     "21:15"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20.15 uur",
+       "20.15",
+       "20:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "19.15 uur",
+       "19.15",
+       "19:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij."
   },
   {
    "id": "G8-MEET-E06-claude-bank-014",
@@ -1775,28 +2633,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 10.00 uur uit het nest. De vlucht duurt 10 uur en 30 minuten. Op de plek van aankomst is het 1 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 10.00 uur uit Eindhoven. De vlucht duurt 10 uur en 30 minuten. Op de plek van aankomst is het 1 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "21.30 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
    "foutHints": [
     {
      "stap": null,
      "fout": "20.30 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 1 uur later."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "19.30 uur",
-     "uitleg": "Later betekent erbij, niet andersom."
+     "uitleg": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "20.30 uur → Dat is de tijd thuis. Daar is het 1 uur later. · 19.30 uur → Later betekent erbij, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "20.30 uur → Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij. · 19.30 uur → Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -1866,7 +2734,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit het nest → uit Eindhoven"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1879,11 +2749,16 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "21:30",
+    "verwacht": "21.30 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -1895,13 +2770,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "21.30 uur",
     "21.30",
     "21:30"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20.30 uur",
+       "20.30",
+       "20:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "19.30 uur",
+       "19.30",
+       "19:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij."
   },
   {
    "id": "G8-MEET-E06-claude-bank-015",
@@ -1910,28 +2834,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 11.00 uur uit de kleedkamer. De vlucht duurt 5 uur en 30 minuten. Op de plek van aankomst is het 6 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 11.00 uur uit Amsterdam. De vlucht duurt 5 uur en 30 minuten. Op de plek van aankomst is het 6 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "22.30 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
    "foutHints": [
     {
      "stap": null,
      "fout": "16.30 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 6 uur later."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "10.30 uur",
-     "uitleg": "Later betekent erbij, niet andersom."
+     "uitleg": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "16.30 uur → Dat is de tijd thuis. Daar is het 6 uur later. · 10.30 uur → Later betekent erbij, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "16.30 uur → Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij. · 10.30 uur → Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -2001,7 +2935,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit de kleedkamer → uit Amsterdam"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -2014,11 +2950,16 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "22:30",
+    "verwacht": "22.30 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2030,13 +2971,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "22.30 uur",
     "22.30",
     "22:30"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "16.30 uur",
+       "16.30",
+       "16:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "10.30 uur",
+       "10.30",
+       "10:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij."
   },
   {
    "id": "G8-MEET-E06-claude-bank-016",
@@ -2045,28 +3035,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 7.15 uur uit het veld. De vlucht duurt 10 uur en 45 minuten. Op de plek van aankomst is het 2 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 7.15 uur uit Maastricht. De vlucht duurt 10 uur en 45 minuten. Op de plek van aankomst is het 2 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "20.00 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
    "foutHints": [
     {
      "stap": null,
      "fout": "18.00 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur later."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "16.00 uur",
-     "uitleg": "Later betekent erbij, niet andersom."
+     "uitleg": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "18.00 uur → Dat is de tijd thuis. Daar is het 2 uur later. · 16.00 uur → Later betekent erbij, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "18.00 uur → Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij. · 16.00 uur → Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -2136,7 +3136,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit het veld → uit Maastricht"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -2149,11 +3151,16 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "20:00",
+    "verwacht": "20.00 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2165,13 +3172,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "20.00 uur",
     "20.00",
     "20:00"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "18.00 uur",
+       "18.00",
+       "18:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "16.00 uur",
+       "16.00",
+       "16:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij."
   },
   {
    "id": "G8-MEET-E06-claude-bank-017",
@@ -2180,28 +3236,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 9.00 uur uit de kantine. De vlucht duurt 8 uur en 45 minuten. Op de plek van aankomst is het 2 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 9.00 uur uit Maastricht. De vlucht duurt 8 uur en 45 minuten. Op de plek van aankomst is het 2 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "19.45 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
    "foutHints": [
     {
      "stap": null,
      "fout": "17.45 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur later."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "15.45 uur",
-     "uitleg": "Later betekent erbij, niet andersom."
+     "uitleg": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "17.45 uur → Dat is de tijd thuis. Daar is het 2 uur later. · 15.45 uur → Later betekent erbij, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "17.45 uur → Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij. · 15.45 uur → Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -2271,7 +3337,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit de kantine → uit Maastricht"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -2284,11 +3352,16 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "19:45",
+    "verwacht": "19.45 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2300,13 +3373,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "19.45 uur",
     "19.45",
     "19:45"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17.45 uur",
+       "17.45",
+       "17:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "15.45 uur",
+       "15.45",
+       "15:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij."
   },
   {
    "id": "G8-MEET-E06-claude-bank-018",
@@ -2315,28 +3437,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 9.15 uur uit het bos. De vlucht duurt 11 uur en 45 minuten. Op de plek van aankomst is het 2 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 9.15 uur uit Eindhoven. De vlucht duurt 11 uur en 45 minuten. Op de plek van aankomst is het 2 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "23.00 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
    "foutHints": [
     {
      "stap": null,
      "fout": "21.00 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur later."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "19.00 uur",
-     "uitleg": "Later betekent erbij, niet andersom."
+     "uitleg": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "21.00 uur → Dat is de tijd thuis. Daar is het 2 uur later. · 19.00 uur → Later betekent erbij, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "21.00 uur → Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij. · 19.00 uur → Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -2406,7 +3538,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit het bos → uit Eindhoven"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -2419,11 +3553,16 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 2,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "23:00",
+    "verwacht": "23.00 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2435,13 +3574,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "23.00 uur",
     "23.00",
     "23:00"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "21.00 uur",
+       "21.00",
+       "21:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "19.00 uur",
+       "19.00",
+       "19:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij."
   },
   {
    "id": "G8-MEET-E06-claude-bank-019",
@@ -2450,28 +3638,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 6.45 uur uit het stadion. De vlucht duurt 10 uur en 30 minuten. Op de plek van aankomst is het 2 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 6.45 uur uit Groningen. De vlucht duurt 10 uur en 30 minuten. Op de plek van aankomst is het 2 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "15.15 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "17.15 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur vroeger."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "19.15 uur",
-     "uitleg": "Vroeger betekent eraf, niet andersom."
+     "uitleg": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "17.15 uur → Dat is de tijd thuis. Daar is het 2 uur vroeger. · 19.15 uur → Vroeger betekent eraf, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "17.15 uur → Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf. · 19.15 uur → Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -2541,7 +3739,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit het stadion → uit Groningen"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -2554,11 +3754,16 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "15:15",
+    "verwacht": "15.15 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2570,13 +3775,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "15.15 uur",
     "15.15",
     "15:15"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17.15 uur",
+       "17.15",
+       "17:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "19.15 uur",
+       "19.15",
+       "19:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf."
   },
   {
    "id": "G8-MEET-E06-claude-bank-020",
@@ -2585,28 +3839,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 11.45 uur uit de schuur. De vlucht duurt 11 uur en 15 minuten. Op de plek van aankomst is het 2 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 11.45 uur uit Groningen. De vlucht duurt 11 uur en 15 minuten. Op de plek van aankomst is het 2 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "21.00 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "23.00 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur vroeger."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "1.00 uur",
-     "uitleg": "Vroeger betekent eraf, niet andersom."
+     "uitleg": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "23.00 uur → Dat is de tijd thuis. Daar is het 2 uur vroeger. · 1.00 uur → Vroeger betekent eraf, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "23.00 uur → Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf. · 1.00 uur → Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -2676,7 +3940,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit de schuur → uit Groningen"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -2689,11 +3955,16 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "21:00",
+    "verwacht": "21.00 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2705,13 +3976,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "21.00 uur",
     "21.00",
     "21:00"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "23.00 uur",
+       "23.00",
+       "23:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1.00 uur",
+       "1.00",
+       "1:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf."
   },
   {
    "id": "G8-MEET-E06-claude-bank-021",
@@ -2720,28 +4040,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 6.30 uur uit het bos. De vlucht duurt 6 uur en 45 minuten. Op de plek van aankomst is het 5 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 6.30 uur uit Eindhoven. De vlucht duurt 6 uur en 45 minuten. Op de plek van aankomst is het 5 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "8.15 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "13.15 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 5 uur vroeger."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "18.15 uur",
-     "uitleg": "Vroeger betekent eraf, niet andersom."
+     "uitleg": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "13.15 uur → Dat is de tijd thuis. Daar is het 5 uur vroeger. · 18.15 uur → Vroeger betekent eraf, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "13.15 uur → Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf. · 18.15 uur → Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -2811,7 +4141,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit het bos → uit Eindhoven"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -2824,11 +4156,16 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "8:15",
+    "verwacht": "8.15 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2840,13 +4177,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "8.15 uur",
     "8.15",
     "8:15"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "13.15 uur",
+       "13.15",
+       "13:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "18.15 uur",
+       "18.15",
+       "18:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf."
   },
   {
    "id": "G8-MEET-E06-claude-bank-022",
@@ -2855,28 +4241,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 9.00 uur uit het museum. De vlucht duurt 6 uur en 30 minuten. Op de plek van aankomst is het 5 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 9.00 uur uit Rotterdam. De vlucht duurt 6 uur en 30 minuten. Op de plek van aankomst is het 5 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "10.30 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "15.30 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 5 uur vroeger."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "20.30 uur",
-     "uitleg": "Vroeger betekent eraf, niet andersom."
+     "uitleg": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "15.30 uur → Dat is de tijd thuis. Daar is het 5 uur vroeger. · 20.30 uur → Vroeger betekent eraf, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "15.30 uur → Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf. · 20.30 uur → Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -2946,7 +4342,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit het museum → uit Rotterdam"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -2959,11 +4357,16 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 3,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "10:30",
+    "verwacht": "10.30 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -2975,13 +4378,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "10.30 uur",
     "10.30",
     "10:30"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "15.30 uur",
+       "15.30",
+       "15:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "20.30 uur",
+       "20.30",
+       "20:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf."
   },
   {
    "id": "G8-MEET-E06-claude-bank-023",
@@ -2990,28 +4442,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 13.45 uur uit het nest. De vlucht duurt 4 uur. Op de plek van aankomst is het 8 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 13.45 uur uit Eindhoven. De vlucht duurt 4 uur. Op de plek van aankomst is het 8 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "1.45 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
+   "sterkereHint": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
    "foutHints": [
     {
      "stap": null,
      "fout": "17.45 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 8 uur later."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "uitlegSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "9.45 uur",
-     "uitleg": "Later betekent erbij, niet andersom."
+     "uitleg": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "uitlegSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "17.45 uur → Dat is de tijd thuis. Daar is het 8 uur later. · 9.45 uur → Later betekent erbij, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "17.45 uur → Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij. · 9.45 uur → Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -3081,7 +4543,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit het nest → uit Eindhoven"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -3092,13 +4556,18 @@
     "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
     "duplicaatVan": null,
-    "somtypeNr": 5,
+    "somtypeNr": 11,
     "somtypeNrOrigineel": 5,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 11,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "1:45",
+    "verwacht": "1.45 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -3110,13 +4579,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "1.45 uur",
     "1.45",
     "1:45"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17.45 uur",
+       "17.45",
+       "17:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "9.45 uur",
+       "9.45",
+       "9:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij."
   },
   {
    "id": "G8-MEET-E06-claude-bank-024",
@@ -3125,28 +4643,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 9.45 uur uit het museum. De vlucht duurt 8 uur. Op de plek van aankomst is het 6 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 9.45 uur uit Rotterdam. De vlucht duurt 8 uur. Op de plek van aankomst is het 6 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "11.45 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "sterkereHint": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "17.45 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 6 uur vroeger."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "uitlegSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "23.45 uur",
-     "uitleg": "Vroeger betekent eraf, niet andersom."
+     "uitleg": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "uitlegSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "17.45 uur → Dat is de tijd thuis. Daar is het 6 uur vroeger. · 23.45 uur → Vroeger betekent eraf, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "17.45 uur → Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf. · 23.45 uur → Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -3216,7 +4744,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "Oef-#496: vliegtuig uit het museum → uit Rotterdam"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -3227,13 +4757,18 @@
     "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
     "duplicaatVan": null,
-    "somtypeNr": 6,
+    "somtypeNr": 12,
     "somtypeNrOrigineel": 6,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 12,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "11:45",
+    "verwacht": "11.45 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -3245,13 +4780,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "11.45 uur",
     "11.45",
     "11:45"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17.45 uur",
+       "17.45",
+       "17:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "23.45 uur",
+       "23.45",
+       "23:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf."
   },
   {
    "id": "G8-MEET-E06-claude-bank-025",
@@ -3260,28 +4844,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 9.30 uur uit de klas. De vlucht duurt 7 uur en 30 minuten. Op de plek van aankomst is het 2 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 9.30 uur uit Rotterdam. De vlucht duurt 7 uur en 30 minuten. Op de plek van aankomst is het 2 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "15.00 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "17.00 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur vroeger."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "19.00 uur",
-     "uitleg": "Vroeger betekent eraf, niet andersom."
+     "uitleg": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "17.00 uur → Dat is de tijd thuis. Daar is het 2 uur vroeger. · 19.00 uur → Vroeger betekent eraf, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "17.00 uur → Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf. · 19.00 uur → Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -3352,6 +4946,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#496: vliegtuig uit de klas → uit Rotterdam",
      "W1 moeilijk woord vervangen"
     ]
    },
@@ -3362,15 +4957,20 @@
     "voorstelDoel": null,
     "regel": "G8-M26-tijdzones",
     "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
-    "somtype": "Een vliegtuig vertrekt om #.# uur uit de klas. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+    "somtype": "Een vliegtuig vertrekt om #.# uur uit Rotterdam. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
     "duplicaatVan": null,
-    "somtypeNr": 7,
+    "somtypeNr": 8,
     "somtypeNrOrigineel": 7,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 8,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit Rotterdam. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "15:00",
+    "verwacht": "15.00 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -3382,13 +4982,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "15.00 uur",
     "15.00",
     "15:00"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17.00 uur",
+       "17.00",
+       "17:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "19.00 uur",
+       "19.00",
+       "19:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf."
   },
   {
    "id": "G8-MEET-E06-claude-bank-026",
@@ -3397,28 +5046,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 10.00 uur uit de klas. De vlucht duurt 2 uur. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 10.00 uur uit Rotterdam. De vlucht duurt 2 uur. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "12.00 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De vlucht duurt een aantal hele uren. Tel die op bij de vertrektijd.",
+   "sterkereHint": "Doe de uren van de vlucht erbij. De minuten blijven hetzelfde als bij vertrek.",
    "foutHints": [
     {
      "stap": null,
      "fout": "11.00 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na.",
+     "uitlegSterker": "Doe de uren van de vlucht erbij. De minuten blijven hetzelfde als bij vertrek.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "11.45 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Dat is te vroeg. De vlucht duurt hele uren: de minuten blijven hetzelfde als bij vertrek.",
+     "uitlegSterker": "Doe de uren van de vlucht erbij. De minuten blijven hetzelfde als bij vertrek.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten veranderd",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "11.00 uur → Tel de uren nog eens: je zit er een uur naast. · 11.45 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "11.00 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na. · 11.45 uur → Dat is te vroeg. De vlucht duurt hele uren: de minuten blijven hetzelfde als bij vertrek.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -3489,6 +5148,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#496: vliegtuig uit de klas → uit Rotterdam",
      "W1 moeilijk woord vervangen"
     ]
    },
@@ -3499,15 +5159,20 @@
     "voorstelDoel": null,
     "regel": "G8-M26-tijdzones",
     "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
-    "somtype": "Een vliegtuig vertrekt om #.# uur uit de klas. De vlucht duurt # uur. Hoe laat landt het? (Typ als #.#.)",
+    "somtype": "Een vliegtuig vertrekt om #.# uur uit Rotterdam. De vlucht duurt # uur. Hoe laat landt het? (Typ als #.#.)",
     "duplicaatVan": null,
-    "somtypeNr": 8,
+    "somtypeNr": 9,
     "somtypeNrOrigineel": 8,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 9,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit Rotterdam. De vlucht duurt # uur. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "12:00",
+    "verwacht": "12.00 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -3519,13 +5184,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "12.00 uur",
     "12.00",
     "12:00"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na.",
+     "tekstSterker": "Doe de uren van de vlucht erbij. De minuten blijven hetzelfde als bij vertrek.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "11.00 uur",
+       "11.00",
+       "11:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten veranderd",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te vroeg. De vlucht duurt hele uren: de minuten blijven hetzelfde als bij vertrek.",
+     "tekstSterker": "Doe de uren van de vlucht erbij. De minuten blijven hetzelfde als bij vertrek.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "11.45 uur",
+       "11.45",
+       "11:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe de uren van de vlucht erbij. De minuten veranderen niet.",
+     "tekstSterker": "Doe de uren van de vlucht erbij. De minuten blijven hetzelfde als bij vertrek.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe de uren van de vlucht erbij. De minuten veranderen niet."
   },
   {
    "id": "G8-MEET-E06-claude-bank-027",
@@ -3534,28 +5248,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 11.45 uur uit de klas. De vlucht duurt 3 uur. Op de plek van aankomst is het 2 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 11.45 uur uit Rotterdam. De vlucht duurt 3 uur. Op de plek van aankomst is het 2 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "12.45 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "sterkereHint": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
    "foutHints": [
     {
      "stap": null,
      "fout": "14.45 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur vroeger."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "uitlegSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "16.45 uur",
-     "uitleg": "Vroeger betekent eraf, niet andersom."
+     "uitleg": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "uitlegSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "14.45 uur → Dat is de tijd thuis. Daar is het 2 uur vroeger. · 16.45 uur → Vroeger betekent eraf, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "14.45 uur → Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf. · 16.45 uur → Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -3626,6 +5350,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#496: vliegtuig uit de klas → uit Rotterdam",
      "W1 moeilijk woord vervangen"
     ]
    },
@@ -3636,15 +5361,20 @@
     "voorstelDoel": null,
     "regel": "G8-M26-tijdzones",
     "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
-    "somtype": "Een vliegtuig vertrekt om #.# uur uit de klas. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+    "somtype": "Een vliegtuig vertrekt om #.# uur uit Rotterdam. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
     "duplicaatVan": null,
-    "somtypeNr": 9,
+    "somtypeNr": 10,
     "somtypeNrOrigineel": 9,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 10,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit Rotterdam. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "12:45",
+    "verwacht": "12.45 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -3656,13 +5386,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "12.45 uur",
     "12.45",
     "12:45"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "14.45 uur",
+       "14.45",
+       "14:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "16.45 uur",
+       "16.45",
+       "16:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf."
   },
   {
    "id": "G8-MEET-E06-claude-bank-028",
@@ -3671,28 +5450,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 7.30 uur uit de school. De vlucht duurt 11 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 7.30 uur uit Eindhoven. De vlucht duurt 11 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "19.15 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "18.15 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "18.30 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "18.15 uur → Tel de uren nog eens: je zit er een uur naast. · 18.30 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "18.15 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 18.30 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -3763,6 +5552,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#496: vliegtuig uit de school → uit Eindhoven",
      "W1 moeilijk woord vervangen"
     ]
    },
@@ -3773,15 +5563,20 @@
     "voorstelDoel": null,
     "regel": "G8-M26-tijdzones",
     "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
-    "somtype": "Een vliegtuig vertrekt om #.# uur uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)",
+    "somtype": "Een vliegtuig vertrekt om #.# uur uit Eindhoven. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)",
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 4,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit Eindhoven. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "19:15",
+    "verwacht": "19.15 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -3793,13 +5588,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "19.15 uur",
     "19.15",
     "19:15"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "18.15 uur",
+       "18.15",
+       "18:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "18.30 uur",
+       "18.30",
+       "18:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-029",
@@ -3808,28 +5652,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 7.15 uur uit de school. De vlucht duurt 7 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 7.15 uur uit Eindhoven. De vlucht duurt 7 uur en 45 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "15.00 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "14.00 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "14.15 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "14.00 uur → Tel de uren nog eens: je zit er een uur naast. · 14.15 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "14.00 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 14.15 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -3900,6 +5754,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#496: vliegtuig uit de school → uit Eindhoven",
      "W1 moeilijk woord vervangen"
     ]
    },
@@ -3910,15 +5765,20 @@
     "voorstelDoel": null,
     "regel": "G8-M26-tijdzones",
     "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
-    "somtype": "Een vliegtuig vertrekt om #.# uur uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)",
+    "somtype": "Een vliegtuig vertrekt om #.# uur uit Eindhoven. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)",
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 4,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit Eindhoven. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "15:00",
+    "verwacht": "15.00 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -3930,13 +5790,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "15.00 uur",
     "15.00",
     "15:00"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "14.00 uur",
+       "14.00",
+       "14:00"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "14.15 uur",
+       "14.15",
+       "14:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-030",
@@ -3945,28 +5854,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 14.00 uur uit de school. De vlucht duurt 11 uur en 15 minuten. Op de plek van aankomst is het 1 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 14.00 uur uit Eindhoven. De vlucht duurt 11 uur en 15 minuten. Op de plek van aankomst is het 1 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "2.15 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het later dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
    "foutHints": [
     {
      "stap": null,
      "fout": "1.15 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 1 uur later."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "0.15 uur",
-     "uitleg": "Later betekent erbij, niet andersom."
+     "uitleg": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "1.15 uur → Dat is de tijd thuis. Daar is het 1 uur later. · 0.15 uur → Later betekent erbij, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "1.15 uur → Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij. · 0.15 uur → Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil erbij (later).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -4037,6 +5956,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#496: vliegtuig uit de school → uit Eindhoven",
      "W1 moeilijk woord vervangen"
     ]
    },
@@ -4047,15 +5967,20 @@
     "voorstelDoel": null,
     "regel": "G8-M26-tijdzones",
     "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
-    "somtype": "Een vliegtuig vertrekt om #.# uur uit de school. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+    "somtype": "Een vliegtuig vertrekt om #.# uur uit Eindhoven. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
     "duplicaatVan": null,
-    "somtypeNr": 10,
+    "somtypeNr": 5,
     "somtypeNrOrigineel": 10,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 5,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit Eindhoven. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "2:15",
+    "verwacht": "2.15 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -4067,13 +5992,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "2.15 uur",
     "2.15",
     "2:15"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het later: doe het tijdsverschil erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1.15 uur",
+       "1.15",
+       "1:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is vroeger dan thuis. Op de plek van aankomst is het juist later: het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "0.15 uur",
+       "0.15",
+       "0:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Doe het tijdsverschil daar nog bij. Kom je voorbij middernacht? Dan begint de klok weer bij nul.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het later, dus het tijdsverschil komt erbij."
   },
   {
    "id": "G8-MEET-E06-claude-bank-031",
@@ -4082,28 +6056,38 @@
    "niveau": "basis",
    "niveauKind": "Opwarmen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 7.15 uur uit het huis. De vlucht duurt 11 uur en 30 minuten. Hoe laat landt het? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 7.15 uur uit Groningen. De vlucht duurt 11 uur en 30 minuten. Hoe laat landt het? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "18.45 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Tel de duur van de vlucht op bij de vertrektijd: eerst de uren, dan de minuten.",
+   "sterkereHint": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
    "foutHints": [
     {
      "stap": null,
      "fout": "17.45 uur",
-     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     "uitleg": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "18.15 uur",
-     "uitleg": "Vergeet de minuten niet."
+     "uitleg": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "uitlegSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "17.45 uur → Tel de uren nog eens: je zit er een uur naast. · 18.15 uur → Vergeet de minuten niet.",
-   "ouderzin": "",
+   "foutHintsTekst": "17.45 uur → Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan. · 18.15 uur → Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+   "ouderzin": "Je kind rekent uit hoe laat een vliegtuig landt: de uren en de minuten van de vlucht komen bij de vertrektijd.",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -4174,6 +6158,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#496: vliegtuig uit het huis → uit Groningen",
      "W1 moeilijk woord vervangen"
     ]
    },
@@ -4184,15 +6169,20 @@
     "voorstelDoel": null,
     "regel": "G8-M26-tijdzones",
     "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
-    "somtype": "Een vliegtuig vertrekt om #.# uur uit het huis. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)",
+    "somtype": "Een vliegtuig vertrekt om #.# uur uit Groningen. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)",
     "duplicaatVan": null,
-    "somtypeNr": 11,
+    "somtypeNr": 6,
     "somtypeNrOrigineel": 11,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 6,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit Groningen. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "18:45",
+    "verwacht": "18.45 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -4204,13 +6194,62 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "18.45 uur",
     "18.45",
     "18:45"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "een uur te vroeg",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is een uur te vroeg. Tel de uren van de vlucht nog eens na, en kijk of de minuten samen over een heel uur gaan.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17.45 uur",
+       "17.45",
+       "17:45"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "soort": "minuten vergeten",
+     "bron": "claude-taalfix",
+     "tekst": "Daar zitten alleen de hele uren van de vlucht in. De minuten van de vlucht moeten er ook nog bij.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "18.15 uur",
+       "18.15",
+       "18:15"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur.",
+     "tekstSterker": "Doe eerst de hele uren van de vlucht erbij. Doe daarna de minuten erbij. Zestig minuten is een uur: kom je daarover, dan schuift de klok een uur door.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe eerst de uren van de vlucht erbij, en dan de minuten. Zestig minuten is een uur."
   },
   {
    "id": "G8-MEET-E06-claude-bank-032",
@@ -4219,28 +6258,38 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "kale",
-   "opgave": "Een vliegtuig vertrekt om 14.15 uur uit het huis. De vlucht duurt 11 uur en 15 minuten. Op de plek van aankomst is het 5 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
+   "opgave": "Een vliegtuig vertrekt om 14.15 uur uit Groningen. De vlucht duurt 11 uur en 15 minuten. Op de plek van aankomst is het 5 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14.30.)",
    "opgaveStappen": null,
    "opties": null,
    "optiesTekst": null,
    "antwoord": "20.30 uur",
    "antwoordDetail": null,
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Reken eerst uit hoe laat het thuis is als het vliegtuig aankomt. Op de plek van aankomst is het vroeger dan thuis.",
+   "sterkereHint": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor.",
    "foutHints": [
     {
      "stap": null,
      "fout": "1.30 uur",
-     "uitleg": "Dat is de tijd thuis. Daar is het 5 uur vroeger."
+     "uitleg": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
      "fout": "6.30 uur",
-     "uitleg": "Vroeger betekent eraf, niet andersom."
+     "uitleg": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "uitlegSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "1.30 uur → Dat is de tijd thuis. Daar is het 5 uur vroeger. · 6.30 uur → Vroeger betekent eraf, niet andersom.",
-   "ouderzin": "",
+   "foutHintsTekst": "1.30 uur → Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf. · 6.30 uur → Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+   "ouderzin": "Je kind rekent met tijdzones: eerst de tijd thuis bij aankomst, dan het tijdsverschil eraf (vroeger).",
    "getallenruimte": "0–1.000",
    "context": "laag",
    "visual": {
@@ -4311,6 +6360,7 @@
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
     "wijzigingen": [
+     "Oef-#496: vliegtuig uit het huis → uit Groningen",
      "W1 moeilijk woord vervangen"
     ]
    },
@@ -4321,15 +6371,20 @@
     "voorstelDoel": null,
     "regel": "G8-M26-tijdzones",
     "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
-    "somtype": "Een vliegtuig vertrekt om #.# uur uit het huis. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
+    "somtype": "Een vliegtuig vertrekt om #.# uur uit Groningen. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)",
     "duplicaatVan": null,
-    "somtypeNr": 12,
+    "somtypeNr": 7,
     "somtypeNrOrigineel": 12,
-    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 7,
+     "somtype": "Een vliegtuig vertrekt om #.# uur uit Groningen. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #.#.)"
+    }
    },
    "controle": {
     "antwoord": "ok",
-    "verwacht": "20:30",
+    "verwacht": "20.30 uur",
     "methode": "G8 tijdzones",
     "mcAntwoordInOpties": null,
     "foutAntwoordGelijkAanGoed": false,
@@ -4341,16 +6396,65 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "20.30 uur",
     "20.30",
     "20:30"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "soort": "tijd thuis",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is de tijd thuis. Op de plek van aankomst is het vroeger: haal het tijdsverschil eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1.30 uur",
+       "1.30",
+       "1:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "verkeerde kant op",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is later dan thuis. Op de plek van aankomst is het juist vroeger: het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6.30 uur",
+       "6.30",
+       "6:30"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf.",
+     "tekstSterker": "Doe de uren en de minuten van de vlucht bij de vertrektijd: dat is de tijd thuis. Haal het tijdsverschil daar nog vanaf. Let op middernacht: ga je daar vooruit voorbij, dan begint de klok weer bij nul. Ga je terug voorbij middernacht, dan is het nog de avond ervoor.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de tijd thuis uit. Daar is het vroeger, dus het tijdsverschil gaat eraf."
   }
  ],
- "hintsSyncOp": "2026-10-08T16:25:40+02:00",
+ "hintsSyncOp": "2026-10-08T16:45:33+02:00",
  "hintsBatches": [
   {
    "batch": "batch1.json",
@@ -4366,10 +6470,14 @@
   },
   {
    "batch": "batch4.json",
-   "md5": "c1a475f62b2d"
+   "md5": "d10180e17ec6"
+  },
+  {
+   "batch": "batch5.json",
+   "md5": "e88b62fcb51c"
   }
  ],
- "geschrevenOp": "2026-10-08T16:25:40+02:00",
+ "geschrevenOp": "2026-10-08T16:45:33+02:00",
  "geschrevenDoor": "build (apply_hints)",
  "itemsGewijzigdBijSchrijven": true
 }
