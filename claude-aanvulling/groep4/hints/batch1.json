@@ -1,0 +1,1060 @@
+{
+ "batch": "batch1",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G4-merge, batch 1 = G4-GET-E02 … G4-GET-E09). Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint; 'claude' = tekst van Claude blijft (ok), 'claude-taalfix' = Claudes tekst met een kleine taalfix, 'nieuw' = eigen tekst (claudeTekst = de Claude-tekst die hij vervangt). Bij 'tekst per item' blijft Claudes eigen tekst per item staan. Getal1/getal2 = de getallen in de opgave, in volgorde.",
+ "somtypen": [
+  {
+   "doel": "G4-GET-E02",
+   "nr": 1,
+   "somtype": "Hoeveel is # [ding] en # [ding]?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Hoeveel is # [ding] en # [ding]?",
+   "hint1": "Een tiental is tien. Hoeveel tientallen zijn er? En hoeveel losse eenheden?",
+   "hint2": "Tel eerst in sprongen van tien, zo vaak als er tientallen zijn. Tel daarna de eenheden erbij, één voor één.",
+   "ouderzin": "Je kind maakt een getal tot 100 uit tientallen en eenheden.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "cijfers omgedraaid",
+     "claudeDenkfout": "cijfers-verwisseld",
+     "regel": "cijfers omgedraaid (tekst per item)",
+     "tekst": "Je hebt de goede cijfers, maar kijk nog eens naar de volgorde. Welk cijfer hoort bij de tientallen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Hoeveel tientallen staan er in de vraag?",
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "waarom": "geen 'tiental naast' (les G3); zeg of het te veel of te weinig is"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Hoeveel tientallen staan er in de vraag?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de twee getallen opgeteld. Maar een tiental is tien, niet één. Tel in sprongen van tien."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "alleen de eenheden",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat zijn alleen de eenheden. Vergeet de tientallen niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Begin met de tientallen. Tel in sprongen van tien. Tel daarna de eenheden erbij."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E02",
+   "nr": 2,
+   "somtype": "Hoeveel [ding] zitten er in #?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Hoeveel [ding] zitten er in #?",
+   "hint1": "Een tiental is een groepje van tien. Hoeveel van die groepjes passen er in het getal?",
+   "hint2": "Tel in sprongen van tien. Stop als de volgende sprong te ver gaat. Hoeveel sprongen heb je gemaakt?",
+   "ouderzin": "Je kind zoekt hoeveel tientallen er in een getal tot 100 zitten.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "eenheden als antwoord",
+     "claudeDenkfout": null,
+     "regel": "fout = eenheden van getal1",
+     "tekst": "Dat is het cijfer achteraan: de losse eenheden. De vraag is hoeveel tientallen erin zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één tiental te veel. Tel nog eens in sprongen van tien.",
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "waarom": "geen 'tiental naast' (les G3); te veel en te weinig apart"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één tiental te weinig. Tel nog eens in sprongen van tien."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het hele getal",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het hele getal. De vraag is hoeveel tientallen erin zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel in sprongen van tien. Stop als de volgende sprong te ver gaat. Tel je sprongen."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E03",
+   "nr": 1,
+   "somtype": "[getallenlijn] Welk getal ligt precies tussen # en #?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[getallenlijn] Welk getal ligt precies tussen # en #?",
+   "hint1": "Zoek de twee getallen op de getallenlijn. Het getal in het midden is van allebei even ver weg.",
+   "hint2": "Hoe ver liggen de twee getallen uit elkaar? Neem de helft daarvan. Tel die helft verder vanaf het kleinste getal.",
+   "ouderzin": "Je kind zoekt het getal dat precies in het midden ligt van twee getallen tot 100.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Zoek het getal dat er precies tussenin ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het verschil",
+     "claudeDenkfout": null,
+     "regel": "fout = verschil van de getallen",
+     "tekst": "Zo ver liggen de getallen uit elkaar. Neem daar de helft van. Tel die helft verder vanaf het kleinste getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de twee getallen opgeteld. Het midden ligt tussen de twee getallen in."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Het midden is van allebei de getallen even ver weg. Reken het na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek het getal in het midden. Van daar is het naar allebei de getallen even ver."
+    }
+   ],
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "Welk getal ligt precies tussen # en #?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G4-GET-E03",
+   "nr": 2,
+   "somtype": "[getallenlijn] Zet # op de getallenlijn.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[getallenlijn] Zet # op de getallenlijn.",
+   "hint1": "Kijk naar het cijfer vooraan. Bij welk tiental op de lijn hoort het getal?",
+   "hint2": "Zoek dat tiental op de lijn. Het cijfer achteraan zegt hoeveel streepjes je nog verder gaat.",
+   "ouderzin": "Je kind zet een getal tot 100 op de getallenlijn, met de tientallen als houvast.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Je zit één tiental te ver naar rechts. Kijk naar het cijfer vooraan. Bij welk tiental hoort het getal?",
+     "claudeTekst": "Je zit een heel tiental ernaast. Kijk naar het cijfer vooraan.",
+     "waarom": "geen 'tiental ernaast' (les G3); zeg welke kant op"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Je zit één tiental te ver naar links. Kijk naar het cijfer vooraan. Bij welk tiental hoort het getal?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Zoek het tiental. Tel vanaf daar de streepjes nog eens, één voor één."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere plek",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek eerst het goede tiental op de lijn. Tel dan de streepjes, één voor één."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E04",
+   "nr": 1,
+   "somtype": "In [plek] liggen # [ding]. Er gaan er # uit. Welke som hoort bij dit verhaal?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er gaan er # uit. Welke som hoort bij dit verhaal?",
+   "hint1": "Lees het verhaal goed. Komen er dingen bij, of gaan er dingen uit?",
+   "hint2": "Er gaan dingen uit, dus het worden er minder. Dat is een minsom. Zoek de som die begint bij het getal dat er eerst in lag.",
+   "ouderzin": "Je kind kiest de minsom die past bij een verhaal tot 100 waarin er dingen uitgaan.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "de minsom omgedraaid",
+     "claudeDenkfout": null,
+     "regel": "de minsom omgedraaid (klein getal min groot getal)",
+     "tekst": "Die som begint bij het verkeerde getal. Begin bij wat er eerst in lag. Daar gaan er een paar af."
+    },
+    {
+     "bron": "claude",
+     "soort": "de plussom",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "de plussom",
+     "tekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E04",
+   "nr": 2,
+   "somtype": "In [plek] liggen # [ding]. Er komen er # bij. Welke som hoort bij dit verhaal?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er komen er # bij. Welke som hoort bij dit verhaal?",
+   "hint1": "Lees het verhaal goed. Komen er dingen bij, of gaan er dingen uit?",
+   "hint2": "Er komen dingen bij, dus het worden er meer. Dat is een plussom. Zoek de som met het getal dat er al lag en het getal dat erbij komt.",
+   "ouderzin": "Je kind kiest de plussom die past bij een verhaal tot 100 waarin er dingen bijkomen.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "de minsom",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "de minsom",
+     "tekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ander getal erbij",
+     "claudeDenkfout": null,
+     "regel": "de plussom (afleider a + (b+1) of a + (b−1))",
+     "tekst": "Dat is wel een plussom. Maar één getal klopt niet. Hoeveel lagen er al? En hoeveel komen erbij?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E05",
+   "nr": 5,
+   "somtype": "In twee dozen zitten samen # [ding]. In de ene doos zitten # [ding] meer dan in de andere. Hoeveel [ding] zitten er in elke doos?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "In twee dozen zitten samen # [ding]. In de ene doos zitten # [ding] meer dan in de andere. Hoeveel [ding] zitten er in elke doos?",
+   "hint1": "Er zijn twee dozen. Samen is het hele aantal. In de ene doos zitten er een paar meer dan in de andere.",
+   "hint2": "Kies twee getallen die samen het hele aantal zijn. Het verschil is hoeveel meer het ene getal is dan het andere. Is het verschil te groot of te klein? Schuif er dan één van de ene doos naar de andere.",
+   "ouderzin": "Je kind zoekt twee getallen die samen een bepaald aantal zijn en een bepaald verschil hebben.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "verschil te groot",
+     "claudeDenkfout": null,
+     "regel": "12 en 3",
+     "tekst": "Kijk goed naar het verschil tussen de twee getallen. Dat moet precies 3 zijn."
+    },
+    {
+     "bron": "claude",
+     "soort": "verschil te klein",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "8 en 7",
+     "tekst": "Tel het verschil tussen jouw twee getallen. Is dat echt 3?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E06",
+   "nr": 1,
+   "somtype": "In/aan elk(e) [bak] zitten # [ding]. Er zijn # [ding]. Welke som hoort bij dit verhaal?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "In/aan elk(e) [bak] zitten # [ding]. Er zijn # [ding]. Welke som hoort bij dit verhaal?",
+   "hint1": "Lees het verhaal goed. Zie je groepjes die even groot zijn?",
+   "hint2": "In elk groepje zitten er evenveel. Dat is een keersom. Zoek de som die begint met het aantal groepjes. Daarna komt hoeveel er in één groepje zitten.",
+   "ouderzin": "Je kind kiest de keersom die past bij een verhaal met groepjes die even groot zijn.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "de plussom",
+     "claudeDenkfout": null,
+     "regel": "de plussom",
+     "tekst": "Dat is een plussom. Maar in het verhaal zijn er groepjes die even groot zijn. Dat is keer.",
+     "claudeTekst": "Let op het teken: het is een keersom. Keer betekent: zoveel groepjes van. Probeer het groepje steeds opnieuw erbij te tellen.",
+     "waarom": "het kind koos een plussom; 'let op het teken' en 'tel het groepje erbij' passen niet bij een som kiezen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ander getal",
+     "claudeDenkfout": null,
+     "regel": "de keersom (afleider met één getal anders, zoals (a+1) × b)",
+     "tekst": "Dat is wel een keersom. Maar één getal klopt niet. Hoeveel groepjes zijn er? En hoeveel zitten er in elk groepje?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E06",
+   "nr": 2,
+   "somtype": "In/aan elk(e) [bak] zitten # [ding]. Hoeveel [ding] zitten er in # [ding]?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "In/aan elk(e) [bak] zitten # [ding]. Hoeveel [ding] zitten er in # [ding]?",
+   "hint1": "Hoeveel groepjes zijn er? En hoeveel zitten er in elk groepje?",
+   "hint2": "Tel in sprongen. Elke sprong is zo groot als één groepje. Maak zoveel sprongen als er groepjes zijn.",
+   "ouderzin": "Je kind rekent uit hoeveel er in een paar even grote groepjes samen zitten.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Je moet er nog mee rekenen. Hoeveel zijn het er in alle groepjes samen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de twee getallen opgeteld. Maar elk groepje telt mee. Tel een groepje steeds opnieuw erbij.",
+     "claudeTekst": "Let op het teken: het is een keersom. Keer betekent: zoveel groepjes van. Probeer het groepje steeds opnieuw erbij te tellen.",
+     "waarom": "zeg wat het kind deed (opgeteld); er staat geen teken in de vraag"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een groepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is één groepje te veel. Tel nog eens hoeveel groepjes er zijn, en maak precies zoveel sprongen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een groepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is één groepje te weinig. Heb je alle groepjes meegeteld? Tel je sprongen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "elk groepje één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is te veel. Kijk nog eens hoeveel er in elk groepje zitten. Tel in sprongen van dat getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "elk groepje één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is te weinig. Kijk nog eens hoeveel er in elk groepje zitten. Tel in sprongen van dat getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1 of meer",
+     "tekst": "Dat is te veel. Tel nog eens in sprongen. Maak zoveel sprongen als er groepjes zijn.",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "de fout is bijna nooit 'eentje': meestal een groepje te veel of te weinig; te veel en te weinig apart"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1 of meer",
+     "tekst": "Dat is te weinig. Heb je alle groepjes meegeteld? Tel je sprongen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel in sprongen. Elke sprong is één groepje."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E06",
+   "nr": 4,
+   "somtype": "# × # vind je lastig. Draai de som om. Hoeveel is # × #?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "# × # vind je lastig. Draai de som om. Hoeveel is # × #?",
+   "hint1": "Bij keer mag je de getallen omdraaien. De uitkomst blijft hetzelfde.",
+   "hint2": "Reken de nieuwe som uit. Het tweede getal zegt hoe groot de sprong is. Het eerste getal zegt hoeveel sprongen je maakt.",
+   "ouderzin": "Je kind leert dat je een keersom mag omdraaien: de uitkomst blijft hetzelfde.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "een stap naast in de tafel",
+     "claudeDenkfout": "tafelbuur",
+     "regel": "een stap te hoog of te laag in de tafel (tekst per item)",
+     "tekst": "Je zit één stap te laag (of te hoog) in de tafel van …"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "plus gedaan",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Het is een keersom: keer, niet plus.",
+     "claudeTekst": "Keer, niet plus.",
+     "waarom": "geen hele zin; zeg eerst wat het kind deed"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1 of meer",
+     "tekst": "Dat is te veel. Tel nog eens in sprongen, en tel hoeveel sprongen je maakt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1 of meer",
+     "tekst": "Dat is te weinig. Heb je alle sprongen gemaakt? Tel ze nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken de omgedraaide som uit. Tel in sprongen."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E06",
+   "nr": 3,
+   "somtype": "# [ding] hebben elk # [ding]. Dat is evenveel als # [ding] met elk # [ding]. Hoeveel [ding] zijn dat samen?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "# [ding] hebben elk # [ding]. Dat is evenveel als # [ding] met elk # [ding]. Hoeveel [ding] zijn dat samen?",
+   "hint1": "De twee zinnen geven evenveel. Kies de zin die je het makkelijkst vindt.",
+   "hint2": "In die zin staat hoeveel ieder heeft. Tel in sprongen van dat getal. Maak zoveel sprongen als het eerste getal in die zin.",
+   "ouderzin": "Je kind rekent een keersom uit en ziet dat je de getallen mag omdraaien. Het mag de makkelijkste som kiezen.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "één groepje",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2 (tekst per item)",
+     "tekst": "… (eigen tekst per item: \"Dat is wat één groepje heeft.\" of \"Je hebt één groepje te weinig geteld.\")"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Het is een keersom. Kijk hoeveel elk heeft, en tel in sprongen van dat getal.",
+     "claudeTekst": "Je hebt de getallen opgeteld. Het is keer: … keer ….",
+     "waarom": "'Het is keer' is een rare zin (Didactiek b4 v1, 2.2 zacht). Getallen per item kan fout_regels niet invullen, dus vaste vorm zonder getallen (merge-punt #48)"
+    },
+    {
+     "bron": "claude",
+     "soort": "een groepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Je hebt één groepje te veel geteld."
+    },
+    {
+     "bron": "claude",
+     "soort": "een groepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Je hebt één groepje te weinig geteld."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ieder één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is te veel. Kijk nog eens hoeveel ieder heeft. Tel in sprongen van dat getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ieder één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is te weinig. Kijk nog eens hoeveel ieder heeft. Tel in sprongen van dat getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1 of meer",
+     "tekst": "Dat is te veel. Kies de zin die je het makkelijkst vindt, en tel in sprongen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1 of meer",
+     "tekst": "Dat is te weinig. Kies de zin die je het makkelijkst vindt, en tel in sprongen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kies de zin die je het makkelijkst vindt. Tel in sprongen van hoeveel ieder heeft."
+    }
+   ],
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "# [ding] hebben elk # [ding]. Dat is evenveel als # [ding] met elk hoeveel [ding]?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G4-GET-E06",
+   "nr": 5,
+   "somtype": "Bij de lunch zijn er # [ding] brood en # [ding] beleg. Hoeveel verschillende boterhammen met één soort brood en één soort beleg kun je maken?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Bij de lunch zijn er # [ding] brood en # [ding] beleg. Hoeveel verschillende boterhammen met één soort brood en één soort beleg kun je maken?",
+   "hint1": "Neem eerst één soort brood. Met welk beleg kan dat allemaal?",
+   "hint2": "Elk soort brood kan met elk soort beleg. Maak een rijtje voor elk soort brood. Tel daarna alle boterhammen.",
+   "ouderzin": "Je kind telt hoeveel verschillende boterhammen je kunt maken: elk soort brood met elk soort beleg.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "5",
+     "tekst": "Je mag niet zomaar optellen. Maak een lijstje van alle boterhammen met het eerste soort brood."
+    },
+    {
+     "bron": "claude",
+     "soort": "één soort geteld",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "3",
+     "tekst": "Bij elk soort brood passen twee soorten beleg. Tel dus per brood hoeveel keuzes je hebt."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E06",
+   "nr": 6,
+   "somtype": "Je hebt # [ding] en # [ding]. Op hoeveel manieren kun je een trui en een broek kiezen?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Je hebt # [ding] en # [ding]. Op hoeveel manieren kun je een trui en een broek kiezen?",
+   "hint1": "Neem eerst één trui. Met welke broeken kan die allemaal?",
+   "hint2": "Elke trui kan met elke broek. Maak een rijtje voor elke trui. Tel daarna alles bij elkaar.",
+   "ouderzin": "Je kind telt op hoeveel manieren je een trui en een broek kunt kiezen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "5 manieren",
+     "tekst": "Je moet de kleren niet bij elkaar optellen. Kijk hoeveel broeken er bij één trui passen.",
+     "claudeTekst": "Je telt de kleren niet bij elkaar op. Kijk hoeveel broeken bij één trui passen.",
+     "waarom": "'Je telt … niet op' klinkt alsof het kind niet optelde, maar dat deed het juist wel"
+    },
+    {
+     "bron": "claude",
+     "soort": "één trui geteld",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "3 manieren",
+     "tekst": "Vergeet de tweede trui niet. Die kan ook met elke broek."
+    }
+   ],
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "Je hebt # [ding] en # [ding]. Hoeveel verschillende sets van een trui en een broek kun je maken?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G4-GET-E07",
+   "nr": 1,
+   "somtype": "# × # =",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# × # =",
+   "hint1": "Keer betekent: groepjes die even groot zijn.",
+   "hint2": "Het eerste getal zegt hoeveel groepjes er zijn. Het tweede getal zegt hoeveel er in elk groepje zitten. Tel in sprongen.",
+   "ouderzin": "Je kind oefent de tafels van 1 tot en met 5 en de tafel van 10.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de som",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de som. Reken de som uit met sprongen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "plus gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt plus gedaan. Bij keer tel je hetzelfde getal steeds opnieuw erbij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een groepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is één groepje te veel. Het eerste getal zegt hoeveel groepjes er zijn. Tel je sprongen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een groepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is één groepje te weinig. Het eerste getal zegt hoeveel groepjes er zijn. Tel je sprongen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "elk groepje één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is te veel. Het tweede getal zegt hoeveel er in elk groepje zitten. Tel in sprongen van dat getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "elk groepje één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is te weinig. Het tweede getal zegt hoeveel er in elk groepje zitten. Tel in sprongen van dat getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1 of meer",
+     "tekst": "Dat is te veel. Tel nog eens in sprongen. Tel ook hoeveel sprongen je maakt.",
+     "claudeTekst": "Bijna! Je zit één groepje ernaast. Tel nog eens goed hoeveel groepjes het zijn.",
+     "waarom": "klopt niet bij elk item: bij 10 × 2 is 24 geen groepje ernaast en is 10 een getal uit de som; te veel en te weinig apart"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1 of meer",
+     "tekst": "Dat is te weinig. Heb je alle sprongen gemaakt? Tel ze nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken de som uit met sprongen. Het tweede getal is de sprong. Het eerste getal zegt hoe vaak."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E07",
+   "nr": 2,
+   "somtype": "□ × # = #",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "□ × # = #",
+   "hint1": "Hoe vaak past het getal achter het keerteken (×) in de uitkomst?",
+   "hint2": "Tel in sprongen van het getal achter het keerteken, tot je bij de uitkomst bent. Tel hoeveel sprongen je maakt.",
+   "ouderzin": "Je kind zoekt het getal dat ontbreekt in een keersom uit de tafels.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de som",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de som. Zoek het getal op de lege plek: tel in sprongen tot de uitkomst.",
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "waarom": "'dóén' met accenten en 'bewerking' zijn lastig; het keerteken staat er al"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt de twee getallen keer elkaar gedaan. Zoek het getal op de lege plek: hoe vaak past het getal achter het keerteken in de uitkomst?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één sprong te veel. Tel je sprongen nog eens.",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "past niet als het kind er 2 of meer naast zit (bij □ × 2 = 6 is 5 er 2 naast); te veel en te weinig apart"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één sprong te weinig. Tel je sprongen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Tel in sprongen tot de uitkomst. Tel hoeveel sprongen je maakt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Tel door in sprongen tot je bij de uitkomst bent. Tel hoeveel sprongen je maakt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel in sprongen van het getal achter het keerteken, tot de uitkomst. Tel hoeveel sprongen je maakt."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E08",
+   "nr": 1,
+   "somtype": "Er zijn # [ding]. In/aan elk(e) [bak] zitten # [ding]. Hoeveel [ding] zijn er?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Er zijn # [ding]. In/aan elk(e) [bak] zitten # [ding]. Hoeveel [ding] zijn er?",
+   "hint1": "Verdeel alles in groepjes die even groot zijn. Hoeveel groepjes kun je maken?",
+   "hint2": "Tel in sprongen van het aantal in één groepje, tot je bij het totaal bent. Tel hoeveel sprongen je maakt.",
+   "ouderzin": "Je kind rekent uit hoeveel even grote groepjes je kunt maken.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Maak groepjes en tel hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt de getallen keer elkaar gedaan. Je moet verdelen: hoeveel groepjes kun je maken?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één groepje te veel. Tel je sprongen nog eens.",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "past niet als het kind er 2 of meer naast zit (bij 18 : 2 is 7 er 2 naast); te veel en te weinig apart"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één groepje te weinig. Tel je sprongen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat zijn te veel groepjes. Doe in elk groepje precies zoveel als in de vraag staat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat zijn te weinig groepjes. Tel door in sprongen tot alles op is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Maak groepjes die even groot zijn. Tel hoeveel groepjes je kunt maken."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E08",
+   "nr": 2,
+   "somtype": "# [ding] gaan op stap. In/aan elk(e) [bak] passen er #. Hoeveel [ding] zijn er nodig?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# [ding] gaan op stap. In/aan elk(e) [bak] passen er #. Hoeveel [ding] zijn er nodig?",
+   "hint1": "Iedereen moet een plek hebben, ook de laatsten.",
+   "hint2": "Tel in sprongen van het aantal dat erin past. Ga door tot je bij het aantal bent, of er net overheen. Tel hoeveel sprongen je maakt.",
+   "ouderzin": "Je kind rekent uit hoeveel bussen of tafels er nodig zijn, ook als de laatste niet helemaal vol is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "rest vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Dan is er nog niet voor iedereen plek. Er blijven er nog over. Daarvoor heb je er nog één nodig.",
+     "claudeTekst": "Dan blijven er … staan. Die moeten ook mee, dus je hebt er een extra nodig.",
+     "waarom": "bij tafels past 'mee' niet; zonder [ding] past de tekst bij bus en tafel"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Dat is er één te veel. Met één minder heeft ook iedereen al een plek."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel in sprongen van het aantal dat erin past. Ga door tot iedereen een plek heeft. Tel hoeveel sprongen je maakt.",
+     "claudeTekst": "Je kunt geen halve bus nemen. Rond naar boven af.",
+     "waarom": "past niet bij tafels; 'naar boven afronden' is te moeilijk; een kommagetal hoort niet in G4"
+    }
+   ],
+   "koppeling": "claudeId",
+   "geenItems": {
+    "sinds": "2026-10-01 15:06",
+    "reden": "rebuild 15:06: de items 'gaan op stap … passen er #' zijn weg (3 naar G5-GET-M06, fixlijst #2/#23)",
+    "actie": "entry blijft staan; apply_hints slaat hem over. Komen er weer items, dan gelden deze hints."
+   }
+  },
+  {
+   "doel": "G4-GET-E08",
+   "nr": 2,
+   "somtype": "Je hebt # [ding]. In/aan elk(e) [bak] passen # [ding]. Hoeveel doosjes kun je helemaal vullen en hoeveel eieren blijven over?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Je hebt # [ding]. In/aan elk(e) [bak] passen # [ding]. Hoeveel doosjes kun je helemaal vullen en hoeveel eieren blijven over?",
+   "hint1": "Vul de doosjes één voor één. Hoeveel doosjes worden er helemaal vol?",
+   "hint2": "Tel in sprongen van het aantal dat in één doosje past. Stop voor je over het totaal heen gaat. Hoeveel eieren houd je dan nog over?",
+   "ouderzin": "Je kind verdeelt in groepjes en kijkt wat er overblijft.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "rest vergeten",
+     "claudeDenkfout": "rest-vergeten",
+     "regel": "3 doosjes",
+     "tekst": "Een doosje telt pas mee als het helemaal vol is. Kijk hoeveel eieren er in het laatste doosje zitten."
+    },
+    {
+     "bron": "claude",
+     "soort": "rest fout",
+     "claudeDenkfout": null,
+     "regel": "2 doosjes en 3 over",
+     "tekst": "Tel eerst hoeveel eieren er in de volle doosjes gaan. Haal dat aantal van 17 af."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E08",
+   "nr": 3,
+   "somtype": "Je hebt # [ding]. In/aan elk(e) [bak] passen # [ding]. Hoeveel zakjes kun je helemaal vullen en hoeveel knikkers blijven over?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Je hebt # [ding]. In/aan elk(e) [bak] passen # [ding]. Hoeveel zakjes kun je helemaal vullen en hoeveel knikkers blijven over?",
+   "hint1": "Vul de zakjes één voor één. Hoeveel zakjes worden er helemaal vol?",
+   "hint2": "Tel in sprongen van het aantal dat in één zakje past. Stop voor je over het totaal heen gaat. Hoeveel knikkers houd je dan nog over?",
+   "ouderzin": "Je kind verdeelt in groepjes en kijkt wat er overblijft.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "rest vergeten",
+     "claudeDenkfout": "rest-vergeten",
+     "regel": "4 zakjes en 0 over",
+     "tekst": "Kijk of het laatste zakje echt vol is. Er moeten 4 knikkers in."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rest fout",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "3 zakjes en 2 over",
+     "tekst": "3 volle zakjes klopt. Hoeveel knikkers zitten daarin? Hoeveel houd je dan over van de 13?",
+     "claudeTekst": "Tel nog eens hoeveel knikkers er in 3 volle zakjes zitten.",
+     "waarom": "zeg dat 3 zakjes klopt en wijs naar de rest (Didactiek zacht 9; 1 item, dus de getallen mogen erin)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E08",
+   "nr": 4,
+   "somtype": "[getallenlijn] Je springt op de getallenlijn van # naar # [ding] sprongen van #. Hoeveel sprongen maak je?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "[getallenlijn] Je springt op de getallenlijn van # naar # [ding] sprongen van #. Hoeveel sprongen maak je?",
+   "hint1": "Begin bij het eerste getal. Waar kom je na één sprong?",
+   "hint2": "Spring steeds even ver, tot je bij het laatste getal bent. Tel alleen de sprongen, niet het getal waar je begint.",
+   "ouderzin": "Je kind telt hoeveel even grote sprongen er passen tussen twee getallen.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "begin meegeteld",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "5 sprongen",
+     "tekst": "Het getal waar je start, telt niet als sprong. Noem de getallen hardop waar je landt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het verschil",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "12 sprongen",
+     "tekst": "Van 3 naar 15 is 12 verder. Dat is niet het aantal sprongen. Elke sprong is 3 groot.",
+     "claudeTekst": "12 is het verschil tussen de getallen, niet het aantal sprongen. Elke sprong is 3 groot.",
+     "waarom": "'verschil' zonder uitleg (Didactiek zacht 2); 'sprongen', net als de opgave"
+    }
+   ],
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "Je springt op de getallenlijn van # naar # [ding] stappen van #. Hoeveel sprongen maak je?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G4-GET-E09",
+   "nr": 1,
+   "somtype": "In de wei lopen # [ding] en # [ding]. Hoeveel poten hebben ze samen?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "In de wei lopen # [ding] en # [ding]. Hoeveel poten hebben ze samen?",
+   "hint1": "Hoeveel poten heeft een kip? En een hond?",
+   "hint2": "Tel eerst alle poten van de kippen. Tel dan alle poten van de honden. Doe die twee samen.",
+   "ouderzin": "Je kind rekent met groepjes van verschillende grootte en telt ze samen.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "alles even groot",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "20 poten",
+     "tekst": "Kippen en honden hebben niet evenveel poten. Tel de kippen apart van de honden."
+    },
+    {
+     "bron": "claude",
+     "soort": "honden fout",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "10 poten",
+     "tekst": "Kijk nog eens naar de honden. Hoeveel poten heeft één hond?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E09",
+   "nr": 2,
+   "somtype": "Je zaagt een plank in # [ding] lange stukken. Elke keer zagen duurt # [ding]. Hoe lang ben je bezig?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Je zaagt een plank in # [ding] lange stukken. Elke keer zagen duurt # [ding]. Hoe lang ben je bezig?",
+   "hint1": "Teken de plank met de stukken. Waar moet je zagen?",
+   "hint2": "Je zaagt tussen twee stukken. Tel hoe vaak je zaagt. Reken dan uit hoe lang dat samen duurt.",
+   "ouderzin": "Je kind ontdekt dat je één keer minder zaagt dan het aantal stukken.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "stukken geteld",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "10 minuten",
+     "tekst": "Tel eerst hoe vaak je moet zagen. Dat is minder vaak dan het aantal stukken."
+    },
+    {
+     "bron": "claude",
+     "soort": "te vaak gezaagd",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "12 minuten",
+     "tekst": "Teken de plank en zet streepjes op de zaagplekken. Tel daarna die streepjes."
+    }
+   ],
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "Je zaagt een plank in # [ding] lange stukken. Elke zaagsnede duurt # [ding]. Hoe lang ben je bezig?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G4-GET-E09",
+   "nr": 3,
+   "somtype": "Op het plein staan # [ding] en # [ding]. Hoeveel wielen zijn dat samen?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Op het plein staan # [ding] en # [ding]. Hoeveel wielen zijn dat samen?",
+   "hint1": "Hoeveel wielen heeft een auto? En een fiets?",
+   "hint2": "Tel eerst alle wielen van de auto's. Tel dan alle wielen van de fietsen. Doe die twee samen.",
+   "ouderzin": "Je kind rekent met groepjes van verschillende grootte en telt ze samen.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "alles even groot",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "10 wielen",
+     "tekst": "Een auto heeft meer wielen dan een fiets. Tel eerst de wielen van de auto's apart."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "fietsen vergeten",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "8 wielen",
+     "tekst": "Je bent de fietsen vergeten. Tel hun wielen er ook bij.",
+     "claudeTekst": "Je hebt één soort voertuig nog niet meegeteld. Kijk nog eens naar de fietsen.",
+     "waarom": "'voertuig' is een moeilijk woord voor groep 4"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-E09",
+   "nr": 4,
+   "somtype": "Treden zijn de stapjes van een trap. ⏎ Van de ene verdieping naar de volgende loop je # [ding]. Hoeveel treden loop je van de #e naar de #e verdieping?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Treden zijn de stapjes van een trap. ⏎ Van de ene verdieping naar de volgende loop je # [ding]. Hoeveel treden loop je van de #e naar de #e verdieping?",
+   "hint1": "Hoeveel trappen loop je? Teken de verdiepingen onder elkaar.",
+   "hint2": "Tussen twee verdiepingen zit één trap. Tel de trappen tussen de verdiepingen uit de vraag. Reken dan uit hoeveel treden dat samen zijn.",
+   "ouderzin": "Je kind telt de trappen tussen verdiepingen en rekent uit hoeveel treden dat zijn.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "een trap te veel",
+     "claudeDenkfout": null,
+     "regel": "36 treden",
+     "tekst": "Tel hoeveel trappen er echt tussen de 1e en de 3e verdieping zitten."
+    },
+    {
+     "bron": "claude",
+     "soort": "één trap",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "12 treden",
+     "tekst": "Je gaat niet één verdieping omhoog, maar verder dan dat."
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

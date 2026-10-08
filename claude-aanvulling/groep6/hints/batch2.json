@@ -1,0 +1,2939 @@
+{
+ "batch": "batch2",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G6-merge, batch 2 = bewerkingen: GET-E04, GET-E06, GET-M05, GET-M06, GET-E07, GET-E08). Formaat als hints/batch1.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint. 'claude-taalfix' met regel 'Claudes sleutel: <label>' = de Claude-sleutels met dat label, met een eigen vaste tekst (per sleutel nagerekend; alleen waar geen motorregel bestaat). 'nieuw' = motorregel met eigen tekst. Getal1/getal2 = de getallen in de opgave, in volgorde. Schrijf 'antwoord + 10' en 'antwoord − 10' apart.",
+ "somtypen": [
+  {
+   "doel": "G6-GET-E04",
+   "nr": 1,
+   "somtype": "In [plek] lagen # [ding]. Er zijn er # weggehaald. Hoeveel [ding] zijn er nog?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "In [plek] lagen # [ding]. Er zijn er # weggehaald. Hoeveel [ding] zijn er nog?",
+   "hint1": "Er zijn er weggehaald: dat is een minsom. Zet de getallen onder elkaar en begin bij de eenheden.",
+   "hint2": "Is het bovenste cijfer kleiner dan het onderste? Leen dan één van de kolom links ervan: dat cijfer gaat één omlaag, en jouw cijfer krijgt er tien bij. Staat daar een nul? Dan leen je verder naar links, en die nul wordt een negen.",
+   "ouderzin": "Je kind rekent een minsom tot 10.000 onder elkaar uit, met lenen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Er zijn er weggehaald: dat is een minsom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is tien te veel. Kijk naar de tientallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden; een nul wordt een negen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderd te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is honderd te veel. Kijk naar de honderdtallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden; een nul wordt een negen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "duizend te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1000",
+     "tekst": "Dat is duizend te veel. Kijk naar de duizendtallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet de getallen onder elkaar en begin bij de eenheden. Kun je een cijfer niet afhalen? Leen dan van links. Staat daar een nul? Dan leen je verder naar links."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Als je over een 0 leent, wordt die 0 een 9 en de kolom links ervan één minder. Tel de honderdtallen nog eens.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "De 0 in de tientallen werd 9 na het lenen. Reken die kolom opnieuw.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je leende uiteindelijk van de duizendtallen: die worden één minder.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Er zijn er weggehaald: een minsom.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E04",
+   "nr": 2,
+   "somtype": "In [plek] liggen # [ding], in [plek] #. Hoeveel zijn het er samen? Reken onder elkaar.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "In [plek] liggen # [ding], in [plek] #. Hoeveel zijn het er samen? Reken onder elkaar.",
+   "hint1": "Zet de getallen onder elkaar: eenheden onder eenheden, tientallen onder tientallen. Begin rechts.",
+   "hint2": "Komt een kolom samen op tien of meer? Schrijf dan alleen het laatste cijfer op en neem één mee naar de kolom links ervan.",
+   "ouderzin": "Je kind telt twee getallen tot 10.000 onder elkaar op.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "eraf gehaald",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Je hebt eraf gehaald. Samen is een plussom: tel de getallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is tien te weinig. Kwamen de eenheden samen op tien of meer? Dan gaat er één tiental mee naar de tientallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderd te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is honderd te weinig. Kwamen de tientallen samen op tien of meer? Dan gaat er één honderdtal mee naar de honderdtallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "duizend te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1000",
+     "tekst": "Dat is duizend te weinig. Kwamen de honderdtallen samen op tien of meer? Dan gaat er één duizendtal mee naar de duizendtallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is tien te veel. Tel de tientallen nog eens. Neem je alleen één mee als de eenheden samen op tien of meer komen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderd te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is honderd te veel. Tel de honderdtallen nog eens. Neem je alleen één mee als de tientallen samen op tien of meer komen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet de getallen onder elkaar en tel kolom voor kolom op, van rechts naar links. Komt een kolom op tien of meer? Dan gaat er één mee naar links."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bij de eenheden kwam je boven de 10: die 1 onthoud je en telt mee bij de tientallen.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Kijk bij de tientallen: kwam je boven de 10? Dan hoort er een honderdtal bij.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je hebt te vaak onthouden. Onthoud alleen als een kolom boven de 10 komt.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E04",
+   "nr": 3,
+   "somtype": "Hoe reken je # + # handig uit?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Hoe reken je # + # handig uit?",
+   "hint1": "Maak het eerste getal rond: welk honderdtal ligt er vlak bij? Het tweede getal blijft zoals het is.",
+   "hint2": "Was het eerste getal kleiner dan het honderdtal? Dan haal je het stukje er aan het eind weer af. Was het groter? Dan doe je het stukje er weer bij.",
+   "ouderzin": "Je kind kiest een handige manier voor een plussom: één getal rond maken en daarna bijstellen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerd teken",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Het teken aan het eind klopt niet. Heb je het eerste getal groter gemaakt? Dan haal je het stukje er weer af. Heb je het kleiner gemaakt? Dan doe je het er weer bij.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "allebei rond",
+     "claudeDenkfout": "allebei-rond",
+     "regel": "Claudes sleutel: allebei-rond",
+     "tekst": "Je hebt allebei de getallen rond gemaakt. Maak alleen het eerste getal rond: het tweede getal blijft zoals het is. Zo komt er precies het goede antwoord uit.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "schatting-verkeerd"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerd stukje",
+     "claudeDenkfout": "verkeerd-stukje",
+     "regel": "Claudes sleutel: verkeerd-stukje",
+     "tekst": "Het laatste getal klopt niet. Kijk alleen naar het eerste getal: hoeveel scheelt dat met het honderdtal?",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "geld-verkeerd-geteld"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Maak het eerste getal rond en laat het tweede getal zoals het is. Hoeveel scheelt het eerste getal met het honderdtal? Dat stukje haal je er weer af of doe je er weer bij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op. Bij teruggeven: vul aan vanaf de prijs tot het betaalde bedrag.",
+     "claudeDenkfout": "geld-verkeerd-geteld",
+     "waarom": "munthint past niet bij deze som (#161)"
+    },
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "claudeDenkfout": "schatting-verkeerd",
+     "waarom": "schathint ('rond allebei af') past niet bij compenseren: daar maak je één getal rond (#161, les 15)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E04",
+   "nr": 4,
+   "somtype": "Welke som is evenveel als # + #?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Welke som is even veel als # + #?",
+   "hint1": "Maak het tweede getal rond. Hoeveel komt er bij het tweede getal bij?",
+   "hint2": "Wat je bij het tweede getal erbij doet, haal je bij het eerste getal evenveel eraf. Dan blijft de uitkomst gelijk.",
+   "ouderzin": "Je kind kiest een plussom met dezelfde uitkomst: bij het ene getal erbij, bij het andere evenveel eraf.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "bij allebei erbij",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Je hebt bij het eerste getal ook iets erbij gedaan. Dan wordt de uitkomst groter. Wat er bij het tweede getal bijkomt, haal je bij het eerste getal eraf.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eerste getal klopt niet",
+     "claudeDenkfout": "eerste-getal-klopt-niet",
+     "regel": "Claudes sleutel: eerste-getal-klopt-niet",
+     "tekst": "Het eerste getal klopt niet. Wat er bij het tweede getal bijkomt, haal je bij het eerste getal evenveel eraf.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "komma-verschoven"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Maak het tweede getal rond. Hoeveel kwam erbij? Haal precies zoveel van het eerste getal af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Welke som is even veel als # + #?",
+    "naar": "Welke som is evenveel als # + #?",
+    "op": "2026-10-01"
+   }
+  },
+  {
+   "doel": "G6-GET-E04",
+   "nr": 5,
+   "somtype": "Hoe reken je # − # handig uit?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Hoe reken je # − # handig uit?",
+   "hint1": "Maak het getal dat eraf gaat rond, naar een honderdtal. Het eerste getal blijft zoals het is.",
+   "hint2": "Haal je zo meer af dan nodig? Dan doe je het stukje er weer bij. Haal je minder af? Dan haal je het stukje er nog af.",
+   "ouderzin": "Je kind kiest een handige manier voor een minsom: het getal dat eraf gaat rond maken en daarna bijstellen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerd teken",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Het teken aan het eind klopt niet. Heb je meer afgehaald dan nodig? Dan doe je het stukje er weer bij. Heb je minder afgehaald? Dan haal je het stukje er nog af.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "allebei rond",
+     "claudeDenkfout": "allebei-rond",
+     "regel": "Claudes sleutel: allebei-rond",
+     "tekst": "Je hebt ook het eerste getal rond gemaakt. Maak alleen het getal dat eraf gaat rond: het eerste getal blijft zoals het is. Zo komt er precies het goede antwoord uit.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "schatting-verkeerd"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerd stukje",
+     "claudeDenkfout": "verkeerd-stukje",
+     "regel": "Claudes sleutel: verkeerd-stukje",
+     "tekst": "Het laatste getal klopt niet. Kijk naar het getal dat eraf gaat: hoeveel scheelt dat met het honderdtal?",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "geld-verkeerd-geteld"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Maak het getal dat eraf gaat rond. Hoeveel scheelt dat? Dat stukje doe je er daarna weer bij, of je haalt het er nog af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "claudeDenkfout": "schatting-verkeerd",
+     "waarom": "schathint ('rond allebei af') past niet bij compenseren: daar maak je één getal rond (#161, les 15)"
+    },
+    {
+     "claudeTekst": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op. Bij teruggeven: vul aan vanaf de prijs tot het betaalde bedrag.",
+     "claudeDenkfout": "geld-verkeerd-geteld",
+     "waarom": "munthint past niet bij deze som (#161)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E04",
+   "nr": 6,
+   "somtype": "Er waren # [ding] in [plek]. Nu zijn er nog #. Hoeveel [ding] zijn er weg?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Er waren # [ding] in [plek]. Nu zijn er nog #. Hoeveel [ding] zijn er weg?",
+   "hint1": "Hoeveel zijn er weg? Haal het getal van nu van het getal van eerst af. Zet ze onder elkaar en begin bij de eenheden.",
+   "hint2": "Is het bovenste cijfer kleiner dan het onderste? Leen dan één van de kolom links ervan: dat cijfer gaat één omlaag, en jouw cijfer krijgt er tien bij.",
+   "ouderzin": "Je kind rekent uit hoeveel er weg zijn: een minsom tot 10.000 onder elkaar.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Er zijn er weg: haal het getal van nu af van het getal van eerst."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "kleinste van grootste",
+     "claudeDenkfout": "kleinste-van-grootste",
+     "regel": "Claudes sleutel: kleinste-van-grootste",
+     "tekst": "Je hebt per kolom het kleinste cijfer van het grootste afgehaald. Het onderste cijfer gaat altijd van het bovenste af. Is het bovenste kleiner? Dan leen je van links.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is tien te veel. Kijk naar de tientallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderd te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is honderd te veel. Kijk naar de honderdtallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "duizend te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1000",
+     "tekst": "Dat is duizend te veel. Kijk naar de duizendtallen. Heb je daar geleend? Dan is dat cijfer één kleiner geworden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet het getal van eerst bovenaan en het getal van nu eronder. Reken kolom voor kolom, van rechts naar links. Is het bovenste cijfer kleiner? Dan leen je van links."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je haalt altijd het onderste cijfer van het bovenste af. Is het bovenste kleiner, dan leen je 10 van de kolom links.",
+     "claudeDenkfout": "kleinste-van-grootste",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Als je hebt geleend, is de kolom links ervan één minder geworden. Vergeet dat niet.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je zoekt hoeveel er weg zijn: het verschil. Dat is aftrekken.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E04",
+   "nr": 7,
+   "somtype": "Welke som is evenveel als # − #?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Welke som is even veel als # − #?",
+   "hint1": "Maak het getal dat eraf gaat rond. Hoeveel komt erbij?",
+   "hint2": "Doe bij het eerste getal evenveel erbij. Dan blijft de uitkomst gelijk.",
+   "ouderzin": "Je kind kiest een minsom met dezelfde uitkomst: bij allebei de getallen evenveel erbij.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "eerste getal eraf",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Je hebt bij het eerste getal iets afgehaald. Bij een minsom doe je bij allebei de getallen evenveel erbij; dan blijft de uitkomst gelijk.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eerste getal klopt niet",
+     "claudeDenkfout": "eerste-getal-klopt-niet",
+     "regel": "Claudes sleutel: eerste-getal-klopt-niet",
+     "tekst": "Het eerste getal klopt niet. Doe er precies evenveel bij als bij het getal dat eraf gaat.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "komma-verschoven"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Maak het getal dat eraf gaat rond. Hoeveel kwam erbij? Doe precies zoveel bij het eerste getal."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Welke som is even veel als # − #?",
+    "naar": "Welke som is evenveel als # − #?",
+    "op": "2026-10-01"
+   }
+  },
+  {
+   "doel": "G6-GET-E04",
+   "nr": 8,
+   "somtype": "In [plek] zijn # [ding] en in [plek] #. Hoeveel [ding] zijn dat samen?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "In [plek] zijn # [ding] en in [plek] #. Hoeveel [ding] zijn dat samen?",
+   "hint1": "Zet de getallen onder elkaar: eenheden onder eenheden, tientallen onder tientallen. Begin rechts.",
+   "hint2": "Komt een kolom samen op tien of meer? Schrijf dan alleen het laatste cijfer op en neem één mee naar de kolom links ervan.",
+   "ouderzin": "Je kind telt twee getallen tot 10.000 bij elkaar op.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "eraf gehaald",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Je hebt eraf gehaald. Samen is een plussom: tel de getallen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is tien te weinig. Kwamen de eenheden samen op tien of meer? Dan gaat er één tiental mee naar de tientallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderd te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is honderd te weinig. Kwamen de tientallen samen op tien of meer? Dan gaat er één honderdtal mee naar de honderdtallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "duizend te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1000",
+     "tekst": "Dat is duizend te weinig. Kwamen de honderdtallen samen op tien of meer? Dan gaat er één duizendtal mee naar de duizendtallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is tien te veel. Tel de tientallen nog eens. Neem je alleen één mee als de eenheden samen op tien of meer komen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderd te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is honderd te veel. Tel de honderdtallen nog eens. Neem je alleen één mee als de tientallen samen op tien of meer komen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet de getallen onder elkaar en tel kolom voor kolom op, van rechts naar links. Komt een kolom op tien of meer? Dan gaat er één mee naar links."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Ergens kwam een kolom boven de 10. Dan schrijf je één cijfer op en onthoud je 1 voor de volgende kolom.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je hebt ergens een 1 te veel onthouden. Loop de kolommen nog eens langs.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Vergeet de duizendtallen niet mee te tellen, helemaal links.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E06",
+   "nr": 1,
+   "somtype": "# × # =",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# × # =",
+   "hint1": "Splits het eerste getal in tientallen en eenheden.",
+   "hint2": "Doe elk stuk keer het tweede getal. Tel de uitkomsten daarna bij elkaar op.",
+   "ouderzin": "Je kind rekent een keersom uit met twee getallen van twee cijfers.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Kijk naar het teken: het is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Ben je een nul vergeten? Een tiental keer een getal krijgt een nul aan het eind."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken elk stuk nog eens na, en tel alle stukken goed op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken elk stuk nog eens na, en tel alle stukken goed op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is tien te veel. Reken de stukken nog eens na en tel ze goed op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is tien te weinig. Reken de stukken nog eens na en tel ze goed op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "cijfers van het tweede getal opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × (som van de cijfers van getal2)",
+     "tekst": "Je hebt de cijfers van het tweede getal bij elkaar opgeteld. Zo reken je niet keer het hele getal. Splits het eerste getal in tientallen en eenheden, en doe elk stuk keer het hele tweede getal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "stuk vergeten",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is te weinig. Heb je elk stuk keer het hele tweede getal gedaan, en niet keer één cijfer of keer de cijfers bij elkaar? Tel daarna alle stukken op.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Splits het eerste getal in tientallen en eenheden. Doe elk stuk keer het tweede getal en tel alles op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast': de fout-hint zegt wat het kind deed"
+    },
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E06",
+   "nr": 2,
+   "somtype": "Hoe reken je # × # handig uit?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Hoe reken je # × # handig uit?",
+   "hint1": "Maak het grote getal rond: welk honderdtal ligt er vlak bij? Het kleine getal blijft zoals het is.",
+   "hint2": "Reken het honderdtal keer het kleine getal. Was het grote getal kleiner dan het honderdtal? Dan haal je het stukje keer het kleine getal eraf. Was het groter? Dan doe je het erbij.",
+   "ouderzin": "Je kind kiest een handige manier voor een keersom: het grote getal rond maken en daarna bijstellen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerd teken",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Het teken in het midden klopt niet. Was het grote getal kleiner dan het honderdtal? Dan haal je het stukje eraf. Was het groter? Dan doe je het erbij.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "kleine getal veranderd",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "regel": "Claudes sleutel: afronden-verkeerde-kant",
+     "tekst": "Je hebt ook het kleine getal veranderd. Het kleine getal blijft zoals het is: alleen het grote getal maak je rond.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "stukje keer honderdtal",
+     "claudeDenkfout": "stukje-keer-het-ronde-getal",
+     "regel": "Claudes sleutel: stukje-keer-het-ronde-getal",
+     "tekst": "Het laatste stuk klopt niet. Het stukje doe je keer het kleine getal, net als het honderdtal.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "schatting-verkeerd"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerd stukje",
+     "claudeDenkfout": "verkeerd-stukje",
+     "regel": "Claudes sleutel: verkeerd-stukje",
+     "tekst": "Het stukje klopt niet. Hoeveel scheelt het grote getal met het honderdtal?",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "geld-verkeerd-geteld"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Maak het grote getal rond en doe dat keer het kleine getal. Hoeveel scheelt het grote getal met het honderdtal? Dat stukje keer het kleine getal haal je eraf of doe je erbij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op. Bij teruggeven: vul aan vanaf de prijs tot het betaalde bedrag.",
+     "claudeDenkfout": "geld-verkeerd-geteld",
+     "waarom": "munthint past niet bij deze som (#161)"
+    },
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "claudeDenkfout": "schatting-verkeerd",
+     "waarom": "schathint ('rond allebei af') past niet bij compenseren: daar maak je één getal rond (#161, les 15)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E06",
+   "nr": 3,
+   "somtype": "In [plek] staan # rijen met # [ding]. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "In [plek] staan # rijen met # [ding]. Hoeveel [ding] zijn dat?",
+   "hint1": "Elke rij heeft evenveel: dat is een keersom. Het aantal rijen keer het aantal in elke rij.",
+   "hint2": "Splits het aantal rijen in tientallen en eenheden (als het die heeft). Doe elk stuk keer het aantal in elke rij en tel de uitkomsten op.",
+   "ouderzin": "Je kind rekent uit hoeveel er in een aantal rijen staan: een keersom met twee getallen van twee cijfers.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. In elke rij staan er evenveel: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "eenheden niet keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × tientallen(getal2) + eenheden(getal2)",
+     "tekst": "Je hebt de eenheden er alleen bijgezet. Doe ook de eenheden keer het andere getal, en tel daarna alle stukken op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "stuk vergeten",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is te weinig. Heb je elk stuk keer het hele andere getal gedaan, ook de eenheden? Tel daarna alle stukken op.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken het aantal rijen keer het aantal in elke rij. Splits een getal in tientallen en eenheden (als het die heeft), en tel de stukken op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "21 × 20 is het grote stukje. Er komt nog 21 × 5 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het kleine stukje is ook een keersom. 21 × 5, niet alleen 5.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "21 rijen van elk 25. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Als je allebei de getallen splitst, moet je álle vier de stukjes uitrekenen: ook 1 × 20.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "30 × 20 is het grote stukje. Er komt nog 30 × 7 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het kleine stukje is ook een keersom. 30 × 7, niet alleen 7.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "30 rijen van elk 27. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "33 × 10 is het grote stukje. Er komt nog 33 × 9 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het kleine stukje is ook een keersom. 33 × 9, niet alleen 9.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "33 rijen van elk 19. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Als je allebei de getallen splitst, moet je álle vier de stukjes uitrekenen: ook 3 × 10.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "28 × 20 is het grote stukje. Er komt nog 28 × 6 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het kleine stukje is ook een keersom. 28 × 6, niet alleen 6.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "28 rijen van elk 26. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Als je allebei de getallen splitst, moet je álle vier de stukjes uitrekenen: ook 8 × 20.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "16 × 10 is het grote stukje. Er komt nog 16 × 6 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het kleine stukje is ook een keersom. 16 × 6, niet alleen 6.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "16 rijen van elk 16. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Als je allebei de getallen splitst, moet je álle vier de stukjes uitrekenen: ook 6 × 10.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "24 × 40 is het grote stukje. Er komt nog 24 × 7 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het kleine stukje is ook een keersom. 24 × 7, niet alleen 7.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "24 rijen van elk 47. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Als je allebei de getallen splitst, moet je álle vier de stukjes uitrekenen: ook 4 × 40.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "24 × 40 is het grote stukje. Er komt nog 24 × 4 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het kleine stukje is ook een keersom. 24 × 4, niet alleen 4.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "24 rijen van elk 44. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "24 × 30 is het grote stukje. Er komt nog 24 × 3 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het kleine stukje is ook een keersom. 24 × 3, niet alleen 3.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "24 rijen van elk 33. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Als je allebei de getallen splitst, moet je álle vier de stukjes uitrekenen: ook 4 × 30.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "34 × 10 is het grote stukje. Er komt nog 34 × 6 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het kleine stukje is ook een keersom. 34 × 6, niet alleen 6.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "34 rijen van elk 16. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Als je allebei de getallen splitst, moet je álle vier de stukjes uitrekenen: ook 4 × 10.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "15 × 30 is het grote stukje. Er komt nog 15 × 2 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het kleine stukje is ook een keersom. 15 × 2, niet alleen 2.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "15 rijen van elk 32. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Als je allebei de getallen splitst, moet je álle vier de stukjes uitrekenen: ook 5 × 30.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "18 × 10 is het grote stukje. Er komt nog 18 × 4 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het kleine stukje is ook een keersom. 18 × 4, niet alleen 4.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "18 rijen van elk 14. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Als je allebei de getallen splitst, moet je álle vier de stukjes uitrekenen: ook 8 × 10.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "13 × 10 is het grote stukje. Er komt nog 13 × 3 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het kleine stukje is ook een keersom. 13 × 3, niet alleen 3.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "13 rijen van elk 13. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E06",
+   "nr": 4,
+   "somtype": "Welke som is evenveel als # × #?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Welke som is even veel als # × #?",
+   "hint1": "Neem de helft van het eerste getal.",
+   "hint2": "Is het ene getal de helft geworden? Dan moet het andere getal twee keer zo groot worden. Zo blijft de uitkomst gelijk.",
+   "ouderzin": "Je kind kiest een keersom met dezelfde uitkomst: de helft van het ene getal, en het andere getal twee keer zo groot.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "allebei groter",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Je hebt allebei de getallen groter gemaakt. Dan wordt de uitkomst ook groter. Neem de helft van het eerste getal en maak het tweede getal twee keer zo groot.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tweede getal klopt niet",
+     "claudeDenkfout": "tweede-getal-klopt-niet",
+     "regel": "Claudes sleutel: tweede-getal-klopt-niet",
+     "tekst": "De helft klopt, maar het tweede getal niet. Het tweede getal moet precies twee keer zo groot worden.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "komma-verschoven"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Neem de helft van het eerste getal en maak het tweede getal twee keer zo groot. Dan blijft de uitkomst gelijk."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.",
+     "claudeDenkfout": "komma-verschoven",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Welke som is even veel als # × #?",
+    "naar": "Welke som is evenveel als # × #?",
+    "op": "2026-10-01"
+   }
+  },
+  {
+   "doel": "G6-GET-E06",
+   "nr": 5,
+   "somtype": "# [ding] met # [ding]. Hoeveel [ding]? Reken handig.",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "# [ding] met # [ding]. Hoeveel [ding]? Reken handig.",
+   "hint1": "In elke doos zitten er evenveel: dat is een keersom.",
+   "hint2": "Reken handig: splits het grote getal in ronde stukken, of verdubbel steeds.",
+   "ouderzin": "Je kind rekent een keersom met een rond getal handig uit.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. In elke doos zitten er evenveel: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Tel de nullen nog eens: hoeveel nullen horen er aan het eind?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Ben je een nul vergeten? Tel de nullen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken het aantal dozen keer hoeveel er in elke doos zitten. Splits het grote getal in ronde stukken, of verdubbel steeds."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel de nullen nog eens. Denk aan 4 × 25 = 100.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Een nul te veel. Denk aan 4 × 25 = 100.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Dozen keer inhoud is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E06",
+   "nr": 6,
+   "somtype": "Er zijn # [ding]. Ze gaan eerlijk over # [ding]. Welke som hoort bij dit verhaal?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Er zijn # [ding]. Ze gaan eerlijk over # [ding]. Welke som hoort bij dit verhaal?",
+   "hint1": "Lees het verhaal: wat wordt er verdeeld, en over hoeveel?",
+   "hint2": "Eerlijk verdelen is een deelsom. Welk getal wordt er verdeeld?",
+   "ouderzin": "Je kind kiest de deelsom die bij een verhaaltje hoort.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "keersom",
+     "claudeDenkfout": null,
+     "regel": "de keersom",
+     "tekst": "Je kiest een keersom, maar er wordt eerlijk verdeeld. Verdelen is een deelsom."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "getallen omgedraaid",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "regel": "Claudes sleutel: omgekeerd-gedeeld",
+     "tekst": "De getallen staan andersom. Wat verdeel je? Dat getal komt vóór het deelteken.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Wat wordt er verdeeld? Dat getal komt vóór het deelteken. Over hoeveel? Dat getal komt erachter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Wat verdeel je? Dat getal komt vóór het deelteken.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je verdeelt. Is dat keer of gedeeld door?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E06",
+   "nr": 7,
+   "somtype": "In [plek] staan # [ding] met elk # [ding]. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "In [plek] staan # [ding] met elk # [ding]. Hoeveel [ding] zijn dat?",
+   "hint1": "In elke doos zitten er evenveel: dat is een keersom. Reken het aantal dozen keer hoeveel er in elke doos zitten.",
+   "hint2": "Splits het getal van twee cijfers in tientallen en eenheden (als het die heeft). Doe elk stuk keer het grote getal en tel de uitkomsten op.",
+   "ouderzin": "Je kind rekent een keersom uit: een getal van twee cijfers keer een getal van drie cijfers.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. In elke doos zitten er evenveel: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "duizend te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1000",
+     "tekst": "Dat is duizend te veel. Tel de stukken nog eens goed bij elkaar op. Neem je alleen één mee als een kolom op tien of meer komt?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "eenheden niet keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × tientallen(getal2) + eenheden(getal2)",
+     "tekst": "Je hebt de eenheden er alleen bijgezet. Doe ook de eenheden keer het andere getal, en tel daarna alle stukken op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "stuk vergeten",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is te weinig. Heb je elk stuk keer het hele andere getal gedaan, ook de eenheden? Tel daarna alle stukken op.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Splits het getal van twee cijfers in tientallen en eenheden (als het die heeft). Doe elk stuk keer het grote getal en tel alles op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "485 × 10 is het grote stuk. Er komt nog 485 × 5 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Ook het kleine stuk is een keersom. 485 × 5.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer het optellen van de twee stukken. Een duizendtal te veel?",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "433 × 10 is het grote stuk. Er komt nog 433 × 7 bij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Ook het kleine stuk is een keersom. 433 × 7.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M05",
+   "nr": 1,
+   "somtype": "Je kunt kiezen uit [getallen]. Welk aantal [ding] kun je precies verdelen in groepjes van #? Typ dat getal.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Je kunt kiezen uit [getallen]. Welk aantal [ding] kun je precies verdelen in groepjes van #? Typ dat getal.",
+   "hint1": "Je zoekt het getal dat je precies kunt verdelen in groepjes van dat aantal, zonder dat er iets overblijft.",
+   "hint2": "Bij groepjes van twee, vijf of tien kun je naar het laatste cijfer kijken. Bij twee: is het laatste cijfer even? Bij vijf: is het een nul of een vijf? Bij tien: is het een nul? Bij andere groepjes reken je het na met de tafel. Is het getal te groot voor de tafel? Haal er dan steeds tien groepjes af. Staat het getal dat je dan hebt in de tafel? Dan kun je het precies verdelen.",
+   "ouderzin": "Je kind zoekt welk getal precies deelbaar is door een getal, zonder dat er iets overblijft.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "blijft iets over",
+     "claudeDenkfout": "rest-vergeten",
+     "regel": "Claudes sleutel: rest-vergeten",
+     "tekst": "Dat getal kun je niet precies verdelen: er blijft iets over. Reken het na en probeer de andere getallen.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Typ een van de getallen uit de vraag: het getal dat je precies kunt verdelen in groepjes, zonder dat er iets overblijft."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "154 : 10 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "144 : 10 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "153 : 10 komt niet precies uit: er blijft 3 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "188 : 5 komt niet precies uit: er blijft 3 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "201 : 5 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "198 : 5 komt niet precies uit: er blijft 3 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "114 : 5 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "116 : 5 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "119 : 5 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "109 : 5 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "104 : 5 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "102 : 5 komt niet precies uit: er blijft 2 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "63 : 5 komt niet precies uit: er blijft 3 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "67 : 5 komt niet precies uit: er blijft 2 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "77 : 5 komt niet precies uit: er blijft 2 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "174 : 5 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "173 : 5 komt niet precies uit: er blijft 3 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "167 : 5 komt niet precies uit: er blijft 2 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "71 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "79 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "73 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "31 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "27 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "33 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "326 : 10 komt niet precies uit: er blijft 6 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "327 : 10 komt niet precies uit: er blijft 7 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "325 : 10 komt niet precies uit: er blijft 5 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "211 : 10 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "212 : 10 komt niet precies uit: er blijft 2 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "225 : 10 komt niet precies uit: er blijft 5 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "9 : 4 komt niet precies uit: er blijft 1 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "13 : 4 komt niet precies uit: er blijft 1 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "7 : 4 komt niet precies uit: er blijft 3 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "75 : 9 komt niet precies uit: er blijft 3 over. Gebruik de regel: de cijfers samen zijn deelbaar door 9.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "80 : 9 komt niet precies uit: er blijft 8 over. Gebruik de regel: de cijfers samen zijn deelbaar door 9.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "84 : 9 komt niet precies uit: er blijft 3 over. Gebruik de regel: de cijfers samen zijn deelbaar door 9.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "33 : 5 komt niet precies uit: er blijft 3 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "29 : 5 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "26 : 5 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "17 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "19 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "15 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "97 : 9 komt niet precies uit: er blijft 7 over. Gebruik de regel: de cijfers samen zijn deelbaar door 9.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "104 : 9 komt niet precies uit: er blijft 5 over. Gebruik de regel: de cijfers samen zijn deelbaar door 9.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "98 : 9 komt niet precies uit: er blijft 8 over. Gebruik de regel: de cijfers samen zijn deelbaar door 9.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "37 : 9 komt niet precies uit: er blijft 1 over. Gebruik de regel: de cijfers samen zijn deelbaar door 9.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "48 : 9 komt niet precies uit: er blijft 3 over. Gebruik de regel: de cijfers samen zijn deelbaar door 9.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "51 : 9 komt niet precies uit: er blijft 6 over. Gebruik de regel: de cijfers samen zijn deelbaar door 9.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "9 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "78 : 5 komt niet precies uit: er blijft 3 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "84 : 5 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "34 : 5 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "16 : 5 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "21 : 5 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "75 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "65 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "59 : 2 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0, 2, 4, 6 of 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "164 : 5 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "178 : 5 komt niet precies uit: er blijft 3 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "162 : 5 komt niet precies uit: er blijft 2 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "139 : 4 komt niet precies uit: er blijft 3 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "142 : 4 komt niet precies uit: er blijft 2 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "150 : 4 komt niet precies uit: er blijft 2 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "75 : 4 komt niet precies uit: er blijft 3 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "63 : 4 komt niet precies uit: er blijft 3 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "73 : 4 komt niet precies uit: er blijft 1 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "358 : 10 komt niet precies uit: er blijft 8 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "361 : 10 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "356 : 10 komt niet precies uit: er blijft 6 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "101 : 5 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "93 : 5 komt niet precies uit: er blijft 3 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "72 : 5 komt niet precies uit: er blijft 2 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "74 : 5 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "83 : 5 komt niet precies uit: er blijft 3 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "34 : 4 komt niet precies uit: er blijft 2 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "27 : 4 komt niet precies uit: er blijft 3 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "33 : 4 komt niet precies uit: er blijft 1 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "55 : 3 komt niet precies uit: er blijft 1 over. Gebruik de regel: de cijfers samen zijn deelbaar door 3.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "71 : 3 komt niet precies uit: er blijft 2 over. Gebruik de regel: de cijfers samen zijn deelbaar door 3.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "65 : 3 komt niet precies uit: er blijft 2 over. Gebruik de regel: de cijfers samen zijn deelbaar door 3.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "37 : 4 komt niet precies uit: er blijft 1 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "39 : 4 komt niet precies uit: er blijft 3 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "46 : 4 komt niet precies uit: er blijft 2 over. Gebruik de regel: de laatste twee cijfers zijn deelbaar door 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "127 : 5 komt niet precies uit: er blijft 2 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "133 : 5 komt niet precies uit: er blijft 3 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "126 : 5 komt niet precies uit: er blijft 1 over. Gebruik de regel: eindigt op 0 of 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "94 : 10 komt niet precies uit: er blijft 4 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "109 : 10 komt niet precies uit: er blijft 9 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "107 : 10 komt niet precies uit: er blijft 7 over. Gebruik de regel: eindigt op 0.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "44 : 3 komt niet precies uit: er blijft 2 over. Gebruik de regel: de cijfers samen zijn deelbaar door 3.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "43 : 3 komt niet precies uit: er blijft 1 over. Gebruik de regel: de cijfers samen zijn deelbaar door 3.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "34 : 3 komt niet precies uit: er blijft 1 over. Gebruik de regel: de cijfers samen zijn deelbaar door 3.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M05",
+   "nr": 2,
+   "somtype": "Van # [ding] worden er # verkocht. Hoeveel blijven er over? Reken uit het hoofd.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Van # [ding] worden er # verkocht. Hoeveel blijven er over? Reken uit het hoofd.",
+   "hint1": "Er worden er verkocht: dat is een minsom.",
+   "hint2": "Reken met honderdtallen. Hoeveel honderdtallen zijn het eerst? Hoeveel honderdtallen gaan er af?",
+   "ouderzin": "Je kind rekent uit het hoofd een minsom met ronde honderdtallen en duizendtallen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Wat er verkocht wordt, gaat eraf: dat is een minsom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Ben je een nul vergeten?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderd te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is honderd te weinig. Tel de honderdtallen nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderd te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is honderd te veel. Tel de honderdtallen nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken met honderdtallen: hoeveel honderdtallen zijn het eerst, en hoeveel gaan er af? Zet daarna de nullen terug."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel in honderdtallen: hoeveel honderdtallen blijven er over?",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Verkocht betekent weg: aftrekken.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Let op de nullen. Een duizendtal is tien honderdtallen.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M05",
+   "nr": 3,
+   "somtype": "[kaartjes op volgorde slepen] Sleep elk getal naar het goede vak: deelbaar door # of niet.",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[kaartjes op volgorde slepen] Sleep elk getal naar het goede vak: deelbaar door # of niet.",
+   "hint1": "Kun je het getal precies verdelen in groepjes van dat aantal, zonder dat er iets overblijft? Dan is het deelbaar.",
+   "hint2": "Bij twee, vijf of tien kun je naar het laatste cijfer kijken. Bij andere getallen reken je het na met de tafel. Is het getal te groot voor de tafel? Haal er dan steeds tien groepjes af. Staat het getal dat je dan hebt in de tafel? Dan is het deelbaar.",
+   "ouderzin": "Je kind sorteert getallen: deelbaar door een getal of niet.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "deelbaar getal bij niet",
+     "claudeDenkfout": null,
+     "regel": "fout = een deelbaar getal bij niet",
+     "tekst": "Bij niet deelbaar staat een getal dat je wél precies kunt verdelen in groepjes van dat aantal. Welk getal is dat?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet-deelbaar getal bij deelbaar",
+     "claudeDenkfout": null,
+     "regel": "fout = een niet-deelbaar getal bij deelbaar",
+     "tekst": "Bij deelbaar staat een getal waarbij er iets overblijft. Welk getal is dat?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één getal in het verkeerde vak",
+     "claudeDenkfout": null,
+     "regel": "fout = één getal in het verkeerde vak",
+     "tekst": "Eén getal staat in het verkeerde vak. Kijk bij elk getal: kun je het precies in groepjes van dat aantal verdelen, zonder dat er iets overblijft?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "vakken omgewisseld",
+     "claudeDenkfout": null,
+     "regel": "fout = vakken omgewisseld",
+     "tekst": "Je hebt de vakken omgewisseld. Bij deelbaar horen de getallen waarbij niets overblijft."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij elk getal: kun je het precies verdelen in groepjes van dat aantal? Dan hoort het bij deelbaar. Blijft er iets over? Dan niet."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M06",
+   "nr": 1,
+   "somtype": "# × # =",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# × # =",
+   "hint1": "Splits het eerste getal in honderdtallen, tientallen en eenheden. Staat er een nul? Dan is dat stuk nul.",
+   "hint2": "Doe elk stuk keer het tweede getal. Tel de uitkomsten daarna bij elkaar op.",
+   "ouderzin": "Je kind rekent een keersom uit: een getal van drie cijfers keer een getal onder de tien.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Kijk naar het teken: het is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken elk stuk nog eens na, en tel alle stukken goed op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken elk stuk nog eens na, en tel alle stukken goed op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is tien te veel. Reken de stukken nog eens na en tel ze goed op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is tien te weinig. Reken de stukken nog eens na en tel ze goed op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen laatste cijfer",
+     "claudeDenkfout": "onthouden-vergeten",
+     "regel": "Claudes sleutel: onthouden-vergeten",
+     "tekst": "Je hebt bij elk cijfer alleen het laatste cijfer van die keersom opgeschreven. Komt een keersom op tien of meer? Dan gaan de tientallen mee naar de plek links ervan.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Splits het eerste getal in honderdtallen, tientallen en eenheden. Doe elk stuk keer het tweede getal en tel alles op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast': de fout-hint zegt wat het kind deed"
+    },
+    {
+     "claudeTekst": "Let op het teken: het is een keersom. Keer betekent: zoveel groepjes van. Probeer het groepje steeds opnieuw erbij te tellen.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M06",
+   "nr": 2,
+   "somtype": "# [ding] worden eerlijk verdeeld over # [ding]. Hoeveel [ding] krijgt [wie]?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# [ding] worden eerlijk verdeeld over # [ding]. Hoeveel [ding] krijgt [wie]?",
+   "hint1": "Eerlijk verdelen is een deelsom. Hoeveel krijgt ieder?",
+   "hint2": "Splits het totaal in stukken die je makkelijk kunt verdelen. Verdeel elk stuk en tel op wat ieder krijgt.",
+   "ouderzin": "Je kind verdeelt eerlijk: een deelsom die precies uitkomt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het aantal waarover je verdeelt",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het aantal waarover je verdeelt. De vraag is hoeveel ieder krijgt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Heb je de getallen van elkaar afgehaald? Er wordt eerlijk verdeeld: dat is een deelsom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt keer gedaan. Er wordt eerlijk verdeeld: dat is een deelsom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken na met een keersom. [getal2] keer jouw antwoord is meer dan [getal1]."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken na met een keersom. [getal2] keer jouw antwoord is minder dan [getal1]."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is tien te weinig. Ben je een stuk vergeten? Reken na met een keersom. [getal2] keer jouw antwoord is minder dan [getal1]."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken na met een keersom: het aantal waarover je verdeelt keer jouw antwoord moet precies het totaal zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel alle happen bij elkaar op. Je bent er een hap van 10 kwijt.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 4 × 73 = 292, dat is meer dan 288.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 4 × 71 = 284, dat is minder dan 288.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 9 × 45 = 405, dat is meer dan 396.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 9 × 43 = 387, dat is minder dan 396.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 95 = 760, dat is meer dan 752.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 93 = 744, dat is minder dan 752.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 3 × 33 = 99, dat is meer dan 96.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 3 × 31 = 93, dat is minder dan 96.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 5 × 52 = 260, dat is meer dan 255.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 5 × 50 = 250, dat is minder dan 255.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 3 × 55 = 165, dat is meer dan 162.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 3 × 53 = 159, dat is minder dan 162.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 4 × 35 = 140, dat is meer dan 136.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 4 × 33 = 132, dat is minder dan 136.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 5 × 25 = 125, dat is meer dan 120.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 5 × 23 = 115, dat is minder dan 120.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 6 × 85 = 510, dat is meer dan 504.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 6 × 83 = 498, dat is minder dan 504.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 4 × 47 = 188, dat is meer dan 184.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 4 × 45 = 180, dat is minder dan 184.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 9 × 50 = 450, dat is meer dan 441.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 9 × 48 = 432, dat is minder dan 441.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 9 × 53 = 477, dat is meer dan 468.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 9 × 51 = 459, dat is minder dan 468.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 98 = 784, dat is meer dan 776.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 96 = 768, dat is minder dan 776.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 6 × 79 = 474, dat is meer dan 468.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 6 × 77 = 462, dat is minder dan 468.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 3 × 47 = 141, dat is meer dan 138.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 3 × 45 = 135, dat is minder dan 138.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 5 × 45 = 225, dat is meer dan 220.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 5 × 43 = 215, dat is minder dan 220.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 7 × 53 = 371, dat is meer dan 364.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 7 × 51 = 357, dat is minder dan 364.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 5 × 85 = 425, dat is meer dan 420.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 5 × 83 = 415, dat is minder dan 420.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 6 × 55 = 330, dat is meer dan 324.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 6 × 53 = 318, dat is minder dan 324.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 7 × 40 = 280, dat is meer dan 273.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 7 × 38 = 266, dat is minder dan 273.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 70 = 560, dat is meer dan 552.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 68 = 544, dat is minder dan 552.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 5 × 36 = 180, dat is meer dan 175.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 5 × 34 = 170, dat is minder dan 175.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 44 = 352, dat is meer dan 344.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 42 = 336, dat is minder dan 344.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 5 × 30 = 150, dat is meer dan 145.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 5 × 28 = 140, dat is minder dan 145.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 6 × 29 = 174, dat is meer dan 168.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 6 × 27 = 162, dat is minder dan 168.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 43 = 344, dat is meer dan 336.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 41 = 328, dat is minder dan 336.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 9 × 27 = 243, dat is meer dan 234.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 9 × 25 = 225, dat is minder dan 234.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 3 × 79 = 237, dat is meer dan 234.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 3 × 77 = 231, dat is minder dan 234.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 89 = 712, dat is meer dan 704.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 87 = 696, dat is minder dan 704.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 27 = 216, dat is meer dan 208.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 25 = 200, dat is minder dan 208.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 3 × 51 = 153, dat is meer dan 150.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 3 × 49 = 147, dat is minder dan 150.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 9 × 87 = 783, dat is meer dan 774.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer. 9 × 85 = 765, dat is minder dan 774.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M06",
+   "nr": 3,
+   "somtype": "[wie] verzamelt elke dag # [ding]. Hoeveel [ding] zijn dat in # dagen?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[wie] verzamelt elke dag # [ding]. Hoeveel [ding] zijn dat in # dagen?",
+   "hint1": "Elke dag komt er evenveel bij: dat is een keersom. Het aantal dagen keer het aantal per dag.",
+   "hint2": "Reken eerst zonder de nullen. Zet daarna de nullen van het ronde getal erachter.",
+   "ouderzin": "Je kind rekent een keersom met een rond getal: eerst zonder de nullen, dan de nullen erachter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Elke dag komt er evenveel bij: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is een nul te veel. Tel de nullen van het ronde getal: zoveel nullen zet je erachter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is een nul te weinig. Tel de nullen van het ronde getal: zoveel nullen zet je erachter."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "nullen vergeten",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "tekst": "Er missen nullen. Tel de nullen van het ronde getal: zoveel nullen zet je erachter.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst zonder de nullen: een keersom uit de tafels. Zet daarna de nullen van het ronde getal erachter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Reken eerst 9 × 4. Plak daarna twee nullen er weer aan. Je mist er één.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is een nul te veel. 400 heeft twee nullen, dus het antwoord krijgt er ook twee.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Elke dag 400 erbij, 9 dagen lang. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Reken eerst 9 × 9. Plak daarna twee nullen er weer aan. Je mist er één.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is een nul te veel. 900 heeft twee nullen, dus het antwoord krijgt er ook twee.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Elke dag 900 erbij, 9 dagen lang. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Reken eerst 6 × 9. Plak daarna twee nullen er weer aan. Je mist er één.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Elke dag 900 erbij, 6 dagen lang. Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M06",
+   "nr": 4,
+   "somtype": "Een raket verbruikt bij de start # liter brandstof per seconde. Hoeveel liter is dat in # seconden?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Een raket verbruikt bij de start # liter brandstof per seconde. Hoeveel liter is dat in # seconden?",
+   "hint1": "Elke seconde gaat er evenveel doorheen: dat is een keersom. Het aantal seconden keer het aantal liter per seconde.",
+   "hint2": "Reken eerst zonder de nullen. Zet daarna de nullen van het ronde getal erachter.",
+   "ouderzin": "Je kind rekent een keersom met een rond getal: eerst zonder de nullen, dan de nullen erachter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Elke seconde gaat er evenveel doorheen: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is een nul te veel. Tel de nullen van het ronde getal: zoveel nullen zet je erachter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is een nul te weinig. Tel de nullen van het ronde getal: zoveel nullen zet je erachter."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "nullen vergeten",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "tekst": "Er missen nullen. Tel de nullen van het ronde getal: zoveel nullen zet je erachter.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst zonder de nullen: een keersom uit de tafels. Zet daarna de nullen van het ronde getal erachter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "700 heeft twee nullen. Je hebt er maar één aan 28 geplakt.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "4 × 7 = 28 is de eerste stap. Maar het was 700 liter per seconde. Plak de nullen er weer aan.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "4 + 700 telt de seconden bij de liters op. Maar élke seconde gaan er 700 liter doorheen.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M06",
+   "nr": 5,
+   "somtype": "Een satelliet draait # keer per dag om de aarde. Hoeveel [ding] zijn dat in # dagen?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Een satelliet draait # keer per dag om de aarde. Hoeveel [ding] zijn dat in # dagen?",
+   "hint1": "Elke dag evenveel rondjes: dat is een keersom. Het aantal dagen keer het aantal rondjes per dag.",
+   "hint2": "Reken eerst zonder de nullen. Zet daarna de nullen van het ronde getal erachter.",
+   "ouderzin": "Je kind rekent een keersom met een rond getal: eerst zonder de nullen, dan de nullen erachter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Elke dag gaat het evenveel keer rond: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is een nul te veel. Tel de nullen van het ronde getal: zoveel nullen zet je erachter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is een nul te weinig. Tel de nullen van het ronde getal: zoveel nullen zet je erachter."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "nullen vergeten",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "tekst": "Er missen nullen. Tel de nullen van het ronde getal: zoveel nullen zet je erachter.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst zonder de nullen: een keersom uit de tafels. Zet daarna de nullen van het ronde getal erachter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bijna! 400 heeft twee nullen. Je hebt er maar één aan 24 geplakt.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "6 × 4 = 24 is de eerste stap. Maar het waren 400 dagen, niet 4. Plak de nullen er weer aan.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Elke dag 6 rondjes, 400 dagen lang. Dat is een keersom, geen plussom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M06",
+   "nr": 6,
+   "somtype": "Het stadion heeft # [ding] met in elk vak # [ding]. Hoeveel [ding] zitten er in [plek]?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Het stadion heeft # [ding] met in elk vak # [ding]. Hoeveel [ding] zitten er in [plek]?",
+   "hint1": "In elk vak zitten evenveel mensen: dat is een keersom. Het aantal vakken keer het aantal in elk vak.",
+   "hint2": "Reken eerst zonder de nullen. Zet daarna de nullen van het ronde getal erachter.",
+   "ouderzin": "Je kind rekent een keersom met een rond getal: eerst zonder de nullen, dan de nullen erachter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. In elk vak zitten evenveel mensen: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is een nul te veel. Tel de nullen van het ronde getal: zoveel nullen zet je erachter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is een nul te weinig. Tel de nullen van het ronde getal: zoveel nullen zet je erachter."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "nullen vergeten",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "regel": "Claudes sleutel: nul-fout-tientallen",
+     "tekst": "Er missen nullen. Tel de nullen van het ronde getal: zoveel nullen zet je erachter.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst zonder de nullen: een keersom uit de tafels. Zet daarna de nullen van het ronde getal erachter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "300 heeft twee nullen. Je hebt er maar één aan 24 geplakt.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "8 × 3 = 24 is de eerste stap. Het waren vakken van 300 mensen, niet van 3.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "8 + 300 is één vak plus het aantal vakken. Maar in élk van de 8 vakken zitten 300 mensen.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E07",
+   "nr": 2,
+   "somtype": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig.",
+   "hint1": "De prijs is bijna een rond bedrag. Reken eerst het aantal keer dat ronde bedrag.",
+   "hint2": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+   "ouderzin": "Je kind rekent handig met geld: een paar keer een prijs die bijna rond is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "de prijs",
+     "claudeDenkfout": null,
+     "regel": "fout = de prijs",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "aantal erbij geteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "stukje niet afgehaald",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "te veel afgehaald",
+     "claudeDenkfout": "tafelbuur",
+     "regel": "Claudes sleutel: tafelbuur",
+     "tekst": "Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst het aantal keer het ronde bedrag. Haal daarna het kleine bedrag dat je te veel rekende er weer af: één keer voor elk."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt met het ronde getal gerekend. Haal er nu 4 × 1 af.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Hoeveel heb je te veel gerekend? 4 keer het verschil.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "4 keer dezelfde prijs: een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je hebt met het ronde getal gerekend. Haal er nu 3 × -98 af.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Hoeveel heb je te veel gerekend? 3 keer het verschil.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "3 keer dezelfde prijs: een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je hebt met het ronde getal gerekend. Haal er nu 6 × 1 af.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Hoeveel heb je te veel gerekend? 6 keer het verschil.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "6 keer dezelfde prijs: een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E07",
+   "nr": 1,
+   "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+   "hint1": "Reken eerst het aantal keer de hele euro's. Reken daarna het aantal keer de centen.",
+   "hint2": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+   "ouderzin": "Je kind rekent met geld: een paar keer dezelfde prijs, met euro's en centen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "de prijs",
+     "claudeDenkfout": null,
+     "regel": "fout = de prijs",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "aantal erbij geteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "centen één keer",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "euro te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + €1",
+     "tekst": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je koopt 4 keer hetzelfde. Dat is 4 keer de prijs, niet de prijs plus 4.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "De centen moet je ook keer het aantal doen, niet één keer meetellen.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Komen de centen samen boven de 100? Alleen dan gaat er een euro bij.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je koopt 3 keer hetzelfde. Dat is 3 keer de prijs, niet de prijs plus 3.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je koopt 2 keer hetzelfde. Dat is 2 keer de prijs, niet de prijs plus 2.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E08",
+   "nr": 1,
+   "somtype": "# [wie] verzamelden [ding]. #, #, #, #, #. Hoeveel [ding] is dat gemiddeld per [wie]?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# [wie] verzamelden [ding]. #, #, #, #, #. Hoeveel [ding] is dat gemiddeld per [wie]?",
+   "hint1": "Tel eerst alle getallen bij elkaar op.",
+   "hint2": "Deel dat totaal door het aantal getallen. Zoveel is het gemiddeld.",
+   "ouderzin": "Je kind rekent een gemiddelde uit: alles optellen en delen door het aantal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken na: het aantal keer jouw antwoord is dan meer dan het totaal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken na: het aantal keer jouw antwoord is dan minder dan het totaal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Je hebt een van de getallen uit de vraag genomen. Het gemiddelde reken je uit: tel eerst alle getallen op en deel dan door het aantal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het totaal",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is alles samen. Deel dat nog door het aantal.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel alle getallen bij elkaar op. Deel dat totaal daarna door het aantal getallen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "50 is het totaal. Gemiddeld betekent: delen door het aantal kinderen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het gemiddelde is niet het hoogste getal. Tel alles op en deel door het aantal.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer het optellen en deel dan precies door 5.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "20 is het totaal. Gemiddeld betekent: delen door het aantal poezen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "35 is het totaal. Gemiddeld betekent: delen door het aantal poezen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "25 is het totaal. Gemiddeld betekent: delen door het aantal kinderen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "30 is het totaal. Gemiddeld betekent: delen door het aantal poezen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "40 is het totaal. Gemiddeld betekent: delen door het aantal dino's.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "25 is het totaal. Gemiddeld betekent: delen door het aantal dino's.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "45 is het totaal. Gemiddeld betekent: delen door het aantal kinderen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "65 is het totaal. Gemiddeld betekent: delen door het aantal spelers.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E08",
+   "nr": 2,
+   "somtype": "# [wie] verzamelden [ding]. #, #, #, #. Hoeveel [ding] is dat gemiddeld per [wie]?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# [wie] verzamelden [ding]. #, #, #, #. Hoeveel [ding] is dat gemiddeld per [wie]?",
+   "hint1": "Tel eerst alle getallen bij elkaar op.",
+   "hint2": "Deel dat totaal door het aantal getallen. Zoveel is het gemiddeld.",
+   "ouderzin": "Je kind rekent een gemiddelde uit: alles optellen en delen door het aantal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken na: het aantal keer jouw antwoord is dan meer dan het totaal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken na: het aantal keer jouw antwoord is dan minder dan het totaal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Je hebt een van de getallen uit de vraag genomen. Het gemiddelde reken je uit: tel eerst alle getallen op en deel dan door het aantal."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het totaal",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is alles samen. Deel dat nog door het aantal.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel alle getallen bij elkaar op. Deel dat totaal daarna door het aantal getallen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "24 is het totaal. Gemiddeld betekent: delen door het aantal dino's.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het gemiddelde is niet het hoogste getal. Tel alles op en deel door het aantal.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "20 is het totaal. Gemiddeld betekent: delen door het aantal kinderen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Controleer het optellen en deel dan precies door 4.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "28 is het totaal. Gemiddeld betekent: delen door het aantal spelers.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

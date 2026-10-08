@@ -1,0 +1,1382 @@
+{
+ "batch": "batch4",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G6-merge, batch 4 = meten: MEET-E01, MEET-E03, MEET-E04, MEET-E05). Formaat als hints/batch3.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint. 'claude-taalfix' met regel 'Claudes sleutel: <label>' = de Claude-sleutels met dat label die geen motorregel vangt, met een eigen vaste tekst (per sleutel nagerekend). 'nieuw' = motorregel met eigen tekst.",
+ "somtypen": [
+  {
+   "doel": "G6-MEET-E01",
+   "nr": 1,
+   "somtype": "# cm = □ m",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# cm = □ m",
+   "hint1": "Eén meter (m) is honderd centimeter (cm). Een meter is groter dan een centimeter, dus het getal wordt kleiner.",
+   "hint2": "Deel het aantal centimeter door honderd: haal er twee nullen af.",
+   "ouderzin": "Je kind rekent lengtematen om: van centimeter naar meter (gedeeld door honderd).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Honderd centimeter is één meter: deel door honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je helemaal omgerekend naar meter? Honderd centimeter is één meter: deel door honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Je hebt door duizend gedeeld. Honderd centimeter is één meter: deel door honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Reken nog eens om. Honderd centimeter is één meter: deel door honderd.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén meter (m) is honderd centimeter (cm). Deel het aantal centimeter door honderd."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'maattrap' zonder uitleg; nu de omrekenregel zelf (één … is tien/honderd/duizend …), per sleutel nagerekend"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "geen 'staat al in de som' (les 20); nu 'Je hebt het getal niet omgerekend'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E01",
+   "nr": 2,
+   "somtype": "# km = □ m",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# km = □ m",
+   "hint1": "Eén kilometer (km) is duizend meter (m). Een meter is kleiner dan een kilometer, dus het getal wordt groter.",
+   "hint2": "Doe het aantal kilometer keer duizend: schrijf er drie nullen achter.",
+   "ouderzin": "Je kind rekent lengtematen om: van kilometer naar meter (keer duizend).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Eén kilometer is duizend meter: doe keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Eén kilometer is duizend meter: doe keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Heb je helemaal omgerekend naar meter? Eén kilometer is duizend meter: doe keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Reken nog eens om. Eén kilometer is duizend meter: doe keer duizend.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kilometer (km) is duizend meter (m). Doe het aantal kilometer keer duizend."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'maattrap' zonder uitleg; nu de omrekenregel zelf (één … is tien/honderd/duizend …), per sleutel nagerekend"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "geen 'staat al in de som' (les 20); nu 'Je hebt het getal niet omgerekend'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E01",
+   "nr": 3,
+   "somtype": "# m = □ mm",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "# m = □ mm",
+   "hint1": "Eén meter (m) is duizend millimeter (mm). Een millimeter is kleiner dan een meter, dus het getal wordt groter.",
+   "hint2": "Doe het aantal meter keer duizend: schrijf er drie nullen achter.",
+   "ouderzin": "Je kind rekent lengtematen om: van meter naar millimeter (keer duizend).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Eén meter is duizend millimeter: doe keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Eén meter is duizend millimeter: doe keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Heb je helemaal omgerekend naar millimeter? Eén meter is duizend millimeter: doe keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Reken nog eens om. Eén meter is duizend millimeter: doe keer duizend.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén meter (m) is duizend millimeter (mm). Doe het aantal meter keer duizend."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'maattrap' zonder uitleg; nu de omrekenregel zelf (één … is tien/honderd/duizend …), per sleutel nagerekend"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "geen 'staat al in de som' (les 20); nu 'Je hebt het getal niet omgerekend'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E01",
+   "nr": 4,
+   "somtype": "# m = □ km",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "# m = □ km",
+   "hint1": "Eén kilometer (km) is duizend meter (m). Een kilometer is groter dan een meter, dus het getal wordt kleiner.",
+   "hint2": "Deel het aantal meter door duizend: haal er drie nullen af.",
+   "ouderzin": "Je kind rekent lengtematen om: van meter naar kilometer (gedeeld door duizend).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Duizend meter is één kilometer: deel door duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je helemaal omgerekend naar kilometer? Duizend meter is één kilometer: deel door duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Duizend meter is één kilometer: deel door duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Reken nog eens om. Duizend meter is één kilometer: deel door duizend.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kilometer (km) is duizend meter (m). Deel het aantal meter door duizend."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'maattrap' zonder uitleg; nu de omrekenregel zelf (één … is tien/honderd/duizend …), per sleutel nagerekend"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "geen 'staat al in de som' (les 20); nu 'Je hebt het getal niet omgerekend'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E01",
+   "nr": 5,
+   "somtype": "# mm = □ m",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "# mm = □ m",
+   "hint1": "Eén meter (m) is duizend millimeter (mm). Een meter is groter dan een millimeter, dus het getal wordt kleiner.",
+   "hint2": "Deel het aantal millimeter door duizend: haal er drie nullen af.",
+   "ouderzin": "Je kind rekent lengtematen om: van millimeter naar meter (gedeeld door duizend).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Duizend millimeter is één meter: deel door duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je helemaal omgerekend naar meter? Duizend millimeter is één meter: deel door duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Duizend millimeter is één meter: deel door duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Reken nog eens om. Duizend millimeter is één meter: deel door duizend.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén meter (m) is duizend millimeter (mm). Deel het aantal millimeter door duizend."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'maattrap' zonder uitleg; nu de omrekenregel zelf (één … is tien/honderd/duizend …), per sleutel nagerekend"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "geen 'staat al in de som' (les 20); nu 'Je hebt het getal niet omgerekend'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E04",
+   "nr": 1,
+   "somtype": "# L = □ cl",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# L = □ cl",
+   "hint1": "Eén liter (L) is honderd centiliter (cl). Een centiliter is kleiner dan een liter, dus het getal wordt groter.",
+   "hint2": "Doe het aantal liter keer honderd: schrijf er twee nullen achter.",
+   "ouderzin": "Je kind rekent inhoudsmaten om: van liter naar centiliter (keer honderd).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Eén liter is honderd centiliter: doe keer honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Je hebt keer duizend gedaan. Eén liter is honderd centiliter: doe keer honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Heb je helemaal omgerekend naar centiliter? Eén liter is honderd centiliter: doe keer honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Reken nog eens om. Eén liter is honderd centiliter: doe keer honderd.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén liter (L) is honderd centiliter (cl). Doe het aantal liter keer honderd."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'maattrap' zonder uitleg; nu de omrekenregel zelf (één … is tien/honderd/duizend …), per sleutel nagerekend"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "geen 'staat al in de som' (les 20); nu 'Je hebt het getal niet omgerekend'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E04",
+   "nr": 2,
+   "somtype": "# cl = □ L",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# cl = □ L",
+   "hint1": "Eén liter (L) is honderd centiliter (cl). Een liter is groter dan een centiliter, dus het getal wordt kleiner.",
+   "hint2": "Deel het aantal centiliter door honderd: haal er twee nullen af.",
+   "ouderzin": "Je kind rekent inhoudsmaten om: van centiliter naar liter (gedeeld door honderd).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Honderd centiliter is één liter: deel door honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je helemaal omgerekend naar liter? Honderd centiliter is één liter: deel door honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Je hebt door duizend gedeeld. Honderd centiliter is één liter: deel door honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Reken nog eens om. Honderd centiliter is één liter: deel door honderd.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén liter (L) is honderd centiliter (cl). Deel het aantal centiliter door honderd."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'maattrap' zonder uitleg; nu de omrekenregel zelf (één … is tien/honderd/duizend …), per sleutel nagerekend"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "geen 'staat al in de som' (les 20); nu 'Je hebt het getal niet omgerekend'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E04",
+   "nr": 3,
+   "somtype": "# L = □ ml",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "# L = □ ml",
+   "hint1": "Eén liter (L) is duizend milliliter (ml). Een milliliter is kleiner dan een liter, dus het getal wordt groter.",
+   "hint2": "Doe het aantal liter keer duizend: schrijf er drie nullen achter.",
+   "ouderzin": "Je kind rekent inhoudsmaten om: van liter naar milliliter (keer duizend).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Eén liter is duizend milliliter: doe keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Eén liter is duizend milliliter: doe keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Heb je helemaal omgerekend naar milliliter? Eén liter is duizend milliliter: doe keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Reken nog eens om. Eén liter is duizend milliliter: doe keer duizend.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén liter (L) is duizend milliliter (ml). Doe het aantal liter keer duizend."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'maattrap' zonder uitleg; nu de omrekenregel zelf (één … is tien/honderd/duizend …), per sleutel nagerekend"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "geen 'staat al in de som' (les 20); nu 'Je hebt het getal niet omgerekend'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E04",
+   "nr": 4,
+   "somtype": "# ml = □ L",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "# ml = □ L",
+   "hint1": "Eén liter (L) is duizend milliliter (ml). Een liter is groter dan een milliliter, dus het getal wordt kleiner.",
+   "hint2": "Deel het aantal milliliter door duizend: haal er drie nullen af.",
+   "ouderzin": "Je kind rekent inhoudsmaten om: van milliliter naar liter (gedeeld door duizend).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Duizend milliliter is één liter: deel door duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je helemaal omgerekend naar liter? Duizend milliliter is één liter: deel door duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Duizend milliliter is één liter: deel door duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Reken nog eens om. Duizend milliliter is één liter: deel door duizend.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén liter (L) is duizend milliliter (ml). Deel het aantal milliliter door duizend."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'maattrap' zonder uitleg; nu de omrekenregel zelf (één … is tien/honderd/duizend …), per sleutel nagerekend"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "geen 'staat al in de som' (les 20); nu 'Je hebt het getal niet omgerekend'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E05",
+   "nr": 1,
+   "somtype": "# kg = □ g",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# kg = □ g",
+   "hint1": "Eén kilogram (kg) is duizend gram (g). Een gram is kleiner dan een kilogram, dus het getal wordt groter.",
+   "hint2": "Doe het aantal kilogram keer duizend: schrijf er drie nullen achter.",
+   "ouderzin": "Je kind rekent gewichtsmaten om: van kilogram naar gram (keer duizend).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Eén kilogram is duizend gram: doe keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Eén kilogram is duizend gram: doe keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Heb je helemaal omgerekend naar gram? Eén kilogram is duizend gram: doe keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Reken nog eens om. Eén kilogram is duizend gram: doe keer duizend.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kilogram (kg) is duizend gram (g). Doe het aantal kilogram keer duizend."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'maattrap' zonder uitleg; nu de omrekenregel zelf (één … is tien/honderd/duizend …), per sleutel nagerekend"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "geen 'staat al in de som' (les 20); nu 'Je hebt het getal niet omgerekend'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E05",
+   "nr": 2,
+   "somtype": "# g = □ kg",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# g = □ kg",
+   "hint1": "Eén kilogram (kg) is duizend gram (g). Een kilogram is groter dan een gram, dus het getal wordt kleiner.",
+   "hint2": "Deel het aantal gram door duizend: haal er drie nullen af.",
+   "ouderzin": "Je kind rekent gewichtsmaten om: van gram naar kilogram (gedeeld door duizend).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet omgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal niet omgerekend. Duizend gram is één kilogram: deel door duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Heb je helemaal omgerekend naar kilogram? Duizend gram is één kilogram: deel door duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Duizend gram is één kilogram: deel door duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Reken nog eens om. Duizend gram is één kilogram: deel door duizend.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kilogram (kg) is duizend gram (g). Deel het aantal gram door duizend."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'maattrap' zonder uitleg; nu de omrekenregel zelf (één … is tien/honderd/duizend …), per sleutel nagerekend"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "geen 'staat al in de som' (les 20); nu 'Je hebt het getal niet omgerekend'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E05",
+   "nr": 3,
+   "somtype": "Een pakket weegt # kg, een ander # kg. Hoeveel kg wegen ze samen?",
+   "hint1": "Zet de komma's recht onder elkaar. Heeft één getal minder cijfers achter de komma? Schrijf er dan een nul achter.",
+   "hint2": "Tel op van rechts naar links: eerst de honderdsten, dan de tienden, dan de hele kilogrammen. Komt een kolom op tien of meer? Dan gaat er één mee naar links.",
+   "ouderzin": "Je kind telt twee gewichten met een komma op: de komma's recht onder elkaar.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "rechts tegen elkaar",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "tekst": "Je hebt de getallen rechts tegen elkaar gezet. Zet de komma's recht onder elkaar. Schrijf een nul achter het getal met minder cijfers achter de komma.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1,0",
+     "tekst": "Dat is één kilogram te veel. Tel de hele kilogrammen nog eens na. Er gaat alleen één mee als de tienden samen op tien of meer komen, en dan maar één keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiende te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 0,1",
+     "tekst": "Bijna! Dat is een tiende te weinig. Tel de tienden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiende te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 0,1",
+     "tekst": "Bijna! Dat is een tiende te veel. Tel de tienden nog eens na. Gaat er alleen één mee als de honderdsten samen op tien of meer komen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet de komma's recht onder elkaar en schrijf zo nodig een nul erachter. Tel op van rechts naar links en zet de komma in je antwoord recht eronder."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "5,2 is 5,20: zet de komma's recht onder elkaar, niet de laatste cijfers.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Alleen als de tienden samen boven de 10 komen, gaat er een hele bij.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Tel de tienden nog eens na.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "9,7 is 9,70: zet de komma's recht onder elkaar, niet de laatste cijfers.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "6,6 is 6,60: zet de komma's recht onder elkaar, niet de laatste cijfers.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "verhuisd": {
+    "van": "G6-MEET-E01",
+    "nrOrigineel": 6,
+    "naar": "G6-MEET-E05",
+    "besluit": "Leerlijn #217/#261",
+    "op": "2026-10-01"
+   },
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Een pakket weegt # kg, een ander # kg. Hoeveel kg wegen ze samen?"
+  },
+  {
+   "doel": "G6-MEET-E01",
+   "nr": 6,
+   "somtype": "[schema] strook",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "[schema] strook",
+   "hint1": "Maak eerst van alles meters: één kilometer is duizend meter.",
+   "hint2": "Tel daarna alle stukken bij elkaar op. Zo lang is de hele strook.",
+   "ouderzin": "Je kind tekent afstanden als één strook en rekent kilometers om naar meters.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (keer)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 keer het aantal nullen van de factor",
+     "tekst": "Je hebt keer [nullen] gedaan. [Factor] heeft [nullen] nullen, maar je doet keer [factor]: schrijf er [nullen] nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal nullen als factor (delen)",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 gedeeld door het aantal nullen van de factor",
+     "tekst": "Je hebt door [nullen] gedeeld. [Factor] heeft [nullen] nullen, maar je deelt door [factor]: haal er [nullen] nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "niet goed omgerekend",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Reken de kilometers goed om naar meters: één kilometer is duizend meter. Tel daarna alles bij elkaar op.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "in kilometers",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "regel": "Claudes sleutel: plaatswaarde-verkeerd",
+     "tekst": "Dat is het aantal kilometer. Hoeveel meter is dat? Eén kilometer is duizend meter.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "afgehaald",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Je hebt de stukken van elkaar afgehaald. De strook is alles samen: tel de stukken bij elkaar op.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Maak van alle stukken meters: één kilometer is duizend meter. Tel de stukken daarna bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bedenk eerst hoeveel meter er in 1 km gaan.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt twee stukken gefietst. Tel eerst de kilometers bij elkaar op.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Reken de kilometers eerst goed om. 1 km is veel meer dan 100 meter.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Let op de eenheid. De strook gaat over meters, niet over kilometers.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E03",
+   "nr": 1,
+   "somtype": "Een rechthoek is # cm lang en # cm breed. Hoeveel cm² is de oppervlakte?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Een rechthoek is # cm lang en # cm breed. Hoeveel vierkante cm is de oppervlakte?",
+   "hint1": "De oppervlakte is wat er binnen de rechthoek zit. Je meet die in cm² (vierkante centimeter): vierkantjes van één centimeter bij één centimeter.",
+   "hint2": "Leg de vierkantjes in rijen. Een rij zo lang als de lengte heeft zoveel vierkantjes als de lengte, en er passen zoveel rijen als de breedte. Met rijen zo lang als de breedte gaat het ook. Reken de lengte keer de breedte.",
+   "ouderzin": "Je kind rekent de oppervlakte van een rechthoek uit in cm²: de lengte keer de breedte.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de lengte en de breedte opgeteld. Voor de oppervlakte reken je de lengte keer de breedte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "omtrek in plaats van oppervlakte",
+     "claudeDenkfout": null,
+     "regel": "fout = (getal1 + getal2) × 2",
+     "tekst": "Dat is de omtrek: de lengte van de rand eromheen. De oppervlakte is wat erbinnen zit: reken de lengte keer de breedte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "oppervlakte verdubbeld",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 2",
+     "tekst": "Je hebt de oppervlakte verdubbeld. De lengte keer de breedte is al de hele oppervlakte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rij van de lengte te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is precies één rij te veel: een rij zo lang als de lengte. Reken de lengte keer de breedte nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rij van de lengte te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is precies één rij te weinig: een rij zo lang als de lengte. Reken de lengte keer de breedte nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rij van de breedte te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is precies één rij te veel: een rij zo lang als de breedte. Reken de lengte keer de breedte nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rij van de breedte te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is precies één rij te weinig: een rij zo lang als de breedte. Reken de lengte keer de breedte nog eens na."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "omtrek",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "regel": "Claudes sleutel: omtrek-oppervlakte-verwisseld",
+     "tekst": "Dat is de omtrek: de lengte van de rand eromheen. De oppervlakte is wat erbinnen zit: reken de lengte keer de breedte.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken de lengte keer de breedte. Zoveel vierkantjes van één centimeter bij één centimeter passen erin."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast': de fout-hint zegt wat het kind deed ('Bijna!' alleen bij één stap ernaast)"
+    },
+    {
+     "claudeTekst": "Omtrek is de lijn eromheen (optellen). Oppervlakte is wat erbinnen zit (lengte keer breedte).",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Een rechthoek is # cm lang en # cm breed. Hoeveel vierkante cm is de oppervlakte?",
+    "naar": "Een rechthoek is # cm lang en # cm breed. Hoeveel cm² is de oppervlakte?",
+    "op": "2026-10-01"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E03",
+   "nr": 2,
+   "somtype": "De oppervlakte van een rechthoek is # cm². Eén zijde is # cm. Hoe lang is de andere zijde in cm?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "De oppervlakte van een rechthoek is # vierkante cm. Eén zijde is # cm. Hoe lang is de andere zijde in cm?",
+   "hint1": "De oppervlakte in cm² (vierkante centimeter) is de ene zijde keer de andere zijde.",
+   "hint2": "Welk getal keer de zijde die je weet, is de oppervlakte? Deel de oppervlakte door de zijde die je weet.",
+   "ouderzin": "Je kind zoekt de andere zijde van een rechthoek als de oppervlakte en één zijde bekend zijn: de oppervlakte gedeeld door de zijde.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "zijde uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Is dat de zijde die je al weet? Je zoekt de andere zijde: deel de oppervlakte door de zijde die je weet. Reken na: jouw antwoord keer die zijde is de oppervlakte.",
+     "tekstSterker": "Je zoekt de andere zijde, niet de zijde uit de vraag. Welk getal keer de zijde die je weet is precies de oppervlakte? Dat vind je met oppervlakte : zijde."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de oppervlakte en de zijde opgeteld. De oppervlakte is de ene zijde keer de andere: deel de oppervlakte door de zijde die je weet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgehaald",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Je hebt de zijde van de oppervlakte afgehaald. Deel de oppervlakte door de zijde die je weet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt de oppervlakte keer de zijde gedaan. Je zoekt de andere zijde: deel de oppervlakte door de zijde die je weet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Dat is één te veel. Reken na: jouw antwoord keer de zijde is dan meer dan de oppervlakte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Dat is één te weinig. Reken na: jouw antwoord keer de zijde is dan minder dan de oppervlakte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel de oppervlakte door de zijde die je weet. Reken na: jouw antwoord keer die zijde moet precies de oppervlakte zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "past niet bij deze som (er komt niets bij of af)"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast': de fout-hint zegt wat het kind deed ('Bijna!' alleen bij één stap ernaast)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "De oppervlakte van een rechthoek is # vierkante cm. Eén zijde is # cm. Hoe lang is de andere zijde in cm?",
+    "naar": "De oppervlakte van een rechthoek is # cm². Eén zijde is # cm. Hoe lang is de andere zijde in cm?",
+    "op": "2026-10-01"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E03",
+   "nr": 3,
+   "somtype": "Bij [plek] ligt een [veld] van # meter lang en # meter breed. Hoeveel m² is dat?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Bij [plek] ligt een [veld] van # meter lang en # meter breed. Hoeveel vierkante meter is dat?",
+   "hint1": "De oppervlakte is wat erbinnen zit. Je meet die hier in m² (vierkante meter): vierkanten van één meter bij één meter.",
+   "hint2": "Leg de vierkanten van één meter bij één meter in rijen. Een rij is zo lang als de lengte, en er passen zoveel rijen als de breedte. Met rijen zo lang als de breedte gaat het ook. Reken de lengte keer de breedte.",
+   "ouderzin": "Je kind rekent de oppervlakte van een rechthoekig stuk grond uit in m²: de lengte keer de breedte.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de lengte en de breedte opgeteld. Voor de oppervlakte reken je de lengte keer de breedte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "omtrek in plaats van oppervlakte",
+     "claudeDenkfout": null,
+     "regel": "fout = (getal1 + getal2) × 2",
+     "tekst": "Dat is de omtrek: de lengte van de rand eromheen. De oppervlakte is wat erbinnen zit: reken de lengte keer de breedte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "oppervlakte verdubbeld",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 2",
+     "tekst": "Je hebt de oppervlakte verdubbeld. De lengte keer de breedte is al de hele oppervlakte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rij van de lengte te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is precies één rij te veel: een rij zo lang als de lengte. Reken de lengte keer de breedte nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rij van de lengte te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is precies één rij te weinig: een rij zo lang als de lengte. Reken de lengte keer de breedte nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rij van de breedte te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is precies één rij te veel: een rij zo lang als de breedte. Reken de lengte keer de breedte nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rij van de breedte te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is precies één rij te weinig: een rij zo lang als de breedte. Reken de lengte keer de breedte nog eens na."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "omtrek of verdubbeld",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "regel": "Claudes sleutel: omtrek-oppervlakte-verwisseld",
+     "tekst": "Dat is niet de oppervlakte. De oppervlakte is wat erbinnen zit: reken de lengte keer de breedte. Je hoeft niets op te tellen of te verdubbelen.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken de lengte keer de breedte. Zoveel vierkanten van één meter bij één meter passen erin."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de omtrek: de lijn eromheen. Oppervlakte is wat erbinnen zit: lengte × breedte.",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Stel je 4 rijen van 7 tegels voor. Hoeveel tegels zijn dat? Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Bij oppervlakte hoef je niet te verdubbelen. Dat doe je alleen bij de omtrek.",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Stel je 11 rijen van 12 tegels voor. Hoeveel tegels zijn dat? Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Stel je 4 rijen van 11 tegels voor. Hoeveel tegels zijn dat? Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Bij [plek] ligt een [veld] van # meter lang en # meter breed. Hoeveel vierkante meter is dat?",
+    "naar": "Bij [plek] ligt een [veld] van # meter lang en # meter breed. Hoeveel m² is dat?",
+    "op": "2026-10-01"
+   },
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MEET-E03",
+   "nr": 4,
+   "somtype": "Bij het huis ligt een tuin van # meter lang en # meter breed. Hoeveel m² is dat?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Bij het huis ligt een tuin van # meter lang en # meter breed. Hoeveel vierkante meter is dat?",
+   "hint1": "De oppervlakte is wat erbinnen zit. Je meet die hier in m² (vierkante meter): vierkanten van één meter bij één meter.",
+   "hint2": "Leg de vierkanten van één meter bij één meter in rijen. Een rij is zo lang als de lengte, en er passen zoveel rijen als de breedte. Met rijen zo lang als de breedte gaat het ook. Reken de lengte keer de breedte.",
+   "ouderzin": "Je kind rekent de oppervlakte van een rechthoekig stuk grond uit in m²: de lengte keer de breedte.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de lengte en de breedte opgeteld. Voor de oppervlakte reken je de lengte keer de breedte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "omtrek in plaats van oppervlakte",
+     "claudeDenkfout": null,
+     "regel": "fout = (getal1 + getal2) × 2",
+     "tekst": "Dat is de omtrek: de lengte van de rand eromheen. De oppervlakte is wat erbinnen zit: reken de lengte keer de breedte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "oppervlakte verdubbeld",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 2",
+     "tekst": "Je hebt de oppervlakte verdubbeld. De lengte keer de breedte is al de hele oppervlakte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rij van de lengte te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is precies één rij te veel: een rij zo lang als de lengte. Reken de lengte keer de breedte nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rij van de lengte te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is precies één rij te weinig: een rij zo lang als de lengte. Reken de lengte keer de breedte nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rij van de breedte te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is precies één rij te veel: een rij zo lang als de breedte. Reken de lengte keer de breedte nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rij van de breedte te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is precies één rij te weinig: een rij zo lang als de breedte. Reken de lengte keer de breedte nog eens na."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "omtrek of verdubbeld",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "regel": "Claudes sleutel: omtrek-oppervlakte-verwisseld",
+     "tekst": "Dat is niet de oppervlakte. De oppervlakte is wat erbinnen zit: reken de lengte keer de breedte. Je hoeft niets op te tellen of te verdubbelen.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken de lengte keer de breedte. Zoveel vierkanten van één meter bij één meter passen erin."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de omtrek: de lijn eromheen. Oppervlakte is wat erbinnen zit: lengte × breedte.",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Stel je 3 rijen van 12 tegels voor. Hoeveel tegels zijn dat? Dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Bij oppervlakte hoef je niet te verdubbelen. Dat doe je alleen bij de omtrek.",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Bij het huis ligt een tuin van # meter lang en # meter breed. Hoeveel vierkante meter is dat?",
+    "naar": "Bij het huis ligt een tuin van # meter lang en # meter breed. Hoeveel m² is dat?",
+    "op": "2026-10-01"
+   },
+   "koppeling": "claudeId"
+  }
+ ]
+}

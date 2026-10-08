@@ -1,0 +1,702 @@
+{
+ "batch": 2,
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G3-pilot). 'nr' = nummer van '## Somtype n' in somtypen/<doel>.md. foutHints: per soort fout; 'claude' = tekst van Claude blijft (ok), 'nieuw' = vervangen. 'regel' zegt welke foute invoer bij de soort hoort (getal1/getal2 = getallen in de opgave, in volgorde). Bij 'claude' met '…' of '[plek]' is de tekst per item verschillend; die blijft per item staan.",
+ "somtypen": [
+  {
+   "doel": "G3-GET-K05",
+   "nr": 1,
+   "hint1": "Er komen dingen bij, dus het worden er meer. Welke plussom hoort bij het verhaal?",
+   "hint2": "Begin bij het grootste getal. Zijn ze even groot? Begin dan bij het eerste. Tel de rest erbij, één voor één. Je mag je vingers gebruiken.",
+   "ouderzin": "Je kind rekent een verhaal uit waarin er dingen bijkomen, tot 12.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = verschil van de getallen",
+     "tekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
+    },
+    {
+     "bron": "claude-taalfix",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord − 10",
+     "tekst": "Je bent het tiental kwijt. Tel nog eens rustig verder.",
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "waarom": "taalfix Didactiek Z7*"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Je zit er net naast. Tel de rest nog eens één voor één erbij.",
+     "claudeDenkfout": "een-ernaast",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "ook gebruikt bij 2 ernaast"
+    }
+   ],
+   "somtype": "Er liggen # [ding]. Er komen er # bij. Hoeveel liggen er nu?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Er liggen # [ding]. Er komen er # bij. Hoeveel liggen er nu?"
+  },
+  {
+   "doel": "G3-GET-K05",
+   "nr": 2,
+   "hint1": "Er gaan dingen weg, dus het worden er minder. Welke minsom hoort bij het verhaal?",
+   "hint2": "Tel terug vanaf het eerste getal. Ga je voorbij de 10? Stop dan eerst bij 10. Haal daarna de rest eraf.",
+   "ouderzin": "Je kind rekent een verhaal uit waarin er dingen weggaan, tot 12.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat kan niet. Er gaan dingen weg. Dan worden het er minder. Tel nog eens terug vanaf het eerste getal.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "claudeTekst": "Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen.",
+     "waarom": "hoort bij een plussom; hier gaat er iets af"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Je zit er net naast. Tel nog eens terug, één tegelijk.",
+     "claudeDenkfout": "een-ernaast",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "ook gebruikt bij 2 ernaast"
+    }
+   ],
+   "somtype": "Er liggen # [ding]. Er gaan er # weg. Hoeveel liggen er nu?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Er liggen # [ding]. Er gaan er # weg. Hoeveel liggen er nu?"
+  },
+  {
+   "doel": "G3-GET-K05",
+   "nr": 3,
+   "hint1": "Het eerste getal is alles samen. Hoeveel er op de ene plek liggen, weet je al. Hoeveel blijven er dan over voor de andere?",
+   "hint2": "Tel verder vanaf het getal dat je weet, tot je bij alles samen bent. Tel hoeveel stappen je zet. Je mag je vingers gebruiken.",
+   "ouderzin": "Je kind zoekt het andere deel als alles samen en één deel bekend zijn (splitsen tot 10).",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "fout = getal1 (alles samen); tekst per item",
+     "tekst": "Niet alles ligt in [plek]. Een deel ligt al in [andere plek]; hoeveel blijven er dan over?"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "fout = getal2 (het deel dat je weet)",
+     "tekst": "Dat is het deel dat je al kent. Het andere deel is gevraagd."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout ligt 1 naast het antwoord (twee teksten van Claude, allebei ok)",
+     "tekst": "Tel na: de twee delen moeten samen precies het hele getal zijn. / Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen bij elkaar gedaan. Maar het eerste getal is al alles samen. Hoeveel moet er nog bij het deel dat je weet?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 2 naast het antwoord, of een andere fout",
+     "tekst": "Dat klopt nog niet. Tel verder vanaf het deel dat je weet, tot alles samen. Tel je stappen goed."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": null,
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "waarom": "algemeen; benoemt de fout niet en er staat geen som"
+    }
+   ],
+   "somtype": "# [ding] over twee [plekken]; in de ene liggen er #. Hoeveel liggen er in de andere?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "# [ding] over twee [plekken]; in de ene liggen er #. Hoeveel liggen er in de andere?"
+  },
+  {
+   "doel": "G3-GET-K05",
+   "nr": 4,
+   "hint1": "Er gaan dingen weg, dus er blijven er minder over. Welke minsom past bij het verhaal?",
+   "hint2": "Tel terug vanaf het eerste getal. Ga je voorbij de 10? Stop dan eerst bij 10. Haal daarna de rest eraf.",
+   "ouderzin": "Je kind rekent uit hoeveel er overblijven als er dingen weggaan, tot 12.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 + getal2 (twee teksten van Claude, allebei ok)",
+     "tekst": "Er gaan dingen weg, dus het worden er minder. Dit is een minsom. / Er gaan dingen weg. Dat is een minsom.",
+     "claudeTekst": "Er gaan er weg, dus het worden er minder. Dit is een minsom. / Er gaan er weg: dat is een minsom.",
+     "waarom": "taalfix Didactiek W2"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 1",
+     "tekst": "Tel nog eens terug, één tegelijk."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 1 (tekst per item, met de stap naar 10)",
+     "tekst": "Ga eerst naar de 10 (… − …), en haal dan de rest eraf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "cijfers omgedraaid",
+     "regel": "fout = getal2 − de eenheden van getal1",
+     "tekst": "Je hebt de cijfers omgedraaid. Begin bij het hele eerste getal. Ga eerst terug naar 10 en haal dan de rest eraf.",
+     "claudeDenkfout": "kleinste-van-grootste",
+     "claudeTekst": "Je hebt de getallen omgedraaid. Begin bij het grote getal en tel terug.",
+     "waarom": "het kind draaide alleen de eenheden om, niet de hele getallen"
+    }
+   ],
+   "somtype": "In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over?"
+  },
+  {
+   "doel": "G3-GET-K05",
+   "nr": 5,
+   "hint1": "Er komen dingen bij, dus het worden er meer. Welke plussom past bij het verhaal?",
+   "hint2": "Begin bij het grootste getal. Zijn ze even groot? Begin dan bij het eerste. Tel de rest erbij, één voor één. Je mag je vingers gebruiken.",
+   "ouderzin": "Je kind rekent uit hoeveel het er samen zijn als er dingen bijkomen, tot 12.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = verschil van de getallen (twee teksten van Claude, allebei ok)",
+     "tekst": "Er komt iets bij, dus het worden er meer. Dit is een plussom. / Er komt iets bij. Dat is een plussom.",
+     "claudeTekst": "Er komt bij, dus het worden er meer. Dit is een plussom. / Er komt bij: dat is een plussom.",
+     "waarom": "taalfix Didactiek W2"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 1",
+     "tekst": "Tel nog eens na op je vingers."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 1 (tekst per item, met de stap naar 10)",
+     "tekst": "Ga eerst naar de 10 (… + …), en tel dan de rest erbij."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord − 10",
+     "tekst": "Je bent het tiental kwijt. Het antwoord is meer dan 10."
+    }
+   ],
+   "somtype": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel liggen er nu?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel liggen er nu?"
+  },
+  {
+   "doel": "G3-GET-M01",
+   "nr": 1,
+   "hint1": "Vóór betekent: één terug tellen.",
+   "hint2": "Zeg het getal hardop en tel één stap terug. Eindigt het getal op een 0? Dan eindigt het getal ervoor op een 9.",
+   "ouderzin": "Je kind noemt het getal dat vóór een getal tot 100 komt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tien te ver",
+     "regel": "fout = getal − 10 of antwoord − 10",
+     "tekst": "Dat is veel te ver terug. Vóór betekent: maar één stap terug.",
+     "claudeDenkfout": "tiental-ernaast",
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "waarom": "bij getal − 10 zit het kind 9 naast; de echte fout is 10 terug in plaats van 1"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verder",
+     "regel": "fout = getal + 1",
+     "tekst": "Je bent verder geteld. Vóór betekent: één terug.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "waarom": "past bij een verhaal, niet bij 'vóór'"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal + 1 (alleen bij 2 items; tekst per item)",
+     "tekst": "Vóór … betekent één minder, niet één meer."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 1",
+     "tekst": "Je bent er twee teruggegaan. Ga precies één terug."
+    }
+   ],
+   "somtype": "Welk getal komt vóór #?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Welk getal komt vóór #?"
+  },
+  {
+   "doel": "G3-GET-M01",
+   "nr": 2,
+   "hint1": "Het goede getal ligt tussen de twee getallen in.",
+   "hint2": "Begin bij het kleinste getal en tel één verder. Is het getal daarna het grootste getal? Dan heb je het goede getal. Eindigt het kleinste getal op een 9? Dan eindigt het getal ertussen op een 0.",
+   "ouderzin": "Je kind zoekt het getal dat tussen twee getallen tot 100 ligt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "overgenomen",
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Zoek het getal dat ertussen ligt.",
+     "claudeDenkfout": "getal-overgenomen",
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "waarom": "er is geen som en geen bewerking"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ervoor",
+     "regel": "fout kleiner dan het kleinste getal",
+     "tekst": "Dat getal komt vóór de twee getallen. Het goede getal ligt ertussen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "waarom": "past bij een verhaal, niet bij 'tussen'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te ver",
+     "regel": "fout = antwoord + 9 of + 10",
+     "tekst": "Dat is veel te ver. Het goede getal ligt tussen de twee getallen in.",
+     "claudeDenkfout": "tiental-ernaast",
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "waarom": "benoemt niet dat het getal ertussen moet liggen; bij + 9 klopt 'één tiental' niet precies"
+    }
+   ],
+   "somtype": "Welk getal hoort tussen # en #?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Welk getal hoort tussen # en #?"
+  },
+  {
+   "doel": "G3-GET-M01",
+   "nr": 3,
+   "hint1": "Na betekent: één verder tellen.",
+   "hint2": "Zeg het getal hardop en tel één stap verder. Eindigt het getal op een 9? Dan eindigt het getal erna op een 0.",
+   "ouderzin": "Je kind noemt het getal dat na een getal tot 100 komt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "terug",
+     "regel": "fout kleiner dan het getal in de vraag",
+     "tekst": "Je bent teruggegaan. Na betekent: één verder.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "waarom": "past bij een verhaal, niet bij 'na'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te ver",
+     "regel": "fout = getal + 10 of antwoord + 10",
+     "tekst": "Dat is veel te ver. Na betekent: maar één stap verder.",
+     "claudeDenkfout": "tiental-ernaast",
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "waarom": "bij getal + 10 zit het kind 9 naast; de echte fout is 10 verder in plaats van 1"
+    }
+   ],
+   "somtype": "Welk getal komt na #?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Welk getal komt na #?"
+  },
+  {
+   "doel": "G3-GET-M02",
+   "nr": 1,
+   "hint1": "Kijk naar de rijen. Hoeveel staan er in een volle rij?",
+   "hint2": "Tel eerst de volle rijen. Tel daarna de rest één voor één erbij. Wijs elke vorm maar één keer aan.",
+   "ouderzin": "Je kind telt vormen in rijtjes tot 20 handig: eerst de volle rijen, dan de rest.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat zijn er te veel. Wijs elke vorm maar één keer aan. Tel eerst de volle rijen en dan de rest.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "claudeTekst": "Leg je vinger op de rij of staaf uit de vraag en schuif hem naar de as. Kijk hoeveel elk streepje waard is.",
+     "waarom": "er is geen grafiek, staaf of as"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Je bent er een paar vergeten. Tel ook de losse vormen erbij.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "waarom": "vaag; het kind telde alleen de volle rijen"
+    }
+   ],
+   "somtype": "[groepjes] Hoeveel [ding] zie je?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[groepjes] Hoeveel [ding] zie je?"
+  },
+  {
+   "doel": "G3-GET-M02",
+   "nr": 2,
+   "hint1": "Hoeveel zie je er al? En hoeveel moeten er dan nog bij tot het getal uit de vraag?",
+   "hint2": "Tel eerst hoeveel er al zijn. Tel dan verder tot het getal uit de vraag, en houd bij hoeveel stappen je zet. Een volle rij helpt je bij het tellen.",
+   "ouderzin": "Je kind zoekt hoeveel er nog bij moeten om tot 20 aan te vullen, met een plaatje in rijtjes.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "al geteld",
+     "regel": "fout = het aantal in de tekening",
+     "tekst": "Zoveel zie je er al. De vraag is hoeveel er nog bij moeten.",
+     "claudeDenkfout": "getal-overgenomen",
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "waarom": "er is geen som; het kind gaf het aantal dat er al is"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat zijn er te weinig. Tel eerst hoeveel er al zijn. Tel dan verder tot het getal uit de vraag.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "claudeTekst": "Leg je vinger op de rij of staaf uit de vraag en schuif hem naar de as. Kijk hoeveel elk streepje waard is.",
+     "waarom": "er is geen grafiek, staaf of as"
+    }
+   ],
+   "somtype": "[groepjes] Hoeveel [ding] moeten er nog bij om # te maken?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[groepjes] Hoeveel [ding] moeten er nog bij om # te maken?"
+  },
+  {
+   "doel": "G3-GET-M04",
+   "nr": 1,
+   "hint1": "Kijk naar de plussom. Die drie getallen horen bij elkaar.",
+   "hint2": "De plussom zegt welke twee delen samen het grootste getal maken. Haal je het ene deel eraf? Dan blijft het andere deel over.",
+   "ouderzin": "Je kind gebruikt een plussom tot 10 om de minsom die erbij hoort te maken.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "fout = het getal dat eraf gaat; tekst per item",
+     "tekst": "Je haalt … eraf. Wat blijft er over? Het andere getal uit de plussom."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "fout = het hele getal; tekst per item",
+     "tekst": "… is het geheel. Na het weghalen blijft er minder over."
+    },
+    {
+     "bron": "claude-taalfix",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal opgeteld in plaats van eraf",
+     "tekst": "Dit is een minsom. Het antwoord is kleiner dan het grootste getal.",
+     "claudeTekst": "Dit is een minsom. Het antwoord is kleiner dan het eerste getal.",
+     "waarom": "taalfix Didactiek W5"
+    }
+   ],
+   "somtype": "# + # = #. Dan weet je ook hoeveel # − # is. Denk aan # [ding] waarvan er # [ding]. ⏎ # − # = □",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# + # = #. Dan weet je ook hoeveel # − # is. Denk aan # [ding] waarvan er # [ding]. ⏎ # − # = □",
+   "somtypeEerder": [
+    {
+     "kop": "# + # = #. Dan weet je ook: # − # = □. Denk aan # [ding] waarvan er # [ding].",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G3-GET-M04",
+   "nr": 2,
+   "hint1": "De minsom en de plussom gebruiken dezelfde drie getallen.",
+   "hint2": "Het grootste getal is alles samen. De twee kleinere getallen zijn de delen. Welk deel mist er nog in de plussom?",
+   "ouderzin": "Je kind maakt bij een minsom tot 10 de plussom die erbij hoort.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "fout = het deel dat al in de plussom staat; tekst per item",
+     "tekst": "… staat er al. Welk getal ontbreekt uit de familie …, … en …?"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "fout = het hele getal; tekst per item",
+     "tekst": "… is de uitkomst, niet het getal dat je erbij doet."
+    }
+   ],
+   "somtype": "# − # = #. Welke plussom hoort hierbij? # + □ = #",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# − # = #. Welke plussom hoort hierbij? # + □ = #"
+  },
+  {
+   "doel": "G3-GET-M05",
+   "nr": 1,
+   "hint1": "Begin bij het grootste getal. Zijn ze even groot? Begin dan bij het eerste. Hoeveel komt erbij?",
+   "hint2": "Tel vanaf het grootste getal verder, zoveel stappen als het andere getal. Je kunt ook de vingers voor allebei de getallen opsteken en ze samen tellen.",
+   "ouderzin": "Je kind oefent plussommen tot 10 uit het hoofd.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "teken",
+     "regel": "fout = verschil van de getallen",
+     "tekst": "Kijk goed naar het teken. Het is plus: er komt iets bij.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "waarom": "er is geen verhaal; het kind keek niet goed naar het teken"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Je zit er net naast. Tel nog eens verder, één voor één.",
+     "claudeDenkfout": "een-ernaast",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "ook gebruikt bij 2 ernaast"
+    }
+   ],
+   "somtype": "# + # =",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# + # ="
+  },
+  {
+   "doel": "G3-GET-M05",
+   "nr": 2,
+   "hint1": "Hoeveel moet er bij het eerste getal om bij het laatste getal te komen?",
+   "hint2": "Tel verder vanaf het eerste getal tot het laatste getal. Tel hoeveel stappen je zet. Dat aantal komt in het hokje.",
+   "ouderzin": "Je kind zoekt het ontbrekende getal in een plussom tot 10.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de twee getallen opgeteld. Zoek hoeveel er nog bij het eerste getal moet om bij het laatste te komen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "waarom": "er is geen verhaal; het kind telde de twee getallen op"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "overgenomen",
+     "regel": "fout = getal2 (de uitkomst)",
+     "tekst": "Dat getal staat al na het isgelijkteken. Hoeveel moet er nog bij het eerste getal?",
+     "claudeDenkfout": "getal-overgenomen",
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "waarom": "vaag; zegt niet wat het kind wél moet zoeken"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Tel nog eens verder vanaf het eerste getal, en tel je stappen goed.",
+     "claudeDenkfout": "een-ernaast",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "ook gebruikt bij 2 ernaast"
+    }
+   ],
+   "somtype": "# + □ = #",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# + □ = #"
+  },
+  {
+   "doel": "G3-GET-M05",
+   "nr": 3,
+   "hint1": "Het is een minsom. Begin bij het eerste getal en haal het tweede eraf.",
+   "hint2": "Tel terug vanaf het eerste getal, zoveel stappen als het tweede getal. Of denk aan een plussom: welk getal en het tweede getal maken samen het eerste?",
+   "ouderzin": "Je kind oefent minsommen tot 10 uit het hoofd.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "teken",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Kijk goed naar het teken. Het is min: er gaat iets af.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "waarom": "er is geen verhaal; het kind keek niet goed naar het teken"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Je zit er net naast. Tel nog eens terug, één tegelijk.",
+     "claudeDenkfout": "een-ernaast",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "ook gebruikt bij 2 ernaast"
+    }
+   ],
+   "somtype": "# − # =",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "# − # =",
+   "somtypeEerder": [
+    {
+     "kop": "# - # =",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G3-GET-M05",
+   "nr": 4,
+   "hint1": "Het eerste getal is het hele getal. Eén deel staat er al. Welk deel hoort erbij?",
+   "hint2": "Tel verder vanaf het deel dat er staat tot het hele getal. Tel hoeveel stappen je zet. Je kunt ook je vingers gebruiken.",
+   "ouderzin": "Je kind oefent splitsingen tot 10 (het tweede deel zoeken).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "heel getal",
+     "regel": "fout = getal1 (het hele getal)",
+     "tekst": "Dat is het hele getal. Welk deel hoort er nog bij?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "deel",
+     "regel": "fout = getal2 (het deel dat er staat)",
+     "tekst": "Dat deel staat er al. Zoek het andere deel."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Maar het eerste getal is al het hele getal. Hoeveel hoort er bij het deel dat er staat?"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout ligt 1 naast het antwoord",
+     "tekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 2 naast het antwoord",
+     "tekst": "Bijna! Tel vanaf het deel dat er staat verder tot het hele getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "overig",
+     "regel": "andere fout",
+     "tekst": "Dat klopt nog niet. De twee delen samen moeten het hele getal zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": null,
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "waarom": "algemeen; benoemt de fout niet"
+    }
+   ],
+   "somtype": "# is # en □",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "# is # en □"
+  },
+  {
+   "doel": "G3-GET-M05",
+   "nr": 5,
+   "hint1": "Het eerste getal is het hele getal. Het tweede deel staat er al. Welk deel hoort er vooraan?",
+   "hint2": "Tel verder vanaf het deel dat er staat tot het hele getal. Tel hoeveel stappen je zet. Je kunt ook je vingers gebruiken.",
+   "ouderzin": "Je kind oefent splitsingen tot 10 (het eerste deel zoeken).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "heel getal",
+     "regel": "fout = getal1 (het hele getal)",
+     "tekst": "Dat is het hele getal. Welk deel hoort er nog bij?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "deel",
+     "regel": "fout = getal2 (het deel dat er staat)",
+     "tekst": "Dat deel staat er al. Zoek het andere deel."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Maar het eerste getal is al het hele getal. Hoeveel hoort er bij het deel dat er staat?"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout ligt 1 naast het antwoord",
+     "tekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 2 naast het antwoord",
+     "tekst": "Bijna! Tel vanaf het deel dat er staat verder tot het hele getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "overig",
+     "regel": "andere fout",
+     "tekst": "Dat klopt nog niet. De twee delen samen moeten het hele getal zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": null,
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "waarom": "algemeen; benoemt de fout niet"
+    }
+   ],
+   "somtype": "# is □ en #",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "# is □ en #"
+  },
+  {
+   "doel": "G3-GET-M05",
+   "nr": 6,
+   "hint1": "Splitsen is: het getal in twee delen verdelen. Eén deel weet je al.",
+   "hint2": "Tel verder vanaf het deel dat je weet tot het hele getal. Het aantal stappen is het andere deel.",
+   "ouderzin": "Je kind splitst een getal tot 10 in twee delen.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal + bekend deel (opgeteld)",
+     "tekst": "Je telt op, maar je moet splitsen: de twee delen samen zijn het hele getal."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 1",
+     "tekst": "Tel na: het bekende deel en jouw getal moeten samen het hele getal zijn."
+    }
+   ],
+   "somtype": "Splits #. # is # en □.",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Splits #. # is # en □.",
+   "somtypeEerder": [
+    {
+     "kop": "Splits #: # is # en hoeveel?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  }
+ ],
+ "taalfix": [
+  "2026-10-01: taalfixes Didactiek v1 verwerkt (hints/taalfix_didactiek_v1.py)"
+ ]
+}

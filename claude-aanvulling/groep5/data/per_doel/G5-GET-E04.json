@@ -1,0 +1,760 @@
+{
+ "schema": "leermees-vragenbank-export/v1 + merge/controle/licentie (claude-merge g5)",
+ "bron": {
+  "licentie": "CC BY-SA 4.0",
+  "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+  "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+  "bron": "https://github.com/Davesgit/leermees-vragenbank",
+  "commit": "7da3257a196386c700310006da60a385fbbe114f"
+ },
+ "gegenereerdOp": "2026-10-08T10:28:30+0200",
+ "g4Basis": "g4/scripts build 14:35 (kopie in scripts/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
+ "doelId": "G5-GET-E04",
+ "bordtitel": "Heel, half, kwart en deel",
+ "aantal": 4,
+ "items": [
+  {
+   "id": "G5-GET-E04-claude-bank-001",
+   "nr": "001",
+   "doelId": "G5-GET-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Kleur drie kwart van de balk.",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "3",
+   "antwoordDetail": null,
+   "hint": "De balk is verdeeld in vier gelijke stukken. Elk stuk is een kwart.",
+   "sterkereHint": "Drie kwart is drie keer een kwart. Hoeveel stukken kleur je dan?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "1",
+     "uitleg": "Je hebt één stuk gekleurd: dat is een kwart. Drie kwart is drie keer zo veel.",
+     "uitlegSterker": "Drie kwart is drie keer een kwart. Hoeveel stukken kleur je dan?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord − 2",
+     "soort": "een kwart gekleurd",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "1 → Je hebt één stuk gekleurd: dat is een kwart. Drie kwart is drie keer zo veel.",
+   "ouderzin": "Je kind kleurt drie kwart van een balk.",
+   "getallenruimte": "0–10",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "balk in 4 gelijke stukken; het kind kleurt stukken (prototype balk kleuren)",
+    "asciiSchets": false,
+    "jsRender": {
+     "soort": "balk",
+     "delen": 4,
+     "kleurbaar": true
+    },
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": "balk kleuren",
+   "bronVariant": "claude-bank:B1:0d44fa4d-3588-44d6-8b60-caf1ed1aaeac",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "3/4 van de balk",
+    "claudeUitleg": "De balk heeft 4 gelijke stukken. 3/4 betekent: 3 van die 4 stukken.",
+    "claudeStrategie": null,
+    "claudeThema": null,
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "balk",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "1",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "1",
+      "uitleg": "Kleur 3 stukken, niet 1."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "0d44fa4d-3588-44d6-8b60-caf1ed1aaeac",
+    "claudeDoel": "B1",
+    "claudeDoelTitel": "Wat is een breuk",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N15 breuk in woorden (helft/kwart, zoals onze G5-bank)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G5-GET-E04",
+    "voorstelDoel": null,
+    "regel": "G5-B01-breuk",
+    "reden": "drie kwart van een balk kleuren (G5-GET-E04: heel/half/kwart/deel)",
+    "somtype": "[balk] Kleur drie kwart van de balk.",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[balk] Kleur drie kwart van de balk.",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 1,
+     "somtype": "[balk] Kleur drie kwart van de balk."
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": 3,
+    "methode": "balk kleuren (stukken)",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord − 2",
+     "soort": "een kwart gekleurd",
+     "bron": "nieuw",
+     "tekst": "Je hebt één stuk gekleurd: dat is een kwart. Drie kwart is drie keer zo veel.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "De balk heeft vier gelijke stukken. Een kwart is één stuk. Drie kwart is drie keer een kwart.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "De balk heeft vier gelijke stukken. Een kwart is één stuk. Drie kwart is drie keer een kwart."
+  },
+  {
+   "id": "G5-GET-E04-claude-bank-002",
+   "nr": "002",
+   "doelId": "G5-GET-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Kleur een kwart van de balk.",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "1",
+   "antwoordDetail": null,
+   "hint": "De balk is verdeeld in vier gelijke stukken.",
+   "sterkereHint": "Een kwart is één van de vier gelijke stukken.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "3",
+     "uitleg": "Je hebt drie stukken gekleurd: dat is drie kwart. Een kwart is veel minder.",
+     "uitlegSterker": "Een kwart is één van de vier gelijke stukken.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord + 2",
+     "soort": "drie kwart gekleurd",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "3 → Je hebt drie stukken gekleurd: dat is drie kwart. Een kwart is veel minder.",
+   "ouderzin": "Je kind kleurt een kwart van een balk.",
+   "getallenruimte": "0–10",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "balk in 4 gelijke stukken; het kind kleurt stukken (prototype balk kleuren)",
+    "asciiSchets": false,
+    "jsRender": {
+     "soort": "balk",
+     "delen": 4,
+     "kleurbaar": true
+    },
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": "balk kleuren",
+   "bronVariant": "claude-bank:B1:527954fe-b34a-4c5e-aad7-6ad6514c4f1d",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "1/4 van de balk",
+    "claudeUitleg": "De balk heeft 4 gelijke stukken. 1/4 betekent: 1 van die 4 stukken.",
+    "claudeStrategie": null,
+    "claudeThema": null,
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "balk",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "3",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "3",
+      "uitleg": "Kleur 1 stuk, niet 3."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "527954fe-b34a-4c5e-aad7-6ad6514c4f1d",
+    "claudeDoel": "B1",
+    "claudeDoelTitel": "Wat is een breuk",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F4 grammatica",
+     "N15 breuk in woorden (helft/kwart, zoals onze G5-bank)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G5-GET-E04",
+    "voorstelDoel": null,
+    "regel": "G5-B01-breuk",
+    "reden": "een kwart van een balk kleuren (G5-GET-E04: heel/half/kwart/deel)",
+    "somtype": "[balk] Kleur een kwart van de balk.",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[balk] Kleur een kwart van de balk.",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 2,
+     "somtype": "[balk] Kleur een kwart van de balk."
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": 1,
+    "methode": "balk kleuren (stukken)",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord + 2",
+     "soort": "drie kwart gekleurd",
+     "bron": "nieuw",
+     "tekst": "Je hebt drie stukken gekleurd: dat is drie kwart. Een kwart is veel minder.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "De balk heeft vier gelijke stukken. Een kwart is één zo'n stuk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "De balk heeft vier gelijke stukken. Een kwart is één zo'n stuk."
+  },
+  {
+   "id": "G5-GET-E04-claude-bank-003",
+   "nr": "003",
+   "doelId": "G5-GET-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "meerkeuze",
+   "opgave": "De kinderen delen een pannenkoek in 4 gelijke stukken. Een kind eet er 1 op. Welk deel is dat?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "de helft"
+    },
+    {
+     "letter": "B",
+     "tekst": "een kwart"
+    },
+    {
+     "letter": "C",
+     "tekst": "drie kwart"
+    }
+   ],
+   "optiesTekst": "A) de helft · B) een kwart · C) drie kwart",
+   "antwoord": "een kwart",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "een kwart"
+   },
+   "hint": "In hoeveel gelijke stukken is de pannenkoek verdeeld? Hoeveel stukken worden er opgegeten?",
+   "sterkereHint": "Er zijn vier stukken en er wordt er één opgegeten. Hoe heet één van de vier gelijke stukken?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "de helft",
+     "uitleg": "De helft is twee van de vier stukken. Er wordt maar één stuk opgegeten.",
+     "uitlegSterker": "Er zijn vier stukken en er wordt er één opgegeten. Hoe heet één van de vier gelijke stukken?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "de helft",
+     "soort": "de helft",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "drie kwart",
+     "uitleg": "Drie kwart is drie van de vier stukken. Er wordt maar één stuk opgegeten.",
+     "uitlegSterker": "Er zijn vier stukken en er wordt er één opgegeten. Hoe heet één van de vier gelijke stukken?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "drie kwart",
+     "soort": "drie kwart",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "de helft → De helft is twee van de vier stukken. Er wordt maar één stuk opgegeten. · drie kwart → Drie kwart is drie van de vier stukken. Er wordt maar één stuk opgegeten.",
+   "ouderzin": "Je kind zegt welk deel van een pannenkoek is opgegeten.",
+   "getallenruimte": "0–10",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "tekening van het eten in gelijke stukken; de opgegeten stukken zijn weg of grijs",
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:B1:35fa962c-e161-40c7-a4e5-3c46a9a0d44d",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "1 van de 4 stukken",
+    "claudeUitleg": "De noemer (onder) zegt in hoeveel stukken het geheel is verdeeld: 4.\nDe teller (boven) zegt hoeveel stukken je neemt: 1.\nDus 1/4.",
+    "claudeStrategie": "teller en noemer",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "breuk",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "de helft",
+      "uitleg": "Tel in hoeveel gelijke stukken het eten is verdeeld. Hoeveel stukken eet het kind op?"
+     },
+     {
+      "stap": null,
+      "fout": "drie kwart",
+      "uitleg": "Tel in hoeveel gelijke stukken het eten is verdeeld. Hoeveel stukken eet het kind op?"
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "35fa962c-e161-40c7-a4e5-3c46a9a0d44d",
+    "claudeDoel": "B1",
+    "claudeDoelTitel": "Wat is een breuk",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G5-FX21 fixlijst #21: Engelse woorden vervangen (kind, trui/muts)",
+     "N1 ':' + getal → zin (fout-hint)",
+     "N12 geen breuknotatie (G5)",
+     "N15 breuk in woorden (helft/kwart, zoals onze G5-bank)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G5-GET-E04",
+    "voorstelDoel": null,
+    "regel": "G5-B01-breuk",
+    "reden": "welk deel? antwoord een kwart (G5-GET-E04, antwoord in woorden)",
+    "somtype": "[wie] delen een pannenkoek in # gelijke stukken. [wie] eet er # op. Welk deel is dat?",
+    "fixlijstG5": [
+     "#21"
+    ],
+    "duplicaatVan": null,
+    "somtypeNr": 3,
+    "somtypeNrOrigineel": 3,
+    "somtypeOrigineel": "[wie] delen een pannenkoek in # gelijke stukken. [wie] eet er # op. Welk deel is dat?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 3,
+     "somtype": "[wie] delen een pannenkoek in # gelijke stukken. [wie] eet er # op. Welk deel is dat?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "een kwart",
+    "methode": "welk deel (in woorden)",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "de helft",
+     "soort": "de helft",
+     "bron": "nieuw",
+     "tekst": "De helft is twee van de vier stukken. Er wordt maar één stuk opgegeten.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "de helft"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "drie kwart",
+     "soort": "drie kwart",
+     "bron": "nieuw",
+     "tekst": "Drie kwart is drie van de vier stukken. Er wordt maar één stuk opgegeten.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "drie kwart"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "De pannenkoek is in vier gelijke stukken verdeeld. Er wordt één stuk opgegeten. Welk deel is één van de vier?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "De pannenkoek is in vier gelijke stukken verdeeld. Er wordt één stuk opgegeten. Welk deel is één van de vier?"
+  },
+  {
+   "id": "G5-GET-E04-claude-bank-004",
+   "nr": "004",
+   "doelId": "G5-GET-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "meerkeuze",
+   "opgave": "De kinderen delen een taart in 4 gelijke stukken. Een kind eet er 1 op. Welk deel is dat?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "de helft"
+    },
+    {
+     "letter": "B",
+     "tekst": "een kwart"
+    },
+    {
+     "letter": "C",
+     "tekst": "drie kwart"
+    }
+   ],
+   "optiesTekst": "A) de helft · B) een kwart · C) drie kwart",
+   "antwoord": "een kwart",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "een kwart"
+   },
+   "hint": "In hoeveel gelijke stukken is de taart verdeeld? Hoeveel stukken worden er opgegeten?",
+   "sterkereHint": "Er zijn vier stukken en er wordt er één opgegeten. Hoe heet één van de vier gelijke stukken?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "de helft",
+     "uitleg": "De helft is twee van de vier stukken. Er wordt maar één stuk opgegeten.",
+     "uitlegSterker": "Er zijn vier stukken en er wordt er één opgegeten. Hoe heet één van de vier gelijke stukken?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "de helft",
+     "soort": "de helft",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "drie kwart",
+     "uitleg": "Drie kwart is drie van de vier stukken. Er wordt maar één stuk opgegeten.",
+     "uitlegSterker": "Er zijn vier stukken en er wordt er één opgegeten. Hoe heet één van de vier gelijke stukken?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "drie kwart",
+     "soort": "drie kwart",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "de helft → De helft is twee van de vier stukken. Er wordt maar één stuk opgegeten. · drie kwart → Drie kwart is drie van de vier stukken. Er wordt maar één stuk opgegeten.",
+   "ouderzin": "Je kind zegt welk deel van een taart is opgegeten.",
+   "getallenruimte": "0–10",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "tekening van het eten in gelijke stukken; de opgegeten stukken zijn weg of grijs",
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:B1:f76a6ae2-0b09-4c20-900a-36e5df6b2b4c",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "1 van de 4 stukken",
+    "claudeUitleg": "De noemer (onder) zegt in hoeveel stukken het geheel is verdeeld: 4.\nDe teller (boven) zegt hoeveel stukken je neemt: 1.\nDus 1/4.",
+    "claudeStrategie": "teller en noemer",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "breuk",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "de helft",
+      "uitleg": "Tel in hoeveel gelijke stukken het eten is verdeeld. Hoeveel stukken eet het kind op?"
+     },
+     {
+      "stap": null,
+      "fout": "drie kwart",
+      "uitleg": "Tel in hoeveel gelijke stukken het eten is verdeeld. Hoeveel stukken eet het kind op?"
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "f76a6ae2-0b09-4c20-900a-36e5df6b2b4c",
+    "claudeDoel": "B1",
+    "claudeDoelTitel": "Wat is een breuk",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G5-FX17 fixlijst #17: kinderen delen de taart (geen dino's)",
+     "N1 ':' + getal → zin (fout-hint)",
+     "N12 geen breuknotatie (G5)",
+     "N15 breuk in woorden (helft/kwart, zoals onze G5-bank)",
+     "W5 woord kindvriendelijk (G4)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G5-GET-E04",
+    "voorstelDoel": null,
+    "regel": "G5-B01-breuk",
+    "reden": "welk deel? antwoord een kwart (G5-GET-E04, antwoord in woorden)",
+    "somtype": "[wie] delen een taart in # gelijke stukken. [wie] eet er # op. Welk deel is dat?",
+    "fixlijstG5": [
+     "#17"
+    ],
+    "duplicaatVan": null,
+    "somtypeNr": 4,
+    "somtypeNrOrigineel": 4,
+    "somtypeOrigineel": "[wie] delen een taart in # gelijke stukken. [wie] eet er # op. Welk deel is dat?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 4,
+     "somtype": "[wie] delen een taart in # gelijke stukken. [wie] eet er # op. Welk deel is dat?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "een kwart",
+    "methode": "welk deel (in woorden)",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "de helft",
+     "soort": "de helft",
+     "bron": "nieuw",
+     "tekst": "De helft is twee van de vier stukken. Er wordt maar één stuk opgegeten.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "de helft"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "drie kwart",
+     "soort": "drie kwart",
+     "bron": "nieuw",
+     "tekst": "Drie kwart is drie van de vier stukken. Er wordt maar één stuk opgegeten.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "drie kwart"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "De taart is in vier gelijke stukken verdeeld. Er wordt één stuk opgegeten. Welk deel is één van de vier?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "De taart is in vier gelijke stukken verdeeld. Er wordt één stuk opgegeten. Welk deel is één van de vier?"
+  }
+ ]
+}

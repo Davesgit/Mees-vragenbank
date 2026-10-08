@@ -1,0 +1,2204 @@
+{
+ "batch": "batch1",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G5-merge, batch 1 = GET-E02, GET-E04, GET-E05). Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint; 'claude' = tekst van Claude blijft (ok), 'claude-taalfix' = Claudes tekst met een kleine taalfix, 'nieuw' = eigen tekst (claudeTekst = de Claude-tekst die hij vervangt). Bij 'tekst per item' blijft Claudes eigen tekst per item staan, behalve teksten in claudeVervangen: die vallen door naar de volgende regel. Getal1/getal2 = de getallen in de opgave, in volgorde. Regels als 'de helft' zijn letterlijke opties. Let op: schrijf 'antwoord + 10' en 'antwoord − 10' apart: 'antwoord ± 10' leest fout_regels als '± 1'.",
+ "somtypen": [
+  {
+   "doel": "G5-GET-E02",
+   "nr": 1,
+   "somtype": "Rond # af op tientallen.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Rond # af op tientallen.",
+   "hint1": "Welke twee tientallen liggen vlak bij het getal? Eén ligt eronder en één ligt erboven.",
+   "hint2": "Kijk naar het cijfer achter de plek van de tientallen. Is het 5 of meer, dan rond je af naar het tiental erboven. Anders naar het tiental eronder.",
+   "ouderzin": "Je kind rondt een getal tot 1000 af op tientallen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet afgerond",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het getal zelf. Rond het af: welk tiental ligt er het dichtst bij?",
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "waarom": "gaat over schatten met twee getallen; hier heeft het kind het getal niet afgerond"
+    },
+    {
+     "bron": "claude-taalfix",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.",
+     "waarom": "past ook bij de sleutels die één stap te ver liggen aan de goede kant (Didactiek V1/V2); zie fixlijst #12",
+     "soort": "verkeerde kant",
+     "regel": "fout = het andere tiental naast getal1",
+     "tekst": "Dat is het tiental aan de andere kant van het getal. Kijk naar het cijfer achter de plek van de tientallen. Is het 5 of meer, dan ga je naar het tiental vlak erboven. Anders naar het tiental vlak eronder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Je gaat de goede kant op, maar één tiental te ver. Kies het tiental dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Je gaat de goede kant op, maar één tiental te ver. Kies het tiental dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 20 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een tiental vlak naast het getal: het tiental eronder of het tiental erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 20 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een tiental vlak naast het getal: het tiental eronder of het tiental erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de twee tientallen vlak onder en vlak boven het getal. Kies het tiental dat er het dichtst bij ligt. Ligt het getal precies in het midden? Dan kies je het tiental erboven."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E02",
+   "nr": 2,
+   "somtype": "Rond # af op honderdtallen.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Rond # af op honderdtallen.",
+   "hint1": "Welke twee honderdtallen liggen vlak bij het getal? Eén ligt eronder en één ligt erboven.",
+   "hint2": "Kijk naar het cijfer achter de plek van de honderdtallen. Is het 5 of meer, dan rond je af naar het honderdtal erboven. Anders naar het honderdtal eronder.",
+   "ouderzin": "Je kind rondt een getal tot 1000 af op honderdtallen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet afgerond",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het getal zelf. Rond het af: welk honderdtal ligt er het dichtst bij?",
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "waarom": "gaat over schatten met twee getallen; hier heeft het kind het getal niet afgerond"
+    },
+    {
+     "bron": "claude-taalfix",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.",
+     "waarom": "past ook bij de sleutels die één stap te ver liggen aan de goede kant (Didactiek V1/V2); zie fixlijst #12",
+     "soort": "verkeerde kant",
+     "regel": "fout = het andere honderdtal naast getal1",
+     "tekst": "Dat is het honderdtal aan de andere kant van het getal. Kijk naar het cijfer achter de plek van de honderdtallen. Is het 5 of meer, dan ga je naar het honderdtal vlak erboven. Anders naar het honderdtal vlak eronder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgerond op tientallen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 afgerond op tientallen",
+     "tekst": "Je hebt afgerond op tientallen. Hier rond je af op honderdtallen: welk honderdtal ligt er het dichtst bij?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Je gaat de goede kant op, maar één honderdtal te ver. Kies het honderdtal dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Je gaat de goede kant op, maar één honderdtal te ver. Kies het honderdtal dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 200 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een honderdtal vlak naast het getal: het honderdtal eronder of het honderdtal erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 200 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een honderdtal vlak naast het getal: het honderdtal eronder of het honderdtal erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de twee honderdtallen vlak onder en vlak boven het getal. Kies het honderdtal dat er het dichtst bij ligt. Ligt het getal precies in het midden? Dan kies je het honderdtal erboven."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E02",
+   "nr": 3,
+   "somtype": "[getallenlijn] Rond # af op tientallen. Sleep de stip naar het tiental dat het dichtst bij # [ding].",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[getallenlijn] Rond # af op tientallen. Sleep de stip naar het tiental dat het dichtst bij # [ding].",
+   "hint1": "De stip staat tussen twee tientallen. Bij welk tiental staat hij het dichtst?",
+   "hint2": "Tel de stapjes van de stip naar het ene tiental en naar het andere. Sleep de stip naar het tiental met de minste stapjes.",
+   "ouderzin": "Je kind rondt op de getallenlijn een getal af op tientallen.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "verkeerde tiental",
+     "claudeDenkfout": null,
+     "regel": "Claudes sleutel: het andere tiental (tekst per item)",
+     "tekst": "Kijk naar het laatste cijfer van …: is het 5 of meer?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar het laatste cijfer van het getal. Is het 5 of meer, dan ga je naar het tiental erboven. Anders naar het tiental eronder."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E02",
+   "nr": 4,
+   "somtype": "[getallenlijn] Zet # op de getallenlijn van # [ding] #.",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "[getallenlijn] Zet # op de getallenlijn van # [ding] #.",
+   "hint1": "Zoek eerst het honderdtal: tussen welke twee honderdtallen ligt het getal?",
+   "hint2": "Tel dan vanaf dat honderdtal verder in stapjes van tien.",
+   "ouderzin": "Je kind zet een getal tot 1000 op een getallenlijn met honderdtallen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te ver. Het cijfer vooraan zegt bij welk honderdtal je begint."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal niet ver genoeg",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. Het cijfer vooraan zegt bij welk honderdtal je begint."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "stapje te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Bijna! Dat is één stapje van tien te ver. Tel de stapjes na het honderdtal nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "stapje niet ver genoeg",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Bijna! Dat is één stapje van tien te weinig. Tel de stapjes na het honderdtal nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek eerst het honderdtal van het getal. Tel dan verder in stapjes van tien tot je bij het getal bent."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E04",
+   "nr": 1,
+   "somtype": "[balk] Kleur drie kwart van de balk.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[balk] Kleur drie kwart van de balk.",
+   "hint1": "De balk is verdeeld in vier gelijke stukken. Elk stuk is een kwart.",
+   "hint2": "Drie kwart is drie keer een kwart. Hoeveel stukken kleur je dan?",
+   "ouderzin": "Je kind kleurt drie kwart van een balk.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een kwart gekleurd",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2",
+     "tekst": "Je hebt één stuk gekleurd: dat is een kwart. Drie kwart is drie keer zo veel.",
+     "claudeTekst": "Kleur 3 stukken, niet 1.",
+     "waarom": "verklapt het antwoord"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "De balk heeft vier gelijke stukken. Een kwart is één stuk. Drie kwart is drie keer een kwart."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E04",
+   "nr": 2,
+   "somtype": "[balk] Kleur een kwart van de balk.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[balk] Kleur een kwart van de balk.",
+   "hint1": "De balk is verdeeld in vier gelijke stukken.",
+   "hint2": "Een kwart is één van de vier gelijke stukken.",
+   "ouderzin": "Je kind kleurt een kwart van een balk.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "drie kwart gekleurd",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2",
+     "tekst": "Je hebt drie stukken gekleurd: dat is drie kwart. Een kwart is veel minder.",
+     "claudeTekst": "Kleur 1 stuk, niet 3.",
+     "waarom": "verklapt het antwoord"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "De balk heeft vier gelijke stukken. Een kwart is één zo'n stuk."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E04",
+   "nr": 3,
+   "somtype": "[wie] delen een pannenkoek in # gelijke stukken. [wie] eet er # op. Welk deel is dat?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[wie] delen een pannenkoek in # gelijke stukken. [wie] eet er # op. Welk deel is dat?",
+   "hint1": "In hoeveel gelijke stukken is de pannenkoek verdeeld? Hoeveel stukken worden er opgegeten?",
+   "hint2": "Er zijn vier stukken en er wordt er één opgegeten. Hoe heet één van de vier gelijke stukken?",
+   "ouderzin": "Je kind zegt welk deel van een pannenkoek is opgegeten.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "de helft",
+     "claudeDenkfout": null,
+     "regel": "de helft",
+     "tekst": "De helft is twee van de vier stukken. Er wordt maar één stuk opgegeten.",
+     "claudeTekst": "Tel in hoeveel gelijke stukken het eten is verdeeld. Hoeveel stukken eet het kind op?",
+     "waarom": "eigen tekst per foute optie; Claudes tekst herhaalde Hint 1 (Didactiek S5)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "drie kwart",
+     "claudeDenkfout": null,
+     "regel": "drie kwart",
+     "tekst": "Drie kwart is drie van de vier stukken. Er wordt maar één stuk opgegeten.",
+     "claudeTekst": "Tel in hoeveel gelijke stukken het eten is verdeeld. Hoeveel stukken eet het kind op?",
+     "waarom": "eigen tekst per foute optie; Claudes tekst herhaalde Hint 1 (Didactiek S5)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "De pannenkoek is in vier gelijke stukken verdeeld. Er wordt één stuk opgegeten. Welk deel is één van de vier?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E04",
+   "nr": 4,
+   "somtype": "[wie] delen een taart in # gelijke stukken. [wie] eet er # op. Welk deel is dat?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "[wie] delen een taart in # gelijke stukken. [wie] eet er # op. Welk deel is dat?",
+   "hint1": "In hoeveel gelijke stukken is de taart verdeeld? Hoeveel stukken worden er opgegeten?",
+   "hint2": "Er zijn vier stukken en er wordt er één opgegeten. Hoe heet één van de vier gelijke stukken?",
+   "ouderzin": "Je kind zegt welk deel van een taart is opgegeten.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "de helft",
+     "claudeDenkfout": null,
+     "regel": "de helft",
+     "tekst": "De helft is twee van de vier stukken. Er wordt maar één stuk opgegeten.",
+     "claudeTekst": "Tel in hoeveel gelijke stukken het eten is verdeeld. Hoeveel stukken eet het kind op?",
+     "waarom": "eigen tekst per foute optie; Claudes tekst herhaalde Hint 1 (Didactiek S5)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "drie kwart",
+     "claudeDenkfout": null,
+     "regel": "drie kwart",
+     "tekst": "Drie kwart is drie van de vier stukken. Er wordt maar één stuk opgegeten.",
+     "claudeTekst": "Tel in hoeveel gelijke stukken het eten is verdeeld. Hoeveel stukken eet het kind op?",
+     "waarom": "eigen tekst per foute optie; Claudes tekst herhaalde Hint 1 (Didactiek S5)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "De taart is in vier gelijke stukken verdeeld. Er wordt één stuk opgegeten. Welk deel is één van de vier?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 1,
+   "somtype": "# + □ = #",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# + □ = #",
+   "hint1": "Welk getal moet je bij het eerste getal optellen om de uitkomst te krijgen?",
+   "hint2": "Vul aan: spring vanaf het eerste getal naar het volgende hele tiental of honderdtal, en dan verder tot de uitkomst. Tel al je sprongen bij elkaar.",
+   "ouderzin": "Je kind zoekt het ontbrekende getal in een plussom tot 1000 (aanvullen).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "de uitkomst",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is de uitkomst van de som. Welk getal moet je bij het eerste getal optellen om daar te komen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de twee getallen opgeteld. Zoek wat erbij moet: van het eerste getal naar de uitkomst."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Begin bij het eerste getal en vul aan tot de uitkomst. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "zegt niet of het een tiental te veel of te weinig is"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast' (les G3/G4): de fout-hint zegt of het één te veel of te weinig is"
+    },
+    {
+     "claudeTekst": "Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "past niet bij elk item (minsom, of geen overschrijding) en 'boven de 10' klopt niet bij precies tien; nu per richting een eigen tekst"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "bij een kale som is er geen verhaal: kijk naar het teken"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "te vaag: het kind heeft de uitkomst overgenomen"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 2,
+   "somtype": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel liggen er nu?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel liggen er nu?",
+   "hint1": "Er komen dingen bij, dus het worden er meer. Tel de twee getallen bij elkaar op.",
+   "hint2": "Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het eerste getal.",
+   "ouderzin": "Je kind telt in een verhaal iets bij een getal tot 1000 op.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "min gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Er komen dingen bij, dus het worden er meer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Tel de tientallen nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Zijn de eenheden samen tien of meer? Dan komt er een tiental bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Tel de honderdtallen nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. De tientallen komen samen op tien of meer: dan komt er een honderdtal bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "zegt niet of het een tiental te veel of te weinig is"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast' (les G3/G4): de fout-hint zegt of het één te veel of te weinig is"
+    },
+    {
+     "claudeTekst": "Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "past niet bij elk item (minsom, of geen overschrijding) en 'boven de 10' klopt niet bij precies tien; nu per richting een eigen tekst"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "bij een kale som is er geen verhaal: kijk naar het teken"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 3,
+   "somtype": "# − # = — met overschrijding van het tiental",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "# − # = — met overschrijding van het tiental",
+   "hint1": "Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Haal ze één voor één van het eerste getal af.",
+   "hint2": "Bij de eenheden en bij de tientallen ga je over een heel tiental of honderdtal heen. Ga eerst terug naar het hele tiental of honderdtal, en haal dan de rest eraf.",
+   "ouderzin": "Je kind haalt een getal af van een getal tot 1000, met overschrijding van het tiental.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Kijk goed naar het teken. Bij − haal je eraf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Bij de eenheden ga je over een heel tiental heen: dan gaat er nog een tiental af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Haal de tientallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Bij de tientallen ga je over een heel honderdtal heen: dan gaat er nog een honderdtal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. Haal de honderdtallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken na: jouw antwoord plus het tweede getal moet het eerste getal zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast' (les G3/G4): de fout-hint zegt of het één te veel of te weinig is"
+    },
+    {
+     "claudeTekst": "Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "past niet bij elk item (minsom, of geen overschrijding) en 'boven de 10' klopt niet bij precies tien; nu per richting een eigen tekst"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "bij een kale som is er geen verhaal: kijk naar het teken"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 4,
+   "somtype": "# + # = — zonder overschrijding van het tiental",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "# + # = — zonder overschrijding van het tiental",
+   "hint1": "Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het eerste getal.",
+   "hint2": "De tientallen komen samen op tien of meer. Dan komt er een honderdtal bij.",
+   "ouderzin": "Je kind telt twee getallen tot 1000 op. De eenheden gaan niet over het tiental.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "min gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Kijk goed naar het teken. Bij + tel je op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Tel de tientallen nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Tel de tientallen nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Tel de honderdtallen nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. De tientallen komen samen op tien of meer: dan komt er een honderdtal bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Begin bij het eerste getal. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "zegt niet of het een tiental te veel of te weinig is"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast' (les G3/G4): de fout-hint zegt of het één te veel of te weinig is"
+    },
+    {
+     "claudeTekst": "Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "past niet bij elk item (minsom, of geen overschrijding) en 'boven de 10' klopt niet bij precies tien; nu per richting een eigen tekst"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "bij een kale som is er geen verhaal: kijk naar het teken"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 5,
+   "somtype": "In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over?",
+   "hint1": "Er gaan dingen weg, dus er blijven er minder over. Haal het tweede getal van het eerste af.",
+   "hint2": "Je gaat onder het hele honderdtal. Ga eerst terug naar het hele honderdtal, en haal daarna de rest eraf.",
+   "ouderzin": "Je kind haalt een getal af van een getal tot 1000, over een heel honderdtal heen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Er gaan dingen weg, dus er blijven er minder over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niets eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er gaan dingen weg, dus er blijven er minder over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal dat weggaat",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het getal dat weggaat. De vraag is hoeveel er nog over zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "onder het honderdtal (tiental)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is te veel. Je gaat onder het hele honderdtal. Ga eerst terug naar het hele honderdtal, en haal dan de rest eraf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Haal de tientallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "onder het honderdtal",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Je gaat onder het hele honderdtal, dus het honderdtal wordt één minder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. Haal de honderdtallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Na 300 kom je in de 200-en. 300 − 2 eindigt op 98.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Je gaat onder 300, dus het honderdtal wordt één minder.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "per item; nu één tekst ('Ga eerst terug naar het hele honderdtal')"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 300 (dat is 2 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 600 kom je in de 500-en. 600 − 2 eindigt op 98.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Je gaat onder 600, dus het honderdtal wordt één minder.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "per item; nu één tekst ('Ga eerst terug naar het hele honderdtal')"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 600 (dat is 4 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 800 kom je in de 700-en. 800 − 17 eindigt op 83.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Je gaat onder 800, dus het honderdtal wordt één minder.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "per item; nu één tekst ('Ga eerst terug naar het hele honderdtal')"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 800 (dat is 1 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 300 kom je in de 200-en. 300 − 1 eindigt op 99.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 300 (dat is 5 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 300 kom je in de 200-en. 300 − 3 eindigt op 97.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 300 (dat is 1 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 800 kom je in de 700-en. 800 − 8 eindigt op 92.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 800 (dat is 5 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 200 kom je in de 100-en. 200 − 38 eindigt op 62.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Je gaat onder 200, dus het honderdtal wordt één minder.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "per item; nu één tekst ('Ga eerst terug naar het hele honderdtal')"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 200 (dat is 2 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 800 kom je in de 700-en. 800 − 10 eindigt op 90.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 600 (dat is 6 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 200 kom je in de 100-en. 200 − 1 eindigt op 99.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 300 (dat is 3 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 800 kom je in de 700-en. 800 − 19 eindigt op 81.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 800 (dat is 3 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 600 kom je in de 500-en. 600 − 17 eindigt op 83.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 600 (dat is 2 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 800 kom je in de 700-en. 800 − 23 eindigt op 77.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 700 kom je in de 600-en. 700 − 30 eindigt op 70.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Je gaat onder 700, dus het honderdtal wordt één minder.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "per item; nu één tekst ('Ga eerst terug naar het hele honderdtal')"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 700 (dat is 5 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 400 kom je in de 300-en. 400 − 4 eindigt op 96.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Je gaat onder 400, dus het honderdtal wordt één minder.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "per item; nu één tekst ('Ga eerst terug naar het hele honderdtal')"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 400 (dat is 3 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 200 kom je in de 100-en. 200 − 15 eindigt op 85.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 200 (dat is 4 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 900 kom je in de 800-en. 900 − 45 eindigt op 55.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Je gaat onder 900, dus het honderdtal wordt één minder.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "per item; nu één tekst ('Ga eerst terug naar het hele honderdtal')"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 900 (dat is 3 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 300 kom je in de 200-en. 300 − 31 eindigt op 69.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 300 (dat is 4 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 900 kom je in de 800-en. 900 − 3 eindigt op 97.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 900 (dat is 4 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 200 kom je in de 100-en. 200 − 7 eindigt op 93.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 200 (dat is 5 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 400 kom je in de 300-en. 400 − 11 eindigt op 89.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 400 (dat is 2 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 500 kom je in de 400-en. 500 − 23 eindigt op 77.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Je gaat onder 500, dus het honderdtal wordt één minder.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "per item; nu één tekst ('Ga eerst terug naar het hele honderdtal')"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 500 (dat is 4 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 800 kom je in de 700-en. 800 − 7 eindigt op 93.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 400 kom je in de 300-en. 400 − 3 eindigt op 97.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 400 (dat is 4 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 300 kom je in de 200-en. 300 − 23 eindigt op 77.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 200 kom je in de 100-en. 200 − 20 eindigt op 80.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 200 (dat is 3 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 400 kom je in de 300-en. 400 − 5 eindigt op 95.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 31,
+   "somtype": "Op [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over?",
+   "nrOrigineel": 19,
+   "somtypeOrigineel": "Op [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over?",
+   "hint1": "Er gaan dingen weg, dus er blijven er minder over. Haal het tweede getal van het eerste af.",
+   "hint2": "Je gaat onder het hele honderdtal. Ga eerst terug naar het hele honderdtal, en haal daarna de rest eraf.",
+   "ouderzin": "Je kind haalt een getal af van een getal tot 1000, over een heel honderdtal heen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Er gaan dingen weg, dus er blijven er minder over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niets eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er gaan dingen weg, dus er blijven er minder over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal dat weggaat",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het getal dat weggaat. De vraag is hoeveel er nog over zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "onder het honderdtal (tiental)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is te veel. Je gaat onder het hele honderdtal. Ga eerst terug naar het hele honderdtal, en haal dan de rest eraf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Haal de tientallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "onder het honderdtal",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Je gaat onder het hele honderdtal, dus het honderdtal wordt één minder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. Haal de honderdtallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Na 300 kom je in de 200-en. 300 − 5 eindigt op 95.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Je gaat onder 300, dus het honderdtal wordt één minder.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "per item; nu één tekst ('Ga eerst terug naar het hele honderdtal')"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 300 (dat is 4 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Na 500 kom je in de 400-en. 500 − 4 eindigt op 96.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Je gaat onder 500, dus het honderdtal wordt één minder.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "per item; nu één tekst ('Ga eerst terug naar het hele honderdtal')"
+    },
+    {
+     "claudeTekst": "Ga eerst precies naar 500 (dat is 2 eraf), en dan de rest.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 6,
+   "somtype": "In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel liggen er nu?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel liggen er nu?",
+   "hint1": "Er gaan dingen weg, dus er liggen er nu minder. Haal het tweede getal van het eerste af.",
+   "hint2": "Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Haal ze één voor één van het eerste getal af.",
+   "ouderzin": "Je kind haalt in een verhaal iets af van een getal tot 1000.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Er gaan dingen weg, dus er blijven er minder over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niets eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er gaan dingen weg, dus er blijven er minder over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal dat weggaat",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het getal dat weggaat. De vraag is hoeveel er nog over zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Ga je bij de eenheden over een heel tiental heen? Dan gaat er nog een tiental af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Haal de tientallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Bij de tientallen ga je over een heel honderdtal heen: dan gaat er nog een honderdtal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. Haal de honderdtallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "past niet bij elk item (minsom, of geen overschrijding) en 'boven de 10' klopt niet bij precies tien; nu per richting een eigen tekst"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast' (les G3/G4): de fout-hint zegt of het één te veel of te weinig is"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "bij een kale som is er geen verhaal: kijk naar het teken"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 7,
+   "somtype": "In [plek] lagen # [ding]. Er zijn er # [ding]. Hoeveel [ding] liggen er nog?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "In [plek] lagen # [ding]. Er zijn er # [ding]. Hoeveel [ding] liggen er nog?",
+   "hint1": "Er zijn dingen weggehaald, dus er liggen er minder. Haal het tweede getal van het eerste af.",
+   "hint2": "Splits het tweede getal in honderdtallen, tientallen en eenheden. Haal ze één voor één van het eerste getal af.",
+   "ouderzin": "Je kind rekent uit hoeveel er nog liggen als er iets is weggehaald (tot 1000).",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "opgeteld",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Er zijn er weggehaald: dit is een minsom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niets eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er zijn dingen weggehaald, dus er liggen er minder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal dat weggaat",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het aantal dat is weggehaald. De vraag is hoeveel er nog liggen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Ga je bij de eenheden over een heel tiental heen? Dan gaat er nog een tiental af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Haal de tientallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Ga je bij de tientallen over een heel honderdtal heen? Dan gaat er nog een honderdtal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. Haal de honderdtallen nog eens af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "kleinste van de grootste",
+     "claudeDenkfout": "kleinste-van-grootste",
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Is bij een plek het cijfer van het tweede getal groter? Ga dan eerst terug tot het hele tiental of honderdtal. Reken na: jouw antwoord plus wat er weggaat, moet het eerste getal zijn.",
+     "claudeTekst": "Je mag niet zomaar de kleinste van de grootste afhalen per kolom. Leen van de kolom ernaast.",
+     "waarom": "'de kleinste van de grootste' is abstract (Didactiek G4 b4 v1, 1.2); vaste tekst via leesbare regel (les G4 4b); 'kolom' en 'lenen' staan niet in de vraag; 3 van de 29 items lenen niet, dus als vraag"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bij het lenen van een honderdtal wordt het honderdtal één minder. Tel de honderdtallen nog eens.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "past niet bij elk item: niet bij elke som moet je lenen; nu met een vraag (Ga je … over een heel tiental heen?)"
+    },
+    {
+     "claudeTekst": "Bij het lenen van een tiental wordt het tiental één minder. Tel de tientallen nog eens.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "past niet bij elk item: niet bij elke som moet je lenen; nu met een vraag (Ga je … over een heel tiental heen?)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 26,
+   "somtype": "Op [plek] lagen # [ding]. Er zijn er # [ding]. Hoeveel [ding] liggen er nog?",
+   "nrOrigineel": 15,
+   "somtypeOrigineel": "Op [plek] lagen # [ding]. Er zijn er # [ding]. Hoeveel [ding] liggen er nog?",
+   "hint1": "Er zijn dingen weggehaald, dus er liggen er minder. Haal het tweede getal van het eerste af.",
+   "hint2": "Splits het tweede getal in honderdtallen, tientallen en eenheden. Haal ze één voor één van het eerste getal af.",
+   "ouderzin": "Je kind rekent uit hoeveel er nog liggen als er iets is weggehaald (tot 1000).",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "opgeteld",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Er zijn er weggehaald: dit is een minsom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niets eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er zijn dingen weggehaald, dus er liggen er minder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal dat weggaat",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het aantal dat is weggehaald. De vraag is hoeveel er nog liggen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Ga je bij de eenheden over een heel tiental heen? Dan gaat er nog een tiental af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Haal de tientallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Haal de honderdtallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. Haal de honderdtallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bij het lenen van een honderdtal wordt het honderdtal één minder. Tel de honderdtallen nog eens.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "past niet bij elk item: niet bij elke som moet je lenen; nu met een vraag (Ga je … over een heel tiental heen?)"
+    },
+    {
+     "claudeTekst": "Bij het lenen van een tiental wordt het tiental één minder. Tel de tientallen nog eens.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "past niet bij elk item: niet bij elke som moet je lenen; nu met een vraag (Ga je … over een heel tiental heen?)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 8,
+   "somtype": "In [plek] liggen # [ding] en in [plek] #. Hoeveel [ding] zijn dat samen?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "In [plek] liggen # [ding] en in [plek] #. Hoeveel [ding] zijn dat samen?",
+   "hint1": "Samen betekent: bij elkaar optellen. Tel de twee getallen op.",
+   "hint2": "Splits het tweede getal in honderdtallen, tientallen en eenheden. Tel ze één voor één bij het eerste getal.",
+   "ouderzin": "Je kind telt twee aantallen tot 1000 bij elkaar op.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "min gedaan",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Samen betekent optellen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tiental te veel",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord + 10",
+     "tekst": "Controleer de tientallen: je hebt er één te veel.",
+     "claudeTekst": "Controleer de tientallen: je hebt er een te veel.",
+     "waarom": "'één' met accenten, zoals 'één tiental te veel' elders"
+    },
+    {
+     "bron": "claude",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": "onthouden-vergeten",
+     "regel": "fout = antwoord − 10",
+     "tekst": "Tel de eenheden nog eens: als ze samen 10 of meer zijn, komt er een tiental bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Tel de honderdtallen nog eens bij elkaar."
+    },
+    {
+     "bron": "claude",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": "onthouden-vergeten",
+     "regel": "fout = antwoord − 100",
+     "tekst": "Tel de tientallen nog eens: als ze samen 100 of meer zijn, komt er een honderdtal bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 28,
+   "somtype": "In [plek] liggen # [ding] en op [plek] #. Hoeveel [ding] zijn dat samen?",
+   "nrOrigineel": 16,
+   "somtypeOrigineel": "In [plek] liggen # [ding] en op [plek] #. Hoeveel [ding] zijn dat samen?",
+   "hint1": "Samen betekent: bij elkaar optellen. Tel de twee getallen op.",
+   "hint2": "Splits het tweede getal in honderdtallen, tientallen en eenheden. Tel ze één voor één bij het eerste getal.",
+   "ouderzin": "Je kind telt twee aantallen tot 1000 bij elkaar op.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "min gedaan",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Samen betekent optellen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tiental te veel",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord + 10",
+     "tekst": "Controleer de tientallen: je hebt er één te veel.",
+     "claudeTekst": "Controleer de tientallen: je hebt er een te veel.",
+     "waarom": "'één' met accenten, zoals 'één tiental te veel' elders"
+    },
+    {
+     "bron": "claude",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": "onthouden-vergeten",
+     "regel": "fout = antwoord − 10",
+     "tekst": "Tel de eenheden nog eens: als ze samen 10 of meer zijn, komt er een tiental bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Tel de honderdtallen nog eens bij elkaar."
+    },
+    {
+     "bron": "claude",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": "onthouden-vergeten",
+     "regel": "fout = antwoord − 100",
+     "tekst": "Tel de tientallen nog eens: als ze samen 100 of meer zijn, komt er een honderdtal bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 30,
+   "somtype": "Op [plek] liggen # [ding] en in [plek] #. Hoeveel [ding] zijn dat samen?",
+   "nrOrigineel": 18,
+   "somtypeOrigineel": "Op [plek] liggen # [ding] en in [plek] #. Hoeveel [ding] zijn dat samen?",
+   "hint1": "Samen betekent: bij elkaar optellen. Tel de twee getallen op.",
+   "hint2": "Splits het tweede getal in honderdtallen, tientallen en eenheden. Tel ze één voor één bij het eerste getal.",
+   "ouderzin": "Je kind telt twee aantallen tot 1000 bij elkaar op.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "min gedaan",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Samen betekent optellen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tiental te veel",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord + 10",
+     "tekst": "Controleer de tientallen: je hebt er één te veel.",
+     "claudeTekst": "Controleer de tientallen: je hebt er een te veel.",
+     "waarom": "'één' met accenten, zoals 'één tiental te veel' elders"
+    },
+    {
+     "bron": "claude",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": "onthouden-vergeten",
+     "regel": "fout = antwoord − 10",
+     "tekst": "Tel de eenheden nog eens: als ze samen 10 of meer zijn, komt er een tiental bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Tel de honderdtallen nog eens bij elkaar."
+    },
+    {
+     "bron": "claude",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": "onthouden-vergeten",
+     "regel": "fout = antwoord − 100",
+     "tekst": "Tel de tientallen nog eens: als ze samen 100 of meer zijn, komt er een honderdtal bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 9,
+   "somtype": "# + # = — met overschrijding van het tiental",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "# + # = — met overschrijding van het tiental",
+   "hint1": "Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het eerste getal.",
+   "hint2": "De eenheden komen samen op tien of meer: dan komt er een tiental bij. Bij de tientallen gebeurt dat ook: dan komt er een honderdtal bij.",
+   "ouderzin": "Je kind telt twee getallen tot 1000 op, met overschrijding van het tiental.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "min gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Kijk goed naar het teken. Bij + tel je op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Tel de tientallen nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. De eenheden zijn samen tien of meer: dan komt er een tiental bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Tel de honderdtallen nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. De tientallen komen samen op tien of meer: dan komt er een honderdtal bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Begin bij het eerste getal. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "past niet bij elk item (minsom, of geen overschrijding) en 'boven de 10' klopt niet bij precies tien; nu per richting een eigen tekst"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast' (les G3/G4): de fout-hint zegt of het één te veel of te weinig is"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "bij een kale som is er geen verhaal: kijk naar het teken"
+    },
+    {
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "zegt niet of het een tiental te veel of te weinig is"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 10,
+   "somtype": "# − # = — zonder overschrijding van het tiental",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "# − # = — zonder overschrijding van het tiental",
+   "hint1": "Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Haal ze één voor één van het eerste getal af.",
+   "hint2": "Bij de tientallen ga je over een heel honderdtal heen. Ga eerst terug naar het hele honderdtal, en haal dan de rest eraf.",
+   "ouderzin": "Je kind haalt een getal af van een getal tot 1000. De eenheden gaan niet over het tiental.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Kijk goed naar het teken. Bij − haal je eraf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Haal de tientallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Haal de tientallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Bij de tientallen ga je over een heel honderdtal heen: dan gaat er nog een honderdtal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. Haal de honderdtallen nog eens af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken na: jouw antwoord plus het tweede getal moet het eerste getal zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "past niet bij elk item (minsom, of geen overschrijding) en 'boven de 10' klopt niet bij precies tien; nu per richting een eigen tekst"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast' (les G3/G4): de fout-hint zegt of het één te veel of te weinig is"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "bij een kale som is er geen verhaal: kijk naar het teken"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 11,
+   "somtype": "In [plek] liggen # [ding]. Er gaan er # uit. Welke som hoort bij dit verhaal?",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er gaan er # uit. Welke som hoort bij dit verhaal?",
+   "hint1": "Lees het verhaal: komen er dingen bij, of gaan er dingen uit?",
+   "hint2": "Gaan er dingen uit? Dan is het een minsom. Je begint met het getal dat er eerst in ligt.",
+   "ouderzin": "Je kind kiest de som die bij een verhaaltje hoort.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "omgedraaid",
+     "claudeDenkfout": null,
+     "regel": "de minsom omgedraaid",
+     "tekst": "Je begint met wat er eerst in ligt. Daar haal je af wat eruit gaat."
+    },
+    {
+     "bron": "claude",
+     "soort": "plussom",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "de plussom",
+     "tekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek in het verhaal de twee getallen. Er gaan dingen uit: haal het tweede getal af van wat er eerst in ligt."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 12,
+   "somtype": "In [plek] liggen # [ding]. Er komen er # bij. Welke som hoort bij dit verhaal?",
+   "nrOrigineel": 12,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er komen er # bij. Welke som hoort bij dit verhaal?",
+   "hint1": "Lees het verhaal: komen er dingen bij, of gaan er dingen af?",
+   "hint2": "Komen er dingen bij? Dan is het een plussom. Kijk ook of de getallen in de som dezelfde zijn als in het verhaal.",
+   "ouderzin": "Je kind kiest de som die bij een verhaaltje hoort.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "minsom",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "de minsom",
+     "tekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ander getal",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk goed welke getallen in het verhaal staan. Gebruik precies die getallen in de som."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 18,
+   "somtype": "[wie] heeft # [ding] en geeft er # weg. Hoeveel [ding] houdt [wie] over?",
+   "nrOrigineel": 13,
+   "somtypeOrigineel": "[wie] heeft # [ding] en geeft er # weg. Hoeveel [ding] houdt [wie] over?",
+   "hint1": "Er worden dingen weggegeven, dus er blijven er minder over. Haal het tweede getal van het eerste af.",
+   "hint2": "Je kunt ook aanvullen: spring vanaf het tweede getal eerst naar het volgende hele tiental of honderdtal, en dan door naar het eerste getal. Hoe groot zijn je sprongen samen?",
+   "ouderzin": "Je kind rekent uit hoeveel er overblijft als er iets wordt weggegeven (tot 1000).",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "opgeteld",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 + getal2 (tekst per item)",
+     "tekst": "Er gaan … weg, dus het worden er minder. Aftrekken, niet optellen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niets eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er worden dingen weggegeven, dus er blijven er minder over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal dat weggaat",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het aantal dat wordt weggegeven. De vraag is hoeveel er nog over zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken de eenheden nog eens na."
+    },
+    {
+     "bron": "claude",
+     "soort": "tiental te veel",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord + 10",
+     "tekst": "Je zit één tiental te hoog. Vul aan tot het volgende honderdtal en tel dan verder."
+    },
+    {
+     "bron": "claude",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord − 10",
+     "tekst": "Je zit één tiental te laag. Vul aan tot het volgende honderdtal en tel dan verder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Bij de tientallen ga je over een heel honderdtal heen: dan gaat er nog een honderdtal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. Haal de honderdtallen nog eens af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "kleinste van de grootste",
+     "claudeDenkfout": "kleinste-van-grootste",
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Je kunt niet per plek het kleine cijfer van het grote afhalen. Vul liever aan: spring vanaf het tweede getal naar het eerste getal.",
+     "claudeTekst": "Je mag niet zomaar per cijfer het kleinste van het grootste afhalen. Vul liever aan vanaf het kleine getal.",
+     "waarom": "'de kleinste van de grootste' is abstract (Didactiek G4 b4 v1, 1.2); vaste tekst via leesbare regel (les G4 4b); aanvullen zoals Hint 2"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 24,
+   "somtype": "In [plek] liggen # [ding]. Er komen # [ding] bij. Hoeveel liggen er nu?",
+   "nrOrigineel": 14,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er komen # [ding] bij. Hoeveel liggen er nu?",
+   "hint1": "Er komen dingen bij, dus het worden er meer. Tel de twee getallen bij elkaar op.",
+   "hint2": "Splits het tweede getal in honderdtallen, tientallen en eenheden. Tel ze één voor één bij het eerste getal.",
+   "ouderzin": "Je kind telt in een verhaal iets bij een getal tot 1000 op.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "min gedaan",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1 (tekst per item)",
+     "tekst": "Er komen … bij, dus je telt op. Niet aftrekken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "claude",
+     "soort": "tiental te veel",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord + 10",
+     "tekst": "Je zit één tiental te hoog. Tel de tientallen nog eens rustig na."
+    },
+    {
+     "bron": "claude",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord − 10",
+     "tekst": "Je zit één tiental te laag. Tel de tientallen nog eens rustig na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Tel de honderdtallen nog eens bij elkaar."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Komen de tientallen samen op tien of meer? Dan komt er een honderdtal bij. Vergeet dat niet.",
+     "claudeTekst": "Als de tientallen samen boven de 100 komen, gaat er een honderdtal bij. Vergeet die niet.",
+     "waarom": "'boven de 100' klopt niet als de tientallen samen precies honderd zijn"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-E05",
+   "nr": 29,
+   "somtype": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel zijn het er samen?",
+   "nrOrigineel": 17,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel zijn het er samen?",
+   "hint1": "Er komen dingen bij, dus het worden er meer. Tel de twee getallen bij elkaar op.",
+   "hint2": "Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het eerste getal.",
+   "ouderzin": "Je kind telt in een verhaal iets bij een getal tot 1000 op.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "min gedaan",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Er komen dingen bij, dus het worden er meer.",
+     "claudeTekst": "Er komt bij: het getal wordt groter.",
+     "waarom": "'Er komt bij' zonder wat er bijkomt (les G4: 'Er komen dingen bij')"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Tel de tientallen nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. De tientallen komen samen op tien of meer: dan komt er een honderdtal bij.",
+     "claudeTekst": "Je gaat over het tiental heen, dus er komt een tiental bij. Tel de tientallen nog eens.",
+     "waarom": "klopt niet: hier gaan de tientallen over het honderdtal (87 + 22), niet de eenheden over het tiental"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Tel de honderdtallen nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. De tientallen komen samen op tien of meer: dan komt er een honderdtal bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Ga eerst naar 90, en tel dan 19 erbij.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    },
+    {
+     "claudeTekst": "Ga eerst naar 90, en tel dan 17 erbij.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "noemt getallen die het antwoord bijna geven en zegt niet of het te veel of te weinig is (les G4 GET-M05)"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

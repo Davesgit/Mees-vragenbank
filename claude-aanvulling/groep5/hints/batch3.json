@@ -1,0 +1,1926 @@
+{
+ "batch": "batch3",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G5-merge, batch 3 = GET-M04, GET-M05, GET-M06). Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint; 'claude' = tekst van Claude blijft, 'claude-taalfix' = tekst op Claudes sleutels (regel 'Claudes sleutel: <denkfout>', fixlijst G4 #48: de vaste tekst geldt voor alle Claude-sleutels met die denkfout), 'nieuw' = eigen tekst (claudeTekst = de Claude-tekst die hij vervangt). [getal1]/[getal2] vult fout_regels per item in. Getal1/getal2 = de getallen in de opgave, in volgorde. Regels als 'de keersom' zijn opties met dat teken. Deelteken ':' als 'a : b'.",
+ "somtypen": [
+  {
+   "doel": "G5-GET-M04",
+   "nr": 1,
+   "somtype": "# + # = — zonder overschrijding van het tiental",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# + # = — zonder overschrijding van het tiental",
+   "hint1": "Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het eerste getal.",
+   "hint2": "Komen de tientallen samen op tien of meer? Dan komt er een honderdtal bij.",
+   "ouderzin": "Je kind telt twee getallen tot 1000 bij elkaar op.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "min gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Kijk goed naar het teken. Bij + tel je op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel de eenheden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Tel de tientallen nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Tel de tientallen nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is één honderdtal te veel. Tel de honderdtallen nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Dat is één honderdtal te weinig. Komen de tientallen samen op tien of meer? Dan komt er een honderdtal bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Begin bij het eerste getal. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "zegt niet of het te veel of te weinig is"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast': de fout-hint zegt of het één te veel of te weinig is"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M04",
+   "nr": 2,
+   "somtype": "# + □ = #",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# + □ = #",
+   "hint1": "Welk getal moet je bij het eerste getal optellen om de uitkomst te krijgen?",
+   "hint2": "Vul aan: spring vanaf het eerste getal naar het volgende hele tiental of honderdtal, en dan verder tot de uitkomst. Tel al je sprongen bij elkaar.",
+   "ouderzin": "Je kind zoekt het ontbrekende getal in een plussom tot 1000 (aanvullen).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "de uitkomst",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is de uitkomst van de som. Welk getal moet je bij het eerste getal optellen om daar te komen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de twee getallen opgeteld. Zoek wat erbij moet: van het eerste getal naar de uitkomst."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Begin bij het eerste getal en vul aan tot de uitkomst. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "zegt niet of het te veel of te weinig is"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M05",
+   "nr": 1,
+   "somtype": "# : # =",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# : # =",
+   "hint1": "Bij delen kijk je hoe vaak het ene getal in het andere past. Hoe vaak past het tweede getal in het eerste getal?",
+   "hint2": "Denk aan de keersom: welk getal keer het tweede getal is het eerste getal?",
+   "ouderzin": "Je kind rekent een deelsom uit met de tafels.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het getal waardoor je deelt",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het getal waardoor je deelt. De vraag is hoe vaak het in het eerste getal past.",
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "waarom": "te vaag: het kind heeft het tweede getal overgenomen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt keer gedaan. Kijk naar het teken: het is een deelsom. Hoe vaak past het tweede getal in het eerste?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken na met de keersom: jouw antwoord keer het tweede getal is meer dan het eerste getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken na met de keersom: jouw antwoord keer het tweede getal is minder dan het eerste getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twee te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2",
+     "tekst": "Dat is twee te veel. Reken na met de keersom: jouw antwoord keer het tweede getal is meer dan het eerste getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twee te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2",
+     "tekst": "Dat is twee te weinig. Reken na met de keersom: jouw antwoord keer het tweede getal is minder dan het eerste getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel van het tweede getal op, tot je bij het eerste getal bent. Hoeveel stappen zijn het?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast': de fout-hint zegt of het één te veel of te weinig is"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M05",
+   "nr": 2,
+   "somtype": "# : # = □. Denk aan de keersom # × □ = #.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# : # = □. Denk aan de keersom # × □ = #.",
+   "hint1": "Kijk naar de keersom in de vraag. Welk getal hoort op het hokje?",
+   "hint2": "Zeg de tafel op tot je precies bij het eerste getal bent. Hoeveel stappen zijn het?",
+   "ouderzin": "Je kind rekent een deelsom uit met de keersom die erbij hoort.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het getal waardoor je deelt",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het getal waardoor je deelt. Welk getal hoort op het hokje in de keersom?",
+     "claudeTekst": "Dat is het getal waardoor je deelt, niet de uitkomst.",
+     "waarom": "'uitkomst' wordt 'het hokje in de keersom' (zoals in de vraag)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt keer gedaan. Het is een deelsom. Welk getal hoort op het hokje in de keersom?",
+     "claudeTekst": "Delen maakt kleiner, niet groter.",
+     "waarom": "zegt niet wat het kind deed en hoe het verder moet"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Zeg de tafel op tot je precies bij het eerste getal bent.",
+     "claudeTekst": "Zeg de tafel op tot je precies bij het totaal bent, niet erover en niet eronder.",
+     "waarom": "'te weinig' erbij; 'het totaal' wordt 'het eerste getal'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Zeg de tafel op tot je precies bij het eerste getal bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel van het tweede getal op, tot je bij het eerste getal bent. Hoeveel stappen zijn het?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M05",
+   "nr": 3,
+   "somtype": "# × # =",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "# × # =",
+   "hint1": "Een keersom is groepjes van hetzelfde aantal. Hoeveel groepjes zijn het, en hoeveel zitten er in elk?",
+   "hint2": "Weet je het niet meteen? Begin bij een som die je wel weet, zoals vijf keer of tien keer. Reken van daar verder of terug.",
+   "ouderzin": "Je kind oefent de tafels.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is één stap te ver in de tafel. Zeg de tafel nog eens op en tel de stappen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is één stap te weinig in de tafel. Zeg de tafel nog eens op en tel de stappen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (andere tafel)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is één stap te ver in de tafel. Zeg de tafel nog eens op en tel de stappen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te weinig (andere tafel)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is één stap te weinig in de tafel. Zeg de tafel nog eens op en tel de stappen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bijna! Je zit één groepje ernaast. Tel nog eens goed hoeveel groepjes het zijn.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M05",
+   "nr": 4,
+   "somtype": "Er staan # [ding]. In elk(e) [bak] zitten # [ding]. Hoeveel [ding] zijn er samen?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Er staan # [ding]. In elk(e) [bak] zitten # [ding]. Hoeveel [ding] zijn er samen?",
+   "hint1": "Hoeveel staan er? En hoeveel zitten er in elk? Dat is een keersom.",
+   "hint2": "Weet je het niet meteen? Begin bij een som die je wel weet, zoals vijf keer of tien keer. Reken van daar verder of terug.",
+   "ouderzin": "Je kind lost een verhaaltje op met een keersom uit de tafels.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bijna! Je zit één groepje ernaast. Tel nog eens goed hoeveel groepjes het zijn.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Let op het teken: het is een keersom. Keer betekent: zoveel groepjes van. Probeer het groepje steeds opnieuw erbij te tellen.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M05",
+   "nr": 5,
+   "somtype": "[rooster] Kleur # × # [ding] rechthoek op het rooster.",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "[rooster] Kleur # × # [ding] rechthoek op het rooster.",
+   "hint1": "Het keerteken (×) betekent: zoveel keer. Het eerste getal zegt hoeveel rijen je kleurt. Het tweede getal zegt hoeveel hokjes er in elke rij komen.",
+   "hint2": "Kleur eerst één rij. Kleur dan de volgende rij recht eronder, net zo lang. Ga door tot je genoeg rijen hebt.",
+   "ouderzin": "Je kind kleurt een keersom als rechthoek op een rooster: het eerste getal is het aantal rijen, het tweede het aantal hokjes per rij.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "plus gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2 (aantal gekleurde hokjes)",
+     "tekst": "Je hebt de getallen opgeteld. Het is een keersom: je kleurt een aantal rijen, en in elke rij evenveel hokjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één rij",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2 (aantal gekleurde hokjes)",
+     "tekst": "Je hebt nog niet genoeg hokjes gekleurd. Kleur alle rijen, recht onder elkaar. In elke rij evenveel hokjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één kolom",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 (aantal gekleurde hokjes)",
+     "tekst": "Je hebt nog niet genoeg hokjes gekleurd. Kleur alle rijen, recht onder elkaar. In elke rij evenveel hokjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel je rijen. Tel de hokjes in elke rij. Kloppen ze met de som?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M05",
+   "nr": 6,
+   "somtype": "# × # [ding] je lastig. Draai de som om. Hoeveel is # × #?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "# × # [ding] je lastig. Draai de som om. Hoeveel is # × #?",
+   "hint1": "Bij een keersom mag je de getallen omdraaien. De uitkomst blijft hetzelfde.",
+   "hint2": "Kies de tafel die je het best kent, en zeg hem op tot het goede aantal stappen.",
+   "ouderzin": "Je kind draait een keersom om, zodat het een tafel kan gebruiken die het kent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Kijk naar het teken: het is een keersom.",
+     "claudeTekst": "Keer, niet plus.",
+     "waarom": "te kort: zegt niet wat het kind deed"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is één stap te ver in de tafel. Zeg de tafel nog eens op en tel de stappen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is één stap te weinig in de tafel. Zeg de tafel nog eens op en tel de stappen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (andere tafel)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is één stap te ver in de tafel. Zeg de tafel nog eens op en tel de stappen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te weinig (andere tafel)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is één stap te weinig in de tafel. Zeg de tafel nog eens op en tel de stappen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit één stap te laag in de tafel van 6.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Je zit één stap te hoog in de tafel van 6.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Je zit één stap te laag in de tafel van 7.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Je zit één stap te hoog in de tafel van 7.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M05",
+   "nr": 7,
+   "somtype": "[wie] heeft # [ding]. Er zijn # [ding]. Hoeveel [ding] zijn dat samen?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "[wie] heeft # [ding]. Er zijn # [ding]. Hoeveel [ding] zijn dat samen?",
+   "hint1": "Ze hebben allemaal evenveel. Hoeveel zijn het er? Dat is een keersom.",
+   "hint2": "Weet je het niet meteen? Begin bij een som die je wel weet, zoals vijf keer of tien keer. Reken van daar verder of terug.",
+   "ouderzin": "Je kind lost een verhaaltje op met een keersom uit de tafels.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "cijfers omgedraaid",
+     "claudeDenkfout": "cijfers-verwisseld",
+     "regel": "Claudes sleutel: cijfers-verwisseld",
+     "tekst": "Je hebt de goede cijfers, maar in een andere volgorde. Kijk goed welk cijfer op welke plek hoort.",
+     "claudeTekst": "Je hebt de goede cijfers, maar draai ze om.",
+     "waarom": "Claudes tekst per item noemt de som ('8 × 7 is zes-en-...?')"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "9 + 8 telt de noten en de eekhoorns op. Maar élke eekhoorn heeft 9 noten. Tel 9 steeds opnieuw erbij, 8 keer.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "9 + 9 telt de tanden en de dino's op. Maar élke dino heeft 9 tanden. Tel 9 steeds opnieuw erbij, 9 keer.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "7 + 7 telt de stickers en de spelers op. Maar élke speler heeft 7 stickers. Tel 7 steeds opnieuw erbij, 7 keer.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat zijn 7 eekhoorns. Er is er nog één met 9 noten.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is één eekhoorn te veel. Het zijn er 8.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat zijn 8 dino's. Er is er nog één met 9 tanden.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is één dino te veel. Het zijn er 9.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat zijn 6 spelers. Er is er nog één met 7 stickers.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is één speler te veel. Het zijn er 7.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M05",
+   "nr": 8,
+   "somtype": "Een spin heeft # [ding]. In [plek] zitten # [ding]. Hoeveel [ding] zijn dat samen?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "Een spin heeft # [ding]. In [plek] zitten # [ding]. Hoeveel [ding] zijn dat samen?",
+   "hint1": "Elke spin heeft evenveel poten. Hoeveel spinnen zijn er? Dat is een keersom.",
+   "hint2": "Weet je het niet meteen? Begin bij een som die je wel weet, zoals vijf keer of tien keer. Reken van daar verder of terug.",
+   "ouderzin": "Je kind lost een verhaaltje op met een keersom uit de tafels.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "cijfers omgedraaid",
+     "claudeDenkfout": "cijfers-verwisseld",
+     "regel": "Claudes sleutel: cijfers-verwisseld",
+     "tekst": "Je hebt de goede cijfers, maar in een andere volgorde. Kijk goed welk cijfer op welke plek hoort.",
+     "claudeTekst": "Je hebt de goede cijfers, maar draai ze om. 8 × 7 is zes-en-...?",
+     "waarom": "Claudes tekst per item noemt de som ('8 × 7 is zes-en-...?')"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "8 + 7 is één spin plus het aantal spinnen. Maar élke spin heeft 8 poten, en er zijn 7 spinnen.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat zijn 6 spinnen. Er is nog een zevende spin met 8 poten.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is 8 × 8, een spin te veel. Het zijn 7 spinnen.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M05",
+   "nr": 9,
+   "somtype": "In [plek] van een dino liggen # [ding]. Er zijn # [ding]. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "In [plek] van een dino liggen # [ding]. Er zijn # [ding]. Hoeveel [ding] zijn dat?",
+   "hint1": "In elk nest liggen evenveel. Hoeveel nesten zijn er? Dat is een keersom.",
+   "hint2": "Weet je het niet meteen? Begin bij een som die je wel weet, zoals vijf keer of tien keer. Reken van daar verder of terug.",
+   "ouderzin": "Je kind lost een verhaaltje op met een keersom uit de tafels.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "cijfers omgedraaid",
+     "claudeDenkfout": "cijfers-verwisseld",
+     "regel": "Claudes sleutel: cijfers-verwisseld",
+     "tekst": "Je hebt de goede cijfers, maar in een andere volgorde. Kijk goed welk cijfer op welke plek hoort.",
+     "claudeTekst": "Je hebt de goede cijfers, maar in de verkeerde volgorde. 7 × 6 is twee-en-...?",
+     "waarom": "Claudes tekst per item noemt de som ('8 × 7 is zes-en-...?')"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "7 + 6 telt de nesten en de eieren op. Maar in élk nest liggen 6 eieren, en er zijn 7 nesten.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is 6 × 6. Er zijn 7 nesten, dus nog 6 eieren erbij.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is 8 × 6. Het zijn 7 nesten, dus 6 eieren minder.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M05",
+   "nr": 10,
+   "somtype": "Op de tribune staan # rijen met # [ding]. Hoeveel [ding] zijn er?",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "Op de tribune staan # rijen met # [ding]. Hoeveel [ding] zijn er?",
+   "hint1": "Hoeveel rijen zijn er, en hoeveel zitten er in elke rij? Dat is een keersom.",
+   "hint2": "Weet je het niet meteen? Begin bij een som die je wel weet, zoals vijf keer of tien keer. Reken van daar verder of terug.",
+   "ouderzin": "Je kind lost een verhaaltje op met een keersom uit de tafels.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twee te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2",
+     "tekst": "Bijna! Dat is twee te veel. Reken de tafel nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "6 + 9 telt de rijen en de stoelen op. Maar elke rij heeft 9 stoelen, en er zijn 6 van die rijen.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is 5 rijen. Er zijn 6 rijen, dus nog een rij van 9 erbij.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Heel dichtbij! Reken via 6 × 10 = 60 en haal er dan 6 af.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M05",
+   "nr": 11,
+   "somtype": "[wie] eet # kilo vlees per dag. Hoeveel kilo eet hij in # dagen?",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "[wie] eet # kilo vlees per dag. Hoeveel kilo eet hij in # dagen?",
+   "hint1": "Elke dag eet hij evenveel kilo. Hoeveel dagen zijn het? Dat is een keersom.",
+   "hint2": "Weet je het niet meteen? Begin bij een som die je wel weet, zoals vijf keer of tien keer. Reken van daar verder of terug.",
+   "ouderzin": "Je kind lost een verhaaltje op met een keersom uit de tafels.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "cijfers omgedraaid",
+     "claudeDenkfout": "cijfers-verwisseld",
+     "regel": "Claudes sleutel: cijfers-verwisseld",
+     "tekst": "Je hebt de goede cijfers, maar in een andere volgorde. Kijk goed welk cijfer op welke plek hoort.",
+     "claudeTekst": "Je hebt de goede cijfers, maar draai ze eens om. 7 × 8 is zes-en-...?",
+     "waarom": "Claudes tekst per item noemt de som ('8 × 7 is zes-en-...?')"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt 7 en 8 bij elkaar opgeteld. Maar de dino eet 8 dagen lang élke dag 7 kilo. Dus 7 + 7 + 7 ... acht keer.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Bijna! 7 × 7 = 49, maar het zijn 8 dagen. Doe er nog één dag van 7 kilo bij.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is 7 × 9. Het zijn maar 8 dagen, dus één groepje van 7 minder.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M05",
+   "nr": 12,
+   "somtype": "[wie] ziet elke dag # [ding] in de tuin. Hoeveel [ding] zijn dat in # dagen?",
+   "nrOrigineel": 12,
+   "somtypeOrigineel": "[wie] ziet elke dag # [ding] in de tuin. Hoeveel [ding] zijn dat in # dagen?",
+   "hint1": "Elke dag ziet het kind evenveel. Hoeveel dagen zijn het? Dat is een keersom.",
+   "hint2": "Weet je het niet meteen? Begin bij een som die je wel weet, zoals vijf keer of tien keer. Reken van daar verder of terug.",
+   "ouderzin": "Je kind lost een verhaaltje op met een keersom uit de tafels.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één groepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "in elk groepje één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "9 + 6 telt de dagen bij de vogels op. Maar élke dag ziet hij 9 vogels, 6 dagen lang.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is 8 × 6. Het zijn 9 vogels per dag, dus nog een groepje van 6 erbij.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is 9 × 5. Het zijn 6 dagen, dus nog een dag met 9 erbij.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "60 is 10 × 6. Het zijn maar 9 per dag, dus haal er 6 af.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M06",
+   "nr": 1,
+   "somtype": "Er zijn # [ding]. Ze gaan eerlijk over # [ding]. Welke som hoort bij dit verhaal?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Er zijn # [ding]. Ze gaan eerlijk over # [ding]. Welke som hoort bij dit verhaal?",
+   "hint1": "Lees het verhaal: wat wordt er verdeeld, en over hoeveel?",
+   "hint2": "Eerlijk verdelen is een deelsom. Welk getal wordt er verdeeld?",
+   "ouderzin": "Je kind kiest de deelsom die bij een verhaaltje hoort.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "keersom",
+     "claudeDenkfout": null,
+     "regel": "de keersom",
+     "tekst": "Je kiest een keersom, maar er wordt eerlijk verdeeld. Verdelen is een deelsom.",
+     "claudeTekst": "Je verdeelt. Is dat keer of gedeeld door?",
+     "waarom": "'gedeeld door' en een vraag zonder antwoord; nu: wat het kind koos en wat het moet zijn"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "getallen omgedraaid",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "regel": "Claudes sleutel: omgekeerd-gedeeld",
+     "tekst": "De getallen staan andersom. Wat verdeel je? Dat getal komt vóór het deelteken (:).",
+     "claudeTekst": "Wat verdeel je? Dat getal komt vóór het deelteken.",
+     "waarom": "'De getallen staan andersom' erbij: dat is de fout"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Wat wordt er verdeeld? Dat getal komt vóór het deelteken (:). Over hoeveel? Dat getal komt erachter."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M06",
+   "nr": 2,
+   "somtype": "Er zijn # [ding]. Ze gaan in [bakken] van #. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Er zijn # [ding]. Ze gaan in [bakken] van #. Hoeveel [ding] zijn dat?",
+   "hint1": "Hoeveel gaan er in elk? Hoe vaak past dat in het totaal?",
+   "hint2": "Denk aan de keersom: hoeveel keer het aantal in elk is het totaal?",
+   "ouderzin": "Je kind rekent uit hoeveel groepjes je kunt maken (deelsom die precies uitkomt).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het aantal in elk",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het aantal in elk. De vraag is hoe vaak dat in het totaal past."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt keer gedaan. Kijk hoeveel er in elk gaan. Hoe vaak past dat in het totaal?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken na met een keersom: dan heb je er meer nodig dan er zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken na met een keersom: dan blijven er nog over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twee te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2",
+     "tekst": "Dat is twee te veel. Reken na met een keersom: dan heb je er meer nodig dan er zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twee te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2",
+     "tekst": "Dat is twee te weinig. Reken na met een keersom: dan blijven er nog over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op van het aantal in elk, tot je bij het totaal bent. Hoeveel stappen zijn het?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast': de fout-hint zegt of het één te veel of te weinig is"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M06",
+   "nr": 3,
+   "somtype": "# [ding] worden eerlijk verdeeld over # [ding]. Hoeveel blijven er over?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "# [ding] worden eerlijk verdeeld over # [ding]. Hoeveel blijven er over?",
+   "hint1": "Verdeel eerlijk: iedereen krijgt evenveel. Hoeveel krijgt ieder, en hoeveel blijven er over?",
+   "hint2": "Zoek de grootste keersom met het aantal waarover je verdeelt, die niet boven het totaal komt. Wat er daarna nog over is, is de rest.",
+   "ouderzin": "Je kind verdeelt eerlijk en rekent uit hoeveel er overblijft (de rest).",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "wat ieder krijgt",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is wat ieder krijgt. De vraag is hoeveel er overblijft.",
+     "claudeTekst": "Dat is wat elk kind krijgt. Gevraagd is wat er overblijft.",
+     "waarom": "Claudes tekst per item ('Dat is wat elk kind krijgt. Gevraagd is …'); 'Gevraagd is' wordt 'De vraag is'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt keer gedaan. Er wordt verdeeld: dat is een deelsom. Hoeveel blijft er over?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Heb je de getallen van elkaar afgehaald? Er wordt verdeeld: dat is een deelsom."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "nog een ronde",
+     "claudeDenkfout": "rest-vergeten",
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is te veel. Daar past nog een hele ronde bij: iedereen kan er nog één krijgen. Wat overblijft, de rest, is altijd kleiner dan het aantal waarover je verdeelt.",
+     "claudeTekst": "Er past nog een hele ronde bij. De rest is altijd kleiner dan het aantal waarover je verdeelt.",
+     "waarom": "'Dat is te veel' erbij; wat 'een hele ronde' is"
+    },
+    {
+     "bron": "claude",
+     "soort": "niets over",
+     "claudeDenkfout": "rest-vergeten",
+     "regel": "Claudes sleutel: rest-vergeten",
+     "tekst": "Het komt niet precies uit: er blijft iets over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst uit hoeveel ieder krijgt. Hoeveel heb je dan uitgedeeld? Wat er nog over is, is de rest."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is wat elke trainer krijgt. Gevraagd is wat er overblijft.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is wat elke dino krijgt. Gevraagd is wat er overblijft.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is wat elke poes krijgt. Gevraagd is wat er overblijft.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is wat elke eekhoorn krijgt. Gevraagd is wat er overblijft.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is wat elke speler krijgt. Gevraagd is wat er overblijft.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M06",
+   "nr": 4,
+   "somtype": "# [ding] worden eerlijk verdeeld over # [ding]. Hoeveel krijgt [wie]? (De rest blijft over.)",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "# [ding] worden eerlijk verdeeld over # [ding]. Hoeveel krijgt [wie]? (De rest blijft over.)",
+   "hint1": "Verdeel eerlijk: iedereen krijgt evenveel. Wat er overblijft, heet de rest. Die krijgt niemand.",
+   "hint2": "Zoek de grootste keersom met het aantal waarover je verdeelt, die niet boven het totaal komt.",
+   "ouderzin": "Je kind verdeelt eerlijk en rekent uit hoeveel ieder krijgt (er blijft iets over).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het aantal waarover je verdeelt",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het aantal waarover je verdeelt. De vraag is hoeveel ieder krijgt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt keer gedaan. Er wordt eerlijk verdeeld: dat is een deelsom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Heb je de getallen van elkaar afgehaald? Er wordt verdeeld: dat is een deelsom."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één te veel",
+     "claudeDenkfout": "rest-vergeten",
+     "regel": "fout = antwoord + 1",
+     "tekst": "Dat is één te veel. Eén stap hoger in de tafel kom je boven het totaal uit.",
+     "claudeTekst": "Eén stap hoger in de tafel kom je boven het totaal uit. Dat past niet.",
+     "waarom": "'Dat is één te veel' erbij"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "de rest",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is wat er overblijft: de rest. De vraag is hoeveel ieder krijgt.",
+     "claudeTekst": "Dat is de rest. Gevraagd is hoeveel elk kind krijgt.",
+     "waarom": "Claudes tekst per item ('Dat is de rest. Gevraagd is …'); 'Gevraagd is' wordt 'De vraag is'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op van het aantal waarover je verdeelt. Stop vlak voordat je boven het totaal komt. Hoeveel stappen zijn het?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de rest. Gevraagd is hoeveel elke speler krijgt.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is de rest. Gevraagd is hoeveel elke eekhoorn krijgt.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is de rest. Gevraagd is hoeveel elke dino krijgt.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is de rest. Gevraagd is hoeveel elk konijn krijgt.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is de rest. Gevraagd is hoeveel elke trainer krijgt.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dat is de rest. Gevraagd is hoeveel elke pinguïn krijgt.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M06",
+   "nr": 5,
+   "somtype": "# [ding] hebben samen # [ding], allemaal evenveel. Hoeveel [ding] heeft [wie]?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "# [ding] hebben samen # [ding], allemaal evenveel. Hoeveel [ding] heeft [wie]?",
+   "hint1": "Ze hebben allemaal evenveel. Verdeel het totaal eerlijk over iedereen.",
+   "hint2": "Denk aan de keersom: hoeveel keer het aantal waarover je verdeelt, is het totaal?",
+   "ouderzin": "Je kind verdeelt een totaal eerlijk (deelsom die precies uitkomt).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het totaal",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het totaal. De vraag is hoeveel ieder heeft.",
+     "claudeTekst": "54 is het totaal. Gevraagd is hoeveel elk kind krijgt.",
+     "waarom": "noemt een getal; nu één tekst"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Heb je de getallen van elkaar afgehaald? Ze verdelen: dat is een deelsom.",
+     "claudeTekst": "Verdelen is delen, niet aftrekken.",
+     "waarom": "'Je hebt de getallen van elkaar afgehaald' erbij"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt keer gedaan. Ze verdelen: dat is een deelsom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken na met een keersom: dan kom je boven het totaal.",
+     "claudeTekst": "Zeg de tafel op tot je precies bij het totaal bent, niet erover.",
+     "waarom": "'Dat is één te veel' erbij"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken na met een keersom: dan kom je onder het totaal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op van het aantal waarover je verdeelt, tot je bij het totaal bent. Hoeveel stappen zijn het?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "48 is het totaal. Gevraagd is hoeveel elk konijn krijgt.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "64 is het totaal. Gevraagd is hoeveel elke speler krijgt.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "63 is het totaal. Gevraagd is hoeveel elk kind krijgt.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "12 is het totaal. Gevraagd is hoeveel elke dino krijgt.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "45 is het totaal. Gevraagd is hoeveel elke pinguïn krijgt.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "35 is het totaal. Gevraagd is hoeveel elke dino krijgt.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "63 is het totaal. Gevraagd is hoeveel elke dino krijgt.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "70 is het totaal. Gevraagd is hoeveel elke speler krijgt.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "12 is het totaal. Gevraagd is hoeveel elk kind krijgt.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M06",
+   "nr": 6,
+   "somtype": "# [ding] worden verdeeld over # [ding]. [wie] krijgt evenveel. Hoeveel blijven er over?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "# [ding] worden verdeeld over # [ding]. [wie] krijgt evenveel. Hoeveel blijven er over?",
+   "hint1": "Verdeel eerlijk: iedereen krijgt evenveel. Hoeveel krijgt ieder, en hoeveel blijven er over?",
+   "hint2": "Zoek de grootste keersom met het aantal waarover je verdeelt, die niet boven het totaal komt. Wat er daarna nog over is, is de rest.",
+   "ouderzin": "Je kind verdeelt eerlijk en rekent uit hoeveel er overblijft (de rest).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt keer gedaan. Er wordt verdeeld: dat is een deelsom. Hoeveel blijft er over?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Heb je de getallen van elkaar afgehaald? Er wordt verdeeld: dat is een deelsom."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "nog een ronde",
+     "claudeDenkfout": "rest-vergeten",
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is te veel. Daar past nog een hele ronde bij: iedereen kan er nog één krijgen. Wat overblijft, de rest, is altijd kleiner dan het aantal waarover je verdeelt.",
+     "claudeTekst": "Er past nog een hele ronde bij. De rest is altijd kleiner dan het aantal waarover je verdeelt.",
+     "waarom": "'Dat is te veel' erbij; wat 'een hele ronde' is"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "niet de rest",
+     "claudeDenkfout": "rest-vergeten",
+     "regel": "Claudes sleutel: rest-vergeten",
+     "tekst": "Dat is niet wat er overblijft. Reken eerst uit hoeveel ieder krijgt. Reken dan terug: hoeveel is er nog over na het verdelen?",
+     "claudeTekst": "11 is wat elke dino krijgt. De vraag is hoeveel er óverblijft.",
+     "waarom": "Claudes teksten per item noemen de keersom ('Reken terug. 8 × 11 = 88 …'); de sleutels zijn wat ieder krijgt of een rekenfout"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst uit hoeveel ieder krijgt. Hoeveel heb je dan uitgedeeld? Wat er nog over is, is de rest."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Reken terug. 8 × 11 = 88. Hoeveel is 94 meer dan dat?",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Als er 14 overblijven, kan elke dino er nog één krijgen. De rest is altijd kleiner dan 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "4 is wat elk kind krijgt. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Reken terug. 9 × 4 = 36. Hoeveel is 43 meer dan dat?",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Als er 16 overblijven, kan elk kind er nog één krijgen. De rest is altijd kleiner dan 9.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "6 is wat elke trainer krijgt. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Als er 10 overblijven, kan elke trainer er nog één krijgen. De rest is altijd kleiner dan 8.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "12 is wat elk kind krijgt. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Reken terug. 5 × 12 = 60. Hoeveel is 64 meer dan dat?",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Als er 9 overblijven, kan elk kind er nog één krijgen. De rest is altijd kleiner dan 5.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Reken terug. 6 × 11 = 66. Hoeveel is 71 meer dan dat?",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "5 is wat elke poes krijgt. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Reken terug. 9 × 5 = 45. Hoeveel is 51 meer dan dat?",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Als er 15 overblijven, kan elke poes er nog één krijgen. De rest is altijd kleiner dan 9.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "9 is wat elke speler krijgt. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Reken terug. 4 × 9 = 36. Hoeveel is 37 meer dan dat?",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Als er 5 overblijven, kan elke speler er nog één krijgen. De rest is altijd kleiner dan 4.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "4 is wat elke poes krijgt. De vraag is hoeveel er óverblijft.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Reken terug. 7 × 4 = 28. Hoeveel is 29 meer dan dat?",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Als er 8 overblijven, kan elke poes er nog één krijgen. De rest is altijd kleiner dan 7.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M06",
+   "nr": 7,
+   "somtype": "# [ding] gaan eten. Aan elke tafel passen er #. Hoeveel [ding] zijn er nodig?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "# [ding] gaan eten. Aan elke tafel passen er #. Hoeveel [ding] zijn er nodig?",
+   "hint1": "Hoeveel passen er aan één tafel? Hoe vaak past dat in het totaal?",
+   "hint2": "Blijft er na het verdelen nog iemand over? Dan is er nog een tafel nodig.",
+   "ouderzin": "Je kind rekent uit hoeveel tafels er nodig zijn, ook voor wie overblijft (naar boven afronden).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt keer gedaan. Er moet verdeeld worden: hoe vaak past het aantal aan één tafel in het totaal?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Heb je de getallen van elkaar afgehaald? Er wordt verdeeld: dat is een deelsom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één tafel te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Dat is één tafel te weinig. Dan heeft niet iedereen een plek. Voor wie overblijft, is nog een tafel nodig.",
+     "claudeTekst": "Dan blijven er kinderen staan. Die moeten ook mee, dus je hebt er een extra nodig.",
+     "waarom": "'mee' past niet bij tafels; 'een extra' wordt 'nog een tafel'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Spring in sprongen van het aantal aan één tafel, tot je bij het totaal komt. Blijft er iemand over? Ook die heeft een plek nodig."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dan blijven er eekhoorns staan. Die moeten ook mee, dus je hebt er een extra nodig.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dan blijven er spelers staan. Die moeten ook mee, dus je hebt er een extra nodig.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Dan blijven er dino's staan. Die moeten ook mee, dus je hebt er een extra nodig.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M06",
+   "nr": 8,
+   "somtype": "# [ding] gaan op stap. In elk(e) [bak] passen er #. Hoeveel [ding] zijn er nodig?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "# [ding] gaan op stap. In elk(e) [bak] passen er #. Hoeveel [ding] zijn er nodig?",
+   "hint1": "Hoeveel passen er in elk? Hoe vaak past dat in het totaal?",
+   "hint2": "Blijft er na het verdelen nog iemand over? Dan is er nog één nodig.",
+   "ouderzin": "Je kind rekent uit hoeveel er nodig zijn, ook voor wie overblijft (naar boven afronden).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt keer gedaan. Er moet verdeeld worden: hoe vaak past het aantal in elk in het totaal?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Heb je de getallen van elkaar afgehaald? Er wordt verdeeld: dat is een deelsom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rest achter de komma",
+     "claudeDenkfout": null,
+     "regel": "fout = quotiënt,rest",
+     "tekst": "Je schreef de rest achter een komma. De vraag is hoeveel er nodig zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Dat is één te weinig. Dan kan niet iedereen mee. Voor wie overblijft, is er nog één nodig.",
+     "claudeTekst": "Dan blijven er kinderen staan. Die moeten ook mee, dus je hebt er een extra nodig.",
+     "waarom": "'een extra' wordt 'nog één'; 'kinderen' past niet bij elk item"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "kommagetal",
+     "claudeDenkfout": null,
+     "regel": "fout = een kommagetal",
+     "tekst": "Een kommagetal kan hier niet: je kunt geen stukje nemen. Hoeveel heb je er nodig, zodat iedereen mee kan?",
+     "claudeTekst": "Je kunt geen halve bus nemen. Rond naar boven af.",
+     "waarom": "'een halve bus' past niet bij elk item; 'Rond naar boven af' zonder uitleg"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoe vaak past het aantal in elk in het totaal? Blijft er iemand over? Ook die moet mee."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dan blijven er dino's staan. Die moeten ook mee, dus je hebt er een extra nodig.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-GET-M06",
+   "nr": 9,
+   "somtype": "# [ding] worden eerlijk verdeeld over # [ding]. Hoeveel [ding] krijgt [wie]?",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "# [ding] worden eerlijk verdeeld over # [ding]. Hoeveel [ding] krijgt [wie]?",
+   "hint1": "Verdeel eerlijk: iedereen krijgt evenveel. Hoeveel krijgt ieder?",
+   "hint2": "Denk aan de keersom: hoeveel keer het aantal waarover je verdeelt, is het totaal?",
+   "ouderzin": "Je kind verdeelt eerlijk (deelsom die precies uitkomt).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het aantal waarover je verdeelt",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het aantal waarover je verdeelt. De vraag is hoeveel ieder krijgt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Heb je de getallen van elkaar afgehaald? Verdelen is een deelsom.",
+     "claudeTekst": "Verdelen is delen, niet aftrekken. Hoe vaak past de groep erin?",
+     "waarom": "'Je hebt de getallen van elkaar afgehaald' erbij"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "keer gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt keer gedaan. Er wordt eerlijk verdeeld: dat is een deelsom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Reken na met een keersom: dan kom je boven het totaal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Reken na met een keersom: dan kom je onder het totaal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zeg de tafel op van het aantal waarover je verdeelt, tot je bij het totaal bent. Hoeveel stappen zijn het?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Controleer. 6 × 8 = 48. Dat is te veel.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Controleer. 6 × 6 = 36. Dan blijft er over.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 10 = 80. Dat is te veel.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 8 = 64. Dan blijft er over.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 6 = 48. Dat is te veel.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Controleer. 8 × 4 = 32. Dan blijft er over.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

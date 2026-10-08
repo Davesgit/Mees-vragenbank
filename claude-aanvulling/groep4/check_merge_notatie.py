@@ -1,0 +1,135 @@
+#!/usr/bin/env python3
+"""Notatiecheck op de G4 Claude-merge (1 okt 2026). Leest alleen, wijzigt niets. G4-versie van g3/check_merge_notatie.py (build 13:59).
+Bron: data/per_doel/G4-*.json (opgave, opgaveStappen, opties/optiesTekst, antwoord, Claude-fout-hints).
+Regels:
+  DP    ':' + getal of □ (geen kloktijd, geen deelsom 'a : b', geen 'woord: getal' zoals 'Reken uit: 4 × 7') -> zin splitsen. FAIL
+  MIN   '-' (koppelteken) tussen getallen/□/#; moet '−' (U+2212) zijn.                                FAIL
+  KEER  '×' of 'x' tussen getallen buiten de tafel-/keerdoelen (M06, E06, E07, E08, E09, VERH-E03/E04). FAIL
+  XSTER 'x' of '*' als keerteken, ook in de keerdoelen (moet '×').                                    FAIL
+  DEELT '÷' (G4: 'a : b').                                                                             FAIL
+  MACHT cijfer + ², ³ of ^.                                                                            FAIL
+  SOM   een som met '=' die niet klopt (elke '=' in een kettingsom; □ telt niet mee).                  FAIL
+  (DP-uitzondering 'woord: getal', XSTER, DEELT, MACHT en SOM: Oefeningen 1 okt 14:30, G4-notatie uit de opdracht.)
+  PUNT  4-cijferig getal met punt (1.000) of ≥10.000 zonder punt.                                       FAIL
+  GELD  '€N,-' of '€N,00' (G4: '€N' en '€N,CC').                                                      FAIL
+  EEN   'Één' (moet 'Eén').                                                                            FAIL
+  KOMMA geldbedrag met komma '€N,CC' (besluit Dave 1 okt: geen komma in G4; '45 cent', '€2').          FAIL
+  DEEL  deelsom 'a : b' in kindtekst (Didactiek: deelteken in G4 = twijfel).                           INFO
+  KLOK  kloktijd u:mm (G4-MEET-E06 kent digitaal :15/:30/:45).                                           INFO
+Gebruik: python3 check_merge_notatie.py [--detail] [doelbestand.json ...]"""
+import json, glob, os, re, sys, collections
+BASE = os.path.dirname(os.path.abspath(__file__))
+KEER_DOELEN = {'G4-GET-M06', 'G4-GET-E06', 'G4-GET-E07', 'G4-GET-E08', 'G4-GET-E09', 'G4-VERH-E03', 'G4-VERH-E04'}
+KLOK = re.compile(r'(?<![\d:])\d{1,2}:\d{2}(?!\d)')
+DEEL = re.compile(r'[\d□#]\s:\s[\d□#]')
+R = [('DP',   "':' + getal",             re.compile(r':\s*[\d□#€]'), 'FAIL'),
+     ('EVEN',  "'even veel' (schrijf 'evenveel')", re.compile(r'\b[Ee]ven veel\b'), 'FAIL'),      # Didactiek 21:25 (G6 #192)
+     ('MIN',  "'-' tussen getallen",     re.compile(r'[\d□#]\s*[-–]\s*[\d□#]'), 'FAIL'),
+     ('KEER', "'×' buiten keerdoel",     re.compile(r'[\d□#]\s*[×x*]\s*[\d□#]'), 'FAIL'),
+     ('PUNT', 'duizendtal-notatie',      re.compile(r'(?<![\d.,])\d\.\d{3}(?![\d.,])|(?<![\d.,:])\d{5,}(?![\d.,:])'), 'FAIL'),
+     ('GELD', "'€N,-' / '€N,00'",        re.compile(r'€\s?\d+,(?:-|00\b)'), 'FAIL'),
+     ('EEN',  "'Één'",                   re.compile(r'Één'), 'FAIL'),
+     ('KOMMA', "geld met komma",         re.compile(r'€\s?\d+,\d'), 'FAIL'),
+     ('XSTER',"'x'/'*' als keerteken",   re.compile(r'[\d□#]\s*[x*]\s*[\d□#]'), 'FAIL'),
+     ('DEELT',"'÷'",                     re.compile(r'÷'), 'FAIL'),
+     ('MACHT','macht',                   re.compile(r'\d\s?[²³]|\d\s?\^'), 'FAIL'),
+     ('SOM',  "som klopt niet",          None, 'FAIL'),
+     ('DEEL', "deelsom 'a : b'",         DEEL, 'INFO'),
+     ('KLOK', 'kloktijd u:mm',           KLOK, 'INFO')]
+WOORD_DP = re.compile(r'(?<=[A-Za-zÀ-ÿ)]): (?=(?:€\s?)?[\d□#])')
+NUM = r'\d+(?:,\d+)?'
+EXPR = rf'{NUM}(?:\s*[+−×:-]\s*{NUM})*'
+KETEN = re.compile(rf'(?<![\d,□])({EXPR})((?:\s*=\s*{EXPR})+)(?![\d,]|\s*[+−×:-]\s*\d)')
+def _eval(e):
+    e = e.replace('−', '-').replace('×', '*').replace(':', '/').replace(',', '.')
+    if not re.fullmatch(r'[\d.\s+\-*/]+', e): return None
+    try: return eval(e)
+    except Exception: return None
+def som_fout(txt):
+    t = KLOK.sub(' ', txt)
+    for m in KETEN.finditer(t):
+        if re.search(r'[□#\d]\s*[+−×:-]\s*$', t[:m.start()]): continue
+        delen = [m.group(1)] + re.split(r'\s*=\s*', m.group(2).strip())[1:]
+        w = [_eval(d) for d in delen]
+        if None in w: continue
+        if any(abs(x - w[0]) > 1e-9 for x in w): return m.group(0).strip()
+    return None
+def velden(it):
+    yield 'opgave', it.get('opgave') or ''
+    for s in it.get('opgaveStappen') or []: yield 'opgave', s if isinstance(s, str) else json.dumps(s, ensure_ascii=False)
+    for o in it.get('opties') or []: yield 'opties', o.get('tekst', '') if isinstance(o, dict) else str(o)
+    yield 'antwoord', str(it.get('antwoord') or '')
+    for f in it.get('foutHints') or []: yield 'fout-hint', (f.get('uitleg') or '')
+def check(files):
+    tel = collections.defaultdict(set); per_st = collections.defaultdict(set); voorb = {}
+    for p in files:
+        D = json.load(open(p)); doel = D['doelId']
+        for it in D['items']:
+            st = (it.get('merge') or {}).get('somtype', '?')
+            for veld, txt in velden(it):
+                for code, _, rx, _ in R:
+                    t = txt
+                    if code == 'DP': t = WOORD_DP.sub(' ', DEEL.sub(' ', KLOK.sub('', t)))
+                    if code == 'KEER' and doel in KEER_DOELEN: continue
+                    if code == 'SOM':
+                        fout = som_fout(t)
+                        if fout: tel[(doel, code, veld)].add(it['id']); per_st[(doel, st, code)].add(it['id']); voorb.setdefault((doel, st, code), f"{it['nr']} [{veld}] …{fout}…")
+                        continue
+                    if m := rx.search(t):
+                        tel[(doel, code, veld)].add(it['id']); per_st[(doel, st, code)].add(it['id'])
+                        voorb.setdefault((doel, st, code), f"{it['nr']} [{veld}] …{t[max(0, m.start() - 25):m.end() + 12]}…")
+    alle = {}
+    for (d, c, v), ids in tel.items(): alle.setdefault((d, c), set()).update(ids)
+    return tel, per_st, voorb, {k: len(v) for k, v in alle.items()}
+if __name__ == '__main__':
+    a = [x for x in sys.argv[1:] if not x.startswith('--')]; detail = '--detail' in sys.argv
+    files = a or sorted(glob.glob(f'{BASE}/data/per_doel/G4-*.json'))
+    tel, per_st, voorb, alle = check(files)
+    codes = [c for c, *_ in R]; ernst = {c: e for c, _, _, e in R}
+    print(f'{len(files)} doelbestanden, {sum(len(json.load(open(p))["items"]) for p in files)} items')
+    print(f"{'doel':14} " + ' '.join(f'{c:>6}' for c in codes))
+    tot = collections.Counter()
+    for d in sorted({d for d, _, _ in tel}):
+        cel = []
+        for c in codes: n = alle.get((d, c), 0); tot[c] += n; cel.append(str(n) if n else '-')
+        print(f"{d:14} " + ' '.join(f'{x:>6}' for x in cel))
+    print('Totaal:', ' · '.join(f"{c} {tot[c]} ({ernst[c]})" for c in codes))
+    print('\nPer somtype (items met hit · voorbeeld):')
+    for (d, st, c), ids in sorted(per_st.items()):
+        if detail or ernst[c] == 'FAIL': print(f"  {ernst[c]:4} {c:4} {d} '{st[:48]}': {len(ids)} · {voorb[(d, st, c)]}")
+    fail = any(tot[c] for c in codes if ernst[c] == 'FAIL')
+    # OPP (G5 fixlijst #59, Didactiek batch 4): omtrek-item van een rechthoek waar oppervlakte = omtrek (6 × 3, 4 × 4): FAIL
+    _opp = []
+    for _p in files:
+        for _it in json.load(open(_p))['items']:
+            _o = (_it.get('opgave') or '').replace('\n', ' ')
+            _m = re.search(r'(\d+) (?:cm|m|mm|dm|km) lang en (\d+) (?:cm|m|mm|dm|km) breed', _o) or re.search(r'(?:rechthoek|veld|tuin|[\wà-ÿ]+) van (\d+) bij (\d+) (?:cm|m|mm|dm|km)?', _o)
+            if _m and 'omtrek' in _o.lower() + ' ' + ('hek' if ' hek' in _o else ''):
+                _l, _b = int(_m.group(1)), int(_m.group(2))
+                if _l * _b == 2 * (_l + _b): _opp.append(f"{_it.get('id')}: {_l} × {_b} (oppervlakte = omtrek = {_l * _b})")
+            elif _m and ' hek' in _o:
+                _l, _b = int(_m.group(1)), int(_m.group(2))
+                if _l * _b == 2 * (_l + _b): _opp.append(f"{_it.get('id')}: {_l} × {_b} (oppervlakte = omtrek = {_l * _b})")
+    print(f"\nOPP (rechthoek met oppervlakte = omtrek bij een omtrekvraag, #59): {len(_opp)} (FAIL)")
+    for _x in _opp[:20]: print('  FAIL OPP', _x)
+    fail = fail or bool(_opp)
+    # REF (G5 fixlijst #63): referentiematen uit /workspace/claude-merge/referentiematen.json: checkPatronen = FAIL, checkPatronenZacht = WARN
+    sys.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge'))
+    import referentiematen_check as _RC
+    fail = (_RC.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail      # checkPatronen = FAIL, zacht = WARN
+    # MAAT (notatie_machten.md, Didactiek 18:00; aangezet 18:05): ²/³ per groep, mengvorm 'vierkante cm', m2/cm3, 'a' voor are, INTRO per somtype
+    # VORM (G5 merge-fixlijst #105, Didactiek 18:54): antwoordOokGoed en geldInvoer moeten bij het antwoord passen (FAIL)
+    import antwoordvormen_check as _AV
+    fail = (_AV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    # VERKLAP (G5 merge-fixlijst #107, Didactiek 18:54): fout-hint noemt het goede antwoord (getal + eenheid) bij meerkeuze = WARN
+    import verklapper_check as _VK
+    _VK.rapport([_it for _p in files for _it in json.load(open(_p))['items']])
+    import machten_check as _MC
+    # DOELID (G5 merge-fixlijst #122, Didactiek 20:04): elk item heeft het doelId van zijn bestand (FAIL)
+    sys.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge')); import doelid_check as _DI
+    fail = (_DI.rapport(files) > 0) or fail
+    import evenveel_check as _EV      # #192 (Didactiek 21:25): 'even veel' ook in ouderzin, hints en kop (FAIL)
+    fail = (_EV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    fail = (_MC.rapport(4, [_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    print('\nG4 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
+    sys.exit(1 if fail else 0)

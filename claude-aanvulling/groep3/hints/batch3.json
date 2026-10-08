@@ -1,0 +1,661 @@
+{
+ "batch": 3,
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G3-pilot). 'nr' = nummer van '## Somtype n' in somtypen/<doel>.md. foutHints: per soort fout; 'claude' = tekst van Claude blijft (ok), 'nieuw' = vervangen. 'regel' zegt welke foute invoer bij de soort hoort (getal1/getal2 = getallen in de opgave, in volgorde). Bij 'claude' met '…' of '[plek]' is de tekst per item verschillend; die blijft per item staan.",
+ "somtypen": [
+  {
+   "doel": "G3-GET-M06",
+   "nr": 1,
+   "hint1": "Hoeveel moet er bij het eerste getal om bij het laatste getal te komen?",
+   "hint2": "Tel verder vanaf het eerste getal tot het laatste getal. Ga je voorbij de 10? Spring dan eerst naar 10. Alle stappen samen komen in het hokje.",
+   "ouderzin": "Je kind zoekt het ontbrekende getal in een plussom tot 20, soms met een sprong via 10.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de twee getallen opgeteld. Zoek hoeveel er nog bij het eerste getal moet om bij het laatste te komen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "waarom": "er is geen verhaal; het kind telde de twee getallen op"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "overgenomen",
+     "regel": "fout = getal2 (de uitkomst)",
+     "tekst": "Dat getal staat al na het isgelijkteken. Hoeveel moet er nog bij het eerste getal?",
+     "claudeDenkfout": "getal-overgenomen",
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "waarom": "vaag; zegt niet wat het kind wél moet zoeken"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Tel nog eens verder vanaf het eerste getal, en tel je stappen goed.",
+     "claudeDenkfout": "een-ernaast",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "ook gebruikt bij 2 ernaast"
+    }
+   ],
+   "somtype": "# + □ = #",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# + □ = #"
+  },
+  {
+   "doel": "G3-GET-M06",
+   "nr": 2,
+   "hint1": "Het is een minsom. Begin bij het eerste getal en haal het tweede eraf.",
+   "hint2": "Kom je onder de 10? Haal er dan eerst zoveel af dat je op 10 uitkomt. Haal daarna de rest eraf.",
+   "ouderzin": "Je kind oefent minsommen tot 20, via het tiental.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "teken",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Kijk goed naar het teken. Het is min: er gaat iets af.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "waarom": "er is geen verhaal; het kind keek niet goed naar het teken"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is te veel. Bij min wordt het minder. Ga eerst terug naar 10 en haal dan de rest eraf.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "claudeTekst": "Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen.",
+     "waarom": "hoort bij een plussom; hier gaat er iets af"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Je zit er net naast. Ga eerst terug naar 10. Haal dan de rest eraf.",
+     "claudeDenkfout": "een-ernaast",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "ook gebruikt bij 2 ernaast"
+    }
+   ],
+   "somtype": "# − # =",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# − # =",
+   "somtypeEerder": [
+    {
+     "kop": "# - # =",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G3-GET-M06",
+   "nr": 3,
+   "hint1": "Begin bij het grootste getal. Zijn ze even groot? Begin dan bij het eerste. Hoeveel komt erbij?",
+   "hint2": "Vul het getal waar je begint eerst aan tot 10. Tel daarna de rest erbij.",
+   "ouderzin": "Je kind oefent plussommen tot 20, via het tiental.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord − 10",
+     "tekst": "Je bent het tiental kwijt. Het antwoord is meer dan 10.",
+     "claudeTekst": "Je zit er één tiental naast. Tel de tientallen nog eens rustig na.",
+     "waarom": "taalfix Didactiek Z7"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Je zit er net naast. Vul eerst aan tot 10. Tel dan de rest erbij.",
+     "claudeDenkfout": "een-ernaast",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "ook gebruikt bij 2 ernaast"
+    }
+   ],
+   "somtype": "# + # =",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "# + # ="
+  },
+  {
+   "doel": "G3-GET-M06",
+   "nr": 4,
+   "hint1": "Het eerste getal is het hele getal. Eén deel staat er al. Welk deel hoort erbij?",
+   "hint2": "Tel verder vanaf het deel dat er staat tot het hele getal. Of haal het deel dat er staat van het hele getal af.",
+   "ouderzin": "Je kind oefent splitsingen tot 20 (het tweede deel zoeken).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "heel getal",
+     "regel": "fout = getal1 (het hele getal)",
+     "tekst": "Dat is het hele getal. Welk deel hoort er nog bij?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "deel",
+     "regel": "fout = getal2 (het deel dat er staat)",
+     "tekst": "Dat deel staat er al. Zoek het andere deel."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Maar het eerste getal is al het hele getal. Hoeveel hoort er bij het deel dat er staat?"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout ligt 1 naast het antwoord",
+     "tekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 2 naast het antwoord",
+     "tekst": "Bijna! Tel vanaf het deel dat er staat verder tot het hele getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "overig",
+     "regel": "andere fout",
+     "tekst": "Dat klopt nog niet. De twee delen samen moeten het hele getal zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": null,
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "waarom": "algemeen; benoemt de fout niet"
+    }
+   ],
+   "somtype": "# is # en □",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "# is # en □"
+  },
+  {
+   "doel": "G3-GET-M06",
+   "nr": 5,
+   "hint1": "Het eerste getal is het hele getal. Het tweede deel staat er al. Welk deel hoort er vooraan?",
+   "hint2": "Leg het hele getal in gedachten met een tienstaaf en losse blokjes. Haal weg wat er al staat. Wat blijft er liggen?",
+   "ouderzin": "Je kind splitst een getal tot 20 in een tiental en losse.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "heel getal",
+     "regel": "fout = getal1 (het hele getal)",
+     "tekst": "Dat is het hele getal. Welk deel hoort er nog bij?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "deel",
+     "regel": "fout = getal2 (het deel dat er staat)",
+     "tekst": "Dat deel staat er al. Zoek het andere deel."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de getallen opgeteld. Maar het eerste getal is al het hele getal. Hoeveel hoort er bij het deel dat er staat?"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout ligt 1 naast het antwoord",
+     "tekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "regel": "fout ligt 2 naast het antwoord",
+     "tekst": "Bijna! Tel vanaf het deel dat er staat verder tot het hele getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "overig",
+     "regel": "andere fout",
+     "tekst": "Dat klopt nog niet. De twee delen samen moeten het hele getal zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": null,
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "waarom": "algemeen; benoemt de fout niet"
+    }
+   ],
+   "somtype": "# is □ en #",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "# is □ en #",
+   "hint2Oud": "Haal het deel dat er staat van het hele getal af. Tel terug, één voor één. Hoeveel blijven er over?"
+  },
+  {
+   "doel": "G3-MEET-E01",
+   "nr": 1,
+   "hint1": "Ze meten hetzelfde ding. Wie had er minder voeten voor nodig?",
+   "hint2": "Grote voeten komen sneller aan het eind. Dan heb je er minder nodig. Kleine voeten moeten vaker stappen.",
+   "ouderzin": "Je kind redeneert over meten met voeten: grotere voeten, minder stappen.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "de andere persoon (tekst per item)",
+     "tekst": "Anne had meer voeten nodig voor hetzelfde stuk. Wat zegt dat over haar voeten?"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "'Dat kun je niet weten' (tekst per item)",
+     "tekst": "De tafel blijft precies even lang. Alleen het aantal voeten is anders."
+    }
+   ],
+   "somtype": "Vergelijken zonder maat — afpassen met natuurlijke maat",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Vergelijken zonder maat — afpassen met natuurlijke maat"
+  },
+  {
+   "doel": "G3-MEET-E03",
+   "nr": 1,
+   "hint1": "Je giet het drinken alleen over. Komt er iets bij, of gaat er iets af?",
+   "hint2": "Giet in gedachten alles terug in het brede glas. Hoe hoog staat het dan? Kijk naar hoe hoog én hoe breed.",
+   "ouderzin": "Je kind ontdekt dat de hoeveelheid drinken gelijk blijft als je het overgiet in een ander glas.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "claudeDenkfout": "schatting-verkeerd",
+     "regel": "het smalle glas",
+     "tekst": "Bij het overgieten heb je niets bijgedaan en niets weggehaald.",
+     "claudeTekst": "Bij het overgieten heb je niets bij gedaan en niets weggehaald.",
+     "waarom": "taalfix Didactiek X4"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "het brede glas",
+     "tekst": "Het brede glas is nu leeg, want alle limonade zit in het andere glas."
+    }
+   ],
+   "somtype": "Vergelijken zonder maat — overgieten: vorm ≠ inhoud",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Vergelijken zonder maat — overgieten: vorm ≠ inhoud",
+   "hint2Oud": "In een smal glas staat drinken hoger, want het glas is dunner. Hoger staan betekent niet dat het meer is."
+  },
+  {
+   "doel": "G3-MEET-E04",
+   "nr": 1,
+   "hint1": "Kijk naar de weegschaal. Zakt er een kant naar beneden?",
+   "hint2": "De zware kant zakt naar beneden. Blijven de twee kanten even hoog? Dan zijn ze even zwaar.",
+   "ouderzin": "Je kind leest af wat zwaarder is op een weegschaal met twee schalen.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "tekst per item (vier verschillende teksten, allemaal ok)",
+     "tekst": "De kant die naar beneden zakt, is de zware kant. Welke kant zakt hier? / Bij even zwaar blijven de twee schalen precies even hoog staan. / …"
+    }
+   ],
+   "somtype": "Vergelijken zonder maat — wegen met een balans",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Vergelijken zonder maat — wegen met een balans"
+  },
+  {
+   "doel": "G3-MEET-E05",
+   "nr": 1,
+   "hint1": "Bij een heel uur wijst de grote wijzer recht omhoog. Kijk dan naar de kleine wijzer.",
+   "hint2": "Kijk bij elke klok waar de kleine wijzer naar wijst. Dat getal is het uur. Welke klok past bij het uur uit de vraag?",
+   "ouderzin": "Je kind kiest de klok die een heel uur aanwijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "regel": "een klok met een ander uur",
+     "tekst": "Kijk naar de kleine wijzer van die klok. Wijst hij naar het uur uit de vraag?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "waarom": "noemt minuten; hier gaat het alleen om hele uren"
+    }
+   ],
+   "somtype": "[klokkenrij] Welke klok wijst # uur aan?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst # uur aan?"
+  },
+  {
+   "doel": "G3-MEET-E05",
+   "nr": 3,
+   "hint1": "Bij een heel uur staat de grote wijzer recht omhoog.",
+   "hint2": "Zet de grote wijzer recht omhoog. Draai daarna de kleine wijzer naar het getal van het uur.",
+   "ouderzin": "Je kind zet de wijzers van een klok op een heel uur.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "regel": "fout = een uur te laat (tekst per item)",
+     "tekst": "Bij [uur in woorden] uur wijst de kleine wijzer naar de [uur als cijfer].",
+     "claudeTekst": "De kleine wijzer wijst naar de ….",
+     "waarom": "taalfix Didactiek X5"
+    }
+   ],
+   "somtype": "[klok-zetten (wijzers slepen)] Zet de klok op [uur] uur.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[klok-zetten (wijzers slepen)] Zet de klok op [uur] uur."
+  },
+  {
+   "doel": "G3-MEET-E05",
+   "nr": 2,
+   "hint1": "Kijk naar de kleine wijzer. Naar welk getal wijst hij?",
+   "hint2": "De grote wijzer staat recht omhoog, dus het is een heel uur. De kleine wijzer wijst naar het uur.",
+   "ouderzin": "Je kind leest een heel uur af op een klok met wijzers.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer gelezen",
+     "regel": "fout = 12 uur (en het antwoord is geen 12 uur)",
+     "tekst": "Je keek naar de grote wijzer. Het uur zie je aan de kleine wijzer.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "waarom": "noemt minuten; hier gaat het alleen om hele uren"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "uur ernaast",
+     "regel": "fout = een uur te vroeg of te laat",
+     "tekst": "Kijk goed waar de kleine wijzer naar wijst. Wijst hij precies naar dat getal?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "waarom": "noemt minuten; hier gaat het alleen om hele uren"
+    }
+   ],
+   "somtype": "[klok] Hoe laat is het op deze klok?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[klok] Hoe laat is het op deze klok?"
+  },
+  {
+   "doel": "G3-MEET-K01",
+   "nr": 1,
+   "hint1": "Denk aan hoe lang de dingen echt zijn. Zet ze in gedachten naast elkaar.",
+   "hint2": "Zet de dingen in gedachten naast elkaar, met het begin op dezelfde plek. Welke steekt het verst uit? Heb je met stappen gemeten? Meer stappen is langer.",
+   "ouderzin": "Je kind vergelijkt lengtes zonder meetlat: naast elkaar zetten of stappen tellen.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "tekst per item (twaalf verschillende teksten, allemaal ok)",
+     "tekst": "Denk aan hoe groot een lepel in je hand is en hoe hoog een bezem naast je staat. / Bij even lang zouden hun hoofden op dezelfde hoogte zitten. / …"
+    }
+   ],
+   "somtype": "Vergelijken zonder maat — lengte vergelijken zonder maat",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Vergelijken zonder maat — lengte vergelijken zonder maat"
+  },
+  {
+   "doel": "G3-MEET-K03",
+   "nr": 1,
+   "hint1": "Waar past meer in? Denk aan hoe groot de dingen zijn.",
+   "hint2": "Denk aan vullen en leeggieten. Hoe vaak past het kleine ding in het grote? Heb je met bekers gemeten? Waar meer bekers in gaan, past meer in.",
+   "ouderzin": "Je kind vergelijkt inhoud zonder maat: waar past meer in?",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "tekst per item (tien verschillende teksten, allemaal ok)",
+     "tekst": "Hoeveel bekers water heb je nodig om de emmer helemaal vol te krijgen? / Vergelijk de aantallen bekers. Is 4 meer of minder dan 7? / …"
+    }
+   ],
+   "somtype": "Vergelijken zonder maat — inhoud vergelijken",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Vergelijken zonder maat — inhoud vergelijken"
+  },
+  {
+   "doel": "G3-MEET-K04",
+   "nr": 1,
+   "hint1": "Denk aan optillen. Wat voelt zwaar in je hand, en wat licht?",
+   "hint2": "Leg de dingen in gedachten in je twee handen. De hand die zakt, houdt het zwaarste. Lichter betekent: minder zwaar.",
+   "ouderzin": "Je kind vergelijkt gewicht zonder weegschaal: wat is zwaarder of lichter?",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "tekst per item (veertien verschillende teksten, allemaal ok)",
+     "tekst": "Wat kun je met één hand dragen en waar heb je twee handen voor nodig? / Lichter betekent minder zwaar. Welke voel je bijna niet in je hand? / …"
+    }
+   ],
+   "somtype": "Vergelijken zonder maat — gewicht vergelijken zonder maat",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Vergelijken zonder maat — gewicht vergelijken zonder maat"
+  },
+  {
+   "doel": "G3-MKU-E02",
+   "nr": 1,
+   "hint1": "Zoek eerst de letter van het vak. Zoek daarna het cijfer.",
+   "hint2": "Volg vanaf de letter de hokjes recht door. Volg ook vanaf het cijfer de hokjes recht door. Waar die twee elkaar raken, is het vak. Kijk wat daar staat.",
+   "ouderzin": "Je kind leest af wat er in een vak van een plattegrond staat (letter en cijfer).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "cijfer fout",
+     "regel": "goede letter, ander cijfer",
+     "tekst": "De letter klopt, maar het cijfer niet. Kijk nog eens naar het cijfer.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "claudeTekst": "Leg je vinger op de rij of staaf uit de vraag en schuif hem naar de as. Kijk hoeveel elk streepje waard is.",
+     "waarom": "er is geen grafiek, staaf of as; het gaat om een vak op de plattegrond"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "letter fout",
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Het cijfer klopt, maar de letter niet. Kijk nog eens naar de letter.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "omgedraaid",
+     "regel": "letter en cijfer omgedraaid (bijvoorbeeld het vak van de tweede letter met het cijfer van de eerste letter)",
+     "tekst": "Je hebt de letter en het cijfer omgedraaid. Zoek eerst de letter, dan het cijfer.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "overig",
+     "regel": "ander vak",
+     "tekst": "Dat is een ander vak. Zoek eerst de letter en daarna het cijfer.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen"
+    }
+   ],
+   "somtype": "[plattegrond] Wat staat er in vak [vak]?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[plattegrond] Wat staat er in vak [vak]?"
+  },
+  {
+   "doel": "G3-MKU-E02",
+   "nr": 2,
+   "hint1": "Zoek eerst het ding op de plattegrond.",
+   "hint2": "Ga vanaf het ding recht naar de rand met de letters. Ga daarna recht naar de rand met de cijfers. Eerst de letter, dan het cijfer.",
+   "ouderzin": "Je kind zoekt in welk vak van een plattegrond iets staat (letter en cijfer).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "cijfer fout",
+     "regel": "goede letter, ander cijfer",
+     "tekst": "De letter klopt, maar het cijfer niet. Kijk nog eens naar het cijfer.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "claudeTekst": "Leg je vinger op de rij of staaf uit de vraag en schuif hem naar de as. Kijk hoeveel elk streepje waard is.",
+     "waarom": "er is geen grafiek, staaf of as; het gaat om een vak op de plattegrond"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "letter fout",
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Het cijfer klopt, maar de letter niet. Kijk nog eens naar de letter.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "omgedraaid",
+     "regel": "letter en cijfer omgedraaid (bijvoorbeeld het vak van de tweede letter met het cijfer van de eerste letter)",
+     "tekst": "Je hebt de letter en het cijfer omgedraaid. Zoek eerst de letter, dan het cijfer.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "overig",
+     "regel": "ander vak",
+     "tekst": "Dat is een ander vak. Zoek eerst de letter en daarna het cijfer.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen"
+    }
+   ],
+   "somtype": "[plattegrond] In welk vak staat de/het [ding]?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[plattegrond] In welk vak staat de/het [ding]?"
+  },
+  {
+   "doel": "G3-MKU-E02",
+   "nr": 3,
+   "hint1": "Zoek eerst de letter. Zoek daarna het cijfer.",
+   "hint2": "Volg vanaf de letter de hokjes recht door. Volg ook vanaf het cijfer de hokjes recht door. Tik op het vak waar die twee elkaar raken.",
+   "ouderzin": "Je kind tikt het goede vak aan op een plattegrond (letter en cijfer).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "cijfer fout",
+     "regel": "goede letter, ander cijfer",
+     "tekst": "De letter klopt, maar het cijfer niet. Kijk nog eens naar het cijfer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "letter fout",
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Het cijfer klopt, maar de letter niet. Kijk nog eens naar de letter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "omgedraaid",
+     "regel": "letter en cijfer omgedraaid (bijvoorbeeld het vak van de tweede letter met het cijfer van de eerste letter)",
+     "tekst": "Je hebt de letter en het cijfer omgedraaid. Zoek eerst de letter, dan het cijfer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "overig",
+     "regel": "ander vak",
+     "tekst": "Dat is een ander vak. Zoek eerst de letter en daarna het cijfer."
+    }
+   ],
+   "somtype": "[plattegrond] Tik op vak [vak] van de plattegrond.",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[plattegrond] Tik op vak [vak] van de plattegrond.",
+   "somtypeEerder": [
+    {
+     "kop": "[vak(ken) aantikken op rooster] Tik op vak [vak] van de plattegrond.",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G3-MKU-K03",
+   "nr": 1,
+   "hint1": "Heeft de vorm hoeken? Tel ze.",
+   "hint2": "Is de vorm rond, zonder hoeken? Of tel je drie of vier hoeken? Bij vier hoeken kijk je ook of alle kanten even lang zijn.",
+   "ouderzin": "Je kind herkent en benoemt cirkel, driehoek, vierkant en rechthoek.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "fout = cirkel",
+     "tekst": "Tel de hoeken. Een cirkel heeft geen hoeken."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "fout = driehoek",
+     "tekst": "Tel de hoeken. Een driehoek heeft er 3."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "fout = rechthoek (bij een driehoek of cirkel)",
+     "tekst": "Tel de hoeken. Een rechthoek heeft er 4."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "vierkant bij cirkel of driehoek",
+     "claudeDenkfout": null,
+     "regel": "fout = vierkant bij een cirkel of driehoek",
+     "tekst": "Tel de hoeken. Een vierkant heeft er 4.",
+     "waarom": "U3 Didactiek: deze fout had geen regel meer; zelfde vorm als de Claude-regels voor cirkel/driehoek/rechthoek"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "vierkant of rechthoek",
+     "regel": "fout = vierkant bij een rechthoek, of rechthoek bij een vierkant",
+     "tekst": "Allebei hebben ze vier hoeken. Bij een vierkant zijn alle kanten even lang. Kijk goed naar de kanten.",
+     "claudeDenkfout": null,
+     "claudeTekst": "Tel de hoeken. Een vierkant heeft er 4.",
+     "waarom": "vierkant en rechthoek hebben allebei 4 hoeken; tellen helpt niet"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere vorm",
+     "regel": "fout = ruit, ster of zeshoek",
+     "tekst": "Kijk goed naar de hoeken en de kanten. Welke vorm uit de klas lijkt erop?",
+     "claudeDenkfout": null,
+     "claudeTekst": "Tel de hoeken. Een ruit heeft er 4. / Een ster heeft er 10. / Een zeshoek heeft er 6.",
+     "waarom": "ruit, ster en zeshoek zijn geen G3-vormen (Didactiek); 'een ster heeft er 10' is verwarrend"
+    }
+   ],
+   "somtype": "[figuur] Hoe heet deze [kleur] vorm?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[figuur] Hoe heet deze [kleur] vorm?"
+  },
+  {
+   "doel": "G3-MKU-K03",
+   "nr": 2,
+   "hint1": "Een hoek is een punt waar twee kanten elkaar raken.",
+   "hint2": "Zet je vinger op één hoek. Ga de vorm rond en tel elke hoek één keer. Stop als je weer bij het begin bent.",
+   "ouderzin": "Je kind telt de hoeken van een vlakke vorm.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 1",
+     "tekst": "Tel de punten waar twee zijden bij elkaar komen, en zet je vinger op elke hoek."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 1",
+     "tekst": "Je hebt een hoek overgeslagen. Ga de vorm rond en tel elke hoek één keer."
+    }
+   ],
+   "somtype": "[figuur] Hoeveel hoeken heeft deze vorm?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[figuur] Hoeveel hoeken heeft deze vorm?"
+  },
+  {
+   "doel": "G3-VBN-E03",
+   "nr": 1,
+   "hint1": "Welk stukje komt steeds terug?",
+   "hint2": "Zeg de rij hardop, vorm voor vorm en kleur voor kleur. Wijs het stukje aan dat steeds terugkomt. Wat hoort er dan op de lege plek?",
+   "ouderzin": "Je kind zet een rij vormen voort die steeds hetzelfde stukje herhaalt.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "een andere vorm of kleur",
+     "tekst": "Kijk welk stukje zich steeds herhaalt en zeg de rij hardop. Wat komt er dan?"
+    }
+   ],
+   "somtype": "[figurenrij] Kijk goed naar de rij. Welke vorm komt op de lege plek?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[figurenrij] Kijk goed naar de rij. Welke vorm komt op de lege plek?",
+   "somtypeEerder": [
+    {
+     "kop": "[figurenrij] Kijk goed naar het patroon. Welke vorm komt op de lege plek?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  }
+ ],
+ "taalfix": [
+  "2026-10-01: taalfixes Didactiek v1 verwerkt (hints/taalfix_didactiek_v1.py)"
+ ]
+}

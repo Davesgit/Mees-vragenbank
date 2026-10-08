@@ -1,0 +1,555 @@
+{
+ "schema": "leermees-vragenbank-export/v1 + merge/controle/licentie (claude-merge g8)",
+ "bron": {
+  "licentie": "CC BY-SA 4.0",
+  "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+  "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+  "bron": "https://github.com/Davesgit/leermees-vragenbank",
+  "commit": "7da3257a196386c700310006da60a385fbbe114f"
+ },
+ "gegenereerdOp": "2026-10-01T22:54:38+0200",
+ "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
+ "doelId": "G8-MEET-E01",
+ "bordtitel": "Het systeem van lengtematen doorzien",
+ "aantal": 4,
+ "items": [
+  {
+   "id": "G8-MEET-E01-claude-bank-001",
+   "nr": "001",
+   "doelId": "G8-MEET-E01",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een wandelaar loopt 6,7 km. Hoeveel meter is dat?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "6700",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "670",
+     "uitleg": "Van km naar m is drie plekken, niet twee."
+    },
+    {
+     "stap": null,
+     "fout": "67",
+     "uitleg": "Haal niet zomaar de komma weg. Keer 1000."
+    }
+   ],
+   "foutHintsTekst": "670 → Van km naar m is drie plekken, niet twee. · 67 → Haal niet zomaar de komma weg. Keer 1000.",
+   "ouderzin": "",
+   "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M25:91d7071f-7608-4354-b6d5-1658a556e7ee",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "6,7 km = ? m",
+    "claudeUitleg": "1 km = 1000 m. De komma schuift drie plekken.\n6,7 km = 6700 m.",
+    "claudeStrategie": "komma drie plekken",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "670",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "67",
+      "denkfout": "kommagetal-als-geheel"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "670",
+      "uitleg": "Van km naar m is drie plekken, niet twee."
+     },
+     {
+      "stap": null,
+      "fout": "67",
+      "uitleg": "Haal niet zomaar de komma weg. Keer 1000."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "91d7071f-7608-4354-b6d5-1658a556e7ee",
+    "claudeDoel": "M25",
+    "claudeDoelTitel": "Alle maten omrekenen",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "G8-R8/R9 het-woord/€-notatie/context"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E01",
+    "voorstelDoel": null,
+    "regel": "G8-M25-km",
+    "reden": "km ↔ m met komma (G8-MEET-E01: lengte als systeem)",
+    "somtype": "Een wandelaar loopt # km. Hoeveel meter is dat?",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een wandelaar loopt # km. Hoeveel meter is dat?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "6700",
+    "methode": "G8 km → m",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E01-claude-bank-002",
+   "nr": "002",
+   "doelId": "G8-MEET-E01",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een wandelaar loopt 8,1 km. Hoeveel meter is dat?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "8100",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "810",
+     "uitleg": "Van km naar m is drie plekken, niet twee."
+    },
+    {
+     "stap": null,
+     "fout": "81",
+     "uitleg": "Haal niet zomaar de komma weg. Keer 1000."
+    }
+   ],
+   "foutHintsTekst": "810 → Van km naar m is drie plekken, niet twee. · 81 → Haal niet zomaar de komma weg. Keer 1000.",
+   "ouderzin": "",
+   "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M25:c81bcdcb-638c-4713-b5f0-dda5a9e482df",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "8,1 km = ? m",
+    "claudeUitleg": "1 km = 1000 m. De komma schuift drie plekken.\n8,1 km = 8100 m.",
+    "claudeStrategie": "komma drie plekken",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "810",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "81",
+      "denkfout": "kommagetal-als-geheel"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "810",
+      "uitleg": "Van km naar m is drie plekken, niet twee."
+     },
+     {
+      "stap": null,
+      "fout": "81",
+      "uitleg": "Haal niet zomaar de komma weg. Keer 1000."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "c81bcdcb-638c-4713-b5f0-dda5a9e482df",
+    "claudeDoel": "M25",
+    "claudeDoelTitel": "Alle maten omrekenen",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E01",
+    "voorstelDoel": null,
+    "regel": "G8-M25-km",
+    "reden": "km ↔ m met komma (G8-MEET-E01: lengte als systeem)",
+    "somtype": "Een wandelaar loopt # km. Hoeveel meter is dat?",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een wandelaar loopt # km. Hoeveel meter is dat?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "8100",
+    "methode": "G8 km → m",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E01-claude-bank-003",
+   "nr": "003",
+   "doelId": "G8-MEET-E01",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een kind loopt 8 km. Hoeveel meter is dat?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "8000",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "800",
+     "uitleg": "Van km naar m is drie plekken, niet twee."
+    },
+    {
+     "stap": null,
+     "fout": "80",
+     "uitleg": "Haal niet zomaar de komma weg. Keer 1000."
+    }
+   ],
+   "foutHintsTekst": "800 → Van km naar m is drie plekken, niet twee. · 80 → Haal niet zomaar de komma weg. Keer 1000.",
+   "ouderzin": "",
+   "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M25:0f4cc9f9-130f-46b9-a3fe-c0b9feb8fe28",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "8,0 km = ? m",
+    "claudeUitleg": "1 km = 1000 m. De komma schuift drie plekken.\n8,0 km = 8000 m.",
+    "claudeStrategie": "komma drie plekken",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "800",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "80",
+      "denkfout": "kommagetal-als-geheel"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "800",
+      "uitleg": "Van km naar m is drie plekken, niet twee."
+     },
+     {
+      "stap": null,
+      "fout": "80",
+      "uitleg": "Haal niet zomaar de komma weg. Keer 1000."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "0f4cc9f9-130f-46b9-a3fe-c0b9feb8fe28",
+    "claudeDoel": "M25",
+    "claudeDoelTitel": "Alle maten omrekenen",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D7-TAAL 'mediaan' → 'het middelste getal'; 'trainer'/'shirt' → 'kind'/'trui'",
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "G7-K1 kommagetal zo kort mogelijk (G7-bank)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E01",
+    "voorstelDoel": null,
+    "regel": "G8-M25-km",
+    "reden": "km ↔ m met komma (G8-MEET-E01: lengte als systeem)",
+    "somtype": "[wie] loopt # km. Hoeveel meter is dat?",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[wie] loopt # km. Hoeveel meter is dat?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "8000",
+    "methode": "G8 km → m",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E01-claude-bank-004",
+   "nr": "004",
+   "doelId": "G8-MEET-E01",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een kind loopt 8,2 km. Hoeveel meter is dat?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "8200",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "820",
+     "uitleg": "Van km naar m is drie plekken, niet twee."
+    },
+    {
+     "stap": null,
+     "fout": "82",
+     "uitleg": "Haal niet zomaar de komma weg. Keer 1000."
+    }
+   ],
+   "foutHintsTekst": "820 → Van km naar m is drie plekken, niet twee. · 82 → Haal niet zomaar de komma weg. Keer 1000.",
+   "ouderzin": "",
+   "getallenruimte": "kommagetallen (1 cijfers achter de komma)",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M25:2496e2d4-3828-4fc2-8550-0c7f54d089a1",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "8,2 km = ? m",
+    "claudeUitleg": "1 km = 1000 m. De komma schuift drie plekken.\n8,2 km = 8200 m.",
+    "claudeStrategie": "komma drie plekken",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "820",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "82",
+      "denkfout": "kommagetal-als-geheel"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "820",
+      "uitleg": "Van km naar m is drie plekken, niet twee."
+     },
+     {
+      "stap": null,
+      "fout": "82",
+      "uitleg": "Haal niet zomaar de komma weg. Keer 1000."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "2496e2d4-3828-4fc2-8550-0c7f54d089a1",
+    "claudeDoel": "M25",
+    "claudeDoelTitel": "Alle maten omrekenen",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E01",
+    "voorstelDoel": null,
+    "regel": "G8-M25-km",
+    "reden": "km ↔ m met komma (G8-MEET-E01: lengte als systeem)",
+    "somtype": "[wie] loopt # km. Hoeveel meter is dat?",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[wie] loopt # km. Hoeveel meter is dat?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "8200",
+    "methode": "G8 km → m",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  }
+ ]
+}

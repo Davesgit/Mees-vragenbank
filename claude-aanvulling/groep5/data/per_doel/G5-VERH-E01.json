@@ -1,0 +1,765 @@
+{
+ "schema": "leermees-vragenbank-export/v1 + merge/controle/licentie (claude-merge g5)",
+ "bron": {
+  "licentie": "CC BY-SA 4.0",
+  "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+  "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+  "bron": "https://github.com/Davesgit/leermees-vragenbank",
+  "commit": "7da3257a196386c700310006da60a385fbbe114f"
+ },
+ "gegenereerdOp": "2026-10-08T10:28:30+0200",
+ "g4Basis": "g4/scripts build 14:35 (kopie in scripts/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
+ "doelId": "G5-VERH-E01",
+ "bordtitel": "Een kwart van iets",
+ "aantal": 3,
+ "items": [
+  {
+   "id": "G5-VERH-E01-claude-bank-001",
+   "nr": "001",
+   "doelId": "G5-VERH-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "In de doos zitten 76 knikkers. Een kwart ervan is groen. Hoeveel groene knikkers zijn er?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "19",
+   "antwoordDetail": null,
+   "hint": "Een kwart is één van vier gelijke delen. Verdeel de knikkers in vier gelijke groepjes.",
+   "sterkereHint": "Hoeveel knikkers zitten er in één groepje? Je kunt ook eerst de helft nemen, en daarvan weer de helft.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "57",
+     "uitleg": "Dat is drie kwart van de knikkers. Je zoekt één kwart: één van de vier gelijke groepjes.",
+     "uitlegSterker": "Hoeveel knikkers zitten er in één groepje? Je kunt ook eerst de helft nemen, en daarvan weer de helft.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "drie kwart",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "76",
+     "uitleg": "Dat zijn alle knikkers. Je zoekt een kwart: verdeel ze in vier gelijke groepjes. Hoeveel zitten er in één groepje?",
+     "uitlegSterker": "Hoeveel knikkers zitten er in één groepje? Je kunt ook eerst de helft nemen, en daarvan weer de helft.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = getal1",
+     "soort": "alle knikkers",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "18",
+     "uitleg": "Bijna! Reken het na: vier groepjes van jouw antwoord moeten samen alle knikkers zijn.",
+     "uitlegSterker": "Hoeveel knikkers zitten er in één groepje? Je kunt ook eerst de helft nemen, en daarvan weer de helft.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord ± 1",
+     "soort": "bijna",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Bijna! Reken het na: vier groepjes van jouw antwoord moeten samen alle knikkers zijn.",
+     "uitlegSterker": "Hoeveel knikkers zitten er in één groepje? Je kunt ook eerst de helft nemen, en daarvan weer de helft.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord ± 1",
+     "soort": "bijna",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "57 → Dat is drie kwart van de knikkers. Je zoekt één kwart: één van de vier gelijke groepjes. · 76 → Dat zijn alle knikkers. Je zoekt een kwart: verdeel ze in vier gelijke groepjes. Hoeveel zitten er in één groepje? · 18 → Bijna! Reken het na: vier groepjes van jouw antwoord moeten samen alle knikkers zijn. · 20 → Bijna! Reken het na: vier groepjes van jouw antwoord moeten samen alle knikkers zijn.",
+   "ouderzin": "Je kind rekent uit hoeveel een kwart van een aantal is.",
+   "getallenruimte": "0–100",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:B2:efd22e14-ae1f-4490-b38a-d6fdb01000e3",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "1/4 van 76",
+    "claudeUitleg": "Eerst 1/4: 76 : 4 = 19.\nDan 1 keer: 1 × 19 = 19.",
+    "claudeStrategie": "eerst één deel, dan keer",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "57",
+      "denkfout": "verkeerde-bewerking"
+     },
+     {
+      "fout": "76",
+      "denkfout": "omgekeerd-gedeeld"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "57",
+      "uitleg": "Dat is het deel dat níét groen is. Lees de vraag nog eens."
+     },
+     {
+      "stap": null,
+      "fout": "76",
+      "uitleg": "Deel door de noemer (4), niet door de teller."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "efd22e14-ae1f-4490-b38a-d6fdb01000e3",
+    "claudeDoel": "B2",
+    "claudeDoelTitel": "Breuk van een hoeveelheid",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N15 breuk in woorden (helft/kwart, zoals onze G5-bank)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G5-VERH-E01",
+    "voorstelDoel": null,
+    "regel": "G5-B02-deel-van",
+    "reden": "een kwart van een hoeveelheid (G5-VERH-E01)",
+    "somtype": "In [plek] zitten # [ding]. Een kwart ervan is groen. Hoeveel groene knikkers zijn er?",
+    "fixlijst98": true,
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "In [plek] liggen # [ding]. Een kwart ervan is groen. Hoeveel groene botten zijn er?",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 1,
+     "somtype": "In [plek] zitten # [ding]. Een kwart ervan is groen. Hoeveel groene knikkers zijn er?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": 19,
+    "methode": "deel van een hoeveelheid",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = getal1",
+     "soort": "alle knikkers",
+     "bron": "nieuw",
+     "tekst": "Dat zijn alle knikkers. Je zoekt een kwart: verdeel ze in vier gelijke groepjes. Hoeveel zitten er in één groepje?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "76"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "drie kwart",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is drie kwart van de knikkers. Je zoekt één kwart: één van de vier gelijke groepjes.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "57"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord ± 1",
+     "soort": "bijna",
+     "bron": "nieuw",
+     "tekst": "Bijna! Reken het na: vier groepjes van jouw antwoord moeten samen alle knikkers zijn.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "18",
+       "20"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Een kwart is één van vier gelijke delen. Deel het aantal knikkers door vier.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Een kwart is één van vier gelijke delen. Deel het aantal knikkers door vier."
+  },
+  {
+   "id": "G5-VERH-E01-claude-bank-002",
+   "nr": "002",
+   "doelId": "G5-VERH-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Er zijn 8 koekjes. Kleur een kwart van de koekjes.",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "2",
+   "antwoordDetail": null,
+   "hint": "Een kwart is één van vier gelijke delen. Verdeel de koekjes in vier gelijke groepjes.",
+   "sterkereHint": "Kleur de koekjes van één groepje.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "1",
+     "uitleg": "Bijna! Dat is één koekje te weinig. Verdeel de koekjes in vier gelijke groepjes en kleur één groepje.",
+     "uitlegSterker": "Kleur de koekjes van één groepje.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord − 1",
+     "soort": "één te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "3",
+     "uitleg": "Bijna! Dat is één koekje te veel. Verdeel de koekjes in vier gelijke groepjes en kleur één groepje.",
+     "uitlegSterker": "Kleur de koekjes van één groepje.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord + 1",
+     "soort": "één te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "4",
+     "uitleg": "Je hebt de helft gekleurd: twee van de vier groepjes. Een kwart is maar één groepje.",
+     "uitlegSterker": "Kleur de koekjes van één groepje.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de helft van getal1",
+     "soort": "de helft",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "6",
+     "uitleg": "Je hebt drie kwart gekleurd: drie van de vier groepjes. Een kwart is maar één groepje.",
+     "uitlegSterker": "Kleur de koekjes van één groepje.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = drie kwart van getal1",
+     "soort": "drie kwart",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "8",
+     "uitleg": "Je hebt alle koekjes gekleurd. Een kwart is één van vier gelijke delen. Kleur alleen de koekjes van één groepje.",
+     "uitlegSterker": "Kleur de koekjes van één groepje.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = getal1",
+     "soort": "alles gekleurd",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "1 → Bijna! Dat is één koekje te weinig. Verdeel de koekjes in vier gelijke groepjes en kleur één groepje. · 3 → Bijna! Dat is één koekje te veel. Verdeel de koekjes in vier gelijke groepjes en kleur één groepje. · 4 → Je hebt de helft gekleurd: twee van de vier groepjes. Een kwart is maar één groepje. · 6 → Je hebt drie kwart gekleurd: drie van de vier groepjes. Een kwart is maar één groepje. · 8 → Je hebt alle koekjes gekleurd. Een kwart is één van vier gelijke delen. Kleur alleen de koekjes van één groepje.",
+   "ouderzin": "Je kind kleurt een kwart van een aantal koekjes.",
+   "getallenruimte": "0–10",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "8 koekjes in een rij; het kind kleurt koekjes",
+    "asciiSchets": false,
+    "jsRender": {
+     "soort": "groepjes",
+     "aantal": 8,
+     "kleurbaar": true
+    },
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": "balk kleuren",
+   "bronVariant": "claude-bank:B2:ff02df38-d86e-4f47-ba0d-5366b0f43a22",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "1/4 van 8",
+    "claudeUitleg": "Eerst 8 : 4 = 2, dat is één deel. Dan 1 delen: 1 × 2 = 2.",
+    "claudeStrategie": null,
+    "claudeThema": null,
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "balk",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [],
+    "mergeFoutHints": [],
+    "claudeFoutHints": []
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "ff02df38-d86e-4f47-ba0d-5366b0f43a22",
+    "claudeDoel": "B2",
+    "claudeDoelTitel": "Breuk van een hoeveelheid",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N15 breuk in woorden (helft/kwart, zoals onze G5-bank)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G5-VERH-E01",
+    "voorstelDoel": null,
+    "regel": "G5-B02-deel-van",
+    "reden": "een kwart van een hoeveelheid (G5-VERH-E01)",
+    "somtype": "[groepjes] Er zijn # [ding]. Kleur een kwart van de koekjes.",
+    "duplicaatVan": null,
+    "somtypeNr": 3,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[groepjes] Er zijn # [ding]. Kleur een kwart van de koekjes.",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 3,
+     "somtype": "[groepjes] Er zijn # [ding]. Kleur een kwart van de koekjes."
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": 2,
+    "methode": "koekjes kleuren",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = getal1",
+     "soort": "alles gekleurd",
+     "bron": "nieuw",
+     "tekst": "Je hebt alle koekjes gekleurd. Een kwart is één van vier gelijke delen. Kleur alleen de koekjes van één groepje.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = drie kwart van getal1",
+     "soort": "drie kwart",
+     "bron": "nieuw",
+     "tekst": "Je hebt drie kwart gekleurd: drie van de vier groepjes. Een kwart is maar één groepje.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = de helft van getal1",
+     "soort": "de helft",
+     "bron": "nieuw",
+     "tekst": "Je hebt de helft gekleurd: twee van de vier groepjes. Een kwart is maar één groepje.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 1",
+     "soort": "één te veel",
+     "bron": "nieuw",
+     "tekst": "Bijna! Dat is één koekje te veel. Verdeel de koekjes in vier gelijke groepjes en kleur één groepje.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord − 1",
+     "soort": "één te weinig",
+     "bron": "nieuw",
+     "tekst": "Bijna! Dat is één koekje te weinig. Verdeel de koekjes in vier gelijke groepjes en kleur één groepje.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Verdeel de koekjes in vier gelijke groepjes. Kleur de koekjes van één groepje.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Verdeel de koekjes in vier gelijke groepjes. Kleur de koekjes van één groepje."
+  },
+  {
+   "id": "G5-VERH-E01-claude-bank-003",
+   "nr": "003",
+   "doelId": "G5-VERH-E01",
+   "niveau": "kritisch",
+   "niveauKind": "Uitdaging",
+   "type": "kale",
+   "opgave": "Er zijn 8 koekjes. Kleur drie kwart van de koekjes.",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "6",
+   "antwoordDetail": null,
+   "hint": "Een kwart is één van vier gelijke delen. Verdeel de koekjes in vier gelijke groepjes.",
+   "sterkereHint": "Drie kwart is drie van die groepjes. Kleur de koekjes van drie groepjes.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "2",
+     "uitleg": "Je hebt één kwart gekleurd: één groepje. Drie kwart is drie van de vier groepjes.",
+     "uitlegSterker": "Drie kwart is drie van die groepjes. Kleur de koekjes van drie groepjes.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = een kwart van getal1",
+     "soort": "één kwart",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "4",
+     "uitleg": "Je hebt de helft gekleurd: twee van de vier groepjes. Drie kwart is drie van de vier groepjes.",
+     "uitlegSterker": "Drie kwart is drie van die groepjes. Kleur de koekjes van drie groepjes.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de helft van getal1",
+     "soort": "de helft",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Bijna! Dat is één koekje te weinig. Verdeel de koekjes in vier gelijke groepjes en kleur drie groepjes.",
+     "uitlegSterker": "Drie kwart is drie van die groepjes. Kleur de koekjes van drie groepjes.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord − 1",
+     "soort": "één te weinig",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "7",
+     "uitleg": "Bijna! Dat is één koekje te veel. Verdeel de koekjes in vier gelijke groepjes en kleur drie groepjes.",
+     "uitlegSterker": "Drie kwart is drie van die groepjes. Kleur de koekjes van drie groepjes.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord + 1",
+     "soort": "één te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "8",
+     "uitleg": "Je hebt alle koekjes gekleurd. Drie kwart is drie van de vier groepjes: één groepje blijft over.",
+     "uitlegSterker": "Drie kwart is drie van die groepjes. Kleur de koekjes van drie groepjes.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = getal1",
+     "soort": "alles gekleurd",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "2 → Je hebt één kwart gekleurd: één groepje. Drie kwart is drie van de vier groepjes. · 4 → Je hebt de helft gekleurd: twee van de vier groepjes. Drie kwart is drie van de vier groepjes. · 5 → Bijna! Dat is één koekje te weinig. Verdeel de koekjes in vier gelijke groepjes en kleur drie groepjes. · 7 → Bijna! Dat is één koekje te veel. Verdeel de koekjes in vier gelijke groepjes en kleur drie groepjes. · 8 → Je hebt alle koekjes gekleurd. Drie kwart is drie van de vier groepjes: één groepje blijft over.",
+   "ouderzin": "Je kind kleurt drie kwart van een aantal koekjes.",
+   "getallenruimte": "0–10",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "8 koekjes in 2 rijen van 4, kleurbaar; de vier gelijke delen (2 koekjes per deel) moeten zichtbaar zijn (Didactiek 1 okt)",
+    "asciiSchets": false,
+    "jsRender": {
+     "soort": "groepjes",
+     "aantal": 8,
+     "kleurbaar": true,
+     "perrij": 4
+    },
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": "balk kleuren",
+   "bronVariant": "claude-bank:B2:ee0c859d-276d-4dd9-97e6-52e3a8cb571c",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "3/4 van 8",
+    "claudeUitleg": "Eerst 8 : 4 = 2, dat is één deel. Dan 3 delen: 3 × 2 = 6.",
+    "claudeStrategie": null,
+    "claudeThema": null,
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "balk",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "2",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "2",
+      "uitleg": "2 is maar één deel. Je hebt 3 delen nodig."
+     }
+    ],
+    "hintRichting": "Drie kwart in woorden, geen 3/4. Eerst een kwart van 8 (8 : 4 = 2), dan 3 keer zoveel. Zet '8 : 4' alleen in de hint, niet in de opgave."
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "ee0c859d-276d-4dd9-97e6-52e3a8cb571c",
+    "claudeDoel": "B2",
+    "claudeDoelTitel": "Breuk van een hoeveelheid",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D-G5 drie kwart: 8 koekjes in 2 rijen van 4 (4 gelijke delen zichtbaar)",
+     "D-G5 niveau volgens Didactiek",
+     "N15 breuk in woorden (helft/kwart, zoals onze G5-bank)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G5-VERH-E01",
+    "voorstelDoel": null,
+    "regel": "D-DRIEKWART-G5",
+    "reden": "Didactiek 1 okt (G5-twijfel G5-VERH-E01-claude-bank-twijfel-001): drie kwart in woorden; kwart van 8 en dan 3 keer",
+    "somtype": "[groepjes] Er zijn # [ding]. Kleur drie kwart van de koekjes.",
+    "didactiekG5": {
+     "twijfelId": "G5-VERH-E01-claude-bank-twijfel-001",
+     "groep": "drie-kwart",
+     "besluit": "behouden",
+     "doel": "G5-VERH-E01",
+     "niveau": "kritisch",
+     "subregel": "drie kwart in woorden; kwart van 8 en dan 3 keer"
+    },
+    "vorigId": "G5-VERH-E01-claude-bank-twijfel-001",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 3,
+    "somtypeOrigineel": "[groepjes] Er zijn # [ding]. Kleur drie kwart van de koekjes.",
+    "hints": {
+     "batch": "batch6.json",
+     "nr": 2,
+     "somtype": "[groepjes] Er zijn # [ding]. Kleur drie kwart van de koekjes."
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": 6,
+    "methode": "koekjes kleuren",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = getal1",
+     "soort": "alles gekleurd",
+     "bron": "nieuw",
+     "tekst": "Je hebt alle koekjes gekleurd. Drie kwart is drie van de vier groepjes: één groepje blijft over.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = een kwart van getal1",
+     "soort": "één kwart",
+     "bron": "nieuw",
+     "tekst": "Je hebt één kwart gekleurd: één groepje. Drie kwart is drie van de vier groepjes.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = de helft van getal1",
+     "soort": "de helft",
+     "bron": "nieuw",
+     "tekst": "Je hebt de helft gekleurd: twee van de vier groepjes. Drie kwart is drie van de vier groepjes.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 1",
+     "soort": "één te veel",
+     "bron": "nieuw",
+     "tekst": "Bijna! Dat is één koekje te veel. Verdeel de koekjes in vier gelijke groepjes en kleur drie groepjes.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord − 1",
+     "soort": "één te weinig",
+     "bron": "nieuw",
+     "tekst": "Bijna! Dat is één koekje te weinig. Verdeel de koekjes in vier gelijke groepjes en kleur drie groepjes.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Verdeel de koekjes in vier gelijke groepjes. Kleur de koekjes van drie groepjes.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Verdeel de koekjes in vier gelijke groepjes. Kleur de koekjes van drie groepjes."
+  }
+ ]
+}

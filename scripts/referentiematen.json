@@ -1,0 +1,891 @@
+[
+  {
+    "id": "lengte-1mm",
+    "maat": "1 mm",
+    "eenheid": "lengte",
+    "goed": "ongeveer zo dik als een bankpasje, of tien velletjes papier op elkaar",
+    "kindzin": "Een millimeter is heel dun: een bankpasje is ongeveer één millimeter dik.",
+    "vanaf": 5,
+    "bron": "SLO tussendoelen eind groep 5 (mm); bankpas 0,76 mm (ISO-norm), papier 80 g ≈ 0,1 mm per vel",
+    "nietGebruiken": [
+      "1 mm is zo dik als een munt (een euromunt is 2 à 2,5 mm dik)",
+      "1 mm is zo dik als een boek"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:mm|millimeter)\\b[^.]{0,40}\\bdik(?:te)?\\b[^.]{0,20}\\b(?:munt|euro|boek)"
+    ],
+    "regexVlaggen": "iu",
+    "opmerking": "Op de liniaal: de afstand tussen twee kleine streepjes is precies 1 mm (geen referentie maar een meetmaat)."
+  },
+  {
+    "id": "lengte-1cm",
+    "maat": "1 cm",
+    "eenheid": "lengte",
+    "goed": "ongeveer zo breed als je duim of een vinger",
+    "kindzin": "Een centimeter is ongeveer zo breed als je duim of de nagel van je vinger.",
+    "vanaf": 4,
+    "bron": "SLO eind groep 4 ('Mijn duim is ongeveer 1 centimeter breed'); SLO eind groep 5 ('de breedte van een vinger is ongeveer een cm')",
+    "nietGebruiken": [
+      "2 cm is ongeveer zo breed als je duim (SLO gebruikt duim = 1 cm)",
+      "1 cm is zo breed als je hand",
+      "een suikerklontje is 1 cm (een klontje is bijna 2 cm)"
+    ],
+    "checkPatronen": [
+      "\\b2 ?(?:cm|centimeter)\\b[^.]{0,40}\\bbreed als (?:je|jouw|een) duim",
+      "(?:\\b1|\\been|één) ?(?:cm|centimeter)\\b[^.]{0,30}\\b(?:zo breed als|de breedte van) (?:je|jouw|een) hand"
+    ],
+    "checkPatronenZacht": [
+      "suikerklont(?:je)?[^.]{0,30}(?:\\b1|\\been|één) ?(?:cm|centimeter)\\b"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G4 bank: 'Je duim is ongeveer 1 cm breed' · G4 merge: '2 cm is ongeveer zo breed als je duim' (tegenspraak)"
+  },
+  {
+    "id": "lengte-1dm",
+    "maat": "1 dm",
+    "eenheid": "lengte",
+    "goed": "ongeveer zo breed als de hand van een volwassene, of zo lang als een krijtje",
+    "kindzin": "Een decimeter is tien centimeter: ongeveer zo breed als de hand van een volwassene.",
+    "vanaf": 5,
+    "bron": "SLO eind groep 5 (dm, met handen en vingers laten zien); handbreedte volwassene ≈ 8 à 9 cm",
+    "nietGebruiken": [
+      "1 dm is zo lang als je arm",
+      "1 dm is zo breed als je vinger"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:dm|decimeter)\\b[^.]{0,30}\\b(?:zo lang als|de lengte van) (?:je|jouw|een) arm",
+      "(?:\\b1|\\been|één) ?(?:dm|decimeter)\\b[^.]{0,30}\\bzo breed als (?:je|jouw|een) vinger"
+    ],
+    "checkPatronenZacht": [
+      "\\b(?:9|10) ?(?:cm|centimeter)\\b[^.]{0,30}\\bzo breed als je hand"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G4 merge: '9 cm is ongeveer zo breed als je hand' (zacht)",
+    "opmerking": "De hand van een kind uit groep 4/5 is maar 6 à 7 cm breed; zeg 'de hand van een volwassene' of 'iets breder dan jouw hand'."
+  },
+  {
+    "id": "lengte-1m",
+    "maat": "1 m",
+    "eenheid": "lengte",
+    "goed": "ongeveer een hele grote stap; bij jou komt een meter ongeveer tot je borst",
+    "kindzin": "Een meter is ongeveer één hele grote stap, en als je rechtop staat komt een meter ongeveer tot je borst.",
+    "vanaf": 4,
+    "bron": "SLO eind groep 4 ('Een grote stap is ongeveer 1 meter'); lengte kind groep 4/5 ≈ 125 à 135 cm (TNO-groeidiagrammen)",
+    "nietGebruiken": [
+      "1 m komt tot je middel",
+      "1 m komt tot je knie",
+      "1 m is zo lang als je arm (een kinderarm is ongeveer 50 cm)"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:m|meter)\\b[^.]{0,40}\\btot (?:aan )?(?:je|jouw) (?:middel|knie|knieën|heup|buik|enkel)",
+      "(?:\\b1|\\been|één) ?(?:m|meter)\\b[^.]{0,20}\\bzo lang als (?:je|jouw) arm"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G4: '1 m tot je middel' (al vervangen, staat nog in claudeVervangen); vervanging '1 m is langer dan je been' klopt"
+  },
+  {
+    "id": "lengte-deur",
+    "maat": "een deur",
+    "eenheid": "lengte",
+    "goed": "ongeveer 2 m hoog en bijna 1 m breed",
+    "kindzin": "Een deur is ongeveer twee meter hoog en bijna een meter breed.",
+    "vanaf": 4,
+    "bron": "standaard binnendeur 201,5 cm hoog, 83 à 93 cm breed (Nederlandse deurmaten)",
+    "nietGebruiken": [
+      "een deur is 3 m hoog",
+      "een deur is 1 m hoog",
+      "een deur is 2 m breed"
+    ],
+    "checkPatronen": [
+      "\\bdeur\\b[^.]{0,30}\\b(?:ongeveer |bijna |wel )?(?:1|3|4|één|een|drie|vier) ?(?:m|meter) hoog",
+      "\\bdeur\\b[^.]{0,30}\\b(?:ongeveer )?(?:2|3|twee|drie) ?(?:m|meter) breed"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "hoogte overal 2 m; breedte '1 m' (G6 bank) en 'bijna een meter, ongeveer 90 cm' (G4 merge) zijn verenigbaar"
+  },
+  {
+    "id": "lengte-kind",
+    "maat": "een kind uit groep 5",
+    "eenheid": "lengte",
+    "goed": "ongeveer 130 cm lang",
+    "kindzin": "Een kind uit groep vijf is ongeveer 130 centimeter lang, dus iets meer dan een meter.",
+    "vanaf": 4,
+    "bron": "TNO-groeidiagrammen: 8 jaar ≈ 131 cm",
+    "nietGebruiken": [
+      "een kind is 2 m lang",
+      "een kind is 1 m lang"
+    ],
+    "checkPatronen": [
+      "\\bkind(?:je)?\\b(?: uit groep \\w+| van \\w+ jaar)? is (?:ongeveer )?(?:1|2|één|een|twee) ?(?:m|meter)\\b(?! ?\\d)(?:,(?!\\d)| lang| groot|\\.|$)"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "lengte-volwassene",
+    "maat": "een volwassene",
+    "eenheid": "lengte",
+    "goed": "ongeveer 175 cm lang (iets minder dan 2 m)",
+    "kindzin": "Een volwassene is ongeveer 175 centimeter lang, iets minder dan twee meter.",
+    "vanaf": 4,
+    "bron": "CBS: gemiddelde lengte volwassenen ≈ 1,81 m (mannen) en 1,67 m (vrouwen)",
+    "nietGebruiken": [
+      "een volwassene is 2 m lang",
+      "een volwassene is 3 m lang"
+    ],
+    "checkPatronen": [
+      "\\bvolwassene?n?\\b[^.]{0,20}\\bis (?:ongeveer )?(?:2|3|twee|drie) ?(?:m|meter)\\b(?![,.]\\d)"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G4 merge: volwassene ≈ 1,80 m (goed)"
+  },
+  {
+    "id": "lengte-klaslokaal",
+    "maat": "een klaslokaal",
+    "eenheid": "lengte",
+    "goed": "ongeveer 8 m lang (ongeveer acht grote stappen)",
+    "kindzin": "Een klaslokaal is ongeveer acht meter lang: dat zijn ongeveer acht grote stappen.",
+    "vanaf": 4,
+    "bron": "gangbaar klaslokaal 7 à 8 m bij 7 m (ongeveer 55 vierkante meter)",
+    "nietGebruiken": [
+      "10 m is ongeveer een klas",
+      "een klaslokaal is 100 m lang"
+    ],
+    "checkPatronen": [
+      "\\bklas(?:lokaal)?\\b[^.]{0,20}\\bis (?:ongeveer )?(?:\\d{3,}|honderd) ?(?:m|meter)\\b"
+    ],
+    "checkPatronenZacht": [
+      "\\b10 ?(?:m|meter)\\b[^.]{0,20}\\b(?:is )?ongeveer (?:een |de )?klas(?:lokaal)?\\b",
+      "\\b12 ?(?:m|meter)\\b\\.? ?(?:dat is |dus )?iets langer dan een klaslokaal"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G4 merge: 8 m · G4 bank: '10 m is ongeveer een klas of gang' · G5 merge: '10 m is iets langer dan een klaslokaal' (goed) · G4 merge: bus 12 m 'iets langer dan een klaslokaal' (12 m is anderhalf klaslokaal)"
+  },
+  {
+    "id": "lengte-verdieping",
+    "maat": "een verdieping",
+    "eenheid": "lengte",
+    "goed": "ongeveer 3 m hoog",
+    "kindzin": "Een verdieping van een huis is ongeveer drie meter hoog.",
+    "vanaf": 4,
+    "bron": "gangbare verdiepingshoogte woningen 2,6 à 3 m",
+    "nietGebruiken": [
+      "een verdieping is 10 m hoog"
+    ],
+    "checkPatronen": [
+      "\\bverdieping\\b[^.]{0,20}\\b(?:ongeveer )?(?:10|tien|1|één|een) ?(?:m|meter) hoog"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "lengte-schoen",
+    "maat": "de schoen van een kind",
+    "eenheid": "lengte",
+    "goed": "ongeveer 20 cm lang",
+    "kindzin": "Jouw schoen is ongeveer twintig centimeter lang, en een liniaal van dertig centimeter is langer.",
+    "vanaf": 4,
+    "bron": "kinderschoenmaat 31 à 33 ≈ voetlengte 19 à 21 cm",
+    "nietGebruiken": [
+      "de schoen van een kind is ongeveer 25 cm (dat is een volwassen schoen)"
+    ],
+    "checkPatronen": [],
+    "checkPatronenZacht": [
+      "\\bschoen\\b[^.]{0,25}\\bkind\\b[^.]{0,20}\\b(?:25|30) ?(?:cm|centimeter)"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G4 merge 010: 'De schoen van een kind is ongeveer 25 cm lang' (te lang)"
+  },
+  {
+    "id": "lengte-pink",
+    "maat": "je pink",
+    "eenheid": "lengte",
+    "goed": "ongeveer 5 cm lang",
+    "kindzin": "Jouw pink is ongeveer vijf centimeter lang.",
+    "vanaf": 4,
+    "bron": "vingerlengte kind 8 jaar: pink ≈ 4,5 à 5,5 cm",
+    "nietGebruiken": [
+      "7 cm is zo lang als je pink"
+    ],
+    "checkPatronen": [],
+    "checkPatronenZacht": [
+      "\\b(?:7|8|9|10) ?(?:cm|centimeter)\\b[^.]{0,25}\\bzo lang als (?:je|jouw) pink"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G4 merge 008: '7 cm is ongeveer zo lang als je pink' (zacht)"
+  },
+  {
+    "id": "lengte-voetbalveld",
+    "maat": "een voetbalveld",
+    "eenheid": "lengte",
+    "goed": "ongeveer 100 m lang",
+    "kindzin": "Een voetbalveld is ongeveer honderd meter lang; als je het afwandelt, ben je ruim een minuut onderweg.",
+    "vanaf": 4,
+    "bron": "KNVB/FIFA: speelveld 105 m bij 68 m",
+    "nietGebruiken": [
+      "een voetbalveld is 1 km lang",
+      "een voetbalveld is een sprintafstand die je in iets meer dan een minuut loopt (sprinten duurt ongeveer 20 seconden)"
+    ],
+    "checkPatronen": [
+      "\\bvoetbalveld\\b[^.]{0,30}\\b(?:1 ?km|een kilometer|één kilometer|1000 ?m)\\b"
+    ],
+    "checkPatronenZacht": [
+      "sprint[^.]{0,60}\\.?[^.]{0,40}(?:iets )?meer dan een minuut"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "overal ≈ 100 m (goed) · G5 merge claudeUitleg 059: 'Dat is de bekende sprintafstand. Je loopt het in iets meer dan een minuut' (sprint ≠ wandelen)"
+  },
+  {
+    "id": "lengte-1hm",
+    "maat": "1 hm",
+    "eenheid": "lengte",
+    "goed": "ongeveer de lengte van een voetbalveld",
+    "kindzin": "Een hectometer is honderd meter: ongeveer zo lang als een voetbalveld.",
+    "vanaf": 6,
+    "bron": "SLO eind groep 6 (hectometer, 1 hm = 100 m)",
+    "nietGebruiken": [
+      "1 hm is zo lang als een klaslokaal"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:hm|hectometer)\\b[^.]{0,30}\\bklas(?:lokaal)?\\b"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "lengte-1dam",
+    "maat": "1 dam",
+    "eenheid": "lengte",
+    "goed": "ongeveer de lengte van een bus, iets langer dan een klaslokaal",
+    "kindzin": "Een decameter is tien meter: ongeveer zo lang als een bus.",
+    "vanaf": 7,
+    "bron": "SLO eind groep 7 (decameter, 1 dam = 10 m); stadsbus ≈ 12 m",
+    "nietGebruiken": [
+      "1 dam is zo lang als een voetbalveld"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:dam|decameter)\\b[^.]{0,30}\\bvoetbalveld"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "lengte-1km",
+    "maat": "1 km",
+    "eenheid": "lengte",
+    "goed": "ongeveer een kwartier wandelen, of tweeënhalf rondje om een atletiekbaan",
+    "kindzin": "Een kilometer is ongeveer een kwartier wandelen, of tien keer de lengte van een voetbalveld.",
+    "vanaf": 5,
+    "bron": "SLO eind groep 5 en 6 ('Hoe lang is 1 km ongeveer?'); wandeltempo 4 à 5 km per uur; atletiekbaan 400 m",
+    "nietGebruiken": [
+      "1 km is een uur lopen",
+      "1 km is een minuut lopen",
+      "1 km is zo lang als een voetbalveld"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:km|kilometer)\\b[^.]{0,40}\\b(?:een uur|één uur|1 uur|een minuut|één minuut|1 minuut|minuutje|vijf minuten|5 minuten) (?:lopen|wandelen)",
+      "(?:\\b1|\\been|één) ?(?:km|kilometer)\\b[^.]{0,20}\\bzo lang als (?:een|één) voetbalveld"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G5 merge: '1 km ≈ een kwartier lopen' (goed)"
+  },
+  {
+    "id": "gewicht-1g",
+    "maat": "1 g",
+    "eenheid": "gewicht",
+    "goed": "ongeveer zo zwaar als een paperclip",
+    "kindzin": "Een gram is heel licht: een paperclip weegt ongeveer één gram.",
+    "vanaf": 5,
+    "bron": "SLO eind groep 5 (gram; voorbeelden postzegel en theezakje); standaard paperclip ≈ 1 g",
+    "nietGebruiken": [
+      "12 g is zo licht als een doosje paperclips (een doosje van 100 clips weegt ongeveer 100 g)",
+      "1 g is een postzegel (een postzegel weegt minder dan 1 g)"
+    ],
+    "checkPatronen": [
+      "\\b\\d{1,2} ?(?:g|gram)\\b[^.]{0,30}\\bdoos(?:je)? (?:met |vol )?paperclips"
+    ],
+    "checkPatronenZacht": [
+      "\\bpostzegel\\b[^.]{0,30}(?:\\b1|\\been|één) ?(?:g|gram)\\b",
+      "(?:\\b1|\\been|één) ?(?:g|gram)\\b[^.]{0,30}\\bpostzegel"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G5 Hint: paperclip ≈ 1 g · G6 bank: '6 gram … een paar paperclips' (goed) · G5 merge 015: '12 g … doosje paperclips' (fout)",
+    "opmerking": "De SLO-voorbeelden postzegel en theezakje kloppen slecht (postzegel ≈ 0,1 g, theezakje ≈ 2 g); daarom de paperclip."
+  },
+  {
+    "id": "gewicht-papier",
+    "maat": "een velletje papier",
+    "eenheid": "gewicht",
+    "goed": "ongeveer 5 g",
+    "kindzin": "Een velletje papier weegt ongeveer vijf gram, dus vijf gram is maar één blaadje.",
+    "vanaf": 5,
+    "bron": "A4 van 80 g per vierkante meter ≈ 5 g",
+    "nietGebruiken": [
+      "5 g is een paar blaadjes papier"
+    ],
+    "checkPatronen": [],
+    "checkPatronenZacht": [
+      "\\b(?:4|5|6) ?(?:g|gram)\\b[^.]{0,30}\\b(?:een paar|paar|wat) (?:blaadjes|velletjes|vellen)"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G5 merge 014: '6 g … een velletje papier' (goed) · 016: '5 g … een paar blaadjes papier' (tegenspraak)"
+  },
+  {
+    "id": "gewicht-1kg",
+    "maat": "1 kg",
+    "eenheid": "gewicht",
+    "goed": "ongeveer zo zwaar als een pak suiker of een pak meel",
+    "kindzin": "Een kilogram is ongeveer zo zwaar als een pak suiker uit de winkel.",
+    "vanaf": 4,
+    "bron": "SLO eind groep 4 ('een pak suiker' ≈ 1 kg)",
+    "nietGebruiken": [
+      "een appel weegt 1 kg",
+      "1 kg is zo zwaar als een boek"
+    ],
+    "checkPatronen": [
+      "\\been appel (?:weegt|is) (?:ongeveer )?(?:1|een|één) ?(?:kg|kilo|kilogram)\\b"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "gewicht-appel",
+    "maat": "een appel",
+    "eenheid": "gewicht",
+    "goed": "ongeveer 150 g",
+    "kindzin": "Een appel weegt ongeveer honderdvijftig gram, dus zes à zeven appels wegen samen ongeveer een kilo.",
+    "vanaf": 5,
+    "bron": "middelgrote appel 130 à 180 g (Voedingscentrum: ±150 g)",
+    "nietGebruiken": [
+      "een appel weegt 200 g (dat is een grote appel)",
+      "een appel weegt 1 kg"
+    ],
+    "checkPatronen": [],
+    "checkPatronenZacht": [
+      "\\been appel\\b[^.]{0,20}(?:~|≈|ongeveer|weegt)\\s?200 ?(?:g|gram)\\b",
+      "appels van 200 ?(?:g|gram)\\b"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G5 merge en G6 bank: 150 g · G5 bank MEET-E05#004/#005: 200 g (tegenspraak)",
+    "opmerking": "'Een grote appel weegt ongeveer 200 g' mag wel."
+  },
+  {
+    "id": "gewicht-ei",
+    "maat": "een ei",
+    "eenheid": "gewicht",
+    "goed": "ongeveer 60 g",
+    "kindzin": "Een ei weegt ongeveer zestig gram.",
+    "vanaf": 5,
+    "bron": "ei maat M/L 53 à 73 g",
+    "nietGebruiken": [
+      "een ei weegt 6 g"
+    ],
+    "checkPatronen": [
+      "\\been ei\\b[^.]{0,15}\\b(?:weegt|is) (?:ongeveer )?(?:6|600) ?(?:g|gram)\\b"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "gewicht-banaan",
+    "maat": "een banaan",
+    "eenheid": "gewicht",
+    "goed": "ongeveer 120 g",
+    "kindzin": "Een banaan weegt ongeveer honderdtwintig gram.",
+    "vanaf": 5,
+    "bron": "middelgrote banaan met schil 120 à 150 g",
+    "nietGebruiken": [
+      "een banaan weegt 1 kg"
+    ],
+    "checkPatronen": [
+      "\\been banaan\\b[^.]{0,15}\\b(?:weegt|is) (?:ongeveer )?(?:1|een|één) ?(?:kg|kilo)\\b"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "gewicht-brood",
+    "maat": "een heel brood",
+    "eenheid": "gewicht",
+    "goed": "ongeveer 800 g",
+    "kindzin": "Een heel brood weegt ongeveer achthonderd gram, iets minder dan een kilo.",
+    "vanaf": 5,
+    "bron": "standaardbrood 800 g",
+    "nietGebruiken": [
+      "een brood weegt 8 kg"
+    ],
+    "checkPatronen": [
+      "\\b(?:een )?(?:heel )?brood\\b[^.]{0,15}\\bweegt (?:ongeveer )?(?:8|10) ?(?:kg|kilo)\\b"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "gewicht-kind",
+    "maat": "een kind uit groep 5",
+    "eenheid": "gewicht",
+    "goed": "ongeveer 30 kg",
+    "kindzin": "Een kind uit groep vijf weegt ongeveer dertig kilo.",
+    "vanaf": 4,
+    "bron": "TNO-groeidiagrammen: 8 jaar ≈ 27 à 28 kg, 9 jaar ≈ 29 à 31 kg",
+    "nietGebruiken": [
+      "50 kg is ongeveer een kind",
+      "50 kg is kind-gewicht"
+    ],
+    "checkPatronen": [
+      "\\b(?:50|60|vijftig) ?(?:kg|kilo|kilogram)\\b[^.]{0,20}\\b(?:is|=|≈)\\b(?! zwaarder| lichter)[^.]{0,15}\\bkind"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G4 merge: 8 à 9 jaar ≈ 30 kg (goed) · G4 bank MEET-E05: '50 kg is ongeveer een kind/kleine volwassene', '50 kg is kind-/volwassen-gewicht' (tegenspraak)"
+  },
+  {
+    "id": "gewicht-volwassene",
+    "maat": "een volwassene",
+    "eenheid": "gewicht",
+    "goed": "ongeveer 75 kg",
+    "kindzin": "Een volwassene weegt ongeveer vijfenzeventig kilo, dus twee volwassenen samen ongeveer honderdvijftig kilo.",
+    "vanaf": 4,
+    "bron": "CBS 2024: gemiddeld 85 kg (mannen) en 72 kg (vrouwen)",
+    "nietGebruiken": [
+      "150 kg is zwaarder dan twee volwassenen (het is ongeveer even zwaar)",
+      "een volwassene weegt 200 kg"
+    ],
+    "checkPatronen": [
+      "\\b(?:150|honderdvijftig) ?(?:kg|kilo)\\b[^.]{0,20}\\bzwaarder dan twee volwassen",
+      "\\bvolwassene?\\b[^.]{0,15}\\bweegt (?:ongeveer )?(?:150|200|20|30) ?(?:kg|kilo)\\b"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G4 merge: volwassene ≈ 75 kg (goed) · G5 merge 018: '150 kg is zwaarder dan twee volwassen mensen' (fout)"
+  },
+  {
+    "id": "gewicht-emmer",
+    "maat": "een volle emmer water",
+    "eenheid": "gewicht",
+    "goed": "ongeveer 10 kg",
+    "kindzin": "Een volle emmer water weegt ongeveer tien kilo, want één liter water weegt ongeveer één kilo.",
+    "vanaf": 5,
+    "bron": "emmer ≈ 10 liter; 1 liter water ≈ 1 kg",
+    "nietGebruiken": [
+      "een volle emmer water weegt 1 kg"
+    ],
+    "checkPatronen": [
+      "\\b(?:volle )?emmer (?:met |vol )?water\\b[^.]{0,15}\\bweegt (?:ongeveer )?(?:1|een|één|100) ?(?:kg|kilo)\\b"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "gewicht-fiets",
+    "maat": "een kinderfiets",
+    "eenheid": "gewicht",
+    "goed": "ongeveer 15 kg",
+    "kindzin": "Een fiets weegt ongeveer vijftien kilo.",
+    "vanaf": 4,
+    "bron": "kinderfiets 10 à 15 kg, stadsfiets 15 à 20 kg",
+    "nietGebruiken": [
+      "een fiets weegt 100 kg"
+    ],
+    "checkPatronen": [
+      "\\bfiets\\b[^.]{0,15}\\bweegt (?:ongeveer )?(?:100|150|1) ?(?:kg|kilo)\\b"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "gewicht-paard",
+    "maat": "een paard",
+    "eenheid": "gewicht",
+    "goed": "ongeveer 500 kg",
+    "kindzin": "Een paard weegt ongeveer vijfhonderd kilo.",
+    "vanaf": 5,
+    "bron": "rijpaard 400 à 600 kg",
+    "nietGebruiken": [
+      "een paard weegt 50 kg"
+    ],
+    "checkPatronen": [
+      "\\bpaard\\b[^.]{0,15}\\bweegt (?:ongeveer )?(?:50|5000) ?(?:kg|kilo)\\b"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "gewicht-auto",
+    "maat": "een auto",
+    "eenheid": "gewicht",
+    "goed": "ongeveer 1000 à 1500 kg (ongeveer 1 ton)",
+    "kindzin": "Een kleine auto weegt ongeveer duizend kilo, en dat is één ton.",
+    "vanaf": 7,
+    "bron": "SLO eind groep 7 (1 ton = 1000 kg); kleine personenauto 900 à 1200 kg",
+    "nietGebruiken": [
+      "een auto weegt 100 kg",
+      "1 ton is 100 kg"
+    ],
+    "checkPatronen": [
+      "\\bauto\\b[^.]{0,15}\\bweegt (?:ongeveer )?(?:100|200|500) ?(?:kg|kilo)\\b",
+      "(?:\\b1|\\been|één) ton (?:is|=) (?:100|10\\.000) ?(?:kg|kilo)\\b"
+    ],
+    "regexVlaggen": "iu",
+    "opmerking": "Let op: in G7-GET-01 betekent 'ton' 100.000 (geld). Patronen alleen op 'ton' + kg."
+  },
+  {
+    "id": "inhoud-1ml",
+    "maat": "1 ml",
+    "eenheid": "inhoud",
+    "goed": "ongeveer 20 druppels",
+    "kindzin": "Een milliliter is heel weinig: in een theelepel gaat al ongeveer vijf milliliter.",
+    "vanaf": 5,
+    "bron": "SLO eind groep 5 (milliliter; oog- en neusdruppels); apotheekregel 1 ml ≈ 20 druppels",
+    "nietGebruiken": [
+      "een paar druppels",
+      "1 ml is maar een paar druppels",
+      "2 ml is maar een paar druppels"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één|\\b2|\\btwee) ?(?:ml|milliliter)\\b[^.]{0,30}\\b(?:een )?paar druppel",
+      "(?:ml|milliliter)\\b[^.]{0,10}\\bis (?:maar )?(?:één|een|1) druppel"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G5 merge Hint 2 (4 items) en fout-hint 185: '1 ml / een milliliter is maar een paar druppels' · G6 bank MEET-E04: '2 ml is maar een paar druppels'"
+  },
+  {
+    "id": "inhoud-theelepel",
+    "maat": "een theelepel",
+    "eenheid": "inhoud",
+    "goed": "ongeveer 5 ml (een eetlepel ongeveer 15 ml)",
+    "kindzin": "In een theelepel gaat ongeveer vijf milliliter, en in een eetlepel ongeveer vijftien milliliter.",
+    "vanaf": 5,
+    "bron": "keukenmaat: theelepel 5 ml, eetlepel 15 ml",
+    "nietGebruiken": [
+      "10 ml is een lepel vol",
+      "10 ml is een lepeltje"
+    ],
+    "checkPatronen": [],
+    "checkPatronenZacht": [
+      "\\b10 ?(?:ml|milliliter)\\b[^.]{0,15}\\b(?:een|één) (?:[a-z]+ ){0,3}?(?:theelepel|lepel|lepeltje)\\b"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G6 bank V01: '10 ml is maar een lepel vol' · G5 bank E04: '10 ml is een klein slokje of lepeltje'",
+    "opmerking": "10 ml is twee theelepels; zeg 'twee theelepels' of 'een kleine eetlepel'."
+  },
+  {
+    "id": "inhoud-1cl",
+    "maat": "1 cl",
+    "eenheid": "inhoud",
+    "goed": "ongeveer twee theelepels (10 ml)",
+    "kindzin": "Een centiliter is tien milliliter: dat zijn ongeveer twee theelepels.",
+    "vanaf": 6,
+    "bron": "SLO eind groep 6 (centiliter, 1 dl = 10 cl)",
+    "nietGebruiken": [
+      "1 cl is een glas"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:cl|centiliter)\\b[^.]{0,20}\\b(?:is|=) (?:ongeveer )?(?:een|één) (?:glas|beker|fles)"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "inhoud-1dl",
+    "maat": "1 dl",
+    "eenheid": "inhoud",
+    "goed": "ongeveer een half glas",
+    "kindzin": "Een deciliter is ongeveer een half glas: in een gewoon glas gaat ruim twee deciliter.",
+    "vanaf": 6,
+    "bron": "SLO eind groep 6 (deciliter; 'gewoon glas ruim 2 dl of 200 ml')",
+    "nietGebruiken": [
+      "1 dl is een emmer",
+      "1 dl is een theelepel"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:dl|deciliter)\\b[^.]{0,20}\\b(?:is|=) (?:ongeveer )?(?:een|één) (?:emmer|theelepel|eetlepel|fles)"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "inhoud-glas",
+    "maat": "een glas",
+    "eenheid": "inhoud",
+    "goed": "ongeveer 200 ml",
+    "kindzin": "In een gewoon glas gaat ongeveer tweehonderd milliliter, dus in een pak melk gaan ongeveer vijf glazen.",
+    "vanaf": 5,
+    "bron": "SLO eind groep 6 ('in een gewoon glas kan ruim 2 dl of 200 ml')",
+    "nietGebruiken": [
+      "een glas is 1 liter",
+      "een glas is 20 ml"
+    ],
+    "checkPatronen": [
+      "\\been (?:glas|beker)\\b[^.]{0,15}\\b(?:is|bevat|past|gaat) (?:er )?(?:ongeveer )?(?:1 ?l\\b|1 liter|een liter|één liter|20 ?ml\\b|2 ?ml\\b)"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G5 merge en G6 bank: glas 200 ml / 2 dl · beker ≈ 200 ml · 'vier bekers van 250 ml = 1 L' (alle goed)"
+  },
+  {
+    "id": "inhoud-1l",
+    "maat": "1 L",
+    "eenheid": "inhoud",
+    "goed": "ongeveer een pak melk",
+    "kindzin": "In een pak melk gaat één liter: dat zijn ongeveer vijf glazen.",
+    "vanaf": 5,
+    "bron": "SLO eind groep 5 ('Een melkpak bevat 1 liter')",
+    "nietGebruiken": [
+      "1 L is een glas",
+      "1 L is een emmer"
+    ],
+    "checkPatronen": [
+      "(?:\\b1 ?l\\b|\\b1 liter|\\been liter|één liter)[^.]{0,10}\\b(?:is|=|≈) (?:ongeveer )?(?:een|één) (?:glas|beker|emmer|bad)\\b"
+    ],
+    "regexVlaggen": "iu",
+    "opmerking": "'Een grote fles water is ongeveer één liter' (G5 merge) mag; veel grote flessen zijn anderhalve liter."
+  },
+  {
+    "id": "inhoud-emmer",
+    "maat": "een emmer",
+    "eenheid": "inhoud",
+    "goed": "ongeveer 10 L",
+    "kindzin": "In een emmer gaat ongeveer tien liter, dat zijn tien pakken melk.",
+    "vanaf": 5,
+    "bron": "gangbare huishoudemmer 10 à 12 L",
+    "nietGebruiken": [
+      "15 L is net iets meer dan één emmer (dat is anderhalve emmer)",
+      "een emmer is 1 L",
+      "een emmer is 100 L"
+    ],
+    "checkPatronen": [
+      "\\b15 ?(?:l|liter)\\b[^.]{0,30}\\b(?:net )?iets meer dan (?:één|een) emmer",
+      "\\bemmer\\b[^.]{0,15}\\b(?:is|bevat|past|gaat) (?:er )?(?:ongeveer )?(?:1|100|een|één) ?(?:l|liter)\\b"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G5/G6: emmer 10 L ('tien pakken melk'), '40 kg = 4 volle emmers' · G5 merge 183: '15 L is net iets meer dan één emmer' (tegenspraak)"
+  },
+  {
+    "id": "inhoud-gieter",
+    "maat": "een gieter",
+    "eenheid": "inhoud",
+    "goed": "ongeveer 10 L (een kleine gieter ongeveer 5 L)",
+    "kindzin": "In een grote gieter gaat ongeveer tien liter, net zoveel als in een emmer.",
+    "vanaf": 5,
+    "bron": "gangbare gieters 5 à 10 L",
+    "nietGebruiken": [
+      "een gieter is 100 L"
+    ],
+    "checkPatronen": [
+      "\\bgieter\\b[^.]{0,15}\\b(?:is|bevat|past|gaat) (?:er )?(?:ongeveer )?(?:100|1000) ?(?:l|liter)\\b"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G7 merge: gieter met 4,09 L (past bij een kleine gieter)"
+  },
+  {
+    "id": "inhoud-bad",
+    "maat": "een bad",
+    "eenheid": "inhoud",
+    "goed": "ongeveer 150 L",
+    "kindzin": "In een vol bad gaat ongeveer honderdvijftig liter: dat zijn ongeveer vijftien emmers.",
+    "vanaf": 5,
+    "bron": "CBS Watergebruik thuis 2021: gemiddeld 140 liter per bad",
+    "nietGebruiken": [
+      "100 L is bijna een heel bad",
+      "een bad is 1000 L",
+      "een bad is 15 L"
+    ],
+    "checkPatronen": [
+      "\\b100 ?(?:l|liter)\\b[^.]{0,30}\\bbijna (?:een )?(?:heel |helemaal |vol )?bad",
+      "\\bbad\\b[^.]{0,15}\\b(?:is|bevat|past|gaat) (?:er )?(?:ongeveer )?(?:1000|15|10) ?(?:l|liter)\\b"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G5/G6: bad ≈ 150 L ('vijftien emmers') · G5 merge 184: '100 L is bijna een heel bad vol' (tegenspraak)"
+  },
+  {
+    "id": "inhoud-1dm3",
+    "maat": "1 kubieke decimeter (dm³)",
+    "eenheid": "inhoud",
+    "goed": "ongeveer een pak melk (precies 1 liter)",
+    "kindzin": "Een kubieke decimeter is een doosje van tien bij tien bij tien centimeter, en daar past precies één liter in.",
+    "vanaf": 7,
+    "bron": "SLO eind groep 7 ('In een doos van 1 dm3 passen 1000 blokjes van 1 cm3 maar ook 1 liter melk')",
+    "nietGebruiken": [
+      "1 dm³ is 10 liter"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:dm³|dm3|kubieke decimeter)(?![A-Za-zÀ-ÿ0-9])[^.]{0,10}\\b(?:is|=) (?:10|100) ?(?:l|liter)\\b"
+    ],
+    "regexVlaggen": "iu",
+    "opmerking": "In 'goed' en 'kindzin' voluit 'kubieke decimeter'; de banken gebruiken dm³ (zie notitie)."
+  },
+  {
+    "id": "inhoud-1m3",
+    "maat": "1 kubieke meter (m³)",
+    "eenheid": "inhoud",
+    "goed": "ongeveer zeven volle baden (precies 1000 liter)",
+    "kindzin": "In een kubieke meter past duizend liter: dat is ongeveer zeven volle baden.",
+    "vanaf": 7,
+    "bron": "SLO eind groep 7 (m3 = 1000 dm3); bad ≈ 150 L",
+    "nietGebruiken": [
+      "1 m³ is 100 liter"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:m³|m3|kubieke meter)(?![A-Za-zÀ-ÿ0-9])[^.]{0,10}\\b(?:is|=) (?:100|10) ?(?:l|liter)\\b"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "tijd-1s",
+    "maat": "1 seconde",
+    "eenheid": "tijd",
+    "goed": "ongeveer zo lang als je 'eenentwintig' zegt",
+    "kindzin": "Een seconde is heel kort: ongeveer zo lang als je rustig 'eenentwintig' zegt.",
+    "vanaf": 5,
+    "bron": "SLO eind groep 5 (seconden, 60 seconden in een minuut); telregel 'eenentwintig, tweeëntwintig'",
+    "nietGebruiken": [
+      "1 seconde is zo lang als tot tien tellen"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) seconde\\b[^.]{0,20}\\btot (?:tien|10|honderd|100) tellen"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "tijd-1min",
+    "maat": "1 minuut",
+    "eenheid": "tijd",
+    "goed": "ongeveer de tijd om 100 m te wandelen (60 seconden)",
+    "kindzin": "Een minuut is zestig seconden: in die tijd wandel je ongeveer honderd meter.",
+    "vanaf": 5,
+    "bron": "SLO eind groep 5 (60 seconden in een minuut); wandeltempo ≈ 5 km per uur ≈ 80 à 100 m per minuut",
+    "nietGebruiken": [
+      "1 minuut is 100 seconden",
+      "een minuut duurt 10 seconden"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) minuut\\b[^.]{0,10}\\b(?:is|=|duurt|heeft) (?:ongeveer )?(?:100|10|honderd|tien) seconden"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "tijd-kwartier",
+    "maat": "een kwartier",
+    "eenheid": "tijd",
+    "goed": "ongeveer 15 minuten, de tijd om 1 km te wandelen",
+    "kindzin": "Een kwartier is vijftien minuten: ongeveer zo lang als je over een kilometer wandelen doet.",
+    "vanaf": 5,
+    "bron": "SLO eind groep 5 (kwartier = 15 minuten)",
+    "nietGebruiken": [
+      "een kwartier is 25 minuten",
+      "een kwartier is 10 minuten"
+    ],
+    "checkPatronen": [
+      "\\been kwartier\\b[^.]{0,10}\\b(?:is|=|duurt) (?:ongeveer )?(?:10|20|25|30|45) minuten"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "opp-1m2",
+    "maat": "1 vierkante meter",
+    "eenheid": "oppervlakte",
+    "goed": "ongeveer een vierkant van één grote stap bij één grote stap (1 m bij 1 m)",
+    "kindzin": "Een vierkante meter is ongeveer zo groot als een vierkant van één meter bij één meter: daar kunnen twee kinderen op staan.",
+    "vanaf": 6,
+    "bron": "SLO eind groep 6 (m2; 'een vierkante meter hoeft niet vierkant van vorm te zijn')",
+    "nietGebruiken": [
+      "1 vierkante meter is ongeveer een tegel (een gewone tegel is 30 bij 30 cm)",
+      "m² (schrijf 'vierkante meter' in kindteksten)"
+    ],
+    "checkPatronen": [],
+    "checkPatronenZacht": [
+      "(?:m²|m2|vierkante meter)(?![A-Za-zÀ-ÿ0-9])[^.]{0,20}\\b(?:ongeveer|zo groot als) (?:een )?tegel\\b(?![^.]{0,30}\\b1 ?m bij 1 ?m)"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G7 bank MEET-02: 'm² is ongeveer een tegel of tafelblad' (zacht) · G6: '20 m² = vloer van een kamer' (goed)"
+  },
+  {
+    "id": "opp-deur",
+    "maat": "een deur (oppervlakte)",
+    "eenheid": "oppervlakte",
+    "goed": "ongeveer 2 vierkante meter",
+    "kindzin": "Een deur is ongeveer twee vierkante meter groot.",
+    "vanaf": 6,
+    "bron": "SLO eind groep 6 ('De oppervlakte van een deur is ongeveer 2 m2')",
+    "nietGebruiken": [
+      "een deur is 20 vierkante meter"
+    ],
+    "checkPatronen": [
+      "\\bdeur\\b[^.]{0,20}\\b(?:is |heeft )?(?:ongeveer )?(?:20|200|10) ?(?:m²|m2|vierkante meter)"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "opp-1dm2",
+    "maat": "1 vierkante decimeter",
+    "eenheid": "oppervlakte",
+    "goed": "ongeveer een tegeltje van 10 cm bij 10 cm",
+    "kindzin": "Een vierkante decimeter is zo groot als een tegeltje van tien bij tien centimeter.",
+    "vanaf": 6,
+    "bron": "SLO eind groep 6 (dm2, 1 m2 = 100 dm2)",
+    "nietGebruiken": [
+      "1 vierkante decimeter is een deur"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:dm²|dm2|vierkante decimeter)(?![A-Za-zÀ-ÿ0-9])[^.]{0,20}\\b(?:is|=) (?:ongeveer )?(?:een|zo groot als een) deur"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G6 bank MEET-E03: '1 dm² is zo groot als een tegeltje van 10 cm bij 10 cm' (goed)"
+  },
+  {
+    "id": "opp-1cm2",
+    "maat": "1 vierkante centimeter",
+    "eenheid": "oppervlakte",
+    "goed": "ongeveer de nagel van je duim",
+    "kindzin": "Een vierkante centimeter is ongeveer zo groot als de nagel van je duim.",
+    "vanaf": 6,
+    "bron": "SLO eind groep 6 (cm2); duimnagel kind ≈ 1 cm bij 1 cm",
+    "nietGebruiken": [
+      "1 vierkante centimeter is de nagel van je pink (die is kleiner)"
+    ],
+    "checkPatronen": [],
+    "checkPatronenZacht": [
+      "(?:cm²|cm2|vierkante centimeter)(?![A-Za-zÀ-ÿ0-9])[^.]{0,30}\\bnagel van (?:je|jouw) pink"
+    ],
+    "regexVlaggen": "iu",
+    "nuInBanken": "G6 bank MEET-E03: '1 cm² is ongeveer zo groot als de nagel van je pink' (zacht: pinknagel ≈ een halve vierkante centimeter)"
+  },
+  {
+    "id": "opp-are",
+    "maat": "1 are",
+    "eenheid": "oppervlakte",
+    "goed": "ongeveer twee klaslokalen (10 m bij 10 m)",
+    "kindzin": "Een are is een vierkant van tien bij tien meter: ongeveer zo groot als twee klaslokalen.",
+    "vanaf": 7,
+    "bron": "SLO eind groep 7 (are, hectare); klaslokaal ≈ 55 vierkante meter",
+    "nietGebruiken": [
+      "1 are is een voetbalveld"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) are\\b[^.]{0,20}\\b(?:is|=) (?:ongeveer )?(?:een|één) voetbalveld"
+    ],
+    "regexVlaggen": "iu"
+  },
+  {
+    "id": "opp-hectare",
+    "maat": "1 hectare",
+    "eenheid": "oppervlakte",
+    "goed": "ongeveer anderhalf voetbalveld (100 m bij 100 m)",
+    "kindzin": "Een hectare is een vierkant van honderd bij honderd meter: ongeveer anderhalf voetbalveld.",
+    "vanaf": 7,
+    "bron": "SLO eind groep 7 noemt 'ongeveer twee voetbalvelden'; speelveld 105 m bij 68 m ≈ 7100 vierkante meter, dus 1 ha ≈ 1,4 veld",
+    "nietGebruiken": [
+      "1 hectare is twee voetbalvelden (twee voetbalvelden zijn samen ongeveer 1,4 hectare)",
+      "1 hectare is een klaslokaal"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:ha|hectare)\\b[^.]{0,20}\\b(?:is|=) (?:ongeveer )?(?:een|één) klas(?:lokaal)?"
+    ],
+    "checkPatronenZacht": [
+      "\\b(?:ha|hectare)\\b[^.]{0,30}\\btwee voetbalvelden"
+    ],
+    "regexVlaggen": "iu",
+    "opmerking": "Bewuste afwijking van het SLO-voorbeeld: twee voetbalvelden is ongeveer 1,4 hectare."
+  },
+  {
+    "id": "opp-km2",
+    "maat": "1 vierkante kilometer",
+    "eenheid": "oppervlakte",
+    "goed": "ongeveer 140 voetbalvelden (100 hectare)",
+    "kindzin": "Een vierkante kilometer is een vierkant van één kilometer bij één kilometer: daar passen ongeveer honderdveertig voetbalvelden op.",
+    "vanaf": 7,
+    "bron": "SLO eind groep 7 (km2 = 100 ha)",
+    "nietGebruiken": [
+      "1 vierkante kilometer is een voetbalveld"
+    ],
+    "checkPatronen": [
+      "(?:\\b1|\\been|één) ?(?:km²|km2|vierkante kilometer)(?![A-Za-zÀ-ÿ0-9])[^.]{0,20}\\b(?:is|=) (?:ongeveer )?(?:een|één) voetbalveld"
+    ],
+    "regexVlaggen": "iu"
+  }
+]

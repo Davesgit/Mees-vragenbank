@@ -1,0 +1,811 @@
+{
+ "schema": "leermees-vragenbank-export/v1 + merge/controle/licentie (claude-merge g3 pilot)",
+ "bron": {
+  "licentie": "CC BY-SA 4.0",
+  "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+  "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+  "bron": "https://github.com/Davesgit/leermees-vragenbank",
+  "commit": "7da3257a196386c700310006da60a385fbbe114f"
+ },
+ "gegenereerdOp": "2026-10-01T13:58:16+0200",
+ "doelId": "G3-GET-E02",
+ "bordtitel": "Getallen op een lijn zetten",
+ "aantal": 4,
+ "items": [
+  {
+   "id": "G3-GET-E02-claude-bank-001",
+   "nr": "001",
+   "doelId": "G3-GET-E02",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Waar hoort 12? Zet de stip op de lijn.",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "12",
+   "antwoordDetail": null,
+   "hint": "Zoek eerst de 10 op de lijn. Komt het getal vóór de 10 of erna?",
+   "sterkereHint": "Tel vanaf de 10 verder, streepje voor streepje, tot je bij het getal bent. Zet daar de stip.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "2",
+     "uitleg": "Kijk goed waar de 10 staat. Het getal is groter dan 10. Tel vanaf de 10 verder.",
+     "regel": "fout = antwoord − 10",
+     "soort": "tien vergeten",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "11",
+     "uitleg": "Bijna! Tel de streepjes nog eens, één voor één.",
+     "regel": "fout ligt 1 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "13",
+     "uitleg": "Bijna! Tel de streepjes nog eens, één voor één.",
+     "regel": "fout ligt 1 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "2 → Kijk goed waar de 10 staat. Het getal is groter dan 10. Tel vanaf de 10 verder. · 11 → Bijna! Tel de streepjes nog eens, één voor één. · 13 → Bijna! Tel de streepjes nog eens, één voor één.",
+   "ouderzin": "Je kind zet een getal tot 20 op de getallenlijn, met 0, 10 en 20 als houvast.",
+   "getallenruimte": "0–12",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "getallenlijn 0–20 met streepjes; 0, 10 en 20 benoemd; het kind tikt (Didactiek §9)",
+    "asciiSchets": false,
+    "jsRender": {
+     "soort": "getallenlijn",
+     "van": 0,
+     "tot": 20,
+     "stap": 1,
+     "labels": [
+      0,
+      10,
+      20
+     ],
+     "kindTikt": true
+    },
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": "stip op getallenlijn zetten",
+   "bronVariant": "claude-bank:D2-2:dc2e19da-ad04-4593-900b-50b37bcda21a",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "12 tussen tientallen",
+    "claudeUitleg": "Zoek eerst het tiental ervoor: 10. Dan nog 2 verder.",
+    "claudeStrategie": null,
+    "claudeThema": null,
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "getallenlijn",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [],
+    "mergeFoutHints": [],
+    "claudeFoutHints": []
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "dc2e19da-ad04-4593-900b-50b37bcda21a",
+    "claudeDoel": "D2-2",
+    "claudeDoelTitel": "Tussen welke tientallen",
+    "claudeGroep": 4,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G3-GET-E02",
+    "voorstelDoel": null,
+    "regel": "D-getallenlijn (R06-getallenlijn)",
+    "reden": "Didactiek 1 okt: getallenlijn ≤20",
+    "somtype": "[getallenlijn] Waar hoort #? Zet de stip op de lijn.",
+    "somtypeOud": "[stip op getallenlijn zetten] Waar hoort #? Zet de stip op de lijn.",
+    "didactiek": {
+     "twijfelId": "G3-GET-E02-claude-bank-twijfel-002",
+     "groep": "getallenlijn",
+     "besluit": "G3",
+     "subregel": "getallenlijn ≤20"
+    },
+    "vorigId": "G3-GET-E02-claude-bank-twijfel-002",
+    "duplicaatVan": null,
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 2,
+     "somtype": "[getallenlijn] Waar hoort #? Zet de stip op de lijn."
+    }
+   },
+   "controle": {
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": [],
+    "claudeUitlegInKindtekst": null
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord − 10",
+     "soort": "tien vergeten",
+     "bron": "nieuw",
+     "tekst": "Kijk goed waar de 10 staat. Het getal is groter dan 10. Tel vanaf de 10 verder.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout ligt 1 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw",
+     "tekst": "Bijna! Tel de streepjes nog eens, één voor één.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "11",
+       "13"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere plek",
+     "bron": "nieuw",
+     "tekst": "Zoek eerst de 10 op de lijn. Tel dan streepje voor streepje tot het getal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek eerst de 10 op de lijn. Tel dan streepje voor streepje tot het getal."
+  },
+  {
+   "id": "G3-GET-E02-claude-bank-002",
+   "nr": "002",
+   "doelId": "G3-GET-E02",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Welk getal ligt precies tussen 12 en 20?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "16",
+   "antwoordDetail": null,
+   "hint": "Zoek de twee getallen uit de vraag op de lijn.",
+   "sterkereHint": "Zet een vinger op elk getal. Schuif je vingers tegelijk één streepje naar elkaar toe. Doe dat tot ze bij hetzelfde streepje zijn.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "12",
+     "uitleg": "Dat getal staat al in de vraag. Zoek het getal dat er precies tussenin ligt.",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "14",
+     "uitleg": "Bijna! Tel de streepjes vanaf allebei de kanten. Aan beide kanten moet het even ver zijn.",
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "15",
+     "uitleg": "Bijna! Tel de streepjes vanaf allebei de kanten. Aan beide kanten moet het even ver zijn.",
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "17",
+     "uitleg": "Bijna! Tel de streepjes vanaf allebei de kanten. Aan beide kanten moet het even ver zijn.",
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "18",
+     "uitleg": "Bijna! Tel de streepjes vanaf allebei de kanten. Aan beide kanten moet het even ver zijn.",
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "20",
+     "uitleg": "Dat getal staat al in de vraag. Zoek het getal dat er precies tussenin ligt.",
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "12 → Dat getal staat al in de vraag. Zoek het getal dat er precies tussenin ligt. · 14 → Bijna! Tel de streepjes vanaf allebei de kanten. Aan beide kanten moet het even ver zijn. · 15 → Bijna! Tel de streepjes vanaf allebei de kanten. Aan beide kanten moet het even ver zijn. · 17 → Bijna! Tel de streepjes vanaf allebei de kanten. Aan beide kanten moet het even ver zijn. · 18 → Bijna! Tel de streepjes vanaf allebei de kanten. Aan beide kanten moet het even ver zijn. · 20 → Dat getal staat al in de vraag. Zoek het getal dat er precies tussenin ligt.",
+   "ouderzin": "Je kind zoekt op de getallenlijn het getal dat precies in het midden van twee getallen ligt.",
+   "getallenruimte": "0–20",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "getallenlijn 0–20 met streepjes; 0, 10 en 20 benoemd; het kind tikt (Didactiek §9)",
+    "asciiSchets": false,
+    "jsRender": {
+     "soort": "getallenlijn",
+     "van": 0,
+     "tot": 20,
+     "stap": 1,
+     "labels": [
+      0,
+      10,
+      20
+     ],
+     "kindTikt": true,
+     "gemarkeerd": [
+      12,
+      20
+     ]
+    },
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:D2-2:9e26c06a-1a3a-432a-86a6-4be1c012fd19",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "D2 − 2",
+    "claudeUitleg": null,
+    "claudeStrategie": null,
+    "claudeThema": null,
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 3,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "14",
+      "denkfout": "grafiek-verkeerd-afgelezen"
+     },
+     {
+      "fout": "32",
+      "denkfout": "plaatswaarde-verkeerd"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": []
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "9e26c06a-1a3a-432a-86a6-4be1c012fd19",
+    "claudeDoel": "D2-2",
+    "claudeDoelTitel": "Tussen welke tientallen",
+    "claudeGroep": 4,
+    "claudeBron": "bank",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D12 ongepaste Claude-fout-hint vervallen",
+     "N2 - → −"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G3-GET-E02",
+    "voorstelDoel": null,
+    "regel": "D-getallenlijn (R03-precies-tussen)",
+    "reden": "Didactiek 1 okt: getallenlijn ≤20",
+    "somtype": "[getallenlijn] Welk getal ligt precies tussen # en #?",
+    "somtypeOud": "Welk getal ligt precies tussen # en #?",
+    "didactiek": {
+     "twijfelId": "G3-GET-E02-claude-bank-twijfel-001",
+     "groep": "getallenlijn",
+     "besluit": "G3",
+     "subregel": "getallenlijn ≤20"
+    },
+    "vorigId": "G3-GET-E02-claude-bank-twijfel-001",
+    "duplicaatVan": null,
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 3,
+     "somtype": "[getallenlijn] Welk getal ligt precies tussen # en #?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": 16,
+    "methode": "midden",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "ok",
+     "verwacht": 16,
+     "methode": "midden"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": [],
+    "claudeUitlegInKindtekst": null
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = een getal uit de vraag",
+     "soort": "getal uit de vraag",
+     "bron": "nieuw",
+     "tekst": "Dat getal staat al in de vraag. Zoek het getal dat er precies tussenin ligt.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "12",
+       "20"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw",
+     "tekst": "Bijna! Tel de streepjes vanaf allebei de kanten. Aan beide kanten moet het even ver zijn.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "14",
+       "15",
+       "17",
+       "18"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere plek",
+     "bron": "nieuw",
+     "tekst": "Zet een vinger op elk getal. Schuif ze tegelijk naar elkaar toe, tot ze elkaar raken.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zet een vinger op elk getal. Schuif ze tegelijk naar elkaar toe, tot ze elkaar raken."
+  },
+  {
+   "id": "G3-GET-E02-claude-bank-003",
+   "nr": "003",
+   "doelId": "G3-GET-E02",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Zet 18 op de getallenlijn.",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "18",
+   "antwoordDetail": null,
+   "hint": "Zoek eerst de 10 op de lijn. Komt het getal vóór de 10 of erna?",
+   "sterkereHint": "Tel vanaf de 10 verder, streepje voor streepje, tot je bij het getal bent. Ligt het dicht bij de 20? Dan kun je ook terugtellen vanaf de 20.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "8",
+     "uitleg": "Kijk goed waar de 10 staat. Het getal is groter dan 10. Tel vanaf de 10 verder.",
+     "regel": "fout = antwoord − 10",
+     "soort": "tien vergeten",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "17",
+     "uitleg": "Bijna! Tel de streepjes nog eens, één voor één.",
+     "regel": "fout ligt 1 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "19",
+     "uitleg": "Bijna! Tel de streepjes nog eens, één voor één.",
+     "regel": "fout ligt 1 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "8 → Kijk goed waar de 10 staat. Het getal is groter dan 10. Tel vanaf de 10 verder. · 17 → Bijna! Tel de streepjes nog eens, één voor één. · 19 → Bijna! Tel de streepjes nog eens, één voor één.",
+   "ouderzin": "Je kind zet een getal tot 20 op de getallenlijn, met 0, 10 en 20 als houvast.",
+   "getallenruimte": "0–20",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "getallenlijn 0–20 met streepjes; 0, 10 en 20 benoemd; het kind tikt (Didactiek §9)",
+    "asciiSchets": false,
+    "jsRender": {
+     "soort": "getallenlijn",
+     "van": 0,
+     "tot": 20,
+     "stap": 1,
+     "labels": [
+      0,
+      10,
+      20
+     ],
+     "kindTikt": true
+    },
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": "stip op getallenlijn zetten",
+   "bronVariant": "claude-bank:D2-1:5561f90a-b719-4b57-9387-f46601dece9c",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "18 op de lijn van 0 tot 100",
+    "claudeUitleg": "18 ligt tussen 10 en 20, dichter bij 20.",
+    "claudeStrategie": null,
+    "claudeThema": null,
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "getallenlijn",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [],
+    "mergeFoutHints": [],
+    "claudeFoutHints": []
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "5561f90a-b719-4b57-9387-f46601dece9c",
+    "claudeDoel": "D2-1",
+    "claudeDoelTitel": "Buurgetallen tot 100",
+    "claudeGroep": 4,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 2,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G3-GET-E02",
+    "voorstelDoel": null,
+    "regel": "D-getallenlijn (R06-getallenlijn)",
+    "reden": "Didactiek 1 okt: getallenlijn ≤20",
+    "somtype": "[getallenlijn] Zet # op de getallenlijn.",
+    "somtypeOud": "[stip op getallenlijn zetten] Zet # op de getallenlijn.",
+    "didactiek": {
+     "twijfelId": "G3-GET-E02-claude-bank-twijfel-003",
+     "groep": "getallenlijn",
+     "besluit": "G3",
+     "subregel": "getallenlijn ≤20"
+    },
+    "vorigId": "G3-GET-E02-claude-bank-twijfel-003",
+    "duplicaatVan": null,
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 1,
+     "somtype": "[getallenlijn] Zet # op de getallenlijn."
+    }
+   },
+   "controle": {
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": [],
+    "claudeUitlegInKindtekst": null
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord − 10",
+     "soort": "tien vergeten",
+     "bron": "nieuw",
+     "tekst": "Kijk goed waar de 10 staat. Het getal is groter dan 10. Tel vanaf de 10 verder.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout ligt 1 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw",
+     "tekst": "Bijna! Tel de streepjes nog eens, één voor één.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17",
+       "19"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere plek",
+     "bron": "nieuw",
+     "tekst": "Zoek eerst de 10 op de lijn. Tel dan streepje voor streepje tot het getal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek eerst de 10 op de lijn. Tel dan streepje voor streepje tot het getal."
+  },
+  {
+   "id": "G3-GET-E02-claude-bank-004",
+   "nr": "004",
+   "doelId": "G3-GET-E02",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Zet 11 op de getallenlijn.",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "11",
+   "antwoordDetail": null,
+   "hint": "Zoek eerst de 10 op de lijn. Komt het getal vóór de 10 of erna?",
+   "sterkereHint": "Tel vanaf de 10 verder, streepje voor streepje, tot je bij het getal bent. Ligt het dicht bij de 20? Dan kun je ook terugtellen vanaf de 20.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "1",
+     "uitleg": "Kijk goed waar de 10 staat. Het getal is groter dan 10. Tel vanaf de 10 verder.",
+     "regel": "fout = antwoord − 10",
+     "soort": "tien vergeten",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "10",
+     "uitleg": "Bijna! Tel de streepjes nog eens, één voor één.",
+     "regel": "fout ligt 1 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "12",
+     "uitleg": "Bijna! Tel de streepjes nog eens, één voor één.",
+     "regel": "fout ligt 1 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "1 → Kijk goed waar de 10 staat. Het getal is groter dan 10. Tel vanaf de 10 verder. · 10 → Bijna! Tel de streepjes nog eens, één voor één. · 12 → Bijna! Tel de streepjes nog eens, één voor één.",
+   "ouderzin": "Je kind zet een getal tot 20 op de getallenlijn, met 0, 10 en 20 als houvast.",
+   "getallenruimte": "0–12",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "getallenlijn 0–20 met streepjes; 0, 10 en 20 benoemd; het kind tikt (Didactiek §9)",
+    "asciiSchets": false,
+    "jsRender": {
+     "soort": "getallenlijn",
+     "van": 0,
+     "tot": 20,
+     "stap": 1,
+     "labels": [
+      0,
+      10,
+      20
+     ],
+     "kindTikt": true
+    },
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": "stip op getallenlijn zetten",
+   "bronVariant": "claude-bank:D2-1:a2bdc84e-f5b5-4d91-94bf-a8a46307aaa3",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "11 op de lijn van 0 tot 100",
+    "claudeUitleg": "11 ligt tussen 10 en 20, dichter bij 10.",
+    "claudeStrategie": null,
+    "claudeThema": null,
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "getallenlijn",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [],
+    "mergeFoutHints": [],
+    "claudeFoutHints": []
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "a2bdc84e-f5b5-4d91-94bf-a8a46307aaa3",
+    "claudeDoel": "D2-1",
+    "claudeDoelTitel": "Buurgetallen tot 100",
+    "claudeGroep": 4,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 2,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G3-GET-E02",
+    "voorstelDoel": null,
+    "regel": "D-getallenlijn (R06-getallenlijn)",
+    "reden": "Didactiek 1 okt: getallenlijn ≤20",
+    "somtype": "[getallenlijn] Zet # op de getallenlijn.",
+    "somtypeOud": "[stip op getallenlijn zetten] Zet # op de getallenlijn.",
+    "didactiek": {
+     "twijfelId": "G3-GET-E02-claude-bank-twijfel-004",
+     "groep": "getallenlijn",
+     "besluit": "G3",
+     "subregel": "getallenlijn ≤20"
+    },
+    "vorigId": "G3-GET-E02-claude-bank-twijfel-004",
+    "duplicaatVan": null,
+    "hints": {
+     "batch": "batch4.json",
+     "nr": 1,
+     "somtype": "[getallenlijn] Zet # op de getallenlijn."
+    }
+   },
+   "controle": {
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": [],
+    "claudeUitlegInKindtekst": null
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord − 10",
+     "soort": "tien vergeten",
+     "bron": "nieuw",
+     "tekst": "Kijk goed waar de 10 staat. Het getal is groter dan 10. Tel vanaf de 10 verder.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "1"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout ligt 1 naast het antwoord",
+     "soort": "bijna",
+     "bron": "nieuw",
+     "tekst": "Bijna! Tel de streepjes nog eens, één voor één.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "10",
+       "12"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere plek",
+     "bron": "nieuw",
+     "tekst": "Zoek eerst de 10 op de lijn. Tel dan streepje voor streepje tot het getal.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek eerst de 10 op de lijn. Tel dan streepje voor streepje tot het getal."
+  }
+ ]
+}

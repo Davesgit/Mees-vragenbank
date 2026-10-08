@@ -1,0 +1,1308 @@
+{
+ "batch": "batch6",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G6-merge, batch 6 = meetkunde: MKU-E01 plattegrond met vakken, MKU-E03 bouwwerk van torens). Formaat als hints/batch5.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint. 'claude-taalfix' met regel 'Claudes sleutel: <label>' = de Claude-sleutels met dat label die geen motorregel vangt, met een eigen vaste tekst (per sleutel nagerekend). 'nieuw' = motorregel of letterlijke optie met eigen tekst.",
+ "somtypen": [
+  {
+   "doel": "G6-MKU-E01",
+   "nr": 1,
+   "somtype": "[plattegrond] Wat staat er in vak [vak]?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[plattegrond] Wat staat er in vak [vak]?",
+   "hint1": "Zoek eerst de letter van het vak langs de rand. Zoek daarna het cijfer.",
+   "hint2": "Volg vanaf de letter de vakjes recht door. Volg ook vanaf het cijfer de vakjes recht door. Waar die twee elkaar raken, is het vak. Kijk wat daar staat.",
+   "ouderzin": "Je kind leest af wat er in een vak van een plattegrond staat. Een vak heeft een letter en een cijfer.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "goede letter, ander cijfer",
+     "claudeDenkfout": null,
+     "regel": "goede letter, ander cijfer",
+     "tekst": "Dat staat in een vak met de goede letter, maar met een ander cijfer. Kijk nog eens naar het cijfer.",
+     "tekstSterker": "Zet een vinger op het cijfer van het vak uit de vraag. Schuif recht opzij tot je precies onder de letter van dat vak bent. Wat staat er in dat vak?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "goed cijfer, andere letter",
+     "claudeDenkfout": null,
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Dat staat in een vak met het goede cijfer, maar met een andere letter. Kijk nog eens naar de letter.",
+     "tekstSterker": "Zet een vinger op de letter van het vak uit de vraag. Schuif recht naar beneden tot je precies naast het cijfer van dat vak bent. Wat staat er in dat vak?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "omgedraaid",
+     "claudeDenkfout": null,
+     "regel": "letter en cijfer omgedraaid",
+     "tekst": "Heb je de letter en het cijfer omgedraaid? Zoek de letter bij de rand met de letters, en het cijfer bij de rand met de cijfers.",
+     "tekstSterker": "De letters staan langs de ene rand, de cijfers langs de andere. Zet een vinger op de letter en een vinger op het cijfer. Schuif ze recht door tot ze in hetzelfde vak komen. Wat staat daar?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "ander vak",
+     "tekst": "Dat staat in een ander vak. Zoek de letter bij de rand met de letters, en het cijfer bij de rand met de cijfers.",
+     "tekstSterker": "Zet een vinger op de letter en een vinger op het cijfer. Schuif de vinger op de letter recht naar beneden, en de vinger op het cijfer recht opzij, tot ze in hetzelfde vak komen. Ligt dat vak precies onder de letter en naast het cijfer? Wat staat daar?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De vijver staat in de goede kolom, maar in een andere rij. Kijk bij vak B4 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in vak D2. Zoek bij vak B4 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in vak F4. Zoek bij vak D6 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede kolom, maar in een andere rij. Kijk bij vak D6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede kolom, maar in een andere rij. Kijk bij vak D3 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De school staat in de goede rij, maar in een andere kolom. Kijk bij vak D3 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in de goede kolom, maar in een andere rij. Kijk bij vak B6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in vak F2. Zoek bij vak B6 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in de goede rij, maar in een andere kolom. Kijk bij vak D4 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede kolom, maar in een andere rij. Kijk bij vak D4 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede rij, maar in een andere kolom. Kijk bij vak F2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in vak B6. Zoek bij vak F2 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in vak F1. Zoek bij vak A6 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede rij, maar in een andere kolom. Kijk bij vak A6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede kolom, maar in een andere rij. Kijk bij vak C6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De school staat in de goede rij, maar in een andere kolom. Kijk bij vak C6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede rij, maar in een andere kolom. Kijk bij vak E1 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in vak A5. Zoek bij vak E1 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De boom staat in de goede kolom, maar in een andere rij. Kijk bij vak C6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede rij, maar in een andere kolom. Kijk bij vak C6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in vak B6. Zoek bij vak F2 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De school staat in de goede kolom, maar in een andere rij. Kijk bij vak F2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De school staat in de goede kolom, maar in een andere rij. Kijk bij vak B2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in de goede rij, maar in een andere kolom. Kijk bij vak B2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in de goede rij, maar in een andere kolom. Kijk bij vak A4 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De boom staat in vak D1. Zoek bij vak A4 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede rij, maar in een andere kolom. Kijk bij vak A6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede kolom, maar in een andere rij. Kijk bij vak A6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De boom staat in vak D5. Zoek bij vak E4 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede kolom, maar in een andere rij. Kijk bij vak E4 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in vak G2. Zoek bij vak B7 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede rij, maar in een andere kolom. Kijk bij vak B7 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in de goede kolom, maar in een andere rij. Kijk bij vak E5 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede rij, maar in een andere kolom. Kijk bij vak E5 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in de goede kolom, maar in een andere rij. Kijk bij vak B1 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in de goede rij, maar in een andere kolom. Kijk bij vak B1 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in de goede kolom, maar in een andere rij. Kijk bij vak D4 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De boom staat in de goede rij, maar in een andere kolom. Kijk bij vak D4 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede rij, maar in een andere kolom. Kijk bij vak E2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in vak B5. Zoek bij vak E2 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede kolom, maar in een andere rij. Kijk bij vak D2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in vak B4. Zoek bij vak D2 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in de goede rij, maar in een andere kolom. Kijk bij vak F2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede kolom, maar in een andere rij. Kijk bij vak F2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in de goede rij, maar in een andere kolom. Kijk bij vak D2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede kolom, maar in een andere rij. Kijk bij vak D2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in de goede kolom, maar in een andere rij. Kijk bij vak E6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in de goede rij, maar in een andere kolom. Kijk bij vak E6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in de goede rij, maar in een andere kolom. Kijk bij vak D6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede kolom, maar in een andere rij. Kijk bij vak D6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in de goede rij, maar in een andere kolom. Kijk bij vak F4 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede kolom, maar in een andere rij. Kijk bij vak F4 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in vak B3. Zoek bij vak C2 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in de goede rij, maar in een andere kolom. Kijk bij vak C2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in vak D6. Zoek bij vak F4 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede rij, maar in een andere kolom. Kijk bij vak F4 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede kolom, maar in een andere rij. Kijk bij vak B3 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in vak C2. Zoek bij vak B3 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede kolom, maar in een andere rij. Kijk bij vak B4 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede rij, maar in een andere kolom. Kijk bij vak B4 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in de goede rij, maar in een andere kolom. Kijk bij vak F6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De school staat in de goede kolom, maar in een andere rij. Kijk bij vak F6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in de goede rij, maar in een andere kolom. Kijk bij vak B6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De boom staat in vak F2. Zoek bij vak B6 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede rij, maar in een andere kolom. Kijk bij vak E3 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De boom staat in vak C5. Zoek bij vak E3 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in vak C5. Zoek bij vak E3 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede kolom, maar in een andere rij. Kijk bij vak E3 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De school staat in de goede kolom, maar in een andere rij. Kijk bij vak C2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in de goede kolom, maar in een andere rij. Kijk bij vak A2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in vak B1. Zoek bij vak A2 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede rij, maar in een andere kolom. Kijk bij vak A4 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in vak D1. Zoek bij vak A4 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede kolom, maar in een andere rij. Kijk bij vak A2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in vak B1. Zoek bij vak A2 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in de goede kolom, maar in een andere rij. Kijk bij vak E5 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De boom staat in de goede rij, maar in een andere kolom. Kijk bij vak E5 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in de goede kolom, maar in een andere rij. Kijk bij vak C4 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in vak D3. Zoek bij vak C4 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede rij, maar in een andere kolom. Kijk bij vak D2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in vak B4. Zoek bij vak D2 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede kolom, maar in een andere rij. Kijk bij vak C2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in vak B3. Zoek bij vak C2 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in vak D1. Zoek bij vak A4 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De school staat in de goede kolom, maar in een andere rij. Kijk bij vak C5 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in de goede rij, maar in een andere kolom. Kijk bij vak C5 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede rij, maar in een andere kolom. Kijk bij vak E7 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De boom staat in de goede kolom, maar in een andere rij. Kijk bij vak E7 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede kolom, maar in een andere rij. Kijk bij vak A6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De school staat in de goede rij, maar in een andere kolom. Kijk bij vak A6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in de goede rij, maar in een andere kolom. Kijk bij vak C4 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in vak D3. Zoek bij vak C4 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in vak B1. Zoek bij vak A2 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede rij, maar in een andere kolom. Kijk bij vak A2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede rij, maar in een andere kolom. Kijk bij vak F6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in de goede kolom, maar in een andere rij. Kijk bij vak F6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De boom staat in de goede rij, maar in een andere kolom. Kijk bij vak C4 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede rij, maar in een andere kolom. Kijk bij vak C2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in de goede kolom, maar in een andere rij. Kijk bij vak C2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in de goede kolom, maar in een andere rij. Kijk bij vak B1 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede rij, maar in een andere kolom. Kijk bij vak B1 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De school staat in de goede rij, maar in een andere kolom. Kijk bij vak B5 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in vak E2. Zoek bij vak B5 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in de goede kolom, maar in een andere rij. Kijk bij vak B5 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in vak E2. Zoek bij vak B5 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede kolom, maar in een andere rij. Kijk bij vak E1 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De school staat in de goede rij, maar in een andere kolom. Kijk bij vak E1 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede kolom, maar in een andere rij. Kijk bij vak F5 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede rij, maar in een andere kolom. Kijk bij vak F5 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in vak F3. Zoek bij vak C6 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in vak F4. Zoek bij vak D6 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in de goede kolom, maar in een andere rij. Kijk bij vak D6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De school staat in de goede rij, maar in een andere kolom. Kijk bij vak A2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in vak B1. Zoek bij vak A2 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede rij, maar in een andere kolom. Kijk bij vak E6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in de goede kolom, maar in een andere rij. Kijk bij vak E6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in vak D1. Zoek bij vak A4 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede kolom, maar in een andere rij. Kijk bij vak A4 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede rij, maar in een andere kolom. Kijk bij vak B3 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in de goede rij, maar in een andere kolom. Kijk bij vak F2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De school staat in de goede rij, maar in een andere kolom. Kijk bij vak B2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede kolom, maar in een andere rij. Kijk bij vak B2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede kolom, maar in een andere rij. Kijk bij vak F4 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede rij, maar in een andere kolom. Kijk bij vak F4 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede kolom, maar in een andere rij. Kijk bij vak D1 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in vak A4. Zoek bij vak D1 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MKU-E01",
+   "nr": 2,
+   "somtype": "[plattegrond] In welk vak staat de/het [ding]?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[plattegrond] In welk vak staat de/het [ding]?",
+   "hint1": "Zoek eerst op de plattegrond het ding uit de vraag.",
+   "hint2": "Ga vanaf daar recht naar de rand met de letters. Ga daarna recht naar de rand met de cijfers. Eerst de letter, dan het cijfer.",
+   "ouderzin": "Je kind zoekt in welk vak van een plattegrond iets staat. Een vak heeft een letter en een cijfer.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "goede letter, ander cijfer",
+     "claudeDenkfout": null,
+     "regel": "goede letter, ander cijfer",
+     "tekst": "De letter klopt, maar het cijfer niet. Ga recht naar de rand met de cijfers en kijk nog eens.",
+     "tekstSterker": "Zet je vinger op wat de vraag noemt. Schuif recht naar de rand met de cijfers. Welk cijfer staat daar?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "goed cijfer, andere letter",
+     "claudeDenkfout": null,
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Het cijfer klopt, maar de letter niet. Ga recht naar de rand met de letters en kijk nog eens.",
+     "tekstSterker": "Zet je vinger op wat de vraag noemt. Schuif recht naar de rand met de letters. Welke letter staat daar?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "omgedraaid",
+     "claudeDenkfout": null,
+     "regel": "letter en cijfer omgedraaid",
+     "tekst": "Heb je de letter en het cijfer omgedraaid? De letter lees je af bij de rand met de letters, het cijfer bij de rand met de cijfers.",
+     "tekstSterker": "Zet je vinger op wat de vraag noemt. Schuif recht naar de rand met de letters: welke letter staat daar? Ga dan vanaf het ding recht naar de rand met de cijfers: welk cijfer staat daar?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "ander vak",
+     "tekst": "Dat is een ander vak. Zoek eerst waar het staat. Ga dan recht naar de rand met de letters, en daarna naar de rand met de cijfers.",
+     "tekstSterker": "Zet je vinger op wat de vraag noemt. Schuif recht omhoog naar de rand met de letters, en ga daarna vanaf het ding recht opzij naar de rand met de cijfers. Welke letter en welk cijfer horen erbij?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De letter klopt. Kijk nog eens naar het cijfer naast de rij waarin de bank staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak B7 staat de tent. Zoek eerst de bank, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De letter klopt. Kijk nog eens naar het cijfer naast de rij waarin het hek staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak A4 staat de bal. Zoek eerst het hek, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak D5 staat de bal. Zoek eerst het hek, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De letter klopt. Kijk nog eens naar het cijfer naast de rij waarin het huis staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het cijfer klopt. Kijk nog eens naar de letter boven de kolom waarin het huis staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het cijfer klopt. Kijk nog eens naar de letter boven de kolom waarin de tent staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "De letter klopt. Kijk nog eens naar het cijfer naast de rij waarin de tent staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het cijfer klopt. Kijk nog eens naar de letter boven de kolom waarin de bank staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "De letter klopt. Kijk nog eens naar het cijfer naast de rij waarin de boom staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak C6 staat het huis. Zoek eerst de boom, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De letter klopt. Kijk nog eens naar het cijfer naast de rij waarin de bal staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak E6 staat de boom. Zoek eerst de bal, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak B5 staat de put. Zoek eerst de vijver, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De letter klopt. Kijk nog eens naar het cijfer naast de rij waarin de vijver staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak G6 staat de school. Zoek eerst de tent, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak E4 staat de vlag. Zoek eerst de put, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De letter klopt. Kijk nog eens naar het cijfer naast de rij waarin de put staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak A5 staat de boom. Zoek eerst de bal, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het cijfer klopt. Kijk nog eens naar de letter boven de kolom waarin de bal staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het cijfer klopt. Kijk nog eens naar de letter boven de kolom waarin het hek staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak E1 staat de bal. Zoek eerst het hek, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het cijfer klopt. Kijk nog eens naar de letter boven de kolom waarin de vijver staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak D3 staat de put. Zoek eerst de vijver, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak A3 staat het huis. Zoek eerst de boom, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De letter klopt. Kijk nog eens naar het cijfer naast de rij waarin de school staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het cijfer klopt. Kijk nog eens naar de letter boven de kolom waarin de school staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak A3 staat het hek. Zoek eerst de school, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het cijfer klopt. Kijk nog eens naar de letter boven de kolom waarin de boom staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak A6 staat de boom. Zoek eerst de bal, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak A3 staat de boom. Zoek eerst de bal, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak E3 staat de vijver. Zoek eerst het huis, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak E1 staat de put. Zoek eerst de vijver, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak E4 staat het hek. Zoek eerst de school, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak G1 staat de tent. Zoek eerst de bank, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak C5 staat het huis. Zoek eerst de boom, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het cijfer klopt. Kijk nog eens naar de letter boven de kolom waarin de put staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak A4 staat de vlag. Zoek eerst de put, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak E3 staat de tent. Zoek eerst de bank, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak E2 staat de vijver. Zoek eerst het huis, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het cijfer klopt. Kijk nog eens naar de letter boven de kolom waarin de vlag staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak F5 staat de bank. Zoek eerst de vlag, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak C4 staat de school. Zoek eerst de tent, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak C6 staat het hek. Zoek eerst de school, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak C5 staat de vijver. Zoek eerst het huis, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak B4 staat de put. Zoek eerst de vijver, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De letter klopt. Kijk nog eens naar het cijfer naast de rij waarin de vlag staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "In vak A3 staat de vijver. Zoek eerst het huis, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak E6 staat de tent. Zoek eerst de bank, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak A2 staat de vlag. Zoek eerst de put, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "In vak A4 staat de boom. Zoek eerst de bal, en kijk dan naar de letter erboven en het cijfer ernaast.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MKU-E01",
+   "nr": 3,
+   "somtype": "[plattegrond] Wat staat er in vak G#?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[plattegrond] Wat staat er in vak G#?",
+   "hint1": "Zoek eerst de letter van het vak langs de rand. Zoek daarna het cijfer.",
+   "hint2": "Volg vanaf de letter de vakjes recht door. Volg ook vanaf het cijfer de vakjes recht door. Waar die twee elkaar raken, is het vak. Kijk wat daar staat.",
+   "ouderzin": "Je kind leest af wat er in een vak van een plattegrond staat. Een vak heeft een letter en een cijfer.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "goede letter, ander cijfer",
+     "claudeDenkfout": null,
+     "regel": "goede letter, ander cijfer",
+     "tekst": "Dat staat in een vak met de goede letter, maar met een ander cijfer. Kijk nog eens naar het cijfer.",
+     "tekstSterker": "Zet een vinger op het cijfer van het vak uit de vraag. Schuif recht opzij tot je precies onder de letter van dat vak bent. Wat staat er in dat vak?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "goed cijfer, andere letter",
+     "claudeDenkfout": null,
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Dat staat in een vak met het goede cijfer, maar met een andere letter. Kijk nog eens naar de letter.",
+     "tekstSterker": "Zet een vinger op de letter van het vak uit de vraag. Schuif recht naar beneden tot je precies naast het cijfer van dat vak bent. Wat staat er in dat vak?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "omgedraaid",
+     "claudeDenkfout": null,
+     "regel": "letter en cijfer omgedraaid",
+     "tekst": "Heb je de letter en het cijfer omgedraaid? Zoek de letter bij de rand met de letters, en het cijfer bij de rand met de cijfers.",
+     "tekstSterker": "De letters staan langs de ene rand, de cijfers langs de andere. Zet een vinger op de letter en een vinger op het cijfer. Schuif ze recht door tot ze in hetzelfde vak komen. Wat staat daar?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "ander vak",
+     "tekst": "Dat staat in een ander vak. Zoek de letter bij de rand met de letters, en het cijfer bij de rand met de cijfers.",
+     "tekstSterker": "Zet een vinger op de letter en een vinger op het cijfer. Schuif de vinger op de letter recht naar beneden, en de vinger op het cijfer recht opzij, tot ze in hetzelfde vak komen. Ligt dat vak precies onder de letter en naast het cijfer? Wat staat daar?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De bal staat in de goede rij, maar in een andere kolom. Kijk bij vak G1 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in de goede kolom, maar in een andere rij. Kijk bij vak G1 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede rij, maar in een andere kolom. Kijk bij vak G6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De boom staat in de goede kolom, maar in een andere rij. Kijk bij vak G6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in de goede rij, maar in een andere kolom. Kijk bij vak G7 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in de goede kolom, maar in een andere rij. Kijk bij vak G7 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in de goede kolom, maar in een andere rij. Kijk bij vak G2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede rij, maar in een andere kolom. Kijk bij vak G2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bank staat in de goede rij, maar in een andere kolom. Kijk bij vak G5 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in de goede kolom, maar in een andere rij. Kijk bij vak G5 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De boom staat in de goede kolom, maar in een andere rij. Kijk bij vak G3 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede rij, maar in een andere kolom. Kijk bij vak G3 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in vak E7. Zoek bij vak G5 eerst de kolom met die letter, dan de rij met dat cijfer. Waar ze elkaar raken, is het vak.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede kolom, maar in een andere rij. Kijk bij vak G5 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in de goede kolom, maar in een andere rij. Kijk bij vak G2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in de goede rij, maar in een andere kolom. Kijk bij vak G2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vlag staat in de goede rij, maar in een andere kolom. Kijk bij vak G4 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De put staat in de goede kolom, maar in een andere rij. Kijk bij vak G4 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MKU-E01",
+   "nr": 4,
+   "somtype": "[plattegrond] Wat staat er in vak H#?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "[plattegrond] Wat staat er in vak H#?",
+   "hint1": "Zoek eerst de letter van het vak langs de rand. Zoek daarna het cijfer.",
+   "hint2": "Volg vanaf de letter de vakjes recht door. Volg ook vanaf het cijfer de vakjes recht door. Waar die twee elkaar raken, is het vak. Kijk wat daar staat.",
+   "ouderzin": "Je kind leest af wat er in een vak van een plattegrond staat. Een vak heeft een letter en een cijfer.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "goede letter, ander cijfer",
+     "claudeDenkfout": null,
+     "regel": "goede letter, ander cijfer",
+     "tekst": "Dat staat in een vak met de goede letter, maar met een ander cijfer. Kijk nog eens naar het cijfer.",
+     "tekstSterker": "Zet een vinger op het cijfer van het vak uit de vraag. Schuif recht opzij tot je precies onder de letter van dat vak bent. Wat staat er in dat vak?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "goed cijfer, andere letter",
+     "claudeDenkfout": null,
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Dat staat in een vak met het goede cijfer, maar met een andere letter. Kijk nog eens naar de letter.",
+     "tekstSterker": "Zet een vinger op de letter van het vak uit de vraag. Schuif recht naar beneden tot je precies naast het cijfer van dat vak bent. Wat staat er in dat vak?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "omgedraaid",
+     "claudeDenkfout": null,
+     "regel": "letter en cijfer omgedraaid",
+     "tekst": "Heb je de letter en het cijfer omgedraaid? Zoek de letter bij de rand met de letters, en het cijfer bij de rand met de cijfers.",
+     "tekstSterker": "De letters staan langs de ene rand, de cijfers langs de andere. Zet een vinger op de letter en een vinger op het cijfer. Schuif ze recht door tot ze in hetzelfde vak komen. Wat staat daar?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "ander vak",
+     "tekst": "Dat staat in een ander vak. Zoek de letter bij de rand met de letters, en het cijfer bij de rand met de cijfers.",
+     "tekstSterker": "Zet een vinger op de letter en een vinger op het cijfer. Schuif de vinger op de letter recht naar beneden, en de vinger op het cijfer recht opzij, tot ze in hetzelfde vak komen. Ligt dat vak precies onder de letter en naast het cijfer? Wat staat daar?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De school staat in de goede rij, maar in een andere kolom. Kijk bij vak H6 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De tent staat in de goede kolom, maar in een andere rij. Kijk bij vak H6 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De bal staat in de goede rij, maar in een andere kolom. Kijk bij vak H2 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het hek staat in de goede kolom, maar in een andere rij. Kijk bij vak H2 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "De vijver staat in de goede rij, maar in een andere kolom. Kijk bij vak H4 goed naar de letter boven de kolom.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    },
+    {
+     "claudeTekst": "Het huis staat in de goede kolom, maar in een andere rij. Kijk bij vak H4 goed naar het cijfer naast de rij.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met een vak per item; nu een vaste tekst per soort fout, door de motor per sleutel gekozen (letter/cijfer/omgedraaid)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-MKU-E03",
+   "nr": 1,
+   "somtype": "[bouwvorm] Dit bouwwerk bestaat uit torens van blokjes. Elke toren staat op de grond, er zitten geen gaten onder. Hoeveel blokjes zijn er gebruikt?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[bouwvorm] Dit bouwwerk bestaat uit torens van blokjes. Elke toren staat op de grond, er zitten geen gaten onder. Hoeveel blokjes zijn er gebruikt?",
+   "hint1": "Het bouwwerk bestaat uit torens. Een toren is een stapel blokjes op één vakje van de grond. Tel toren voor toren.",
+   "hint2": "Kijk bij elke toren hoe hoog hij is. De blokjes onder het bovenste blokje zie je niet altijd, maar ze zijn er wel. Tel de aantallen van alle torens bij elkaar op.",
+   "ouderzin": "Je kind telt de blokjes van een bouwwerk van torens. Ook de blokjes die je niet ziet, tellen mee.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "aantal torens",
+     "claudeDenkfout": null,
+     "regel": "fout = het aantal torens",
+     "tekst": "Is dat het aantal torens? Een toren kan hoger zijn dan één blokje. Tel bij elke toren hoeveel blokjes er op elkaar staan. Tel die aantallen daarna op.",
+     "tekstSterker": "Kijk naar één toren. Hoeveel blokjes staan er op elkaar? Dat aantal telt mee, niet één blokje per toren. Doe dat bij elke toren en tel alles op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "alle torens even hoog",
+     "claudeDenkfout": null,
+     "regel": "fout = de hoogste toren keer het aantal torens",
+     "tekst": "Zijn alle torens even hoog? Tel elke toren apart en tel de aantallen daarna op.",
+     "tekstSterker": "Zoek eerst de lage torens. Elke toren telt met zijn eigen hoogte. Tel die aantallen daarna op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "volle balk",
+     "claudeDenkfout": null,
+     "regel": "fout = de hoogste toren keer het aantal vakjes van de grond",
+     "tekst": "Is het bouwwerk een volle balk? Er zijn lege vakjes en lagere torens. Tel alleen de blokjes die er echt staan.",
+     "tekstSterker": "Kijk welke vakjes van de grond leeg zijn. Daar staat niets. Tel alleen de torens die er staan, elk met zijn eigen hoogte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "elke toren één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = het antwoord plus het aantal torens",
+     "tekst": "Heb je bij elke toren één blokje te veel geteld? Tel bij elke toren van het onderste tot het bovenste blokje.",
+     "tekstSterker": "Kijk naar één toren. Het onderste blokje staat op de grond, de grond zelf telt niet. Tel zo elke toren."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een toren vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = het antwoord min één toren",
+     "tekst": "Heb je elke toren meegeteld? Tel toren voor toren, en sla er geen over.",
+     "tekstSterker": "Begin aan één kant en ga toren voor toren verder. Zeg bij elke toren hoe hoog hij is, en tel steeds verder."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders geteld",
+     "claudeDenkfout": null,
+     "regel": "Claudes sleutel (zonder label)",
+     "tekst": "Tel nog eens. Tel bij elke toren hoeveel blokjes er op elkaar staan. Tel die aantallen daarna op.",
+     "waarom": "Claudes sleutels zonder label; nu een vaste tekst die bij elke sleutel klopt (per sleutel nagerekend)",
+     "tekstSterker": "Begin aan één kant en ga toren voor toren verder. Zeg bij elke toren hoe hoog hij is: tel van de grond tot het bovenste blokje. Tel steeds verder, en tel elke toren één keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel bij elke toren hoeveel blokjes er op elkaar staan. Tel die aantallen daarna op.",
+     "tekstSterker": "Begin aan één kant en ga toren voor toren verder. Zeg bij elke toren hoe hoog hij is: tel van de grond tot het bovenste blokje. Tel steeds verder, en tel elke toren één keer."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel toren voor toren hoeveel blokjes er op elkaar staan. Tel die aantallen daarna op.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je telde het aantal torens. Een toren kan hoger zijn dan één blokje. Tel ook de blokjes die op elkaar staan.",
+     "claudeDenkfout": null,
+     "waarom": "zegt zeker wat het kind deed; nu een vraag (les 42), per sleutel nagerekend"
+    },
+    {
+     "claudeTekst": "Niet alle torens zijn even hoog. Tel elke toren apart en tel de aantallen daarna op.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het bouwwerk is geen volle balk. Tel alleen de blokjes die er echt staan.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je zit er net naast. Tel toren voor toren en schrijf bij elke toren op hoeveel blokjes erin zitten.",
+     "claudeDenkfout": null,
+     "waarom": "'net naast' zonder richting; nu 'een toren vergeten' (de sleutel is het antwoord min één toren)"
+    },
+    {
+     "claudeTekst": "Je telde de vakjes van het grondvlak. Tel per toren hoeveel blokjes erop staan.",
+     "claudeDenkfout": null,
+     "waarom": "zegt zeker wat het kind deed; nu een vraag (les 42), per sleutel nagerekend"
+    }
+   ],
+   "koppeling": "claudeId",
+   "hint2MetPlaatje": "Bij deze hint zie je het bouwwerk van boven, als plattegrond. In elk vakje staat hoeveel blokjes daar op elkaar staan. Ook de blokjes die je in de tekening niet ziet, tellen mee. Een leeg vakje heeft geen toren. Tel alle getallen bij elkaar op."
+  }
+ ]
+}

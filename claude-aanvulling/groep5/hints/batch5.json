@@ -1,0 +1,1428 @@
+{
+ "batch": "batch5",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G5-merge, batch 5 = MEET-E06 tijd en kalender). Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint; 'claude-taalfix' = vaste tekst op Claudes sleutels (regel 'Claudes sleutel: <denkfout>', #48); 'nieuw' = eigen tekst. Klokregels: 'fout = klok een uur te laat/te vroeg' (zelfde minuten, uur ± 1) en 'fout = grote wijzer verkeerd' (zelfde uur, andere minuten), via de klokkenrij of 'h:mm'; kalender: 'fout = een dag ernaast', 'fout = gestopt op de eerste/laatste dag van de maand' (#49).",
+ "somtypen": [
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 1,
+   "somtype": "Hoeveel dagen duurt het van # [ding] tot # [ding]?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Hoeveel dagen duurt het van # [ding] tot # [ding]?",
+   "hint1": "Tel eerst de dagen tot het eind van de eerste maand. Kijk hoeveel dagen die maand heeft: dertig of eenendertig?",
+   "hint2": "Tel daarna de hele maanden ertussen erbij, als die er zijn. Tel tot slot de dagen in de laatste maand erbij. De dag waarop je begint, tel je niet mee.",
+   "ouderzin": "Je kind rekent uit hoeveel dagen het is van de ene datum tot de andere, over de maandgrens heen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één dag te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één dag te veel. De dag waarop je begint, tel je niet mee. Kijk ook hoeveel dagen elke maand heeft."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één dag te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één dag te weinig. Kijk hoeveel dagen elke maand heeft: dertig of eenendertig? Tel tot en met de laatste dag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Tel in stukken: de dagen tot het eind van de eerste maand, de hele maanden ertussen, en de dagen in de laatste maand."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Heb je alle stukken opgeteld? Tel de dagen tot het eind van de eerste maand, de hele maanden ertussen, en de dagen in de laatste maand."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel in stukken: de dagen tot het eind van de eerste maand, de hele maanden ertussen, en de dagen in de laatste maand. Kijk hoeveel dagen elke maand heeft: dertig of eenendertig?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "te vaag: zegt niet welk stuk ontbreekt"
+    },
+    {
+     "claudeTekst": "Tel via de maandgrens: eerst tot het eind van de maand, dan de dagen van de nieuwe maand. En kijk hoeveel dagen die maand echt heeft.",
+     "claudeDenkfout": "kalender-verkeerd-geteld",
+     "waarom": "vervangen door een vaste tekst per soort fout (gestopt bij de maandgrens, een dag ernaast)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 1,
+   "somtype": "Hoeveel minuten duurt het van #:# uur tot #:# uur?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Hoeveel minuten duurt het van #:# uur tot #:# uur?",
+   "hint1": "Tel eerst de minuten tot het volgende hele uur.",
+   "hint2": "Tel dan de hele uren erbij, als die er zijn: elk uur is zestig minuten. Tel tot slot de minuten na het laatste hele uur erbij, als die er zijn.",
+   "ouderzin": "Je kind rekent uit hoeveel minuten het is van de ene tijd tot de andere, over het hele uur heen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een uur te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 60",
+     "tekst": "Dat is zestig minuten te veel: een heel uur. Tel in stukken: eerst de minuten tot het volgende hele uur. Dan de hele uren van zestig minuten, als die er zijn. Dan de minuten die nog over zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 60",
+     "tekst": "Dat is zestig minuten te weinig: een heel uur. Heb je alle hele uren meegeteld?"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "honderd minuten",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is te veel. Heb je gerekend alsof een uur honderd minuten heeft? Een uur heeft zestig minuten.",
+     "claudeTekst": "Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.",
+     "waarom": "alle sleutels liggen boven het antwoord (#2 77/77, #15 22/22); een vraag, want Claude rekent soms een uur te veel"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1 of meer",
+     "tekst": "Dat is te veel. Tel in stukken: eerst de minuten tot het volgende hele uur. Dan de hele uren, als die er zijn. Dan de minuten die nog over zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1 of meer",
+     "tekst": "Dat is te weinig. Heb je alle stukken opgeteld? Tel in stukken: eerst de minuten tot het volgende hele uur. Dan de hele uren, als die er zijn. Dan de minuten die nog over zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel in stukken: eerst de minuten tot het volgende hele uur. Dan de hele uren, als die er zijn. Dan de minuten die nog over zijn. Een uur heeft zestig minuten."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "te vaag: zegt niet welk stuk ontbreekt"
+    },
+    {
+     "claudeTekst": "Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "noemt getallen; nu een vaste tekst per soort fout (zestig minuten in woorden)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 2,
+   "somtype": "[klokkenrij] Welke klok wijst #:# [ding]? (tijd digitaal)",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst #:# [ding]? (tijd digitaal)",
+   "hint1": "Achter de dubbele punt staan de minuten na het hele uur. Bij de grote wijzer is elk getal vijf minuten: bij de één vijf minuten, bij de twee tien minuten.",
+   "hint2": "Vóór de dubbele punt staat het uur dat geweest is. Is dat dertien of meer? Haal er dan twaalf af: veertien uur is twee uur op de klok. De kleine wijzer staat tussen dat uur en het volgende uur.",
+   "ouderzin": "Je kind zoekt de klok met wijzers die een digitale tijd aanwijst, op de minuut.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. De kleine wijzer staat tussen het uur dat geweest is en het volgende uur. Is het uur dertien of meer? Haal er dan eerst twaalf af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Tel bij de grote wijzer vijf minuten per getal, en daarna de streepjes: één minuut per streepje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok eerst naar de grote wijzer: vijf minuten per getal, en één minuut per streepje. Kijk dan naar de kleine wijzer: staat hij tussen het uur dat geweest is en het volgende uur? Is het uur dertien of meer, haal er dan eerst twaalf af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 3,
+   "somtype": "Het is #:# uur. Hoe laat is het # minuten later?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Het is #:# uur. Hoe laat is het # minuten later?",
+   "hint1": "Hoeveel minuten is het nog tot het volgende hele uur? Begin daarmee.",
+   "hint2": "Tel eerst door tot het hele uur. Hoeveel minuten moet je daarna nog? Tel die verder na het hele uur.",
+   "ouderzin": "Je kind rekent uit hoe laat het is een aantal minuten later, over het hele uur heen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "gestopt bij het hele uur",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Je bent gestopt bij het hele uur. Er moeten nog minuten bij: tel verder na het hele uur.",
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "waarom": "alle sleutels zijn het hele uur na de begintijd (49/49)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Dat is een uur te vroeg. Je gaat over het hele uur heen: dan komt er een uur bij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "te laat",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is te laat. Een uur heeft zestig minuten. Tel eerst tot het hele uur en tel daarna de rest verder.",
+     "claudeTekst": "Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.",
+     "waarom": "alle sleutels liggen na het antwoord (171/171)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Een uur heeft zestig minuten. Tel eerst tot het volgende hele uur. Tel daarna de minuten die nog over zijn verder."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 4,
+   "somtype": "Het is #:# uur. Hoe laat was het # minuten eerder?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Het is #:# uur. Hoe laat was het # minuten eerder?",
+   "hint1": "Hoeveel minuten is het na het hele uur? Tel eerst terug tot dat hele uur.",
+   "hint2": "Hoeveel minuten moet je daarna nog terug? Tel die terug vanaf het hele uur. Een uur heeft zestig minuten.",
+   "ouderzin": "Je kind rekent uit hoe laat het was een aantal minuten eerder, over het hele uur heen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "gestopt bij het hele uur",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Je bent gestopt bij het hele uur. Je moet nog verder terug: tel de rest terug vanaf het hele uur.",
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "waarom": "alle sleutels zijn het hele uur van de begintijd (58/58)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Dat is een uur te laat. Je gaat terug over het hele uur heen: dan gaat er een uur af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "te vroeg",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is te vroeg. Een uur heeft zestig minuten. Tel eerst terug tot het hele uur en tel daarna de rest verder terug.",
+     "claudeTekst": "Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.",
+     "waarom": "alle sleutels liggen vóór het antwoord (162/162)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Een uur heeft zestig minuten. Tel eerst terug tot het hele uur. Tel daarna de minuten die nog over zijn verder terug."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 5,
+   "somtype": "Het is # [ding]. Welke datum is het # dagen later?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Het is # [ding]. Welke datum is het # dagen later?",
+   "hint1": "Tel eerst tot de laatste dag van de maand. Hoeveel dagen heeft die maand: dertig of eenendertig?",
+   "hint2": "Hoeveel dagen heb je dan al geteld? Tel de rest verder in de nieuwe maand.",
+   "ouderzin": "Je kind telt een aantal dagen verder op de kalender, over het eind van de maand heen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "gestopt bij de maandgrens",
+     "claudeDenkfout": null,
+     "regel": "fout = gestopt op de eerste dag van de maand",
+     "tekst": "Je bent gestopt waar de nieuwe maand begint. Tel nog verder, tot je alle dagen hebt geteld."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een dag later",
+     "claudeDenkfout": null,
+     "regel": "fout = een dag later",
+     "tekst": "Bijna! Je bent één dag te ver geteld. Hoeveel dagen heeft de maand: dertig of eenendertig?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een dag eerder",
+     "claudeDenkfout": null,
+     "regel": "fout = een dag eerder",
+     "tekst": "Bijna! Je bent één dag te kort geteld. Hoeveel dagen heeft de maand: dertig of eenendertig? De dag waarop je begint, tel je niet mee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "datum later",
+     "claudeDenkfout": null,
+     "regel": "fout = datum later dan het antwoord",
+     "tekst": "Dat is te ver. Tel eerst tot de laatste dag van de maand. Hoeveel dagen heb je dan al geteld? Tel alleen de rest verder in de nieuwe maand."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere datum",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel eerst tot de laatste dag van de maand. Tel daarna verder in de nieuwe maand. Kijk goed hoeveel dagen de maand heeft: dertig of eenendertig?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel via de maandgrens: eerst tot het eind van de maand, dan de dagen van de nieuwe maand. En kijk hoeveel dagen die maand echt heeft.",
+     "claudeDenkfout": "kalender-verkeerd-geteld",
+     "waarom": "vervangen door een vaste tekst per soort fout (gestopt bij de maandgrens, een dag ernaast)"
+    },
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "te vaag: zegt niet welk stuk ontbreekt"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 6,
+   "somtype": "Het is # [ding]. Welke datum was het # dagen eerder?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Het is # [ding]. Welke datum was het # dagen eerder?",
+   "hint1": "Tel eerst terug tot de eerste dag van de maand. Hoeveel dagen heb je dan al teruggeteld?",
+   "hint2": "Na de eerste dag van de maand kom je bij de laatste dag van de maand ervoor. Hoeveel dagen heeft die maand: dertig of eenendertig? Tel daar de rest verder terug.",
+   "ouderzin": "Je kind telt een aantal dagen terug op de kalender, over het begin van de maand heen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "gestopt bij de maandgrens",
+     "claudeDenkfout": null,
+     "regel": "fout = gestopt op de laatste dag van de maand",
+     "tekst": "Je bent gestopt waar de maand ervoor eindigt. Tel nog verder terug, tot je alle dagen hebt geteld."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een dag eerder",
+     "claudeDenkfout": null,
+     "regel": "fout = een dag eerder",
+     "tekst": "Bijna! Je bent één dag te ver teruggeteld. Hoeveel dagen heeft de maand ervoor: dertig of eenendertig?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een dag later",
+     "claudeDenkfout": null,
+     "regel": "fout = een dag later",
+     "tekst": "Bijna! Je bent één dag te kort teruggeteld. Hoeveel dagen heeft de maand ervoor: dertig of eenendertig? De dag waarop je begint, tel je niet mee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "datum eerder",
+     "claudeDenkfout": null,
+     "regel": "fout = datum eerder dan het antwoord",
+     "tekst": "Dat is te ver terug. Tel eerst terug tot de eerste dag van de maand. Hoeveel dagen heb je dan al teruggeteld? Tel alleen de rest verder terug."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere datum",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Na de eerste dag van de maand kom je bij de laatste dag van de maand ervoor. Tel daar verder terug. Kijk goed hoeveel dagen die maand heeft: dertig of eenendertig?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel via de maandgrens: eerst tot het eind van de maand, dan de dagen van de nieuwe maand. En kijk hoeveel dagen die maand echt heeft.",
+     "claudeDenkfout": "kalender-verkeerd-geteld",
+     "waarom": "vervangen door een vaste tekst per soort fout (gestopt bij de maandgrens, een dag ernaast)"
+    },
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "te vaag: zegt niet welk stuk ontbreekt"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 7,
+   "somtype": "[klok] Hoe laat is het op deze klok? (opties digitaal) — minuten na het hele uur",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "[klok] Hoe laat is het op deze klok? (opties digitaal) — minuten na het hele uur",
+   "hint1": "Kijk eerst naar de kleine wijzer. Welk getal heeft hij het laatst gehad? Dat getal komt vóór de dubbele punt.",
+   "hint2": "Kijk dan naar de grote wijzer. Elk getal is vijf minuten: bij de één vijf minuten, bij de twee tien minuten. Tel vanaf het laatste getal de streepjes erbij: één minuut per streepje.",
+   "ouderzin": "Je kind leest een klok met wijzers af op de minuut en kiest de digitale tijd (minuten na het hele uur).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een minuut te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een minuut te laat",
+     "tekst": "Bij die tijd staat de grote wijzer één streepje verder. Tel na het laatste getal de streepjes nog eens: één minuut per streepje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een minuut te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een minuut te vroeg",
+     "tekst": "Bij die tijd staat de grote wijzer één streepje minder ver. Tel na het laatste getal de streepjes nog eens: één minuut per streepje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "vijf minuten te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok vijf minuten te laat",
+     "tekst": "Bij die tijd staat de grote wijzer één getal verder. Tel vijf minuten per getal, tot het laatste getal vóór de grote wijzer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "vijf minuten te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok vijf minuten te vroeg",
+     "tekst": "Bij die tijd staat de grote wijzer één getal minder ver. Tel vijf minuten per getal, tot het laatste getal vóór de grote wijzer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die tijd staat de grote wijzer ergens anders. Tel vijf minuten per getal tot het laatste getal vóór de grote wijzer. Tel daarna de streepjes erbij: één minuut per streepje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere tijd",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar de kleine wijzer: welk getal heeft hij het laatst gehad? Kijk dan naar de grote wijzer: vijf minuten per getal, en één minuut per streepje."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 8,
+   "somtype": "[klok] Hoe laat is het op deze klok? (opties digitaal) — minuten vóór het hele uur",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "[klok] Hoe laat is het op deze klok? (opties digitaal) — minuten vóór het hele uur",
+   "hint1": "Kijk eerst naar de kleine wijzer. Welk getal heeft hij het laatst gehad? Dat getal komt vóór de dubbele punt.",
+   "hint2": "Kijk dan naar de grote wijzer. Elk getal is vijf minuten: bij de één vijf minuten, bij de twee tien minuten. Tel vanaf het laatste getal de streepjes erbij: één minuut per streepje.",
+   "ouderzin": "Je kind leest een klok met wijzers af op de minuut en kiest de digitale tijd (na half, tot het hele uur).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een minuut te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een minuut te laat",
+     "tekst": "Bij die tijd staat de grote wijzer één streepje verder. Tel na het laatste getal de streepjes nog eens: één minuut per streepje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een minuut te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een minuut te vroeg",
+     "tekst": "Bij die tijd staat de grote wijzer één streepje minder ver. Tel na het laatste getal de streepjes nog eens: één minuut per streepje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "vijf minuten te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok vijf minuten te laat",
+     "tekst": "Bij die tijd staat de grote wijzer één getal verder. Tel vijf minuten per getal, tot het laatste getal vóór de grote wijzer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "vijf minuten te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok vijf minuten te vroeg",
+     "tekst": "Bij die tijd staat de grote wijzer één getal minder ver. Tel vijf minuten per getal, tot het laatste getal vóór de grote wijzer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die tijd staat de grote wijzer ergens anders. Tel vijf minuten per getal tot het laatste getal vóór de grote wijzer. Tel daarna de streepjes erbij: één minuut per streepje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere tijd",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar de kleine wijzer: welk getal heeft hij het laatst gehad? Kijk dan naar de grote wijzer: vijf minuten per getal, en één minuut per streepje."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 10,
+   "somtype": "[klok] Hoe laat is het op deze klok? (opties in woorden) — minuten na het hele uur",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "[klok] Hoe laat is het op deze klok? (opties in woorden) — minuten na het hele uur",
+   "hint1": "Kijk eerst naar de grote wijzer: hoeveel minuten is het na het hele uur? Tot en met kwart over zeg je 'over'. Daarna zeg je 'voor half'.",
+   "hint2": "Kijk dan naar de kleine wijzer: welk getal heeft hij het laatst gehad? Bij 'over' noem je dat uur. Bij 'voor half' noem je het volgende uur.",
+   "ouderzin": "Je kind leest een klok met wijzers af en kiest de tijd in woorden (vijf over, tien over, tien voor half …).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Het uur klopt niet. Kijk naar de kleine wijzer: welk getal heeft hij het laatst gehad? Bij 'over' noem je dat uur. Bij 'voor half' noem je het volgende uur."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Het uur klopt niet. Kijk naar de kleine wijzer: welk getal heeft hij het laatst gehad? Bij 'over' noem je dat uur. Bij 'voor half' noem je het volgende uur."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer een getal te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok vijf minuten te laat",
+     "tekst": "De minuten kloppen niet. Bij die tijd staat de grote wijzer één getal verder. Kijk hoeveel minuten na het hele uur het is: elk getal is vijf minuten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer als uur gelezen",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer als uur gelezen",
+     "tekst": "Heb je de grote wijzer als uur gelezen? Het uur lees je af aan de kleine wijzer, de minuten aan de grote wijzer. Kijk naar de grote wijzer: hoeveel minuten na het hele uur is het? Kijk dan naar de kleine wijzer: welk getal heeft hij het laatst gehad? Bij 'over' noem je dat uur, bij 'voor half' het volgende uur."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere tijd",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar de grote wijzer: hoeveel minuten na het hele uur is het? Kijk dan naar de kleine wijzer: welk getal heeft hij het laatst gehad? Bij 'over' noem je dat uur, bij 'voor half' het volgende uur."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 12,
+   "somtype": "[klok] Hoe laat is het op deze klok? (opties in woorden) — minuten vóór het hele uur",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "[klok] Hoe laat is het op deze klok? (opties in woorden) — minuten vóór het hele uur",
+   "hint1": "Kijk eerst naar de grote wijzer: hoeveel minuten is het na het hele uur? Na half zeg je 'over half'. Vanaf kwart voor zeg je 'voor'.",
+   "hint2": "Kijk dan naar de kleine wijzer. Hij staat tussen twee getallen. Bij 'over half' en bij 'voor' noem je het getal waar hij naartoe gaat.",
+   "ouderzin": "Je kind leest een klok met wijzers af en kiest de tijd in woorden (vijf over half, tien voor …).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Het uur klopt niet. De kleine wijzer staat tussen twee getallen. Bij 'over half' en bij 'voor' noem je het getal waar hij naartoe gaat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Het uur klopt niet. De kleine wijzer staat tussen twee getallen. Bij 'over half' en bij 'voor' noem je het getal waar hij naartoe gaat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer een getal te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok vijf minuten te laat",
+     "tekst": "De minuten kloppen niet. Bij die tijd staat de grote wijzer één getal verder. Kijk hoeveel minuten na het hele uur het is: elk getal is vijf minuten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer als uur gelezen",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer als uur gelezen",
+     "tekst": "Heb je de grote wijzer als uur gelezen? Het uur lees je af aan de kleine wijzer, de minuten aan de grote wijzer. Kijk naar de grote wijzer: hoeveel minuten na het hele uur is het? De kleine wijzer staat tussen twee getallen: noem het getal waar hij naartoe gaat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "De minuten kloppen niet. Kijk naar de grote wijzer: hoeveel minuten na het hele uur is het? Elk getal is vijf minuten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere tijd",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar de grote wijzer: hoeveel minuten na het hele uur is het? De kleine wijzer staat tussen twee getallen: noem het getal waar hij naartoe gaat."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 13,
+   "somtype": "[klokkenrij] Welke klok wijst half # [ding]? (tijd in woorden)",
+   "nrOrigineel": 24,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst half # [ding]? (tijd in woorden)",
+   "hint1": "Bij half wijst de grote wijzer recht naar beneden. Zoek eerst de klokken waarbij dat zo is.",
+   "hint2": "Half betekent: een half uur vóór het hele uur. De kleine wijzer staat dan tussen het uur ervoor en het uur uit de vraag.",
+   "ouderzin": "Je kind zoekt de klok met wijzers die half … aanwijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te vroeg. De grote wijzer klopt wel. Bij half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij half wijst hij recht naar beneden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok naar de grote wijzer: wijst hij recht naar beneden? Kijk dan naar de kleine wijzer: staat hij tussen het uur ervoor en het uur uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 14,
+   "somtype": "[klokkenrij] Welke klok wijst tien over # [ding]? (tijd in woorden)",
+   "nrOrigineel": 12,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst tien over # [ding]? (tijd in woorden)",
+   "hint1": "Bij tien over wijst de grote wijzer naar de twee. Zoek eerst de klokken waarbij dat zo is.",
+   "hint2": "Tien over betekent: tien minuten na het hele uur. De kleine wijzer is dan net voorbij het uur uit de vraag.",
+   "ouderzin": "Je kind zoekt de klok met wijzers die tien over … aanwijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij tien over is de kleine wijzer net voorbij het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "over en voor verwisseld",
+     "claudeDenkfout": null,
+     "regel": "fout = over en voor verwisseld",
+     "tekst": "Bij die klok is het tien voor, en niet tien over. Bij tien over is de grote wijzer net voorbij de twaalf: hij wijst naar de twee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer als uur gelezen",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer als uur gelezen",
+     "tekst": "Bij die klok is het een heel uur. Het uur lees je af aan de kleine wijzer, de minuten aan de grote wijzer. Kijk bij die klok naar de grote wijzer: wijst hij naar de twee? Kijk dan naar de kleine wijzer: is hij net voorbij het uur uit de vraag?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij tien over wijst hij naar de twee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok naar de grote wijzer: wijst hij naar de twee? Kijk dan naar de kleine wijzer: is hij net voorbij het uur uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 15,
+   "somtype": "[klokkenrij] Welke klok wijst tien voor half # [ding]? (tijd in woorden)",
+   "nrOrigineel": 13,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst tien voor half # [ding]? (tijd in woorden)",
+   "hint1": "Bij tien voor half wijst de grote wijzer naar de vier. Zoek eerst de klokken waarbij dat zo is.",
+   "hint2": "Tien voor half betekent: tien minuten vóór half. De kleine wijzer staat dan tussen het uur ervoor en het uur uit de vraag.",
+   "ouderzin": "Je kind zoekt de klok met wijzers die tien voor half … aanwijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij tien voor half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te vroeg. De grote wijzer klopt wel. Bij tien voor half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij tien voor half wijst hij naar de vier."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok naar de grote wijzer: wijst hij naar de vier? Kijk dan naar de kleine wijzer: staat hij tussen het uur ervoor en het uur uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 16,
+   "somtype": "[klokkenrij] Welke klok wijst vijf over # [ding]? (tijd in woorden)",
+   "nrOrigineel": 14,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst vijf over # [ding]? (tijd in woorden)",
+   "hint1": "Bij vijf over wijst de grote wijzer naar de één. Zoek eerst de klokken waarbij dat zo is.",
+   "hint2": "Vijf over betekent: vijf minuten na het hele uur. De kleine wijzer is dan net voorbij het uur uit de vraag.",
+   "ouderzin": "Je kind zoekt de klok met wijzers die vijf over … aanwijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij vijf over is de kleine wijzer net voorbij het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "over en voor verwisseld",
+     "claudeDenkfout": null,
+     "regel": "fout = over en voor verwisseld",
+     "tekst": "Bij die klok is het vijf voor, en niet vijf over. Bij vijf over is de grote wijzer net voorbij de twaalf: hij wijst naar de één."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer als uur gelezen",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer als uur gelezen",
+     "tekst": "Bij die klok is het een heel uur. Het uur lees je af aan de kleine wijzer, de minuten aan de grote wijzer. Kijk bij die klok naar de grote wijzer: wijst hij naar de één? Kijk dan naar de kleine wijzer: is hij net voorbij het uur uit de vraag?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij vijf over wijst hij naar de één."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok naar de grote wijzer: wijst hij naar de één? Kijk dan naar de kleine wijzer: is hij net voorbij het uur uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 17,
+   "somtype": "[wie] beginnen om #:# en zijn klaar om #:#. Hoeveel minuten duurde het?",
+   "nrOrigineel": 15,
+   "somtypeOrigineel": "[wie] beginnen om #:# en zijn klaar om #:#. Hoeveel minuten duurde het?",
+   "hint1": "Kom je over het hele uur heen? Tel dan eerst de minuten tot het hele uur.",
+   "hint2": "Ga je niet over het hele uur heen? Tel dan gewoon van de begintijd tot de eindtijd. Ga je er wel overheen? Tel dan de hele uren erbij als die er zijn, elk uur is zestig minuten. Tel tot slot de minuten na het laatste hele uur erbij.",
+   "ouderzin": "Je kind rekent uit hoe lang iets duurt in minuten, van de begintijd tot de eindtijd.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een uur te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 60",
+     "tekst": "Dat is zestig minuten te veel: een heel uur. Tel in stukken: eerst tot het hele uur, dan de hele uren van zestig minuten als die er zijn, dan de minuten erna."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 60",
+     "tekst": "Dat is zestig minuten te weinig: een heel uur. Heb je alle hele uren meegeteld?"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "honderd minuten",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Dat is te veel. Heb je gerekend alsof een uur honderd minuten heeft? Een uur heeft zestig minuten.",
+     "claudeTekst": "Een uur heeft 60 minuten, geen 100. Je kunt de tijden niet zomaar van elkaar aftrekken. Reken via het hele uur.",
+     "waarom": "alle sleutels liggen boven het antwoord (#2 77/77, #15 22/22); een vraag, want Claude rekent soms een uur te veel"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1 of meer",
+     "tekst": "Dat is te veel. Tel van de begintijd tot de eindtijd. Ga je over het hele uur heen? Tel dan in stukken: eerst tot het hele uur, dan de hele uren als die er zijn, dan de minuten erna."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1 of meer",
+     "tekst": "Dat is te weinig. Heb je alle stukken opgeteld? Tel van de begintijd tot de eindtijd. Ga je over het hele uur heen? Tel dan in stukken: eerst tot het hele uur, dan de hele uren als die er zijn, dan de minuten erna."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel van de begintijd tot de eindtijd. Ga je over het hele uur heen? Tel dan in stukken: eerst tot het hele uur, dan de hele uren als die er zijn, dan de minuten erna. Een uur heeft zestig minuten."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een uur heeft 60 minuten, geen 100. Je kunt de tijden niet zomaar van elkaar aftrekken. Reken via het hele uur.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "noemt getallen; nu een vaste tekst per soort fout (zestig minuten in woorden)"
+    },
+    {
+     "claudeTekst": "Je zit een heel uur te hoog. Tel de uren nog eens na.",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Tel de minuten tot het hele uur, en dan de minuten daarna. Controleer allebei de stukjes.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 18,
+   "somtype": "[klokkenrij] Welke klok wijst tien over half # [ding]? (tijd in woorden)",
+   "nrOrigineel": 16,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst tien over half # [ding]? (tijd in woorden)",
+   "hint1": "Bij tien over half wijst de grote wijzer naar de acht. Zoek eerst de klokken waarbij dat zo is.",
+   "hint2": "Tien over half betekent: tien minuten na half. De kleine wijzer staat dan tussen het uur ervoor en het uur uit de vraag.",
+   "ouderzin": "Je kind zoekt de klok met wijzers die tien over half … aanwijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij tien over half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te vroeg. De grote wijzer klopt wel. Bij tien over half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij tien over half wijst hij naar de acht."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok naar de grote wijzer: wijst hij naar de acht? Kijk dan naar de kleine wijzer: staat hij tussen het uur ervoor en het uur uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 19,
+   "somtype": "[klokkenrij] Welke klok wijst tien voor # [ding]? (tijd in woorden)",
+   "nrOrigineel": 17,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst tien voor # [ding]? (tijd in woorden)",
+   "hint1": "Bij tien voor wijst de grote wijzer naar de tien. Zoek eerst de klokken waarbij dat zo is.",
+   "hint2": "Tien voor betekent: tien minuten vóór het hele uur. De kleine wijzer is dan bijna bij het uur uit de vraag, maar nog net ervoor.",
+   "ouderzin": "Je kind zoekt de klok met wijzers die tien voor … aanwijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij tien voor is de kleine wijzer bijna bij het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "over en voor verwisseld",
+     "claudeDenkfout": null,
+     "regel": "fout = over en voor verwisseld",
+     "tekst": "Bij die klok is het tien over, en niet tien voor. Bij tien voor moet de grote wijzer nog naar de twaalf: hij wijst naar de tien."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer als uur gelezen",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer als uur gelezen",
+     "tekst": "Bij die klok is het een heel uur. Het uur lees je af aan de kleine wijzer, de minuten aan de grote wijzer. Kijk bij die klok naar de grote wijzer: wijst hij naar de tien? Kijk dan naar de kleine wijzer: is hij bijna bij het uur uit de vraag?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok naar de grote wijzer: wijst hij naar de tien? Kijk dan naar de kleine wijzer: is hij bijna bij het uur uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 20,
+   "somtype": "[klokkenrij] Welke klok wijst vijf over half # [ding]? (tijd in woorden)",
+   "nrOrigineel": 18,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst vijf over half # [ding]? (tijd in woorden)",
+   "hint1": "Bij vijf over half wijst de grote wijzer naar de zeven. Zoek eerst de klokken waarbij dat zo is.",
+   "hint2": "Vijf over half betekent: vijf minuten na half. De kleine wijzer staat dan tussen het uur ervoor en het uur uit de vraag.",
+   "ouderzin": "Je kind zoekt de klok met wijzers die vijf over half … aanwijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij vijf over half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te vroeg. De grote wijzer klopt wel. Bij vijf over half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij vijf over half wijst hij naar de zeven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok naar de grote wijzer: wijst hij naar de zeven? Kijk dan naar de kleine wijzer: staat hij tussen het uur ervoor en het uur uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 21,
+   "somtype": "[klokkenrij] Welke klok wijst vijf voor # [ding]? (tijd in woorden)",
+   "nrOrigineel": 19,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst vijf voor # [ding]? (tijd in woorden)",
+   "hint1": "Bij vijf voor wijst de grote wijzer naar de elf. Zoek eerst de klokken waarbij dat zo is.",
+   "hint2": "Vijf voor betekent: vijf minuten vóór het hele uur. De kleine wijzer is dan bijna bij het uur uit de vraag, maar nog net ervoor.",
+   "ouderzin": "Je kind zoekt de klok met wijzers die vijf voor … aanwijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij vijf voor is de kleine wijzer bijna bij het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "over en voor verwisseld",
+     "claudeDenkfout": null,
+     "regel": "fout = over en voor verwisseld",
+     "tekst": "Bij die klok is het vijf over, en niet vijf voor. Bij vijf voor moet de grote wijzer nog naar de twaalf: hij wijst naar de elf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer als uur gelezen",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer als uur gelezen",
+     "tekst": "Bij die klok is het een heel uur. Het uur lees je af aan de kleine wijzer, de minuten aan de grote wijzer. Kijk bij die klok naar de grote wijzer: wijst hij naar de elf? Kijk dan naar de kleine wijzer: is hij bijna bij het uur uit de vraag?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok naar de grote wijzer: wijst hij naar de elf? Kijk dan naar de kleine wijzer: is hij bijna bij het uur uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 22,
+   "somtype": "[klokkenrij] Welke klok wijst vijf voor half # [ding]? (tijd in woorden)",
+   "nrOrigineel": 20,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst vijf voor half # [ding]? (tijd in woorden)",
+   "hint1": "Bij vijf voor half wijst de grote wijzer naar de vijf. Zoek eerst de klokken waarbij dat zo is.",
+   "hint2": "Vijf voor half betekent: vijf minuten vóór half. De kleine wijzer staat dan tussen het uur ervoor en het uur uit de vraag.",
+   "ouderzin": "Je kind zoekt de klok met wijzers die vijf voor half … aanwijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij vijf voor half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te vroeg. De grote wijzer klopt wel. Bij vijf voor half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij vijf voor half wijst hij naar de vijf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok naar de grote wijzer: wijst hij naar de vijf? Kijk dan naar de kleine wijzer: staat hij tussen het uur ervoor en het uur uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "één tekst voor elke foute klok; nu per soort fout (kleine of grote wijzer)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 23,
+   "somtype": "[wie] vertrekken om #:#. De reis duurt # uur en # minuten. Hoe laat komen ze aan? Typ de tijd, zoals #:#.",
+   "nrOrigineel": 21,
+   "somtypeOrigineel": "[wie] vertrekken om #:#. De reis duurt # uur en # minuten. Hoe laat komen ze aan? Typ de tijd, zoals #:#.",
+   "hint1": "Tel eerst de hele uren erbij. Tel daarna de minuten erbij.",
+   "hint2": "Komen de minuten op zestig of meer? Dan is dat een uur erbij. Een uur heeft zestig minuten.",
+   "ouderzin": "Je kind rekent uit hoe laat iets aankomt als de reis uren en minuten duurt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "zestig minuten of meer",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Zestig minuten of meer kan niet achter de dubbele punt. Een uur heeft zestig minuten: dan komt er een uur bij.",
+     "claudeTekst": "Een uur heeft 60 minuten. Komen de minuten boven de 60, dan gaat er een uur bij.",
+     "waarom": "alle sleutels hebben 60 of meer minuten (5/5, 3/3)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Dat is een uur te vroeg. Heb je alle hele uren van de reis erbij geteld?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Dat is een uur te laat. Tel de hele uren van de reis nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien minuten te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok tien minuten te laat",
+     "tekst": "De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien minuten te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok tien minuten te vroeg",
+     "tekst": "De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "uren of minuten ernaast",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "Claudes sleutel: tiental-ernaast",
+     "tekst": "Dat klopt niet helemaal. Tel de uren en de minuten nog eens apart erbij. Kijk of je over het hele uur heen gaat.",
+     "claudeTekst": "Je zit een uur te vroeg. Tel de uren nog eens na.",
+     "waarom": "Claudes sleutels zijn een uur te vroeg of tien minuten ernaast, door elkaar (fixlijst #71)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel eerst de hele uren erbij, en daarna de minuten. Een uur heeft zestig minuten: kom je over het hele uur heen, dan komt er een uur bij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel de minuten tot het hele uur en de minuten daarna apart.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 9,
+   "somtype": "[klok-zetten (wijzers slepen)] Zet de klok op [tijd].",
+   "nrOrigineel": 22,
+   "somtypeOrigineel": "[klok-zetten (wijzers slepen)] Zet de klok op [tijd].",
+   "hint1": "Zet eerst de grote wijzer. Hoeveel minuten is het na het hele uur? Elk getal is vijf minuten.",
+   "hint2": "Zet dan de kleine wijzer. Hoor je 'half' of 'voor' in de tijd? Dan staat hij nog vóór het uur uit de tijd. Anders staat hij net voorbij dat uur.",
+   "ouderzin": "Je kind zet de wijzers van een klok op een tijd in woorden.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "De kleine wijzer staat een uur te ver. De grote wijzer staat goed. Welk uur hoor je in de tijd? Hoor je 'half' of 'voor'? Dan staat de kleine wijzer nog vóór dat uur. Anders staat hij net voorbij dat uur."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "De grote wijzer staat niet goed. Hoeveel minuten na het hele uur is het? Elk getal is vijf minuten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet eerst de grote wijzer: hoeveel minuten na het hele uur? Zet dan de kleine wijzer. Hoor je 'half' of 'voor' in de tijd? Dan staat hij nog vóór het uur dat je hoort. Anders staat hij net voorbij dat uur."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "\"tien over half één\" is nog vóór een uur. De kleine wijzer is nog niet bij de 1.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "aanhalingstekens en 'vóór een uur' kloppen niet bij alle tijden; nu één vaste tekst"
+    },
+    {
+     "claudeTekst": "\"vijf over half acht\" is nog vóór acht uur. De kleine wijzer is nog niet bij de 8.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "aanhalingstekens en 'vóór een uur' kloppen niet bij alle tijden; nu één vaste tekst"
+    },
+    {
+     "claudeTekst": "De kleine wijzer wijst naar de 12.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "\"vijf over half tien\" is nog vóór tien uur. De kleine wijzer is nog niet bij de 10.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "aanhalingstekens en 'vóór een uur' kloppen niet bij alle tijden; nu één vaste tekst"
+    },
+    {
+     "claudeTekst": "\"tien over half elf\" is nog vóór elf uur. De kleine wijzer is nog niet bij de 11.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "aanhalingstekens en 'vóór een uur' kloppen niet bij alle tijden; nu één vaste tekst"
+    },
+    {
+     "claudeTekst": "\"vijf voor twee\" is nog vóór twee uur. De kleine wijzer is nog niet bij de 2.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "aanhalingstekens en 'vóór een uur' kloppen niet bij alle tijden; nu één vaste tekst"
+    },
+    {
+     "claudeTekst": "De kleine wijzer wijst naar de 5.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 24,
+   "somtype": "[wie] vertrekken om #:#. De reis duurt # minuten. Hoe laat komen ze aan? Typ de tijd, zoals #:#.",
+   "nrOrigineel": 23,
+   "somtypeOrigineel": "[wie] vertrekken om #:#. De reis duurt # minuten. Hoe laat komen ze aan? Typ de tijd, zoals #:#.",
+   "hint1": "Tel de minuten erbij. Kom je over het hele uur heen?",
+   "hint2": "Ga je over het hele uur heen? Tel dan eerst tot het hele uur, en daarna de minuten die nog over zijn. Een uur heeft zestig minuten.",
+   "ouderzin": "Je kind rekent uit hoe laat iets aankomt als de reis een aantal minuten duurt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "zestig minuten of meer",
+     "claudeDenkfout": "tijd-als-kommagetal",
+     "regel": "Claudes sleutel: tijd-als-kommagetal",
+     "tekst": "Zestig minuten of meer kan niet achter de dubbele punt. Een uur heeft zestig minuten: dan komt er een uur bij.",
+     "claudeTekst": "Een uur heeft 60 minuten. Komen de minuten boven de 60, dan gaat er een uur bij.",
+     "waarom": "alle sleutels hebben 60 of meer minuten (5/5, 3/3)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Dat is een uur te vroeg: dan kom je aan vóór je vertrekt. Kom je over het hele uur heen? Dan komt er een uur bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Dat is een uur te laat. De reis duurt korter dan een uur. Er komt alleen een uur bij als je over het hele uur heen gaat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien minuten te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok tien minuten te laat",
+     "tekst": "De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien minuten te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok tien minuten te vroeg",
+     "tekst": "De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "uren of minuten ernaast",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "Claudes sleutel: tiental-ernaast",
+     "tekst": "Dat klopt niet helemaal. Tel de uren en de minuten nog eens apart erbij. Kijk of je over het hele uur heen gaat.",
+     "claudeTekst": "Je zit een uur te vroeg. Tel de uren nog eens na.",
+     "waarom": "Claudes sleutels zijn een uur te vroeg of tien minuten ernaast, door elkaar (fixlijst #71)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de minuten erbij. Een uur heeft zestig minuten: kom je over het hele uur heen, dan komt er een uur bij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel de minuten tot het hele uur en de minuten daarna apart.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E06",
+   "nr": 11,
+   "somtype": "Hoeveel dagen duurt het van # [maand] tot # [maand]? — één maandgrens (generator #84)",
+   "nrOrigineel": 26,
+   "somtypeOrigineel": "Hoeveel dagen duurt het van # [maand] tot # [maand]? — één maandgrens (generator #84)",
+   "hint1": "Tel eerst de dagen tot het eind van de eerste maand. Hoeveel dagen heeft die maand? Kijk op de kalender of tel op je knokkels. De dag waarop je begint, tel je niet mee.",
+   "hint2": "Tel daarna de dagen in de nieuwe maand, tot en met de dag waarop het eindigt. Tel de twee stukken bij elkaar op.",
+   "ouderzin": "Je kind rekent uit hoeveel dagen het is van de ene datum tot de andere, over het eind van de maand heen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getallen afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Heb je de twee getallen uit de vraag van elkaar afgetrokken? Je gaat over het eind van de maand heen. Tel eerst de dagen tot het eind van de eerste maand: hoeveel dagen heeft die maand? Tel daarna de dagen in de nieuwe maand erbij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "alleen de nieuwe maand",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is te weinig. Heb je alleen de dagen in de nieuwe maand geteld? Tel eerst de dagen tot het eind van de eerste maand. Tel daarna de dagen in de nieuwe maand erbij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "alleen de eerste maand",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is te weinig. Heb je de dagen in de nieuwe maand ook erbij geteld? Kijk ook hoeveel dagen de eerste maand heeft. Tel tot en met de dag waarop het eindigt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één dag te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één dag te veel. Heb je de dag waarop je begint meegeteld? Die tel je niet mee. Kijk ook hoeveel dagen de eerste maand heeft."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één dag te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één dag te weinig. Hoeveel dagen heeft de eerste maand? Tel in de nieuwe maand tot en met de dag waarop het eindigt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. De dag waarop je begint, tel je niet mee. Tel in twee stukken: eerst de dagen tot het eind van de eerste maand, dan de dagen in de nieuwe maand."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Heb je allebei de stukken geteld? Tel eerst de dagen tot het eind van de eerste maand, en daarna de dagen in de nieuwe maand."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel in twee stukken: eerst de dagen tot het eind van de eerste maand, dan de dagen in de nieuwe maand. De dag waarop je begint, tel je niet mee. Tel de twee stukken bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [],
+   "koppeling": "claudeId"
+  }
+ ]
+}

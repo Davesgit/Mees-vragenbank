@@ -1,0 +1,1182 @@
+{
+ "batch": "batch4",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G5-merge, batch 4 = MEET-E01 t/m MEET-E05). Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint; 'claude' = tekst van Claude blijft (bij de referentiematen per foute optie), 'claude-taalfix' = tekst op Claudes sleutels (regel 'Claudes sleutel: <denkfout>', #48), of een letterlijke optie ('10 m', '15 g') met een verbeterde Claude-tekst; 'nieuw' = eigen tekst. 'fout = antwoord × 10' / ': 10' zijn de motorregels van #29 (nul te veel / nul vergeten). Getal1/getal2 = de getallen in de opgave, in volgorde.",
+ "somtypen": [
+  {
+   "doel": "G5-MEET-E01",
+   "nr": 1,
+   "somtype": "# m = □ cm",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# m = □ cm",
+   "hint1": "Eén meter (m) is honderd centimeter (cm). Hoeveel meter zijn het?",
+   "hint2": "Doe het aantal meter keer honderd: zet er twee nullen achter.",
+   "ouderzin": "Je kind rekent meters om naar centimeters.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is te veel: er staat een nul te veel achter. Eén meter is honderd centimeter: zet er twee nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is te weinig: er mist een nul. Eén meter is honderd centimeter: zet er twee nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal uit de som",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een centimeter is kleiner dan een meter, dus het worden er meer. Zet er twee nullen achter."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het getal uit de som (sleutel)",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een centimeter is kleiner dan een meter, dus het worden er meer. Zet er twee nullen achter.",
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "waarom": "Claudes vaste tekst ('Dat getal staat al in de som. Wat moet je ermee dóén?') zegt niet hoe het verder moet; vangt ook de items met '10.000'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Eén meter is honderd centimeter. Doe het aantal meter keer honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Eén meter is honderd centimeter. Doe het aantal meter keer honderd."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend (sleutel)",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat klopt niet. Eén meter is honderd centimeter. Doe het aantal meter keer honderd.",
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "waarom": "'maattrap' en 'stappen van keer 10' zijn G6; vangt de sleutels bij een antwoord met punt ('10.000'), waar de getalregels niet werken (G5-fixlijst #52)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén meter is honderd centimeter. Doe het aantal meter keer honderd: zet er twee nullen achter."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E01",
+   "nr": 2,
+   "somtype": "# cm = □ m",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# cm = □ m",
+   "hint1": "Honderd centimeter (cm) is één meter (m). Hoe vaak past honderd in het aantal centimeter?",
+   "hint2": "Deel het aantal centimeter door honderd: haal er twee nullen af.",
+   "ouderzin": "Je kind rekent centimeters om naar meters.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is te veel: er staat nog een nul te veel achter. Honderd centimeter is één meter: haal er twee nullen af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is te weinig: je hebt een nul te veel weggehaald. Honderd centimeter is één meter: haal er twee nullen af."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het getal uit de som (sleutel)",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een meter is groter dan een centimeter, dus het worden er minder. Haal er twee nullen af.",
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "waarom": "Claudes vaste tekst zegt niet hoe het verder moet; als sleutel, want getal1 leest '10.000' als 10 (G5-fixlijst #52)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal uit de som",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een meter is groter dan een centimeter, dus het worden er minder. Haal er twee nullen af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Honderd centimeter is één meter. Deel het aantal centimeter door honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Honderd centimeter is één meter. Deel het aantal centimeter door honderd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Honderd centimeter is één meter. Deel het aantal centimeter door honderd: haal er twee nullen af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'maattrap' en stappen van keer 10 zijn G6-stof; nu: het feit (één meter is honderd centimeter) en de nullen"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E01",
+   "nr": 3,
+   "somtype": "# km = □ m",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "# km = □ m",
+   "hint1": "Eén kilometer (km) is duizend meter (m). Hoeveel kilometer zijn het?",
+   "hint2": "Doe het aantal kilometer keer duizend: zet er drie nullen achter.",
+   "ouderzin": "Je kind rekent kilometers om naar meters.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is te veel: er staat een nul te veel achter. Eén kilometer is duizend meter: zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is te weinig: er mist een nul. Eén kilometer is duizend meter: zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal uit de som",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een meter is kleiner dan een kilometer, dus het worden er meer. Zet er drie nullen achter."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het getal uit de som (sleutel)",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een meter is kleiner dan een kilometer, dus het worden er meer. Zet er drie nullen achter.",
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "waarom": "Claudes vaste tekst ('Dat getal staat al in de som. Wat moet je ermee dóén?') zegt niet hoe het verder moet; vangt ook de items met '10.000'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend (sleutel)",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat klopt niet. Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend.",
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "waarom": "'maattrap' en 'stappen van keer 10' zijn G6; vangt de sleutels bij een antwoord met punt ('10.000'), waar de getalregels niet werken (G5-fixlijst #52)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kilometer is duizend meter. Doe het aantal kilometer keer duizend: zet er drie nullen achter."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E01",
+   "nr": 4,
+   "somtype": "# m = □ mm",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "# m = □ mm",
+   "hint1": "Eén meter (m) is duizend millimeter (mm). Hoeveel meter zijn het?",
+   "hint2": "Doe het aantal meter keer duizend: zet er drie nullen achter.",
+   "ouderzin": "Je kind rekent meters om naar millimeters.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is te veel: er staat een nul te veel achter. Eén meter is duizend millimeter: zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is te weinig: er mist een nul. Eén meter is duizend millimeter: zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal uit de som",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een millimeter is kleiner dan een meter, dus het worden er meer. Zet er drie nullen achter."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het getal uit de som (sleutel)",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een millimeter is kleiner dan een meter, dus het worden er meer. Zet er drie nullen achter.",
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "waarom": "Claudes vaste tekst ('Dat getal staat al in de som. Wat moet je ermee dóén?') zegt niet hoe het verder moet; vangt ook de items met '10.000'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Eén meter is duizend millimeter. Doe het aantal meter keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Eén meter is duizend millimeter. Doe het aantal meter keer duizend."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend (sleutel)",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat klopt niet. Eén meter is duizend millimeter. Doe het aantal meter keer duizend.",
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "waarom": "'maattrap' en 'stappen van keer 10' zijn G6; vangt de sleutels bij een antwoord met punt ('10.000'), waar de getalregels niet werken (G5-fixlijst #52)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén meter is duizend millimeter. Doe het aantal meter keer duizend: zet er drie nullen achter."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E04",
+   "nr": 2,
+   "somtype": "# L = □ ml",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# L = □ ml",
+   "hint1": "Eén liter (L) is duizend milliliter (ml). Hoeveel liter zijn het?",
+   "hint2": "Doe het aantal liter keer duizend: zet er drie nullen achter.",
+   "ouderzin": "Je kind rekent liters om naar milliliters.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is te veel: er staat een nul te veel achter. Eén liter is duizend milliliter: zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is te weinig: er mist een nul. Eén liter is duizend milliliter: zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal uit de som",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een milliliter is kleiner dan een liter, dus het worden er meer. Zet er drie nullen achter."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het getal uit de som (sleutel)",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een milliliter is kleiner dan een liter, dus het worden er meer. Zet er drie nullen achter.",
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "waarom": "Claudes vaste tekst ('Dat getal staat al in de som. Wat moet je ermee dóén?') zegt niet hoe het verder moet; vangt ook de items met '10.000'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Eén liter is duizend milliliter. Doe het aantal liter keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Eén liter is duizend milliliter. Doe het aantal liter keer duizend."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend (sleutel)",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat klopt niet. Eén liter is duizend milliliter. Doe het aantal liter keer duizend.",
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "waarom": "'maattrap' en 'stappen van keer 10' zijn G6; vangt de sleutels bij een antwoord met punt ('10.000'), waar de getalregels niet werken (G5-fixlijst #52)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén liter is duizend milliliter. Doe het aantal liter keer duizend: zet er drie nullen achter."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E04",
+   "nr": 4,
+   "somtype": "Een emmer bevat # L. Hoeveel ml is dat?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Een emmer bevat # L. Hoeveel ml is dat?",
+   "hint1": "Eén liter (L) is duizend milliliter (ml). Hoeveel liter zit er in de emmer?",
+   "hint2": "Doe het aantal liter keer duizend: zet er drie nullen achter.",
+   "ouderzin": "Je kind rekent liters om naar milliliters.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is te veel: er staat een nul te veel achter. Eén liter is duizend milliliter: zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is te weinig: er mist een nul. Eén liter is duizend milliliter: zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal uit de som",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een milliliter is kleiner dan een liter, dus het worden er meer. Zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Eén liter is duizend milliliter. Doe het aantal liter keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Eén liter is duizend milliliter. Doe het aantal liter keer duizend."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend (sleutel)",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat klopt niet. Eén liter is duizend milliliter. Doe het aantal liter keer duizend.",
+     "claudeTekst": "Een nul te weinig. 1 L is 1000 ml.",
+     "waarom": "'maattrap' en 'stappen van keer 10' zijn G6; vangt de sleutels bij een antwoord met punt ('10.000'), waar de getalregels niet werken (G5-fixlijst #52)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén liter is duizend milliliter. Doe het aantal liter keer duizend: zet er drie nullen achter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een nul te veel. 1 L is 1000 ml.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Het getal verandert als de eenheid verandert. Van l naar ml is keer 1.000.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E05",
+   "nr": 1,
+   "somtype": "# kg = □ g",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# kg = □ g",
+   "hint1": "Eén kilogram (kg) is duizend gram (g). Hoeveel kilogram zijn het?",
+   "hint2": "Doe het aantal kilogram keer duizend: zet er drie nullen achter.",
+   "ouderzin": "Je kind rekent kilogrammen om naar grammen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is te veel: er staat een nul te veel achter. Eén kilogram is duizend gram: zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is te weinig: er mist een nul. Eén kilogram is duizend gram: zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal uit de som",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een gram is kleiner dan een kilogram, dus het worden er meer. Zet er drie nullen achter."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "het getal uit de som (sleutel)",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een gram is kleiner dan een kilogram, dus het worden er meer. Zet er drie nullen achter.",
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "waarom": "Claudes vaste tekst ('Dat getal staat al in de som. Wat moet je ermee dóén?') zegt niet hoe het verder moet; vangt ook de items met '10.000'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend (sleutel)",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat klopt niet. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend.",
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "waarom": "'maattrap' en 'stappen van keer 10' zijn G6; vangt de sleutels bij een antwoord met punt ('10.000'), waar de getalregels niet werken (G5-fixlijst #52)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend: zet er drie nullen achter."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E05",
+   "nr": 3,
+   "somtype": "Een [ding] is # kg zwaar. Hoeveel g is dat?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Een [ding] is # kg zwaar. Hoeveel g is dat?",
+   "hint1": "Eén kilogram (kg) is duizend gram (g). Hoeveel kilogram is het?",
+   "hint2": "Doe het aantal kilogram keer duizend: zet er drie nullen achter.",
+   "ouderzin": "Je kind rekent kilogrammen om naar grammen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is te veel: er staat een nul te veel achter. Eén kilogram is duizend gram: zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is te weinig: er mist een nul. Eén kilogram is duizend gram: zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal uit de som",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt het getal uit de som overgenomen. Een gram is kleiner dan een kilogram, dus het worden er meer. Zet er drie nullen achter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders omgerekend (sleutel)",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "Dat klopt niet. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend.",
+     "claudeTekst": "Een nul te weinig. 1 kg is 1000 g.",
+     "waarom": "'maattrap' en 'stappen van keer 10' zijn G6; vangt de sleutels bij een antwoord met punt ('10.000'), waar de getalregels niet werken (G5-fixlijst #52)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend: zet er drie nullen achter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een nul te veel. 1 kg is 1000 g.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Het getal verandert als de eenheid verandert. Van kg naar g is keer 1.000.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E01",
+   "nr": 5,
+   "somtype": "[referentie] Hoe lang/hoog/breed is … ongeveer?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "[referentie] Hoe lang/hoog/breed is … ongeveer?",
+   "hint1": "Denk aan iets dat je kent. Is het langer of korter? Hoeveel grote stappen zou het zijn?",
+   "hint2": "Een grote stap is ongeveer één meter. Een kilometer is heel ver: daar loop je ongeveer een kwartier over.",
+   "ouderzin": "Je kind schat hoe lang iets is, met maten die het kent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "te kort",
+     "claudeDenkfout": null,
+     "regel": "10 m",
+     "tekst": "Dat is te kort. 10 m is iets langer dan een klaslokaal. Een voetbalveld is veel langer.",
+     "claudeTekst": "10 m is iets langer dan een klaslokaal. Dan kun je nauwelijks sprinten.",
+     "waarom": "'Dan kun je nauwelijks sprinten' is vreemd; 'Dat is te kort' erbij"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te lang (1000 m)",
+     "claudeDenkfout": null,
+     "regel": "1000 m",
+     "tekst": "Dat is te lang. 1000 m is een kilometer. Zo ver loop je in ongeveer een kwartier.",
+     "claudeTekst": "1000 m is een kilometer. Zo ver loop je in ongeveer een kwartier.",
+     "waarom": "review-batch4-didactiek-v1.md S5: richting vooraan"
+    },
+    {
+     "bron": "claude",
+     "soort": "andere maat",
+     "claudeDenkfout": null,
+     "regel": "Claudes sleutel (tekst per item)",
+     "tekst": "Claudes tekst per foute optie: … is zo groot/zwaar als … (iets dat je kent). Past dat?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zie het voor je. Vergelijk het met iets dat je kent. Welke maat past het best?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E04",
+   "nr": 3,
+   "somtype": "[referentie] Hoeveel gaat er ongeveer in …?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[referentie] Hoeveel gaat er ongeveer in …?",
+   "hint1": "Stel je voor dat je het vult. Past er een beetje in, of heel veel?",
+   "hint2": "Een pak melk is één liter. Een milliliter is heel weinig: in een theelepel gaat al ongeveer vijf milliliter. Welke maat past het best?",
+   "ouderzin": "Je kind schat hoeveel er in iets past, met maten die het kent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "te weinig (15 L)",
+     "claudeDenkfout": null,
+     "regel": "15 L",
+     "tekst": "Dat is te weinig. 15 L is anderhalve emmer. Daarmee is een bad niet vol.",
+     "claudeTekst": "15 L is net iets meer dan één emmer. Daarmee is een bad niet vol.",
+     "waarom": "review-batch4-didactiek-v1.md S5: een emmer is 10 L (184, 185)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel (1500 L)",
+     "claudeDenkfout": null,
+     "regel": "1500 L",
+     "tekst": "Dat is veel te veel. Zoveel water is een klein zwembad vol. Tel eens hoeveel emmers er in een bad passen.",
+     "claudeTekst": "1500 L is een klein zwembad vol. Tel eens hoeveel emmers er in een bad passen.",
+     "waarom": "review-batch4-didactiek-v1.md S5: richting vooraan; geen getal boven 1000 in de kindtekst (check_hints WARN)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel (100 L)",
+     "claudeDenkfout": null,
+     "regel": "100 L",
+     "tekst": "Dat is veel te veel. In 100 L zit al meer dan een half bad. Een emmer kun je nog tillen.",
+     "claudeTekst": "100 L is bijna een heel bad vol. Een emmer kun je nog tillen.",
+     "waarom": "review-batch4-didactiek-v1.md S5: een bad is 150 L (183)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig (1 L)",
+     "claudeDenkfout": null,
+     "regel": "1 L",
+     "tekst": "Dat is te weinig. 1 L is één pak melk. Zo weinig water staat er niet in een volle emmer.",
+     "claudeTekst": "1 L is één pak melk. Zo weinig water staat er niet in een volle emmer.",
+     "waarom": "review-batch4-didactiek-v1.md S5: richting vooraan"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig (1 ml)",
+     "claudeDenkfout": null,
+     "regel": "1 ml",
+     "tekst": "Dat is veel te weinig. 1 ml is nog minder dan een theelepel. Kijk nog eens hoe groot een pak melk is.",
+     "claudeTekst": "1 ml is maar een paar druppels. Kijk nog eens hoe groot een pak melk is.",
+     "waarom": "review-batch4-didactiek-v1.md V1: één milliliter is ongeveer twintig druppels"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel (10 L)",
+     "claudeDenkfout": null,
+     "regel": "10 L",
+     "tekst": "Dat is veel te veel. 10 L is een volle emmer water. Past dat in een pak dat je met één hand vasthoudt?",
+     "claudeTekst": "10 L is een volle emmer water. Past dat in een pak dat je met één hand vasthoudt?",
+     "waarom": "review-batch4-didactiek-v1.md S5: richting vooraan"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig (20 ml)",
+     "claudeDenkfout": null,
+     "regel": "20 ml",
+     "tekst": "Dat is te weinig. 20 ml is maar een paar lepels vol. Denk aan een vol glas.",
+     "claudeTekst": "20 ml is maar een paar slokjes uit een lepel. Denk aan een vol glas.",
+     "waarom": "review-batch4-didactiek-v1.md S5: 'slokjes uit een lepel' is vreemd"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel (2 L)",
+     "claudeDenkfout": null,
+     "regel": "2 L",
+     "tekst": "Dat is veel te veel. 2 L zijn twee pakken melk. Past dat allemaal in één glas?",
+     "claudeTekst": "2 L zijn twee pakken melk. Past dat allemaal in één glas?",
+     "waarom": "review-batch4-didactiek-v1.md S5: richting vooraan"
+    },
+    {
+     "bron": "claude",
+     "soort": "andere maat",
+     "claudeDenkfout": null,
+     "regel": "Claudes sleutel (tekst per item)",
+     "tekst": "Claudes tekst per foute optie: … is zo groot/zwaar als … (iets dat je kent). Past dat?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zie het voor je. Vergelijk het met iets dat je kent. Welke maat past het best?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E05",
+   "nr": 2,
+   "somtype": "[referentie] Hoe zwaar is … ongeveer?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[referentie] Hoe zwaar is … ongeveer?",
+   "hint1": "Stel je voor dat je het in je hand hebt. Is het licht of zwaar?",
+   "hint2": "Een pak suiker weegt één kilogram. Een gram is heel licht, zo licht als een paperclip. Welke maat past het best?",
+   "ouderzin": "Je kind schat hoe zwaar iets is, met maten die het kent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "te licht (6 g)",
+     "claudeDenkfout": null,
+     "regel": "6 g",
+     "tekst": "Dat is te licht. 6 g is ongeveer zo licht als een velletje papier. Een ei voelt zwaarder aan.",
+     "claudeTekst": "6 g is zo licht als een velletje papier. Een ei voelt zwaarder aan.",
+     "waarom": "review-batch4-didactiek-v1.md S5: velletje papier = 5 g (lijst), dus 'ongeveer'; richting vooraan"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te zwaar (600 g)",
+     "claudeDenkfout": null,
+     "regel": "600 g",
+     "tekst": "Dat is te zwaar. 600 g is bijna een heel brood. Vergelijk een ei eens met een appel.",
+     "claudeTekst": "600 g is bijna een heel brood. Vergelijk een ei eens met een appel.",
+     "waarom": "review-batch4-didactiek-v1.md S5: richting vooraan"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te licht (12 g)",
+     "claudeDenkfout": null,
+     "regel": "12 g",
+     "tekst": "Dat is te licht. 12 g is zo licht als een stuk of twaalf paperclips. Een banaan voelt zwaarder aan.",
+     "claudeTekst": "12 g is zo licht als een doosje paperclips. Een banaan voelt zwaarder aan.",
+     "waarom": "review-batch4-didactiek-v1.md V2: een doosje paperclips weegt veel meer dan 12 g (Hint 2: een paperclip = 1 g)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te zwaar (1 kg)",
+     "claudeDenkfout": null,
+     "regel": "1 kg",
+     "tekst": "Dat is te zwaar. 1 kg is een heel pak suiker. Vergelijk een banaan eens met een appel.",
+     "claudeTekst": "1 kg is een heel pak suiker. Vergelijk een banaan eens met een appel.",
+     "waarom": "review-batch4-didactiek-v1.md S5: richting vooraan"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te licht (appel)",
+     "claudeDenkfout": null,
+     "regel": "15 g",
+     "tekst": "Dat is te licht. 15 g is zo licht als een paar knikkers. Voelt een appel zo licht aan?",
+     "claudeTekst": "15 g is ongeveer zo licht als een lucifersdoosje. Voelt een appel zo licht aan?",
+     "waarom": "'lucifersdoosje' kennen kinderen niet; 'Dat is te licht' erbij; vóór '5 g' ('5 g' past ook in '15 g')"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te licht (5 g)",
+     "claudeDenkfout": null,
+     "regel": "5 g",
+     "tekst": "Dat is te licht. 5 g is zo licht als een velletje papier. Een heel boek is zwaarder.",
+     "claudeTekst": "5 g is zo licht als een paar blaadjes papier. Een heel boek is zwaarder.",
+     "waarom": "review-batch4-didactiek-v1.md S5: gelijk aan 6 g (velletje papier = 5 g)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te zwaar (5 kg)",
+     "claudeDenkfout": null,
+     "regel": "5 kg",
+     "tekst": "Dat is veel te zwaar voor een boek. 5 kg is zo zwaar als vijf pakken suiker.",
+     "claudeTekst": "5 kg is zo zwaar als vijf pakken suiker. Dat kun je bijna niet met één hand vasthouden.",
+     "waarom": "review-batch4-didactiek-v1.md S5: 'bijna niet met één hand' is overdreven"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te zwaar (8 kg)",
+     "claudeDenkfout": null,
+     "regel": "8 kg",
+     "tekst": "Dat is veel te zwaar. 8 kg is zo zwaar als acht pakken suiker. Dat draag je niet zomaar in één hand.",
+     "claudeTekst": "8 kg is zo zwaar als acht pakken suiker. Dat draag je niet zomaar in één hand.",
+     "waarom": "review-batch4-didactiek-v1.md S5: richting vooraan"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te licht (80 g)",
+     "claudeDenkfout": null,
+     "regel": "80 g",
+     "tekst": "Dat is te licht. 80 g is nog lichter dan een appel. Til in gedachten een heel brood op.",
+     "claudeTekst": "80 g is nog lichter dan een appel. Til in gedachten een heel brood op.",
+     "waarom": "review-batch4-didactiek-v1.md S5: richting vooraan (appel = 150 g)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te zwaar (150 kg)",
+     "claudeDenkfout": null,
+     "regel": "150 kg",
+     "tekst": "Dat is veel te zwaar. 150 kg is zo zwaar als twee volwassen mensen samen. Til in gedachten een appel eens op.",
+     "claudeTekst": "150 kg is zwaarder dan twee volwassen mensen. Til in gedachten een appel eens op.",
+     "waarom": "review-batch4-didactiek-v1.md V3: een volwassene weegt zo'n 75 kg"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te licht (400 g)",
+     "claudeDenkfout": null,
+     "regel": "400 g",
+     "tekst": "Dat is te licht. 400 g is minder dan een brood. Til in gedachten een kat eens op.",
+     "claudeTekst": "400 g is minder dan een brood. Til in gedachten een kat eens op.",
+     "waarom": "review-batch4-didactiek-v1.md S5: richting vooraan (brood = 800 g)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te zwaar (40 kg)",
+     "claudeDenkfout": null,
+     "regel": "40 kg",
+     "tekst": "Dat is veel te zwaar. 40 kg is zwaarder dan een kind uit groep 5. Zo zwaar is een kat niet.",
+     "claudeTekst": "40 kg is zwaarder dan een kind uit groep 5. Dat is te veel voor een kat.",
+     "waarom": "review-batch4-didactiek-v1.md S5: richting vooraan (kind groep 5 = 28 kg); niet twee keer 'te zwaar/te veel'"
+    },
+    {
+     "bron": "claude",
+     "soort": "andere maat",
+     "claudeDenkfout": null,
+     "regel": "Claudes sleutel (tekst per item)",
+     "tekst": "Claudes tekst per foute optie: … is zo groot/zwaar als … (iets dat je kent). Past dat?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zie het voor je. Vergelijk het met iets dat je kent. Welke maat past het best?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E02",
+   "nr": 1,
+   "somtype": "Een rechthoek is # cm lang en # cm breed. Hoeveel cm is de omtrek?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Een rechthoek is # cm lang en # cm breed. Hoeveel cm is de omtrek?",
+   "hint1": "De omtrek is de lijn om de rechthoek heen. Hoeveel zijden (kanten) heeft een rechthoek?",
+   "hint2": "Tel alle vier de zijden bij elkaar op: twee keer de lengte en twee keer de breedte.",
+   "ouderzin": "Je kind rekent de omtrek van een rechthoek uit: alle zijden bij elkaar.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "twee zijden",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de lengte en de breedte één keer opgeteld. Maar er zijn vier zijden: twee lange en twee korte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "oppervlakte",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Heb je keer gedaan? Dan heb je de oppervlakte: wat erbinnen zit. De omtrek is de lijn eromheen: tel de zijden op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "korte zijde vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is te weinig. Je bent een korte zijde vergeten. Tel alle vier de zijden: twee lange en twee korte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "lange zijde vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is te weinig. Je bent een lange zijde vergeten. Tel alle vier de zijden: twee lange en twee korte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "lange zijde te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is te veel. Je hebt een lange zijde te veel geteld. Er zijn twee lange en twee korte zijden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "korte zijde te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is te veel. Je hebt een korte zijde te veel geteld. Er zijn twee lange en twee korte zijden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel de vier zijden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel de vier zijden nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Tel alle vier de zijden bij elkaar: twee lange en twee korte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Tel alle vier de zijden bij elkaar: twee lange en twee korte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "De omtrek is de lijn eromheen. Tel alle vier de zijden bij elkaar: twee keer de lengte en twee keer de breedte."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Omtrek is de lijn eromheen (optellen). Oppervlakte is wat erbinnen zit (lengte keer breedte).",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "te vaag: zegt niet welk stuk ontbreekt"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast': de fout-hint zegt wat er mis is (een zijde vergeten of te veel)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E02",
+   "nr": 2,
+   "somtype": "Om een [veld] van # bij # meter komt een hek. Hoeveel meter hek is dat?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Om een [veld] van # bij # meter komt een hek. Hoeveel meter hek is dat?",
+   "hint1": "Het hek gaat er helemaal omheen. Dat is de omtrek. Hoeveel kanten zijn er?",
+   "hint2": "Tel alle vier de kanten bij elkaar op: twee lange en twee korte.",
+   "ouderzin": "Je kind rekent uit hoe lang een hek om een rechthoekig stuk grond is (de omtrek).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "twee zijden",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de lengte en de breedte één keer opgeteld. Maar er zijn vier kanten: twee lange en twee korte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "oppervlakte",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Heb je keer gedaan? Dan heb je de oppervlakte: wat erbinnen zit. De omtrek is de lijn eromheen: tel de kanten op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "korte zijde vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is te weinig. Je bent een korte kant vergeten. Tel alle vier de kanten: twee lange en twee korte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "lange zijde vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is te weinig. Je bent een lange kant vergeten. Tel alle vier de kanten: twee lange en twee korte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "lange zijde te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is te veel. Je hebt een lange kant te veel geteld. Er zijn twee lange en twee korte kanten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "korte zijde te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is te veel. Je hebt een korte kant te veel geteld. Er zijn twee lange en twee korte kanten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel de vier kanten nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel de vier kanten nog eens bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Tel alle vier de kanten bij elkaar: twee lange en twee korte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Tel alle vier de kanten bij elkaar: twee lange en twee korte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "De omtrek is de lijn eromheen. Tel alle vier de kanten bij elkaar: twee keer de lengte en twee keer de breedte."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is de oppervlakte: wat erbinnen zit. Een hek staat eromheen, dus tel de zijden op.",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Een rechthoek heeft vier zijden. Je hebt er maar twee geteld.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Tel alle vier de zijden: twee lange en twee korte.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E03",
+   "nr": 1,
+   "somtype": "[rooster] Kleur een rechthoek met een oppervlakte van # hokjes.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[rooster] Kleur een rechthoek met een oppervlakte van # hokjes.",
+   "hint1": "De oppervlakte is hoeveel hokjes er binnen de rechthoek zitten. Hoeveel hokjes moet je kleuren?",
+   "hint2": "Bedenk een keersom met dit aantal als uitkomst. Het eerste getal is het aantal rijen, het tweede hoeveel hokjes er in elke rij komen. Kleur de rijen recht onder elkaar.",
+   "ouderzin": "Je kind kleurt een rechthoek met een gegeven oppervlakte (aantal hokjes) op een rooster.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één hokje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = getal + 1 (aantal gekleurde hokjes)",
+     "tekst": "Je hebt één hokje te veel gekleurd. Tel de hokjes nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig hokjes",
+     "claudeDenkfout": null,
+     "regel": "fout kleiner dan het getal in de vraag (aantal gekleurde hokjes)",
+     "tekst": "Je hebt te weinig hokjes gekleurd. Tel ze nog eens: hoeveel moeten het er zijn?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel je hokjes. Zijn het er precies genoeg? Is het een rechthoek: alle rijen even lang en recht onder elkaar?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E04",
+   "nr": 1,
+   "somtype": "[maatbeker] Hoeveel milliliter zit er in de beker?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[maatbeker] Hoeveel milliliter zit er in de beker?",
+   "hint1": "Kijk waar het drinken ophoudt. Welk getal op de beker staat daar net onder?",
+   "hint2": "Hoeveel milliliter is één streepje? Tel hoeveel sprongetjes het is van het ene getal naar het volgende getal. Tel dan vanaf het getal verder, streepje voor streepje, tot de bovenkant van het drinken.",
+   "ouderzin": "Je kind leest af hoeveel milliliter er in een maatbeker zit.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "streepjes als 1 geteld",
+     "claudeDenkfout": null,
+     "regel": "fout = streepjes als 1 geteld",
+     "tekst": "Eén streepje is niet één milliliter. Hoeveel milliliter is één sprongetje?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één streepje ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = één streepje ernaast",
+     "tekst": "Je zit één streepje ernaast. Tel de streepjes nog eens vanaf het getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1 of meer",
+     "tekst": "Dat is te veel. Zoek het getal op de beker dat net onder de bovenkant van het drinken staat. Hoeveel milliliter is één streepje? Tel vanaf dat getal de streepjes tot de bovenkant van het drinken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1 of meer",
+     "tekst": "Dat is te weinig. Zoek het getal op de beker dat net onder de bovenkant van het drinken staat. Hoeveel milliliter is één streepje? Tel de streepjes erboven er nog bij, tot de bovenkant van het drinken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek het getal op de beker dat net onder de bovenkant van het drinken staat. Hoeveel milliliter is één streepje? Tel vanaf dat getal de streepjes tot de bovenkant van het drinken."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk bij welk streepje het drinken staat. Hoeveel milliliter is elk streepje?",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "zegt niet of het te veel of te weinig is"
+    },
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "te vaag: zegt niet welk stuk ontbreekt"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

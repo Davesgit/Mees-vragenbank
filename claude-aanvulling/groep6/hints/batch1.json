@@ -1,0 +1,1096 @@
+{
+ "batch": "batch1",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G6-merge, batch 1 = grote getallen: GET-M01, GET-M02, GET-E01, GET-M03). Formaat als g5/hints/batch1.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint; 'claude' = tekst van Claude blijft (ok), 'claude-taalfix' = Claudes tekst met een kleine taalfix, 'nieuw' = eigen tekst (claudeTekst = de Claude-tekst die hij vervangt). Getal1/getal2 = de getallen in de opgave, in volgorde. Schrijf 'antwoord + 10' en 'antwoord − 10' apart: 'antwoord ± 10' leest fout_regels als '± 1'.",
+ "somtypen": [
+  {
+   "doel": "G6-GET-M01",
+   "nr": 1,
+   "somtype": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?",
+   "hint1": "Splits het getal: duizendtallen, honderdtallen, tientallen en eenheden. Welk deel staat er nog niet?",
+   "hint2": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+   "ouderzin": "Je kind splitst een getal tot 10.000 in duizendtallen, honderdtallen, tientallen en eenheden.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alleen het cijfer",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard?",
+     "claudeTekst": "De … staat op de plek van de tientallen. Hoeveel is … tientallen waard?",
+     "waarom": "tekst per item met het cijfer; nu één tekst"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderdtallen",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+     "claudeTekst": "Het zijn tientallen, geen honderdtallen. … tientallen is … keer 10.",
+     "waarom": "tekst per item met het cijfer; nu één tekst"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Splits het getal in duizendtallen, honderdtallen, tientallen en eenheden. Welk deel ontbreekt er nog in de som?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De 5 staat op de plek van de tientallen. Hoeveel is 5 tientallen waard?",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Het zijn tientallen, geen honderdtallen. 5 tientallen is 5 keer 10.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "De 9 staat op de plek van de tientallen. Hoeveel is 9 tientallen waard?",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Het zijn tientallen, geen honderdtallen. 9 tientallen is 9 keer 10.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "De 2 staat op de plek van de tientallen. Hoeveel is 2 tientallen waard?",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Het zijn tientallen, geen honderdtallen. 2 tientallen is 2 keer 10.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "De 8 staat op de plek van de tientallen. Hoeveel is 8 tientallen waard?",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Het zijn tientallen, geen honderdtallen. 8 tientallen is 8 keer 10.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M01",
+   "nr": 2,
+   "somtype": "[kaartjes op volgorde slepen] Zet de getallen op volgorde van klein naar groot.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[kaartjes op volgorde slepen] Zet de getallen op volgorde van klein naar groot.",
+   "hint1": "Vergelijk eerst het cijfer vooraan: de tienduizendtallen. Het getal met het kleinste cijfer vooraan komt eerst.",
+   "hint2": "Is het cijfer vooraan bij twee getallen gelijk? Kijk dan naar het cijfer erna. Zet zo alle getallen van klein naar groot.",
+   "ouderzin": "Je kind zet getallen tot 100.000 op volgorde van klein naar groot.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "van groot naar klein",
+     "claudeDenkfout": "kleinste-van-grootste",
+     "regel": "volgorde omgedraaid",
+     "tekst": "Je hebt de getallen van groot naar klein gezet. Begin met het kleinste getal.",
+     "claudeTekst": "Klein naar groot: het kleinste getal eerst.",
+     "waarom": "zegt niet wat het kind deed"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Vergelijk de getallen van links naar rechts: eerst het cijfer vooraan, dan het cijfer erna. Het kleinste getal komt eerst."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M02",
+   "nr": 1,
+   "somtype": "# wordt #. Met hoeveel verandert het getal?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# wordt #. Met hoeveel verandert het getal?",
+   "hint1": "Vergelijk de twee getallen cijfer voor cijfer. Welk cijfer is anders?",
+   "hint2": "Op welke plek staat dat cijfer? Het is één groter of één kleiner geworden. Eén op die plek is één tiental, honderdtal, duizendtal of tienduizendtal. Schrijf dat als getal.",
+   "ouderzin": "Je kind ziet welk cijfer in een getal tot 100.000 verandert, en hoeveel dat waard is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één plek te ver naar links",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te veel. Het cijfer dat anders is, staat één plek verder naar rechts. Welke plek is dat?",
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "waarom": "zegt niet wat er fout is"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één plek te ver naar rechts",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te weinig. Het cijfer dat anders is, staat één plek verder naar links. Welke plek is dat?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek het cijfer dat anders is. Staat het bij de tientallen, honderdtallen, duizendtallen of tienduizendtallen? Eén op die plek is wat het getal verandert."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M02",
+   "nr": 2,
+   "somtype": "Welk getal is # meer dan #?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Welk getal is # meer dan #?",
+   "hint1": "Kijk naar het getal vooraan in de vraag. Bij welke plek komt er één bij: de honderdtallen of de duizendtallen?",
+   "hint2": "Op die plek staat een negen. Komt er één bij, dan wordt die negen een nul en gaat het cijfer ervoor één omhoog. Is dat cijfer ook een negen? Dan wordt dat ook een nul, en gaat het cijfer daarvoor één omhoog.",
+   "ouderzin": "Je kind telt er honderd of duizend bij, over een tienduizendtal of duizendtal heen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "eraf gehaald",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Je hebt eraf gehaald. Meer dan betekent dat er iets bijkomt: het getal wordt groter.",
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "waarom": "zegt niet wat het kind deed"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twee keer erbij",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Dat is te veel. Er komt maar één bij op die plek. Heb je bij de negen het cijfer ervoor één omhoog gezet, en de negen een nul gemaakt?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal zelf",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het getal uit de vraag. Er moet nog iets bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één erbij gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2 + 1",
+     "tekst": "Je hebt er maar één bijgedaan. Kijk naar het getal vooraan in de vraag: zoveel komt erbij.",
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "waarom": "fixlijst G6 #6: motorregel, één richting per entry (Claudes sleutels waren allemaal getal plus of min één)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij welke plek er één bijkomt. Staat daar een negen? Dan wordt die een nul en gaat het cijfer ervoor één omhoog."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "past niet: hier gaat het om erbij of eraf, niet om een maattrap"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast' (les G3/G4): de fout-hint zegt wat het kind deed"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M02",
+   "nr": 3,
+   "somtype": "Welk getal is # minder dan #?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Welk getal is # minder dan #?",
+   "hint1": "Kijk naar het getal vooraan in de vraag. Bij welke plek gaat er één af: de honderdtallen of de duizendtallen?",
+   "hint2": "Op die plek staat een nul. Dan leen je van het cijfer ervoor: de nul wordt een negen en het cijfer ervoor gaat één omlaag. Is dat cijfer ook een nul? Dan wordt dat ook een negen, en leen je van het cijfer daarvoor.",
+   "ouderzin": "Je kind haalt er honderd of duizend af, over een tienduizendtal of duizendtal heen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "erbij gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt erbij gedaan. Minder dan betekent dat er iets afgaat: het getal wordt kleiner.",
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "waarom": "zegt niet wat het kind deed"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twee keer eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Dat is te weinig. Er gaat maar één af op die plek. Heb je bij de nul geleend: de nul een negen gemaakt en het cijfer ervoor één omlaag gezet?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "het getal zelf",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is het getal uit de vraag. Er moet nog iets af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één eraf gehaald",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2 − 1",
+     "tekst": "Je hebt er maar één afgehaald. Kijk naar het getal vooraan in de vraag: zoveel gaat eraf.",
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "waarom": "fixlijst G6 #6: motorregel, één richting per entry (Claudes sleutels waren allemaal getal plus of min één)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij welke plek er één afgaat. Staat daar een nul? Dan leen je van het cijfer ervoor: de nul wordt een negen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "past niet: hier gaat het om erbij of eraf, niet om een maattrap"
+    },
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast' (les G3/G4): de fout-hint zegt wat het kind deed"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M02",
+   "nr": 4,
+   "somtype": "De teller staat op # [ding]. Er komt er één bij. Op welk getal staat de teller nu?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "De teller staat op # [ding]. Er komt er één bij. Op welk getal staat de teller nu?",
+   "hint1": "Er komt er één bij. Welk getal komt direct na dit getal?",
+   "hint2": "Het getal eindigt op negens. Komt er één bij, dan worden die negens nullen en gaat het cijfer ervoor één omhoog.",
+   "ouderzin": "Je kind telt één verder, over een honderdtal of duizendtal heen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "tien erbij",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord + 9",
+     "tekst": "Er komt er maar één bij, geen tien. Tel één verder.",
+     "claudeTekst": "Er komt er maar één bij, geen tien. Tel één verder.",
+     "waarom": "Claude-tekst ok; regel exact"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderd te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is te veel. Er komt er maar één bij: de negens worden nullen en het cijfer ervoor gaat één omhoog.",
+     "claudeTekst": "Als 99 vol is, wordt het 00 en gaat alleen het honderdtal één omhoog.",
+     "waarom": "klopt niet bij 3999 en 8999: daar gaat het duizendtal omhoog"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "terug geteld",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = antwoord − 2",
+     "tekst": "Er komt er één bij, dus je telt verder, niet terug.",
+     "claudeTekst": "Er komt er één bij, dus je telt vooruit, niet terug.",
+     "waarom": "kleine taalfix"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet verder geteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het getal uit de vraag. Er komt er nog één bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel één verder dan het getal in de vraag. De negens aan het eind worden nullen en het cijfer ervoor gaat één omhoog."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M02",
+   "nr": 5,
+   "somtype": "Op het bord staat # [ding]. Hoeveel is de # in dit getal waard?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Op het bord staat # [ding]. Hoeveel is de # in dit getal waard?",
+   "hint1": "Op welke plek staat het cijfer: bij de duizendtallen, de honderdtallen, de tientallen of de eenheden?",
+   "hint2": "Tel hoeveel cijfers er rechts van dat cijfer staan. Zoveel nullen zet je achter het cijfer.",
+   "ouderzin": "Je kind zegt hoeveel een cijfer in een getal tot 10.000 waard is.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "alleen het cijfer",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "regel": "fout = getal2",
+     "tekst": "Dat is alleen het cijfer. Een cijfer is meer waard als het verder naar links staat. Op welke plek staat het?",
+     "claudeTekst": "Een cijfer is meer waard als het verder naar links staat. Op welke plek staat de …?",
+     "waarom": "tekst per item; nu één tekst"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één nul te veel",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "regel": "fout = antwoord × 10",
+     "tekst": "Eén nul te veel. Tel hoeveel cijfers er rechts van het cijfer staan: zoveel nullen krijg je.",
+     "claudeTekst": "Eén nul te veel. Tel de plekken rechts van het cijfer: zoveel nullen krijg je.",
+     "waarom": "'plekken' wordt 'cijfers'"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één nul te weinig",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "regel": "fout = antwoord : 10",
+     "tekst": "Eén nul te weinig. Tel hoeveel cijfers er rechts van het cijfer staan: zoveel nullen krijg je.",
+     "claudeTekst": "Eén nul te weinig. Tel de plekken rechts van het cijfer: zoveel nullen krijg je.",
+     "waarom": "'plekken' wordt 'cijfers'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek op welke plek het cijfer staat. Tel de cijfers rechts ervan: zoveel nullen komen er achter het cijfer."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een cijfer is meer waard als het verder naar links staat. Op welke plek staat de 8?",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Een cijfer is meer waard als het verder naar links staat. Op welke plek staat de 4?",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Een cijfer is meer waard als het verder naar links staat. Op welke plek staat de 6?",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Een cijfer is meer waard als het verder naar links staat. Op welke plek staat de 7?",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Een cijfer is meer waard als het verder naar links staat. Op welke plek staat de 5?",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E01",
+   "nr": 1,
+   "somtype": "Rond # af op duizendtallen.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Rond # af op duizendtallen.",
+   "hint1": "Welke twee duizendtallen liggen vlak bij het getal? Eén ligt eronder en één ligt erboven.",
+   "hint2": "Kijk naar het cijfer van de honderdtallen. Is het 5 of meer, dan rond je af naar het duizendtal erboven. Anders naar het duizendtal eronder.",
+   "ouderzin": "Je kind rondt een getal tot 100.000 af op duizendtallen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet afgerond",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het getal zelf. Rond het nog af op duizendtallen. Kijk naar het cijfer van de honderdtallen.",
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "waarom": "gaat over schatten met twee getallen; hier heeft het kind het getal niet afgerond"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant",
+     "claudeDenkfout": null,
+     "regel": "fout = het andere duizendtal naast getal1",
+     "tekst": "Dat is het duizendtal aan de andere kant van het getal. Kijk naar het cijfer van de honderdtallen. Is het 5 of meer, dan ga je naar het duizendtal vlak erboven. Anders naar het duizendtal vlak eronder.",
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.",
+     "waarom": "fixlijst G6 #1: verkeerde kant en één stap te ver apart (zoals G5 #12)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgerond op honderdtallen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 afgerond op honderdtallen",
+     "tekst": "Je hebt afgerond op honderdtallen. Hier rond je af op duizendtallen. Kijk naar het cijfer van de honderdtallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1000",
+     "tekst": "Je gaat de goede kant op, maar één duizendtal te ver. Kies het duizendtal dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1000",
+     "tekst": "Je gaat de goede kant op, maar één duizendtal te ver. Kies het duizendtal dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2000 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een duizendtal vlak naast het getal: het duizendtal eronder of het duizendtal erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2000 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een duizendtal vlak naast het getal: het duizendtal eronder of het duizendtal erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Je rondt af op duizendtallen: de laatste drie cijfers van het antwoord zijn dus nullen. Zoek de twee duizendtallen vlak onder en vlak boven het getal. Kijk dan naar het cijfer van de honderdtallen. Is het 5 of meer, dan kies je het duizendtal erboven. Anders kies je het duizendtal eronder."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E01",
+   "nr": 2,
+   "somtype": "Rond # af op honderdtallen.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Rond # af op honderdtallen.",
+   "hint1": "Welke twee honderdtallen liggen vlak bij het getal? Eén ligt eronder en één ligt erboven.",
+   "hint2": "Kijk naar het cijfer van de tientallen. Is het 5 of meer, dan rond je af naar het honderdtal erboven. Anders naar het honderdtal eronder.",
+   "ouderzin": "Je kind rondt een getal tot 100.000 af op honderdtallen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet afgerond",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het getal zelf. Rond het nog af op honderdtallen. Kijk naar het cijfer van de tientallen.",
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "waarom": "gaat over schatten met twee getallen; hier heeft het kind het getal niet afgerond"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "regel": "fout = het andere honderdtal naast getal1",
+     "tekst": "Dat is het honderdtal aan de andere kant van het getal. Kijk naar het cijfer van de tientallen. Is het 5 of meer, dan ga je naar het honderdtal vlak erboven. Anders naar het honderdtal vlak eronder.",
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.",
+     "waarom": "G5 #12: verkeerde kant en één stap te ver apart"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgerond op tientallen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 afgerond op tientallen",
+     "tekst": "Je hebt afgerond op tientallen. Hier rond je af op honderdtallen. Kijk naar het cijfer van de tientallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Je gaat de goede kant op, maar één honderdtal te ver. Kies het honderdtal dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Je gaat de goede kant op, maar één honderdtal te ver. Kies het honderdtal dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 200 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een honderdtal vlak naast het getal: het honderdtal eronder of het honderdtal erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 200 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een honderdtal vlak naast het getal: het honderdtal eronder of het honderdtal erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Je rondt af op honderdtallen: de laatste twee cijfers van het antwoord zijn dus nullen. Zoek de twee honderdtallen vlak onder en vlak boven het getal. Kijk dan naar het cijfer van de tientallen. Is het 5 of meer, dan kies je het honderdtal erboven. Anders kies je het honderdtal eronder."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E01",
+   "nr": 4,
+   "somtype": "Rond # af op tienduizendtallen.",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Rond # af op tienduizendtallen.",
+   "hint1": "Welke twee tienduizendtallen liggen vlak bij het getal? Eén ligt eronder en één ligt erboven.",
+   "hint2": "Kijk naar het cijfer van de duizendtallen. Is het 5 of meer, dan rond je af naar het tienduizendtal erboven. Anders naar het tienduizendtal eronder.",
+   "ouderzin": "Je kind rondt een getal tot 100.000 af op tienduizendtallen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet afgerond",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het getal zelf. Rond het nog af op tienduizendtallen. Kijk naar het cijfer van de duizendtallen.",
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "waarom": "gaat over schatten met twee getallen; hier heeft het kind het getal niet afgerond"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant",
+     "claudeDenkfout": null,
+     "regel": "fout = het andere tienduizendtal naast getal1",
+     "tekst": "Dat is het tienduizendtal aan de andere kant van het getal. Kijk naar het cijfer van de duizendtallen. Is het 5 of meer, dan ga je naar het tienduizendtal vlak erboven. Anders naar het tienduizendtal vlak eronder.",
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.",
+     "waarom": "fixlijst G6 #1: verkeerde kant en één stap te ver apart (zoals G5 #12)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgerond op duizendtallen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 afgerond op duizendtallen",
+     "tekst": "Je hebt afgerond op duizendtallen. Hier rond je af op tienduizendtallen. Kijk naar het cijfer van de duizendtallen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10000",
+     "tekst": "Je gaat de goede kant op, maar één tienduizendtal te ver. Kies het tienduizendtal dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10000",
+     "tekst": "Je gaat de goede kant op, maar één tienduizendtal te ver. Kies het tienduizendtal dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 20000 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een tienduizendtal vlak naast het getal: het tienduizendtal eronder of het tienduizendtal erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 20000 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een tienduizendtal vlak naast het getal: het tienduizendtal eronder of het tienduizendtal erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Je rondt af op tienduizendtallen: de laatste vier cijfers van het antwoord zijn dus nullen. Zoek de twee tienduizendtallen vlak onder en vlak boven het getal. Kijk dan naar het cijfer van de duizendtallen. Is het 5 of meer, dan kies je het tienduizendtal erboven. Anders kies je het tienduizendtal eronder."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E01",
+   "nr": 5,
+   "somtype": "In [plek] zijn precies # [ding]. Rond dit aantal af op honderdtallen.",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "In [plek] zijn precies # [ding]. Rond dit aantal af op honderdtallen.",
+   "hint1": "Welke twee honderdtallen liggen vlak bij het getal? Eén ligt eronder en één ligt erboven.",
+   "hint2": "Kijk naar het cijfer van de tientallen. Is het 5 of meer, dan rond je af naar het honderdtal erboven. Anders naar het honderdtal eronder.",
+   "ouderzin": "Je kind rondt een aantal tot 10.000 af op honderdtallen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet afgerond",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het getal zelf. Rond het nog af op honderdtallen. Kijk naar het cijfer van de tientallen.",
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "waarom": "gaat over schatten met twee getallen; hier heeft het kind het getal niet afgerond"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "regel": "fout = het andere honderdtal naast getal1",
+     "tekst": "Dat is het honderdtal aan de andere kant van het getal. Kijk naar het cijfer van de tientallen. Is het 5 of meer, dan ga je naar het honderdtal vlak erboven. Anders naar het honderdtal vlak eronder.",
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.",
+     "waarom": "G5 #12: verkeerde kant en één stap te ver apart"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgerond op tientallen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 afgerond op tientallen",
+     "tekst": "Je hebt afgerond op tientallen. Hier rond je af op honderdtallen. Kijk naar het cijfer van de tientallen."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "afgerond op duizendtallen",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "regel": "fout = getal1 afgerond op duizendtallen",
+     "tekst": "Je hebt afgerond op duizendtallen. Hier rond je af op honderdtallen. Kijk naar het cijfer van de tientallen.",
+     "claudeTekst": "Je hebt op de verkeerde plek afgerond. Het moet op honderdtallen.",
+     "waarom": "zegt wat het kind deed; motorregel (S10/#151, les 10)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Je gaat de goede kant op, maar één honderdtal te ver. Kies het honderdtal dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 100",
+     "tekst": "Je gaat de goede kant op, maar één honderdtal te ver. Kies het honderdtal dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 200 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een honderdtal vlak naast het getal: het honderdtal eronder of het honderdtal erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 200 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een honderdtal vlak naast het getal: het honderdtal eronder of het honderdtal erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Je rondt af op honderdtallen: de laatste twee cijfers van het antwoord zijn dus nullen. Zoek de twee honderdtallen vlak onder en vlak boven het getal. Kijk dan naar het cijfer van de tientallen. Is het 5 of meer, dan kies je het honderdtal erboven. Anders kies je het honderdtal eronder."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk naar wat er na de honderdtallen komt. Is dat minder dan de helft van 100, dan rond je naar beneden af. Anders naar boven.",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E01",
+   "nr": 7,
+   "somtype": "In [plek] zijn precies # [ding]. Rond dit aantal af op duizendtallen.",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "In [plek] zijn precies # [ding]. Rond dit aantal af op duizendtallen.",
+   "hint1": "Welke twee duizendtallen liggen vlak bij het getal? Eén ligt eronder en één ligt erboven.",
+   "hint2": "Kijk naar het cijfer van de honderdtallen. Is het 5 of meer, dan rond je af naar het duizendtal erboven. Anders naar het duizendtal eronder.",
+   "ouderzin": "Je kind rondt een aantal tot 10.000 af op duizendtallen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet afgerond",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het getal zelf. Rond het nog af op duizendtallen. Kijk naar het cijfer van de honderdtallen.",
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "waarom": "gaat over schatten met twee getallen; hier heeft het kind het getal niet afgerond"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "regel": "fout = het andere duizendtal naast getal1",
+     "tekst": "Dat is het duizendtal aan de andere kant van het getal. Kijk naar het cijfer van de honderdtallen. Is het 5 of meer, dan ga je naar het duizendtal vlak erboven. Anders naar het duizendtal vlak eronder.",
+     "claudeTekst": "Kijk naar wat er na de duizendtallen komt. Is dat minder dan de helft …",
+     "waarom": "zegt niet wat het kind deed; S10: motorregel (#151)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "afgerond op honderdtallen",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "regel": "fout = getal1 afgerond op honderdtallen",
+     "tekst": "Je hebt afgerond op honderdtallen. Hier rond je af op duizendtallen. Kijk naar het cijfer van de honderdtallen.",
+     "claudeTekst": "Je hebt op de verkeerde plek afgerond. Het moet op duizendtallen.",
+     "waarom": "zegt wat het kind deed; motorregel (S10/#151, les 10)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1000",
+     "tekst": "Je gaat de goede kant op, maar één duizendtal te ver. Kies het duizendtal dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1000",
+     "tekst": "Je gaat de goede kant op, maar één duizendtal te ver. Kies het duizendtal dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2000 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een duizendtal vlak naast het getal: het duizendtal eronder of het duizendtal erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2000 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een duizendtal vlak naast het getal: het duizendtal eronder of het duizendtal erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Je rondt af op duizendtallen: de laatste drie cijfers van het antwoord zijn dus nullen. Zoek de twee duizendtallen vlak onder en vlak boven het getal. Kijk dan naar het cijfer van de honderdtallen. Is het 5 of meer, dan kies je het duizendtal erboven. Anders kies je het duizendtal eronder."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk naar wat er na de duizendtallen komt. Is dat minder dan de helft van 1000, dan rond je naar beneden af. Anders naar boven.",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E01",
+   "nr": 8,
+   "somtype": "In [plek] zijn precies # [ding]. Rond dit aantal af op tientallen.",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "In [plek] zijn precies # [ding]. Rond dit aantal af op tientallen.",
+   "hint1": "Welke twee tientallen liggen vlak bij het getal? Eén ligt eronder en één ligt erboven.",
+   "hint2": "Kijk naar het cijfer van de eenheden. Is het 5 of meer, dan rond je af naar het tiental erboven. Anders naar het tiental eronder.",
+   "ouderzin": "Je kind rondt een aantal tot 10.000 af op tientallen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet afgerond",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het getal zelf. Rond het nog af op tientallen. Kijk naar het cijfer van de eenheden.",
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.",
+     "waarom": "gaat over schatten met twee getallen; hier heeft het kind het getal niet afgerond"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "regel": "fout = het andere tiental naast getal1",
+     "tekst": "Dat is het tiental aan de andere kant van het getal. Kijk naar het cijfer van de eenheden. Is het 5 of meer, dan ga je naar het tiental vlak erboven. Anders naar het tiental vlak eronder.",
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.",
+     "waarom": "G5 #12: verkeerde kant en één stap te ver apart"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "afgerond op honderdtallen",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "regel": "fout = getal1 afgerond op honderdtallen",
+     "tekst": "Je hebt afgerond op honderdtallen. Hier rond je af op tientallen. Kijk naar het cijfer van de eenheden.",
+     "claudeTekst": "Je hebt op de verkeerde plek afgerond. Het moet op tientallen.",
+     "waarom": "zegt wat het kind deed; motorregel (S10/#151, les 10)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Je gaat de goede kant op, maar één tiental te ver. Kies het tiental dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stap te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Je gaat de goede kant op, maar één tiental te ver. Kies het tiental dat vlak naast het getal ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omhoog)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 20 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een tiental vlak naast het getal: het tiental eronder of het tiental erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te ver (omlaag)",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 20 of meer",
+     "tekst": "Dat ligt te ver weg. Kies een tiental vlak naast het getal: het tiental eronder of het tiental erboven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Je rondt af op tientallen: het laatste cijfer van het antwoord is dus een nul. Zoek de twee tientallen vlak onder en vlak boven het getal. Kijk dan naar het cijfer van de eenheden. Is het 5 of meer, dan kies je het tiental erboven. Anders kies je het tiental eronder."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk naar wat er na de tientallen komt. Is dat minder dan de helft van 10, dan rond je naar beneden af. Anders naar boven.",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E01",
+   "nr": 3,
+   "somtype": "[stip op getallenlijn zetten] Zet # op de getallenlijn van # tot #.",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[stip op getallenlijn zetten] Zet # op de getallenlijn van # tot #.",
+   "hint1": "Tussen welke twee tienduizendtallen ligt het getal? Zoek die eerst op de lijn.",
+   "hint2": "Tel dan vanaf het tienduizendtal eronder verder in stappen van duizend.",
+   "ouderzin": "Je kind zet een getal tot 100.000 op een getallenlijn met tienduizendtallen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tienduizendtal te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10000",
+     "tekst": "Dat is één tienduizendtal te ver. Het cijfer vooraan zegt bij welk tienduizendtal je begint."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tienduizendtal te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10000",
+     "tekst": "Dat is één tienduizendtal te weinig. Het cijfer vooraan zegt bij welk tienduizendtal je begint."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "stap te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1000",
+     "tekst": "Bijna! Dat is één stap van duizend te ver. Tel de stappen na het tienduizendtal nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "stap te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1000",
+     "tekst": "Bijna! Dat is één stap van duizend te weinig. Tel de stappen na het tienduizendtal nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek eerst het tienduizendtal van het getal: het cijfer vooraan. Tel dan verder in stappen van duizend tot je bij het getal bent."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E01",
+   "nr": 6,
+   "somtype": "In [plek] liggen # [ding]. In [plek] liggen er #. Typ het grootste getal.",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. In [plek] liggen er #. Typ het grootste getal.",
+   "hint1": "Vergelijk de getallen van links naar rechts. Begin bij de duizendtallen.",
+   "hint2": "Zijn de duizendtallen gelijk? Kijk dan naar de honderdtallen. Zijn die ook gelijk? Kijk dan naar de tientallen. Het eerste cijfer dat verschilt, beslist.",
+   "ouderzin": "Je kind zegt welk van twee getallen tot 10.000 het grootst is.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "het kleinste getal",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat is het kleinste getal. Je zoekt het grootste. Vergelijk van links naar rechts: eerst de duizendtallen, dan de honderdtallen.",
+     "claudeTekst": "Vergelijk van links naar rechts: eerst de duizendtallen, dan de honderdtallen, dan de tientallen.",
+     "waarom": "zegt niet wat het kind deed"
+    },
+    {
+     "bron": "claude",
+     "soort": "cijfers verwisseld",
+     "claudeDenkfout": "cijfers-verwisseld",
+     "regel": "Claudes sleutel: cijfers-verwisseld",
+     "tekst": "Je hebt de goede cijfers, maar in de verkeerde volgorde. Typ het getal precies zoals het er staat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Typ een van de twee getallen uit de vraag: het grootste. Vergelijk ze van links naar rechts, eerst de duizendtallen."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M03",
+   "nr": 1,
+   "somtype": "[stip op getallenlijn zetten] Zet # op de lijn van # tot #.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[stip op getallenlijn zetten] Zet # op de lijn van # tot #.",
+   "hint1": "Zoek eerst het hele getal op de lijn. Bij een kommagetal is dat het cijfer vóór de komma.",
+   "hint2": "Staat er een komma? Het cijfer achter de komma zegt hoeveel tienden je nog verder gaat. Tussen twee hele getallen zitten tien tienden.",
+   "ouderzin": "Je kind zet een kommagetal met één cijfer achter de komma op een getallenlijn.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alleen het hele getal",
+     "claudeDenkfout": null,
+     "regel": "fout = het hele getal van het kommagetal",
+     "tekst": "Dat is alleen het hele getal. Het cijfer achter de komma zegt hoeveel tienden je nog verder gaat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "cijfer achter de komma als heel getal",
+     "claudeDenkfout": null,
+     "regel": "fout = de tienden als heel getal",
+     "tekst": "Dat is het cijfer achter de komma, als heel getal. Zoek eerst het hele getal op de lijn: het cijfer vóór de komma. Ga dan zoveel tienden verder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "cijfers omgedraaid",
+     "claudeDenkfout": null,
+     "regel": "fout = de cijfers om de komma omgedraaid",
+     "tekst": "Je hebt de cijfers omgedraaid. Het cijfer vóór de komma is het hele getal. Het cijfer achter de komma zegt hoeveel tienden je verder gaat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één tiende te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 0,1",
+     "tekst": "Bijna! Je bent één tiende te ver. Zet je stip een klein stukje terug. Tussen twee hele getallen zitten tien tienden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één tiende te kort",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 0,1",
+     "tekst": "Bijna! Je bent één tiende te kort. Zet je stip een klein stukje verder. Tussen twee hele getallen zitten tien tienden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Je stip staat aan het begin of aan het eind van de lijn. Zoek eerst het hele getal op de lijn. Staat er een komma? Ga dan zoveel tienden verder als het cijfer achter de komma zegt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek eerst het hele getal op de lijn. Staat er een komma? Ga dan zoveel tienden verder als het cijfer achter de komma zegt."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M03",
+   "nr": 2,
+   "somtype": "Een [ding] is #/# meter lang. Schrijf dat als kommagetal.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Een [ding] is #/# meter lang. Schrijf dat als kommagetal.",
+   "hint1": "Een meter is 100 centimeter. Hoeveel centimeter is dit stuk van een meter? Staat er boven de streep meer dan 1? Reken dan eerst uit hoeveel centimeter één gelijk deel is.",
+   "hint2": "Schrijf het dan als kommagetal in meters. Het eerste cijfer achter de komma telt de stukken van tien centimeter, het tweede cijfer de losse centimeters. Zo is 68 centimeter 0,68 meter.",
+   "ouderzin": "Je kind schrijft een breuk van een meter als kommagetal.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "niet zo omgezet",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "tekst": "Je hebt het getal boven de streep achter de komma gezet. Zo schrijf je die breuk niet als kommagetal. Reken eerst uit hoeveel centimeter het is: een meter is 100 centimeter.",
+     "claudeTekst": "Zet niet zomaar de teller achter de komma. … is … gedeeld door ….",
+     "waarom": "tekst per item; bij 3/10 en 1/10 klopt 'de teller achter de komma' niet (fixlijst G6 #3)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "een meter of meer",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "regel": "Claudes sleutel: omgekeerd-gedeeld",
+     "tekst": "Dat is een hele meter of meer. Maar het stuk is korter dan een meter: het getal boven de streep is kleiner dan het getal eronder.",
+     "claudeTekst": "Teller gedeeld door noemer, niet andersom.",
+     "waarom": "zegt niet wat het kind ziet; 'gedeeld door' is hier niet de route (centimeters)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken uit hoeveel centimeter het stuk is: een meter is 100 centimeter. Schrijf dat dan als deel van een meter, met een komma."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Zet niet zomaar de teller achter de komma. 1/2 is 1 gedeeld door 2.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Zet niet zomaar de teller achter de komma. 3/10 is 3 gedeeld door 10.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Zet niet zomaar de teller achter de komma. 1/5 is 1 gedeeld door 5.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Zet niet zomaar de teller achter de komma. 3/4 is 3 gedeeld door 4.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Zet niet zomaar de teller achter de komma. 2/5 is 2 gedeeld door 5.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Zet niet zomaar de teller achter de komma. 1/10 is 1 gedeeld door 10.",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

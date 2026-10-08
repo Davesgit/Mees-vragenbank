@@ -1,0 +1,4193 @@
+{
+ "schema": "leermees-vragenbank-export/v1 + merge/controle/licentie (claude-merge g8)",
+ "bron": {
+  "licentie": "CC BY-SA 4.0",
+  "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+  "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+  "bron": "https://github.com/Davesgit/leermees-vragenbank",
+  "commit": "7da3257a196386c700310006da60a385fbbe114f"
+ },
+ "gegenereerdOp": "2026-10-01T22:54:38+0200",
+ "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
+ "doelId": "G8-MEET-E06",
+ "bordtitel": "Tijdzones, tijdseenheden en de tijdbalk",
+ "aantal": 32,
+ "items": [
+  {
+   "id": "G8-MEET-E06-claude-bank-001",
+   "nr": "001",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 6:15 uit de dierentuin. De vlucht duurt 5 uur en 45 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "12:00",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "11:00",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "11:15",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "11:00 → Tel de uren nog eens: je zit er een uur naast. · 11:15 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:053ba259-8c69-4eba-a2ca-22059b64cc75",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "6:15 + 5:45",
+    "claudeUitleg": "6:15 + 5 uur = 11:15, + 45 minuten = 12:00.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "11:00",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "11:15",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "11:00",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "11:15",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "053ba259-8c69-4eba-a2ca-22059b64cc75",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "12:00",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-002",
+   "nr": "002",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 9:30 uit het bos. De vlucht duurt 10 uur en 45 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "20:15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "19:15",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "19:30",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "19:15 → Tel de uren nog eens: je zit er een uur naast. · 19:30 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:0f877317-481e-4e3c-86ba-84b6f42a9114",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "9:30 + 10:45",
+    "claudeUitleg": "9:30 + 10 uur = 19:30, + 45 minuten = 20:15.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "19:15",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "19:30",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "19:15",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "19:30",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "0f877317-481e-4e3c-86ba-84b6f42a9114",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "20:15",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-003",
+   "nr": "003",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 13:45 uit het stadion. De vlucht duurt 9 uur en 30 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "23:15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "22:15",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "22:45",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "22:15 → Tel de uren nog eens: je zit er een uur naast. · 22:45 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:2858151e-804b-4fcc-86be-ec234f9c3d79",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "13:45 + 9:30",
+    "claudeUitleg": "13:45 + 9 uur = 22:45, + 30 minuten = 23:15.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "22:15",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "22:45",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "22:15",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "22:45",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "2858151e-804b-4fcc-86be-ec234f9c3d79",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "23:15",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-004",
+   "nr": "004",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 9:00 uit de kleedkamer. De vlucht duurt 9 uur en 15 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "18:15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "17:15",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "18:00",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "17:15 → Tel de uren nog eens: je zit er een uur naast. · 18:00 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:5e42fcd6-9f7f-4bd4-bed5-1aefff5e87ab",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "9:00 + 9:15",
+    "claudeUitleg": "9:00 + 9 uur = 18:00, + 15 minuten = 18:15.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "17:15",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "18:00",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "17:15",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "18:00",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "5e42fcd6-9f7f-4bd4-bed5-1aefff5e87ab",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "18:15",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-005",
+   "nr": "005",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 12:45 uit de dierentuin. De vlucht duurt 3 uur en 30 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "16:15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "15:15",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "15:45",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "15:15 → Tel de uren nog eens: je zit er een uur naast. · 15:45 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:6b73ae62-8fec-4a53-988b-83579cdcad35",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "12:45 + 3:30",
+    "claudeUitleg": "12:45 + 3 uur = 15:45, + 30 minuten = 16:15.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "15:15",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "15:45",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "15:15",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "15:45",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "6b73ae62-8fec-4a53-988b-83579cdcad35",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "16:15",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-006",
+   "nr": "006",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 12:45 uit de kantine. De vlucht duurt 5 uur en 15 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "18:00",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "17:00",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "17:45",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "17:00 → Tel de uren nog eens: je zit er een uur naast. · 17:45 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:70f15618-52ae-45c0-a30f-e90e2066a3cb",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "12:45 + 5:15",
+    "claudeUitleg": "12:45 + 5 uur = 17:45, + 15 minuten = 18:00.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "17:00",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "17:45",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "17:00",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "17:45",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "70f15618-52ae-45c0-a30f-e90e2066a3cb",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "18:00",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-007",
+   "nr": "007",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 8:15 uit het museum. De vlucht duurt 5 uur en 45 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "14:00",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "13:00",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "13:15",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "13:00 → Tel de uren nog eens: je zit er een uur naast. · 13:15 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:79e692e1-471c-44c5-9bb0-6bab75003aac",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "8:15 + 5:45",
+    "claudeUitleg": "8:15 + 5 uur = 13:15, + 45 minuten = 14:00.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "13:00",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "13:15",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "13:00",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "13:15",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "79e692e1-471c-44c5-9bb0-6bab75003aac",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "14:00",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-008",
+   "nr": "008",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 9:30 uit de dierentuin. De vlucht duurt 8 uur en 15 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "17:45",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "16:45",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "17:30",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "16:45 → Tel de uren nog eens: je zit er een uur naast. · 17:30 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:7ea82818-af0f-4593-bb11-d4efe2874427",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "9:30 + 8:15",
+    "claudeUitleg": "9:30 + 8 uur = 17:30, + 15 minuten = 17:45.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "16:45",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "17:30",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "16:45",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "17:30",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "7ea82818-af0f-4593-bb11-d4efe2874427",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "17:45",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-009",
+   "nr": "009",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 7:45 uit de vallei. De vlucht duurt 11 uur en 45 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "19:30",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "18:30",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "18:45",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "18:30 → Tel de uren nog eens: je zit er een uur naast. · 18:45 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:ce935a79-38b5-4f83-a419-792e0be9410d",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "7:45 + 11:45",
+    "claudeUitleg": "7:45 + 11 uur = 18:45, + 45 minuten = 19:30.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "18:30",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "18:45",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "18:30",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "18:45",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "ce935a79-38b5-4f83-a419-792e0be9410d",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "19:30",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-010",
+   "nr": "010",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 10:00 uit de vallei. De vlucht duurt 6 uur en 15 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "16:15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "15:15",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "16:00",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "15:15 → Tel de uren nog eens: je zit er een uur naast. · 16:00 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:d40bec10-9084-465d-9f82-79910a4da445",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "10:00 + 6:15",
+    "claudeUitleg": "10:00 + 6 uur = 16:00, + 15 minuten = 16:15.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "15:15",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "16:00",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "15:15",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "16:00",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "d40bec10-9084-465d-9f82-79910a4da445",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "16:15",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-011",
+   "nr": "011",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 7:45 uit het museum. De vlucht duurt 3 uur en 15 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "11:00",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "10:00",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "10:45",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "10:00 → Tel de uren nog eens: je zit er een uur naast. · 10:45 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:d85f2f6c-2697-4161-a2e4-e28928f61da4",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "7:45 + 3:15",
+    "claudeUitleg": "7:45 + 3 uur = 10:45, + 15 minuten = 11:00.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "10:00",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "10:45",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "10:00",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "10:45",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "d85f2f6c-2697-4161-a2e4-e28928f61da4",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "11:00",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-012",
+   "nr": "012",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 9:30 uit de kantine. De vlucht duurt 8 uur en 45 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "18:15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "17:15",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "17:30",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "17:15 → Tel de uren nog eens: je zit er een uur naast. · 17:30 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:fd447548-7491-4dd5-a12e-d91f1dec93c6",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "9:30 + 8:45",
+    "claudeUitleg": "9:30 + 8 uur = 17:30, + 45 minuten = 18:15.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "17:15",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "17:30",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "17:15",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "17:30",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "fd447548-7491-4dd5-a12e-d91f1dec93c6",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "18:15",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-013",
+   "nr": "013",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 11:45 uit de dierentuin. De vlucht duurt 8 uur en 30 minuten. Op de plek van aankomst is het 1 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "21:15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "20:15",
+     "uitleg": "Dat is de tijd thuis. Daar is het 1 uur later."
+    },
+    {
+     "stap": null,
+     "fout": "19:15",
+     "uitleg": "Later betekent erbij, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "20:15 → Dat is de tijd thuis. Daar is het 1 uur later. · 19:15 → Later betekent erbij, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:17176eae-3bd9-41de-b204-9640ef9cb111",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "11:45 + 8:30 + 1 uur",
+    "claudeUitleg": "Thuis is het bij de landing 20:15.\nDaar is het 1 uur later: 21:15.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "20:15",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "19:15",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "20:15",
+      "uitleg": "Dat is de tijd thuis. Daar is het 1 uur later."
+     },
+     {
+      "stap": null,
+      "fout": "19:15",
+      "uitleg": "Later betekent erbij, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "17176eae-3bd9-41de-b204-9640ef9cb111",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "21:15",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-014",
+   "nr": "014",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 10:00 uit het nest. De vlucht duurt 10 uur en 30 minuten. Op de plek van aankomst is het 1 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "21:30",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "20:30",
+     "uitleg": "Dat is de tijd thuis. Daar is het 1 uur later."
+    },
+    {
+     "stap": null,
+     "fout": "19:30",
+     "uitleg": "Later betekent erbij, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "20:30 → Dat is de tijd thuis. Daar is het 1 uur later. · 19:30 → Later betekent erbij, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:47fc68e6-3f43-44fa-9e62-00369ef17083",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "10:00 + 10:30 + 1 uur",
+    "claudeUitleg": "Thuis is het bij de landing 20:30.\nDaar is het 1 uur later: 21:30.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "20:30",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "19:30",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "20:30",
+      "uitleg": "Dat is de tijd thuis. Daar is het 1 uur later."
+     },
+     {
+      "stap": null,
+      "fout": "19:30",
+      "uitleg": "Later betekent erbij, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "47fc68e6-3f43-44fa-9e62-00369ef17083",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "21:30",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-015",
+   "nr": "015",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 11:00 uit de kleedkamer. De vlucht duurt 5 uur en 30 minuten. Op de plek van aankomst is het 6 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "22:30",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "16:30",
+     "uitleg": "Dat is de tijd thuis. Daar is het 6 uur later."
+    },
+    {
+     "stap": null,
+     "fout": "10:30",
+     "uitleg": "Later betekent erbij, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "16:30 → Dat is de tijd thuis. Daar is het 6 uur later. · 10:30 → Later betekent erbij, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:78096f07-10d4-4a6d-99aa-0417b7f4db92",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "11:00 + 5:30 + 6 uur",
+    "claudeUitleg": "Thuis is het bij de landing 16:30.\nDaar is het 6 uur later: 22:30.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "16:30",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "10:30",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "16:30",
+      "uitleg": "Dat is de tijd thuis. Daar is het 6 uur later."
+     },
+     {
+      "stap": null,
+      "fout": "10:30",
+      "uitleg": "Later betekent erbij, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "78096f07-10d4-4a6d-99aa-0417b7f4db92",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "22:30",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-016",
+   "nr": "016",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 7:15 uit het veld. De vlucht duurt 10 uur en 45 minuten. Op de plek van aankomst is het 2 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "20:00",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "18:00",
+     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur later."
+    },
+    {
+     "stap": null,
+     "fout": "16:00",
+     "uitleg": "Later betekent erbij, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "18:00 → Dat is de tijd thuis. Daar is het 2 uur later. · 16:00 → Later betekent erbij, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:7b5e6a0e-bcc6-4690-b79f-c8e7ae607b27",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "7:15 + 10:45 + 2 uur",
+    "claudeUitleg": "Thuis is het bij de landing 18:00.\nDaar is het 2 uur later: 20:00.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "18:00",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "16:00",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "18:00",
+      "uitleg": "Dat is de tijd thuis. Daar is het 2 uur later."
+     },
+     {
+      "stap": null,
+      "fout": "16:00",
+      "uitleg": "Later betekent erbij, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "7b5e6a0e-bcc6-4690-b79f-c8e7ae607b27",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "20:00",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-017",
+   "nr": "017",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 9:00 uit de kantine. De vlucht duurt 8 uur en 45 minuten. Op de plek van aankomst is het 2 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "19:45",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "17:45",
+     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur later."
+    },
+    {
+     "stap": null,
+     "fout": "15:45",
+     "uitleg": "Later betekent erbij, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "17:45 → Dat is de tijd thuis. Daar is het 2 uur later. · 15:45 → Later betekent erbij, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:85f77232-a1fe-4667-be43-989986d151cd",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "9:00 + 8:45 + 2 uur",
+    "claudeUitleg": "Thuis is het bij de landing 17:45.\nDaar is het 2 uur later: 19:45.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "17:45",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "15:45",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "17:45",
+      "uitleg": "Dat is de tijd thuis. Daar is het 2 uur later."
+     },
+     {
+      "stap": null,
+      "fout": "15:45",
+      "uitleg": "Later betekent erbij, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "85f77232-a1fe-4667-be43-989986d151cd",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "19:45",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-018",
+   "nr": "018",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 9:15 uit het bos. De vlucht duurt 11 uur en 45 minuten. Op de plek van aankomst is het 2 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "23:00",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "21:00",
+     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur later."
+    },
+    {
+     "stap": null,
+     "fout": "19:00",
+     "uitleg": "Later betekent erbij, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "21:00 → Dat is de tijd thuis. Daar is het 2 uur later. · 19:00 → Later betekent erbij, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:882b78d8-1576-475d-a8e6-7e9d7e0267ab",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "9:15 + 11:45 + 2 uur",
+    "claudeUitleg": "Thuis is het bij de landing 21:00.\nDaar is het 2 uur later: 23:00.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "21:00",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "19:00",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "21:00",
+      "uitleg": "Dat is de tijd thuis. Daar is het 2 uur later."
+     },
+     {
+      "stap": null,
+      "fout": "19:00",
+      "uitleg": "Later betekent erbij, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "882b78d8-1576-475d-a8e6-7e9d7e0267ab",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "23:00",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-019",
+   "nr": "019",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 6:45 uit het stadion. De vlucht duurt 10 uur en 30 minuten. Op de plek van aankomst is het 2 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "15:15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "17:15",
+     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur vroeger."
+    },
+    {
+     "stap": null,
+     "fout": "19:15",
+     "uitleg": "Vroeger betekent eraf, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "17:15 → Dat is de tijd thuis. Daar is het 2 uur vroeger. · 19:15 → Vroeger betekent eraf, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:4fc42d9c-c4e9-4312-a3ea-06fc60ed5e1b",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "6:45 + 10:30 − 2 uur",
+    "claudeUitleg": "Thuis is het bij de landing 17:15.\nDaar is het 2 uur vroeger: 15:15.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "17:15",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "19:15",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "17:15",
+      "uitleg": "Dat is de tijd thuis. Daar is het 2 uur vroeger."
+     },
+     {
+      "stap": null,
+      "fout": "19:15",
+      "uitleg": "Vroeger betekent eraf, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "4fc42d9c-c4e9-4312-a3ea-06fc60ed5e1b",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 3,
+    "somtypeNrOrigineel": 3,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "15:15",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-020",
+   "nr": "020",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 11:45 uit de schuur. De vlucht duurt 11 uur en 15 minuten. Op de plek van aankomst is het 2 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "21:00",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "23:00",
+     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur vroeger."
+    },
+    {
+     "stap": null,
+     "fout": "1:00",
+     "uitleg": "Vroeger betekent eraf, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "23:00 → Dat is de tijd thuis. Daar is het 2 uur vroeger. · 1:00 → Vroeger betekent eraf, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:71eb4182-0be8-4bd7-9731-521c463cf0f4",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "11:45 + 11:15 − 2 uur",
+    "claudeUitleg": "Thuis is het bij de landing 23:00.\nDaar is het 2 uur vroeger: 21:00.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "23:00",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "1:00",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "23:00",
+      "uitleg": "Dat is de tijd thuis. Daar is het 2 uur vroeger."
+     },
+     {
+      "stap": null,
+      "fout": "1:00",
+      "uitleg": "Vroeger betekent eraf, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "71eb4182-0be8-4bd7-9731-521c463cf0f4",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 3,
+    "somtypeNrOrigineel": 3,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "21:00",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-021",
+   "nr": "021",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 6:30 uit het bos. De vlucht duurt 6 uur en 45 minuten. Op de plek van aankomst is het 5 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "8:15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "13:15",
+     "uitleg": "Dat is de tijd thuis. Daar is het 5 uur vroeger."
+    },
+    {
+     "stap": null,
+     "fout": "18:15",
+     "uitleg": "Vroeger betekent eraf, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "13:15 → Dat is de tijd thuis. Daar is het 5 uur vroeger. · 18:15 → Vroeger betekent eraf, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:857b4d9e-9f65-433e-a117-1dc64eef34e2",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "6:30 + 6:45 − 5 uur",
+    "claudeUitleg": "Thuis is het bij de landing 13:15.\nDaar is het 5 uur vroeger: 8:15.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "13:15",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "18:15",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "13:15",
+      "uitleg": "Dat is de tijd thuis. Daar is het 5 uur vroeger."
+     },
+     {
+      "stap": null,
+      "fout": "18:15",
+      "uitleg": "Vroeger betekent eraf, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "857b4d9e-9f65-433e-a117-1dc64eef34e2",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 3,
+    "somtypeNrOrigineel": 3,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "8:15",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-022",
+   "nr": "022",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 9:00 uit het museum. De vlucht duurt 6 uur en 30 minuten. Op de plek van aankomst is het 5 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "10:30",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "15:30",
+     "uitleg": "Dat is de tijd thuis. Daar is het 5 uur vroeger."
+    },
+    {
+     "stap": null,
+     "fout": "20:30",
+     "uitleg": "Vroeger betekent eraf, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "15:30 → Dat is de tijd thuis. Daar is het 5 uur vroeger. · 20:30 → Vroeger betekent eraf, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:a08132a9-8abe-4d87-814e-f897d03e6647",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "9:00 + 6:30 − 5 uur",
+    "claudeUitleg": "Thuis is het bij de landing 15:30.\nDaar is het 5 uur vroeger: 10:30.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "15:30",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "20:30",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "15:30",
+      "uitleg": "Dat is de tijd thuis. Daar is het 5 uur vroeger."
+     },
+     {
+      "stap": null,
+      "fout": "20:30",
+      "uitleg": "Vroeger betekent eraf, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "a08132a9-8abe-4d87-814e-f897d03e6647",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 3,
+    "somtypeNrOrigineel": 3,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "10:30",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-023",
+   "nr": "023",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 13:45 uit het nest. De vlucht duurt 4 uur. Op de plek van aankomst is het 8 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "1:45",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "17:45",
+     "uitleg": "Dat is de tijd thuis. Daar is het 8 uur later."
+    },
+    {
+     "stap": null,
+     "fout": "9:45",
+     "uitleg": "Later betekent erbij, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "17:45 → Dat is de tijd thuis. Daar is het 8 uur later. · 9:45 → Later betekent erbij, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:ff798e6c-9a8e-413f-8252-e3063e7514c5",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "13:45 + 4:00 + 8 uur",
+    "claudeUitleg": "Thuis is het bij de landing 17:45.\nDaar is het 8 uur later: 1:45.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "17:45",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "9:45",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "17:45",
+      "uitleg": "Dat is de tijd thuis. Daar is het 8 uur later."
+     },
+     {
+      "stap": null,
+      "fout": "9:45",
+      "uitleg": "Later betekent erbij, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "ff798e6c-9a8e-413f-8252-e3063e7514c5",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 5,
+    "somtypeNrOrigineel": 5,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "1:45",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-024",
+   "nr": "024",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 9:45 uit het museum. De vlucht duurt 8 uur. Op de plek van aankomst is het 6 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "11:45",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "17:45",
+     "uitleg": "Dat is de tijd thuis. Daar is het 6 uur vroeger."
+    },
+    {
+     "stap": null,
+     "fout": "23:45",
+     "uitleg": "Vroeger betekent eraf, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "17:45 → Dat is de tijd thuis. Daar is het 6 uur vroeger. · 23:45 → Vroeger betekent eraf, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:5905a374-0fee-43d1-a313-52bfcc1e6653",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "9:45 + 8:00 − 6 uur",
+    "claudeUitleg": "Thuis is het bij de landing 17:45.\nDaar is het 6 uur vroeger: 11:45.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "17:45",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "23:45",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "17:45",
+      "uitleg": "Dat is de tijd thuis. Daar is het 6 uur vroeger."
+     },
+     {
+      "stap": null,
+      "fout": "23:45",
+      "uitleg": "Vroeger betekent eraf, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "5905a374-0fee-43d1-a313-52bfcc1e6653",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 6,
+    "somtypeNrOrigineel": 6,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit [plek]. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "11:45",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-025",
+   "nr": "025",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 9:30 uit de klas. De vlucht duurt 7 uur en 30 minuten. Op de plek van aankomst is het 2 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "15:00",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "17:00",
+     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur vroeger."
+    },
+    {
+     "stap": null,
+     "fout": "19:00",
+     "uitleg": "Vroeger betekent eraf, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "17:00 → Dat is de tijd thuis. Daar is het 2 uur vroeger. · 19:00 → Vroeger betekent eraf, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:a53c67ed-22dc-44fa-a037-0c5e42eaf15d",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "9:30 + 7:30 − 2 uur",
+    "claudeUitleg": "Thuis is het bij de landing 17:00.\nDaar is het 2 uur vroeger: 15:00.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "17:00",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "19:00",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "17:00",
+      "uitleg": "Dat is de tijd thuis. Daar is het 2 uur vroeger."
+     },
+     {
+      "stap": null,
+      "fout": "19:00",
+      "uitleg": "Vroeger betekent eraf, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "a53c67ed-22dc-44fa-a037-0c5e42eaf15d",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "W1 moeilijk woord vervangen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 7,
+    "somtypeNrOrigineel": 7,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "15:00",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-026",
+   "nr": "026",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 10:00 uit de klas. De vlucht duurt 2 uur. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "12:00",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "11:00",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "11:45",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "11:00 → Tel de uren nog eens: je zit er een uur naast. · 11:45 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:660ef0c9-68b3-41ac-b01e-bda521513541",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "10:00 + 2:00",
+    "claudeUitleg": "10:00 + 2 uur = 12:00.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "11:00",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "11:45",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "11:00",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "11:45",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "660ef0c9-68b3-41ac-b01e-bda521513541",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "W1 moeilijk woord vervangen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 8,
+    "somtypeNrOrigineel": 8,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "12:00",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-027",
+   "nr": "027",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 11:45 uit de klas. De vlucht duurt 3 uur. Op de plek van aankomst is het 2 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "12:45",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "14:45",
+     "uitleg": "Dat is de tijd thuis. Daar is het 2 uur vroeger."
+    },
+    {
+     "stap": null,
+     "fout": "16:45",
+     "uitleg": "Vroeger betekent eraf, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "14:45 → Dat is de tijd thuis. Daar is het 2 uur vroeger. · 16:45 → Vroeger betekent eraf, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:e4aa86a1-9b48-4340-82e6-b4af448ed85d",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "11:45 + 3:00 − 2 uur",
+    "claudeUitleg": "Thuis is het bij de landing 14:45.\nDaar is het 2 uur vroeger: 12:45.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "14:45",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "16:45",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "14:45",
+      "uitleg": "Dat is de tijd thuis. Daar is het 2 uur vroeger."
+     },
+     {
+      "stap": null,
+      "fout": "16:45",
+      "uitleg": "Vroeger betekent eraf, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "e4aa86a1-9b48-4340-82e6-b4af448ed85d",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "W1 moeilijk woord vervangen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 9,
+    "somtypeNrOrigineel": 9,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de klas. De vlucht duurt # uur. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "12:45",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-028",
+   "nr": "028",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 7:30 uit de school. De vlucht duurt 11 uur en 45 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "19:15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "18:15",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "18:30",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "18:15 → Tel de uren nog eens: je zit er een uur naast. · 18:30 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:40197a9e-7419-4ac1-995d-acd10e2bcb95",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "7:30 + 11:45",
+    "claudeUitleg": "7:30 + 11 uur = 18:30, + 45 minuten = 19:15.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "18:15",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "18:30",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "18:15",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "18:30",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "40197a9e-7419-4ac1-995d-acd10e2bcb95",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "W1 moeilijk woord vervangen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 4,
+    "somtypeNrOrigineel": 4,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "19:15",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-029",
+   "nr": "029",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 7:15 uit de school. De vlucht duurt 7 uur en 45 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "15:00",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "14:00",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "14:15",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "14:00 → Tel de uren nog eens: je zit er een uur naast. · 14:15 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:673635c8-68ad-444b-bcfc-22b3e431a166",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "7:15 + 7:45",
+    "claudeUitleg": "7:15 + 7 uur = 14:15, + 45 minuten = 15:00.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "14:00",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "14:15",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "14:00",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "14:15",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "673635c8-68ad-444b-bcfc-22b3e431a166",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "W1 moeilijk woord vervangen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 4,
+    "somtypeNrOrigineel": 4,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "15:00",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-030",
+   "nr": "030",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 14:00 uit de school. De vlucht duurt 11 uur en 15 minuten. Op de plek van aankomst is het 1 uur later dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "2:15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "1:15",
+     "uitleg": "Dat is de tijd thuis. Daar is het 1 uur later."
+    },
+    {
+     "stap": null,
+     "fout": "0:15",
+     "uitleg": "Later betekent erbij, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "1:15 → Dat is de tijd thuis. Daar is het 1 uur later. · 0:15 → Later betekent erbij, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:6855c8f6-8b8f-4898-acee-31986b4ec4ec",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "14:00 + 11:15 + 1 uur",
+    "claudeUitleg": "Thuis is het bij de landing 1:15.\nDaar is het 1 uur later: 2:15.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "1:15",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "0:15",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "1:15",
+      "uitleg": "Dat is de tijd thuis. Daar is het 1 uur later."
+     },
+     {
+      "stap": null,
+      "fout": "0:15",
+      "uitleg": "Later betekent erbij, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "6855c8f6-8b8f-4898-acee-31986b4ec4ec",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "W1 moeilijk woord vervangen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 10,
+    "somtypeNrOrigineel": 10,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit de school. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur later dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "2:15",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-031",
+   "nr": "031",
+   "doelId": "G8-MEET-E06",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 7:15 uit het huis. De vlucht duurt 11 uur en 30 minuten. Hoe laat landt het? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "18:45",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "17:45",
+     "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+    },
+    {
+     "stap": null,
+     "fout": "18:15",
+     "uitleg": "Vergeet de minuten niet."
+    }
+   ],
+   "foutHintsTekst": "17:45 → Tel de uren nog eens: je zit er een uur naast. · 18:15 → Vergeet de minuten niet.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:c68c5b25-787a-4ea8-abca-da797c305183",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "7:15 + 11:30",
+    "claudeUitleg": "7:15 + 11 uur = 18:15, + 30 minuten = 18:45.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "17:45",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "18:15",
+      "denkfout": "klok-verkeerd-gelezen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "17:45",
+      "uitleg": "Tel de uren nog eens: je zit er een uur naast."
+     },
+     {
+      "stap": null,
+      "fout": "18:15",
+      "uitleg": "Vergeet de minuten niet."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "c68c5b25-787a-4ea8-abca-da797c305183",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "W1 moeilijk woord vervangen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 11,
+    "somtypeNrOrigineel": 11,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Hoe laat landt het? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "18:45",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-MEET-E06-claude-bank-032",
+   "nr": "032",
+   "doelId": "G8-MEET-E06",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vliegtuig vertrekt om 14:15 uit het huis. De vlucht duurt 11 uur en 15 minuten. Op de plek van aankomst is het 5 uur vroeger dan thuis. Hoe laat is het daar bij de landing? (Typ als 14:30.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "20:30",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "1:30",
+     "uitleg": "Dat is de tijd thuis. Daar is het 5 uur vroeger."
+    },
+    {
+     "stap": null,
+     "fout": "6:30",
+     "uitleg": "Vroeger betekent eraf, niet andersom."
+    }
+   ],
+   "foutHintsTekst": "1:30 → Dat is de tijd thuis. Daar is het 5 uur vroeger. · 6:30 → Vroeger betekent eraf, niet andersom.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:M26:75b780e5-26bc-4ae8-b589-ef62aa528967",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "14:15 + 11:15 − 5 uur",
+    "claudeUitleg": "Thuis is het bij de landing 1:30.\nDaar is het 5 uur vroeger: 20:30.",
+    "claudeStrategie": "tijd optellen",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "1:30",
+      "denkfout": "tijd-als-kommagetal"
+     },
+     {
+      "fout": "6:30",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "1:30",
+      "uitleg": "Dat is de tijd thuis. Daar is het 5 uur vroeger."
+     },
+     {
+      "stap": null,
+      "fout": "6:30",
+      "uitleg": "Vroeger betekent eraf, niet andersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "75b780e5-26bc-4ae8-b589-ef62aa528967",
+    "claudeDoel": "M26",
+    "claudeDoelTitel": "Tijdzones",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "W1 moeilijk woord vervangen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-MEET-E06",
+    "voorstelDoel": null,
+    "regel": "G8-M26-tijdzones",
+    "reden": "vluchttijd en tijdzones (G8-MEET-E06)",
+    "somtype": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)",
+    "duplicaatVan": null,
+    "somtypeNr": 12,
+    "somtypeNrOrigineel": 12,
+    "somtypeOrigineel": "Een vliegtuig vertrekt om #:# uit het huis. De vlucht duurt # uur en # minuten. Op de plek van aankomst is het # uur vroeger dan thuis. Hoe laat is het daar bij de [ding]? (Typ als #:#.)"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "20:30",
+    "methode": "G8 tijdzones",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  }
+ ]
+}

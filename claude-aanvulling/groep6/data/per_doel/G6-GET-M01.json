@@ -1,0 +1,947 @@
+{
+ "schema": "leermees-vragenbank-export/v1 + merge/controle/licentie (claude-merge g6)",
+ "bron": {
+  "licentie": "CC BY-SA 4.0",
+  "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+  "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+  "bron": "https://github.com/Davesgit/leermees-vragenbank",
+  "commit": "7da3257a196386c700310006da60a385fbbe114f"
+ },
+ "gegenereerdOp": "2026-10-08T10:27:27+0200",
+ "g5Basis": "g5/scripts 1 okt 15:35 (kopie in scripts/g5_basis/: regels_g5.py met G6_MODUS; g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
+ "doelId": "G6-GET-M01",
+ "bordtitel": "Grote getallen tot 100.000 lezen",
+ "aantal": 5,
+ "items": [
+  {
+   "id": "G6-GET-M01-claude-bank-001",
+   "nr": "001",
+   "doelId": "G6-GET-M01",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Er zijn 6158 stickers geteld. 6158 = 6000 + 100 + ? + 8. Welk getal hoort op het vraagteken?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "50",
+   "antwoordDetail": null,
+   "hint": "Splits het getal: duizendtallen, honderdtallen, tientallen en eenheden. Welk deel staat er nog niet?",
+   "sterkereHint": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard?",
+     "uitlegSterker": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord : 10",
+     "soort": "alleen het cijfer",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "500",
+     "uitleg": "Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+     "uitlegSterker": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord × 10",
+     "soort": "honderdtallen",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "5 → Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard? · 500 → Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+   "ouderzin": "Je kind splitst een getal tot 10.000 in duizendtallen, honderdtallen, tientallen en eenheden.",
+   "getallenruimte": "0–10.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:C11:43a3f21c-4508-4534-acfe-d15e2a67d322",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "6158 = 6000 + 100 + ? + 8",
+    "claudeUitleg": "6158 bestaat uit 6 duizendtallen, 1 honderdtallen, 5 tientallen en 8 eenheden.\n5 tientallen is 50.",
+    "claudeStrategie": "positiewaarde",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "5",
+      "denkfout": "plaatswaarde-verkeerd"
+     },
+     {
+      "fout": "500",
+      "denkfout": "nul-fout-tientallen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "5",
+      "uitleg": "De 5 staat op de plek van de tientallen. Hoeveel is 5 tientallen waard?"
+     },
+     {
+      "stap": null,
+      "fout": "500",
+      "uitleg": "Het zijn tientallen, geen honderdtallen. 5 tientallen is 5 keer 10."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "43a3f21c-4508-4534-acfe-d15e2a67d322",
+    "claudeDoel": "C11",
+    "claudeDoelTitel": "Getallen tot 100.000",
+    "claudeGroep": 6,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-M01",
+    "voorstelDoel": null,
+    "regel": "G6-G07-lezen",
+    "reden": "getallen tot 100.000 lezen en schrijven (G6-GET-M01)",
+    "somtype": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 1,
+     "somtype": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?"
+    }
+   },
+   "controle": {
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "alleen het cijfer",
+     "bron": "nieuw",
+     "tekst": "Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "honderdtallen",
+     "bron": "nieuw",
+     "tekst": "Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "500"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Splits het getal in duizendtallen, honderdtallen, tientallen en eenheden. Welk deel ontbreekt er nog in de som?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Splits het getal in duizendtallen, honderdtallen, tientallen en eenheden. Welk deel ontbreekt er nog in de som?"
+  },
+  {
+   "id": "G6-GET-M01-claude-bank-002",
+   "nr": "002",
+   "doelId": "G6-GET-M01",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Er zijn 1793 vissen geteld. 1793 = 1000 + 700 + ? + 3. Welk getal hoort op het vraagteken?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "90",
+   "antwoordDetail": null,
+   "hint": "Splits het getal: duizendtallen, honderdtallen, tientallen en eenheden. Welk deel staat er nog niet?",
+   "sterkereHint": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "9",
+     "uitleg": "Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard?",
+     "uitlegSterker": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord : 10",
+     "soort": "alleen het cijfer",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "900",
+     "uitleg": "Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+     "uitlegSterker": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord × 10",
+     "soort": "honderdtallen",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "9 → Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard? · 900 → Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+   "ouderzin": "Je kind splitst een getal tot 10.000 in duizendtallen, honderdtallen, tientallen en eenheden.",
+   "getallenruimte": "0–10.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:C11:7f7d33ef-adc4-4bec-adbf-a17a9172eaba",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "1793 = 1000 + 700 + ? + 3",
+    "claudeUitleg": "1793 bestaat uit 1 duizendtallen, 7 honderdtallen, 9 tientallen en 3 eenheden.\n9 tientallen is 90.",
+    "claudeStrategie": "positiewaarde",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "9",
+      "denkfout": "plaatswaarde-verkeerd"
+     },
+     {
+      "fout": "900",
+      "denkfout": "nul-fout-tientallen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "9",
+      "uitleg": "De 9 staat op de plek van de tientallen. Hoeveel is 9 tientallen waard?"
+     },
+     {
+      "stap": null,
+      "fout": "900",
+      "uitleg": "Het zijn tientallen, geen honderdtallen. 9 tientallen is 9 keer 10."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "7f7d33ef-adc4-4bec-adbf-a17a9172eaba",
+    "claudeDoel": "C11",
+    "claudeDoelTitel": "Getallen tot 100.000",
+    "claudeGroep": 6,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-M01",
+    "voorstelDoel": null,
+    "regel": "G6-G07-lezen",
+    "reden": "getallen tot 100.000 lezen en schrijven (G6-GET-M01)",
+    "somtype": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 1,
+     "somtype": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?"
+    }
+   },
+   "controle": {
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "alleen het cijfer",
+     "bron": "nieuw",
+     "tekst": "Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "9"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "honderdtallen",
+     "bron": "nieuw",
+     "tekst": "Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "900"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Splits het getal in duizendtallen, honderdtallen, tientallen en eenheden. Welk deel ontbreekt er nog in de som?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Splits het getal in duizendtallen, honderdtallen, tientallen en eenheden. Welk deel ontbreekt er nog in de som?"
+  },
+  {
+   "id": "G6-GET-M01-claude-bank-003",
+   "nr": "003",
+   "doelId": "G6-GET-M01",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Er zijn 8229 tanden geteld. 8229 = 8000 + 200 + ? + 9. Welk getal hoort op het vraagteken?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "20",
+   "antwoordDetail": null,
+   "hint": "Splits het getal: duizendtallen, honderdtallen, tientallen en eenheden. Welk deel staat er nog niet?",
+   "sterkereHint": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "2",
+     "uitleg": "Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard?",
+     "uitlegSterker": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord : 10",
+     "soort": "alleen het cijfer",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "200",
+     "uitleg": "Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+     "uitlegSterker": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord × 10",
+     "soort": "honderdtallen",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "2 → Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard? · 200 → Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+   "ouderzin": "Je kind splitst een getal tot 10.000 in duizendtallen, honderdtallen, tientallen en eenheden.",
+   "getallenruimte": "0–10.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:C11:aef56bbc-6649-4611-9bfc-586ad38849ce",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "8229 = 8000 + 200 + ? + 9",
+    "claudeUitleg": "8229 bestaat uit 8 duizendtallen, 2 honderdtallen, 2 tientallen en 9 eenheden.\n2 tientallen is 20.",
+    "claudeStrategie": "positiewaarde",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "2",
+      "denkfout": "plaatswaarde-verkeerd"
+     },
+     {
+      "fout": "200",
+      "denkfout": "nul-fout-tientallen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "2",
+      "uitleg": "De 2 staat op de plek van de tientallen. Hoeveel is 2 tientallen waard?"
+     },
+     {
+      "stap": null,
+      "fout": "200",
+      "uitleg": "Het zijn tientallen, geen honderdtallen. 2 tientallen is 2 keer 10."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "aef56bbc-6649-4611-9bfc-586ad38849ce",
+    "claudeDoel": "C11",
+    "claudeDoelTitel": "Getallen tot 100.000",
+    "claudeGroep": 6,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-M01",
+    "voorstelDoel": null,
+    "regel": "G6-G07-lezen",
+    "reden": "getallen tot 100.000 lezen en schrijven (G6-GET-M01)",
+    "somtype": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 1,
+     "somtype": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?"
+    }
+   },
+   "controle": {
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "alleen het cijfer",
+     "bron": "nieuw",
+     "tekst": "Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "honderdtallen",
+     "bron": "nieuw",
+     "tekst": "Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "200"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Splits het getal in duizendtallen, honderdtallen, tientallen en eenheden. Welk deel ontbreekt er nog in de som?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Splits het getal in duizendtallen, honderdtallen, tientallen en eenheden. Welk deel ontbreekt er nog in de som?"
+  },
+  {
+   "id": "G6-GET-M01-claude-bank-004",
+   "nr": "004",
+   "doelId": "G6-GET-M01",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Er zijn 6587 knopen geteld. 6587 = 6000 + 500 + ? + 7. Welk getal hoort op het vraagteken?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "80",
+   "antwoordDetail": null,
+   "hint": "Splits het getal: duizendtallen, honderdtallen, tientallen en eenheden. Welk deel staat er nog niet?",
+   "sterkereHint": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "8",
+     "uitleg": "Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard?",
+     "uitlegSterker": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord : 10",
+     "soort": "alleen het cijfer",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "800",
+     "uitleg": "Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+     "uitlegSterker": "Het vraagteken hoort bij de tientallen. Kijk welk cijfer op de plek van de tientallen staat. Hoeveel is dat aantal tientallen waard?",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord × 10",
+     "soort": "honderdtallen",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "8 → Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard? · 800 → Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+   "ouderzin": "Je kind splitst een getal tot 10.000 in duizendtallen, honderdtallen, tientallen en eenheden.",
+   "getallenruimte": "0–10.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:C11:ca6f5915-baa1-4b35-8736-72aacacdc042",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "6587 = 6000 + 500 + ? + 7",
+    "claudeUitleg": "6587 bestaat uit 6 duizendtallen, 5 honderdtallen, 8 tientallen en 7 eenheden.\n8 tientallen is 80.",
+    "claudeStrategie": "positiewaarde",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "8",
+      "denkfout": "plaatswaarde-verkeerd"
+     },
+     {
+      "fout": "800",
+      "denkfout": "nul-fout-tientallen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "8",
+      "uitleg": "De 8 staat op de plek van de tientallen. Hoeveel is 8 tientallen waard?"
+     },
+     {
+      "stap": null,
+      "fout": "800",
+      "uitleg": "Het zijn tientallen, geen honderdtallen. 8 tientallen is 8 keer 10."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "ca6f5915-baa1-4b35-8736-72aacacdc042",
+    "claudeDoel": "C11",
+    "claudeDoelTitel": "Getallen tot 100.000",
+    "claudeGroep": 6,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "W1 moeilijk woord vervangen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-M01",
+    "voorstelDoel": null,
+    "regel": "G6-G07-lezen",
+    "reden": "getallen tot 100.000 lezen en schrijven (G6-GET-M01)",
+    "somtype": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 1,
+     "somtype": "Er zijn # [ding] geteld. # = # + # + ? + #. Welk getal hoort op het vraagteken?"
+    }
+   },
+   "controle": {
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord : 10",
+     "soort": "alleen het cijfer",
+     "bron": "nieuw",
+     "tekst": "Je hebt alleen het cijfer opgeschreven. Dat cijfer staat op de plek van de tientallen. Hoeveel zijn die tientallen samen waard?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord × 10",
+     "soort": "honderdtallen",
+     "bron": "nieuw",
+     "tekst": "Dat zijn honderdtallen. Het cijfer staat op de plek van de tientallen, en één tiental is tien.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "800"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Splits het getal in duizendtallen, honderdtallen, tientallen en eenheden. Welk deel ontbreekt er nog in de som?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Splits het getal in duizendtallen, honderdtallen, tientallen en eenheden. Welk deel ontbreekt er nog in de som?"
+  },
+  {
+   "id": "G6-GET-M01-claude-bank-005",
+   "nr": "005",
+   "doelId": "G6-GET-M01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "ordenen",
+   "opgave": "Zet de getallen op volgorde van klein naar groot.",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "45.409|66.342|72.430|89.693",
+   "antwoordDetail": null,
+   "hint": "Vergelijk eerst het cijfer vooraan: de tienduizendtallen. Het getal met het kleinste cijfer vooraan komt eerst.",
+   "sterkereHint": "Is het cijfer vooraan bij twee getallen gelijk? Kijk dan naar het cijfer erna. Zet zo alle getallen van klein naar groot.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "89.693|72.430|66.342|45.409",
+     "uitleg": "Je hebt de getallen van groot naar klein gezet. Begin met het kleinste getal.",
+     "uitlegSterker": "Is het cijfer vooraan bij twee getallen gelijk? Kijk dan naar het cijfer erna. Zet zo alle getallen van klein naar groot.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "volgorde omgedraaid",
+     "soort": "van groot naar klein",
+     "bron": "claude-taalfix"
+    }
+   ],
+   "foutHintsTekst": "89.693|72.430|66.342|45.409 → Je hebt de getallen van groot naar klein gezet. Begin met het kleinste getal.",
+   "ouderzin": "Je kind zet getallen tot 100.000 op volgorde van klein naar groot.",
+   "getallenruimte": "0–100.000",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "interactief: kaartjes op volgorde slepen",
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": "kaartjes op volgorde slepen",
+   "bronVariant": "claude-bank:C11:9aef04d3-3a37-4bb2-93e5-61314ca74ba7",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "66.342, 45.409, 89.693, 72.430 op volgorde",
+    "claudeUitleg": "Van klein naar groot: 45.409, 66.342, 72.430, 89.693.",
+    "claudeStrategie": null,
+    "claudeThema": null,
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "slepen",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "89.693|72.430|66.342|45.409",
+      "denkfout": "kleinste-van-grootste"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "89.693|72.430|66.342|45.409",
+      "uitleg": "Klein naar groot: het kleinste getal eerst."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "9aef04d3-3a37-4bb2-93e5-61314ca74ba7",
+    "claudeDoel": "C11",
+    "claudeDoelTitel": "Getallen tot 100.000",
+    "claudeGroep": 6,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-M01",
+    "voorstelDoel": null,
+    "regel": "G6-G07-lezen",
+    "reden": "getallen tot 100.000 lezen en schrijven (G6-GET-M01)",
+    "somtype": "[kaartjes op volgorde slepen] Zet de getallen op volgorde van klein naar groot.",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[kaartjes op volgorde slepen] Zet de getallen op volgorde van klein naar groot.",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 2,
+     "somtype": "[kaartjes op volgorde slepen] Zet de getallen op volgorde van klein naar groot."
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "45.409|66.342|72.430|89.693",
+    "methode": "ordenen (op waarde)",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "FOUT",
+     "verwacht": "45409|66342|72430|89693",
+     "methode": "ordenen"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "volgorde omgedraaid",
+     "soort": "van groot naar klein",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt de getallen van groot naar klein gezet. Begin met het kleinste getal.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "89.693|72.430|66.342|45.409"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Vergelijk de getallen van links naar rechts: eerst het cijfer vooraan, dan het cijfer erna. Het kleinste getal komt eerst.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Vergelijk de getallen van links naar rechts: eerst het cijfer vooraan, dan het cijfer erna. Het kleinste getal komt eerst."
+  }
+ ]
+}

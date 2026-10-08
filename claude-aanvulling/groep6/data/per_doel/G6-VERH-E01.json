@@ -1,0 +1,1072 @@
+{
+ "schema": "leermees-vragenbank-export/v1 + merge/controle/licentie (claude-merge g6)",
+ "bron": {
+  "licentie": "CC BY-SA 4.0",
+  "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+  "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+  "bron": "https://github.com/Davesgit/leermees-vragenbank",
+  "commit": "7da3257a196386c700310006da60a385fbbe114f"
+ },
+ "gegenereerdOp": "2026-10-08T10:27:27+0200",
+ "g5Basis": "g5/scripts 1 okt 15:35 (kopie in scripts/g5_basis/: regels_g5.py met G6_MODUS; g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
+ "doelId": "G6-VERH-E01",
+ "bordtitel": "Verhoudingstabel gebruiken bij recepten en meer",
+ "aantal": 4,
+ "items": [
+  {
+   "id": "G6-VERH-E01-claude-bank-001",
+   "nr": "001",
+   "doelId": "G6-VERH-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "meerkeuze",
+   "opgave": "2 kg appels kost €3. Je zet dat in een verhoudingstabel. Wat hoort er in het vakje bij 8 kg appels?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "€6"
+    },
+    {
+     "letter": "B",
+     "tekst": "€12"
+    },
+    {
+     "letter": "C",
+     "tekst": "€9"
+    }
+   ],
+   "optiesTekst": "A) €6 · B) €12 · C) €9",
+   "antwoord": "€12",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "€12"
+   },
+   "hint": "In een verhoudingstabel horen twee getallen bij elkaar. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+   "sterkereHint": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€6",
+     "uitleg": "Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "uitlegSterker": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+     "soort": "verhouding niet gelijk",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€9",
+     "uitleg": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "uitlegSterker": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = y1 + (x2 − x1)",
+     "soort": "opgeteld",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€6 → Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. · €9 → Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+   "ouderzin": "Je kind rekent met een verhoudingstabel. Wordt het ene getal een aantal keer zo groot, dan wordt het andere getal ook zoveel keer zo groot.",
+   "getallenruimte": "0–100",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:W4:63102a04-0fa1-461d-9d72-1f48aac406f2",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "W4",
+    "claudeUitleg": "Van 2 kg naar 8 kg is 4 keer zoveel. Dan wordt de prijs ook 4 keer zo hoog. 4 × €3 is €12.",
+    "claudeStrategie": "tabel keer zoveel",
+    "claudeThema": null,
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "keuze",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€9",
+      "denkfout": "verhoudingstabel-verkeerd"
+     },
+     {
+      "fout": "€6",
+      "denkfout": "verhoudingstabel-verkeerd"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€9",
+      "uitleg": "Kijk hoe vaak 2 kg in 8 kg past. Met datzelfde aantal keer werk je bij de prijs."
+     },
+     {
+      "stap": null,
+      "fout": "€6",
+      "uitleg": "Je bent maar tot 4 kg gekomen. Ga verder tot je bij 8 kg bent."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "63102a04-0fa1-461d-9d72-1f48aac406f2",
+    "claudeDoel": "W4",
+    "claudeDoelTitel": "Schematisch weergeven",
+    "claudeGroep": 6,
+    "claudeBron": "ai",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G6-W7 'In een tabel staat. …' → '… Je zet dat in een tabel.'",
+     "N1 \":\" + getal → punt"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-VERH-E01",
+    "voorstelDoel": null,
+    "regel": "G6-W03-schema-tabel",
+    "reden": "situatie in een verhoudingstabel (G6-VERH-E01)",
+    "somtype": "[schema] verhoudingstabel",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[schema] verhoudingstabel",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[schema] verhoudingstabel"
+    }
+   },
+   "controle": {
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = y1 + (x2 − x1)",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€9"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = y1 + x2",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€11"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "opgeteld",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+     "soort": "verhouding niet gelijk",
+     "bron": "claude-taalfix",
+     "tekst": "Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€6",
+       "€9"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "getal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het getal bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "gedeeld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt gedeeld. Bij een groter aantal hoort ook een groter getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk."
+  },
+  {
+   "id": "G6-VERH-E01-claude-bank-002",
+   "nr": "002",
+   "doelId": "G6-VERH-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "meerkeuze",
+   "opgave": "Voor 3 broden betaal je €6. Je vult een verhoudingstabel in. Wat hoort er in het vakje bij 6 broden?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "€12"
+    },
+    {
+     "letter": "B",
+     "tekst": "€9"
+    },
+    {
+     "letter": "C",
+     "tekst": "€6"
+    }
+   ],
+   "optiesTekst": "A) €12 · B) €9 · C) €6",
+   "antwoord": "€12",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "€12"
+   },
+   "hint": "In een verhoudingstabel horen twee getallen bij elkaar. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+   "sterkereHint": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€9",
+     "uitleg": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "uitlegSterker": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = y1 + (x2 − x1)",
+     "soort": "opgeteld",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "€6",
+     "uitleg": "Je hebt een getal uit de vraag overgenomen. Is dat echt het getal bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "uitlegSterker": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "getal uit de vraag",
+     "bron": "claude-taalfix"
+    }
+   ],
+   "foutHintsTekst": "€9 → Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. · €6 → Je hebt een getal uit de vraag overgenomen. Is dat echt het getal bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+   "ouderzin": "Je kind rekent met een verhoudingstabel. Wordt het ene getal een aantal keer zo groot, dan wordt het andere getal ook zoveel keer zo groot.",
+   "getallenruimte": "0–100",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:W4:78d2c8c5-9cc4-41ea-92c8-112bde92ebe9",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "W4",
+    "claudeUitleg": "Van 3 broden naar 6 broden is keer 2. In de tabel doe je met de prijs hetzelfde. Dus €6 keer 2 is €12.",
+    "claudeStrategie": "verhoudingstabel gebruiken",
+    "claudeThema": null,
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "keuze",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€9",
+      "denkfout": "verhoudingstabel-verkeerd"
+     },
+     {
+      "fout": "€6",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€9",
+      "uitleg": "Het aantal broden wordt twee keer zo groot. Doe met de prijs precies hetzelfde."
+     },
+     {
+      "stap": null,
+      "fout": "€6",
+      "uitleg": "Je hebt het getal 6 uit de vraag overgenomen. Kijk eerst hoeveel 6 broden meer zijn dan 3."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "78d2c8c5-9cc4-41ea-92c8-112bde92ebe9",
+    "claudeDoel": "W4",
+    "claudeDoelTitel": "Schematisch weergeven",
+    "claudeGroep": 6,
+    "claudeBron": "ai",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-VERH-E01",
+    "voorstelDoel": null,
+    "regel": "G6-W03-schema-tabel",
+    "reden": "situatie in een verhoudingstabel (G6-VERH-E01)",
+    "somtype": "[schema] verhoudingstabel",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[schema] verhoudingstabel",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[schema] verhoudingstabel"
+    }
+   },
+   "controle": {
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = y1 + (x2 − x1)",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€9"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = y1 + x2",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "opgeteld",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+     "soort": "verhouding niet gelijk",
+     "bron": "claude-taalfix",
+     "tekst": "Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€9"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "getal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het getal bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "gedeeld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt gedeeld. Bij een groter aantal hoort ook een groter getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk."
+  },
+  {
+   "id": "G6-VERH-E01-claude-bank-003",
+   "nr": "003",
+   "doelId": "G6-VERH-E01",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "meerkeuze",
+   "opgave": "In een tabel staat: van 1 pak sap kun je 3 glazen inschenken. Hoeveel glazen krijg je van 6 pakken?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "18 glazen"
+    },
+    {
+     "letter": "B",
+     "tekst": "9 glazen"
+    },
+    {
+     "letter": "C",
+     "tekst": "2 glazen"
+    }
+   ],
+   "optiesTekst": "A) 18 glazen · B) 9 glazen · C) 2 glazen",
+   "antwoord": "18 glazen",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "18 glazen"
+   },
+   "hint": "In een verhoudingstabel horen twee getallen bij elkaar. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+   "sterkereHint": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "9 glazen",
+     "uitleg": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "uitlegSterker": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = y1 + x2",
+     "soort": "opgeteld",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2 glazen",
+     "uitleg": "Je hebt gedeeld. Bij een groter aantal hoort ook een groter getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "uitlegSterker": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "gedeeld",
+     "bron": "claude-taalfix"
+    }
+   ],
+   "foutHintsTekst": "9 glazen → Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. · 2 glazen → Je hebt gedeeld. Bij een groter aantal hoort ook een groter getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+   "ouderzin": "Je kind rekent met een verhoudingstabel. Wordt het ene getal een aantal keer zo groot, dan wordt het andere getal ook zoveel keer zo groot.",
+   "getallenruimte": "0–100",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:W4:99f70279-e011-4a04-ba90-932630cd9092",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "W4",
+    "claudeUitleg": "Elk pak geeft 3 glazen. Bij 6 pakken doe je 6 × 3. Dat zijn 18 glazen.",
+    "claudeStrategie": "tabel stap voor stap",
+    "claudeThema": null,
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "keuze",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "9 glazen",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "2 glazen",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "9 glazen",
+      "uitleg": "Elk pak geeft weer 3 glazen. Je moet 3 dus zes keer nemen."
+     },
+     {
+      "stap": null,
+      "fout": "2 glazen",
+      "uitleg": "Je krijgt meer glazen dan pakken, niet minder. Kijk nog eens naar de tabel."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "99f70279-e011-4a04-ba90-932630cd9092",
+    "claudeDoel": "W4",
+    "claudeDoelTitel": "Schematisch weergeven",
+    "claudeGroep": 6,
+    "claudeBron": "ai",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-VERH-E01",
+    "voorstelDoel": null,
+    "regel": "G6-W03-schema-tabel",
+    "reden": "situatie in een verhoudingstabel (G6-VERH-E01)",
+    "somtype": "[schema] verhoudingstabel",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[schema] verhoudingstabel",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[schema] verhoudingstabel"
+    }
+   },
+   "controle": {
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = y1 + (x2 − x1)",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8",
+       "8 glazen"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = y1 + x2",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "9",
+       "9 glazen"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "opgeteld",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "9 glazen"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+     "soort": "verhouding niet gelijk",
+     "bron": "claude-taalfix",
+     "tekst": "Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "getal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het getal bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "gedeeld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt gedeeld. Bij een groter aantal hoort ook een groter getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2 glazen"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk."
+  },
+  {
+   "id": "G6-VERH-E01-claude-bank-004",
+   "nr": "004",
+   "doelId": "G6-VERH-E01",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "meerkeuze",
+   "opgave": "1 fles is 2 L. Je zet dat in een tabel. Hoeveel liter is 5 van die flessen?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "10 L"
+    },
+    {
+     "letter": "B",
+     "tekst": "7 L"
+    },
+    {
+     "letter": "C",
+     "tekst": "2,5 L"
+    }
+   ],
+   "optiesTekst": "A) 10 L · B) 7 L · C) 2,5 L",
+   "antwoord": "10 L",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "10 L"
+   },
+   "hint": "In een verhoudingstabel horen twee getallen bij elkaar. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+   "sterkereHint": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "7 L",
+     "uitleg": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "uitlegSterker": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = y1 + x2",
+     "soort": "opgeteld",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "2,5 L",
+     "uitleg": "Je hebt gedeeld. Bij een groter aantal hoort ook een groter getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "uitlegSterker": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "gedeeld",
+     "bron": "claude-taalfix"
+    }
+   ],
+   "foutHintsTekst": "7 L → Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. · 2,5 L → Je hebt gedeeld. Bij een groter aantal hoort ook een groter getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+   "ouderzin": "Je kind rekent met een verhoudingstabel. Wordt het ene getal een aantal keer zo groot, dan wordt het andere getal ook zoveel keer zo groot.",
+   "getallenruimte": "0–100",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:W4:e5a7d298-114f-4c95-bf76-51fd013df70b",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "W4",
+    "claudeUitleg": "In de tabel staat 1 fles bij 2 L. Bij 5 flessen doe je 5 x 2. Dat is 10 L.",
+    "claudeStrategie": "tabel doorrekenen",
+    "claudeThema": null,
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "keuze",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "7 L",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "2,5 L",
+      "denkfout": "verkeerde-bewerking"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "7 L",
+      "uitleg": "Elke fles heeft 2 L. Tel eens 2 L op voor iedere fles apart."
+     },
+     {
+      "stap": null,
+      "fout": "2,5 L",
+      "uitleg": "Meer flessen betekent meer liter. Het antwoord wordt dus groter dan 2."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "e5a7d298-114f-4c95-bf76-51fd013df70b",
+    "claudeDoel": "W4",
+    "claudeDoelTitel": "Schematisch weergeven",
+    "claudeGroep": 6,
+    "claudeBron": "ai",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G6-W7 'In een tabel staat. …' → '… Je zet dat in een tabel.'",
+     "N1 \":\" + getal → punt"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-VERH-E01",
+    "voorstelDoel": null,
+    "regel": "G6-W03-schema-tabel",
+    "reden": "situatie in een verhoudingstabel (G6-VERH-E01)",
+    "somtype": "[schema] verhoudingstabel",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[schema] verhoudingstabel",
+    "hints": {
+     "batch": "batch5.json",
+     "nr": 1,
+     "somtype": "[schema] verhoudingstabel"
+    }
+   },
+   "controle": {
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = y1 + (x2 − x1)",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6",
+       "6 L"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = y1 + x2",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7",
+       "7 L"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "opgeteld",
+     "bron": "claude-taalfix",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7 L"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+     "soort": "verhouding niet gelijk",
+     "bron": "claude-taalfix",
+     "tekst": "Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "soort": "getal uit de vraag",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het getal bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": []
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "gedeeld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt gedeeld. Bij een groter aantal hoort ook een groter getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2,5 L"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk."
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+# Twijfels batch 4 (meten), Oefeningen 1 okt 21:41
+
+1. **'Doe keer duizend: schrijf er drie nullen achter' / 'deel door honderd: haal er twee nullen af'**: dat klopt bij elk item. Elke opgave is een heel getal, en bij delen eindigt het getal altijd op genoeg nullen (b4/check). Bij kommagetallen zou dit niet kloppen, maar die zitten niet in deze somtypen.
+2. **'Je hebt keer honderd gedaan' (E01 #2/#3, E04 #3, E05 #1, tien keer te weinig)**: dit is de bekende verwarring tussen de maten (honderd en duizend). Bij 'tien keer te veel' met factor duizend zou het kind keer tienduizend hebben gedaan. Dat is geen maatfactor, dus daar staat geen bewering.
+3. **'Precies één rij te veel/te weinig' (E03 #1/#3/#4, motor antwoord ± getal1/getal2)**: ook a ± breedte heet 'rij' (een rij langs de andere kant). Is 'kolom' duidelijker voor groep 6? Didactiek beslist. Er staat geen 'Bijna!', want een rij ernaast is geen stap van één.
+4. **E01 #6 '+ 1' met 'Bijna!'**: één hele kilogram ernaast is één stap (les 9). De tekst vraagt of de tienden op tien of meer komen, met 'alleen dan'.
+5. **#101**: het woord bij het symbool staat één keer in Hint 1 («cm² (vierkante centimeter)», «m² (vierkante meter)»). Bij de lengte-, inhouds- en gewichtsmaten staat in Hint 1 ook één keer het symbool bij het woord («Eén kilometer (km) is duizend meter (m).») en in 'andere fout'. check_merge_notatie geeft INTRO 0.
+6. **Geen referentiematen**: de hints noemen geen dingen als maat (geen 'een pak melk is een liter'). refscan 0 en REF 0.
+
+**Ronde 4a (21:57), bij twijfel 2:** les 29 beslist het deels. De sleutel één stap van tien vóór het antwoord (km → m keer honderd, cm → m door tien, L → cl keer tien, …) is ook een goede tussenstap als je omrekent in stappen van tien. Die sleutel krijgt nu een vraag in plaats van 'Je hebt keer honderd gedaan': «Dat is tien keer te weinig. Heb je helemaal omgerekend naar meter? Eén kilometer is duizend meter: doe keer duizend.» (11 somtypen). De sleutel voorbij het antwoord (cm → m door duizend, L → cl keer duizend) is geen tussenstap en houdt «Je hebt door duizend gedeeld». Die bewering is per sleutel nagerekend.

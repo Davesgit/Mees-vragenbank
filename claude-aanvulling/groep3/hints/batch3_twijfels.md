@@ -1,0 +1,13 @@
+## Twijfels voor Didactiek/Overzicht (nieuw in batch 3)
+- **'×' in de hints:** komt nergens voor. De checker geeft nu FAIL op '×' of 'x' tussen twee getallen. Geen enkel gemapt somtype is echt vermenigvuldigen; E06 (rijen kleuren) heeft alleen twijfel-items. Wel staat '×' in Claude-opties: E04 somtype 2 (63 items) en E05 somtype 2 (14 items) hebben een keersom als afleider ('3 × 2'). Mijn fout-hint daar zegt 'Dat is een keersom …' zonder het teken. Voorstel voor de merge: vervang die afleider in G3 door bijvoorbeeld de omgedraaide plussom of een som die een ernaast zit.
+- **Moeilijke woorden in Claude-opgaven** (de hints gebruiken ze niet; de checker geeft FAIL op een lijst):
+  - kittens, maanstenen, ruimtepakken, schroeven, ruimtestation, maanbasis, lanceerbasis, laboratorium, voetafdrukken, varenbladeren: K05 ongeveer 60×, E04 15×, K01 12×, M04 6×;
+  - ~~'patroon'~~ → **mag blijven** (Didactiek v1 Z6: de G3-bank gebruikt 'patroon'). Checker geeft er geen FAIL meer op.
+  - de vorm 'ruit' in VBN-E03 (14×) en als afleider in MKU-K03 (4×), plus 'ster' en 'zeshoek' (elk 1×). Volgens Didactiek zijn dat geen G3-vormen.
+- **Optieletters die botsen met labels:**
+  - MEET-E05 somtype 1 (klokkenrij, 46 items): de opties zíjn de letters van de klokken ('A) C · B) B · C) A'). Na husselen klopt dat niet meer. Voorstel: laat het kind op de klok tikken, of zet `Husselen: nee`.
+  - MEET-K03 (kan A en kan B, 1 item): 'kan A' staat in de opgave en in een optie. Voorstel: 'de rode kan / de blauwe kan'.
+- **Plattegrond (MKU-E02):** de hints zeggen alleen 'eerst de letter, dan het cijfer' en 'volg de hokjes recht door'. Ze zeggen niet of de letter boven of onder staat, omdat de vakcode van Claude anders werkt dan in onze G3-bank (besluiten §3). De fout-hints per soort (letter fout / cijfer fout / omgedraaid) kan de merge uitrekenen uit `jsRender.dingen`.
+- **M06 somtype 5 ('# is □ en #'):** ✔ Didactiek v1 X3. Hint 2 noemt geen 'volle rij' meer: «Haal het deel dat er staat van het hele getal af. Tel terug, één voor één. Hoeveel blijven er over?». Het gevraagde deel moet wisselen, zodat het antwoord niet altijd 10 is. Dat is een merge-punt (merge-fixlijst.md).
+- **MEET-E05 klok zetten:** ✔ Didactiek v1 X5. De tekst per item wordt «Bij [uur in woorden] uur wijst de kleine wijzer naar de [uur als cijfer].», bijvoorbeeld 'Bij negen uur … naar de 9.'. De merge vult die tekst in (merge-fixlijst.md, punt 10).
+- **Checker:** een getal vlak voor een punt ('tot 10.') werd eerst niet gezien. Dat is opgelost, en het antwoord-check werkt nu ook aan het eind van een zin. Batch 1 en 2 geven daarna nog steeds 0 FAIL en 0 WARN.

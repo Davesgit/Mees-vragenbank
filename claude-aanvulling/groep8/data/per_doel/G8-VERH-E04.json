@@ -1,0 +1,4621 @@
+{
+ "schema": "leermees-vragenbank-export/v1 + merge/controle/licentie (claude-merge g8)",
+ "bron": {
+  "licentie": "CC BY-SA 4.0",
+  "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+  "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+  "bron": "https://github.com/Davesgit/leermees-vragenbank",
+  "commit": "7da3257a196386c700310006da60a385fbbe114f"
+ },
+ "gegenereerdOp": "2026-10-01T22:54:38+0200",
+ "g7Basis": "g7/scripts 1 okt 18:15 (kopie in scripts/g7_basis/, met g6_basis/g5_basis/g4_basis_1435/)",
+ "doelId": "G8-VERH-E04",
+ "bordtitel": "Procenten uitrekenen: 1%-regel en korting",
+ "aantal": 32,
+ "items": [
+  {
+   "id": "G8-VERH-E04-claude-bank-001",
+   "nr": "001",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Bram zet €1500 op een spaarrekening met 2% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "30",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€300",
+     "uitleg": "1% van 1500 is 15, niet 150."
+    },
+    {
+     "stap": null,
+     "fout": "€1530",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€2",
+     "uitleg": "2% is een deel van €1500, niet €2."
+    }
+   ],
+   "foutHintsTekst": "€300 → 1% van 1500 is 15, niet 150. · €1530 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €2 → 2% is een deel van €1.500, niet €2.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:2b6bff89-3a9c-42d6-91bc-7fe4ea9d76c1",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "2% van 1500",
+    "claudeUitleg": "1% van 1500 is 15.\n2% is 2 × 15 = €30.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€300",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€1530",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€2",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€300",
+      "uitleg": "1% van 1500 is 15, niet 150."
+     },
+     {
+      "stap": null,
+      "fout": "€1530",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€2",
+      "uitleg": "2% is een deel van €1500, niet €2."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "2b6bff89-3a9c-42d6-91bc-7fe4ea9d76c1",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "Bram zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 5,
+    "somtypeNrOrigineel": 5,
+    "somtypeOrigineel": "Bram zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "30",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-002",
+   "nr": "002",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Daan zet €500 op een spaarrekening met 3% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€150",
+     "uitleg": "1% van 500 is 5, niet 50."
+    },
+    {
+     "stap": null,
+     "fout": "€515",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€3",
+     "uitleg": "3% is een deel van €500, niet €3."
+    }
+   ],
+   "foutHintsTekst": "€150 → 1% van 500 is 5, niet 50. · €515 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €3 → 3% is een deel van €500, niet €3.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:8cafc578-2ff9-40c4-afed-91f3526da50d",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "3% van 500",
+    "claudeUitleg": "1% van 500 is 5.\n3% is 3 × 5 = €15.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€150",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€515",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€3",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€150",
+      "uitleg": "1% van 500 is 5, niet 50."
+     },
+     {
+      "stap": null,
+      "fout": "€515",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€3",
+      "uitleg": "3% is een deel van €500, niet €3."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "8cafc578-2ff9-40c4-afed-91f3526da50d",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 3,
+    "somtypeNrOrigineel": 3,
+    "somtypeOrigineel": "Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "15",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-003",
+   "nr": "003",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Daan zet €800 op een spaarrekening met 4% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "32",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€320",
+     "uitleg": "1% van 800 is 8, niet 80."
+    },
+    {
+     "stap": null,
+     "fout": "€832",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€4",
+     "uitleg": "4% is een deel van €800, niet €4."
+    }
+   ],
+   "foutHintsTekst": "€320 → 1% van 800 is 8, niet 80. · €832 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €4 → 4% is een deel van €800, niet €4.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:9054fb11-4029-46d5-8321-520dd1b95974",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "4% van 800",
+    "claudeUitleg": "1% van 800 is 8.\n4% is 4 × 8 = €32.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€320",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€832",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€4",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€320",
+      "uitleg": "1% van 800 is 8, niet 80."
+     },
+     {
+      "stap": null,
+      "fout": "€832",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€4",
+      "uitleg": "4% is een deel van €800, niet €4."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "9054fb11-4029-46d5-8321-520dd1b95974",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 3,
+    "somtypeNrOrigineel": 3,
+    "somtypeOrigineel": "Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "32",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-004",
+   "nr": "004",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Daan zet €200 op een spaarrekening met 1% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "2",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€20",
+     "uitleg": "1% van 200 is 2, niet 20."
+    },
+    {
+     "stap": null,
+     "fout": "€202",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€1",
+     "uitleg": "1% is een deel van €200, niet €1."
+    }
+   ],
+   "foutHintsTekst": "€20 → 1% van 200 is 2, niet 20. · €202 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €1 → 1% is een deel van €200, niet €1.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:bf200fe0-f197-414d-a8b6-5fddb7b5086b",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "1% van 200",
+    "claudeUitleg": "1% van 200 is 2.\n1% is 1 × 2 = €2.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€20",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€202",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€1",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€20",
+      "uitleg": "1% van 200 is 2, niet 20."
+     },
+     {
+      "stap": null,
+      "fout": "€202",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€1",
+      "uitleg": "1% is een deel van €200, niet €1."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "bf200fe0-f197-414d-a8b6-5fddb7b5086b",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 3,
+    "somtypeNrOrigineel": 3,
+    "somtypeOrigineel": "Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "2",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-005",
+   "nr": "005",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Daan zet €400 op een spaarrekening met 3% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "12",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€120",
+     "uitleg": "1% van 400 is 4, niet 40."
+    },
+    {
+     "stap": null,
+     "fout": "€412",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€3",
+     "uitleg": "3% is een deel van €400, niet €3."
+    }
+   ],
+   "foutHintsTekst": "€120 → 1% van 400 is 4, niet 40. · €412 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €3 → 3% is een deel van €400, niet €3.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:c7ea08a4-6e91-42bd-b102-4224b3727bfc",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "3% van 400",
+    "claudeUitleg": "1% van 400 is 4.\n3% is 3 × 4 = €12.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€120",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€412",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€3",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€120",
+      "uitleg": "1% van 400 is 4, niet 40."
+     },
+     {
+      "stap": null,
+      "fout": "€412",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€3",
+      "uitleg": "3% is een deel van €400, niet €3."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "c7ea08a4-6e91-42bd-b102-4224b3727bfc",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 3,
+    "somtypeNrOrigineel": 3,
+    "somtypeOrigineel": "Daan zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "12",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-006",
+   "nr": "006",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een ei kost na 50% korting €30. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "60",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€45",
+     "uitleg": "De 50% ging van de óude prijs af, niet van €30. €30 is 50%."
+    },
+    {
+     "stap": null,
+     "fout": "€30",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€45 → De 50% ging van de óude prijs af, niet van €30. €30 is 50%. · €30 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:03d597d7-b928-4d1e-b5aa-392c75684e6d",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 50% korting €30, was?",
+    "claudeUitleg": "€30 is 50% van de oude prijs.\n1% is 30 : 50 = 0,60, dus 100% is €60.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€45",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€30",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€45",
+      "uitleg": "De 50% ging van de óude prijs af, niet van €30. €30 is 50%."
+     },
+     {
+      "stap": null,
+      "fout": "€30",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "03d597d7-b928-4d1e-b5aa-392c75684e6d",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-001",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "60",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-007",
+   "nr": "007",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een kaartje kost na 20% korting €160. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "200",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€192",
+     "uitleg": "De 20% ging van de óude prijs af, niet van €160. €160 is 80%."
+    },
+    {
+     "stap": null,
+     "fout": "€160",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€192 → De 20% ging van de óude prijs af, niet van €160. €160 is 80%. · €160 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:1205b455-1ca8-4fc8-ab74-24ad9db4d129",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 20% korting €160, was?",
+    "claudeUitleg": "€160 is 80% van de oude prijs.\n1% is 160 : 80 = 2,00, dus 100% is €200.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€192",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€160",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€192",
+      "uitleg": "De 20% ging van de óude prijs af, niet van €160. €160 is 80%."
+     },
+     {
+      "stap": null,
+      "fout": "€160",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "1205b455-1ca8-4fc8-ab74-24ad9db4d129",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-002",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "200",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-008",
+   "nr": "008",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een kaartje kost na 50% korting €100. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "200",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€150",
+     "uitleg": "De 50% ging van de óude prijs af, niet van €100. €100 is 50%."
+    },
+    {
+     "stap": null,
+     "fout": "€100",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€150 → De 50% ging van de óude prijs af, niet van €100. €100 is 50%. · €100 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:16e6400d-ab40-4e9c-9962-938d9cc724ab",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 50% korting €100, was?",
+    "claudeUitleg": "€100 is 50% van de oude prijs.\n1% is 100 : 50 = 2,00, dus 100% is €200.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€150",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€100",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€150",
+      "uitleg": "De 50% ging van de óude prijs af, niet van €100. €100 is 50%."
+     },
+     {
+      "stap": null,
+      "fout": "€100",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "16e6400d-ab40-4e9c-9962-938d9cc724ab",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-003",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "200",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-009",
+   "nr": "009",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vis kost na 20% korting €120. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "150",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€144",
+     "uitleg": "De 20% ging van de óude prijs af, niet van €120. €120 is 80%."
+    },
+    {
+     "stap": null,
+     "fout": "€120",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€144 → De 20% ging van de óude prijs af, niet van €120. €120 is 80%. · €120 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:3025592c-31be-49f0-b258-7eb8750d151b",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 20% korting €120, was?",
+    "claudeUitleg": "€120 is 80% van de oude prijs.\n1% is 120 : 80 = 1,50, dus 100% is €150.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€144",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€120",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€144",
+      "uitleg": "De 20% ging van de óude prijs af, niet van €120. €120 is 80%."
+     },
+     {
+      "stap": null,
+      "fout": "€120",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "3025592c-31be-49f0-b258-7eb8750d151b",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-004",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "150",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-010",
+   "nr": "010",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een kaart kost na 20% korting €48. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "60",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€58",
+     "uitleg": "De 20% ging van de óude prijs af, niet van €48. €48 is 80%."
+    },
+    {
+     "stap": null,
+     "fout": "€48",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€58 → De 20% ging van de óude prijs af, niet van €48. €48 is 80%. · €48 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:3f74c1c1-e67f-4e6f-815f-eeff6d703afe",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 20% korting €48, was?",
+    "claudeUitleg": "€48 is 80% van de oude prijs.\n1% is 48 : 80 = 0,60, dus 100% is €60.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€58",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€48",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€58",
+      "uitleg": "De 20% ging van de óude prijs af, niet van €48. €48 is 80%."
+     },
+     {
+      "stap": null,
+      "fout": "€48",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "3f74c1c1-e67f-4e6f-815f-eeff6d703afe",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W11 winkel: passende spullen",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-005",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "60",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-011",
+   "nr": "011",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een trui kost na 10% korting €54. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "60",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€59",
+     "uitleg": "De 10% ging van de óude prijs af, niet van €54. €54 is 90%."
+    },
+    {
+     "stap": null,
+     "fout": "€54",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€59 → De 10% ging van de óude prijs af, niet van €54. €54 is 90%. · €54 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:4e3a64c0-caa1-46c3-bb36-fdb44b651420",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 10% korting €54, was?",
+    "claudeUitleg": "€54 is 90% van de oude prijs.\n1% is 54 : 90 = 0,60, dus 100% is €60.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€59",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€54",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€59",
+      "uitleg": "De 10% ging van de óude prijs af, niet van €54. €54 is 90%."
+     },
+     {
+      "stap": null,
+      "fout": "€54",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "4e3a64c0-caa1-46c3-bb36-fdb44b651420",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D7-TAAL 'mediaan' → 'het middelste getal'; 'trainer'/'shirt' → 'kind'/'trui'",
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-006",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "60",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-012",
+   "nr": "012",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een wortel kost na 25% korting €60. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "80",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€75",
+     "uitleg": "De 25% ging van de óude prijs af, niet van €60. €60 is 75%."
+    },
+    {
+     "stap": null,
+     "fout": "€60",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€75 → De 25% ging van de óude prijs af, niet van €60. €60 is 75%. · €60 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:566b2d98-a883-40ec-b274-12b09b040de1",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 25% korting €60, was?",
+    "claudeUitleg": "€60 is 75% van de oude prijs.\n1% is 60 : 75 = 0,80, dus 100% is €80.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€75",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€60",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€75",
+      "uitleg": "De 25% ging van de óude prijs af, niet van €60. €60 is 75%."
+     },
+     {
+      "stap": null,
+      "fout": "€60",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "566b2d98-a883-40ec-b274-12b09b040de1",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-007",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "80",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-013",
+   "nr": "013",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een schrift kost na 25% korting €60. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "80",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€75",
+     "uitleg": "De 25% ging van de óude prijs af, niet van €60. €60 is 75%."
+    },
+    {
+     "stap": null,
+     "fout": "€60",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€75 → De 25% ging van de óude prijs af, niet van €60. €60 is 75%. · €60 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:5b3d9b42-09c7-46e1-8582-b75900a089d3",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 25% korting €60, was?",
+    "claudeUitleg": "€60 is 75% van de oude prijs.\n1% is 60 : 75 = 0,80, dus 100% is €80.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€75",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€60",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€75",
+      "uitleg": "De 25% ging van de óude prijs af, niet van €60. €60 is 75%."
+     },
+     {
+      "stap": null,
+      "fout": "€60",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "5b3d9b42-09c7-46e1-8582-b75900a089d3",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W11 winkel: passende spullen",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-008",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "80",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-014",
+   "nr": "014",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een knikker kost na 50% korting €40. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "80",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€60",
+     "uitleg": "De 50% ging van de óude prijs af, niet van €40. €40 is 50%."
+    },
+    {
+     "stap": null,
+     "fout": "€40",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€60 → De 50% ging van de óude prijs af, niet van €40. €40 is 50%. · €40 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:844212d8-636d-44e7-9141-95ad6366caac",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 50% korting €40, was?",
+    "claudeUitleg": "€40 is 50% van de oude prijs.\n1% is 40 : 50 = 0,80, dus 100% is €80.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€60",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€40",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€60",
+      "uitleg": "De 50% ging van de óude prijs af, niet van €40. €40 is 50%."
+     },
+     {
+      "stap": null,
+      "fout": "€40",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "844212d8-636d-44e7-9141-95ad6366caac",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W1 moeilijk woord vervangen",
+     "W11 winkel: passende spullen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-009",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "80",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-015",
+   "nr": "015",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een pion kost na 10% korting €180. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "200",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€198",
+     "uitleg": "De 10% ging van de óude prijs af, niet van €180. €180 is 90%."
+    },
+    {
+     "stap": null,
+     "fout": "€180",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€198 → De 10% ging van de óude prijs af, niet van €180. €180 is 90%. · €180 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:8c16deab-8aff-43ee-b6b5-1bea4c6755fc",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 10% korting €180, was?",
+    "claudeUitleg": "€180 is 90% van de oude prijs.\n1% is 180 : 90 = 2,00, dus 100% is €200.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€198",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€180",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€198",
+      "uitleg": "De 10% ging van de óude prijs af, niet van €180. €180 is 90%."
+     },
+     {
+      "stap": null,
+      "fout": "€180",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "8c16deab-8aff-43ee-b6b5-1bea4c6755fc",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-010",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "200",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-016",
+   "nr": "016",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een sticker kost na 50% korting €20. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "40",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€30",
+     "uitleg": "De 50% ging van de óude prijs af, niet van €20. €20 is 50%."
+    },
+    {
+     "stap": null,
+     "fout": "€20",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€30 → De 50% ging van de óude prijs af, niet van €20. €20 is 50%. · €20 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:930b3b0d-01d4-4367-9f18-b2115bf09383",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 50% korting €20, was?",
+    "claudeUitleg": "€20 is 50% van de oude prijs.\n1% is 20 : 50 = 0,40, dus 100% is €40.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€30",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€20",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€30",
+      "uitleg": "De 50% ging van de óude prijs af, niet van €20. €20 is 50%."
+     },
+     {
+      "stap": null,
+      "fout": "€20",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "930b3b0d-01d4-4367-9f18-b2115bf09383",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W5 woord kindvriendelijk (G4)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-011",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "40",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-017",
+   "nr": "017",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een bot kost na 20% korting €192. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "240",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€230",
+     "uitleg": "De 20% ging van de óude prijs af, niet van €192. €192 is 80%."
+    },
+    {
+     "stap": null,
+     "fout": "€192",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€230 → De 20% ging van de óude prijs af, niet van €192. €192 is 80%. · €192 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:95ee6319-3a9c-4760-ad27-982e93540d21",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 20% korting €192, was?",
+    "claudeUitleg": "€192 is 80% van de oude prijs.\n1% is 192 : 80 = 2,40, dus 100% is €240.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€230",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€192",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€230",
+      "uitleg": "De 20% ging van de óude prijs af, niet van €192. €192 is 80%."
+     },
+     {
+      "stap": null,
+      "fout": "€192",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "95ee6319-3a9c-4760-ad27-982e93540d21",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-012",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "240",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-018",
+   "nr": "018",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een bot kost na 25% korting €60. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "80",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€75",
+     "uitleg": "De 25% ging van de óude prijs af, niet van €60. €60 is 75%."
+    },
+    {
+     "stap": null,
+     "fout": "€60",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€75 → De 25% ging van de óude prijs af, niet van €60. €60 is 75%. · €60 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:d19d8dde-7230-4d61-9dcc-6b63cf4667c8",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 25% korting €60, was?",
+    "claudeUitleg": "€60 is 75% van de oude prijs.\n1% is 60 : 75 = 0,80, dus 100% is €80.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€75",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€60",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€75",
+      "uitleg": "De 25% ging van de óude prijs af, niet van €60. €60 is 75%."
+     },
+     {
+      "stap": null,
+      "fout": "€60",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "d19d8dde-7230-4d61-9dcc-6b63cf4667c8",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-013",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "80",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-019",
+   "nr": "019",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een sticker kost na 50% korting €100. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "200",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€150",
+     "uitleg": "De 50% ging van de óude prijs af, niet van €100. €100 is 50%."
+    },
+    {
+     "stap": null,
+     "fout": "€100",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€150 → De 50% ging van de óude prijs af, niet van €100. €100 is 50%. · €100 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:e07869da-6915-429c-b52e-5017dd3c5d91",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 50% korting €100, was?",
+    "claudeUitleg": "€100 is 50% van de oude prijs.\n1% is 100 : 50 = 2,00, dus 100% is €200.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€150",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€100",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€150",
+      "uitleg": "De 50% ging van de óude prijs af, niet van €100. €100 is 50%."
+     },
+     {
+      "stap": null,
+      "fout": "€100",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "e07869da-6915-429c-b52e-5017dd3c5d91",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W5 woord kindvriendelijk (G4)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-014",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "Een [ding] kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "200",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-020",
+   "nr": "020",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een zak noten kost na 50% korting €75. Wat was de prijs vóór de korting?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "150",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€113",
+     "uitleg": "De 50% ging van de óude prijs af, niet van €75. €75 is 50%."
+    },
+    {
+     "stap": null,
+     "fout": "€75",
+     "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+    }
+   ],
+   "foutHintsTekst": "€113 → De 50% ging van de óude prijs af, niet van €75. €75 is 50%. · €75 → Dat is de prijs ná de korting. Gevraagd is de prijs ervoor.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:V6:baceb1c1-ae10-4811-9b45-a678867e2a90",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "na 50% korting €75, was?",
+    "claudeUitleg": "€75 is 50% van de oude prijs.\n1% is 75 : 50 = 1,50, dus 100% is €150.",
+    "claudeStrategie": "terugrekenen via 1%",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€113",
+      "denkfout": "procent-verkeerde-basis"
+     },
+     {
+      "fout": "€75",
+      "denkfout": "getal-overgenomen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€113",
+      "uitleg": "De 50% ging van de óude prijs af, niet van €75. €75 is 50%."
+     },
+     {
+      "stap": null,
+      "fout": "€75",
+      "uitleg": "Dat is de prijs ná de korting. Gevraagd is de prijs ervoor."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "baceb1c1-ae10-4811-9b45-a678867e2a90",
+    "claudeDoel": "V6",
+    "claudeDoelTitel": "Terugrekenen",
+    "claudeGroep": 7,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W11 winkel: passende spullen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-P00-park-G7",
+    "reden": "uit de G7-park (voorstel G8-VERH-E04, regel G7-V08-terug)",
+    "somtype": "Een zak noten kost na #% korting €#. Wat was de prijs vóór de korting?",
+    "g7Park": {
+     "id": "G8-VERH-E04-claude-bank-park-015",
+     "voorstelDoel": "G8-VERH-E04",
+     "regel": "G7-V08-terug"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 6,
+    "somtypeNrOrigineel": 6,
+    "somtypeOrigineel": "Een zak noten kost na #% korting €#. Wat was de prijs vóór de korting?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "150",
+    "methode": "G8 prijs vóór korting",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-021",
+   "nr": "021",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Fatima zet €800 op een spaarrekening met 3% rente per jaar. Hoeveel rente krijgt ze na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "24",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€240",
+     "uitleg": "1% van 800 is 8, niet 80."
+    },
+    {
+     "stap": null,
+     "fout": "€824",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€3",
+     "uitleg": "3% is een deel van €800, niet €3."
+    }
+   ],
+   "foutHintsTekst": "€240 → 1% van 800 is 8, niet 80. · €824 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €3 → 3% is een deel van €800, niet €3.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:70c0893b-ca98-4587-928d-32829b631244",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "3% van 800",
+    "claudeUitleg": "1% van 800 is 8.\n3% is 3 × 8 = €24.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€240",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€824",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€3",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€240",
+      "uitleg": "1% van 800 is 8, niet 80."
+     },
+     {
+      "stap": null,
+      "fout": "€824",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€3",
+      "uitleg": "3% is een deel van €800, niet €3."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "70c0893b-ca98-4587-928d-32829b631244",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "Fatima zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 4,
+    "somtypeNrOrigineel": 4,
+    "somtypeOrigineel": "Fatima zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "24",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-022",
+   "nr": "022",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Fatima zet €2000 op een spaarrekening met 3% rente per jaar. Hoeveel rente krijgt ze na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "60",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€600",
+     "uitleg": "1% van 2000 is 20, niet 200."
+    },
+    {
+     "stap": null,
+     "fout": "€2060",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€3",
+     "uitleg": "3% is een deel van €2000, niet €3."
+    }
+   ],
+   "foutHintsTekst": "€600 → 1% van 2000 is 20, niet 200. · €2060 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €3 → 3% is een deel van €2.000, niet €3.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:ec509488-51e0-4298-aed3-fbb76d8f8f57",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "3% van 2000",
+    "claudeUitleg": "1% van 2000 is 20.\n3% is 3 × 20 = €60.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€600",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€2060",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€3",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€600",
+      "uitleg": "1% van 2000 is 20, niet 200."
+     },
+     {
+      "stap": null,
+      "fout": "€2060",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€3",
+      "uitleg": "3% is een deel van €2000, niet €3."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "ec509488-51e0-4298-aed3-fbb76d8f8f57",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "Fatima zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 4,
+    "somtypeNrOrigineel": 4,
+    "somtypeOrigineel": "Fatima zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "60",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-023",
+   "nr": "023",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Sanne zet €400 op een spaarrekening met 1% rente per jaar. Hoeveel rente krijgt ze na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "4",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€40",
+     "uitleg": "1% van 400 is 4, niet 40."
+    },
+    {
+     "stap": null,
+     "fout": "€404",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€1",
+     "uitleg": "1% is een deel van €400, niet €1."
+    }
+   ],
+   "foutHintsTekst": "€40 → 1% van 400 is 4, niet 40. · €404 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €1 → 1% is een deel van €400, niet €1.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:095fb51b-8ef8-4ada-a20d-98fb6118987c",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "1% van 400",
+    "claudeUitleg": "1% van 400 is 4.\n1% is 1 × 4 = €4.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€40",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€404",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€1",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€40",
+      "uitleg": "1% van 400 is 4, niet 40."
+     },
+     {
+      "stap": null,
+      "fout": "€404",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€1",
+      "uitleg": "1% is een deel van €400, niet €1."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "095fb51b-8ef8-4ada-a20d-98fb6118987c",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "Sanne zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 7,
+    "somtypeNrOrigineel": 7,
+    "somtypeOrigineel": "Sanne zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt ze na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "4",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-024",
+   "nr": "024",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een speler zet €800 op een spaarrekening met 3% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "24",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€240",
+     "uitleg": "1% van 800 is 8, niet 80."
+    },
+    {
+     "stap": null,
+     "fout": "€824",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€3",
+     "uitleg": "3% is een deel van €800, niet €3."
+    }
+   ],
+   "foutHintsTekst": "€240 → 1% van 800 is 8, niet 80. · €824 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €3 → 3% is een deel van €800, niet €3.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:073a3d9b-76d2-4ad2-a147-345a3d3b9fda",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "3% van 800",
+    "claudeUitleg": "1% van 800 is 8.\n3% is 3 × 8 = €24.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€240",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€824",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€3",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€240",
+      "uitleg": "1% van 800 is 8, niet 80."
+     },
+     {
+      "stap": null,
+      "fout": "€824",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€3",
+      "uitleg": "3% is een deel van €800, niet €3."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "073a3d9b-76d2-4ad2-a147-345a3d3b9fda",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "24",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-025",
+   "nr": "025",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een kind zet €200 op een spaarrekening met 3% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "6",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€60",
+     "uitleg": "1% van 200 is 2, niet 20."
+    },
+    {
+     "stap": null,
+     "fout": "€206",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€3",
+     "uitleg": "3% is een deel van €200, niet €3."
+    }
+   ],
+   "foutHintsTekst": "€60 → 1% van 200 is 2, niet 20. · €206 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €3 → 3% is een deel van €200, niet €3.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:2ce1eeb2-2239-4b65-b21f-228c21a2c897",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "3% van 200",
+    "claudeUitleg": "1% van 200 is 2.\n3% is 3 × 2 = €6.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€60",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€206",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€3",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€60",
+      "uitleg": "1% van 200 is 2, niet 20."
+     },
+     {
+      "stap": null,
+      "fout": "€206",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€3",
+      "uitleg": "3% is een deel van €200, niet €3."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "2ce1eeb2-2239-4b65-b21f-228c21a2c897",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "6",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-026",
+   "nr": "026",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een kind zet €1500 op een spaarrekening met 4% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "60",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€600",
+     "uitleg": "1% van 1500 is 15, niet 150."
+    },
+    {
+     "stap": null,
+     "fout": "€1560",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€4",
+     "uitleg": "4% is een deel van €1500, niet €4."
+    }
+   ],
+   "foutHintsTekst": "€600 → 1% van 1500 is 15, niet 150. · €1560 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €4 → 4% is een deel van €1.500, niet €4.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:468d7955-8f0c-42c1-b32e-c50bc49c63e5",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "4% van 1500",
+    "claudeUitleg": "1% van 1500 is 15.\n4% is 4 × 15 = €60.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€600",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€1560",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€4",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€600",
+      "uitleg": "1% van 1500 is 15, niet 150."
+     },
+     {
+      "stap": null,
+      "fout": "€1560",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€4",
+      "uitleg": "4% is een deel van €1500, niet €4."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "468d7955-8f0c-42c1-b32e-c50bc49c63e5",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "60",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-027",
+   "nr": "027",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een speler zet €1500 op een spaarrekening met 1% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "15",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€150",
+     "uitleg": "1% van 1500 is 15, niet 150."
+    },
+    {
+     "stap": null,
+     "fout": "€1515",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€1",
+     "uitleg": "1% is een deel van €1500, niet €1."
+    }
+   ],
+   "foutHintsTekst": "€150 → 1% van 1500 is 15, niet 150. · €1515 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €1 → 1% is een deel van €1.500, niet €1.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:5617bef9-e5d0-4144-92ff-0e2782acfbbd",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "1% van 1500",
+    "claudeUitleg": "1% van 1500 is 15.\n1% is 1 × 15 = €15.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€150",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€1515",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€1",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€150",
+      "uitleg": "1% van 1500 is 15, niet 150."
+     },
+     {
+      "stap": null,
+      "fout": "€1515",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€1",
+      "uitleg": "1% is een deel van €1500, niet €1."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "5617bef9-e5d0-4144-92ff-0e2782acfbbd",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "15",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-028",
+   "nr": "028",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een kind zet €300 op een spaarrekening met 4% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "12",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€120",
+     "uitleg": "1% van 300 is 3, niet 30."
+    },
+    {
+     "stap": null,
+     "fout": "€312",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€4",
+     "uitleg": "4% is een deel van €300, niet €4."
+    }
+   ],
+   "foutHintsTekst": "€120 → 1% van 300 is 3, niet 30. · €312 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €4 → 4% is een deel van €300, niet €4.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:71caedb2-028c-4688-a1c3-e486bdcd84c5",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "4% van 300",
+    "claudeUitleg": "1% van 300 is 3.\n4% is 4 × 3 = €12.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€120",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€312",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€4",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€120",
+      "uitleg": "1% van 300 is 3, niet 30."
+     },
+     {
+      "stap": null,
+      "fout": "€312",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€4",
+      "uitleg": "4% is een deel van €300, niet €4."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "71caedb2-028c-4688-a1c3-e486bdcd84c5",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "12",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-029",
+   "nr": "029",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een kind zet €2000 op een spaarrekening met 3% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "60",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€600",
+     "uitleg": "1% van 2000 is 20, niet 200."
+    },
+    {
+     "stap": null,
+     "fout": "€2060",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€3",
+     "uitleg": "3% is een deel van €2000, niet €3."
+    }
+   ],
+   "foutHintsTekst": "€600 → 1% van 2000 is 20, niet 200. · €2060 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €3 → 3% is een deel van €2.000, niet €3.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:75577bf3-adb8-4a98-86d7-aa8c65e66b5f",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "3% van 2000",
+    "claudeUitleg": "1% van 2000 is 20.\n3% is 3 × 20 = €60.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€600",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€2060",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€3",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€600",
+      "uitleg": "1% van 2000 is 20, niet 200."
+     },
+     {
+      "stap": null,
+      "fout": "€2060",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€3",
+      "uitleg": "3% is een deel van €2000, niet €3."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "75577bf3-adb8-4a98-86d7-aa8c65e66b5f",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "60",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-030",
+   "nr": "030",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een kind zet €500 op een spaarrekening met 1% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "5",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€50",
+     "uitleg": "1% van 500 is 5, niet 50."
+    },
+    {
+     "stap": null,
+     "fout": "€505",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€1",
+     "uitleg": "1% is een deel van €500, niet €1."
+    }
+   ],
+   "foutHintsTekst": "€50 → 1% van 500 is 5, niet 50. · €505 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €1 → 1% is een deel van €500, niet €1.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:a4e586c8-b8af-425b-9f0d-3202c979edac",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "1% van 500",
+    "claudeUitleg": "1% van 500 is 5.\n1% is 1 × 5 = €5.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€50",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€505",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€1",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€50",
+      "uitleg": "1% van 500 is 5, niet 50."
+     },
+     {
+      "stap": null,
+      "fout": "€505",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€1",
+      "uitleg": "1% is een deel van €500, niet €1."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "a4e586c8-b8af-425b-9f0d-3202c979edac",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "5",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-031",
+   "nr": "031",
+   "doelId": "G8-VERH-E04",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een kind zet €1500 op een spaarrekening met 5% rente per jaar. Hoeveel rente krijgt hij na één jaar?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "75",
+   "antwoordDetail": null,
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€750",
+     "uitleg": "1% van 1500 is 15, niet 150."
+    },
+    {
+     "stap": null,
+     "fout": "€1575",
+     "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+    },
+    {
+     "stap": null,
+     "fout": "€5",
+     "uitleg": "5% is een deel van €1500, niet €5."
+    }
+   ],
+   "foutHintsTekst": "€750 → 1% van 1500 is 15, niet 150. · €1575 → Gevraagd is alleen de rente, niet het hele bedrag op de rekening. · €5 → 5% is een deel van €1.500, niet €5.",
+   "ouderzin": "",
+   "getallenruimte": "procenten met €",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T6:f43d7e64-bcf0-4f4a-8feb-294dc387a817",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "5% van 1500",
+    "claudeUitleg": "1% van 1500 is 15.\n5% is 5 × 15 = €75.",
+    "claudeStrategie": "via 1%",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€750",
+      "denkfout": "komma-verschoven"
+     },
+     {
+      "fout": "€1575",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "€5",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€750",
+      "uitleg": "1% van 1500 is 15, niet 150."
+     },
+     {
+      "stap": null,
+      "fout": "€1575",
+      "uitleg": "Gevraagd is alleen de rente, niet het hele bedrag op de rekening."
+     },
+     {
+      "stap": null,
+      "fout": "€5",
+      "uitleg": "5% is een deel van €1500, niet €5."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "f43d7e64-bcf0-4f4a-8feb-294dc387a817",
+    "claudeDoel": "T6",
+    "claudeDoelTitel": "Rente",
+    "claudeGroep": 8,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "G8-R8/R9 het-woord/€-notatie/context",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "G8-T6-rente",
+    "reden": "rente = procent van een bedrag (G8-VERH-E04)",
+    "somtype": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[wie] zet €# op een spaarrekening met #% rente per jaar. Hoeveel [ding] krijgt hij na één jaar?"
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "75",
+    "methode": "G8 rente",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   }
+  },
+  {
+   "id": "G8-VERH-E04-claude-bank-032",
+   "nr": "032",
+   "doelId": "G8-VERH-E04",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "meerkeuze",
+   "opgave": "Van de 150 kinderen op school komt 60 procent met de fiets. Hoeveel kinderen komen er met de fiets?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "60 kinderen"
+    },
+    {
+     "letter": "B",
+     "tekst": "100 kinderen"
+    },
+    {
+     "letter": "C",
+     "tekst": "90 kinderen"
+    }
+   ],
+   "optiesTekst": "A) 60 kinderen · B) 100 kinderen · C) 90 kinderen",
+   "antwoord": "90 kinderen",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "90 kinderen"
+   },
+   "hint": "",
+   "sterkereHint": "",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "60 kinderen",
+     "uitleg": "60 is het percentage en niet het aantal kinderen. Reken het uit met 150."
+    },
+    {
+     "stap": null,
+     "fout": "100 kinderen",
+     "uitleg": "Je rekent met 100 kinderen. De school heeft een ander aantal leerlingen."
+    }
+   ],
+   "foutHintsTekst": "60 kinderen → 60 is het percentage en niet het aantal kinderen. Reken het uit met 150. · 100 kinderen → Je rekent met 100 kinderen. De school heeft een ander aantal leerlingen.",
+   "ouderzin": "",
+   "getallenruimte": "0–1.000",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:G9:86d4eb05-6d60-4885-88d1-ff5fce24df00",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "G9",
+    "claudeUitleg": "10 procent van 150 is 15 kinderen. 60 procent is dan 6 x 15 = 90. Dus 90 kinderen komen met de fiets.",
+    "claudeStrategie": "via tien procent",
+    "claudeThema": null,
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "keuze",
+    "claudeNiveau": 3,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "60 kinderen",
+      "denkfout": "getal-overgenomen"
+     },
+     {
+      "fout": "100 kinderen",
+      "denkfout": "procent-verkeerde-basis"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "60 kinderen",
+      "uitleg": "60 is het percentage en niet het aantal kinderen. Reken het uit met 150."
+     },
+     {
+      "stap": null,
+      "fout": "100 kinderen",
+      "uitleg": "Je rekent met 100 kinderen. De school heeft een ander aantal leerlingen."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "86d4eb05-6d60-4885-88d1-ff5fce24df00",
+    "claudeDoel": "G9",
+    "claudeDoelTitel": "Statistiek",
+    "claudeGroep": 8,
+    "claudeBron": "ai",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G8-VERH-E04",
+    "voorstelDoel": null,
+    "regel": "D8-STAT-NAAR-VERH",
+    "reden": "Didactiek 1 okt (G8-twijfel G8-VBN-E04-claude-bank-twijfel-022): STAT-NAAR-VERH",
+    "somtype": "Van de # [ding] op school komt # procent met de fiets. Hoeveel kinderen komen er met de fiets?",
+    "didactiekG8": {
+     "twijfelId": "G8-VBN-E04-claude-bank-twijfel-022",
+     "groep": "statistiek-gemengd",
+     "regel": "G8-G9-statistiek",
+     "subregel": "STAT-NAAR-VERH",
+     "redencode": "STAT-NAAR-VERH",
+     "didactiek": {
+      "besluit": "verplaatsen",
+      "doel": "G8-VERH-E04"
+     },
+     "dave": null,
+     "flags": [],
+     "hintStatus": "Didactiek G8"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 8,
+    "somtypeNrOrigineel": 8,
+    "somtypeOrigineel": "Van de # [ding] op school komt # procent met de fiets. Hoeveel kinderen komen er met de fiets?"
+   },
+   "controle": {
+    "antwoord": "n.v.t.",
+    "verwacht": null,
+    "methode": "geen automatische controle",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null
+   },
+   "geldigeAntwoorden": [
+    "90 kinderen"
+   ]
+  }
+ ]
+}

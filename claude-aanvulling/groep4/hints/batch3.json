@@ -1,0 +1,1242 @@
+{
+ "batch": "batch3",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G4-merge, batch 3 = GET-M02, GET-M05, GET-M06, MEET-E01/E02/E05/E07, MKU-E01 … MKU-E05). Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint; 'claude' = tekst van Claude blijft (ok), 'claude-taalfix' = Claudes tekst met een kleine taalfix, 'nieuw' = eigen tekst (claudeTekst = de Claude-tekst die hij vervangt). Bij 'tekst per item' blijft Claudes eigen tekst per item staan, behalve teksten in claudeVervangen: die vallen door naar de volgende regel. Getal1/getal2 = de getallen in de opgave, in volgorde. Regels als '45 m' of '3 euro' zijn letterlijke opties: ze bestaan maar in een paar items (in de andere items meldt apply_hints ze als 'niet te lezen'; dat is verwacht). GET-M06 (rooster): de sleutels zijn het aantal gekleurde hokjes; de app moet dat aantal doorgeven (zie merge-fixlijst).",
+ "somtypen": [
+  {
+   "doel": "G4-GET-M02",
+   "nr": 1,
+   "somtype": "[tienstaven/blokjes leggen] Leg # [ding] tienstaven en losse blokjes. Hoeveel losse blokjes leg je?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[tienstaven/blokjes leggen] Leg # [ding] tienstaven en losse blokjes. Hoeveel losse blokjes leg je?",
+   "hint1": "Een tienstaaf is tien blokjes. Wat over is, leg je als losse blokjes.",
+   "hint2": "Het cijfer vooraan zegt hoeveel tienstaven je legt. Het cijfer achteraan zegt hoeveel losse blokjes je legt.",
+   "ouderzin": "Je kind legt een getal tot 100 met tienstaven en losse blokjes en zegt hoeveel losse blokjes het zijn.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het hele getal",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het hele getal. De vraag is hoeveel losse blokjes je legt, naast de tienstaven."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 naast het antwoord",
+     "tekst": "Bijna! Tel de losse blokjes nog eens. Kijk naar het cijfer achteraan."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Leg eerst zoveel tienstaven als je kunt. Hoeveel losse blokjes heb je dan nog nodig?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M02",
+   "nr": 2,
+   "somtype": "[tienstaven/blokjes leggen] Leg # [ding] tienstaven en losse blokjes. Hoeveel tienstaven leg je?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[tienstaven/blokjes leggen] Leg # [ding] tienstaven en losse blokjes. Hoeveel tienstaven leg je?",
+   "hint1": "Een tienstaaf is tien blokjes. Hoeveel tienstaven passen er in het getal?",
+   "hint2": "Tel in sprongen van tien. Elke sprong is één tienstaaf. Stop als de volgende sprong te ver gaat.",
+   "ouderzin": "Je kind legt een getal tot 100 met tienstaven en losse blokjes en zegt hoeveel tienstaven het zijn.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het hele getal",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het hele getal. Eén tienstaaf is tien blokjes. Hoeveel tienstaven heb je nodig?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één tienstaaf te veel. Tel nog eens in sprongen van tien."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één tienstaaf te weinig. Tel nog eens in sprongen van tien."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar het cijfer vooraan. Dat zegt hoeveel tienstaven je legt."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M05",
+   "nr": 1,
+   "somtype": "In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over? — hele tientallen",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over? — hele tientallen",
+   "hint1": "Er gaan dingen weg, dus er blijven er minder over. Hoeveel tientallen gaan er weg?",
+   "hint2": "Spring vanaf het eerste getal terug in sprongen van tien: één sprong voor elk tiental dat weggaat. Het cijfer achteraan blijft hetzelfde.",
+   "ouderzin": "Je kind haalt hele tientallen af van een getal tot 100, in een verhaaltje.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niets eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er gaan dingen weg, dus er blijven er minder over."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "een tiental te veel eraf",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Tel de tientallen die weggaan nog eens.",
+     "claudeTekst": "Tel de tientallen nog eens: één tiental te veel eraf.",
+     "waarom": "'te veel eraf' bij een antwoord dat te laag is: zeg 'te weinig' in de goede richting"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Er gaan dingen weg, dus het getal wordt kleiner.",
+     "claudeTekst": "Er gaat weg, dus het getal wordt kleiner.",
+     "waarom": "'Er gaat weg' / 'Er komt bij' zonder wat er weggaat (les G3: 'Er gaan dingen weg')"
+    },
+    {
+     "bron": "claude",
+     "soort": "alleen het cijfer eraf",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "regel": "alleen het cijfer van de tientallen eraf (tekst per item)",
+     "tekst": "Je haalt … eraf, maar het zijn … tientallen. Dat is …."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te weinig eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is te veel. Er moet nog een tiental af.",
+     "claudeTekst": "Je gaat over het tiental heen, dus er gaat een tiental af. Tel de tientallen nog eens.",
+     "waarom": "klopt niet: bij dit somtype ga je niet over een tiental heen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Bij hele tientallen blijft het cijfer achteraan hetzelfde.",
+     "claudeTekst": "Ga eerst naar …, en haal dan … eraf.",
+     "waarom": "bij hele tientallen hoef je niet via het tiental (bv. 79 − 10: 'Ga eerst naar 70, en haal dan 1 eraf'); spring een tiental"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoeveel tientallen er weggaan. Spring zo vaak een tiental terug. Het cijfer achteraan blijft hetzelfde."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Er gaat weg: het getal wordt kleiner.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "'Er gaat weg' / 'Er komt bij' zonder wat er weggaat (les G3: 'Er gaan dingen weg'); nu dezelfde tekst als 'opgeteld'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M05",
+   "nr": 2,
+   "somtype": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel [ding] zijn het er nu? — hele tientallen",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel [ding] zijn het er nu? — hele tientallen",
+   "hint1": "Er komen dingen bij, dus het worden er meer. Hoeveel tientallen komen erbij?",
+   "hint2": "Spring vanaf het eerste getal vooruit in sprongen van tien: één sprong voor elk tiental dat erbij komt. Het cijfer achteraan blijft hetzelfde.",
+   "ouderzin": "Je kind telt hele tientallen bij een getal tot 100, in een verhaaltje.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niets erbij",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er komen dingen bij, dus het worden er meer."
+    },
+    {
+     "bron": "claude",
+     "soort": "een tiental te veel",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord + 10",
+     "tekst": "Tel de tientallen nog eens: één tiental te veel."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "min gedaan",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Er komen dingen bij, dus het getal wordt groter.",
+     "claudeTekst": "Er komt bij, dus het getal wordt groter.",
+     "waarom": "'Er gaat weg' / 'Er komt bij' zonder wat er weggaat (les G3: 'Er gaan dingen weg')"
+    },
+    {
+     "bron": "claude",
+     "soort": "alleen het cijfer erbij",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "regel": "alleen het cijfer van de tientallen erbij (tekst per item)",
+     "tekst": "Je telt … erbij, maar het zijn … tientallen. Dat is …."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is te weinig. Er moet nog een tiental bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Bij hele tientallen blijft het cijfer achteraan hetzelfde."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoeveel tientallen erbij komen. Spring zo vaak een tiental verder. Het cijfer achteraan blijft hetzelfde."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M05",
+   "nr": 3,
+   "somtype": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel zijn het er samen? — over het tiental",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel zijn het er samen? — over het tiental",
+   "hint1": "Er komen dingen bij, dus het worden er meer. Je komt over een tiental heen.",
+   "hint2": "Heeft het tweede getal tientallen? Tel die eerst erbij. Tel dan de eenheden erbij: eerst tot het volgende hele tiental, daarna de rest.",
+   "ouderzin": "Je kind telt bij een getal tot 100 iets op en gaat daarbij over een tiental heen, in een verhaaltje.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niets erbij",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er komen dingen bij, dus het worden er meer."
+    },
+    {
+     "bron": "claude",
+     "soort": "tiental vergeten",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord − 10",
+     "tekst": "Je gaat over het tiental heen, dus er komt een tiental bij. Tel de tientallen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Ga eerst naar het volgende hele tiental, en tel dan de rest erbij.",
+     "claudeTekst": "Ga eerst naar …, en tel dan … erbij.",
+     "waarom": "'… en tel dan 1 erbij' verklapt bijna het antwoord (73 + 8); zonder getal, zoals G3"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "min gedaan",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Er komen dingen bij, dus het getal wordt groter.",
+     "claudeTekst": "Er komt bij: het getal wordt groter.",
+     "waarom": "'Er gaat weg' / 'Er komt bij' zonder wat er weggaat (les G3: 'Er gaan dingen weg')"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Tel de tientallen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Ga eerst naar het volgende hele tiental, en tel dan de rest erbij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Heeft het tweede getal tientallen? Tel die eerst erbij. Tel dan de eenheden erbij: eerst tot het hele tiental, daarna de rest."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M05",
+   "nr": 4,
+   "somtype": "In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over? — over het tiental",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over? — over het tiental",
+   "hint1": "Er gaan dingen weg, dus er blijven er minder over. Je gaat terug over een tiental heen.",
+   "hint2": "Heeft het tweede getal tientallen? Haal die eerst eraf. Haal dan de eenheden eraf: eerst terug tot het hele tiental, daarna de rest.",
+   "ouderzin": "Je kind haalt iets af van een getal tot 100 en gaat daarbij terug over een tiental heen, in een verhaaltje.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niets eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er gaan dingen weg, dus er blijven er minder over."
+    },
+    {
+     "bron": "claude",
+     "soort": "tiental vergeten",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord + 10",
+     "tekst": "Je gaat over het tiental heen, dus er gaat een tiental af. Tel de tientallen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Ga eerst terug naar het hele tiental, en haal dan de rest eraf.",
+     "claudeTekst": "Ga eerst naar …, en haal dan … eraf.",
+     "waarom": "de rest stond er als getal: verklapt bijna het antwoord"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Er gaan dingen weg, dus het getal wordt kleiner.",
+     "claudeTekst": "Er gaat weg: het getal wordt kleiner.",
+     "waarom": "'Er gaat weg' / 'Er komt bij' zonder wat er weggaat (les G3: 'Er gaan dingen weg')"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te veel eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Tel de tientallen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Ga eerst terug tot het hele tiental, en haal dan de rest eraf."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "kleinste van de grootste",
+     "claudeDenkfout": "kleinste-van-grootste",
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Bij de eenheden kun je het kleine cijfer niet zomaar van het grote afhalen. Ga eerst terug tot het hele tiental, en haal dan de rest eraf.",
+     "claudeTekst": "Bij de eenheden kun je niet zomaar de kleinste van de grootste afhalen. Ga via het tiental.",
+     "waarom": "'de kleinste van de grootste' is abstract en 'Ga via het tiental' zegt niet wat je doet (Didactiek b4 v1, 1.2 verplicht)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Heeft het tweede getal tientallen? Haal die eerst eraf. Haal dan de eenheden eraf: eerst terug tot het hele tiental, daarna de rest."
+    }
+   ],
+   "koppeling": "claudeId",
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bij de eenheden kun je niet zomaar de kleinste van de grootste afhalen. Ga via het tiental.",
+     "claudeDenkfout": "kleinste-van-grootste",
+     "waarom": "'de kleinste van de grootste' is abstract en 'Ga via het tiental' zegt niet wat je doet (Didactiek b4 v1, 1.2 verplicht); vaste tekst via leesbare regel (fout_regels kan geen vaste tekst op Claude-sleutels per item)"
+    }
+   ]
+  },
+  {
+   "doel": "G4-GET-M05",
+   "nr": 5,
+   "somtype": "In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over? — zonder tiental-overschrijding",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over? — zonder tiental-overschrijding",
+   "hint1": "Er gaan dingen weg, dus er blijven er minder over. Splits het tweede getal in tientallen en eenheden.",
+   "hint2": "Haal eerst de tientallen eraf. Haal daarna de eenheden eraf.",
+   "ouderzin": "Je kind haalt een getal boven de tien af van een getal tot 100, zonder terug over een tiental te gaan, in een verhaaltje.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niets eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er gaan dingen weg, dus er blijven er minder over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tientallen vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Haal ook de tientallen van het tweede getal eraf.",
+     "claudeTekst": "Je gaat over het tiental heen, dus er gaat een tiental af. Tel de tientallen nog eens.",
+     "waarom": "klopt niet: bij dit somtype ga je niet over een tiental heen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Haal eerst de tientallen eraf, en dan de eenheden.",
+     "claudeTekst": "Ga eerst naar …, en haal dan … eraf.",
+     "waarom": "'Ga eerst naar 90' hoort niet bij 'zonder overgang' (les G3 K05-4) en zegt niet dat het één te veel is"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Er gaan dingen weg, dus het getal wordt kleiner.",
+     "claudeTekst": "Er gaat weg: het getal wordt kleiner.",
+     "waarom": "'Er gaat weg' / 'Er komt bij' zonder wat er weggaat (les G3: 'Er gaan dingen weg')"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te veel eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Tel de tientallen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Haal eerst de tientallen eraf, en dan de eenheden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Haal eerst de tientallen eraf. Haal daarna de eenheden eraf."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M05",
+   "nr": 6,
+   "somtype": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel zijn het er samen? — zonder tiental-overschrijding",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel zijn het er samen? — zonder tiental-overschrijding",
+   "hint1": "Er komen dingen bij, dus het worden er meer. Splits het tweede getal in tientallen en eenheden.",
+   "hint2": "Tel eerst de tientallen erbij. Tel daarna de eenheden erbij.",
+   "ouderzin": "Je kind telt een getal boven de tien bij een getal tot 100, zonder over een tiental te gaan, in een verhaaltje.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niets erbij",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er komen dingen bij, dus het worden er meer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tientallen vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is één tiental te weinig. Tel ook de tientallen van het tweede getal erbij.",
+     "claudeTekst": "Je gaat over het tiental heen, dus er komt een tiental bij. Tel de tientallen nog eens.",
+     "waarom": "klopt niet: bij dit somtype ga je niet over een tiental heen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel eerst de tientallen erbij, en dan de eenheden.",
+     "claudeTekst": "Ga eerst naar …, en tel dan … erbij.",
+     "waarom": "'Ga eerst naar 70' hoort niet bij 'zonder overgang' en zegt niet dat het één te weinig is"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "min gedaan",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Er komen dingen bij, dus het getal wordt groter.",
+     "claudeTekst": "Er komt bij: het getal wordt groter.",
+     "waarom": "'Er gaat weg' / 'Er komt bij' zonder wat er weggaat (les G3: 'Er gaan dingen weg')"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is één tiental te veel. Tel de tientallen nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel eerst de tientallen erbij, en dan de eenheden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel eerst de tientallen erbij. Tel daarna de eenheden erbij."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M05",
+   "nr": 7,
+   "somtype": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel zijn het er samen? — hele tientallen",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Er komen er # bij. Hoeveel zijn het er samen? — hele tientallen",
+   "hint1": "Er komen dingen bij, dus het worden er meer. Hoeveel tientallen komen erbij?",
+   "hint2": "Spring vanaf het eerste getal vooruit in sprongen van tien: één sprong voor elk tiental dat erbij komt. Het cijfer achteraan blijft hetzelfde.",
+   "ouderzin": "Je kind telt hele tientallen bij een getal tot 100, in een verhaaltje.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niets erbij",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Dat is het getal waarmee je begint. Er komen dingen bij, dus het worden er meer."
+    },
+    {
+     "bron": "claude",
+     "soort": "een tiental te veel",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "fout = antwoord + 10",
+     "tekst": "Tel de tientallen nog eens: één tiental te veel."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "min gedaan",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Er komen dingen bij, dus het getal wordt groter.",
+     "claudeTekst": "Er komt bij, dus het getal wordt groter.",
+     "waarom": "'Er gaat weg' / 'Er komt bij' zonder wat er weggaat (les G3: 'Er gaan dingen weg')"
+    },
+    {
+     "bron": "claude",
+     "soort": "alleen het cijfer erbij",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "regel": "alleen het cijfer van de tientallen erbij (tekst per item)",
+     "tekst": "Je telt … erbij, maar het zijn … tientallen. Dat is …."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een tiental te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is te weinig. Er moet nog een tiental bij.",
+     "claudeTekst": "Je gaat over het tiental heen, dus er komt een tiental bij. Tel de tientallen nog eens.",
+     "waarom": "klopt niet: bij dit somtype ga je niet over een tiental heen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Bij hele tientallen blijft het cijfer achteraan hetzelfde.",
+     "claudeTekst": "Ga eerst naar …, en tel dan … erbij.",
+     "waarom": "bij hele tientallen hoef je niet via het tiental (bv. 79 − 10: 'Ga eerst naar 70, en haal dan 1 eraf'); spring een tiental"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoeveel tientallen erbij komen. Spring zo vaak een tiental verder. Het cijfer achteraan blijft hetzelfde."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Er komt bij: het getal wordt groter.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "'Er gaat weg' / 'Er komt bij' zonder wat er weggaat (les G3: 'Er gaan dingen weg'); nu dezelfde tekst als 'min gedaan'"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M06",
+   "nr": 1,
+   "somtype": "[rooster] Kleur # × # [ding] rechthoek op het rooster.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[rooster] Kleur # × # [ding] rechthoek op het rooster.",
+   "hint1": "Het keerteken (×) betekent: zoveel keer. Het eerste getal zegt hoeveel rijen je kleurt. Het tweede getal zegt hoeveel hokjes er in elke rij komen.",
+   "hint2": "Kleur eerst één rij. Kleur dan de volgende rij recht eronder, net zo lang. Ga door tot je genoeg rijen hebt.",
+   "ouderzin": "Je kind kleurt een keersom als rechthoek op een rooster: het eerste getal is het aantal rijen, het tweede het aantal hokjes per rij.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "plus gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2 (aantal gekleurde hokjes)",
+     "tekst": "Je hebt de getallen opgeteld. Het is een keersom: je kleurt een aantal rijen, en in elke rij evenveel hokjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één kolom",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 (aantal gekleurde hokjes)",
+     "tekst": "Je hebt nog niet genoeg hokjes gekleurd. Kleur alle rijen, recht onder elkaar. In elke rij evenveel hokjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één rij",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2 (aantal gekleurde hokjes)",
+     "tekst": "Je hebt nog niet genoeg hokjes gekleurd. Kleur alle rijen, recht onder elkaar. In elke rij evenveel hokjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel je rijen. Tel de hokjes in elke rij. Kloppen ze met de som?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M06",
+   "nr": 2,
+   "somtype": "[rooster] Kleur # rijen van # hokjes. Dat is # × #.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[rooster] Kleur # rijen van # hokjes. Dat is # × #.",
+   "hint1": "Kleur eerst één rij met zoveel hokjes als in de vraag staat.",
+   "hint2": "Kleur dan de volgende rij recht eronder, net zo lang. Ga door tot je genoeg rijen hebt. Tel ze na.",
+   "ouderzin": "Je kind kleurt rijen met hokjes op een rooster en ziet dat dat een keersom is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "plus gedaan",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2 (aantal gekleurde hokjes)",
+     "tekst": "Je hebt de getallen opgeteld. Het is een keersom: je kleurt een aantal rijen, en in elke rij evenveel hokjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één kolom",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 (aantal gekleurde hokjes)",
+     "tekst": "Je hebt nog niet genoeg hokjes gekleurd. Kleur alle rijen, recht onder elkaar. In elke rij evenveel hokjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één rij",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2 (aantal gekleurde hokjes)",
+     "tekst": "Je hebt nog niet genoeg hokjes gekleurd. Kleur alle rijen, recht onder elkaar. In elke rij evenveel hokjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel je rijen. Tel de hokjes in elke rij. Kloppen ze met de som?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E01",
+   "nr": 1,
+   "somtype": "[liniaal] Hoeveel centimeter is de strook?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[liniaal] Hoeveel centimeter is de strook?",
+   "hint1": "De strook begint niet bij nul. Kijk waar hij begint en waar hij ophoudt.",
+   "hint2": "Tel de centimeters van het begin tot het eind van de strook. Tel de stukjes tussen de streepjes, niet de streepjes zelf.",
+   "ouderzin": "Je kind meet een strook op een liniaal die niet bij nul begint.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één centimeter te veel. Tel de stukjes tussen de streepjes, niet de streepjes.",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "geen 'eentje naast' (les G3): zeg of het te veel of te weinig is, en waar je op let"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één centimeter te weinig. Tel van het begin tot het eind van de strook."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "veel te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Kijk goed waar de strook begint. Tel vanaf daar de centimeters tot het eind."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "veel te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Kijk waar de strook begint en waar hij ophoudt. Tel de centimeters daartussen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk waar de strook begint en waar hij ophoudt. Tel de centimeters daartussen."
+    }
+   ],
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "[liniaal] Hoeveel centimeter is de rode strook?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G4-MEET-E02",
+   "nr": 1,
+   "somtype": "[referentie] Hoe lang/hoog/breed is … ongeveer? (m of cm)",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[referentie] Hoe lang/hoog/breed is … ongeveer? (m of cm)",
+   "hint1": "Denk aan iets wat je kent, zoals je hand of je eigen lengte. Is het ding groter of kleiner?",
+   "hint2": "Kleine dingen meet je in centimeter, grote dingen in meter. Kies eerst de maat. Kies dan een getal dat erbij past.",
+   "ouderzin": "Je kind schat hoe lang of hoog iets is, in meter of centimeter.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "verkeerde schatting",
+     "claudeDenkfout": null,
+     "regel": "Claudes tekst bij de foute optie (tekst per item)",
+     "tekst": "… (eigen tekst per item)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te groot",
+     "claudeDenkfout": null,
+     "regel": "1000 m",
+     "tekst": "1000 m is heel ver. Daar loop je lang over. Een voetbalveld is veel korter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te klein",
+     "claudeDenkfout": null,
+     "regel": "10 m",
+     "tekst": "10 m is veel te kort. Op een voetbalveld kun je heel ver rennen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "korter dan een meter",
+     "claudeDenkfout": null,
+     "regel": "80 cm",
+     "tekst": "80 cm is nog geen meter. Zo kort is een klaslokaal niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "goed getal, verkeerde maat (45 m)",
+     "claudeDenkfout": null,
+     "regel": "45 m",
+     "tekst": "Het getal klopt, maar de maat niet. Is het centimeter of meter?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "goed getal, verkeerde maat (20 m)",
+     "claudeDenkfout": null,
+     "regel": "20 m",
+     "tekst": "Kijk goed naar de maat. 20 meter is langer dan twee klaslokalen. Een schoen is korter dan een liniaal van dertig centimeter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "goed getal, verkeerde maat (18 m)",
+     "claudeDenkfout": null,
+     "regel": "18 m",
+     "tekst": "Het getal klopt, maar de maat niet. Is het centimeter of meter?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "korter dan een meter (1 m)",
+     "claudeDenkfout": null,
+     "regel": "1 m",
+     "tekst": "1 m is langer dan je been. Een schoen is veel korter dan dat.",
+     "claudeTekst": "1 m is langer dan je been. Een schoen is veel korter dan dat.",
+     "waarom": "feitelijk fout: bij een kind van groep 4 komt 1 m hoger dan het middel (Didactiek, verplicht)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "half voetbalveld (50 m)",
+     "claudeDenkfout": null,
+     "regel": "50 m",
+     "tekst": "50 m is zo lang als een half voetbalveld. Een bus is veel korter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Denk aan iets wat je kent, zoals je hand of je eigen lengte. Is het langer of korter?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "1000 m is een kilometer. Zo ver loop je in ongeveer een kwartier.",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "waarom": "'kilometer' hoort niet in G4 (SPINE_G4), '1000 m' is boven 100 en 'zo ver loop je in …' is tijdsduur schatten (bij 009). ('Kwartier' is wél G4.)"
+    },
+    {
+     "claudeTekst": "10 m is iets langer dan een klaslokaal. Dan kun je nauwelijks sprinten.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "'sprinten' en 'nauwelijks' zijn moeilijke woorden (bij 009)"
+    },
+    {
+     "claudeTekst": "80 cm is bijna een meter. Dat is smaller dan een tafel.",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "'smaller dan een tafel' klopt niet goed: een tafel is ook ongeveer 80 cm (bij 007)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E05",
+   "nr": 1,
+   "somtype": "[referentie] Hoe zwaar is … ongeveer?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[referentie] Hoe zwaar is … ongeveer?",
+   "hint1": "Denk aan iets wat je kent. Een pak suiker weegt één kilo (1 kg).",
+   "hint2": "Is het lichter of zwaarder dan een pak suiker? Hoeveel pakken suiker zou het ongeveer zijn?",
+   "ouderzin": "Je kind schat hoe zwaar iets is.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "verkeerde schatting",
+     "claudeDenkfout": null,
+     "regel": "Claudes tekst bij de foute optie (tekst per item)",
+     "tekst": "… (eigen tekst per item)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "te zwaar",
+     "claudeDenkfout": "tiental-ernaast",
+     "regel": "40 kg",
+     "tekst": "40 kg is zwaarder dan een kind uit jouw klas. Dat is te veel voor een kat.",
+     "claudeTekst": "40 kg is zwaarder dan een kind uit groep 5. Dat is te veel voor een kat.",
+     "waarom": "het kind zit in groep 4: 'een kind uit jouw klas'"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Denk aan een pak suiker. Is het lichter of zwaarder? Hoeveel keer zo zwaar?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E05",
+   "nr": 2,
+   "somtype": "[referentie] Welk voorwerp weegt ongeveer # kg?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[referentie] Welk voorwerp weegt ongeveer # kg?",
+   "hint1": "Til in gedachten elk ding op. Is het heel licht, heel zwaar, of daartussen?",
+   "hint2": "Een kilo (1 kg) voel je echt in je hand. Toch kun je het met één hand optillen.",
+   "ouderzin": "Je kind zoekt een voorwerp dat ongeveer één kilo weegt.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "verkeerde schatting",
+     "claudeDenkfout": null,
+     "regel": "Claudes tekst bij de foute optie (tekst per item)",
+     "tekst": "… (eigen tekst per item)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Til in gedachten de dingen op. Welke is niet heel licht en niet heel zwaar?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E07",
+   "nr": 1,
+   "somtype": "[geld] Hoeveel [ding] zie je? — met centen",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[geld] Hoeveel [ding] zie je? — met centen",
+   "hint1": "Kijk bij elke munt of het een munt van cent of van euro is.",
+   "hint2": "Begin bij de grootste munt. Tel de andere munten er één voor één bij.",
+   "ouderzin": "Je kind telt munten bij elkaar op, ook munten van cent.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "aantal munten (€3)",
+     "claudeDenkfout": null,
+     "regel": "€3",
+     "tekst": "Je hebt de munten geteld. De vraag is hoeveel geld het samen is. Kijk wat elke munt waard is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal munten (€4)",
+     "claudeDenkfout": null,
+     "regel": "€4",
+     "tekst": "Je hebt de munten geteld. De vraag is hoeveel geld het samen is. Kijk wat elke munt waard is."
+    },
+    {
+     "bron": "claude",
+     "soort": "cent en euro door elkaar",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "regel": "cent als euro geteld (tekst per item)",
+     "tekst": "Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op."
+    },
+    {
+     "bron": "claude",
+     "soort": "verkeerd geteld",
+     "claudeDenkfout": "geld-verkeerd-geteld",
+     "regel": "verkeerd geteld (tekst per item)",
+     "tekst": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Begin bij de grootste munt. Tel de andere munten er één voor één bij. Kijk goed: cent of euro?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MKU-E01",
+   "nr": 1,
+   "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+   "hint1": "Zoek waar je staat en waar je heen moet. Moet je naar links of naar rechts? En naar boven of naar beneden?",
+   "hint2": "Tel de hokjes opzij. Tel daarna de hokjes naar boven of beneden. Welke route past daarbij?",
+   "ouderzin": "Je kind kiest de route tussen twee plekken op een plattegrond met hokjes.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "verkeerde richting",
+     "claudeDenkfout": null,
+     "regel": "verkeerde richting (tekst per item)",
+     "tekst": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven? (tekst per item)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantallen verwisseld",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "claudeTekst": "Je hebt de aantallen verwisseld. Tel de hokjes opzij en de hokjes omhoog apart.",
+     "waarom": "'omhoog' klopt niet als de route naar beneden gaat"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MKU-E02",
+   "nr": 1,
+   "somtype": "[plattegrond] Je staat bij de vlag en kijkt naar [richting]. Welk ding kun je niet zien, omdat er iets voor staat?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[plattegrond] Je staat bij de vlag en kijkt naar [richting]. Welk ding kun je niet zien, omdat er iets voor staat?",
+   "hint1": "Je kijkt recht vooruit, langs de rij van de vlag. Welke dingen staan in die rij?",
+   "hint2": "Het eerste ding dat je tegenkomt, zie je. Wat daarachter staat, zie je niet.",
+   "ouderzin": "Je kind zoekt op een plattegrond welk ding achter een ander ding verstopt staat.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "verkeerd ding",
+     "claudeDenkfout": null,
+     "regel": "Claudes tekst bij de foute optie (tekst per item)",
+     "tekst": "… (eigen tekst per item)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere rij",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Dat staat niet in dezelfde rij als de vlag. Blijf in de rij van de vlag: welk ding staat achter een ander ding?"
+    }
+   ],
+   "koppeling": "kop",
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De bank staat in een andere rij; daar kijk je niet langs.",
+     "claudeDenkfout": null,
+     "waarom": "'op dezelfde rij' / puntkomma: nu 'in dezelfde rij' (vaste tekst bij 'andere rij')"
+    },
+    {
+     "claudeTekst": "De school staat in een andere rij; daar kijk je niet langs.",
+     "claudeDenkfout": null,
+     "waarom": "'op dezelfde rij' / puntkomma: nu 'in dezelfde rij' (vaste tekst bij 'andere rij')"
+    },
+    {
+     "claudeTekst": "De vijver staat in een andere rij; daar kijk je niet langs.",
+     "claudeDenkfout": null,
+     "waarom": "'op dezelfde rij' / puntkomma: nu 'in dezelfde rij' (vaste tekst bij 'andere rij')"
+    },
+    {
+     "claudeTekst": "Het huis staat in een andere rij; daar kijk je niet langs.",
+     "claudeDenkfout": null,
+     "waarom": "'op dezelfde rij' / puntkomma: nu 'in dezelfde rij' (vaste tekst bij 'andere rij')"
+    }
+   ],
+   "somtypeEerder": [
+    {
+     "kop": "[plattegrond] Je staat bij de vlag en kijkt recht naar [richting]. Welk ding kun je niet zien, omdat er iets voor staat?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G4-MKU-E02",
+   "nr": 2,
+   "somtype": "[plattegrond] Je staat bij de vlag en kijkt naar [richting]. Welk ding zie je als eerste?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[plattegrond] Je staat bij de vlag en kijkt naar [richting]. Welk ding zie je als eerste?",
+   "hint1": "Je kijkt recht vooruit, langs de rij van de vlag. Welke dingen staan in die rij?",
+   "hint2": "Ga vanaf de vlag hokje voor hokje in de richting waar je kijkt. Wat kom je het eerst tegen?",
+   "ouderzin": "Je kind zoekt op een plattegrond welk ding het als eerste ziet.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "verkeerd ding",
+     "claudeDenkfout": null,
+     "regel": "Claudes tekst bij de foute optie (tekst per item)",
+     "tekst": "… (eigen tekst per item)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere rij",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Dat staat niet in dezelfde rij als de vlag. Je kijkt alleen langs de rij van de vlag."
+    }
+   ],
+   "koppeling": "kop",
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De bal staat niet op dezelfde rij als de vlag. Je kijkt recht langs de rij.",
+     "claudeDenkfout": null,
+     "waarom": "'op dezelfde rij' / puntkomma: nu 'in dezelfde rij' (vaste tekst bij 'andere rij')"
+    },
+    {
+     "claudeTekst": "De boom staat niet op dezelfde rij als de vlag. Je kijkt recht langs de rij.",
+     "claudeDenkfout": null,
+     "waarom": "'op dezelfde rij' / puntkomma: nu 'in dezelfde rij' (vaste tekst bij 'andere rij')"
+    },
+    {
+     "claudeTekst": "De tent staat niet op dezelfde rij als de vlag. Je kijkt recht langs de rij.",
+     "claudeDenkfout": null,
+     "waarom": "'op dezelfde rij' / puntkomma: nu 'in dezelfde rij' (vaste tekst bij 'andere rij')"
+    }
+   ],
+   "somtypeEerder": [
+    {
+     "kop": "[plattegrond] Je staat bij de vlag en kijkt recht naar [richting]. Welk ding zie je als eerste?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G4-MKU-E03",
+   "nr": 1,
+   "somtype": "[ruimtefiguur] Een vlak is een platte kant. ⏎ Dit is een [figuur]. Hoeveel vlakken heeft een [figuur]? (Tel ook wat je niet ziet.)",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[ruimtefiguur] Een vlak is een platte kant. ⏎ Dit is een [figuur]. Hoeveel vlakken heeft een [figuur]? (Tel ook wat je niet ziet.)",
+   "hint1": "Een vlak is een platte kant. Draai de figuur in je hoofd rond: ook achter en onder zitten vlakken.",
+   "hint2": "Tel eerst de vlakken die je ziet. Tel dan de vlakken aan de achterkant en de onderkant erbij.",
+   "ouderzin": "Je kind telt de vlakken (platte kanten) van een ruimtefiguur, ook die je niet ziet.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "alleen wat je ziet",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "dubbel geteld",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 1",
+     "tekst": "Je hebt er één dubbel geteld. Wijs elke platte kant maar één keer aan.",
+     "claudeTekst": "Je hebt er een dubbel geteld. Ga systematisch rond: boven, onder, dan de zijkanten.",
+     "waarom": "'systematisch' is een moeilijk woord, en een piramide heeft geen bovenkant"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Je mist er één. Vergeet de onderkant niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Wijs elke platte kant één keer aan. Vergeet de achterkant en de onderkant niet."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MKU-E03",
+   "nr": 2,
+   "somtype": "[ruimtefiguur] Hoe heet deze ruimtelijke figuur?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[ruimtefiguur] Hoe heet deze ruimtelijke figuur?",
+   "hint1": "Kijk naar de onderkant en naar de bovenkant van de figuur.",
+   "hint2": "Hij lijkt op een tent met een punt bovenaan. Welke naam hoort daarbij?",
+   "ouderzin": "Je kind herkent een piramide.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "andere figuur",
+     "claudeDenkfout": null,
+     "regel": "Claudes tekst bij de foute optie (tekst per item)",
+     "tekst": "… (eigen tekst per item)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar de bovenkant. Welke figuur heeft een punt?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MKU-E04",
+   "nr": 1,
+   "somtype": "Welke ruimtelijke figuur heeft de vorm van een [voorwerp]?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Welke ruimtelijke figuur heeft de vorm van een [voorwerp]?",
+   "hint1": "Denk aan de vorm van het voorwerp. Kan het rollen? Heeft het platte kanten?",
+   "hint2": "Zijn alle kanten even groot? Is het helemaal rond, of rond met twee platte kanten?",
+   "ouderzin": "Je kind zoekt welke ruimtefiguur bij een voorwerp past.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "andere figuur",
+     "claudeDenkfout": null,
+     "regel": "Claudes tekst bij de foute optie (tekst per item)",
+     "tekst": "… (eigen tekst per item)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk nog eens naar de vorm. Kan het rollen? Heeft het platte kanten?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MKU-E04",
+   "nr": 2,
+   "somtype": "[ruimtefiguur] Hoe heet deze ruimtelijke figuur?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[ruimtefiguur] Hoe heet deze ruimtelijke figuur?",
+   "hint1": "Kijk goed naar de figuur. Kan hij rollen? Heeft hij platte kanten?",
+   "hint2": "Denk aan dingen die je kent, zoals een bal, een blik, een doos of een dobbelsteen. Op welk ding lijkt deze figuur?",
+   "ouderzin": "Je kind herkent en benoemt een ruimtefiguur.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "andere figuur",
+     "claudeDenkfout": null,
+     "regel": "Claudes tekst bij de foute optie (tekst per item)",
+     "tekst": "… (eigen tekst per item)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk nog eens naar de vorm. Kan hij rollen? Heeft hij platte kanten?"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MKU-E05",
+   "nr": 1,
+   "somtype": "[vorm] Spiegel de stip in de lijn. Tik op het vak waar hij komt.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[vorm] Spiegel de stip in de lijn. Tik op het vak waar hij komt.",
+   "hint1": "Stel je voor dat de lijn een spiegel is. De stip komt aan de andere kant, net zo ver van de lijn.",
+   "hint2": "Tel de hokjes van de stip tot de lijn. Tel het hokje van de stip mee. Ga recht over de lijn en tel aan de andere kant net zo veel.",
+   "ouderzin": "Je kind spiegelt een stip in een lijn op een rooster.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "stip niet verplaatst",
+     "claudeDenkfout": null,
+     "regel": "stip niet verplaatst (fout = het vak van de stip)",
+     "tekst": "Daar staat de stip nu. Spiegel hem: aan de andere kant van de lijn, net zo ver van de lijn.",
+     "claudeTekst": "Een spiegel draait de figuur om. Wat links staat komt rechts, even ver van de lijn.",
+     "waarom": "klopt niet bij een liggende lijn (dan gaat het om boven en onder); 'figuur' is hier een stip"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "goede letter, ander cijfer",
+     "claudeDenkfout": null,
+     "regel": "goede letter, ander cijfer",
+     "tekst": "De letter klopt, maar het cijfer niet. Ga recht over de lijn, en tel aan de andere kant net zo veel hokjes als de stip van de lijn af is.",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "geen 'eentje naast' (les G3): zeg of het te veel of te weinig is, en waar je op let"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "goed cijfer, andere letter",
+     "claudeDenkfout": null,
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Het cijfer klopt, maar de letter niet. Ga recht over de lijn, en tel aan de andere kant net zo veel hokjes als de stip van de lijn af is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ander vak",
+     "claudeDenkfout": null,
+     "regel": "ander vak",
+     "tekst": "Dat is een ander vak. Ga vanaf de stip recht naar de lijn, en dan net zo ver door aan de andere kant."
+    }
+   ],
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "[vorm] Spiegel de stip in de rode lijn. Tik op het vak waar hij komt.",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  }
+ ]
+}

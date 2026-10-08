@@ -1,0 +1,1142 @@
+{
+ "batch": 4,
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G3-pilot). 'nr' = nummer van '## Somtype n' in somtypen/<doel>.md. foutHints: per soort fout; 'claude' = tekst van Claude blijft (ok), 'nieuw' = vervangen. 'regel' zegt welke foute invoer bij de soort hoort (getal1/getal2 = getallen in de opgave, in volgorde). Bij 'claude' met '…' of '[plek]' is de tekst per item verschillend; die blijft per item staan. Batch 4: de 29 open somtypes na de build van 13:23 (twijfel-besluiten Didactiek). Bij 'claude' met een optietekst als regel geldt die tekst bij die foute optie.",
+ "somtypen": [
+  {
+   "doel": "G3-GET-E02",
+   "nr": 1,
+   "somtype": "[getallenlijn] Zet # op de getallenlijn.",
+   "hint1": "Zoek eerst de 10 op de lijn. Komt het getal vóór de 10 of erna?",
+   "hint2": "Tel vanaf de 10 verder, streepje voor streepje, tot je bij het getal bent. Ligt het dicht bij de 20? Dan kun je ook terugtellen vanaf de 20.",
+   "ouderzin": "Je kind zet een getal tot 20 op de getallenlijn, met 0, 10 en 20 als houvast.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tien vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Kijk goed waar de 10 staat. Het getal is groter dan 10. Tel vanaf de 10 verder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 naast het antwoord",
+     "tekst": "Bijna! Tel de streepjes nog eens, één voor één."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere plek",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek eerst de 10 op de lijn. Tel dan streepje voor streepje tot het getal."
+    }
+   ],
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[getallenlijn] Zet # op de getallenlijn."
+  },
+  {
+   "doel": "G3-GET-E02",
+   "nr": 2,
+   "somtype": "[getallenlijn] Waar hoort #? Zet de stip op de lijn.",
+   "hint1": "Zoek eerst de 10 op de lijn. Komt het getal vóór de 10 of erna?",
+   "hint2": "Tel vanaf de 10 verder, streepje voor streepje, tot je bij het getal bent. Zet daar de stip.",
+   "ouderzin": "Je kind zet een getal tot 20 op de getallenlijn, met 0, 10 en 20 als houvast.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tien vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Kijk goed waar de 10 staat. Het getal is groter dan 10. Tel vanaf de 10 verder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 naast het antwoord",
+     "tekst": "Bijna! Tel de streepjes nog eens, één voor één."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere plek",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek eerst de 10 op de lijn. Tel dan streepje voor streepje tot het getal."
+    }
+   ],
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[getallenlijn] Waar hoort #? Zet de stip op de lijn."
+  },
+  {
+   "doel": "G3-GET-E02",
+   "nr": 3,
+   "somtype": "[getallenlijn] Welk getal ligt precies tussen # en #?",
+   "hint1": "Zoek de twee getallen uit de vraag op de lijn.",
+   "hint2": "Zet een vinger op elk getal. Schuif je vingers tegelijk één streepje naar elkaar toe. Doe dat tot ze bij hetzelfde streepje zijn.",
+   "ouderzin": "Je kind zoekt op de getallenlijn het getal dat precies in het midden van twee getallen ligt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Zoek het getal dat er precies tussenin ligt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Tel de streepjes vanaf allebei de kanten. Aan beide kanten moet het even ver zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere plek",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet een vinger op elk getal. Schuif ze tegelijk naar elkaar toe, tot ze elkaar raken."
+    }
+   ],
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[getallenlijn] Welk getal ligt precies tussen # en #?"
+  },
+  {
+   "doel": "G3-GET-E03",
+   "nr": 1,
+   "somtype": "Je knipt een lang touw op # [ding] door. Hoeveel stukken touw heb je dan?",
+   "hint1": "Teken het touw. Zet een streepje op elke plek waar je knipt.",
+   "hint2": "Tel daarna de stukken tussen de streepjes. Vergeet het stuk aan het begin en het stuk aan het eind niet.",
+   "ouderzin": "Je kind denkt na over knippen en stukken: hoeveel stukken krijg je bij een aantal knippen?",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "3 stukken",
+     "tekst": "Probeer het met één knip. Hoeveel stukken heb je dan al?"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "6 stukken",
+     "tekst": "Elke knip maakt er één stuk bij, niet twee keer zo veel."
+    }
+   ],
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Je knipt een lang touw op # [ding] door. Hoeveel stukken touw heb je dan?"
+  },
+  {
+   "doel": "G3-GET-E03",
+   "nr": 2,
+   "somtype": "Je knipt een strook papier in # [ding] grote stukken. Hoe vaak moet je knippen?",
+   "hint1": "Teken de strook. Verdeel hem in stukken die even groot zijn.",
+   "hint2": "Zet een streepje tussen elke twee stukken. Tel de streepjes. Zo vaak knip je.",
+   "ouderzin": "Je kind denkt na over knippen en stukken: hoe vaak knip je voor een aantal stukken?",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "4 keer",
+     "tekst": "Teken de strook en zet streepjes waar je knipt. Tel daarna pas de streepjes."
+    },
+    {
+     "bron": "claude-taalfix",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "5 keer",
+     "tekst": "Aan de twee kanten van de strook knip je niet. Tel alleen waar je knipt.",
+     "claudeTekst": "Je hoeft aan de uiteinden niet te knippen. Tel alleen de knipplekken tussen de stukken.",
+     "waarom": "'uiteinden' en 'knipplekken' zijn te moeilijk (Didactiek Z7)"
+    }
+   ],
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Je knipt een strook papier in # [ding] grote stukken. Hoe vaak moet je knippen?"
+  },
+  {
+   "doel": "G3-GET-E03",
+   "nr": 3,
+   "somtype": "De kinderen staan in één rij bij de [ding]. Noor is de vijfde van voren en de tweede van achteren. Hoeveel kinderen staan er in de rij?",
+   "hint1": "Teken de rij met streepjes. Zet Noor op haar plek.",
+   "hint2": "Tel de kinderen vóór Noor en de kinderen achter Noor. Tel Noor zelf er één keer bij.",
+   "ouderzin": "Je kind redeneert over een plek in de rij, van voren en van achteren geteld.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "7 kinderen",
+     "tekst": "Als je 5 en 2 optelt, tel je Noor twee keer mee. Teken de rij eens met streepjes."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "5 kinderen",
+     "tekst": "Achter Noor staat ook nog iemand. Teken de rij en zet Noor op haar plek."
+    }
+   ],
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "De kinderen staan in één rij bij de [ding]. Noor is de vijfde van voren en de tweede van achteren. Hoeveel kinderen staan er in de rij?"
+  },
+  {
+   "doel": "G3-GET-E03",
+   "nr": 4,
+   "somtype": "De kinderen staan in één rij. Sam is de derde van voren en ook de vierde van achteren. Hoeveel kinderen staan er in de rij?",
+   "hint1": "Teken de rij met streepjes. Zet Sam op zijn plek.",
+   "hint2": "Tel de kinderen vóór Sam en de kinderen achter Sam. Tel Sam zelf er één keer bij.",
+   "ouderzin": "Je kind redeneert over een plek in de rij, van voren en van achteren geteld.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "7 kinderen",
+     "tekst": "Je hebt Sam misschien twee keer geteld. Sam staat maar op één plek in de rij."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "5 kinderen",
+     "tekst": "Teken de rij met streepjes en zet Sam erin. Tel daarna alle streepjes."
+    }
+   ],
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "De kinderen staan in één rij. Sam is de derde van voren en ook de vierde van achteren. Hoeveel kinderen staan er in de rij?"
+  },
+  {
+   "doel": "G3-GET-E03",
+   "nr": 5,
+   "somtype": "Langs een pad staat een hek van # [ding]. Hoeveel palen staan er?",
+   "hint1": "Teken het hek: eerst de vakken naast elkaar.",
+   "hint2": "Zet daarna de palen. Tussen twee vakken staat één paal. Aan het begin en aan het eind staat ook een paal. Tel alle palen één voor één.",
+   "ouderzin": "Je kind denkt na over een hek: hoeveel palen horen bij een aantal vakken?",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "paal vergeten",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "5 palen",
+     "tekst": "Bijna! Aan het begin en aan het eind staat ook een paal. Tel de palen nog eens, één voor één.",
+     "claudeTekst": "Elk vak heeft aan beide kanten een paal. Vergeet de laatste paal aan het eind niet.",
+     "waarom": "besluit Didactiek §4: 'aan beide kanten van een vak' is te zwaar voor G3"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "dubbel geteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "10 palen",
+     "tekst": "Tussen twee vakken staat maar één paal. Tel elke paal maar één keer.",
+     "claudeTekst": "Twee vakken naast elkaar delen samen één paal. Die paal tel je maar één keer.",
+     "waarom": "'delen' kan het kind lezen als verdelen; korter"
+    }
+   ],
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Langs een pad staat een hek van # [ding]. Hoeveel palen staan er?"
+  },
+  {
+   "doel": "G3-GET-E06",
+   "nr": 1,
+   "somtype": "[rooster] Er zijn # rijen van # hokjes gekleurd. Hoeveel hokjes zijn er gekleurd? # + # + # = □",
+   "hint1": "Kijk naar één gekleurde rij. Hoeveel hokjes zitten erin?",
+   "hint2": "Tel de volgende rij erbij, en dan de volgende. Ga door tot je alle rijen hebt gehad. Elke rij is één getal in de plussom.",
+   "ouderzin": "Je kind telt rijen met evenveel gekleurde hokjes bij elkaar op (herhaald optellen, nog zonder keerteken).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één rij",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is één rij. Er zijn meer rijen. Tel ze er allemaal bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rijen en hokjes opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de rijen en de hokjes bij elkaar gedaan. Tel alle hokjes: elke rij komt erbij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal rijen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het aantal rijen. Hoeveel hokjes zijn er samen gekleurd?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Tel alle hokjes nog eens, rij voor rij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar de plussom. Tel de getallen één voor één bij elkaar. Je mag ook de gekleurde hokjes tellen."
+    }
+   ],
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[rooster] Er zijn # rijen van # hokjes gekleurd. Hoeveel hokjes zijn er gekleurd? # + # + # = □",
+   "somtypeEerder": [
+    {
+     "kop": "[rooster] Kleur # rijen van # hokjes. Hoeveel hokjes kleur je? # + # + # = □",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G3-GET-E06",
+   "nr": 2,
+   "somtype": "[rooster] Er zijn # rijen van # hokjes gekleurd. Hoeveel hokjes zijn er gekleurd? # + # = □",
+   "hint1": "Kijk naar één gekleurde rij. Hoeveel hokjes zitten erin?",
+   "hint2": "Tel de volgende rij erbij, en dan de volgende. Ga door tot je alle rijen hebt gehad. Elke rij is één getal in de plussom.",
+   "ouderzin": "Je kind telt rijen met evenveel gekleurde hokjes bij elkaar op (herhaald optellen, nog zonder keerteken).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één rij",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is één rij. Er zijn meer rijen. Tel ze er allemaal bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rijen en hokjes opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de rijen en de hokjes bij elkaar gedaan. Tel alle hokjes: elke rij komt erbij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal rijen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het aantal rijen. Hoeveel hokjes zijn er samen gekleurd?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Tel alle hokjes nog eens, rij voor rij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar de plussom. Tel de getallen één voor één bij elkaar. Je mag ook de gekleurde hokjes tellen."
+    }
+   ],
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[rooster] Er zijn # rijen van # hokjes gekleurd. Hoeveel hokjes zijn er gekleurd? # + # = □",
+   "somtypeEerder": [
+    {
+     "kop": "[rooster] Kleur # rijen van # hokjes. Hoeveel hokjes kleur je? # + # = □",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G3-GET-E06",
+   "nr": 3,
+   "somtype": "[rooster] Er zijn # rijen van # hokjes gekleurd. Hoeveel hokjes zijn er gekleurd? # + # + # + # + # = □",
+   "hint1": "Kijk naar één gekleurde rij. Hoeveel hokjes zitten erin?",
+   "hint2": "Tel de volgende rij erbij, en dan de volgende. Ga door tot je alle rijen hebt gehad. Elke rij is één getal in de plussom.",
+   "ouderzin": "Je kind telt rijen met evenveel gekleurde hokjes bij elkaar op (herhaald optellen, nog zonder keerteken).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één rij",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is één rij. Er zijn meer rijen. Tel ze er allemaal bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rijen en hokjes opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de rijen en de hokjes bij elkaar gedaan. Tel alle hokjes: elke rij komt erbij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal rijen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het aantal rijen. Hoeveel hokjes zijn er samen gekleurd?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Tel alle hokjes nog eens, rij voor rij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar de plussom. Tel de getallen één voor één bij elkaar. Je mag ook de gekleurde hokjes tellen."
+    }
+   ],
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[rooster] Er zijn # rijen van # hokjes gekleurd. Hoeveel hokjes zijn er gekleurd? # + # + # + # + # = □",
+   "somtypeEerder": [
+    {
+     "kop": "[rooster] Kleur # rijen van # hokjes. Hoeveel hokjes kleur je? # + # + # + # + # = □",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G3-GET-E06",
+   "nr": 4,
+   "somtype": "[rooster] Er zijn # rijen van # hokjes gekleurd. Hoeveel hokjes zijn er gekleurd? # + # + # + # = □",
+   "hint1": "Kijk naar één gekleurde rij. Hoeveel hokjes zitten erin?",
+   "hint2": "Tel de volgende rij erbij, en dan de volgende. Ga door tot je alle rijen hebt gehad. Elke rij is één getal in de plussom.",
+   "ouderzin": "Je kind telt rijen met evenveel gekleurde hokjes bij elkaar op (herhaald optellen, nog zonder keerteken).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één rij",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Dat is één rij. Er zijn meer rijen. Tel ze er allemaal bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rijen en hokjes opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt de rijen en de hokjes bij elkaar gedaan. Tel alle hokjes: elke rij komt erbij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal rijen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het aantal rijen. Hoeveel hokjes zijn er samen gekleurd?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Tel alle hokjes nog eens, rij voor rij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk naar de plussom. Tel de getallen één voor één bij elkaar. Je mag ook de gekleurde hokjes tellen."
+    }
+   ],
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "[rooster] Er zijn # rijen van # hokjes gekleurd. Hoeveel hokjes zijn er gekleurd? # + # + # + # = □",
+   "somtypeEerder": [
+    {
+     "kop": "[rooster] Kleur # rijen van # hokjes. Hoeveel hokjes kleur je? # + # + # + # = □",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G3-GET-E06",
+   "nr": 5,
+   "somtype": "Je springt met stappen van # [ding] # naar #. Hoeveel sprongen maak je?",
+   "hint1": "Spring in gedachten op een getallenlijn. Tel hoe vaak je springt.",
+   "hint2": "Begin bij het getal waar je vanaf springt. Spring steeds even ver als de stap. Tel elke sprong. Stop als je bij het laatste getal bent.",
+   "ouderzin": "Je kind telt hoeveel sprongen van gelijke grootte je nodig hebt om ergens te komen.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "10 sprongen",
+     "tekst": "Je springt niet steeds één stap vooruit, maar twee tegelijk."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "6 sprongen",
+     "tekst": "Schrijf de getallen op waar je landt. Eerst 2, dan 4, dan 6. Tel dan hoe vaak je landt."
+    }
+   ],
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Je springt met stappen van # [ding] # naar #. Hoeveel sprongen maak je?"
+  },
+  {
+   "doel": "G3-GET-M01",
+   "nr": 5,
+   "somtype": "Tel met sprongen van #. #, #, #, #, □",
+   "hint1": "Zeg de getallen van de rij hardop. Hoe ver spring je steeds?",
+   "hint2": "Begin bij het laatste getal van de rij. Spring nog één keer net zo ver. Dat getal hoort op de lege plek.",
+   "ouderzin": "Je kind telt verder met sprongen van 2 tot 20.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "overgenomen",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Spring vanaf het laatste getal nog één sprong verder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 naast het antwoord",
+     "tekst": "Bijna! Kijk hoe ver je steeds springt, en spring precies zo ver."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Je bent te ver gesprongen. Spring vanaf het laatste getal maar één keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel hardop mee met de sprongen, vanaf het eerste getal. Welk getal komt er daarna?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": null,
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "waarom": "er is geen som; zegt niet wat het kind moet doen"
+    },
+    {
+     "claudeDenkfout": "verkeerde-bewerking",
+     "claudeTekst": "Kijk of de rij omhoog of omlaag gaat. Deze gaat omhoog.",
+     "waarom": "fout staat al in de rij; valt onder 'getal uit de vraag'"
+    },
+    {
+     "claudeDenkfout": "een-ernaast",
+     "claudeTekst": "Kijk hoe groot de sprong tussen twee getallen naast elkaar is, en maak vanaf het laatste getal precies zo'n sprong.",
+     "waarom": "te lang; nu één regel 'bijna' voor 1 ernaast"
+    },
+    {
+     "claudeDenkfout": "een-ernaast",
+     "claudeTekst": "De sprong is niet 1. Kijk naar het verschil tussen twee getallen in de rij.",
+     "waarom": "'verschil' is abstract; samengevoegd in 'bijna'"
+    }
+   ],
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Tel met sprongen van #. #, #, #, #, □"
+  },
+  {
+   "doel": "G3-GET-M01",
+   "nr": 4,
+   "somtype": "Tel met sprongen van #. #, #, #, □, #",
+   "hint1": "Zeg de getallen van de rij hardop. Hoe ver spring je steeds?",
+   "hint2": "Kijk naar het getal vóór de lege plek. Spring één keer net zo ver. Klopt het getal ná de lege plek dan ook?",
+   "ouderzin": "Je kind vult een getal in een rij met sprongen van 2 tot 20 in.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "overgenomen",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort tussen het getal vóór en het getal ná de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 naast het antwoord",
+     "tekst": "Bijna! Kijk hoe ver je steeds springt, en spring precies zo ver."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel hardop mee met de sprongen, vanaf het eerste getal. Welk getal hoort op de lege plek?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": null,
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "waarom": "er is geen som; zegt niet wat het kind moet doen"
+    }
+   ],
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Tel met sprongen van #. #, #, #, □, #"
+  },
+  {
+   "doel": "G3-GET-M01",
+   "nr": 6,
+   "somtype": "Tel met sprongen van #. #, □, #, #, #",
+   "hint1": "Zeg de getallen van de rij hardop. Hoe ver spring je steeds?",
+   "hint2": "Kijk naar het getal vóór de lege plek. Spring één keer net zo ver. Klopt het getal ná de lege plek dan ook?",
+   "ouderzin": "Je kind vult een getal in een rij met sprongen van 2 tot 20 in.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "overgenomen",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort tussen het getal vóór en het getal ná de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 naast het antwoord",
+     "tekst": "Bijna! Kijk hoe ver je steeds springt, en spring precies zo ver."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel hardop mee met de sprongen, vanaf het eerste getal. Welk getal hoort op de lege plek?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": null,
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "waarom": "er is geen som; zegt niet wat het kind moet doen"
+    }
+   ],
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Tel met sprongen van #. #, □, #, #, #"
+  },
+  {
+   "doel": "G3-GET-M01",
+   "nr": 7,
+   "somtype": "Tel met sprongen van #. #, #, □, #, #",
+   "hint1": "Zeg de getallen van de rij hardop. Hoe ver spring je steeds?",
+   "hint2": "Kijk naar het getal vóór de lege plek. Spring één keer net zo ver. Klopt het getal ná de lege plek dan ook?",
+   "ouderzin": "Je kind vult een getal in een rij met sprongen van 2 tot 20 in.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "overgenomen",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort tussen het getal vóór en het getal ná de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 naast het antwoord",
+     "tekst": "Bijna! Kijk hoe ver je steeds springt, en spring precies zo ver."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel hardop mee met de sprongen, vanaf het eerste getal. Welk getal hoort op de lege plek?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": null,
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "waarom": "er is geen som; zegt niet wat het kind moet doen"
+    }
+   ],
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Tel met sprongen van #. #, #, □, #, #"
+  },
+  {
+   "doel": "G3-GET-M02",
+   "nr": 3,
+   "somtype": "[tienstaven/blokjes leggen] Leg # [ding] een tienstaaf en losse blokjes. Hoeveel losse blokjes leg je?",
+   "hint1": "Het getal is een tien en losse. De tien leg je met de tienstaaf.",
+   "hint2": "Kijk naar het laatste cijfer van het getal. Zoveel losse blokjes leg je naast de tienstaaf.",
+   "ouderzin": "Je kind ziet hoeveel enen (losse blokjes) er naast de tien (tienstaaf) horen in een getal tot 20.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tien vergeten",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het hele getal. De tienstaaf is al tien. Hoeveel losse blokjes leg je erbij?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens naar het laatste cijfer van het getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Je legt één tienstaaf. Dat is de tien. Hoeveel losse blokjes leg je er nog naast? Kijk naar het laatste cijfer."
+    }
+   ],
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[tienstaven/blokjes leggen] Leg # [ding] een tienstaaf en losse blokjes. Hoeveel losse blokjes leg je?",
+   "somtypeEerder": [
+    {
+     "kop": "[tienstaven/blokjes leggen] Leg # [ding] een tienstaaf en losse blokjes.",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G3-GET-M02",
+   "nr": 4,
+   "somtype": "[tienstaven/blokjes leggen] Leg # [ding] tienstaven. Hoeveel tienstaven leg je?",
+   "hint1": "Een tienstaaf is een tien. Hoeveel tienen zitten er in het getal?",
+   "hint2": "Tel met tienen: bij elke staaf komt er tien bij. Stop als je bij het getal bent. Hoeveel staven heb je dan?",
+   "ouderzin": "Je kind ziet hoeveel tienen (tienstaven) er in een rond getal tot 20 zitten.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één tien",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het hele getal. Elke tienstaaf is tien. Hoeveel tienstaven heb je nodig?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 8 (één tienstaaf = tien)",
+     "tekst": "Dat is één tienstaaf. Leg er nog een bij en tel met tienen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel met tienen tot je bij het getal bent. Hoeveel tienstaven heb je dan gelegd?"
+    }
+   ],
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "[tienstaven/blokjes leggen] Leg # [ding] tienstaven. Hoeveel tienstaven leg je?",
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": "cijfers-verwisseld",
+     "claudeTekst": "Kijk naar de volgorde van de cijfers: het eerste cijfer is het grootste blok.",
+     "waarom": "'volgorde van de cijfers' en 'grootste blok' zijn onduidelijk; het kind legde enen in plaats van tienen"
+    }
+   ],
+   "somtypeEerder": [
+    {
+     "kop": "[tienstaven/blokjes leggen] Leg # [ding] tienstaven.",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G3-GET-M05",
+   "nr": 7,
+   "somtype": "Twee getallen. Samen #. Het ene is # meer. Welke twee getallen zijn het?",
+   "hint1": "Kijk bij elk antwoord: maken de twee getallen samen het getal dat na 'Samen' staat?",
+   "hint2": "Kijk dan hoeveel het ene getal meer is dan het andere. Tel van het kleine getal naar het grote getal.",
+   "ouderzin": "Je kind zoekt twee getallen die samen een getal maken en een bepaald aantal verschillen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "claudeDenkfout": null,
+     "regel": "8 en 2",
+     "tekst": "Die twee getallen liggen te ver uit elkaar. Zoek getallen die dichter bij elkaar liggen.",
+     "claudeTekst": "Het verschil tussen die twee is te groot. Zoek getallen die dichter bij elkaar liggen.",
+     "waarom": "'verschil' zonder uitleg (Didactiek Z4)"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "7 en 3",
+     "tekst": "Samen klopt het wel, maar kijk nog eens hoeveel het ene getal groter is."
+    }
+   ],
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Twee getallen. Samen #. Het ene is # meer. Welke twee getallen zijn het?"
+  },
+  {
+   "doel": "G3-GET-M06",
+   "nr": 6,
+   "somtype": "Je denkt aan een getal. Als je er # bij doet, krijg je #. Aan welk getal denk je?",
+   "hint1": "Er kwam iets bij, en toen kreeg je een nieuw getal. Welk getal had je vóórdat er iets bij kwam?",
+   "hint2": "Begin bij het getal dat je kreeg. Tel terug, zoveel als erbij kwam. Ga je voorbij de 10? Stop dan eerst bij 10.",
+   "ouderzin": "Je kind rekent terug: welk getal had je, als je er iets bij hebt gedaan?",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "17",
+     "tekst": "Je moet terugrekenen, niet erbij doen. Begin bij 12 en ga terug."
+    },
+    {
+     "bron": "claude-taalfix",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "8",
+     "tekst": "Kijk of het klopt: doe er 5 bij. Krijg je dan precies 12?",
+     "claudeTekst": "Controleer je antwoord: doe er 5 bij en kijk of je precies 12 krijgt.",
+     "waarom": "'Controleer je antwoord' → 'Kijk of het klopt' (Didactiek Z6)"
+    }
+   ],
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Je denkt aan een getal. Als je er # bij doet, krijg je #. Aan welk getal denk je?"
+  },
+  {
+   "doel": "G3-MEET-K01",
+   "nr": 2,
+   "somtype": "Vergelijken zonder maat — Didactiek 1 okt: dik/dikker",
+   "hint1": "Denk aan het boek en het blaadje in je hand. Wat voelt dikker?",
+   "hint2": "Pak in gedachten het blaadje tussen je duim en je vinger. Doe dat ook met het boek. Waar zitten je duim en vinger verder uit elkaar?",
+   "ouderzin": "Je kind vergelijkt twee dingen op dikte, zonder te meten.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "claudeDenkfout": "schatting-verkeerd",
+     "regel": "Het blaadje.",
+     "tekst": "In een boek liggen heel veel blaadjes op elkaar."
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": null,
+     "regel": "Ze zijn even dik.",
+     "tekst": "Leg in gedachten je vingers om het boek en om het blaadje."
+    }
+   ],
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Vergelijken zonder maat — Didactiek 1 okt: dik/dikker"
+  },
+  {
+   "doel": "G3-MKU-E02",
+   "nr": 4,
+   "somtype": "[plattegrond] Je staat bij de [ding]. Loop # hokjes naar [richting]. Loop dan # hokje naar [richting]. Waar kom je? Tik op het vak.",
+   "hint1": "Zet je vinger op de plek waar je staat. Loop de eerste stap, hokje voor hokje.",
+   "hint2": "Loop daarna de tweede stap. Tel de hokjes hardop. Tik op het vak waar je uitkomt.",
+   "ouderzin": "Je kind volgt een route van twee stappen op een plattegrond en tikt aan waar het uitkomt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opzij geteld fout",
+     "claudeDenkfout": null,
+     "regel": "goede letter, ander cijfer",
+     "tekst": "Naar boven of naar beneden klopt. Heb je de stap opzij ook gedaan, en de goede kant op? Tel de hokjes naar links of naar rechts nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "boven of beneden fout",
+     "claudeDenkfout": null,
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Opzij klopt. Heb je de stap naar boven of naar beneden ook gedaan, en de goede kant op? Tel die hokjes nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ander vak",
+     "claudeDenkfout": null,
+     "regel": "ander vak",
+     "tekst": "Begin opnieuw bij de plek waar je staat. Loop eerst de ene stap en dan de andere, hokje voor hokje."
+    }
+   ],
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Loop # hokjes naar [richting]. Loop dan # hokje naar [richting]. Waar kom je? Tik op het vak.",
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen de eerste stap gedaan. Ga daarna nog omhoog of omlaag.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    },
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen omhoog of omlaag gelopen. Vergeet de stap opzij niet.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    }
+   ]
+  },
+  {
+   "doel": "G3-MKU-E02",
+   "nr": 5,
+   "somtype": "[plattegrond] Je staat bij de [ding]. Loop # hokjes naar [richting]. Loop dan # hokjes naar [richting]. Waar kom je? Tik op het vak.",
+   "hint1": "Zet je vinger op de plek waar je staat. Loop de eerste stap, hokje voor hokje.",
+   "hint2": "Loop daarna de tweede stap. Tel de hokjes hardop. Tik op het vak waar je uitkomt.",
+   "ouderzin": "Je kind volgt een route van twee stappen op een plattegrond en tikt aan waar het uitkomt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opzij geteld fout",
+     "claudeDenkfout": null,
+     "regel": "goede letter, ander cijfer",
+     "tekst": "Naar boven of naar beneden klopt. Heb je de stap opzij ook gedaan, en de goede kant op? Tel de hokjes naar links of naar rechts nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "boven of beneden fout",
+     "claudeDenkfout": null,
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Opzij klopt. Heb je de stap naar boven of naar beneden ook gedaan, en de goede kant op? Tel die hokjes nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ander vak",
+     "claudeDenkfout": null,
+     "regel": "ander vak",
+     "tekst": "Begin opnieuw bij de plek waar je staat. Loop eerst de ene stap en dan de andere, hokje voor hokje."
+    }
+   ],
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Loop # hokjes naar [richting]. Loop dan # hokjes naar [richting]. Waar kom je? Tik op het vak.",
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen de eerste stap gedaan. Ga daarna nog omhoog of omlaag.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    },
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen omhoog of omlaag gelopen. Vergeet de stap opzij niet.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    },
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen de stap opzij gedaan. Daarna ga je nog omhoog of omlaag.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    }
+   ]
+  },
+  {
+   "doel": "G3-MKU-E02",
+   "nr": 6,
+   "somtype": "[plattegrond] Je staat bij de [ding]. Loop # hokje naar [richting]. Loop dan # hokjes naar [richting]. Waar kom je? Tik op het vak.",
+   "hint1": "Zet je vinger op de plek waar je staat. Loop de eerste stap, hokje voor hokje.",
+   "hint2": "Loop daarna de tweede stap. Tel de hokjes hardop. Tik op het vak waar je uitkomt.",
+   "ouderzin": "Je kind volgt een route van twee stappen op een plattegrond en tikt aan waar het uitkomt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opzij geteld fout",
+     "claudeDenkfout": null,
+     "regel": "goede letter, ander cijfer",
+     "tekst": "Naar boven of naar beneden klopt. Heb je de stap opzij ook gedaan, en de goede kant op? Tel de hokjes naar links of naar rechts nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "boven of beneden fout",
+     "claudeDenkfout": null,
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Opzij klopt. Heb je de stap naar boven of naar beneden ook gedaan, en de goede kant op? Tel die hokjes nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ander vak",
+     "claudeDenkfout": null,
+     "regel": "ander vak",
+     "tekst": "Begin opnieuw bij de plek waar je staat. Loop eerst de ene stap en dan de andere, hokje voor hokje."
+    }
+   ],
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Loop # hokje naar [richting]. Loop dan # hokjes naar [richting]. Waar kom je? Tik op het vak.",
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen de eerste stap gedaan. Ga daarna nog omhoog of omlaag.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    },
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen omhoog of omlaag gelopen. Vergeet de stap opzij niet.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    },
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen de stap opzij gedaan. Daarna ga je nog omhoog of omlaag.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    }
+   ]
+  },
+  {
+   "doel": "G3-MKU-E02",
+   "nr": 7,
+   "somtype": "[plattegrond] Je staat bij de [ding]. Loop # hokje naar [richting]. Loop dan # hokje naar [richting]. Waar kom je? Tik op het vak.",
+   "hint1": "Zet je vinger op de plek waar je staat. Loop de eerste stap, hokje voor hokje.",
+   "hint2": "Loop daarna de tweede stap. Tel de hokjes hardop. Tik op het vak waar je uitkomt.",
+   "ouderzin": "Je kind volgt een route van twee stappen op een plattegrond en tikt aan waar het uitkomt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opzij geteld fout",
+     "claudeDenkfout": null,
+     "regel": "goede letter, ander cijfer",
+     "tekst": "Naar boven of naar beneden klopt. Heb je de stap opzij ook gedaan, en de goede kant op? Tel de hokjes naar links of naar rechts nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "boven of beneden fout",
+     "claudeDenkfout": null,
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Opzij klopt. Heb je de stap naar boven of naar beneden ook gedaan, en de goede kant op? Tel die hokjes nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ander vak",
+     "claudeDenkfout": null,
+     "regel": "ander vak",
+     "tekst": "Begin opnieuw bij de plek waar je staat. Loop eerst de ene stap en dan de andere, hokje voor hokje."
+    }
+   ],
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Loop # hokje naar [richting]. Loop dan # hokje naar [richting]. Waar kom je? Tik op het vak.",
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen de eerste stap gedaan. Ga daarna nog omhoog of omlaag.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    },
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen omhoog of omlaag gelopen. Vergeet de stap opzij niet.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    },
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen de stap opzij gedaan. Daarna ga je nog omhoog of omlaag.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    }
+   ]
+  },
+  {
+   "doel": "G3-MKU-E02",
+   "nr": 8,
+   "somtype": "[plattegrond] Je staat bij het [ding]. Loop # hokjes naar [richting]. Loop dan # hokjes naar [richting]. Waar kom je? Tik op het vak.",
+   "hint1": "Zet je vinger op de plek waar je staat. Loop de eerste stap, hokje voor hokje.",
+   "hint2": "Loop daarna de tweede stap. Tel de hokjes hardop. Tik op het vak waar je uitkomt.",
+   "ouderzin": "Je kind volgt een route van twee stappen op een plattegrond en tikt aan waar het uitkomt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opzij geteld fout",
+     "claudeDenkfout": null,
+     "regel": "goede letter, ander cijfer",
+     "tekst": "Naar boven of naar beneden klopt. Heb je de stap opzij ook gedaan, en de goede kant op? Tel de hokjes naar links of naar rechts nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "boven of beneden fout",
+     "claudeDenkfout": null,
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Opzij klopt. Heb je de stap naar boven of naar beneden ook gedaan, en de goede kant op? Tel die hokjes nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ander vak",
+     "claudeDenkfout": null,
+     "regel": "ander vak",
+     "tekst": "Begin opnieuw bij de plek waar je staat. Loop eerst de ene stap en dan de andere, hokje voor hokje."
+    }
+   ],
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "[plattegrond] Je staat bij het [ding]. Loop # hokjes naar [richting]. Loop dan # hokjes naar [richting]. Waar kom je? Tik op het vak.",
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen de eerste stap gedaan. Ga daarna nog omhoog of omlaag.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    },
+    {
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "claudeTekst": "Je hebt alleen omhoog of omlaag gelopen. Vergeet de stap opzij niet.",
+     "waarom": "'omhoog/omlaag' → 'naar boven/beneden' zoals in de opgave (Didactiek Z1); valt nu onder de regels hieronder (Z2: elke stap eigen tekst)"
+    }
+   ]
+  },
+  {
+   "doel": "G3-MKU-E03",
+   "nr": 1,
+   "somtype": "[vorm] Vouw het blad dicht over de rode lijn. Waar komt de stip?",
+   "hint1": "Vouw het blad in gedachten dicht over de rode lijn. De stip gaat mee naar de andere kant.",
+   "hint2": "Tel de hokjes van de stip tot de rode lijn. Tel het hokje van de stip mee. Tel aan de andere kant van de lijn net zo veel. Blijf in dezelfde rij.",
+   "ouderzin": "Je kind vouwt in gedachten een blad dicht over een lijn en zoekt waar een stip terechtkomt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "stip niet verplaatst",
+     "claudeDenkfout": null,
+     "regel": "stip niet verplaatst (fout = het vak van de stip)",
+     "tekst": "Daar staat de stip nu. Vouw het blad in je hoofd dicht over de rode lijn. Waar komt de stip dan?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "goede rij, verkeerd hokje",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "goede letter, ander cijfer",
+     "tekst": "Je zit in de goede rij. Tel de hokjes van de stip tot de rode lijn, met het hokje van de stip erbij. Tel aan de andere kant net zo veel.",
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "waarom": "geen papier of vingers nodig; zegt niet wát je telt"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere rij",
+     "claudeDenkfout": null,
+     "regel": "goed cijfer, andere letter",
+     "tekst": "Bij het vouwen blijft de stip in dezelfde rij. Ga recht opzij over de rode lijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ander vak",
+     "claudeDenkfout": null,
+     "regel": "ander vak",
+     "tekst": "Zoek eerst de rij van de stip. Ga dan recht opzij over de rode lijn, net zo ver als de stip van de lijn af is."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeDenkfout": "spiegelen-verkeerd",
+     "claudeTekst": "Een spiegel draait de figuur om. Wat links staat komt rechts, even ver van de lijn.",
+     "waarom": "besluit Didactiek §1: in G3 vouwen, niet 'spiegel'; valt nu onder 'goede rij, verkeerd hokje'"
+    }
+   ],
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[vorm] Vouw het blad dicht over de rode lijn. Waar komt de stip?"
+  },
+  {
+   "doel": "G3-MKU-E04",
+   "nr": 1,
+   "somtype": "[figuur] Hoeveel hoeken heeft deze vorm?",
+   "hint1": "Zet je vinger op een hoek. Ga de vorm rond en tel elke hoek.",
+   "hint2": "Begin bij een hoek die je goed onthoudt. Stop als je weer bij die hoek bent. Tel elke hoek maar één keer.",
+   "ouderzin": "Je kind telt de hoeken van een vorm.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een te veel",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 1",
+     "tekst": "Je hebt een hoek twee keer geteld. Zet je vinger op elke hoek en tel hem maar één keer.",
+     "claudeTekst": "Tel de punten waar twee zijden bij elkaar komen, en zet je vinger op elke hoek.",
+     "waarom": "'zijden' → 'kanten' (G3-bank); het kind telde een hoek dubbel"
+    },
+    {
+     "bron": "claude",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 1",
+     "tekst": "Je hebt een hoek overgeslagen. Ga de vorm rond en tel elke hoek één keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet je vinger op een hoek. Ga de vorm rond en tel elke hoek één keer."
+    }
+   ],
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[figuur] Hoeveel hoeken heeft deze vorm?"
+  }
+ ]
+}

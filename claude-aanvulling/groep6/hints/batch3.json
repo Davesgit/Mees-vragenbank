@@ -1,0 +1,1177 @@
+{
+ "batch": "batch3",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G6-merge, batch 3 = breuken: GET-E03, GET-M04, GET-E09). Formaat als hints/batch2.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint. 'claude-taalfix' met regel 'Claudes sleutel: <label>' = de Claude-sleutels met dat label, met een eigen vaste tekst (per sleutel nagerekend; bij breukantwoorden heeft de motor geen regels). 'nieuw' = motorregel met eigen tekst. Getal1/getal2 = de getallen in de opgave, in volgorde (een breuk telt als twee getallen: teller, noemer). Woordkeus: 'stuk' = gelijk deel van het geheel, 'delen' = de bewerking.",
+ "somtypen": [
+  {
+   "doel": "G6-GET-E03",
+   "nr": 1,
+   "somtype": "Schrijf #/# zo eenvoudig mogelijk.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Schrijf #/# zo eenvoudig mogelijk.",
+   "hint1": "Zoek een getal waardoor je de teller (boven de streep) en de noemer (onder de streep) allebei precies kunt delen.",
+   "hint2": "Deel de teller en de noemer door dat getal. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.",
+   "ouderzin": "Je kind schrijft een breuk zo eenvoudig mogelijk: de teller en de noemer door hetzelfde getal delen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "één van de twee gedeeld",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Je hebt maar één van de twee gedeeld. Deel de teller én de noemer door hetzelfde getal, dan blijft de breuk even groot.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "omgedraaid",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "regel": "Claudes sleutel: omgekeerd-gedeeld",
+     "tekst": "Je hebt de breuk omgedraaid. De teller blijft boven de streep en de noemer blijft onder de streep.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "hetzelfde eraf gehaald",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Je hebt van de teller en de noemer hetzelfde getal afgehaald. Zo blijft de breuk niet even groot. Deel de teller en de noemer door hetzelfde getal.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "nog niet eenvoudigst (Claude)",
+     "claudeDenkfout": "nog-niet-eenvoudigst",
+     "regel": "Claudes sleutel: nog-niet-eenvoudigst",
+     "tekst": "Die breuk is even groot, maar nog niet zo eenvoudig mogelijk. Kun je de teller en de noemer nog eens door hetzelfde getal delen?",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "teller-en-noemer-optellen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nog niet eenvoudigst",
+     "claudeDenkfout": null,
+     "regel": "fout = gelijkwaardig maar niet zo eenvoudig mogelijk",
+     "tekst": "Die breuk is even groot, maar nog niet zo eenvoudig mogelijk. Kun je de teller en de noemer nog eens door hetzelfde getal delen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel de teller en de noemer door hetzelfde getal. Ga door tot er geen getal meer is waardoor je ze allebei kunt delen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "past niet bij deze som (er komt niets bij of af)"
+    },
+    {
+     "claudeTekst": "Wat wil je weten, en waar deel je dan door? Zet het in een verhoudingstabel.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "verhoudingstabel past niet bij deze som (breuk van een hoeveelheid: eerst één gelijk stuk, S6)"
+    },
+    {
+     "claudeTekst": "De noemer zegt in hoeveel stukken de taart is verdeeld. Die verandert niet als je stukken bij elkaar doet.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E03",
+   "nr": 3,
+   "somtype": "Welke breuk is het grootst? Kies uit #/#, #/# of #/#.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Welke breuk is het grootst? Kies uit #/#, #/# of #/#. — verschillende tellers en noemers",
+   "hint1": "Kijk eerst bij elke breuk: is hij meer dan de helft, minder, of precies de helft? Doe de teller (boven de streep) keer twee en vergelijk met de noemer (onder de streep).",
+   "hint2": "Is maar één breuk meer dan de helft? Dan is die het grootst. Is geen breuk meer dan de helft, maar wel één precies de helft? Dan is die het grootst. Zijn er meer breuken meer dan de helft? Of liggen ze alle drie onder de helft? Vergelijk ze dan twee aan twee. Hebben ze dezelfde noemer, dan is die met de grootste teller het grootst. Hebben ze dezelfde teller, dan is die met de kleinste noemer het grootst. Is de ene noemer een veelvoud van de andere? Doe dan bij de breuk met de kleinste noemer de teller en de noemer allebei keer hetzelfde getal, zodat de noemers gelijk worden. Vergelijk daarna de tellers. Is dat ook niet zo? Zoek dan een getal waar beide noemers precies in passen. Schrijf de twee breuken met dat getal als noemer en vergelijk de tellers.",
+   "ouderzin": "Je kind zoekt de grootste van drie breuken.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "een andere breuk",
+     "claudeDenkfout": "een-andere-breuk",
+     "regel": "Claudes sleutel: een-andere-breuk",
+     "tekst": "Er is nog een breuk die groter is. Is jouw breuk meer of minder dan de helft? En de andere twee?",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "grotere-noemer-is-groter"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Typ de grootste van de drie breuken uit de vraag. Kijk eerst bij elke breuk: meer dan de helft, minder, of precies de helft? Is maar één breuk meer dan de helft, dan is die het grootst. Anders vergelijk je de breuken die nog kunnen winnen twee aan twee."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter?",
+     "claudeDenkfout": "grotere-noemer-is-groter",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Welke breuk is het grootst? Kies uit #/#, #/# of #/#. — verschillende tellers en noemers",
+    "naar": "Welke breuk is het grootst? Kies uit #/#, #/# of #/#.",
+    "op": "2026-10-01"
+   }
+  },
+  {
+   "doel": "G6-GET-E03",
+   "nr": 4,
+   "somtype": "Welke breuk is het kleinst? Kies uit #/#, #/# of #/#.",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Welke breuk is het kleinst? Kies uit #/#, #/# of #/#. — verschillende tellers en noemers",
+   "hint1": "Kijk eerst bij elke breuk: is hij meer dan de helft, minder, of precies de helft? Doe de teller (boven de streep) keer twee en vergelijk met de noemer (onder de streep).",
+   "hint2": "Is maar één breuk minder dan de helft? Dan is die het kleinst. Zijn er meer breuken minder dan de helft? Of liggen ze alle drie boven de helft? Vergelijk ze dan twee aan twee. Hebben ze dezelfde noemer, dan is die met de kleinste teller het kleinst. Hebben ze dezelfde teller, dan is die met de grootste noemer het kleinst. Is de ene noemer een veelvoud van de andere? Doe dan bij de breuk met de kleinste noemer de teller en de noemer allebei keer hetzelfde getal, zodat de noemers gelijk worden. Vergelijk daarna de tellers. Is dat ook niet zo? Zoek dan een getal waar beide noemers precies in passen. Schrijf de twee breuken met dat getal als noemer en vergelijk de tellers.",
+   "ouderzin": "Je kind zoekt de kleinste van drie breuken.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "een andere breuk",
+     "claudeDenkfout": "een-andere-breuk",
+     "regel": "Claudes sleutel: een-andere-breuk",
+     "tekst": "Er is nog een breuk die kleiner is. Is jouw breuk meer of minder dan de helft? En de andere twee?",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "grotere-noemer-is-groter"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Typ de kleinste van de drie breuken uit de vraag. Kijk eerst bij elke breuk: meer dan de helft, minder, of precies de helft? Is maar één breuk minder dan de helft, dan is die het kleinst. Anders vergelijk je de breuken die nog kunnen winnen twee aan twee."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Stel je een taart voor: verdeel je hem in 8 stukken of in 4 stukken, welk stuk is dan groter?",
+     "claudeDenkfout": "grotere-noemer-is-groter",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Welke breuk is het kleinst? Kies uit #/#, #/# of #/#. — verschillende tellers en noemers",
+    "naar": "Welke breuk is het kleinst? Kies uit #/#, #/# of #/#.",
+    "op": "2026-10-01"
+   }
+  },
+  {
+   "doel": "G6-GET-E03",
+   "nr": 2,
+   "somtype": "Schrijf #/# met noemer #.",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Schrijf #/# met noemer #.",
+   "hint1": "Hoeveel keer zo groot is de nieuwe noemer als de oude noemer (onder de streep)?",
+   "hint2": "Doe de teller (boven de streep) ook zoveel keer. Dan blijft de breuk even groot.",
+   "ouderzin": "Je kind schrijft een breuk met een grotere noemer: de teller en de noemer allebei keer hetzelfde getal.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "teller hetzelfde gelaten",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "De noemer is groter geworden, maar de teller niet. Hoeveel keer zo groot is de noemer geworden? Doe de teller ook zoveel keer.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "hetzelfde erbij gedaan",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "regel": "Claudes sleutel: teller-en-noemer-optellen",
+     "tekst": "Je hebt bij de teller hetzelfde erbij gedaan als bij de noemer. Zo blijft de breuk niet even groot. Hoeveel keer zo groot is de noemer geworden? Doe de teller ook zoveel keer.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerd keer",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "regel": "Claudes sleutel: eenheid-verkeerd-omgerekend",
+     "tekst": "De noemer klopt, maar de teller niet. Hoeveel keer zo groot is de noemer geworden? Doe de teller precies zoveel keer.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "teller klopt niet",
+     "claudeDenkfout": "teller-klopt-niet",
+     "regel": "Claudes sleutel: teller-klopt-niet",
+     "tekst": "De noemer klopt, maar de teller niet. Hoeveel keer zo groot is de noemer geworden? Doe de teller precies zoveel keer.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "omgekeerd-gedeeld"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "even groot, andere noemer",
+     "claudeDenkfout": null,
+     "regel": "fout = even grote breuk met een andere noemer",
+     "tekst": "Die breuk is even groot, maar hij heeft nog niet de nieuwe noemer uit de vraag. Hoeveel keer zo groot is de nieuwe noemer als de oude noemer? Doe de teller ook zoveel keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Schrijf de breuk met de nieuwe noemer. Hoeveel keer zo groot is die noemer? Doe de teller precies zoveel keer."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De noemer zegt in hoeveel stukken de taart is verdeeld. Die verandert niet als je stukken bij elkaar doet.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?",
+     "claudeDenkfout": "eenheid-verkeerd-omgerekend",
+     "waarom": "maattrap past niet bij breuken"
+    },
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Wat wil je weten, en waar deel je dan door? Zet het in een verhoudingstabel.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "verhoudingstabel past niet bij deze som (breuk van een hoeveelheid: eerst één gelijk stuk, S6)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E03",
+   "nr": 5,
+   "somtype": "#/# van de [ding]. Schrijf deze breuk zo eenvoudig mogelijk.",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "#/# van de [ding]. Schrijf deze breuk zo eenvoudig mogelijk.",
+   "hint1": "Zoek een getal waardoor je de teller (boven de streep) en de noemer (onder de streep) allebei precies kunt delen.",
+   "hint2": "Deel de teller en de noemer door dat getal. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.",
+   "ouderzin": "Je kind schrijft een breuk van een groep dingen zo eenvoudig mogelijk.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "één van de twee gedeeld",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "tekst": "Je hebt maar één van de twee gedeeld. Deel de teller én de noemer door hetzelfde getal, dan blijft de breuk even groot.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nog niet eenvoudigst",
+     "claudeDenkfout": null,
+     "regel": "fout = gelijkwaardig maar niet zo eenvoudig mogelijk",
+     "tekst": "Die breuk is even groot, maar nog niet zo eenvoudig mogelijk. Kun je de teller en de noemer nog eens door hetzelfde getal delen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel de teller en de noemer door hetzelfde getal. Ga door tot er geen getal meer is waardoor je ze allebei kunt delen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Als je de noemer deelt, moet je de teller door hetzelfde getal delen.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Als je de teller deelt, moet je de noemer door hetzelfde getal delen.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E03",
+   "nr": 8,
+   "somtype": "#/# van de [wie] heeft een [ding]. Schrijf die breuk zo eenvoudig mogelijk.",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "#/# van de [wie] heeft een [ding]. Schrijf die breuk zo eenvoudig mogelijk.",
+   "hint1": "Zoek een getal waardoor je de teller (boven de streep) en de noemer (onder de streep) allebei precies kunt delen.",
+   "hint2": "Deel de teller en de noemer door dat getal. Kun je daarna nog eens allebei door hetzelfde getal delen? Ga door tot dat niet meer kan.",
+   "ouderzin": "Je kind schrijft een breuk van een groep zo eenvoudig mogelijk.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "één van de twee gedeeld",
+     "claudeDenkfout": "een-van-de-twee-gedeeld",
+     "regel": "Claudes sleutel: een-van-de-twee-gedeeld",
+     "tekst": "Je hebt maar één van de twee gedeeld. Deel de teller én de noemer door hetzelfde getal, dan blijft de breuk even groot.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "teller-en-noemer-optellen"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "omgedraaid",
+     "claudeDenkfout": "cijfers-verwisseld",
+     "regel": "Claudes sleutel: cijfers-verwisseld",
+     "tekst": "Je hebt de breuk omgedraaid. De teller blijft boven de streep en de noemer blijft onder de streep.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nog niet eenvoudigst",
+     "claudeDenkfout": null,
+     "regel": "fout = gelijkwaardig maar niet zo eenvoudig mogelijk",
+     "tekst": "Die breuk is even groot, maar nog niet zo eenvoudig mogelijk. Kun je de teller en de noemer nog eens door hetzelfde getal delen?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel de teller en de noemer door hetzelfde getal. Ga door tot er geen getal meer is waardoor je ze allebei kunt delen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Wat je met de teller doet, doe je ook met de noemer. Allebei delen.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Deel de teller ook door hetzelfde getal.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Teller boven, noemer onder. Draai ze niet om.",
+     "claudeDenkfout": "cijfers-verwisseld",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E03",
+   "nr": 6,
+   "somtype": "#/# van een [ding] is evenveel als ?/#. Welk getal hoort op het vraagteken?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "#/# van een [ding] is evenveel als ?/#. Welk getal hoort op het vraagteken?",
+   "hint1": "Hoeveel keer zo groot is de nieuwe noemer (onder de streep) als de oude noemer?",
+   "hint2": "Doe de teller (boven de streep) ook zoveel keer. Dan blijft de breuk even groot.",
+   "ouderzin": "Je kind zoekt een gelijkwaardige breuk: de teller en de noemer allebei keer hetzelfde getal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "de factor",
+     "claudeDenkfout": null,
+     "regel": "fout = de factor (nieuwe noemer : oude noemer)",
+     "tekst": "Hoeveel keer zo groot is de noemer geworden? Doe de teller (boven de streep) ook zoveel keer. Dat getal komt op het vraagteken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "teller overgenomen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is de teller van de eerste breuk. De noemer is groter geworden. Hoeveel keer zo groot? Doe de teller ook zoveel keer."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "hetzelfde erbij gedaan",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "regel": "Claudes sleutel: teller-en-noemer-optellen",
+     "tekst": "Je hebt bij de teller hetzelfde erbij gedaan als bij de noemer. Zo blijft de breuk niet even groot. Hoeveel keer zo groot is de noemer geworden? Doe de teller ook zoveel keer.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Hoeveel keer zo groot is de noemer geworden? Doe de teller precies zoveel keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Hoeveel keer zo groot is de noemer geworden? Doe de teller precies zoveel keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het getal dat op het vraagteken hoort? Hoeveel keer zo groot is de nieuwe noemer? Doe de teller ook zoveel keer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel keer zo groot is de nieuwe noemer als de oude noemer? Doe de teller ook zoveel keer."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt bij de teller opgeteld wat er bij de noemer bij kwam. Je moet allebei met hetzelfde getal vermenigvuldigen.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Kijk hoeveel keer zo groot de noemer werd; de teller wordt precies zoveel keer zo groot.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Vermenigvuldig de teller met hetzelfde getal als de noemer, en tel niets extra's op.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E03",
+   "nr": 7,
+   "somtype": "[stip op getallenlijn zetten] Zet #/# op de lijn van # tot #.",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "[stip op getallenlijn zetten] Zet #/# op de lijn van # tot #.",
+   "hint1": "De streepjes verdelen de lijn van nul tot één in zoveel gelijke stukken als de noemer (onder de streep) zegt.",
+   "hint2": "De teller (boven de streep) zegt hoeveel van die stukken je vanaf nul verder gaat.",
+   "ouderzin": "Je kind zet een breuk op een getallenlijn van nul tot één.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een stuk te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = een stuk te ver",
+     "tekst": "Bijna! Je bent één stuk te ver. Tel vanaf nul de stukken nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een stuk te kort",
+     "claudeDenkfout": null,
+     "regel": "fout = een stuk te kort",
+     "tekst": "Bijna! Je bent één stuk te kort. Tel vanaf nul de stukken nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "De streepjes verdelen de lijn in zoveel gelijke stukken als de noemer zegt. Ga vanaf nul zoveel stukken verder als de teller zegt."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E03",
+   "nr": 9,
+   "somtype": "[kaartjes op volgorde slepen] Welke breuken zijn hetzelfde als #/#? Sleep ze naar het goede vak.",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "[kaartjes op volgorde slepen] Welke breuken zijn hetzelfde als #/#? Sleep ze naar het goede vak.",
+   "hint1": "Een breuk blijft even groot als je de teller (boven de streep) en de noemer (onder de streep) allebei keer hetzelfde getal doet.",
+   "hint2": "Kijk bij elke breuk: hoeveel keer zo groot is de noemer geworden? Is de teller ook precies zoveel keer zo groot? Dan hoort hij bij hetzelfde.",
+   "ouderzin": "Je kind sorteert breuken: even groot als de breuk in de vraag, of niet.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één breuk in het verkeerde vak",
+     "claudeDenkfout": null,
+     "regel": "fout = één getal in het verkeerde vak",
+     "tekst": "Eén breuk staat in het verkeerde vak. Kijk bij elke breuk: zijn de teller en de noemer allebei keer hetzelfde getal gedaan? Dan is hij even groot."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "vakken omgewisseld",
+     "claudeDenkfout": null,
+     "regel": "fout = vakken omgewisseld",
+     "tekst": "Je hebt de vakken omgewisseld. Bij hetzelfde horen de breuken die even groot zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij elke breuk of de teller en de noemer allebei keer hetzelfde getal zijn gedaan. Dan is hij even groot en hoort hij bij hetzelfde. Anders niet."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E03",
+   "nr": 10,
+   "somtype": "[kaartjes op volgorde slepen] Zet de breuken op volgorde van klein naar groot.",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "[kaartjes op volgorde slepen] Zet de breuken op volgorde van klein naar groot.",
+   "hint1": "Hebben de breuken dezelfde teller (boven de streep)? Dan kijk je naar de noemer (onder de streep): hoe groter de noemer, hoe kleiner de stukken.",
+   "hint2": "Zet de kleinste breuk vooraan en de grootste achteraan.",
+   "ouderzin": "Je kind zet breuken op volgorde van klein naar groot.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "omgedraaid",
+     "claudeDenkfout": null,
+     "regel": "volgorde omgedraaid",
+     "tekst": "Je hebt ze van groot naar klein gezet. Begin met de kleinste breuk."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Vergelijk de breuken twee aan twee. Hebben ze dezelfde teller? Dan is de breuk met de grootste noemer het kleinst."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een grotere noemer betekent kleinere stukken.",
+     "claudeDenkfout": "grotere-noemer-is-groter",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M04",
+   "nr": 1,
+   "somtype": "# #/# = ?/#. Welk getal hoort op het vraagteken?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# #/# = ?/#. Welk getal hoort op het vraagteken?",
+   "hint1": "Eén hele bestaat uit zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel stukken zitten er in het hele getal?",
+   "hint2": "Tel de stukken van de breuk daar nog bij. Dat getal komt boven de streep.",
+   "ouderzin": "Je kind schrijft een gemengd getal als één breuk: het hele getal omzetten in stukken en de stukken van de breuk erbij tellen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "heel en teller opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Heb je het hele getal en de teller opgeteld? Eén hele bestaat uit zoveel gelijke stukken als de noemer zegt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "teller niet erbij",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal2",
+     "tekst": "Je hebt het hele getal omgezet in stukken. Tel de stukken van de breuk er nog bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één te veel. Tel de stukken nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één te weinig. Tel de stukken nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het getal dat op het vraagteken hoort? Hoeveel gelijke stukken zitten er in het hele getal? Tel daar de stukken van de breuk bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe het hele getal keer de noemer: zoveel gelijke stukken zitten er in het hele getal. Tel daar de teller bij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een hele is 5 5-de delen, niet 1. Vermenigvuldig eerst 4 × 5.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt de 2/5 vergeten op te tellen.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Een hele is 4 4-de delen, niet 1. Vermenigvuldig eerst 1 × 4.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt de 1/4 vergeten op te tellen.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Een hele is 8 8-de delen, niet 1. Vermenigvuldig eerst 3 × 8.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt de 2/8 vergeten op te tellen.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt de 2/4 vergeten op te tellen.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Een hele is 2 2-de delen, niet 1. Vermenigvuldig eerst 2 × 2.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt de 1/2 vergeten op te tellen.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt de 7/8 vergeten op te tellen.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Een hele is 4 4-de delen, niet 1. Vermenigvuldig eerst 2 × 4.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Een hele is 4 4-de delen, niet 1. Vermenigvuldig eerst 3 × 4.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt de 3/4 vergeten op te tellen.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Een hele is 8 8-de delen, niet 1. Vermenigvuldig eerst 1 × 8.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt de 4/8 vergeten op te tellen.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Een hele is 3 3-de delen, niet 1. Vermenigvuldig eerst 2 × 3.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt de 1/3 vergeten op te tellen.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Een hele is 2 2-de delen, niet 1. Vermenigvuldig eerst 4 × 2.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Een hele is 2 2-de delen, niet 1. Vermenigvuldig eerst 3 × 2.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt de 5/8 vergeten op te tellen.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M04",
+   "nr": 2,
+   "somtype": "Je hebt #/# [ding]. Hoeveel hele pizza's zijn dat? Niet alle stukken passen in hele pizza's. Typ alleen het aantal hele pizza's.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Je hebt #/# [ding]. Hoeveel hele pizza's zijn dat? Er blijft ook nog een stuk over. Typ alleen het aantal hele pizza's.",
+   "hint1": "De noemer (onder de streep) zegt hoeveel gelijke stukken er in één hele pizza zitten.",
+   "hint2": "Hoe vaak past de noemer in de teller (boven de streep)? Zoveel hele pizza's zijn het.",
+   "ouderzin": "Je kind rekent uit hoeveel hele pizza's er in een breuk zitten die groter is dan één.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "noemer eraf gehaald",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Je hebt de noemer van de teller afgehaald. Zo weet je hoeveel stukken er na één hele pizza nog zijn. Hoe vaak past de noemer in de teller?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de rest",
+     "claudeDenkfout": null,
+     "regel": "fout = de rest van getal1 : getal2",
+     "tekst": "Zijn dat de stukken die overblijven? De vraag is hoeveel hele pizza's het zijn. Hoe vaak past de noemer in de teller?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "steeds een hele eraf",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 − j × getal2 (j ≥ 2)",
+     "tekst": "Heb je steeds een hele pizza van de stukken afgehaald? Ga door tot dat niet meer kan, en tel hoe vaak het lukte."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Dat is één hele pizza te veel. Zoveel stukken zijn er niet."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Dat is één hele pizza te weinig. De noemer past nog één keer meer in de teller."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Je hebt een getal uit de breuk overgenomen. Is dat echt het aantal hele pizza's? Hoe vaak past de noemer in de teller?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoe vaak past de noemer in de teller? Zoveel hele pizza's zijn het."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Eén hele meer past niet: de teller is daarvoor niet groot genoeg.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Hoe vaak past de noemer in de teller? Dat is delen, niet aftrekken.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Je hebt #/# [ding]. Hoeveel hele pizza's zijn dat? Er blijft ook nog een stuk over. Typ alleen het aantal hele pizza's.",
+    "naar": "Je hebt #/# [ding]. Hoeveel hele pizza's zijn dat? Niet alle stukken passen in hele pizza's. Typ alleen het aantal hele pizza's.",
+    "op": "2026-10-01"
+   }
+  },
+  {
+   "doel": "G6-GET-M04",
+   "nr": 3,
+   "somtype": "Hoe heet de # in #/#?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Hoe heet de # in #/#?",
+   "hint1": "Kijk waar het getal staat: boven de streep of onder de streep?",
+   "hint2": "Het getal onder de streep zegt in hoeveel gelijke stukken het geheel is verdeeld. Het getal boven de streep zegt hoeveel van die stukken je neemt.",
+   "ouderzin": "Je kind leert de namen van de getallen in een breuk: de teller staat boven de streep, de noemer eronder.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "teller gekozen",
+     "claudeDenkfout": null,
+     "regel": "de teller",
+     "tekst": "De teller staat boven de streep. Dit getal staat onder de streep."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "noemer gekozen",
+     "claudeDenkfout": null,
+     "regel": "de noemer",
+     "tekst": "De noemer staat onder de streep. Dit getal staat boven de streep."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "uitkomst gekozen",
+     "claudeDenkfout": null,
+     "regel": "de uitkomst",
+     "tekst": "De uitkomst krijg je pas als je iets uitrekent. Dit getal staat in de breuk zelf. Kijk waar het staat: boven of onder de streep? Hoe heet het getal op die plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk waar het getal staat: boven de streep of onder de streep? Hoe heet het getal op die plek?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "past niet bij deze som (er komt niets bij of af)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-M04",
+   "nr": 4,
+   "somtype": "[wie] snijden een [eten] in # gelijke stukken. [wie] eet er # op. Welk deel van de [eten] is dat? Typ een breuk, zoals #/#.",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "[wie] delen een [eten] in # gelijke stukken. [wie] eet er # op. Welk deel is dat? Typ een breuk, zoals #/#.",
+   "hint1": "Een deel is een of meer gelijke stukken van het geheel. In hoeveel gelijke stukken is het geheel verdeeld? Dat getal komt onder de streep: de noemer.",
+   "hint2": "Hoeveel stukken worden er opgegeten? Dat getal komt boven de streep: de teller.",
+   "ouderzin": "Je kind schrijft als breuk welk deel er is opgegeten: de noemer is het aantal gelijke stukken, de teller het aantal opgegeten stukken.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "wat overblijft",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat zijn de stukken die overblijven. De vraag is hoeveel er is opgegeten: dat getal komt boven de streep.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "getallen op de verkeerde plek",
+     "claudeDenkfout": "getallen-op-de-verkeerde-plek",
+     "regel": "Claudes sleutel: getallen-op-de-verkeerde-plek",
+     "tekst": "Staan de getallen op de goede plek? Onder de streep, bij de noemer, komt het aantal gelijke stukken van het geheel. Boven de streep, bij de teller, komt hoeveel stukken er zijn opgegeten.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "teller-en-noemer-optellen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Onder de streep komt het aantal gelijke stukken van het geheel. Boven de streep komt hoeveel stukken er zijn opgegeten."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Het getal onder de streep is het aantal stukken van het hele ding. Het getal erboven is wat je neemt.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is het deel dat óverblijft. De vraag is welk deel de dino opeet.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Onder de streep komt het totale aantal stukken. 8, niet wat er overblijft.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Dat is het deel dat óverblijft. De vraag is welk deel de pinguïn opeet.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Onder de streep komt het totale aantal stukken. 5, niet wat er overblijft.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Dat is het deel dat óverblijft. De vraag is welk deel het kind opeet.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is het deel dat óverblijft. De vraag is welk deel het konijn opeet.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Onder de streep komt het totale aantal stukken. 10, niet wat er overblijft.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Onder de streep komt het totale aantal stukken. 3, niet wat er overblijft.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Dat is het deel dat óverblijft. De vraag is welk deel de speler opeet.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "[wie] delen een [eten] in # gelijke stukken. [wie] eet er # op. Welk deel is dat? Typ een breuk, zoals #/#.",
+    "naar": "[wie] snijden een [eten] in # gelijke stukken. [wie] eet er # op. Welk deel van de [eten] is dat? Typ een breuk, zoals #/#.",
+    "op": "2026-10-01"
+   }
+  },
+  {
+   "doel": "G6-GET-E09",
+   "nr": 1,
+   "somtype": "Hoeveel is #/# van €#?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Hoeveel is #/# van €#?",
+   "hint1": "Verdeel het bedrag eerst in zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel is één stuk? Komt dat niet uit in hele euro's? Reken dan met centen.",
+   "hint2": "Neem dan zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?",
+   "ouderzin": "Je kind rekent een breuk van een bedrag uit: eerst één gelijk stuk, dan zoveel stukken als de teller zegt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "het hele bedrag",
+     "claudeDenkfout": null,
+     "regel": "fout = de prijs",
+     "tekst": "Dat is het hele bedrag. Verdeel het bedrag eerst in zoveel gelijke stukken als de noemer zegt. Neem dan zoveel stukken als de teller zegt."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één stuk",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is één stuk. Neem nu zoveel stukken als de teller zegt.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "wat overblijft",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Is dat wat er overblijft? Je zoekt zoveel stukken als de teller zegt.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "stuk te veel of te weinig",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "Claudes sleutel: een-ernaast",
+     "tekst": "Kijk nog eens naar de teller. Neem je precies zoveel stukken als de teller zegt? Reken eerst uit hoeveel één stuk is.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Verdeel het bedrag in zoveel gelijke stukken als de noemer zegt. Neem dan zoveel stukken als de teller zegt. Reken zo nodig met centen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast': de fout-hint zegt wat het kind deed ('Bijna!' alleen bij één stap ernaast)"
+    },
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E09",
+   "nr": 2,
+   "somtype": "Hoeveel is #/# van #?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Hoeveel is #/# van #?",
+   "hint1": "Verdeel het getal eerst in zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel is één stuk?",
+   "hint2": "Neem dan zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?",
+   "ouderzin": "Je kind rekent een breuk van een getal uit: eerst één gelijk stuk, dan zoveel stukken als de teller zegt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één stuk (regel)",
+     "claudeDenkfout": null,
+     "regel": "fout = één stuk (het aantal : de noemer)",
+     "tekst": "Dat is één stuk. Neem nu zoveel stukken als de teller zegt."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één stuk",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is één stuk. Neem nu zoveel stukken als de teller zegt.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het antwoord op de vraag? Verdeel het getal eerst in zoveel gelijke stukken als de noemer zegt."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "wat overblijft",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Is dat wat er overblijft? Je zoekt zoveel stukken als de teller zegt.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "stuk te veel of te weinig",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "Claudes sleutel: een-ernaast",
+     "tekst": "Kijk nog eens naar de teller. Neem je precies zoveel stukken als de teller zegt? Reken eerst uit hoeveel één stuk is.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Verdeel het getal in zoveel gelijke stukken als de noemer zegt. Neem dan zoveel stukken als de teller zegt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "geen 'eentje naast': de fout-hint zegt wat het kind deed ('Bijna!' alleen bij één stap ernaast)"
+    },
+    {
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-GET-E09",
+   "nr": 3,
+   "somtype": "[wie] krijgt #/# van # [ding]. Hoeveel [ding] is dat?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[wie] krijgt #/# van # [ding]. Hoeveel [ding] is dat?",
+   "hint1": "Verdeel alles eerst in zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel is één stuk?",
+   "hint2": "Neem dan zoveel stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?",
+   "ouderzin": "Je kind rekent uit hoeveel iemand krijgt bij een breuk van een aantal: eerst één gelijk stuk, dan zoveel stukken als de teller zegt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één stuk",
+     "claudeDenkfout": null,
+     "regel": "fout = één stuk (het aantal : de noemer)",
+     "tekst": "Dat is één stuk. Neem nu zoveel stukken als de teller zegt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het antwoord op de vraag? Verdeel alles eerst in zoveel gelijke stukken als de noemer zegt."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "wat overblijft",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Is dat wat er overblijft? Je zoekt zoveel stukken als de teller zegt.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "niet verdeeld",
+     "claudeDenkfout": "niet-verdeeld",
+     "regel": "Claudes sleutel: niet-verdeeld",
+     "tekst": "Kijk nog eens naar de breuk. Heb je alles eerst verdeeld in zoveel gelijke stukken als de noemer zegt? Neem dan zoveel stukken als de teller zegt.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)",
+     "claudeDenkfoutOrigineel": "deel-vergeten-bij-splitsen"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Verdeel alles in zoveel gelijke stukken als de noemer zegt. Neem dan zoveel stukken als de teller zegt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je bent het delen door de noemer vergeten.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is wat overblijft. De vraag is wat de poes krijgt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is 1/6. Vermenigvuldig nog met 4.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Dat is wat overblijft. De vraag is wat de dino krijgt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is 1/8. Vermenigvuldig nog met 2.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Dat is 1/8. Vermenigvuldig nog met 5.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Dat is wat overblijft. De vraag is wat de speler krijgt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is wat overblijft. De vraag is wat het kind krijgt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is 1/5. Vermenigvuldig nog met 3.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Dat is 1/8. Vermenigvuldig nog met 4.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Dat is wat overblijft. De vraag is wat het konijn krijgt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Dat is 1/8. Vermenigvuldig nog met 7.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

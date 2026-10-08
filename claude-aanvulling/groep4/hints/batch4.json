@@ -1,0 +1,1049 @@
+{
+ "batch": "batch4",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G4-merge, batch 4 = MEET-E06, VBN-E01, VERH-E01). Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint; 'claude' = tekst van Claude blijft (ok), 'claude-taalfix' = Claudes tekst met een kleine taalfix, 'nieuw' = eigen tekst (claudeTekst = de Claude-tekst die hij vervangt). Bij 'tekst per item' blijft Claudes eigen tekst per item staan, behalve teksten in claudeVervangen: die vallen door naar de volgende regel. Getal1/getal2 = de getallen in de opgave, in volgorde. MEET-E06 (klok, kalender): fout_regels kent geen regels voor half/kwart of datums; de foute opties krijgen daarom per soort klok één vaste tekst ('andere klok', regel 'andere fout'). VBN-E01 #4/#5: getal1 = de waarde van één streepje (2).",
+ "somtypen": [
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 1,
+   "somtype": "[klokkenrij] Welke klok wijst [tijd] aan? (tijd in woorden) — half",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst [tijd] aan? (tijd in woorden) — half",
+   "hint1": "Bij half wijst de grote wijzer recht naar beneden. Zoek eerst de klokken waarbij dat zo is.",
+   "hint2": "Half betekent: een half uur vóór het hele uur. De kleine wijzer staat dan tussen het uur ervoor en het uur uit de vraag.",
+   "ouderzin": "Je kind kiest de klok die een half uur aanwijst, zoals half vier.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te vroeg. De grote wijzer klopt wel. Bij half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij half wijst hij recht naar beneden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok naar de grote wijzer: wijst hij recht naar beneden? Kijk dan naar de kleine wijzer: staat hij tussen het uur ervoor en het uur uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "'hoeveel minuten daarna' past niet bij G4 (halve uren en kwartieren, geen minuten); nu één vaste tekst per soort klok"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 5,
+   "somtype": "[klokkenrij] Welke klok wijst [tijd] aan? (tijd in woorden) — kwart voor",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst [tijd] aan? (tijd in woorden) — kwart voor",
+   "hint1": "Bij kwart voor wijst de grote wijzer naar de negen. Zoek eerst de klokken waarbij dat zo is.",
+   "hint2": "Kwart voor betekent: een kwartier vóór het hele uur. De kleine wijzer is dan bijna bij het uur uit de vraag, maar nog net ervoor.",
+   "ouderzin": "Je kind kiest de klok die kwart voor een heel uur aanwijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij kwart voor is de kleine wijzer bijna bij het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij kwart voor wijst hij naar de negen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok naar de grote wijzer: wijst hij naar de negen? Kijk dan naar de kleine wijzer: is hij bijna bij het uur uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "'hoeveel minuten daarna' past niet bij G4 (halve uren en kwartieren, geen minuten); nu één vaste tekst per soort klok"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 6,
+   "somtype": "[klokkenrij] Welke klok wijst [tijd] aan? (tijd in woorden) — kwart over",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst [tijd] aan? (tijd in woorden) — kwart over",
+   "hint1": "Bij kwart over wijst de grote wijzer naar de drie. Zoek eerst de klokken waarbij dat zo is.",
+   "hint2": "Kwart over betekent: een kwartier na het hele uur. De kleine wijzer is dan net voorbij het uur uit de vraag.",
+   "ouderzin": "Je kind kiest de klok die kwart over een heel uur aanwijst.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij kwart over is de kleine wijzer net voorbij het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij kwart over wijst hij naar de drie."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok naar de grote wijzer: wijst hij naar de drie? Kijk dan naar de kleine wijzer: is hij net voorbij het uur uit de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "'hoeveel minuten daarna' past niet bij G4 (halve uren en kwartieren, geen minuten); nu één vaste tekst per soort klok"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 2,
+   "somtype": "[klok] Hoe laat is het op deze klok? (opties in woorden) — half",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[klok] Hoe laat is het op deze klok? (opties in woorden) — half",
+   "hint1": "Kijk eerst naar de grote wijzer. Wijst hij recht naar beneden, dan is het half.",
+   "hint2": "Kijk dan naar de kleine wijzer. Hij staat tussen twee getallen. Neem het getal waar hij naartoe gaat: het is half van dat uur.",
+   "ouderzin": "Je kind leest een half uur af op een klok met wijzers.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een uur te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Dat is een uur te laat. Kijk naar de kleine wijzer: naar welk uur gaat hij nu? Het is half van dat uur."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Dat is een uur te vroeg. Bij half kijk je naar het uur waar de kleine wijzer naartoe gaat, niet naar het uur dat net geweest is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Kijk nog eens naar de grote wijzer. Hij wijst recht naar beneden: dan is het half."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Bij half wijst de grote wijzer recht naar beneden. Kijk naar de kleine wijzer: naar welk uur gaat hij? Het is half van dat uur."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "'hoeveel minuten daarna' past niet bij G4 (halve uren en kwartieren, geen minuten); nu één vaste tekst per soort klok"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 7,
+   "somtype": "[klok] Hoe laat is het op deze klok? (opties in woorden) — kwart over",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "[klok] Hoe laat is het op deze klok? (opties in woorden) — kwart over",
+   "hint1": "Kijk eerst naar de grote wijzer. Wijst hij naar de drie, dan is het kwart over.",
+   "hint2": "Kijk dan naar de kleine wijzer. Welk getal is hij net voorbij? Het is kwart over dat uur.",
+   "ouderzin": "Je kind leest kwart over af op een klok met wijzers.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een uur te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Dat is een uur te laat. De kleine wijzer is net voorbij een getal: het is kwart over dat uur, niet over het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Dat is een uur te vroeg. Welk getal is de kleine wijzer net voorbij? Het is kwart over dat uur."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Bij kwart over wijst de grote wijzer naar de drie. De kleine wijzer is net voorbij een getal: het is kwart over dat uur."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "'hoeveel minuten daarna' past niet bij G4 (halve uren en kwartieren, geen minuten); nu één vaste tekst per soort klok"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 11,
+   "somtype": "[klok] Hoe laat is het op deze klok? (opties in woorden) — kwart voor",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "[klok] Hoe laat is het op deze klok? (opties in woorden) — kwart voor",
+   "hint1": "Kijk eerst naar de grote wijzer. Wijst hij naar de negen, dan is het kwart voor.",
+   "hint2": "Kijk dan naar de kleine wijzer. Bij welk getal is hij bijna? Het is kwart voor dat uur.",
+   "ouderzin": "Je kind leest kwart voor af op een klok met wijzers.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een uur te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Dat is een uur te laat. Bij welk getal is de kleine wijzer bijna? Het is kwart voor dat uur."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Kijk nog eens naar de grote wijzer. Hij wijst naar de negen: dan is het kwart voor."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Bij kwart voor wijst de grote wijzer naar de negen. De kleine wijzer is bijna bij het volgende getal: het is kwart voor dat uur."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "'hoeveel minuten daarna' past niet bij G4 (halve uren en kwartieren, geen minuten); nu één vaste tekst per soort klok"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 15,
+   "somtype": "[klokkenrij] Welke klok wijst [tijd] aan? (tijd digitaal) — half",
+   "nrOrigineel": 12,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst [tijd] aan? (tijd digitaal) — half",
+   "hint1": "Achter de dubbele punt staat hoeveel minuten na het hele uur het is. Dertig minuten is een half uur: de grote wijzer wijst recht naar beneden.",
+   "hint2": "Vóór de dubbele punt staat het uur dat geweest is. De kleine wijzer staat dan tussen dat uur en het volgende uur.",
+   "ouderzin": "Je kind kiest de klok met wijzers die bij een digitale tijd met dertig minuten hoort.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. De kleine wijzer staat tussen het uur vóór de dubbele punt en het volgende uur."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij dertig minuten wijst hij recht naar beneden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok eerst naar de grote wijzer: bij dertig minuten wijst hij recht naar beneden. De kleine wijzer staat tussen het uur vóór de dubbele punt en het volgende uur."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "dezelfde tekst bij half, kwart over en kwart voor; nu één vaste tekst per soort klok, die ook de dubbele punt uitlegt"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 16,
+   "somtype": "[klokkenrij] Welke klok wijst [tijd] aan? (tijd digitaal) — kwart over",
+   "nrOrigineel": 13,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst [tijd] aan? (tijd digitaal) — kwart over",
+   "hint1": "Achter de dubbele punt staat hoeveel minuten na het hele uur het is. Vijftien minuten is een kwartier: de grote wijzer wijst naar de drie.",
+   "hint2": "Vóór de dubbele punt staat het uur. De kleine wijzer is dan net voorbij dat uur.",
+   "ouderzin": "Je kind kiest de klok met wijzers die bij een digitale tijd met vijftien minuten hoort.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. De kleine wijzer is net voorbij het uur vóór de dubbele punt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij vijftien minuten wijst hij naar de drie."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok eerst naar de grote wijzer: bij vijftien minuten wijst hij naar de drie. De kleine wijzer is net voorbij het uur vóór de dubbele punt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "dezelfde tekst bij half, kwart over en kwart voor; nu één vaste tekst per soort klok, die ook de dubbele punt uitlegt"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 17,
+   "somtype": "[klokkenrij] Welke klok wijst [tijd] aan? (tijd digitaal) — kwart voor",
+   "nrOrigineel": 14,
+   "somtypeOrigineel": "[klokkenrij] Welke klok wijst [tijd] aan? (tijd digitaal) — kwart voor",
+   "hint1": "Achter de dubbele punt staat hoeveel minuten na het hele uur het is. Bij vijfenveertig minuten is het kwart voor het volgende uur: de grote wijzer wijst naar de negen.",
+   "hint2": "Vóór de dubbele punt staat het uur dat geweest is. De kleine wijzer is dan bijna bij het volgende uur.",
+   "ouderzin": "Je kind kiest de klok met wijzers die bij een digitale tijd met vijfenveertig minuten hoort.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. De kleine wijzer is bijna bij het volgende uur, maar nog net ervoor."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "grote wijzer verkeerd",
+     "claudeDenkfout": null,
+     "regel": "fout = grote wijzer verkeerd",
+     "tekst": "Bij die klok staat de grote wijzer niet goed. Bij vijfenveertig minuten wijst hij naar de negen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk bij die klok eerst naar de grote wijzer: bij vijfenveertig minuten wijst hij naar de negen. De kleine wijzer is bijna bij het volgende uur, maar nog net ervoor."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "dezelfde tekst bij half, kwart over en kwart voor; nu één vaste tekst per soort klok, die ook de dubbele punt uitlegt"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 12,
+   "somtype": "[klok] Hoe laat is het op deze klok? (opties digitaal) — half",
+   "nrOrigineel": 15,
+   "somtypeOrigineel": "[klok] Hoe laat is het op deze klok? (opties digitaal) — half",
+   "hint1": "Kijk eerst naar de grote wijzer. Wijst hij recht naar beneden, dan is het dertig minuten na het hele uur.",
+   "hint2": "Kijk dan naar de kleine wijzer. Welk getal is hij voorbij? Dat getal komt vóór de dubbele punt.",
+   "ouderzin": "Je kind leest een half uur af op een klok met wijzers en kiest de digitale tijd.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een uur te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Dat is een uur te laat. De kleine wijzer is nog niet bij dat getal. Vóór de dubbele punt komt het getal dat hij voorbij is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Dat is een uur te vroeg. De kleine wijzer is al verder. Vóór de dubbele punt komt het getal dat hij voorbij is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "De kleine wijzer staat tussen twee getallen. Vóór de dubbele punt komt het getal dat hij voorbij is."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "dezelfde tekst bij half, kwart over en kwart voor; nu één vaste tekst per soort klok, die ook de dubbele punt uitlegt"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 13,
+   "somtype": "[klok] Hoe laat is het op deze klok? (opties digitaal) — kwart over",
+   "nrOrigineel": 16,
+   "somtypeOrigineel": "[klok] Hoe laat is het op deze klok? (opties digitaal) — kwart over",
+   "hint1": "Kijk eerst naar de grote wijzer. Wijst hij naar de drie, dan is het vijftien minuten na het hele uur.",
+   "hint2": "Kijk dan naar de kleine wijzer. Welk getal is hij net voorbij? Dat getal komt vóór de dubbele punt.",
+   "ouderzin": "Je kind leest kwart over af op een klok met wijzers en kiest de digitale tijd.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een uur te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Dat is een uur te laat. De kleine wijzer is nog niet bij dat getal. Vóór de dubbele punt komt het getal dat hij net voorbij is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Dat is een uur te vroeg. De kleine wijzer is al verder. Vóór de dubbele punt komt het getal dat hij net voorbij is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "De kleine wijzer is net voorbij een getal. Dat getal komt vóór de dubbele punt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "dezelfde tekst bij half, kwart over en kwart voor; nu één vaste tekst per soort klok, die ook de dubbele punt uitlegt"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 14,
+   "somtype": "[klok] Hoe laat is het op deze klok? (opties digitaal) — kwart voor",
+   "nrOrigineel": 17,
+   "somtypeOrigineel": "[klok] Hoe laat is het op deze klok? (opties digitaal) — kwart voor",
+   "hint1": "Kijk eerst naar de grote wijzer. Wijst hij naar de negen, dan is het vijfenveertig minuten na het hele uur.",
+   "hint2": "Kijk dan naar de kleine wijzer. Hij is bijna bij het volgende getal, maar nog niet. Vóór de dubbele punt komt het getal dat hij voorbij is.",
+   "ouderzin": "Je kind leest kwart voor af op een klok met wijzers en kiest de digitale tijd.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een uur te laat",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "Dat is een uur te laat. De kleine wijzer is bijna bij dat getal, maar nog niet. Vóór de dubbele punt komt het getal dat hij al voorbij is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een uur te vroeg",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te vroeg",
+     "tekst": "Dat is een uur te vroeg. De kleine wijzer is al verder. Vóór de dubbele punt komt het getal dat hij al voorbij is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Bij kwart voor is de kleine wijzer bijna bij het volgende getal. Vóór de dubbele punt komt het getal dat hij al voorbij is."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "dezelfde tekst bij half, kwart over en kwart voor; nu één vaste tekst per soort klok, die ook de dubbele punt uitlegt"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 8,
+   "somtype": "[klok-zetten (wijzers slepen)] Zet de klok op [tijd]. — half",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "[klok-zetten (wijzers slepen)] Zet de klok op [tijd]. — half",
+   "hint1": "Bij half zet je de grote wijzer recht naar beneden.",
+   "hint2": "Half betekent: een half uur vóór het hele uur. Zet de kleine wijzer tussen het uur ervoor en het uur uit de vraag.",
+   "ouderzin": "Je kind zet de wijzers van een klok op een half uur.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "regel": "Claudes sleutel: een uur te laat (tekst per item)",
+     "tekst": "\"half …\" is nog vóór … uur. De kleine wijzer is nog niet bij de …."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Bij half wijst de grote wijzer recht naar beneden. De kleine wijzer staat tussen het uur ervoor en het uur uit de vraag."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 9,
+   "somtype": "[klok-zetten (wijzers slepen)] Zet de klok op [tijd]. — kwart over",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "[klok-zetten (wijzers slepen)] Zet de klok op [tijd]. — kwart over",
+   "hint1": "Bij kwart over zet je de grote wijzer naar de drie.",
+   "hint2": "Kwart over betekent: een kwartier na het hele uur. Zet de kleine wijzer net voorbij het uur uit de vraag.",
+   "ouderzin": "Je kind zet de wijzers van een klok op kwart over.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = klok een uur te laat",
+     "tekst": "De kleine wijzer staat een uur te ver. Bij kwart over zet je hem net voorbij het uur uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Bij kwart over wijst de grote wijzer naar de drie. De kleine wijzer staat net voorbij het uur uit de vraag."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De kleine wijzer wijst naar de 1.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "bij kwart over staat de kleine wijzer net voorbij het uur, niet precies erop; en de tekst zegt niet wat er fout is"
+    },
+    {
+     "claudeTekst": "De kleine wijzer wijst naar de 11.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "bij kwart over staat de kleine wijzer net voorbij het uur, niet precies erop; en de tekst zegt niet wat er fout is"
+    },
+    {
+     "claudeTekst": "De kleine wijzer wijst naar de 7.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "bij kwart over staat de kleine wijzer net voorbij het uur, niet precies erop; en de tekst zegt niet wat er fout is"
+    },
+    {
+     "claudeTekst": "De kleine wijzer wijst naar de 8.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "bij kwart over staat de kleine wijzer net voorbij het uur, niet precies erop; en de tekst zegt niet wat er fout is"
+    },
+    {
+     "claudeTekst": "De kleine wijzer wijst naar de 9.",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "bij kwart over staat de kleine wijzer net voorbij het uur, niet precies erop; en de tekst zegt niet wat er fout is"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 10,
+   "somtype": "[klok-zetten (wijzers slepen)] Zet de klok op [tijd]. — kwart voor",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "[klok-zetten (wijzers slepen)] Zet de klok op [tijd]. — kwart voor",
+   "hint1": "Bij kwart voor zet je de grote wijzer naar de negen.",
+   "hint2": "Kwart voor betekent: een kwartier vóór het hele uur. Zet de kleine wijzer bijna bij het uur uit de vraag, maar nog net ervoor.",
+   "ouderzin": "Je kind zet de wijzers van een klok op kwart voor.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "kleine wijzer een uur te ver",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "regel": "Claudes sleutel: een uur te laat (tekst per item)",
+     "tekst": "\"kwart voor …\" is nog vóór … uur. De kleine wijzer is nog niet bij de …."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere klok",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Bij kwart voor wijst de grote wijzer naar de negen. De kleine wijzer staat bijna bij het uur uit de vraag, maar nog net ervoor."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 3,
+   "somtype": "Het is # [ding]. Welke datum is het # [ding] later?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Het is # [ding]. Welke datum is het # [ding] later?",
+   "hint1": "Tel de dagen verder, één voor één. Tel op je vingers of op een kalender.",
+   "hint2": "Tel eerst tot de laatste dag van de maand. Hoeveel dagen moet je dan nog? Tel die verder in de nieuwe maand.",
+   "ouderzin": "Je kind telt een aantal dagen verder op de kalender, over het eind van de maand heen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een dag ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = een dag ernaast",
+     "tekst": "Bijna! Dat is één dag ernaast. Tel de dagen nog eens, één voor één."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "gestopt bij de maandgrens",
+     "claudeDenkfout": null,
+     "regel": "fout = gestopt op de eerste dag van de maand",
+     "tekst": "Je bent gestopt waar de nieuwe maand begint. Tel nog verder, tot je alle dagen hebt geteld."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere datum",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel eerst tot de laatste dag van de maand. Tel daarna verder in de nieuwe maand. Kijk goed hoeveel dagen de maand heeft: dertig of eenendertig?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel via de maandgrens: eerst tot het eind van de maand, dan de dagen van de nieuwe maand. En kijk hoeveel dagen die maand echt heeft.",
+     "claudeDenkfout": "kalender-verkeerd-geteld",
+     "waarom": "'maandgrens' is een moeilijk woord, en de zin begint met 'En'; nu één vaste tekst"
+    },
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "te vaag: zegt niet wat er ontbreekt; nu één vaste tekst"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-MEET-E06",
+   "nr": 4,
+   "somtype": "Het is # [ding]. Welke datum was het # [ding] eerder?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Het is # [ding]. Welke datum was het # [ding] eerder?",
+   "hint1": "Tel de dagen terug, één voor één. Tel op je vingers of op een kalender.",
+   "hint2": "Tel terug tot de eerste dag van de maand. Daarna kom je bij de laatste dag van de maand ervoor. Tel daar verder terug.",
+   "ouderzin": "Je kind telt een aantal dagen terug op de kalender, over het begin van de maand heen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een dag ernaast",
+     "claudeDenkfout": null,
+     "regel": "fout = een dag ernaast",
+     "tekst": "Bijna! Dat is één dag ernaast. Tel de dagen nog eens, één voor één."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "gestopt bij de maandgrens",
+     "claudeDenkfout": null,
+     "regel": "fout = gestopt op de laatste dag van de maand",
+     "tekst": "Je bent gestopt waar de maand ervoor eindigt. Tel nog verder terug, tot je alle dagen hebt geteld."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere datum",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Na de eerste dag van de maand kom je bij de laatste dag van de maand ervoor. Tel daar verder terug. Kijk goed hoeveel dagen die maand heeft: dertig of eenendertig?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel via de maandgrens: eerst tot het eind van de maand, dan de dagen van de nieuwe maand. En kijk hoeveel dagen die maand echt heeft.",
+     "claudeDenkfout": "kalender-verkeerd-geteld",
+     "waarom": "'maandgrens' is een moeilijk woord, en de zin begint met 'En'; nu één vaste tekst"
+    },
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "te vaag: zegt niet wat er ontbreekt; nu één vaste tekst"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-VBN-E01",
+   "nr": 1,
+   "somtype": "[tabel] Hoeveel [naam] zijn er op [naam]?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[tabel] Hoeveel [naam] zijn er op [naam]?",
+   "hint1": "Zoek in de tabel de rij van het ding uit de vraag.",
+   "hint2": "Ga in die rij naar de kolom van de dag uit de vraag. Het getal in dat vak is het antwoord.",
+   "ouderzin": "Je kind leest één getal af in een tabel.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "andere cel",
+     "claudeDenkfout": null,
+     "regel": "fout = andere cel",
+     "tekst": "Dat getal staat in een ander vak. Zoek de rij van het ding en de kolom van de dag. Waar die twee elkaar raken, staat het antwoord."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "som van de rij",
+     "claudeDenkfout": null,
+     "regel": "fout = som van de rij",
+     "tekst": "Je hebt een hele rij bij elkaar opgeteld. De vraag gaat over één dag: kijk alleen in het vak van die dag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "som van de kolom",
+     "claudeDenkfout": null,
+     "regel": "fout = som van de kolom",
+     "tekst": "Je hebt een hele kolom bij elkaar opgeteld. De vraag gaat over één ding: kijk alleen in het vak van dat ding."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "ander vak of opgeteld",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de rij van het ding en de kolom van de dag. Waar die twee elkaar raken, staat het antwoord. Je hoeft niets uit te rekenen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "klopt niet: dit kind heeft een rij of kolom opgeteld, en er hoeft niets uitgerekend te worden"
+    }
+   ],
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "[tabel] Hoeveel [naam] op [naam]?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G4-VBN-E01",
+   "nr": 2,
+   "somtype": "[tabel] Hoeveel [naam] zijn er op [naam] meer dan op [naam]?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[tabel] Hoeveel [naam] zijn er op [naam] meer dan op [naam]?",
+   "hint1": "Zoek in de tabel de rij van het ding uit de vraag. Zoek in die rij de getallen van de twee dagen.",
+   "hint2": "Hoeveel meer? Haal het kleinste getal van het grootste af.",
+   "ouderzin": "Je kind zoekt twee getallen in een tabel en rekent uit hoeveel meer het ene is dan het andere.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één getal",
+     "claudeDenkfout": null,
+     "regel": "fout = andere cel",
+     "tekst": "Dat is één getal uit de tabel. Je hebt er twee nodig: die van de twee dagen, in de rij van het ding. Haal dan het kleinste getal van het grootste af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "som van de rij",
+     "claudeDenkfout": null,
+     "regel": "fout = som van de rij",
+     "tekst": "Je hebt een hele rij bij elkaar opgeteld. Je hebt alleen de getallen van de twee dagen nodig. Haal het kleinste getal van het grootste af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = som van twee cellen",
+     "tekst": "Je hebt twee getallen opgeteld. Hoeveel meer? Haal het kleinste getal van het grootste af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde getallen afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = verschil van twee cellen",
+     "tekst": "Je hebt twee andere getallen van elkaar afgehaald. Kijk goed: de rij van het ding, en de twee dagen uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één getal of opgeteld",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Je hebt twee getallen nodig: die van de twee dagen, in de rij van het ding. Haal dan het kleinste getal van het grootste af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "klopt niet: dit kind heeft de hele rij opgeteld"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "'hoeveel meer' is vergelijken: er komt niets bij en er gaat niets af"
+    }
+   ],
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "[tabel] Hoeveel [naam] meer op [naam] dan op [naam]?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G4-VBN-E01",
+   "nr": 3,
+   "somtype": "[tabel] Hoeveel [naam] zijn er in totaal?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[tabel] Hoeveel [naam] zijn er in totaal?",
+   "hint1": "Zoek in de tabel de rij van het ding uit de vraag.",
+   "hint2": "Tel alle getallen in die rij bij elkaar. Sla er geen over.",
+   "ouderzin": "Je kind telt alle getallen in één rij van een tabel bij elkaar op.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "andere rij",
+     "claudeDenkfout": null,
+     "regel": "fout = som van de rij",
+     "tekst": "Dat is het totaal van een andere rij. Zoek eerst de rij van het ding uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "kolom opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = som van de kolom",
+     "tekst": "Je hebt een kolom opgeteld. Tel de getallen in de rij van het ding uit de vraag bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één getal",
+     "claudeDenkfout": null,
+     "regel": "fout = andere cel",
+     "tekst": "Dat is maar één getal. In totaal betekent: tel alle getallen in de rij bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet alles opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = som van twee cellen",
+     "tekst": "Je hebt niet alles opgeteld. Tel alle getallen in de rij bij elkaar. Sla er geen over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = verschil van twee cellen",
+     "tekst": "Je hebt getallen van elkaar afgehaald. In totaal betekent: alles bij elkaar optellen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere rij of niet alles",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel alle getallen in de rij van het ding uit de vraag bij elkaar: van elke dag één. Tel de andere rijen niet mee."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "klopt niet: dit kind heeft een kolom (één dag) opgeteld"
+    },
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "te vaag: zegt niet wat er ontbreekt; nu één vaste tekst"
+    }
+   ],
+   "koppeling": "kop",
+   "somtypeEerder": [
+    {
+     "kop": "[tabel] Hoeveel [naam] in totaal?",
+     "tot": "2026-10-01"
+    }
+   ],
+   "kopNagekeken": "2026-10-01"
+  },
+  {
+   "doel": "G4-VBN-E01",
+   "nr": 4,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Hoeveel [naam] zijn er?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Hoeveel [naam] zijn er?",
+   "hint1": "Zoek de staaf van het ding uit de vraag. Zoek het getal vlak onder de top van de staaf.",
+   "hint2": "Elk streepje is twee. Spring vanaf dat getal verder met twee voor elk streepje, tot de top van de staaf.",
+   "ouderzin": "Je kind leest een staafdiagram af waarin elk streepje twee is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één streepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Bijna! Dat is één streepje te veel. Kijk goed waar de top van de staaf is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één streepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Bijna! Dat is één streepje te weinig. Kijk goed waar de top van de staaf is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "streepjes geteld",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord gedeeld door getal1",
+     "tekst": "Je hebt de streepjes geteld. Maar elk streepje is twee. Spring bij elk streepje twee verder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "streepjes geteld of andere staaf",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de staaf van het ding uit de vraag. Tel niet alleen de streepjes: spring bij elk streepje twee verder. Waar kom je bij de top van de staaf?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Leg je vinger op de rij of staaf uit de vraag en schuif hem naar de as. Kijk hoeveel elk streepje waard is.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "'rij of staaf' en 'de as': past niet bij een staafdiagram in G4; nu vaste teksten (één streepje te veel/te weinig, streepjes geteld)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-VBN-E01",
+   "nr": 5,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Hoeveel [naam] zijn er meer dan [naam]?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Hoeveel [naam] zijn er meer dan [naam]?",
+   "hint1": "Zoek de twee staven uit de vraag. Lees bij allebei af hoeveel het er zijn. Elk streepje is twee.",
+   "hint2": "Hoeveel meer? Haal het kleinste getal van het grootste af. Of tel hoeveel streepjes de ene staaf hoger is, en spring per streepje twee verder.",
+   "ouderzin": "Je kind leest twee staven af in een staafdiagram en rekent uit hoeveel meer het ene is dan het andere.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één streepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Bijna! Dat is één streepje te veel. Kijk nog eens goed waar de toppen van de twee staven zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één streepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Bijna! Dat is één streepje te weinig. Kijk nog eens goed waar de toppen van de twee staven zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "streepjes geteld",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord gedeeld door getal1",
+     "tekst": "Je hebt geteld hoeveel streepjes de ene staaf hoger is. Maar elk streepje is twee. Spring per streepje twee verder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld of één staaf",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees de twee staven uit de vraag af. Elk streepje is twee. Hoeveel meer? Haal het kleinste getal van het grootste af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Leg je vinger op de rij of staaf uit de vraag en schuif hem naar de as. Kijk hoeveel elk streepje waard is.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "'rij of staaf' en 'de as': past niet bij een staafdiagram in G4; nu vaste teksten (één streepje te veel/te weinig, streepjes geteld)"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "'hoeveel meer' is vergelijken: er komt niets bij en er gaat niets af"
+    },
+    {
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "te vaag: dit kind heeft één staaf afgelezen in plaats van het verschil"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-VERH-E01",
+   "nr": 1,
+   "somtype": "Op een weegschaal weegt # [ding] net zo veel als # [ding]. Hoeveel pruimen wegen net zo veel als # [ding]?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Op een weegschaal weegt # [ding] net zo veel als # [ding]. Hoeveel pruimen wegen net zo veel als # [ding]?",
+   "hint1": "Kijk hoeveel pruimen er bij één appel horen.",
+   "hint2": "Teken de appels. Zet bij elke appel net zo veel pruimen als in de eerste zin. Tel dan alle pruimen.",
+   "ouderzin": "Je kind rekent met een weegschaal uit hoeveel pruimen net zo zwaar zijn als een aantal appels.",
+   "foutHints": [
+    {
+     "bron": "claude",
+     "soort": "opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: getallen opgeteld (tekst per item)",
+     "tekst": "Elke appel hoort bij twee pruimen. Reken per appel apart."
+    },
+    {
+     "bron": "claude",
+     "soort": "getal overgenomen",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal uit de vraag (tekst per item)",
+     "tekst": "Een pruim is lichter dan een appel. Je hebt er dus meer nodig dan 3."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zet bij elke appel net zo veel pruimen als in de eerste zin. Tel dan alle pruimen bij elkaar."
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

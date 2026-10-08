@@ -1,0 +1,3196 @@
+{
+ "schema": "leermees-vragenbank-export/v1 + merge/controle/licentie (claude-merge g6)",
+ "bron": {
+  "licentie": "CC BY-SA 4.0",
+  "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+  "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+  "bron": "https://github.com/Davesgit/leermees-vragenbank",
+  "commit": "7da3257a196386c700310006da60a385fbbe114f"
+ },
+ "gegenereerdOp": "2026-10-08T10:27:27+0200",
+ "g5Basis": "g5/scripts 1 okt 15:35 (kopie in scripts/g5_basis/: regels_g5.py met G6_MODUS; g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
+ "doelId": "G6-GET-E07",
+ "bordtitel": "Keer met euro's, ook schatten",
+ "aantal": 12,
+ "items": [
+  {
+   "id": "G6-GET-E07-claude-bank-001",
+   "nr": "001",
+   "doelId": "G6-GET-E07",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "4 tenten van elk €199. Hoeveel is dat samen? Reken handig.",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "€796",
+   "antwoordDetail": null,
+   "hint": "De prijs is bijna een rond bedrag. Reken eerst het aantal keer dat ronde bedrag.",
+   "sterkereHint": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€800",
+     "uitleg": "Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "stukje niet afgehaald",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€792",
+     "uitleg": "Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "te veel afgehaald",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€203",
+     "uitleg": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€199",
+     "uitleg": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€800 → Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk. · €792 → Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk. · €203 → Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom. · €199 → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+   "ouderzin": "Je kind rekent handig met geld: een paar keer een prijs die bijna rond is.",
+   "getallenruimte": "0–1.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T10:0ae9e80f-55a7-486e-9c20-36084a8a7b4b",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "4 × 199",
+    "claudeUitleg": "199 is bijna 200.\n4 × 200 = 800, dat is 4 te veel.\n800 − 4 = 796.",
+    "claudeStrategie": "rond getal nemen en corrigeren",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€800",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "€792",
+      "denkfout": "tafelbuur"
+     },
+     {
+      "fout": "€203",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€800",
+      "uitleg": "Je hebt met het ronde getal gerekend. Haal er nu 4 × 1 af."
+     },
+     {
+      "stap": null,
+      "fout": "€792",
+      "uitleg": "Hoeveel heb je te veel gerekend? 4 keer het verschil."
+     },
+     {
+      "stap": null,
+      "fout": "€203",
+      "uitleg": "4 keer dezelfde prijs: een keersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "0ae9e80f-55a7-486e-9c20-36084a8a7b4b",
+    "claudeDoel": "T10",
+    "claudeDoelTitel": "Rekenvorm kiezen",
+    "claudeGroep": 6,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "N14 geldantwoord met €",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W5 woord kindvriendelijk (G4)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-E07",
+    "voorstelDoel": null,
+    "regel": "G6-T03-handig-keerdeel",
+    "reden": "4 × €199 handig (G6-GET-E07: keer met euro’s)",
+    "somtype": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig.",
+    "opgaveVoor164": "4 stickers van elk €199. Hoeveel is dat samen? Reken handig.",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig.",
+    "hints": {
+     "batch": "batch2.json",
+     "nr": 2,
+     "somtype": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig."
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "€796",
+    "methode": "handig keer (context)",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "antwoordOokGoed": [
+    "796"
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€199"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€203"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "stukje niet afgehaald",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€800"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "te veel afgehaald",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€792"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst het aantal keer het ronde bedrag. Haal daarna het kleine bedrag dat je te veel rekende er weer af: één keer voor elk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst het aantal keer het ronde bedrag. Haal daarna het kleine bedrag dat je te veel rekende er weer af: één keer voor elk."
+  },
+  {
+   "id": "G6-GET-E07-claude-bank-002",
+   "nr": "002",
+   "doelId": "G6-GET-E07",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "3 fietsen van elk €998. Hoeveel is dat samen? Reken handig.",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "€2994",
+   "antwoordDetail": null,
+   "hint": "De prijs is bijna een rond bedrag. Reken eerst het aantal keer dat ronde bedrag.",
+   "sterkereHint": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€3000",
+     "uitleg": "Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "stukje niet afgehaald",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€2988",
+     "uitleg": "Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "te veel afgehaald",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€1001",
+     "uitleg": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€998",
+     "uitleg": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€3000 → Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk. · €2988 → Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk. · €1001 → Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom. · €998 → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+   "ouderzin": "Je kind rekent handig met geld: een paar keer een prijs die bijna rond is.",
+   "getallenruimte": "0–10.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T10:23bbdc97-e25d-405d-beb2-ee34e5388471",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "3 × 998",
+    "claudeUitleg": "998 is bijna 1000.\n3 × 1000 = 3000, dat is 6 te veel.\n3000 − 6 = 2994.",
+    "claudeStrategie": "rond getal nemen en corrigeren",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€3000",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "€2988",
+      "denkfout": "tafelbuur"
+     },
+     {
+      "fout": "€1001",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€3000",
+      "uitleg": "Je hebt met het ronde getal gerekend. Haal er nu 3 × 2 af."
+     },
+     {
+      "stap": null,
+      "fout": "€2988",
+      "uitleg": "Hoeveel heb je te veel gerekend? 3 keer het verschil."
+     },
+     {
+      "stap": null,
+      "fout": "€1001",
+      "uitleg": "3 keer dezelfde prijs: een keersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "23bbdc97-e25d-405d-beb2-ee34e5388471",
+    "claudeDoel": "T10",
+    "claudeDoelTitel": "Rekenvorm kiezen",
+    "claudeGroep": 6,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "G6-FX21 (G5-fixlijst #21/#49, Dave 17:17): Engelse woorden vervangen, ook in extraVelden",
+     "N14 geldantwoord met €",
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-E07",
+    "voorstelDoel": null,
+    "regel": "G6-T03-handig-keerdeel",
+    "reden": "3 × €998 handig (G6-GET-E07: keer met euro’s)",
+    "somtype": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig.",
+    "opgaveVoor164": "3 truien van elk €998. Hoeveel is dat samen? Reken handig.",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig.",
+    "hints": {
+     "batch": "batch2.json",
+     "nr": 2,
+     "somtype": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig."
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "€2994",
+    "methode": "handig keer (context)",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "antwoordOokGoed": [
+    "2994"
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€998"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€1001"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "stukje niet afgehaald",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€3000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "te veel afgehaald",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€2988"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst het aantal keer het ronde bedrag. Haal daarna het kleine bedrag dat je te veel rekende er weer af: één keer voor elk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst het aantal keer het ronde bedrag. Haal daarna het kleine bedrag dat je te veel rekende er weer af: één keer voor elk."
+  },
+  {
+   "id": "G6-GET-E07-claude-bank-003",
+   "nr": "003",
+   "doelId": "G6-GET-E07",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "6 steps van elk €199. Hoeveel is dat samen? Reken handig.",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "€1194",
+   "antwoordDetail": null,
+   "hint": "De prijs is bijna een rond bedrag. Reken eerst het aantal keer dat ronde bedrag.",
+   "sterkereHint": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€1200",
+     "uitleg": "Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "stukje niet afgehaald",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€1188",
+     "uitleg": "Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "te veel afgehaald",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€205",
+     "uitleg": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€199",
+     "uitleg": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€1200 → Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk. · €1188 → Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk. · €205 → Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom. · €199 → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+   "ouderzin": "Je kind rekent handig met geld: een paar keer een prijs die bijna rond is.",
+   "getallenruimte": "0–10.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T10:69754232-7278-47c7-b199-0cc9125f7f5a",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "6 × 199",
+    "claudeUitleg": "199 is bijna 200.\n6 × 200 = 1200, dat is 6 te veel.\n1200 − 6 = 1194.",
+    "claudeStrategie": "rond getal nemen en corrigeren",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€1200",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "€1188",
+      "denkfout": "tafelbuur"
+     },
+     {
+      "fout": "€205",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€1200",
+      "uitleg": "Je hebt met het ronde getal gerekend. Haal er nu 6 × 1 af."
+     },
+     {
+      "stap": null,
+      "fout": "€1188",
+      "uitleg": "Hoeveel heb je te veel gerekend? 6 keer het verschil."
+     },
+     {
+      "stap": null,
+      "fout": "€205",
+      "uitleg": "6 keer dezelfde prijs: een keersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "69754232-7278-47c7-b199-0cc9125f7f5a",
+    "claudeDoel": "T10",
+    "claudeDoelTitel": "Rekenvorm kiezen",
+    "claudeGroep": 6,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "N14 geldantwoord met €",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W1 moeilijk woord vervangen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-E07",
+    "voorstelDoel": null,
+    "regel": "G6-T03-handig-keerdeel",
+    "reden": "6 × €199 handig (G6-GET-E07: keer met euro’s)",
+    "somtype": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig.",
+    "opgaveVoor164": "6 blaadjes van elk €199. Hoeveel is dat samen? Reken handig.",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig.",
+    "hints": {
+     "batch": "batch2.json",
+     "nr": 2,
+     "somtype": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig."
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "€1194",
+    "methode": "handig keer (context)",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "antwoordOokGoed": [
+    "1194"
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€199"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€205"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "stukje niet afgehaald",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€1200"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "te veel afgehaald",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€1188"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst het aantal keer het ronde bedrag. Haal daarna het kleine bedrag dat je te veel rekende er weer af: één keer voor elk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst het aantal keer het ronde bedrag. Haal daarna het kleine bedrag dat je te veel rekende er weer af: één keer voor elk."
+  },
+  {
+   "id": "G6-GET-E07-claude-bank-004",
+   "nr": "004",
+   "doelId": "G6-GET-E07",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "6 fietsen van elk €499. Hoeveel is dat samen? Reken handig.",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "€2994",
+   "antwoordDetail": null,
+   "hint": "De prijs is bijna een rond bedrag. Reken eerst het aantal keer dat ronde bedrag.",
+   "sterkereHint": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€3000",
+     "uitleg": "Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "stukje niet afgehaald",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€2988",
+     "uitleg": "Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "te veel afgehaald",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€505",
+     "uitleg": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€499",
+     "uitleg": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "uitlegSterker": "Je rekent dan voor elk een klein bedrag te veel. Haal dat bedrag er weer af: één keer voor elk.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€3000 → Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk. · €2988 → Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk. · €505 → Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom. · €499 → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+   "ouderzin": "Je kind rekent handig met geld: een paar keer een prijs die bijna rond is.",
+   "getallenruimte": "0–10.000",
+   "context": "laag",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:T10:d185d7ac-0855-4561-92f3-ff9d6f11e4ac",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "6 × 499",
+    "claudeUitleg": "499 is bijna 500.\n6 × 500 = 3000, dat is 6 te veel.\n3000 − 6 = 2994.",
+    "claudeStrategie": "rond getal nemen en corrigeren",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€3000",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "€2988",
+      "denkfout": "tafelbuur"
+     },
+     {
+      "fout": "€505",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€3000",
+      "uitleg": "Je hebt met het ronde getal gerekend. Haal er nu 6 × 1 af."
+     },
+     {
+      "stap": null,
+      "fout": "€2988",
+      "uitleg": "Hoeveel heb je te veel gerekend? 6 keer het verschil."
+     },
+     {
+      "stap": null,
+      "fout": "€505",
+      "uitleg": "6 keer dezelfde prijs: een keersom."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "d185d7ac-0855-4561-92f3-ff9d6f11e4ac",
+    "claudeDoel": "T10",
+    "claudeDoelTitel": "Rekenvorm kiezen",
+    "claudeGroep": 6,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "F2b 4 cijfers zonder punt",
+     "G6-F2c 4 cijfers zonder punt (ook aan het eind van een zin)",
+     "N14 geldantwoord met €",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W1 moeilijk woord vervangen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-E07",
+    "voorstelDoel": null,
+    "regel": "G6-T03-handig-keerdeel",
+    "reden": "6 × €499 handig (G6-GET-E07: keer met euro’s)",
+    "somtype": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig.",
+    "opgaveVoor164": "6 poesjes van elk €499. Hoeveel is dat samen? Reken handig.",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig.",
+    "hints": {
+     "batch": "batch2.json",
+     "nr": 2,
+     "somtype": "# [ding] van elk €#. Hoeveel is dat samen? Reken handig."
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "€2994",
+    "methode": "handig keer (context)",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "antwoordOokGoed": [
+    "2994"
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€499"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€505"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "stukje niet afgehaald",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is het aantal keer het ronde bedrag. Maar de prijs is een klein bedrag minder: haal dat bedrag er nog af, één keer voor elk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€3000"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: tafelbuur",
+     "soort": "te veel afgehaald",
+     "bron": "claude-taalfix",
+     "tekst": "Dat is te weinig: je hebt te veel afgehaald. Hoeveel is de prijs minder dan het ronde bedrag? Haal precies dat bedrag af, één keer voor elk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€2988"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst het aantal keer het ronde bedrag. Haal daarna het kleine bedrag dat je te veel rekende er weer af: één keer voor elk.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst het aantal keer het ronde bedrag. Haal daarna het kleine bedrag dat je te veel rekende er weer af: één keer voor elk."
+  },
+  {
+   "id": "G6-GET-E07-claude-bank-005",
+   "nr": "005",
+   "doelId": "G6-GET-E07",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een stickervel kost €2,94. Je koopt er 4. Hoeveel betaal je?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "€11,76",
+   "antwoordDetail": null,
+   "hint": "Reken eerst het aantal keer de hele euro's. Reken daarna het aantal keer de centen.",
+   "sterkereHint": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€6,94",
+     "uitleg": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€8,94",
+     "uitleg": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€12,76",
+     "uitleg": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "€2,94",
+     "uitleg": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€6,94 → Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom. · €8,94 → De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen. · €12,76 → Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij? · €2,94 → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+   "ouderzin": "Je kind rekent met geld: een paar keer dezelfde prijs, met euro's en centen.",
+   "getallenruimte": "kommagetallen (2 cijfers achter de komma) met €",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:B4:3c7225a1-244f-4f49-9db7-dc7460eb5de1",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "4 × 2,94",
+    "claudeUitleg": "Reken de euro's en de centen apart.\n4 × €2 = €8.\n4 × 94 cent = 376 cent.\nSamen €11,76.",
+    "claudeStrategie": "euro's en centen apart",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "decimaal",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€6,94",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "€8,94",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "€12,76",
+      "denkfout": "onthouden-vergeten"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€6,94",
+      "uitleg": "Je koopt 4 keer hetzelfde. Dat is 4 keer de prijs, niet de prijs plus 4."
+     },
+     {
+      "stap": null,
+      "fout": "€8,94",
+      "uitleg": "De centen moet je ook keer het aantal doen, niet één keer meetellen."
+     },
+     {
+      "stap": null,
+      "fout": "€12,76",
+      "uitleg": "Komen de centen samen boven de 100? Alleen dan gaat er een euro bij."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "3c7225a1-244f-4f49-9db7-dc7460eb5de1",
+    "claudeDoel": "B4",
+    "claudeDoelTitel": "Kommagetallen bij geld",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D-G5 realistische context ('een zak wortels', 'een stickervel'); getallen en antwoord gelijk",
+     "N14 geldantwoord met €",
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-E07",
+    "voorstelDoel": null,
+    "regel": "D5-geld-keer",
+    "reden": "Didactiek 1 okt (G5-twijfel G5-GET-E08-claude-bank-twijfel-002): exact × met geld = SLO eind G6",
+    "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "g5Park": {
+     "id": "G6-GET-E07-claude-bank-park-002",
+     "voorstelDoel": "G6-GET-E07",
+     "regel": "D-GELD-EXACT-G6"
+    },
+    "didactiekG5": {
+     "twijfelId": "G5-GET-E08-claude-bank-twijfel-002",
+     "groep": "geld-keer",
+     "besluit": "ander-doel",
+     "doel": "G6-GET-E07",
+     "niveau": "toepassen",
+     "subregel": "exact × met geld = SLO eind G6"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "hints": {
+     "batch": "batch2.json",
+     "nr": 1,
+     "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "€11,76",
+    "methode": "prijs × aantal",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "antwoordOokGoed": [
+    "11,76",
+    "11.76"
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€2,94"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€6,94"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix",
+     "tekst": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€8,94"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€12,76"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op."
+  },
+  {
+   "id": "G6-GET-E07-claude-bank-006",
+   "nr": "006",
+   "doelId": "G6-GET-E07",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een stuiterbal kost €1,34. Je koopt er 4. Hoeveel betaal je?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "€5,36",
+   "antwoordDetail": null,
+   "hint": "Reken eerst het aantal keer de hele euro's. Reken daarna het aantal keer de centen.",
+   "sterkereHint": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€5,34",
+     "uitleg": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€4,34",
+     "uitleg": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€6,36",
+     "uitleg": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "€1,34",
+     "uitleg": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€5,34 → Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom. · €4,34 → De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen. · €6,36 → Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij? · €1,34 → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+   "ouderzin": "Je kind rekent met geld: een paar keer dezelfde prijs, met euro's en centen.",
+   "getallenruimte": "kommagetallen (2 cijfers achter de komma) met €",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:B4:4c94d0e7-8611-41f3-8396-185609e6b9d1",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "4 × 1,34",
+    "claudeUitleg": "Reken de euro's en de centen apart.\n4 × €1 = €4.\n4 × 34 cent = 136 cent.\nSamen €5,36.",
+    "claudeStrategie": "euro's en centen apart",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "decimaal",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€5,34",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "€4,34",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "€6,36",
+      "denkfout": "onthouden-vergeten"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€5,34",
+      "uitleg": "Je koopt 4 keer hetzelfde. Dat is 4 keer de prijs, niet de prijs plus 4."
+     },
+     {
+      "stap": null,
+      "fout": "€4,34",
+      "uitleg": "De centen moet je ook keer het aantal doen, niet één keer meetellen."
+     },
+     {
+      "stap": null,
+      "fout": "€6,36",
+      "uitleg": "Komen de centen samen boven de 100? Alleen dan gaat er een euro bij."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "4c94d0e7-8611-41f3-8396-185609e6b9d1",
+    "claudeDoel": "B4",
+    "claudeDoelTitel": "Kommagetallen bij geld",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D-G5 realistische context ('een zak wortels', 'een stickervel'); getallen en antwoord gelijk",
+     "N14 geldantwoord met €",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W11 winkel: passende spullen",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-E07",
+    "voorstelDoel": null,
+    "regel": "D5-geld-keer",
+    "reden": "Didactiek 1 okt (G5-twijfel G5-GET-E08-claude-bank-twijfel-003): exact × met geld = SLO eind G6",
+    "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "g5Park": {
+     "id": "G6-GET-E07-claude-bank-park-003",
+     "voorstelDoel": "G6-GET-E07",
+     "regel": "D-GELD-EXACT-G6"
+    },
+    "didactiekG5": {
+     "twijfelId": "G5-GET-E08-claude-bank-twijfel-003",
+     "groep": "geld-keer",
+     "besluit": "ander-doel",
+     "doel": "G6-GET-E07",
+     "niveau": "toepassen",
+     "subregel": "exact × met geld = SLO eind G6"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "hints": {
+     "batch": "batch2.json",
+     "nr": 1,
+     "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "€5,36",
+    "methode": "prijs × aantal",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "antwoordOokGoed": [
+    "5,36",
+    "5.36"
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€1,34"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€5,34"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix",
+     "tekst": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€4,34"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€6,36"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op."
+  },
+  {
+   "id": "G6-GET-E07-claude-bank-007",
+   "nr": "007",
+   "doelId": "G6-GET-E07",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "kale",
+   "opgave": "Een stuiterbal kost €2,31. Je koopt er 3. Hoeveel betaal je?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "€6,93",
+   "antwoordDetail": null,
+   "hint": "Reken eerst het aantal keer de hele euro's. Reken daarna het aantal keer de centen.",
+   "sterkereHint": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€5,31",
+     "uitleg": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€6,31",
+     "uitleg": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€7,93",
+     "uitleg": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "€2,31",
+     "uitleg": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€5,31 → Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom. · €6,31 → De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen. · €7,93 → Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij? · €2,31 → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+   "ouderzin": "Je kind rekent met geld: een paar keer dezelfde prijs, met euro's en centen.",
+   "getallenruimte": "kommagetallen (2 cijfers achter de komma) met €",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:B4:6bfcdac4-61b3-4fb1-bcb6-62f37e9bc87e",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "3 × 2,31",
+    "claudeUitleg": "Reken de euro's en de centen apart.\n3 × €2 = €6.\n3 × 31 cent = 93 cent.\nSamen €6,93.",
+    "claudeStrategie": "euro's en centen apart",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "decimaal",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€5,31",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "€6,31",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "€7,93",
+      "denkfout": "onthouden-vergeten"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€5,31",
+      "uitleg": "Je koopt 3 keer hetzelfde. Dat is 3 keer de prijs, niet de prijs plus 3."
+     },
+     {
+      "stap": null,
+      "fout": "€6,31",
+      "uitleg": "De centen moet je ook keer het aantal doen, niet één keer meetellen."
+     },
+     {
+      "stap": null,
+      "fout": "€7,93",
+      "uitleg": "Komen de centen samen boven de 100? Alleen dan gaat er een euro bij."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "6bfcdac4-61b3-4fb1-bcb6-62f37e9bc87e",
+    "claudeDoel": "B4",
+    "claudeDoelTitel": "Kommagetallen bij geld",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D-G5 niveau volgens Didactiek",
+     "D-G5 realistische context ('een zak wortels', 'een stickervel'); getallen en antwoord gelijk",
+     "N14 geldantwoord met €",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W11 winkel: passende spullen",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-E07",
+    "voorstelDoel": null,
+    "regel": "D5-geld-keer",
+    "reden": "Didactiek 1 okt (G5-twijfel G5-GET-E08-claude-bank-twijfel-004): exact × met geld = SLO eind G6",
+    "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "g5Park": {
+     "id": "G6-GET-E07-claude-bank-park-004",
+     "voorstelDoel": "G6-GET-E07",
+     "regel": "D-GELD-EXACT-G6"
+    },
+    "didactiekG5": {
+     "twijfelId": "G5-GET-E08-claude-bank-twijfel-004",
+     "groep": "geld-keer",
+     "besluit": "ander-doel",
+     "doel": "G6-GET-E07",
+     "niveau": "basis",
+     "subregel": "exact × met geld = SLO eind G6"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "hints": {
+     "batch": "batch2.json",
+     "nr": 1,
+     "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "€6,93",
+    "methode": "prijs × aantal",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "antwoordOokGoed": [
+    "6,93",
+    "6.93"
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€2,31"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€5,31"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix",
+     "tekst": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€6,31"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€7,93"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op."
+  },
+  {
+   "id": "G6-GET-E07-claude-bank-008",
+   "nr": "008",
+   "doelId": "G6-GET-E07",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een stickervel kost €2,42. Je koopt er 4. Hoeveel betaal je?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "€9,68",
+   "antwoordDetail": null,
+   "hint": "Reken eerst het aantal keer de hele euro's. Reken daarna het aantal keer de centen.",
+   "sterkereHint": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€6,42",
+     "uitleg": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€8,42",
+     "uitleg": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€10,68",
+     "uitleg": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "€2,42",
+     "uitleg": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€6,42 → Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom. · €8,42 → De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen. · €10,68 → Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij? · €2,42 → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+   "ouderzin": "Je kind rekent met geld: een paar keer dezelfde prijs, met euro's en centen.",
+   "getallenruimte": "kommagetallen (2 cijfers achter de komma) met €",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:B4:c139f1f5-7243-471b-b473-2f92bc722058",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "4 × 2,42",
+    "claudeUitleg": "Reken de euro's en de centen apart.\n4 × €2 = €8.\n4 × 42 cent = 168 cent.\nSamen €9,68.",
+    "claudeStrategie": "euro's en centen apart",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "decimaal",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€6,42",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "€8,42",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "€10,68",
+      "denkfout": "onthouden-vergeten"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€6,42",
+      "uitleg": "Je koopt 4 keer hetzelfde. Dat is 4 keer de prijs, niet de prijs plus 4."
+     },
+     {
+      "stap": null,
+      "fout": "€8,42",
+      "uitleg": "De centen moet je ook keer het aantal doen, niet één keer meetellen."
+     },
+     {
+      "stap": null,
+      "fout": "€10,68",
+      "uitleg": "Komen de centen samen boven de 100? Alleen dan gaat er een euro bij."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "c139f1f5-7243-471b-b473-2f92bc722058",
+    "claudeDoel": "B4",
+    "claudeDoelTitel": "Kommagetallen bij geld",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D-G5 realistische context ('een zak wortels', 'een stickervel'); getallen en antwoord gelijk",
+     "N14 geldantwoord met €",
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-E07",
+    "voorstelDoel": null,
+    "regel": "D5-geld-keer",
+    "reden": "Didactiek 1 okt (G5-twijfel G5-GET-E08-claude-bank-twijfel-005): exact × met geld = SLO eind G6",
+    "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "g5Park": {
+     "id": "G6-GET-E07-claude-bank-park-005",
+     "voorstelDoel": "G6-GET-E07",
+     "regel": "D-GELD-EXACT-G6"
+    },
+    "didactiekG5": {
+     "twijfelId": "G5-GET-E08-claude-bank-twijfel-005",
+     "groep": "geld-keer",
+     "besluit": "ander-doel",
+     "doel": "G6-GET-E07",
+     "niveau": "toepassen",
+     "subregel": "exact × met geld = SLO eind G6"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "hints": {
+     "batch": "batch2.json",
+     "nr": 1,
+     "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "€9,68",
+    "methode": "prijs × aantal",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "antwoordOokGoed": [
+    "9,68",
+    "9.68"
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€2,42"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€6,42"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix",
+     "tekst": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€8,42"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€10,68"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op."
+  },
+  {
+   "id": "G6-GET-E07-claude-bank-009",
+   "nr": "009",
+   "doelId": "G6-GET-E07",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een schrift kost €2,74. Je koopt er 4. Hoeveel betaal je?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "€10,96",
+   "antwoordDetail": null,
+   "hint": "Reken eerst het aantal keer de hele euro's. Reken daarna het aantal keer de centen.",
+   "sterkereHint": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€6,74",
+     "uitleg": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€8,74",
+     "uitleg": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€11,96",
+     "uitleg": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "€2,74",
+     "uitleg": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€6,74 → Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom. · €8,74 → De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen. · €11,96 → Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij? · €2,74 → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+   "ouderzin": "Je kind rekent met geld: een paar keer dezelfde prijs, met euro's en centen.",
+   "getallenruimte": "kommagetallen (2 cijfers achter de komma) met €",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:B4:d96eeaf0-9abb-4078-a47b-6cb3d49ee33d",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "4 × 2,74",
+    "claudeUitleg": "Reken de euro's en de centen apart.\n4 × €2 = €8.\n4 × 74 cent = 296 cent.\nSamen €10,96.",
+    "claudeStrategie": "euro's en centen apart",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "decimaal",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€6,74",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "€8,74",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "€11,96",
+      "denkfout": "onthouden-vergeten"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€6,74",
+      "uitleg": "Je koopt 4 keer hetzelfde. Dat is 4 keer de prijs, niet de prijs plus 4."
+     },
+     {
+      "stap": null,
+      "fout": "€8,74",
+      "uitleg": "De centen moet je ook keer het aantal doen, niet één keer meetellen."
+     },
+     {
+      "stap": null,
+      "fout": "€11,96",
+      "uitleg": "Komen de centen samen boven de 100? Alleen dan gaat er een euro bij."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "d96eeaf0-9abb-4078-a47b-6cb3d49ee33d",
+    "claudeDoel": "B4",
+    "claudeDoelTitel": "Kommagetallen bij geld",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D-G5 realistische context ('een zak wortels', 'een stickervel'); getallen en antwoord gelijk",
+     "N14 geldantwoord met €",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W11 winkel: passende spullen",
+     "W8 woord kindvriendelijk (G5, enkelvoud)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-E07",
+    "voorstelDoel": null,
+    "regel": "D5-geld-keer",
+    "reden": "Didactiek 1 okt (G5-twijfel G5-GET-E08-claude-bank-twijfel-006): exact × met geld = SLO eind G6",
+    "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "g5Park": {
+     "id": "G6-GET-E07-claude-bank-park-006",
+     "voorstelDoel": "G6-GET-E07",
+     "regel": "D-GELD-EXACT-G6"
+    },
+    "didactiekG5": {
+     "twijfelId": "G5-GET-E08-claude-bank-twijfel-006",
+     "groep": "geld-keer",
+     "besluit": "ander-doel",
+     "doel": "G6-GET-E07",
+     "niveau": "toepassen",
+     "subregel": "exact × met geld = SLO eind G6"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "hints": {
+     "batch": "batch2.json",
+     "nr": 1,
+     "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "€10,96",
+    "methode": "prijs × aantal",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "antwoordOokGoed": [
+    "10,96",
+    "10.96"
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€2,74"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€6,74"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix",
+     "tekst": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€8,74"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€11,96"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op."
+  },
+  {
+   "id": "G6-GET-E07-claude-bank-010",
+   "nr": "010",
+   "doelId": "G6-GET-E07",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een pen kost €3,26. Je koopt er 4. Hoeveel betaal je?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "€13,04",
+   "antwoordDetail": null,
+   "hint": "Reken eerst het aantal keer de hele euro's. Reken daarna het aantal keer de centen.",
+   "sterkereHint": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€7,26",
+     "uitleg": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€12,26",
+     "uitleg": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€14,04",
+     "uitleg": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "€3,26",
+     "uitleg": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€7,26 → Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom. · €12,26 → De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen. · €14,04 → Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij? · €3,26 → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+   "ouderzin": "Je kind rekent met geld: een paar keer dezelfde prijs, met euro's en centen.",
+   "getallenruimte": "kommagetallen (2 cijfers achter de komma) met €",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:B4:ed23c8e7-a252-4f4f-bea6-942d687e9003",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "4 × 3,26",
+    "claudeUitleg": "Reken de euro's en de centen apart.\n4 × €3 = €12.\n4 × 26 cent = 104 cent.\nSamen €13,04.",
+    "claudeStrategie": "euro's en centen apart",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "decimaal",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€7,26",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "€12,26",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "€14,04",
+      "denkfout": "onthouden-vergeten"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€7,26",
+      "uitleg": "Je koopt 4 keer hetzelfde. Dat is 4 keer de prijs, niet de prijs plus 4."
+     },
+     {
+      "stap": null,
+      "fout": "€12,26",
+      "uitleg": "De centen moet je ook keer het aantal doen, niet één keer meetellen."
+     },
+     {
+      "stap": null,
+      "fout": "€14,04",
+      "uitleg": "Komen de centen samen boven de 100? Alleen dan gaat er een euro bij."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "ed23c8e7-a252-4f4f-bea6-942d687e9003",
+    "claudeDoel": "B4",
+    "claudeDoelTitel": "Kommagetallen bij geld",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D-G5 realistische context ('een zak wortels', 'een stickervel'); getallen en antwoord gelijk",
+     "N14 geldantwoord met €",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W11 winkel: passende spullen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-E07",
+    "voorstelDoel": null,
+    "regel": "D5-geld-keer",
+    "reden": "Didactiek 1 okt (G5-twijfel G5-GET-E08-claude-bank-twijfel-007): exact × met geld = SLO eind G6",
+    "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "g5Park": {
+     "id": "G6-GET-E07-claude-bank-park-007",
+     "voorstelDoel": "G6-GET-E07",
+     "regel": "D-GELD-EXACT-G6"
+    },
+    "didactiekG5": {
+     "twijfelId": "G5-GET-E08-claude-bank-twijfel-007",
+     "groep": "geld-keer",
+     "besluit": "ander-doel",
+     "doel": "G6-GET-E07",
+     "niveau": "toepassen",
+     "subregel": "exact × met geld = SLO eind G6"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "hints": {
+     "batch": "batch2.json",
+     "nr": 1,
+     "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "€13,04",
+    "methode": "prijs × aantal",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "antwoordOokGoed": [
+    "13,04",
+    "13.04"
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€3,26"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€7,26"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix",
+     "tekst": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€12,26"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€14,04"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op."
+  },
+  {
+   "id": "G6-GET-E07-claude-bank-011",
+   "nr": "011",
+   "doelId": "G6-GET-E07",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een zak noten kost €2,71. Je koopt er 4. Hoeveel betaal je?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "€10,84",
+   "antwoordDetail": null,
+   "hint": "Reken eerst het aantal keer de hele euro's. Reken daarna het aantal keer de centen.",
+   "sterkereHint": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€6,71",
+     "uitleg": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€8,71",
+     "uitleg": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€11,84",
+     "uitleg": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "€2,71",
+     "uitleg": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€6,71 → Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom. · €8,71 → De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen. · €11,84 → Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij? · €2,71 → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+   "ouderzin": "Je kind rekent met geld: een paar keer dezelfde prijs, met euro's en centen.",
+   "getallenruimte": "kommagetallen (2 cijfers achter de komma) met €",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:B4:8d70ce2e-7167-402b-89a6-f6ba9f60d104",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "4 × 2,71",
+    "claudeUitleg": "Reken de euro's en de centen apart.\n4 × €2 = €8.\n4 × 71 cent = 284 cent.\nSamen €10,84.",
+    "claudeStrategie": "euro's en centen apart",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "decimaal",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€6,71",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "€8,71",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "€11,84",
+      "denkfout": "onthouden-vergeten"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€6,71",
+      "uitleg": "Je koopt 4 keer hetzelfde. Dat is 4 keer de prijs, niet de prijs plus 4."
+     },
+     {
+      "stap": null,
+      "fout": "€8,71",
+      "uitleg": "De centen moet je ook keer het aantal doen, niet één keer meetellen."
+     },
+     {
+      "stap": null,
+      "fout": "€11,84",
+      "uitleg": "Komen de centen samen boven de 100? Alleen dan gaat er een euro bij."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "8d70ce2e-7167-402b-89a6-f6ba9f60d104",
+    "claudeDoel": "B4",
+    "claudeDoelTitel": "Kommagetallen bij geld",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D-G5 realistische context ('een zak wortels', 'een stickervel'); getallen en antwoord gelijk",
+     "N14 geldantwoord met €",
+     "N9 geldnotatie €N / €N,CC (G5)",
+     "W11 winkel: passende spullen"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-E07",
+    "voorstelDoel": null,
+    "regel": "D5-geld-keer",
+    "reden": "Didactiek 1 okt (G5-twijfel G5-GET-E08-claude-bank-twijfel-008): exact × met geld = SLO eind G6",
+    "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "g5Park": {
+     "id": "G6-GET-E07-claude-bank-park-008",
+     "voorstelDoel": "G6-GET-E07",
+     "regel": "D-GELD-EXACT-G6"
+    },
+    "didactiekG5": {
+     "twijfelId": "G5-GET-E08-claude-bank-twijfel-008",
+     "groep": "geld-keer",
+     "besluit": "ander-doel",
+     "doel": "G6-GET-E07",
+     "niveau": "toepassen",
+     "subregel": "exact × met geld = SLO eind G6"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "hints": {
+     "batch": "batch2.json",
+     "nr": 1,
+     "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "€10,84",
+    "methode": "prijs × aantal",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "antwoordOokGoed": [
+    "10,84",
+    "10.84"
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€2,71"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€6,71"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix",
+     "tekst": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€8,71"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€11,84"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op."
+  },
+  {
+   "id": "G6-GET-E07-claude-bank-012",
+   "nr": "012",
+   "doelId": "G6-GET-E07",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een zak wortels kost €3,94. Je koopt er 2. Hoeveel betaal je?",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "€7,88",
+   "antwoordDetail": null,
+   "hint": "Reken eerst het aantal keer de hele euro's. Reken daarna het aantal keer de centen.",
+   "sterkereHint": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "€5,94",
+     "uitleg": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€6,94",
+     "uitleg": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "€8,88",
+     "uitleg": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw"
+    },
+    {
+     "stap": null,
+     "fout": "€3,94",
+     "uitleg": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "uitlegSterker": "Zijn de centen samen honderd of meer? Elke honderd cent is één euro. Tel daarna alles bij elkaar op.",
+     "laag2": "terugval hint2 (somtype)",
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "€5,94 → Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom. · €6,94 → De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen. · €8,88 → Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij? · €3,94 → Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+   "ouderzin": "Je kind rekent met geld: een paar keer dezelfde prijs, met euro's en centen.",
+   "getallenruimte": "kommagetallen (2 cijfers achter de komma) met €",
+   "context": "midden",
+   "visual": {
+    "nodig": false,
+    "toelichting": null,
+    "asciiSchets": false,
+    "jsRender": null,
+    "svgBestanden": []
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:B4:075aa194-b613-45ae-b668-7bbed0a71beb",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "2 × 3,94",
+    "claudeUitleg": "Reken de euro's en de centen apart.\n2 × €3 = €6.\n2 × 94 cent = 188 cent.\nSamen €7,88.",
+    "claudeStrategie": "euro's en centen apart",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "decimaal",
+    "claudeVorm": "open",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "€5,94",
+      "denkfout": "optellen-ipv-vermenigvuldigen"
+     },
+     {
+      "fout": "€6,94",
+      "denkfout": "deel-vergeten-bij-splitsen"
+     },
+     {
+      "fout": "€8,88",
+      "denkfout": "onthouden-vergeten"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "€5,94",
+      "uitleg": "Je koopt 2 keer hetzelfde. Dat is 2 keer de prijs, niet de prijs plus 2."
+     },
+     {
+      "stap": null,
+      "fout": "€6,94",
+      "uitleg": "De centen moet je ook keer het aantal doen, niet één keer meetellen."
+     },
+     {
+      "stap": null,
+      "fout": "€8,88",
+      "uitleg": "Komen de centen samen boven de 100? Alleen dan gaat er een euro bij."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "075aa194-b613-45ae-b668-7bbed0a71beb",
+    "claudeDoel": "B4",
+    "claudeDoelTitel": "Kommagetallen bij geld",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D-G5 realistische context ('een zak wortels', 'een stickervel'); getallen en antwoord gelijk",
+     "N14 geldantwoord met €",
+     "N9 geldnotatie €N / €N,CC (G5)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G6-GET-E07",
+    "voorstelDoel": null,
+    "regel": "D5-geld-keer",
+    "reden": "Didactiek 1 okt (G5-twijfel G5-GET-E08-claude-bank-twijfel-001): exact × met geld = SLO eind G6",
+    "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "g5Park": {
+     "id": "G6-GET-E07-claude-bank-park-001",
+     "voorstelDoel": "G6-GET-E07",
+     "regel": "D-GELD-EXACT-G6"
+    },
+    "didactiekG5": {
+     "twijfelId": "G5-GET-E08-claude-bank-twijfel-001",
+     "groep": "geld-keer",
+     "besluit": "ander-doel",
+     "doel": "G6-GET-E07",
+     "niveau": "toepassen",
+     "subregel": "exact × met geld = SLO eind G6"
+    },
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?",
+    "hints": {
+     "batch": "batch2.json",
+     "nr": 1,
+     "somtype": "Een [ding] kost €#. Je koopt er #. Hoeveel betaal je?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "€7,88",
+    "methode": "prijs × aantal",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "antwoordOokGoed": [
+    "7,88",
+    "7.88"
+   ],
+   "foutRegels": [
+    {
+     "regel": "fout = de prijs",
+     "soort": "de prijs",
+     "bron": "nieuw",
+     "tekst": "Dat is de prijs van één. Je koopt er meer: reken het aantal keer de prijs.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€3,94"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "soort": "aantal erbij geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt het aantal erbij geteld. Je koopt er een paar van dezelfde prijs: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€5,94"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "soort": "centen één keer",
+     "bron": "claude-taalfix",
+     "tekst": "De centen kloppen niet. Je hebt het aantal keer de euro's gedaan, maar de centen maar één keer geteld. Reken ook het aantal keer de centen.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€6,94"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + €1",
+     "soort": "euro te veel",
+     "bron": "nieuw",
+     "tekst": "Dat is één euro te veel. Reken de centen nog eens na: elke honderd cent is één euro. Hoeveel euro komt er dan bij?",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "€8,88"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken het aantal keer de euro's en het aantal keer de centen. Elke honderd cent is één euro. Tel daarna alles op."
+  }
+ ]
+}

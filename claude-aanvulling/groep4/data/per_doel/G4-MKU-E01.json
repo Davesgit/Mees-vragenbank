@@ -1,0 +1,2150 @@
+{
+ "schema": "leermees-vragenbank-export/v1 + merge/controle/licentie (claude-merge g4)",
+ "bron": {
+  "licentie": "CC BY-SA 4.0",
+  "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+  "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+  "bron": "https://github.com/Davesgit/leermees-vragenbank",
+  "commit": "7da3257a196386c700310006da60a385fbbe114f"
+ },
+ "gegenereerdOp": "2026-10-01T21:21:39+0200",
+ "g3Basis": "g3/scripts build 13:59 (merge_stap2.py → scripts/merge_g3regels.py; build_g3.py-functies via scripts/g3_basis_1359/)",
+ "doelId": "G4-MKU-E01",
+ "bordtitel": "Route op de kaart beschrijven",
+ "aantal": 9,
+ "items": [
+  {
+   "id": "G4-MKU-E01-claude-bank-001",
+   "nr": "001",
+   "doelId": "G4-MKU-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "meerkeuze",
+   "opgave": "Je staat bij de school. Welke route brengt je bij de put?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Eerst 5 hokjes naar links, dan 1 hokje naar beneden."
+    },
+    {
+     "letter": "B",
+     "tekst": "Eerst 5 hokjes naar rechts, dan 1 hokje naar boven."
+    },
+    {
+     "letter": "C",
+     "tekst": "Eerst 1 hokje naar links, dan 5 hokjes naar beneden."
+    }
+   ],
+   "optiesTekst": "A) Eerst 5 hokjes naar links, dan 1 hokje naar beneden. · B) Eerst 5 hokjes naar rechts, dan 1 hokje naar boven. · C) Eerst 1 hokje naar links, dan 5 hokjes naar beneden.",
+   "antwoord": "Eerst 5 hokjes naar links, dan 1 hokje naar beneden.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Eerst 5 hokjes naar links, dan 1 hokje naar beneden."
+   },
+   "hint": "Zoek waar je staat en waar je heen moet. Moet je naar links of naar rechts? En naar boven of naar beneden?",
+   "sterkereHint": "Tel de hokjes opzij. Tel daarna de hokjes naar boven of beneden. Welke route past daarbij?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "Eerst 5 hokjes naar rechts, dan 1 hokje naar boven.",
+     "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?",
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude (per item)"
+    },
+    {
+     "stap": null,
+     "fout": "Eerst 1 hokje naar links, dan 5 hokjes naar beneden.",
+     "uitleg": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "Eerst 5 hokjes naar rechts, dan 1 hokje naar boven. → Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven? · Eerst 1 hokje naar links, dan 5 hokjes naar beneden. → Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+   "ouderzin": "Je kind kiest de route tussen twee plekken op een plattegrond met hokjes.",
+   "getallenruimte": "n.v.t.",
+   "context": "midden",
+   "visual": {
+    "nodig": true,
+    "toelichting": "Claude-tekenaar: soort “plattegrond” (parameters in jsRender)",
+    "asciiSchets": false,
+    "jsRender": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "A6",
+       "wat": "school"
+      },
+      {
+       "vak": "B1",
+       "wat": "put"
+      }
+     ],
+     "kolommen": 6,
+     "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)"
+    },
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K9:0650b5d8-6f37-423b-8fb7-e806c20310e8",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "route F5 → A4",
+    "claudeUitleg": null,
+    "claudeStrategie": "eerst opzij, dan omhoog of omlaag",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "Eerst 5 hokjes naar rechts, dan 1 hokje naar boven.",
+      "denkfout": null
+     },
+     {
+      "fout": "Eerst 1 hokje naar links, dan 5 hokjes naar beneden.",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeBeeld": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "F5",
+       "wat": "school"
+      },
+      {
+       "vak": "A4",
+       "wat": "put"
+      }
+     ],
+     "kolommen": 6
+    },
+    "claudeUitlegOudeVakcode": "Van F5 naar A4: de letter gaat van F naar A, dat is 5 hokjes naar links. Het cijfer gaat van 5 naar 4, dat is 1 hokje naar beneden.",
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "Eerst 5 hokjes naar rechts, dan 1 hokje naar boven.",
+      "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?"
+     },
+     {
+      "stap": null,
+      "fout": "Eerst 1 hokje naar links, dan 5 hokjes naar beneden.",
+      "uitleg": "Je hebt de aantallen verwisseld. Tel de hokjes opzij en de hokjes omhoog apart."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "0650b5d8-6f37-423b-8fb7-e806c20310e8",
+    "claudeDoel": "K9",
+    "claudeDoelTitel": "Routebeschrijving",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D1 spiegelen/route herschreven (Didactiek §1/§3)",
+     "V1 vakcode → LeerMees-afspraak",
+     "V2 vakcode uit de opgave (ding staat op de kaart)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E01",
+    "voorstelDoel": null,
+    "regel": "D-routes",
+    "reden": "Didactiek 1 okt (G3-pilot): route kiezen (beschrijven)",
+    "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "g3Park": {
+     "id": "G4-MKU-E01-claude-bank-park-001",
+     "voorstelDoel": "G4-MKU-E01"
+    },
+    "didactiek": {
+     "twijfelId": "G3-MKU-E02-claude-bank-twijfel-016",
+     "groep": "routes",
+     "besluit": "G4",
+     "subregel": "route kiezen (beschrijven)"
+    },
+    "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "Eerst 5 hokjes naar links, dan 1 hokje naar beneden.",
+    "methode": "route kiezen (LeerMees-vakken)",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "ok",
+     "verwacht": "Eerst 5 hokjes naar links, dan 1 hokje naar beneden.",
+     "methode": "route"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude",
+     "tekst": null,
+     "perItem": true,
+     "match": {
+      "waarden": [
+       "Eerst 1 hokje naar links, dan 5 hokjes naar beneden.",
+       "Eerst 5 hokjes naar rechts, dan 1 hokje naar boven."
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw",
+     "tekst": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart."
+  },
+  {
+   "id": "G4-MKU-E01-claude-bank-002",
+   "nr": "002",
+   "doelId": "G4-MKU-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "meerkeuze",
+   "opgave": "Je staat bij de school. Welke route brengt je bij de bal?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Eerst 1 hokje naar links, dan 2 hokjes naar beneden."
+    },
+    {
+     "letter": "B",
+     "tekst": "Eerst 2 hokjes naar rechts, dan 1 hokje naar boven."
+    },
+    {
+     "letter": "C",
+     "tekst": "Eerst 1 hokje naar rechts, dan 2 hokjes naar boven."
+    }
+   ],
+   "optiesTekst": "A) Eerst 1 hokje naar links, dan 2 hokjes naar beneden. · B) Eerst 2 hokjes naar rechts, dan 1 hokje naar boven. · C) Eerst 1 hokje naar rechts, dan 2 hokjes naar boven.",
+   "antwoord": "Eerst 1 hokje naar rechts, dan 2 hokjes naar boven.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Eerst 1 hokje naar rechts, dan 2 hokjes naar boven."
+   },
+   "hint": "Zoek waar je staat en waar je heen moet. Moet je naar links of naar rechts? En naar boven of naar beneden?",
+   "sterkereHint": "Tel de hokjes opzij. Tel daarna de hokjes naar boven of beneden. Welke route past daarbij?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "Eerst 1 hokje naar links, dan 2 hokjes naar beneden.",
+     "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?",
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude (per item)"
+    },
+    {
+     "stap": null,
+     "fout": "Eerst 2 hokjes naar rechts, dan 1 hokje naar boven.",
+     "uitleg": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "Eerst 1 hokje naar links, dan 2 hokjes naar beneden. → Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven? · Eerst 2 hokjes naar rechts, dan 1 hokje naar boven. → Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+   "ouderzin": "Je kind kiest de route tussen twee plekken op een plattegrond met hokjes.",
+   "getallenruimte": "n.v.t.",
+   "context": "midden",
+   "visual": {
+    "nodig": true,
+    "toelichting": "Claude-tekenaar: soort “plattegrond” (parameters in jsRender)",
+    "asciiSchets": false,
+    "jsRender": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "E5",
+       "wat": "school"
+      },
+      {
+       "vak": "C6",
+       "wat": "bal"
+      }
+     ],
+     "kolommen": 6,
+     "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)"
+    },
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K9:1782e247-7ba4-430e-b023-9986690b2511",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "route E1 → F3",
+    "claudeUitleg": null,
+    "claudeStrategie": "eerst opzij, dan omhoog of omlaag",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "Eerst 1 hokje naar links, dan 2 hokjes naar beneden.",
+      "denkfout": null
+     },
+     {
+      "fout": "Eerst 2 hokjes naar rechts, dan 1 hokje naar boven.",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeBeeld": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "E1",
+       "wat": "school"
+      },
+      {
+       "vak": "F3",
+       "wat": "bal"
+      }
+     ],
+     "kolommen": 6
+    },
+    "claudeUitlegOudeVakcode": "Van E1 naar F3: de letter gaat van E naar F, dat is 1 hokje naar rechts. Het cijfer gaat van 1 naar 3, dat is 2 hokjes naar boven.",
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "Eerst 1 hokje naar links, dan 2 hokjes naar beneden.",
+      "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?"
+     },
+     {
+      "stap": null,
+      "fout": "Eerst 2 hokjes naar rechts, dan 1 hokje naar boven.",
+      "uitleg": "Je hebt de aantallen verwisseld. Tel de hokjes opzij en de hokjes omhoog apart."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "1782e247-7ba4-430e-b023-9986690b2511",
+    "claudeDoel": "K9",
+    "claudeDoelTitel": "Routebeschrijving",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D1 spiegelen/route herschreven (Didactiek §1/§3)",
+     "V1 vakcode → LeerMees-afspraak",
+     "V2 vakcode uit de opgave (ding staat op de kaart)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E01",
+    "voorstelDoel": null,
+    "regel": "D-routes",
+    "reden": "Didactiek 1 okt (G3-pilot): route kiezen (beschrijven)",
+    "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "g3Park": {
+     "id": "G4-MKU-E01-claude-bank-park-002",
+     "voorstelDoel": "G4-MKU-E01"
+    },
+    "didactiek": {
+     "twijfelId": "G3-MKU-E02-claude-bank-twijfel-017",
+     "groep": "routes",
+     "besluit": "G4",
+     "subregel": "route kiezen (beschrijven)"
+    },
+    "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "Eerst 1 hokje naar rechts, dan 2 hokjes naar boven.",
+    "methode": "route kiezen (LeerMees-vakken)",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "ok",
+     "verwacht": "Eerst 1 hokje naar rechts, dan 2 hokjes naar boven.",
+     "methode": "route"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude",
+     "tekst": null,
+     "perItem": true,
+     "match": {
+      "waarden": [
+       "Eerst 1 hokje naar links, dan 2 hokjes naar beneden.",
+       "Eerst 2 hokjes naar rechts, dan 1 hokje naar boven."
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw",
+     "tekst": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart."
+  },
+  {
+   "id": "G4-MKU-E01-claude-bank-003",
+   "nr": "003",
+   "doelId": "G4-MKU-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "meerkeuze",
+   "opgave": "Je staat bij de school. Welke route brengt je bij de bal?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Eerst 5 hokjes naar rechts, dan 1 hokje naar beneden."
+    },
+    {
+     "letter": "B",
+     "tekst": "Eerst 5 hokjes naar links, dan 1 hokje naar boven."
+    },
+    {
+     "letter": "C",
+     "tekst": "Eerst 1 hokje naar rechts, dan 5 hokjes naar beneden."
+    }
+   ],
+   "optiesTekst": "A) Eerst 5 hokjes naar rechts, dan 1 hokje naar beneden. · B) Eerst 5 hokjes naar links, dan 1 hokje naar boven. · C) Eerst 1 hokje naar rechts, dan 5 hokjes naar beneden.",
+   "antwoord": "Eerst 5 hokjes naar rechts, dan 1 hokje naar beneden.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Eerst 5 hokjes naar rechts, dan 1 hokje naar beneden."
+   },
+   "hint": "Zoek waar je staat en waar je heen moet. Moet je naar links of naar rechts? En naar boven of naar beneden?",
+   "sterkereHint": "Tel de hokjes opzij. Tel daarna de hokjes naar boven of beneden. Welke route past daarbij?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "Eerst 5 hokjes naar links, dan 1 hokje naar boven.",
+     "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?",
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude (per item)"
+    },
+    {
+     "stap": null,
+     "fout": "Eerst 1 hokje naar rechts, dan 5 hokjes naar beneden.",
+     "uitleg": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "Eerst 5 hokjes naar links, dan 1 hokje naar boven. → Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven? · Eerst 1 hokje naar rechts, dan 5 hokjes naar beneden. → Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+   "ouderzin": "Je kind kiest de route tussen twee plekken op een plattegrond met hokjes.",
+   "getallenruimte": "n.v.t.",
+   "context": "midden",
+   "visual": {
+    "nodig": true,
+    "toelichting": "Claude-tekenaar: soort “plattegrond” (parameters in jsRender)",
+    "asciiSchets": false,
+    "jsRender": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "A1",
+       "wat": "school"
+      },
+      {
+       "vak": "B6",
+       "wat": "bal"
+      }
+     ],
+     "kolommen": 6,
+     "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)"
+    },
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K9:23fb85f2-8b45-404d-8dcc-0146afa8668f",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "route A5 → F4",
+    "claudeUitleg": null,
+    "claudeStrategie": "eerst opzij, dan omhoog of omlaag",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "Eerst 5 hokjes naar links, dan 1 hokje naar boven.",
+      "denkfout": null
+     },
+     {
+      "fout": "Eerst 1 hokje naar rechts, dan 5 hokjes naar beneden.",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeBeeld": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "A5",
+       "wat": "school"
+      },
+      {
+       "vak": "F4",
+       "wat": "bal"
+      }
+     ],
+     "kolommen": 6
+    },
+    "claudeUitlegOudeVakcode": "Van A5 naar F4: de letter gaat van A naar F, dat is 5 hokjes naar rechts. Het cijfer gaat van 5 naar 4, dat is 1 hokje naar beneden.",
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "Eerst 5 hokjes naar links, dan 1 hokje naar boven.",
+      "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?"
+     },
+     {
+      "stap": null,
+      "fout": "Eerst 1 hokje naar rechts, dan 5 hokjes naar beneden.",
+      "uitleg": "Je hebt de aantallen verwisseld. Tel de hokjes opzij en de hokjes omhoog apart."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "23fb85f2-8b45-404d-8dcc-0146afa8668f",
+    "claudeDoel": "K9",
+    "claudeDoelTitel": "Routebeschrijving",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D1 spiegelen/route herschreven (Didactiek §1/§3)",
+     "V1 vakcode → LeerMees-afspraak",
+     "V2 vakcode uit de opgave (ding staat op de kaart)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E01",
+    "voorstelDoel": null,
+    "regel": "D-routes",
+    "reden": "Didactiek 1 okt (G3-pilot): route kiezen (beschrijven)",
+    "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "g3Park": {
+     "id": "G4-MKU-E01-claude-bank-park-003",
+     "voorstelDoel": "G4-MKU-E01"
+    },
+    "didactiek": {
+     "twijfelId": "G3-MKU-E02-claude-bank-twijfel-018",
+     "groep": "routes",
+     "besluit": "G4",
+     "subregel": "route kiezen (beschrijven)"
+    },
+    "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "Eerst 5 hokjes naar rechts, dan 1 hokje naar beneden.",
+    "methode": "route kiezen (LeerMees-vakken)",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "ok",
+     "verwacht": "Eerst 5 hokjes naar rechts, dan 1 hokje naar beneden.",
+     "methode": "route"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude",
+     "tekst": null,
+     "perItem": true,
+     "match": {
+      "waarden": [
+       "Eerst 1 hokje naar rechts, dan 5 hokjes naar beneden.",
+       "Eerst 5 hokjes naar links, dan 1 hokje naar boven."
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw",
+     "tekst": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart."
+  },
+  {
+   "id": "G4-MKU-E01-claude-bank-004",
+   "nr": "004",
+   "doelId": "G4-MKU-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "meerkeuze",
+   "opgave": "Je staat bij de tent. Welke route brengt je bij de put?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden."
+    },
+    {
+     "letter": "B",
+     "tekst": "Eerst 2 hokjes naar links, dan 1 hokje naar boven."
+    },
+    {
+     "letter": "C",
+     "tekst": "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden."
+    }
+   ],
+   "optiesTekst": "A) Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden. · B) Eerst 2 hokjes naar links, dan 1 hokje naar boven. · C) Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+   "antwoord": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden."
+   },
+   "hint": "Zoek waar je staat en waar je heen moet. Moet je naar links of naar rechts? En naar boven of naar beneden?",
+   "sterkereHint": "Tel de hokjes opzij. Tel daarna de hokjes naar boven of beneden. Welke route past daarbij?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "Eerst 2 hokjes naar links, dan 1 hokje naar boven.",
+     "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?",
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude (per item)"
+    },
+    {
+     "stap": null,
+     "fout": "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+     "uitleg": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "Eerst 2 hokjes naar links, dan 1 hokje naar boven. → Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven? · Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden. → Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+   "ouderzin": "Je kind kiest de route tussen twee plekken op een plattegrond met hokjes.",
+   "getallenruimte": "n.v.t.",
+   "context": "midden",
+   "visual": {
+    "nodig": true,
+    "toelichting": "Claude-tekenaar: soort “plattegrond” (parameters in jsRender)",
+    "asciiSchets": false,
+    "jsRender": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "D3",
+       "wat": "tent"
+      },
+      {
+       "vak": "E5",
+       "wat": "put"
+      }
+     ],
+     "kolommen": 6,
+     "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)"
+    },
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K9:65529c0c-5d56-46cd-80e3-dc080d37b785",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "route C2 → E1",
+    "claudeUitleg": null,
+    "claudeStrategie": "eerst opzij, dan omhoog of omlaag",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "Eerst 2 hokjes naar links, dan 1 hokje naar boven.",
+      "denkfout": null
+     },
+     {
+      "fout": "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeBeeld": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "C2",
+       "wat": "tent"
+      },
+      {
+       "vak": "E1",
+       "wat": "put"
+      }
+     ],
+     "kolommen": 6
+    },
+    "claudeUitlegOudeVakcode": "Van C2 naar E1: de letter gaat van C naar E, dat is 2 hokjes naar rechts. Het cijfer gaat van 2 naar 1, dat is 1 hokje naar beneden.",
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "Eerst 2 hokjes naar links, dan 1 hokje naar boven.",
+      "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?"
+     },
+     {
+      "stap": null,
+      "fout": "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+      "uitleg": "Je hebt de aantallen verwisseld. Tel de hokjes opzij en de hokjes omhoog apart."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "65529c0c-5d56-46cd-80e3-dc080d37b785",
+    "claudeDoel": "K9",
+    "claudeDoelTitel": "Routebeschrijving",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D1 spiegelen/route herschreven (Didactiek §1/§3)",
+     "V1 vakcode → LeerMees-afspraak",
+     "V2 vakcode uit de opgave (ding staat op de kaart)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E01",
+    "voorstelDoel": null,
+    "regel": "D-routes",
+    "reden": "Didactiek 1 okt (G3-pilot): route kiezen (beschrijven)",
+    "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "g3Park": {
+     "id": "G4-MKU-E01-claude-bank-park-004",
+     "voorstelDoel": "G4-MKU-E01"
+    },
+    "didactiek": {
+     "twijfelId": "G3-MKU-E02-claude-bank-twijfel-019",
+     "groep": "routes",
+     "besluit": "G4",
+     "subregel": "route kiezen (beschrijven)"
+    },
+    "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden.",
+    "methode": "route kiezen (LeerMees-vakken)",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "ok",
+     "verwacht": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden.",
+     "methode": "route"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude",
+     "tekst": null,
+     "perItem": true,
+     "match": {
+      "waarden": [
+       "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+       "Eerst 2 hokjes naar links, dan 1 hokje naar boven."
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw",
+     "tekst": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart."
+  },
+  {
+   "id": "G4-MKU-E01-claude-bank-005",
+   "nr": "005",
+   "doelId": "G4-MKU-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "meerkeuze",
+   "opgave": "Je staat bij de put. Welke route brengt je bij de tent?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Eerst 2 hokjes naar links, dan 4 hokjes naar beneden."
+    },
+    {
+     "letter": "B",
+     "tekst": "Eerst 2 hokjes naar rechts, dan 4 hokjes naar boven."
+    },
+    {
+     "letter": "C",
+     "tekst": "Eerst 4 hokjes naar links, dan 2 hokjes naar beneden."
+    }
+   ],
+   "optiesTekst": "A) Eerst 2 hokjes naar links, dan 4 hokjes naar beneden. · B) Eerst 2 hokjes naar rechts, dan 4 hokjes naar boven. · C) Eerst 4 hokjes naar links, dan 2 hokjes naar beneden.",
+   "antwoord": "Eerst 2 hokjes naar links, dan 4 hokjes naar beneden.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Eerst 2 hokjes naar links, dan 4 hokjes naar beneden."
+   },
+   "hint": "Zoek waar je staat en waar je heen moet. Moet je naar links of naar rechts? En naar boven of naar beneden?",
+   "sterkereHint": "Tel de hokjes opzij. Tel daarna de hokjes naar boven of beneden. Welke route past daarbij?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "Eerst 2 hokjes naar rechts, dan 4 hokjes naar boven.",
+     "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?",
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude (per item)"
+    },
+    {
+     "stap": null,
+     "fout": "Eerst 4 hokjes naar links, dan 2 hokjes naar beneden.",
+     "uitleg": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "Eerst 2 hokjes naar rechts, dan 4 hokjes naar boven. → Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven? · Eerst 4 hokjes naar links, dan 2 hokjes naar beneden. → Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+   "ouderzin": "Je kind kiest de route tussen twee plekken op een plattegrond met hokjes.",
+   "getallenruimte": "n.v.t.",
+   "context": "midden",
+   "visual": {
+    "nodig": true,
+    "toelichting": "Claude-tekenaar: soort “plattegrond” (parameters in jsRender)",
+    "asciiSchets": false,
+    "jsRender": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "A3",
+       "wat": "put"
+      },
+      {
+       "vak": "E1",
+       "wat": "tent"
+      }
+     ],
+     "kolommen": 6,
+     "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)"
+    },
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K9:668f073c-ab9a-431d-8427-2caac11bb206",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "route C5 → A1",
+    "claudeUitleg": null,
+    "claudeStrategie": "eerst opzij, dan omhoog of omlaag",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "Eerst 2 hokjes naar rechts, dan 4 hokjes naar boven.",
+      "denkfout": null
+     },
+     {
+      "fout": "Eerst 4 hokjes naar links, dan 2 hokjes naar beneden.",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeBeeld": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "C5",
+       "wat": "put"
+      },
+      {
+       "vak": "A1",
+       "wat": "tent"
+      }
+     ],
+     "kolommen": 6
+    },
+    "claudeUitlegOudeVakcode": "Van C5 naar A1: de letter gaat van C naar A, dat is 2 hokjes naar links. Het cijfer gaat van 5 naar 1, dat is 4 hokjes naar beneden.",
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "Eerst 2 hokjes naar rechts, dan 4 hokjes naar boven.",
+      "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?"
+     },
+     {
+      "stap": null,
+      "fout": "Eerst 4 hokjes naar links, dan 2 hokjes naar beneden.",
+      "uitleg": "Je hebt de aantallen verwisseld. Tel de hokjes opzij en de hokjes omhoog apart."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "668f073c-ab9a-431d-8427-2caac11bb206",
+    "claudeDoel": "K9",
+    "claudeDoelTitel": "Routebeschrijving",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D1 spiegelen/route herschreven (Didactiek §1/§3)",
+     "V1 vakcode → LeerMees-afspraak",
+     "V2 vakcode uit de opgave (ding staat op de kaart)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E01",
+    "voorstelDoel": null,
+    "regel": "D-routes",
+    "reden": "Didactiek 1 okt (G3-pilot): route kiezen (beschrijven)",
+    "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "g3Park": {
+     "id": "G4-MKU-E01-claude-bank-park-005",
+     "voorstelDoel": "G4-MKU-E01"
+    },
+    "didactiek": {
+     "twijfelId": "G3-MKU-E02-claude-bank-twijfel-020",
+     "groep": "routes",
+     "besluit": "G4",
+     "subregel": "route kiezen (beschrijven)"
+    },
+    "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "Eerst 2 hokjes naar links, dan 4 hokjes naar beneden.",
+    "methode": "route kiezen (LeerMees-vakken)",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "ok",
+     "verwacht": "Eerst 2 hokjes naar links, dan 4 hokjes naar beneden.",
+     "methode": "route"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude",
+     "tekst": null,
+     "perItem": true,
+     "match": {
+      "waarden": [
+       "Eerst 2 hokjes naar rechts, dan 4 hokjes naar boven.",
+       "Eerst 4 hokjes naar links, dan 2 hokjes naar beneden."
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw",
+     "tekst": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart."
+  },
+  {
+   "id": "G4-MKU-E01-claude-bank-006",
+   "nr": "006",
+   "doelId": "G4-MKU-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "meerkeuze",
+   "opgave": "Je staat bij de boom. Welke route brengt je bij het huis?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden."
+    },
+    {
+     "letter": "B",
+     "tekst": "Eerst 2 hokjes naar links, dan 1 hokje naar boven."
+    },
+    {
+     "letter": "C",
+     "tekst": "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden."
+    }
+   ],
+   "optiesTekst": "A) Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden. · B) Eerst 2 hokjes naar links, dan 1 hokje naar boven. · C) Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+   "antwoord": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden."
+   },
+   "hint": "Zoek waar je staat en waar je heen moet. Moet je naar links of naar rechts? En naar boven of naar beneden?",
+   "sterkereHint": "Tel de hokjes opzij. Tel daarna de hokjes naar boven of beneden. Welke route past daarbij?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "Eerst 2 hokjes naar links, dan 1 hokje naar boven.",
+     "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?",
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude (per item)"
+    },
+    {
+     "stap": null,
+     "fout": "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+     "uitleg": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "Eerst 2 hokjes naar links, dan 1 hokje naar boven. → Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven? · Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden. → Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+   "ouderzin": "Je kind kiest de route tussen twee plekken op een plattegrond met hokjes.",
+   "getallenruimte": "n.v.t.",
+   "context": "midden",
+   "visual": {
+    "nodig": true,
+    "toelichting": "Claude-tekenaar: soort “plattegrond” (parameters in jsRender)",
+    "asciiSchets": false,
+    "jsRender": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "A1",
+       "wat": "boom"
+      },
+      {
+       "vak": "B3",
+       "wat": "huis"
+      }
+     ],
+     "kolommen": 6,
+     "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)"
+    },
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K9:a6a5a3e8-cd71-4a11-850f-521cdf05d5a9",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "route A5 → C4",
+    "claudeUitleg": null,
+    "claudeStrategie": "eerst opzij, dan omhoog of omlaag",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "Eerst 2 hokjes naar links, dan 1 hokje naar boven.",
+      "denkfout": null
+     },
+     {
+      "fout": "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeBeeld": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "A5",
+       "wat": "boom"
+      },
+      {
+       "vak": "C4",
+       "wat": "huis"
+      }
+     ],
+     "kolommen": 6
+    },
+    "claudeUitlegOudeVakcode": "Van A5 naar C4: de letter gaat van A naar C, dat is 2 hokjes naar rechts. Het cijfer gaat van 5 naar 4, dat is 1 hokje naar beneden.",
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "Eerst 2 hokjes naar links, dan 1 hokje naar boven.",
+      "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?"
+     },
+     {
+      "stap": null,
+      "fout": "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+      "uitleg": "Je hebt de aantallen verwisseld. Tel de hokjes opzij en de hokjes omhoog apart."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "a6a5a3e8-cd71-4a11-850f-521cdf05d5a9",
+    "claudeDoel": "K9",
+    "claudeDoelTitel": "Routebeschrijving",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D1 spiegelen/route herschreven (Didactiek §1/§3)",
+     "V1 vakcode → LeerMees-afspraak",
+     "V2 vakcode uit de opgave (ding staat op de kaart)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E01",
+    "voorstelDoel": null,
+    "regel": "D-routes",
+    "reden": "Didactiek 1 okt (G3-pilot): route kiezen (beschrijven)",
+    "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "g3Park": {
+     "id": "G4-MKU-E01-claude-bank-park-008",
+     "voorstelDoel": "G4-MKU-E01"
+    },
+    "didactiek": {
+     "twijfelId": "G3-MKU-E02-claude-bank-twijfel-023",
+     "groep": "routes",
+     "besluit": "G4",
+     "subregel": "route kiezen (beschrijven)"
+    },
+    "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden.",
+    "methode": "route kiezen (LeerMees-vakken)",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "ok",
+     "verwacht": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden.",
+     "methode": "route"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude",
+     "tekst": null,
+     "perItem": true,
+     "match": {
+      "waarden": [
+       "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+       "Eerst 2 hokjes naar links, dan 1 hokje naar boven."
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw",
+     "tekst": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart."
+  },
+  {
+   "id": "G4-MKU-E01-claude-bank-007",
+   "nr": "007",
+   "doelId": "G4-MKU-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "meerkeuze",
+   "opgave": "Je staat bij de boom. Welke route brengt je bij de school?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Eerst 2 hokjes naar links, dan 1 hokje naar boven."
+    },
+    {
+     "letter": "B",
+     "tekst": "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden."
+    },
+    {
+     "letter": "C",
+     "tekst": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden."
+    }
+   ],
+   "optiesTekst": "A) Eerst 2 hokjes naar links, dan 1 hokje naar boven. · B) Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden. · C) Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden.",
+   "antwoord": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden."
+   },
+   "hint": "Zoek waar je staat en waar je heen moet. Moet je naar links of naar rechts? En naar boven of naar beneden?",
+   "sterkereHint": "Tel de hokjes opzij. Tel daarna de hokjes naar boven of beneden. Welke route past daarbij?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "Eerst 2 hokjes naar links, dan 1 hokje naar boven.",
+     "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?",
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude (per item)"
+    },
+    {
+     "stap": null,
+     "fout": "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+     "uitleg": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "Eerst 2 hokjes naar links, dan 1 hokje naar boven. → Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven? · Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden. → Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+   "ouderzin": "Je kind kiest de route tussen twee plekken op een plattegrond met hokjes.",
+   "getallenruimte": "n.v.t.",
+   "context": "midden",
+   "visual": {
+    "nodig": true,
+    "toelichting": "Claude-tekenaar: soort “plattegrond” (parameters in jsRender)",
+    "asciiSchets": false,
+    "jsRender": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "C1",
+       "wat": "boom"
+      },
+      {
+       "vak": "D3",
+       "wat": "school"
+      }
+     ],
+     "kolommen": 6,
+     "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)"
+    },
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K9:bfa5dde8-3ca3-4ecc-b89d-880708d59c9b",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "route A3 → C2",
+    "claudeUitleg": null,
+    "claudeStrategie": "eerst opzij, dan omhoog of omlaag",
+    "claudeThema": "Ruimte",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "Eerst 2 hokjes naar links, dan 1 hokje naar boven.",
+      "denkfout": null
+     },
+     {
+      "fout": "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeBeeld": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "A3",
+       "wat": "boom"
+      },
+      {
+       "vak": "C2",
+       "wat": "school"
+      }
+     ],
+     "kolommen": 6
+    },
+    "claudeUitlegOudeVakcode": "Van A3 naar C2: de letter gaat van A naar C, dat is 2 hokjes naar rechts. Het cijfer gaat van 3 naar 2, dat is 1 hokje naar beneden.",
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "Eerst 2 hokjes naar links, dan 1 hokje naar boven.",
+      "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?"
+     },
+     {
+      "stap": null,
+      "fout": "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+      "uitleg": "Je hebt de aantallen verwisseld. Tel de hokjes opzij en de hokjes omhoog apart."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "bfa5dde8-3ca3-4ecc-b89d-880708d59c9b",
+    "claudeDoel": "K9",
+    "claudeDoelTitel": "Routebeschrijving",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D1 spiegelen/route herschreven (Didactiek §1/§3)",
+     "V1 vakcode → LeerMees-afspraak",
+     "V2 vakcode uit de opgave (ding staat op de kaart)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E01",
+    "voorstelDoel": null,
+    "regel": "D-routes",
+    "reden": "Didactiek 1 okt (G3-pilot): route kiezen (beschrijven)",
+    "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "g3Park": {
+     "id": "G4-MKU-E01-claude-bank-park-006",
+     "voorstelDoel": "G4-MKU-E01"
+    },
+    "didactiek": {
+     "twijfelId": "G3-MKU-E02-claude-bank-twijfel-021",
+     "groep": "routes",
+     "besluit": "G4",
+     "subregel": "route kiezen (beschrijven)"
+    },
+    "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden.",
+    "methode": "route kiezen (LeerMees-vakken)",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "ok",
+     "verwacht": "Eerst 2 hokjes naar rechts, dan 1 hokje naar beneden.",
+     "methode": "route"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude",
+     "tekst": null,
+     "perItem": true,
+     "match": {
+      "waarden": [
+       "Eerst 1 hokje naar rechts, dan 2 hokjes naar beneden.",
+       "Eerst 2 hokjes naar links, dan 1 hokje naar boven."
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw",
+     "tekst": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart."
+  },
+  {
+   "id": "G4-MKU-E01-claude-bank-008",
+   "nr": "008",
+   "doelId": "G4-MKU-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "meerkeuze",
+   "opgave": "Je staat bij de boom. Welke route brengt je bij de vijver?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Eerst 1 hokje naar rechts, dan 4 hokjes naar beneden."
+    },
+    {
+     "letter": "B",
+     "tekst": "Eerst 4 hokjes naar links, dan 1 hokje naar boven."
+    },
+    {
+     "letter": "C",
+     "tekst": "Eerst 1 hokje naar links, dan 4 hokjes naar boven."
+    }
+   ],
+   "optiesTekst": "A) Eerst 1 hokje naar rechts, dan 4 hokjes naar beneden. · B) Eerst 4 hokjes naar links, dan 1 hokje naar boven. · C) Eerst 1 hokje naar links, dan 4 hokjes naar boven.",
+   "antwoord": "Eerst 1 hokje naar links, dan 4 hokjes naar boven.",
+   "antwoordDetail": {
+    "juisteOptie": "C",
+    "juisteOptieTekst": "Eerst 1 hokje naar links, dan 4 hokjes naar boven."
+   },
+   "hint": "Zoek waar je staat en waar je heen moet. Moet je naar links of naar rechts? En naar boven of naar beneden?",
+   "sterkereHint": "Tel de hokjes opzij. Tel daarna de hokjes naar boven of beneden. Welke route past daarbij?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "Eerst 1 hokje naar rechts, dan 4 hokjes naar beneden.",
+     "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?",
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude (per item)"
+    },
+    {
+     "stap": null,
+     "fout": "Eerst 4 hokjes naar links, dan 1 hokje naar boven.",
+     "uitleg": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "Eerst 1 hokje naar rechts, dan 4 hokjes naar beneden. → Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven? · Eerst 4 hokjes naar links, dan 1 hokje naar boven. → Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+   "ouderzin": "Je kind kiest de route tussen twee plekken op een plattegrond met hokjes.",
+   "getallenruimte": "n.v.t.",
+   "context": "midden",
+   "visual": {
+    "nodig": true,
+    "toelichting": "Claude-tekenaar: soort “plattegrond” (parameters in jsRender)",
+    "asciiSchets": false,
+    "jsRender": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "E2",
+       "wat": "boom"
+      },
+      {
+       "vak": "A1",
+       "wat": "vijver"
+      }
+     ],
+     "kolommen": 6,
+     "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)"
+    },
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K9:c6c01759-c47b-49dc-9fde-5d846bd753ab",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "route B1 → A5",
+    "claudeUitleg": null,
+    "claudeStrategie": "eerst opzij, dan omhoog of omlaag",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "Eerst 1 hokje naar rechts, dan 4 hokjes naar beneden.",
+      "denkfout": null
+     },
+     {
+      "fout": "Eerst 4 hokjes naar links, dan 1 hokje naar boven.",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeBeeld": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "B1",
+       "wat": "boom"
+      },
+      {
+       "vak": "A5",
+       "wat": "vijver"
+      }
+     ],
+     "kolommen": 6
+    },
+    "claudeUitlegOudeVakcode": "Van B1 naar A5: de letter gaat van B naar A, dat is 1 hokje naar links. Het cijfer gaat van 1 naar 5, dat is 4 hokjes naar boven.",
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "Eerst 1 hokje naar rechts, dan 4 hokjes naar beneden.",
+      "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?"
+     },
+     {
+      "stap": null,
+      "fout": "Eerst 4 hokjes naar links, dan 1 hokje naar boven.",
+      "uitleg": "Je hebt de aantallen verwisseld. Tel de hokjes opzij en de hokjes omhoog apart."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "c6c01759-c47b-49dc-9fde-5d846bd753ab",
+    "claudeDoel": "K9",
+    "claudeDoelTitel": "Routebeschrijving",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D1 spiegelen/route herschreven (Didactiek §1/§3)",
+     "V1 vakcode → LeerMees-afspraak",
+     "V2 vakcode uit de opgave (ding staat op de kaart)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E01",
+    "voorstelDoel": null,
+    "regel": "D-routes",
+    "reden": "Didactiek 1 okt (G3-pilot): route kiezen (beschrijven)",
+    "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "g3Park": {
+     "id": "G4-MKU-E01-claude-bank-park-007",
+     "voorstelDoel": "G4-MKU-E01"
+    },
+    "didactiek": {
+     "twijfelId": "G3-MKU-E02-claude-bank-twijfel-022",
+     "groep": "routes",
+     "besluit": "G4",
+     "subregel": "route kiezen (beschrijven)"
+    },
+    "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "Eerst 1 hokje naar links, dan 4 hokjes naar boven.",
+    "methode": "route kiezen (LeerMees-vakken)",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "ok",
+     "verwacht": "Eerst 1 hokje naar links, dan 4 hokjes naar boven.",
+     "methode": "route"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude",
+     "tekst": null,
+     "perItem": true,
+     "match": {
+      "waarden": [
+       "Eerst 1 hokje naar rechts, dan 4 hokjes naar beneden.",
+       "Eerst 4 hokjes naar links, dan 1 hokje naar boven."
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw",
+     "tekst": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart."
+  },
+  {
+   "id": "G4-MKU-E01-claude-bank-009",
+   "nr": "009",
+   "doelId": "G4-MKU-E01",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "meerkeuze",
+   "opgave": "Je staat bij de put. Welke route brengt je bij het huis?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "Eerst 3 hokjes naar rechts, dan 1 hokje naar beneden."
+    },
+    {
+     "letter": "B",
+     "tekst": "Eerst 3 hokjes naar links, dan 1 hokje naar boven."
+    },
+    {
+     "letter": "C",
+     "tekst": "Eerst 1 hokje naar rechts, dan 3 hokjes naar beneden."
+    }
+   ],
+   "optiesTekst": "A) Eerst 3 hokjes naar rechts, dan 1 hokje naar beneden. · B) Eerst 3 hokjes naar links, dan 1 hokje naar boven. · C) Eerst 1 hokje naar rechts, dan 3 hokjes naar beneden.",
+   "antwoord": "Eerst 3 hokjes naar rechts, dan 1 hokje naar beneden.",
+   "antwoordDetail": {
+    "juisteOptie": "A",
+    "juisteOptieTekst": "Eerst 3 hokjes naar rechts, dan 1 hokje naar beneden."
+   },
+   "hint": "Zoek waar je staat en waar je heen moet. Moet je naar links of naar rechts? En naar boven of naar beneden?",
+   "sterkereHint": "Tel de hokjes opzij. Tel daarna de hokjes naar boven of beneden. Welke route past daarbij?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "Eerst 3 hokjes naar links, dan 1 hokje naar boven.",
+     "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?",
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude (per item)"
+    },
+    {
+     "stap": null,
+     "fout": "Eerst 1 hokje naar rechts, dan 3 hokjes naar beneden.",
+     "uitleg": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "Eerst 3 hokjes naar links, dan 1 hokje naar boven. → Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven? · Eerst 1 hokje naar rechts, dan 3 hokjes naar beneden. → Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+   "ouderzin": "Je kind kiest de route tussen twee plekken op een plattegrond met hokjes.",
+   "getallenruimte": "n.v.t.",
+   "context": "midden",
+   "visual": {
+    "nodig": true,
+    "toelichting": "Claude-tekenaar: soort “plattegrond” (parameters in jsRender)",
+    "asciiSchets": false,
+    "jsRender": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "A2",
+       "wat": "put"
+      },
+      {
+       "vak": "B5",
+       "wat": "huis"
+      }
+     ],
+     "kolommen": 6,
+     "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)"
+    },
+    "svgBestanden": []
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K9:d179db62-e3f6-40ec-9861-72ef0c1a7407",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "route B5 → E4",
+    "claudeUitleg": null,
+    "claudeStrategie": "eerst opzij, dan omhoog of omlaag",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 2,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "Eerst 3 hokjes naar links, dan 1 hokje naar boven.",
+      "denkfout": null
+     },
+     {
+      "fout": "Eerst 1 hokje naar rechts, dan 3 hokjes naar beneden.",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeBeeld": {
+     "rijen": 5,
+     "soort": "plattegrond",
+     "dingen": [
+      {
+       "vak": "B5",
+       "wat": "put"
+      },
+      {
+       "vak": "E4",
+       "wat": "huis"
+      }
+     ],
+     "kolommen": 6
+    },
+    "claudeUitlegOudeVakcode": "Van B5 naar E4: de letter gaat van B naar E, dat is 3 hokjes naar rechts. Het cijfer gaat van 5 naar 4, dat is 1 hokje naar beneden.",
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "Eerst 3 hokjes naar links, dan 1 hokje naar boven.",
+      "uitleg": "Kijk naar de richting: welke kant is rechts op de kaart, en welke kant is boven?"
+     },
+     {
+      "stap": null,
+      "fout": "Eerst 1 hokje naar rechts, dan 3 hokjes naar beneden.",
+      "uitleg": "Je hebt de aantallen verwisseld. Tel de hokjes opzij en de hokjes omhoog apart."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "d179db62-e3f6-40ec-9861-72ef0c1a7407",
+    "claudeDoel": "K9",
+    "claudeDoelTitel": "Routebeschrijving",
+    "claudeGroep": 5,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "D1 spiegelen/route herschreven (Didactiek §1/§3)",
+     "V1 vakcode → LeerMees-afspraak",
+     "V2 vakcode uit de opgave (ding staat op de kaart)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E01",
+    "voorstelDoel": null,
+    "regel": "D-routes",
+    "reden": "Didactiek 1 okt (G3-pilot): route kiezen (beschrijven)",
+    "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "g3Park": {
+     "id": "G4-MKU-E01-claude-bank-park-009",
+     "voorstelDoel": "G4-MKU-E01"
+    },
+    "didactiek": {
+     "twijfelId": "G3-MKU-E02-claude-bank-twijfel-024",
+     "groep": "routes",
+     "besluit": "G4",
+     "subregel": "route kiezen (beschrijven)"
+    },
+    "vakAfspraak": "letter = rij (A boven), cijfer = kolom (1 links)",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "[plattegrond] Je staat bij de [ding]. Welke route brengt je bij de [ding]?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "Eerst 3 hokjes naar rechts, dan 1 hokje naar beneden.",
+    "methode": "route kiezen (LeerMees-vakken)",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "ok",
+     "verwacht": "Eerst 3 hokjes naar rechts, dan 1 hokje naar beneden.",
+     "methode": "route"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "verkeerde richting (tekst per item)",
+     "soort": "verkeerde richting",
+     "bron": "claude",
+     "tekst": null,
+     "perItem": true,
+     "match": {
+      "waarden": [
+       "Eerst 1 hokje naar rechts, dan 3 hokjes naar beneden.",
+       "Eerst 3 hokjes naar links, dan 1 hokje naar boven."
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "aantallen verwisseld",
+     "bron": "nieuw",
+     "tekst": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk goed hoeveel hokjes je opzij gaat en hoeveel naar boven of beneden. Tel die twee apart."
+  }
+ ]
+}

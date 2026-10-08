@@ -1,0 +1,888 @@
+{
+ "schema": "leermees-vragenbank-export/v1 + merge/controle/licentie (claude-merge g4)",
+ "bron": {
+  "licentie": "CC BY-SA 4.0",
+  "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+  "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+  "bron": "https://github.com/Davesgit/leermees-vragenbank",
+  "commit": "7da3257a196386c700310006da60a385fbbe114f"
+ },
+ "gegenereerdOp": "2026-10-01T21:21:39+0200",
+ "g3Basis": "g3/scripts build 13:59 (merge_stap2.py → scripts/merge_g3regels.py; build_g3.py-functies via scripts/g3_basis_1359/)",
+ "doelId": "G4-MKU-E03",
+ "bordtitel": "Voor-, zij- en bovenaanzicht",
+ "aantal": 4,
+ "items": [
+  {
+   "id": "G4-MKU-E03-claude-bank-001",
+   "nr": "001",
+   "doelId": "G4-MKU-E03",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vlak is een platte kant.\nDit is een balk. Hoeveel vlakken heeft een balk? (Tel ook wat je niet ziet.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "6",
+   "antwoordDetail": null,
+   "hint": "Een vlak is een platte kant. Draai de figuur in je hoofd rond: ook achter en onder zitten vlakken.",
+   "sterkereHint": "Tel eerst de vlakken die je ziet. Tel dan de vlakken aan de achterkant en de onderkant erbij.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "3",
+     "uitleg": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee.",
+     "regel": "fout = antwoord − 2 of meer",
+     "soort": "alleen wat je ziet",
+     "bron": "claude"
+    },
+    {
+     "stap": null,
+     "fout": "7",
+     "uitleg": "Je hebt er één dubbel geteld. Wijs elke platte kant maar één keer aan.",
+     "regel": "fout = antwoord + 1",
+     "soort": "dubbel geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Bijna! Je mist er één. Vergeet de onderkant niet.",
+     "regel": "fout = antwoord − 1",
+     "soort": "één te weinig",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "3 → Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee. · 7 → Je hebt er één dubbel geteld. Wijs elke platte kant maar één keer aan. · 5 → Bijna! Je mist er één. Vergeet de onderkant niet.",
+   "ouderzin": "Je kind telt de vlakken (platte kanten) van een ruimtefiguur, ook die je niet ziet.",
+   "getallenruimte": "n.v.t.",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "tekening van een balk met doorzichtige of gestippelde achterkant (verplicht: 'tel ook wat je niet ziet') — de Claude-tekenaar kent geen ruimtefiguur",
+    "asciiSchets": false,
+    "jsRender": {
+     "soort": "ruimtefiguur",
+     "figuur": "balk"
+    },
+    "svgBestanden": [],
+    "nietLiveZonderBeeld": true
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K5:3ce44e45-9e2a-4b65-ba9e-95e883f3b06e",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "vlakken van een balk",
+    "claudeUitleg": "Een balk heeft 6 vlakken, 8 hoekpunten en 12 ribben.",
+    "claudeStrategie": "ook de achterkant tellen",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 3,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "3",
+      "denkfout": "een-ernaast"
+     },
+     {
+      "fout": "7",
+      "denkfout": "een-ernaast"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "3",
+      "uitleg": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee."
+     },
+     {
+      "stap": null,
+      "fout": "7",
+      "uitleg": "Je hebt er een dubbel geteld. Ga systematisch rond: boven, onder, dan de zijkanten."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "3ce44e45-9e2a-4b65-ba9e-95e883f3b06e",
+    "claudeDoel": "K5",
+    "claudeDoelTitel": "Ruimtelijke figuren",
+    "claudeGroep": 4,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "B5 begrip uitgelegd boven de vraag (Didactiek §4)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E03",
+    "voorstelDoel": null,
+    "regel": "D-VLAKKEN",
+    "reden": "Didactiek 1 okt (G4-twijfel G4-MKU-E04-claude-bank-twijfel-002): vlakken kubus/balk (= 6 vlakjes bouwplaat)",
+    "somtype": "[ruimtefiguur] Een vlak is een platte kant. ⏎ Dit is een [figuur]. Hoeveel vlakken heeft een [figuur]? (Tel ook wat je niet ziet.)",
+    "nietLiveZonderBeeld": true,
+    "didactiekG4": {
+     "twijfelId": "G4-MKU-E04-claude-bank-twijfel-002",
+     "groep": "begrippen",
+     "subregel": "vlakken kubus/balk (= 6 vlakjes bouwplaat)",
+     "redencode": "VLAKKEN",
+     "didactiek": {
+      "besluit": "G4",
+      "doel": "G4-MKU-E03"
+     },
+     "overzicht": null
+    },
+    "vorigId": "G4-MKU-E04-claude-bank-twijfel-002",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[ruimtefiguur] Een vlak is een platte kant. ⏎ Dit is een [figuur]. Hoeveel vlakken heeft een [figuur]? (Tel ook wat je niet ziet.)",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "[ruimtefiguur] Een vlak is een platte kant. ⏎ Dit is een [figuur]. Hoeveel vlakken heeft een [figuur]? (Tel ook wat je niet ziet.)"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": 6,
+    "methode": "ruimtefiguur tellen",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord − 2 of meer",
+     "soort": "alleen wat je ziet",
+     "bron": "claude",
+     "tekst": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee.",
+     "perItem": false,
+     "match": {
+      "totEnMet": 4
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 1",
+     "soort": "dubbel geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt er één dubbel geteld. Wijs elke platte kant maar één keer aan.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord − 1",
+     "soort": "één te weinig",
+     "bron": "nieuw",
+     "tekst": "Bijna! Je mist er één. Vergeet de onderkant niet.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Wijs elke platte kant één keer aan. Vergeet de achterkant en de onderkant niet.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Wijs elke platte kant één keer aan. Vergeet de achterkant en de onderkant niet."
+  },
+  {
+   "id": "G4-MKU-E03-claude-bank-002",
+   "nr": "002",
+   "doelId": "G4-MKU-E03",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vlak is een platte kant.\nDit is een kubus. Hoeveel vlakken heeft een kubus? (Tel ook wat je niet ziet.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "6",
+   "antwoordDetail": null,
+   "hint": "Een vlak is een platte kant. Draai de figuur in je hoofd rond: ook achter en onder zitten vlakken.",
+   "sterkereHint": "Tel eerst de vlakken die je ziet. Tel dan de vlakken aan de achterkant en de onderkant erbij.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "3",
+     "uitleg": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee.",
+     "regel": "fout = antwoord − 2 of meer",
+     "soort": "alleen wat je ziet",
+     "bron": "claude"
+    },
+    {
+     "stap": null,
+     "fout": "7",
+     "uitleg": "Je hebt er één dubbel geteld. Wijs elke platte kant maar één keer aan.",
+     "regel": "fout = antwoord + 1",
+     "soort": "dubbel geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "5",
+     "uitleg": "Bijna! Je mist er één. Vergeet de onderkant niet.",
+     "regel": "fout = antwoord − 1",
+     "soort": "één te weinig",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "3 → Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee. · 7 → Je hebt er één dubbel geteld. Wijs elke platte kant maar één keer aan. · 5 → Bijna! Je mist er één. Vergeet de onderkant niet.",
+   "ouderzin": "Je kind telt de vlakken (platte kanten) van een ruimtefiguur, ook die je niet ziet.",
+   "getallenruimte": "n.v.t.",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "tekening van een kubus met doorzichtige of gestippelde achterkant (verplicht: 'tel ook wat je niet ziet') — de Claude-tekenaar kent geen ruimtefiguur",
+    "asciiSchets": false,
+    "jsRender": {
+     "soort": "ruimtefiguur",
+     "figuur": "kubus"
+    },
+    "svgBestanden": [],
+    "nietLiveZonderBeeld": true
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K5:6d8cdd25-3456-4217-a211-a5ad6a015e74",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "vlakken van een kubus",
+    "claudeUitleg": "Een kubus heeft 6 vlakken, 8 hoekpunten en 12 ribben.",
+    "claudeStrategie": "ook de achterkant tellen",
+    "claudeThema": "Voetbal",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 3,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "3",
+      "denkfout": "een-ernaast"
+     },
+     {
+      "fout": "7",
+      "denkfout": "een-ernaast"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "3",
+      "uitleg": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee."
+     },
+     {
+      "stap": null,
+      "fout": "7",
+      "uitleg": "Je hebt er een dubbel geteld. Ga systematisch rond: boven, onder, dan de zijkanten."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "6d8cdd25-3456-4217-a211-a5ad6a015e74",
+    "claudeDoel": "K5",
+    "claudeDoelTitel": "Ruimtelijke figuren",
+    "claudeGroep": 4,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "B5 begrip uitgelegd boven de vraag (Didactiek §4)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E03",
+    "voorstelDoel": null,
+    "regel": "D-VLAKKEN",
+    "reden": "Didactiek 1 okt (G4-twijfel G4-MKU-E04-claude-bank-twijfel-005): vlakken kubus/balk (= 6 vlakjes bouwplaat)",
+    "somtype": "[ruimtefiguur] Een vlak is een platte kant. ⏎ Dit is een [figuur]. Hoeveel vlakken heeft een [figuur]? (Tel ook wat je niet ziet.)",
+    "nietLiveZonderBeeld": true,
+    "didactiekG4": {
+     "twijfelId": "G4-MKU-E04-claude-bank-twijfel-005",
+     "groep": "begrippen",
+     "subregel": "vlakken kubus/balk (= 6 vlakjes bouwplaat)",
+     "redencode": "VLAKKEN",
+     "didactiek": {
+      "besluit": "G4",
+      "doel": "G4-MKU-E03"
+     },
+     "overzicht": null
+    },
+    "vorigId": "G4-MKU-E04-claude-bank-twijfel-005",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[ruimtefiguur] Een vlak is een platte kant. ⏎ Dit is een [figuur]. Hoeveel vlakken heeft een [figuur]? (Tel ook wat je niet ziet.)",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "[ruimtefiguur] Een vlak is een platte kant. ⏎ Dit is een [figuur]. Hoeveel vlakken heeft een [figuur]? (Tel ook wat je niet ziet.)"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": 6,
+    "methode": "ruimtefiguur tellen",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord − 2 of meer",
+     "soort": "alleen wat je ziet",
+     "bron": "claude",
+     "tekst": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee.",
+     "perItem": false,
+     "match": {
+      "totEnMet": 4
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 1",
+     "soort": "dubbel geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt er één dubbel geteld. Wijs elke platte kant maar één keer aan.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord − 1",
+     "soort": "één te weinig",
+     "bron": "nieuw",
+     "tekst": "Bijna! Je mist er één. Vergeet de onderkant niet.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Wijs elke platte kant één keer aan. Vergeet de achterkant en de onderkant niet.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Wijs elke platte kant één keer aan. Vergeet de achterkant en de onderkant niet."
+  },
+  {
+   "id": "G4-MKU-E03-claude-bank-003",
+   "nr": "003",
+   "doelId": "G4-MKU-E03",
+   "niveau": "toepassen",
+   "niveauKind": "Oefenen",
+   "type": "kale",
+   "opgave": "Een vlak is een platte kant.\nDit is een piramide. Hoeveel vlakken heeft een piramide? (Tel ook wat je niet ziet.)",
+   "opgaveStappen": null,
+   "opties": null,
+   "optiesTekst": null,
+   "antwoord": "5",
+   "antwoordDetail": null,
+   "hint": "Een vlak is een platte kant. Draai de figuur in je hoofd rond: ook achter en onder zitten vlakken.",
+   "sterkereHint": "Tel eerst de vlakken die je ziet. Tel dan de vlakken aan de achterkant en de onderkant erbij.",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "3",
+     "uitleg": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee.",
+     "regel": "fout = antwoord − 2 of meer",
+     "soort": "alleen wat je ziet",
+     "bron": "claude"
+    },
+    {
+     "stap": null,
+     "fout": "6",
+     "uitleg": "Je hebt er één dubbel geteld. Wijs elke platte kant maar één keer aan.",
+     "regel": "fout = antwoord + 1",
+     "soort": "dubbel geteld",
+     "bron": "claude-taalfix"
+    },
+    {
+     "stap": null,
+     "fout": "4",
+     "uitleg": "Bijna! Je mist er één. Vergeet de onderkant niet.",
+     "regel": "fout = antwoord − 1",
+     "soort": "één te weinig",
+     "bron": "nieuw"
+    }
+   ],
+   "foutHintsTekst": "3 → Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee. · 6 → Je hebt er één dubbel geteld. Wijs elke platte kant maar één keer aan. · 4 → Bijna! Je mist er één. Vergeet de onderkant niet.",
+   "ouderzin": "Je kind telt de vlakken (platte kanten) van een ruimtefiguur, ook die je niet ziet.",
+   "getallenruimte": "n.v.t.",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "tekening van een piramide met doorzichtige of gestippelde achterkant (verplicht: 'tel ook wat je niet ziet'); met een vierkant grondvlak, anders klopt 5 niet — de Claude-tekenaar kent geen ruimtefiguur",
+    "asciiSchets": false,
+    "jsRender": {
+     "soort": "ruimtefiguur",
+     "figuur": "piramide"
+    },
+    "svgBestanden": [],
+    "nietLiveZonderBeeld": true
+   },
+   "husselen": null,
+   "husselPlan": null,
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K5:3035b6c9-535f-4446-b91f-32eed933bdcd",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "vlakken van een piramide",
+    "claudeUitleg": "Een piramide heeft 5 vlakken, 5 hoekpunten en 8 ribben.",
+    "claudeStrategie": "ook de achterkant tellen",
+    "claudeThema": "Dieren verzorgen",
+    "claudeAntwoordType": "geheel",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 3,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "3",
+      "denkfout": "een-ernaast"
+     },
+     {
+      "fout": "6",
+      "denkfout": "een-ernaast"
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "3",
+      "uitleg": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee."
+     },
+     {
+      "stap": null,
+      "fout": "6",
+      "uitleg": "Je hebt er een dubbel geteld. Ga systematisch rond: boven, onder, dan de zijkanten."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "3035b6c9-535f-4446-b91f-32eed933bdcd",
+    "claudeDoel": "K5",
+    "claudeDoelTitel": "Ruimtelijke figuren",
+    "claudeGroep": 4,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": [
+     "B5 begrip uitgelegd boven de vraag (Didactiek §4)"
+    ]
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E03",
+    "voorstelDoel": null,
+    "regel": "D-VLAKKEN-PIRAMIDE",
+    "reden": "Didactiek 1 okt (G4-twijfel G4-MKU-E04-claude-bank-twijfel-006): vlakken piramide (= stukken bouwplaat)",
+    "somtype": "[ruimtefiguur] Een vlak is een platte kant. ⏎ Dit is een [figuur]. Hoeveel vlakken heeft een [figuur]? (Tel ook wat je niet ziet.)",
+    "nietLiveZonderBeeld": true,
+    "didactiekG4": {
+     "twijfelId": "G4-MKU-E04-claude-bank-twijfel-006",
+     "groep": "begrippen",
+     "subregel": "vlakken piramide (= stukken bouwplaat)",
+     "redencode": "VLAKKEN-PIRAMIDE",
+     "didactiek": {
+      "besluit": "G4",
+      "doel": "G4-MKU-E03"
+     },
+     "overzicht": null
+    },
+    "vorigId": "G4-MKU-E04-claude-bank-twijfel-006",
+    "duplicaatVan": null,
+    "somtypeNr": 1,
+    "somtypeNrOrigineel": 1,
+    "somtypeOrigineel": "[ruimtefiguur] Een vlak is een platte kant. ⏎ Dit is een [figuur]. Hoeveel vlakken heeft een [figuur]? (Tel ook wat je niet ziet.)",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 1,
+     "somtype": "[ruimtefiguur] Een vlak is een platte kant. ⏎ Dit is een [figuur]. Hoeveel vlakken heeft een [figuur]? (Tel ook wat je niet ziet.)"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": 5,
+    "methode": "ruimtefiguur tellen",
+    "mcAntwoordInOpties": null,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "fout = antwoord − 2 of meer",
+     "soort": "alleen wat je ziet",
+     "bron": "claude",
+     "tekst": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee.",
+     "perItem": false,
+     "match": {
+      "totEnMet": 3
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord + 1",
+     "soort": "dubbel geteld",
+     "bron": "claude-taalfix",
+     "tekst": "Je hebt er één dubbel geteld. Wijs elke platte kant maar één keer aan.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "fout = antwoord − 1",
+     "soort": "één te weinig",
+     "bron": "nieuw",
+     "tekst": "Bijna! Je mist er één. Vergeet de onderkant niet.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Wijs elke platte kant één keer aan. Vergeet de achterkant en de onderkant niet.",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Wijs elke platte kant één keer aan. Vergeet de achterkant en de onderkant niet."
+  },
+  {
+   "id": "G4-MKU-E03-claude-bank-004",
+   "nr": "004",
+   "doelId": "G4-MKU-E03",
+   "niveau": "basis",
+   "niveauKind": "Opwarmen",
+   "type": "meerkeuze",
+   "opgave": "Hoe heet deze ruimtelijke figuur?",
+   "opgaveStappen": null,
+   "opties": [
+    {
+     "letter": "A",
+     "tekst": "bol"
+    },
+    {
+     "letter": "B",
+     "tekst": "piramide"
+    },
+    {
+     "letter": "C",
+     "tekst": "balk"
+    }
+   ],
+   "optiesTekst": "A) bol · B) piramide · C) balk",
+   "antwoord": "piramide",
+   "antwoordDetail": {
+    "juisteOptie": "B",
+    "juisteOptieTekst": "piramide"
+   },
+   "hint": "Kijk naar de onderkant en naar de bovenkant van de figuur.",
+   "sterkereHint": "Hij lijkt op een tent met een punt bovenaan. Welke naam hoort daarbij?",
+   "foutHints": [
+    {
+     "stap": null,
+     "fout": "bol",
+     "uitleg": "Een bol ziet er anders uit: denk aan een voetbal.",
+     "regel": "Claudes tekst bij de foute optie (tekst per item)",
+     "soort": "andere figuur",
+     "bron": "claude (per item)"
+    },
+    {
+     "stap": null,
+     "fout": "balk",
+     "uitleg": "Een balk ziet er anders uit: denk aan een schoenendoos.",
+     "regel": "Claudes tekst bij de foute optie (tekst per item)",
+     "soort": "andere figuur",
+     "bron": "claude (per item)"
+    }
+   ],
+   "foutHintsTekst": "bol → Een bol ziet er anders uit: denk aan een voetbal. · balk → Een balk ziet er anders uit: denk aan een schoenendoos.",
+   "ouderzin": "Je kind herkent een piramide.",
+   "getallenruimte": "n.v.t.",
+   "context": "laag",
+   "visual": {
+    "nodig": true,
+    "toelichting": "tekening van een piramide verplicht (Didactiek §5) — de Claude-tekenaar kent geen ruimtefiguur",
+    "asciiSchets": false,
+    "jsRender": {
+     "soort": "ruimtefiguur",
+     "figuur": "piramide"
+    },
+    "svgBestanden": [],
+    "nietLiveZonderBeeld": true
+   },
+   "husselen": true,
+   "husselPlan": {
+    "appHusselt": true,
+    "reden": "standaard husselen",
+    "vasteOpties": []
+   },
+   "rekenmachine": false,
+   "deelsomInvoer": false,
+   "subfocus": null,
+   "ui": null,
+   "bronVariant": "claude-bank:K5:dd5c6593-dfba-4a45-81de-fcebcc126d75",
+   "kopExtra": null,
+   "extraVelden": {
+    "claudeKaleSom": "figuur: piramide",
+    "claudeUitleg": "Dit is een piramide. Denk aan een tent met een punt.",
+    "claudeStrategie": "vormen herkennen",
+    "claudeThema": "Dino's en fossielen",
+    "claudeAntwoordType": "tekst",
+    "claudeVorm": "beeld",
+    "claudeNiveau": 1,
+    "niveauVoorlopig": true,
+    "claudeDenkfouten": [
+     {
+      "fout": "balk",
+      "denkfout": null
+     },
+     {
+      "fout": "bol",
+      "denkfout": null
+     }
+    ],
+    "mergeFoutHints": [],
+    "claudeFoutHints": [
+     {
+      "stap": null,
+      "fout": "balk",
+      "uitleg": "Een balk ziet er anders uit: denk aan een schoenendoos."
+     },
+     {
+      "stap": null,
+      "fout": "bol",
+      "uitleg": "Een bol ziet er anders uit: denk aan een voetbal."
+     }
+    ]
+   },
+   "bron": {
+    "bestand": "vragen.json",
+    "type": "claude-bank",
+    "claudeId": "dd5c6593-dfba-4a45-81de-fcebcc126d75",
+    "claudeDoel": "K5",
+    "claudeDoelTitel": "Ruimtelijke figuren",
+    "claudeGroep": 4,
+    "claudeBron": "gegenereerd",
+    "claudeVersie": 1,
+    "repo": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f"
+   },
+   "licentie": {
+    "licentie": "CC BY-SA 4.0",
+    "licentieUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.nl",
+    "naamsvermelding": "Leermees open vragenbank, CC BY-SA 4.0, leermees.nl",
+    "bron": "https://github.com/Davesgit/leermees-vragenbank",
+    "commit": "7da3257a196386c700310006da60a385fbbe114f",
+    "gewijzigd": true,
+    "wijzigingen": []
+   },
+   "opBord": false,
+   "merge": {
+    "status": "gemapt",
+    "doel": "G4-MKU-E03",
+    "voorstelDoel": null,
+    "regel": "D-PIRAMIDE-NAAM",
+    "reden": "Didactiek 1 okt (G4-twijfel G4-MKU-E04-claude-bank-twijfel-007): piramide herkennen (naam staat in E03)",
+    "somtype": "[ruimtefiguur] Hoe heet deze ruimtelijke figuur?",
+    "nietLiveZonderBeeld": true,
+    "didactiekG4": {
+     "twijfelId": "G4-MKU-E04-claude-bank-twijfel-007",
+     "groep": "vormnaam",
+     "subregel": "piramide herkennen (naam staat in E03)",
+     "redencode": "PIRAMIDE-NAAM",
+     "didactiek": {
+      "besluit": "G4",
+      "doel": "G4-MKU-E03"
+     },
+     "overzicht": null
+    },
+    "vorigId": "G4-MKU-E04-claude-bank-twijfel-007",
+    "duplicaatVan": null,
+    "somtypeNr": 2,
+    "somtypeNrOrigineel": 2,
+    "somtypeOrigineel": "[ruimtefiguur] Hoe heet deze ruimtelijke figuur?",
+    "hints": {
+     "batch": "batch3.json",
+     "nr": 2,
+     "somtype": "[ruimtefiguur] Hoe heet deze ruimtelijke figuur?"
+    }
+   },
+   "controle": {
+    "antwoord": "ok",
+    "verwacht": "piramide",
+    "methode": "vormnaam",
+    "mcAntwoordInOpties": true,
+    "foutAntwoordGelijkAanGoed": false,
+    "zonderFoutHints": false,
+    "claudeVorm": {
+     "antwoord": "n.v.t.",
+     "verwacht": null,
+     "methode": "geen automatische controle"
+    },
+    "dubbeleOptie": false,
+    "notatie": [],
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "Claudes tekst bij de foute optie (tekst per item)",
+     "soort": "andere figuur",
+     "bron": "claude",
+     "tekst": null,
+     "perItem": true,
+     "match": {
+      "waarden": [
+       "balk",
+       "bol"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Kijk naar de bovenkant. Welke figuur heeft een punt?",
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Kijk naar de bovenkant. Welke figuur heeft een punt?"
+  }
+ ]
+}

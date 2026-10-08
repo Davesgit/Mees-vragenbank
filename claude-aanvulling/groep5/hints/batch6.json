@@ -1,0 +1,1157 @@
+{
+ "batch": "batch6",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G5-merge, batch 6 = MEET-E07 geld, MKU-E02 ruimtefiguren, VBN-E01 staafdiagram en tabel, VBN-E03 patronen, VERH-E01 kwart). Koppeling: doel + nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint; 'claude-taalfix' = vaste tekst op Claudes sleutels (regel 'Claudes sleutel: <denkfout>', #48); 'claude' met 'tekst per item' = Claudes tekst per foute optie blijft (VBN-E03); 'nieuw' = eigen tekst. Geld: 'fout = antwoord ± €1' en '± 10 cent' (#32); tabel: 'fout = andere cel / som van de rij / som van de kolom / som van twee cellen / verschil van twee cellen' (#42).",
+ "somtypen": [
+  {
+   "doel": "G5-MEET-E07",
+   "nr": 1,
+   "somtype": "[geld] Hoeveel [ding] zie je?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[geld] Hoeveel [ding] zie je?",
+   "hint1": "Begin bij het geld dat het meest waard is.",
+   "hint2": "Tel de rest er één voor één bij. Een euro is honderd cent.",
+   "ouderzin": "Je kind telt munten en briefjes bij elkaar en kiest het bedrag.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "te weinig geteld",
+     "claudeDenkfout": "geld-verkeerd-geteld",
+     "regel": "Claudes sleutel: geld-verkeerd-geteld",
+     "tekst": "Dat is te weinig. Leg het geld op volgorde van groot naar klein en tel het één voor één op.",
+     "claudeTekst": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op.",
+     "waarom": "alle sleutels liggen onder het antwoord (185/185)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "euro en cent door elkaar",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "tekst": "Dat is te veel. Kijk goed naar elke munt: is het een munt van cent of van euro? Honderd cent is één euro.",
+     "claudeTekst": "Kijk goed naar elke munt. Is het een munt van cent of van euro? Tel dan alles op.",
+     "waarom": "alle sleutels liggen boven het antwoord (92/92); 'te veel' i.p.v. 'veel te veel' (3 sleutels zijn geen tien keer zo veel)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal stuks geld (3)",
+     "claudeDenkfout": null,
+     "regel": "€3",
+     "tekst": "Je hebt geteld hoeveel stukken geld er zijn. De vraag is hoeveel geld het samen is. Kijk wat elk stuk waard is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal stuks geld (4)",
+     "claudeDenkfout": null,
+     "regel": "€4",
+     "tekst": "Je hebt geteld hoeveel stukken geld er zijn. De vraag is hoeveel geld het samen is. Kijk wat elk stuk waard is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Leg het geld op volgorde van groot naar klein. Tel het één voor één bij elkaar. Een euro is honderd cent."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E07",
+   "nr": 2,
+   "somtype": "[geld] Je hebt dit geld. Je koopt iets van €#. Hoeveel houd je over?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[geld] Je hebt dit geld. Je koopt iets van €#. Hoeveel houd je over?",
+   "hint1": "Tel eerst al het geld. Begin bij het geld dat het meest waard is.",
+   "hint2": "Haal dan de prijs ervan af. Een euro is honderd cent.",
+   "ouderzin": "Je kind telt munten en briefjes en rekent uit hoeveel er overblijft na een aankoop.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "prijs erbij gedaan",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Je hebt de prijs bij het geld opgeteld. Je koopt iets: dan gaat het geld eraf.",
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "waarom": "alle sleutels zijn al het geld plus de prijs (63/63)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de prijs",
+     "claudeDenkfout": null,
+     "regel": "fout = de prijs",
+     "tekst": "Dat is de prijs. De vraag is hoeveel geld je overhoudt. Tel eerst al het geld. Haal dan de prijs eraf."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "euro en cent door elkaar",
+     "claudeDenkfout": "kommagetal-als-geheel",
+     "regel": "Claudes sleutel: kommagetal-als-geheel",
+     "tekst": "Dat is te veel. Kijk goed naar elke munt: is het een munt van cent of van euro? Honderd cent is één euro.",
+     "claudeTekst": "Tel eerst al het geld. Is een munt cent of euro? Haal dan de prijs eraf.",
+     "waarom": "alle sleutels liggen boven het antwoord (63/63)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "te weinig",
+     "claudeDenkfout": "geld-verkeerd-geteld",
+     "regel": "Claudes sleutel: geld-verkeerd-geteld",
+     "tekst": "Dat is te weinig. Heb je al het geld geteld? Leg het op volgorde van groot naar klein en tel het één voor één op. Haal dan de prijs eraf.",
+     "claudeTekst": "Leg de munten op volgorde van groot naar klein en tel ze één voor één op. Bij teruggeven: vul aan vanaf de prijs tot het betaalde bedrag.",
+     "waarom": "alle sleutels liggen onder het antwoord (90/90); een vraag, want het kan tellen of aftrekken zijn"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel eerst al het geld, van groot naar klein. Haal dan de prijs eraf. Een euro is honderd cent."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E07",
+   "nr": 3,
+   "somtype": "Je koopt drie [ding]. Ze kosten €# en €# en €#. Je betaalt met €#. Hoeveel krijg je terug?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Je koopt drie [ding] van €#, €# en €#. Je betaalt met €#. Hoeveel krijg je terug?",
+   "hint1": "Tel eerst de drie prijzen bij elkaar op. Dan weet je wat het samen kost.",
+   "hint2": "Vul dan aan tot het geld waarmee je betaalt: eerst tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij.",
+   "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt als het drie dingen koopt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "wat het kost",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af.",
+     "claudeTekst": "€7,44 is wat het kost. De vraag is wat je terugkrijgt.",
+     "waarom": "alle sleutels zijn de som van de drie prijzen (#3 7/7, #5 1/1)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de prijs van één ding",
+     "claudeDenkfout": null,
+     "regel": "fout = de prijs",
+     "tekst": "Dat is de prijs van één ding. Tel eerst de drie prijzen bij elkaar op. Haal dat dan van het geld waarmee je betaalt af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één euro te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + €1",
+     "tekst": "Dat is één euro te veel. Vul eerst aan tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij tot het geld waarmee je betaalt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één euro te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − €1",
+     "tekst": "Dat is één euro te weinig. Tel de hele euro's nog eens: van de hele euro tot het geld waarmee je betaalt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien cent te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10 cent",
+     "tekst": "Bijna! Dat is tien cent te weinig. Tel de centen nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien cent te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10 cent",
+     "tekst": "Bijna! Dat is tien cent te veel. Tel de centen nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel eerst de prijzen bij elkaar op. Vul dan aan: eerst tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij tot het geld waarmee je betaalt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "€8,99 is wat het kost. De vraag is wat je terugkrijgt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "€9,74 is wat het kost. De vraag is wat je terugkrijgt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "€10,16 is wat het kost. De vraag is wat je terugkrijgt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "€9,97 is wat het kost. De vraag is wat je terugkrijgt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "€12,83 is wat het kost. De vraag is wat je terugkrijgt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "€10,20 is wat het kost. De vraag is wat je terugkrijgt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Vul aan tot de hele euro en tel dan de euro's tot het betaalde bedrag.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Tel de centen nog eens na.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "Je koopt drie [ding] van €#, €# en €#. Je betaalt met €#. Hoeveel krijg je terug?",
+    "naar": "Je koopt drie [ding]. Ze kosten €# en €# en €#. Je betaalt met €#. Hoeveel krijg je terug?",
+    "op": "2026-10-01"
+   }
+  },
+  {
+   "doel": "G5-MEET-E07",
+   "nr": 4,
+   "somtype": "Een [ding] kost €#. Je betaalt met €#. Hoeveel krijg je terug?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Een [ding] kost €#. Je betaalt met €#. Hoeveel krijg je terug?",
+   "hint1": "Hoeveel is het van de prijs tot de volgende hele euro? Begin daarmee.",
+   "hint2": "Tel dan de hele euro's erbij tot het geld waarmee je betaalt.",
+   "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt bij één aankoop.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Je hebt de prijs en het geld waarmee je betaalt bij elkaar opgeteld. Terugkrijgen is het verschil: haal de prijs van het geld af.",
+     "claudeTekst": "Terugkrijgen is het verschil tussen wat je betaalt en wat het kost. Dat is aftrekken.",
+     "waarom": "alle sleutels zijn prijs plus betaald (4/4)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de prijs",
+     "claudeDenkfout": null,
+     "regel": "fout = de prijs",
+     "tekst": "Dat is de prijs. De vraag is hoeveel je terugkrijgt. Haal de prijs van het geld waarmee je betaalt af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één euro te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + €1",
+     "tekst": "Dat is één euro te veel. Vul eerst aan tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij tot het geld waarmee je betaalt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één euro te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − €1",
+     "tekst": "Dat is één euro te weinig. Tel de hele euro's nog eens: van de hele euro tot het geld waarmee je betaalt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien cent te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10 cent",
+     "tekst": "Bijna! Dat is tien cent te weinig. Tel de centen nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien cent te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10 cent",
+     "tekst": "Bijna! Dat is tien cent te veel. Tel de centen nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Vul aan van de prijs tot de volgende hele euro. Tel dan de hele euro's erbij tot het geld waarmee je betaalt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk of je bij het aanvullen tot de hele euro al een euro hebt gebruikt. Die tel je niet dubbel.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MEET-E07",
+   "nr": 5,
+   "somtype": "Je koopt drie zakken noten van €#, €# en €#. Je betaalt met €#. Hoeveel krijg je terug?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Je koopt drie zakken noten van €#, €# en €#. Je betaalt met €#. Hoeveel krijg je terug?",
+   "hint1": "Tel eerst de drie prijzen bij elkaar op. Dan weet je wat het samen kost.",
+   "hint2": "Vul dan aan tot het geld waarmee je betaalt: eerst tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij.",
+   "ouderzin": "Je kind rekent uit hoeveel geld het terugkrijgt als het drie dingen koopt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "wat het kost",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af.",
+     "claudeTekst": "€7,56 is wat het kost. De vraag is wat je terugkrijgt.",
+     "waarom": "alle sleutels zijn de som van de drie prijzen (#3 7/7, #5 1/1)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de prijs van één ding",
+     "claudeDenkfout": null,
+     "regel": "fout = de prijs",
+     "tekst": "Dat is de prijs van één ding. Tel eerst de drie prijzen bij elkaar op. Haal dat dan van het geld waarmee je betaalt af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één euro te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + €1",
+     "tekst": "Dat is één euro te veel. Vul eerst aan tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij tot het geld waarmee je betaalt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één euro te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − €1",
+     "tekst": "Dat is één euro te weinig. Tel de hele euro's nog eens: van de hele euro tot het geld waarmee je betaalt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien cent te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10 cent",
+     "tekst": "Bijna! Dat is tien cent te weinig. Tel de centen nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tien cent te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10 cent",
+     "tekst": "Bijna! Dat is tien cent te veel. Tel de centen nog eens na."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel eerst de prijzen bij elkaar op. Vul dan aan: eerst tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij tot het geld waarmee je betaalt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Vul aan tot de hele euro en tel dan de euro's tot het betaalde bedrag.",
+     "claudeDenkfout": "onthouden-vergeten",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Tel de centen nog eens na.",
+     "claudeDenkfout": "tiental-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MKU-E02",
+   "nr": 1,
+   "somtype": "[ruimtefiguur] Een hoekpunt is een punt waar randen samenkomen. ⏎ Dit is een kubus. Hoeveel [ding] heeft een kubus? (Tel ook wat je niet ziet.)",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[ruimtefiguur] Een hoekpunt is een punt waar randen samenkomen. ⏎ Dit is een kubus. Hoeveel [ding] heeft een kubus? (Tel ook wat je niet ziet.)",
+   "hint1": "Tel eerst de hoekpunten aan de bovenkant van de kubus.",
+   "hint2": "Tel dan de hoekpunten aan de onderkant erbij. Tel ook de hoekpunten die je niet ziet.",
+   "ouderzin": "Je kind telt de hoekpunten van een kubus, ook de hoekpunten die je niet ziet.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is er één te veel. Heb je er één dubbel geteld? Tel eerst de bovenkant, dan de onderkant."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Heb je de hoekpunten dubbel geteld? Tel eerst de bovenkant, dan de onderkant."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is er één te weinig. Heb je ook de hoekpunten geteld die je niet ziet?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Heb je ook de hoekpunten geteld die je niet ziet? De achterkant en de onderkant tellen ook mee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel eerst de bovenkant, dan de onderkant. Tel ook de hoekpunten die je niet ziet."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Je hebt er een dubbel geteld. Ga systematisch rond: boven, onder, dan de zijkanten.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-MKU-E02",
+   "nr": 2,
+   "somtype": "[ruimtefiguur] Een vlak is een platte kant van de figuur. Een ribbe is de rand waar twee vlakken tegen elkaar zitten. ⏎ Dit is een balk. Hoeveel [ding] heeft een balk? (Tel ook wat je niet ziet.)",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[ruimtefiguur] Een ribbe is de rand waar twee vlakken tegen elkaar zitten. ⏎ Dit is een balk. Hoeveel [ding] heeft een balk? (Tel ook wat je niet ziet.)",
+   "hint1": "Tel eerst de ribben van het bovenvlak. Tel dan de ribben van het ondervlak.",
+   "hint2": "Tel tot slot de ribben die van boven naar beneden lopen. Tel ook de ribben die je niet ziet.",
+   "ouderzin": "Je kind telt de ribben van een balk, ook de ribben die je niet ziet.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is er één te veel. Heb je er één dubbel geteld? Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Heb je de ribben dubbel geteld? Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is er één te weinig. Heb je ook de ribben geteld die je niet ziet?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal vlakken",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 6",
+     "tekst": "Dat is te weinig. Zes is het aantal vlakken. Je telt de ribben: de randen waar twee vlakken tegen elkaar zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Heb je ook de ribben geteld die je niet ziet? De achterkant en de onderkant tellen ook mee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden. Tel ook de ribben die je niet ziet."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Je hebt er een dubbel geteld. Ga systematisch rond: boven, onder, dan de zijkanten.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "[ruimtefiguur] Een ribbe is de rand waar twee vlakken tegen elkaar zitten. ⏎ Dit is een balk. Hoeveel [ding] heeft een balk? (Tel ook wat je niet ziet.)",
+    "naar": "[ruimtefiguur] Een vlak is een platte kant van de figuur. Een ribbe is de rand waar twee vlakken tegen elkaar zitten. ⏎ Dit is een balk. Hoeveel [ding] heeft een balk? (Tel ook wat je niet ziet.)",
+    "op": "2026-10-01"
+   }
+  },
+  {
+   "doel": "G5-MKU-E02",
+   "nr": 3,
+   "somtype": "[ruimtefiguur] Een vlak is een platte kant van de figuur. Een ribbe is de rand waar twee vlakken tegen elkaar zitten. ⏎ Dit is een kubus. Hoeveel [ding] heeft een kubus? (Tel ook wat je niet ziet.)",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[ruimtefiguur] Een ribbe is de rand waar twee vlakken tegen elkaar zitten. ⏎ Dit is een kubus. Hoeveel [ding] heeft een kubus? (Tel ook wat je niet ziet.)",
+   "hint1": "Tel eerst de ribben van het bovenvlak. Tel dan de ribben van het ondervlak.",
+   "hint2": "Tel tot slot de ribben die van boven naar beneden lopen. Tel ook de ribben die je niet ziet.",
+   "ouderzin": "Je kind telt de ribben van een kubus, ook de ribben die je niet ziet.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is er één te veel. Heb je er één dubbel geteld? Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2 of meer",
+     "tekst": "Dat is te veel. Heb je de ribben dubbel geteld? Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is er één te weinig. Heb je ook de ribben geteld die je niet ziet?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal vlakken",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 6",
+     "tekst": "Dat is te weinig. Zes is het aantal vlakken. Je telt de ribben: de randen waar twee vlakken tegen elkaar zitten."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2 of meer",
+     "tekst": "Dat is te weinig. Heb je ook de ribben geteld die je niet ziet? De achterkant en de onderkant tellen ook mee."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden. Tel ook de ribben die je niet ziet."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je telt alleen wat je ziet. De achterkant en de onderkant tellen ook mee.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    },
+    {
+     "claudeTekst": "Je hebt er een dubbel geteld. Ga systematisch rond: boven, onder, dan de zijkanten.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "[ruimtefiguur] Een ribbe is de rand waar twee vlakken tegen elkaar zitten. ⏎ Dit is een kubus. Hoeveel [ding] heeft een kubus? (Tel ook wat je niet ziet.)",
+    "naar": "[ruimtefiguur] Een vlak is een platte kant van de figuur. Een ribbe is de rand waar twee vlakken tegen elkaar zitten. ⏎ Dit is een kubus. Hoeveel [ding] heeft een kubus? (Tel ook wat je niet ziet.)",
+    "op": "2026-10-01"
+   }
+  },
+  {
+   "doel": "G5-VBN-E01",
+   "nr": 1,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Hoeveel [naam] zijn er?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Hoeveel [naam] zijn er?",
+   "hint1": "Zoek de staaf van het ding uit de vraag. Welk getal hoort bij de top van de staaf? Staat daar geen getal, zoek dan het getal vlak eronder.",
+   "hint2": "Kijk in de vraag hoeveel elk streepje is. Tel vanaf dat getal verder, zo veel per streepje, tot de top van de staaf.",
+   "ouderzin": "Je kind leest een staafdiagram af. Elk streepje is meer dan één.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "streepjes geteld",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord gedeeld door getal1",
+     "tekst": "Je hebt de streepjes geteld. Kijk in de vraag hoeveel elk streepje is. Tel bij elk streepje zo veel verder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vlak onder de top",
+     "claudeDenkfout": null,
+     "regel": "fout = het getal vlak onder de top",
+     "tekst": "Dat is het getal vlak onder de top. Tel de streepjes erboven er nog bij: kijk in de vraag hoeveel elk streepje is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één streepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Bijna! Dat is één streepje te veel. Kijk goed waar de top van de staaf is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één streepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Bijna! Dat is één streepje te weinig. Kijk goed waar de top van de staaf is."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere staaf",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "tekst": "Dat is een andere staaf. Zoek de staaf van het ding uit de vraag.",
+     "claudeTekst": "Leg je vinger op de rij of staaf uit de vraag en schuif hem naar de as. Kijk hoeveel elk streepje waard is.",
+     "waarom": "na de streepjesregels zijn alle overgebleven sleutels de waarde van een andere staaf (75/75)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de staaf van het ding uit de vraag. Staat er een getal bij de top? Dan is dat het antwoord. Staat er geen getal, zoek dan het getal vlak eronder. Tel de streepjes erboven erbij: kijk in de vraag hoeveel elk streepje is."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-VBN-E01",
+   "nr": 2,
+   "somtype": "[staafdiagram] Elk streepje is #. ⏎ Hoeveel [naam] zijn er meer dan [naam]?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[staafdiagram] Elk streepje is #. ⏎ Hoeveel [naam] zijn er meer dan [naam]?",
+   "hint1": "Zoek de twee staven uit de vraag. Lees bij allebei af hoeveel het er zijn. Kijk in de vraag hoeveel elk streepje is.",
+   "hint2": "Hoeveel meer? Haal het kleinste getal van het grootste af.",
+   "ouderzin": "Je kind leest twee staven af in een staafdiagram en rekent uit hoeveel meer het ene is dan het andere.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Je hebt de twee staven opgeteld. De vraag is hoeveel meer: haal het kleinste getal van het grootste af.",
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "waarom": "alle sleutels zijn de twee staven uit de vraag opgeteld (52/52)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één staaf",
+     "claudeDenkfout": "andere-deel-genomen",
+     "regel": "Claudes sleutel: andere-deel-genomen",
+     "tekst": "Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af.",
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "waarom": "alle sleutels zijn de waarde van één van de twee staven uit de vraag (38/38)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "streepjes geteld",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord gedeeld door getal1",
+     "tekst": "Je hebt geteld hoeveel streepjes de ene staaf hoger is. Kijk in de vraag hoeveel elk streepje is. Tel per streepje zo veel verder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één streepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + getal1",
+     "tekst": "Bijna! Dat is één streepje te veel. Kijk nog eens goed waar de toppen van de twee staven zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één streepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − getal1",
+     "tekst": "Bijna! Dat is één streepje te weinig. Kijk nog eens goed waar de toppen van de twee staven zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees de twee staven uit de vraag af. Kijk hoeveel elk streepje is. Hoeveel meer? Haal het kleinste getal van het grootste af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Leg je vinger op de rij of staaf uit de vraag en schuif hem naar de as. Kijk hoeveel elk streepje waard is.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "één tekst voor elke fout ('rij of staaf'); nu per soort fout (streepjes, andere staaf)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-VBN-E01",
+   "nr": 3,
+   "somtype": "[tabel] Hoeveel [naam] in totaal?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[tabel] Hoeveel [naam] in totaal?",
+   "hint1": "Zoek in de tabel de rij van het ding uit de vraag. Een rij loopt van links naar rechts.",
+   "hint2": "Tel alle getallen in die rij bij elkaar. Sla er geen over.",
+   "ouderzin": "Je kind telt alle getallen in één rij van een tabel bij elkaar op.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "andere rij",
+     "claudeDenkfout": null,
+     "regel": "fout = som van de rij",
+     "tekst": "Dat is het totaal van een andere rij. Zoek eerst de rij van het ding uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "kolom opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = som van de kolom",
+     "tekst": "Je hebt een kolom opgeteld. Tel de getallen in de rij van het ding uit de vraag bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één getal",
+     "claudeDenkfout": null,
+     "regel": "fout = andere cel",
+     "tekst": "Heb je maar één getal uit de tabel genomen? In totaal betekent: tel alle getallen in de rij bij elkaar."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "niet alles opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = som van twee cellen",
+     "tekst": "Je hebt niet alles opgeteld. Tel alle getallen in de rij bij elkaar. Sla er geen over."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "niet alles opgeteld (één vergeten)",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Je hebt niet alles opgeteld. Tel alle getallen in de rij bij elkaar. Sla er geen over.",
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "waarom": "alle sleutels zijn het totaal van de rij min één getal uit die rij (27/27)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = verschil van twee cellen",
+     "tekst": "Je hebt getallen van elkaar afgehaald. In totaal betekent: alles bij elkaar optellen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel alle getallen in de rij van het ding uit de vraag bij elkaar: van elke dag één. Tel de andere rijen niet mee."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "te vaag: zegt niet wat er mis is"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-VBN-E01",
+   "nr": 4,
+   "somtype": "[tabel] Hoeveel [naam] meer op [naam] dan op [naam]?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "[tabel] Hoeveel [naam] meer op [naam] dan op [naam]?",
+   "hint1": "Zoek in de tabel de rij van het ding uit de vraag. Een rij loopt van links naar rechts. Zoek in die rij de getallen van de twee dagen.",
+   "hint2": "Hoeveel meer? Haal het kleinste getal van het grootste af.",
+   "ouderzin": "Je kind zoekt twee getallen in een tabel en rekent uit hoeveel meer het ene is dan het andere.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één getal",
+     "claudeDenkfout": null,
+     "regel": "fout = andere cel",
+     "tekst": "Heb je één getal uit de tabel genomen? Je hebt er twee nodig: die van de twee dagen, in de rij van het ding. Haal dan het kleinste getal van het grootste af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "som van de rij",
+     "claudeDenkfout": null,
+     "regel": "fout = som van de rij",
+     "tekst": "Je hebt een hele rij bij elkaar opgeteld. Je hebt alleen de getallen van de twee dagen nodig. Haal het kleinste getal van het grootste af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "fout = som van twee cellen",
+     "tekst": "Je hebt twee getallen opgeteld. Hoeveel meer? Haal het kleinste getal van het grootste af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde getallen afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = verschil van twee cellen",
+     "tekst": "Je hebt twee andere getallen van elkaar afgehaald. Kijk goed: de rij van het ding, en de twee dagen uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Je hebt twee getallen nodig: die van de twee dagen, in de rij van het ding. Haal dan het kleinste getal van het grootste af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "te vaag: zegt niet wat er mis is"
+    },
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-VBN-E01",
+   "nr": 5,
+   "somtype": "[tabel] Hoeveel [naam] op [naam]?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "[tabel] Hoeveel [naam] op [naam]?",
+   "hint1": "Zoek in de tabel de rij van het ding uit de vraag. Een rij loopt van links naar rechts.",
+   "hint2": "Ga in die rij naar de kolom van de dag uit de vraag. Een kolom loopt van boven naar beneden. Het getal in dat vak is het antwoord.",
+   "ouderzin": "Je kind leest één getal af in een tabel.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "andere cel",
+     "claudeDenkfout": null,
+     "regel": "fout = andere cel",
+     "tekst": "Dat getal staat in een ander vak. Zoek de rij van het ding en de kolom van de dag. Waar die twee elkaar raken, staat het antwoord."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "som van de rij",
+     "claudeDenkfout": null,
+     "regel": "fout = som van de rij",
+     "tekst": "Je hebt een hele rij bij elkaar opgeteld. De vraag gaat over één dag: kijk alleen in het vak van die dag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "som van de kolom",
+     "claudeDenkfout": null,
+     "regel": "fout = som van de kolom",
+     "tekst": "Je hebt een hele kolom bij elkaar opgeteld. De vraag gaat over één ding: kijk alleen in het vak van dat ding."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de rij van het ding en de kolom van de dag. Waar die twee elkaar raken, staat het antwoord. Je hoeft niets uit te rekenen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt het andere stuk uitgerekend. Lees de vraag nog eens: wat wil die precies weten?",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "te vaag: zegt niet wat er mis is"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-VBN-E03",
+   "nr": 1,
+   "somtype": "[patroon] patroon in een verhaal of figuur",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[patroon] patroon in een verhaal of figuur",
+   "hint1": "Kijk wat er elke keer bijkomt, of wat er steeds terugkomt. Kijk ook waarmee het begint.",
+   "hint2": "Ga dan stap voor stap verder tot je bij de plek uit de vraag bent. Of reken het uit: hoeveel stappen zijn het, en hoeveel komt er per stap bij?",
+   "ouderzin": "Je kind zoekt de regel in een patroon (een verhaal, figuur of herhaling) en gaat ermee verder.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde bewerking (per item)",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Je hebt 12 en 3 bij elkaar opgeteld. Bedenk hoe vaak er 3 blokken bijkomen. / Je hebt 6 en 8 opgeteld. Reken eerst uit hoeveel de plant in 8 weken groeit. / Alleen voor de eerste driehoek heb je 3 stokjes nodig. Voor de volgende driehoeken heb je minder nodig. / Je hebt 10 en 2 bij elkaar opgeteld. Kijk nog eens hoeveel blokken er per plek bijkomen. / Alleen voor het eerste vierkant heb je 4 lucifers nodig. De vierkanten erna delen een lucifer.",
+     "claudeTekst": "Alleen de eerste driehoek kost 3 stokjes. De volgende driehoeken kosten minder. / Alleen het eerste vierkant kost 4 lucifers. De vierkanten erna delen een lucifer.",
+     "waarom": "Claudes teksten per item; 011/017 'bijkomen' (eigen correctie); Didactiek batch 6 S8: 015, 023 'heb je nodig'"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één stap ernaast (per item)",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "Claudes sleutel: een-ernaast",
+     "tekst": "Bij plek 1 begin je met 1 stip, niet met 2. Kijk hoeveel stappen van 2 erbij komen. / Je hebt één stap van 2 te ver gezet. Tel de stappen vanaf plek 1 nog eens. / Controleer of je bij plek 11 of bij plek 12 bent uitgekomen. / Kijk nog eens hoeveel weken er precies 3 euro bijkomt. / De bus van 8:00 uur is al de eerste. Tel daarna nog vier keer 15 minuten. / Je bent één bus te vroeg gestopt. Tel nog eens welke bus de vijfde is. / Tel de 11 extra driehoeken van 2 stokjes en vergeet de eerste driehoek niet. / Kijk bij welke rij 40 tegels horen. Ga daarna nog één rij verder. / Reken na welke plek bij 18 blokken hoort. Ga daarna nog één stap verder. / Elke groep van drie eindigt met dezelfde kleur. Kijk of 12 precies een groep afmaakt. / Controleer of je 8 of 9 zakjes hebt geteld. / Kijk bij welk getal de herhaling van drie precies rond is. Daarna tel je verder in het patroon. / Op alle oneven plekken staat steeds dezelfde vrucht. Kijk of 25 even of oneven is. / Kijk bij hoeveel tafels 56 stoelen horen. Er staat nog een tafel meer. / Reken na bij welke ronde 95 punten horen. Er komt nog een ronde bij.",
+     "claudeTekst": "Bij plek 1 begin je met 1 stip, niet met 2. Kijk hoeveel stappen van 2 je erbij doet. / Je hebt één stap van 2 te veel gedaan. Tel de stappen vanaf plek 1 nog eens.",
+     "waarom": "Claudes teksten per item; Didactiek batch 6 S8: 010 'erbij komen', 'gezet'"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "optellen in plaats van keer (per item)",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Je hebt 9 en 5 opgeteld. In elke rij zitten steeds 5 tegels meer dan in de rij ervoor. / Je hebt 9 en 6 opgeteld. Er komen elke keer 6 knikkers bij. Je rekent dus 9 keer 6. / Je hebt 15 en 4 opgeteld. Elke tafel heeft zelf al 4 stoelen nodig. / Je hebt 20 en 5 opgeteld. Bedenk dat je elke ronde opnieuw 5 punten krijgt.",
+     "claudeTekst": "Je hebt 9 en 6 opgeteld. Elk zakje heeft 6 knikkers, dus je hebt 6 negen keer nodig.",
+     "waarom": "Claudes teksten per item; Didactiek batch 6 S8: 019 (eigen aanpassing, 019 is nu een patroon); ronde 6b-2: 016 'zitten'"
+    },
+    {
+     "bron": "claude",
+     "soort": "per item",
+     "claudeDenkfout": null,
+     "regel": "Claudes sleutel (tekst per item)",
+     "tekst": "Claudes tekst per foute optie (nagekeken: noemt de fout of wijst de weg bij dit item)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk wat er elke keer bijkomt, of wat er steeds terugkomt. Kijk ook waarmee het begint. Ga dan stap voor stap verder."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-VBN-E03",
+   "nr": 2,
+   "somtype": "[patroon] getallenrij",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[patroon] getallenrij",
+   "hint1": "Kijk van het ene getal naar het volgende. Wat gebeurt er elke keer: komt er iets bij, gaat er iets af, of wordt het getal dubbel?",
+   "hint2": "Doe die stap steeds opnieuw. Wordt er naar een plek gevraagd? Tel de plekken mee tot je bij die plek bent.",
+   "ouderzin": "Je kind zoekt de regel in een getallenrij en gaat ermee verder.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "één stap ernaast (per item)",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "Claudes sleutel: een-ernaast",
+     "tekst": "70 staat op plek 4. Ga van daaruit verder naar plek 6. / Je hebt een stap te ver gezet. Stop precies bij plek 6. / Tel hoeveel stappen van 8 terug je vanaf plek 1 zet om bij plek 8 te komen. / Je hebt één stap te ver gezet. Stop precies bij plek 8. / Kijk hoeveel je elke keer verder springt van het ene getal naar het volgende. / Tel goed hoeveel stappen je nog moet zetten na plek 4. Plek 8 is nog niet plek 9. / Je bent één stap te ver gegaan. Kijk nog eens welk getal precies bij plek 9 hoort. / Tel de plekken goed mee. 50 staat op plek 1. Ga door tot plek 7. / Reken het verschil tussen 2 en 9 nog eens na op de getallenlijn.",
+     "claudeTekst": "70 staat op plek 4. Tel van daaruit verder naar plek 6. / Tel hoeveel stappen van 8 je vanaf plek 1 zet om bij plek 8 te komen.",
+     "waarom": "Claudes teksten per item; 001 en 002: 'te veel' → 'te ver' (eigen correctie); Didactiek batch 6 S8: 001 'Ga', 002 'terug'"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "getal overgenomen (per item)",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Je hebt 2 opgeteld bij het laatste getal. Kijk of het getal misschien elke keer dubbel zo groot wordt. / Je hebt naar het tweede getal gekeken. Reken het verschil uit tussen 4 en 7.",
+     "claudeTekst": "Je hebt er 2 bij gedaan. Kijk of het getal misschien elke keer verdubbeld wordt.",
+     "waarom": "Claudes teksten per item; 004 'erbij gedaan' → 'opgeteld bij' (check_hints FAIL)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde bewerking (per item)",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Kijk nog eens: de sprong van 4 naar 8 is niet even groot als die van 8 naar 16. / Kijk of er steeds hetzelfde getal bijkomt, of dat de sprongen groter worden. / Vergelijk 6 met 3 en 12 met 6. Wat gebeurt er met het getal? / Kijk of 3 keer 1 echt 4 is. Probeer of erbij optellen beter past. / Kijk of 9 het dubbele van 2 is. Zo niet, dan past keer 2 niet.",
+     "claudeTekst": "Kijk of 1 keer 3 echt 4 is. Probeer of erbij optellen beter past.",
+     "waarom": "Claudes teksten per item; Didactiek batch 6 S8: 008 '3 keer 1'"
+    },
+    {
+     "bron": "claude",
+     "soort": "per item",
+     "claudeDenkfout": null,
+     "regel": "Claudes sleutel (tekst per item)",
+     "tekst": "Claudes tekst per foute optie (nagekeken: noemt de fout of wijst de weg bij dit item)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk van het ene getal naar het volgende: wat gebeurt er elke keer? Doe die stap steeds opnieuw en tel de plekken mee."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-VERH-E01",
+   "nr": 1,
+   "somtype": "In [plek] zitten # [ding]. Een kwart ervan is groen. Hoeveel groene knikkers zijn er?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. Een kwart ervan is groen. Hoeveel groene botten zijn er?",
+   "hint1": "Een kwart is één van vier gelijke delen. Verdeel de knikkers in vier gelijke groepjes.",
+   "hint2": "Hoeveel knikkers zitten er in één groepje? Je kunt ook eerst de helft nemen, en daarvan weer de helft.",
+   "ouderzin": "Je kind rekent uit hoeveel een kwart van een aantal is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alle knikkers",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat zijn alle knikkers. Je zoekt een kwart: verdeel ze in vier gelijke groepjes. Hoeveel zitten er in één groepje?"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "drie kwart",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Dat is drie kwart van de knikkers. Je zoekt één kwart: één van de vier gelijke groepjes.",
+     "claudeTekst": "Dat is het deel dat níét groen is. Lees de vraag nog eens.",
+     "waarom": "de sleutel is drie kwart van het aantal (1/1)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord ± 1",
+     "tekst": "Bijna! Reken het na: vier groepjes van jouw antwoord moeten samen alle knikkers zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Een kwart is één van vier gelijke delen. Deel het aantal knikkers door vier."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Deel door de noemer (4), niet door de teller.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "'noemer' en 'teller' zijn te moeilijk in groep 5; nu: een kwart is één van vier gelijke delen"
+    }
+   ],
+   "koppeling": "claudeId",
+   "kopGewijzigd": {
+    "van": "In [plek] liggen # [ding]. Een kwart ervan is groen. Hoeveel groene botten zijn er?",
+    "naar": "In [plek] zitten # [ding]. Een kwart ervan is groen. Hoeveel groene knikkers zijn er?",
+    "op": "2026-10-01"
+   }
+  },
+  {
+   "doel": "G5-VERH-E01",
+   "nr": 2,
+   "somtype": "[groepjes] Er zijn # [ding]. Kleur drie kwart van de koekjes.",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[groepjes] Er zijn # [ding]. Kleur drie kwart van de koekjes.",
+   "hint1": "Een kwart is één van vier gelijke delen. Verdeel de koekjes in vier gelijke groepjes.",
+   "hint2": "Drie kwart is drie van die groepjes. Kleur de koekjes van drie groepjes.",
+   "ouderzin": "Je kind kleurt drie kwart van een aantal koekjes.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alles gekleurd",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt alle koekjes gekleurd. Drie kwart is drie van de vier groepjes: één groepje blijft over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één kwart",
+     "claudeDenkfout": null,
+     "regel": "fout = een kwart van getal1",
+     "tekst": "Je hebt één kwart gekleurd: één groepje. Drie kwart is drie van de vier groepjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de helft",
+     "claudeDenkfout": null,
+     "regel": "fout = de helft van getal1",
+     "tekst": "Je hebt de helft gekleurd: twee van de vier groepjes. Drie kwart is drie van de vier groepjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één koekje te veel. Verdeel de koekjes in vier gelijke groepjes en kleur drie groepjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één koekje te weinig. Verdeel de koekjes in vier gelijke groepjes en kleur drie groepjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Verdeel de koekjes in vier gelijke groepjes. Kleur de koekjes van drie groepjes."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "2 is maar één deel. Je hebt 3 delen nodig.",
+     "claudeDenkfout": null,
+     "waarom": "noemt getallen van het item; nu één tekst per soort fout"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G5-VERH-E01",
+   "nr": 3,
+   "somtype": "[groepjes] Er zijn # [ding]. Kleur een kwart van de koekjes.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[groepjes] Er zijn # [ding]. Kleur een kwart van de koekjes.",
+   "hint1": "Een kwart is één van vier gelijke delen. Verdeel de koekjes in vier gelijke groepjes.",
+   "hint2": "Kleur de koekjes van één groepje.",
+   "ouderzin": "Je kind kleurt een kwart van een aantal koekjes.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alles gekleurd",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt alle koekjes gekleurd. Een kwart is één van vier gelijke delen. Kleur alleen de koekjes van één groepje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "drie kwart",
+     "claudeDenkfout": null,
+     "regel": "fout = drie kwart van getal1",
+     "tekst": "Je hebt drie kwart gekleurd: drie van de vier groepjes. Een kwart is maar één groepje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de helft",
+     "claudeDenkfout": null,
+     "regel": "fout = de helft van getal1",
+     "tekst": "Je hebt de helft gekleurd: twee van de vier groepjes. Een kwart is maar één groepje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Dat is één koekje te veel. Verdeel de koekjes in vier gelijke groepjes en kleur één groepje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Dat is één koekje te weinig. Verdeel de koekjes in vier gelijke groepjes en kleur één groepje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Verdeel de koekjes in vier gelijke groepjes. Kleur de koekjes van één groepje."
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

@@ -1,0 +1,1612 @@
+{
+ "batch": "batch2",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G4-merge, batch 2 = G4-GET-M01). Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint; 'claude' = tekst van Claude blijft (ok), 'nieuw' = eigen tekst (claudeTekst = de Claude-tekst die hij vervangt). Elk somtype heeft één vaste sprong en richting, dus 'fout = antwoord ± k' is per somtype: verkeerde kant op = antwoord ∓ 2 sprongen, sprong van 1 = vorige getal ± 1, een sprong te ver = antwoord ± 1 sprong.",
+ "somtypen": [
+  {
+   "doel": "G4-GET-M01",
+   "nr": 2,
+   "somtype": "Welk getal past op de lege plek? [rij, □ ertussen] — sprongen van 2",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Welk getal past op de lege plek? [rij, □ ertussen] — sprongen van 2",
+   "hint1": "Kijk naar de getallen in de rij. Hoeveel komt er steeds bij?",
+   "hint2": "Begin bij het getal vóór de lege plek. Maak één sprong omhoog, net zo groot als de andere sprongen. Met nog zo'n sprong kom je op het getal na de lege plek. Zo kun je het controleren.",
+   "ouderzin": "Je kind vult het getal in dat ontbreekt in een rij met sprongen van 2.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het getal vóór de lege plek. Maak vanaf dat getal nog één sprong omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 4",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omhoog. Spring dus ook omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 3,
+   "somtype": "Welk getal past op de lege plek? [rij, □ ertussen] — terug sprongen van 2",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Welk getal past op de lege plek? [rij, □ ertussen] — terug sprongen van 2",
+   "hint1": "Kijk naar de getallen in de rij. Hoeveel gaat er steeds af?",
+   "hint2": "Begin bij het getal vóór de lege plek. Maak één sprong omlaag, net zo groot als de andere sprongen. Met nog zo'n sprong kom je op het getal na de lege plek. Zo kun je het controleren.",
+   "ouderzin": "Je kind vult het getal in dat ontbreekt in een rij die terugtelt met sprongen van 2.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het getal vóór de lege plek. Maak vanaf dat getal nog één sprong omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 4",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omlaag. Spring dus ook omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 5,
+   "somtype": "Welk getal past op de lege plek? [rij, □ ertussen] — sprongen van 10",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Welk getal past op de lege plek? [rij, □ ertussen] — sprongen van 10",
+   "hint1": "Kijk naar de getallen in de rij. Hoeveel komt er steeds bij?",
+   "hint2": "Begin bij het getal vóór de lege plek. Maak één sprong omhoog, net zo groot als de andere sprongen. Met nog zo'n sprong kom je op het getal na de lege plek. Zo kun je het controleren. Het cijfer achteraan blijft steeds hetzelfde.",
+   "ouderzin": "Je kind vult het getal in dat ontbreekt in een rij met sprongen van 10.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het getal vóór de lege plek. Maak vanaf dat getal nog één sprong omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 9",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 20",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omhoog. Spring dus ook omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 7,
+   "somtype": "Welk getal past op de lege plek? [rij, □ ertussen] — sprongen van 5",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Welk getal past op de lege plek? [rij, □ ertussen] — sprongen van 5",
+   "hint1": "Kijk naar de getallen in de rij. Hoeveel komt er steeds bij?",
+   "hint2": "Begin bij het getal vóór de lege plek. Maak één sprong omhoog, net zo groot als de andere sprongen. Met nog zo'n sprong kom je op het getal na de lege plek. Zo kun je het controleren.",
+   "ouderzin": "Je kind vult het getal in dat ontbreekt in een rij met sprongen van 5.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het getal vóór de lege plek. Maak vanaf dat getal nog één sprong omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 4",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omhoog. Spring dus ook omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 8,
+   "somtype": "Welk getal past op de lege plek? [rij, □ ertussen] — terug sprongen van 5",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Welk getal past op de lege plek? [rij, □ ertussen] — terug sprongen van 5",
+   "hint1": "Kijk naar de getallen in de rij. Hoeveel gaat er steeds af?",
+   "hint2": "Begin bij het getal vóór de lege plek. Maak één sprong omlaag, net zo groot als de andere sprongen. Met nog zo'n sprong kom je op het getal na de lege plek. Zo kun je het controleren.",
+   "ouderzin": "Je kind vult het getal in dat ontbreekt in een rij die terugtelt met sprongen van 5.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het getal vóór de lege plek. Maak vanaf dat getal nog één sprong omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 4",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omlaag. Spring dus ook omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 1,
+   "somtype": "Welk getal past op de lege plek? [rij, □ achteraan] — terug sprongen van 2",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Welk getal past op de lege plek? [rij, □ achteraan] — terug sprongen van 2",
+   "hint1": "Kijk naar de getallen in de rij. Hoeveel gaat er steeds af?",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omlaag, net zo groot als de andere sprongen.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij die terugtelt met sprongen van 2.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 4",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omlaag. Spring dus ook omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 4,
+   "somtype": "Welk getal past op de lege plek? [rij, □ achteraan] — sprongen van 2",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Welk getal past op de lege plek? [rij, □ achteraan] — sprongen van 2",
+   "hint1": "Kijk naar de getallen in de rij. Hoeveel komt er steeds bij?",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omhoog, net zo groot als de andere sprongen.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij met sprongen van 2.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 4",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omhoog. Spring dus ook omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 6,
+   "somtype": "Welk getal past op de lege plek? [rij, □ achteraan] — sprongen van 10",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "Welk getal past op de lege plek? [rij, □ achteraan] — sprongen van 10",
+   "hint1": "Kijk naar de getallen in de rij. Hoeveel komt er steeds bij?",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omhoog, net zo groot als de andere sprongen. Het cijfer achteraan blijft steeds hetzelfde.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij met sprongen van 10.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 20",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omhoog. Spring dus ook omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 9",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 12,
+   "somtype": "Tel terug met sprongen van #. [rij, □ ertussen] — terug sprongen van 2",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "Tel terug met sprongen van #. [rij, □ ertussen] — terug sprongen van 2",
+   "hint1": "In de vraag staat hoe groot elke sprong is. De rij gaat omlaag.",
+   "hint2": "Begin bij het getal vóór de lege plek. Maak één sprong omlaag, net zo groot als de andere sprongen. Met nog zo'n sprong kom je op het getal na de lege plek. Zo kun je het controleren.",
+   "ouderzin": "Je kind vult het getal in dat ontbreekt in een rij die terugtelt met sprongen van 2.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het getal vóór de lege plek. Maak vanaf dat getal nog één sprong omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 4",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omlaag. Spring dus ook omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 13,
+   "somtype": "Welk getal past op de lege plek? [rij, □ ertussen] — terug sprongen van 10",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "Welk getal past op de lege plek? [rij, □ ertussen] — terug sprongen van 10",
+   "hint1": "Kijk naar de getallen in de rij. Hoeveel gaat er steeds af?",
+   "hint2": "Begin bij het getal vóór de lege plek. Maak één sprong omlaag, net zo groot als de andere sprongen. Met nog zo'n sprong kom je op het getal na de lege plek. Zo kun je het controleren. Het cijfer achteraan blijft steeds hetzelfde.",
+   "ouderzin": "Je kind vult het getal in dat ontbreekt in een rij die terugtelt met sprongen van 10.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het getal vóór de lege plek. Maak vanaf dat getal nog één sprong omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 9",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 20",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omlaag. Spring dus ook omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het getal vóór de lege plek precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 9,
+   "somtype": "Welk getal past op de lege plek? [rij, □ achteraan] — sprongen van 5",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "Welk getal past op de lege plek? [rij, □ achteraan] — sprongen van 5",
+   "hint1": "Kijk naar de getallen in de rij. Hoeveel komt er steeds bij?",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omhoog, net zo groot als de andere sprongen.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij met sprongen van 5.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omhoog. Spring dus ook omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omhoog."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 4",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 5",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 10,
+   "somtype": "Welk getal past op de lege plek? [rij, □ achteraan] — terug sprongen van 5",
+   "nrOrigineel": 12,
+   "somtypeOrigineel": "Welk getal past op de lege plek? [rij, □ achteraan] — terug sprongen van 5",
+   "hint1": "Kijk naar de getallen in de rij. Hoeveel gaat er steeds af?",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omlaag, net zo groot als de andere sprongen.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij die terugtelt met sprongen van 5.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omlaag. Spring dus ook omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 4",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 5",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 11,
+   "somtype": "Tel terug met sprongen van #. [rij, □ achteraan] — terug sprongen van 2",
+   "nrOrigineel": 13,
+   "somtypeOrigineel": "Tel terug met sprongen van #. [rij, □ achteraan] — terug sprongen van 2",
+   "hint1": "In de vraag staat hoe groot elke sprong is. De rij gaat omlaag.",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omlaag, net zo groot als de andere sprongen.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij die terugtelt met sprongen van 2.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = antwoord + 4",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omlaag. Spring dus ook omlaag.",
+     "claudeTekst": "Kijk of de rij omhoog of omlaag gaat. Deze gaat omlaag.",
+     "waarom": "zelfde zin als de nieuwe tekst bij de andere somtypes"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Je bent maar een klein stapje teruggegaan. Kijk hoe groot de sprongen in de rij zijn.",
+     "claudeTekst": "De sprong is niet 1. Kijk naar het verschil tussen twee getallen in de rij.",
+     "waarom": "bij item 023 (9, 7, 5, 3, □) is 1 het antwoord: noem geen getal dat soms het antwoord is"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 2",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net naast",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong.",
+     "claudeTekst": "Kijk hoe groot de sprong tussen twee getallen naast elkaar is, en maak vanaf het laatste getal precies zo'n sprong.",
+     "waarom": "zin in twee delen, met 'Bijna!' (de fout ligt steeds precies 1 ernaast)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 14,
+   "somtype": "Welk getal past op de lege plek? [rij, □ achteraan] — terug sprongen van 10",
+   "nrOrigineel": 14,
+   "somtypeOrigineel": "Welk getal past op de lege plek? [rij, □ achteraan] — terug sprongen van 10",
+   "hint1": "Kijk naar de getallen in de rij. Hoeveel gaat er steeds af?",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omlaag, net zo groot als de andere sprongen. Het cijfer achteraan blijft steeds hetzelfde.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij die terugtelt met sprongen van 10.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 20",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omlaag. Spring dus ook omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omlaag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "sprong van 1",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 9",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat klopt nog niet. Lees de som nog eens rustig en probeer het stap voor stap.",
+     "claudeDenkfout": null,
+     "waarom": "algemene zin bij elke fout: er staat geen som, en de zin zegt niet wat er misging; nu een tekst per soort fout (verkeerde kant op, sprong van 1, een sprong te ver, getal uit de rij)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 15,
+   "somtype": "Tel terug met sprongen van #. [rij, □ achteraan] — terug sprongen van 10",
+   "nrOrigineel": 15,
+   "somtypeOrigineel": "Tel terug met sprongen van #. [rij, □ achteraan] — terug sprongen van 10",
+   "hint1": "In de vraag staat hoe groot elke sprong is. De rij gaat omlaag.",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omlaag, net zo groot als de andere sprongen. Het cijfer achteraan blijft steeds hetzelfde.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij die terugtelt met sprongen van 10.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = antwoord + 20",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omlaag. Spring dus ook omlaag.",
+     "claudeTekst": "Kijk of de rij omhoog of omlaag gaat. Deze gaat omlaag.",
+     "waarom": "zelfde zin als de nieuwe tekst bij de andere somtypes"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omlaag."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "sprong van 1",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 9",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende.",
+     "claudeTekst": "De sprong is niet 1. Kijk naar het verschil tussen twee getallen in de rij.",
+     "waarom": "'verschil' zonder uitleg; zelfde zin als bij #1–#12 en #14"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 10",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net naast",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong.",
+     "claudeTekst": "Kijk hoe groot de sprong tussen twee getallen naast elkaar is, en maak vanaf het laatste getal precies zo'n sprong.",
+     "waarom": "zin in twee delen, met 'Bijna!' (de fout ligt steeds precies 1 ernaast)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 16,
+   "somtype": "Tel met sprongen van #. [rij, □ achteraan] — sprongen van 4",
+   "nrOrigineel": 16,
+   "somtypeOrigineel": "Tel met sprongen van #. [rij, □ achteraan] — sprongen van 4",
+   "hint1": "In de vraag staat hoe groot elke sprong is. De rij gaat omhoog.",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omhoog, net zo groot als de andere sprongen.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij met sprongen van 4.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = antwoord − 8",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omhoog. Spring dus ook omhoog.",
+     "claudeTekst": "Kijk of de rij omhoog of omlaag gaat. Deze gaat omhoog.",
+     "waarom": "zelfde zin als de nieuwe tekst bij de andere somtypes"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omhoog."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "sprong van 1",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 3",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende.",
+     "claudeTekst": "De sprong is niet 1. Kijk naar het verschil tussen twee getallen in de rij.",
+     "waarom": "'verschil' zonder uitleg; zelfde zin als bij #1–#12 en #14"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 4",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net naast",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong.",
+     "claudeTekst": "Kijk hoe groot de sprong tussen twee getallen naast elkaar is, en maak vanaf het laatste getal precies zo'n sprong.",
+     "waarom": "zin in twee delen, met 'Bijna!' (de fout ligt steeds precies 1 ernaast)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 17,
+   "somtype": "Tel met sprongen van #. [rij, □ achteraan] — sprongen van 10",
+   "nrOrigineel": 17,
+   "somtypeOrigineel": "Tel met sprongen van #. [rij, □ achteraan] — sprongen van 10",
+   "hint1": "In de vraag staat hoe groot elke sprong is. De rij gaat omhoog.",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omhoog, net zo groot als de andere sprongen. Het cijfer achteraan blijft steeds hetzelfde.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij met sprongen van 10.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = antwoord − 20",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omhoog. Spring dus ook omhoog.",
+     "claudeTekst": "Kijk of de rij omhoog of omlaag gaat. Deze gaat omhoog.",
+     "waarom": "zelfde zin als de nieuwe tekst bij de andere somtypes"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omhoog."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "sprong van 1",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 9",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende.",
+     "claudeTekst": "De sprong is niet 1. Kijk naar het verschil tussen twee getallen in de rij.",
+     "waarom": "'verschil' zonder uitleg; zelfde zin als bij #1–#12 en #14"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 10",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net naast",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong.",
+     "claudeTekst": "Kijk hoe groot de sprong tussen twee getallen naast elkaar is, en maak vanaf het laatste getal precies zo'n sprong.",
+     "waarom": "zin in twee delen, met 'Bijna!' (de fout ligt steeds precies 1 ernaast)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 18,
+   "somtype": "Tel met sprongen van #. [rij, □ achteraan] — sprongen van 2",
+   "nrOrigineel": 18,
+   "somtypeOrigineel": "Tel met sprongen van #. [rij, □ achteraan] — sprongen van 2",
+   "hint1": "In de vraag staat hoe groot elke sprong is. De rij gaat omhoog.",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omhoog, net zo groot als de andere sprongen.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij met sprongen van 2.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = antwoord − 4",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omhoog. Spring dus ook omhoog.",
+     "claudeTekst": "Kijk of de rij omhoog of omlaag gaat. Deze gaat omhoog.",
+     "waarom": "zelfde zin als de nieuwe tekst bij de andere somtypes"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omhoog."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "sprong van 1",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 1",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende.",
+     "claudeTekst": "De sprong is niet 1. Kijk naar het verschil tussen twee getallen in de rij.",
+     "waarom": "'verschil' zonder uitleg; zelfde zin als bij #1–#12 en #14"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net naast",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong.",
+     "claudeTekst": "Kijk hoe groot de sprong tussen twee getallen naast elkaar is, en maak vanaf het laatste getal precies zo'n sprong.",
+     "waarom": "zin in twee delen, met 'Bijna!' (de fout ligt steeds precies 1 ernaast)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 19,
+   "somtype": "Tel terug met sprongen van #. [rij, □ achteraan] — terug sprongen van 5",
+   "nrOrigineel": 19,
+   "somtypeOrigineel": "Tel terug met sprongen van #. [rij, □ achteraan] — terug sprongen van 5",
+   "hint1": "In de vraag staat hoe groot elke sprong is. De rij gaat omlaag.",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omlaag, net zo groot als de andere sprongen.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij die terugtelt met sprongen van 5.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = antwoord + 10",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omlaag. Spring dus ook omlaag.",
+     "claudeTekst": "Kijk of de rij omhoog of omlaag gaat. Deze gaat omlaag.",
+     "waarom": "zelfde zin als de nieuwe tekst bij de andere somtypes"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omlaag."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "sprong van 1",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 4",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende.",
+     "claudeTekst": "De sprong is niet 1. Kijk naar het verschil tussen twee getallen in de rij.",
+     "waarom": "'verschil' zonder uitleg; zelfde zin als bij #1–#12 en #14"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 5",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net naast",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong.",
+     "claudeTekst": "Kijk hoe groot de sprong tussen twee getallen naast elkaar is, en maak vanaf het laatste getal precies zo'n sprong.",
+     "waarom": "zin in twee delen, met 'Bijna!' (de fout ligt steeds precies 1 ernaast)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 20,
+   "somtype": "Tel met sprongen van #. [rij, □ achteraan] — sprongen van 3",
+   "nrOrigineel": 20,
+   "somtypeOrigineel": "Tel met sprongen van #. [rij, □ achteraan] — sprongen van 3",
+   "hint1": "In de vraag staat hoe groot elke sprong is. De rij gaat omhoog.",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omhoog, net zo groot als de andere sprongen.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij met sprongen van 3.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = antwoord − 6",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omhoog. Spring dus ook omhoog.",
+     "claudeTekst": "Kijk of de rij omhoog of omlaag gaat. Deze gaat omhoog.",
+     "waarom": "zelfde zin als de nieuwe tekst bij de andere somtypes"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omhoog."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "sprong van 1",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 2",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende.",
+     "claudeTekst": "De sprong is niet 1. Kijk naar het verschil tussen twee getallen in de rij.",
+     "waarom": "'verschil' zonder uitleg; zelfde zin als bij #1–#12 en #14"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 3",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net naast",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong.",
+     "claudeTekst": "Kijk hoe groot de sprong tussen twee getallen naast elkaar is, en maak vanaf het laatste getal precies zo'n sprong.",
+     "waarom": "zin in twee delen, met 'Bijna!' (de fout ligt steeds precies 1 ernaast)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 21,
+   "somtype": "Tel met sprongen van #. [rij, □ achteraan] — sprongen van 5",
+   "nrOrigineel": 21,
+   "somtypeOrigineel": "Tel met sprongen van #. [rij, □ achteraan] — sprongen van 5",
+   "hint1": "In de vraag staat hoe groot elke sprong is. De rij gaat omhoog.",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omhoog, net zo groot als de andere sprongen.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij met sprongen van 5.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = antwoord − 10",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omhoog. Spring dus ook omhoog.",
+     "claudeTekst": "Kijk of de rij omhoog of omlaag gaat. Deze gaat omhoog.",
+     "waarom": "zelfde zin als de nieuwe tekst bij de andere somtypes"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omhoog."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "sprong van 1",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 4",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende.",
+     "claudeTekst": "De sprong is niet 1. Kijk naar het verschil tussen twee getallen in de rij.",
+     "waarom": "'verschil' zonder uitleg; zelfde zin als bij #1–#12 en #14"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 5",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net naast",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 1",
+     "tekst": "Bijna! Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong.",
+     "claudeTekst": "Kijk hoe groot de sprong tussen twee getallen naast elkaar is, en maak vanaf het laatste getal precies zo'n sprong.",
+     "waarom": "zin in twee delen, met 'Bijna!' (de fout ligt steeds precies 1 ernaast)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 22,
+   "somtype": "Tel terug met sprongen van #. [rij, □ achteraan] — terug sprongen van 3",
+   "nrOrigineel": 22,
+   "somtypeOrigineel": "Tel terug met sprongen van #. [rij, □ achteraan] — terug sprongen van 3",
+   "hint1": "In de vraag staat hoe groot elke sprong is. De rij gaat omlaag.",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omlaag, net zo groot als de andere sprongen.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij die terugtelt met sprongen van 3.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = antwoord + 6",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omlaag. Spring dus ook omlaag.",
+     "claudeTekst": "Kijk of de rij omhoog of omlaag gaat. Deze gaat omlaag.",
+     "waarom": "zelfde zin als de nieuwe tekst bij de andere somtypes"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omlaag."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "sprong van 1",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 2",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende.",
+     "claudeTekst": "De sprong is niet 1. Kijk naar het verschil tussen twee getallen in de rij.",
+     "waarom": "'verschil' zonder uitleg; zelfde zin als bij #1–#12 en #14"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 3",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net naast",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong.",
+     "claudeTekst": "Kijk hoe groot de sprong tussen twee getallen naast elkaar is, en maak vanaf het laatste getal precies zo'n sprong.",
+     "waarom": "zin in twee delen, met 'Bijna!' (de fout ligt steeds precies 1 ernaast)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G4-GET-M01",
+   "nr": 23,
+   "somtype": "Tel terug met sprongen van #. [rij, □ achteraan] — terug sprongen van 4",
+   "nrOrigineel": 23,
+   "somtypeOrigineel": "Tel terug met sprongen van #. [rij, □ achteraan] — terug sprongen van 4",
+   "hint1": "In de vraag staat hoe groot elke sprong is. De rij gaat omlaag.",
+   "hint2": "Begin bij het laatste getal. Maak nog één sprong omlaag, net zo groot als de andere sprongen.",
+   "ouderzin": "Je kind zoekt het volgende getal in een rij die terugtelt met sprongen van 4.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "verkeerde kant op",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "fout = antwoord + 8",
+     "tekst": "Kijk of de rij omhoog of omlaag gaat. Deze rij gaat omlaag. Spring dus ook omlaag.",
+     "claudeTekst": "Kijk of de rij omhoog of omlaag gaat. Deze gaat omlaag.",
+     "waarom": "zelfde zin als de nieuwe tekst bij de andere somtypes"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal vóór de lege plek",
+     "claudeDenkfout": null,
+     "regel": "fout = laatste getal van de rij",
+     "tekst": "Dat is het laatste getal van de rij. Maak vanaf dat getal nog één sprong omlaag."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "sprong van 1",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord + 3",
+     "tekst": "De sprong is niet 1. Kijk hoe groot de sprong is van het ene getal naar het volgende.",
+     "claudeTekst": "De sprong is niet 1. Kijk naar het verschil tussen twee getallen in de rij.",
+     "waarom": "'verschil' zonder uitleg; zelfde zin als bij #1–#12 en #14"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": null,
+     "regel": "fout = een getal uit de vraag",
+     "tekst": "Dat getal staat al in de vraag. Welk getal hoort op de lege plek?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "een sprong te ver",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 4",
+     "tekst": "Dat is een sprong te ver. Maak vanaf het laatste getal maar één sprong."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "net naast",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "fout = antwoord − 1",
+     "tekst": "Bijna! Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong.",
+     "claudeTekst": "Kijk hoe groot de sprong tussen twee getallen naast elkaar is, en maak vanaf het laatste getal precies zo'n sprong.",
+     "waarom": "zin in twee delen, met 'Bijna!' (de fout ligt steeds precies 1 ernaast)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "bijna",
+     "claudeDenkfout": null,
+     "regel": "fout ligt 1 of 2 naast het antwoord",
+     "tekst": "Bijna! Kijk nog eens hoe groot de sprong is. Maak vanaf het laatste getal precies zo'n sprong."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe groot de sprong is van het ene getal naar het volgende. Maak vanaf het laatste getal precies zo'n sprong."
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

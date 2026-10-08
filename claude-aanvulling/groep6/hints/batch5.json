@@ -1,0 +1,1021 @@
+{
+ "batch": "batch5",
+ "geschreven": "2026-10-01",
+ "uitleg": "Hints per somtype (G6-merge, batch 5 = verbanden en verhoudingen: VBN-E02, VERH-E01, VERH-E02, VERH-E03). Formaat als hints/batch4.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per soort fout, van boven naar beneden, de eerste regel die past wint. 'claude-taalfix' met regel 'Claudes sleutel: <label>' = de Claude-sleutels met dat label die geen motorregel vangt, met een eigen vaste tekst (per sleutel nagerekend). 'nieuw' = motorregel of letterlijke optie met eigen tekst.",
+ "somtypen": [
+  {
+   "doel": "G6-VBN-E02",
+   "nr": 1,
+   "somtype": "[lijngrafiek] Hoeveel [ding] kwamen er bij van [maand] naar [maand]?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[lijngrafiek] Hoeveel [ding] kwamen er bij van [maand] naar [maand]?",
+   "hint1": "Zoek de twee maanden uit de vraag onder de grafiek. Lees bij allebei af hoe hoog de stip staat. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.",
+   "hint2": "Hoeveel kwamen er bij? Haal het aantal van de eerste maand af van het aantal van de tweede maand.",
+   "ouderzin": "Je kind leest in een lijngrafiek twee maanden af en rekent uit hoeveel er van de ene naar de andere maand bij kwamen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "de tweede maand",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is het aantal in de tweede maand van de vraag. Hoeveel waren het in de eerste maand? Haal het aantal van de eerste maand ervan af: dat is wat erbij kwam.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Je hebt de twee maanden bij elkaar opgeteld. De vraag is hoeveel er bij kwamen. Hoeveel meer is de tweede maand dan de eerste?",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de tweede maand (regel)",
+     "claudeDenkfout": null,
+     "regel": "fout = de tweede maand uit de vraag",
+     "tekst": "Dat is het aantal in de tweede maand van de vraag. Hoeveel waren het in de eerste maand? Haal het aantal van de eerste maand ervan af: dat is wat erbij kwam."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "streepjes geteld",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : perstreep",
+     "tekst": "Is dat het aantal streepjes? Elk streepje is meer dan één. Hoeveel is elk streepje? Reken dan het aantal streepjes keer dat getal.",
+     "tekstSterker": "Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Zo weet je hoeveel elk streepje is. Lees daarna bij de twee maanden uit de vraag af hoe hoog de stip staat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één streepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + perstreep",
+     "tekst": "Dat is één streepje te veel. Lees de twee stippen nog eens af en tel de streepjes goed.",
+     "tekstSterker": "Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Zo weet je hoeveel elk streepje is. Lees daarna bij de twee maanden uit de vraag af hoe hoog de stip staat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één streepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − perstreep",
+     "tekst": "Dat is één streepje te weinig. Lees de twee stippen nog eens af en tel de streepjes goed.",
+     "tekstSterker": "Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Zo weet je hoeveel elk streepje is. Lees daarna bij de twee maanden uit de vraag af hoe hoog de stip staat."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders afgelezen",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "tekst": "Lees de twee stippen nog eens af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Haal dan de eerste maand van de tweede af.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees de twee maanden uit de vraag af. Haal het aantal van de eerste maand af van het aantal van de tweede maand."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Lees de vraag nog eens: komt er iets bij, of gaat er iets af?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "zegt niet wat er fout is ('opgeteld' bij 'kwamen er bij': nu precies)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-VBN-E02",
+   "nr": 2,
+   "somtype": "[lijngrafiek] Hoeveel [ding] waren er in [maand]?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[lijngrafiek] Hoeveel [ding] waren er in [maand]?",
+   "hint1": "Zoek de maand uit de vraag onder de grafiek. Ga recht omhoog naar de stip.",
+   "hint2": "Zoek het getal langs de zijkant op dezelfde hoogte als de stip, of net eronder. Tel dan de streepjes tot de stip. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.",
+   "ouderzin": "Je kind leest in een lijngrafiek af hoeveel het er in één maand waren.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "andere maand",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "tekst": "Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "getal onder de stip",
+     "claudeDenkfout": "plaatswaarde-verkeerd",
+     "regel": "Claudes sleutel: plaatswaarde-verkeerd",
+     "tekst": "Dat is het getal langs de zijkant net onder de stip. Staat de stip precies op dat getal? Tel de streepjes vanaf dat getal tot de stip.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere maand (regel)",
+     "claudeDenkfout": null,
+     "regel": "fout = een andere maand",
+     "tekst": "Dat is het aantal bij een andere maand. Zoek eerst de maand uit de vraag onder de grafiek. Ga dan recht omhoog naar de stip."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal onder de stip (regel)",
+     "claudeDenkfout": null,
+     "regel": "fout = het getal onder de stip",
+     "tekst": "Dat is het getal langs de zijkant net onder de stip. Staat de stip precies op dat getal? Tel de streepjes vanaf dat getal tot de stip."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "streepjes geteld",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : perstreep",
+     "tekst": "Is dat het aantal streepjes? Elk streepje is meer dan één. Hoeveel is elk streepje? Reken dan het aantal streepjes keer dat getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één streepje te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + perstreep",
+     "tekst": "Dat is één streepje te veel. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één streepje te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − perstreep",
+     "tekst": "Dat is één streepje te weinig. Tel vanaf het getal langs de zijkant de streepjes tot de stip nog eens."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders afgelezen",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "tekst": "Lees de stip nog eens af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Tel dan vanaf het getal op of net onder de stip verder.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek de maand uit de vraag en ga recht omhoog naar de stip. Tel vanaf het getal langs de zijkant op of net onder de stip de streepjes verder."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "kloktekst bij een grafiek (label 'klok-verkeerd-gelezen' klopt niet, les 16); nu een tekst die bij de waarde van de sleutel past"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-VBN-E02",
+   "nr": 3,
+   "somtype": "[lijngrafiek] Hoeveel [ding] waren er in alle maanden samen?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[lijngrafiek] Hoeveel [ding] waren er in alle maanden samen?",
+   "hint1": "Lees bij elke maand af hoe hoog de stip staat. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes.",
+   "hint2": "Tel de aantallen van alle maanden bij elkaar op. Tel elke maand precies één keer.",
+   "ouderzin": "Je kind leest in een lijngrafiek alle maanden af en telt ze bij elkaar op.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "één maand",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Is dat het aantal van één maand? De vraag gaat over alle maanden samen. Tel de aantallen van alle maanden bij elkaar op.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "een paar maanden",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is nog niet alles. Heb je elke maand precies één keer meegeteld? Tel de aantallen van alle maanden bij elkaar op.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "niet elke maand één keer",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "regel": "Claudes sleutel: klok-verkeerd-gelezen",
+     "tekst": "Tel nog eens. Heb je elke maand precies één keer meegeteld? Tel de aantallen van alle maanden bij elkaar op.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "maand vergeten (regel)",
+     "claudeDenkfout": null,
+     "regel": "fout = alle maanden samen min één maand",
+     "tekst": "Tel nog eens. Heb je elke maand precies één keer meegeteld? Tel de aantallen van alle maanden bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "maand dubbel (regel)",
+     "claudeDenkfout": null,
+     "regel": "fout = alle maanden samen plus één maand",
+     "tekst": "Tel nog eens. Heb je elke maand precies één keer meegeteld? Tel de aantallen van alle maanden bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één maand (regel)",
+     "claudeDenkfout": null,
+     "regel": "fout = de waarde van één maand",
+     "tekst": "Is dat het aantal van één maand? De vraag gaat over alle maanden samen. Tel de aantallen van alle maanden bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "streepjes geteld",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : perstreep",
+     "tekst": "Is dat het aantal streepjes? Elk streepje is meer dan één. Hoeveel is elk streepje? Lees zo bij elke maand af hoeveel het er waren, en tel die aantallen op.",
+     "tekstSterker": "Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Zo weet je hoeveel elk streepje is. Lees daarna bij elke maand af hoe hoog de stip staat."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "anders afgelezen",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "regel": "Claudes sleutel: grafiek-verkeerd-afgelezen",
+     "tekst": "Lees bij elke maand de stip goed af. Hoeveel is elk streepje? Neem twee getallen langs de zijkant die vlak boven elkaar staan. Tel vanaf het onderste getal de streepjes omhoog, tot en met het streepje bij het bovenste getal. Hoeveel meer is het bovenste getal? Deel dat door het aantal streepjes. Tel daarna alle maanden op.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Lees bij elke maand het aantal af en tel alle maanden bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "zegt niet wat er ontbreekt; nu per sleutel nagerekend (een paar maanden of één maand: neutrale vraag, les 29)"
+    },
+    {
+     "claudeTekst": "Kijk eerst naar de kleine wijzer: welk uur is het geweest? Dan de grote wijzer: hoeveel minuten daarna?",
+     "claudeDenkfout": "klok-verkeerd-gelezen",
+     "waarom": "kloktekst bij een grafiek (label 'klok-verkeerd-gelezen' klopt niet, les 16); nu een tekst die bij de waarde van de sleutel past"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-VERH-E01",
+   "nr": 1,
+   "somtype": "[schema] verhoudingstabel",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[schema] verhoudingstabel",
+   "hint1": "In een verhoudingstabel horen twee getallen bij elkaar. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet?",
+   "hint2": "Reken uit hoeveel keer zo groot het aantal in de vraag is als het aantal dat je al weet. Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk.",
+   "ouderzin": "Je kind rekent met een verhoudingstabel. Wordt het ene getal een aantal keer zo groot, dan wordt het andere getal ook zoveel keer zo groot.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Heb je er iets bij opgeteld? Komt er bij het ene getal iets bij, dan komt er bij het andere getal niet vanzelf hetzelfde bij. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "verhouding niet gelijk",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "regel": "Claudes sleutel: verhoudingstabel-verkeerd",
+     "tekst": "Ben je al bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "getal uit de vraag",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Je hebt een getal uit de vraag overgenomen. Is dat echt het getal bij het vakje uit de vraag? Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "gedeeld",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Je hebt gedeeld. Bij een groter aantal hoort ook een groter getal. Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel keer zo groot is het aantal in de vraag als het aantal dat je al weet? Doe het andere getal ook zoveel keer. Zo blijft de verhouding gelijk."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk hoe vaak 2 kg in 8 kg past. Met datzelfde aantal keer werk je bij de prijs.",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je bent maar tot 4 kg gekomen. Ga verder tot je bij 8 kg bent.",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Het aantal broden wordt twee keer zo groot. Doe met de prijs precies hetzelfde.",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je hebt het getal 6 uit de vraag overgenomen. Kijk eerst hoeveel 6 broden meer zijn dan 3.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Elk pak geeft weer 3 glazen. Je moet 3 dus zes keer nemen.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je krijgt meer glazen dan pakken, niet minder. Kijk nog eens naar de tabel.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Elke fles heeft 2 liter. Tel eens 2 liter op voor iedere fles apart.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Meer flessen betekent meer liter. Het antwoord wordt dus groter dan 2.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-VERH-E02",
+   "nr": 2,
+   "somtype": "[balk] Kleur #/# van de balk.",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "[balk] Kleur #/# van de balk.",
+   "hint1": "De noemer (onder de streep) zegt in hoeveel gelijke stukken de balk verdeeld is. Die stukken staan er al.",
+   "hint2": "De teller (boven de streep) zegt hoeveel gelijke stukken van de balk je kleurt.",
+   "ouderzin": "Je kind kleurt een breuk van een balk die al in gelijke stukken verdeeld is.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "wat overblijft",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Zijn dat de stukken die niet gekleurd moeten worden? Kleur zoveel stukken als de teller zegt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "hele balk",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Je hebt de hele balk gekleurd. De noemer zegt in hoeveel stukken de balk verdeeld is. De teller zegt hoeveel je er kleurt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stuk te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Je hebt één stuk te veel gekleurd. Kleur zoveel stukken als de teller zegt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "één stuk te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord − 1",
+     "tekst": "Je hebt één stuk te weinig gekleurd. Kleur zoveel stukken als de teller zegt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kleur zoveel stukken als de teller (boven de streep) zegt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kleur 2 stukken, niet 4.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Kleur 3 stukken, niet 5.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Kleur 1 stuk, niet 2.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Kleur 1 stuk, niet 7.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Kleur 5 stukken, niet 1.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Kleur 7 stukken, niet 1.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-VERH-E02",
+   "nr": 3,
+   "somtype": "[groepjes] Er zijn # [ding]. Kleur #/# van de koekjes.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "[groepjes] Er zijn # [ding]. Kleur #/# van de koekjes.",
+   "hint1": "Verdeel de koekjes eerst in zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel koekjes zitten er in één stuk?",
+   "hint2": "In elk gelijk stuk zitten evenveel koekjes. Kleur zoveel van die stukken als de teller (boven de streep) zegt.",
+   "ouderzin": "Je kind kleurt een breuk van een aantal koekjes. Eerst verdeelt het de koekjes in gelijke stukken (gedeeld door de noemer), dan kleurt het zoveel stukken als de teller zegt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alle koekjes",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt alle koekjes gekleurd. Kleur alleen zoveel gelijke stukken als de teller zegt. Verdeel de koekjes eerst in zoveel gelijke stukken als de noemer zegt."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één stuk",
+     "claudeDenkfout": null,
+     "regel": "Claudes sleutel (zonder label)",
+     "tekst": "Dat is één gelijk stuk. Hoeveel van die stukken zegt de teller? Kleur die allemaal.",
+     "waarom": "Claudes sleutels zonder label; nu een vaste tekst die bij elke sleutel klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "teller als aantal",
+     "claudeDenkfout": null,
+     "regel": "fout = getal2",
+     "tekst": "Je hebt zoveel koekjes gekleurd als de teller zegt. De teller zegt hoeveel gelijke stukken je kleurt. Hoeveel koekjes zitten er in één stuk?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Verdeel de koekjes in zoveel gelijke stukken als de noemer zegt. Kleur dan zoveel stukken als de teller zegt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "4 is maar één deel. Je hebt 3 delen nodig.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "2 is maar één deel. Je hebt 2 delen nodig.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "3 is maar één deel. Je hebt 5 delen nodig.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "2 is maar één deel. Je hebt 5 delen nodig.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-VERH-E02",
+   "nr": 4,
+   "somtype": "[schema] strook",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "[schema] strook",
+   "hint1": "De hele strook is het geheel. Een deel is een of meer gelijke stukken van het geheel.",
+   "hint2": "Verdeel de strook in gelijke stukken. Hoeveel hokjes zitten er in één stuk, en hoeveel van die stukken horen bij de vraag?",
+   "ouderzin": "Je kind gebruikt een strook met hokjes om een deel van een geheel te vinden.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "hele stroken",
+     "claudeDenkfout": null,
+     "regel": "drie hele stroken",
+     "tekst": "Er is maar één strook. Je kleurt alleen een paar hokjes ervan, dus het antwoord is een deel van die ene strook."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerd deel (een derde)",
+     "claudeDenkfout": null,
+     "regel": "een derde",
+     "tekst": "Hoe vaak passen de gekleurde hokjes in de hele strook? Zoveel gelijke stukken heeft het geheel, en één daarvan is gekleurd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "verkeerd deel (een zestiende)",
+     "claudeDenkfout": null,
+     "regel": "een zestiende",
+     "tekst": "Hoe vaak passen de gekleurde hokjes in de hele strook? Zoveel gelijke stukken heeft het geheel, en één daarvan is gekleurd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "de helft gekozen",
+     "claudeDenkfout": null,
+     "regel": "de helft",
+     "tekst": "Bij de helft zijn er evenveel gekleurde als niet-gekleurde hokjes. Hoe vaak passen de gekleurde hokjes in de hele strook? Zoveel gelijke stukken heeft het geheel, en één daarvan is gekleurd."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "helft van de hokjes (twaalf)",
+     "claudeDenkfout": null,
+     "regel": "12 hokjes",
+     "tekst": "Dat is de helft van de strook. Een derde is minder dan de helft. Verdeel de strook in drie gelijke stukken. Hoeveel hokjes zitten er in één stuk?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "helft van de hokjes (tien)",
+     "claudeDenkfout": null,
+     "regel": "10 hokjes",
+     "tekst": "Dat is de helft van de strook. Een kwart is minder dan de helft. Verdeel de strook in vier gelijke stukken. Hoeveel hokjes zitten er in één stuk?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal stukken (drie)",
+     "claudeDenkfout": null,
+     "regel": "3 hokjes",
+     "tekst": "Een derde betekent: verdeel de strook in drie gelijke stukken. Drie is het aantal stukken, niet het aantal hokjes. Hoeveel hokjes zitten er in één stuk?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "aantal stukken (vier)",
+     "claudeDenkfout": null,
+     "regel": "4 hokjes",
+     "tekst": "Een kwart betekent: verdeel de strook in vier gelijke stukken. Vier is het aantal stukken, niet het aantal hokjes. Hoeveel hokjes zitten er in één stuk?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Verdeel de strook in gelijke stukken. Hoeveel hokjes zitten er in één stuk, en hoeveel van die stukken horen bij de vraag?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk hoe vaak 3 hokjes in de hele strook van 12 passen.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je kleurt maar een stukje van één strook. Het antwoord is dus kleiner dan de hele strook.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Het getal 3 zegt in hoeveel gelijke stukken je de strook verdeelt, niet hoeveel hokjes je kleurt.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "12 hokjes is de helft van de strook. Een derde is minder dan de helft.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Kijk hoeveel groepjes van 4 hokjes er in de hele strook passen.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Bij de helft zou je precies 8 hokjes kleuren. Tel nog eens hoeveel je er echt kleurt.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Het getal 4 zegt in hoeveel stukken je de strook deelt, niet hoe groot één stuk is.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Dat is de helft van de strook. Een kwart is nog kleiner.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-VERH-E02",
+   "nr": 5,
+   "somtype": "In [plek] liggen # [ding]. #/# [ding] is groen. Hoeveel groene [ding] zijn er?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "In [plek] liggen # [ding]. #/# [ding] is groen. Hoeveel groene [ding] zijn er?",
+   "hint1": "Verdeel alles eerst in zoveel gelijke stukken als de noemer (onder de streep) zegt. Hoeveel is één stuk?",
+   "hint2": "Eén gelijk stuk is het hele aantal gedeeld door de noemer. Neem zoveel van die stukken als de teller (boven de streep) zegt. Hoeveel is dat samen?",
+   "ouderzin": "Je kind rekent een breuk van een aantal uit. Eerst één gelijk stuk (gedeeld door de noemer), dan keer de teller.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alles",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het hele aantal. De vraag gaat alleen over zoveel gelijke stukken als de teller zegt. Deel eerst door de noemer."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één stuk",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is één gelijk stuk. Hoeveel van die stukken zegt de teller? Hoeveel is dat samen?",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "door de teller gedeeld",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "regel": "Claudes sleutel: omgekeerd-gedeeld",
+     "tekst": "Je hebt gedeeld door de teller. Deel door de noemer, dan heb je één gelijk stuk. Doe dat daarna keer de teller.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "wat overblijft",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Is dat wat er overblijft? Je zoekt zoveel gelijke stukken als de teller zegt.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Deel eerst door de noemer. Dat is één gelijk stuk. Doe dat keer de teller."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is het deel dat níét groen is. Lees de vraag nog eens.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Deel door de noemer (6), niet door de teller.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "31 is 1/6. Je hebt 5 van die delen nodig.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "52 is 1/6. Je hebt 5 van die delen nodig.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-VERH-E02",
+   "nr": 1,
+   "somtype": "[taart] [wie] eet #/# van een taart en een ander(e) [wie] eet #/#. Welk deel is samen op? Typ een breuk.",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "[taart] [wie] eet #/# van een taart en een ander(e) [wie] eet #/#. Welk deel is samen op? Typ een breuk.",
+   "hint1": "Een deel is een of meer gelijke stukken van het geheel. De taart is in gelijke stukken verdeeld. De noemer (onder de streep) zegt in hoeveel.",
+   "hint2": "Tel de stukken van allebei bij elkaar op. Dat getal komt boven de streep, als teller. De noemer blijft hetzelfde.",
+   "ouderzin": "Je kind telt twee breuken van een taart op die dezelfde noemer hebben.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alleen het aantal stukken",
+     "claudeDenkfout": null,
+     "regel": "fout = de stukken samen met noemer één",
+     "tekst": "Dat is alleen het aantal stukken. Zo lijkt het alsof er hele taarten op zijn. Zet onder de streep in hoeveel gelijke stukken de taart verdeeld is."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "noemer veranderd",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "regel": "Claudes sleutel: teller-en-noemer-optellen",
+     "tekst": "De taart blijft in evenveel gelijke stukken verdeeld. Onder de streep blijft dus de noemer staan. Boven de streep komt hoeveel stukken er samen op zijn.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "afgehaald",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Je hebt de stukken van elkaar afgehaald. Samen op betekent dat je de stukken van allebei bij elkaar optelt.",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de stukken van allebei op en zet dat boven de streep. De noemer blijft hetzelfde."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De noemer verandert niet: de taart blijft in evenveel stukken verdeeld. Tel alleen de tellers op.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je hebt 5 stukken, maar van welke grootte? Zet 6 onder de streep.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Samen op betekent optellen, niet aftrekken.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Je hebt 4 stukken, maar van welke grootte? Zet 6 onder de streep.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt 2 stukken, maar van welke grootte? Zet 4 onder de streep.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt 3 stukken, maar van welke grootte? Zet 4 onder de streep.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt 3 stukken, maar van welke grootte? Zet 5 onder de streep.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt 6 stukken, maar van welke grootte? Zet 8 onder de streep.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt 7 stukken, maar van welke grootte? Zet 10 onder de streep.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt 5 stukken, maar van welke grootte? Zet 8 onder de streep.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt 2 stukken, maar van welke grootte? Zet 5 onder de streep.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Je hebt 4 stukken, maar van welke grootte? Zet 5 onder de streep.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-VERH-E03",
+   "nr": 1,
+   "somtype": "# [ding] worden eerlijk verdeeld over # [ding]. Welk deel van een [ding] krijgt [wie]?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# [ding] worden eerlijk verdeeld over # [ding]. Welk deel van een [ding] krijgt [wie]?",
+   "hint1": "Een deel is een of meer gelijke stukken van een geheel. Eerlijk verdelen is een deling: wat je verdeelt, gedeeld door het aantal dat iets krijgt.",
+   "hint2": "Eerlijk verdelen kun je als breuk schrijven. Wat je verdeelt, komt boven de streep. Dat is de teller. Over hoeveel je verdeelt, komt onder de streep. Dat is de noemer.",
+   "ouderzin": "Je kind schrijft eerlijk verdelen als breuk. Het aantal dat verdeeld wordt, gedeeld door het aantal dat iets krijgt.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "omgedraaid",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "regel": "Claudes sleutel: omgekeerd-gedeeld",
+     "tekst": "Je hebt de breuk omgedraaid. Wat je verdeelt, komt boven de streep (de teller). Over hoeveel je verdeelt, komt onder de streep (de noemer).",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "van één ervan",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "regel": "Claudes sleutel: deel-van-geheel-verkeerd",
+     "tekst": "Zoveel krijgt ieder van één ervan. Maar er wordt meer dan één verdeeld. Van elk krijgt ieder zo'n stuk. Hoeveel stukken zijn dat samen?",
+     "waarom": "Claudes tekst per item; nu een vaste tekst die bij elke sleutel van dit label klopt (per sleutel nagerekend)"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Schrijf de deling als breuk. Wat je verdeelt, komt boven de streep. Over hoeveel je verdeelt, komt onder de streep."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je deelt 2 door 8: het getal dat je verdeelt komt boven.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Er zijn 2 botten, niet één. Elke dino krijgt van elk bot een 8-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Je deelt 4 door 6: het getal dat je verdeelt komt boven.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Er zijn 4 blaadjes, niet één. Elke dino krijgt van elk blaadje een 6-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Je deelt 2 door 4: het getal dat je verdeelt komt boven.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Er zijn 2 knikkers, niet één. Elk kind krijgt van elke knoop een 4-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Je deelt 3 door 5: het getal dat je verdeelt komt boven.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Er zijn 3 kaartjes, niet één. Elk kind krijgt van elk kaartje een 5-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Je deelt 3 door 8: het getal dat je verdeelt komt boven.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Er zijn 3 tanden, niet één. Elke dino krijgt van elke tand een 8-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Er zijn 3 noten, niet één. Elke eekhoorn krijgt van elk poesje een 8-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Je deelt 4 door 5: het getal dat je verdeelt komt boven.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Er zijn 4 stickers, niet één. Elk kind krijgt van elke sticker een 5-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Er zijn 4 blaadjes, niet één. Elke dino krijgt van elk blaadje een 5-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Er zijn 4 vissen, niet één. Elke pinguïn krijgt van elk poesje een 5-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Je deelt 2 door 6: het getal dat je verdeelt komt boven.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Er zijn 2 vissen, niet één. Elke poes krijgt van elke vis een 6-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Je deelt 3 door 4: het getal dat je verdeelt komt boven.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Er zijn 3 blaadjes, niet één. Elke dino krijgt van elk blaadje een 4-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Er zijn 3 ballen, niet één. Elke speler krijgt van elke bal een 4-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Er zijn 4 kaartjes, niet één. Elk kind krijgt van elk kaartje een 6-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Er zijn 3 stickers, niet één. Elk kind krijgt van elke sticker een 4-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Je deelt 3 door 6: het getal dat je verdeelt komt boven.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Er zijn 3 truien, niet één. Elk kind krijgt van elke trui een 6-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Je deelt 4 door 8: het getal dat je verdeelt komt boven.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen per item; nu een vaste tekst zonder getallen (geen voorbeeld dat een antwoord kan zijn, les 6)"
+    },
+    {
+     "claudeTekst": "Er zijn 4 eieren, niet één. Elke dino krijgt van elke stap een 8-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    },
+    {
+     "claudeTekst": "Er zijn 4 noten, niet één. Elke eekhoorn krijgt van elke wortel een 8-de deel.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "'8-de deel' is geen notatie voor groep 6; nu zonder getallen"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G6-VERH-E03",
+   "nr": 2,
+   "somtype": "De breuk #/# is hetzelfde als een deelsom. Welke? # : □",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "De breuk #/# is hetzelfde als een deelsom. Welke? # : □",
+   "hint1": "Een breuk is ook een deling. De streep betekent gedeeld door. De teller (boven de streep) gedeeld door de noemer (onder de streep).",
+   "hint2": "Het teken tussen de getallen in de som betekent gedeeld door. Vóór dat teken staat de teller. Welk getal komt erna? Kijk onder de streep.",
+   "ouderzin": "Je kind schrijft een breuk als deelsom, de teller gedeeld door de noemer.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "teller ingevuld",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Je hebt de teller ingevuld. De teller staat vóór het teken. Gedeeld door welk getal? Kijk onder de streep."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "afgetrokken",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Je hebt de teller van de noemer afgehaald. De breukstreep betekent gedeeld door. De teller gedeeld door de noemer."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "De breukstreep betekent gedeeld door. Vóór het teken komt de teller, erna het getal onder de streep."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De noemer (onder de streep) is het getal waardoor je deelt.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "vervangen door een vaste tekst per soort fout (per sleutel nagerekend)"
+    },
+    {
+     "claudeTekst": "Niet aftrekken: de breukstreep is een deelteken.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "'deelteken' zonder uitleg; nu 'gedeeld door'"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}
