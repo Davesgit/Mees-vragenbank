@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-01T22:54:27+0200",
+ "gegenereerdOp": "2026-10-08T12:16:26+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-DENK-03",
  "bordtitel": "Stappenplannen bij rekenen",
@@ -42,22 +42,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "17 minuten"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Maak een plan in stappen. Hoelang duren alle rondjes samen?",
+   "sterkereHint": "Doe het aantal rondjes keer de tijd van één rondje. Tel de rusttijd er één keer bij op.",
    "foutHints": [
     {
      "stap": null,
      "fout": "12 minuten",
-     "uitleg": "De rondjes heb je goed geteld. Er hoort nog een stap bij het plan."
+     "uitleg": "Hoelang duren alle rondjes samen? Dat is het aantal rondjes keer de tijd van één rondje. Hoelang rust je, en tel je dat erbij?",
+     "uitlegSterker": "Schrijf de twee stappen onder elkaar: alle rondjes samen (het aantal rondjes keer de tijd van één rondje), en de rust. Tel die twee tijden bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "12 minuten",
+     "soort": "rust vergeten of alles opgeteld",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "27 minuten",
-     "uitleg": "Lees nog eens hoe vaak je rust. Is dat na elk rondje of maar één keer?"
+     "uitleg": "Rust je na elk rondje? Lees nog eens: je rust maar één keer, aan het eind.",
+     "uitlegSterker": "Reken eerst de tijd van alle rondjes samen uit. Tel de rusttijd daar maar één keer bij op.",
+     "laag2": "tekstSterker",
+     "regel": "27 minuten",
+     "soort": "rust na elk rondje",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "12 minuten → De rondjes heb je goed geteld. Er hoort nog een stap bij het plan. · 27 minuten → Lees nog eens hoe vaak je rust. Is dat na elk rondje of maar één keer?",
-   "ouderzin": "",
+   "foutHintsTekst": "12 minuten → Hoelang duren alle rondjes samen? Dat is het aantal rondjes keer de tijd van één rondje. Hoelang rust je, en tel je dat erbij? · 27 minuten → Rust je na elk rondje? Lees nog eens: je rust maar één keer, aan het eind.",
+   "ouderzin": "Je kind rekent een opgave in twee stappen uit: eerst een keersom, dan erbij.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -149,7 +159,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Bij gym loop je # [ding] van # minuten en daarna rust je # minuten. Hoelang ben je in totaal bezig?"
+    "somtypeOrigineel": "Bij gym loop je # [ding] van # minuten en daarna rust je # minuten. Hoelang ben je in totaal bezig?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 1,
+     "somtype": "Bij gym loop je # [ding] van # minuten en daarna rust je # minuten. Hoelang ben je in totaal bezig?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -165,8 +180,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "12 minuten",
+     "soort": "rust vergeten of alles opgeteld",
+     "bron": "nieuw",
+     "tekst": "Hoelang duren alle rondjes samen? Dat is het aantal rondjes keer de tijd van één rondje. Hoelang rust je, en tel je dat erbij?",
+     "tekstSterker": "Schrijf de twee stappen onder elkaar: alle rondjes samen (het aantal rondjes keer de tijd van één rondje), en de rust. Tel die twee tijden bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "12 minuten"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "27 minuten",
+     "soort": "rust na elk rondje",
+     "bron": "nieuw",
+     "tekst": "Rust je na elk rondje? Lees nog eens: je rust maar één keer, aan het eind.",
+     "tekstSterker": "Reken eerst de tijd van alle rondjes samen uit. Tel de rusttijd daar maar één keer bij op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "27 minuten"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst de rondjes samen uit. Tel de rust er één keer bij op.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst de rondjes samen uit. Tel de rust er één keer bij op."
   },
   {
    "id": "G7-DENK-03-claude-bank-002",
@@ -197,22 +259,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "600 g"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Kook je voor meer of voor minder personen dan in het recept? Hoeveel keer zoveel personen is dat?",
+   "sterkereHint": "Deel het nieuwe aantal personen door het aantal uit het recept. De uitkomst zegt hoeveel keer zoveel meel je nodig hebt. Doe het meel uit het recept zoveel keer.",
    "foutHints": [
     {
      "stap": null,
      "fout": "150 g",
-     "uitleg": "Je kookt voor meer mensen dan in het recept staat. Heb je dan meer of minder meel nodig?"
+     "uitleg": "Heb je minder meel genomen? Je kookt voor meer personen, dus je hebt meer meel nodig.",
+     "uitlegSterker": "Hoeveel keer zoveel personen zijn het nu? Doe het meel uit het recept ook zoveel keer: het wordt meer, niet minder.",
+     "laag2": "tekstSterker",
+     "regel": "150 g",
+     "soort": "gedeeld",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "302 g",
-     "uitleg": "Je hebt er een klein getal bij opgeteld. Van 4 naar 8 personen is keer zoveel, niet plus zoveel."
+     "uitleg": "Heb je er een klein getal bij opgeteld? Bij keer zoveel personen hoort keer zoveel meel, niet een paar gram erbij.",
+     "uitlegSterker": "Een paar gram erbij is niet genoeg. Elke groep van evenveel personen als in het recept heeft dezelfde hoeveelheid meel nodig. Tel hoeveel van die groepen er nu zijn, en neem het meel uit het recept zo vaak.",
+     "laag2": "tekstSterker",
+     "regel": "302 g",
+     "soort": "opgeteld",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "150 g → Je kookt voor meer mensen dan in het recept staat. Heb je dan meer of minder meel nodig? · 302 g → Je hebt er een klein getal bij opgeteld. Van 4 naar 8 personen is keer zoveel, niet plus zoveel.",
-   "ouderzin": "",
+   "foutHintsTekst": "150 g → Heb je minder meel genomen? Je kookt voor meer personen, dus je hebt meer meel nodig. · 302 g → Heb je er een klein getal bij opgeteld? Bij keer zoveel personen hoort keer zoveel meel, niet een paar gram erbij.",
+   "ouderzin": "Je kind past een recept aan voor meer personen: keer zoveel personen is keer zoveel meel.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -304,7 +376,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "Een recept voor # [ding] gebruikt # g meel. Stap #: je kookt voor # [ding]. Stap #: pas de hoeveelheid meel aan. Hoeveel meel heb je nodig?"
+    "somtypeOrigineel": "Een recept voor # [ding] gebruikt # g meel. Stap #: je kookt voor # [ding]. Stap #: pas de hoeveelheid meel aan. Hoeveel meel heb je nodig?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 2,
+     "somtype": "Een recept voor # [ding] gebruikt # g meel. Stap #: je kookt voor # [ding]. Stap #: pas de hoeveelheid meel aan. Hoeveel meel heb je nodig?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -320,8 +397,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "150 g",
+     "soort": "gedeeld",
+     "bron": "nieuw",
+     "tekst": "Heb je minder meel genomen? Je kookt voor meer personen, dus je hebt meer meel nodig.",
+     "tekstSterker": "Hoeveel keer zoveel personen zijn het nu? Doe het meel uit het recept ook zoveel keer: het wordt meer, niet minder.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "150 g"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "302 g",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je er een klein getal bij opgeteld? Bij keer zoveel personen hoort keer zoveel meel, niet een paar gram erbij.",
+     "tekstSterker": "Een paar gram erbij is niet genoeg. Elke groep van evenveel personen als in het recept heeft dezelfde hoeveelheid meel nodig. Tel hoeveel van die groepen er nu zijn, en neem het meel uit het recept zo vaak.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "302 g"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Hoeveel keer zoveel personen zijn het? Doe het meel ook zoveel keer.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Hoeveel keer zoveel personen zijn het? Doe het meel ook zoveel keer."
   },
   {
    "id": "G7-DENK-03-claude-bank-003",
@@ -352,22 +476,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "21 stoelen"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Maak een plan in stappen. Hoeveel stoelen staan er eerst in totaal?",
+   "sterkereHint": "Doe het aantal tafels keer het aantal stoelen aan één tafel. Haal de stoelen die je weghaalt van dat totaal af.",
    "foutHints": [
     {
      "stap": null,
      "fout": "24 stoelen",
-     "uitleg": "Dat is het aantal na de eerste stap. Er moet nog iets weggehaald worden."
+     "uitleg": "Is dat het aantal na de eerste stap? Je haalt er daarna nog een paar weg.",
+     "uitlegSterker": "Schrijf de twee stappen onder elkaar: alle stoelen samen, en de stoelen die je weghaalt. Haal de stoelen die je weghaalt van het totaal af.",
+     "laag2": "tekstSterker",
+     "regel": "24 stoelen",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "7 stoelen",
-     "uitleg": "Je hebt 6 en 4 opgeteld. Elke tafel heeft 4 stoelen, dus hoeveel keer 4 is dat?"
+     "uitleg": "Heb je het aantal tafels en het aantal stoelen aan één tafel opgeteld? Elke tafel heeft evenveel stoelen. Hoeveel keer dat aantal is het?",
+     "uitlegSterker": "Tel de stoelen tafel voor tafel: steeds hetzelfde aantal, zo vaak als er tafels zijn. Dat is een keersom. Haal de stoelen die je weghaalt daarna van het totaal af.",
+     "laag2": "tekstSterker",
+     "regel": "7 stoelen",
+     "soort": "opgeteld in plaats van keer",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "24 stoelen → Dat is het aantal na de eerste stap. Er moet nog iets weggehaald worden. · 7 stoelen → Je hebt 6 en 4 opgeteld. Elke tafel heeft 4 stoelen, dus hoeveel keer 4 is dat?",
-   "ouderzin": "",
+   "foutHintsTekst": "24 stoelen → Is dat het aantal na de eerste stap? Je haalt er daarna nog een paar weg. · 7 stoelen → Heb je het aantal tafels en het aantal stoelen aan één tafel opgeteld? Elke tafel heeft evenveel stoelen. Hoeveel keer dat aantal is het?",
+   "ouderzin": "Je kind rekent een opgave in twee stappen uit: eerst een keersom, dan eraf.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -459,7 +593,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "In [plek] staan # [ding] met elk # [ding]. Daarna haal je # [ding] weg. Hoeveel stoelen staan er nog?"
+    "somtypeOrigineel": "In [plek] staan # [ding] met elk # [ding]. Daarna haal je # [ding] weg. Hoeveel stoelen staan er nog?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 3,
+     "somtype": "In [plek] staan # [ding] met elk # [ding]. Daarna haal je # [ding] weg. Hoeveel stoelen staan er nog?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -475,8 +614,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "24 stoelen",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw",
+     "tekst": "Is dat het aantal na de eerste stap? Je haalt er daarna nog een paar weg.",
+     "tekstSterker": "Schrijf de twee stappen onder elkaar: alle stoelen samen, en de stoelen die je weghaalt. Haal de stoelen die je weghaalt van het totaal af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "24 stoelen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "7 stoelen",
+     "soort": "opgeteld in plaats van keer",
+     "bron": "nieuw",
+     "tekst": "Heb je het aantal tafels en het aantal stoelen aan één tafel opgeteld? Elke tafel heeft evenveel stoelen. Hoeveel keer dat aantal is het?",
+     "tekstSterker": "Tel de stoelen tafel voor tafel: steeds hetzelfde aantal, zo vaak als er tafels zijn. Dat is een keersom. Haal de stoelen die je weghaalt daarna van het totaal af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7 stoelen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst alle stoelen samen uit met een keersom. Haal de stoelen die je weghaalt daarna eraf.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst alle stoelen samen uit met een keersom. Haal de stoelen die je weghaalt daarna eraf."
   },
   {
    "id": "G7-DENK-03-claude-bank-004",
@@ -507,22 +693,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "16"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Verdubbelen is keer twee. Schrijf na elke stap het nieuwe getal op.",
+   "sterkereHint": "Begin bij het getal uit de vraag en doe het keer twee. Doe de uitkomst weer keer twee. Houd met streepjes bij hoe vaak je verdubbelt, tot het aantal keer uit de vraag.",
    "foutHints": [
     {
      "stap": null,
      "fout": "8",
-     "uitleg": "Schrijf het getal na elke verdubbeling op. Heb je echt 4 keer verdubbeld?"
+     "uitleg": "Heb je echt zo vaak verdubbeld als de vraag zegt? Schrijf na elke verdubbeling het getal op en tel de stappen.",
+     "uitlegSterker": "Schrijf een rijtje: het begingetal, en daarachter steeds het dubbele. Zet onder elk nieuw getal een streepje. Stop als je zoveel streepjes hebt als de vraag zegt.",
+     "laag2": "tekstSterker",
+     "regel": "8",
+     "soort": "een keer te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "9",
-     "uitleg": "Verdubbelen is niet steeds er 2 bij optellen. Wat gebeurt er met een getal als het 2 keer zoveel wordt?"
+     "uitleg": "Heb je steeds twee erbij gedaan? Verdubbelen is keer twee: het getal wordt twee keer zo groot.",
+     "uitlegSterker": "Verdubbelen is het getal bij zichzelf optellen. Doe dat met het begingetal, en daarna steeds met de nieuwe uitkomst.",
+     "laag2": "tekstSterker",
+     "regel": "9",
+     "soort": "steeds twee erbij",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "8 → Schrijf het getal na elke verdubbeling op. Heb je echt 4 keer verdubbeld? · 9 → Verdubbelen is niet steeds er 2 bij optellen. Wat gebeurt er met een getal als het 2 keer zoveel wordt?",
-   "ouderzin": "",
+   "foutHintsTekst": "8 → Heb je echt zo vaak verdubbeld als de vraag zegt? Schrijf na elke verdubbeling het getal op en tel de stappen. · 9 → Heb je steeds twee erbij gedaan? Verdubbelen is keer twee: het getal wordt twee keer zo groot.",
+   "ouderzin": "Je kind verdubbelt een getal een paar keer achter elkaar en houdt bij hoe vaak.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -614,7 +810,12 @@
     "duplicaatVan": null,
     "somtypeNr": 5,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "Je begint bij # en verdubbelt het getal # keer. Welk getal krijg je dan?"
+    "somtypeOrigineel": "Je begint bij # en verdubbelt het getal # keer. Welk getal krijg je dan?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 5,
+     "somtype": "Je begint bij # en verdubbelt het getal # keer. Welk getal krijg je dan?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -630,8 +831,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "8",
+     "soort": "een keer te weinig",
+     "bron": "nieuw",
+     "tekst": "Heb je echt zo vaak verdubbeld als de vraag zegt? Schrijf na elke verdubbeling het getal op en tel de stappen.",
+     "tekstSterker": "Schrijf een rijtje: het begingetal, en daarachter steeds het dubbele. Zet onder elk nieuw getal een streepje. Stop als je zoveel streepjes hebt als de vraag zegt.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "9",
+     "soort": "steeds twee erbij",
+     "bron": "nieuw",
+     "tekst": "Heb je steeds twee erbij gedaan? Verdubbelen is keer twee: het getal wordt twee keer zo groot.",
+     "tekstSterker": "Verdubbelen is het getal bij zichzelf optellen. Doe dat met het begingetal, en daarna steeds met de nieuwe uitkomst.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "9"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Verdubbelen is keer twee. Doe dat zo vaak als de vraag zegt.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Verdubbelen is keer twee. Doe dat zo vaak als de vraag zegt."
   },
   {
    "id": "G7-DENK-03-claude-bank-005",
@@ -662,22 +910,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "20"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Elke stap is even groot. Hoeveel stappen zet je, en hoe groot is één stap?",
+   "sterkereHint": "Doe het aantal stappen keer de grootte van één stap. Zo ver spring je. Tel dat op bij het getal waar je begint.",
    "foutHints": [
     {
      "stap": null,
      "fout": "16",
-     "uitleg": "Tel je stappen nog eens na. Hoeveel sprongen van 4 heb je precies gemaakt?"
+     "uitleg": "Heb je alle stappen gezet? Tel je sprongen nog eens, vanaf het getal waar je begint. Tel bij elke sprong één.",
+     "uitlegSterker": "Zet een streepje voor elke sprong en schrijf erbij waar je uitkomt. Stop pas als je zoveel streepjes hebt als het aantal stappen uit de vraag.",
+     "laag2": "tekstSterker",
+     "regel": "16",
+     "soort": "een stap te weinig",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "9",
-     "uitleg": "Je hebt 4 en 5 bij elkaar opgeteld. Elke stap is 4 groot, dus hoeveel keer 4 loop je?"
+     "uitleg": "Heb je het aantal stappen en de grootte van een stap opgeteld? Elke stap is even groot. Hoe vaak zet je zo'n stap?",
+     "uitlegSterker": "Spring vanaf het getal waar je begint steeds dezelfde stap vooruit, en tel bij elke sprong mee. Het aantal stappen keer de grootte van één stap is hoe ver je springt.",
+     "laag2": "tekstSterker",
+     "regel": "9",
+     "soort": "opgeteld",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "16 → Tel je stappen nog eens na. Hoeveel sprongen van 4 heb je precies gemaakt? · 9 → Je hebt 4 en 5 bij elkaar opgeteld. Elke stap is 4 groot, dus hoeveel keer 4 loop je?",
-   "ouderzin": "",
+   "foutHintsTekst": "16 → Heb je alle stappen gezet? Tel je sprongen nog eens, vanaf het getal waar je begint. Tel bij elke sprong één. · 9 → Heb je het aantal stappen en de grootte van een stap opgeteld? Elke stap is even groot. Hoe vaak zet je zo'n stap?",
+   "ouderzin": "Je kind springt in gelijke stappen over de getallenlijn: het aantal stappen keer de grootte van één stap, vanaf het begingetal.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -769,7 +1027,12 @@
     "duplicaatVan": null,
     "somtypeNr": 6,
     "somtypeNrOrigineel": 5,
-    "somtypeOrigineel": "Je begint bij # op de getallenlijn en zet # [ding] van # [ding]. Bij welk getal kom je uit?"
+    "somtypeOrigineel": "Je begint bij # op de getallenlijn en zet # [ding] van # [ding]. Bij welk getal kom je uit?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 6,
+     "somtype": "Je begint bij # op de getallenlijn en zet # [ding] van # [ding]. Bij welk getal kom je uit?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -785,8 +1048,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "16",
+     "soort": "een stap te weinig",
+     "bron": "nieuw",
+     "tekst": "Heb je alle stappen gezet? Tel je sprongen nog eens, vanaf het getal waar je begint. Tel bij elke sprong één.",
+     "tekstSterker": "Zet een streepje voor elke sprong en schrijf erbij waar je uitkomt. Stop pas als je zoveel streepjes hebt als het aantal stappen uit de vraag.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "16"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "9",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je het aantal stappen en de grootte van een stap opgeteld? Elke stap is even groot. Hoe vaak zet je zo'n stap?",
+     "tekstSterker": "Spring vanaf het getal waar je begint steeds dezelfde stap vooruit, en tel bij elke sprong mee. Het aantal stappen keer de grootte van één stap is hoe ver je springt.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "9"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe het aantal stappen keer de grootte van één stap. Tel dat op bij het getal waar je begint.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe het aantal stappen keer de grootte van één stap. Tel dat op bij het getal waar je begint."
   },
   {
    "id": "G7-DENK-03-claude-bank-006",
@@ -817,22 +1127,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "14 dl"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Schrijf voor elke dag op hoeveel water de plant krijgt.",
+   "sterkereHint": "Op de eerste dag krijgt de plant de hoeveelheid uit de vraag. Elke volgende dag doe je er de extra hoeveelheid bij. Schrijf alle dagen onder elkaar en tel ze bij elkaar op.",
    "foutHints": [
     {
      "stap": null,
      "fout": "11 dl",
-     "uitleg": "Schrijf de vier dagen onder elkaar op. Heb je elke dag meegeteld?"
+     "uitleg": "Dat is te weinig. Heb je elke dag meegeteld, met de goede hoeveelheid? Elke volgende dag krijgt de plant meer dan de dag ervoor.",
+     "uitlegSterker": "Maak een rijtje met voor elke dag de hoeveelheid. Elke dag komt er weer wat bij, dus elk getal is groter dan het getal ervoor. Tel het rijtje op.",
+     "laag2": "tekstSterker",
+     "regel": "11 dl",
+     "soort": "meer dan dag één of dag vergeten",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "8 dl",
-     "uitleg": "De hoeveelheid wordt elke dag groter. Je kunt dus niet 4 keer dezelfde hoeveelheid nemen."
+     "uitleg": "Krijgt de plant elke dag evenveel? Elke volgende dag krijgt hij meer. Schrijf de dagen onder elkaar.",
+     "uitlegSterker": "Schrijf voor elke dag op hoeveel water de plant krijgt: op de eerste dag de hoeveelheid uit de vraag, en elke volgende dag wat meer. Tel alle dagen bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "8 dl",
+     "soort": "elke dag hetzelfde",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "11 dl → Schrijf de vier dagen onder elkaar op. Heb je elke dag meegeteld? · 8 dl → De hoeveelheid wordt elke dag groter. Je kunt dus niet 4 keer dezelfde hoeveelheid nemen.",
-   "ouderzin": "",
+   "foutHintsTekst": "11 dl → Dat is te weinig. Heb je elke dag meegeteld, met de goede hoeveelheid? Elke volgende dag krijgt de plant meer dan de dag ervoor. · 8 dl → Krijgt de plant elke dag evenveel? Elke volgende dag krijgt hij meer. Schrijf de dagen onder elkaar.",
+   "ouderzin": "Je kind maakt een rijtje dat elke dag wat groter wordt, en telt het op.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -924,7 +1244,12 @@
     "duplicaatVan": null,
     "somtypeNr": 7,
     "somtypeNrOrigineel": 6,
-    "somtypeOrigineel": "Je geeft een plant # dagen water. Op dag # [ding] je # dl en elke volgende dag # dl meer. Hoeveel dl water geef je in totaal?"
+    "somtypeOrigineel": "Je geeft een plant # dagen water. Op dag # [ding] je # dl en elke volgende dag # dl meer. Hoeveel dl water geef je in totaal?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 7,
+     "somtype": "Je geeft een plant # dagen water. Op dag # [ding] je # dl en elke volgende dag # dl meer. Hoeveel dl water geef je in totaal?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -940,8 +1265,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "11 dl",
+     "soort": "meer dan dag één of dag vergeten",
+     "bron": "nieuw",
+     "tekst": "Dat is te weinig. Heb je elke dag meegeteld, met de goede hoeveelheid? Elke volgende dag krijgt de plant meer dan de dag ervoor.",
+     "tekstSterker": "Maak een rijtje met voor elke dag de hoeveelheid. Elke dag komt er weer wat bij, dus elk getal is groter dan het getal ervoor. Tel het rijtje op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "11 dl"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "8 dl",
+     "soort": "elke dag hetzelfde",
+     "bron": "nieuw",
+     "tekst": "Krijgt de plant elke dag evenveel? Elke volgende dag krijgt hij meer. Schrijf de dagen onder elkaar.",
+     "tekstSterker": "Schrijf voor elke dag op hoeveel water de plant krijgt: op de eerste dag de hoeveelheid uit de vraag, en elke volgende dag wat meer. Tel alle dagen bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8 dl"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Schrijf alle dagen onder elkaar, met elke dag wat meer. Tel alle dagen bij elkaar op.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Schrijf alle dagen onder elkaar, met elke dag wat meer. Tel alle dagen bij elkaar op."
   },
   {
    "id": "G7-DENK-03-claude-bank-007",
@@ -950,44 +1322,54 @@
    "niveau": "toepassen",
    "niveauKind": "Oefenen",
    "type": "meerkeuze",
-   "opgave": "Je hebt 3 pakken sap van elk 2 liter. Stap 1: giet alles in een kan. Stap 2: giet er 1 liter uit. Hoeveel liter zit er nog in de kan?",
+   "opgave": "Je hebt 3 flesjes sap van elk 3 dl. Stap 1: giet alles in een kan. Stap 2: giet er 2 dl uit. Hoeveel dl zit er nog in de kan?",
    "opgaveStappen": null,
    "opties": [
     {
      "letter": "A",
-     "tekst": "4 liter"
+     "tekst": "4 dl"
     },
     {
      "letter": "B",
-     "tekst": "5 liter"
+     "tekst": "7 dl"
     },
     {
      "letter": "C",
-     "tekst": "6 liter"
+     "tekst": "9 dl"
     }
    ],
-   "optiesTekst": "A) 4 liter · B) 5 liter · C) 6 liter",
-   "antwoord": "5 liter",
+   "optiesTekst": "A) 4 dl · B) 7 dl · C) 9 dl",
+   "antwoord": "7 dl",
    "antwoordDetail": {
     "juisteOptie": "B",
-    "juisteOptieTekst": "5 liter"
+    "juisteOptieTekst": "7 dl"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Volg de stappen. Hoeveel deciliter giet je bij stap één in de kan?",
+   "sterkereHint": "Doe het aantal flesjes keer de deciliters in één flesje: zoveel zit er na stap één in de kan. Haal bij stap twee de deciliters die je eruit giet eraf.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "6 liter",
-     "uitleg": "Na stap 1 zit dat erin. Maar stap 2 moet je ook nog uitvoeren."
+     "fout": "4 dl",
+     "uitleg": "Heb je het aantal flesjes en de deciliters van één flesje opgeteld? Elk flesje heeft evenveel sap. Hoeveel keer dat aantal is het?",
+     "uitlegSterker": "Tel de deciliters flesje voor flesje: steeds hetzelfde aantal, zo vaak als er flesjes zijn. Dat is een keersom. Haal de deciliters die je eruit giet daarna van het totaal af.",
+     "laag2": "tekstSterker",
+     "regel": "4 dl",
+     "soort": "opgeteld in plaats van keer",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "4 liter",
-     "uitleg": "Je hebt 3 en 2 opgeteld. Elk pak heeft 2 liter, dus hoeveel keer 2 liter is dat?"
+     "fout": "9 dl",
+     "uitleg": "Is dat wat er na stap één in de kan zit? Bij stap twee giet je er nog iets uit.",
+     "uitlegSterker": "Schrijf onder elkaar wat er na stap één en na stap twee in de kan zit. Haal bij stap twee de deciliters die je eruit giet af van wat er in de kan zat.",
+     "laag2": "tekstSterker",
+     "regel": "9 dl",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "6 liter → Na stap 1 zit dat erin. Maar stap 2 moet je ook nog uitvoeren. · 4 liter → Je hebt 3 en 2 opgeteld. Elk pak heeft 2 liter, dus hoeveel keer 2 liter is dat?",
-   "ouderzin": "",
+   "foutHintsTekst": "4 dl → Heb je het aantal flesjes en de deciliters van één flesje opgeteld? Elk flesje heeft evenveel sap. Hoeveel keer dat aantal is het? · 9 dl → Is dat wat er na stap één in de kan zit? Bij stap twee giet je er nog iets uit.",
+   "ouderzin": "Je kind volgt een plan in twee stappen: eerst een keersom, dan eraf.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1011,7 +1393,7 @@
    "kopExtra": null,
    "extraVelden": {
     "claudeKaleSom": "W5",
-    "claudeUitleg": "3 pakken van 2 liter is 6 liter. Daar gaat 1 liter af. Er blijft 5 liter in de kan.",
+    "claudeUitleg": "3 flesjes van 3 dl is 9 dl. Daar gaat 2 dl af. Er blijft 7 dl in de kan.",
     "claudeStrategie": "stap voor stap uitvoeren",
     "claudeThema": null,
     "claudeAntwoordType": "tekst",
@@ -1020,11 +1402,11 @@
     "niveauVoorlopig": true,
     "claudeDenkfouten": [
      {
-      "fout": "6 liter",
+      "fout": "9 dl",
       "denkfout": null
      },
      {
-      "fout": "4 liter",
+      "fout": "4 dl",
       "denkfout": "optellen-ipv-vermenigvuldigen"
      }
     ],
@@ -1032,13 +1414,13 @@
     "claudeFoutHints": [
      {
       "stap": null,
-      "fout": "6 liter",
+      "fout": "9 dl",
       "uitleg": "Na stap 1 zit dat erin. Maar stap 2 moet je ook nog uitvoeren."
      },
      {
       "stap": null,
-      "fout": "4 liter",
-      "uitleg": "Je hebt 3 en 2 opgeteld. Elk pak heeft 2 liter, dus hoeveel keer 2 liter is dat?"
+      "fout": "4 dl",
+      "uitleg": "Je hebt 3 en 3 opgeteld. Elk flesje heeft 3 dl, dus hoeveel keer 3 dl is dat?"
      }
     ]
    },
@@ -1061,7 +1443,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-V516 (review batch 1 Didactiek): sap 3 × 3 dl − 2 dl = 7 dl (3 + 2 gaf het goede antwoord; pak 2 L / kan 6 L)"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -1070,16 +1454,31 @@
     "voorstelDoel": null,
     "regel": "G7-W03-stappenplan",
     "reden": "een stappenplan volgen (G7-DENK-03)",
-    "somtype": "Je hebt # [ding] sap van elk # liter. Stap #: giet alles in een kan. Stap #: giet er # liter uit. Hoeveel liter zit er nog in de kan?",
+    "somtype": "Je hebt # [ding] sap van elk # dl. Stap #: giet alles in een kan. Stap #: giet er # dl uit. Hoeveel dl zit er nog in de kan?",
     "g6Park": {
      "id": "G7-DENK-03-claude-bank-park-007",
      "voorstelDoel": "G7-DENK-03",
      "regel": "G6-W06-stappen"
     },
+    "todoOefeningen": "TODO Oefeningen (V-#516, 8 okt): opgave omgebouwd naar 3 flesjes van 3 dl, 2 dl eruit (7 dl). Werk H1, H2, ouderzin en de fout-hints van batch1 DENK-03 nrO 7 bij: 'pakken'/'liter' → 'flesjes'/'dl', regels '6 liter' → '9 dl' en '4 liter' → '4 dl'.",
+    "v516": {
+     "opgaveOud": "Je hebt 3 pakken sap van elk 2 liter. Stap 1: giet alles in een kan. Stap 2: giet er 1 liter uit. Hoeveel liter zit er nog in de kan?",
+     "antwoordOud": "5 liter",
+     "optiesOud": [
+      "4 liter",
+      "5 liter",
+      "6 liter"
+     ]
+    },
     "duplicaatVan": null,
     "somtypeNr": 8,
     "somtypeNrOrigineel": 7,
-    "somtypeOrigineel": "Je hebt # [ding] sap van elk # liter. Stap #: giet alles in een kan. Stap #: giet er # liter uit. Hoeveel liter zit er nog in de kan?"
+    "somtypeOrigineel": "Je hebt # [ding] sap van elk # liter. Stap #: giet alles in een kan. Stap #: giet er # liter uit. Hoeveel liter zit er nog in de kan?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 8,
+     "somtype": "Je hebt # [ding] sap van elk # dl. Stap #: giet alles in een kan. Stap #: giet er # dl uit. Hoeveel dl zit er nog in de kan?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1095,8 +1494,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "9 dl",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw",
+     "tekst": "Is dat wat er na stap één in de kan zit? Bij stap twee giet je er nog iets uit.",
+     "tekstSterker": "Schrijf onder elkaar wat er na stap één en na stap twee in de kan zit. Haal bij stap twee de deciliters die je eruit giet af van wat er in de kan zat.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "9 dl"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "4 dl",
+     "soort": "opgeteld in plaats van keer",
+     "bron": "nieuw",
+     "tekst": "Heb je het aantal flesjes en de deciliters van één flesje opgeteld? Elk flesje heeft evenveel sap. Hoeveel keer dat aantal is het?",
+     "tekstSterker": "Tel de deciliters flesje voor flesje: steeds hetzelfde aantal, zo vaak als er flesjes zijn. Dat is een keersom. Haal de deciliters die je eruit giet daarna van het totaal af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4 dl"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst uit hoeveel deciliter er in de kan zit. Haal daarna af wat je eruit giet.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst uit hoeveel deciliter er in de kan zit. Haal daarna af wat je eruit giet."
   },
   {
    "id": "G7-DENK-03-claude-bank-008",
@@ -1127,22 +1573,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "24 stukken"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Elke strook wordt een paar stukken. Krijg je meer of minder stukken dan stroken?",
+   "sterkereHint": "Elke strook geeft hetzelfde aantal stukken. Doe het aantal stroken keer het aantal stukken per strook.",
    "foutHints": [
     {
      "stap": null,
      "fout": "14 stukken",
-     "uitleg": "Je hebt 2 bij 12 opgeteld. Elke strook wordt 2 stukken, dus hoeveel keer 2 krijg je?"
+     "uitleg": "Heb je het aantal stukken per strook erbij opgeteld? Elke strook wordt zoveel stukken. Hoe vaak gebeurt dat?",
+     "uitlegSterker": "Tel strook voor strook: elke strook geeft hetzelfde aantal stukken, zo vaak als er stroken zijn. Dat is een keersom.",
+     "laag2": "tekstSterker",
+     "regel": "14 stukken",
+     "soort": "opgeteld",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "6 stukken",
-     "uitleg": "Door knippen krijg je meer stukken, niet minder. Kijk nog eens wat er met elke strook gebeurt."
+     "uitleg": "Heb je gedeeld? Door te knippen krijg je meer stukken, niet minder.",
+     "uitlegSterker": "Knip in gedachten één strook: dat geeft een paar stukken. Doe dat bij elke strook. Doe het aantal stroken keer het aantal stukken per strook.",
+     "laag2": "tekstSterker",
+     "regel": "6 stukken",
+     "soort": "gedeeld",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "14 stukken → Je hebt 2 bij 12 opgeteld. Elke strook wordt 2 stukken, dus hoeveel keer 2 krijg je? · 6 stukken → Door knippen krijg je meer stukken, niet minder. Kijk nog eens wat er met elke strook gebeurt.",
-   "ouderzin": "",
+   "foutHintsTekst": "14 stukken → Heb je het aantal stukken per strook erbij opgeteld? Elke strook wordt zoveel stukken. Hoe vaak gebeurt dat? · 6 stukken → Heb je gedeeld? Door te knippen krijg je meer stukken, niet minder.",
+   "ouderzin": "Je kind ziet dat knippen meer stukken geeft: een keersom.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1234,7 +1690,12 @@
     "duplicaatVan": null,
     "somtypeNr": 9,
     "somtypeNrOrigineel": 8,
-    "somtypeOrigineel": "Je hebt # [ding] stroken. Je knipt elke strook in # stukken. Hoeveel stukken heb je dan?"
+    "somtypeOrigineel": "Je hebt # [ding] stroken. Je knipt elke strook in # stukken. Hoeveel stukken heb je dan?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 9,
+     "somtype": "Je hebt # [ding] stroken. Je knipt elke strook in # stukken. Hoeveel stukken heb je dan?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1250,8 +1711,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "14 stukken",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je het aantal stukken per strook erbij opgeteld? Elke strook wordt zoveel stukken. Hoe vaak gebeurt dat?",
+     "tekstSterker": "Tel strook voor strook: elke strook geeft hetzelfde aantal stukken, zo vaak als er stroken zijn. Dat is een keersom.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "14 stukken"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "6 stukken",
+     "soort": "gedeeld",
+     "bron": "nieuw",
+     "tekst": "Heb je gedeeld? Door te knippen krijg je meer stukken, niet minder.",
+     "tekstSterker": "Knip in gedachten één strook: dat geeft een paar stukken. Doe dat bij elke strook. Doe het aantal stroken keer het aantal stukken per strook.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6 stukken"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Doe het aantal stroken keer het aantal stukken per strook.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Doe het aantal stroken keer het aantal stukken per strook."
   },
   {
    "id": "G7-DENK-03-claude-bank-009",
@@ -1282,22 +1790,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "12 stickers"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Volg de stappen één voor één. Hoeveel heb je na stap één nog?",
+   "sterkereHint": "Haal bij stap één de stickers die je weggeeft van het begin af. Haal bij stap twee nog eens af wat je weggeeft.",
    "foutHints": [
     {
      "stap": null,
      "fout": "16 stickers",
-     "uitleg": "Er staan twee stappen. Heb je de tweede stap ook echt uitgevoerd?"
+     "uitleg": "Is dat wat je na stap één nog hebt? Bij stap twee geef je er nog een paar weg.",
+     "uitlegSterker": "Schrijf onder elkaar wat je na stap één en na stap twee hebt. Haal bij elke stap af wat je weggeeft.",
+     "laag2": "tekstSterker",
+     "regel": "16 stickers",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "28 stickers",
-     "uitleg": "Let goed op wat je met de stickers doet: je geeft ze weg. Worden het er dan meer of minder?"
+     "uitleg": "Heb je de stickers die je weggeeft opgeteld? Weggeven is eraf halen: je houdt er minder over.",
+     "uitlegSterker": "Weggeven is eraf halen. Begin bij wat je had, en haal er bij elke stap af wat je weggeeft.",
+     "laag2": "tekstSterker",
+     "regel": "28 stickers",
+     "soort": "erbij in plaats van eraf",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "16 stickers → Er staan twee stappen. Heb je de tweede stap ook echt uitgevoerd? · 28 stickers → Let goed op wat je met de stickers doet: je geeft ze weg. Worden het er dan meer of minder?",
-   "ouderzin": "",
+   "foutHintsTekst": "16 stickers → Is dat wat je na stap één nog hebt? Bij stap twee geef je er nog een paar weg. · 28 stickers → Heb je de stickers die je weggeeft opgeteld? Weggeven is eraf halen: je houdt er minder over.",
+   "ouderzin": "Je kind volgt een plan in twee stappen en haalt twee keer iets af.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1389,7 +1907,12 @@
     "duplicaatVan": null,
     "somtypeNr": 10,
     "somtypeNrOrigineel": 9,
-    "somtypeOrigineel": "Je hebt # [ding]. Stap #: geef # [ding] weg. Stap #: geef nog eens # [ding] weg. Hoeveel stickers heb je dan nog?"
+    "somtypeOrigineel": "Je hebt # [ding]. Stap #: geef # [ding] weg. Stap #: geef nog eens # [ding] weg. Hoeveel stickers heb je dan nog?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 10,
+     "somtype": "Je hebt # [ding]. Stap #: geef # [ding] weg. Stap #: geef nog eens # [ding] weg. Hoeveel stickers heb je dan nog?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1405,8 +1928,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "16 stickers",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw",
+     "tekst": "Is dat wat je na stap één nog hebt? Bij stap twee geef je er nog een paar weg.",
+     "tekstSterker": "Schrijf onder elkaar wat je na stap één en na stap twee hebt. Haal bij elke stap af wat je weggeeft.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "16 stickers"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "28 stickers",
+     "soort": "erbij in plaats van eraf",
+     "bron": "nieuw",
+     "tekst": "Heb je de stickers die je weggeeft opgeteld? Weggeven is eraf halen: je houdt er minder over.",
+     "tekstSterker": "Weggeven is eraf halen. Begin bij wat je had, en haal er bij elke stap af wat je weggeeft.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "28 stickers"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Haal bij elke stap af wat je weggeeft.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Haal bij elke stap af wat je weggeeft."
   },
   {
    "id": "G7-DENK-03-claude-bank-010",
@@ -1437,22 +2007,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "9 euro"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Volg de stappen één voor één. Hoeveel geld heb je na stap één?",
+   "sterkereHint": "Tel bij stap één het zakgeld op bij wat je gespaard had. Haal bij stap twee de prijs van het schrift ervan af.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "13 euro",
-     "uitleg": "Je hebt stap 1 goed gedaan. Wat gebeurt er bij stap 2 met je geld?"
+     "fout": "17 euro",
+     "uitleg": "Heb je de prijs van het schrift erbij opgeteld? Als je iets koopt, heb je minder geld.",
+     "uitlegSterker": "Zakgeld krijgen is erbij, iets kopen is eraf. Tel bij stap één het zakgeld op en haal bij stap twee de prijs eraf.",
+     "laag2": "tekstSterker",
+     "regel": "17",
+     "soort": "prijs erbij opgeteld",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "17 euro",
-     "uitleg": "Als je een schrift koopt, gaat er geld af. Tel je dat er dan bij op?"
+     "fout": "13 euro",
+     "uitleg": "Is dat wat je na stap één hebt? Bij stap twee koop je nog een schrift.",
+     "uitlegSterker": "Schrijf onder elkaar wat je na stap één en na stap twee hebt. Wat je koopt, haal je van je geld af.",
+     "laag2": "tekstSterker",
+     "regel": "13",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "13 euro → Je hebt stap 1 goed gedaan. Wat gebeurt er bij stap 2 met je geld? · 17 euro → Als je een schrift koopt, gaat er geld af. Tel je dat er dan bij op?",
-   "ouderzin": "",
+   "foutHintsTekst": "17 euro → Heb je de prijs van het schrift erbij opgeteld? Als je iets koopt, heb je minder geld. · 13 euro → Is dat wat je na stap één hebt? Bij stap twee koop je nog een schrift.",
+   "ouderzin": "Je kind volgt een plan in twee stappen: eerst erbij, dan eraf.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1544,7 +2124,12 @@
     "duplicaatVan": null,
     "somtypeNr": 11,
     "somtypeNrOrigineel": 10,
-    "somtypeOrigineel": "Je hebt # euro gespaard. Stap #: je krijgt # euro zakgeld. Stap #: je koopt een schrift van # euro. Hoeveel euro heb je dan?"
+    "somtypeOrigineel": "Je hebt # euro gespaard. Stap #: je krijgt # euro zakgeld. Stap #: je koopt een schrift van # euro. Hoeveel euro heb je dan?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 11,
+     "somtype": "Je hebt # euro gespaard. Stap #: je krijgt # euro zakgeld. Stap #: je koopt een schrift van # euro. Hoeveel euro heb je dan?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1560,8 +2145,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "13",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw",
+     "tekst": "Is dat wat je na stap één hebt? Bij stap twee koop je nog een schrift.",
+     "tekstSterker": "Schrijf onder elkaar wat je na stap één en na stap twee hebt. Wat je koopt, haal je van je geld af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "13 euro"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "17",
+     "soort": "prijs erbij opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je de prijs van het schrift erbij opgeteld? Als je iets koopt, heb je minder geld.",
+     "tekstSterker": "Zakgeld krijgen is erbij, iets kopen is eraf. Tel bij stap één het zakgeld op en haal bij stap twee de prijs eraf.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17 euro"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel het zakgeld erbij op en haal de prijs van wat je koopt eraf.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel het zakgeld erbij op en haal de prijs van wat je koopt eraf."
   },
   {
    "id": "G7-DENK-03-claude-bank-011",
@@ -3773,22 +4405,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "150 ballen"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Maak een plan in stappen. Hoeveel ballen zitten er eerst in alle dozen samen?",
+   "sterkereHint": "Doe het aantal dozen keer het aantal ballen in één doos. Haal de ballen die Noor eruit haalt van dat totaal af.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "168 ballen",
-     "uitleg": "Je hebt alleen het totaal uitgerekend. Er gingen er nog een aantal uit."
+     "fout": "31 ballen",
+     "uitleg": "Heb je het aantal dozen en het aantal ballen in één doos opgeteld? In elke doos zitten evenveel ballen. Hoeveel keer dat aantal is het?",
+     "uitlegSterker": "Splits het aantal ballen in één doos in tientallen en eenheden. Doe elk stuk keer het aantal dozen en tel de uitkomsten op. Haal de ballen van Noor daarna van het totaal af.",
+     "laag2": "tekstSterker",
+     "regel": "31 ballen",
+     "soort": "opgeteld in plaats van keer",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "31 ballen",
-     "uitleg": "Je hebt 7 en 24 opgeteld. Elke doos bevat 24 ballen."
+     "fout": "168 ballen",
+     "uitleg": "Is dat het aantal ballen in alle dozen samen? Noor haalt er nog een paar uit.",
+     "uitlegSterker": "Schrijf de twee stappen onder elkaar: alle ballen samen, en de ballen die Noor eruit haalt. Haal de ballen van Noor van het totaal af.",
+     "laag2": "tekstSterker",
+     "regel": "168 ballen",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "168 ballen → Je hebt alleen het totaal uitgerekend. Er gingen er nog een aantal uit. · 31 ballen → Je hebt 7 en 24 opgeteld. Elke doos bevat 24 ballen.",
-   "ouderzin": "",
+   "foutHintsTekst": "31 ballen → Heb je het aantal dozen en het aantal ballen in één doos opgeteld? In elke doos zitten evenveel ballen. Hoeveel keer dat aantal is het? · 168 ballen → Is dat het aantal ballen in alle dozen samen? Noor haalt er nog een paar uit.",
+   "ouderzin": "Je kind rekent een opgave in twee stappen uit: eerst een keersom, dan eraf.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -3906,12 +4548,17 @@
      "besluit": "aanpassen",
      "hintStatus": "voorstel Didactiek; Oefeningen schrijft de definitieve hints in G7",
      "bestand": "data/aanvulling_uit_g8.json",
-     "g8Build": "2026-10-01T22:31:24+0200"
+     "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "In een sportzaal staan # [ding] met elk # [ding]. Noor haalt er # [ding] uit. Hoeveel blijven er over?",
     "somtypeNr": 4,
     "somtypeNrOrigineel": 25,
-    "somtypeOrigineel": "In een sportzaal staan # [ding] met elk # [ding]. Noor haalt er # [ding] uit. Hoeveel blijven er over?"
+    "somtypeOrigineel": "In een sportzaal staan # [ding] met elk # [ding]. Noor haalt er # [ding] uit. Hoeveel blijven er over?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 4,
+     "somtype": "In een sportzaal staan # [ding] met elk # [ding]. Noor haalt er # [ding] uit. Hoeveel blijven er over?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -3927,11 +4574,58 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "150 ballen"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "168 ballen",
+     "soort": "tweede stap vergeten",
+     "bron": "nieuw",
+     "tekst": "Is dat het aantal ballen in alle dozen samen? Noor haalt er nog een paar uit.",
+     "tekstSterker": "Schrijf de twee stappen onder elkaar: alle ballen samen, en de ballen die Noor eruit haalt. Haal de ballen van Noor van het totaal af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "168 ballen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "31 ballen",
+     "soort": "opgeteld in plaats van keer",
+     "bron": "nieuw",
+     "tekst": "Heb je het aantal dozen en het aantal ballen in één doos opgeteld? In elke doos zitten evenveel ballen. Hoeveel keer dat aantal is het?",
+     "tekstSterker": "Splits het aantal ballen in één doos in tientallen en eenheden. Doe elk stuk keer het aantal dozen en tel de uitkomsten op. Haal de ballen van Noor daarna van het totaal af.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "31 ballen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken eerst alle ballen samen uit met een keersom. Haal de ballen van Noor daarna eraf.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken eerst alle ballen samen uit met een keersom. Haal de ballen van Noor daarna eraf."
   },
   {
    "id": "G7-DENK-03-claude-bank-naar-002",
@@ -4087,7 +4781,7 @@
      "besluit": "verplaatsen",
      "hintStatus": "voorstel Didactiek; Oefeningen schrijft de definitieve hints in G7",
      "bestand": "data/aanvulling_uit_g8.json",
-     "g8Build": "2026-10-01T22:31:24+0200"
+     "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Op een wandeltocht van # km staan om de # meter bordjes, ook bij de start en de finish. Hoeveel bordjes staan er?",
     "somtypeNr": 17,
@@ -4113,6 +4807,13 @@
    "geldigeAntwoorden": [
     "25 bordjes"
    ]
+  }
+ ],
+ "hintsSyncOp": "2026-10-08T12:16:56+02:00",
+ "hintsBatches": [
+  {
+   "batch": "batch1.json",
+   "md5": "4715654e9a9a"
   }
  ]
 }

@@ -7,7 +7,7 @@
   "bron": "https://github.com/Davesgit/leermees-vragenbank",
   "commit": "7da3257a196386c700310006da60a385fbbe114f"
  },
- "gegenereerdOp": "2026-10-01T22:54:27+0200",
+ "gegenereerdOp": "2026-10-08T12:16:26+0200",
  "g6Basis": "g6/scripts 1 okt 16:11-rebuild (kopie in scripts/g6_basis/: regels_g6.py, besluiten_g6.py; g5_basis/: regels_g5.py met G6_MODUS; g5_basis/g4_basis_1435/: merge_g3regels.py, regels_g4.py, g3_basis_1359/)",
  "doelId": "G7-DENK-02",
  "bordtitel": "Een situatie in een som zetten",
@@ -42,22 +42,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "60 vierkante meter"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Oppervlakte is hoeveel ruimte de moestuin binnen de rand inneemt. Denk aan hokjes van één bij één meter.",
+   "sterkereHint": "Een rechthoek vul je met rijen hokjes van één vierkante meter. In elke rij passen zoveel hokjes als de lengte, en er zijn zoveel rijen als de breedte. Doe de lengte keer de breedte.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "34 vierkante meter",
-     "uitleg": "Je hebt nu de lengte van de rand uitgerekend. De oppervlakte gaat over het vlak binnen de rand."
+     "fout": "17 vierkante meter",
+     "uitleg": "Heb je de lengte en de breedte opgeteld? Bij oppervlakte tel je hokjes van één bij één meter. Hoeveel rijen zijn er, en hoeveel hokjes in elke rij?",
+     "uitlegSterker": "Teken één rij hokjes langs de lengte: zoveel hokjes als de lengte. Er passen zoveel rijen onder elkaar als de breedte. Doe het aantal hokjes in één rij keer het aantal rijen.",
+     "laag2": "tekstSterker",
+     "regel": "17 vierkante meter",
+     "soort": "lengte en breedte opgeteld",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "17 vierkante meter",
-     "uitleg": "Bij oppervlakte tel je de zijden niet op. Denk aan rijen hokjes van 1 bij 1 meter."
+     "fout": "34 vierkante meter",
+     "uitleg": "Is dat de lengte van de rand rondom? Dat is de omtrek. De oppervlakte is het vlak binnen de rand.",
+     "uitlegSterker": "Teken de moestuin als rechthoek met rijen hokjes van één bij één meter. Hoeveel hokjes passen er in één rij, en hoeveel rijen zijn er? Doe het aantal hokjes in één rij keer het aantal rijen.",
+     "laag2": "tekstSterker",
+     "regel": "34 vierkante meter",
+     "soort": "omtrek",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "34 vierkante meter → Je hebt nu de lengte van de rand uitgerekend. De oppervlakte gaat over het vlak binnen de rand. · 17 vierkante meter → Bij oppervlakte tel je de zijden niet op. Denk aan rijen hokjes van 1 bij 1 meter.",
-   "ouderzin": "",
+   "foutHintsTekst": "17 vierkante meter → Heb je de lengte en de breedte opgeteld? Bij oppervlakte tel je hokjes van één bij één meter. Hoeveel rijen zijn er, en hoeveel hokjes in elke rij? · 34 vierkante meter → Is dat de lengte van de rand rondom? Dat is de omtrek. De oppervlakte is het vlak binnen de rand.",
+   "ouderzin": "Je kind rekent de oppervlakte van een rechthoek uit: de lengte keer de breedte, in vierkante meter.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -149,7 +159,12 @@
     "duplicaatVan": null,
     "somtypeNr": 1,
     "somtypeNrOrigineel": 1,
-    "somtypeOrigineel": "Een moestuin is # meter lang en # meter breed. Je tekent hem als rechthoek. Hoe groot is de oppervlakte?"
+    "somtypeOrigineel": "Een moestuin is # meter lang en # meter breed. Je tekent hem als rechthoek. Hoe groot is de oppervlakte?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 1,
+     "somtype": "Een moestuin is # meter lang en # meter breed. Je tekent hem als rechthoek. Hoe groot is de oppervlakte?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -165,8 +180,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "34 vierkante meter",
+     "soort": "omtrek",
+     "bron": "nieuw",
+     "tekst": "Is dat de lengte van de rand rondom? Dat is de omtrek. De oppervlakte is het vlak binnen de rand.",
+     "tekstSterker": "Teken de moestuin als rechthoek met rijen hokjes van één bij één meter. Hoeveel hokjes passen er in één rij, en hoeveel rijen zijn er? Doe het aantal hokjes in één rij keer het aantal rijen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "34 vierkante meter"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "17 vierkante meter",
+     "soort": "lengte en breedte opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je de lengte en de breedte opgeteld? Bij oppervlakte tel je hokjes van één bij één meter. Hoeveel rijen zijn er, en hoeveel hokjes in elke rij?",
+     "tekstSterker": "Teken één rij hokjes langs de lengte: zoveel hokjes als de lengte. Er passen zoveel rijen onder elkaar als de breedte. Doe het aantal hokjes in één rij keer het aantal rijen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "17 vierkante meter"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Oppervlakte reken je uit met hokjes van één bij één meter. Doe de lengte keer de breedte.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Oppervlakte reken je uit met hokjes van één bij één meter. Doe de lengte keer de breedte."
   },
   {
    "id": "G7-DENK-02-claude-bank-002",
@@ -197,22 +259,32 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "60 meter"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Lees goed welk getal de vraag zoekt. De omtrek is de rand rondom. De oppervlakte is het vlak binnen de rand.",
+   "sterkereHint": "Zoekt de vraag de omtrek? Tel dan alle vier de zijden bij elkaar op. Zoekt de vraag de oppervlakte? Doe dan de lengte keer de breedte.",
    "foutHints": [
     {
      "stap": null,
-     "fout": "200 meter",
-     "uitleg": "De omtrek is de lijn helemaal rondom je tekening, niet het vlak erbinnen."
+     "fout": "30 meter",
+     "uitleg": "Heb je maar twee zijden geteld? Een rechthoek heeft vier zijden. Loop helemaal om het veld heen.",
+     "uitlegSterker": "Een rechthoek heeft twee lange en twee korte zijden. Schrijf alle vier de zijden onder elkaar en tel ze één voor één bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "30 meter",
+     "soort": "twee zijden",
+     "bron": "nieuw"
     },
     {
      "stap": null,
-     "fout": "30 meter",
-     "uitleg": "Een rechthoek heeft vier zijden. Ben je er alle vier langsgelopen?"
+     "fout": "200 meter",
+     "uitleg": "Heb je de lengte keer de breedte gedaan? Zo krijg je de oppervlakte: het vlak binnen de rand. De omtrek is alleen de rand.",
+     "uitlegSterker": "De omtrek is de rand rondom het veld. Schrijf de vier zijden onder elkaar: de lengte, de breedte, de lengte en de breedte. Tel ze bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "200 meter",
+     "soort": "oppervlakte",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "200 meter → De omtrek is de lijn helemaal rondom je tekening, niet het vlak erbinnen. · 30 meter → Een rechthoek heeft vier zijden. Ben je er alle vier langsgelopen?",
-   "ouderzin": "",
+   "foutHintsTekst": "30 meter → Heb je maar twee zijden geteld? Een rechthoek heeft vier zijden. Loop helemaal om het veld heen. · 200 meter → Heb je de lengte keer de breedte gedaan? Zo krijg je de oppervlakte: het vlak binnen de rand. De omtrek is alleen de rand.",
+   "ouderzin": "Je kind rekent aan een rechthoek: de omtrek (alle vier de zijden opgeteld) of de oppervlakte (de lengte keer de breedte), net wat de vraag zoekt.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -304,7 +376,12 @@
     "duplicaatVan": null,
     "somtypeNr": 2,
     "somtypeNrOrigineel": 2,
-    "somtypeOrigineel": "Een sportveld is # meter lang en # meter breed. Je tekent het als rechthoek. Welk getal hoort bij de [ding]?"
+    "somtypeOrigineel": "Een sportveld is # meter lang en # meter breed. Je tekent het als rechthoek. Welk getal hoort bij de [ding]?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 2,
+     "somtype": "Een sportveld is # meter lang en # meter breed. Je tekent het als rechthoek. Welk getal hoort bij de [ding]?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -320,8 +397,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "200 meter",
+     "soort": "oppervlakte",
+     "bron": "nieuw",
+     "tekst": "Heb je de lengte keer de breedte gedaan? Zo krijg je de oppervlakte: het vlak binnen de rand. De omtrek is alleen de rand.",
+     "tekstSterker": "De omtrek is de rand rondom het veld. Schrijf de vier zijden onder elkaar: de lengte, de breedte, de lengte en de breedte. Tel ze bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "200 meter"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "30 meter",
+     "soort": "twee zijden",
+     "bron": "nieuw",
+     "tekst": "Heb je maar twee zijden geteld? Een rechthoek heeft vier zijden. Loop helemaal om het veld heen.",
+     "tekstSterker": "Een rechthoek heeft twee lange en twee korte zijden. Schrijf alle vier de zijden onder elkaar en tel ze één voor één bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30 meter"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek je de omtrek? Tel dan alle vier de zijden op. Zoek je de oppervlakte? Doe dan de lengte keer de breedte.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek je de omtrek? Tel dan alle vier de zijden op. Zoek je de oppervlakte? Doe dan de lengte keer de breedte."
   },
   {
    "id": "G7-DENK-02-claude-bank-003",
@@ -352,30 +476,42 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "3 groepjes van 6, één groepje gekleurd"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Een derde: je verdeelt alle kinderen in drie even grote groepjes.",
+   "sterkereHint": "Hoeveel is een derde van de hele groep? Reken het uit. Tel bij elke tekening hoeveel er gekleurd zijn.",
    "foutHints": [
     {
      "stap": null,
      "fout": "3 groepjes van 6, alle groepjes gekleurd",
-     "uitleg": "Een derde betekent dat maar één van de gelijke groepjes telt."
+     "uitleg": "Spelen alle kinderen bij de zandbak? Een derde is maar één van de drie even grote groepjes.",
+     "uitlegSterker": "Verdeel de kinderen in drie even grote groepjes. Kleur er één. Alleen dat ene groepje is een derde; de andere twee horen er niet bij.",
+     "laag2": "tekstSterker",
+     "regel": "alle groepjes gekleurd",
+     "soort": "alles gekleurd",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "2 groepjes van 9, één groepje gekleurd",
-     "uitleg": "Bij een derde teken je drie even grote groepjes, niet twee."
+     "uitleg": "Hoeveel groepjes horen bij een derde? Bij een derde verdeel je in drie even grote groepjes, niet in twee.",
+     "uitlegSterker": "Bij een helft verdeel je in twee even grote groepjes, bij een derde in drie. Zoek de tekening met drie even grote groepjes.",
+     "laag2": "tekstSterker",
+     "regel": "2 groepjes van 9",
+     "soort": "twee groepjes",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "3 groepjes van 6, alle groepjes gekleurd → Een derde betekent dat maar één van de gelijke groepjes telt. · 2 groepjes van 9, één groepje gekleurd → Bij een derde teken je drie even grote groepjes, niet twee.",
-   "ouderzin": "",
+   "foutHintsTekst": "3 groepjes van 6, alle groepjes gekleurd → Spelen alle kinderen bij de zandbak? Een derde is maar één van de drie even grote groepjes. · 2 groepjes van 9, één groepje gekleurd → Hoeveel groepjes horen bij een derde? Bij een derde verdeel je in drie even grote groepjes, niet in twee.",
+   "ouderzin": "Je kind kiest de tekening bij een derde van een groep: drie even grote groepjes, waarvan er één meedoet.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
-    "nodig": false,
-    "toelichting": null,
+    "nodig": true,
+    "toelichting": "de vraag verwijst naar een tekening (welke tekening/som); zonder tekening niet live (Z-#525, zoals DENK-02 #4/#9/#10/#13)",
     "asciiSchets": false,
     "jsRender": null,
-    "svgBestanden": []
+    "svgBestanden": [],
+    "nietLiveZonderBeeld": true,
+    "eisAlsErEenPlaatjeKomt": "het gekozen groepje niet alleen met kleur markeren: ook omcirkelen of arceren (les 11; Z-#525)"
    },
    "husselen": true,
    "husselPlan": {
@@ -441,7 +577,9 @@
     "bron": "https://github.com/Davesgit/leermees-vragenbank",
     "commit": "7da3257a196386c700310006da60a385fbbe114f",
     "gewijzigd": true,
-    "wijzigingen": []
+    "wijzigingen": [
+     "G7-Z525 (review batch 1 Didactiek): visual.nodig gelijk binnen de welke-tekening/som-somtypes van DENK-02"
+    ]
    },
    "opBord": false,
    "merge": {
@@ -459,7 +597,12 @@
     "duplicaatVan": null,
     "somtypeNr": 3,
     "somtypeNrOrigineel": 3,
-    "somtypeOrigineel": "Er zijn # [ding] op het schoolplein. Een derde speelt bij de [ding]. Welke tekening past hier het beste bij?"
+    "somtypeOrigineel": "Er zijn # [ding] op het schoolplein. Een derde speelt bij de [ding]. Welke tekening past hier het beste bij?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 3,
+     "somtype": "Er zijn # [ding] op het schoolplein. Een derde speelt bij de [ding]. Welke tekening past hier het beste bij?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -475,8 +618,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "alle groepjes gekleurd",
+     "soort": "alles gekleurd",
+     "bron": "nieuw",
+     "tekst": "Spelen alle kinderen bij de zandbak? Een derde is maar één van de drie even grote groepjes.",
+     "tekstSterker": "Verdeel de kinderen in drie even grote groepjes. Kleur er één. Alleen dat ene groepje is een derde; de andere twee horen er niet bij.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "3 groepjes van 6, alle groepjes gekleurd"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "2 groepjes van 9",
+     "soort": "twee groepjes",
+     "bron": "nieuw",
+     "tekst": "Hoeveel groepjes horen bij een derde? Bij een derde verdeel je in drie even grote groepjes, niet in twee.",
+     "tekstSterker": "Bij een helft verdeel je in twee even grote groepjes, bij een derde in drie. Zoek de tekening met drie even grote groepjes.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "2 groepjes van 9, één groepje gekleurd"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Bij een derde verdeel je de groep in drie even grote groepjes. Eén groepje hoort bij de vraag.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Bij een derde verdeel je de groep in drie even grote groepjes. Eén groepje hoort bij de vraag."
   },
   {
    "id": "G7-DENK-02-claude-bank-004",
@@ -507,22 +697,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "Een strook van 24 die je in 2 gelijke stukken deelt"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Hoeveel kinderen gaan er met de fiets? Denk aan wat 'de helft' betekent.",
+   "sterkereHint": "Reken uit hoeveel de helft van de hele klas is. Kijk bij elke tekening hoe groot één stuk is. Welk stuk is precies zo groot?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Een strook van 24 die je in 4 gelijke stukken deelt",
-     "uitleg": "Bij de helft knip je de strook één keer doormidden."
+     "uitleg": "Hoeveel stukken horen bij de helft? Bij de helft knip je de strook één keer doormidden: twee gelijke stukken.",
+     "uitlegSterker": "Een helft is één van twee gelijke stukken, een kwart is één van vier. Zoek de strook die in twee gelijke stukken verdeeld is.",
+     "laag2": "tekstSterker",
+     "regel": "in 4 gelijke stukken",
+     "soort": "vier stukken",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Twee stroken van 24 naast elkaar",
-     "uitleg": "De klas wordt niet groter, hij wordt alleen verdeeld."
+     "uitleg": "Wordt de klas groter? De klas blijft even groot; je verdeelt hem alleen. Je hebt dus één strook nodig.",
+     "uitlegSterker": "Teken één strook voor de hele klas. Verdeel die strook in twee gelijke stukken: één stuk is de helft.",
+     "laag2": "tekstSterker",
+     "regel": "twee stroken",
+     "soort": "klas verdubbeld",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Een strook van 24 die je in 4 gelijke stukken deelt → Bij de helft knip je de strook één keer doormidden. · Twee stroken van 24 naast elkaar → De klas wordt niet groter, hij wordt alleen verdeeld.",
-   "ouderzin": "",
+   "foutHintsTekst": "Een strook van 24 die je in 4 gelijke stukken deelt → Hoeveel stukken horen bij de helft? Bij de helft knip je de strook één keer doormidden: twee gelijke stukken. · Twee stroken van 24 naast elkaar → Wordt de klas groter? De klas blijft even groot; je verdeelt hem alleen. Je hebt dus één strook nodig.",
+   "ouderzin": "Je kind kiest de tekening bij de helft: één strook in twee gelijke stukken.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -616,7 +816,12 @@
     "duplicaatVan": null,
     "somtypeNr": 4,
     "somtypeNrOrigineel": 4,
-    "somtypeOrigineel": "In [plek] zitten # [ding]. De helft gaat met de fiets. Welke tekening past het beste bij deze situatie?"
+    "somtypeOrigineel": "In [plek] zitten # [ding]. De helft gaat met de fiets. Welke tekening past het beste bij deze situatie?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 4,
+     "somtype": "In [plek] zitten # [ding]. De helft gaat met de fiets. Welke tekening past het beste bij deze situatie?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -632,8 +837,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "in 4 gelijke stukken",
+     "soort": "vier stukken",
+     "bron": "nieuw",
+     "tekst": "Hoeveel stukken horen bij de helft? Bij de helft knip je de strook één keer doormidden: twee gelijke stukken.",
+     "tekstSterker": "Een helft is één van twee gelijke stukken, een kwart is één van vier. Zoek de strook die in twee gelijke stukken verdeeld is.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Een strook van 24 die je in 4 gelijke stukken deelt"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "twee stroken",
+     "soort": "klas verdubbeld",
+     "bron": "nieuw",
+     "tekst": "Wordt de klas groter? De klas blijft even groot; je verdeelt hem alleen. Je hebt dus één strook nodig.",
+     "tekstSterker": "Teken één strook voor de hele klas. Verdeel die strook in twee gelijke stukken: één stuk is de helft.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Twee stroken van 24 naast elkaar"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Bij de helft verdeel je één strook in twee gelijke stukken.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Bij de helft verdeel je één strook in twee gelijke stukken."
   },
   {
    "id": "G7-DENK-02-claude-bank-005",
@@ -664,22 +916,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "15 boeken"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De staaf stopt precies tussen twee streepjes. Welk getal ligt precies in het midden van die twee?",
+   "sterkereHint": "Kijk naar de twee streepjes waar de staaf tussen stopt. Hoeveel is het van het kleinste naar het grootste getal? Neem de helft daarvan en tel die op bij het kleinste getal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "10 boeken",
-     "uitleg": "De staaf stopt niet bij het streepje van 10, maar een stuk hoger."
+     "uitleg": "Is dat het streepje onder de staaf, of het verschil tussen de twee streepjes? De staaf stopt precies in het midden tussen de twee streepjes.",
+     "uitlegSterker": "Neem het verschil tussen de twee streepjes waar de staaf tussen stopt. De helft daarvan komt bovenop het kleinste getal.",
+     "laag2": "tekstSterker",
+     "regel": "10 boeken",
+     "soort": "streepje eronder of het verschil",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "30 boeken",
-     "uitleg": "Je hoeft de twee getallen niet op te tellen. Zoek het getal dat er precies tussenin ligt."
+     "uitleg": "Heb je de twee getallen opgeteld? De staaf stopt tussen die twee getallen. Het antwoord ligt dus tussen het kleinste en het grootste getal.",
+     "uitlegSterker": "Het getal in het midden ligt tussen de twee streepjes. Neem het verschil tussen die twee getallen, en tel de helft daarvan op bij het kleinste getal.",
+     "laag2": "tekstSterker",
+     "regel": "30 boeken",
+     "soort": "opgeteld",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "10 boeken → De staaf stopt niet bij het streepje van 10, maar een stuk hoger. · 30 boeken → Je hoeft de twee getallen niet op te tellen. Zoek het getal dat er precies tussenin ligt.",
-   "ouderzin": "",
+   "foutHintsTekst": "10 boeken → Is dat het streepje onder de staaf, of het verschil tussen de twee streepjes? De staaf stopt precies in het midden tussen de twee streepjes. · 30 boeken → Heb je de twee getallen opgeteld? De staaf stopt tussen die twee getallen. Het antwoord ligt dus tussen het kleinste en het grootste getal.",
+   "ouderzin": "Je kind leest een staafdiagram af als de staaf precies tussen twee streepjes stopt: het getal in het midden.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -771,7 +1033,12 @@
     "duplicaatVan": null,
     "somtypeNr": 5,
     "somtypeNrOrigineel": 5,
-    "somtypeOrigineel": "In een staafdiagram staat hoeveel boeken een klas leest. De staaf van maandag staat precies tussen # en #. Hoeveel [ding] zijn dat?"
+    "somtypeOrigineel": "In een staafdiagram staat hoeveel boeken een klas leest. De staaf van maandag staat precies tussen # en #. Hoeveel [ding] zijn dat?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 5,
+     "somtype": "In een staafdiagram staat hoeveel boeken een klas leest. De staaf van maandag staat precies tussen # en #. Hoeveel [ding] zijn dat?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -787,8 +1054,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "10 boeken",
+     "soort": "streepje eronder of het verschil",
+     "bron": "nieuw",
+     "tekst": "Is dat het streepje onder de staaf, of het verschil tussen de twee streepjes? De staaf stopt precies in het midden tussen de twee streepjes.",
+     "tekstSterker": "Neem het verschil tussen de twee streepjes waar de staaf tussen stopt. De helft daarvan komt bovenop het kleinste getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "10 boeken"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "30 boeken",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je de twee getallen opgeteld? De staaf stopt tussen die twee getallen. Het antwoord ligt dus tussen het kleinste en het grootste getal.",
+     "tekstSterker": "Het getal in het midden ligt tussen de twee streepjes. Neem het verschil tussen die twee getallen, en tel de helft daarvan op bij het kleinste getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "30 boeken"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek het getal precies in het midden tussen de twee streepjes.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek het getal precies in het midden tussen de twee streepjes."
   },
   {
    "id": "G7-DENK-02-claude-bank-006",
@@ -819,22 +1133,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "45 flesjes"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "De staaf stopt precies tussen twee streepjes. Welk getal ligt precies in het midden van die twee?",
+   "sterkereHint": "Kijk naar de twee streepjes waar de staaf tussen stopt. Hoeveel is het van het kleinste naar het grootste getal? Neem de helft daarvan en tel die op bij het kleinste getal.",
    "foutHints": [
     {
      "stap": null,
      "fout": "40 flesjes",
-     "uitleg": "De staaf stopt niet bij een streepje, maar er precies tussenin. Zoek het getal in het midden."
+     "uitleg": "Is dat het streepje onder de staaf? De staaf gaat nog een stuk hoger: precies tot het midden tussen de twee streepjes.",
+     "uitlegSterker": "Neem het verschil tussen de twee streepjes waar de staaf tussen stopt. De helft daarvan komt bovenop het kleinste getal.",
+     "laag2": "tekstSterker",
+     "regel": "40 flesjes",
+     "soort": "streepje eronder",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "90 flesjes",
-     "uitleg": "Je hoeft de twee getallen niet op te tellen. Zoek het getal dat er precies tussenin ligt."
+     "uitleg": "Heb je de twee getallen opgeteld? De staaf stopt tussen die twee getallen. Het antwoord ligt dus tussen het kleinste en het grootste getal.",
+     "uitlegSterker": "Het getal in het midden ligt tussen de twee streepjes. Neem het verschil tussen die twee getallen, en tel de helft daarvan op bij het kleinste getal.",
+     "laag2": "tekstSterker",
+     "regel": "90 flesjes",
+     "soort": "opgeteld",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "40 flesjes → De staaf stopt niet bij een streepje, maar er precies tussenin. Zoek het getal in het midden. · 90 flesjes → Je hoeft de twee getallen niet op te tellen. Zoek het getal dat er precies tussenin ligt.",
-   "ouderzin": "",
+   "foutHintsTekst": "40 flesjes → Is dat het streepje onder de staaf? De staaf gaat nog een stuk hoger: precies tot het midden tussen de twee streepjes. · 90 flesjes → Heb je de twee getallen opgeteld? De staaf stopt tussen die twee getallen. Het antwoord ligt dus tussen het kleinste en het grootste getal.",
+   "ouderzin": "Je kind leest een staafdiagram af als de staaf precies tussen twee streepjes stopt: het getal in het midden.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -926,7 +1250,12 @@
     "duplicaatVan": null,
     "somtypeNr": 6,
     "somtypeNrOrigineel": 6,
-    "somtypeOrigineel": "In een staafdiagram staat hoeveel flesjes water een klas drinkt. De staaf van vrijdag staat precies tussen # en #. Hoeveel [ding] zijn dat?"
+    "somtypeOrigineel": "In een staafdiagram staat hoeveel flesjes water een klas drinkt. De staaf van vrijdag staat precies tussen # en #. Hoeveel [ding] zijn dat?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 6,
+     "somtype": "In een staafdiagram staat hoeveel flesjes water een klas drinkt. De staaf van vrijdag staat precies tussen # en #. Hoeveel [ding] zijn dat?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -942,8 +1271,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "40 flesjes",
+     "soort": "streepje eronder",
+     "bron": "nieuw",
+     "tekst": "Is dat het streepje onder de staaf? De staaf gaat nog een stuk hoger: precies tot het midden tussen de twee streepjes.",
+     "tekstSterker": "Neem het verschil tussen de twee streepjes waar de staaf tussen stopt. De helft daarvan komt bovenop het kleinste getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "40 flesjes"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "90 flesjes",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je de twee getallen opgeteld? De staaf stopt tussen die twee getallen. Het antwoord ligt dus tussen het kleinste en het grootste getal.",
+     "tekstSterker": "Het getal in het midden ligt tussen de twee streepjes. Neem het verschil tussen die twee getallen, en tel de helft daarvan op bij het kleinste getal.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "90 flesjes"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Zoek het getal precies in het midden tussen de twee streepjes.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Zoek het getal precies in het midden tussen de twee streepjes."
   },
   {
    "id": "G7-DENK-02-claude-bank-007",
@@ -974,22 +1350,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "7 stickers, 2 over"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Geef ieder steeds evenveel, tot je niet nog een rondje kunt geven. Wat er dan nog ligt, blijft over.",
+   "sterkereHint": "Zoek het grootste aantal dat ieder kan krijgen: dat aantal keer het aantal kinderen mag niet meer zijn dan wat je hebt. Haal wat je uitdeelt af van wat je had. Wat er nog ligt, blijft over.",
    "foutHints": [
     {
      "stap": null,
      "fout": "7 stickers, niets over",
-     "uitleg": "Tel eens na hoeveel stickers je hebt uitgedeeld. Kijk of je er dan precies 30 kwijt bent."
+     "uitleg": "Heb je alles uitgedeeld? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat precies wat je had?",
+     "uitlegSterker": "Doe het aantal voor ieder keer het aantal kinderen. Haal dat af van wat je had. Wat er nog ligt, blijft over.",
+     "laag2": "tekstSterker",
+     "regel": "niets over",
+     "soort": "rest vergeten",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "8 stickers, 2 over",
-     "uitleg": "Reken na. 4 keer jouw aantal mag niet meer dan 30 zijn."
+     "uitleg": "Heb je wel genoeg om ieder zoveel te geven? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat meer dan wat je had?",
+     "uitlegSterker": "Probeer een kleiner aantal voor ieder. Doe dat keer het aantal kinderen. Zoek het grootste aantal waarbij je niet meer nodig hebt dan je had. Kom je boven wat je had? Dan kom je er juist een paar tekort. Dat is geen rest.",
+     "laag2": "tekstSterker",
+     "regel": "8 stickers",
+     "soort": "te veel voor ieder",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "7 stickers, niets over → Tel eens na hoeveel stickers je hebt uitgedeeld. Kijk of je er dan precies 30 kwijt bent. · 8 stickers, 2 over → Reken na. 4 keer jouw aantal mag niet meer dan 30 zijn.",
-   "ouderzin": "",
+   "foutHintsTekst": "7 stickers, niets over → Heb je alles uitgedeeld? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat precies wat je had? · 8 stickers, 2 over → Heb je wel genoeg om ieder zoveel te geven? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat meer dan wat je had?",
+   "ouderzin": "Je kind verdeelt eerlijk en kijkt hoeveel er overblijft (delen met rest).",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1083,7 +1469,12 @@
     "duplicaatVan": null,
     "somtypeNr": 7,
     "somtypeNrOrigineel": 7,
-    "somtypeOrigineel": "Je hebt # [ding] en verdeelt ze eerlijk over # [ding]. In je schema geef je [wie] evenveel. Hoeveel [ding] krijgt [wie] en hoeveel blijven er over?"
+    "somtypeOrigineel": "Je hebt # [ding] en verdeelt ze eerlijk over # [ding]. In je schema geef je [wie] evenveel. Hoeveel [ding] krijgt [wie] en hoeveel blijven er over?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 7,
+     "somtype": "Je hebt # [ding] en verdeelt ze eerlijk over # [ding]. In je schema geef je [wie] evenveel. Hoeveel [ding] krijgt [wie] en hoeveel blijven er over?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1099,8 +1490,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "niets over",
+     "soort": "rest vergeten",
+     "bron": "nieuw",
+     "tekst": "Heb je alles uitgedeeld? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat precies wat je had?",
+     "tekstSterker": "Doe het aantal voor ieder keer het aantal kinderen. Haal dat af van wat je had. Wat er nog ligt, blijft over.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7 stickers, niets over"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "8 stickers",
+     "soort": "te veel voor ieder",
+     "bron": "nieuw",
+     "tekst": "Heb je wel genoeg om ieder zoveel te geven? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat meer dan wat je had?",
+     "tekstSterker": "Probeer een kleiner aantal voor ieder. Doe dat keer het aantal kinderen. Zoek het grootste aantal waarbij je niet meer nodig hebt dan je had. Kom je boven wat je had? Dan kom je er juist een paar tekort. Dat is geen rest.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8 stickers, 2 over"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Geef ieder evenveel. Reken na: het aantal voor ieder keer het aantal kinderen, plus wat overblijft, is wat je had.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Geef ieder evenveel. Reken na: het aantal voor ieder keer het aantal kinderen, plus wat overblijft, is wat je had."
   },
   {
    "id": "G7-DENK-02-claude-bank-008",
@@ -1131,30 +1569,41 @@
     "juisteOptie": "B",
     "juisteOptieTekst": "4 × 6"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Er zijn een paar rijen, en in elke rij liggen evenveel knikkers. Welke som hoort bij steeds hetzelfde aantal?",
+   "sterkereHint": "Hoeveel zijn het er samen? Tel rij voor rij. Reken ook elke som uit: welke som geeft precies dat aantal?",
    "foutHints": [
     {
      "stap": null,
-     "fout": "4 + 6",
-     "uitleg": "Er zijn meerdere rijen die allemaal even lang zijn. Wat doe je dan met de getallen?"
+     "fout": "6 − 4",
+     "uitleg": "Gaan er knikkers weg? Er gaat niets af: elke rij hoort erbij. Welke som past bij steeds hetzelfde aantal?",
+     "uitlegSterker": "Elke rij heeft hetzelfde aantal knikkers. Schrijf voor elke rij dat aantal op en tel ze op. Een plussom met steeds hetzelfde getal schrijf je als een keersom.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "afgehaald",
+     "bron": "claude-taalfix"
     },
     {
      "stap": null,
-     "fout": "6 − 4",
-     "uitleg": "Er gaat niets weg. Er komen juist steeds 6 knikkers bij."
+     "fout": "4 + 6",
+     "uitleg": "Heb je één rij en het aantal rijen bij elkaar opgeteld? In elke rij liggen evenveel knikkers. Welke som hoort bij steeds hetzelfde aantal, een paar keer?",
+     "uitlegSterker": "Tel de knikkers rij voor rij: steeds hetzelfde aantal, zo vaak als er rijen zijn. Een plussom met steeds hetzelfde getal schrijf je korter als een keersom.",
+     "laag2": "tekstSterker",
+     "regel": "4 + 6",
+     "soort": "opgeteld",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "4 + 6 → Er zijn meerdere rijen die allemaal even lang zijn. Wat doe je dan met de getallen? · 6 − 4 → Er gaat niets weg. Er komen juist steeds 6 knikkers bij.",
-   "ouderzin": "",
+   "foutHintsTekst": "6 − 4 → Gaan er knikkers weg? Er gaat niets af: elke rij hoort erbij. Welke som past bij steeds hetzelfde aantal? · 4 + 6 → Heb je één rij en het aantal rijen bij elkaar opgeteld? In elke rij liggen evenveel knikkers. Welke som hoort bij steeds hetzelfde aantal, een paar keer?",
+   "ouderzin": "Je kind kiest de som bij een tekening met groepjes die even groot zijn: een keersom.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
-    "nodig": false,
-    "toelichting": null,
+    "nodig": true,
+    "toelichting": "de vraag verwijst naar een tekening (welke tekening/som); zonder tekening niet live (Z-#525, zoals DENK-02 #4/#9/#10/#13)",
     "asciiSchets": false,
     "jsRender": null,
-    "svgBestanden": []
+    "svgBestanden": [],
+    "nietLiveZonderBeeld": true
    },
    "husselen": true,
    "husselPlan": {
@@ -1222,6 +1671,7 @@
     "gewijzigd": true,
     "wijzigingen": [
      "G7-N3 keerteken '×' in een optie",
+     "G7-Z525 (review batch 1 Didactiek): visual.nodig gelijk binnen de welke-tekening/som-somtypes van DENK-02",
      "N2 - → −"
     ]
    },
@@ -1241,7 +1691,12 @@
     "duplicaatVan": null,
     "somtypeNr": 8,
     "somtypeNrOrigineel": 8,
-    "somtypeOrigineel": "Je koopt # [ding] knikkers. In elk(e) [bak] zitten # [ding]. Welke som hoort bij de tekening van # rijen met # [ding]?"
+    "somtypeOrigineel": "Je koopt # [ding] knikkers. In elk(e) [bak] zitten # [ding]. Welke som hoort bij de tekening van # rijen met # [ding]?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 8,
+     "somtype": "Je koopt # [ding] knikkers. In elk(e) [bak] zitten # [ding]. Welke som hoort bij de tekening van # rijen met # [ding]?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1257,8 +1712,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "4 + 6",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je één rij en het aantal rijen bij elkaar opgeteld? In elke rij liggen evenveel knikkers. Welke som hoort bij steeds hetzelfde aantal, een paar keer?",
+     "tekstSterker": "Tel de knikkers rij voor rij: steeds hetzelfde aantal, zo vaak als er rijen zijn. Een plussom met steeds hetzelfde getal schrijf je korter als een keersom.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "4 + 6"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "afgehaald",
+     "bron": "claude-taalfix",
+     "tekst": "Gaan er knikkers weg? Er gaat niets af: elke rij hoort erbij. Welke som past bij steeds hetzelfde aantal?",
+     "tekstSterker": "Elke rij heeft hetzelfde aantal knikkers. Schrijf voor elke rij dat aantal op en tel ze op. Een plussom met steeds hetzelfde getal schrijf je als een keersom.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "6 − 4"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Steeds hetzelfde aantal, een paar keer: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Steeds hetzelfde aantal, een paar keer: dat is een keersom."
   },
   {
    "id": "G7-DENK-02-claude-bank-009",
@@ -1289,22 +1790,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "5 × 8 = 40"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "In elke doos zitten evenveel eieren. Welke som hoort bij steeds hetzelfde aantal?",
+   "sterkereHint": "Hoeveel zijn het er samen? Tel doos voor doos. Welke som heeft precies dat aantal als uitkomst?",
    "foutHints": [
     {
      "stap": null,
      "fout": "5 + 8 = 13",
-     "uitleg": "In elke doos zitten evenveel eieren. Dan tel je niet één keer op, maar steeds hetzelfde aantal erbij."
+     "uitleg": "Heb je één doos en het aantal dozen bij elkaar opgeteld? In elke doos zitten evenveel eieren. Welke som past bij steeds hetzelfde aantal?",
+     "uitlegSterker": "Tel de eieren doos voor doos: steeds hetzelfde aantal, zo vaak als er dozen zijn. Een plussom met steeds hetzelfde getal schrijf je korter als een keersom.",
+     "laag2": "tekstSterker",
+     "regel": "5 + 8 = 13",
+     "soort": "opgeteld",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "8 − 5 = 3",
-     "uitleg": "Je haalt niets weg. Je hebt juist meerdere dozen met eieren samen."
+     "uitleg": "Gaan er eieren weg? Alle dozen samen horen bij het antwoord. Welke som past bij steeds hetzelfde aantal?",
+     "uitlegSterker": "Schrijf voor elke doos het aantal eieren op en tel ze bij elkaar op. Een plussom met steeds hetzelfde getal schrijf je als een keersom.",
+     "laag2": "tekstSterker",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "afgehaald",
+     "bron": "claude-taalfix"
     }
    ],
-   "foutHintsTekst": "5 + 8 = 13 → In elke doos zitten evenveel eieren. Dan tel je niet één keer op, maar steeds hetzelfde aantal erbij. · 8 − 5 = 3 → Je haalt niets weg. Je hebt juist meerdere dozen met eieren samen.",
-   "ouderzin": "",
+   "foutHintsTekst": "5 + 8 = 13 → Heb je één doos en het aantal dozen bij elkaar opgeteld? In elke doos zitten evenveel eieren. Welke som past bij steeds hetzelfde aantal? · 8 − 5 = 3 → Gaan er eieren weg? Alle dozen samen horen bij het antwoord. Welke som past bij steeds hetzelfde aantal?",
+   "ouderzin": "Je kind kiest de som bij een tekening met groepjes die even groot zijn: een keersom.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1398,7 +1909,12 @@
     "duplicaatVan": null,
     "somtypeNr": 9,
     "somtypeNrOrigineel": 9,
-    "somtypeOrigineel": "Je tekent # [ding] en in elke doos # [ding]. Welke som hoort bij deze tekening?"
+    "somtypeOrigineel": "Je tekent # [ding] en in elke doos # [ding]. Welke som hoort bij deze tekening?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 9,
+     "somtype": "Je tekent # [ding] en in elke doos # [ding]. Welke som hoort bij deze tekening?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1414,8 +1930,54 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "5 + 8 = 13",
+     "soort": "opgeteld",
+     "bron": "nieuw",
+     "tekst": "Heb je één doos en het aantal dozen bij elkaar opgeteld? In elke doos zitten evenveel eieren. Welke som past bij steeds hetzelfde aantal?",
+     "tekstSterker": "Tel de eieren doos voor doos: steeds hetzelfde aantal, zo vaak als er dozen zijn. Een plussom met steeds hetzelfde getal schrijf je korter als een keersom.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "5 + 8 = 13"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "soort": "afgehaald",
+     "bron": "claude-taalfix",
+     "tekst": "Gaan er eieren weg? Alle dozen samen horen bij het antwoord. Welke som past bij steeds hetzelfde aantal?",
+     "tekstSterker": "Schrijf voor elke doos het aantal eieren op en tel ze bij elkaar op. Een plussom met steeds hetzelfde getal schrijf je als een keersom.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "8 − 5 = 3"
+      ]
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Steeds hetzelfde aantal, een paar keer: dat is een keersom.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Steeds hetzelfde aantal, een paar keer: dat is een keersom."
   },
   {
    "id": "G7-DENK-02-claude-bank-010",
@@ -1446,22 +2008,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "Een balkje van 8 en een balkje van 3 keer 8"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Lees de zin over Tim nog eens. Wat betekent 'keer zoveel'?",
+   "sterkereHint": "Reken uit hoeveel Tim er heeft. Kijk bij elke tekening hoe lang het balkje van Tim is. Welk balkje is precies zo lang?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Een balkje van 8 en een balkje van 8 plus 3",
-     "uitleg": "Bij 3 keer zoveel leg je hetzelfde balkje meerdere keren achter elkaar."
+     "uitleg": "Is 'keer zoveel' hetzelfde als 'erbij'? Bij keer zoveel leg je het hele balkje een paar keer achter elkaar.",
+     "uitlegSterker": "Teken het korte balkje. Teken het nog eens en nog eens erachter, zo vaak als het getal voor 'keer zoveel' zegt. Zo lang wordt het lange balkje.",
+     "laag2": "tekstSterker",
+     "regel": "8 plus 3",
+     "soort": "erbij in plaats van keer",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Twee balkjes van allebei 8",
-     "uitleg": "Tim heeft niet evenveel als Sanne. Hij heeft er meer."
+     "uitleg": "Hebben ze allebei evenveel? Bij keer zoveel heeft de een meer dan de ander.",
+     "uitlegSterker": "Het balkje met keer zoveel is langer. Het bestaat uit een paar keer het korte balkje achter elkaar. Zoek de tekening waarin dat zo is.",
+     "laag2": "tekstSterker",
+     "regel": "allebei",
+     "soort": "even lang",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Een balkje van 8 en een balkje van 8 plus 3 → Bij 3 keer zoveel leg je hetzelfde balkje meerdere keren achter elkaar. · Twee balkjes van allebei 8 → Tim heeft niet evenveel als Sanne. Hij heeft er meer.",
-   "ouderzin": "",
+   "foutHintsTekst": "Een balkje van 8 en een balkje van 8 plus 3 → Is 'keer zoveel' hetzelfde als 'erbij'? Bij keer zoveel leg je het hele balkje een paar keer achter elkaar. · Twee balkjes van allebei 8 → Hebben ze allebei evenveel? Bij keer zoveel heeft de een meer dan de ander.",
+   "ouderzin": "Je kind kiest het schema bij 'keer zoveel': hetzelfde balkje een paar keer achter elkaar.",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1557,7 +2129,12 @@
     "duplicaatVan": null,
     "somtypeNr": 10,
     "somtypeNrOrigineel": 10,
-    "somtypeOrigineel": "Je tekent een schema bij deze opgave: Sanne heeft # [ding] en Tim heeft er # keer zoveel. Welke tekening klopt?"
+    "somtypeOrigineel": "Je tekent een schema bij deze opgave: Sanne heeft # [ding] en Tim heeft er # keer zoveel. Welke tekening klopt?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 10,
+     "somtype": "Je tekent een schema bij deze opgave: Sanne heeft # [ding] en Tim heeft er # keer zoveel. Welke tekening klopt?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1573,8 +2150,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "8 plus 3",
+     "soort": "erbij in plaats van keer",
+     "bron": "nieuw",
+     "tekst": "Is 'keer zoveel' hetzelfde als 'erbij'? Bij keer zoveel leg je het hele balkje een paar keer achter elkaar.",
+     "tekstSterker": "Teken het korte balkje. Teken het nog eens en nog eens erachter, zo vaak als het getal voor 'keer zoveel' zegt. Zo lang wordt het lange balkje.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Een balkje van 8 en een balkje van 8 plus 3"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "allebei",
+     "soort": "even lang",
+     "bron": "nieuw",
+     "tekst": "Hebben ze allebei evenveel? Bij keer zoveel heeft de een meer dan de ander.",
+     "tekstSterker": "Het balkje met keer zoveel is langer. Het bestaat uit een paar keer het korte balkje achter elkaar. Zoek de tekening waarin dat zo is.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Twee balkjes van allebei 8"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Bij 'keer zoveel' leg je hetzelfde balkje een paar keer achter elkaar. Hoe vaak? Dat zegt het getal voor 'keer zoveel'.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Bij 'keer zoveel' leg je hetzelfde balkje een paar keer achter elkaar. Hoe vaak? Dat zegt het getal voor 'keer zoveel'."
   },
   {
    "id": "G7-DENK-02-claude-bank-011",
@@ -1605,22 +2229,32 @@
     "juisteOptie": "C",
     "juisteOptieTekst": "Elk 5 potloden, 1 over"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Geef ieder steeds evenveel, tot je niet nog een rondje kunt geven. Wat er dan nog ligt, blijft over.",
+   "sterkereHint": "Zoek het grootste aantal dat ieder kan krijgen: dat aantal keer het aantal kinderen mag niet meer zijn dan wat je hebt. Haal wat je uitdeelt af van wat je had. Wat er nog ligt, blijft over.",
    "foutHints": [
     {
      "stap": null,
      "fout": "Elk 5 potloden, niets over",
-     "uitleg": "Tel in je schema na hoeveel potloden je hebt verdeeld. Zijn dat er echt 26?"
+     "uitleg": "Heb je alles uitgedeeld? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat precies wat je had?",
+     "uitlegSterker": "Doe het aantal voor ieder keer het aantal kinderen. Haal dat af van wat je had. Wat er nog ligt, blijft over.",
+     "laag2": "tekstSterker",
+     "regel": "niets over",
+     "soort": "rest vergeten",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Elk 6 potloden, 4 over",
-     "uitleg": "Kijk of je wel genoeg potloden hebt om iedereen er 6 te geven."
+     "uitleg": "Heb je wel genoeg om ieder zoveel te geven? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat meer dan wat je had?",
+     "uitlegSterker": "Probeer een kleiner aantal voor ieder. Doe dat keer het aantal kinderen. Zoek het grootste aantal waarbij je niet meer nodig hebt dan je had. Kom je boven wat je had? Dan kom je er juist een paar tekort. Dat is geen rest.",
+     "laag2": "tekstSterker",
+     "regel": "6 potloden",
+     "soort": "te veel voor ieder",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Elk 5 potloden, niets over → Tel in je schema na hoeveel potloden je hebt verdeeld. Zijn dat er echt 26? · Elk 6 potloden, 4 over → Kijk of je wel genoeg potloden hebt om iedereen er 6 te geven.",
-   "ouderzin": "",
+   "foutHintsTekst": "Elk 5 potloden, niets over → Heb je alles uitgedeeld? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat precies wat je had? · Elk 6 potloden, 4 over → Heb je wel genoeg om ieder zoveel te geven? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat meer dan wat je had?",
+   "ouderzin": "Je kind verdeelt eerlijk en kijkt hoeveel er overblijft (delen met rest).",
    "getallenruimte": "n.v.t.",
    "context": "midden",
    "visual": {
@@ -1712,7 +2346,12 @@
     "duplicaatVan": null,
     "somtypeNr": 11,
     "somtypeNrOrigineel": 11,
-    "somtypeOrigineel": "Je verdeelt # [ding] eerlijk over # [ding]. In je schema krijgt [wie] evenveel. Hoeveel krijgt [wie] en hoeveel blijven er over?"
+    "somtypeOrigineel": "Je verdeelt # [ding] eerlijk over # [ding]. In je schema krijgt [wie] evenveel. Hoeveel krijgt [wie] en hoeveel blijven er over?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 11,
+     "somtype": "Je verdeelt # [ding] eerlijk over # [ding]. In je schema krijgt [wie] evenveel. Hoeveel krijgt [wie] en hoeveel blijven er over?"
+    }
    },
    "controle": {
     "antwoord": "ok",
@@ -1728,8 +2367,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "niets over",
+     "soort": "rest vergeten",
+     "bron": "nieuw",
+     "tekst": "Heb je alles uitgedeeld? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat precies wat je had?",
+     "tekstSterker": "Doe het aantal voor ieder keer het aantal kinderen. Haal dat af van wat je had. Wat er nog ligt, blijft over.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Elk 5 potloden, niets over"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "6 potloden",
+     "soort": "te veel voor ieder",
+     "bron": "nieuw",
+     "tekst": "Heb je wel genoeg om ieder zoveel te geven? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat meer dan wat je had?",
+     "tekstSterker": "Probeer een kleiner aantal voor ieder. Doe dat keer het aantal kinderen. Zoek het grootste aantal waarbij je niet meer nodig hebt dan je had. Kom je boven wat je had? Dan kom je er juist een paar tekort. Dat is geen rest.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Elk 6 potloden, 4 over"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Geef ieder evenveel. Reken na: het aantal voor ieder keer het aantal kinderen, plus wat overblijft, is wat je had.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Geef ieder evenveel. Reken na: het aantal voor ieder keer het aantal kinderen, plus wat overblijft, is wat je had."
   },
   {
    "id": "G7-DENK-02-claude-bank-012",
@@ -1760,22 +2446,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "30 meter"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Teken de palen als streepjes op een rij. Tel de stukken tussen de palen.",
+   "sterkereHint": "Tussen twee palen zit steeds een stuk. Er is altijd één stuk minder dan er palen zijn. Doe het aantal stukken keer de afstand tussen twee palen.",
    "foutHints": [
     {
      "stap": null,
      "fout": "35 meter",
-     "uitleg": "Teken de palen als streepjes en tel de tussenruimtes. Dat zijn er minder dan het aantal palen."
+     "uitleg": "Heb je het aantal palen keer de afstand gedaan? Tel in je tekening de stukken tussen de palen. Zijn dat er evenveel als palen?",
+     "uitlegSterker": "Teken een paar palen als streepjes, bijvoorbeeld drie. Tussen drie palen zitten twee stukken. Er is altijd één stuk minder dan er palen zijn.",
+     "laag2": "tekstSterker",
+     "regel": "35 meter",
+     "soort": "palen in plaats van stukken",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "25 meter",
-     "uitleg": "Tel de tussenruimtes in je tekening nog eens na."
+     "uitleg": "Dat is één stuk te weinig. Tel in je tekening de stukken tussen de palen nog eens, van de eerste tot de laatste paal.",
+     "uitlegSterker": "Er is altijd één stuk minder dan er palen zijn. Haal één af van het aantal palen, en doe dat keer de afstand tussen twee palen.",
+     "laag2": "tekstSterker",
+     "regel": "25 meter",
+     "soort": "stuk te weinig",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "35 meter → Teken de palen als streepjes en tel de tussenruimtes. Dat zijn er minder dan het aantal palen. · 25 meter → Tel de tussenruimtes in je tekening nog eens na.",
-   "ouderzin": "",
+   "foutHintsTekst": "35 meter → Heb je het aantal palen keer de afstand gedaan? Tel in je tekening de stukken tussen de palen. Zijn dat er evenveel als palen? · 25 meter → Dat is één stuk te weinig. Tel in je tekening de stukken tussen de palen nog eens, van de eerste tot de laatste paal.",
+   "ouderzin": "Je kind rekent de lengte van een rij palen uit: er is één tussenruimte minder dan er palen zijn.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -1867,7 +2563,12 @@
     "duplicaatVan": null,
     "somtypeNr": 12,
     "somtypeNrOrigineel": 12,
-    "somtypeOrigineel": "Langs een pad staan # [ding] op een rij. Tussen twee palen zit steeds # meter. Hoe lang is de rij van de eerste tot de laatste paal?"
+    "somtypeOrigineel": "Langs een pad staan # [ding] op een rij. Tussen twee palen zit steeds # meter. Hoe lang is de rij van de eerste tot de laatste paal?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 12,
+     "somtype": "Langs een pad staan # [ding] op een rij. Tussen twee palen zit steeds # meter. Hoe lang is de rij van de eerste tot de laatste paal?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -1883,8 +2584,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "35 meter",
+     "soort": "palen in plaats van stukken",
+     "bron": "nieuw",
+     "tekst": "Heb je het aantal palen keer de afstand gedaan? Tel in je tekening de stukken tussen de palen. Zijn dat er evenveel als palen?",
+     "tekstSterker": "Teken een paar palen als streepjes, bijvoorbeeld drie. Tussen drie palen zitten twee stukken. Er is altijd één stuk minder dan er palen zijn.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "35 meter"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "25 meter",
+     "soort": "stuk te weinig",
+     "bron": "nieuw",
+     "tekst": "Dat is één stuk te weinig. Tel in je tekening de stukken tussen de palen nog eens, van de eerste tot de laatste paal.",
+     "tekstSterker": "Er is altijd één stuk minder dan er palen zijn. Haal één af van het aantal palen, en doe dat keer de afstand tussen twee palen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "25 meter"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Tel de stukken tussen de palen: dat is één minder dan het aantal palen.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Tel de stukken tussen de palen: dat is één minder dan het aantal palen."
   },
   {
    "id": "G7-DENK-02-claude-bank-013",
@@ -1915,22 +2663,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "Een strook van 6 en een strook van 24"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Bij 'keer zoveel' leg je dezelfde strook een paar keer achter elkaar. Hoe vaak? Dat zegt het getal voor 'keer zoveel'.",
+   "sterkereHint": "Teken de strook van wie het minst heeft. Leg die strook zo vaak achter elkaar als het getal voor 'keer zoveel' zegt. Hoe lang wordt de lange strook?",
    "foutHints": [
     {
      "stap": null,
      "fout": "Een strook van 6 en een strook van 10",
-     "uitleg": "Vier keer zoveel is niet vier erbij. Teken de strook van Lotte vier keer achter elkaar."
+     "uitleg": "Is 'keer zoveel' hetzelfde als 'erbij'? Bij keer zoveel leg je de hele strook een paar keer achter elkaar.",
+     "uitlegSterker": "Teken de korte strook. Teken hem nog eens en nog eens erachter, zo vaak als het getal voor 'keer zoveel' zegt. Hoe lang is de strook nu?",
+     "laag2": "tekstSterker",
+     "regel": "strook van 10",
+     "soort": "erbij in plaats van keer",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "Een strook van 6 en een strook van 4",
-     "uitleg": "Het getal 4 zegt hoe vaak je de strook van Lotte neemt."
+     "uitleg": "Hoort het getal voor 'keer zoveel' bij een strook? Dat getal zegt hoe vaak je de korte strook neemt, niet hoe lang hij is.",
+     "uitlegSterker": "Teken de korte strook. Leg hem zo vaak achter elkaar als het getal voor 'keer zoveel' zegt. Zo lang is de lange strook samen.",
+     "laag2": "tekstSterker",
+     "regel": "strook van 4",
+     "soort": "getal als strook",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "Een strook van 6 en een strook van 10 → Vier keer zoveel is niet vier erbij. Teken de strook van Lotte vier keer achter elkaar. · Een strook van 6 en een strook van 4 → Het getal 4 zegt hoe vaak je de strook van Lotte neemt.",
-   "ouderzin": "",
+   "foutHintsTekst": "Een strook van 6 en een strook van 10 → Is 'keer zoveel' hetzelfde als 'erbij'? Bij keer zoveel leg je de hele strook een paar keer achter elkaar. · Een strook van 6 en een strook van 4 → Hoort het getal voor 'keer zoveel' bij een strook? Dat getal zegt hoe vaak je de korte strook neemt, niet hoe lang hij is.",
+   "ouderzin": "Je kind kiest het schema bij 'keer zoveel': dezelfde strook een paar keer achter elkaar.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -2024,7 +2782,12 @@
     "duplicaatVan": null,
     "somtypeNr": 13,
     "somtypeNrOrigineel": 13,
-    "somtypeOrigineel": "Lotte heeft # [ding]. Bram heeft er # keer zoveel. Welke tekening klopt bij deze situatie?"
+    "somtypeOrigineel": "Lotte heeft # [ding]. Bram heeft er # keer zoveel. Welke tekening klopt bij deze situatie?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 13,
+     "somtype": "Lotte heeft # [ding]. Bram heeft er # keer zoveel. Welke tekening klopt bij deze situatie?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2040,8 +2803,55 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
-   }
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
+   },
+   "foutRegels": [
+    {
+     "regel": "strook van 10",
+     "soort": "erbij in plaats van keer",
+     "bron": "nieuw",
+     "tekst": "Is 'keer zoveel' hetzelfde als 'erbij'? Bij keer zoveel leg je de hele strook een paar keer achter elkaar.",
+     "tekstSterker": "Teken de korte strook. Teken hem nog eens en nog eens erachter, zo vaak als het getal voor 'keer zoveel' zegt. Hoe lang is de strook nu?",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Een strook van 6 en een strook van 10"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "strook van 4",
+     "soort": "getal als strook",
+     "bron": "nieuw",
+     "tekst": "Hoort het getal voor 'keer zoveel' bij een strook? Dat getal zegt hoe vaak je de korte strook neemt, niet hoe lang hij is.",
+     "tekstSterker": "Teken de korte strook. Leg hem zo vaak achter elkaar als het getal voor 'keer zoveel' zegt. Zo lang is de lange strook samen.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "Een strook van 6 en een strook van 4"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Bij 'keer zoveel' leg je dezelfde strook een paar keer achter elkaar.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Bij 'keer zoveel' leg je dezelfde strook een paar keer achter elkaar."
   },
   {
    "id": "G7-DENK-02-claude-bank-naar-001",
@@ -2072,22 +2882,32 @@
     "juisteOptie": "A",
     "juisteOptieTekst": "17 wielen"
    },
-   "hint": "",
-   "sterkereHint": "",
+   "hint": "Er zijn twee soorten fietsen, met een verschillend aantal wielen. Reken elke soort apart uit.",
+   "sterkereHint": "Doe bij elke soort het aantal fietsen keer het aantal wielen van één fiets. Tel de uitkomsten van de twee soorten bij elkaar op.",
    "foutHints": [
     {
      "stap": null,
      "fout": "7 wielen",
-     "uitleg": "Je hebt alleen de fietsen geteld. Elke fiets heeft meerdere wielen."
+     "uitleg": "Is dat het aantal fietsen? De vraag gaat over de wielen, en elke fiets heeft meer dan één wiel.",
+     "uitlegSterker": "Begin bij de eerste soort: hoeveel wielen hebben die fietsen samen? Doe hetzelfde bij de tweede soort. Tel de wielen van de twee soorten bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "7 wielen",
+     "soort": "alleen de fietsen",
+     "bron": "nieuw"
     },
     {
      "stap": null,
      "fout": "14 wielen",
-     "uitleg": "Reken beide soorten fietsen apart uit en tel de uitkomsten daarna op."
+     "uitleg": "Hebben alle fietsen evenveel wielen? De twee soorten hebben een verschillend aantal wielen. Reken elke soort apart uit.",
+     "uitlegSterker": "Schrijf twee sommen op: één voor elke soort, met het aantal fietsen keer het aantal wielen van één fiets. Tel de twee uitkomsten bij elkaar op.",
+     "laag2": "tekstSterker",
+     "regel": "14 wielen",
+     "soort": "overal evenveel wielen",
+     "bron": "nieuw"
     }
    ],
-   "foutHintsTekst": "7 wielen → Je hebt alleen de fietsen geteld. Elke fiets heeft meerdere wielen. · 14 wielen → Reken beide soorten fietsen apart uit en tel de uitkomsten daarna op.",
-   "ouderzin": "",
+   "foutHintsTekst": "7 wielen → Is dat het aantal fietsen? De vraag gaat over de wielen, en elke fiets heeft meer dan één wiel. · 14 wielen → Hebben alle fietsen evenveel wielen? De twee soorten hebben een verschillend aantal wielen. Reken elke soort apart uit.",
+   "ouderzin": "Je kind rekent met twee groepen: elke groep apart een keersom, en daarna samen.",
    "getallenruimte": "n.v.t.",
    "context": "laag",
    "visual": {
@@ -2195,12 +3015,17 @@
      "besluit": "verplaatsen",
      "hintStatus": "voorstel Didactiek; Oefeningen schrijft de definitieve hints in G7",
      "bestand": "data/aanvulling_uit_g8.json",
-     "g8Build": "2026-10-01T22:31:24+0200"
+     "g8Build": "2026-10-01T22:54:38+0200"
     },
     "somtypeG8": "Op een schoolplein staan # [ding] met # [ding] en # [ding] met # [ding]. Hoeveel [ding] zijn dat samen?",
     "somtypeNr": 14,
     "somtypeNrOrigineel": 14,
-    "somtypeOrigineel": "Op een schoolplein staan # [ding] met # [ding] en # [ding] met # [ding]. Hoeveel [ding] zijn dat samen?"
+    "somtypeOrigineel": "Op een schoolplein staan # [ding] met # [ding] en # [ding] met # [ding]. Hoeveel [ding] zijn dat samen?",
+    "hints": {
+     "batch": "batch1.json",
+     "nr": 14,
+     "somtype": "Op een schoolplein staan # [ding] met # [ding] en # [ding] met # [ding]. Hoeveel [ding] zijn dat samen?"
+    }
    },
    "controle": {
     "antwoord": "n.v.t.",
@@ -2216,11 +3041,65 @@
     },
     "dubbeleOptie": false,
     "notatie": [],
-    "claudeUitlegInKindtekst": null
+    "claudeUitlegInKindtekst": null,
+    "foutHintPlaceholder": null,
+    "foutHintsNietToegepast": []
    },
    "geldigeAntwoorden": [
     "17 wielen"
-   ]
+   ],
+   "foutRegels": [
+    {
+     "regel": "7 wielen",
+     "soort": "alleen de fietsen",
+     "bron": "nieuw",
+     "tekst": "Is dat het aantal fietsen? De vraag gaat over de wielen, en elke fiets heeft meer dan één wiel.",
+     "tekstSterker": "Begin bij de eerste soort: hoeveel wielen hebben die fietsen samen? Doe hetzelfde bij de tweede soort. Tel de wielen van de twee soorten bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "7 wielen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "14 wielen",
+     "soort": "overal evenveel wielen",
+     "bron": "nieuw",
+     "tekst": "Hebben alle fietsen evenveel wielen? De twee soorten hebben een verschillend aantal wielen. Reken elke soort apart uit.",
+     "tekstSterker": "Schrijf twee sommen op: één voor elke soort, met het aantal fietsen keer het aantal wielen van één fiets. Tel de twee uitkomsten bij elkaar op.",
+     "perItem": false,
+     "match": {
+      "waarden": [
+       "14 wielen"
+      ],
+      "opOpties": true
+     },
+     "leesbaar": true
+    },
+    {
+     "regel": "andere fout",
+     "soort": "andere fout",
+     "bron": "nieuw",
+     "tekst": "Reken elke soort apart uit en tel de uitkomsten bij elkaar op.",
+     "tekstSterker": null,
+     "perItem": false,
+     "match": {
+      "alles": true
+     },
+     "leesbaar": true
+    }
+   ],
+   "algemeneFoutHint": "Reken elke soort apart uit en tel de uitkomsten bij elkaar op."
+  }
+ ],
+ "hintsSyncOp": "2026-10-08T12:16:56+02:00",
+ "hintsBatches": [
+  {
+   "batch": "batch1.json",
+   "md5": "4715654e9a9a"
   }
  ]
 }

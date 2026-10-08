@@ -18,7 +18,7 @@ Somtypes zonder 'hints klaar' tellen als 'open'.
 Gebruik: python3 check_hints.py [bestand.md ...]   (standaard alle somtypen/G7-*.md) · exit 1 bij FAIL.
 """
 import re,sys,os,glob,json,collections
-import sys as _sys113; _sys113.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge')); import klok113_check as _K113
+import sys as _sys113; _sys113.path.insert(0, '/workspace/claude-merge/tools'); import klok113_check as _K113
 BASE=os.path.dirname(os.path.abspath(__file__))
 LETTER=re.compile(r"(?<![\w'’/.-])([A-D])(?![\w'’/-])")
 KLOK=re.compile(r'(?<![\d:])\d{1,2}:\d{2}(?!\d)')
@@ -262,6 +262,9 @@ def check(files):
 if __name__=="__main__":
     files=sys.argv[1:] or sorted(glob.glob(f"{BASE}/somtypen/G7-*.md"))
     fails,warns,info,k,o=check(files)
+    sys.path.insert(0, '/workspace/claude-merge/tools'); import huis_checks as _HC      # #540 KEERDELEN + #543 LETT-testtabel (eindcheck G6 r11)
+    fails = list(fails) + _HC.extra_fails(os.path.dirname(os.path.abspath(__file__)))
+    warns = list(warns) + _HC.extra_warns(os.path.dirname(os.path.abspath(__file__)))      # ONLEESBAAR: regel bij geen enkel item te lezen (8 okt)
     for x in fails: print("FAIL",x)
     for x in warns: print("WARN",x)
     for x in info: print("INFO",x)

@@ -138,7 +138,7 @@ if __name__ == '__main__':
     for _x in _opp[:20]: print('  FAIL OPP', _x)
     fail = fail or bool(_opp)
     # REF (G5 fixlijst #63): referentiematen uit /workspace/claude-merge/referentiematen.json: checkPatronen = FAIL, checkPatronenZacht = WARN
-    sys.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge'))
+    sys.path.insert(0, '/workspace/claude-merge/tools')
     import referentiematen_check as _RC
     fail = (_RC.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail      # checkPatronen = FAIL, zacht = WARN
     # MAAT (notatie_machten.md, Didactiek 18:00; aangezet 18:05): ²/³ per groep, mengvorm 'vierkante cm', m2/cm3, 'a' voor are, INTRO per somtype
@@ -147,13 +147,24 @@ if __name__ == '__main__':
     fail = (_AV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import machten_check as _MC
     # BREUKVORM (G6 merge-fixlijst #170, Dave 21:24): even grote breuk goed, behalve als de opgave een vorm vraagt (FAIL)
-    sys.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge')); import breukvorm as _BV
+    sys.path.insert(0, '/workspace/claude-merge/tools'); import breukvorm as _BV
     fail = (_BV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     # DOELID (G5 merge-fixlijst #122, Didactiek 20:04): elk item heeft het doelId van zijn bestand (FAIL)
-    sys.path.insert(0, __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'scripts', 'merge')); import doelid_check as _DI
+    sys.path.insert(0, '/workspace/claude-merge/tools'); import doelid_check as _DI
     fail = (_DI.rapport(files) > 0) or fail
     import evenveel_check as _EV      # #192 (Didactiek 21:25): 'even veel' ook in ouderzin, hints en kop (FAIL)
     fail = (_EV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     fail = (_MC.rapport(7, [_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    import geldig_check as _GA      # #360 (G5 gate ronde 9): antwoord ∈ geldigeAntwoorden (FAIL, G5–G8)
+    fail = (_GA.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    import bijna390_check as _B390      # #390 (G6 gate ronde 9 deel B): getal uit de vraag nooit ±1/'Bijna!' (FAIL, G5–G8)
+    fail = (_B390.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
+    # Review G7 batch 1 (Didactiek 8 okt): Z-#518 CONTEXT (WARN), Z-#525 VISUAL (WARN), Z-#520 ROUTES (INFO, alleen somtypes met hints + telling heel G7)
+    import contextgebonden_check as _CG, visual_somtype_check as _VS, routes_check as _RT
+    _alle = [_it for _p in files for _it in json.load(open(_p))['items']]
+    _CG.rapport(os.path.dirname(os.path.abspath(__file__))); _VS.rapport(_alle)
+    _hk = {(_e['doel'], _e.get('nrOrigineel')) for _b in glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'hints', 'batch*.json')) for _e in json.load(open(_b)).get('somtypen', [])}
+    _RT.rapport([_it for _it in _alle if (_it['merge']['doel'], _it['merge'].get('somtypeNrOrigineel')) in _hk])
+    print(f"  (heel G7, alle meerkeuze: {len(_RT.rapport(_alle, toon=False))} INFO-treffers; niet per stuk getoond)")
     print('\nG7 merge-notatie:', 'FAIL' if fail else 'ALLES OK')
     sys.exit(1 if fail else 0)

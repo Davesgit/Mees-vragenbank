@@ -46,3 +46,11 @@ def extra_fails(base):
     import sys
     sys.path.insert(0, os.path.join(base, 'scripts')); import fout_regels as FR
     return keerdelen(base) + lett_afwijkingen(FR)
+# ONLEESBAAR (opdracht 12:15): een regel die de motor bij geen enkel item van zijn somtype kan lezen (logs/regels_onleesbaar.json, geschreven door
+# apply_hints) = WARN. Zo'n regel geeft nooit een sleutel; de foute opties vallen dan stil op 'andere fout' (zoals '6 liter' na V-#516 in G7).
+def onleesbaar(base):
+    p = f'{base}/logs/regels_onleesbaar.json'
+    if not os.path.exists(p): return []
+    return [f"ONLEESBAAR {x['doel']} #{x['nrOrigineel']}: regel '{x['regel']}' is bij geen van de {x['items']} items te lezen (geeft nooit een sleutel)"
+            for x in json.load(open(p))['regels'] if x['items'] and x['itemsNietTeLezen'] >= x['items']]
+def extra_warns(base): return onleesbaar(base)

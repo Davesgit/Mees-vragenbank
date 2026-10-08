@@ -1,0 +1,1285 @@
+{
+ "batch": "batch1",
+ "geschreven": "2026-10-08",
+ "uitleg": "Hints per somtype (G7-merge, batch 1 = DENK-02 een situatie in een som zetten, 14 somtypes, en DENK-03 een plan in stappen, nrO 1, 2, 3, 25, 4–10). Formaat als g6/hints/batch6.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per foute optie een letterlijke regel (de optietekst, exact), laag 1 'tekst' en laag 2 'tekstSterker'; 'andere fout' als laatste (algemeen, terugval op Hint 2).",
+ "somtypen": [
+  {
+   "doel": "G7-DENK-02",
+   "nr": 1,
+   "somtype": "Een moestuin is # meter lang en # meter breed. Je tekent hem als rechthoek. Hoe groot is de oppervlakte?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Een moestuin is # meter lang en # meter breed. Je tekent hem als rechthoek. Hoe groot is de oppervlakte?",
+   "hint1": "Oppervlakte is hoeveel ruimte de moestuin binnen de rand inneemt. Denk aan hokjes van één bij één meter.",
+   "hint2": "Een rechthoek vul je met rijen hokjes van één vierkante meter. In elke rij passen zoveel hokjes als de lengte, en er zijn zoveel rijen als de breedte. Doe de lengte keer de breedte.",
+   "ouderzin": "Je kind rekent de oppervlakte van een rechthoek uit: de lengte keer de breedte, in vierkante meter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "omtrek",
+     "claudeDenkfout": null,
+     "regel": "34 vierkante meter",
+     "tekst": "Is dat de lengte van de rand rondom? Dat is de omtrek. De oppervlakte is het vlak binnen de rand.",
+     "tekstSterker": "Teken de moestuin als rechthoek met rijen hokjes van één bij één meter. Hoeveel hokjes passen er in één rij, en hoeveel rijen zijn er? Doe het aantal hokjes in één rij keer het aantal rijen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "lengte en breedte opgeteld",
+     "claudeDenkfout": null,
+     "regel": "17 vierkante meter",
+     "tekst": "Heb je de lengte en de breedte opgeteld? Bij oppervlakte tel je hokjes van één bij één meter. Hoeveel rijen zijn er, en hoeveel hokjes in elke rij?",
+     "tekstSterker": "Teken één rij hokjes langs de lengte: zoveel hokjes als de lengte. Er passen zoveel rijen onder elkaar als de breedte. Doe het aantal hokjes in één rij keer het aantal rijen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Oppervlakte reken je uit met hokjes van één bij één meter. Doe de lengte keer de breedte."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt nu de lengte van de rand uitgerekend. De oppervlakte gaat over het vlak binnen de rand.",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "zegt zeker wat het kind deed; nu een vraag (les 20/101), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Bij oppervlakte tel je de zijden niet op. Denk aan rijen hokjes van 1 bij 1 meter.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 2,
+   "somtype": "Een sportveld is # meter lang en # meter breed. Je tekent het als rechthoek. Welk getal hoort bij de [ding]?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Een sportveld is # meter lang en # meter breed. Je tekent het als rechthoek. Welk getal hoort bij de [ding]?",
+   "hint1": "Lees goed welk getal de vraag zoekt. De omtrek is de rand rondom. De oppervlakte is het vlak binnen de rand.",
+   "hint2": "Zoekt de vraag de omtrek? Tel dan alle vier de zijden bij elkaar op. Zoekt de vraag de oppervlakte? Doe dan de lengte keer de breedte.",
+   "ouderzin": "Je kind rekent aan een rechthoek: de omtrek (alle vier de zijden opgeteld) of de oppervlakte (de lengte keer de breedte), net wat de vraag zoekt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "oppervlakte",
+     "claudeDenkfout": null,
+     "regel": "200 meter",
+     "tekst": "Heb je de lengte keer de breedte gedaan? Zo krijg je de oppervlakte: het vlak binnen de rand. De omtrek is alleen de rand.",
+     "tekstSterker": "De omtrek is de rand rondom het veld. Schrijf de vier zijden onder elkaar: de lengte, de breedte, de lengte en de breedte. Tel ze bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twee zijden",
+     "claudeDenkfout": null,
+     "regel": "30 meter",
+     "tekst": "Heb je maar twee zijden geteld? Een rechthoek heeft vier zijden. Loop helemaal om het veld heen.",
+     "tekstSterker": "Een rechthoek heeft twee lange en twee korte zijden. Schrijf alle vier de zijden onder elkaar en tel ze één voor één bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek je de omtrek? Tel dan alle vier de zijden op. Zoek je de oppervlakte? Doe dan de lengte keer de breedte."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De omtrek is de lijn helemaal rondom je tekening, niet het vlak erbinnen.",
+     "claudeDenkfout": "omtrek-oppervlakte-verwisseld",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Een rechthoek heeft vier zijden. Ben je er alle vier langsgelopen?",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "omtrek"
+    ],
+    "aanname": "'omtrek' staat op de plek van [ding]; H1, H2 en ALG passen nu bij omtrek én oppervlakte, maar de fout-hints ('200 meter' = oppervlakte, '30 meter' = twee zijden) gaan uit van een omtrekvraag"
+   }
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 3,
+   "somtype": "Er zijn # [ding] op het schoolplein. Een derde speelt bij de [ding]. Welke tekening past hier het beste bij?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Er zijn # [ding] op het schoolplein. Een derde speelt bij de [ding]. Welke tekening past hier het beste bij?",
+   "hint1": "Een derde: je verdeelt alle kinderen in drie even grote groepjes.",
+   "hint2": "Hoeveel is een derde van de hele groep? Reken het uit. Tel bij elke tekening hoeveel er gekleurd zijn.",
+   "ouderzin": "Je kind kiest de tekening bij een derde van een groep: drie even grote groepjes, waarvan er één meedoet.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alles gekleurd",
+     "claudeDenkfout": null,
+     "regel": "alle groepjes gekleurd",
+     "tekst": "Spelen alle kinderen bij de zandbak? Een derde is maar één van de drie even grote groepjes.",
+     "tekstSterker": "Verdeel de kinderen in drie even grote groepjes. Kleur er één. Alleen dat ene groepje is een derde; de andere twee horen er niet bij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "twee groepjes",
+     "claudeDenkfout": null,
+     "regel": "2 groepjes van 9",
+     "tekst": "Hoeveel groepjes horen bij een derde? Bij een derde verdeel je in drie even grote groepjes, niet in twee.",
+     "tekstSterker": "Bij een helft verdeel je in twee even grote groepjes, bij een derde in drie. Zoek de tekening met drie even grote groepjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Bij een derde verdeel je de groep in drie even grote groepjes. Eén groepje hoort bij de vraag."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een derde betekent dat maar één van de gelijke groepjes telt.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Bij een derde teken je drie even grote groepjes, niet twee.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "kinderen",
+     "zandbak"
+    ]
+   }
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 4,
+   "somtype": "In [plek] zitten # [ding]. De helft gaat met de fiets. Welke tekening past het beste bij deze situatie?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "In [plek] zitten # [ding]. De helft gaat met de fiets. Welke tekening past het beste bij deze situatie?",
+   "hint1": "Hoeveel kinderen gaan er met de fiets? Denk aan wat 'de helft' betekent.",
+   "hint2": "Reken uit hoeveel de helft van de hele klas is. Kijk bij elke tekening hoe groot één stuk is. Welk stuk is precies zo groot?",
+   "ouderzin": "Je kind kiest de tekening bij de helft: één strook in twee gelijke stukken.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "vier stukken",
+     "claudeDenkfout": null,
+     "regel": "in 4 gelijke stukken",
+     "tekst": "Hoeveel stukken horen bij de helft? Bij de helft knip je de strook één keer doormidden: twee gelijke stukken.",
+     "tekstSterker": "Een helft is één van twee gelijke stukken, een kwart is één van vier. Zoek de strook die in twee gelijke stukken verdeeld is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "klas verdubbeld",
+     "claudeDenkfout": null,
+     "regel": "twee stroken",
+     "tekst": "Wordt de klas groter? De klas blijft even groot; je verdeelt hem alleen. Je hebt dus één strook nodig.",
+     "tekstSterker": "Teken één strook voor de hele klas. Verdeel die strook in twee gelijke stukken: één stuk is de helft."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Bij de helft verdeel je één strook in twee gelijke stukken."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bij de helft knip je de strook één keer doormidden.",
+     "claudeDenkfout": "deel-van-geheel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De klas wordt niet groter, hij wordt alleen verdeeld.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "klas",
+     "kinderen"
+    ]
+   }
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 5,
+   "somtype": "In een staafdiagram staat hoeveel boeken een klas leest. De staaf van maandag staat precies tussen # en #. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "In een staafdiagram staat hoeveel boeken een klas leest. De staaf van maandag staat precies tussen # en #. Hoeveel [ding] zijn dat?",
+   "hint1": "De staaf stopt precies tussen twee streepjes. Welk getal ligt precies in het midden van die twee?",
+   "hint2": "Kijk naar de twee streepjes waar de staaf tussen stopt. Hoeveel is het van het kleinste naar het grootste getal? Neem de helft daarvan en tel die op bij het kleinste getal.",
+   "ouderzin": "Je kind leest een staafdiagram af als de staaf precies tussen twee streepjes stopt: het getal in het midden.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "streepje eronder of het verschil",
+     "claudeDenkfout": null,
+     "regel": "10 boeken",
+     "tekst": "Is dat het streepje onder de staaf, of het verschil tussen de twee streepjes? De staaf stopt precies in het midden tussen de twee streepjes.",
+     "tekstSterker": "Neem het verschil tussen de twee streepjes waar de staaf tussen stopt. De helft daarvan komt bovenop het kleinste getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "30 boeken",
+     "tekst": "Heb je de twee getallen opgeteld? De staaf stopt tussen die twee getallen. Het antwoord ligt dus tussen het kleinste en het grootste getal.",
+     "tekstSterker": "Het getal in het midden ligt tussen de twee streepjes. Neem het verschil tussen die twee getallen, en tel de helft daarvan op bij het kleinste getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek het getal precies in het midden tussen de twee streepjes."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De staaf stopt niet bij het streepje van 10, maar een stuk hoger.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Je hoeft de twee getallen niet op te tellen. Zoek het getal dat er precies tussenin ligt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 6,
+   "somtype": "In een staafdiagram staat hoeveel flesjes water een klas drinkt. De staaf van vrijdag staat precies tussen # en #. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "In een staafdiagram staat hoeveel flesjes water een klas drinkt. De staaf van vrijdag staat precies tussen # en #. Hoeveel [ding] zijn dat?",
+   "hint1": "De staaf stopt precies tussen twee streepjes. Welk getal ligt precies in het midden van die twee?",
+   "hint2": "Kijk naar de twee streepjes waar de staaf tussen stopt. Hoeveel is het van het kleinste naar het grootste getal? Neem de helft daarvan en tel die op bij het kleinste getal.",
+   "ouderzin": "Je kind leest een staafdiagram af als de staaf precies tussen twee streepjes stopt: het getal in het midden.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "streepje eronder",
+     "claudeDenkfout": null,
+     "regel": "40 flesjes",
+     "tekst": "Is dat het streepje onder de staaf? De staaf gaat nog een stuk hoger: precies tot het midden tussen de twee streepjes.",
+     "tekstSterker": "Neem het verschil tussen de twee streepjes waar de staaf tussen stopt. De helft daarvan komt bovenop het kleinste getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "90 flesjes",
+     "tekst": "Heb je de twee getallen opgeteld? De staaf stopt tussen die twee getallen. Het antwoord ligt dus tussen het kleinste en het grootste getal.",
+     "tekstSterker": "Het getal in het midden ligt tussen de twee streepjes. Neem het verschil tussen die twee getallen, en tel de helft daarvan op bij het kleinste getal."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Zoek het getal precies in het midden tussen de twee streepjes."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De staaf stopt niet bij een streepje, maar er precies tussenin. Zoek het getal in het midden.",
+     "claudeDenkfout": "grafiek-verkeerd-afgelezen",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je hoeft de twee getallen niet op te tellen. Zoek het getal dat er precies tussenin ligt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 7,
+   "somtype": "Je hebt # [ding] en verdeelt ze eerlijk over # [ding]. In je schema geef je [wie] evenveel. Hoeveel [ding] krijgt [wie] en hoeveel blijven er over?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Je hebt # [ding] en verdeelt ze eerlijk over # [ding]. In je schema geef je [wie] evenveel. Hoeveel [ding] krijgt [wie] en hoeveel blijven er over?",
+   "hint1": "Geef ieder steeds evenveel, tot je niet nog een rondje kunt geven. Wat er dan nog ligt, blijft over.",
+   "hint2": "Zoek het grootste aantal dat ieder kan krijgen: dat aantal keer het aantal kinderen mag niet meer zijn dan wat je hebt. Haal wat je uitdeelt af van wat je had. Wat er nog ligt, blijft over.",
+   "ouderzin": "Je kind verdeelt eerlijk en kijkt hoeveel er overblijft (delen met rest).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "rest vergeten",
+     "claudeDenkfout": null,
+     "regel": "niets over",
+     "tekst": "Heb je alles uitgedeeld? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat precies wat je had?",
+     "tekstSterker": "Doe het aantal voor ieder keer het aantal kinderen. Haal dat af van wat je had. Wat er nog ligt, blijft over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel voor ieder",
+     "claudeDenkfout": null,
+     "regel": "8 stickers",
+     "tekst": "Heb je wel genoeg om ieder zoveel te geven? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat meer dan wat je had?",
+     "tekstSterker": "Probeer een kleiner aantal voor ieder. Doe dat keer het aantal kinderen. Zoek het grootste aantal waarbij je niet meer nodig hebt dan je had. Kom je boven wat je had? Dan kom je er juist een paar tekort. Dat is geen rest."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Geef ieder evenveel. Reken na: het aantal voor ieder keer het aantal kinderen, plus wat overblijft, is wat je had."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel eens na hoeveel stickers je hebt uitgedeeld. Kijk of je er dan precies 30 kwijt bent.",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Reken na. 4 keer jouw aantal mag niet meer dan 30 zijn.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "kinderen",
+     "kind"
+    ]
+   }
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 8,
+   "somtype": "Je koopt # [ding] knikkers. In elk(e) [bak] zitten # [ding]. Welke som hoort bij de tekening van # rijen met # [ding]?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "Je koopt # [ding] knikkers. In elk(e) [bak] zitten # [ding]. Welke som hoort bij de tekening van # rijen met # [ding]?",
+   "hint1": "Er zijn een paar rijen, en in elke rij liggen evenveel knikkers. Welke som hoort bij steeds hetzelfde aantal?",
+   "hint2": "Hoeveel zijn het er samen? Tel rij voor rij. Reken ook elke som uit: welke som geeft precies dat aantal?",
+   "ouderzin": "Je kind kiest de som bij een tekening met groepjes die even groot zijn: een keersom.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "4 + 6",
+     "tekst": "Heb je één rij en het aantal rijen bij elkaar opgeteld? In elke rij liggen evenveel knikkers. Welke som hoort bij steeds hetzelfde aantal, een paar keer?",
+     "tekstSterker": "Tel de knikkers rij voor rij: steeds hetzelfde aantal, zo vaak als er rijen zijn. Een plussom met steeds hetzelfde getal schrijf je korter als een keersom."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "afgehaald",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Gaan er knikkers weg? Er gaat niets af: elke rij hoort erbij. Welke som past bij steeds hetzelfde aantal?",
+     "claudeTekst": "Er gaat niets weg. Er komen juist steeds 6 knikkers bij.",
+     "waarom": "Claudes sleutel; een letterlijke regel met '−' past niet (motor), nu een vaste tekst met eigen laag 2",
+     "tekstSterker": "Elke rij heeft hetzelfde aantal knikkers. Schrijf voor elke rij dat aantal op en tel ze op. Een plussom met steeds hetzelfde getal schrijf je als een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Steeds hetzelfde aantal, een paar keer: dat is een keersom."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Er zijn meerdere rijen die allemaal even lang zijn. Wat doe je dan met de getallen?",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 9,
+   "somtype": "Je tekent # [ding] en in elke doos # [ding]. Welke som hoort bij deze tekening?",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "Je tekent # [ding] en in elke doos # [ding]. Welke som hoort bij deze tekening?",
+   "hint1": "In elke doos zitten evenveel eieren. Welke som hoort bij steeds hetzelfde aantal?",
+   "hint2": "Hoeveel zijn het er samen? Tel doos voor doos. Welke som heeft precies dat aantal als uitkomst?",
+   "ouderzin": "Je kind kiest de som bij een tekening met groepjes die even groot zijn: een keersom.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "5 + 8 = 13",
+     "tekst": "Heb je één doos en het aantal dozen bij elkaar opgeteld? In elke doos zitten evenveel eieren. Welke som past bij steeds hetzelfde aantal?",
+     "tekstSterker": "Tel de eieren doos voor doos: steeds hetzelfde aantal, zo vaak als er dozen zijn. Een plussom met steeds hetzelfde getal schrijf je korter als een keersom."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "afgehaald",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Gaan er eieren weg? Alle dozen samen horen bij het antwoord. Welke som past bij steeds hetzelfde aantal?",
+     "claudeTekst": "Je haalt niets weg. Je hebt juist meerdere dozen met eieren samen.",
+     "waarom": "Claudes sleutel; een letterlijke regel met '−' past niet (motor), nu een vaste tekst met eigen laag 2",
+     "tekstSterker": "Schrijf voor elke doos het aantal eieren op en tel ze bij elkaar op. Een plussom met steeds hetzelfde getal schrijf je als een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Steeds hetzelfde aantal, een paar keer: dat is een keersom."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "In elke doos zitten evenveel eieren. Dan tel je niet één keer op, maar steeds hetzelfde aantal erbij.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "dozen",
+     "eieren"
+    ]
+   }
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 10,
+   "somtype": "Je tekent een schema bij deze opgave: Sanne heeft # [ding] en Tim heeft er # keer zoveel. Welke tekening klopt?",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "Je tekent een schema bij deze opgave: Sanne heeft # [ding] en Tim heeft er # keer zoveel. Welke tekening klopt?",
+   "hint1": "Lees de zin over Tim nog eens. Wat betekent 'keer zoveel'?",
+   "hint2": "Reken uit hoeveel Tim er heeft. Kijk bij elke tekening hoe lang het balkje van Tim is. Welk balkje is precies zo lang?",
+   "ouderzin": "Je kind kiest het schema bij 'keer zoveel': hetzelfde balkje een paar keer achter elkaar.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "erbij in plaats van keer",
+     "claudeDenkfout": null,
+     "regel": "8 plus 3",
+     "tekst": "Is 'keer zoveel' hetzelfde als 'erbij'? Bij keer zoveel leg je het hele balkje een paar keer achter elkaar.",
+     "tekstSterker": "Teken het korte balkje. Teken het nog eens en nog eens erachter, zo vaak als het getal voor 'keer zoveel' zegt. Zo lang wordt het lange balkje."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "even lang",
+     "claudeDenkfout": null,
+     "regel": "allebei",
+     "tekst": "Hebben ze allebei evenveel? Bij keer zoveel heeft de een meer dan de ander.",
+     "tekstSterker": "Het balkje met keer zoveel is langer. Het bestaat uit een paar keer het korte balkje achter elkaar. Zoek de tekening waarin dat zo is."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Bij 'keer zoveel' leg je hetzelfde balkje een paar keer achter elkaar. Hoe vaak? Dat zegt het getal voor 'keer zoveel'."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Bij 3 keer zoveel leg je hetzelfde balkje meerdere keren achter elkaar.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Tim heeft niet evenveel als Sanne. Hij heeft er meer.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 11,
+   "somtype": "Je verdeelt # [ding] eerlijk over # [ding]. In je schema krijgt [wie] evenveel. Hoeveel krijgt [wie] en hoeveel blijven er over?",
+   "nrOrigineel": 11,
+   "somtypeOrigineel": "Je verdeelt # [ding] eerlijk over # [ding]. In je schema krijgt [wie] evenveel. Hoeveel krijgt [wie] en hoeveel blijven er over?",
+   "hint1": "Geef ieder steeds evenveel, tot je niet nog een rondje kunt geven. Wat er dan nog ligt, blijft over.",
+   "hint2": "Zoek het grootste aantal dat ieder kan krijgen: dat aantal keer het aantal kinderen mag niet meer zijn dan wat je hebt. Haal wat je uitdeelt af van wat je had. Wat er nog ligt, blijft over.",
+   "ouderzin": "Je kind verdeelt eerlijk en kijkt hoeveel er overblijft (delen met rest).",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "rest vergeten",
+     "claudeDenkfout": null,
+     "regel": "niets over",
+     "tekst": "Heb je alles uitgedeeld? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat precies wat je had?",
+     "tekstSterker": "Doe het aantal voor ieder keer het aantal kinderen. Haal dat af van wat je had. Wat er nog ligt, blijft over."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "te veel voor ieder",
+     "claudeDenkfout": null,
+     "regel": "6 potloden",
+     "tekst": "Heb je wel genoeg om ieder zoveel te geven? Reken na: het aantal voor ieder keer het aantal kinderen. Is dat meer dan wat je had?",
+     "tekstSterker": "Probeer een kleiner aantal voor ieder. Doe dat keer het aantal kinderen. Zoek het grootste aantal waarbij je niet meer nodig hebt dan je had. Kom je boven wat je had? Dan kom je er juist een paar tekort. Dat is geen rest."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Geef ieder evenveel. Reken na: het aantal voor ieder keer het aantal kinderen, plus wat overblijft, is wat je had."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel in je schema na hoeveel potloden je hebt verdeeld. Zijn dat er echt 26?",
+     "claudeDenkfout": "rest-vergeten",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Kijk of je wel genoeg potloden hebt om iedereen er 6 te geven.",
+     "claudeDenkfout": "andere-deel-genomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "kinderen",
+     "kind"
+    ]
+   }
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 12,
+   "somtype": "Langs een pad staan # [ding] op een rij. Tussen twee palen zit steeds # meter. Hoe lang is de rij van de eerste tot de laatste paal?",
+   "nrOrigineel": 12,
+   "somtypeOrigineel": "Langs een pad staan # [ding] op een rij. Tussen twee palen zit steeds # meter. Hoe lang is de rij van de eerste tot de laatste paal?",
+   "hint1": "Teken de palen als streepjes op een rij. Tel de stukken tussen de palen.",
+   "hint2": "Tussen twee palen zit steeds een stuk. Er is altijd één stuk minder dan er palen zijn. Doe het aantal stukken keer de afstand tussen twee palen.",
+   "ouderzin": "Je kind rekent de lengte van een rij palen uit: er is één tussenruimte minder dan er palen zijn.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "palen in plaats van stukken",
+     "claudeDenkfout": null,
+     "regel": "35 meter",
+     "tekst": "Heb je het aantal palen keer de afstand gedaan? Tel in je tekening de stukken tussen de palen. Zijn dat er evenveel als palen?",
+     "tekstSterker": "Teken een paar palen als streepjes, bijvoorbeeld drie. Tussen drie palen zitten twee stukken. Er is altijd één stuk minder dan er palen zijn."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "stuk te weinig",
+     "claudeDenkfout": null,
+     "regel": "25 meter",
+     "tekst": "Dat is één stuk te weinig. Tel in je tekening de stukken tussen de palen nog eens, van de eerste tot de laatste paal.",
+     "tekstSterker": "Er is altijd één stuk minder dan er palen zijn. Haal één af van het aantal palen, en doe dat keer de afstand tussen twee palen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel de stukken tussen de palen: dat is één minder dan het aantal palen."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Teken de palen als streepjes en tel de tussenruimtes. Dat zijn er minder dan het aantal palen.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Tel de tussenruimtes in je tekening nog eens na.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 13,
+   "somtype": "Lotte heeft # [ding]. Bram heeft er # keer zoveel. Welke tekening klopt bij deze situatie?",
+   "nrOrigineel": 13,
+   "somtypeOrigineel": "Lotte heeft # [ding]. Bram heeft er # keer zoveel. Welke tekening klopt bij deze situatie?",
+   "hint1": "Bij 'keer zoveel' leg je dezelfde strook een paar keer achter elkaar. Hoe vaak? Dat zegt het getal voor 'keer zoveel'.",
+   "hint2": "Teken de strook van wie het minst heeft. Leg die strook zo vaak achter elkaar als het getal voor 'keer zoveel' zegt. Hoe lang wordt de lange strook?",
+   "ouderzin": "Je kind kiest het schema bij 'keer zoveel': dezelfde strook een paar keer achter elkaar.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "erbij in plaats van keer",
+     "claudeDenkfout": null,
+     "regel": "strook van 10",
+     "tekst": "Is 'keer zoveel' hetzelfde als 'erbij'? Bij keer zoveel leg je de hele strook een paar keer achter elkaar.",
+     "tekstSterker": "Teken de korte strook. Teken hem nog eens en nog eens erachter, zo vaak als het getal voor 'keer zoveel' zegt. Hoe lang is de strook nu?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "getal als strook",
+     "claudeDenkfout": null,
+     "regel": "strook van 4",
+     "tekst": "Hoort het getal voor 'keer zoveel' bij een strook? Dat getal zegt hoe vaak je de korte strook neemt, niet hoe lang hij is.",
+     "tekstSterker": "Teken de korte strook. Leg hem zo vaak achter elkaar als het getal voor 'keer zoveel' zegt. Zo lang is de lange strook samen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Bij 'keer zoveel' leg je dezelfde strook een paar keer achter elkaar."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Vier keer zoveel is niet vier erbij. Teken de strook van Lotte vier keer achter elkaar.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Het getal 4 zegt hoe vaak je de strook van Lotte neemt.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-02",
+   "nr": 14,
+   "somtype": "Op een schoolplein staan # [ding] met # [ding] en # [ding] met # [ding]. Hoeveel [ding] zijn dat samen?",
+   "nrOrigineel": 14,
+   "somtypeOrigineel": "Op een schoolplein staan # [ding] met # [ding] en # [ding] met # [ding]. Hoeveel [ding] zijn dat samen?",
+   "hint1": "Er zijn twee soorten fietsen, met een verschillend aantal wielen. Reken elke soort apart uit.",
+   "hint2": "Doe bij elke soort het aantal fietsen keer het aantal wielen van één fiets. Tel de uitkomsten van de twee soorten bij elkaar op.",
+   "ouderzin": "Je kind rekent met twee groepen: elke groep apart een keersom, en daarna samen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "alleen de fietsen",
+     "claudeDenkfout": null,
+     "regel": "7 wielen",
+     "tekst": "Is dat het aantal fietsen? De vraag gaat over de wielen, en elke fiets heeft meer dan één wiel.",
+     "tekstSterker": "Begin bij de eerste soort: hoeveel wielen hebben die fietsen samen? Doe hetzelfde bij de tweede soort. Tel de wielen van de twee soorten bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "overal evenveel wielen",
+     "claudeDenkfout": null,
+     "regel": "14 wielen",
+     "tekst": "Hebben alle fietsen evenveel wielen? De twee soorten hebben een verschillend aantal wielen. Reken elke soort apart uit.",
+     "tekstSterker": "Schrijf twee sommen op: één voor elke soort, met het aantal fietsen keer het aantal wielen van één fiets. Tel de twee uitkomsten bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken elke soort apart uit en tel de uitkomsten bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt alleen de fietsen geteld. Elke fiets heeft meerdere wielen.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "zegt zeker wat het kind deed; nu een vraag (les 20/101), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Reken beide soorten fietsen apart uit en tel de uitkomsten daarna op.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "fietsen",
+     "wielen"
+    ],
+    "aanname": "elke fiets heeft meer dan één wiel"
+   }
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 1,
+   "somtype": "Bij gym loop je # [ding] van # minuten en daarna rust je # minuten. Hoelang ben je in totaal bezig?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Bij gym loop je # [ding] van # minuten en daarna rust je # minuten. Hoelang ben je in totaal bezig?",
+   "hint1": "Maak een plan in stappen. Hoelang duren alle rondjes samen?",
+   "hint2": "Doe het aantal rondjes keer de tijd van één rondje. Tel de rusttijd er één keer bij op.",
+   "ouderzin": "Je kind rekent een opgave in twee stappen uit: eerst een keersom, dan erbij.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "rust vergeten of alles opgeteld",
+     "claudeDenkfout": null,
+     "regel": "12 minuten",
+     "tekst": "Hoelang duren alle rondjes samen? Dat is het aantal rondjes keer de tijd van één rondje. Hoelang rust je, en tel je dat erbij?",
+     "tekstSterker": "Schrijf de twee stappen onder elkaar: alle rondjes samen (het aantal rondjes keer de tijd van één rondje), en de rust. Tel die twee tijden bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "rust na elk rondje",
+     "claudeDenkfout": null,
+     "regel": "27 minuten",
+     "tekst": "Rust je na elk rondje? Lees nog eens: je rust maar één keer, aan het eind.",
+     "tekstSterker": "Reken eerst de tijd van alle rondjes samen uit. Tel de rusttijd daar maar één keer bij op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de rondjes samen uit. Tel de rust er één keer bij op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De rondjes heb je goed geteld. Er hoort nog een stap bij het plan.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Lees nog eens hoe vaak je rust. Is dat na elk rondje of maar één keer?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "rondjes"
+    ]
+   }
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 2,
+   "somtype": "Een recept voor # [ding] gebruikt # g meel. Stap #: je kookt voor # [ding]. Stap #: pas de hoeveelheid meel aan. Hoeveel meel heb je nodig?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Een recept voor # [ding] gebruikt # g meel. Stap #: je kookt voor # [ding]. Stap #: pas de hoeveelheid meel aan. Hoeveel meel heb je nodig?",
+   "hint1": "Kook je voor meer of voor minder personen dan in het recept? Hoeveel keer zoveel personen is dat?",
+   "hint2": "Deel het nieuwe aantal personen door het aantal uit het recept. De uitkomst zegt hoeveel keer zoveel meel je nodig hebt. Doe het meel uit het recept zoveel keer.",
+   "ouderzin": "Je kind past een recept aan voor meer personen: keer zoveel personen is keer zoveel meel.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "gedeeld",
+     "claudeDenkfout": null,
+     "regel": "150 g",
+     "tekst": "Heb je minder meel genomen? Je kookt voor meer personen, dus je hebt meer meel nodig.",
+     "tekstSterker": "Hoeveel keer zoveel personen zijn het nu? Doe het meel uit het recept ook zoveel keer: het wordt meer, niet minder."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "302 g",
+     "tekst": "Heb je er een klein getal bij opgeteld? Bij keer zoveel personen hoort keer zoveel meel, niet een paar gram erbij.",
+     "tekstSterker": "Een paar gram erbij is niet genoeg. Elke groep van evenveel personen als in het recept heeft dezelfde hoeveelheid meel nodig. Tel hoeveel van die groepen er nu zijn, en neem het meel uit het recept zo vaak."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Hoeveel keer zoveel personen zijn het? Doe het meel ook zoveel keer."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je kookt voor meer mensen dan in het recept staat. Heb je dan meer of minder meel nodig?",
+     "claudeDenkfout": "verhoudingstabel-verkeerd",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je hebt er een klein getal bij opgeteld. Van 4 naar 8 personen is keer zoveel, niet plus zoveel.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "personen"
+    ],
+    "aanname": "meer personen dan in het recept, met een hele factor (vergroten)"
+   }
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 3,
+   "somtype": "In [plek] staan # [ding] met elk # [ding]. Daarna haal je # [ding] weg. Hoeveel stoelen staan er nog?",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "In [plek] staan # [ding] met elk # [ding]. Daarna haal je # [ding] weg. Hoeveel stoelen staan er nog?",
+   "hint1": "Maak een plan in stappen. Hoeveel stoelen staan er eerst in totaal?",
+   "hint2": "Doe het aantal tafels keer het aantal stoelen aan één tafel. Haal de stoelen die je weghaalt van dat totaal af.",
+   "ouderzin": "Je kind rekent een opgave in twee stappen uit: eerst een keersom, dan eraf.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tweede stap vergeten",
+     "claudeDenkfout": null,
+     "regel": "24 stoelen",
+     "tekst": "Is dat het aantal na de eerste stap? Je haalt er daarna nog een paar weg.",
+     "tekstSterker": "Schrijf de twee stappen onder elkaar: alle stoelen samen, en de stoelen die je weghaalt. Haal de stoelen die je weghaalt van het totaal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld in plaats van keer",
+     "claudeDenkfout": null,
+     "regel": "7 stoelen",
+     "tekst": "Heb je het aantal tafels en het aantal stoelen aan één tafel opgeteld? Elke tafel heeft evenveel stoelen. Hoeveel keer dat aantal is het?",
+     "tekstSterker": "Tel de stoelen tafel voor tafel: steeds hetzelfde aantal, zo vaak als er tafels zijn. Dat is een keersom. Haal de stoelen die je weghaalt daarna van het totaal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst alle stoelen samen uit met een keersom. Haal de stoelen die je weghaalt daarna eraf."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is het aantal na de eerste stap. Er moet nog iets weggehaald worden.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Je hebt 6 en 4 opgeteld. Elke tafel heeft 4 stoelen, dus hoeveel keer 4 is dat?",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "tafels"
+    ]
+   }
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 4,
+   "somtype": "In een sportzaal staan # [ding] met elk # [ding]. Noor haalt er # [ding] uit. Hoeveel blijven er over?",
+   "nrOrigineel": 25,
+   "somtypeOrigineel": "In een sportzaal staan # [ding] met elk # [ding]. Noor haalt er # [ding] uit. Hoeveel blijven er over?",
+   "hint1": "Maak een plan in stappen. Hoeveel ballen zitten er eerst in alle dozen samen?",
+   "hint2": "Doe het aantal dozen keer het aantal ballen in één doos. Haal de ballen die Noor eruit haalt van dat totaal af.",
+   "ouderzin": "Je kind rekent een opgave in twee stappen uit: eerst een keersom, dan eraf.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tweede stap vergeten",
+     "claudeDenkfout": null,
+     "regel": "168 ballen",
+     "tekst": "Is dat het aantal ballen in alle dozen samen? Noor haalt er nog een paar uit.",
+     "tekstSterker": "Schrijf de twee stappen onder elkaar: alle ballen samen, en de ballen die Noor eruit haalt. Haal de ballen van Noor van het totaal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld in plaats van keer",
+     "claudeDenkfout": null,
+     "regel": "31 ballen",
+     "tekst": "Heb je het aantal dozen en het aantal ballen in één doos opgeteld? In elke doos zitten evenveel ballen. Hoeveel keer dat aantal is het?",
+     "tekstSterker": "Splits het aantal ballen in één doos in tientallen en eenheden. Doe elk stuk keer het aantal dozen en tel de uitkomsten op. Haal de ballen van Noor daarna van het totaal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst alle ballen samen uit met een keersom. Haal de ballen van Noor daarna eraf."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt alleen het totaal uitgerekend. Er gingen er nog een aantal uit.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "zegt zeker wat het kind deed; nu een vraag (les 20/101), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Je hebt 7 en 24 opgeteld. Elke doos bevat 24 ballen.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "dozen",
+     "ballen"
+    ],
+    "aanname": "het aantal ballen in één doos heeft twee cijfers (tientallen en eenheden, laag 2 van opgeteld in plaats van keer)"
+   }
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 5,
+   "somtype": "Je begint bij # en verdubbelt het getal # keer. Welk getal krijg je dan?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Je begint bij # en verdubbelt het getal # keer. Welk getal krijg je dan?",
+   "hint1": "Verdubbelen is keer twee. Schrijf na elke stap het nieuwe getal op.",
+   "hint2": "Begin bij het getal uit de vraag en doe het keer twee. Doe de uitkomst weer keer twee. Houd met streepjes bij hoe vaak je verdubbelt, tot het aantal keer uit de vraag.",
+   "ouderzin": "Je kind verdubbelt een getal een paar keer achter elkaar en houdt bij hoe vaak.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een keer te weinig",
+     "claudeDenkfout": null,
+     "regel": "8",
+     "tekst": "Heb je echt zo vaak verdubbeld als de vraag zegt? Schrijf na elke verdubbeling het getal op en tel de stappen.",
+     "tekstSterker": "Schrijf een rijtje: het begingetal, en daarachter steeds het dubbele. Zet onder elk nieuw getal een streepje. Stop als je zoveel streepjes hebt als de vraag zegt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "steeds twee erbij",
+     "claudeDenkfout": null,
+     "regel": "9",
+     "tekst": "Heb je steeds twee erbij gedaan? Verdubbelen is keer twee: het getal wordt twee keer zo groot.",
+     "tekstSterker": "Verdubbelen is het getal bij zichzelf optellen. Doe dat met het begingetal, en daarna steeds met de nieuwe uitkomst."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Verdubbelen is keer twee. Doe dat zo vaak als de vraag zegt."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Schrijf het getal na elke verdubbeling op. Heb je echt 4 keer verdubbeld?",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Verdubbelen is niet steeds er 2 bij optellen. Wat gebeurt er met een getal als het 2 keer zoveel wordt?",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 6,
+   "somtype": "Je begint bij # op de getallenlijn en zet # [ding] van # [ding]. Bij welk getal kom je uit?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Je begint bij # op de getallenlijn en zet # [ding] van # [ding]. Bij welk getal kom je uit?",
+   "hint1": "Elke stap is even groot. Hoeveel stappen zet je, en hoe groot is één stap?",
+   "hint2": "Doe het aantal stappen keer de grootte van één stap. Zo ver spring je. Tel dat op bij het getal waar je begint.",
+   "ouderzin": "Je kind springt in gelijke stappen over de getallenlijn: het aantal stappen keer de grootte van één stap, vanaf het begingetal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "een stap te weinig",
+     "claudeDenkfout": null,
+     "regel": "16",
+     "tekst": "Heb je alle stappen gezet? Tel je sprongen nog eens, vanaf het getal waar je begint. Tel bij elke sprong één.",
+     "tekstSterker": "Zet een streepje voor elke sprong en schrijf erbij waar je uitkomt. Stop pas als je zoveel streepjes hebt als het aantal stappen uit de vraag."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "9",
+     "tekst": "Heb je het aantal stappen en de grootte van een stap opgeteld? Elke stap is even groot. Hoe vaak zet je zo'n stap?",
+     "tekstSterker": "Spring vanaf het getal waar je begint steeds dezelfde stap vooruit, en tel bij elke sprong mee. Het aantal stappen keer de grootte van één stap is hoe ver je springt."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe het aantal stappen keer de grootte van één stap. Tel dat op bij het getal waar je begint."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel je stappen nog eens na. Hoeveel sprongen van 4 heb je precies gemaakt?",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Je hebt 4 en 5 bij elkaar opgeteld. Elke stap is 4 groot, dus hoeveel keer 4 loop je?",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "stappen",
+     "vooruit"
+    ],
+    "aanname": "de sleutels '16' (een stap te weinig) en '9' (opgeteld) gaan uit van begingetal nul; de teksten zelf niet meer"
+   }
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 7,
+   "somtype": "Je geeft een plant # dagen water. Op dag # [ding] je # dl en elke volgende dag # dl meer. Hoeveel dl water geef je in totaal?",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "Je geeft een plant # dagen water. Op dag # [ding] je # dl en elke volgende dag # dl meer. Hoeveel dl water geef je in totaal?",
+   "hint1": "Schrijf voor elke dag op hoeveel water de plant krijgt.",
+   "hint2": "Op de eerste dag krijgt de plant de hoeveelheid uit de vraag. Elke volgende dag doe je er de extra hoeveelheid bij. Schrijf alle dagen onder elkaar en tel ze bij elkaar op.",
+   "ouderzin": "Je kind maakt een rijtje dat elke dag wat groter wordt, en telt het op.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "meer dan dag één of dag vergeten",
+     "claudeDenkfout": null,
+     "regel": "11 dl",
+     "tekst": "Dat is te weinig. Heb je elke dag meegeteld, met de goede hoeveelheid? Elke volgende dag krijgt de plant meer dan de dag ervoor.",
+     "tekstSterker": "Maak een rijtje met voor elke dag de hoeveelheid. Elke dag komt er weer wat bij, dus elk getal is groter dan het getal ervoor. Tel het rijtje op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "elke dag hetzelfde",
+     "claudeDenkfout": null,
+     "regel": "8 dl",
+     "tekst": "Krijgt de plant elke dag evenveel? Elke volgende dag krijgt hij meer. Schrijf de dagen onder elkaar.",
+     "tekstSterker": "Schrijf voor elke dag op hoeveel water de plant krijgt: op de eerste dag de hoeveelheid uit de vraag, en elke volgende dag wat meer. Tel alle dagen bij elkaar op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Schrijf alle dagen onder elkaar, met elke dag wat meer. Tel alle dagen bij elkaar op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Schrijf de vier dagen onder elkaar op. Heb je elke dag meegeteld?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De hoeveelheid wordt elke dag groter. Je kunt dus niet 4 keer dezelfde hoeveelheid nemen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 8,
+   "somtype": "Je hebt # [ding] sap van elk # dl. Stap #: giet alles in een kan. Stap #: giet er # dl uit. Hoeveel dl zit er nog in de kan?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "Je hebt # [ding] sap van elk # liter. Stap #: giet alles in een kan. Stap #: giet er # liter uit. Hoeveel liter zit er nog in de kan?",
+   "hint1": "Volg de stappen. Hoeveel deciliter giet je bij stap één in de kan?",
+   "hint2": "Doe het aantal flesjes keer de deciliters in één flesje: zoveel zit er na stap één in de kan. Haal bij stap twee de deciliters die je eruit giet eraf.",
+   "ouderzin": "Je kind volgt een plan in twee stappen: eerst een keersom, dan eraf.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tweede stap vergeten",
+     "claudeDenkfout": null,
+     "regel": "9 dl",
+     "tekst": "Is dat wat er na stap één in de kan zit? Bij stap twee giet je er nog iets uit.",
+     "tekstSterker": "Schrijf onder elkaar wat er na stap één en na stap twee in de kan zit. Haal bij stap twee de deciliters die je eruit giet af van wat er in de kan zat."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld in plaats van keer",
+     "claudeDenkfout": null,
+     "regel": "4 dl",
+     "tekst": "Heb je het aantal flesjes en de deciliters van één flesje opgeteld? Elk flesje heeft evenveel sap. Hoeveel keer dat aantal is het?",
+     "tekstSterker": "Tel de deciliters flesje voor flesje: steeds hetzelfde aantal, zo vaak als er flesjes zijn. Dat is een keersom. Haal de deciliters die je eruit giet daarna van het totaal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst uit hoeveel deciliter er in de kan zit. Haal daarna af wat je eruit giet."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Na stap 1 zit dat erin. Maar stap 2 moet je ook nog uitvoeren.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Je hebt 3 en 2 opgeteld. Elk pak heeft 2 liter, dus hoeveel keer 2 liter is dat?",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    }
+   ],
+   "kopGewijzigd": {
+    "van": "Je hebt # [ding] sap van elk # liter. Stap #: giet alles in een kan. Stap #: giet er # liter uit. Hoeveel liter zit er nog in de kan?",
+    "naar": "Je hebt # [ding] sap van elk # dl. Stap #: giet alles in een kan. Stap #: giet er # dl uit. Hoeveel dl zit er nog in de kan?",
+    "op": "2026-10-08"
+   },
+   "koppeling": "claudeId",
+   "contextgebonden": {
+    "woorden": [
+     "flesjes"
+    ],
+    "aanname": "de inhoud staat in deciliter (V-#516)"
+   }
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 9,
+   "somtype": "Je hebt # [ding] stroken. Je knipt elke strook in # stukken. Hoeveel stukken heb je dan?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "Je hebt # [ding] stroken. Je knipt elke strook in # stukken. Hoeveel stukken heb je dan?",
+   "hint1": "Elke strook wordt een paar stukken. Krijg je meer of minder stukken dan stroken?",
+   "hint2": "Elke strook geeft hetzelfde aantal stukken. Doe het aantal stroken keer het aantal stukken per strook.",
+   "ouderzin": "Je kind ziet dat knippen meer stukken geeft: een keersom.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "opgeteld",
+     "claudeDenkfout": null,
+     "regel": "14 stukken",
+     "tekst": "Heb je het aantal stukken per strook erbij opgeteld? Elke strook wordt zoveel stukken. Hoe vaak gebeurt dat?",
+     "tekstSterker": "Tel strook voor strook: elke strook geeft hetzelfde aantal stukken, zo vaak als er stroken zijn. Dat is een keersom."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "gedeeld",
+     "claudeDenkfout": null,
+     "regel": "6 stukken",
+     "tekst": "Heb je gedeeld? Door te knippen krijg je meer stukken, niet minder.",
+     "tekstSterker": "Knip in gedachten één strook: dat geeft een paar stukken. Doe dat bij elke strook. Doe het aantal stroken keer het aantal stukken per strook."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Doe het aantal stroken keer het aantal stukken per strook."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt 2 bij 12 opgeteld. Elke strook wordt 2 stukken, dus hoeveel keer 2 krijg je?",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Door knippen krijg je meer stukken, niet minder. Kijk nog eens wat er met elke strook gebeurt.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 10,
+   "somtype": "Je hebt # [ding]. Stap #: geef # [ding] weg. Stap #: geef nog eens # [ding] weg. Hoeveel stickers heb je dan nog?",
+   "nrOrigineel": 9,
+   "somtypeOrigineel": "Je hebt # [ding]. Stap #: geef # [ding] weg. Stap #: geef nog eens # [ding] weg. Hoeveel stickers heb je dan nog?",
+   "hint1": "Volg de stappen één voor één. Hoeveel heb je na stap één nog?",
+   "hint2": "Haal bij stap één de stickers die je weggeeft van het begin af. Haal bij stap twee nog eens af wat je weggeeft.",
+   "ouderzin": "Je kind volgt een plan in twee stappen en haalt twee keer iets af.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tweede stap vergeten",
+     "claudeDenkfout": null,
+     "regel": "16 stickers",
+     "tekst": "Is dat wat je na stap één nog hebt? Bij stap twee geef je er nog een paar weg.",
+     "tekstSterker": "Schrijf onder elkaar wat je na stap één en na stap twee hebt. Haal bij elke stap af wat je weggeeft."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "erbij in plaats van eraf",
+     "claudeDenkfout": null,
+     "regel": "28 stickers",
+     "tekst": "Heb je de stickers die je weggeeft opgeteld? Weggeven is eraf halen: je houdt er minder over.",
+     "tekstSterker": "Weggeven is eraf halen. Begin bij wat je had, en haal er bij elke stap af wat je weggeeft."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Haal bij elke stap af wat je weggeeft."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Er staan twee stappen. Heb je de tweede stap ook echt uitgevoerd?",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Let goed op wat je met de stickers doet: je geeft ze weg. Worden het er dan meer of minder?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G7-DENK-03",
+   "nr": 11,
+   "somtype": "Je hebt # euro gespaard. Stap #: je krijgt # euro zakgeld. Stap #: je koopt een schrift van # euro. Hoeveel euro heb je dan?",
+   "nrOrigineel": 10,
+   "somtypeOrigineel": "Je hebt # euro gespaard. Stap #: je krijgt # euro zakgeld. Stap #: je koopt een schrift van # euro. Hoeveel euro heb je dan?",
+   "hint1": "Volg de stappen één voor één. Hoeveel geld heb je na stap één?",
+   "hint2": "Tel bij stap één het zakgeld op bij wat je gespaard had. Haal bij stap twee de prijs van het schrift ervan af.",
+   "ouderzin": "Je kind volgt een plan in twee stappen: eerst erbij, dan eraf.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "tweede stap vergeten",
+     "claudeDenkfout": null,
+     "regel": "13",
+     "tekst": "Is dat wat je na stap één hebt? Bij stap twee koop je nog een schrift.",
+     "tekstSterker": "Schrijf onder elkaar wat je na stap één en na stap twee hebt. Wat je koopt, haal je van je geld af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "prijs erbij opgeteld",
+     "claudeDenkfout": null,
+     "regel": "17",
+     "tekst": "Heb je de prijs van het schrift erbij opgeteld? Als je iets koopt, heb je minder geld.",
+     "tekstSterker": "Zakgeld krijgen is erbij, iets kopen is eraf. Tel bij stap één het zakgeld op en haal bij stap twee de prijs eraf."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Tel het zakgeld erbij op en haal de prijs van wat je koopt eraf."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je hebt stap 1 goed gedaan. Wat gebeurt er bij stap 2 met je geld?",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst per foute optie zonder cijfers (letterlijke regel, per optie nagerekend)"
+    },
+    {
+     "claudeTekst": "Als je een schrift koopt, gaat er geld af. Tel je dat er dan bij op?",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per foute optie, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}

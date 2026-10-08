@@ -36,3 +36,14 @@ Nummering: Oefeningen Oef-#NNN onder #500 (volgende vrije: Oef-#427); Didactiek 
 | los-scan | Oefeningen | G7 met de uitgebreide los-scan (les 135): 3 vondsten (DENK-02 #1, #8, #9) opgelost | ✓ 0 |
 
 Checks (zandbak): check_hints 25 klaar · 130 open · 0 FAIL · 0 WARN · 0 INFO; notatie ALLES OK; b1/check FAIL 0; verklap FAIL 0; los-scan 0; tweede run 0 wijzigingen. Lessen 144–149: `hints/lessen_g7.md`.
+
+## Review batch 1 Didactiek (8 okt; build 12:16:26, Overzicht)
+| # | Wie | Stand |
+|---|---|---|
+| V-#516 | Overzicht (data) + Oefeningen (tekst) | ✓ DENK-03 nrO 7: «Je hebt 3 flesjes sap van elk 3 dl. … giet er 2 dl uit.» Antwoord 7 dl, afleiders 9 dl (stap twee vergeten) en 4 dl (3 + 3 − 2). `scripts/fixlijst_g7.py`, aangeroepen in build_g7 na FX21. Routes nagerekend (tools/routes_check.py): 7 komt alleen uit 3 × 3 − 2. Kop van 'liter' naar 'dl' (kopGewijzigd; nrOrigineel 7 blijft via claudeId). Teksten in dl: Oefeningen ronde 1b ✓ |
+| V-#515, V-#517 | Oefeningen | ✓ ronde 1b (patch_batch1.py): H1/H2 zonder verklapper; vlag 'contextgebonden' in 13 entries |
+| Z-#518 | Overzicht | ✓ CONTEXT-guard in check_merge_notatie (tools/contextgebonden_check.py): WARN als een gevlagde entry meer dan één item krijgt of een vlagwoord niet in de opgave staat. Nu 13 gevlagd, 0 WARN |
+| Z-#520 | Overzicht (check) → Oefeningen/Didactiek (tekst/getallen) | ✓ ROUTES (INFO, tools/routes_check.py): DUBBEL DENK-02 #5 '10' (10 uit de vraag / 20 − 10), DENK-03 nrO 1 '12' (3 × 4 / 3 + 4 + 5), DENK-03 #3 '7' (4 + 3 / 6 + 4 − 3), DENK-03 #9 '16' (4 × 4 / 20 − 4), DENK-03 nrO 7 '9 dl' (3 × 3 / 3 + 3 × 2) en '4 dl' (3 + 3 − 2 / 2 × 2); ZWAK DENK-03 nrO 4 '16' (4 × 4) en nrO 10 '9' (5 + 4). Heel G7: 31 INFO-treffers. Teksten niet aangepast |
+| Z-#525 | Overzicht | ✓ DENK-02 #3 en #8 ('welke tekening/som') op visual.nodig + nietLiveZonderBeeld zoals #4/#9/#10/#13; #3 met eis 'niet alleen kleur'. VERH-04 #4 mengde rad (tekening verplicht) en zonder tekening → rad als eigen somtype (VERH-04 #7, bevroren v6). VISUAL-check: 0 WARN |
+| Z-#521, 'gekleurd' DENK-02 #3 | Oefeningen | open |
+| ONLEESBAAR | Overzicht (G5–G8) | ✓ apply_hints schrijft logs/regels_onleesbaar.json; check_hints geeft WARN als een regel bij geen enkel item van zijn somtype te lezen is (G5 0, G6 0, G7 0, G8 0) |

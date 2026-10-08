@@ -2,7 +2,7 @@
 
 Onze omschrijving: Breuk ↔ % ↔ verhouding · in onze bank: 8 items
 
-Claude-vragen gemapt: **137** in **6** somtypen · twijfel (voorstel dit doel): **0**
+Claude-vragen gemapt: **137** in **7** somtypen · twijfel (voorstel dit doel): **0**
 
 Invoer voor het schrijven van hint 1 (`hint`) en hint 2 (`sterkereHint`) per somtype. Velden `hint`, `sterkereHint` en `ouderzin` zijn nog leeg.
 Elk somtype heeft een vaste sleutel (nrOrigineel + somtypeOrigineel, bevroren/somtype_nr_v*.json): neem die over in hints/batch*.json, dan blijft de hint gekoppeld als de nummering of de kop verandert.
@@ -30,31 +30,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 1 (te schrijven):** 
 - **Hint 2 (te schrijven):** 
 
-## Somtype 2: Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')
-
-- Sleutel: nrOrigineel **4** · somtypeOrigineel “Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')” (koppeling: claudeId)
-- Items: **9** · Claude-doelen: G7 (9) · regel: D-KANS-NAAR-DEEL
-- Getallenruimte: 0–1.000 · type: meerkeuze
-- Denkfouten (Claude): deel-van-geheel-verkeerd (8), andere-deel-genomen (5), getal-overgenomen (2), een-ernaast (1)
-- Verschillende Claude-fout-hints: 18 (meest: “Kijk goed naar welke kleur er in de vraag wordt gevraagd.”)
-- Voorbeelden:
-  - `G7-VERH-04-claude-bank-132` (Claude G7, ai, niveau 1 → basis)
-    - **Opgave:** In een zakje zitten 3 rode en 7 blauwe knikkers. Welk deel van de knikkers is rood?
-    - **Opties:** A) 7 op de 10 · B) 3 op de 10 · C) 3 op de 7
-    - **Antwoord:** 3 op de 10  (controle: ok)
-    - **Fout-hints (Claude):** 7 op de 10 → Kijk goed naar welke kleur er in de vraag wordt gevraagd. · 3 op de 7 → Je moet het aantal rode knikkers vergelijken met alle knikkers samen, niet met de blauwe.
-    - **Uitleg (Claude):** In het zakje zitten samen 3 + 7 = 10 knikkers. Daarvan zijn er 3 rood. Dat is dus 3 op de 10.
-  - `G7-VERH-04-claude-bank-127` (Claude G7, ai, niveau 2 → toepassen)
-    - **Opgave:** In een doos liggen 20 kaartjes en op 5 kaartjes staat een ster. Welk deel van de kaartjes heeft een ster?
-    - **Opties:** A) 5 op de 15 · B) 1 op de 4 · C) 1 op de 5
-    - **Antwoord:** 1 op de 4  (controle: ok)
-    - **Fout-hints (Claude):** 5 op de 15 → Vergelijk de sterkaartjes met alle kaartjes, niet met de kaartjes zonder ster. · 1 op de 5 → Het aantal sterren is niet meteen het antwoord. Kijk hoe vaak 5 in 20 past.
-    - **Uitleg (Claude):** 5 van de 20 kaartjes heeft een ster. 20 : 5 = 4, dus dat is één van elke vier kaartjes. Dat is dus 1 op de 4.
-
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
-
-## Somtype 3: Schrijf # in procenten.
+## Somtype 2: Schrijf # in procenten.
 
 - Sleutel: nrOrigineel **2** · somtypeOrigineel “Schrijf # in procenten.” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: B13 (8) · regel: G7-V01-breuk-procent
@@ -72,6 +48,30 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Opties:** A) 50% · B) 500% · C) 5%
     - **Antwoord:** 50%  (controle: ok)
     - **Fout-hints (Claude):** 500% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links. · 5% → Keer 10: de komma schuift één plek naar rechts. Gedeeld door 10: één plek naar links.
+
+- **Hint 1 (te schrijven):** 
+- **Hint 2 (te schrijven):** 
+
+## Somtype 3: Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')
+
+- Sleutel: nrOrigineel **4** · somtypeOrigineel “Deel van een totaal: welk deel van de [ding] is …? ('zoveel op de zoveel')” (koppeling: claudeId)
+- Items: **7** · Claude-doelen: G7 (7) · regel: D-KANS-NAAR-DEEL
+- Getallenruimte: 0–1.000 · type: meerkeuze
+- Denkfouten (Claude): deel-van-geheel-verkeerd (6), andere-deel-genomen (4), getal-overgenomen (1), een-ernaast (1)
+- Verschillende Claude-fout-hints: 14 (meest: “Kijk goed naar welke kleur er in de vraag wordt gevraagd.”)
+- Voorbeelden:
+  - `G7-VERH-04-claude-bank-132` (Claude G7, ai, niveau 1 → basis)
+    - **Opgave:** In een zakje zitten 3 rode en 7 blauwe knikkers. Welk deel van de knikkers is rood?
+    - **Opties:** A) 7 op de 10 · B) 3 op de 10 · C) 3 op de 7
+    - **Antwoord:** 3 op de 10  (controle: ok)
+    - **Fout-hints (Claude):** 7 op de 10 → Kijk goed naar welke kleur er in de vraag wordt gevraagd. · 3 op de 7 → Je moet het aantal rode knikkers vergelijken met alle knikkers samen, niet met de blauwe.
+    - **Uitleg (Claude):** In het zakje zitten samen 3 + 7 = 10 knikkers. Daarvan zijn er 3 rood. Dat is dus 3 op de 10.
+  - `G7-VERH-04-claude-bank-127` (Claude G7, ai, niveau 2 → toepassen)
+    - **Opgave:** In een doos liggen 20 kaartjes en op 5 kaartjes staat een ster. Welk deel van de kaartjes heeft een ster?
+    - **Opties:** A) 5 op de 15 · B) 1 op de 4 · C) 1 op de 5
+    - **Antwoord:** 1 op de 4  (controle: ok)
+    - **Fout-hints (Claude):** 5 op de 15 → Vergelijk de sterkaartjes met alle kaartjes, niet met de kaartjes zonder ster. · 1 op de 5 → Het aantal sterren is niet meteen het antwoord. Kijk hoe vaak 5 in 20 past.
+    - **Uitleg (Claude):** 5 van de 20 kaartjes heeft een ster. 20 : 5 = 4, dus dat is één van elke vier kaartjes. Dat is dus 1 op de 4.
 
 - **Hint 1 (te schrijven):** 
 - **Hint 2 (te schrijven):** 
@@ -122,7 +122,33 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 1 (te schrijven):** 
 - **Hint 2 (te schrijven):** 
 
-## Somtype 6: Deel van een totaal: in welke zak is het deel het grootst? (delen vergelijken)
+## Somtype 6: [rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')
+
+- Sleutel: nrOrigineel **7** · somtypeOrigineel “[rad] Deel van een totaal: welk deel van de vakjes is …? ('zoveel op de zoveel')” (koppeling: claudeId)
+- Items: **2** · Claude-doelen: G7 (2) · regel: D-KANS-NAAR-DEEL
+- Getallenruimte: 0–1.000 · type: meerkeuze
+- Denkfouten (Claude): deel-van-geheel-verkeerd (2), andere-deel-genomen (1), getal-overgenomen (1)
+- Verschillende Claude-fout-hints: 4 (meest: “Tel alle vakjes van het rad, ook de groene.”)
+- Voorbeelden:
+  - `G7-VERH-04-claude-bank-137` (Claude G7, ai, niveau 1 → basis)
+    - **Opgave:** Een rad heeft 8 even grote vakjes. Twee vakjes zijn groen. Welk deel van de vakjes is groen?
+    - **Tekening:** `{"soort": "rad", "vakjes": 8, "gemarkeerd": {"aantal": 2, "kleur": "groen", "letter": "G", "patroon": "gestreept"}, "pijl": false}`
+    - **Opties:** A) 2 op de 8 · B) 2 op de 6 · C) 6 op de 8
+    - **Antwoord:** 2 op de 8  (controle: ok)
+    - **Fout-hints (Claude):** 2 op de 6 → Tel alle vakjes van het rad, ook de groene. · 6 op de 8 → Je hebt de vakjes geteld die niet groen zijn. Lees nog eens wat er gevraagd wordt.
+    - **Uitleg (Claude):** Het rad heeft in totaal 8 vakjes. Daarvan zijn er 2 groen. Dat is dus 2 op de 8.
+  - `G7-VERH-04-claude-bank-136` (Claude G7, ai, niveau 3 → toepassen)
+    - **Opgave:** Een rad heeft 12 even grote vakjes en 3 daarvan zijn rood. Welk deel van de vakjes is rood?
+    - **Tekening:** `{"soort": "rad", "vakjes": 12, "gemarkeerd": {"aantal": 3, "kleur": "rood", "letter": "R", "patroon": "gestreept"}, "pijl": false}`
+    - **Opties:** A) 1 op de 4 · B) 1 op de 3 · C) 3 op de 9
+    - **Antwoord:** 1 op de 4  (controle: ok)
+    - **Fout-hints (Claude):** 1 op de 3 → Het aantal rode vakjes is niet meteen het antwoord. Kijk hoe vaak 3 in 12 past. · 3 op de 9 → Tel alle vakjes van het rad, ook de rode.
+    - **Uitleg (Claude):** 3 van de 12 vakjes is rood. 12 : 3 = 4, dus dat is één van elke vier vakjes. Dat is dus 1 op de 4.
+
+- **Hint 1 (te schrijven):** 
+- **Hint 2 (te schrijven):** 
+
+## Somtype 7: Deel van een totaal: in welke zak is het deel het grootst? (delen vergelijken)
 
 - Sleutel: nrOrigineel **6** · somtypeOrigineel “Deel van een totaal: in welke zak is het deel het grootst? (delen vergelijken)” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: G7 (1) · regel: D-KANS-NAAR-DEEL

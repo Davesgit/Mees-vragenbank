@@ -24,8 +24,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 12 minuten → De rondjes heb je goed geteld. Er hoort nog een stap bij het plan. · 27 minuten → Lees nog eens hoe vaak je rust. Is dat na elk rondje of maar één keer?
     - **Uitleg (Claude):** 3 rondjes van 4 minuten zijn 12 minuten. Daar komt 5 minuten rust bij. Samen is dat 17 minuten.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Maak een plan in stappen. Hoelang duren alle rondjes samen?
+- **Hint 2 (te schrijven):** Doe het aantal rondjes keer de tijd van één rondje. Tel de rusttijd er één keer bij op.
+- **Ouderzin:** Je kind rekent een opgave in twee stappen uit: eerst een keersom, dan erbij.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `rust vergeten of alles opgeteld` (12 minuten) → Hoelang duren alle rondjes samen? Dat is het aantal rondjes keer de tijd van één rondje. Hoelang rust je, en tel je dat erbij?  [nieuw]
+  - `rust na elk rondje` (27 minuten) → Rust je na elk rondje? Lees nog eens: je rust maar één keer, aan het eind.  [nieuw]
+  - `andere fout` (andere fout) → Reken eerst de rondjes samen uit. Tel de rust er één keer bij op.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: Een recept voor # [ding] gebruikt # g meel. Stap #: je kookt voor # [ding]. Stap #: pas de hoeveelheid meel aan. Hoeveel meel heb je nodig?
 
@@ -43,8 +49,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 150 g → Je kookt voor meer mensen dan in het recept staat. Heb je dan meer of minder meel nodig? · 302 g → Je hebt er een klein getal bij opgeteld. Van 4 naar 8 personen is keer zoveel, niet plus zoveel.
     - **Uitleg (Claude):** 8 personen is 2 keer zoveel als 4 personen. Dus neem je ook 2 keer zoveel meel. 2 keer 300 g is 600 g.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Kook je voor meer of voor minder personen dan in het recept? Hoeveel keer zoveel personen is dat?
+- **Hint 2 (te schrijven):** Deel het nieuwe aantal personen door het aantal uit het recept. De uitkomst zegt hoeveel keer zoveel meel je nodig hebt. Doe het meel uit het recept zoveel keer.
+- **Ouderzin:** Je kind past een recept aan voor meer personen: keer zoveel personen is keer zoveel meel.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `gedeeld` (150 g) → Heb je minder meel genomen? Je kookt voor meer personen, dus je hebt meer meel nodig.  [nieuw]
+  - `opgeteld` (302 g) → Heb je er een klein getal bij opgeteld? Bij keer zoveel personen hoort keer zoveel meel, niet een paar gram erbij.  [nieuw]
+  - `andere fout` (andere fout) → Hoeveel keer zoveel personen zijn het? Doe het meel ook zoveel keer.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: In [plek] staan # [ding] met elk # [ding]. Daarna haal je # [ding] weg. Hoeveel stoelen staan er nog?
 
@@ -62,8 +74,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 24 stoelen → Dat is het aantal na de eerste stap. Er moet nog iets weggehaald worden. · 7 stoelen → Je hebt 6 en 4 opgeteld. Elke tafel heeft 4 stoelen, dus hoeveel keer 4 is dat?
     - **Uitleg (Claude):** 6 tafels met 4 stoelen zijn 6 keer 4, dus 24 stoelen. Daarvan haal je 3 stoelen weg. Er blijven 21 stoelen staan.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Maak een plan in stappen. Hoeveel stoelen staan er eerst in totaal?
+- **Hint 2 (te schrijven):** Doe het aantal tafels keer het aantal stoelen aan één tafel. Haal de stoelen die je weghaalt van dat totaal af.
+- **Ouderzin:** Je kind rekent een opgave in twee stappen uit: eerst een keersom, dan eraf.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tweede stap vergeten` (24 stoelen) → Is dat het aantal na de eerste stap? Je haalt er daarna nog een paar weg.  [nieuw]
+  - `opgeteld in plaats van keer` (7 stoelen) → Heb je het aantal tafels en het aantal stoelen aan één tafel opgeteld? Elke tafel heeft evenveel stoelen. Hoeveel keer dat aantal is het?  [nieuw]
+  - `andere fout` (andere fout) → Reken eerst alle stoelen samen uit met een keersom. Haal de stoelen die je weghaalt daarna eraf.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: In een sportzaal staan # [ding] met elk # [ding]. Noor haalt er # [ding] uit. Hoeveel blijven er over?
 
@@ -80,8 +98,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 168 ballen → Je hebt alleen het totaal uitgerekend. Er gingen er nog een aantal uit. · 31 ballen → Je hebt 7 en 24 opgeteld. Elke doos bevat 24 ballen.
     - **Uitleg (Claude):** 7 dozen met 24 ballen zijn 7 x 24 = 168 ballen. Daar gaan 18 ballen af: 168 − 18 = 150. Er blijven 150 ballen over.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Maak een plan in stappen. Hoeveel ballen zitten er eerst in alle dozen samen?
+- **Hint 2 (te schrijven):** Doe het aantal dozen keer het aantal ballen in één doos. Haal de ballen die Noor eruit haalt van dat totaal af.
+- **Ouderzin:** Je kind rekent een opgave in twee stappen uit: eerst een keersom, dan eraf.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tweede stap vergeten` (168 ballen) → Is dat het aantal ballen in alle dozen samen? Noor haalt er nog een paar uit.  [nieuw]
+  - `opgeteld in plaats van keer` (31 ballen) → Heb je het aantal dozen en het aantal ballen in één doos opgeteld? In elke doos zitten evenveel ballen. Hoeveel keer dat aantal is het?  [nieuw]
+  - `andere fout` (andere fout) → Reken eerst alle ballen samen uit met een keersom. Haal de ballen van Noor daarna eraf.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 5: Je begint bij # en verdubbelt het getal # keer. Welk getal krijg je dan?
 
@@ -99,8 +123,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 8 → Schrijf het getal na elke verdubbeling op. Heb je echt 4 keer verdubbeld? · 9 → Verdubbelen is niet steeds er 2 bij optellen. Wat gebeurt er met een getal als het 2 keer zoveel wordt?
     - **Uitleg (Claude):** Je krijgt na elke stap 2, 4, 8 en 16. Dat zijn vier verdubbelingen. De uitkomst is 16.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Verdubbelen is keer twee. Schrijf na elke stap het nieuwe getal op.
+- **Hint 2 (te schrijven):** Begin bij het getal uit de vraag en doe het keer twee. Doe de uitkomst weer keer twee. Houd met streepjes bij hoe vaak je verdubbelt, tot het aantal keer uit de vraag.
+- **Ouderzin:** Je kind verdubbelt een getal een paar keer achter elkaar en houdt bij hoe vaak.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een keer te weinig` (8) → Heb je echt zo vaak verdubbeld als de vraag zegt? Schrijf na elke verdubbeling het getal op en tel de stappen.  [nieuw]
+  - `steeds twee erbij` (9) → Heb je steeds twee erbij gedaan? Verdubbelen is keer twee: het getal wordt twee keer zo groot.  [nieuw]
+  - `andere fout` (andere fout) → Verdubbelen is keer twee. Doe dat zo vaak als de vraag zegt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 6: Je begint bij # op de getallenlijn en zet # [ding] van # [ding]. Bij welk getal kom je uit?
 
@@ -118,8 +148,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 16 → Tel je stappen nog eens na. Hoeveel sprongen van 4 heb je precies gemaakt? · 9 → Je hebt 4 en 5 bij elkaar opgeteld. Elke stap is 4 groot, dus hoeveel keer 4 loop je?
     - **Uitleg (Claude):** Elke stap is 4 groot en je zet er 5. Dus 5 keer 4 is 20. Je komt uit bij 20.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Elke stap is even groot. Hoeveel stappen zet je, en hoe groot is één stap?
+- **Hint 2 (te schrijven):** Doe het aantal stappen keer de grootte van één stap. Zo ver spring je. Tel dat op bij het getal waar je begint.
+- **Ouderzin:** Je kind springt in gelijke stappen over de getallenlijn: het aantal stappen keer de grootte van één stap, vanaf het begingetal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `een stap te weinig` (16) → Heb je alle stappen gezet? Tel je sprongen nog eens, vanaf het getal waar je begint. Tel bij elke sprong één.  [nieuw]
+  - `opgeteld` (9) → Heb je het aantal stappen en de grootte van een stap opgeteld? Elke stap is even groot. Hoe vaak zet je zo'n stap?  [nieuw]
+  - `andere fout` (andere fout) → Doe het aantal stappen keer de grootte van één stap. Tel dat op bij het getal waar je begint.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 7: Je geeft een plant # dagen water. Op dag # [ding] je # dl en elke volgende dag # dl meer. Hoeveel dl water geef je in totaal?
 
@@ -137,10 +173,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 11 dl → Schrijf de vier dagen onder elkaar op. Heb je elke dag meegeteld? · 8 dl → De hoeveelheid wordt elke dag groter. Je kunt dus niet 4 keer dezelfde hoeveelheid nemen.
     - **Uitleg (Claude):** De dagen zijn 2, 3, 4 en 5 dl. Die tel je allemaal bij elkaar op. Samen is dat 14 dl.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Schrijf voor elke dag op hoeveel water de plant krijgt.
+- **Hint 2 (te schrijven):** Op de eerste dag krijgt de plant de hoeveelheid uit de vraag. Elke volgende dag doe je er de extra hoeveelheid bij. Schrijf alle dagen onder elkaar en tel ze bij elkaar op.
+- **Ouderzin:** Je kind maakt een rijtje dat elke dag wat groter wordt, en telt het op.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `meer dan dag één of dag vergeten` (11 dl) → Dat is te weinig. Heb je elke dag meegeteld, met de goede hoeveelheid? Elke volgende dag krijgt de plant meer dan de dag ervoor.  [nieuw]
+  - `elke dag hetzelfde` (8 dl) → Krijgt de plant elke dag evenveel? Elke volgende dag krijgt hij meer. Schrijf de dagen onder elkaar.  [nieuw]
+  - `andere fout` (andere fout) → Schrijf alle dagen onder elkaar, met elke dag wat meer. Tel alle dagen bij elkaar op.  [nieuw]
+- Status: hints klaar
 
-## Somtype 8: Je hebt # [ding] sap van elk # liter. Stap #: giet alles in een kan. Stap #: giet er # liter uit. Hoeveel liter zit er nog in de kan?
+## Somtype 8: Je hebt # [ding] sap van elk # dl. Stap #: giet alles in een kan. Stap #: giet er # dl uit. Hoeveel dl zit er nog in de kan?
 
 - Sleutel: nrOrigineel **7** · somtypeOrigineel “Je hebt # [ding] sap van elk # liter. Stap #: giet alles in een kan. Stap #: giet er # liter uit. Hoeveel liter zit er nog in de kan?” (koppeling: claudeId)
 - Items: **1** · Claude-doelen: W5 (1) · regel: G7-W03-stappenplan
@@ -150,14 +192,21 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Na stap 1 zit dat erin. Maar stap 2 moet je ook nog uitvoeren.”)
 - Voorbeelden:
   - `G7-DENK-03-claude-bank-007` (Claude W5, ai, niveau 2 → toepassen)
-    - **Opgave:** Je hebt 3 pakken sap van elk 2 liter. Stap 1: giet alles in een kan. Stap 2: giet er 1 liter uit. Hoeveel liter zit er nog in de kan?
-    - **Opties:** A) 4 liter · B) 5 liter · C) 6 liter
-    - **Antwoord:** 5 liter  (controle: n.v.t.)
-    - **Fout-hints (Claude):** 6 liter → Na stap 1 zit dat erin. Maar stap 2 moet je ook nog uitvoeren. · 4 liter → Je hebt 3 en 2 opgeteld. Elk pak heeft 2 liter, dus hoeveel keer 2 liter is dat?
-    - **Uitleg (Claude):** 3 pakken van 2 liter is 6 liter. Daar gaat 1 liter af. Er blijft 5 liter in de kan.
+    - **Opgave:** Je hebt 3 flesjes sap van elk 3 dl. Stap 1: giet alles in een kan. Stap 2: giet er 2 dl uit. Hoeveel dl zit er nog in de kan?
+    - **Opties:** A) 4 dl · B) 7 dl · C) 9 dl
+    - **Antwoord:** 7 dl  (controle: n.v.t.)
+    - **Fout-hints (Claude):** 9 dl → Na stap 1 zit dat erin. Maar stap 2 moet je ook nog uitvoeren. · 4 dl → Je hebt 3 en 3 opgeteld. Elk flesje heeft 3 dl, dus hoeveel keer 3 dl is dat?
+    - **Uitleg (Claude):** 3 flesjes van 3 dl is 9 dl. Daar gaat 2 dl af. Er blijft 7 dl in de kan.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Volg de stappen. Hoeveel deciliter giet je bij stap één in de kan?
+- **Hint 2 (te schrijven):** Doe het aantal flesjes keer de deciliters in één flesje: zoveel zit er na stap één in de kan. Haal bij stap twee de deciliters die je eruit giet eraf.
+- **Ouderzin:** Je kind volgt een plan in twee stappen: eerst een keersom, dan eraf.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tweede stap vergeten` (9 dl) → Is dat wat er na stap één in de kan zit? Bij stap twee giet je er nog iets uit.  [nieuw]
+  - `opgeteld in plaats van keer` (4 dl) → Heb je het aantal flesjes en de deciliters van één flesje opgeteld? Elk flesje heeft evenveel sap. Hoeveel keer dat aantal is het?  [nieuw]
+  - `andere fout` (andere fout) → Reken eerst uit hoeveel deciliter er in de kan zit. Haal daarna af wat je eruit giet.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Je hebt # [ding] sap van elk # liter. Stap #: giet alles in een kan. Stap #: giet er # liter uit. Hoeveel liter zit er nog in de kan?'. Nakijken of ze nog passen.
+- Status: hints klaar
 
 ## Somtype 9: Je hebt # [ding] stroken. Je knipt elke strook in # stukken. Hoeveel stukken heb je dan?
 
@@ -175,8 +224,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 14 stukken → Je hebt 2 bij 12 opgeteld. Elke strook wordt 2 stukken, dus hoeveel keer 2 krijg je? · 6 stukken → Door knippen krijg je meer stukken, niet minder. Kijk nog eens wat er met elke strook gebeurt.
     - **Uitleg (Claude):** Elke strook wordt 2 stukken. Bij 12 stroken doe je 12 keer 2. Dat zijn 24 stukken.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Elke strook wordt een paar stukken. Krijg je meer of minder stukken dan stroken?
+- **Hint 2 (te schrijven):** Elke strook geeft hetzelfde aantal stukken. Doe het aantal stroken keer het aantal stukken per strook.
+- **Ouderzin:** Je kind ziet dat knippen meer stukken geeft: een keersom.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `opgeteld` (14 stukken) → Heb je het aantal stukken per strook erbij opgeteld? Elke strook wordt zoveel stukken. Hoe vaak gebeurt dat?  [nieuw]
+  - `gedeeld` (6 stukken) → Heb je gedeeld? Door te knippen krijg je meer stukken, niet minder.  [nieuw]
+  - `andere fout` (andere fout) → Doe het aantal stroken keer het aantal stukken per strook.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 10: Je hebt # [ding]. Stap #: geef # [ding] weg. Stap #: geef nog eens # [ding] weg. Hoeveel stickers heb je dan nog?
 
@@ -194,8 +249,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 16 stickers → Er staan twee stappen. Heb je de tweede stap ook echt uitgevoerd? · 28 stickers → Let goed op wat je met de stickers doet: je geeft ze weg. Worden het er dan meer of minder?
     - **Uitleg (Claude):** Van 20 haal je eerst 4 af, dan houd je 16 over. Daarna haal je er nog 4 af. Zo blijven er 12 stickers over.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Volg de stappen één voor één. Hoeveel heb je na stap één nog?
+- **Hint 2 (te schrijven):** Haal bij stap één de stickers die je weggeeft van het begin af. Haal bij stap twee nog eens af wat je weggeeft.
+- **Ouderzin:** Je kind volgt een plan in twee stappen en haalt twee keer iets af.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tweede stap vergeten` (16 stickers) → Is dat wat je na stap één nog hebt? Bij stap twee geef je er nog een paar weg.  [nieuw]
+  - `erbij in plaats van eraf` (28 stickers) → Heb je de stickers die je weggeeft opgeteld? Weggeven is eraf halen: je houdt er minder over.  [nieuw]
+  - `andere fout` (andere fout) → Haal bij elke stap af wat je weggeeft.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 11: Je hebt # euro gespaard. Stap #: je krijgt # euro zakgeld. Stap #: je koopt een schrift van # euro. Hoeveel euro heb je dan?
 
@@ -213,8 +274,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 13 euro → Je hebt stap 1 goed gedaan. Wat gebeurt er bij stap 2 met je geld? · 17 euro → Als je een schrift koopt, gaat er geld af. Tel je dat er dan bij op?
     - **Uitleg (Claude):** 8 euro plus 5 euro is 13 euro. Daar gaat 4 euro af voor het schrift. Je houdt 9 euro over.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Volg de stappen één voor één. Hoeveel geld heb je na stap één?
+- **Hint 2 (te schrijven):** Tel bij stap één het zakgeld op bij wat je gespaard had. Haal bij stap twee de prijs van het schrift ervan af.
+- **Ouderzin:** Je kind volgt een plan in twee stappen: eerst erbij, dan eraf.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `tweede stap vergeten` (13) → Is dat wat je na stap één hebt? Bij stap twee koop je nog een schrift.  [nieuw]
+  - `prijs erbij opgeteld` (17) → Heb je de prijs van het schrift erbij opgeteld? Als je iets koopt, heb je minder geld.  [nieuw]
+  - `andere fout` (andere fout) → Tel het zakgeld erbij op en haal de prijs van wat je koopt eraf.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 12: Je loopt een route. # m rechtdoor, dan links # m en dan rechts # m. Hoeveel meter heb je in totaal gelopen?
 
