@@ -25,8 +25,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 3  (controle: ok)
     - **Fout-hints (Claude):** 4 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Je hoeft niet de hele som uit te rekenen. Op welk cijfer de uitkomst eindigt, hangt alleen af van de eenheden: het cijfer helemaal rechts in elk getal.
+- **Hint 2 (te schrijven):** Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt die kleine keersom? Daarop eindigt de hele som ook.
+- **Ouderzin:** Je kind zoekt op welk cijfer een keersom eindigt, zonder de hele som uit te rekenen: alleen de eenheden tellen mee.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je opgeteld? Er staat een keerteken (×): reken de eenheden keer elkaar.  [Claude, taalfix]
+  - `begincijfer` (Claudes sleutel: getal-overgenomen) → Dat is het cijfer waarmee de uitkomst begint. De vraag gaat over het cijfer waarop de uitkomst eindigt: helemaal rechts.  [Claude, taalfix]
+  - `keersom ernaast` (Claudes sleutel: een-ernaast) → Dat hoort bij een keersom ernaast. Kijk nog eens welke eenheden er staan, en reken precies die keer elkaar.  [Claude, taalfix]
+  - `tientallencijfer` (Claudes sleutel: tafelbuur) → Dat is het cijfer van de tientallen van de kleine keersom. De uitkomst eindigt op het cijfer helemaal rechts daarvan.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Reken alleen de eenheden keer elkaar, en kijk op welk cijfer dat eindigt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 2: Hoeveel is # + # [ding]? Rond beide getallen af op duizendtallen en reken dan uit.
 
@@ -45,8 +53,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 13.000  (controle: n.v.t.)
     - **Fout-hints (Claude):** 14.000 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 20.000 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen met ronde getallen. Rond eerst allebei de getallen af op duizendtallen, zoals de vraag zegt. Reken daarna met de afgeronde getallen.
+- **Hint 2 (te schrijven):** Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Tel daarna de twee afgeronde getallen op.
+- **Ouderzin:** Je kind schat een plussom: eerst allebei de getallen afronden op duizendtallen, dan met de ronde getallen rekenen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `precies uitgerekend` (fout = getal1 + getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst allebei de getallen af op duizendtallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `duizend te weinig` (fout = antwoord - 1000) → Dat is duizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweeduizend te veel` (fout = antwoord + 2000) → Dat is tweeduizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweeduizend te weinig` (fout = antwoord - 2000) → Dat is tweeduizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `andere fout` (andere fout) → Rond eerst allebei de getallen af op duizendtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 3: Hoeveel is # × # [ding]? Rond # af op honderdtallen en # op tientallen, en reken dan uit.
 
@@ -65,8 +82,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 9000  (controle: ok)
     - **Fout-hints (Claude):** 9600 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 12.000 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen met ronde getallen. Rond elk getal af zoals de vraag zegt, en reken daarna met de afgeronde getallen.
+- **Hint 2 (te schrijven):** Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter.
+- **Ouderzin:** Je kind schat een keersom: eerst afronden zoals de vraag zegt, dan de cijfers zonder nullen keer elkaar en de nullen erachter.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `precies uitgerekend` (fout = getal1 × getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst af zoals de vraag zegt. Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot: er staat een nul te veel achter.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein: er mist een nul.  [nieuw]
+  - `andere fout` (andere fout) → Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 4: Hoeveel is # × # [ding]? Rond beide getallen af op tientallen en reken dan uit.
 
@@ -85,8 +109,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 24.000  (controle: n.v.t.)
     - **Fout-hints (Claude):** 23.000 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven. · 22.000 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen met ronde getallen. Rond elk getal af zoals de vraag zegt, en reken daarna met de afgeronde getallen.
+- **Hint 2 (te schrijven):** Kijk bij elk getal naar de eenheden. Is dat vijf of meer? Dan rond je naar boven af op tientallen. Anders rond je naar beneden af. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter.
+- **Ouderzin:** Je kind schat een keersom: eerst afronden zoals de vraag zegt, dan de cijfers zonder nullen keer elkaar en de nullen erachter.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `precies uitgerekend` (fout = getal1 × getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst af zoals de vraag zegt. Kijk bij elk getal naar de eenheden. Is dat vijf of meer? Dan rond je naar boven af op tientallen. Anders rond je naar beneden af.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot: er staat een nul te veel achter.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein: er mist een nul.  [nieuw]
+  - `andere fout` (andere fout) → Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Kijk bij elk getal naar de eenheden. Is dat vijf of meer? Dan rond je naar boven af op tientallen. Anders rond je naar beneden af.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 5: Kijk zonder uit te rekenen. Welk antwoord bij # × # [ding] kloppen?
 
@@ -103,12 +134,21 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 432 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 187 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
   - `G8-GET-E02-claude-bank-245` (Claude T3, bank, niveau 2 → toepassen)
     - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 339 × 3 kan kloppen?
-    - **Opties:** A) 1017 · B) 1019 · C) 342
+    - **Opties:** A) 1019 · B) 342 · C) 1017
     - **Antwoord:** 1017  (controle: n.v.t.)
     - **Fout-hints (Claude):** 342 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Je hoeft niet precies te rekenen. Kijk eerst waarop het antwoord eindigt. Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt dat? Daarop eindigt het antwoord ook.
+- **Hint 2 (te schrijven):** Blijft er meer dan één antwoord over? Rond het grootste getal naar beneden af op honderdtallen en reken keer: het antwoord is groter. Rond het naar boven af en reken keer: groter kan het antwoord niet zijn.
+- **Ouderzin:** Je kind kiest zonder precies te rekenen welk antwoord kan kloppen: door te kijken waarop het eindigt en tussen welke ronde getallen het ligt.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `plus in plaats van keer` (fout = getal1 + getal2) → Heb je opgeteld? Er staat een keerteken (×): het antwoord is veel groter dan de twee getallen samen.  [nieuw]
+  - `te groot` (Claudes sleutel: bovengrens) → Dat is te groot. Rond het grootste getal naar boven af op honderdtallen en reken keer: groter kan het antwoord niet zijn.  [Claude, taalfix]
+  - `te klein` (Claudes sleutel: ondergrens) → Dat is te klein. Rond het grootste getal naar beneden af op honderdtallen en reken keer: kleiner kan het antwoord niet zijn.  [Claude, taalfix]
+  - `veel te klein` (Claudes sleutel: orde-van-grootte) → Dat is te klein. Rond het grootste getal naar beneden af op honderdtallen en reken keer: kleiner kan het antwoord niet zijn.  [Claude, taalfix]
+  - `eindcijfer` (Claudes sleutel: laatste-cijfer) → Kijk waarop het antwoord moet eindigen. Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt dat? Daarop eindigt het antwoord ook.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Kijk eerst waarop het antwoord eindigt, en daarna tussen welke ronde getallen het ligt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 6: Hoeveel is # + # [ding]? Rond beide getallen af op honderdtallen en reken dan uit.
 
@@ -127,8 +167,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 1400  (controle: n.v.t.)
     - **Fout-hints (Claude):** 1359 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 1200 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen met ronde getallen. Rond eerst allebei de getallen af op honderdtallen, zoals de vraag zegt. Reken daarna met de afgeronde getallen.
+- **Hint 2 (te schrijven):** Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af. Tel daarna de twee afgeronde getallen op.
+- **Ouderzin:** Je kind schat een plussom: eerst allebei de getallen afronden op honderdtallen, dan met de ronde getallen rekenen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `precies uitgerekend` (fout = getal1 + getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst allebei de getallen af op honderdtallen. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
+  - `honderd te veel` (fout = antwoord + 100) → Dat is honderd te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
+  - `honderd te weinig` (fout = antwoord - 100) → Dat is honderd te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweehonderd te veel` (fout = antwoord + 200) → Dat is tweehonderd te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweehonderd te weinig` (fout = antwoord - 200) → Dat is tweehonderd te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
+  - `andere fout` (andere fout) → Rond eerst allebei de getallen af op honderdtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 7: Hoeveel is # − # [ding]? Rond beide getallen af op duizendtallen en reken dan uit.
 
@@ -147,8 +196,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 5000  (controle: n.v.t.)
     - **Fout-hints (Claude):** 4991 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 7000 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen met ronde getallen. Rond eerst allebei de getallen af op duizendtallen, zoals de vraag zegt. Reken daarna met de afgeronde getallen.
+- **Hint 2 (te schrijven):** Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Haal daarna het afgeronde getal achter het minteken van het andere afgeronde getal af.
+- **Ouderzin:** Je kind schat een minsom: eerst allebei de getallen afronden op duizendtallen, dan met de ronde getallen rekenen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `precies uitgerekend` (fout = getal1 - getal2 of getal2 - getal1) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst allebei de getallen af op duizendtallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `duizend te weinig` (fout = antwoord - 1000) → Dat is duizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweeduizend te veel` (fout = antwoord + 2000) → Dat is tweeduizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweeduizend te weinig` (fout = antwoord - 2000) → Dat is tweeduizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `andere fout` (andere fout) → Rond eerst allebei de getallen af op duizendtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 8: In [plek] liggen # [ding] en er komen # bij. Schat het totaal: rond beide getallen af op duizendtallen en tel op.
 
@@ -169,8 +227,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 5511 → Dat is precies. Hier vragen we de schatting met ronde getallen. · 7000 → Kijk per getal naar de honderdtallen: onder de 500 rond je naar beneden af. · 5000 → Kijk per getal naar de honderdtallen: vanaf 500 rond je naar boven af.
     - **Uitleg (Claude):** 2839 is ongeveer 3000, 2672 ongeveer 3000. Samen 6000. Precies is het 5511.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen met ronde getallen. Rond eerst allebei de getallen af op duizendtallen, zoals de vraag zegt. Reken daarna met de afgeronde getallen.
+- **Hint 2 (te schrijven):** Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Tel daarna de twee afgeronde getallen op.
+- **Ouderzin:** Je kind schat een totaal: eerst allebei de getallen afronden op duizendtallen, dan optellen.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `precies uitgerekend` (fout = getal1 + getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst allebei de getallen af op duizendtallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `duizend te veel` (fout = antwoord + 1000) → Dat is duizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `duizend te weinig` (fout = antwoord - 1000) → Dat is duizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweeduizend te veel` (fout = antwoord + 2000) → Dat is tweeduizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `tweeduizend te weinig` (fout = antwoord - 2000) → Dat is tweeduizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+  - `andere fout` (andere fout) → Rond eerst allebei de getallen af op duizendtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 9: Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?
 
@@ -182,7 +249,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Voorbeelden:
   - `G8-GET-E02-claude-bank-233` (Claude T3, bank, niveau 1 → basis)
     - **Opgave:** Kijk zonder uit te rekenen. Welk antwoord bij 360 + 709 kan kloppen?
-    - **Opties:** A) 1069 · B) 2069 · C) 1071
+    - **Opties:** A) 2069 · B) 1069 · C) 1071
     - **Antwoord:** 1069  (controle: n.v.t.)
     - **Fout-hints (Claude):** 2069 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
   - `G8-GET-E02-claude-bank-229` (Claude T3, bank, niveau 1 → basis)
@@ -191,8 +258,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 1513  (controle: n.v.t.)
     - **Fout-hints (Claude):** 2513 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Je hoeft niet precies te rekenen. Kijk eerst waarop het antwoord eindigt. Tel alleen de eenheden van de twee getallen op. Op welk cijfer eindigt dat? Daarop eindigt het antwoord ook.
+- **Hint 2 (te schrijven):** Blijft er meer dan één antwoord over? Rond allebei de getallen naar beneden af op honderdtallen en tel op: het antwoord is groter. Rond allebei naar boven af en tel op: groter kan het antwoord niet zijn.
+- **Ouderzin:** Je kind kiest zonder precies te rekenen welk antwoord kan kloppen: door te kijken waarop het eindigt en tussen welke ronde getallen het ligt.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `min in plaats van plus` (fout = getal1 - getal2 of getal2 - getal1) → Heb je min gedaan? Er staat een plus: het antwoord is groter dan allebei de getallen.  [nieuw]
+  - `te groot` (Claudes sleutel: bovengrens) → Dat is te groot. Rond allebei de getallen naar boven af op honderdtallen en tel op: groter kan het antwoord niet zijn.  [Claude, taalfix]
+  - `veel te klein` (Claudes sleutel: orde-van-grootte) → Dat is te klein. Rond allebei de getallen naar beneden af op honderdtallen en tel op: kleiner kan het antwoord niet zijn.  [Claude, taalfix]
+  - `eindcijfer` (Claudes sleutel: laatste-cijfer) → Kijk waarop het antwoord moet eindigen. Tel alleen de eenheden van de twee getallen op. Op welk cijfer eindigt dat? Daarop eindigt het antwoord ook.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Kijk eerst waarop het antwoord eindigt, en daarna tussen welke ronde getallen het ligt.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 10: Ongeveer hoeveel is # × #? Rond # af op honderdtallen en # op tientallen, en reken dan uit.
 
@@ -213,8 +288,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 100 → Tel de nullen. 100 en 10 hebben er samen 3. · 10.000 → Een nul te veel. Tel de nullen van beide ronde getallen. · 1656 → Dat is precies uitgerekend. Hier vragen we een schatting met de ronde getallen.
     - **Uitleg (Claude):** 138 is ongeveer 100, 12 is ongeveer 10. 100 × 10 = 1000. Het echte antwoord (1656) ligt daar dichtbij.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen met ronde getallen. Rond elk getal af zoals de vraag zegt, en reken daarna met de afgeronde getallen.
+- **Hint 2 (te schrijven):** Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter.
+- **Ouderzin:** Je kind schat een keersom: eerst afronden zoals de vraag zegt, dan de cijfers zonder nullen keer elkaar en de nullen erachter.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `precies uitgerekend` (fout = getal1 × getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst af zoals de vraag zegt. Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot: er staat een nul te veel achter.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein: er mist een nul.  [nieuw]
+  - `andere fout` (andere fout) → Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 11: # [ding] met elk # [ding]. Schat hoeveel dat ongeveer is: rond # af op honderdtallen en reken dan uit.
 
@@ -235,8 +317,16 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 1485 → Precies uitgerekend. Hier vragen we de schatting met het ronde getal. · 150 → 300 × 5: tel de nullen goed. · 305 → 5 dozen van elk ongeveer 300: dat is een keersom.
     - **Uitleg (Claude):** 297 is bijna 300. 300 × 5 = 1500. Precies is het 1485, dus de schatting klopt goed.
 
-- **Hint 1 (te schrijven):** 
-- **Hint 2 (te schrijven):** 
+- **Hint 1 (te schrijven):** Schatten is ongeveer uitrekenen met ronde getallen. Rond het getal af op honderdtallen, zoals de vraag zegt, en reken dan.
+- **Hint 2 (te schrijven):** Kijk bij het getal dat je op honderdtallen afrondt naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af, anders naar beneden. Er staat 'met elk': reken het aantal keer het afgeronde getal. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter.
+- **Ouderzin:** Je kind schat een keersom met een verhaal: eerst één getal afronden op honderdtallen, dan keer het aantal.
+- **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `precies uitgerekend` (fout = getal1 × getal2) → Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst af zoals de vraag zegt. Kijk bij het getal dat je op honderdtallen afrondt naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af, anders naar beneden.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot: er staat een nul te veel achter.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein: er mist een nul.  [nieuw]
+  - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Heb je opgeteld? Er staat 'met elk': dan reken je keer.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Kijk bij het getal dat je op honderdtallen afrondt naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af, anders naar beneden.  [nieuw]
+- Status: hints klaar
 
 ## Somtype 12: 's Ochtends is het # graden en 's middags # graden. Hoe reken je uit hoeveel graden het warmer is geworden?
 

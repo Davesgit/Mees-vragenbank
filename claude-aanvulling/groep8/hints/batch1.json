@@ -1,0 +1,1990 @@
+{
+ "batch": "batch1",
+ "geschreven": "2026-10-08",
+ "uitleg": "Hints per somtype (G8-merge, batch 1 = GET-E02 #1–#11 schatten en laatste cijfer, GET-E03 volgorde van bewerkingen, GET-E04 breuken). Formaat als g7/hints/batch*.json. Koppeling: nrOrigineel + somtypeOrigineel (regel 'Sleutel' in somtypen/<doel>.md); 'nr' en 'somtype' houdt scripts/sync_hint_keys.py bij. foutHints: per sleutel een motorregel of Claudes sleutel (label) met een vaste tekst, laag 1 'tekst' en laag 2 'tekstSterker'; 'andere fout' als laatste.",
+ "somtypen": [
+  {
+   "doel": "G8-GET-E02",
+   "nr": 1,
+   "somtype": "Op welk cijfer eindigt # × #?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Op welk cijfer eindigt # × #?",
+   "hint1": "Je hoeft niet de hele som uit te rekenen. Op welk cijfer de uitkomst eindigt, hangt alleen af van de eenheden: het cijfer helemaal rechts in elk getal.",
+   "hint2": "Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt die kleine keersom? Daarop eindigt de hele som ook.",
+   "ouderzin": "Je kind zoekt op welk cijfer een keersom eindigt, zonder de hele som uit te rekenen: alleen de eenheden tellen mee.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Heb je opgeteld? Er staat een keerteken (×): reken de eenheden keer elkaar.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt die kleine keersom? Daarop eindigt de hele som ook."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "begincijfer",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is het cijfer waarmee de uitkomst begint. De vraag gaat over het cijfer waarop de uitkomst eindigt: helemaal rechts.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt die kleine keersom? Daarop eindigt de hele som ook."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "keersom ernaast",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "Claudes sleutel: een-ernaast",
+     "tekst": "Dat hoort bij een keersom ernaast. Kijk nog eens welke eenheden er staan, en reken precies die keer elkaar.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Schrijf de eenheden van allebei de getallen op. Reken die twee cijfers keer elkaar: op welk cijfer eindigt dat?"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tientallencijfer",
+     "claudeDenkfout": "tafelbuur",
+     "regel": "Claudes sleutel: tafelbuur",
+     "tekst": "Dat is het cijfer van de tientallen van de kleine keersom. De uitkomst eindigt op het cijfer helemaal rechts daarvan.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken de eenheden van de twee getallen keer elkaar. Krijg je een getal met twee cijfers? Dan eindigt de hele som op het cijfer van de eenheden daarvan."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken alleen de eenheden keer elkaar, en kijk op welk cijfer dat eindigt.",
+     "tekstSterker": "Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt die kleine keersom? Daarop eindigt de hele som ook."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "zegt zeker wat het kind deed; nu een waardezin of een vraag (les 20/101/161), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Bijna! Je zit één groepje ernaast. Tel nog eens goed hoeveel groepjes het zijn.",
+     "claudeDenkfout": "tafelbuur",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Let op het teken: het is een keersom. Keer betekent: zoveel groepjes van. Probeer het groepje steeds opnieuw erbij te tellen.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 2,
+   "somtype": "Hoeveel is # + # [ding]? Rond beide getallen af op duizendtallen en reken dan uit.",
+   "nrOrigineel": 51,
+   "somtypeOrigineel": "Hoeveel is # + # [ding]? Rond beide getallen af op duizendtallen en reken dan uit.",
+   "hint1": "Schatten is ongeveer uitrekenen met ronde getallen. Rond eerst allebei de getallen af op duizendtallen, zoals de vraag zegt. Reken daarna met de afgeronde getallen.",
+   "hint2": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Tel daarna de twee afgeronde getallen op.",
+   "ouderzin": "Je kind schat een plussom: eerst allebei de getallen afronden op duizendtallen, dan met de ronde getallen rekenen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "precies uitgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst allebei de getallen af op duizendtallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "duizend te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1000",
+     "tekst": "Dat is duizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "duizend te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 1000",
+     "tekst": "Dat is duizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tweeduizend te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2000",
+     "tekst": "Dat is tweeduizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tweeduizend te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 2000",
+     "tekst": "Dat is tweeduizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Rond eerst allebei de getallen af op duizendtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed op welke plek je moet afronden. De vraag zegt dat je op duizendtallen afrondt.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Dat is het precieze antwoord. Hier maak je een schatting. Rond eerst af zoals in de vraag staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 6,
+   "somtype": "Hoeveel is # + # [ding]? Rond beide getallen af op honderdtallen en reken dan uit.",
+   "nrOrigineel": 55,
+   "somtypeOrigineel": "Hoeveel is # + # [ding]? Rond beide getallen af op honderdtallen en reken dan uit.",
+   "hint1": "Schatten is ongeveer uitrekenen met ronde getallen. Rond eerst allebei de getallen af op honderdtallen, zoals de vraag zegt. Reken daarna met de afgeronde getallen.",
+   "hint2": "Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af. Tel daarna de twee afgeronde getallen op.",
+   "ouderzin": "Je kind schat een plussom: eerst allebei de getallen afronden op honderdtallen, dan met de ronde getallen rekenen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "precies uitgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst allebei de getallen af op honderdtallen. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderd te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 100",
+     "tekst": "Dat is honderd te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "honderd te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 100",
+     "tekst": "Dat is honderd te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tweehonderd te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 200",
+     "tekst": "Dat is tweehonderd te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tweehonderd te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 200",
+     "tekst": "Dat is tweehonderd te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Rond eerst allebei de getallen af op honderdtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af op honderdtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed op welke plek je moet afronden. De vraag zegt dat je op honderdtallen afrondt.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Dat is het precieze antwoord. Hier maak je een schatting. Rond eerst af zoals in de vraag staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 7,
+   "somtype": "Hoeveel is # − # [ding]? Rond beide getallen af op duizendtallen en reken dan uit.",
+   "nrOrigineel": 56,
+   "somtypeOrigineel": "Hoeveel is # − # [ding]? Rond beide getallen af op duizendtallen en reken dan uit.",
+   "hint1": "Schatten is ongeveer uitrekenen met ronde getallen. Rond eerst allebei de getallen af op duizendtallen, zoals de vraag zegt. Reken daarna met de afgeronde getallen.",
+   "hint2": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Haal daarna het afgeronde getal achter het minteken van het andere afgeronde getal af.",
+   "ouderzin": "Je kind schat een minsom: eerst allebei de getallen afronden op duizendtallen, dan met de ronde getallen rekenen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "precies uitgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst allebei de getallen af op duizendtallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Haal daarna het afgeronde getal achter het minteken van het andere afgeronde getal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "duizend te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1000",
+     "tekst": "Dat is duizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Haal daarna het afgeronde getal achter het minteken van het andere afgeronde getal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "duizend te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 1000",
+     "tekst": "Dat is duizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Haal daarna het afgeronde getal achter het minteken van het andere afgeronde getal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tweeduizend te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2000",
+     "tekst": "Dat is tweeduizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Haal daarna het afgeronde getal achter het minteken van het andere afgeronde getal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tweeduizend te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 2000",
+     "tekst": "Dat is tweeduizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Haal daarna het afgeronde getal achter het minteken van het andere afgeronde getal af."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Rond eerst allebei de getallen af op duizendtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Haal daarna het afgeronde getal achter het minteken van het andere afgeronde getal af."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Dat is het precieze antwoord. Hier maak je een schatting. Rond eerst af zoals in de vraag staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Kijk goed op welke plek je moet afronden. De vraag zegt dat je op duizendtallen afrondt.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 8,
+   "somtype": "In [plek] liggen # [ding] en er komen # bij. Schat het totaal: rond beide getallen af op duizendtallen en tel op.",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "In [plek] liggen # [ding] en er komen # bij. Schat het totaal: rond beide getallen af op duizendtallen en tel op.",
+   "hint1": "Schatten is ongeveer uitrekenen met ronde getallen. Rond eerst allebei de getallen af op duizendtallen, zoals de vraag zegt. Reken daarna met de afgeronde getallen.",
+   "hint2": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Tel daarna de twee afgeronde getallen op.",
+   "ouderzin": "Je kind schat een totaal: eerst allebei de getallen afronden op duizendtallen, dan optellen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "precies uitgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst allebei de getallen af op duizendtallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "duizend te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1000",
+     "tekst": "Dat is duizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "duizend te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 1000",
+     "tekst": "Dat is duizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tweeduizend te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 2000",
+     "tekst": "Dat is tweeduizend te veel. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "tweeduizend te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord - 2000",
+     "tekst": "Dat is tweeduizend te weinig. Kijk nog eens hoe je elk getal afrondt. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Rond eerst allebei de getallen af op duizendtallen, en reken dan met de afgeronde getallen. Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar het cijfer van de honderdtallen. Is dat vijf of meer? Dan rond je naar boven af op duizendtallen. Anders rond je naar beneden af. Schrijf de twee afgeronde getallen op. Tel daarna de twee afgeronde getallen op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Dat is precies. Hier vragen we de schatting met ronde getallen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Kijk per getal naar de honderdtallen: onder de 500 rond je naar beneden af.",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk per getal naar de honderdtallen: vanaf 500 rond je naar boven af.",
+     "claudeDenkfout": "afronden-verkeerde-kant",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 3,
+   "somtype": "Hoeveel is # × # [ding]? Rond # af op honderdtallen en # op tientallen, en reken dan uit.",
+   "nrOrigineel": 52,
+   "somtypeOrigineel": "Hoeveel is # × # [ding]? Rond # af op honderdtallen en # op tientallen, en reken dan uit.",
+   "hint1": "Schatten is ongeveer uitrekenen met ronde getallen. Rond elk getal af zoals de vraag zegt, en reken daarna met de afgeronde getallen.",
+   "hint2": "Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter.",
+   "ouderzin": "Je kind schat een keersom: eerst afronden zoals de vraag zegt, dan de cijfers zonder nullen keer elkaar en de nullen erachter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "precies uitgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst af zoals de vraag zegt. Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden.",
+     "tekstSterker": "Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te groot: er staat een nul te veel achter.",
+     "tekstSterker": "Tel de nullen van de afgeronde getallen samen. Zoveel nullen komen achter de uitkomst van de cijfers zonder nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te klein: er mist een nul.",
+     "tekstSterker": "Tel de nullen van de afgeronde getallen samen. Zoveel nullen komen achter de uitkomst van de cijfers zonder nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden.",
+     "tekstSterker": "Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Dat is het precieze antwoord. Hier maak je een schatting. Rond eerst af zoals in de vraag staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk goed op welke plek je elk getal moet afronden. Dat staat in de vraag.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 10,
+   "somtype": "Ongeveer hoeveel is # × #? Rond # af op honderdtallen en # op tientallen, en reken dan uit.",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Ongeveer hoeveel is # × #? Rond # af op honderdtallen en # op tientallen, en reken dan uit.",
+   "hint1": "Schatten is ongeveer uitrekenen met ronde getallen. Rond elk getal af zoals de vraag zegt, en reken daarna met de afgeronde getallen.",
+   "hint2": "Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter.",
+   "ouderzin": "Je kind schat een keersom: eerst afronden zoals de vraag zegt, dan de cijfers zonder nullen keer elkaar en de nullen erachter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "precies uitgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst af zoals de vraag zegt. Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden.",
+     "tekstSterker": "Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te groot: er staat een nul te veel achter.",
+     "tekstSterker": "Tel de nullen van de afgeronde getallen samen. Zoveel nullen komen achter de uitkomst van de cijfers zonder nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te klein: er mist een nul.",
+     "tekstSterker": "Tel de nullen van de afgeronde getallen samen. Zoveel nullen komen achter de uitkomst van de cijfers zonder nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden.",
+     "tekstSterker": "Bij het getal dat je op honderdtallen afrondt, kijk je naar het cijfer van de tientallen. Bij het getal dat je op tientallen afrondt, kijk je naar de eenheden. Is dat cijfer vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Tel de nullen. 100 en 40 hebben er samen 3.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Een nul te veel. Tel de nullen van beide ronde getallen.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Dat is precies uitgerekend. Hier vragen we een schatting met de ronde getallen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Tel de nullen. 200 en 30 hebben er samen 3.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Tel de nullen. 500 en 20 hebben er samen 3.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Tel de nullen. 100 en 30 hebben er samen 3.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Tel de nullen. 100 en 10 hebben er samen 3.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Tel de nullen. 400 en 20 hebben er samen 3.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Tel de nullen. 200 en 20 hebben er samen 3.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 4,
+   "somtype": "Hoeveel is # × # [ding]? Rond beide getallen af op tientallen en reken dan uit.",
+   "nrOrigineel": 53,
+   "somtypeOrigineel": "Hoeveel is # × # [ding]? Rond beide getallen af op tientallen en reken dan uit.",
+   "hint1": "Schatten is ongeveer uitrekenen met ronde getallen. Rond elk getal af zoals de vraag zegt, en reken daarna met de afgeronde getallen.",
+   "hint2": "Kijk bij elk getal naar de eenheden. Is dat vijf of meer? Dan rond je naar boven af op tientallen. Anders rond je naar beneden af. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter.",
+   "ouderzin": "Je kind schat een keersom: eerst afronden zoals de vraag zegt, dan de cijfers zonder nullen keer elkaar en de nullen erachter.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "precies uitgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst af zoals de vraag zegt. Kijk bij elk getal naar de eenheden. Is dat vijf of meer? Dan rond je naar boven af op tientallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar de eenheden. Is dat vijf of meer? Dan rond je naar boven af op tientallen. Anders rond je naar beneden af. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te groot: er staat een nul te veel achter.",
+     "tekstSterker": "Tel de nullen van de afgeronde getallen samen. Zoveel nullen komen achter de uitkomst van de cijfers zonder nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te klein: er mist een nul.",
+     "tekstSterker": "Tel de nullen van de afgeronde getallen samen. Zoveel nullen komen achter de uitkomst van de cijfers zonder nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Kijk bij elk getal naar de eenheden. Is dat vijf of meer? Dan rond je naar boven af op tientallen. Anders rond je naar beneden af.",
+     "tekstSterker": "Kijk bij elk getal naar de eenheden. Is dat vijf of meer? Dan rond je naar boven af op tientallen. Anders rond je naar beneden af. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan rond je naar boven af. Anders rond je naar beneden af.",
+     "claudeDenkfout": null,
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Schatten is rekenen met ronde getallen. Rond eerst af zoals in de vraag staat, en reken dan.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Dat is het precieze antwoord. Hier maak je een schatting. Rond eerst af zoals in de vraag staat.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Kijk goed op welke plek je moet afronden. De vraag zegt dat je op tientallen afrondt.",
+     "claudeDenkfout": null,
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 11,
+   "somtype": "# [ding] met elk # [ding]. Schat hoeveel dat ongeveer is: rond # af op honderdtallen en reken dan uit.",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "# [ding] met elk # [ding]. Schat hoeveel dat ongeveer is: rond # af op honderdtallen en reken dan uit.",
+   "hint1": "Schatten is ongeveer uitrekenen met ronde getallen. Rond het getal af op honderdtallen, zoals de vraag zegt, en reken dan.",
+   "hint2": "Kijk bij het getal dat je op honderdtallen afrondt naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af, anders naar beneden. Er staat 'met elk': reken het aantal keer het afgeronde getal. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter.",
+   "ouderzin": "Je kind schat een keersom met een verhaal: eerst één getal afronden op honderdtallen, dan keer het aantal.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "precies uitgerekend",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 × getal2",
+     "tekst": "Je hebt het precies uitgerekend. Dat is goed gerekend, maar de vraag vraagt een schatting: rond eerst af zoals de vraag zegt. Kijk bij het getal dat je op honderdtallen afrondt naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af, anders naar beneden.",
+     "tekstSterker": "Kijk bij het getal dat je op honderdtallen afrondt naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord × 10",
+     "tekst": "Dat is tien keer te groot: er staat een nul te veel achter.",
+     "tekstSterker": "Tel de nullen van de afgeronde getallen samen. Zoveel nullen komen achter de uitkomst van de cijfers zonder nullen."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "nul te weinig",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord : 10",
+     "tekst": "Dat is tien keer te klein: er mist een nul.",
+     "tekstSterker": "Tel de nullen van de afgeronde getallen samen. Zoveel nullen komen achter de uitkomst van de cijfers zonder nullen."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Heb je opgeteld? Er staat 'met elk': dan reken je keer.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Kijk bij het getal dat je op honderdtallen afrondt naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Rond eerst af zoals de vraag zegt, en reken dan met de afgeronde getallen keer elkaar. Kijk bij het getal dat je op honderdtallen afrondt naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af, anders naar beneden.",
+     "tekstSterker": "Kijk bij het getal dat je op honderdtallen afrondt naar het cijfer van de tientallen. Is dat vijf of meer? Dan rond je naar boven af, anders naar beneden. Reken de cijfers zonder de nullen keer elkaar, en zet daarna alle nullen van de afgeronde getallen erachter."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Precies uitgerekend. Hier vragen we de schatting met het ronde getal.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "500 × 5: tel de nullen goed.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "5 dozen van elk ongeveer 500: dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "200 × 7: tel de nullen goed.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "7 dozen van elk ongeveer 200: dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "300 × 5: tel de nullen goed.",
+     "claudeDenkfout": "nul-fout-tientallen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "5 dozen van elk ongeveer 300: dat is een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 5,
+   "somtype": "Kijk zonder uit te rekenen. Welk antwoord bij # × # [ding] kloppen?",
+   "nrOrigineel": 54,
+   "somtypeOrigineel": "Kijk zonder uit te rekenen. Welk antwoord bij # × # [ding] kloppen?",
+   "hint1": "Je hoeft niet precies te rekenen. Kijk eerst waarop het antwoord eindigt. Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt dat? Daarop eindigt het antwoord ook.",
+   "hint2": "Blijft er meer dan één antwoord over? Rond het grootste getal naar beneden af op honderdtallen en reken keer: het antwoord is groter. Rond het naar boven af en reken keer: groter kan het antwoord niet zijn.",
+   "ouderzin": "Je kind kiest zonder precies te rekenen welk antwoord kan kloppen: door te kijken waarop het eindigt en tussen welke ronde getallen het ligt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "plus in plaats van keer",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 + getal2",
+     "tekst": "Heb je opgeteld? Er staat een keerteken (×): het antwoord is veel groter dan de twee getallen samen.",
+     "tekstSterker": "Rond het grootste getal naar beneden af op honderdtallen en reken keer: het antwoord is groter. Rond het naar boven af en reken keer: groter kan het antwoord niet zijn."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "te groot",
+     "claudeDenkfout": "bovengrens",
+     "regel": "Claudes sleutel: bovengrens",
+     "tekst": "Dat is te groot. Rond het grootste getal naar boven af op honderdtallen en reken keer: groter kan het antwoord niet zijn.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Rond het grootste getal naar beneden af op honderdtallen en reken keer: het antwoord is groter. Rond het naar boven af en reken keer: groter kan het antwoord niet zijn."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "te klein",
+     "claudeDenkfout": "ondergrens",
+     "regel": "Claudes sleutel: ondergrens",
+     "tekst": "Dat is te klein. Rond het grootste getal naar beneden af op honderdtallen en reken keer: kleiner kan het antwoord niet zijn.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Rond het grootste getal naar beneden af op honderdtallen en reken keer: het antwoord is groter. Rond het naar boven af en reken keer: groter kan het antwoord niet zijn."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "veel te klein",
+     "claudeDenkfout": "orde-van-grootte",
+     "regel": "Claudes sleutel: orde-van-grootte",
+     "tekst": "Dat is te klein. Rond het grootste getal naar beneden af op honderdtallen en reken keer: kleiner kan het antwoord niet zijn.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Rond het grootste getal naar beneden af op honderdtallen en reken keer: het antwoord is groter. Rond het naar boven af en reken keer: groter kan het antwoord niet zijn."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eindcijfer",
+     "claudeDenkfout": "laatste-cijfer",
+     "regel": "Claudes sleutel: laatste-cijfer",
+     "tekst": "Kijk waarop het antwoord moet eindigen. Reken alleen de eenheden van de twee getallen keer elkaar. Op welk cijfer eindigt dat? Daarop eindigt het antwoord ook.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe de eenheden van de twee getallen keer elkaar. Het cijfer helemaal rechts van die uitkomst staat ook helemaal rechts in het antwoord."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk eerst waarop het antwoord eindigt, en daarna tussen welke ronde getallen het ligt.",
+     "tekstSterker": "Rond het grootste getal naar beneden af op honderdtallen en reken keer: het antwoord is groter. Rond het naar boven af en reken keer: groter kan het antwoord niet zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Rond 467 naar boven af. 500 × 9 is 4500. De uitkomst kan dus niet groter zijn dan 4500, en 5203 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 467 × 9 eindigt op 3. Eindigt 4205 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 371 × 3 eindigt op 3. Eindigt 1111 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 400 × 3 is 1200. Ligt 374 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 355 naar beneden af. 300 × 9 is 2700. De uitkomst kan dus niet kleiner zijn dan 2700, en 2195 is kleiner.",
+     "claudeDenkfout": "ondergrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 355 × 9 eindigt op 5. Eindigt 3193 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 403 naar boven af. 500 × 8 is 4000. De uitkomst kan dus niet groter zijn dan 4000, en 4224 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 403 × 8 eindigt op 4. Eindigt 3226 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 307 naar boven af. 400 × 5 is 2000. De uitkomst kan dus niet groter zijn dan 2000, en 2535 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 300 × 5 is 1500. Ligt 535 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 387 naar boven af. 400 × 9 is 3600. De uitkomst kan dus niet groter zijn dan 3600, en 4483 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 400 × 9 is 3600. Ligt 396 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 243 naar beneden af. 200 × 9 is 1800. De uitkomst kan dus niet kleiner zijn dan 1800, en 1187 is kleiner.",
+     "claudeDenkfout": "ondergrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 200 × 9 is 1800. Ligt 252 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 275 naar boven af. 300 × 7 is 2100. De uitkomst kan dus niet groter zijn dan 2100, en 2925 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 275 naar beneden af. 200 × 7 is 1400. De uitkomst kan dus niet kleiner zijn dan 1400, en 925 is kleiner.",
+     "claudeDenkfout": "ondergrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 339 × 3 eindigt op 7. Eindigt 1019 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 300 × 3 is 900. Ligt 342 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 451 × 3 eindigt op 3. Eindigt 1351 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 500 × 3 is 1500. Ligt 454 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 419 × 7 eindigt op 3. Eindigt 2931 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 400 × 7 is 2800. Ligt 426 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 483 naar boven af. 500 × 8 is 4000. De uitkomst kan dus niet groter zijn dan 4000, en 4864 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 483 × 8 eindigt op 4. Eindigt 3866 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 291 naar boven af. 300 × 8 is 2400. De uitkomst kan dus niet groter zijn dan 2400, en 3328 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 291 × 8 eindigt op 8. Eindigt 2330 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 259 naar beneden af. 200 × 8 is 1600. De uitkomst kan dus niet kleiner zijn dan 1600, en 1072 is kleiner.",
+     "claudeDenkfout": "ondergrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 259 × 8 eindigt op 2. Eindigt 2070 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 195 naar boven af. 200 × 7 is 1400. De uitkomst kan dus niet groter zijn dan 1400, en 2365 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 195 naar beneden af. 100 × 7 is 700. De uitkomst kan dus niet kleiner zijn dan 700, en 365 is kleiner.",
+     "claudeDenkfout": "ondergrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 300 × 4 is 1200. Ligt 292 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 300 × 4 is 1200. Ligt 327 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 227 naar boven af. 300 × 5 is 1500. De uitkomst kan dus niet groter zijn dan 1500, en 2135 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 227 × 5 eindigt op 5. Eindigt 1133 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 211 naar boven af. 300 × 6 is 1800. De uitkomst kan dus niet groter zijn dan 1800, en 2266 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 200 × 6 is 1200. Ligt 217 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond 179 naar beneden af. 100 × 8 is 800. De uitkomst kan dus niet kleiner zijn dan 800, en 432 is kleiner.",
+     "claudeDenkfout": "ondergrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 200 × 8 is 1600. Ligt 187 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E02",
+   "nr": 9,
+   "somtype": "Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?",
+   "nrOrigineel": 57,
+   "somtypeOrigineel": "Kijk zonder uit te rekenen. Welk antwoord bij # + # [ding] kloppen?",
+   "hint1": "Je hoeft niet precies te rekenen. Kijk eerst waarop het antwoord eindigt. Tel alleen de eenheden van de twee getallen op. Op welk cijfer eindigt dat? Daarop eindigt het antwoord ook.",
+   "hint2": "Blijft er meer dan één antwoord over? Rond allebei de getallen naar beneden af op honderdtallen en tel op: het antwoord is groter. Rond allebei naar boven af en tel op: groter kan het antwoord niet zijn.",
+   "ouderzin": "Je kind kiest zonder precies te rekenen welk antwoord kan kloppen: door te kijken waarop het eindigt en tussen welke ronde getallen het ligt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "min in plaats van plus",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1 - getal2 of getal2 - getal1",
+     "tekst": "Heb je min gedaan? Er staat een plus: het antwoord is groter dan allebei de getallen.",
+     "tekstSterker": "Rond allebei de getallen naar beneden af op honderdtallen en tel op: het antwoord is groter. Rond allebei naar boven af en tel op: groter kan het antwoord niet zijn."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "te groot",
+     "claudeDenkfout": "bovengrens",
+     "regel": "Claudes sleutel: bovengrens",
+     "tekst": "Dat is te groot. Rond allebei de getallen naar boven af op honderdtallen en tel op: groter kan het antwoord niet zijn.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Rond allebei de getallen naar beneden af op honderdtallen en tel op: het antwoord is groter. Rond allebei naar boven af en tel op: groter kan het antwoord niet zijn."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "veel te klein",
+     "claudeDenkfout": "orde-van-grootte",
+     "regel": "Claudes sleutel: orde-van-grootte",
+     "tekst": "Dat is te klein. Rond allebei de getallen naar beneden af op honderdtallen en tel op: kleiner kan het antwoord niet zijn.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Rond allebei de getallen naar beneden af op honderdtallen en tel op: het antwoord is groter. Rond allebei naar boven af en tel op: groter kan het antwoord niet zijn."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "eindcijfer",
+     "claudeDenkfout": "laatste-cijfer",
+     "regel": "Claudes sleutel: laatste-cijfer",
+     "tekst": "Kijk waarop het antwoord moet eindigen. Tel alleen de eenheden van de twee getallen op. Op welk cijfer eindigt dat? Daarop eindigt het antwoord ook.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Tel de eenheden van de twee getallen op. Het cijfer helemaal rechts van die uitkomst staat ook helemaal rechts in het antwoord."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk eerst waarop het antwoord eindigt, en daarna tussen welke ronde getallen het ligt.",
+     "tekstSterker": "Rond allebei de getallen naar beneden af op honderdtallen en tel op: het antwoord is groter. Rond allebei naar boven af en tel op: groter kan het antwoord niet zijn."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Rond allebei naar boven af. 800 + 800 is 1600. De uitkomst kan dus niet groter zijn dan 1600, en 2513 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 737 + 776 eindigt op 3. Eindigt 1511 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 800 + 700 is 1500. Ligt 572 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 800 + 700 is 1500. Ligt 76 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond allebei naar boven af. 500 + 700 is 1200. De uitkomst kan dus niet groter zijn dan 1200, en 2128 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 447 + 681 eindigt op 8. Eindigt 1130 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 800 + 300 is 1100. Ligt 82 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 766 + 316 eindigt op 2. Eindigt 1080 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond allebei naar boven af. 400 + 800 is 1200. De uitkomst kan dus niet groter zijn dan 1200, en 2069 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 360 + 709 eindigt op 9. Eindigt 1071 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 500 + 700 is 1200. Ligt 187 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 534 + 653 eindigt op 7. Eindigt 1185 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 592 + 409 eindigt op 1. Eindigt 999 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond eerst af. 600 + 400 is 1000. Ligt 183 daar dichtbij?",
+     "claudeDenkfout": "orde-van-grootte",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Rond allebei naar boven af. 900 + 300 is 1200. De uitkomst kan dus niet groter zijn dan 1200, en 2141 is groter.",
+     "claudeDenkfout": "bovengrens",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Kijk naar het laatste cijfer. De uitkomst van 853 + 288 eindigt op 1. Eindigt 1143 daarop?",
+     "claudeDenkfout": "laatste-cijfer",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E03",
+   "nr": 1,
+   "somtype": "Reken uit: (# + #) × #",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "Reken uit: (# + #) × #",
+   "hint1": "Wat tussen haakjes staat, reken je altijd eerst uit.",
+   "hint2": "Tel eerst de twee getallen tussen de haakjes op. Doe die uitkomst daarna keer het getal achter de haakjes.",
+   "ouderzin": "Je kind oefent de rekenvolgorde: wat tussen haakjes staat, gaat altijd eerst.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "haakjes overgeslagen",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Heb je eerst keer gedaan? Wat tussen haakjes staat, reken je eerst uit, ook als er een keerteken staat.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Tel eerst de twee getallen tussen de haakjes op. Doe die uitkomst daarna keer het getal achter de haakjes."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alles opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Heb je alles opgeteld? Achter de haakjes staat een keerteken (×).",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Tel eerst de twee getallen tussen de haakjes op. Doe die uitkomst daarna keer het getal achter de haakjes."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst uit wat tussen de haakjes staat, en doe dat daarna keer het getal achter de haakjes.",
+     "tekstSterker": "Tel eerst de twee getallen tussen de haakjes op. Doe die uitkomst daarna keer het getal achter de haakjes."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "De haakjes gaan voor: eerst optellen, dan vermenigvuldigen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Na de haakjes komt een keersom.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E03",
+   "nr": 2,
+   "somtype": "Reken uit. # : # + #",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "Reken uit. # : # + #",
+   "hint1": "De dubbele punt (:) betekent gedeeld door. Delen gaat vóór optellen, als er geen haakjes staan.",
+   "hint2": "Reken eerst de deelsom uit. Tel daarna het getal achter het plusteken erbij.",
+   "ouderzin": "Je kind oefent de rekenvolgorde: delen gaat vóór optellen.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "volgorde",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Let op de volgorde: eerst delen, daarna optellen.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst de deelsom uit. Tel daarna het getal achter het plusteken erbij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de deelsom uit, en tel daarna het getal achter het plusteken erbij.",
+     "tekstSterker": "Delen gaat vóór optellen. Je telt dus pas op als de deelsom klaar is."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Delen gaat vóór plus. Deel eerst, tel daarna op.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Er staat een deelteken: eerst delen, dan pas optellen.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E03",
+   "nr": 3,
+   "somtype": "Reken uit. # + # × (# − #)",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Reken uit. # + # × (# − #)",
+   "hint1": "Eerst reken je uit wat tussen haakjes staat, dan keer, en pas daarna plus.",
+   "hint2": "Reken eerst de minsom tussen de haakjes uit. Doe daarna het getal vóór de haakjes keer die uitkomst. Tel pas daarna het getal vóór het plusteken erbij.",
+   "ouderzin": "Je kind oefent de rekenvolgorde: eerst haakjes, dan keer, dan plus.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "volgorde",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Let op de volgorde: eerst wat tussen haakjes staat, dan keer, en pas daarna plus.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst de minsom tussen de haakjes uit. Doe daarna het getal vóór de haakjes keer die uitkomst. Tel pas daarna het getal vóór het plusteken erbij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Eerst haakjes, dan keer, dan plus.",
+     "tekstSterker": "Reken eerst de minsom tussen de haakjes uit. Doe daarna het getal vóór de haakjes keer die uitkomst. Tel pas daarna het getal vóór het plusteken erbij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Alleen wat tussen de haakjes staat reken je eerst. Daarna keer, dan plus.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De haakjes horen bij elkaar: reken eerst ${d} − ${e} uit.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E03",
+   "nr": 4,
+   "somtype": "Reken uit. # − # × #",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "Reken uit. # − # × #",
+   "hint1": "Keer gaat vóór min, als er geen haakjes staan.",
+   "hint2": "Reken eerst de keersom uit. Haal die uitkomst daarna af van het getal vóór het minteken.",
+   "ouderzin": "Je kind oefent de rekenvolgorde: keer gaat vóór min.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "eerst min",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Heb je eerst min gedaan? Keer gaat vóór min.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst de keersom uit. Haal die uitkomst daarna af van het getal vóór het minteken."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld bij het keerteken",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Heb je de twee getallen bij het keerteken opgeteld? Daar staat keer (×): reken die keersom eerst uit.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst de keersom uit. Haal die uitkomst daarna af van het getal vóór het minteken."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de keersom uit, en haal die uitkomst daarna af van het getal vóór het minteken.",
+     "tekstSterker": "Reken eerst de keersom uit. Haal die uitkomst daarna af van het getal vóór het minteken."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Keer gaat vóór min. Eerst de keersom, dan pas aftrekken.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Er staat een keerteken: eerst vermenigvuldigen, dan pas aftrekken.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E03",
+   "nr": 5,
+   "somtype": "Reken uit. # + # × #",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "Reken uit. # + # × #",
+   "hint1": "Keer gaat vóór plus, als er geen haakjes staan.",
+   "hint2": "Reken eerst de keersom uit. Tel daarna het getal vóór het plusteken erbij.",
+   "ouderzin": "Je kind oefent de rekenvolgorde: keer gaat vóór plus.",
+   "foutHints": [
+    {
+     "bron": "claude-taalfix",
+     "soort": "eerst plus",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "regel": "Claudes sleutel: verkeerde-bewerking",
+     "tekst": "Heb je eerst opgeteld? Keer gaat vóór plus.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst de keersom uit. Tel daarna het getal vóór het plusteken erbij."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alles opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Heb je alles opgeteld? Er staat ook een keerteken (×).",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Reken eerst de keersom uit. Tel daarna het getal vóór het plusteken erbij."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken eerst de keersom uit, en tel daarna het getal vóór het plusteken erbij.",
+     "tekstSterker": "Reken eerst de keersom uit. Tel daarna het getal vóór het plusteken erbij."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Keer gaat vóór plus. Reken eerst de keersom uit, ook al staat hij achteraan.",
+     "claudeDenkfout": "verkeerde-bewerking",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Er staat een keerteken: eerst vermenigvuldigen, dan pas optellen.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E04",
+   "nr": 1,
+   "somtype": "# [ding] worden in stukken van #/# [ding]. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 1,
+   "somtypeOrigineel": "# [ding] worden in stukken van #/# [ding]. Hoeveel [ding] zijn dat?",
+   "hint1": "Je zoekt hoeveel stukken er in totaal zijn. Kijk eerst naar één heel: hoeveel stukken van deze grootte passen erin?",
+   "hint2": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele.",
+   "ouderzin": "Je kind deelt hele dingen in gelijke stukken (delen door een breuk): in één heel passen zoveel stukken als de noemer zegt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "hele overgenomen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het aantal hele waar je mee begint. Elk heel wordt in stukken verdeeld, dus je krijgt meer stukken.",
+     "tekstSterker": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Heb je opgeteld? Elk heel geeft zoveel stukken als de noemer (het getal onder de streep) zegt: reken keer.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "hele (label)",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "regel": "Claudes sleutel: omgekeerd-gedeeld",
+     "tekst": "Dat is het aantal hele waar je mee begint. Elk heel wordt in stukken verdeeld, dus je krijgt meer stukken.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk eerst hoeveel stukken er in één heel passen, en reken dan keer het aantal hele.",
+     "tekstSterker": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Delen door een breuk maakt groter: hoeveel van die stukken passen er in één hele?",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Elke hele geeft evenveel stukken als de noemer zegt: dat is keer, niet plus.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E04",
+   "nr": 4,
+   "somtype": "# [ding] wordt in stukken van #/# [ding]. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 4,
+   "somtypeOrigineel": "# [ding] wordt in stukken van #/# [ding]. Hoeveel [ding] zijn dat?",
+   "hint1": "Je zoekt hoeveel stukken er in totaal zijn. Kijk eerst naar één heel: hoeveel stukken van deze grootte passen erin?",
+   "hint2": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele.",
+   "ouderzin": "Je kind deelt hele dingen in gelijke stukken (delen door een breuk): in één heel passen zoveel stukken als de noemer zegt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "hele overgenomen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het aantal hele waar je mee begint. Elk heel wordt in stukken verdeeld, dus je krijgt meer stukken.",
+     "tekstSterker": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Heb je opgeteld? Elk heel geeft zoveel stukken als de noemer (het getal onder de streep) zegt: reken keer.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "hele (label)",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "regel": "Claudes sleutel: omgekeerd-gedeeld",
+     "tekst": "Dat is het aantal hele waar je mee begint. Elk heel wordt in stukken verdeeld, dus je krijgt meer stukken.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk eerst hoeveel stukken er in één heel passen, en reken dan keer het aantal hele.",
+     "tekstSterker": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Delen door een breuk maakt groter: hoeveel van die stukken passen er in één hele?",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Elke hele geeft evenveel stukken als de noemer zegt: dat is keer, niet plus.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E04",
+   "nr": 7,
+   "somtype": "# [ding] chocola worden in stukken van #/# [ding]. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 7,
+   "somtypeOrigineel": "# [ding] chocola worden in stukken van #/# [ding]. Hoeveel [ding] zijn dat?",
+   "hint1": "Je zoekt hoeveel stukken er in totaal zijn. Kijk eerst naar één heel: hoeveel stukken van deze grootte passen erin?",
+   "hint2": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele.",
+   "ouderzin": "Je kind deelt hele dingen in gelijke stukken (delen door een breuk): in één heel passen zoveel stukken als de noemer zegt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "hele overgenomen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het aantal hele waar je mee begint. Elk heel wordt in stukken verdeeld, dus je krijgt meer stukken.",
+     "tekstSterker": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "regel": "Claudes sleutel: optellen-ipv-vermenigvuldigen",
+     "tekst": "Heb je opgeteld? Elk heel geeft zoveel stukken als de noemer (het getal onder de streep) zegt: reken keer.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "hele (label)",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "regel": "Claudes sleutel: omgekeerd-gedeeld",
+     "tekst": "Dat is het aantal hele waar je mee begint. Elk heel wordt in stukken verdeeld, dus je krijgt meer stukken.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk eerst hoeveel stukken er in één heel passen, en reken dan keer het aantal hele.",
+     "tekstSterker": "In één heel passen zoveel stukken als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal hele."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Delen door een breuk maakt groter: hoeveel van die stukken passen er in één hele?",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Elke hele geeft evenveel stukken als de noemer zegt: dat is keer, niet plus.",
+     "claudeDenkfout": "optellen-ipv-vermenigvuldigen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E04",
+   "nr": 2,
+   "somtype": "# liter limonade wordt in [bakken] van #/# liter geschonken. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 2,
+   "somtypeOrigineel": "# liter limonade wordt in [bakken] van #/# liter geschonken. Hoeveel [ding] zijn dat?",
+   "hint1": "Je zoekt hoe vaak je kunt schenken. Kijk eerst naar één liter: hoe vaak kun je daaruit schenken?",
+   "hint2": "Uit één liter schenk je zo vaak als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal liters.",
+   "ouderzin": "Je kind deelt liters in gelijke porties (delen door een breuk): uit één liter schenk je zo vaak als de noemer zegt.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "liters overgenomen",
+     "claudeDenkfout": null,
+     "regel": "fout = getal1",
+     "tekst": "Dat is het aantal liters. Uit elke liter schenk je meer dan één keer.",
+     "tekstSterker": "Uit één liter schenk je zo vaak als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal liters."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één liter",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "regel": "Claudes sleutel: omgekeerd-gedeeld",
+     "tekst": "Zo vaak schenk je uit één liter. Er zijn meer liters: reken keer het aantal liters.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Uit één liter schenk je zo vaak als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal liters."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk eerst hoe vaak je uit één liter schenkt, en reken dan keer het aantal liters.",
+     "tekstSterker": "Uit één liter schenk je zo vaak als de noemer (het getal onder de streep) zegt. Doe dat keer het aantal liters."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Elke liter geeft 5 bekers. Dus meer dan 4.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "5 bekers uit één liter. Er zijn 4 liter.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Elke liter geeft 4 bekers. Dus meer dan 6.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "4 bekers uit één liter. Er zijn 6 liter.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Elke liter geeft 3 bekers. Dus meer dan 5.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "3 bekers uit één liter. Er zijn 5 liter.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Elke liter geeft 3 bekers. Dus meer dan 2.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "3 bekers uit één liter. Er zijn 2 liter.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Elke liter geeft 2 bekers. Dus meer dan 5.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "2 bekers uit één liter. Er zijn 5 liter.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Elke liter geeft 4 bekers. Dus meer dan 2.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "4 bekers uit één liter. Er zijn 2 liter.",
+     "claudeDenkfout": "omgekeerd-gedeeld",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E04",
+   "nr": 3,
+   "somtype": "Er is nog #/# [ding]. [wie] eet daar #/# deel van. Welk deel van de hele taart is dat? Typ een breuk.",
+   "nrOrigineel": 3,
+   "somtypeOrigineel": "Er is nog #/# [ding]. [wie] eet daar #/# deel van. Welk deel van de hele taart is dat? Typ een breuk.",
+   "hint1": "Je neemt een deel ván wat er nog is. Een deel van een deel reken je uit met keer.",
+   "hint2": "Doe teller keer teller en noemer keer noemer (de teller is het getal boven de streep, de noemer het getal onder de streep). Maak de breuk daarna zo eenvoudig mogelijk.",
+   "ouderzin": "Je kind rekent een deel van een deel uit (breuk keer breuk) en maakt de breuk zo eenvoudig mogelijk.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet vereenvoudigd",
+     "claudeDenkfout": null,
+     "regel": "fout = gelijkwaardig maar niet zo eenvoudig mogelijk",
+     "tekst": "Die breuk is even groot als het antwoord, maar het kan eenvoudiger. Deel de teller (het getal boven de streep) en de noemer (het getal onder de streep) door hetzelfde getal.",
+     "tekstSterker": "Zoek een getal waardoor de teller (boven de streep) en de noemer (onder de streep) allebei te delen zijn, en deel ze allebei. Ga door tot dat niet meer kan."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "opgeteld",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "regel": "Claudes sleutel: teller-en-noemer-optellen",
+     "tekst": "Heb je de tellers (boven de streep) opgeteld en de noemers (onder de streep) ook? Een deel ván een deel is keer, niet plus.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe teller keer teller en noemer keer noemer (de teller is het getal boven de streep, de noemer het getal onder de streep). Maak de breuk daarna zo eenvoudig mogelijk."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "niet van de hele taart",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "Dat is niet het deel van de hele taart. Neem het deel ván wat er nog is: reken de twee breuken keer elkaar.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Doe teller keer teller en noemer keer noemer (de teller is het getal boven de streep, de noemer het getal onder de streep). Maak de breuk daarna zo eenvoudig mogelijk."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Reken de twee breuken keer elkaar: teller keer teller (boven de streep) en noemer keer noemer (onder de streep).",
+     "tekstSterker": "Doe teller keer teller en noemer keer noemer (de teller is het getal boven de streep, de noemer het getal onder de streep). Maak de breuk daarna zo eenvoudig mogelijk."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Een deel ván een deel is vermenigvuldigen, niet optellen.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Vermenigvuldig ook de noemers met elkaar.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "Vermenigvuldig ook de tellers met elkaar.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E04",
+   "nr": 5,
+   "somtype": "#/# [ding] wordt verdeeld in stukken van #/#. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 5,
+   "somtypeOrigineel": "#/# [ding] wordt verdeeld in stukken van #/#. Hoeveel [ding] zijn dat?",
+   "hint1": "Je zoekt hoe vaak het kleine stuk in het deel past.",
+   "hint2": "Maak de twee breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep). Hoe vaak past de teller (het getal boven de streep) van het kleine stuk in de teller van het deel?",
+   "ouderzin": "Je kind deelt een breuk in kleinere stukken (breuk gedeeld door breuk): met dezelfde noemer kun je de tellers vergelijken.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Dat is één stuk te veel. Tel nog eens hoe vaak het kleine stuk in het deel past.",
+     "tekstSterker": "Maak de twee breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep). Hoe vaak past de teller (het getal boven de streep) van het kleine stuk in de teller van het deel?"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één te veel (label)",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "Claudes sleutel: een-ernaast",
+     "tekst": "Dat is één stuk te veel. Tel nog eens hoe vaak het kleine stuk in het deel past.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Maak de twee breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep). Hoe vaak past de teller (het getal boven de streep) van het kleine stuk in de teller van het deel?"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "teller overgenomen",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is de teller van het deel (het getal boven de streep). Je zoekt hoe vaak het kleine stuk in het deel past.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Maak de twee breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep). Hoe vaak past de teller (het getal boven de streep) van het kleine stuk in de teller van het deel?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe vaak het kleine stuk in het deel past.",
+     "tekstSterker": "Maak de twee breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep). Hoe vaak past de teller (het getal boven de streep) van het kleine stuk in de teller van het deel?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Schrijf 1/2 eerst als ?/4.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1/2 is precies 2/4.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Schrijf 3/6 eerst als ?/2.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "3/6 is precies 1/2.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Schrijf 1/2 eerst als ?/8.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "1/2 is precies 4/8.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E04",
+   "nr": 8,
+   "somtype": "#/# [ding] chocola wordt verdeeld in stukken van #/#. Hoeveel [ding] zijn dat?",
+   "nrOrigineel": 8,
+   "somtypeOrigineel": "#/# [ding] chocola wordt verdeeld in stukken van #/#. Hoeveel [ding] zijn dat?",
+   "hint1": "Je zoekt hoe vaak het kleine stuk in het deel past.",
+   "hint2": "Maak de twee breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep). Hoe vaak past de teller (het getal boven de streep) van het kleine stuk in de teller van het deel?",
+   "ouderzin": "Je kind deelt een breuk in kleinere stukken (breuk gedeeld door breuk): met dezelfde noemer kun je de tellers vergelijken.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "één te veel",
+     "claudeDenkfout": null,
+     "regel": "fout = antwoord + 1",
+     "tekst": "Dat is één stuk te veel. Tel nog eens hoe vaak het kleine stuk in het deel past.",
+     "tekstSterker": "Maak de twee breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep). Hoe vaak past de teller (het getal boven de streep) van het kleine stuk in de teller van het deel?"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "één te veel (label)",
+     "claudeDenkfout": "een-ernaast",
+     "regel": "Claudes sleutel: een-ernaast",
+     "tekst": "Dat is één stuk te veel. Tel nog eens hoe vaak het kleine stuk in het deel past.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Maak de twee breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep). Hoe vaak past de teller (het getal boven de streep) van het kleine stuk in de teller van het deel?"
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "teller overgenomen",
+     "claudeDenkfout": "getal-overgenomen",
+     "regel": "Claudes sleutel: getal-overgenomen",
+     "tekst": "Dat is de teller van het deel (het getal boven de streep). Je zoekt hoe vaak het kleine stuk in het deel past.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Maak de twee breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep). Hoe vaak past de teller (het getal boven de streep) van het kleine stuk in de teller van het deel?"
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Kijk hoe vaak het kleine stuk in het deel past.",
+     "tekstSterker": "Maak de twee breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep). Hoe vaak past de teller (het getal boven de streep) van het kleine stuk in de teller van het deel?"
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Schrijf 6/8 eerst als ?/4.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "6/8 is precies 3/4.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Schrijf 3/6 eerst als ?/2.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "3/6 is precies 1/2.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Schrijf 2/4 eerst als ?/8.",
+     "claudeDenkfout": "getal-overgenomen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "2/4 is precies 4/8.",
+     "claudeDenkfout": "een-ernaast",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  },
+  {
+   "doel": "G8-GET-E04",
+   "nr": 6,
+   "somtype": "[wie] eet #/# van een pizza, een ander kind #/#. Welk deel is samen op? Typ een breuk.",
+   "nrOrigineel": 6,
+   "somtypeOrigineel": "[wie] eet #/# van een pizza, een ander kind #/#. Welk deel is samen op? Typ een breuk.",
+   "hint1": "Breuken kun je pas optellen als ze dezelfde noemer hebben (het getal onder de streep).",
+   "hint2": "Maak de breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep), en verander de tellers (de getallen boven de streep) mee. Tel daarna alleen de tellers op.",
+   "ouderzin": "Je kind telt twee breuken op: eerst gelijknamig maken (dezelfde noemer geven), dan de tellers optellen.",
+   "foutHints": [
+    {
+     "bron": "nieuw",
+     "soort": "niet vereenvoudigd",
+     "claudeDenkfout": null,
+     "regel": "fout = gelijkwaardig maar niet zo eenvoudig mogelijk",
+     "tekst": "Die breuk is even groot als het antwoord, maar het kan eenvoudiger. Deel de teller (het getal boven de streep) en de noemer (het getal onder de streep) door hetzelfde getal.",
+     "tekstSterker": "Zoek een getal waardoor de teller (boven de streep) en de noemer (onder de streep) allebei te delen zijn, en deel ze allebei. Ga door tot dat niet meer kan."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "alles opgeteld",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "regel": "Claudes sleutel: teller-en-noemer-optellen",
+     "tekst": "Bij breuken optellen tel je alleen de tellers op (boven de streep), en dat kan pas als de noemers (onder de streep) gelijk zijn.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Maak de breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep), en verander de tellers (de getallen boven de streep) mee. Tel daarna alleen de tellers op."
+    },
+    {
+     "bron": "claude-taalfix",
+     "soort": "tellers niet mee",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "regel": "Claudes sleutel: deel-vergeten-bij-splitsen",
+     "tekst": "De noemer (onder de streep) klopt, maar de tellers (boven de streep) moeten mee veranderen als je de noemers gelijk maakt.",
+     "claudeTekst": null,
+     "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt; vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+     "tekstSterker": "Hoeveel keer heb je de noemer (het getal onder de streep) van elke breuk groter gemaakt? Doe de teller (het getal boven de streep) van die breuk evenveel keer. Tel daarna de tellers op."
+    },
+    {
+     "bron": "nieuw",
+     "soort": "andere fout",
+     "claudeDenkfout": null,
+     "regel": "andere fout",
+     "tekst": "Maak de breuken eerst gelijknamig (geef ze dezelfde noemer: het getal onder de streep), en tel dan de tellers (boven de streep) op.",
+     "tekstSterker": "Maak de breuken gelijknamig: geef ze dezelfde noemer (het getal onder de streep), en verander de tellers (de getallen boven de streep) mee. Tel daarna alleen de tellers op."
+    }
+   ],
+   "claudeVervangen": [
+    {
+     "claudeTekst": "Je kunt alleen optellen als de stukken even groot zijn. Maak eerst de noemers gelijk.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "vervangen door een vaste tekst per regel, met eigen laag 2 (les 40)"
+    },
+    {
+     "claudeTekst": "De noemer blijft 12 als je 4/12 en 3/12 optelt.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Na het gelijknamig maken zijn de tellers niet meer 1. 1/3 is 4/12.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De noemer blijft 14 als je 7/14 en 2/14 optelt.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Na het gelijknamig maken zijn de tellers niet meer 1. 1/2 is 7/14.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De noemer blijft 24 als je 8/24 en 3/24 optelt.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Na het gelijknamig maken zijn de tellers niet meer 1. 1/3 is 8/24.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "De noemer blijft 6 als je 3/6 en 2/6 optelt.",
+     "claudeDenkfout": "teller-en-noemer-optellen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    },
+    {
+     "claudeTekst": "Na het gelijknamig maken zijn de tellers niet meer 1. 1/2 is 3/6.",
+     "claudeDenkfout": "deel-vergeten-bij-splitsen",
+     "waarom": "tekst met getallen uit het item; nu een vaste tekst zonder cijfers (regel nagerekend), met eigen laag 2"
+    }
+   ],
+   "koppeling": "claudeId"
+  }
+ ]
+}
