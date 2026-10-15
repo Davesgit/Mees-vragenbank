@@ -52,9 +52,15 @@ def lett_afwijkingen(FR):
         a, b = FR.lett_past(r.lower(), v), FR.lett_guard(r, v)
         if a != verwacht or b != verwacht: uit.append(f"LETT (#543) regel {r!r} op {v!r}: verwacht {'past' if verwacht else 'past niet'}, lett_past={a}, lett_guard={b}")
     return uit
+def motor_map(base):
+    """Didactiek 19:57: zoekvolgorde voor de motor. Eerst <groep>/scripts (claude-merge, G3–G6 in de repo); anders de repo-motor
+    scripts/fout_regels.py twee mappen hoger (claude-aanvulling/groep7 → scripts/, G7 heeft geen eigen kopie). Geen motorkopie."""
+    for d in (os.path.join(base, 'scripts'), os.path.join(base, '..', '..', 'scripts')):
+        if os.path.isfile(os.path.join(d, 'fout_regels.py')): return os.path.abspath(d)
+    raise FileNotFoundError(f'fout_regels.py niet gevonden in {base}/scripts of in de repo-map scripts/')
 def extra_fails(base):
     import sys
-    sys.path.insert(0, os.path.join(base, 'scripts')); import fout_regels as FR
+    sys.path.insert(0, motor_map(base)); import fout_regels as FR
     return keerdelen(base) + lett_afwijkingen(FR)
 # ONLEESBAAR (opdracht 12:15): een regel die de motor bij geen enkel item van zijn somtype kan lezen (logs/regels_onleesbaar.json, geschreven door
 # apply_hints) = WARN. Zo'n regel geeft nooit een sleutel; de foute opties vallen dan stil op 'andere fout' (zoals '6 liter' na V-#516 in G7).

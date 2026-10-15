@@ -43,3 +43,13 @@ Volgorde voor Overzicht: eerst 1–5, 7 en 9 in de opgaven. Dan build_g3 (punt 1
 - Geen enkele app-code noemt 'uitleg', 'extraVelden' of 'claude'.
 - `export_bank.js` bewaart onbekende velden onder `extraVelden`, en het veld komt in geen enkele export of `bank/data.json` voor.
 - Risico: de live website-code staat niet op deze machine. En als de merge 'Uitleg (Claude)' omzet naar een kindveld, wordt het wél zichtbaar.
+
+## Na-ronde r13 deel B (8 okt 19:40)
+| # | Wat | Stand |
+|---|---|---|
+| V-#1013 | vaste gates in check_merge_notatie (KLOKTIJD/TIJDSDUUR/KLOKWOORD/KLOKSLEUTEL/TYPVOORBEELD, JUISTE-OPTIE/OPTIESTEKST, GEMIDDELDE/-SAMEN, VORMCUE) als FAIL | ✓ G3: ALLES OK (VORMCUE 0 FAIL · 1 WARN MEET-E05 middelste 10/16, Z-#1051) |
+| **Oef-#1022** (open) | G3 klok-zetten (MEET-E05): het antwoord '3.00 uur' bij «Zet de klok op drie uur» (Z-#1017). Voorstel Oefeningen: een weergaveveld `antwoordTekst` = `claudeKaleSom` («drie uur») als het antwoord zichtbaar is; `geldigeAntwoorden` blijven de drie vormen. | **open**, niet gebouwd (wacht op besluit app/Overzicht) |
+- Z-#1077: G3-items hebben geen somtypeNr; de vormcue-guard groepeert in G3 per doel (grof). Voorstel: somtypeNr toevoegen.
+
+### Verdict Didactiek op c44ec26
+- Zacht open (zie r13/R13.md): Z-#1012–#1015, Z-#1017 (Oef-#1022), Z-#1019, Z-#1080–#1082; Oef-#1031 alleen bij variant B voor Z-#1062.

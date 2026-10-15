@@ -593,6 +593,38 @@ Bron: `/workspace/leerlijn/rekenen-groep6/BESLUIT_R9-4_R10_NIVEAUS.md` §A. Vera
 
 | # | Wat | Stand |
 |---|---|---|
-| L-R9-4a | G5-GET-E07 speelvolgorde: #9 (nrO 20) direct na #3 (nrO 3); #10 (nrO 21) na #8 (nrO 8) en vóór #5. Weergavenummers blijven bevroren (D-#408): alleen speel-/progressievolgorde | open (na-ronde) |
-| L-R9-4b | Niveau: `naar-002` (3 × 13 = 39) en `naar-026` (6 × 12 = 72) uit #10, en `naar-008` (98 : 7 = 14) uit #9 → basis (bewuste uitzondering op 'alleen omhoog'); de rest blijft toepassen | open (na-ronde) |
+| L-R9-4a | G5-GET-E07 speelvolgorde: #9 (nrO 20) direct na #3 (nrO 3); #10 (nrO 21) na #8 (nrO 8) en vóór #5. Weergavenummers blijven bevroren (D-#408): alleen speel-/progressievolgorde | **✓ (branch na-ronde-r13)**: volgorde nrO 1,2,3,9,4,6,7,8,10,5,11 in `bevroren/speelvolgorde.json` en `merge.speelVolgorde` bij alle 504 E07-items; weergavenummers ongewijzigd |
+| L-R9-4b | Niveau: `naar-002` (3 × 13 = 39) en `naar-026` (6 × 12 = 72) uit #10, en `naar-008` (98 : 7 = 14) uit #9 → basis (bewuste uitzondering op 'alleen omhoog'); de rest blijft toepassen | **✓ (branch na-ronde-r13)**: 3 items toepassen → basis (naar-002, naar-008, naar-026) |
 | L-R9-4c | Optioneel (Leerlijn): #3 basis-items met driecijferig deeltal (001, 002, 008, 012, 014, 027, 028) → toepassen | niet gevraagd; bij Didactiek |
+| JO | juisteOptie/juisteOptieTekst gelijk aan het antwoord (melding r13-wachtrij) | **✓ (branch na-ronde-r13)**: 2 items, MEET-E07 282 (C €0,90 → €1,20) en 287 (A €1 → €2,50); daarna 0 |
+
+Uitvoering: `python3 r13/r13_uitvoer.py` (idempotent; rapport `r13/r13_rapport.json`). De wijzigingen staan in de data (`data/gemapt.json` → `apply_hints.py`). **Na een nieuwe G5-build moet `r13_uitvoer.py` opnieuw draaien**, anders gaan ze verloren.
+Checks op r13/g5 (8 okt ±18:20): check_hints 139 klaar · 0 open · 0 FAIL · 2 WARN; merge-notatie ALLES OK; #121 0 FAIL; generator-sleutels 0 FAIL.
+
+## Na-ronde r13 deel B (8 okt 19:40; Didactiek review-r13 + vormcue 19:35)
+| # | Wat | Stand |
+|---|---|---|
+| V-#1001 | MEET-E07 #1 centen-afleider | ✓ 114 |
+| V-#1012 | MEET-E06 1200–1211: tekst Oefeningen (batch5 md5 001c81b1) + motor; check_v1012 als FAIL in de G5-check | ✓ FAIL 24 (983900d) → 0 |
+| Oef-#1021 | 1211 «(Typ als 9.45.)» | ✓ 1 |
+| V-#1051 | VBN-E01 #4 280/282/283 'som van de rij' → 130/90/125 | ✓ (283: regel 'andere cel' wint, 125 is ook de cel van dinsdag) |
+| V-#1052 | VBN-E03 #1 011/019/024 → 39/60/105 'een stap te ver'; Claude-sleutel met de nieuwe tekst | ✓ data; **Oefeningen: teksten in de regel** (nu wint de oude tekst) |
+| V-#1053 | GET-E05 #17 gen-012/014/016/018: −10 → +10 | ✓ data; label 'tiental-te-veel'; **Oefeningen: regel 'fout = antwoord + 10'** |
+| V-#1013 | gates incl. VORMCUE | G5 merge-notatie **FAIL 1**: VORMCUE 'middelste' MEET-E07 #1 101/182 (V-#1040-cue, geen datavoorstel) |
+| Z-#1053 | VBN-E03 014 '9.00 uur' (r13) / '9:00 uur' (main) | melding; bij samenvoegen één notatie |
+
+### Na-ronde r13 deel B, Oefeningen 19:43 (vormcue-hints)
+- `patch_r13_vormcue.py`: batch6 VBN-E03 #1, 'een stap te ver', 3 teksten per item (V-#1052 3/3: 011 '39', 019 '60', 024 '105'). Batch7 GET-E05 nrO 32: 'tiental te veel' op `fout = antwoord + 10` (V-#1053 4/4: gen-012/014/016/018).
+- Diff per_doel: 3 + 4 items met andere foutHints. Bij de andere 12 + 4 items van die somtypen verandert alleen foutRegels (de regellijst).
+- check_hints 0 FAIL · VORMCUE rang 0 FAIL. Middelste open: MEET-E07 #1 (101/182), wacht op Didactiek.
+
+### Vormcue één regel voor alle posities (Didactiek 19:57)
+- kleinste/middelste/grootste: FAIL bij > 50 % én p < 0,01 (kans 1/3); mutanten per positie 17/17. Stand per somtype: zie r13/R13.md. Data van de items niet aangepast (Didactiek stuurt voorstellen per item).
+
+### Z-#1074 en V-#1072 (Didactiek 20:09)
+- Z-#1074: VBN-E01 283, afleider 125 → 90 (vogels wo − do, 'verschil van twee cellen'). 125 was ook een cel. Verdeling blijft 15/15/0.
+- V-#1072 (MEET-E07 #1): voorstel met 15 items in r13/voorstel_v1072.json (antwoord + de kleinste munt uit visual.munten, 15/15 nagerekend; 19/86/77). Nog niet geplaatst: het wacht op de motorregel van Oefeningen (Z-#1076). Z-#1053 (014 '9.00' vs '9:00') staat nog open.
+
+### Verdict Didactiek op c44ec26
+- Zacht open (zie r13/R13.md): Z-#1012–#1015, Z-#1017 (Oef-#1022), Z-#1019, Z-#1080–#1082; Oef-#1031 alleen bij variant B voor Z-#1062.
+- 15 okt: V-#1072 en Z-#1076 geplaatst (G5-MEET-E07 #1 19/86/77), Z-#1075 (#32, FAIL 0). Zie R13.md.

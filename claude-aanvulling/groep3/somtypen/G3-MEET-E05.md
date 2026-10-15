@@ -75,14 +75,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G3-MEET-E05-claude-bank-002` (Claude M3, gegenereerd, niveau 1 → basis)
     - **Opgave:** Zet de klok op negen uur.
     - **UI:** klok-zetten (wijzers slepen)
-    - **Antwoord:** 9:00  (controle: ok)
-    - **Fout-hints (Claude):** 10:00 → Bij negen uur wijst de kleine wijzer naar de 9.
+    - **Antwoord:** 9.00 uur  (controle: ok)
+    - **Fout-hints (Claude):** 10.00 uur → Bij negen uur wijst de kleine wijzer naar de 9.
     - **Uitleg (Claude):** De grote wijzer staat op de 12, de kleine wijzer wijst naar de 9.
   - `G3-MEET-E05-claude-bank-012` (Claude M3, gegenereerd, niveau 1 → basis)
     - **Opgave:** Zet de klok op acht uur.
     - **UI:** klok-zetten (wijzers slepen)
-    - **Antwoord:** 8:00  (controle: ok)
-    - **Fout-hints (Claude):** 9:00 → Bij acht uur wijst de kleine wijzer naar de 8.
+    - **Antwoord:** 8.00 uur  (controle: ok)
+    - **Fout-hints (Claude):** 9.00 uur → Bij acht uur wijst de kleine wijzer naar de 8.
     - **Uitleg (Claude):** De grote wijzer staat op de 12, de kleine wijzer wijst naar de 8.
 
 - **Hint 1 (te schrijven):** Bij een heel uur staat de grote wijzer recht omhoog.

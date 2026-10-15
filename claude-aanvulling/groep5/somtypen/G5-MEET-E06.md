@@ -8,7 +8,7 @@ Invoer voor het schrijven van hint 1 (`hint`) en hint 2 (`sterkereHint`) per som
 Elk somtype heeft een vaste sleutel (nrOrigineel + somtypeOrigineel, bevroren/somtype_nr_v*.json): neem die over in hints/batch*.json, dan blijft de hint gekoppeld als de nummering of de kop verandert.
 Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/Davesgit/leermees-vragenbank @ 7da3257
 
-## Somtype 1: Hoeveel minuten duurt het van #:# uur tot #:# uur?
+## Somtype 1: Hoeveel minuten duurt het van #.# uur tot #.# uur?
 
 - Sleutel: nrOrigineel **2** · somtypeOrigineel “Hoeveel minuten duurt het van #:# uur tot #:# uur?” (koppeling: claudeId)
 - Items: **220** · Claude-doelen: M14 (220) · regel: G5-M03-tijdsduur
@@ -17,11 +17,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.”)
 - Voorbeelden:
   - `G5-MEET-E06-claude-bank-643` (Claude M14, bank, niveau 3 → toepassen)
-    - **Opgave:** Hoeveel minuten duurt het van 7:15 uur tot 8:00 uur?
+    - **Opgave:** Hoeveel minuten duurt het van 7.15 uur tot 8.00 uur?
     - **Antwoord:** 45  (controle: ok)
     - **Fout-hints (Claude):** 60 → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.
   - `G5-MEET-E06-claude-bank-826` (Claude M14, bank, niveau 3 → toepassen)
-    - **Opgave:** Hoeveel minuten duurt het van 8:25 uur tot 9:10 uur?
+    - **Opgave:** Hoeveel minuten duurt het van 8.25 uur tot 9.10 uur?
     - **Antwoord:** 45  (controle: ok)
     - **Fout-hints (Claude):** 85 → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur. · 15 → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet.
 
@@ -35,6 +35,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `te veel` (fout = antwoord + 1 of meer) → Dat is te veel. Tel in stukken: eerst de minuten tot het volgende hele uur. Dan de hele uren, als die er zijn. Dan de minuten die nog over zijn.  [nieuw]
   - `te weinig` (fout = antwoord − 1 of meer) → Dat is te weinig. Heb je alle stukken opgeteld? Tel in stukken: eerst de minuten tot het volgende hele uur. Dan de hele uren, als die er zijn. Dan de minuten die nog over zijn.  [nieuw]
   - `andere fout` (andere fout) → Tel in stukken: eerst de minuten tot het volgende hele uur. Dan de hele uren, als die er zijn. Dan de minuten die nog over zijn. Een uur heeft zestig minuten.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Hoeveel minuten duurt het van #:# uur tot #:# uur?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 2: [klokkenrij] Welke klok wijst #:# [ding]? (tijd digitaal)
@@ -70,7 +71,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere klok` (andere fout) → Kijk bij die klok eerst naar de grote wijzer: vijf minuten per getal, en één minuut per streepje. Kijk dan naar de kleine wijzer: staat hij tussen het uur dat geweest is en het volgende uur? Is het uur dertien of meer, haal er dan eerst twaalf af.  [nieuw]
 - Status: hints klaar
 
-## Somtype 3: Het is #:# uur. Hoe laat is het # minuten later?
+## Somtype 3: Het is #.# uur. Hoe laat is het # minuten later? (Typ als 14.30.)
 
 - Sleutel: nrOrigineel **3** · somtypeOrigineel “Het is #:# uur. Hoe laat is het # minuten later?” (koppeling: claudeId)
 - Items: **110** · Claude-doelen: M14 (110) · regel: G5-M03-tijdsduur
@@ -79,13 +80,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.”)
 - Voorbeelden:
   - `G5-MEET-E06-claude-bank-178` (Claude M14, bank, niveau 2 → toepassen)
-    - **Opgave:** Het is 8:40 uur. Hoe laat is het 25 minuten later?
-    - **Antwoord:** 9:05  (controle: ok)
-    - **Fout-hints (Claude):** 9:00 → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet. · 9:40 → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.
+    - **Opgave:** Het is 8.40 uur. Hoe laat is het 25 minuten later?
+    - **Antwoord:** 9.05 uur  (controle: ok)
+    - **Fout-hints (Claude):** 9.00 uur → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet. · 9.40 uur → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.
   - `G5-MEET-E06-claude-bank-271` (Claude M14, bank, niveau 2 → toepassen)
-    - **Opgave:** Het is 9:40 uur. Hoe laat is het 45 minuten later?
-    - **Antwoord:** 10:25  (controle: ok)
-    - **Fout-hints (Claude):** 10:40 → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur. · 10:45 → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.
+    - **Opgave:** Het is 9.40 uur. Hoe laat is het 45 minuten later?
+    - **Antwoord:** 10.25 uur  (controle: ok)
+    - **Fout-hints (Claude):** 10.40 uur → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur. · 10.45 uur → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.
 
 - **Hint 1 (te schrijven):** Hoeveel minuten is het nog tot het volgende hele uur? Begin daarmee.
 - **Hint 2 (te schrijven):** Tel eerst door tot het hele uur. Hoeveel minuten moet je daarna nog? Tel die verder na het hele uur.
@@ -95,9 +96,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `een uur te vroeg` (fout = klok een uur te vroeg) → Dat is een uur te vroeg. Je gaat over het hele uur heen: dan komt er een uur bij.  [nieuw]
   - `te laat` (Claudes sleutel: tijd-als-kommagetal) → Dat is te laat. Een uur heeft zestig minuten. Tel eerst tot het hele uur en tel daarna de rest verder.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een uur heeft zestig minuten. Tel eerst tot het volgende hele uur. Tel daarna de minuten die nog over zijn verder.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Het is #:# uur. Hoe laat is het # minuten later?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 4: Het is #:# uur. Hoe laat was het # minuten eerder?
+## Somtype 4: Het is #.# uur. Hoe laat was het # minuten eerder? (Typ als 14.30.)
 
 - Sleutel: nrOrigineel **4** · somtypeOrigineel “Het is #:# uur. Hoe laat was het # minuten eerder?” (koppeling: claudeId)
 - Items: **110** · Claude-doelen: M14 (110) · regel: G5-M03-tijdsduur
@@ -106,13 +108,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 2 (meest: “Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.”)
 - Voorbeelden:
   - `G5-MEET-E06-claude-bank-322` (Claude M14, bank, niveau 2 → toepassen)
-    - **Opgave:** Het is 9:05 uur. Hoe laat was het 30 minuten eerder?
-    - **Antwoord:** 8:35  (controle: ok)
-    - **Fout-hints (Claude):** 9:00 → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet. · 8:05 → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.
+    - **Opgave:** Het is 9.05 uur. Hoe laat was het 30 minuten eerder?
+    - **Antwoord:** 8.35 uur  (controle: ok)
+    - **Fout-hints (Claude):** 9.00 uur → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet. · 8.05 uur → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.
   - `G5-MEET-E06-claude-bank-283` (Claude M14, bank, niveau 2 → toepassen)
-    - **Opgave:** Het is 9:35 uur. Hoe laat was het 45 minuten eerder?
-    - **Antwoord:** 8:50  (controle: ok)
-    - **Fout-hints (Claude):** 9:00 → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet. · 8:35 → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.
+    - **Opgave:** Het is 9.35 uur. Hoe laat was het 45 minuten eerder?
+    - **Antwoord:** 8.50 uur  (controle: ok)
+    - **Fout-hints (Claude):** 9.00 uur → Je bent bijna klaar, maar er ontbreekt nog een stap. Kijk wat je al hebt uitgerekend en wat er nog bij moet. · 8.35 uur → Een uur heeft 60 minuten, geen 100. Reken via het volgende hele uur.
 
 - **Hint 1 (te schrijven):** Hoeveel minuten is het na het hele uur? Tel eerst terug tot dat hele uur.
 - **Hint 2 (te schrijven):** Tel eerst terug tot het hele uur. Hoeveel minuten moet je vanaf het hele uur nog terug? Tel die er ook af. Een uur heeft zestig minuten.
@@ -122,6 +124,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `een uur te laat` (fout = klok een uur te laat) → Dat is een uur te laat. Je gaat terug over het hele uur heen: dan gaat er een uur af.  [nieuw]
   - `te vroeg` (Claudes sleutel: tijd-als-kommagetal) → Dat is te vroeg. Een uur heeft zestig minuten. Tel eerst terug tot het hele uur en tel daarna de rest verder terug.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een uur heeft zestig minuten. Tel eerst terug tot het hele uur. Tel daarna de minuten die nog over zijn verder terug.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Het is #:# uur. Hoe laat was het # minuten eerder?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 5: Het is # [ding]. Welke datum is het # dagen later?
@@ -261,13 +264,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `G5-MEET-E06-claude-bank-827` (Claude M7, gegenereerd, niveau 2 → toepassen)
     - **Opgave:** Zet de klok op tien over half één.
     - **UI:** klok-zetten (wijzers slepen)
-    - **Antwoord:** 12:40  (controle: ok)
-    - **Fout-hints (Claude):** 1:40 → "tien over half één" is nog vóór een uur. De kleine wijzer is nog niet bij de 1.
+    - **Antwoord:** 12.40 uur  (controle: ok)
+    - **Fout-hints (Claude):** 1.40 uur → "tien over half één" is nog vóór een uur. De kleine wijzer is nog niet bij de 1.
     - **Uitleg (Claude):** De grote wijzer geeft de minuten: elke streep is 5 minuten. 40 minuten is bij de 8. De kleine wijzer staat na de 12.
   - `G5-MEET-E06-merge-gen-027` (Claude merge-generator #100, None, niveau None → toepassen)
     - **Opgave:** Zet de klok op vijf voor drie.
     - **UI:** klok-zetten (wijzers slepen)
-    - **Antwoord:** 2:55  (controle: ok)
+    - **Antwoord:** 2.55 uur  (controle: ok)
     - **Fout-hints (Claude):** —
 
 - **Hint 1 (te schrijven):** Zet eerst de grote wijzer. Hoeveel minuten is het na het hele uur? Elk getal is vijf minuten.
@@ -512,7 +515,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere klok` (andere fout) → Kijk bij die klok naar de grote wijzer: wijst hij naar de één? Kijk dan naar de kleine wijzer: is hij net voorbij het uur uit de vraag?  [nieuw]
 - Status: hints klaar
 
-## Somtype 17: [wie] beginnen om #:# en zijn klaar om #:#. Hoeveel minuten duurde het?
+## Somtype 17: [wie] beginnen om #.# uur en zijn klaar om #.# uur. Hoeveel minuten duurde het?
 
 - Sleutel: nrOrigineel **15** · somtypeOrigineel “[wie] beginnen om #:# en zijn klaar om #:#. Hoeveel minuten duurde het?” (koppeling: claudeId)
 - Items: **12** · Claude-doelen: M14 (12) · regel: G5-M03-tijdsduur
@@ -521,15 +524,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 3 (meest: “Je zit een heel uur te hoog. Tel de uren nog eens na.”)
 - Voorbeelden:
   - `G5-MEET-E06-claude-bank-1197` (Claude M14, gegenereerd, niveau 1 → basis)
-    - **Opgave:** De kinderen beginnen om 10:05 en zijn klaar om 10:55. Hoeveel minuten duurde het?
+    - **Opgave:** De kinderen beginnen om 10.05 uur en zijn klaar om 10.55 uur. Hoeveel minuten duurde het?
     - **Antwoord:** 50  (controle: ok)
     - **Fout-hints (Claude):** 110 → Je zit een heel uur te hoog. Tel de uren nog eens na. · 60 → Tel de minuten tot het hele uur, en dan de minuten daarna. Controleer allebei de stukjes.
-    - **Uitleg (Claude):** Van 10:05 tot 10:55 is 50 minuten. Je gaat niet over het hele uur heen.
+    - **Uitleg (Claude):** Van 10.05 uur tot 10.55 uur is 50 minuten. Je gaat niet over het hele uur heen.
   - `G5-MEET-E06-claude-bank-1192` (Claude M14, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** De spelers beginnen om 11:15 en zijn klaar om 12:40. Hoeveel minuten duurde het?
+    - **Opgave:** De spelers beginnen om 11.15 uur en zijn klaar om 12.40 uur. Hoeveel minuten duurde het?
     - **Antwoord:** 85  (controle: ok)
     - **Fout-hints (Claude):** 125 → Een uur heeft 60 minuten, geen 100. Je kunt de tijden niet zomaar van elkaar aftrekken. Reken via het hele uur. · 145 → Je zit een heel uur te hoog. Tel de uren nog eens na. · 25 → Tel de minuten tot het hele uur, en dan de minuten daarna. Controleer allebei de stukjes.
-    - **Uitleg (Claude):** Reken via het hele uur. Van 11:15 tot 12:00 is 45 minuten. Van 12:00 tot 12:40 is 40 minuten. Samen: 45 + 40 = 85 minuten.
+    - **Uitleg (Claude):** Reken via het hele uur. Van 11.15 uur tot 12.00 uur is 45 minuten. Van 12.00 uur tot 12.40 uur is 40 minuten. Samen: 45 + 40 = 85 minuten.
 
 - **Hint 1 (te schrijven):** Kom je over het hele uur heen? Tel dan eerst de minuten tot het hele uur.
 - **Hint 2 (te schrijven):** Ga je niet over het hele uur heen? Tel dan gewoon van de begintijd tot de eindtijd. Ga je er wel overheen? Tel dan de hele uren erbij als die er zijn, elk uur is zestig minuten. Tel tot slot de minuten na het laatste hele uur erbij.
@@ -541,6 +544,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `te veel` (fout = antwoord + 1 of meer) → Dat is te veel. Tel van de begintijd tot de eindtijd. Ga je over het hele uur heen? Tel dan in stukken: eerst tot het hele uur, dan de hele uren als die er zijn, dan de minuten erna.  [nieuw]
   - `te weinig` (fout = antwoord − 1 of meer) → Dat is te weinig. Heb je alle stukken opgeteld? Tel van de begintijd tot de eindtijd. Ga je over het hele uur heen? Tel dan in stukken: eerst tot het hele uur, dan de hele uren als die er zijn, dan de minuten erna.  [nieuw]
   - `andere fout` (andere fout) → Tel van de begintijd tot de eindtijd. Ga je over het hele uur heen? Tel dan in stukken: eerst tot het hele uur, dan de hele uren als die er zijn, dan de minuten erna. Een uur heeft zestig minuten.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '[wie] beginnen om #:# en zijn klaar om #:#. Hoeveel minuten duurde het?'. Nakijken of ze nog passen.
 - Status: hints klaar
 
 ## Somtype 18: [klokkenrij] Welke klok wijst tien over half # [ding]? (tijd in woorden)
@@ -713,7 +717,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `andere klok` (andere fout) → Kijk bij die klok naar de grote wijzer: wijst hij naar de vijf? Kijk dan naar de kleine wijzer: staat hij tussen het uur ervoor en het uur uit de vraag?  [nieuw]
 - Status: hints klaar
 
-## Somtype 23: [wie] vertrekken om #:#. De reis duurt # uur en # minuten. Hoe laat komen ze aan? Typ de tijd, zoals #:#.
+## Somtype 23: [wie] vertrekken om #.# uur. De reis duurt # uur en # minuten. Hoe laat komen ze aan? (Typ als 14.30.)
 
 - Sleutel: nrOrigineel **21** · somtypeOrigineel “[wie] vertrekken om #:#. De reis duurt # uur en # minuten. Hoe laat komen ze aan? Typ de tijd, zoals #:#.” (koppeling: claudeId)
 - Items: **8** · Claude-doelen: M14 (8) · regel: G5-M03-tijdsduur
@@ -722,30 +726,31 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 3 (meest: “Je zit een uur te vroeg. Tel de uren nog eens na.”)
 - Voorbeelden:
   - `G5-MEET-E06-claude-bank-1204` (Claude M14, gegenereerd, niveau 3 → toepassen)
-    - **Opgave:** De kinderen vertrekken om 8:10. De reis duurt 1 uur en 20 minuten. Hoe laat komen ze aan? Typ de tijd, zoals 9:05.
-    - **Antwoord:** 9:30  (controle: ok)
-    - **Fout-hints (Claude):** 8:30 → Je zit een uur te vroeg. Tel de uren nog eens na. · 9:40 → Tel de minuten tot het hele uur en de minuten daarna apart.
-    - **Uitleg (Claude):** Tel eerst 1 uur erbij: 9:10. Nog 20 minuten verder: 9:30.
+    - **Opgave:** De kinderen vertrekken om 8.10 uur. De reis duurt 1 uur en 20 minuten. Hoe laat komen ze aan? (Typ als 14.30.)
+    - **Antwoord:** 9.30 uur  (controle: ok)
+    - **Fout-hints (Claude):** 8.30 uur → Je zit een uur te vroeg. Tel de uren nog eens na. · 9.40 uur → Tel de minuten tot het hele uur en de minuten daarna apart.
+    - **Uitleg (Claude):** Tel eerst 1 uur erbij: 9.10 uur. Nog 20 minuten verder: 9.30 uur.
   - `G5-MEET-E06-claude-bank-1210` (Claude M14, gegenereerd, niveau 3 → toepassen)
-    - **Opgave:** De spelers vertrekken om 8:40. De reis duurt 2 uur en 50 minuten. Hoe laat komen ze aan? Typ de tijd, zoals 9:05.
-    - **Antwoord:** 11:30  (controle: ok)
-    - **Fout-hints (Claude):** 10:90 → Een uur heeft 60 minuten. Komen de minuten boven de 60, dan gaat er een uur bij. · 10:30 → Je zit een uur te vroeg. Tel de uren nog eens na. · 11:40 → Tel de minuten tot het hele uur en de minuten daarna apart.
-    - **Uitleg (Claude):** Ga via het hele uur. Van 8:40 tot 9:00 is 20 minuten. Dan 2 uur: 11:00. Nog 30 minuten verder: 11:30.
+    - **Opgave:** De spelers vertrekken om 8.40 uur. De reis duurt 2 uur en 50 minuten. Hoe laat komen ze aan? (Typ als 14.30.)
+    - **Antwoord:** 11.30 uur  (controle: ok)
+    - **Fout-hints (Claude):** 10:90 → Een uur heeft 60 minuten. Komen de minuten boven de 60, dan gaat er een uur bij. · 10.30 uur → Je zit een uur te vroeg. Tel de uren nog eens na. · 11.40 uur → Tel de minuten tot het hele uur en de minuten daarna apart.
+    - **Uitleg (Claude):** Ga via het hele uur. Van 8.40 uur tot 9.00 uur is 20 minuten. Dan 2 uur: 11.00 uur. Nog 30 minuten verder: 11.30 uur.
 
 - **Hint 1 (te schrijven):** Tel eerst de hele uren erbij. Tel daarna de minuten erbij.
 - **Hint 2 (te schrijven):** Komen de minuten op zestig of meer? Dan is dat een uur erbij. Een uur heeft zestig minuten.
 - **Ouderzin:** Je kind rekent uit hoe laat iets aankomt als de reis uren en minuten duurt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `zestig minuten of meer` (Claudes sleutel: tijd-als-kommagetal) → Zestig minuten of meer kan niet achter de dubbele punt. Een uur heeft zestig minuten: dan komt er een uur bij.  [Claude, taalfix]
+  - `zestig minuten of meer` (Claudes sleutel: tijd-als-kommagetal) → Achter de punt staan de minuten. Dat kunnen er niet zestig of meer zijn: een uur heeft zestig minuten. Dan komt er een uur bij.  [Claude, taalfix]
   - `een uur te vroeg` (fout = klok een uur te vroeg) → Dat is een uur te vroeg. Heb je alle hele uren van de reis erbij geteld?  [nieuw]
   - `een uur te laat` (fout = klok een uur te laat) → Dat is een uur te laat. Tel de hele uren van de reis nog eens.  [nieuw]
   - `tien minuten te laat` (fout = klok tien minuten te laat) → De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?  [nieuw]
   - `tien minuten te vroeg` (fout = klok tien minuten te vroeg) → De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?  [nieuw]
   - `uren of minuten ernaast` (Claudes sleutel: tiental-ernaast) → Dat klopt niet helemaal. Tel de uren en de minuten nog eens apart erbij. Kijk of je over het hele uur heen gaat.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel eerst de hele uren erbij, en daarna de minuten. Een uur heeft zestig minuten: kom je over het hele uur heen, dan komt er een uur bij.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '[wie] vertrekken om #:#. De reis duurt # uur en # minuten. Hoe laat komen ze aan? Typ de tijd, zoals #:#.'. Nakijken of ze nog passen.
 - Status: hints klaar
 
-## Somtype 24: [wie] vertrekken om #:#. De reis duurt # minuten. Hoe laat komen ze aan? Typ de tijd, zoals #:#.
+## Somtype 24: [wie] vertrekken om #.# uur. De reis duurt # minuten. Hoe laat komen ze aan? (Typ als 14.30.)
 
 - Sleutel: nrOrigineel **23** · somtypeOrigineel “[wie] vertrekken om #:#. De reis duurt # minuten. Hoe laat komen ze aan? Typ de tijd, zoals #:#.” (koppeling: claudeId)
 - Items: **4** · Claude-doelen: M14 (4) · regel: G5-M03-tijdsduur
@@ -754,25 +759,26 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - Verschillende Claude-fout-hints: 3 (meest: “Je zit een uur te vroeg. Tel de uren nog eens na.”)
 - Voorbeelden:
   - `G5-MEET-E06-claude-bank-1201` (Claude M14, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** De kinderen vertrekken om 16:45. De reis duurt 35 minuten. Hoe laat komen ze aan? Typ de tijd, zoals 9:05.
-    - **Antwoord:** 17:20  (controle: ok)
-    - **Fout-hints (Claude):** 16:80 → Een uur heeft 60 minuten. Komen de minuten boven de 60, dan gaat er een uur bij. · 16:20 → Je zit een uur te vroeg. Tel de uren nog eens na. · 17:30 → Tel de minuten tot het hele uur en de minuten daarna apart.
-    - **Uitleg (Claude):** Ga via het hele uur. Van 16:45 tot 17:00 is 15 minuten. Nog 20 minuten verder: 17:20.
+    - **Opgave:** De kinderen vertrekken om 16.45 uur. De reis duurt 35 minuten. Hoe laat komen ze aan? (Typ als 14.30.)
+    - **Antwoord:** 17.20 uur  (controle: ok)
+    - **Fout-hints (Claude):** 16:80 → Een uur heeft 60 minuten. Komen de minuten boven de 60, dan gaat er een uur bij. · 16.20 uur → Je zit een uur te vroeg. Tel de uren nog eens na. · 17.30 uur → Tel de minuten tot het hele uur en de minuten daarna apart.
+    - **Uitleg (Claude):** Ga via het hele uur. Van 16.45 uur tot 17.00 uur is 15 minuten. Nog 20 minuten verder: 17.20 uur.
   - `G5-MEET-E06-claude-bank-1203` (Claude M14, gegenereerd, niveau 2 → toepassen)
-    - **Opgave:** De spelers vertrekken om 17:50. De reis duurt 25 minuten. Hoe laat komen ze aan? Typ de tijd, zoals 9:05.
-    - **Antwoord:** 18:15  (controle: ok)
-    - **Fout-hints (Claude):** 17:75 → Een uur heeft 60 minuten. Komen de minuten boven de 60, dan gaat er een uur bij. · 17:15 → Je zit een uur te vroeg. Tel de uren nog eens na. · 18:25 → Tel de minuten tot het hele uur en de minuten daarna apart.
-    - **Uitleg (Claude):** Ga via het hele uur. Van 17:50 tot 18:00 is 10 minuten. Nog 15 minuten verder: 18:15.
+    - **Opgave:** De spelers vertrekken om 17.50 uur. De reis duurt 25 minuten. Hoe laat komen ze aan? (Typ als 14.30.)
+    - **Antwoord:** 18.15 uur  (controle: ok)
+    - **Fout-hints (Claude):** 17:75 → Een uur heeft 60 minuten. Komen de minuten boven de 60, dan gaat er een uur bij. · 17.15 uur → Je zit een uur te vroeg. Tel de uren nog eens na. · 18.25 uur → Tel de minuten tot het hele uur en de minuten daarna apart.
+    - **Uitleg (Claude):** Ga via het hele uur. Van 17.50 uur tot 18.00 uur is 10 minuten. Nog 15 minuten verder: 18.15 uur.
 
 - **Hint 1 (te schrijven):** Tel de minuten erbij. Kom je over het hele uur heen?
 - **Hint 2 (te schrijven):** Ga je over het hele uur heen? Tel dan eerst tot het hele uur, en daarna de minuten die nog over zijn. Een uur heeft zestig minuten.
 - **Ouderzin:** Je kind rekent uit hoe laat iets aankomt als de reis een aantal minuten duurt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `zestig minuten of meer` (Claudes sleutel: tijd-als-kommagetal) → Zestig minuten of meer kan niet achter de dubbele punt. Een uur heeft zestig minuten: dan komt er een uur bij.  [Claude, taalfix]
+  - `zestig minuten of meer` (Claudes sleutel: tijd-als-kommagetal) → Achter de punt staan de minuten. Dat kunnen er niet zestig of meer zijn: een uur heeft zestig minuten. Dan komt er een uur bij.  [Claude, taalfix]
   - `een uur te vroeg` (fout = klok een uur te vroeg) → Dat is een uur te vroeg: dan kom je aan vóór je vertrekt. Kom je over het hele uur heen? Dan komt er een uur bij.  [nieuw]
   - `een uur te laat` (fout = klok een uur te laat) → Dat is een uur te laat. De reis duurt korter dan een uur. Er komt alleen een uur bij als je over het hele uur heen gaat.  [nieuw]
   - `tien minuten te laat` (fout = klok tien minuten te laat) → De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?  [nieuw]
   - `tien minuten te vroeg` (fout = klok tien minuten te vroeg) → De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?  [nieuw]
   - `uren of minuten ernaast` (Claudes sleutel: tiental-ernaast) → Dat klopt niet helemaal. Tel de uren en de minuten nog eens apart erbij. Kijk of je over het hele uur heen gaat.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel de minuten erbij. Een uur heeft zestig minuten: kom je over het hele uur heen, dan komt er een uur bij.  [nieuw]
+- **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor '[wie] vertrekken om #:#. De reis duurt # minuten. Hoe laat komen ze aan? Typ de tijd, zoals #:#.'. Nakijken of ze nog passen.
 - Status: hints klaar
