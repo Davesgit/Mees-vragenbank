@@ -173,3 +173,4 @@ De WARN komt uit de nieuwe check LES250 (Oef-#484, `tools/les250_check.py`, in c
 ### Verdict Didactiek op c44ec26
 - Zacht open (zie r13/R13.md): Z-#1012–#1015, Z-#1017 (Oef-#1022), Z-#1019, Z-#1080–#1082; Oef-#1031 alleen bij variant B voor Z-#1062.
 - Z-#1084: G4 gesynct en gestempeld (hintsSyncOp 20:19:02, schrijflog); apply_hints stempelt nu zoals G5.
+- 15 okt: Z-#1076 motorbinding '(op de foto)' in G4-MEET-E07 #1; G4 opnieuw gesynct en gestempeld.

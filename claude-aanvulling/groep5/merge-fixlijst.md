@@ -627,3 +627,4 @@ Checks op r13/g5 (8 okt ±18:20): check_hints 139 klaar · 0 open · 0 FAIL · 2
 
 ### Verdict Didactiek op c44ec26
 - Zacht open (zie r13/R13.md): Z-#1012–#1015, Z-#1017 (Oef-#1022), Z-#1019, Z-#1080–#1082; Oef-#1031 alleen bij variant B voor Z-#1062.
+- 15 okt: V-#1072 en Z-#1076 geplaatst (G5-MEET-E07 #1 19/86/77), Z-#1075 (#32, FAIL 0). Zie R13.md.

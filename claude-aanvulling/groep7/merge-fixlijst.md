@@ -494,3 +494,4 @@ Alleen deze 5 items zijn veranderd (vergeleken met de repo: 5 items anders, verd
 ### Verdict Didactiek op c44ec26
 - Zacht open (zie r13/R13.md): Z-#1012–#1015, Z-#1017 (Oef-#1022), Z-#1019, Z-#1080–#1082; Oef-#1031 alleen bij variant B voor Z-#1062.
 - V-#1080: TYPVOORBEELD ziet nu ook «bijvoorbeeld X»: 24 FAIL in MEET-04 021–044, tot Oefeningen «bijvoorbeeld −20» zet en de motor opnieuw draait (42 foute sleutels '−3'/'-3' moeten weg). Z-#1083: R13.md gecorrigeerd (946 sleutels: 290 tweelingen + 656 nieuw).
+- 15 okt: V-#1080 geplaatst (021–044 «bijvoorbeeld −20», sleutels 182 → 118, TYPVOORBEELD 0). De motor staat nu in groep7/scripts/fout_regels.py. Oef-#1034 n.v.t.; Z-#1090 na merge.

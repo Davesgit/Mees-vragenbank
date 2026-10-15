@@ -164,6 +164,13 @@ for n_, (e_, nw_, r_) in {'072': ('10', '20', 'fout = antwoord + perstreep'), '1
                           '076': ('45', '15', 'fout = een andere maand'), '115': ('20', '5', 'fout = een andere maand')}.items():
     VC107X[f'G6-VBN-E02-claude-bank-{n_}'] = ('V-#1073', 6, e_, nw_, r_)
 VC107X['G5-VBN-E01-claude-bank-283'] = ('Z-#1074', 5, '125', '90', 'fout = verschil van twee cellen')
+# V-#1072 (Didactiek 20:09/20:13; hook Oefeningen zet_v1072.py 470bee78, V1072_STRIKT=1 + Z1076=1): G5-MEET-E07 #1, de lage afleider 'te weinig geteld'
+# (antwoord − kleinste munt) wordt antwoord + de kleinste munt uit visual.jsRender.munten. De regel komt pas met de hook: vóór de hook mag de route nog
+# ontbreken (WACHT1072), na de hook moet hij precies [regel] zijn (idempotente tweede run + check107x).
+V1072 = json.load(open(f'{R13}/voorstel_v1072.json', encoding='utf-8')); WACHT1072 = set()
+for n_, v_ in V1072.items():
+    assert v_['nieuw=antw+k'] and v_['kleinsteMunt'] in v_['munten'], n_
+    VC107X[v_['id']] = ('V-#1072', 5, v_['oud'], v_['nieuw'], f"fout = antwoord + {v_['kleinsteMunt']} cent (op de foto)"); WACHT1072.add(v_['id'])
 _MOTOR = {}
 def _motor(g):
     if g not in _MOTOR:
@@ -183,11 +190,13 @@ def vormcue107x(it, log):
     vnr, g, eruit, nieuw, regel = VC107X[it['id']]; ops = [o['tekst'] for o in it['opties']]
     if nieuw in ops and eruit not in ops:      # al gedaan (idempotent); route opnieuw bewijzen
         rr = routes(it, g, nieuw)
-        if rr != [regel]: raise SystemExit(f"{vnr} {it['id']}: {nieuw} heeft routes {rr}, verwacht precies [{regel!r}]")
+        if rr != [regel] and not (it['id'] in WACHT1072 and regel not in [r_['regel'] for r_ in it.get('foutRegels') or []]):
+            raise SystemExit(f"{vnr} {it['id']}: {nieuw} heeft routes {rr}, verwacht precies [{regel!r}]")
         return
     if eruit not in ops or nieuw in ops or nieuw == str(it['antwoord']): raise SystemExit(f"{vnr} {it['id']}: opties {ops} passen niet bij {eruit} → {nieuw}")
     rr = routes(it, g, nieuw)
-    if rr != [regel]: raise SystemExit(f"{vnr} {it['id']}: {nieuw} heeft routes {rr}, verwacht precies [{regel!r}] (les 306/415)")
+    if rr != [regel] and not (it['id'] in WACHT1072 and regel not in [r_['regel'] for r_ in it.get('foutRegels') or []]):      # V-#1072: regel komt met de hook
+        raise SystemExit(f"{vnr} {it['id']}: {nieuw} heeft routes {rr}, verwacht precies [{regel!r}] (les 306/415)")
     voor_soort = [f.get('soort') for f in it.get('foutHints') or [] if f.get('fout') != eruit]
     it['opties'] = [dict(o, tekst=nieuw) if o['tekst'] == eruit else o for o in it['opties']]
     if it.get('optiesTekst'): it['optiesTekst'] = ' · '.join(f"{o['letter']}) {o['tekst']}" for o in it['opties'])

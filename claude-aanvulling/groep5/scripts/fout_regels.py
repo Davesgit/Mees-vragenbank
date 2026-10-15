@@ -789,6 +789,9 @@ def _compile_regel(regel, c):
     if m:
         if c.ac is None: return None
         d = int(m.group(2)) if m.group(2) else int(m.group(3)) * 100
+        if (f1076_ := re.search(r'\((niet )?op de foto\)', r)):      # Z-#1076: alleen als munt d (niet) op de foto ligt; niet bewezen = vuurt niet
+            mu1076_ = _munten_foto1076(c.it)
+            if mu1076_ is None or ((d in mu1076_) == bool(f1076_.group(1))): return {'exact': set()}
         doel = ([c.ac - d] if m.group(1) in ('±', '-') and c.ac - d >= 0 else []) + ([c.ac + d] if m.group(1) in ('±', '+') else [])
         return {'exact': {geld(x) for x in doel}, 'pred': lambda v: _cent(v) in doel}
     # getallen
@@ -1284,3 +1287,13 @@ def pas_toe(it, st, alle_cellen=None):
     return [regels.get(json_klok(r), r) for r in terug] if isinstance(terug, list) else terug
 def _regels_van(st): return [f.get('regel') for f in st.get('foutHints') or []]
 def json_klok(r): return r if isinstance(r, str) else repr(r)
+
+def _munten_foto1076(it):      # Z-#1076 (Oefeningen, hook zet_v1072.py): munten op de foto (cent) of None (niet bewezen)
+    import os as _o
+    for p_ in ([_o.environ['V1072_FOTOVELD']] if _o.environ.get('V1072_FOTOVELD') else ['visual.munten', 'visual.muntenOpFoto', 'visual.jsRender.muntenOpFoto', 'visual.opDeFoto', 'visual.jsRender.munten']):
+        v_ = it
+        for k_ in p_.split('.'): v_ = v_.get(k_) if isinstance(v_, dict) else None
+        if isinstance(v_, list) and all(isinstance(m_, int) for m_ in v_): return v_
+    if _o.environ.get('V1072_STRIKT') == '1': return None
+    vis_ = it.get('visual') or {}; jr_ = vis_.get('jsRender') or {}
+    return jr_['munten'] if jr_.get('soort') == 'geld' and isinstance(jr_.get('munten'), list) and jr_['munten'] and not vis_.get('svgBestanden') else None
