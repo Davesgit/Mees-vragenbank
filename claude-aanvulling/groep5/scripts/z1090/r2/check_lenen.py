@@ -28,6 +28,10 @@ if MUT == 'M_onthH': x_, k_ = eerste(lambda x: onthoudt(x, 100), False, 'honderd
 if MUT == 'M_1040': next(k for x in I[('G5-GET-E05', 17)] for k in x['foutHints'] if k['fout'] in ('99', '97'))['soort'] = 'honderdtal vergeten'
 if MUT == 'M_1040t': next(k for x in I[('G5-GET-E05', 17)] for k in x['foutHints'] if k['fout'] in ('99', '97'))['uitleg'] = 'Dat is één tiental te weinig. Tel de tientallen nog eens bij elkaar.'
 if MUT == 'M_cijfer': x_, k_ = eerste(lambda x: onthoudt(x), True, '(onthouden)'); k_['uitleg'] = 'Tel de eenheden nog eens: als ze samen 10 of meer zijn, komt er een tiental bij.'
+if MUT == 'M_honderd': x_, k_ = eerste(lambda x: onthoudt(x, 100), False, 'honderdtal te weinig'); k_['uitleg'] = 'Tel de tientallen nog eens: als ze samen honderd of meer zijn, komt er een honderdtal bij.'      # V-#1130
+if MUT == 'M_cijfer100': x_, k_ = eerste(lambda x: onthoudt(x, 100), True, '(onthouden)'); k_['uitleg'] = 'Tel de tientallen nog eens: als ze samen 100 of meer zijn, komt er een honderdtal bij.'
+if MUT == 'M_leenH': x_, k_ = eerste(lambda x: leent(x, 100), False, 'honderdtal te veel'); k_['uitleg'] = 'Dat is te veel. Bij de tientallen ga je over een heel honderdtal heen: dan gaat er nog een honderdtal af.'
+if MUT == 'M_bedragH': next(k for x in I[('G5-GET-E05', 7)] for k in x['foutHints'] if k['soort'] == 'honderdtal te veel')['uitleg'] = 'Dat is één honderdtal te veel. Haal de honderdtallen nog eens af.'      # r4 (a)
 if MUT == 'M_snap': x_, k_ = eerste(lambda x: leent(x), True, '(geleend)'); k_['uitleg'] = (k_.get('uitleg') or '') + ' Reken goed.'
 snap, n_l, n_o, mis = {}, 0, 0, []
 for (d, n), xs in I.items():
@@ -40,13 +44,22 @@ for (d, n), xs in I.items():
                     if not rx.search(t): continue
                     if re.search(r'\d', t): F.append(f"cijfer in leen-/onthoudzin (Oef-#1049) {d} #{n} {x['nr']} sleutel {k['fout']!r} [{v}]: {t[:70]}")
                     w = fn(x); snap[f"{d}#{n} {x['nr']} {k['fout']} {v} {naam}"] = [k['soort'], w, t]
-                    n_l += naam == 'leen'; n_o += naam != 'leen'
-                    if w is not True: F.append(f"{'lenen' if naam == 'leen' else 'onthouden'} {d} #{n} {x['nr']} sleutel {k['fout']!r} [{v}]: {'geen ' + ('lenen' if naam == 'leen' else 'onthouden') if w is False else 'som niet te lezen'} ({x['opgave'][:50]} → {x['antwoord']}): {t[:70]}")
+                    n_l += naam.startswith('leen'); n_o += not naam.startswith('leen')
+                    if w is not True: F.append(f"{'lenen' if naam.startswith('leen') else 'onthouden'} {d} #{n} {x['nr']} sleutel {k['fout']!r} [{v}]: {'geen ' + ('lenen' if naam.startswith('leen') else 'onthouden') if w is False else 'som niet te lezen'} ({x['opgave'][:50]} → {x['antwoord']}): {t[:70]}")
             # gemist: item leent/onthoudt wel, maar de sleutel kreeg de tekst zonder uitleg (motor las de som anders) → INFO
             if k['soort'].endswith(('tiental te veel', 'tiental te weinig')) and d.startswith('G5-GET-E05'):
                 e = ENT.get((d, n)); 
                 if e and any(f['soort'] == k['soort'] + ' (geleend)' or f['soort'] == k['soort'] + ' (onthouden)' for f in e['foutHints']):
                     if (leent(x) if 'veel' in k['soort'] else onthoudt(x)): mis.append(f"{d} #{n} {x['nr']} {k['fout']}")
+# r4 (a): de 'zonder'-tekst van een gesplitste regel noemt geen bedrag
+for (d, n), xs in I.items():
+    e = ENT.get((d, n))
+    if not d.startswith('G5-GET') or not e: continue
+    gespl = {f['soort'][:-len(' (geleend)')] for f in e['foutHints'] if f['soort'].endswith(' (geleend)')} | {f['soort'][:-len(' (onthouden)')] for f in e['foutHints'] if f['soort'].endswith(' (onthouden)')}
+    for x in xs:
+        for k in x['foutHints']:
+            if k['soort'] in gespl and re.search(r'\b(één|een) (honderdtal|tiental) te (veel|weinig)\b', k.get('uitleg') or ''):
+                F.append(f"bedrag in zonder-tekst {d} #{n} {x['nr']} sleutel {k['fout']!r}: {k['uitleg'][:60]}")
 # Oef-#1040
 e17 = ENT.get(('G5-GET-E05', 17))
 if e17 is not None:

@@ -36,8 +36,10 @@ for P in sorted(glob.glob(os.path.join(G, 'hints', 'batch*.json'))):
                     z = zonder(g[v], n)
                     if z is None: ok = False; break
                     rich = 'veel' if '+' in rg else 'weinig'
-                    if v == 'tekst' and not z.startswith('Dat is te'): z = f'Dat is te {rich}. ' + z
-                    if not KIJK.search(re.sub(r'^Dat is te \w+\.', '', z)): z = (z + ' ' + kijk).strip()
+                    if v == 'tekst': z = re.sub(r'^Dat is (?:één|een) (?:honderdtal|tiental) te (veel|weinig)\.', r'Dat is te \1.', z)      # r4 (a): geen bedrag in de 'zonder'-tekst
+                    if v == 'tekst' and not z.startswith('Dat is'):      # r3: 'Dat is één honderdtal te veel.' blijft staan (bedrag: Z-#1091)
+                     z = f'Dat is te {rich}. ' + z
+                    if not KIJK.search(re.sub(r'^Dat is [^.]*\.', '', z)): z = (z + ' ' + kijk).strip()
                     g[v] = re.sub(r'\s+', ' ', z).strip()
             if not ok: MELD.append(f"{s['doel']} #{s['nrOrigineel']} {f['soort']!r}: uitleg in een onbekende vorm: niet gezet"); uit.append(f); continue
             met = sum(w is True for w in waar)
@@ -51,8 +53,8 @@ for P in sorted(glob.glob(os.path.join(G, 'hints', 'batch*.json'))):
         for f in uit:
             for v in ('tekst', 'tekstSterker'):
                 t_ = f.get(v)
-                if isinstance(t_, str) and any(rx.search(t_) for _, rx, *_r in SOORTEN) and re.search(r'samen 10 of meer', t_):
-                    f[v] = t_.replace('samen 10 of meer', 'samen tien of meer'); LOG.append(f"{s['doel']} #{s['nrOrigineel']} {f['soort']!r} [{v}]: '10 of meer' → 'tien of meer' (Oef-#1049)")
+                if isinstance(t_, str) and any(rx.search(t_) for _, rx, *_r in SOORTEN) and re.search(r'samen 10{1,2} of meer', t_):
+                    f[v] = t_.replace('samen 100 of meer', 'samen honderd of meer').replace('samen 10 of meer', 'samen tien of meer'); LOG.append(f"{s['doel']} #{s['nrOrigineel']} {f['soort']!r} [{v}]: cijfer → woord (Oef-#1049/V-#1130)")
         s['foutHints'] = uit
     if len(LOG) > n0: schrijf(P, t, D)
 if SCOPE: json.dump(SCOPE, open(os.path.join(G, 'logs', 'z1090_lenen_scope.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
