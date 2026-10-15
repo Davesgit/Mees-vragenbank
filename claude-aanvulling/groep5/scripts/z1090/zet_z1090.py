@@ -26,6 +26,8 @@ ITEMS = {}
 for p in glob.glob(os.path.join(G5, 'data', 'per_doel', '*.json')):
     for x in json.load(open(p, encoding='utf-8'))['items']: ITEMS.setdefault((x['doelId'], x['merge'].get('somtypeNrOrigineel')), []).append(x)
 GEBONDEN = '_munten_foto1076' in open(os.path.join(G5, 'scripts', 'fout_regels.py'), encoding='utf-8').read()
+# Z-#1075 bezit G5-GET-E05 #32 (Z1075_WEINIG, Didactiek: «…Let goed op de tientallen die je onthoudt…», onthouden 8/8 nagerekend): buiten Z-#1090
+UITGESLOTEN = {('G5-GET-E05', 32, 'tiental te weinig'), ('G5-GET-E05', 32, 'tiental te veel')}
 LOG, MELD, SCOPE = [], [], []
 def nieuw(seg, soort, its):
     m = START.match(seg)
@@ -42,6 +44,7 @@ for P in sorted(glob.glob(os.path.join(G5, 'hints', 'batch*.json'))):
     for s in D['somtypen']:
         its = ITEMS.get((s['doel'], s['nrOrigineel']), []); uit = []
         for f in s['foutHints']:
+            if (s['doel'], s['nrOrigineel'], f['soort']) in UITGESLOTEN: uit.append(f); continue
             g = copy.deepcopy(f); info = None
             for k in ('tekst', 'tekstSterker'):
                 if isinstance(g.get(k), str):
