@@ -4,7 +4,7 @@ De vragenbank van **LeerMees**: een gratis, rustig en didactisch rekenplatform v
 
 Deze repo is de bron om verder te werken, voor mensen en voor AI-tools (ChatGPT, Claude en andere). Alle kindteksten zijn Nederlands.
 
-Stand: 15 oktober 2026. G8 is definitief goedgekeurd (Didactiek, taal: ok). De fixes voor G3–G7 (ronde r13) staan op de branch `na-ronde-r13` en liggen bij Didactiek voor de hercheck (zie [Stand per groep](#stand-per-groep)).
+Stand: 15 oktober 2026. G3–G8 zijn definitief goedgekeurd (Didactiek, taal: ok). Ronde r13 (G3–G7) is op 15 oktober naar main gemerged (zie [Stand per groep](#stand-per-groep)).
 
 ## Mappen
 
@@ -119,11 +119,11 @@ Wat nog hints nodig heeft: [`claude-aanvulling/hints_todo.md`](claude-aanvulling
 
 | Groep | Canonieke bank | Claude-aanvulling | Somtypen met hints | Stand |
 |---|---|---|---|---|
-| G3 | 44 leerdoelen · 284 items | 1.519 items · 26 leerdoelen | 83 van 83 | **Klaar.** Checks: 0 FAIL · 1 WARN. Fixes ronde r13 op `na-ronde-r13`, bij Didactiek voor de hercheck. |
-| G4 | 46 leerdoelen · 368 items | 1.855 items · 24 leerdoelen | 97 van 97 | **Goedgekeurd** (Didactiek: taal: ok, build 15:46:18). Checks: 0 FAIL · 3 WARN. Fixes ronde r13 op `na-ronde-r13`, bij Didactiek voor de hercheck. |
-| G5 | 40 leerdoelen · 320 items | 4.845 items · 22 leerdoelen | 139 van 139 | **Ronde 11 verwerkt** (na-ronde r12, build 12:47:18). Checks: 0 FAIL · 2 WARN. Fixes ronde r13 op `na-ronde-r13`, bij Didactiek voor de hercheck. Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`. |
-| G6 | 44 leerdoelen · 352 items | 4.302 items · 23 leerdoelen | 102 van 102 | **Ronde 11 verwerkt** (build 12:11:42). Checks: 0 FAIL · 3 WARN. Fixes ronde r13 op `na-ronde-r13`, bij Didactiek voor de hercheck. Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`. |
-| G7 | 25 leerdoelen · 200 items (+ 16 in een Claude-set en 12 pilotbestanden) | 7.646 items · 17 leerdoelen | 155 van 155 | **Taal: ok, heel G7** (Didactiek 8 okt). Laatste build 16:20:58. Checks: 0 FAIL · 0 WARN. Fixes ronde r13 op `na-ronde-r13`, bij Didactiek voor de hercheck. |
+| G3 | 44 leerdoelen · 284 items | 1.519 items · 26 leerdoelen | 83 van 83 | **Definitief goedgekeurd** (Didactiek 15 okt, taal: ok, hercheck r13 op dda7ade); ronde r13 gemerged naar main (c91a4cf). Checks: 0 FAIL · 1 WARN. |
+| G4 | 46 leerdoelen · 368 items | 1.855 items · 24 leerdoelen | 97 van 97 | **Definitief goedgekeurd** (Didactiek 15 okt, taal: ok, hercheck r13 op dda7ade); ronde r13 gemerged naar main (c91a4cf). Checks: 0 FAIL · 3 WARN. |
+| G5 | 40 leerdoelen · 320 items | 4.845 items · 22 leerdoelen | 139 van 139 | **Definitief goedgekeurd** (Didactiek 15 okt, taal: ok, hercheck r13 op dda7ade); ronde r13 gemerged naar main (c91a4cf). Daarna V-#1110 (G5-VBN-E01 #4, vormcue 15/10/5). Checks: 0 FAIL · 2 WARN. Z-#1090 staat apart op de branch `na-ronde-z1090`. Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`. |
+| G6 | 44 leerdoelen · 352 items | 4.302 items · 23 leerdoelen | 102 van 102 | **Definitief goedgekeurd** (Didactiek 15 okt, taal: ok, hercheck r13 op dda7ade); ronde r13 gemerged naar main (c91a4cf). Checks: 0 FAIL · 3 WARN. Het kritisch concept (L-R10b) is **voorlopig**. Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`. |
+| G7 | 25 leerdoelen · 200 items (+ 16 in een Claude-set en 12 pilotbestanden) | 7.646 items · 17 leerdoelen | 155 van 155 | **Definitief goedgekeurd** (Didactiek 15 okt, taal: ok, hercheck r13 op dda7ade); ronde r13 gemerged naar main (c91a4cf). Checks: 0 FAIL · 0 WARN. |
 | G8 | 37 leerdoelen · 296 items | 1.458 items · 23 leerdoelen | 206 van 206 | **Goedgekeurd** (Didactiek 15 okt, taal: ok; build 15 okt 16:11:31, commit 337ba06). Checks: b1–b9 0 FAIL, check_hints 0 FAIL · 0 WARN, merge-notatie OK; mutanten b6/b8/b9 66/74/71 gevangen (`claude-aanvulling/groep8/tools/`). VBN-V01 #1 001–012 gaan niet live zonder beeld. |
 
 **G5 en G6 (ronde 9):** de builds zijn van 8 oktober, G5 10:57:42 en G6 10:58:34 (veld `gegenereerdOp`), met de motor `scripts/fout_regels.py` die hier staat (gelijk in G5–G8). Elk databestand heeft ook `hintsSyncOp` en `hintsBatches` (welke hint-batches erin zitten). Bord, app en rapporten werken op `id`, niet op `nr` of het somtypenummer: die kunnen verschuiven. G5 heeft 139 somtypen, want E07 #6 (TT × TT schatten, 10 items) is naar G6-GET-E06 gegaan. G6 heeft 94 somtypen, want MKU-E01 #3 en #4 zijn samengevoegd met #1 en GET-E06 heeft er één bij.
