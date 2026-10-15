@@ -167,6 +167,9 @@ VC107X['G5-VBN-E01-claude-bank-283'] = ('Z-#1074', 5, '125', '90', 'fout = versc
 # V-#1072 (Didactiek 20:09/20:13; hook Oefeningen zet_v1072.py 470bee78, V1072_STRIKT=1 + Z1076=1): G5-MEET-E07 #1, de lage afleider 'te weinig geteld'
 # (antwoord − kleinste munt) wordt antwoord + de kleinste munt uit visual.jsRender.munten. De regel komt pas met de hook: vóór de hook mag de route nog
 # ontbreken (WACHT1072), na de hook moet hij precies [regel] zijn (idempotente tweede run + check107x).
+# V-#1110 (Didactiek hercheck dda7ade, zacht; 15 okt): G5-VBN-E01 #4 (15/15/0) → 15/10/5: vijf afleiders → een getal uit de tabel ('één getal', fout = andere cel)
+for n_, (e_, nw_) in {'285': ('215', '85'), '280': ('360', '110'), '301': ('600', '85'), '303': ('300', '85'), '279': ('305', '35')}.items():
+    VC107X[f'G5-VBN-E01-claude-bank-{n_}'] = ('V-#1110', 5, e_, nw_, 'fout = andere cel')
 V1072 = json.load(open(f'{R13}/voorstel_v1072.json', encoding='utf-8')); WACHT1072 = set()
 for n_, v_ in V1072.items():
     assert v_['nieuw=antw+k'] and v_['kleinsteMunt'] in v_['munten'], n_

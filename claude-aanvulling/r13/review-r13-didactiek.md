@@ -389,3 +389,87 @@ G4–G6 worden definitief zodra VORMCUE groen is. Daarvoor hoeft taalkundig niet
 - **421.** Een afleiderfix die één cue weghaalt, kan een andere cue maken (centen → rang). Meet na elke afleiderwissel ook de rang van het goede antwoord.
 - **422.** Bij waar/fout-items telt de bewering als getal mee in de rang-check. Omrekenafleiders ÷10/×10 zetten het goede antwoord altijd in het midden.
 - **423.** Bewijs op oude data kan alleen als de oude data de fout bevatten. Is dat niet zo (TIJDSDUUR 0 op 482a19f en 983900d), meld dan dat de guard alleen op mutanten rust.
+
+## Hercheck dda7ade (Didactiek, 15 okt, op na-ronde-r13 dda7ade)
+Snapshot via git archive (dda7ade en c44ec26, met tools/ en bevroren/), -B, PYTHONDONTWRITEBYTECODE. Er is niets uit live tools geïmporteerd en geen __pycache__ achtergelaten. Een meegekopieerde tools_snap/__pycache__ uit live tools (bouwsel_routes, 16:10, niet van mij) is uit de snapshot verwijderd; het live exemplaar is niet aangeraakt. Aan het eind stond de branch nog op dda7ade, dus er was geen nieuwe snapshot nodig (les 290).
+
+**hintsSyncOp-stempels (per_doel, dda7ade · c44ec26)**
+- G3: geen · geen
+- G4: 23× 08 okt 20:19:02 en 1× 20:31:52 · geen. De andere G4-per_doel-bestanden hebben alleen een nieuwe stempel: er is geen item veranderd.
+- G5: 17× 18:12:31, 2× 19:44:53, 1× 20:11:28 en 2× 20:35:55 · 17× 18:12:31 en 5× 19:44:53
+- G6: 19× 18:12:40, 3× 19:45:00 en 1× 20:11:37 · 19× 18:12:40 en 4× 19:45:00
+- G7: 15× 16:21:05, 1× 19:45:10 en 1× 20:36:24 · 15× 16:21:05 en 2× 19:45:10
+
+**1. Diff per item: 0 problemen.** Veranderde items:
+- G4-MEET-E07: 24
+- G4-VBN-E01: 12
+- G5-GET-E05: 8
+- G5-MEET-E07: 182, waarvan 167 alleen in foutRegels
+- G5-VBN-E01: 1
+- G6-VBN-E02: 5
+- G7-MEET-04: 24
+
+Elke route is opnieuw uitgerekend (les 285/306/392). Elke nieuwe waarde hoort bij precies één motorroute.
+- V-#1070, V-#1071, V-#1073 en Z-#1074 (283 → 90) komen overeen met de voorstellen. Alle 15 wissels van V-#1072 ook. Elke c ligt op de foto.
+- Z-#1076: waarden met '(op de foto)' liggen altijd op de foto, waarden met '(niet op de foto)' nooit. De teksten zijn neutraal.
+- Z-#1075 WEINIG geldt voor 013/015/017/053. De eenhedensom is daar steeds ≥ 20, dus er is echt een tiental onthouden.
+- De verklaptest is gehaald (les 300): geen enkele hint noemt een getal.
+
+**2. V-#1080: ok.**
+- De sleutels zijn 182 → 118. De 64 die wegvielen kwamen allemaal uit het typvoorbeeld '3/−3'.
+- Alle 118 sleutels zijn opnieuw uitgerekend: 48 'te koud' (a−1), 46 'getal uit de vraag' en 24 'min vergeten'.
+- Er is geen sleutel '20' of '−20'. De antwoorden liggen tussen −12 en −1.
+- TYPVOORBEELD gaat op FAIL bij de mutanten (−3 als sleutel, −2 als goed antwoord, 3) en bij de oude G7-data (24 treffers). Op de nieuwe data geeft de check 0 (les 321).
+
+**3. Checks: ok.**
+- check_hints G3–G7: 0 FAIL.
+- merge_notatie G3–G7: ALLES OK.
+- VORMCUE-mutanten: 17/17, zacht 4/4.
+- De vier verplichte verdelingen kloppen precies: 17/28/13, 9/26/19, 19/86/77 en 15/29/16.
+- Gate-mutant: de oude G5-MEET-E07 geeft FAIL (middelste 101/182).
+- Posities onder 10% komen allemaal van vóór deze ronde. G5-VBN-E01 #4 is daarvan de grootste (0/30).
+
+**V-#1110: G5-VBN-E01 #4 (15/15/0).** Dat het antwoord hier nooit de grootste waarde is, ligt niet aan de structuur van het somtype. Er zijn echte denkfouten die onder het antwoord uitkomen: de kleinere gevraagde cel ('één getal uit de tabel') of een verkeerd paar. Voorstel: vervang in 5 items één afleider. De hinttekst is de bestaande «Heb je één getal uit de tabel genomen? …».
+
+| item | antwoord | oud | nieuw | route |
+|---|---|---|---|---|
+| 285 | 130 | 215 | 85 | potloden woensdag |
+| 280 | 140 | 360 | 110 | appels dinsdag |
+| 301 | 130 | 600 | 85 | katten woensdag |
+| 303 | 130 | 300 | 85 | bananen donderdag |
+| 279 | 90 | 305 | 35 | fietsen maandag |
+
+De verdeling wordt dan 15/10/5. Dat geeft 0 FAIL en geen nieuwe 'nooit'.
+
+**5. Kritisch-concept (120 items, 30 somtypen).**
+- Rekenwerk: alle 120 items zijn nagerekend en kloppen. De 4 van M02 #1 heb ik met de hand nagekeken, de rest met een script.
+- Rangverdeling: 26/54/40. Dat is wat Overzicht meldt.
+- V-#1081 ✓:
+  - E09 #1 heeft 'teller en noemer omgedraaid'.
+  - E06/M06 hebben een grotere fout ('afgerond en niet teruggerekend').
+  - Bij afronden is in 1 van de 4 items het goede antwoord een veelvoud van de volgende eenheid (30.000 en 5000).
+  - M02 #1 heeft 'verkeerde plek'.
+- V-#1082 ✓: binnen een somtype komt geen getallenset dubbel voor.
+- V-#1083 ✓: M06 'onthouden vergeten' is echt de 4062-vorm (1265, 1284, 941, 1555).
+- V-#1084 ✓: geen omrekening van klein naar groot met een kommagetal als antwoord. Alle 60 omrekeningen hebben een heel getal als antwoord.
+
+Open zijn nog 3 somtypen waarin alle 4 items op dezelfde rang staan, dus meer dan 2 van de 4. Voorstel Z-#1111, wel nog door Oefeningen te bevestigen:
+- **GET-E04 #1** (4/4 klein): neem een denkfout die onder het antwoord uitkomt, bijvoorbeeld 'twee keer geleend' (antwoord − 100).
+- **MEET-E03 #2** (4/4 klein): neem 'de gegeven zijde genomen' als afleider. Die waarde valt soms onder en soms boven het antwoord: 6 tegen 5, 9 tegen 12, 7 tegen 8, 5 tegen 4.
+- **VERH-E02 #2** (4/4 groot): neem 'keer de teller, niet gedeeld' als afleider (40, 60, 30, 60). Die ligt boven het antwoord.
+
+**6. Merge.**
+- De guards zijn op main 337ba06 en op de branch identiek (vormcue d6316332, kloktijd 74626cf6). Z-#1078 is dus opgelost.
+- De G4-stempel en het G7-motorpad (groep7/scripts) mergen zonder conflict. Main raakt groep4 niet aan.
+- Main heeft scripts/fout_regels.py wel veranderd. Op de branch is dat bestand gelijk aan de merge-base, dus de versie van main gaat mee.
+- git merge-tree geeft één conflict, in claude-aanvulling/groep7/merge-fixlijst.md. Dat is alleen documentatie: beide kanten hebben een stuk toegevoegd. Neem beide stukken over.
+
+**Les 440:** controleer bij een concept met rangverdeling ook per somtype hoeveel items op dezelfde rang staan, en niet alleen het totaal. Het totaal 26/54/40 is in orde, maar daaronder zitten drie somtypen met 4/4 op één rang.
+
+**Verdict**
+- G3: taal ok · definitief
+- G4: taal ok · definitief
+- G5: taal ok · definitief. V-#1110 is een verbetering, geen blokkade.
+- G6: taal ok · definitief
+- G7: taal ok · definitief. Het doc-conflict in merge-fixlijst.md lossen we op bij de merge.
+- Kritisch-concept: bruikbaar · voorlopig. Voorbehoud: E04 #1, MEET-E03 #2 en VERH-E02 #2 (Z-#1111).
