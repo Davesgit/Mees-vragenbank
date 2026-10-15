@@ -30,9 +30,9 @@ Dit is een kubus. Hoeveel hoekpunten heeft een kubus? (Tel ook wat je niet ziet.
 - **Hint 2 (te schrijven):** Tel de hoekpunten aan de bovenkant en aan de onderkant bij elkaar op. Tel ook de hoekpunten die je niet ziet.
 - **Ouderzin:** Je kind telt de hoekpunten van een kubus, ook de hoekpunten die je niet ziet.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is er één te veel. Heb je er één dubbel geteld? Tel eerst de bovenkant, dan de onderkant.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat zijn er te veel. Heb je iets dubbel geteld? Tel eerst de bovenkant, dan de onderkant.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Heb je de hoekpunten dubbel geteld? Tel eerst de bovenkant, dan de onderkant.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is er één te weinig. Heb je ook de hoekpunten geteld die je niet ziet?  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat zijn er te weinig. Heb je ook de hoekpunten geteld die je niet ziet?  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Heb je ook de hoekpunten geteld die je niet ziet? De achterkant en de onderkant tellen ook mee.  [nieuw]
   - `andere fout` (andere fout) → Tel eerst de bovenkant, dan de onderkant. Tel ook de hoekpunten die je niet ziet.  [nieuw]
 - Status: hints klaar
@@ -59,9 +59,9 @@ Dit is een balk. Hoeveel ribben heeft een balk? (Tel ook wat je niet ziet.)
 - **Hint 2 (te schrijven):** Tel de ribben bovenop, de ribben onderaan en de ribben die van boven naar beneden lopen bij elkaar op. Tel ook de ribben die je niet ziet.
 - **Ouderzin:** Je kind telt de ribben van een balk, ook de ribben die je niet ziet.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is er één te veel. Heb je er één dubbel geteld? Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat zijn er te veel. Heb je iets dubbel geteld? Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Heb je de ribben dubbel geteld? Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is er één te weinig. Heb je ook de ribben geteld die je niet ziet?  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat zijn er te weinig. Heb je ook de ribben geteld die je niet ziet?  [nieuw]
   - `aantal vlakken` (fout = antwoord − 6) → Dat is te weinig. Zes is het aantal vlakken. Je telt de ribben: de randen waar twee vlakken tegen elkaar zitten.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Heb je ook de ribben geteld die je niet ziet? De achterkant en de onderkant tellen ook mee.  [nieuw]
   - `andere fout` (andere fout) → Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden. Tel ook de ribben die je niet ziet.  [nieuw]
@@ -90,9 +90,9 @@ Dit is een kubus. Hoeveel ribben heeft een kubus? (Tel ook wat je niet ziet.)
 - **Hint 2 (te schrijven):** Tel de ribben bovenop, de ribben onderaan en de ribben die van boven naar beneden lopen bij elkaar op. Tel ook de ribben die je niet ziet.
 - **Ouderzin:** Je kind telt de ribben van een kubus, ook de ribben die je niet ziet.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is er één te veel. Heb je er één dubbel geteld? Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat zijn er te veel. Heb je iets dubbel geteld? Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Heb je de ribben dubbel geteld? Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is er één te weinig. Heb je ook de ribben geteld die je niet ziet?  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat zijn er te weinig. Heb je ook de ribben geteld die je niet ziet?  [nieuw]
   - `aantal vlakken` (fout = antwoord − 6) → Dat is te weinig. Zes is het aantal vlakken. Je telt de ribben: de randen waar twee vlakken tegen elkaar zitten.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Heb je ook de ribben geteld die je niet ziet? De achterkant en de onderkant tellen ook mee.  [nieuw]
   - `andere fout` (andere fout) → Tel eerst het bovenvlak, dan het ondervlak, en dan de ribben van boven naar beneden. Tel ook de ribben die je niet ziet.  [nieuw]

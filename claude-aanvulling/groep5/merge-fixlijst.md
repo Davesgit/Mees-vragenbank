@@ -633,3 +633,4 @@ Checks op r13/g5 (8 okt ±18:20): check_hints 139 klaar · 0 open · 0 FAIL · 2
 
 - **Z-#1090 + V-#1130 opgelost (15 okt, Didactiek taal: ok, definitief op c533d6f; gemerged naar main 5549110):** ronde 2 lenen/onthouden + Oef-#1040 + Z-#1090 v2 + r4 (leenH). Scripts in `groep5/scripts/z1090/` (r4). check_hints 0 FAIL, check_lenen FAIL 0, check_z1090 FAIL 0.
 - **Z-#1091 (open, voorlopig):** bedragen uit hints; branch `na-ronde-z1091` (119de26). Wordt later door v3 vervangen.
+- **Z-#1091 v4 (open, ter review bij Didactiek; 15 okt):** branch `na-ronde-z1091-v4` (vanaf main ec3a77e), met V-#1136, V-#1137 en V-#1139. Vervangt `na-ronde-z1091` (119de26, v2) en `na-ronde-z1091-v3` (3d95866); die branches worden niet meer gebruikt. snap_lenen ververst (alleen 'één honderdtal te veel' → 'te veel', GET-E05 #10/#13). De mutanten M_bijna/M_bijnaI/M_woord hebben `<basis>/groep5_voor` (G5 vóór de hooks) nodig; zonder die map missen ze.
