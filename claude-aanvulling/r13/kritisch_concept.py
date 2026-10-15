@@ -9,6 +9,10 @@ Gebruik: python3 r13/kritisch_concept.py  (deterministisch, seed 13)."""
 import json, os, random, re, sys, collections, itertools
 from fractions import Fraction as F
 R13 = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, R13); import lijst as LJ
+# Z-#1126 (15 okt): in de repo staat r13/g6/data niet; dan de G6-data uit claude-aanvulling/groep6/data. Het concept in de repo is mét hook
+# (V-#1081, Didactiek 15 okt definitief op 1c76bc6) en wordt dan niet overschreven: uitvoer naar KRITISCH_UIT of een tijdelijke map.
+G6DATA = f'{R13}/g6/data' if os.path.isdir(f'{R13}/g6/data') else os.path.join(R13, '..', 'groep6', 'data')
+UIT = os.environ.get('KRITISCH_UIT') or (R13 if os.path.isdir(f'{R13}/g6/data') else __import__('tempfile').mkdtemp(prefix='kritisch_concept_'))
 NAMEN = ['Lisa', 'Tom', 'Kim', 'Ali', 'Sanne', 'Bram', 'Jet', 'Daan', 'Noor', 'Milan', 'Fleur', 'Sem']
 ZIJ = {'Lisa': 'Ze', 'Tom': 'Hij', 'Kim': 'Ze', 'Ali': 'Hij', 'Sanne': 'Ze', 'Bram': 'Hij', 'Jet': 'Ze', 'Daan': 'Hij', 'Noor': 'Ze', 'Milan': 'Hij', 'Fleur': 'Ze', 'Sem': 'Hij'}      # Z-#1081
 OEF_KIEST = {('G6-GET-E04', 1), ('G6-MEET-E03', 2), ('G6-VERH-E02', 2)}      # V-#1081: geen natuurlijke fout aan de andere kant → Oefeningen kiest er een, anders buiten de set
@@ -295,7 +299,7 @@ def guard_mutanten():
             'niveau (V-#1082)': any('niveau' in x for x in guards([it('n', False, 0, '1 kg is 100 g.', bew='100')[0]], {'MUT-n': {'q': 1, 'bank': (11, 28)}}))}
 def main():
     r = random.Random(13); kop = {}
-    G = json.load(open(f'{R13}/g6/data/gemapt.json'))['items']
+    G = json.load(open(f'{G6DATA}/gemapt.json'))['items']
     for it in G:
         if it['merge'].get('status') == 'gemapt':
             kop.setdefault((it['merge']['doel'], it['merge']['somtypeNrOrigineel']), it['merge']['somtype'])
@@ -371,7 +375,7 @@ def main():
             'jaOpLetter (waar/alle)': ja, 'wareItemNummer': dict(sorted(collections.Counter(int(it['id'].rsplit('-', 1)[1]) for it in items if it['beweringKlopt']).items())),
             'guards': 'FAIL 0', 'guardMutanten': M}
     uit = {'uitleg': __doc__, 'aantal': len(items), 'somtypes': len({(i['doelId'], i['somtypeNrOrigineel']) for i in items}), 'statistiek': stat, 'nietGegenereerd': niet, 'items': items}
-    json.dump(uit, open(f'{R13}/kritisch_concept_g6.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    json.dump(uit, open(f'{UIT}/kritisch_concept_g6.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     L = ['# r13 L-R10b: kritisch-items G6 (CONCEPT, niet in data)', '',
          f'{len(items)} items in {uit["somtypes"]} somtypes: per somtype 2 beweringen waar en 2 fout, op willekeurige itemnummers. Bron: `r13/kritisch_concept.py` (seed 13). Ronde 2 volgens Didactiek review-r13 §8.',
          '', f"**Statistiek:** waar {stat['waar']} · fout {stat['fout']} · goede letter {stat['goedeLetter']} · 'Ja' op A/B/C (waar/alle) {ja} · nummer van het ware item {stat['wareItemNummer']}.",
@@ -380,6 +384,6 @@ def main():
          '', 'Niet gegenereerd: ' + '; '.join(f"{x['somtype']} ({x['reden']})" for x in niet) + '.', '',
          'Voor Oefeningen: H1 (alle somtypes), H2 per somtype en L1 per foute optie staan als voorstel in `conceptHints`; definitieve teksten en regels zijn van Oefeningen. Voor Didactiek: alternatief in twee stappen (eerst Ja/Nee, dan het getal typen; Leerlijn onduidelijk 6) staat open.', '']
     for i in items: L.append(f"- `{i['id']}` {i['opgave']} → **{i['antwoord']}** · opties: " + ' / '.join(o['tekst'] for o in i['opties']) + f" · H2: {i['conceptHints']['H2']}")
-    open(f'{R13}/kritisch_concept_g6.md', 'w', encoding='utf-8').write('\n'.join(L) + '\n')
+    open(f'{UIT}/kritisch_concept_g6.md', 'w', encoding='utf-8').write('\n'.join(L) + '\n')
     print(len(items), 'items,', uit['somtypes'], 'somtypes; niet:', len(niet)); print(json.dumps(stat, ensure_ascii=False))
 if __name__ == '__main__': main()

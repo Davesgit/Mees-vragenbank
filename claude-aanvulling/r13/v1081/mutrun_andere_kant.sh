@@ -1,6 +1,6 @@
 #!/bin/bash
 # mutanten V-#1081 andere kant: $1 = uitvoer van zet_andere_kant.py, $2 = het concept zonder hook (origineel); elke mutant moet zijn eigen FAIL geven (verwacht_andere_kant.tsv)
-D=$(cd "$(dirname "$0")" && pwd); U=$(realpath "$1"); O=$(realpath "${2:-/workspace/claude-merge/r13/kritisch_concept_g6.json}"); mis=0; n=0; T=$(mktemp -d)
+D=$(cd "$(dirname "$0")" && pwd); U=$(realpath "$1"); [ -n "$2" ] || { echo "gebruik: $0 <uit.json> <concept zonder hook> (Oef-#1051; bv. git show b7e4794:claude-aanvulling/r13/kritisch_concept_g6.json)"; exit 2; }; O=$(realpath "$2"); mis=0; n=0; T=$(mktemp -d)
 while IFS=$'\t' read -r m pat; do
   n=$((n+1))
   case $m in
