@@ -130,6 +130,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `honderdtal te ver` (fout = antwoord + 100) → Dat is één honderdtal te ver. Het cijfer vooraan zegt bij welk honderdtal je begint.  [nieuw]
   - `honderdtal niet ver genoeg` (fout = antwoord − 100) → Dat is één honderdtal te weinig. Het cijfer vooraan zegt bij welk honderdtal je begint.  [nieuw]
   - `stapje te ver` (fout = antwoord + 10) → Bijna! Dat is één stapje van tien te ver. Tel de stapjes na het honderdtal nog eens.  [nieuw]
-  - `stapje niet ver genoeg` (fout = antwoord − 10) → Bijna! Dat is één stapje van tien te weinig. Tel de stapjes na het honderdtal nog eens.  [nieuw]
+  - `stapje niet ver genoeg` (fout = antwoord − 10) → Dat is te weinig. Tel de stapjes na het honderdtal nog eens.  [nieuw]
   - `andere fout` (andere fout) → Zoek eerst het honderdtal van het getal. Tel dan verder in stapjes van tien tot je bij het getal bent.  [nieuw]
 - Status: hints klaar
