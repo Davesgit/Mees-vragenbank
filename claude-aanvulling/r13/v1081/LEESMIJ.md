@@ -9,5 +9,8 @@ Bron (alleen gelezen): /workspace/claude-merge/r13/kritisch_concept_g6.json (md5
   L1: «Dat is te weinig. Tel nog eens in de tafel van de bekende zijde. Reken na: jouw zijde keer de bekende zijde moet precies de oppervlakte zijn.»
 - G6-VERH-E02 #2 (afleiders laag): hoog = keer de teller, niet door de noemer gedeeld (aantal × teller).
   L1: «Dat is te veel: dat zijn meer koekjes dan er zijn. Verdeel de koekjes eerst in gelijke groepjes; de noemer zegt hoeveel groepjes.»
-Per somtype gezet in 2 van de 4 items (eerste ware + eerste foute): rang 2× midden + 2× rand. In alle 4 = 4× midden = FAIL (mutant M_rang).
+Per somtype gezet in 2 van de 4 items (eerste ware + eerste foute item waarvoor de kandidaat voldoet): rang 2× midden + 2× rand.
+MEET-E03 #2 (Didactiek 15 okt): de nieuwe waarde is geen getal uit de vraag en komt alleen via 'tafelstap te vroeg' → 02-3 (7 = de gegeven zijde) valt af; gezet: 02-1 (4) en 02-4 (3).
+VERH-E02 #2: het ding komt uit de vraag (les 147, nu steeds 'koekjes'), teller ≥ 2; voorwaarden per item in de SNAP.
+Op 584062f (GET-E04 en VERH-E02 al gezet): `./mutrun_andere_kant.sh <uit.json> <concept van 584062f>` (11 mutanten). In alle 4 = 4× midden = FAIL (mutant M_rang).
 Bewering, antwoord, letters van goed en Ja blijven gelijk; vervangen wordt een Nee-afleider (fout item: de andere fout; waar item: de verste).

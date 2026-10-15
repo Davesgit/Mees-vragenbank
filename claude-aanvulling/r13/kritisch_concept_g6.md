@@ -2,7 +2,7 @@
 
 120 items in 30 somtypes: per somtype 2 beweringen waar en 2 fout, op willekeurige itemnummers. Bron: `r13/kritisch_concept.py` (seed 13). Ronde 2 volgens Didactiek review-r13 §8.
 
-**Statistiek:** waar 60 · fout 60 · goede letter {'A': 40, 'B': 40, 'C': 40} · 'Ja' op A/B/C (waar/alle) {'A': (20, 40), 'B': (20, 40), 'C': (20, 40)} · nummer van het ware item {1: 13, 2: 12, 3: 15, 4: 20}.
+**Statistiek:** waar 60 · fout 60 · goede letter {'A': 40, 'B': 40, 'C': 40} · 'Ja' op A/B/C (waar/alle) {'A': (20, 40), 'B': (20, 40), 'C': (20, 40)} · nummer van het ware item {1: 13, 2: 12, 3: 15, 4: 20}. Rang van het goede getal (V-#1081, Z-#1111): GET-E04 #1 2× midden + 2× klein, MEET-E03 #2 2× midden + 2× klein, VERH-E02 #2 2× midden + 2× groot; check_andere_kant FAIL 0, mutanten 11/11.
 **Guards** (§8): waar-aandeel per doel 40–60 %, P(goed | Ja op X) 0,2–0,6, afrondvorm, geen twee getallen naast elkaar, L1 bij elke foute optie, ware item op wisselende plek: FAIL 0. Guard-mutanten (oude conceptvorm): {'waar-aandeel': True, 'Ja-op-letter': True, 'ware-plek': True, 'getallen-naast-elkaar': True, 'afrondvorm': True, 'rang (V-#1081)': True, 'dubbele som (V-#1082)': True, 'niveau (V-#1082)': True}.
 
 Taalvorm: directe rede, «Noor zegt: "4/5 van 80 is 20." Klopt dat?»; «Nee, het zijn 6 koekjes.». husselen: true. Getallen uit het midden (afronden 12.000–88.000; omrekenen ≤ 2.000).
@@ -132,4 +132,4 @@ Voor Oefeningen: H1 (alle somtypes), H2 per somtype en L1 per foute optie staan 
 - `G6-VERH-E03-r13-kritisch-01-3` 5 taarten worden eerlijk verdeeld over 6 kinderen. Fleur zegt: "Elk kind krijgt 5/6 taart." Klopt dat? → **Ja, dat klopt.** · opties: Nee, het is 1/6 taart. / Ja, dat klopt. / Nee, het is 6/5 taart. · H2: Wat wordt er verdeeld, en over hoeveel kinderen? Dat zijn de teller en de noemer.
 - `G6-VERH-E03-r13-kritisch-01-4` 2 taarten worden eerlijk verdeeld over 7 kinderen. Sem zegt: "Elk kind krijgt 2/7 taart." Klopt dat? → **Ja, dat klopt.** · opties: Ja, dat klopt. / Nee, het is 7/2 taart. / Nee, het is 1 taart. · H2: Wat wordt er verdeeld, en over hoeveel kinderen? Dat zijn de teller en de noemer.
 
-**Z-#1111 (15 okt, hook Oefeningen V-#1081 geplaatst, voorlopig):** andere-kant-afleider in G6-GET-E04 #1 (01-1: 2664 → 1464; 01-2: 5700 → 3700) en G6-VERH-E02 #2 (05-1: 2 → 40; 05-2: 3 → 60). Rang 2× midden + 2× rand. **G6-MEET-E03 #2 niet gezet** (Oef-#1043): de hook kiest het eerste ware item (02-3, waar 7 cm ook de gegeven zijde is); Didactiek wil item 4 met waarde 3. Open bij Oefeningen.
+**Z-#1111 (15 okt, hook Oefeningen V-#1081 geplaatst, voorlopig):** andere-kant-afleider in G6-GET-E04 #1 (01-1: 2664 → 1464; 01-2: 5700 → 3700) en G6-VERH-E02 #2 (05-1: 2 → 40; 05-2: 3 → 60). Rang 2× midden + 2× rand. **G6-MEET-E03 #2:** eerst niet gezet (Oef-#1043); met de nieuwe hook (zet_andere_kant 81cffc6a) wel: 02-4: 15 → 3 en 02-1: 15 → 4 ('tafelstap te vroeg'); 02-3 (7 = gegeven zijde) valt af.

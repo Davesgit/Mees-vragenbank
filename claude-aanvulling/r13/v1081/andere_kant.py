@@ -12,6 +12,12 @@ def _lenen(a, b):
         if l: uit.append(k)
         k += 1
     return uit
+def vraaggetallen(x): return {int(n.replace('.', '')) for n in re.findall(GETAL, x['opgave'])}
+def andere_routes_e03(A, z): return {A, z, A - z, A + z, 2 * z} | ({A // 2} if A % 2 == 0 else set())
+def verh_e02(x):
+    """(teller, noemer, aantal, woord uit de vraag) — les 147: het ding komt uit de vraag, niet vast 'koekjes'"""
+    m = re.search(r'"(\d+)/(\d+) van (\d+) ([a-zà-ÿ]+)', x['opgave'])
+    return (int(m.group(1)), int(m.group(2)), int(m.group(3)), m.group(4)) if m else None
 def kandidaat(x):
     """(waarde, kant, denkfout, L1-tekst) of None"""
     T = goed(x); d = x['doelId']; s = x['somtypeNrOrigineel']
@@ -25,12 +31,17 @@ def kandidaat(x):
     if (d, s) == ('G6-MEET-E03', 2):
         m = re.search(r'oppervlakte van (\d+) cm²\. Eén zijde is (\d+) cm', x['opgave']); A, z = int(m.group(1)), int(m.group(2))
         if A != T * z or T < 2: return None
-        return (T - 1, 'laag', 'in de tafel van de bekende zijde één stap te vroeg gestopt',
+        v = T - 1
+        # Didactiek 15 okt: de waarde is geen getal uit de vraag en komt alleen via 'tafelstap te vroeg' (niet via een andere bekende route)
+        if v in vraaggetallen(x) or v in andere_routes_e03(A, z): return None
+        return (v, 'laag', 'in de tafel van de bekende zijde één stap te vroeg gestopt',
                 'Dat is te weinig. Tel nog eens in de tafel van de bekende zijde. Reken na: jouw zijde keer de bekende zijde moet precies de oppervlakte zijn.')
     if (d, s) == ('G6-VERH-E02', 2):
-        m = re.search(r'"(\d+)/(\d+) van (\d+) koekjes', x['opgave']); n, q, a = map(int, m.groups())
-        if a * n % q or a * n // q != T or n < 2: return None
+        q_ = verh_e02(x)
+        if not q_: return None
+        n, q, a, woord = q_
+        if a * n % q or a * n // q != T or n < 2: return None      # teller ≥ 2: anders is 'keer de teller' gewoon het hele aantal
         return (a * n, 'hoog', 'keer de teller gedaan en niet door de noemer gedeeld',
-                'Dat is te veel: dat zijn meer koekjes dan er zijn. Verdeel de koekjes eerst in gelijke groepjes; de noemer zegt hoeveel groepjes.')
+                f'Dat is te veel: dat zijn meer {woord} dan er zijn. Verdeel de {woord} eerst in gelijke groepjes; de noemer zegt hoeveel groepjes.')
     return None
 SCOPE = {('G6-GET-E04', 1), ('G6-MEET-E03', 2), ('G6-VERH-E02', 2)}

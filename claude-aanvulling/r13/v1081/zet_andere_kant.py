@@ -10,12 +10,28 @@ Idempotent: staat de waarde er al, dan 0 wijzigingen."""
 import json, sys, os, re, copy, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from andere_kant import *
 D = json.load(open(sys.argv[1], encoding='utf-8')); MELD, LOG = [], []
+GEBLOKT = set()
+ORIG = {x['id']: x for x in json.load(open(sys.argv[3], encoding='utf-8'))['items']} if len(sys.argv) > 3 else {}      # optioneel: concept zonder hook (voor terugzetten)
+# Overzicht 16:45: een al gezet item dat niet (meer) voldoet (bv. VERH-E02: geen ding uit de vraag of teller < 2) gaat terug naar de oude afleider
+for x in D['items']:
+    ak = (x.get('oefeningen1081') or {}).get('andereKant')
+    if not ak or (x['doelId'], x['somtypeNrOrigineel']) not in SCOPE: continue
+    c = kandidaat(x)
+    if c and any(o['tekst'] == ak['nieuw'] and w(o['tekst']) == c[0] for o in x['opties']): continue
+    o0 = ORIG.get(x['id'])
+    if not o0: MELD.append(f"{x['id']}: voldoet niet meer, maar geen origineel (3e argument) om terug te zetten; somtype niet aangeraakt"); GEBLOKT.add((x['doelId'], x['somtypeNrOrigineel'])); continue
+    for k_ in ('opties', 'denkfoutPerOptie'): x[k_] = json.loads(json.dumps(o0[k_]))
+    x['conceptHints']['L1'] = json.loads(json.dumps(o0['conceptHints'].get('L1')))
+    del x['oefeningen1081']; LOG.append(f"{x['id']}: terug naar {ak['oud']!r} (voldoet niet)")
 per = collections.defaultdict(list)
 for x in D['items']:
     if (x['doelId'], x['somtypeNrOrigineel']) in SCOPE: per[(x['doelId'], x['somtypeNrOrigineel'])].append(x)
 ALLE = os.environ.get('ANDERE_KANT_ALLE') == '1'      # alleen voor de mutant M_rang
 for k_, xs in per.items():
-    kies = xs if ALLE else [next(x for x in xs if x['beweringKlopt']), next(x for x in xs if not x['beweringKlopt'])]
+    if k_ in GEBLOKT: continue
+    # eerste ware en eerste foute item waarvoor de kandidaat voldoet (MEET-E03 #2: 02-3 valt af, 7 = de gegeven zijde → 02-4)
+    kies = xs if ALLE else [next((x for x in xs if x['beweringKlopt'] and kandidaat(x)), None), next((x for x in xs if not x['beweringKlopt'] and kandidaat(x)), None)]
+    kies = [x for x in kies if x is not None]
     for x in kies:
         c = kandidaat(x)
         if not c: MELD.append(f"{x['id']}: vorm niet herkend, niets gezet"); continue

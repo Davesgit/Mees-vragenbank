@@ -21,6 +21,12 @@ if x0:
     if MUT == 'M_letter': x0['conceptHints']['L1'][n0] += ' Kies dan B.'
     if MUT == 'M_botst':  o_ = opt(x0, n0); o_['tekst'] = re.sub(GETAL, str(goed(x0)), n0, count=1)
     if MUT == 'M_antwoord': x0['antwoord'] = x0['antwoord'] + ' '
+xm = next((x for x in gez if x['doelId'] == 'G6-MEET-E03'), None); xv = next((x for x in gez if x['doelId'] == 'G6-VERH-E02'), None)
+if MUT == 'M_vraag' and xm:      # afleider = de gegeven zijde (getal uit de vraag), tekst/denkfout 'tafelstap' blijft
+    n_ = xm['oefeningen1081']['andereKant']['nieuw']; z_ = re.search(r'Eén zijde is (\d+) cm', xm['opgave']).group(1); t_ = re.sub(GETAL, z_, n_, count=1)
+    opt(xm, n_)['tekst'] = t_; xm['conceptHints']['L1'][t_] = xm['conceptHints']['L1'].pop(n_); xm['denkfoutPerOptie'][t_] = xm['denkfoutPerOptie'].pop(n_); xm['oefeningen1081']['andereKant']['nieuw'] = t_
+if MUT == 'M_woord' and xv: n_ = xv['oefeningen1081']['andereKant']['nieuw']; xv['conceptHints']['L1'][n_] = xv['conceptHints']['L1'][n_].replace(verh_e02(xv)[3], 'appels')
+if MUT == 'M_teller' and xv: xv['opgave'] = re.sub(r'"(\d+)/', '"1/', xv['opgave'], count=1); OI[xv['id']] = dict(OI[xv['id']], opgave=xv['opgave'])
 for x in XS:
     T = goed(x); o0 = OI[x['id']]
     for k in ('bewering', 'antwoord', 'beweringKlopt', 'claim', 'opgave'):
@@ -40,6 +46,18 @@ for x in XS:
             if re.search(r'\d', l1): F.append(f"{x['id']}: cijfer in L1 (verklapt): {l1[:60]}")
             if re.search(r'\b[ABC]\b', l1) or re.search(r'optie', l1, re.I): F.append(f"{x['id']}: optieletter in L1: {l1[:60]}")
             if x['denkfoutPerOptie'].get(o['tekst']) != x['oefeningen1081']['andereKant']['denkfout']: F.append(f"{x['id']}: denkfout ontbreekt")
+# Didactiek 15 okt: voorwaarden per item (ook in de SNAP)
+VW = {}
+for x in gez:
+    nk = x['oefeningen1081']['andereKant']; v = w(nk['nieuw']); T = goed(x)
+    if x['doelId'] == 'G6-MEET-E03':
+        A, z = map(int, re.search(r'oppervlakte van (\d+) cm²\. Eén zijde is (\d+) cm', x['opgave']).groups())
+        VW[x['id']] = {'nietUitDeVraag': v not in vraaggetallen(x), 'alleenTafelstap': v == T - 1 and v not in andere_routes_e03(A, z)}
+    if x['doelId'] == 'G6-VERH-E02':
+        n, q, a, woord = verh_e02(x); l1 = x['conceptHints']['L1'].get(nk['nieuw']) or ''
+        VW[x['id']] = {'woord': woord, 'woordInL1': f' {woord} ' in f' {l1} ' and not re.search(r'\b(koekjes|appels|snoepjes|knikkers)\b', l1.replace(woord, '')), 'teller': n, 'tellerMinstens2': n >= 2, 'waarde': v == a * n}
+    for k_, ok_ in VW.get(x['id'], {}).items():
+        if ok_ is False: F.append(f"{x['id']}: voorwaarde {k_} klopt niet ({nk['nieuw']})")
 # rang per somtype (zelfde regel als rang_goed/rang_open in kritisch_concept.py) + beide kanten
 som = collections.defaultdict(list); kant = collections.defaultdict(set)
 for x in XS:
@@ -52,7 +70,7 @@ for k, c in RANG.items():
     if max(c.values()) > 2 or '?' in c: F.append(f"rang {k}: {c}")
 for k, s in kant.items():
     if s != {'laag', 'hoog'}: F.append(f"{k[0]} #{k[1]}: afleiders maar aan één kant {s}")
-snap = {x['id']: sorted(o['tekst'] for o in x['opties']) + [x['conceptHints'].get('L1')] for x in XS}
+snap = {x['id']: sorted(o['tekst'] for o in x['opties']) + [x['conceptHints'].get('L1')] + ([VW[x['id']]] if x['id'] in VW else []) for x in XS}
 if os.environ.get('SNAP') == '1': json.dump(snap, open(SNAPF, 'w', encoding='utf-8'), ensure_ascii=False, indent=0, sort_keys=True)
 elif os.path.exists(SNAPF):
     oud = json.load(open(SNAPF, encoding='utf-8')); F += [f"SNAP {k}" for k in sorted(set(oud) | set(snap)) if oud.get(k) != snap.get(k)]

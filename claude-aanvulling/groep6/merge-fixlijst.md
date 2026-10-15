@@ -494,3 +494,5 @@ L-R10f: niet aangeraakt (wacht op Dave). N13-3: open (wacht op Oefeningen).
 
 ### Verdict Didactiek op c44ec26
 - Zacht open (zie r13/R13.md): Z-#1012–#1015, Z-#1017 (Oef-#1022), Z-#1019, Z-#1080–#1082; Oef-#1031 alleen bij variant B voor Z-#1062.
+
+- **Oef-#1051 (open, 15 okt):** V-#1081 andere kant terugzetten of opnieuw controleren vraagt het concept zónder hook als derde argument (mutrun/check: `<uit.json> <concept zonder hook>`, het concept van b7e4794, md5 3c46f7c2).
