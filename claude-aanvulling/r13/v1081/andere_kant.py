@@ -13,7 +13,14 @@ def _lenen(a, b):
         k += 1
     return uit
 def vraaggetallen(x): return {int(n.replace('.', '')) for n in re.findall(GETAL, x['opgave'])}
-def andere_routes_e03(A, z): return {A, z, A - z, A + z, 2 * z} | ({A // 2} if A % 2 == 0 else set())
+def andere_routes_e03(A, z, S=None):
+    """waarden die een kind ook via een andere bekende route krijgt. Z-#1111 v3 (Didactiek, les 306): ook via het getal van het kind in de vraag
+    (S, 'Sanne zegt …'): S ÷ z, S − z, S + z, A − S, A ÷ S (02-1: 24 ÷ 6 = 4 was een tweede route)"""
+    r = {A, z, A - z, A + z, 2 * z} | ({A // 2} if A % 2 == 0 else set())
+    if S: r |= {S, abs(S - z), S + z, abs(A - S)} | ({S // z} if S % z == 0 else set()) | ({A // S} if A % S == 0 else set())
+    return r
+def zegt(x):
+    m = re.search(r'zegt: "De andere zijde is (\d+) cm', x['opgave']); return int(m.group(1)) if m else None
 def verh_e02(x):
     """(teller, noemer, aantal, woord uit de vraag) — les 147: het ding komt uit de vraag, niet vast 'koekjes'"""
     m = re.search(r'"(\d+)/(\d+) van (\d+) ([a-zà-ÿ]+)', x['opgave'])
@@ -33,7 +40,7 @@ def kandidaat(x):
         if A != T * z or T < 2: return None
         v = T - 1
         # Didactiek 15 okt: de waarde is geen getal uit de vraag en komt alleen via 'tafelstap te vroeg' (niet via een andere bekende route)
-        if v in vraaggetallen(x) or v in andere_routes_e03(A, z): return None
+        if v in vraaggetallen(x) or v in andere_routes_e03(A, z, zegt(x)): return None
         return (v, 'laag', 'in de tafel van de bekende zijde één stap te vroeg gestopt',
                 'Dat is te weinig. Tel nog eens in de tafel van de bekende zijde. Reken na: jouw zijde keer de bekende zijde moet precies de oppervlakte zijn.')
     if (d, s) == ('G6-VERH-E02', 2):

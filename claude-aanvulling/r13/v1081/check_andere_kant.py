@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Check V-#1081 andere kant op een uitvoer van zet_andere_kant.py. [MUT=..] [SNAP=1] python3 check_andere_kant.py <uit.json> [<concept-origineel.json>]
+"""Check V-#1081 andere kant op een uitvoer van zet_andere_kant.py. [MUT=..] [SNAP=1] python3 check_andere_kant.py <uit.json> <concept-origineel.json>
 Per item in scope: elke Nee-waarde ≠ goed en ≠ elkaar; de nieuwe waarde ligt aan de kant die in 'kant' staat; L1 bij elke Nee-afleider noemt de
 richting die klopt (te weinig ↔ lager dan goed, te veel ↔ hoger), geen cijfer, geen optieletter; bewering, antwoord, juisteOptie en de Ja-letter zijn
 gelijk aan het origineel; rang-guard per somtype hooguit 2× dezelfde rang en minstens één afleider aan elke kant; SNAP van de nieuwe opties."""
 import json, sys, os, re, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from andere_kant import *
 MUT = os.environ.get('MUT', ''); F = []; SNAPF = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'snap_andere_kant.json')
-D = json.load(open(sys.argv[1], encoding='utf-8')); O = json.load(open(sys.argv[2] if len(sys.argv) > 2 else '/workspace/claude-merge/r13/kritisch_concept_g6.json', encoding='utf-8'))
+if len(sys.argv) < 3:      # Z-#1126: geen live standaard meer; het origineel is verplicht (zoals mutrun_andere_kant.sh)
+    print(f"gebruik: {sys.argv[0]} <uit.json> <concept zonder hook> (bv. git show b7e4794:claude-aanvulling/r13/kritisch_concept_g6.json)", file=sys.stderr); sys.exit(2)
+D = json.load(open(sys.argv[1], encoding='utf-8')); O = json.load(open(sys.argv[2], encoding='utf-8'))
 OI = {x['id']: x for x in O['items']}
 XS = [x for x in D['items'] if (x['doelId'], x['somtypeNrOrigineel']) in SCOPE]
 gez = [x for x in XS if 'oefeningen1081' in x]; x0 = gez[0] if gez else None
@@ -25,6 +27,9 @@ xm = next((x for x in gez if x['doelId'] == 'G6-MEET-E03'), None); xv = next((x 
 if MUT == 'M_vraag' and xm:      # afleider = de gegeven zijde (getal uit de vraag), tekst/denkfout 'tafelstap' blijft
     n_ = xm['oefeningen1081']['andereKant']['nieuw']; z_ = re.search(r'Eén zijde is (\d+) cm', xm['opgave']).group(1); t_ = re.sub(GETAL, z_, n_, count=1)
     opt(xm, n_)['tekst'] = t_; xm['conceptHints']['L1'][t_] = xm['conceptHints']['L1'].pop(n_); xm['denkfoutPerOptie'][t_] = xm['denkfoutPerOptie'].pop(n_); xm['oefeningen1081']['andereKant']['nieuw'] = t_
+if MUT == 'M_sanne' and xm:      # het kind zegt een zijde waaruit de afleider via een tweede route volgt (S ÷ z = afleider)
+    v_ = w(xm['oefeningen1081']['andereKant']['nieuw']); z_ = int(re.search(r'Eén zijde is (\d+) cm', xm['opgave']).group(1))
+    xm['opgave'] = re.sub(r'(zegt: "De andere zijde is )\d+', lambda m: m.group(1) + str(v_ * z_), xm['opgave']); OI[xm['id']] = dict(OI[xm['id']], opgave=xm['opgave'])
 if MUT == 'M_woord' and xv: n_ = xv['oefeningen1081']['andereKant']['nieuw']; xv['conceptHints']['L1'][n_] = xv['conceptHints']['L1'][n_].replace(verh_e02(xv)[3], 'appels')
 if MUT == 'M_teller' and xv: xv['opgave'] = re.sub(r'"(\d+)/', '"1/', xv['opgave'], count=1); OI[xv['id']] = dict(OI[xv['id']], opgave=xv['opgave'])
 for x in XS:
@@ -52,7 +57,8 @@ for x in gez:
     nk = x['oefeningen1081']['andereKant']; v = w(nk['nieuw']); T = goed(x)
     if x['doelId'] == 'G6-MEET-E03':
         A, z = map(int, re.search(r'oppervlakte van (\d+) cm²\. Eén zijde is (\d+) cm', x['opgave']).groups())
-        VW[x['id']] = {'nietUitDeVraag': v not in vraaggetallen(x), 'alleenTafelstap': v == T - 1 and v not in andere_routes_e03(A, z)}
+        VW[x['id']] = {'nietUitDeVraag': v not in vraaggetallen(x), 'alleenTafelstap': v == T - 1 and v not in andere_routes_e03(A, z),
+                     'nietViaGetalKind': v not in andere_routes_e03(A, z, zegt(x))}      # Z-#1111 v3: ook niet via het getal van het kind (02-1: 24 ÷ 6 = 4)
     if x['doelId'] == 'G6-VERH-E02':
         n, q, a, woord = verh_e02(x); l1 = x['conceptHints']['L1'].get(nk['nieuw']) or ''
         VW[x['id']] = {'woord': woord, 'woordInL1': f' {woord} ' in f' {l1} ' and not re.search(r'\b(koekjes|appels|snoepjes|knikkers)\b', l1.replace(woord, '')), 'teller': n, 'tellerMinstens2': n >= 2, 'waarde': v == a * n}

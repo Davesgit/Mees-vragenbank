@@ -5,6 +5,7 @@ while IFS=$'\t' read -r m pat; do
   n=$((n+1))
   case $m in
     M_snap) python3 -c "import json,sys;d=json.load(open('$U'));x=next(x for x in d['items'] if 'oefeningen1081' in x);x['conceptHints']['H2']+=' ';k=x['oefeningen1081']['andereKant']['nieuw'];x['conceptHints']['L1'][k]+=' Kijk goed.';json.dump(d,open('$T/s.json','w'),ensure_ascii=False)"; out=$(python3 -B $D/check_andere_kant.py $T/s.json $O 2>&1);;
+    M_arg)  out=$(python3 -B $D/check_andere_kant.py "$U" 2>&1; echo "FAIL exit $?");;      # Z-#1126: zonder origineel moet de check weigeren (exit 2), nooit live lezen
     M_rang) ANDERE_KANT_ALLE=1 python3 -B $D/zet_andere_kant.py $O $T/r.json >/dev/null; out=$(python3 -B $D/check_andere_kant.py $T/r.json $O 2>&1);;
     *) out=$(MUT=$m python3 -B $D/check_andere_kant.py "$U" $O 2>&1);;
   esac
