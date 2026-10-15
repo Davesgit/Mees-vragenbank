@@ -5,7 +5,7 @@
 - bedrag-guard (bedrag_lib v5 BEDRAG + 'hele ronde', 'heel uur te') in entry- en itemteksten van GET-E06, GET-M06, MEET-E06, MEET-E07;
 - SNAP per regel."""
 import json, os, re, sys, glob
-D_ = os.path.dirname(os.path.abspath(__file__)); sys.path[:0] = [os.path.join(D_, '..', 'z1091_v5'), os.path.join(D_, '..', 'z1090', 'r4')]
+D_ = os.path.dirname(os.path.abspath(__file__)); sys.path[:0] = [os.path.join(D_, '..', 'z1091'), os.path.join(D_, '..', 'z1090', 'r4')]
 from bedrag_lib import BEDRAG; from g5pad import *
 B = sys.argv[1]; MUT = os.environ.get('MUT', ''); F = []; G = g5(B); I = items(G)
 DOELEN = ('G5-GET-E06', 'G5-GET-M06', 'G5-MEET-E06', 'G5-MEET-E07')

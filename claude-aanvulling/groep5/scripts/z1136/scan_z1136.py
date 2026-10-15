@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Les 450-scan (Z-#1136): zichtbare kindteksten (entry hint1/hint2/tekst/tekstSterker + item uitleg/uitlegSterker) van heel G5 op bedragresten. python3 scan_z1136.py <basis>"""
 import json, os, re, sys, glob, collections
-D_ = os.path.dirname(os.path.abspath(__file__)); sys.path[:0] = [os.path.join(D_, '..', 'z1091_v5'), os.path.join(D_, '..', 'z1090', 'r4')]
+D_ = os.path.dirname(os.path.abspath(__file__)); sys.path[:0] = [os.path.join(D_, '..', 'z1091'), os.path.join(D_, '..', 'z1090', 'r4')]
 from bedrag_lib import BEDRAG; from g5pad import *
 P = {'bedrag-guard': BEDRAG,
      'een/één/twee/tien X te …': re.compile(r'\b(?:een|één|twee|drie|tien|honderd)(?: hele?)? (?:\w+ )?te (?:veel|weinig|ver|kort|hoog|laag|vroeg|laat|zwaar|licht)\b', re.I),

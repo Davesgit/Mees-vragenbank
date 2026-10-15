@@ -117,7 +117,7 @@ def verify85(it):
 NR86 = [1188, 1191, 1194, 1195, 1197, 1199, 1201, 1203, 1204, 1205, 1208, 1210]
 DIER = r"(?:poezen|konijnen|dino's|pinguïns|eekhoorns)"
 def _ids86():
-    D = json.load(open('/workspace/claude-merge/g5/bevroren/ids_v1.json'))['ids']; inv = {v: k for k, v in D.items()}
+    D = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'bevroren', 'ids_v1.json')))['ids']; inv = {v: k for k, v in D.items()}
     return {inv[f'G5-MEET-E06-claude-bank-{n}']: (n, ['De kinderen', 'De spelers'][i % 2]) for i, n in enumerate(NR86)}
 IDS86 = _ids86()
 def _tekst(x, f):

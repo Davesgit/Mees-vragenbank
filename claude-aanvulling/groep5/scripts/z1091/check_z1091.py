@@ -102,14 +102,14 @@ if DOEL == 'G5-MEET-E06':
 # V-#1137: waar 'Bijna!' weg is, begint de tekst met een richting (entry én item; basis = groep5_voor van dezelfde zandbak)
 RICHT0 = re.compile(r'^(Dat is (?:er )?te (?:veel|weinig|ver)|Dat zijn er te (?:veel|weinig)|Je bent (?:te ver|niet ver genoeg)|Je bent te vroeg)\b')
 # V-#1140 (les 456): basis vóór de hooks. Volgorde: <basis>/groep5_voor (zandbak); anders BASIS_COMMIT (env, bv. ec3a77e) → `git archive`
-# uit BASIS_REPO (standaard /workspace/mees-z1090, alleen gelezen) naar een tijdelijke map; anders FAIL + exit 2 (nooit stil overslaan).
+# uit BASIS_REPO (standaard de repo van dit script: git rev-parse --show-toplevel; V-#1141) naar een tijdelijke map; anders FAIL + exit 2 (nooit stil overslaan).
 import subprocess, tempfile, atexit, shutil
 def basis_voor():
     v = os.path.join(B, 'groep5_voor')
     if os.path.isdir(v) and MUT != 'M_geenvoor': return v, 'groep5_voor'
     c = os.environ.get('BASIS_COMMIT', '') if MUT != 'M_geenvoor' else ''
     if c:
-        repo = os.environ.get('BASIS_REPO', '/workspace/mees-z1090'); t = tempfile.mkdtemp(prefix='voor_'); atexit.register(shutil.rmtree, t, True)
+        repo = os.environ.get('BASIS_REPO') or subprocess.run(['git', '-C', os.path.dirname(os.path.abspath(__file__)), 'rev-parse', '--show-toplevel'], capture_output=True, text=True).stdout.strip() or os.path.join(os.path.dirname(os.path.abspath(__file__)), *(['..'] * 4)); t = tempfile.mkdtemp(prefix='voor_'); atexit.register(shutil.rmtree, t, True)
         r = subprocess.run(f"git -C '{repo}' archive {c} claude-aanvulling/groep5/hints claude-aanvulling/groep5/data/per_doel | tar -x -C '{t}'", shell=True, capture_output=True, text=True)
         g = os.path.join(t, 'claude-aanvulling', 'groep5')
         if r.returncode == 0 and glob.glob(os.path.join(g, 'hints', 'batch*.json')): return g, f'git {c}'
