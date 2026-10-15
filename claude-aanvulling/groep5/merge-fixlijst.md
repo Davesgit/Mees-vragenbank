@@ -630,3 +630,6 @@ Checks op r13/g5 (8 okt ±18:20): check_hints 139 klaar · 0 open · 0 FAIL · 2
 - 15 okt: V-#1072 en Z-#1076 geplaatst (G5-MEET-E07 #1 19/86/77), Z-#1075 (#32, FAIL 0). Zie R13.md.
 
 - **Z-#1121 (open, aparte latere ronde; 15 okt):** 'aantal stuks geld' als leesbare regel in de G5-motor. Niet in Z-#1090/Z-#1122.
+
+- **Z-#1090 + V-#1130 opgelost (15 okt, Didactiek taal: ok, definitief op c533d6f; gemerged naar main 5549110):** ronde 2 lenen/onthouden + Oef-#1040 + Z-#1090 v2 + r4 (leenH). Scripts in `groep5/scripts/z1090/` (r4). check_hints 0 FAIL, check_lenen FAIL 0, check_z1090 FAIL 0.
+- **Z-#1091 (open, voorlopig):** bedragen uit hints; branch `na-ronde-z1091` (119de26). Wordt later door v3 vervangen.
