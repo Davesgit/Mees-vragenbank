@@ -637,3 +637,8 @@ Checks op r13/g5 (8 okt ±18:20): check_hints 139 klaar · 0 open · 0 FAIL · 2
 - **Z-#1091 opgelost (15 okt, Didactiek taal: ok, definitief op 892e6d0; gemerged naar main 9d437e2).** Rechtzetting van de getallen uit 892e6d0: **93 mutanten** (niet 98); GET-M06: **25 velden in 5 items** (niet 13).
 - **Z-#1136 (open, zacht):** zichtbare resten: 'Bijna!' in GET-E06 #1/#2; geld per munt in MEET-E07 #3–#5; GET-M06 'nog een hele ronde'; MEET-E06 #15 'een heel uur'.
 - **V-#1140 (open, Oefeningen):** check_z1091 slaat de controles op 'bijna-zonder-richting' en 'woord' (en hun mutanten) stil over als `<basis>/groep5_voor` ontbreekt. Hij moet dan falen of een waarschuwing geven.
+- **V-#1140 opgelost (15 okt, z1091_v5, branch `na-ronde-z1136`):** check_z1091 haalt groep5_voor uit `<basis>/groep5_voor` of via BASIS_COMMIT (git archive uit BASIS_REPO); anders FAIL 'groep5_voor ontbreekt' en exit 2. Mutant M_geenvoor; 106/106 mutanten raak met BASIS_COMMIT=ec3a77e.
+  - Vervolgpunt (Oefeningen): de standaard van BASIS_REPO is het live pad `/workspace/mees-z1090`; zet BASIS_REPO expliciet of maak de standaard repo-relatief.
+- **Z-#1136:** klaar bij Oefeningen, wacht op Oef-#1063.
+- **Z-#1136 geplaatst op `na-ronde-z1136` (15 okt, Oef-#1063 goedgekeurd; ter review):** GET-E06 #1/#2 'centen ernaast' → 4 soorten (± 1 / ± 10 cent, richting per item); GET-M06 #3/#6 'nog een hele ronde' → «Daar kun je nog verder mee verdelen.». MEET-E07 #3–#5 en MEET-E06 #15: geen wijziging, wel guard. Snap z1091/GET-M06 ververst (alleen die zin).
+  - Vervolgpunt (Oefeningen): check_z1136/scan_z1136 zoeken bedrag_lib in `../z1091_v5`; in de repo heet die map `z1091` (nu nodig: PYTHONPATH=groep5/scripts/z1091).

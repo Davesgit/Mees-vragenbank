@@ -94,7 +94,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `wat ieder krijgt` (Claudes sleutel: andere-deel-genomen) → Dat is wat ieder krijgt. De vraag is hoeveel er overblijft.  [Claude, taalfix]
   - `keer gedaan` (fout = getal1 × getal2) → Je hebt keer gedaan. Er wordt verdeeld: dat is een deelsom. Hoeveel blijft er over?  [nieuw]
   - `afgetrokken` (fout = getal1 - getal2 of getal2 - getal1) → Heb je de getallen van elkaar afgehaald? Er wordt verdeeld: dat is een deelsom.  [nieuw]
-  - `nog een ronde` (fout = antwoord + getal2) → Dat is te veel. Daar past nog een hele ronde bij: iedereen kan er nog één krijgen. Wat overblijft, de rest, is altijd kleiner dan het aantal waarover je verdeelt.  [Claude, taalfix]
+  - `nog een ronde` (fout = antwoord + getal2) → Dat is te veel. Daar kun je nog verder mee verdelen. Wat overblijft, de rest, is altijd kleiner dan het aantal waarover je verdeelt.  [Claude, taalfix]
   - `niets over` (Claudes sleutel: rest-vergeten) → Het komt niet precies uit: er blijft iets over.  [Claude, ok]
   - `andere fout` (andere fout) → Reken eerst uit hoeveel ieder krijgt. Hoeveel heb je dan uitgedeeld? Wat er nog over is, is de rest.  [nieuw]
 - Status: hints klaar
@@ -186,7 +186,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `keer gedaan` (fout = getal1 × getal2) → Je hebt keer gedaan. Er wordt verdeeld: dat is een deelsom. Hoeveel blijft er over?  [nieuw]
   - `afgetrokken` (fout = getal1 - getal2 of getal2 - getal1) → Heb je de getallen van elkaar afgehaald? Er wordt verdeeld: dat is een deelsom.  [nieuw]
-  - `nog een ronde` (fout = antwoord + getal2) → Dat is te veel. Daar past nog een hele ronde bij: iedereen kan er nog één krijgen. Wat overblijft, de rest, is altijd kleiner dan het aantal waarover je verdeelt.  [Claude, taalfix]
+  - `nog een ronde` (fout = antwoord + getal2) → Dat is te veel. Daar kun je nog verder mee verdelen. Wat overblijft, de rest, is altijd kleiner dan het aantal waarover je verdeelt.  [Claude, taalfix]
   - `niet de rest` (Claudes sleutel: rest-vergeten) → Dat is niet wat er overblijft. Reken eerst uit hoeveel ieder krijgt. Reken dan terug: hoeveel is er nog over na het verdelen?  [Claude, taalfix]
   - `andere fout` (andere fout) → Reken eerst uit hoeveel ieder krijgt. Hoeveel heb je dan uitgedeeld? Wat er nog over is, is de rest.  [nieuw]
 - Status: hints klaar
