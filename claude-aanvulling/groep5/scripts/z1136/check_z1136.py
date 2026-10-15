@@ -37,6 +37,7 @@ for (d, n), x in X6:
         hi, lo = t.startswith('Dat is te veel'), t.startswith('Dat is te weinig')
         if not ((hi and v > a) or (lo and v < a)): F.append(f"richting {d} #{n} {x['nr']} sleutel {h['fout']!r} (antwoord {x['antwoord']}): {t[:50]}")
         stap = abs(v - a); plek = 'laatste cijfer' if stap == 1 else 'eerste cijfer' if stap == 10 else None
+        if ',' not in str(h['fout']) and 'die mis je nog' in t: plek = 'die mis je nog'      # Z-#1142: sleutel zonder komma (hele euro)
         if plek is None or plek not in t: F.append(f"plek {d} #{n} {x['nr']} sleutel {h['fout']!r} (verschil {stap} cent): {t[:70]}")
 for s in ENT:
     for f in [s] + s['foutHints']:
@@ -52,13 +53,14 @@ for (d, n), xs in I.items():
             if guard(t): F.append(f"weggever {d} #{n} {x['nr']} sleutel {h['fout']!r}: {t.strip()[:70]}")
 SNAPF = os.path.join(D_, 'snap_z1136.json')
 snap = {f"{s['doel']}#{s['nrOrigineel']} {f['soort']}": [f.get('tekst'), f.get('tekstSterker')] for s in ENT if s['doel'] in ('G5-GET-E06', 'G5-GET-M06') for f in s['foutHints']
-        if f['soort'].startswith('centen') or f['soort'] == 'nog een ronde'}
+        if (f['soort'].startswith('centen') and not f['soort'].endswith('hele euro)')) or f['soort'] == 'nog een ronde'}      # Z-#1142-soorten: eigen snap
 if MUT == 'M_snap': k_ = sorted(snap)[0]; snap[k_] = [snap[k_][0] + ' Kijk goed.', snap[k_][1]]
 if os.environ.get('SNAP') == '1': json.dump(snap, open(SNAPF, 'w', encoding='utf-8'), ensure_ascii=False, indent=0, sort_keys=True)
 elif os.path.exists(SNAPF):
-    oud = json.load(open(SNAPF, encoding='utf-8')); F += [f"SNAP Z-#1136 {k}" for k in sorted(set(oud) | set(snap)) if oud.get(k) != snap.get(k)][:20]
+    oud = json.load(open(SNAPF, encoding='utf-8')); F += [f"SNAP Z-#1136 {k}" for k in sorted(set(oud) | set(snap)) if oud.get(k) != snap.get(k)]
 else: F.append('SNAP Z-#1136 ontbreekt')
 print(f"INFO Z-#1136: {len(ENT)} entries; GET-E06 {len(X6)} items, richting/plek nagekeken bij {n_r} sleutels; SNAP {len(snap)} regels")
 for f in F[:30]: print('FAIL', f)
-print(f"check Z-#1136: FAIL {len(F)}" + (f' (MUT={MUT})' if MUT else ''))
+if len(F) > 30: print(f"… {len(F) - 30} FAIL-regels niet getoond (V-#1141)")
+print(f"check Z-#1136: FAIL {len(F)} (totaal)" + (f' (MUT={MUT})' if MUT else ''))
 sys.exit(1 if F else 0)
