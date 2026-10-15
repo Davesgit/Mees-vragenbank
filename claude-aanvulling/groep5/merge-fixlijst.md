@@ -642,3 +642,5 @@ Checks op r13/g5 (8 okt ±18:20): check_hints 139 klaar · 0 open · 0 FAIL · 2
 - **Z-#1136:** klaar bij Oefeningen, wacht op Oef-#1063.
 - **Z-#1136 geplaatst op `na-ronde-z1136` (15 okt, Oef-#1063 goedgekeurd; ter review):** GET-E06 #1/#2 'centen ernaast' → 4 soorten (± 1 / ± 10 cent, richting per item); GET-M06 #3/#6 'nog een hele ronde' → «Daar kun je nog verder mee verdelen.». MEET-E07 #3–#5 en MEET-E06 #15: geen wijziging, wel guard. Snap z1091/GET-M06 ververst (alleen die zin).
   - Vervolgpunt (Oefeningen): check_z1136/scan_z1136 zoeken bedrag_lib in `../z1091_v5`; in de repo heet die map `z1091` (nu nodig: PYTHONPATH=groep5/scripts/z1091).
+- **Z-#1136, V-#1140 en V-#1141 opgelost, op main (merge 82b5e82, Didactiek 15 okt taal: ok).** V-#1141: check_z1136/scan_z1136 importeren uit ../z1091; check_z1091 BASIS_REPO standaard = repo van het script; sbx-scripts via git archive uit de repo; geen /workspace-paden in groep5/scripts. Getest vanuit een schone git-archive-snapshot (les 457).
+- **Z-#1142 (open, zacht, Oefeningen):** 71 sleutels zonder komma (bv. €11 bij €11,10) krijgen «Kijk goed naar de centen: die mis je nog.».
