@@ -105,10 +105,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `wat het kost` (Claudes sleutel: verkeerde-bewerking) → Dat is wat alles samen kost. De vraag is hoeveel je terugkrijgt. Haal het van het geld waarmee je betaalt af.  [Claude, taalfix]
   - `de prijs van één ding` (fout = de prijs) → Dat is de prijs van één ding. Tel eerst de drie prijzen bij elkaar op. Haal dat dan van het geld waarmee je betaalt af.  [nieuw]
-  - `één euro te veel` (fout = antwoord + €1) → Dat is één euro te veel. Vul eerst aan tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij tot het geld waarmee je betaalt.  [nieuw]
-  - `één euro te weinig` (fout = antwoord − €1) → Dat is één euro te weinig. Tel de hele euro's nog eens: van de hele euro tot het geld waarmee je betaalt.  [nieuw]
-  - `tien cent te weinig` (fout = antwoord − 10 cent) → Bijna! Dat is tien cent te weinig. Tel de centen nog eens na.  [nieuw]
-  - `tien cent te veel` (fout = antwoord + 10 cent) → Bijna! Dat is tien cent te veel. Tel de centen nog eens na.  [nieuw]
+  - `één euro te veel` (fout = antwoord + €1) → Dat is te veel. Vul eerst aan tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij tot het geld waarmee je betaalt.  [nieuw]
+  - `één euro te weinig` (fout = antwoord − €1) → Dat is te weinig. Tel de hele euro's nog eens: van de hele euro tot het geld waarmee je betaalt.  [nieuw]
+  - `tien cent te weinig` (fout = antwoord − 10 cent) → Dat is te weinig. Tel de centen nog eens na.  [nieuw]
+  - `tien cent te veel` (fout = antwoord + 10 cent) → Dat is te veel. Tel de centen nog eens na.  [nieuw]
   - `andere fout` (andere fout) → Tel eerst de prijzen bij elkaar op. Vul dan aan: eerst tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij tot het geld waarmee je betaalt.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-01): de hints zijn geschreven voor 'Je koopt drie [ding] van €#, €# en €#. Je betaalt met €#. Hoeveel krijg je terug?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -138,9 +138,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (Claudes sleutel: verkeerde-bewerking) → Je hebt de prijs en het geld waarmee je betaalt bij elkaar opgeteld. Terugkrijgen is het verschil: haal de prijs van het geld af.  [Claude, taalfix]
   - `de prijs` (fout = de prijs) → Dat is de prijs. De vraag is hoeveel je terugkrijgt. Haal de prijs van het geld waarmee je betaalt af.  [nieuw]
-  - `één euro te veel` (fout = antwoord + €1) → Dat is één euro te veel. Vul eerst aan tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij tot het geld waarmee je betaalt.  [nieuw]
-  - `één euro te weinig` (fout = antwoord − €1) → Dat is één euro te weinig. Tel de hele euro's nog eens: van de hele euro tot het geld waarmee je betaalt.  [nieuw]
-  - `tien cent te weinig` (fout = antwoord − 10 cent) → Bijna! Dat is tien cent te weinig. Tel de centen nog eens na.  [nieuw]
-  - `tien cent te veel` (fout = antwoord + 10 cent) → Bijna! Dat is tien cent te veel. Tel de centen nog eens na.  [nieuw]
+  - `één euro te veel` (fout = antwoord + €1) → Dat is te veel. Vul eerst aan tot de volgende hele euro. Ben je er dan nog niet? Tel dan de hele euro's erbij tot het geld waarmee je betaalt.  [nieuw]
+  - `één euro te weinig` (fout = antwoord − €1) → Dat is te weinig. Tel de hele euro's nog eens: van de hele euro tot het geld waarmee je betaalt.  [nieuw]
+  - `tien cent te weinig` (fout = antwoord − 10 cent) → Dat is te weinig. Tel de centen nog eens na.  [nieuw]
+  - `tien cent te veel` (fout = antwoord + 10 cent) → Dat is te veel. Tel de centen nog eens na.  [nieuw]
   - `andere fout` (andere fout) → Vul aan van de prijs tot de volgende hele euro. Tel dan de hele euro's erbij tot het geld waarmee je betaalt.  [nieuw]
 - Status: hints klaar

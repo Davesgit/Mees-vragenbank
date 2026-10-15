@@ -32,8 +32,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `opgeteld` (fout = getal1 + getal2) → Je hebt de getallen opgeteld. Kijk naar het teken: het is een keersom.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Heeft het eerste getal eenheden? Reken dan het stuk met de eenheden nog eens na. Tel daarna alle stukken goed op.  [nieuw]
   - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Heeft het eerste getal eenheden? Reken dan het stuk met de eenheden nog eens na. Tel daarna alle stukken goed op.  [nieuw]
-  - `tiental te veel` (fout = antwoord + 10) → Dat is één tiental te veel. Reken de stukken nog eens na en tel ze goed op.  [nieuw]
-  - `tiental te weinig` (fout = antwoord − 10) → Dat is één tiental te weinig. Reken de stukken nog eens na en tel ze goed op.  [nieuw]
+  - `tiental te veel` (fout = antwoord + 10) → Dat is te veel. Reken de stukken nog eens na en tel ze goed op.  [nieuw]
+  - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Reken de stukken nog eens na en tel ze goed op.  [nieuw]
   - `iets vergeten` (Claudes sleutel: onthouden-vergeten) → Dat is te weinig. Reken elk stuk apart uit. Tel daarna alle stukken bij elkaar op, en vergeet er geen.  [Claude, taalfix]
   - `andere fout` (andere fout) → Splits het eerste getal in stukken. Doe elk stuk keer het tweede getal en tel alles op.  [nieuw]
 - Status: hints klaar
@@ -92,7 +92,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Reken na met een keersom. [getal2] keer jouw antwoord is meer dan [getal1].  [nieuw]
   - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Reken na met een keersom. [getal2] keer jouw antwoord is minder dan [getal1].  [nieuw]
-  - `tien vergeten` (fout = antwoord − 10) → Dat is tien te weinig. Heb je ieder eerst tien gegeven? Verdeel eerst tien keer, en daarna de rest.  [nieuw]
+  - `tien vergeten` (fout = antwoord − 10) → Dat is te weinig. Heb je ieder eerst tien gegeven? Verdeel eerst tien keer, en daarna de rest.  [nieuw]
   - `andere fout` (andere fout) → Reken na met een keersom: jouw antwoord keer het aantal waarover je verdeelt, moet het totaal zijn.  [nieuw]
 - Status: hints klaar
 
@@ -270,7 +270,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `afgetrokken` (fout = getal1 - getal2 of getal2 - getal1) → Je hebt het ene getal van het andere afgehaald. Eerlijk verdelen is delen. Overal komt evenveel: hoeveel is dat?  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Reken na met een keersom. [getal2] keer jouw antwoord is meer dan [getal1].  [nieuw]
   - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Reken na met een keersom. [getal2] keer jouw antwoord is minder dan [getal1].  [nieuw]
-  - `tien vergeten` (fout = antwoord − 10) → Dat is tien te weinig. Heb je alle stukken van je verdeling bij elkaar opgeteld? Verdeel eerst tien keer, en daarna de rest.  [nieuw]
+  - `tien vergeten` (fout = antwoord − 10) → Dat is te weinig. Heb je alle stukken van je verdeling bij elkaar opgeteld? Verdeel eerst tien keer, en daarna de rest.  [nieuw]
   - `andere fout` (andere fout) → Reken na met een keersom: jouw antwoord keer het aantal waarover je verdeelt, moet het totaal zijn.  [nieuw]
 - Status: hints klaar
 

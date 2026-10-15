@@ -86,8 +86,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Tel de hele euro's bij elkaar, en tel de centen bij elkaar. Komen de centen samen op honderd cent of meer? Dan komt er een euro bij.
 - **Ouderzin:** Je kind rekent uit hoeveel twee dingen in de winkel samen kosten.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `euro te veel` (Claudes sleutel: onthouden-vergeten) → Dat is een euro te veel. Komen de centen samen op honderd cent of meer? Alleen dan komt er een euro bij.  [Claude, taalfix]
-  - `tien cent te weinig` (Claudes sleutel: tiental-ernaast) → Dat is tien cent te weinig. Tel de centen nog eens bij elkaar.  [Claude, taalfix]
+  - `euro te veel` (Claudes sleutel: onthouden-vergeten) → Dat is te veel. Komen de centen samen op honderd cent of meer? Alleen dan komt er een euro bij.  [Claude, taalfix]
+  - `tien cent te weinig` (Claudes sleutel: tiental-ernaast) → Dat is te weinig. Tel de centen nog eens bij elkaar.  [Claude, taalfix]
   - `centen niet goed` (Claudes sleutel: kommagetal-als-geheel) → De centen kloppen niet. Tel de centen apart bij elkaar. Komen ze samen op honderd cent of meer? Dan komt er een euro bij.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel eerst de hele euro's bij elkaar en dan de centen. Honderd cent is één euro.  [nieuw]
 - Status: hints klaar

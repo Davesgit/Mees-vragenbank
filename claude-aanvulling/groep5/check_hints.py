@@ -418,5 +418,20 @@ if __name__=="__main__":
     _m217, _v217 = _L217.zelftest()      # Oef-#489: zelftest (Z-#812/Z-#824) hoort groen te zijn, anders FAIL
     if _m217 or _v217: fails.append(f'les 217 zelftest: {len(_m217)} gemist, {len(_v217)} vals alarm'); print('FAIL les 217 zelftest', _m217, _v217)
     for _w in _L217.groep(_o250.path.dirname(_o250.path.abspath(__file__))): warns.append(_w); print('WARN', _w)
+    # Z-#1090/Z-#1122 (15 okt): G5 fout-hints noemen het precieze verschil niet (guard uit scripts/z1090/check_z1090.py; SNAP-regels apart) + mutant M_bedrag
+    import subprocess as _sp1090
+    _d1090 = _o250.path.dirname(_o250.path.abspath(__file__)); _c1090 = _o250.path.join(_d1090, 'scripts', 'z1090', 'check_z1090.py'); _r1090 = _o250.path.join(_d1090, '..', '..')
+    def _z1090(mut=''):
+        _e = dict(_o250.environ, MUT=mut, PYTHONDONTWRITEBYTECODE='1'); _e.pop('SNAP', None)
+        _u = _sp1090.run([_s250.executable, '-B', _c1090, _r1090], capture_output=True, text=True, env=_e)
+        if 'Traceback' in _u.stderr: return None
+        return [l[5:] for l in _u.stdout.splitlines() if l.startswith('FAIL Z-#1090')]
+    _f1090 = _z1090()
+    if _f1090 is None: fails.append('Z-#1090 guard: check_z1090.py crasht'); print('FAIL Z-#1090 guard crasht')
+    else:
+        for _f in _f1090: fails.append(_f); print('FAIL', _f)
+    _m1090 = _z1090('M_bedrag')
+    if not _m1090 or not any('noemt het verschil' in _f for _f in _m1090): fails.append('Z-#1090 mutant M_bedrag gemist'); print('FAIL Z-#1090 mutant M_bedrag gemist')
+    else: print('INFO Z-#1090 guard: 0 treffers · mutant M_bedrag gevangen' if not _f1090 else f'INFO Z-#1090 guard: {len(_f1090)} treffers · mutant M_bedrag gevangen')
     print(f"Somtypen: {k} hints klaar · {o} open · {len(fails)} FAIL · {len(warns)} WARN · {len(info)} INFO · {'ALLES OK' if not fails else 'FAIL'}")
     sys.exit(1 if fails else 0)
