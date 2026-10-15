@@ -32,10 +32,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `het getal waardoor je deelt` (fout = getal2) → Dat is het getal waardoor je deelt. De vraag is hoe vaak het in het eerste getal past.  [nieuw]
   - `keer gedaan` (fout = getal1 × getal2) → Je hebt keer gedaan. Kijk naar het teken: het is een deelsom. Hoe vaak past het tweede getal in het eerste?  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Reken na met de keersom: jouw antwoord keer het tweede getal is meer dan het eerste getal.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Reken na met de keersom: jouw antwoord keer het tweede getal is minder dan het eerste getal.  [nieuw]
-  - `twee te veel` (fout = antwoord + 2) → Dat is twee te veel. Reken na met de keersom: jouw antwoord keer het tweede getal is meer dan het eerste getal.  [nieuw]
-  - `twee te weinig` (fout = antwoord − 2) → Dat is twee te weinig. Reken na met de keersom: jouw antwoord keer het tweede getal is minder dan het eerste getal.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Reken na met de keersom: jouw antwoord keer het tweede getal is meer dan het eerste getal.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Reken na met de keersom: jouw antwoord keer het tweede getal is minder dan het eerste getal.  [nieuw]
+  - `twee te veel` (fout = antwoord + 2) → Dat is te veel. Reken na met de keersom: jouw antwoord keer het tweede getal is meer dan het eerste getal.  [nieuw]
+  - `twee te weinig` (fout = antwoord − 2) → Dat is te weinig. Reken na met de keersom: jouw antwoord keer het tweede getal is minder dan het eerste getal.  [nieuw]
   - `andere fout` (andere fout) → Zeg de tafel van het tweede getal op, tot je bij het eerste getal bent. Hoeveel stappen zijn het?  [nieuw]
 - Status: hints klaar
 
@@ -65,8 +65,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `het getal waardoor je deelt` (fout = getal2) → Dat is het getal waardoor je deelt. Welk getal hoort op het hokje in de keersom?  [nieuw]
   - `keer gedaan` (fout = getal1 × getal2) → Je hebt keer gedaan. Het is een deelsom. Welk getal hoort op het hokje in de keersom?  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Zeg de tafel op tot je precies bij het eerste getal bent.  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Zeg de tafel op tot je precies bij het eerste getal bent.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Zeg de tafel op tot je precies bij het eerste getal bent.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Zeg de tafel op tot je precies bij het eerste getal bent.  [nieuw]
   - `andere fout` (andere fout) → Zeg de tafel van het tweede getal op, tot je bij het eerste getal bent. Hoeveel stappen zijn het?  [nieuw]
 - Status: hints klaar
 
@@ -91,10 +91,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Weet je het niet meteen? Begin bij een som die je wel weet, zoals vijf keer of tien keer. Reken van daar verder of terug.
 - **Ouderzin:** Je kind oefent de tafels.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `één stap te ver` (fout = antwoord + getal1) → Dat is één stap te ver in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
-  - `één stap te weinig` (fout = antwoord − getal1) → Dat is één stap te weinig in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
-  - `één stap te ver (andere tafel)` (fout = antwoord + getal2) → Dat is één stap te ver in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
-  - `één stap te weinig (andere tafel)` (fout = antwoord − getal2) → Dat is één stap te weinig in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
+  - `één stap te ver` (fout = antwoord + getal1) → Je bent te ver gegaan in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
+  - `één stap te weinig` (fout = antwoord − getal1) → Je bent niet ver genoeg gegaan in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
+  - `één stap te ver (andere tafel)` (fout = antwoord + getal2) → Je bent te ver gegaan in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
+  - `één stap te weinig (andere tafel)` (fout = antwoord − getal2) → Je bent niet ver genoeg gegaan in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `andere fout` (andere fout) → Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent.  [nieuw]
@@ -122,10 +122,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind lost een verhaaltje op met een keersom uit de tafels.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom.  [nieuw]
-  - `één groepje te veel` (fout = antwoord + getal2) → Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `één groepje te weinig` (fout = antwoord − getal2) → Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `in elk groepje één te veel` (fout = antwoord + getal1) → Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
-  - `in elk groepje één te weinig` (fout = antwoord − getal1) → Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `één groepje te veel` (fout = antwoord + getal2) → Dat zijn er te veel. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `één groepje te weinig` (fout = antwoord − getal2) → Dat zijn er te weinig. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `in elk groepje één te veel` (fout = antwoord + getal1) → Dan zitten er in elk groepje te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `in elk groepje één te weinig` (fout = antwoord − getal1) → Dan zitten er in elk groepje te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `andere fout` (andere fout) → Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent.  [nieuw]
@@ -190,10 +190,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind draait een keersom om, zodat het een tafel kan gebruiken die het kent.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt de getallen opgeteld. Kijk naar het teken: het is een keersom.  [nieuw]
-  - `één stap te ver` (fout = antwoord + getal1) → Dat is één stap te ver in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
-  - `één stap te weinig` (fout = antwoord − getal1) → Dat is één stap te weinig in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
-  - `één stap te ver (andere tafel)` (fout = antwoord + getal2) → Dat is één stap te ver in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
-  - `één stap te weinig (andere tafel)` (fout = antwoord − getal2) → Dat is één stap te weinig in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
+  - `één stap te ver` (fout = antwoord + getal1) → Je bent te ver gegaan in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
+  - `één stap te weinig` (fout = antwoord − getal1) → Je bent niet ver genoeg gegaan in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
+  - `één stap te ver (andere tafel)` (fout = antwoord + getal2) → Je bent te ver gegaan in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
+  - `één stap te weinig (andere tafel)` (fout = antwoord − getal2) → Je bent niet ver genoeg gegaan in de tafel. Zeg de tafel nog eens op en tel de stappen.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `andere fout` (andere fout) → Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent.  [nieuw]
@@ -223,10 +223,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind lost een verhaaltje op met een keersom uit de tafels.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom.  [nieuw]
-  - `één groepje te veel` (fout = antwoord + getal1) → Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `één groepje te weinig` (fout = antwoord − getal1) → Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `in elk groepje één te veel` (fout = antwoord + getal2) → Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
-  - `in elk groepje één te weinig` (fout = antwoord − getal2) → Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `één groepje te veel` (fout = antwoord + getal1) → Dat zijn er te veel. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `één groepje te weinig` (fout = antwoord − getal1) → Dat zijn er te weinig. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `in elk groepje één te veel` (fout = antwoord + getal2) → Dan zitten er in elk groepje te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `in elk groepje één te weinig` (fout = antwoord − getal2) → Dan zitten er in elk groepje te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
   - `cijfers omgedraaid` (Claudes sleutel: cijfers-verwisseld) → Je hebt de goede cijfers, maar in een andere volgorde. Kijk goed welk cijfer op welke plek hoort.  [Claude, taalfix]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
@@ -252,10 +252,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind lost een verhaaltje op met een keersom uit de tafels.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom.  [nieuw]
-  - `één groepje te veel` (fout = antwoord + getal1) → Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `één groepje te weinig` (fout = antwoord − getal1) → Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `in elk groepje één te veel` (fout = antwoord + getal2) → Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
-  - `in elk groepje één te weinig` (fout = antwoord − getal2) → Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `één groepje te veel` (fout = antwoord + getal1) → Dat zijn er te veel. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `één groepje te weinig` (fout = antwoord − getal1) → Dat zijn er te weinig. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `in elk groepje één te veel` (fout = antwoord + getal2) → Dan zitten er in elk groepje te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `in elk groepje één te weinig` (fout = antwoord − getal2) → Dan zitten er in elk groepje te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
   - `cijfers omgedraaid` (Claudes sleutel: cijfers-verwisseld) → Je hebt de goede cijfers, maar in een andere volgorde. Kijk goed welk cijfer op welke plek hoort.  [Claude, taalfix]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
@@ -281,10 +281,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind lost een verhaaltje op met een keersom uit de tafels.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom.  [nieuw]
-  - `één groepje te veel` (fout = antwoord + getal1) → Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `één groepje te weinig` (fout = antwoord − getal1) → Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `in elk groepje één te veel` (fout = antwoord + getal2) → Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
-  - `in elk groepje één te weinig` (fout = antwoord − getal2) → Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `één groepje te veel` (fout = antwoord + getal1) → Dat zijn er te veel. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `één groepje te weinig` (fout = antwoord − getal1) → Dat zijn er te weinig. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `in elk groepje één te veel` (fout = antwoord + getal2) → Dan zitten er in elk groepje te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `in elk groepje één te weinig` (fout = antwoord − getal2) → Dan zitten er in elk groepje te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
   - `cijfers omgedraaid` (Claudes sleutel: cijfers-verwisseld) → Je hebt de goede cijfers, maar in een andere volgorde. Kijk goed welk cijfer op welke plek hoort.  [Claude, taalfix]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
@@ -310,11 +310,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind lost een verhaaltje op met een keersom uit de tafels.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom.  [nieuw]
-  - `één groepje te veel` (fout = antwoord + getal2) → Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `één groepje te weinig` (fout = antwoord − getal2) → Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `in elk groepje één te veel` (fout = antwoord + getal1) → Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
-  - `in elk groepje één te weinig` (fout = antwoord − getal1) → Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
-  - `twee te veel` (fout = antwoord + 2) → Dat is twee te veel. Reken de tafel nog eens na.  [nieuw]
+  - `één groepje te veel` (fout = antwoord + getal2) → Dat zijn er te veel. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `één groepje te weinig` (fout = antwoord − getal2) → Dat zijn er te weinig. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `in elk groepje één te veel` (fout = antwoord + getal1) → Dan zitten er in elk groepje te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `in elk groepje één te weinig` (fout = antwoord − getal1) → Dan zitten er in elk groepje te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `twee te veel` (fout = antwoord + 2) → Dat is te veel. Reken de tafel nog eens na.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `andere fout` (andere fout) → Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent.  [nieuw]
@@ -339,10 +339,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind lost een verhaaltje op met een keersom uit de tafels.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom.  [nieuw]
-  - `één groepje te veel` (fout = antwoord + getal1) → Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `één groepje te weinig` (fout = antwoord − getal1) → Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `in elk groepje één te veel` (fout = antwoord + getal2) → Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
-  - `in elk groepje één te weinig` (fout = antwoord − getal2) → Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `één groepje te veel` (fout = antwoord + getal1) → Dat zijn er te veel. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `één groepje te weinig` (fout = antwoord − getal1) → Dat zijn er te weinig. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `in elk groepje één te veel` (fout = antwoord + getal2) → Dan zitten er in elk groepje te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `in elk groepje één te weinig` (fout = antwoord − getal2) → Dan zitten er in elk groepje te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
   - `cijfers omgedraaid` (Claudes sleutel: cijfers-verwisseld) → Je hebt de goede cijfers, maar in een andere volgorde. Kijk goed welk cijfer op welke plek hoort.  [Claude, taalfix]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
@@ -368,10 +368,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind lost een verhaaltje op met een keersom uit de tafels.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom.  [nieuw]
-  - `één groepje te veel` (fout = antwoord + getal1) → Dat is één groepje te veel. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `één groepje te weinig` (fout = antwoord − getal1) → Dat is één groepje te weinig. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
-  - `in elk groepje één te veel` (fout = antwoord + getal2) → Dan zit er in elk groepje één te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
-  - `in elk groepje één te weinig` (fout = antwoord − getal2) → Dan zit er in elk groepje één te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `één groepje te veel` (fout = antwoord + getal1) → Dat zijn er te veel. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `één groepje te weinig` (fout = antwoord − getal1) → Dat zijn er te weinig. Lees nog eens hoeveel groepjes het zijn. Lees nog eens hoeveel groepjes het zijn.  [nieuw]
+  - `in elk groepje één te veel` (fout = antwoord + getal2) → Dan zitten er in elk groepje te veel. Lees nog eens hoeveel er in elk zitten.  [nieuw]
+  - `in elk groepje één te weinig` (fout = antwoord − getal2) → Dan zitten er in elk groepje te weinig. Lees nog eens hoeveel er in elk zitten.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Zeg de tafel nog eens op, stap voor stap, tot je bij het goede aantal groepjes bent.  [nieuw]
   - `andere fout` (andere fout) → Zeg de tafel op, stap voor stap. Tel de stappen tot je bij het goede aantal groepjes bent.  [nieuw]
