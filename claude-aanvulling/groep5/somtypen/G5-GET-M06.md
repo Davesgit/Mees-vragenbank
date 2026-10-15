@@ -61,10 +61,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `het aantal in elk` (fout = getal2) → Dat is het aantal in elk. De vraag is hoe vaak dat in het totaal past.  [nieuw]
   - `keer gedaan` (fout = getal1 × getal2) → Je hebt keer gedaan. Kijk hoeveel er in elk gaan. Hoe vaak past dat in het totaal?  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Reken na met een keersom: dan heb je er meer nodig dan er zijn.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Reken na met een keersom: dan blijven er nog over.  [nieuw]
-  - `twee te veel` (fout = antwoord + 2) → Dat is twee te veel. Reken na met een keersom: dan heb je er meer nodig dan er zijn.  [nieuw]
-  - `twee te weinig` (fout = antwoord − 2) → Dat is twee te weinig. Reken na met een keersom: dan blijven er nog over.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Reken na met een keersom: dan heb je er meer nodig dan er zijn.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Reken na met een keersom: dan blijven er nog over.  [nieuw]
+  - `twee te veel` (fout = antwoord + 2) → Dat is te veel. Reken na met een keersom: dan heb je er meer nodig dan er zijn.  [nieuw]
+  - `twee te weinig` (fout = antwoord − 2) → Dat is te weinig. Reken na met een keersom: dan blijven er nog over.  [nieuw]
   - `andere fout` (andere fout) → Zeg de tafel op van het aantal in elk, tot je bij het totaal bent. Hoeveel stappen zijn het?  [nieuw]
 - Status: hints klaar
 
@@ -125,7 +125,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `het aantal waarover je verdeelt` (fout = getal2) → Dat is het aantal waarover je verdeelt. De vraag is hoeveel ieder krijgt.  [nieuw]
   - `keer gedaan` (fout = getal1 × getal2) → Je hebt keer gedaan. Er wordt eerlijk verdeeld: dat is een deelsom.  [nieuw]
   - `afgetrokken` (fout = getal1 - getal2 of getal2 - getal1) → Heb je de getallen van elkaar afgehaald? Er wordt verdeeld: dat is een deelsom.  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Dat is één te veel. Eén stap hoger in de tafel kom je boven het totaal uit.  [Claude, taalfix]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Met jouw antwoord kom je in de tafel boven het totaal uit.  [Claude, taalfix]
   - `de rest` (Claudes sleutel: andere-deel-genomen) → Dat is wat er overblijft: de rest. De vraag is hoeveel ieder krijgt.  [Claude, taalfix]
   - `andere fout` (andere fout) → Zeg de tafel op van het aantal waarover je verdeelt. Stop vlak voordat je boven het totaal komt. Hoeveel stappen zijn het?  [nieuw]
 - Status: hints klaar
@@ -156,8 +156,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `het totaal` (fout = getal2) → Dat is het totaal. De vraag is hoeveel ieder heeft.  [nieuw]
   - `afgetrokken` (fout = getal1 - getal2 of getal2 - getal1) → Heb je de getallen van elkaar afgehaald? Ze verdelen: dat is een deelsom.  [nieuw]
   - `keer gedaan` (fout = getal1 × getal2) → Je hebt keer gedaan. Ze verdelen: dat is een deelsom.  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Reken na met een keersom: dan kom je boven het totaal.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Reken na met een keersom: dan kom je onder het totaal.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Reken na met een keersom: dan kom je boven het totaal.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Reken na met een keersom: dan kom je onder het totaal.  [nieuw]
   - `andere fout` (andere fout) → Zeg de tafel op van het aantal waarover je verdeelt, tot je bij het totaal bent. Hoeveel stappen zijn het?  [nieuw]
 - Status: hints klaar
 
@@ -240,13 +240,13 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 34 : 4 = 8 rest 2. De rest moet ook mee, dus je hebt er een extra nodig: 9.
 
 - **Hint 1 (te schrijven):** Hoeveel passen er in elk? Hoe vaak past dat in het totaal?
-- **Hint 2 (te schrijven):** Blijft er na het verdelen nog iemand over? Dan is er nog één nodig.
+- **Hint 2 (te schrijven):** Blijft er na het verdelen nog iemand over? Dan heb je er meer nodig.
 - **Ouderzin:** Je kind rekent uit hoeveel er nodig zijn, ook voor wie overblijft (naar boven afronden).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `keer gedaan` (fout = getal1 × getal2) → Je hebt keer gedaan. Er moet verdeeld worden: hoe vaak past het aantal in elk in het totaal?  [nieuw]
   - `afgetrokken` (fout = getal1 - getal2 of getal2 - getal1) → Heb je de getallen van elkaar afgehaald? Er wordt verdeeld: dat is een deelsom.  [nieuw]
   - `rest achter de komma` (fout = quotiënt,rest) → Je schreef de rest achter een komma. De vraag is hoeveel er nodig zijn.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Dat is één te weinig. Dan kan niet iedereen mee. Voor wie overblijft, is er nog één nodig.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Dan kan niet iedereen mee. Ook wie overblijft, moet mee.  [nieuw]
   - `kommagetal` (fout = een kommagetal) → Een kommagetal kan hier niet: je kunt geen stukje nemen. Hoeveel heb je er nodig, zodat iedereen mee kan?  [nieuw]
   - `andere fout` (andere fout) → Hoe vaak past het aantal in elk in het totaal? Blijft er iemand over? Ook die moet mee.  [nieuw]
 - Status: hints klaar
@@ -277,7 +277,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `het aantal waarover je verdeelt` (fout = getal2) → Dat is het aantal waarover je verdeelt. De vraag is hoeveel ieder krijgt.  [nieuw]
   - `afgetrokken` (fout = getal1 - getal2 of getal2 - getal1) → Heb je de getallen van elkaar afgehaald? Verdelen is een deelsom.  [nieuw]
   - `keer gedaan` (fout = getal1 × getal2) → Je hebt keer gedaan. Er wordt eerlijk verdeeld: dat is een deelsom.  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Reken na met een keersom: dan kom je boven het totaal.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Reken na met een keersom: dan kom je onder het totaal.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Reken na met een keersom: dan kom je boven het totaal.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Reken na met een keersom: dan kom je onder het totaal.  [nieuw]
   - `andere fout` (andere fout) → Zeg de tafel op van het aantal waarover je verdeelt, tot je bij het totaal bent. Hoeveel stappen zijn het?  [nieuw]
 - Status: hints klaar

@@ -66,7 +66,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Vóór de dubbele punt staat het uur dat geweest is. Is dat dertien of meer? Haal er dan twaalf af: veertien uur is twee uur op de klok. De kleine wijzer staat tussen dat uur en het volgende uur.
 - **Ouderzin:** Je kind zoekt de klok met wijzers die een digitale tijd aanwijst, op de minuut.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. De kleine wijzer staat tussen het uur dat geweest is en het volgende uur. Is het uur dertien of meer? Haal er dan eerst twaalf af.  [nieuw]
+  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer te ver. De grote wijzer klopt wel. De kleine wijzer staat tussen het uur dat geweest is en het volgende uur. Is het uur dertien of meer? Haal er dan eerst twaalf af.  [nieuw]
   - `grote wijzer verkeerd` (fout = grote wijzer verkeerd) → Bij die klok staat de grote wijzer niet goed. Tel bij de grote wijzer vijf minuten per getal, en daarna de streepjes: één minuut per streepje.  [nieuw]
   - `andere klok` (andere fout) → Kijk bij die klok eerst naar de grote wijzer: vijf minuten per getal, en één minuut per streepje. Kijk dan naar de kleine wijzer: staat hij tussen het uur dat geweest is en het volgende uur? Is het uur dertien of meer, haal er dan eerst twaalf af.  [nieuw]
 - Status: hints klaar
@@ -93,7 +93,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent uit hoe laat het is een aantal minuten later, over het hele uur heen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `gestopt bij het hele uur` (Claudes sleutel: deel-vergeten-bij-splitsen) → Je bent gestopt bij het hele uur. Er moeten nog minuten bij: tel verder na het hele uur.  [Claude, taalfix]
-  - `een uur te vroeg` (fout = klok een uur te vroeg) → Dat is een uur te vroeg. Je gaat over het hele uur heen: dan komt er een uur bij.  [nieuw]
+  - `een uur te vroeg` (fout = klok een uur te vroeg) → Dat is te vroeg. Je gaat over het hele uur heen: dan komt er een uur bij.  [nieuw]
   - `te laat` (Claudes sleutel: tijd-als-kommagetal) → Dat is te laat. Een uur heeft zestig minuten. Tel eerst tot het hele uur en tel daarna de rest verder.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een uur heeft zestig minuten. Tel eerst tot het volgende hele uur. Tel daarna de minuten die nog over zijn verder.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Het is #:# uur. Hoe laat is het # minuten later?'. Nakijken of ze nog passen.
@@ -121,7 +121,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent uit hoe laat het was een aantal minuten eerder, over het hele uur heen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `gestopt bij het hele uur` (Claudes sleutel: deel-vergeten-bij-splitsen) → Je bent gestopt bij het hele uur. Je moet nog verder terug: tel de rest terug vanaf het hele uur.  [Claude, taalfix]
-  - `een uur te laat` (fout = klok een uur te laat) → Dat is een uur te laat. Je gaat terug over het hele uur heen: dan gaat er een uur af.  [nieuw]
+  - `een uur te laat` (fout = klok een uur te laat) → Dat is te laat. Je gaat terug over het hele uur heen: dan gaat er een uur af.  [nieuw]
   - `te vroeg` (Claudes sleutel: tijd-als-kommagetal) → Dat is te vroeg. Een uur heeft zestig minuten. Tel eerst terug tot het hele uur en tel daarna de rest verder terug.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een uur heeft zestig minuten. Tel eerst terug tot het hele uur. Tel daarna de minuten die nog over zijn verder terug.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Het is #:# uur. Hoe laat was het # minuten eerder?'. Nakijken of ze nog passen.
@@ -151,8 +151,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind telt een aantal dagen verder op de kalender, over het eind van de maand heen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `gestopt bij de maandgrens` (fout = gestopt op de eerste dag van de maand) → Je bent gestopt waar de nieuwe maand begint. Tel nog verder, tot je alle dagen hebt geteld.  [nieuw]
-  - `een dag later` (fout = een dag later) → Bijna! Je bent één dag te ver geteld. Hoeveel dagen heeft de maand: dertig of eenendertig?  [nieuw]
-  - `een dag eerder` (fout = een dag eerder) → Bijna! Je bent één dag te kort geteld. Hoeveel dagen heeft de maand: dertig of eenendertig? De dag waarop je begint, tel je niet mee.  [nieuw]
+  - `een dag later` (fout = een dag later) → Je bent één dag te ver geteld. Hoeveel dagen heeft de maand: dertig of eenendertig?  [nieuw]
+  - `een dag eerder` (fout = een dag eerder) → Je bent één dag te kort geteld. Hoeveel dagen heeft de maand: dertig of eenendertig? De dag waarop je begint, tel je niet mee.  [nieuw]
   - `datum later` (fout = datum later dan het antwoord) → Dat is te ver. Tel eerst tot de laatste dag van de maand. Hoeveel dagen heb je dan al geteld? Tel alleen de rest verder in de nieuwe maand.  [nieuw]
   - `andere datum` (andere fout) → Tel eerst tot de laatste dag van de maand. Tel daarna verder in de nieuwe maand. Kijk goed hoeveel dagen de maand heeft: dertig of eenendertig?  [nieuw]
 - Status: hints klaar
@@ -181,8 +181,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind telt een aantal dagen terug op de kalender, over het begin van de maand heen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `gestopt bij de maandgrens` (fout = gestopt op de laatste dag van de maand) → Je bent gestopt waar de maand ervoor eindigt. Tel nog verder terug, tot je alle dagen hebt geteld.  [nieuw]
-  - `een dag eerder` (fout = een dag eerder) → Bijna! Je bent één dag te ver teruggeteld. Hoeveel dagen heeft de maand ervoor: dertig of eenendertig?  [nieuw]
-  - `een dag later` (fout = een dag later) → Bijna! Je bent één dag te kort teruggeteld. Hoeveel dagen heeft de maand ervoor: dertig of eenendertig? De dag waarop je begint, tel je niet mee.  [nieuw]
+  - `een dag eerder` (fout = een dag eerder) → Je bent te ver teruggeteld. Hoeveel dagen heeft de maand ervoor: dertig of eenendertig?  [nieuw]
+  - `een dag later` (fout = een dag later) → Je bent niet ver genoeg teruggeteld. Tel de dagen nog eens. Hoeveel dagen heeft de maand ervoor: dertig of eenendertig? De dag waarop je begint, tel je niet mee.  [nieuw]
   - `datum eerder` (fout = datum eerder dan het antwoord) → Dat is te ver terug. Tel eerst terug tot de eerste dag van de maand. Hoeveel dagen heb je dan al teruggeteld? Tel alleen de rest verder terug.  [nieuw]
   - `andere datum` (andere fout) → Na de eerste dag van de maand kom je bij de laatste dag van de maand ervoor. Tel daar verder terug. Kijk goed hoeveel dagen die maand heeft: dertig of eenendertig?  [nieuw]
 - Status: hints klaar
@@ -277,7 +277,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Zet na de grote wijzer de kleine wijzer. Hoor je 'half' of 'voor' in de tijd? Dan staat hij nog vóór het uur uit de tijd. Anders staat hij net voorbij dat uur.
 - **Ouderzin:** Je kind zet de wijzers van een klok op een tijd in woorden.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → De kleine wijzer staat een uur te ver. De grote wijzer staat goed. Welk uur hoor je in de tijd? Hoor je 'half' of 'voor'? Dan staat de kleine wijzer nog vóór dat uur. Anders staat hij net voorbij dat uur.  [nieuw]
+  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → De kleine wijzer staat te ver. De grote wijzer staat goed. Welk uur hoor je in de tijd? Hoor je 'half' of 'voor'? Dan staat de kleine wijzer nog vóór dat uur. Anders staat hij net voorbij dat uur.  [nieuw]
   - `grote wijzer verkeerd` (fout = grote wijzer verkeerd) → De grote wijzer staat niet goed. Hoeveel minuten na het hele uur is het? Elk getal is vijf minuten.  [nieuw]
   - `andere fout` (andere fout) → Zet eerst de grote wijzer: hoeveel minuten na het hele uur? Zet dan de kleine wijzer. Hoor je 'half' of 'voor' in de tijd? Dan staat hij nog vóór het uur dat je hoort. Anders staat hij net voorbij dat uur.  [nieuw]
 - Status: hints klaar
@@ -338,8 +338,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `getallen afgetrokken` (fout = getal1 - getal2 of getal2 - getal1) → Heb je de twee getallen uit de vraag van elkaar afgetrokken? Je gaat over het eind van de maand heen. Tel eerst de dagen tot het eind van de eerste maand: hoeveel dagen heeft die maand? Tel daarna de dagen in de nieuwe maand erbij.  [nieuw]
   - `alleen de nieuwe maand` (fout = getal2) → Dat is te weinig. Heb je alleen de dagen in de nieuwe maand geteld? Tel eerst de dagen tot het eind van de eerste maand. Tel daarna de dagen in de nieuwe maand erbij.  [nieuw]
   - `alleen de eerste maand` (fout = antwoord − getal2) → Dat is te weinig. Heb je de dagen in de nieuwe maand ook erbij geteld? Kijk ook hoeveel dagen de eerste maand heeft. Tel tot en met de dag waarop het eindigt.  [nieuw]
-  - `één dag te veel` (fout = antwoord + 1) → Bijna! Dat is één dag te veel. Heb je de dag waarop je begint meegeteld? Die tel je niet mee. Kijk ook hoeveel dagen de eerste maand heeft.  [nieuw]
-  - `één dag te weinig` (fout = antwoord − 1) → Bijna! Dat is één dag te weinig. Hoeveel dagen heeft de eerste maand? Tel in de nieuwe maand tot en met de dag waarop het eindigt.  [nieuw]
+  - `één dag te veel` (fout = antwoord + 1) → Dat is één dag te veel. Heb je de dag waarop je begint meegeteld? Die tel je niet mee. Kijk ook hoeveel dagen de eerste maand heeft.  [nieuw]
+  - `één dag te weinig` (fout = antwoord − 1) → Dat is één dag te weinig. Hoeveel dagen heeft de eerste maand? Tel in de nieuwe maand tot en met de dag waarop het eindigt.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. De dag waarop je begint, tel je niet mee. Tel in twee stukken: eerst de dagen tot het eind van de eerste maand, dan de dagen in de nieuwe maand.  [nieuw]
   - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Heb je allebei de stukken geteld? Tel eerst de dagen tot het eind van de eerste maand, en daarna de dagen in de nieuwe maand.  [nieuw]
   - `andere fout` (andere fout) → Tel in twee stukken: eerst de dagen tot het eind van de eerste maand, dan de dagen in de nieuwe maand. De dag waarop je begint, tel je niet mee. Tel de twee stukken bij elkaar op.  [nieuw]
@@ -406,7 +406,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Half betekent: een half uur vóór het hele uur. De kleine wijzer staat dan tussen het uur ervoor en het uur uit de vraag.
 - **Ouderzin:** Je kind zoekt de klok met wijzers die half … aanwijst.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `kleine wijzer een uur te vroeg` (fout = klok een uur te vroeg) → Bij die klok staat de kleine wijzer een uur te vroeg. De grote wijzer klopt wel. Bij half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te vroeg` (fout = klok een uur te vroeg) → Bij die klok staat de kleine wijzer te vroeg. De grote wijzer klopt wel. Bij half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
   - `grote wijzer verkeerd` (fout = grote wijzer verkeerd) → Bij die klok staat de grote wijzer niet goed. Bij half wijst hij recht naar beneden.  [nieuw]
   - `andere klok` (andere fout) → Kijk bij die klok naar de grote wijzer: wijst hij recht naar beneden? Kijk dan naar de kleine wijzer: staat hij tussen het uur ervoor en het uur uit de vraag?  [nieuw]
 - Status: hints klaar
@@ -439,7 +439,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Tien over betekent: tien minuten na het hele uur. De kleine wijzer is dan net voorbij het uur uit de vraag.
 - **Ouderzin:** Je kind zoekt de klok met wijzers die tien over … aanwijst.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij tien over is de kleine wijzer net voorbij het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer te ver. De grote wijzer klopt wel. Bij tien over is de kleine wijzer net voorbij het uur uit de vraag.  [nieuw]
   - `over en voor verwisseld` (fout = over en voor verwisseld) → Bij die klok is het tien voor, en niet tien over. Bij tien over is de grote wijzer net voorbij de twaalf: hij wijst naar de twee.  [nieuw]
   - `grote wijzer als uur gelezen` (fout = grote wijzer als uur gelezen) → Bij die klok is het een heel uur. Het uur lees je af aan de kleine wijzer, de minuten aan de grote wijzer. Kijk bij die klok naar de grote wijzer: wijst hij naar de twee? Kijk dan naar de kleine wijzer: is hij net voorbij het uur uit de vraag?  [nieuw]
   - `grote wijzer verkeerd` (fout = grote wijzer verkeerd) → Bij die klok staat de grote wijzer niet goed. Bij tien over wijst hij naar de twee.  [nieuw]
@@ -474,8 +474,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Tien voor half betekent: tien minuten vóór half. De kleine wijzer staat dan tussen het uur ervoor en het uur uit de vraag.
 - **Ouderzin:** Je kind zoekt de klok met wijzers die tien voor half … aanwijst.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij tien voor half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
-  - `kleine wijzer een uur te vroeg` (fout = klok een uur te vroeg) → Bij die klok staat de kleine wijzer een uur te vroeg. De grote wijzer klopt wel. Bij tien voor half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer te ver. De grote wijzer klopt wel. Bij tien voor half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te vroeg` (fout = klok een uur te vroeg) → Bij die klok staat de kleine wijzer te vroeg. De grote wijzer klopt wel. Bij tien voor half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
   - `grote wijzer verkeerd` (fout = grote wijzer verkeerd) → Bij die klok staat de grote wijzer niet goed. Bij tien voor half wijst hij naar de vier.  [nieuw]
   - `andere klok` (andere fout) → Kijk bij die klok naar de grote wijzer: wijst hij naar de vier? Kijk dan naar de kleine wijzer: staat hij tussen het uur ervoor en het uur uit de vraag?  [nieuw]
 - Status: hints klaar
@@ -508,7 +508,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Vijf over betekent: vijf minuten na het hele uur. De kleine wijzer is dan net voorbij het uur uit de vraag.
 - **Ouderzin:** Je kind zoekt de klok met wijzers die vijf over … aanwijst.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij vijf over is de kleine wijzer net voorbij het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer te ver. De grote wijzer klopt wel. Bij vijf over is de kleine wijzer net voorbij het uur uit de vraag.  [nieuw]
   - `over en voor verwisseld` (fout = over en voor verwisseld) → Bij die klok is het vijf voor, en niet vijf over. Bij vijf over is de grote wijzer net voorbij de twaalf: hij wijst naar de één.  [nieuw]
   - `grote wijzer als uur gelezen` (fout = grote wijzer als uur gelezen) → Bij die klok is het een heel uur. Het uur lees je af aan de kleine wijzer, de minuten aan de grote wijzer. Kijk bij die klok naar de grote wijzer: wijst hij naar de één? Kijk dan naar de kleine wijzer: is hij net voorbij het uur uit de vraag?  [nieuw]
   - `grote wijzer verkeerd` (fout = grote wijzer verkeerd) → Bij die klok staat de grote wijzer niet goed. Bij vijf over wijst hij naar de één.  [nieuw]
@@ -575,8 +575,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Tien over half betekent: tien minuten na half. De kleine wijzer staat dan tussen het uur ervoor en het uur uit de vraag.
 - **Ouderzin:** Je kind zoekt de klok met wijzers die tien over half … aanwijst.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij tien over half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
-  - `kleine wijzer een uur te vroeg` (fout = klok een uur te vroeg) → Bij die klok staat de kleine wijzer een uur te vroeg. De grote wijzer klopt wel. Bij tien over half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer te ver. De grote wijzer klopt wel. Bij tien over half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te vroeg` (fout = klok een uur te vroeg) → Bij die klok staat de kleine wijzer te vroeg. De grote wijzer klopt wel. Bij tien over half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
   - `grote wijzer verkeerd` (fout = grote wijzer verkeerd) → Bij die klok staat de grote wijzer niet goed. Bij tien over half wijst hij naar de acht.  [nieuw]
   - `andere klok` (andere fout) → Kijk bij die klok naar de grote wijzer: wijst hij naar de acht? Kijk dan naar de kleine wijzer: staat hij tussen het uur ervoor en het uur uit de vraag?  [nieuw]
 - Status: hints klaar
@@ -609,7 +609,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Tien voor betekent: tien minuten vóór het hele uur. De kleine wijzer is dan bijna bij het uur uit de vraag, maar nog net ervoor.
 - **Ouderzin:** Je kind zoekt de klok met wijzers die tien voor … aanwijst.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij tien voor is de kleine wijzer bijna bij het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer te ver. De grote wijzer klopt wel. Bij tien voor is de kleine wijzer bijna bij het uur uit de vraag.  [nieuw]
   - `over en voor verwisseld` (fout = over en voor verwisseld) → Bij die klok is het tien over, en niet tien voor. Bij tien voor moet de grote wijzer nog naar de twaalf: hij wijst naar de tien.  [nieuw]
   - `grote wijzer als uur gelezen` (fout = grote wijzer als uur gelezen) → Bij die klok is het een heel uur. Het uur lees je af aan de kleine wijzer, de minuten aan de grote wijzer. Kijk bij die klok naar de grote wijzer: wijst hij naar de tien? Kijk dan naar de kleine wijzer: is hij bijna bij het uur uit de vraag?  [nieuw]
   - `andere klok` (andere fout) → Kijk bij die klok naar de grote wijzer: wijst hij naar de tien? Kijk dan naar de kleine wijzer: is hij bijna bij het uur uit de vraag?  [nieuw]
@@ -643,8 +643,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Vijf over half betekent: vijf minuten na half. De kleine wijzer staat dan tussen het uur ervoor en het uur uit de vraag.
 - **Ouderzin:** Je kind zoekt de klok met wijzers die vijf over half … aanwijst.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij vijf over half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
-  - `kleine wijzer een uur te vroeg` (fout = klok een uur te vroeg) → Bij die klok staat de kleine wijzer een uur te vroeg. De grote wijzer klopt wel. Bij vijf over half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer te ver. De grote wijzer klopt wel. Bij vijf over half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te vroeg` (fout = klok een uur te vroeg) → Bij die klok staat de kleine wijzer te vroeg. De grote wijzer klopt wel. Bij vijf over half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
   - `grote wijzer verkeerd` (fout = grote wijzer verkeerd) → Bij die klok staat de grote wijzer niet goed. Bij vijf over half wijst hij naar de zeven.  [nieuw]
   - `andere klok` (andere fout) → Kijk bij die klok naar de grote wijzer: wijst hij naar de zeven? Kijk dan naar de kleine wijzer: staat hij tussen het uur ervoor en het uur uit de vraag?  [nieuw]
 - Status: hints klaar
@@ -677,7 +677,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Vijf voor betekent: vijf minuten vóór het hele uur. De kleine wijzer is dan bijna bij het uur uit de vraag, maar nog net ervoor.
 - **Ouderzin:** Je kind zoekt de klok met wijzers die vijf voor … aanwijst.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij vijf voor is de kleine wijzer bijna bij het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer te ver. De grote wijzer klopt wel. Bij vijf voor is de kleine wijzer bijna bij het uur uit de vraag.  [nieuw]
   - `over en voor verwisseld` (fout = over en voor verwisseld) → Bij die klok is het vijf over, en niet vijf voor. Bij vijf voor moet de grote wijzer nog naar de twaalf: hij wijst naar de elf.  [nieuw]
   - `grote wijzer als uur gelezen` (fout = grote wijzer als uur gelezen) → Bij die klok is het een heel uur. Het uur lees je af aan de kleine wijzer, de minuten aan de grote wijzer. Kijk bij die klok naar de grote wijzer: wijst hij naar de elf? Kijk dan naar de kleine wijzer: is hij bijna bij het uur uit de vraag?  [nieuw]
   - `andere klok` (andere fout) → Kijk bij die klok naar de grote wijzer: wijst hij naar de elf? Kijk dan naar de kleine wijzer: is hij bijna bij het uur uit de vraag?  [nieuw]
@@ -711,8 +711,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Vijf voor half betekent: vijf minuten vóór half. De kleine wijzer staat dan tussen het uur ervoor en het uur uit de vraag.
 - **Ouderzin:** Je kind zoekt de klok met wijzers die vijf voor half … aanwijst.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer een uur te ver. De grote wijzer klopt wel. Bij vijf voor half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
-  - `kleine wijzer een uur te vroeg` (fout = klok een uur te vroeg) → Bij die klok staat de kleine wijzer een uur te vroeg. De grote wijzer klopt wel. Bij vijf voor half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te ver` (fout = klok een uur te laat) → Bij die klok staat de kleine wijzer te ver. De grote wijzer klopt wel. Bij vijf voor half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
+  - `kleine wijzer een uur te vroeg` (fout = klok een uur te vroeg) → Bij die klok staat de kleine wijzer te vroeg. De grote wijzer klopt wel. Bij vijf voor half staat de kleine wijzer tussen het uur ervoor en het uur uit de vraag.  [nieuw]
   - `grote wijzer verkeerd` (fout = grote wijzer verkeerd) → Bij die klok staat de grote wijzer niet goed. Bij vijf voor half wijst hij naar de vijf.  [nieuw]
   - `andere klok` (andere fout) → Kijk bij die klok naar de grote wijzer: wijst hij naar de vijf? Kijk dan naar de kleine wijzer: staat hij tussen het uur ervoor en het uur uit de vraag?  [nieuw]
 - Status: hints klaar
@@ -741,8 +741,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent uit hoe laat iets aankomt als de reis uren en minuten duurt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `zestig minuten of meer` (Claudes sleutel: tijd-als-kommagetal) → Achter de punt staan de minuten. Dat kunnen er niet zestig of meer zijn: een uur heeft zestig minuten. Dan komt er een uur bij.  [Claude, taalfix]
-  - `een uur te vroeg` (fout = klok een uur te vroeg) → Dat is een uur te vroeg. Heb je alle hele uren van de reis erbij geteld?  [nieuw]
-  - `een uur te laat` (fout = klok een uur te laat) → Dat is een uur te laat. Tel de hele uren van de reis nog eens.  [nieuw]
+  - `een uur te vroeg` (fout = klok een uur te vroeg) → Dat is te vroeg. Heb je alle hele uren van de reis erbij geteld?  [nieuw]
+  - `een uur te laat` (fout = klok een uur te laat) → Dat is te laat. Tel de hele uren van de reis nog eens.  [nieuw]
   - `tien minuten te laat` (fout = klok tien minuten te laat) → De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?  [nieuw]
   - `tien minuten te vroeg` (fout = klok tien minuten te vroeg) → De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?  [nieuw]
   - `uren of minuten ernaast` (Claudes sleutel: tiental-ernaast) → Dat klopt niet helemaal. Tel de uren en de minuten nog eens apart erbij. Kijk of je over het hele uur heen gaat.  [Claude, taalfix]
@@ -774,8 +774,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent uit hoe laat iets aankomt als de reis een aantal minuten duurt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `zestig minuten of meer` (Claudes sleutel: tijd-als-kommagetal) → Achter de punt staan de minuten. Dat kunnen er niet zestig of meer zijn: een uur heeft zestig minuten. Dan komt er een uur bij.  [Claude, taalfix]
-  - `een uur te vroeg` (fout = klok een uur te vroeg) → Dat is een uur te vroeg: dan kom je aan vóór je vertrekt. Kom je over het hele uur heen? Dan komt er een uur bij.  [nieuw]
-  - `een uur te laat` (fout = klok een uur te laat) → Dat is een uur te laat. De reis duurt korter dan een uur. Er komt alleen een uur bij als je over het hele uur heen gaat.  [nieuw]
+  - `een uur te vroeg` (fout = klok een uur te vroeg) → Dat is te vroeg: dan kom je aan vóór je vertrekt. Kom je over het hele uur heen? Dan komt er een uur bij.  [nieuw]
+  - `een uur te laat` (fout = klok een uur te laat) → Dat is te laat. De reis duurt korter dan een uur. Er komt alleen een uur bij als je over het hele uur heen gaat.  [nieuw]
   - `tien minuten te laat` (fout = klok tien minuten te laat) → De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?  [nieuw]
   - `tien minuten te vroeg` (fout = klok tien minuten te vroeg) → De minuten kloppen niet. Tel de minuten van de reis nog eens erbij. Kom je over het hele uur heen?  [nieuw]
   - `uren of minuten ernaast` (Claudes sleutel: tiental-ernaast) → Dat klopt niet helemaal. Tel de uren en de minuten nog eens apart erbij. Kijk of je over het hele uur heen gaat.  [Claude, taalfix]

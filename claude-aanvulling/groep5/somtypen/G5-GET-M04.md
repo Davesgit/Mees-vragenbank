@@ -26,12 +26,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind telt twee getallen tot 1000 bij elkaar op.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `min gedaan` (fout = getal1 - getal2 of getal2 - getal1) → Kijk goed naar het teken. Bij + tel je op.  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Tel de eenheden nog eens bij elkaar.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Tel de eenheden nog eens bij elkaar.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Tel de eenheden nog eens bij elkaar.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Tel de eenheden nog eens bij elkaar.  [nieuw]
   - `tiental te veel` (fout = antwoord + 10) → Dat is te veel. Tel de tientallen nog eens bij elkaar.  [nieuw]
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Tel de tientallen nog eens bij elkaar.  [nieuw]
-  - `honderdtal te veel` (fout = antwoord + 100) → Dat is één honderdtal te veel. Tel de honderdtallen nog eens bij elkaar.  [nieuw]
-  - `honderdtal te weinig` (fout = antwoord − 100) → Dat is één honderdtal te weinig. Komen de tientallen samen op tien of meer? Dan komt er een honderdtal bij.  [nieuw]
+  - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Tel de honderdtallen nog eens bij elkaar.  [nieuw]
+  - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Komen de tientallen samen op tien of meer? Dan komt er een honderdtal bij.  [nieuw]
   - `andere fout` (andere fout) → Begin bij het eerste getal. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
@@ -54,8 +54,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `de uitkomst` (fout = getal2) → Dat is de uitkomst van de som. Welk getal moet je bij het eerste getal optellen om daar te komen?  [nieuw]
   - `opgeteld` (fout = getal1 + getal2) → Je hebt de twee getallen opgeteld. Zoek wat erbij moet: van het eerste getal naar de uitkomst.  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één te veel. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één te weinig. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn.  [nieuw]
   - `tiental te veel` (fout = antwoord + 10) → Dat is te veel. Let op de tientallen. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn.  [nieuw]
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Let op de tientallen. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn.  [nieuw]
   - `andere fout` (andere fout) → Begin bij het eerste getal en vul aan tot de uitkomst. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn.  [nieuw]

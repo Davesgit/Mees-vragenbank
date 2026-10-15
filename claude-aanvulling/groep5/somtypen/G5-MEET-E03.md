@@ -37,7 +37,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Bedenk een keersom met het aantal hokjes uit de vraag als uitkomst. Het eerste getal is het aantal rijen, het tweede hoeveel hokjes er in elke rij komen. Kleur de rijen recht onder elkaar.
 - **Ouderzin:** Je kind kleurt een rechthoek met een gegeven oppervlakte (aantal hokjes) op een rooster.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `één hokje te veel` (fout = getal + 1 (aantal gekleurde hokjes)) → Je hebt één hokje te veel gekleurd. Tel de hokjes nog eens.  [nieuw]
+  - `één hokje te veel` (fout = getal + 1 (aantal gekleurde hokjes)) → Je hebt te veel hokjes gekleurd. Tel de hokjes nog eens.  [nieuw]
   - `te weinig hokjes` (fout kleiner dan het getal in de vraag (aantal gekleurde hokjes)) → Je hebt te weinig hokjes gekleurd. Tel ze nog eens: hoeveel moeten het er zijn?  [nieuw]
   - `andere fout` (andere fout) → Tel je hokjes. Zijn het er precies genoeg? Is het een rechthoek: alle rijen even lang en recht onder elkaar?  [nieuw]
 - Status: hints klaar
