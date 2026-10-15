@@ -12,3 +12,7 @@
 - V-#1137: VERH-E01 #1 'bijna' (± 1) gesplitst in 'één te veel' / 'één te weinig' → «Dat is te veel./te weinig. Reken het na: …»; check 'bijna-zonder-richting' (entry + item, alle somtypen), mutanten M_bijna, M_bijnaI.
 - V-#1139 (les 455): «Dan is er nog een tafel nodig.» / «Voor wie overblijft, is nog een tafel nodig.» → «… zijn er meer tafels nodig.»; 'nog een/één … nodig' in BEDRAG; mutant M_nodig. G5-scan: 0 over.
 - Z-#1138: cijfers uit vraag/antwoord blijven; geen wijziging.
+## z1091_v5 (18:12, V-#1140 / les 456) — PATCH COPY op ec3a77e (main vóór de merge van v4; git archive uit /workspace/mees-z1090, alleen gelezen)
+- Rechtgezet: v4 staat op ec3a77e (niet c533d6f); 93 mutanten in v4 (niet 98); GET-M06: 25 velden in 5 items (de '13 wijzigingen' van de hook zijn entryregels).
+- check_z1091: groep5_voor uit <basis>/groep5_voor, anders BASIS_COMMIT → git archive (tijdelijke map), anders FAIL + exit 2. Mutant M_geenvoor (alle 13 somtypen).
+- Draaien zoals Overzicht (repo zonder groep5_voor): BASIS_COMMIT=ec3a77e python3 check_z1091.py <somtype> <repo>.

@@ -101,9 +101,24 @@ if DOEL == 'G5-MEET-E06':
             if kl and re.search(r'te vroeg', t) and (b_[0] - a_[0]) % 12 != 1: F.append(f"klok-richting {d} #{n} {x['nr']} sleutel {h['fout']!r}: te vroeg, maar {a_} vs {b_}")
 # V-#1137: waar 'Bijna!' weg is, begint de tekst met een richting (entry én item; basis = groep5_voor van dezelfde zandbak)
 RICHT0 = re.compile(r'^(Dat is (?:er )?te (?:veel|weinig|ver)|Dat zijn er te (?:veel|weinig)|Je bent (?:te ver|niet ver genoeg)|Je bent te vroeg)\b')
-VOOR = os.path.join(B, 'groep5_voor')
+# V-#1140 (les 456): basis vóór de hooks. Volgorde: <basis>/groep5_voor (zandbak); anders BASIS_COMMIT (env, bv. ec3a77e) → `git archive`
+# uit BASIS_REPO (standaard /workspace/mees-z1090, alleen gelezen) naar een tijdelijke map; anders FAIL + exit 2 (nooit stil overslaan).
+import subprocess, tempfile, atexit, shutil
+def basis_voor():
+    v = os.path.join(B, 'groep5_voor')
+    if os.path.isdir(v) and MUT != 'M_geenvoor': return v, 'groep5_voor'
+    c = os.environ.get('BASIS_COMMIT', '') if MUT != 'M_geenvoor' else ''
+    if c:
+        repo = os.environ.get('BASIS_REPO', '/workspace/mees-z1090'); t = tempfile.mkdtemp(prefix='voor_'); atexit.register(shutil.rmtree, t, True)
+        r = subprocess.run(f"git -C '{repo}' archive {c} claude-aanvulling/groep5/hints claude-aanvulling/groep5/data/per_doel | tar -x -C '{t}'", shell=True, capture_output=True, text=True)
+        g = os.path.join(t, 'claude-aanvulling', 'groep5')
+        if r.returncode == 0 and glob.glob(os.path.join(g, 'hints', 'batch*.json')): return g, f'git {c}'
+        print(f"FAIL groep5_voor: git archive {c} uit {repo} mislukt: {r.stderr.strip()[:120]}"); sys.exit(2)
+    print(f"FAIL groep5_voor ontbreekt: geen {v} en geen BASIS_COMMIT (zet BASIS_COMMIT=<basiscommit>, bv. ec3a77e); bijna/woord-checks kunnen niet draaien")
+    print(f"check Z-#1091 {DOEL}: FAIL 1" + (f' (MUT={MUT})' if MUT else '')); sys.exit(2)
+VOOR, VOORBRON = basis_voor()
 n_b = 0
-if os.path.isdir(VOOR):
+if True:
     V0 = {}
     for p in sorted(glob.glob(os.path.join(VOOR, 'hints', 'batch*.json'))):
         for s in json.load(open(p, encoding='utf-8'))['somtypen']:
@@ -130,7 +145,7 @@ if os.path.isdir(VOOR):
 # V-#1136: geen kapotte woorden: elk woord in de kindteksten van dit somtype staat in de woordenlijst (basis-G5 + vervangzinnen)
 WRD = re.compile(r"[A-Za-zÀ-ÿ]+")
 WL = set()
-if os.path.isdir(VOOR):
+if True:
     for p in glob.glob(os.path.join(VOOR, 'hints', 'batch*.json')) + glob.glob(os.path.join(VOOR, 'data', 'per_doel', '*.json')):
         WL |= {w.lower() for w in WRD.findall(open(p, encoding='utf-8').read())}
     WL |= {w.lower() for a, b in REGELS if isinstance(b, str) for w in WRD.findall(b)} | {w.lower() for v in MEERV.values() for w in [v]}
@@ -164,6 +179,6 @@ snap = {f"{s['doel']}#{s['nrOrigineel']} {f['soort']}": [f.get('tekst'), f.get('
 if os.environ.get('SNAP') == '1': os.makedirs(os.path.dirname(SNAPF), exist_ok=True); json.dump(snap, open(SNAPF, 'w', encoding='utf-8'), ensure_ascii=False, indent=0, sort_keys=True)
 elif os.path.exists(SNAPF):
     oud = json.load(open(SNAPF, encoding='utf-8')); F += [f"SNAP Z-#1091 {k}" for k in sorted(set(oud) | set(snap)) if oud.get(k) != snap.get(k)][:20]
-print(f"INFO {DOEL}: {len(ENT)} entries, {len(XS)} items; richting nagekeken bij {n_r} sleutels, {geen} zonder eenduidig richtingwoord/getal; SNAP {len(snap)} regels; leen/onthoud-teksten {n_l}; bijna→richting {n_b}; woorden {n_w}" + (f'; klok nagekeken bij {n_k} sleutels' if DOEL == 'G5-MEET-E06' else ''))
+print(f"INFO {DOEL}: {len(ENT)} entries, {len(XS)} items; richting nagekeken bij {n_r} sleutels, {geen} zonder eenduidig richtingwoord/getal; SNAP {len(snap)} regels; leen/onthoud-teksten {n_l}; bijna→richting {n_b}; woorden {n_w}; basis {VOORBRON}" + (f'; klok nagekeken bij {n_k} sleutels' if DOEL == 'G5-MEET-E06' else ''))
 for f in F[:30]: print('FAIL', f)
 print(f"check Z-#1091 {DOEL}: FAIL {len(F)}" + (f' (MUT={MUT})' if MUT else ''))
