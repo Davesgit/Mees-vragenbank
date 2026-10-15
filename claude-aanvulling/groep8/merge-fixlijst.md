@@ -524,3 +524,13 @@ Commit in mees-vragenbank (`/workspace/mees-vragenbank`, main): build 18:20:30 �
 - Gedaan: r1h → g8/hints/patch_batch9.py (04151006; de diff met 1g is alleen het 1h-blok), gebouwd met bouw_veilig. VBN-V01 #1: omgewisseld 44, maar één getal 23, (0,0)/'stip op de lijn van nul' 76; die 76 hebben allemaal een 0 waar het antwoord er geen heeft.
 - Z-#1094 en Oef-#1030 zaten al in de build van 8 okt 20:36:44: 7 drie-kanten-uitleggen boven het antwoord krijgen de V-#1061-tekst, de build-assert vereist 7, en er staat 0 keer 'binnenin' de verkeerde kant op.
 - Gates: b1–b9 FAIL 0, check_hints 0 FAIL, merge-notatie ALLES OK. b9-snapshot niet opnieuw gezet (niet nodig: hij klopte al).
+
+### 15 okt: Didactiek keurt G8 definitief goed (taal: ok, main 337ba06)
+- **Z-#1098:** de 24 overige 'binnenin'-teksten in MEET-V01 #1 blijven staan. Daar ligt de drie-kanten-waarde onder het antwoord, dus de richting klopt. Alleen de 7 van Z-#1094 zijn aangepast.
+- **Z-#1043:** blijft open.
+- **Z-#1096:** G8-tooling staat in de repo onder `claude-aanvulling/groep8/`, met paden relatief aan de repo:
+  - `hints/`: make_/patch_batch*.py, patch_lib.py en wijzigingen_batch*.json;
+  - `scripts/`: apply_hints.py en de andere buildscripts;
+  - `tools/`: mutrun.py, l271.py en b6/b8/b9 (check.py, runmut.sh, verwacht.tsv, snapshots).
+- **Z-#1097:** __pycache__ is opgeruimd in tools/ en g8/scripts. In de repo stond `__pycache__/` al in .gitignore, en er is niets van getrackt.
+- **VBN-V01 #1, items 001–012:** gaan niet live zonder beeld.

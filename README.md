@@ -4,7 +4,7 @@ De vragenbank van **LeerMees**: een gratis, rustig en didactisch rekenplatform v
 
 Deze repo is de bron om verder te werken, voor mensen en voor AI-tools (ChatGPT, Claude en andere). Alle kindteksten zijn Nederlands.
 
-Stand: 8 oktober 2026. G5 en G6: ronde 10 (gate en rechecks van Didactiek) is verwerkt; alle checks 0 FAIL, 0 WARN (zie [Stand per groep](#stand-per-groep)).
+Stand: 15 oktober 2026. G8 is definitief goedgekeurd (Didactiek, taal: ok). De fixes voor G3–G7 (ronde r13) staan op de branch `na-ronde-r13` en liggen bij Didactiek voor de hercheck (zie [Stand per groep](#stand-per-groep)).
 
 ## Mappen
 
@@ -119,12 +119,12 @@ Wat nog hints nodig heeft: [`claude-aanvulling/hints_todo.md`](claude-aanvulling
 
 | Groep | Canonieke bank | Claude-aanvulling | Somtypen met hints | Stand |
 |---|---|---|---|---|
-| G3 | 44 leerdoelen · 284 items | 1.519 items · 26 leerdoelen | 83 van 83 | **Klaar** |
-| G4 | 46 leerdoelen · 368 items | 1.855 items · 24 leerdoelen | 97 van 97 | **Goedgekeurd** (Didactiek: taal: ok, ook na build 15:46:18 met ronde 1c/1d GET-E05). Checks 0 FAIL · 1 WARN (LES250 bank-059, nieuwe check, voor Oefeningen). |
-| G5 | 40 leerdoelen · 320 items | 4.845 items · 22 leerdoelen | 139 van 139 | **Ronde 11 verwerkt** (eindcheck r11 van Didactiek: #530/Oef-#426 bedragen, #531, #540, #543); na-ronde r12 (build 12:47:18): Oef-#427 gen-001 vervangen, motor zonder verschuiving; checks 0 FAIL, 0 WARN. Vaste somtypenummers (`bevroren/somtype_weergave_nr.json`). Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`, blokken 'Ronde 10' en 'Ronde 10b' |
-| G6 | 44 leerdoelen · 352 items | 4.302 items · 23 leerdoelen | 102 van 102 | **Ronde 11 verwerkt** (build 12:11:42; eindcheck r11 van Didactiek: #532 overdracht, #540, #543; checks 0 FAIL, 0 WARN, FIX6 0). Nieuw: hm (MEET-E01 #7–#10) en dl (MEET-E04 #5–#8). Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`, blokken 'Ronde 10' en 'Ronde 10b' |
-| G7 | 25 leerdoelen · 200 items (+ 16 in een Claude-set en 12 pilotbestanden) | 7.646 items · 17 leerdoelen | 155 van 155 | **Taal: ok, heel G7** (Didactiek 8 okt, build 15:41:07; geldt ook voor 15:49:23 en 15:52:17). Laatste build 16:20:58: hints batch 1 t/m 6, 155 van 155, checks 0 FAIL · 0 WARN; daarin V-#853/Z-#854 (GET-04 somtype 5: 427, 428, 861, 863, 864 nieuwe data met gelijke som, wacht op een korte nacheck van Didactiek). |
-| G8 | 37 leerdoelen · 296 items | 1.458 items · 23 leerdoelen | 121 van 223 | **Hints batch 1–5** (build 16:45:31). Didactiek: batch 1–3 taal: ok (16:06:26 + sync 16:12; 0 verschil op 16:13:53); batch 4 taal: fix (16:25:38) → V-#870/V-#871/Z-#872/Z-#873 zitten erin, ronde 1b/1c van Oefeningen ook; batch 5 (MEET-E03/E05/E06) gesynct, nog niet bekeken. |
+| G3 | 44 leerdoelen · 284 items | 1.519 items · 26 leerdoelen | 83 van 83 | **Klaar.** Checks: 0 FAIL · 1 WARN. Fixes ronde r13 op `na-ronde-r13`, bij Didactiek voor de hercheck. |
+| G4 | 46 leerdoelen · 368 items | 1.855 items · 24 leerdoelen | 97 van 97 | **Goedgekeurd** (Didactiek: taal: ok, build 15:46:18). Checks: 0 FAIL · 3 WARN. Fixes ronde r13 op `na-ronde-r13`, bij Didactiek voor de hercheck. |
+| G5 | 40 leerdoelen · 320 items | 4.845 items · 22 leerdoelen | 139 van 139 | **Ronde 11 verwerkt** (na-ronde r12, build 12:47:18). Checks: 0 FAIL · 2 WARN. Fixes ronde r13 op `na-ronde-r13`, bij Didactiek voor de hercheck. Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`. |
+| G6 | 44 leerdoelen · 352 items | 4.302 items · 23 leerdoelen | 102 van 102 | **Ronde 11 verwerkt** (build 12:11:42). Checks: 0 FAIL · 3 WARN. Fixes ronde r13 op `na-ronde-r13`, bij Didactiek voor de hercheck. Open voor Oefeningen/Leerlijn: zie `merge-fixlijst.md`. |
+| G7 | 25 leerdoelen · 200 items (+ 16 in een Claude-set en 12 pilotbestanden) | 7.646 items · 17 leerdoelen | 155 van 155 | **Taal: ok, heel G7** (Didactiek 8 okt). Laatste build 16:20:58. Checks: 0 FAIL · 0 WARN. Fixes ronde r13 op `na-ronde-r13`, bij Didactiek voor de hercheck. |
+| G8 | 37 leerdoelen · 296 items | 1.458 items · 23 leerdoelen | 206 van 206 | **Goedgekeurd** (Didactiek 15 okt, taal: ok; build 15 okt 16:11:31, commit 337ba06). Checks: b1–b9 0 FAIL, check_hints 0 FAIL · 0 WARN, merge-notatie OK; mutanten b6/b8/b9 66/74/71 gevangen (`claude-aanvulling/groep8/tools/`). VBN-V01 #1 001–012 gaan niet live zonder beeld. |
 
 **G5 en G6 (ronde 9):** de builds zijn van 8 oktober, G5 10:57:42 en G6 10:58:34 (veld `gegenereerdOp`), met de motor `scripts/fout_regels.py` die hier staat (gelijk in G5–G8). Elk databestand heeft ook `hintsSyncOp` en `hintsBatches` (welke hint-batches erin zitten). Bord, app en rapporten werken op `id`, niet op `nr` of het somtypenummer: die kunnen verschuiven. G5 heeft 139 somtypen, want E07 #6 (TT × TT schatten, 10 items) is naar G6-GET-E06 gegaan. G6 heeft 94 somtypen, want MKU-E01 #3 en #4 zijn samengevoegd met #1 en GET-E06 heeft er één bij.
 

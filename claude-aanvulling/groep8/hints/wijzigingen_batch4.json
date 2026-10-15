@@ -1,0 +1,2684 @@
+[
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 1,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "alleen de volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "volle en rest opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = hele getal + rest",
+    "tekst": "Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "de rest",
+    "claudeDenkfout": null,
+    "regel": "fout = de rest van getal2 : getal1",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "alleen de volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "volle en rest opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = hele getal + rest",
+    "tekst": "Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "de rest",
+    "claudeDenkfout": null,
+    "regel": "fout = de rest van getal2 : getal1",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 3,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "alleen de volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "volle en rest opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = hele getal + rest",
+    "tekst": "Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "de rest",
+    "claudeDenkfout": null,
+    "regel": "fout = de rest van getal2 : getal1",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 4,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "alleen de volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "volle en rest opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = hele getal + rest",
+    "tekst": "Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "de rest",
+    "claudeDenkfout": null,
+    "regel": "fout = de rest van getal2 : getal1",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 5,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "alleen de volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "volle en rest opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = hele getal + rest",
+    "tekst": "Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "de rest",
+    "claudeDenkfout": null,
+    "regel": "fout = de rest van getal2 : getal1",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 6,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "alleen de volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "volle en rest opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = hele getal + rest",
+    "tekst": "Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "de rest",
+    "claudeDenkfout": null,
+    "regel": "fout = de rest van getal2 : getal1",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 8,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "alleen de volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "volle en rest opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = hele getal + rest",
+    "tekst": "Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "de rest",
+    "claudeDenkfout": null,
+    "regel": "fout = de rest van getal2 : getal1",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 10,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Je zoekt een aantal, en dat is een heel getal. Kijk naar het getal voor de komma, en naar wat er na de komma staat.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "één te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord + 1",
+    "tekst": "Dat is er één te veel. Reken het na: past alles ook in één minder?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "alleen de volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat zijn alleen de volle. Daarna blijft er nog wat over, en dat moet ook ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "volle en rest opgeteld",
+    "claudeDenkfout": null,
+    "regel": "fout = hele getal + rest",
+    "tekst": "Dat is het aantal volle plus wat er overblijft. Wat overblijft, past samen in nog één. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "de rest",
+    "claudeDenkfout": null,
+    "regel": "fout = de rest van getal2 : getal1",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "rest nog niet erin",
+    "claudeDenkfout": "rest-vergeten",
+    "regel": "Claudes sleutel: rest-vergeten",
+    "tekst": "Na de volle blijft er nog wat over. Dat past samen in nog één. Hoeveel heb je er dan nodig?",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "wat overblijft",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er overblijft na de volle. De vraag wil weten hoeveel je er nodig hebt, zodat alles erin past.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Het getal voor de komma zegt hoeveel er helemaal vol raken. Blijft er dan nog wat over? Ook dat moet ergens in. Hoeveel heb je er dan nodig?",
+    "tekstSterker": "Staat er na de komma nog iets? Dan blijft er wat over dat nog nergens in zit. Ook dat moet ergens in: dan heb je er één meer nodig dan het getal voor de komma."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 7,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "per stuk min wat overblijft",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 − antwoord",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het aantal volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "cijfers achter de komma",
+    "claudeDenkfout": null,
+    "regel": "fout = de cijfers achter de komma uit de vraag",
+    "tekst": "Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 9,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "per stuk min wat overblijft",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 − antwoord",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het aantal volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "cijfers achter de komma",
+    "claudeDenkfout": null,
+    "regel": "fout = de cijfers achter de komma uit de vraag",
+    "tekst": "Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 11,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "per stuk min wat overblijft",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 − antwoord",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het aantal volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "cijfers achter de komma",
+    "claudeDenkfout": null,
+    "regel": "fout = de cijfers achter de komma uit de vraag",
+    "tekst": "Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 12,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "per stuk min wat overblijft",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 − antwoord",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het aantal volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "cijfers achter de komma",
+    "claudeDenkfout": null,
+    "regel": "fout = de cijfers achter de komma uit de vraag",
+    "tekst": "Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 13,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "per stuk min wat overblijft",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 − antwoord",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het aantal volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "cijfers achter de komma",
+    "claudeDenkfout": null,
+    "regel": "fout = de cijfers achter de komma uit de vraag",
+    "tekst": "Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 14,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "per stuk min wat overblijft",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 − antwoord",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het aantal volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "cijfers achter de komma",
+    "claudeDenkfout": null,
+    "regel": "fout = de cijfers achter de komma uit de vraag",
+    "tekst": "Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 15,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "per stuk min wat overblijft",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 − antwoord",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het aantal volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "cijfers achter de komma",
+    "claudeDenkfout": null,
+    "regel": "fout = de cijfers achter de komma uit de vraag",
+    "tekst": "Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-E05",
+  "nrOrigineel": 16,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "kommagetal",
+    "claudeDenkfout": null,
+    "regel": "fout = een kommagetal",
+    "tekst": "Er blijft een aantal over, en dat is een heel getal. Wat er na de komma staat, is niet dat aantal. Reken het uit met het getal voor de komma.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Je zoekt hoeveel er overblijven als alle volle weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "per stuk min wat overblijft",
+    "claudeDenkfout": null,
+    "regel": "fout = getal1 − antwoord",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "het aantal volle",
+    "claudeDenkfout": null,
+    "regel": "fout = het hele getal van het kommagetal uit de vraag",
+    "tekst": "Dat is het aantal volle: dat getal staat voor de komma. De vraag wil weten hoeveel er overblijven als die weg zijn.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "cijfers achter de komma",
+    "claudeDenkfout": null,
+    "regel": "fout = de cijfers achter de komma uit de vraag",
+    "tekst": "Dat getal staat na de komma, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "aangevuld",
+    "claudeDenkfout": "andere-deel-genomen",
+    "regel": "Claudes sleutel: andere-deel-genomen",
+    "tekst": "Dat is wat er nog bij moet om er nog één vol te maken. De vraag wil weten hoeveel er overblijven.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "getal van de rekenmachine",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat getal zie je op de rekenmachine, maar het is niet wat er overblijft. Wat overblijft, reken je uit: haal de volle van het totaal af.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Hoeveel gaan er in alle volle samen? Haal dat van het totaal af: wat blijft er over?",
+    "tekstSterker": "Doe het getal voor de komma keer het aantal dat er in één past: zoveel gaan er weg. Haal dat van het totaal af. Wat overblijft, is het antwoord."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet; Ronde 1c (Oefeningen 8 okt; Z-#870 Didactiek review-batch4): kommagetal vóór getal uit de vraag"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-M01",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 10",
+    "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "duizend keer te weinig",
+    "claudeDenkfout": "nul-fout-tientallen",
+    "regel": "Claudes sleutel: nul-fout-tientallen",
+    "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 10",
+    "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend in plaats van miljoen",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 1000",
+    "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "duizend keer te weinig",
+    "claudeDenkfout": "nul-fout-tientallen",
+    "regel": "Claudes sleutel: nul-fout-tientallen",
+    "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-M01",
+  "nrOrigineel": 3,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 10",
+    "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "duizend keer te weinig",
+    "claudeDenkfout": "nul-fout-tientallen",
+    "regel": "Claudes sleutel: nul-fout-tientallen",
+    "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 10",
+    "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend in plaats van miljoen",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 1000",
+    "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "duizend keer te weinig",
+    "claudeDenkfout": "nul-fout-tientallen",
+    "regel": "Claudes sleutel: nul-fout-tientallen",
+    "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-M01",
+  "nrOrigineel": 4,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 10",
+    "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "duizend keer te weinig",
+    "claudeDenkfout": "nul-fout-tientallen",
+    "regel": "Claudes sleutel: nul-fout-tientallen",
+    "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 10",
+    "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend in plaats van miljoen",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 1000",
+    "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "duizend keer te weinig",
+    "claudeDenkfout": "nul-fout-tientallen",
+    "regel": "Claudes sleutel: nul-fout-tientallen",
+    "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-GET-M01",
+  "nrOrigineel": 5,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 10",
+    "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "duizend keer te weinig",
+    "claudeDenkfout": "nul-fout-tientallen",
+    "regel": "Claudes sleutel: nul-fout-tientallen",
+    "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 10",
+    "tekst": "Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "nul te veel",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord × 10",
+    "tekst": "Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "duizend in plaats van miljoen",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 1000",
+    "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "duizend keer te weinig",
+    "claudeDenkfout": "nul-fout-tientallen",
+    "regel": "Claudes sleutel: nul-fout-tientallen",
+    "tekst": "Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?",
+    "tekstSterker": "Een miljoen heeft zes nullen. Schrijf het getal uit de vraag op, en zet er zes nullen achter."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-MEET-E01",
+  "nrOrigineel": 1,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "tien keer te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 10",
+    "tekst": "Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "honderd keer te weinig",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "tien keer te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 10",
+    "tekst": "Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "keer tien gedaan",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 100",
+    "tekst": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "honderd keer te weinig",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet"
+ },
+ {
+  "tijd": "16:43",
+  "doel": "G8-MEET-E01",
+  "nrOrigineel": 2,
+  "veld": "foutHints",
+  "was": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "tien keer te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 10",
+    "tekst": "Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "honderd keer te weinig",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   }
+  ],
+  "wordt": [
+   {
+    "bron": "nieuw",
+    "soort": "getal uit de vraag",
+    "claudeDenkfout": null,
+    "regel": "fout = een getal uit de vraag",
+    "tekst": "Dat is het getal in kilometer. De vraag wil meters: hoeveel meter is één kilometer?",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "tien keer te weinig",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 10",
+    "tekst": "Dat is tien keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "keer tien gedaan",
+    "claudeDenkfout": null,
+    "regel": "fout = antwoord : 100",
+    "tekst": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "claude-taalfix",
+    "soort": "honderd keer te weinig",
+    "claudeDenkfout": "kommagetal-als-geheel",
+    "regel": "Claudes sleutel: kommagetal-als-geheel",
+    "tekst": "Dat is honderd keer te weinig. Eén kilometer is duizend meter: doe het aantal kilometer keer duizend.",
+    "claudeTekst": null,
+    "waarom": "Claudes sleutels met dit label: geen motorregel die ze allemaal pakt (Oef-#490); vaste tekst zonder getallen, per sleutel nagerekend, met eigen laag 2",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   },
+   {
+    "bron": "nieuw",
+    "soort": "andere fout",
+    "claudeDenkfout": null,
+    "regel": "andere fout",
+    "tekst": "Eén kilometer is duizend meter. Hoeveel meter is dan het aantal kilometer uit de vraag?",
+    "tekstSterker": "Doe het aantal kilometer keer duizend. Bij een kommagetal schuift de komma dan drie plekken op. Vul aan met nullen."
+   }
+  ],
+  "waarom": "Ronde 1b (Oefeningen 8 okt; Oef-#490 motorregels, build 16:25:38): rekenregels Oef-#490 vóór de labelregels; labelregel blijft vangnet"
+ }
+]

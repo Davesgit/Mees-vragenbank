@@ -1,0 +1,56 @@
+# Z-#961 / les 360: verwachte melding per mutant (regex op een NIEUWE FAIL-regel). Generieke namen staan in mutrun.py (STANDAARD).
+M_192	#192 .*'even veel'
+M_dprijs	VERH-E05 #\d+ \d{3} data: H2: 'nieuwe min oude prijs; de oude prijs is honderd procent' = het antwoord
+M_drente	VERH-E05 #\d+ \d{3} data: H2: 'bedrag : honderd × procent = rente; rente erbij' = het antwoord
+M_dstijg	VERH-E05 #\d+ \d{3} data: H2: 'oude prijs : honderd × procent erbij' = het antwoord
+M_daantal	VERH-E05 #\d+ \d{3} data: H2: 'nieuw min oud aantal; het oude aantal is honderd procent' = het antwoord
+M_ddaal	VERH-E05 #\d+ \d{3} data: H2: 'oud min nieuw; het oude aantal is honderd procent' = het antwoord
+M_drooster	VBN-V01 #1 001 data:
+M_dlijn	VBN-V01 #2 013 data:
+M_dcirkel	VBN-V01 #3 014 data:
+M_das	VBN-V01 #4 015 data:
+M_dstaaf	VBN-V01 #5 016 data:
+M_306	les 306 VERH-E05 #\d+ \d{3}: de foute route 'verschil in euro'
+M_d353	VERH-E05 #\d+ \d{3} data: H1/H2: oude prijs in euro, procent erbij
+M_label	VERH-E05 #\d+ \d{3} sleutel '€?8': soort 'tien keer te veel rente' klopt niet
+M_label2	VERH-E05 #\d+ \d{3} sleutel '€?24': soort 'procent als euro' klopt niet
+M_label3	VERH-E05 #\d+ \d{3} sleutel '€41': soort 'nog geen procent van de oude prijs' klopt niet
+M_label4	VERH-E05 #\d+ \d{3} sleutel '4': soort 'nieuwe aantal als basis' klopt niet
+M_label5	VBN-V01 #1 001 sleutel '1,5': soort 'omgewisseld' klopt niet
+M_label6	VERH-E05 #\d+ \d{3} sleutel '€?392': soort 'alleen de rente' klopt niet
+M_lijn2	VBN-V01 #2 013 'De temperatuur daalt met 6 graden': soort 'omhoog in plaats van omlaag' klopt niet
+M_staaf2	VBN-V01 #5 016 'Maandag': soort 'de laagste staaf' klopt niet
+M_lett	VBN-V01 #5 016 regel 'dag': pakt
+M_mist	VBN-V01 #4 015: foute optie '140' heeft 0 fout-hints
+M_alg	VERH-E05 #\d+ \d{3} '(20|12) procent': meerkeuze-optie op 'andere fout'
+M_deel	VERH-E05 nrO2 \[L1 mutant\]: (cijfer|dubbele punt|deelteken)
+M_ongev	les 372 VERH-E05 nrO21 \[L1 mutant\]
+M_ctx	les 147 VERH-E05 nrO(4|2) \[L1 mutant\]: (kopwoord|contextwoord) 'daan'
+M_ctx2	les 147 VERH-E05 nrO5 \[L1 mutant\]: (kopwoord|contextwoord) 'knuffel'
+M_ctx3	les 147 VERH-E05 nrO3 \[L1 mutant\]: contextwoord 'wortels'
+M_ctx4	les 147 VERH-E05 nrO3 \[L1 mutant\]: contextwoord
+M_ctx5	les 147 VBN-V01 nrO5 \[L1 mutant\]: contextwoord 'maandag'
+M_ctx6	les 147 VERH-E05 nrO(19|5) \[L1 mutant\]: (kopwoord|contextwoord)
+M_260	les 260 VBN-V01 #3 014 H1
+M_824	Z-#824 VBN-V01 #2 013 H2
+M_264	(les 264 VERH-E05 #\d+ 054 H1: 'ongev'|les 260 VERH-E05 #\d+ 054 H1|Z-#824 VERH-E05 #\d+ \d{3} H1)
+M_264h2	les 264 VBN-V01 #4 015 H2
+M_lijn0	VBN-V01 #1 001 sleutel '6,2': soort '(stip op de lijn van nul|maar één getal)' klopt niet
+M_1022	les 306 VERH-E05 #\d+ \d{3}: de foute route 'oude prijs uit de vraag'
+M_1024	V-#1024 VERH-E05 #\d+ \d{3}
+M_1025	VBN-V01 #1 0\d\d sleutel '\d+': soort '(maar één getal|stip op de lijn van nul)' klopt niet
+M_1014	Oef-#1014 VERH-E05 kop 'Een \[ding\] kostte €# en kost nu €#
+M_1031	VBN-V01 #1 009 sleutel '1,0': soort 'maar één getal' klopt niet
+M_1023	(Oef-#1023 VBN-V01 #1 001: sleutel '(6,0|0,1)' staat niet onder 'stip op de lijn van nul'|les 318 V01 #1: 'stip op de lijn van nul' staat na)
+M_318	les 318 V01 #1: '(stip op de lijn van nul|omgewisseld)' staat na 'een getal uit de vraag'
+M_dec	VBN-V01 #1 0\d\d sleutel '\(?\d+, ?0\)?': soort 'maar één getal' klopt niet
+M_1024k	Oef-#1024 VERH-E05 #\d+ \d{3} sleutel '33,3': soort 'andere fout', de afgeronde vorm '33' heeft
+M_1062n	Z-#1062 VBN-V01 #1 008 sleutel '3,0': tekst 'een nul waar een ander getal hoort', maar het antwoord
+M_1062t	Z-#1062 V01 #1 entry 'stip op de lijn van nul': niet de tekst van Didactiek
+M_1062s	Z-#1062 snapshot V01 #1 001 6,0
+M_1062p	les 193 VBN-V01 nrO1 \[L1 stip op de lijn van nul\]: plekwoord
+M_1036k	Oef-#1036 VBN-V01 #1 \[L2 andere fout\]: 'vóór/na de komma'
+M_1036c	les 193 VBN-V01 nrO2 \[L1 mutant\]: plekwoord
+M_1036v	les 300 Oef-#1036 VBN-V01 #1 001 \[001 sterkereHint\]: hint geeft de stip
+M_1036s	Oef-#1036 snapshot V01 #1 \[H1\]
+M_1036o	Oef-#1036 VBN-V01 #1 'omgewisseld': niet «Bij jouw stip
