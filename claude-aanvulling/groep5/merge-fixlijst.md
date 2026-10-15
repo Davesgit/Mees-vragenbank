@@ -645,3 +645,7 @@ Checks op r13/g5 (8 okt ±18:20): check_hints 139 klaar · 0 open · 0 FAIL · 2
 - **Z-#1136, V-#1140 en V-#1141 opgelost, op main (merge 82b5e82, Didactiek 15 okt taal: ok).** V-#1141: check_z1136/scan_z1136 importeren uit ../z1091; check_z1091 BASIS_REPO standaard = repo van het script; sbx-scripts via git archive uit de repo; geen /workspace-paden in groep5/scripts. Getest vanuit een schone git-archive-snapshot (les 457).
 - **Z-#1142 (open, zacht, Oefeningen):** 71 sleutels zonder komma (bv. €11 bij €11,10) krijgen «Kijk goed naar de centen: die mis je nog.».
 - **Z-#1142 + Oef-#1065 geplaatst op `na-ronde-z1142` (15 okt, ter review):** G5-motor `groep5/scripts/fout_regels.py` (6a3d6409 → a00a0c4e): compile_regel kent '(sleutel hele euro)' / '(sleutel met centen)'. GET-E06 #1/#2: nieuwe soort 'centen te veel/weinig (10 cent, hele euro)' met «Dat is te veel/te weinig. Kijk goed naar de centen: die mis je nog.» (71 sleutels: 36 te veel, 35 te weinig). G8-motor (0d5393e8) en G7-motor (4fb7f673) ongewijzigd. Geen snap ververst.
+- **Z-#1142 + Oef-#1065 opgelost, op main (merge 17c0449, Didactiek 15 okt taal: ok, definitief op e388ac1).**
+- **V-#1143 (open, zacht):** de ±1- en ±10-centregels in GET-E06 #1/#2 krijgen '(sleutel met centen)' plus een mutant, zodat de volgorde van de regels niet bepaalt welke tekst een kind ziet (les 458).
+- **z1142-LEESMIJ (open, zacht):** de basis moet cbc6d2f zijn (nu f67d28d).
+- Nog open (zacht): Z-#1135, Z-#1092, Z-#1121.
