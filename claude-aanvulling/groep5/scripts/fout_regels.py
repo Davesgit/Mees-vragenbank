@@ -322,6 +322,15 @@ def _lijn219(r, c):
 def compile_regel(regel, c):
     """Zie _compile_regel. G6 ronde 8: bij een antwoord met een eenheid krijgt elke hele-getalwaarde die eenheid erachter ('220' → '220 bezoekers');
     de kale vorm blijft ook staan (een kind kan de eenheid weglaten)."""
+    # Z-#1142: '(sleutel hele euro)' / '(sleutel met centen)' achter een regel: alleen sleutels die een heel eurobedrag zijn (zonder komma), of juist niet
+    if (q1142 := re.search(r'\s*\(sleutel (hele euro|met centen)\)\s*$', regel, re.I)):
+        res = compile_regel(regel[:q1142.start()], c); heel = q1142.group(1).lower() == 'hele euro'
+        if not res or res.get('alles'): return res
+        ok = lambda v: _cent(v) is not None and (',' not in str(v)) == heel
+        res = dict(res)
+        if res.get('exact') is not None: res['exact'] = {v for v in res['exact'] if ok(v)}
+        if res.get('pred'): p0 = res['pred']; res['pred'] = lambda v, p0=p0: p0(v) and ok(v)
+        return res
     res = _compile_regel(regel, c)
     if res and getattr(c, 'eenheid', None) and res.get('exact'):
         res = dict(res); res['exact'] = set(res['exact']) | {f'{v} {c.eenheid}' for v in res['exact'] if re.fullmatch(r'\d+', str(v))}

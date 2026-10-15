@@ -16,3 +16,7 @@
 - Rechtgezet: v4 staat op ec3a77e (niet c533d6f); 93 mutanten in v4 (niet 98); GET-M06: 25 velden in 5 items (de '13 wijzigingen' van de hook zijn entryregels).
 - check_z1091: groep5_voor uit <basis>/groep5_voor, anders BASIS_COMMIT → git archive (tijdelijke map), anders FAIL + exit 2. Mutant M_geenvoor (alle 13 somtypen).
 - Draaien zoals Overzicht (repo zonder groep5_voor): BASIS_COMMIT=ec3a77e python3 check_z1091.py <somtype> <repo>.
+## V-#1141 (18:31, spiegel van Overzichts repofix) — g8work/r13/z1142/scripts/z1091
+- BASIS_REPO standaard = de repo van het script (git rev-parse --show-toplevel), niet /workspace/mees-z1090; zonder repo: FAIL + exit 2.
+- Altijd het TOTAAL aantal FAIL ('FAIL N (totaal)'; SNAP-verschillen niet meer afgekapt op 20, getoond max. 30 regels).
+- GET-M06/snap.json = e695e506 (repo f67d28d). Les 457: FAIL als de basis geen 'Bijna!' heeft (BASIS_COMMIT ná Z-#1091; juist: ec3a77e).
