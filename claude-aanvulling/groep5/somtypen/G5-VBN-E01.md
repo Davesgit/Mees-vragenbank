@@ -40,8 +40,8 @@ Hoeveel peren zijn er?
   - `streepjes geteld` (fout = antwoord gedeeld door getal1) → Je hebt de streepjes geteld. Kijk in de vraag hoeveel elk streepje is. Tel bij elk streepje zo veel verder.  [nieuw]
   - `getal vlak onder de top` (fout = het getal vlak onder de top) → Dat is het getal vlak onder de top. Tel de streepjes erboven er nog bij: kijk in de vraag hoeveel elk streepje is.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Is dat wat één streepje waard is? De vraag gaat over de hele staaf. Hoeveel streepjes hoog is de staaf?  [nieuw]
-  - `één streepje te veel` (fout = antwoord + getal1) → Bijna! Dat is één streepje te veel. Kijk goed waar de top van de staaf is.  [nieuw]
-  - `één streepje te weinig` (fout = antwoord − getal1) → Bijna! Dat is één streepje te weinig. Kijk goed waar de top van de staaf is.  [nieuw]
+  - `één streepje te veel` (fout = antwoord + getal1) → Dat is te veel. Tel de streepjes nog eens. Kijk goed waar de top van de staaf is.  [nieuw]
+  - `één streepje te weinig` (fout = antwoord − getal1) → Dat is te weinig. Tel de streepjes nog eens. Kijk goed waar de top van de staaf is.  [nieuw]
   - `andere staaf` (Claudes sleutel: grafiek-verkeerd-afgelezen) → Dat is een andere staaf. Zoek de staaf van het ding uit de vraag.  [Claude, taalfix]
   - `andere fout` (andere fout) → Zoek de staaf van het ding uit de vraag. Staat er een getal bij de top? Dan is dat het antwoord. Staat er geen getal, zoek dan het getal vlak eronder. Tel de streepjes erboven erbij: kijk in de vraag hoeveel elk streepje is.  [nieuw]
 - Status: hints klaar
@@ -79,8 +79,8 @@ Hoeveel stiften zijn er meer dan potloden?
   - `één staaf` (Claudes sleutel: andere-deel-genomen) → Dat is wat één staaf laat zien. De vraag is hoeveel meer: lees beide staven af en haal het kleinste getal van het grootste af.  [Claude, taalfix]
   - `streepjes geteld` (fout = antwoord gedeeld door getal1) → Je hebt geteld hoeveel streepjes de ene staaf hoger is. Kijk in de vraag hoeveel elk streepje is. Tel per streepje zo veel verder.  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Is dat wat één streepje waard is? De vraag is hoeveel meer. Lees allebei de staven af.  [nieuw]
-  - `één streepje te veel` (fout = antwoord + getal1) → Bijna! Dat is één streepje te veel. Kijk nog eens goed waar de toppen van de twee staven zijn.  [nieuw]
-  - `één streepje te weinig` (fout = antwoord − getal1) → Bijna! Dat is één streepje te weinig. Kijk nog eens goed waar de toppen van de twee staven zijn.  [nieuw]
+  - `één streepje te veel` (fout = antwoord + getal1) → Dat is te veel. Tel de streepjes nog eens. Kijk nog eens goed waar de toppen van de twee staven zijn.  [nieuw]
+  - `één streepje te weinig` (fout = antwoord − getal1) → Dat is te weinig. Tel de streepjes nog eens. Kijk nog eens goed waar de toppen van de twee staven zijn.  [nieuw]
   - `andere fout` (andere fout) → Lees de twee staven uit de vraag af. Kijk hoeveel elk streepje is. Hoeveel meer? Haal het kleinste getal van het grootste af.  [nieuw]
 - Status: hints klaar
 

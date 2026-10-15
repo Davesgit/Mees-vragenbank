@@ -28,7 +28,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `alle knikkers` (fout = getal1) → Dat zijn alle knikkers. Je zoekt een kwart: verdeel ze in vier gelijke groepjes. Hoeveel zitten er in één groepje?  [nieuw]
   - `drie kwart` (Claudes sleutel: verkeerde-bewerking) → Dat is drie kwart van de knikkers. Je zoekt één kwart: één van de vier gelijke groepjes.  [Claude, taalfix]
-  - `bijna` (fout = antwoord ± 1) → Bijna! Reken het na: vier groepjes van jouw antwoord moeten samen alle knikkers zijn.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Reken het na: vier groepjes van jouw antwoord moeten samen alle knikkers zijn.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Reken het na: vier groepjes van jouw antwoord moeten samen alle knikkers zijn.  [nieuw]
   - `andere fout` (andere fout) → Een kwart is één van vier gelijke delen. Deel het aantal knikkers door vier.  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-01): de hints zijn geschreven voor 'In [plek] liggen # [ding]. Een kwart ervan is groen. Hoeveel groene botten zijn er?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -57,8 +58,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `alles gekleurd` (fout = getal1) → Je hebt alle koekjes gekleurd. Drie kwart is drie van de vier groepjes: één groepje blijft over.  [nieuw]
   - `één kwart` (fout = een kwart van getal1) → Je hebt één kwart gekleurd: één groepje. Drie kwart is drie van de vier groepjes.  [nieuw]
   - `de helft` (fout = de helft van getal1) → Je hebt de helft gekleurd: twee van de vier groepjes. Drie kwart is drie van de vier groepjes.  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één koekje te veel. Verdeel de koekjes in vier gelijke groepjes en kleur drie groepjes.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één koekje te weinig. Verdeel de koekjes in vier gelijke groepjes en kleur drie groepjes.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Tel de koekjes nog eens. Verdeel de koekjes in vier gelijke groepjes en kleur drie groepjes.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Tel de koekjes nog eens. Verdeel de koekjes in vier gelijke groepjes en kleur drie groepjes.  [nieuw]
   - `andere fout` (andere fout) → Verdeel de koekjes in vier gelijke groepjes. Kleur de koekjes van drie groepjes.  [nieuw]
 - Status: hints klaar
 
@@ -85,7 +86,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `alles gekleurd` (fout = getal1) → Je hebt alle koekjes gekleurd. Een kwart is één van vier gelijke delen. Kleur alleen de koekjes van één groepje.  [nieuw]
   - `drie kwart` (fout = drie kwart van getal1) → Je hebt drie kwart gekleurd: drie van de vier groepjes. Een kwart is maar één groepje.  [nieuw]
   - `de helft` (fout = de helft van getal1) → Je hebt de helft gekleurd: twee van de vier groepjes. Een kwart is maar één groepje.  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Bijna! Dat is één koekje te veel. Verdeel de koekjes in vier gelijke groepjes en kleur één groepje.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Bijna! Dat is één koekje te weinig. Verdeel de koekjes in vier gelijke groepjes en kleur één groepje.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Tel de koekjes nog eens. Verdeel de koekjes in vier gelijke groepjes en kleur één groepje.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Tel de koekjes nog eens. Verdeel de koekjes in vier gelijke groepjes en kleur één groepje.  [nieuw]
   - `andere fout` (andere fout) → Verdeel de koekjes in vier gelijke groepjes. Kleur de koekjes van één groepje.  [nieuw]
 - Status: hints klaar

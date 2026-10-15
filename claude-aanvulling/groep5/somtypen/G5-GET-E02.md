@@ -31,8 +31,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `niet afgerond` (fout = getal1) → Dat is het getal zelf. Rond het af: welk tiental ligt er het dichtst bij?  [nieuw]
   - `verkeerde kant` (fout = het andere tiental naast getal1) → Dat is het tiental aan de andere kant van het getal. Kijk naar het cijfer achter de plek van de tientallen. Is het 5 of meer, dan ga je naar het tiental vlak erboven. Anders naar het tiental vlak eronder.  [Claude, taalfix]
-  - `één stap te ver (omhoog)` (fout = antwoord + 10) → Je gaat de goede kant op, maar één tiental te ver. Kies het tiental dat vlak naast het getal ligt.  [nieuw]
-  - `één stap te ver (omlaag)` (fout = antwoord − 10) → Je gaat de goede kant op, maar één tiental te ver. Kies het tiental dat vlak naast het getal ligt.  [nieuw]
+  - `één stap te ver (omhoog)` (fout = antwoord + 10) → Je gaat de goede kant op, maar te ver. Kies het tiental dat vlak naast het getal ligt.  [nieuw]
+  - `één stap te ver (omlaag)` (fout = antwoord − 10) → Je gaat de goede kant op, maar te ver. Kies het tiental dat vlak naast het getal ligt.  [nieuw]
   - `te ver (omhoog)` (fout = antwoord + 20 of meer) → Dat ligt te ver weg. Kies een tiental vlak naast het getal: het tiental eronder of het tiental erboven.  [nieuw]
   - `te ver (omlaag)` (fout = antwoord − 20 of meer) → Dat ligt te ver weg. Kies een tiental vlak naast het getal: het tiental eronder of het tiental erboven.  [nieuw]
   - `andere fout` (andere fout) → Zoek de twee tientallen vlak onder en vlak boven het getal. Kies het tiental dat er het dichtst bij ligt. Ligt het getal precies in het midden? Dan kies je het tiental erboven.  [nieuw]
@@ -62,8 +62,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `niet afgerond` (fout = getal1) → Dat is het getal zelf. Rond het af: welk honderdtal ligt er het dichtst bij?  [nieuw]
   - `verkeerde kant` (fout = het andere honderdtal naast getal1) → Dat is het honderdtal aan de andere kant van het getal. Kijk naar het cijfer achter de plek van de honderdtallen. Is het 5 of meer, dan ga je naar het honderdtal vlak erboven. Anders naar het honderdtal vlak eronder.  [Claude, taalfix]
   - `afgerond op tientallen` (fout = getal1 afgerond op tientallen) → Je hebt afgerond op tientallen. Hier rond je af op honderdtallen: welk honderdtal ligt er het dichtst bij?  [nieuw]
-  - `één stap te ver (omhoog)` (fout = antwoord + 100) → Je gaat de goede kant op, maar één honderdtal te ver. Kies het honderdtal dat vlak naast het getal ligt.  [nieuw]
-  - `één stap te ver (omlaag)` (fout = antwoord − 100) → Je gaat de goede kant op, maar één honderdtal te ver. Kies het honderdtal dat vlak naast het getal ligt.  [nieuw]
+  - `één stap te ver (omhoog)` (fout = antwoord + 100) → Je gaat de goede kant op, maar te ver. Kies het honderdtal dat vlak naast het getal ligt.  [nieuw]
+  - `één stap te ver (omlaag)` (fout = antwoord − 100) → Je gaat de goede kant op, maar te ver. Kies het honderdtal dat vlak naast het getal ligt.  [nieuw]
   - `te ver (omhoog)` (fout = antwoord + 200 of meer) → Dat ligt te ver weg. Kies een honderdtal vlak naast het getal: het honderdtal eronder of het honderdtal erboven.  [nieuw]
   - `te ver (omlaag)` (fout = antwoord − 200 of meer) → Dat ligt te ver weg. Kies een honderdtal vlak naast het getal: het honderdtal eronder of het honderdtal erboven.  [nieuw]
   - `andere fout` (andere fout) → Zoek de twee honderdtallen vlak onder en vlak boven het getal. Kies het honderdtal dat er het dichtst bij ligt. Ligt het getal precies in het midden? Dan kies je het honderdtal erboven.  [nieuw]
@@ -127,9 +127,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Begin bij het honderdtal dat net onder het getal ligt, en tel vanaf dat honderdtal verder in stapjes van tien.
 - **Ouderzin:** Je kind zet een getal tot 1000 op een getallenlijn met honderdtallen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `honderdtal te ver` (fout = antwoord + 100) → Dat is één honderdtal te ver. Het cijfer vooraan zegt bij welk honderdtal je begint.  [nieuw]
-  - `honderdtal niet ver genoeg` (fout = antwoord − 100) → Dat is één honderdtal te weinig. Het cijfer vooraan zegt bij welk honderdtal je begint.  [nieuw]
-  - `stapje te ver` (fout = antwoord + 10) → Bijna! Dat is één stapje van tien te ver. Tel de stapjes na het honderdtal nog eens.  [nieuw]
+  - `honderdtal te ver` (fout = antwoord + 100) → Dat is te ver. Het cijfer vooraan zegt bij welk honderdtal je begint.  [nieuw]
+  - `honderdtal niet ver genoeg` (fout = antwoord − 100) → Dat is te weinig. Het cijfer vooraan zegt bij welk honderdtal je begint.  [nieuw]
+  - `stapje te ver` (fout = antwoord + 10) → Dat is te ver. Tel de stapjes na het honderdtal nog eens.  [nieuw]
   - `stapje niet ver genoeg` (fout = antwoord − 10) → Dat is te weinig. Tel de stapjes na het honderdtal nog eens.  [nieuw]
   - `andere fout` (andere fout) → Zoek eerst het honderdtal van het getal. Tel dan verder in stapjes van tien tot je bij het getal bent.  [nieuw]
 - Status: hints klaar
