@@ -518,3 +518,9 @@ Commit in mees-vragenbank (`/workspace/mees-vragenbank`, main): build 18:20:30 �
   - check_hints 0 FAIL · check_merge_notatie ALLES OK.
   - b1–b8 FAIL 0; b8 is FAIL 0 dankzij de SNAP en M_1060 van Oefeningen. Mutanten b6 66/0 gemist, b8 74/0.
   - **b9 FAIL 1:** Z-#1062. De guard van Oefeningen (check.py 20:19:25, ronde 1f, Didactiek A met aanpassing) verwacht voor 'stip op de lijn van nul' de nieuwe tekst «Bij jouw stip staat een nul waar een ander getal hoort. …». Hun patch voor ronde 1f (patch_batch9.py) staat nog niet klaar: die is van 19:18:35. Dat werk ligt bij Oefeningen.
+
+### Build 15 okt 16:11:31 (na stilstand sinds 8 okt 20:36:44)
+- Oorzaak b9 FAIL 2: ronde 1f (Z-#1062 A) en 1g (Oef-#1036 'eerste/tweede getal') stonden al live (g8/hints/patch_batch9.py = e08c47e3; 1g bevat 1f). De b9-check (7961d93c) verwacht al ronde **1h** (Oefeningen 8 okt ~20:40, Oef-#1036 stem: «Bij jouw stip zijn de twee getallen omgewisseld.»). Die stond alleen in g8work/b9/r1h/patch_batch9.py (04151006) en was nooit naar g8/hints gezet.
+- Gedaan: r1h → g8/hints/patch_batch9.py (04151006; de diff met 1g is alleen het 1h-blok), gebouwd met bouw_veilig. VBN-V01 #1: omgewisseld 44, maar één getal 23, (0,0)/'stip op de lijn van nul' 76; die 76 hebben allemaal een 0 waar het antwoord er geen heeft.
+- Z-#1094 en Oef-#1030 zaten al in de build van 8 okt 20:36:44: 7 drie-kanten-uitleggen boven het antwoord krijgen de V-#1061-tekst, de build-assert vereist 7, en er staat 0 keer 'binnenin' de verkeerde kant op.
+- Gates: b1–b9 FAIL 0, check_hints 0 FAIL, merge-notatie ALLES OK. b9-snapshot niet opnieuw gezet (niet nodig: hij klopte al).

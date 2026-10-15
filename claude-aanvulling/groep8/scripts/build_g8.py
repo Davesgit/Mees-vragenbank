@@ -1134,13 +1134,21 @@ def fix_g8(r, slog):
                 r['opties'] = [dict(o_, tekst=str(nw_)) if o_['tekst'] == str(oud_) else o_ for o_ in r['opties']]
                 r['optiesTekst'] = ' · '.join(f"{o_['letter']}) {o_['tekst']}" for o_ in r['opties'])
                 tk_ = {'laag te veel': 'Je telde een laag te veel. Tel nog eens hoeveel lagen er op elkaar liggen.', 'laag te weinig': 'Je telde een laag te weinig. Tel nog eens hoeveel lagen er op elkaar liggen.',
-                       'drie kanten': 'Dat zijn de blokjes van drie kanten samen. Blokjes op een rand tel je zo twee of drie keer, en blokjes achter en onder zie je niet. Reken één laag uit en doe die keer het aantal lagen.'}[route_]      # Oef-#1030: tekst van V-#1061 (geen richting; 'binnenin' weg)
+                       'drie kanten': TK_DRIE_1061}[route_]      # Oef-#1030: tekst van V-#1061 (geen richting; 'binnenin' weg)
                 for f_ in ex.get('claudeFoutHints') or []:
                     if f_.get('fout') == str(oud_): f_.update(fout=str(nw_), uitleg=tk_)
                 for d_ in ex.get('claudeDenkfouten') or []:
                     if d_.get('fout') == str(oud_): d_['fout'] = str(nw_)
                 assert any(f_.get('fout') == str(nw_) for f_ in ex.get('claudeFoutHints') or []), (c8, 'V-#1040: Claude-sleutel niet gevonden')
                 slog(r, f"V-#1040: lage afleider → '{route_}'", 'opties', str(oud_), str(nw_))
+        # Z-#1094 (Didactiek hercheck 9b5a1bd, zacht): MEET-V01 #1, Claude-uitleg bij de drie-kanten-sleutel. Ligt die sleutel BOVEN het antwoord, dan wijst
+        # «… er zitten ook blokjes binnenin» de verkeerde kant op (het kind telde al te veel). Daar de V-#1061-tekst, zoals bij 035/080 (Oef-#1030).
+        # Verwacht precies 7 items (009 018 026 027 050 092 093); onder het antwoord klopt de richting en blijft de tekst.
+        if r['merge'].get('doel') == 'G8-MEET-V01' and ((r.get('visual') or {}).get('jsRender') or {}).get('soort') == 'bouwsel':
+            jr_ = r['visual']['jsRender']; R_ = BR.routes(jr_['diep'], jr_['hoog'], jr_['breed']); a_ = jr_['diep'] * jr_['hoog'] * jr_['breed']
+            for f_ in ex.get('claudeFoutHints') or []:
+                if 'binnenin' in (f_.get('uitleg') or '') and str(f_.get('fout')) == str(R_.get('drie kanten')) and int(f_['fout']) > a_:
+                    o_ = f_['uitleg']; f_['uitleg'] = TK_DRIE_1061; Z1094_LOG.append(c8); slog(r, 'Z-#1094: drie-kanten-uitleg boven het antwoord → V-#1061-tekst', 'claudeFoutHints', o_, TK_DRIE_1061)
         # b9-datapunten (Oefeningen 8 okt, Oef-#1014–#1020) + Didactiek review-batch9 (V-#1020–#1027, Z-#1021/#1022/#1024)
         if r['merge'].get('doel') == 'G8-VERH-E05':
             o = r['opgave']; nr_ = KOPPIN_E05.get(r['bron']['claudeId'][:8], {}).get('id', '')[-3:]      # ids komen later; de bevroren kop-pin kent het id
@@ -1338,6 +1346,8 @@ V1021 = {'012': {'oud': 'Een bal kostte €20 en kost nu €25. Met hoeveel proc
                  'antwoord': '20', 'sleutels': ['6', '17'], 'kaleSom': 'van 30 naar 36 = +__%', 'uitleg': 'De stijging is 36 − 30 = 6.\n6 van 30 is 20%.'}}      # V-#1021; 'ei' → 'boek' via V1020
 Z1020 = {'9a772298': 92, 'db8f17ef': 168, 'ebb7cc5c': 78, '5a73879c': 60, 'ee1a0072': 70}      # + Z-#1042: 034 (bordspel) €40→€70 (75%), was dubbel met 013      # Z-#1020: 014 €80→€92 (15%), 016 €120→€168 (40%), 018 €60→€78 (30%), 043 50→60 (20%)
 KOPPIN_E05 = json.load(open(os.path.join(os.path.dirname(HERE), 'bevroren', 'kop_e05_fase1.json'), encoding='utf-8'))['items']
+TK_DRIE_1061 = 'Dat zijn de blokjes van drie kanten samen. Blokjes op een rand tel je zo twee of drie keer, en blokjes achter en onder zie je niet. Reken één laag uit en doe die keer het aantal lagen.'      # V-#1061 / Oef-#1030 / Z-#1094
+Z1094_LOG = []
 V1040 = {'1a8192c9': (7, 'laag te veel'), '272c995d': (24, 'laag te veel'), '2a4533b9': (7, 'drie kanten'), '7b4f6289': (9, 'drie kanten')}      # V-#1040: MEET-V01 #1 018/026/035/080
 # Z-#1044 (zacht) niet gedaan: bij 062 (2×7×2) is 32 de enige route boven het antwoord 28 ('laag te veel' = 'drie kanten'); elke andere route ligt eronder
 # (24, 22, 14, 11, 4), dan wordt goed de grootste (70 > 69, b6 Z-#891 FAIL). Twee routes op 32 blijven dus staan (tekst 'laag te veel' is waar).
@@ -1393,6 +1403,7 @@ if __name__ == '__main__':
     if os.environ.get('G8_STAGING') != '1':      # Oefeningen 17:27 (lege map): bouw nooit direct op live; scripts/bouw_veilig.py bouwt in een kopie en zet daarna atomair om
         sys.path.insert(0, HERE); import bouw_veilig; sys.exit(bouw_veilig.main())
     rows, gem, twf, t7, bui, stats = main()
+    assert len(Z1094_LOG) == 7, ('Z-#1094: verwacht 7 drie-kanten-uitleggen boven het antwoord', Z1094_LOG)
     print('pool', stats['pool'], '(G7-park', stats['g7ParkInPool'], 'van', stats['g7ParkTotaal'], ') | rows', len(rows), 'gemapt', len(gem), 'twijfel', len(twf), 'terug-G7', len(t7),
           '(aanvulling G7', stats['aanvullingG7'], ') buiten', len(bui), '| al in G3–G7', stats['alInG3G7']['totaal'], '| geen regel', stats['geenRegel'], '| geschrapt', stats['geschrapt'])
     print('controle', stats['controle']); print('naar groep', stats['naarGroep'])
