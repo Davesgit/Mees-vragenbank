@@ -24,11 +24,11 @@ z1147	claude-aanvulling/groep5/scripts/z1147/mutrun_z1147.sh	uit na Z-#1148 ande
 z1146-v3	claude-aanvulling/groep5/scripts/z1146/mutrun_z1146_v3.sh	uit na V-#1150 (laag 1 alleen richting + vraag + opdracht) wijkt de snap af; vervangen door z1146-v4 (r23 R1)
 z1147-v2	claude-aanvulling/groep5/scripts/z1147/mutrun_z1147_v2.sh	uit na V-#1150 (laag 1 alleen richting + vraag + opdracht) wijkt de snap af; vervangen door z1147-v3 (r23 R1)
 z1148	claude-aanvulling/groep5/scripts/z1148/mutrun_z1148.sh	uit vervangen door mutrun_z1148_ex.sh (r23 V-#1151, Oef-#1077: exit ≠ 0 bij gemist)
-z1135-v3	claude-aanvulling/groep5/scripts/z1135/mutrun_z1135_v3.sh	bash $G5/scripts/z1135/mutrun_z1135_v3.sh $S
-z1146-v4	claude-aanvulling/groep5/scripts/z1146/mutrun_z1146_v4.sh	bash $G5/scripts/z1146/mutrun_z1146_v4.sh $S
-z1147-v3	claude-aanvulling/groep5/scripts/z1147/mutrun_z1147_v3.sh	bash $G5/scripts/z1147/mutrun_z1147_v3.sh $S
-v1150-guard	claude-aanvulling/groep5/scripts/v1150/mutrun_guard_v1150.sh	bash $G5/scripts/v1150/mutrun_guard_v1150.sh $S
-v1150	claude-aanvulling/groep5/scripts/v1150/mutrun_v1150.sh	bash $G5/scripts/v1150/mutrun_v1150.sh $S
+z1135-v3	claude-aanvulling/groep5/scripts/z1135/mutrun_z1135_v3.sh	uit na V-#1152/V-#1153 (laag 1 van 'nul vergeten'/'te weinig'/'te veel' = richting + vraag + opdracht) wijkt de snap af; vervangen door z1135-v4 (r24 R1)
+z1146-v4	claude-aanvulling/groep5/scripts/z1146/mutrun_z1146_v4.sh	uit na V-#1152/V-#1153 40 entryregels en 259 itemsleutels met de vraag i.p.v. 17/149; vervangen door z1146-v5 (r24 R1)
+z1147-v3	claude-aanvulling/groep5/scripts/z1147/mutrun_z1147_v3.sh	uit na V-#1152/V-#1153 andere aantallen (entry/md 40, uitleg 259, foutRegels 308); vervangen door z1147-v4 (r24 R1)
+v1150-guard	claude-aanvulling/groep5/scripts/v1150/mutrun_guard_v1150.sh	uit bereik alleen 'nul te veel' + vraagteksten; na V-#1152/V-#1153 FAIL 110 (alleen 'te groot/klein' toegestaan); vervangen door v1150-v2-guard (r24 R1, les 462: alle sleutels)
+v1150	claude-aanvulling/groep5/scripts/v1150/mutrun_v1150.sh	uit na V-#1152/V-#1153 FAIL via guard_v1150 (v1); vervangen door v1150-v2 (r24 R1, alle sleutels, laag 2 per item)
 z1090-ex	claude-aanvulling/groep5/scripts/z1090/mutrun_z1090_ex.sh	bash $G5/scripts/z1090/mutrun_z1090_ex.sh $S
 z1090-r2-lenen-ex	claude-aanvulling/groep5/scripts/z1090/r2/mutrun_lenen_ex.sh	bash $G5/scripts/z1090/r2/mutrun_lenen_ex.sh $S
 z1090-r4-lenen-ex	claude-aanvulling/groep5/scripts/z1090/r4/mutrun_lenen_ex.sh	bash $G5/scripts/z1090/r4/mutrun_lenen_ex.sh $S
@@ -47,3 +47,8 @@ z1148-ex	claude-aanvulling/groep5/scripts/z1148/mutrun_z1148_ex.sh	bash $G5/scri
 mutrun_all	tools/mutrun_all.sh	uit runner v1 (r22), vervangen door tools/mutrun_all_v2.sh; geen mutantenscript
 mutrun_all-v2	tools/mutrun_all_v2.sh	uit runner v2 (r23), draait deze lijst zelf; geen mutantenscript
 v1149-g8	claude-aanvulling/groep8/scripts/v1149g8/mutrun_g8_stempel.sh	APPLYLOG=$L8 bash $G8/scripts/v1149g8/mutrun_g8_stempel.sh $S
+z1135-v4	claude-aanvulling/groep5/scripts/z1135/mutrun_z1135_v4.sh	bash $G5/scripts/z1135/mutrun_z1135_v4.sh $S
+z1146-v5	claude-aanvulling/groep5/scripts/z1146/mutrun_z1146_v5.sh	bash $G5/scripts/z1146/mutrun_z1146_v5.sh $S
+z1147-v4	claude-aanvulling/groep5/scripts/z1147/mutrun_z1147_v4.sh	bash $G5/scripts/z1147/mutrun_z1147_v4.sh $S
+v1150-v2-guard	claude-aanvulling/groep5/scripts/v1150/mutrun_guard_v1150_v2.sh	bash $G5/scripts/v1150/mutrun_guard_v1150_v2.sh $S
+v1150-v2	claude-aanvulling/groep5/scripts/v1150/mutrun_v1150_v2.sh	bash $G5/scripts/v1150/mutrun_v1150_v2.sh $S
