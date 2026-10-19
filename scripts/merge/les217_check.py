@@ -55,7 +55,8 @@ if __name__ == '__main__':
         for t in mis: print('GEMIST', t)
         for t in vals: print('VALS ALARM', t)
         print(f'zelftest les 217: {len(ZELFTEST_FOUT) - len(mis)}/{len(ZELFTEST_FOUT)} gevangen, {len(vals)} vals alarm'); sys.exit(1 if mis or vals else 0)
-    B = sys.argv[1] if len(sys.argv) > 1 else '/workspace/g7work/r9oef/sbx/g7'
+    B = sys.argv[1] if len(sys.argv) > 1 else os.environ.get('LES217_G7')      # r22: geen vast standaardpad; groepmap (met hints/) als argument of LES217_G7
+    if not B or not os.path.isdir(os.path.join(B, 'hints')): print(f'FAIL instelling: geef de G7-map met hints/ als argument of via LES217_G7 (nu: {B!r})'); sys.exit(2)
     F = [f for p in sorted(glob.glob(f'{B}/hints/batch*.json')) for f in les217(p)]
     for f in F: print('FAIL', f)
     print(f'huis_checks G7 ({len(glob.glob(f"{B}/hints/batch*.json"))} batches): les 217 FAIL {len(F)}')

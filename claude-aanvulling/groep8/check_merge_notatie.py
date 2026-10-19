@@ -24,7 +24,7 @@ Gebruik: python3 check_merge_notatie.py [--detail] [doelbestand.json ...]"""
 import json, glob, os, re, sys, collections
 BASE = os.path.dirname(os.path.abspath(__file__))
 KLOK = re.compile(r'(?<![\d:])\d{1,2}:\d{2}(?!\d)')
-sys.path.insert(0, '/workspace/claude-merge/tools'); sys.path.insert(0, os.path.join(BASE, '..', '..', 'scripts', 'merge'))
+sys.path.insert(0, os.path.join(BASE, '..', '..', 'scripts', 'merge'))      # r22: geen live tools-map meer (zelfde md5's in scripts/merge)
 try: import g8_b7_vlag as _B7VLAG
 except ImportError:
     class _B7VLAG: ACTIEF = False
@@ -146,8 +146,8 @@ if __name__ == '__main__':
     print(f"\nOPP (rechthoek met oppervlakte = omtrek bij een omtrekvraag, #59): {len(_opp)} (FAIL)")
     for _x in _opp[:20]: print('  FAIL OPP', _x)
     fail = fail or bool(_opp)
-    # REF (G5 fixlijst #63): referentiematen uit /workspace/claude-merge/referentiematen.json: checkPatronen = FAIL, checkPatronenZacht = WARN
-    sys.path.insert(0, '/workspace/claude-merge/tools')
+    # REF (G5 fixlijst #63): referentiematen uit scripts/referentiematen.json: checkPatronen = FAIL, checkPatronenZacht = WARN
+    sys.path.insert(0, os.path.join(BASE, '..', '..', 'scripts', 'merge'))
     import referentiematen_check as _RC
     fail = (_RC.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail      # checkPatronen = FAIL, zacht = WARN
     # MAAT (notatie_machten.md, Didactiek 18:00; aangezet 18:05): ²/³ per groep, mengvorm 'vierkante cm', m2/cm3, 'a' voor are, INTRO per somtype
@@ -156,7 +156,7 @@ if __name__ == '__main__':
     fail = (_AV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
     import machten_check as _MC
     # DOELID (G5 merge-fixlijst #122, Didactiek 20:04): elk item heeft het doelId van zijn bestand (FAIL)
-    sys.path.insert(0, '/workspace/claude-merge/tools'); import doelid_check as _DI
+    sys.path.insert(0, os.path.join(BASE, '..', '..', 'scripts', 'merge')); import doelid_check as _DI
     fail = (_DI.rapport(files) > 0) or fail
     import evenveel_check as _EV      # #192 (Didactiek 21:25): 'even veel' ook in ouderzin, hints en kop (FAIL)
     fail = (_EV.rapport([_it for _p in files for _it in json.load(open(_p))['items']]) > 0) or fail
