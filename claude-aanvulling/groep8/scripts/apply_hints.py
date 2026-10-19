@@ -25,6 +25,17 @@ def hints_sync_stempel():
     bs=[{'batch':os.path.basename(b),'md5':_h.md5(open(b,'rb').read()).hexdigest()[:12]} for b in sorted(_g.glob(f"{BASE}/hints/batch*.json"))]
     return {'hintsSyncOp':nu,'hintsBatches':bs}
 
+def stempel_regel(sync):
+    """V-#1149 (les 460, r22; G8-kopie r23): stempelregel in de apply-log, gelijk aan G5. Zelfde hintsSyncOp en batch-md5's als in data/gemapt.json en per_doel; commit = git HEAD
+    van de basis als die een git-werkmap is, anders 'geen' (git-archive-snapshot). check_z1121_v3 vergelijkt hierop i.p.v. op de wijzigtijd."""
+    import subprocess as _sp
+    r=os.path.realpath(os.path.join(BASE,'..','..')); c='geen'      # alleen als de repo-wortel zelf de git-werkmap is (geen omliggende repo)
+    try:
+        o=_sp.run(['git','-C',r,'rev-parse','--show-toplevel','--short=12','HEAD'],capture_output=True,text=True,timeout=10).stdout.split()
+        if len(o)==2 and os.path.realpath(o[0])==r: c=o[1]
+    except Exception: pass
+    return f"stempel V-#1149: hintsSyncOp={sync['hintsSyncOp']} commit={c} batches=" + ','.join(f"{b['batch']}:{b['md5']}" for b in sync['hintsBatches'])
+
 def block(st):
     L=[f"- **Hint 1 (te schrijven):** {st['hint1']}",f"- **Hint 2 (te schrijven):** {st['hint2']}",f"- **Ouderzin:** {st['ouderzin']}"]
     fh=st['foutHints']
@@ -119,6 +130,7 @@ def apply_items(entries, batchnaam):
             json.dump(D,open(p,'w',encoding='utf-8'),ensure_ascii=False,indent=1)
     print(f"items: {stats['items']} met hints · {stats['items zonder fout-hint']} zonder fout-hint · {stats['somtype zonder items']} somtype-entries zonder items · claudeUitleg in kindtekst: {stats['claudeUitleg in kindtekst']}")
     for (d,r),n in onleesbaar.items(): print(f"LET OP regel niet te lezen in {d}: '{r}' ({n} items)")
+    print(stempel_regel(_sync))      # V-#1149 (r23): ook in de G8-apply-log
     json.dump({'uitleg':'Per hint-entry de regels die de motor bij een item niet kon lezen (fout_regels.pas_toe). check_hints: WARN als een regel bij geen enkel item van het somtype te lezen is.',
                'regels':[{'doel':d,'nrOrigineel':n,'regel':r,'itemsNietTeLezen':k,'items':_nit[(d,n)]} for (d,n,r),k in sorted(_onl.items(),key=str)]},
               open(f"{BASE}/logs/regels_onleesbaar.json",'w',encoding='utf-8'),ensure_ascii=False,indent=1)
