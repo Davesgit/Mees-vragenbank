@@ -25,8 +25,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 2700  (controle: ok)
     - **Fout-hints (Claude):** 54 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 270 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** Eén meter (m) is honderd centimeter (cm). Hoeveel meter zijn het?
-- **Hint 2 (te schrijven):** Doe het aantal meter keer honderd: zet er twee nullen achter.
+- **Hint 1 (te schrijven):** Hoeveel centimeter gaan er in één meter?
+- **Hint 2 (te schrijven):** Eén meter (m) is honderd centimeter (cm). Doe het aantal meter keer honderd: zet er twee nullen achter.
 - **Ouderzin:** Je kind rekent meters om naar centimeters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel centimeter gaan er in één meter? Eén meter is honderd centimeter: zet er twee nullen achter.  [nieuw]
@@ -56,8 +56,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 70  (controle: ok)
     - **Fout-hints (Claude):** 3500 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 7 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** Honderd centimeter (cm) is één meter (m). Hoe vaak past honderd in het aantal centimeter?
-- **Hint 2 (te schrijven):** Deel het aantal centimeter door honderd: haal er twee nullen af.
+- **Hint 1 (te schrijven):** Hoeveel centimeter gaan er in één meter?
+- **Hint 2 (te schrijven):** Honderd centimeter (cm) is één meter (m). Deel het aantal centimeter door honderd: haal er twee nullen af.
 - **Ouderzin:** Je kind rekent centimeters om naar meters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel centimeter gaan er in één meter? Honderd centimeter is één meter: haal er twee nullen af.  [nieuw]
@@ -86,8 +86,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 6000  (controle: ok)
     - **Fout-hints (Claude):** 60.000 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 6 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
 
-- **Hint 1 (te schrijven):** Eén kilometer (km) is duizend meter (m). Hoeveel kilometer zijn het?
-- **Hint 2 (te schrijven):** Doe het aantal kilometer keer duizend: zet er drie nullen achter.
+- **Hint 1 (te schrijven):** Hoeveel meter gaan er in één kilometer?
+- **Hint 2 (te schrijven):** Eén kilometer (km) is duizend meter (m). Doe het aantal kilometer keer duizend: zet er drie nullen achter.
 - **Ouderzin:** Je kind rekent kilometers om naar meters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel meter gaan er in één kilometer? Eén kilometer is duizend meter: zet er drie nullen achter.  [nieuw]
@@ -117,8 +117,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 6000  (controle: ok)
     - **Fout-hints (Claude):** 60.000 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 6 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
 
-- **Hint 1 (te schrijven):** Eén meter (m) is duizend millimeter (mm). Hoeveel meter zijn het?
-- **Hint 2 (te schrijven):** Doe het aantal meter keer duizend: zet er drie nullen achter.
+- **Hint 1 (te schrijven):** Hoeveel millimeter gaan er in één meter?
+- **Hint 2 (te schrijven):** Eén meter (m) is duizend millimeter (mm). Doe het aantal meter keer duizend: zet er drie nullen achter.
 - **Ouderzin:** Je kind rekent meters om naar millimeters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel millimeter gaan er in één meter? Eén meter is duizend millimeter: zet er drie nullen achter.  [nieuw]

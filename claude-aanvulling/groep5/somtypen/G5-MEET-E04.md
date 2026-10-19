@@ -57,8 +57,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 6000  (controle: ok)
     - **Fout-hints (Claude):** 18 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 600 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** Eén liter (L) is duizend milliliter (ml). Hoeveel liter zijn het?
-- **Hint 2 (te schrijven):** Doe het aantal liter keer duizend: zet er drie nullen achter.
+- **Hint 1 (te schrijven):** Hoeveel milliliter gaan er in één liter?
+- **Hint 2 (te schrijven):** Eén liter (L) is duizend milliliter (ml). Doe het aantal liter keer duizend: zet er drie nullen achter.
 - **Ouderzin:** Je kind rekent liters om naar milliliters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel milliliter gaan er in één liter? Eén liter is duizend milliliter: zet er drie nullen achter.  [nieuw]
@@ -127,8 +127,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 800 → Een nul te weinig. 1 L is 1000 ml. · 80.000 → Een nul te veel. 1 L is 1000 ml. · 8 → Het getal verandert als de eenheid verandert. Van l naar ml is keer 1.000.
     - **Uitleg (Claude):** 1 L = 1000 ml. Dus 8 L = 8 × 1000 = 8000 ml.
 
-- **Hint 1 (te schrijven):** Eén liter (L) is duizend milliliter (ml). Hoeveel liter zit er in de emmer?
-- **Hint 2 (te schrijven):** Doe het aantal liter keer duizend: zet er drie nullen achter.
+- **Hint 1 (te schrijven):** Hoeveel milliliter gaan er in één liter?
+- **Hint 2 (te schrijven):** Eén liter (L) is duizend milliliter (ml). Doe het aantal liter keer duizend: zet er drie nullen achter.
 - **Ouderzin:** Je kind rekent liters om naar milliliters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel milliliter gaan er in één liter? Eén liter is duizend milliliter: zet er drie nullen achter.  [nieuw]

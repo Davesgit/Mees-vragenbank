@@ -25,8 +25,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 6000  (controle: ok)
     - **Fout-hints (Claude):** 60.000 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het? · 600 → Gebruik de maattrap: elke stap is keer 10 of gedeeld door 10. Hoeveel stappen zijn het?
 
-- **Hint 1 (te schrijven):** Eén kilogram (kg) is duizend gram (g). Hoeveel kilogram zijn het?
-- **Hint 2 (te schrijven):** Doe het aantal kilogram keer duizend: zet er drie nullen achter.
+- **Hint 1 (te schrijven):** Hoeveel gram gaan er in één kilogram?
+- **Hint 2 (te schrijven):** Eén kilogram (kg) is duizend gram (g). Doe het aantal kilogram keer duizend: zet er drie nullen achter.
 - **Ouderzin:** Je kind rekent kilogrammen om naar grammen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel gram gaan er in één kilogram? Eén kilogram is duizend gram: zet er drie nullen achter.  [nieuw]
@@ -99,8 +99,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 900 → Een nul te weinig. 1 kg is 1000 g. · 90.000 → Een nul te veel. 1 kg is 1000 g. · 9 → Het getal verandert als de eenheid verandert. Van kg naar g is keer 1.000.
     - **Uitleg (Claude):** 1 kg = 1000 g. Dus 9 kg = 9 × 1000 = 9000 g.
 
-- **Hint 1 (te schrijven):** Eén kilogram (kg) is duizend gram (g). Hoeveel kilogram is het?
-- **Hint 2 (te schrijven):** Doe het aantal kilogram keer duizend: zet er drie nullen achter.
+- **Hint 1 (te schrijven):** Hoeveel gram gaan er in één kilogram?
+- **Hint 2 (te schrijven):** Eén kilogram (kg) is duizend gram (g). Doe het aantal kilogram keer duizend: zet er drie nullen achter.
 - **Ouderzin:** Je kind rekent kilogrammen om naar grammen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel gram gaan er in één kilogram? Eén kilogram is duizend gram: zet er drie nullen achter.  [nieuw]
