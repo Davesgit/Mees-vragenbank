@@ -29,7 +29,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het aantal meter keer honderd: zet er twee nullen achter.
 - **Ouderzin:** Je kind rekent meters om naar centimeters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `nul te veel` (fout = antwoord × 10) → Dat is te veel: er staat een nul te veel achter. Eén meter is honderd centimeter: zet er twee nullen achter.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel keer zo klein is een centimeter als een meter? Eén meter is honderd centimeter: zet er twee nullen achter.  [nieuw]
   - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Eén meter is honderd centimeter: zet er twee nullen achter.  [nieuw]
   - `het getal uit de som` (fout = getal1) → Je hebt het getal uit de som overgenomen. Een centimeter is kleiner dan een meter, dus het worden er meer. Zet er twee nullen achter.  [nieuw]
   - `het getal uit de som (sleutel)` (Claudes sleutel: getal-overgenomen) → Je hebt het getal uit de som overgenomen. Een centimeter is kleiner dan een meter, dus het worden er meer. Zet er twee nullen achter.  [Claude, taalfix]
@@ -60,8 +60,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Deel het aantal centimeter door honderd: haal er twee nullen af.
 - **Ouderzin:** Je kind rekent centimeters om naar meters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `nul te veel` (fout = antwoord × 10) → Dat is te veel: er staat nog een nul te veel achter. Honderd centimeter is één meter: haal er twee nullen af.  [nieuw]
-  - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: je hebt een nul te veel weggehaald. Honderd centimeter is één meter: haal er twee nullen af.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel keer zo groot is een meter als een centimeter? Honderd centimeter is één meter: haal er twee nullen af.  [nieuw]
+  - `nul vergeten` (fout = antwoord : 10) → Dat is te klein. Hoeveel keer zo groot is een meter als een centimeter? Honderd centimeter is één meter: haal er twee nullen af.  [nieuw]
   - `het getal uit de som (sleutel)` (Claudes sleutel: getal-overgenomen) → Je hebt het getal uit de som overgenomen. Een meter is groter dan een centimeter, dus het worden er minder. Haal er twee nullen af.  [Claude, taalfix]
   - `het getal uit de som` (fout = getal1) → Je hebt het getal uit de som overgenomen. Een meter is groter dan een centimeter, dus het worden er minder. Haal er twee nullen af.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Honderd centimeter is één meter. Deel het aantal centimeter door honderd.  [nieuw]
@@ -90,7 +90,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het aantal kilometer keer duizend: zet er drie nullen achter.
 - **Ouderzin:** Je kind rekent kilometers om naar meters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `nul te veel` (fout = antwoord × 10) → Dat is te veel: er staat een nul te veel achter. Eén kilometer is duizend meter: zet er drie nullen achter.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel keer zo klein is een meter als een kilometer? Eén kilometer is duizend meter: zet er drie nullen achter.  [nieuw]
   - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Eén kilometer is duizend meter: zet er drie nullen achter.  [nieuw]
   - `het getal uit de som` (fout = getal1) → Je hebt het getal uit de som overgenomen. Een meter is kleiner dan een kilometer, dus het worden er meer. Zet er drie nullen achter.  [nieuw]
   - `het getal uit de som (sleutel)` (Claudes sleutel: getal-overgenomen) → Je hebt het getal uit de som overgenomen. Een meter is kleiner dan een kilometer, dus het worden er meer. Zet er drie nullen achter.  [Claude, taalfix]
@@ -121,7 +121,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het aantal meter keer duizend: zet er drie nullen achter.
 - **Ouderzin:** Je kind rekent meters om naar millimeters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `nul te veel` (fout = antwoord × 10) → Dat is te veel: er staat een nul te veel achter. Eén meter is duizend millimeter: zet er drie nullen achter.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel keer zo klein is een millimeter als een meter? Eén meter is duizend millimeter: zet er drie nullen achter.  [nieuw]
   - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Eén meter is duizend millimeter: zet er drie nullen achter.  [nieuw]
   - `het getal uit de som` (fout = getal1) → Je hebt het getal uit de som overgenomen. Een millimeter is kleiner dan een meter, dus het worden er meer. Zet er drie nullen achter.  [nieuw]
   - `het getal uit de som (sleutel)` (Claudes sleutel: getal-overgenomen) → Je hebt het getal uit de som overgenomen. Een millimeter is kleiner dan een meter, dus het worden er meer. Zet er drie nullen achter.  [Claude, taalfix]

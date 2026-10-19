@@ -178,9 +178,9 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind lost een verhaaltje op met een keersom.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is te veel: er staat een nul te veel achter. Reken eerst zonder de nullen en zet ze er daarna weer achter.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is te veel. Tel de nullen in de som nog eens: hoeveel horen er achter je antwoord? Reken eerst zonder de nullen en zet ze er daarna weer achter.  [nieuw]
   - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Reken eerst zonder de nullen en zet ze er daarna allemaal weer achter.  [nieuw]
-  - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Staat er een nul te veel achter? Reken eerst zonder de nullen en zet ze er daarna weer achter.  [nieuw]
+  - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Tel de nullen in de som nog eens: hoeveel horen er achter je antwoord? Reken eerst zonder de nullen en zet ze er daarna weer achter.  [nieuw]
   - `andere fout` (andere fout) → Reken eerst zonder de nullen en zet ze er daarna weer achter. Kijk of je antwoord past: het is een keersom.  [nieuw]
 - Status: hints klaar
 
@@ -326,8 +326,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind lost een verhaaltje op met een keersom.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Je hebt [getal1] en [getal2] opgeteld. Maar het is steeds hetzelfde aantal: dat is een keersom.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is te veel: er staat een nul te veel achter. Reken eerst zonder de nullen en zet ze er daarna weer achter.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is te veel. Tel de nullen in de som nog eens: hoeveel horen er achter je antwoord? Reken eerst zonder de nullen en zet ze er daarna weer achter.  [nieuw]
   - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Reken eerst zonder de nullen en zet ze er daarna allemaal weer achter.  [nieuw]
-  - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Staat er een nul te veel achter? Reken eerst zonder de nullen en zet ze er daarna weer achter.  [nieuw]
+  - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Tel de nullen in de som nog eens: hoeveel horen er achter je antwoord? Reken eerst zonder de nullen en zet ze er daarna weer achter.  [nieuw]
   - `andere fout` (andere fout) → Reken eerst zonder de nullen en zet ze er daarna weer achter. Kijk of je antwoord past: het is een keersom.  [nieuw]
 - Status: hints klaar
