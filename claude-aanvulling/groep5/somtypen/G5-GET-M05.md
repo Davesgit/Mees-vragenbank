@@ -26,17 +26,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 2  (controle: ok)
     - **Fout-hints (Claude):** 4 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers. · 6 → Dat getal staat al in de som. Wat moet je ermee dóén? Lees de vraag nog eens en zoek de bewerking.
 
-- **Hint 1 (te schrijven):** Bij delen kijk je hoe vaak het ene getal in het andere past. Hoe vaak past het tweede getal in het eerste getal?
-- **Hint 2 (te schrijven):** Denk aan de keersom: welk getal keer het tweede getal is het eerste getal?
+- **Hint 1 (te schrijven):** Bij delen kijk je hoe vaak het ene getal in het andere past. Hoe vaak past het kleinste getal in het grootste getal?
+- **Hint 2 (te schrijven):** Denk aan de keersom: welk getal keer het kleinste getal is het grootste getal?
 - **Ouderzin:** Je kind rekent een deelsom uit met de tafels.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `het getal waardoor je deelt` (fout = getal2) → Dat is het getal waardoor je deelt. De vraag is hoe vaak het in het eerste getal past.  [nieuw]
-  - `keer gedaan` (fout = getal1 × getal2) → Je hebt keer gedaan. Kijk naar het teken: het is een deelsom. Hoe vaak past het tweede getal in het eerste?  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Reken na met de keersom: jouw antwoord keer het tweede getal is meer dan het eerste getal.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Reken na met de keersom: jouw antwoord keer het tweede getal is minder dan het eerste getal.  [nieuw]
-  - `twee te veel` (fout = antwoord + 2) → Dat is te veel. Reken na met de keersom: jouw antwoord keer het tweede getal is meer dan het eerste getal.  [nieuw]
-  - `twee te weinig` (fout = antwoord − 2) → Dat is te weinig. Reken na met de keersom: jouw antwoord keer het tweede getal is minder dan het eerste getal.  [nieuw]
-  - `andere fout` (andere fout) → Zeg de tafel van het tweede getal op, tot je bij het eerste getal bent. Hoeveel stappen zijn het?  [nieuw]
+  - `het getal waardoor je deelt` (fout = getal2) → Dat is het getal waardoor je deelt. De vraag is hoe vaak het in het grootste getal past.  [nieuw]
+  - `keer gedaan` (fout = getal1 × getal2) → Je hebt keer gedaan. Kijk naar het teken: het is een deelsom. Hoe vaak past het kleinste getal in het grootste?  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Reken na met de keersom: jouw antwoord keer het kleinste getal is meer dan het grootste getal.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Reken na met de keersom: jouw antwoord keer het kleinste getal is minder dan het grootste getal.  [nieuw]
+  - `twee te veel` (fout = antwoord + 2) → Dat is te veel. Reken na met de keersom: jouw antwoord keer het kleinste getal is meer dan het grootste getal.  [nieuw]
+  - `twee te weinig` (fout = antwoord − 2) → Dat is te weinig. Reken na met de keersom: jouw antwoord keer het kleinste getal is minder dan het grootste getal.  [nieuw]
+  - `andere fout` (andere fout) → Zeg de tafel van het kleinste getal op, tot je bij het grootste getal bent. Hoeveel stappen zijn het?  [nieuw]
 - Status: hints klaar
 
 ## Somtype 2: # : # = □. Denk aan de keersom # × □ = #.
@@ -60,14 +60,14 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 5 × 4 = 20, dus 20 : 5 = 4.
 
 - **Hint 1 (te schrijven):** Kijk naar de keersom in de vraag. Welk getal hoort op het hokje?
-- **Hint 2 (te schrijven):** Zeg de tafel op tot je precies bij het eerste getal bent. Hoeveel stappen zijn het?
+- **Hint 2 (te schrijven):** Zeg de tafel op tot je precies bij het grootste getal bent. Hoeveel stappen zijn het?
 - **Ouderzin:** Je kind rekent een deelsom uit met de keersom die erbij hoort.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `het getal waardoor je deelt` (fout = getal2) → Dat is het getal waardoor je deelt. Welk getal hoort op het hokje in de keersom?  [nieuw]
   - `keer gedaan` (fout = getal1 × getal2) → Je hebt keer gedaan. Het is een deelsom. Welk getal hoort op het hokje in de keersom?  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Zeg de tafel op tot je precies bij het eerste getal bent.  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Zeg de tafel op tot je precies bij het eerste getal bent.  [nieuw]
-  - `andere fout` (andere fout) → Zeg de tafel van het tweede getal op, tot je bij het eerste getal bent. Hoeveel stappen zijn het?  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Zeg de tafel op tot je precies bij het grootste getal bent.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Zeg de tafel op tot je precies bij het grootste getal bent.  [nieuw]
+  - `andere fout` (andere fout) → Zeg de tafel van het kleinste getal op, tot je bij het grootste getal bent. Hoeveel stappen zijn het?  [nieuw]
 - Status: hints klaar
 
 ## Somtype 3: # × # =
@@ -156,7 +156,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** —
     - **Uitleg (Claude):** 8 rijen van 6: tik op de linkerbovenhoek en dan op de rechteronderhoek. Tel na: 8 × 6 = 48.
 
-- **Hint 1 (te schrijven):** Het keerteken (×) betekent: zoveel keer. Het eerste getal zegt hoeveel rijen je kleurt. Het tweede getal zegt hoeveel hokjes er in elke rij komen.
+- **Hint 1 (te schrijven):** Het keerteken (×) betekent: zoveel keer. In de som staan het aantal rijen en hoeveel hokjes er in één rij staan: zoveel rijen, met in elke rij zoveel hokjes.
 - **Hint 2 (te schrijven):** Kleur eerst één rij. Kleur dan de volgende rij recht eronder, net zo lang. Ga door tot je genoeg rijen hebt.
 - **Ouderzin:** Je kind kleurt een keersom als rechthoek op een rooster: het eerste getal is het aantal rijen, het tweede het aantal hokjes per rij.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
