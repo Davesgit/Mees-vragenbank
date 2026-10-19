@@ -32,8 +32,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind zoekt wat één cijfer in een groot getal waard is: dat cijfer met een nul voor elke plek die erna komt.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt wat dat ene cijfer waard is, op de plek waar het staat.  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig: er mist een nul. Tel nog eens hoeveel cijfers er na dat cijfer komen.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Tel nog eens hoeveel cijfers er na dat cijfer komen.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. Tel nog eens hoeveel cijfers er na dat cijfer komen.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. Tel nog eens hoeveel cijfers er na dat cijfer komen.  [nieuw]
   - `andere fout` (andere fout) → Tel hoeveel cijfers er na dat cijfer komen. Evenveel nullen komen erachter.  [nieuw]
 - Status: hints klaar
 
@@ -61,8 +61,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind schrijft een aantal miljoen als getal: het getal met zes nullen erachter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. Een miljoen heeft zes nullen.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. Een miljoen heeft zes nullen.  [nieuw]
   - `duizend in plaats van miljoen` (fout = antwoord : 1000) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [nieuw]
   - `duizend keer te weinig` (Claudes sleutel: nul-fout-tientallen) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?  [nieuw]
@@ -93,8 +93,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind schrijft een aantal miljoen als getal: het getal met zes nullen erachter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. Een miljoen heeft zes nullen.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. Een miljoen heeft zes nullen.  [nieuw]
   - `duizend in plaats van miljoen` (fout = antwoord : 1000) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [nieuw]
   - `duizend keer te weinig` (Claudes sleutel: nul-fout-tientallen) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?  [nieuw]
@@ -120,8 +120,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind schrijft een aantal miljoen als getal: het getal met zes nullen erachter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. Een miljoen heeft zes nullen.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. Een miljoen heeft zes nullen.  [nieuw]
   - `duizend in plaats van miljoen` (fout = antwoord : 1000) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [nieuw]
   - `duizend keer te weinig` (Claudes sleutel: nul-fout-tientallen) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?  [nieuw]
@@ -147,8 +147,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind schrijft een aantal miljoen als getal: het getal met zes nullen erachter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Er staat miljoen achter: hoeveel nullen horen daarbij?  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig: er mist een nul. Een miljoen heeft zes nullen.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Een miljoen heeft zes nullen.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. Een miljoen heeft zes nullen.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. Een miljoen heeft zes nullen.  [nieuw]
   - `duizend in plaats van miljoen` (fout = antwoord : 1000) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [nieuw]
   - `duizend keer te weinig` (Claudes sleutel: nul-fout-tientallen) → Dat is duizend keer te weinig. Een miljoen is duizend keer duizend: dat zijn zes nullen.  [Claude, taalfix]
   - `andere fout` (andere fout) → Een miljoen is duizend keer duizend: dat zijn zes nullen. Hoeveel nullen heeft jouw getal?  [nieuw]
