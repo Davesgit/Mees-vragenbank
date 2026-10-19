@@ -33,6 +33,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Tel de rest er één voor één bij. Een euro is honderd cent.
 - **Ouderzin:** Je kind telt munten en briefjes bij elkaar en kiest het bedrag.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
+  - `aantal stuks geld` (fout = het aantal munten) → Je hebt geteld hoeveel stukken geld er zijn. De vraag is hoeveel geld het samen is. Kijk wat elk stuk waard is.  [nieuw]
   - `te veel geteld (5 cent)` (fout = antwoord + 5 cent (op de foto)) → Dat is te veel. Heb je een stuk geld twee keer geteld? Leg het geld op volgorde van groot naar klein en tel elk stuk één keer.  [nieuw]
   - `te veel geteld (10 cent)` (fout = antwoord + 10 cent (op de foto)) → Dat is te veel. Heb je een stuk geld twee keer geteld? Leg het geld op volgorde van groot naar klein en tel elk stuk één keer.  [nieuw]
   - `te veel geteld (20 cent)` (fout = antwoord + 20 cent (op de foto)) → Dat is te veel. Heb je een stuk geld twee keer geteld? Leg het geld op volgorde van groot naar klein en tel elk stuk één keer.  [nieuw]
@@ -43,8 +44,6 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `te veel (niet op de foto, 50 cent)` (fout = antwoord + 50 cent (niet op de foto)) → Dat is te veel. Tel het geld nog eens: leg het op volgorde van groot naar klein en tel het één voor één op.  [nieuw]
   - `te weinig geteld` (Claudes sleutel: geld-verkeerd-geteld) → Dat is te weinig. Leg het geld op volgorde van groot naar klein en tel het één voor één op.  [Claude, taalfix]
   - `euro en cent door elkaar` (Claudes sleutel: kommagetal-als-geheel) → Dat is te veel. Kijk goed naar elke munt: is het een munt van cent of van euro? Honderd cent is één euro.  [Claude, taalfix]
-  - `aantal stuks geld (3)` (€3) → Je hebt geteld hoeveel stukken geld er zijn. De vraag is hoeveel geld het samen is. Kijk wat elk stuk waard is.  [nieuw]
-  - `aantal stuks geld (4)` (€4) → Je hebt geteld hoeveel stukken geld er zijn. De vraag is hoeveel geld het samen is. Kijk wat elk stuk waard is.  [nieuw]
   - `andere fout` (andere fout) → Leg het geld op volgorde van groot naar klein. Tel het één voor één bij elkaar. Een euro is honderd cent.  [nieuw]
 - Status: hints klaar
 

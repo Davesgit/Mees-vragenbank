@@ -34,8 +34,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Tel de andere munten er één voor één bij. Een euro is honderd cent.
 - **Ouderzin:** Je kind telt munten tot twee euro bij elkaar.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `aantal munten (3)` (€3) → Je hebt de munten geteld. De vraag is hoeveel geld het samen is. Kijk wat elke munt waard is.  [nieuw]
-  - `aantal munten (4)` (€4) → Je hebt de munten geteld. De vraag is hoeveel geld het samen is. Kijk wat elke munt waard is.  [nieuw]
+  - `aantal munten` (fout = het aantal munten) → Je hebt de munten geteld. De vraag is hoeveel geld het samen is. Kijk wat elke munt waard is.  [nieuw]
   - `munten vergeten` (Claudes sleutel: geld-verkeerd-geteld) → Dat is te weinig. Leg de munten op volgorde van groot naar klein en tel ze één voor één op.  [Claude, taalfix]
   - `euro en cent door elkaar` (Claudes sleutel: kommagetal-als-geheel) → Dat is veel te veel. Kijk goed naar elke munt: is het een munt van cent of van euro? Honderd cent is één euro.  [Claude, taalfix]
   - `andere fout` (andere fout) → Leg de munten op volgorde van groot naar klein. Tel ze één voor één bij elkaar. Een euro is honderd cent.  [nieuw]
