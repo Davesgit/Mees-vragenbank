@@ -30,11 +30,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent kilogrammen om naar grammen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel gram gaan er in één kilogram? Reken daarmee opnieuw.  [nieuw]
-  - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Eén kilogram is duizend gram: zet er drie nullen achter.  [nieuw]
+  - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig. Hoeveel gram gaan er in één kilogram? Reken daarmee opnieuw.  [nieuw]
   - `het getal uit de som` (fout = getal1) → Je hebt het getal uit de som overgenomen. Een gram is kleiner dan een kilogram, dus het worden er meer. Zet er drie nullen achter.  [nieuw]
   - `het getal uit de som (sleutel)` (Claudes sleutel: getal-overgenomen) → Je hebt het getal uit de som overgenomen. Een gram is kleiner dan een kilogram, dus het worden er meer. Zet er drie nullen achter.  [Claude, taalfix]
-  - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend.  [nieuw]
-  - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend.  [nieuw]
+  - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Hoeveel gram gaan er in één kilogram? Reken daarmee opnieuw.  [nieuw]
+  - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Hoeveel gram gaan er in één kilogram? Reken daarmee opnieuw.  [nieuw]
   - `anders omgerekend (sleutel)` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat klopt niet. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend.  [Claude, taalfix]
   - `andere fout` (andere fout) → Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend: zet er drie nullen achter.  [nieuw]
 - Status: hints klaar
@@ -104,10 +104,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent kilogrammen om naar grammen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel gram gaan er in één kilogram? Reken daarmee opnieuw.  [nieuw]
-  - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Eén kilogram is duizend gram: zet er drie nullen achter.  [nieuw]
+  - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig. Hoeveel gram gaan er in één kilogram? Reken daarmee opnieuw.  [nieuw]
   - `het getal uit de som` (fout = getal1) → Je hebt het getal uit de som overgenomen. Een gram is kleiner dan een kilogram, dus het worden er meer. Zet er drie nullen achter.  [nieuw]
-  - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend.  [nieuw]
-  - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend.  [nieuw]
+  - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Hoeveel gram gaan er in één kilogram? Reken daarmee opnieuw.  [nieuw]
+  - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Hoeveel gram gaan er in één kilogram? Reken daarmee opnieuw.  [nieuw]
   - `anders omgerekend (sleutel)` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat klopt niet. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend.  [Claude, taalfix]
   - `andere fout` (andere fout) → Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend: zet er drie nullen achter.  [nieuw]
 - Status: hints klaar

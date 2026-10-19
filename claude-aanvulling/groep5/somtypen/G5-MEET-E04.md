@@ -62,11 +62,11 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent liters om naar milliliters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel milliliter gaan er in één liter? Reken daarmee opnieuw.  [nieuw]
-  - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Eén liter is duizend milliliter: zet er drie nullen achter.  [nieuw]
+  - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig. Hoeveel milliliter gaan er in één liter? Reken daarmee opnieuw.  [nieuw]
   - `het getal uit de som` (fout = getal1) → Je hebt het getal uit de som overgenomen. Een milliliter is kleiner dan een liter, dus het worden er meer. Zet er drie nullen achter.  [nieuw]
   - `het getal uit de som (sleutel)` (Claudes sleutel: getal-overgenomen) → Je hebt het getal uit de som overgenomen. Een milliliter is kleiner dan een liter, dus het worden er meer. Zet er drie nullen achter.  [Claude, taalfix]
-  - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Eén liter is duizend milliliter. Doe het aantal liter keer duizend.  [nieuw]
-  - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Eén liter is duizend milliliter. Doe het aantal liter keer duizend.  [nieuw]
+  - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Hoeveel milliliter gaan er in één liter? Reken daarmee opnieuw.  [nieuw]
+  - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Hoeveel milliliter gaan er in één liter? Reken daarmee opnieuw.  [nieuw]
   - `anders omgerekend (sleutel)` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat klopt niet. Eén liter is duizend milliliter. Doe het aantal liter keer duizend.  [Claude, taalfix]
   - `andere fout` (andere fout) → Eén liter is duizend milliliter. Doe het aantal liter keer duizend: zet er drie nullen achter.  [nieuw]
 - Status: hints klaar
@@ -132,10 +132,10 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent liters om naar milliliters.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel milliliter gaan er in één liter? Reken daarmee opnieuw.  [nieuw]
-  - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Eén liter is duizend milliliter: zet er drie nullen achter.  [nieuw]
+  - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig. Hoeveel milliliter gaan er in één liter? Reken daarmee opnieuw.  [nieuw]
   - `het getal uit de som` (fout = getal1) → Je hebt het getal uit de som overgenomen. Een milliliter is kleiner dan een liter, dus het worden er meer. Zet er drie nullen achter.  [nieuw]
-  - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Eén liter is duizend milliliter. Doe het aantal liter keer duizend.  [nieuw]
-  - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Eén liter is duizend milliliter. Doe het aantal liter keer duizend.  [nieuw]
+  - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Hoeveel milliliter gaan er in één liter? Reken daarmee opnieuw.  [nieuw]
+  - `te weinig` (fout = antwoord − 2 of meer) → Dat is te weinig. Hoeveel milliliter gaan er in één liter? Reken daarmee opnieuw.  [nieuw]
   - `anders omgerekend (sleutel)` (Claudes sleutel: eenheid-verkeerd-omgerekend) → Dat klopt niet. Eén liter is duizend milliliter. Doe het aantal liter keer duizend.  [Claude, taalfix]
   - `andere fout` (andere fout) → Eén liter is duizend milliliter. Doe het aantal liter keer duizend: zet er drie nullen achter.  [nieuw]
 - Status: hints klaar
