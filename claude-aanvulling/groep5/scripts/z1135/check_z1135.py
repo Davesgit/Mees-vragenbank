@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check Z-#1135. [MUT=..] [SNAP=1] python3 check_z1135.py <basis>   (zandbak of repo-snapshot)
+"""Check Z-#1135 (r20-versie: ook de Z-#1146-kijkzin «Hoeveel <kleine maat> gaat er in één <grote maat>?»; mutanten M_eenheid/M_volgorde op die vorm). [MUT=..] [SNAP=1] python3 check_z1135.py <basis>   (zandbak of repo-snapshot)
 - geen 'nul te veel' (ook 'een nul te veel weggehaald') in entry- en itemteksten van GET-E07, MEET-E01, MEET-E04, MEET-E05;
 - per item: 'te groot'/'te veel' ⇔ sleutel > antwoord, 'te klein'/'te weinig' ⇔ sleutel < antwoord (soorten 'nul te veel', 'nul vergeten', GET-E07 'te veel');
 - eenheden: de twee maten in de kijkzin staan als afkorting in de opgave van dat item, in de goede volgorde (van → naar);
@@ -12,6 +12,7 @@ DOELEN = ('G5-GET-E07', 'G5-MEET-E01', 'G5-MEET-E04', 'G5-MEET-E05')
 NUL = re.compile(r'\bnul te (?:veel|weinig)\b', re.I)
 AFK = {'meter': 'm', 'centimeter': 'cm', 'millimeter': 'mm', 'kilometer': 'km', 'liter': 'L', 'milliliter': 'ml', 'kilogram': 'kg', 'gram': 'g'}
 KIJK = re.compile(r'Hoeveel keer zo (klein|groot) is een (\w+) als een (\w+)\?')
+KIJK2 = re.compile(r'Hoeveel (\w+) gaat er in één (\w+)\?')      # Z-#1146 (r20): «Hoeveel centimeter gaat er in één meter?»
 ENT = [s for p in sorted(glob.glob(os.path.join(G, 'hints', 'batch*.json'))) for s in json.load(open(p, encoding='utf-8'))['somtypen'] if s['doel'] in DOELEN]
 XS = [((d, n), x) for (d, n), xs in I.items() if d in DOELEN for x in xs]
 GROOTTE = {'km': 1000000, 'm': 1000, 'cm': 10, 'mm': 1, 'L': 1000, 'ml': 1, 'kg': 1000, 'g': 1}
@@ -20,8 +21,8 @@ def num(v):
     m = re.fullmatch(r'\s*(\d{1,3}(?:\.\d{3})+|\d+)\s*(?:[a-zA-Z]+)?\s*', str(v)); return int(m.group(1).replace('.', '')) if m else None
 if MUT == 'M_nul': f_ = next(f for s in ENT for f in s['foutHints'] if f['soort'] == 'nul te veel'); f_['tekst'] = 'Dat is te veel: er staat een nul te veel achter. ' + f_['tekst']
 if MUT == 'M_richting': h_ = next(h for _, x in XS for h in x['foutHints'] if h['soort'] == 'nul te veel' and 'te groot' in h['uitleg']); h_['uitleg'] = h_['uitleg'].replace('te groot', 'te klein', 1)
-if MUT == 'M_eenheid': h_ = next(h for (k, x) in XS if k[0] == 'G5-MEET-E01' for h in x['foutHints'] if 'centimeter als een meter' in h['uitleg']); h_['uitleg'] = h_['uitleg'].replace('centimeter als een meter', 'millimeter als een meter')
-if MUT == 'M_volgorde': h_ = next(h for (k, x) in XS if k == ('G5-MEET-E01', 1) for h in x['foutHints'] if 'zo klein is een centimeter als een meter' in h['uitleg']); h_['uitleg'] = h_['uitleg'].replace('zo klein is een centimeter als een meter', 'zo klein is een meter als een centimeter')
+if MUT == 'M_eenheid': h_ = next(h for (k, x) in XS if k[0] == 'G5-MEET-E01' for h in x['foutHints'] if 'Hoeveel centimeter gaat er in één meter?' in h['uitleg']); h_['uitleg'] = h_['uitleg'].replace('Hoeveel centimeter gaat', 'Hoeveel millimeter gaat')
+if MUT == 'M_volgorde': h_ = next(h for (k, x) in XS if k == ('G5-MEET-E01', 1) for h in x['foutHints'] if 'Hoeveel centimeter gaat er in één meter?' in h['uitleg']); h_['uitleg'] = h_['uitleg'].replace('Hoeveel centimeter gaat er in één meter?', 'Hoeveel meter gaat er in één centimeter?')
 if MUT == 'M_vergeten': f_ = next(f for s in ENT for f in s['foutHints'] if f['soort'] == 'nul vergeten' and 'er mist een nul' in f['tekst']); f_['tekst'] = f_['tekst'].replace('er mist een nul', 'het is te klein')
 for s in ENT:
     for f in [s] + s['foutHints']:
@@ -39,8 +40,12 @@ for (d, n), x in XS:
         if a is None or v is None or hi == lo: F.append(f"richting {d} #{n} {x['nr']} sleutel {h['fout']!r}: geen eenduidige richting of getal"); continue
         n_r += 1
         if (hi and not v > a) or (lo and not v < a): F.append(f"richting {d} #{n} {x['nr']} sleutel {h['fout']!r} (antwoord {x['antwoord']}): {t.strip()[:60]}")
-        m = KIJK.search(t)
-        if m:
+        m = KIJK.search(t); m2 = KIJK2.search(t)
+        if m2:      # Z-#1146: kleine maat, grote maat; allebei als afkorting in de opgave, de grote groter dan de kleine
+            n_e += 1; kl, gr = m2.groups(); toks = re.findall(r'\b(km|cm|mm|ml|kg|m|L|g)\b', x['opgave'])
+            if kl not in AFK or gr not in AFK or sorted(toks[:2]) != sorted([AFK[kl], AFK[gr]]): F.append(f"eenheid {d} #{n} {x['nr']} sleutel {h['fout']!r}: '{kl} in één {gr}' past niet bij de opgave {x['opgave'][:40]!r}")
+            elif not num_f(AFK[gr]) > num_f(AFK[kl]): F.append(f"eenheid {d} #{n} {x['nr']}: 'hoeveel {kl} in één {gr}' is omgekeerd")
+        elif m:
             n_e += 1; r_, naar, van = m.groups(); toks = re.findall(r'\b(km|cm|mm|ml|kg|m|L|g)\b', x['opgave'])
             if naar not in AFK or van not in AFK or toks[:2] != [AFK[van], AFK[naar]]: F.append(f"eenheid {d} #{n} {x['nr']} sleutel {h['fout']!r}: '{van} → {naar}' past niet bij de opgave {x['opgave'][:40]!r}")
             elif r_ != ('klein' if num_f(AFK[van]) > num_f(AFK[naar]) else 'groot'): F.append(f"eenheid {d} #{n} {x['nr']}: 'zo {r_}' klopt niet voor {van} → {naar}")

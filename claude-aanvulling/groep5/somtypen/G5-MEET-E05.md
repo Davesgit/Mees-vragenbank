@@ -29,7 +29,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het aantal kilogram keer duizend: zet er drie nullen achter.
 - **Ouderzin:** Je kind rekent kilogrammen om naar grammen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel keer zo klein is een gram als een kilogram? Eén kilogram is duizend gram: zet er drie nullen achter.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel gram gaat er in één kilogram? Eén kilogram is duizend gram: zet er drie nullen achter.  [nieuw]
   - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Eén kilogram is duizend gram: zet er drie nullen achter.  [nieuw]
   - `het getal uit de som` (fout = getal1) → Je hebt het getal uit de som overgenomen. Een gram is kleiner dan een kilogram, dus het worden er meer. Zet er drie nullen achter.  [nieuw]
   - `het getal uit de som (sleutel)` (Claudes sleutel: getal-overgenomen) → Je hebt het getal uit de som overgenomen. Een gram is kleiner dan een kilogram, dus het worden er meer. Zet er drie nullen achter.  [Claude, taalfix]
@@ -103,7 +103,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het aantal kilogram keer duizend: zet er drie nullen achter.
 - **Ouderzin:** Je kind rekent kilogrammen om naar grammen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel keer zo klein is een gram als een kilogram? Eén kilogram is duizend gram: zet er drie nullen achter.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is te groot. Hoeveel gram gaat er in één kilogram? Eén kilogram is duizend gram: zet er drie nullen achter.  [nieuw]
   - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig: er mist een nul. Eén kilogram is duizend gram: zet er drie nullen achter.  [nieuw]
   - `het getal uit de som` (fout = getal1) → Je hebt het getal uit de som overgenomen. Een gram is kleiner dan een kilogram, dus het worden er meer. Zet er drie nullen achter.  [nieuw]
   - `te veel` (fout = antwoord + 2 of meer) → Dat is te veel. Eén kilogram is duizend gram. Doe het aantal kilogram keer duizend.  [nieuw]
