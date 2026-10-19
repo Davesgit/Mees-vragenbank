@@ -31,7 +31,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Hint 2 (te schrijven):** Doe het aantal GB van de kaart keer duizend. Dan weet je hoeveel MB er op de kaart past. Deel dat door het aantal MB van één filmpje.
 - **Ouderzin:** Je kind rekent eerst GB om naar MB (keer duizend) en deelt dan door de grootte van één filmpje.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel. Tel de nullen nog eens na: hoeveel MB past er op de kaart?  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. Tel de nullen nog eens na: hoeveel MB past er op de kaart?  [nieuw]
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel filmpjes er op de kaart passen.  [nieuw]
   - `nul te weinig` (fout = een nul te weinig (afgekapt)) → Dan is er ergens een nul weggevallen. Tel de nullen nog eens na: hoeveel MB past er op de kaart, en hoeveel MB is één filmpje?  [nieuw]
   - `andere fout` (andere fout) → Reken eerst de kaart om naar MB: keer duizend. Deel dan door het aantal MB van één filmpje. Tel de nullen goed.  [nieuw]
@@ -61,8 +61,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent TB om naar GB: keer duizend.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel GB het is.  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Eén TB is duizend GB, niet honderd.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Eén TB is duizend GB.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. Eén TB is duizend GB, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. Eén TB is duizend GB.  [nieuw]
   - `andere fout` (andere fout) → Eén TB is duizend GB. Hoeveel GB is dan het aantal TB uit de vraag?  [nieuw]
 - Status: hints klaar
 
@@ -90,8 +90,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent MB om naar KB: keer duizend.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel KB het is.  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Eén MB is duizend KB, niet honderd.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Eén MB is duizend KB.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. Eén MB is duizend KB, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. Eén MB is duizend KB.  [nieuw]
   - `andere fout` (andere fout) → Eén MB is duizend KB. Hoeveel KB is dan het aantal MB uit de vraag?  [nieuw]
 - Status: hints klaar
 
@@ -119,8 +119,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent GB om naar MB: keer duizend.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel MB het is.  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Eén GB is duizend MB, niet honderd.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Eén GB is duizend MB.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. Eén GB is duizend MB, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. Eén GB is duizend MB.  [nieuw]
   - `andere fout` (andere fout) → Eén GB is duizend MB. Hoeveel MB is dan het aantal GB uit de vraag?  [nieuw]
 - Status: hints klaar
 
@@ -143,8 +143,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent GB om naar MB: keer duizend.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat getal staat al in de vraag. Je zoekt hoeveel MB het is.  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. Eén GB is duizend MB, niet honderd.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. Eén GB is duizend MB.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. Eén GB is duizend MB, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. Eén GB is duizend MB.  [nieuw]
   - `andere fout` (andere fout) → Eén GB is duizend MB. Hoeveel MB is dan het aantal GB uit de vraag?  [nieuw]
 - Status: hints klaar
 
@@ -167,8 +167,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat is het aantal kubieke meter. De vraag wil liters: hoeveel liter past er in één kubieke meter?  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. In één kubieke meter past duizend liter, niet honderd.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. In één kubieke meter past duizend liter.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. In één kubieke meter past duizend liter, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. In één kubieke meter past duizend liter.  [nieuw]
   - `andere fout` (andere fout) → Eén kubieke meter is duizend liter. Hoeveel liter is dan het aantal kubieke meter uit de vraag?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een bak voor wortels heeft een inhoud van # [ding]. Hoeveel liter is dat?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -192,8 +192,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat is het aantal kubieke meter. De vraag wil liters: hoeveel liter past er in één kubieke meter?  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. In één kubieke meter past duizend liter, niet honderd.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. In één kubieke meter past duizend liter.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. In één kubieke meter past duizend liter, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. In één kubieke meter past duizend liter.  [nieuw]
   - `andere fout` (andere fout) → Eén kubieke meter is duizend liter. Hoeveel liter is dan het aantal kubieke meter uit de vraag?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een bak voor truien heeft een inhoud van # [ding]. Hoeveel liter is dat?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -217,8 +217,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat is het aantal kubieke meter. De vraag wil liters: hoeveel liter past er in één kubieke meter?  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. In één kubieke meter past duizend liter, niet honderd.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. In één kubieke meter past duizend liter.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. In één kubieke meter past duizend liter, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. In één kubieke meter past duizend liter.  [nieuw]
   - `andere fout` (andere fout) → Eén kubieke meter is duizend liter. Hoeveel liter is dan het aantal kubieke meter uit de vraag?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een bak voor knopen heeft een inhoud van # [ding]. Hoeveel liter is dat?'. Nakijken of ze nog passen.
 - Status: hints klaar
@@ -242,8 +242,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind rekent kubieke meters om naar liters: in één kubieke meter past duizend liter.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `getal uit de vraag` (fout = een getal uit de vraag) → Dat is het aantal kubieke meter. De vraag wil liters: hoeveel liter past er in één kubieke meter?  [nieuw]
-  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te weinig. In één kubieke meter past duizend liter, niet honderd.  [nieuw]
-  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te veel: er staat een nul te veel. In één kubieke meter past duizend liter.  [nieuw]
+  - `nul te weinig` (fout = antwoord : 10) → Dat is tien keer te klein. In één kubieke meter past duizend liter, niet honderd.  [nieuw]
+  - `nul te veel` (fout = antwoord × 10) → Dat is tien keer te groot. In één kubieke meter past duizend liter.  [nieuw]
   - `andere fout` (andere fout) → Eén kubieke meter is duizend liter. Hoeveel liter is dan het aantal kubieke meter uit de vraag?  [nieuw]
 - **LET OP kop gewijzigd** (2026-10-08): de hints zijn geschreven voor 'Een bak voor tanden heeft een inhoud van # [ding]. Hoeveel liter is dat?'. Nakijken of ze nog passen.
 - Status: hints klaar

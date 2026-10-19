@@ -208,7 +208,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind schat een keersom door eerst af te ronden.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `precies uitgerekend` (fout = getal1 × getal2) → Dat is precies uitgerekend. De vraag is hoeveel het ongeveer is. Rond eerst af en reken dan uit met het ronde getal.  [nieuw]
-  - `nul vergeten` (fout = antwoord : 10) → Tel de nullen van het ronde getal goed mee.  [nieuw]
+  - `nul vergeten` (fout = antwoord : 10) → Dat is te weinig. Tel de nullen van het ronde getal goed mee.  [nieuw]
   - `opgeteld` (Claudes sleutel: optellen-ipv-vermenigvuldigen) → Je hebt opgeteld. In elke doos zitten er evenveel: dat is een keersom.  [Claude, taalfix]
   - `andere fout` (andere fout) → Rond eerst af zoals in de vraag staat. Reken dan uit met het ronde getal.  [nieuw]
 - Status: hints klaar
