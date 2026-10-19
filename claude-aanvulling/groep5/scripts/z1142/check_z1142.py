@@ -3,6 +3,7 @@
 - motor: fout_regels kent '(sleutel hele euro)' (anders vallen de sleutels terug op de komma-tekst);
 - GET-E06 #1/#2 per sleutel 'centen te …': sleutel zonder komma ⇔ soort '(10 cent, hele euro)' ⇔ tekst «Kijk goed naar de centen: die mis je nog.»;
   nooit «achter de komma» bij een sleutel zonder komma; richting: te veel ⇔ sleutel > antwoord;
+- V-#1143: elke centen-regel '(sleutel hele euro)' of '(sleutel met centen)';
 - SNAP van de zes centen-soorten. Drukt altijd het TOTAAL aantal FAIL af (V-#1141)."""
 import json, os, re, sys, glob
 D_ = os.path.dirname(os.path.abspath(__file__)); sys.path[:0] = [os.path.join(D_, '..', 'z1090', 'r4')]
@@ -25,6 +26,15 @@ for (d, nr), x, h in H:
     if zk and ('achter de komma' in t or 'die mis je nog' not in t): F.append(f"komma {d} #{nr} {x['nr']} sleutel {h['fout']!r} (antwoord {x['antwoord']}): {t[:70]}")
     if not zk and 'die mis je nog' in t: F.append(f"heel {d} #{nr} {x['nr']} sleutel {h['fout']!r}: {t[:70]}")
     if a is None or v is None or not ((t.startswith('Dat is te veel') and v > a) or (t.startswith('Dat is te weinig') and v < a)): F.append(f"richting {d} #{nr} {x['nr']} sleutel {h['fout']!r} (antwoord {x['antwoord']}): {t[:50]}")
+# V-#1143 (les 458): elke centen-regel heeft een sleutelfilter: '(sleutel hele euro)' of '(sleutel met centen)'
+ENT0 = [s for p in sorted(glob.glob(os.path.join(G, 'hints', 'batch*.json'))) for s in json.load(open(p, encoding='utf-8'))['somtypen'] if s['doel'] == 'G5-GET-E06' and s['nrOrigineel'] in (1, 2)]
+if MUT == 'M_metcenten': f_ = next(f for s in ENT0 for f in s['foutHints'] if f['regel'].endswith('(sleutel met centen)')); f_['regel'] = f_['regel'].replace(' (sleutel met centen)', '')
+n_f = 0
+for s in ENT0:
+    for f in s['foutHints']:
+        if not f['soort'].startswith('centen te'): continue
+        n_f += 1; heel_ = f['soort'].endswith('hele euro)')
+        if not f['regel'].endswith('(sleutel hele euro)' if heel_ else '(sleutel met centen)'): F.append(f"filter G5-GET-E06 #{s['nrOrigineel']} {f['soort']!r}: regel {f['regel']!r} zonder '(sleutel {'hele euro' if heel_ else 'met centen'})'")
 ENT = [s for p in sorted(glob.glob(os.path.join(G, 'hints', 'batch*.json'))) for s in json.load(open(p, encoding='utf-8'))['somtypen'] if s['doel'] == 'G5-GET-E06']
 snap = {f"{s['doel']}#{s['nrOrigineel']} {f['soort']}": [f.get('regel'), f.get('tekst')] for s in ENT for f in s['foutHints'] if f['soort'].startswith('centen te')}
 if MUT == 'M_snap': k_ = sorted(snap)[0]; snap[k_] = [snap[k_][0], snap[k_][1] + ' Kijk goed.']
@@ -33,7 +43,7 @@ if os.environ.get('SNAP') == '1': json.dump(snap, open(SNAPF, 'w', encoding='utf
 elif os.path.exists(SNAPF):
     oud = json.load(open(SNAPF, encoding='utf-8')); F += [f"SNAP Z-#1142 {k}" for k in sorted(set(oud) | set(snap)) if oud.get(k) != snap.get(k)]
 else: F.append('SNAP Z-#1142 ontbreekt')
-print(f"INFO Z-#1142: {len(X)} items, {n} centen-sleutels, waarvan {heel} zonder komma; SNAP {len(snap)} regels")
+print(f"INFO Z-#1142: {len(X)} items, {n} centen-sleutels, waarvan {heel} zonder komma; SNAP {len(snap)} regels; centen-regels met filter {n_f}")
 for f in F[:30]: print('FAIL', f)
 if len(F) > 30: print(f"… {len(F) - 30} FAIL-regels niet getoond")
 print(f"check Z-#1142: FAIL {len(F)} (totaal)" + (f' (MUT={MUT})' if MUT else ''))

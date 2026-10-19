@@ -1,0 +1,15 @@
+--- a/claude-aanvulling/groep5/scripts/fout_regels.py
++++ b/claude-aanvulling/groep5/scripts/fout_regels.py
+@@ -803,6 +803,12 @@
+             if mu1076_ is None or ((d in mu1076_) == bool(f1076_.group(1))): return {'exact': set()}
+         doel = ([c.ac - d] if m.group(1) in ('±', '-') and c.ac - d >= 0 else []) + ([c.ac + d] if m.group(1) in ('±', '+') else [])
+         return {'exact': {geld(x) for x in doel}, 'pred': lambda v: _cent(v) in doel}
++    # Z-#1121: #81 'fout = het aantal munten' vóór de getallen-regel: bij geld tellen is het antwoord geen geheel getal en heeft de opgave geen getallen
++    if r.startswith('fout = het aantal munten'):
++        mu = c.jr.get('munten') if c.jr.get('soort') == 'geld' else None
++        if not mu: return {'exact': set()}
++        k_ = geld(len(mu) * 100)
++        return E(k_) if geld_norm(k_) != geld_norm(c.ans) else {'exact': set()}
+     # getallen
+     if a is None and not n: return None
+     # G6 merge-fixlijst #215 (Didactiek batch 4): omrekenen met het aantal nullen als factor (km → m × 3, cm → m : 2)

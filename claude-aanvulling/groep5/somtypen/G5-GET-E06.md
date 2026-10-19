@@ -30,12 +30,12 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Ouderzin:** Je kind telt twee geldbedragen met euro's en centen bij elkaar op.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `komma op de verkeerde plek` (Claudes sleutel: komma-verschoven) → De komma staat op de verkeerde plek. Hoeveel hele euro's zijn het ongeveer? Kijk of je antwoord daarbij past.  [Claude, taalfix]
-  - `centen te veel (1 cent)` (fout = antwoord + 1 cent) → Dat is te veel. Kijk goed naar het laatste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
-  - `centen te weinig (1 cent)` (fout = antwoord − 1 cent) → Dat is te weinig. Kijk goed naar het laatste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
+  - `centen te veel (1 cent)` (fout = antwoord + 1 cent (sleutel met centen)) → Dat is te veel. Kijk goed naar het laatste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
+  - `centen te weinig (1 cent)` (fout = antwoord − 1 cent (sleutel met centen)) → Dat is te weinig. Kijk goed naar het laatste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
   - `centen te veel (10 cent, hele euro)` (fout = antwoord + 10 cent (sleutel hele euro)) → Dat is te veel. Kijk goed naar de centen: die mis je nog.  [nieuw]
-  - `centen te veel (10 cent)` (fout = antwoord + 10 cent) → Dat is te veel. Kijk goed naar het eerste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
+  - `centen te veel (10 cent)` (fout = antwoord + 10 cent (sleutel met centen)) → Dat is te veel. Kijk goed naar het eerste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
   - `centen te weinig (10 cent, hele euro)` (fout = antwoord − 10 cent (sleutel hele euro)) → Dat is te weinig. Kijk goed naar de centen: die mis je nog.  [nieuw]
-  - `centen te weinig (10 cent)` (fout = antwoord − 10 cent) → Dat is te weinig. Kijk goed naar het eerste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
+  - `centen te weinig (10 cent)` (fout = antwoord − 10 cent (sleutel met centen)) → Dat is te weinig. Kijk goed naar het eerste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
   - `min gedaan` (Claudes sleutel: verkeerde-bewerking) → Kijk goed naar het teken: het is een plussom. Tel de bedragen bij elkaar op.  [Claude, taalfix]
   - `andere fout` (andere fout) → Tel eerst de hele euro's bij elkaar en dan de centen. Honderd cent is één euro.  [nieuw]
 - Status: hints klaar
@@ -58,18 +58,18 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** €6,65 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
 - **Hint 1 (te schrijven):** Haal eerst de hele euro's eraf. Haal daarna de centen eraf.
-- **Hint 2 (te schrijven):** Heeft het eerste bedrag minder centen dan het tweede? Wissel dan een euro in voor honderd cent.
+- **Hint 2 (te schrijven):** Heeft het grootste bedrag minder centen dan het kleinste? Wissel dan een euro in voor honderd cent.
 - **Ouderzin:** Je kind haalt een geldbedrag met euro's en centen van een ander bedrag af.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `bedrag dat eraf gaat` (fout = het bedrag dat eraf gaat) → Is dat het bedrag dat eraf gaat? Haal het van het eerste bedrag af.  [nieuw]
+  - `bedrag dat eraf gaat` (fout = het bedrag dat eraf gaat) → Is dat het bedrag dat eraf gaat? Haal het van het grootste bedrag af.  [nieuw]
   - `komma op de verkeerde plek` (Claudes sleutel: komma-verschoven) → De komma staat op de verkeerde plek. Hoeveel hele euro's zijn het ongeveer? Kijk of je antwoord daarbij past.  [Claude, taalfix]
-  - `centen te veel (1 cent)` (fout = antwoord + 1 cent) → Dat is te veel. Kijk goed naar het laatste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
-  - `centen te weinig (1 cent)` (fout = antwoord − 1 cent) → Dat is te weinig. Kijk goed naar het laatste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
+  - `centen te veel (1 cent)` (fout = antwoord + 1 cent (sleutel met centen)) → Dat is te veel. Kijk goed naar het laatste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
+  - `centen te weinig (1 cent)` (fout = antwoord − 1 cent (sleutel met centen)) → Dat is te weinig. Kijk goed naar het laatste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
   - `centen te veel (10 cent, hele euro)` (fout = antwoord + 10 cent (sleutel hele euro)) → Dat is te veel. Kijk goed naar de centen: die mis je nog.  [nieuw]
-  - `centen te veel (10 cent)` (fout = antwoord + 10 cent) → Dat is te veel. Kijk goed naar het eerste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
+  - `centen te veel (10 cent)` (fout = antwoord + 10 cent (sleutel met centen)) → Dat is te veel. Kijk goed naar het eerste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
   - `centen te weinig (10 cent, hele euro)` (fout = antwoord − 10 cent (sleutel hele euro)) → Dat is te weinig. Kijk goed naar de centen: die mis je nog.  [nieuw]
-  - `centen te weinig (10 cent)` (fout = antwoord − 10 cent) → Dat is te weinig. Kijk goed naar het eerste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
-  - `opgeteld` (Claudes sleutel: verkeerde-bewerking) → Kijk goed naar het teken: het is een minsom. Haal het tweede bedrag van het eerste af.  [Claude, taalfix]
+  - `centen te weinig (10 cent)` (fout = antwoord − 10 cent (sleutel met centen)) → Dat is te weinig. Kijk goed naar het eerste cijfer achter de komma: reken de centen nog eens na.  [nieuw]
+  - `opgeteld` (Claudes sleutel: verkeerde-bewerking) → Kijk goed naar het teken: het is een minsom. Haal het kleinste bedrag van het grootste af.  [Claude, taalfix]
   - `andere fout` (andere fout) → Haal eerst de hele euro's eraf en dan de centen. Een euro is honderd cent.  [nieuw]
 - Status: hints klaar
 

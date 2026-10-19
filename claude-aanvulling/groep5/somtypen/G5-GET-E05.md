@@ -25,19 +25,19 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 274  (controle: ok)
     - **Fout-hints (Claude):** 264 → Je zit er één tiental naast. Tel de tientallen nog eens rustig na. · 273 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.
 
-- **Hint 1 (te schrijven):** Welk getal moet je bij het eerste getal optellen om de uitkomst te krijgen?
-- **Hint 2 (te schrijven):** Vul aan: spring vanaf het eerste getal naar het volgende hele tiental of honderdtal, en dan verder tot de uitkomst. Tel al je sprongen bij elkaar.
+- **Hint 1 (te schrijven):** Welk getal moet je bij het getal dat er al staat optellen om de uitkomst te krijgen?
+- **Hint 2 (te schrijven):** Vul aan: spring vanaf het getal dat er al staat naar het volgende hele tiental of honderdtal, en dan verder tot de uitkomst. Tel al je sprongen bij elkaar.
 - **Ouderzin:** Je kind zoekt het ontbrekende getal in een plussom tot 1000 (aanvullen).
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `de uitkomst` (fout = getal2) → Dat is de uitkomst van de som. Welk getal moet je bij het eerste getal optellen om daar te komen?  [nieuw]
-  - `opgeteld` (fout = getal1 + getal2) → Je hebt de twee getallen opgeteld. Zoek wat erbij moet: van het eerste getal naar de uitkomst.  [nieuw]
-  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn.  [nieuw]
-  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn.  [nieuw]
-  - `tiental te veel` (fout = antwoord + 10) → Dat is te veel. Let op de tientallen. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn.  [nieuw]
-  - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Let op de tientallen. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn.  [nieuw]
-  - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn. Kijk goed naar de honderdtallen.  [nieuw]
-  - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn. Kijk goed naar de honderdtallen.  [nieuw]
-  - `andere fout` (andere fout) → Begin bij het eerste getal en vul aan tot de uitkomst. Reken na: het eerste getal plus jouw getal moet precies de uitkomst zijn.  [nieuw]
+  - `de uitkomst` (fout = getal2) → Dat is de uitkomst van de som. Welk getal moet je bij het getal dat er al staat optellen om daar te komen?  [nieuw]
+  - `opgeteld` (fout = getal1 + getal2) → Je hebt de twee getallen opgeteld. Zoek wat erbij moet: van het getal dat er al staat naar de uitkomst.  [nieuw]
+  - `één te veel` (fout = antwoord + 1) → Dat is te veel. Reken na: het getal dat er al staat plus jouw getal moet precies de uitkomst zijn.  [nieuw]
+  - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Reken na: het getal dat er al staat plus jouw getal moet precies de uitkomst zijn.  [nieuw]
+  - `tiental te veel` (fout = antwoord + 10) → Dat is te veel. Let op de tientallen. Reken na: het getal dat er al staat plus jouw getal moet precies de uitkomst zijn.  [nieuw]
+  - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Let op de tientallen. Reken na: het getal dat er al staat plus jouw getal moet precies de uitkomst zijn.  [nieuw]
+  - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Reken na: het getal dat er al staat plus jouw getal moet precies de uitkomst zijn. Kijk goed naar de honderdtallen.  [nieuw]
+  - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Reken na: het getal dat er al staat plus jouw getal moet precies de uitkomst zijn. Kijk goed naar de honderdtallen.  [nieuw]
+  - `andere fout` (andere fout) → Begin bij het getal dat er al staat en vul aan tot de uitkomst. Reken na: het getal dat er al staat plus jouw getal moet precies de uitkomst zijn.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 2: In [plek] liggen # [ding]. Er komen er # bij. Hoeveel liggen er nu?
@@ -58,7 +58,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 443 → Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen. · 434 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.
 
 - **Hint 1 (te schrijven):** Er komen dingen bij, dus het worden er meer. Tel de twee getallen bij elkaar op.
-- **Hint 2 (te schrijven):** Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het eerste getal.
+- **Hint 2 (te schrijven):** Splits het kleinste getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het grootste getal.
 - **Ouderzin:** Je kind telt in een verhaal iets bij een getal tot 1000 op.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `min gedaan` (fout = getal1 - getal2 of getal2 - getal1) → Er komen dingen bij, dus het worden er meer.  [nieuw]
@@ -69,7 +69,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Tel de tientallen nog eens bij elkaar.  [nieuw]
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Tel de honderdtallen nog eens bij elkaar.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. De tientallen komen samen op tien of meer: dan komt er een honderdtal bij.  [nieuw]
-  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
+  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het kleinste getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 3: # − # = — met overschrijding van het tiental
@@ -89,7 +89,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 273  (controle: ok)
     - **Fout-hints (Claude):** 283 → Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen. · 274 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.
 
-- **Hint 1 (te schrijven):** Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Haal ze één voor één van het eerste getal af.
+- **Hint 1 (te schrijven):** Splits het kleinste getal in honderdtallen (als het die heeft), tientallen en eenheden. Haal ze één voor één van het grootste getal af.
 - **Hint 2 (te schrijven):** Bij de eenheden en bij de tientallen ga je over een heel tiental of honderdtal heen. Ga eerst terug naar het hele tiental of honderdtal, en haal dan de rest eraf.
 - **Ouderzin:** Je kind haalt een getal af van een getal tot 1000, met overschrijding van het tiental.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -100,7 +100,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Haal de tientallen nog eens af.  [nieuw]
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Bij de tientallen ga je over een heel honderdtal heen: dan gaat er nog een honderdtal af.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Haal de honderdtallen nog eens af.  [nieuw]
-  - `andere fout` (andere fout) → Reken na: jouw antwoord plus het tweede getal moet het eerste getal zijn.  [nieuw]
+  - `andere fout` (andere fout) → Reken na: jouw antwoord plus het kleinste getal moet het grootste getal zijn.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 4: # + # = — zonder overschrijding van het tiental
@@ -120,7 +120,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 525  (controle: ok)
     - **Fout-hints (Claude):** 425 → Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen. · 515 → Je zit er één tiental naast. Tel de tientallen nog eens rustig na.
 
-- **Hint 1 (te schrijven):** Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het eerste getal.
+- **Hint 1 (te schrijven):** Splits het kleinste getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het grootste getal.
 - **Hint 2 (te schrijven):** De tientallen komen samen op tien of meer. Dan komt er een honderdtal bij.
 - **Ouderzin:** Je kind telt twee getallen tot 1000 op. De eenheden gaan niet over het tiental.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -131,7 +131,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Tel de tientallen nog eens bij elkaar.  [nieuw]
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Tel de honderdtallen nog eens bij elkaar.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. De tientallen komen samen op tien of meer: dan komt er een honderdtal bij.  [nieuw]
-  - `andere fout` (andere fout) → Begin bij het eerste getal. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
+  - `andere fout` (andere fout) → Begin bij het grootste getal. Tel het kleinste getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 5: In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over?
@@ -153,7 +153,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 195 → Na 200 kom je in de 100-en. 200 − 15 eindigt op 85. · 285 → Je gaat onder 200, dus het honderdtal wordt één minder. · 184 → Ga eerst precies naar 200 (dat is 4 eraf), en dan de rest.
     - **Uitleg (Claude):** Ga eerst naar het ronde getal: 204 − 4 = 200. Dan de rest eraf: 200 − 15 = 185.
 
-- **Hint 1 (te schrijven):** Er gaan dingen weg, dus er blijven er minder over. Haal het tweede getal van het eerste af.
+- **Hint 1 (te schrijven):** Er gaan dingen weg, dus er blijven er minder over. Haal het kleinste getal van het grootste af.
 - **Hint 2 (te schrijven):** Je gaat onder het hele honderdtal. Ga eerst terug naar het hele honderdtal, en haal daarna de rest eraf.
 - **Ouderzin:** Je kind haalt een getal af van een getal tot 1000, over een heel honderdtal heen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -166,7 +166,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Haal de tientallen nog eens af.  [nieuw]
   - `onder het honderdtal` (fout = antwoord + 100) → Dat is te veel. Je gaat onder het hele honderdtal, dus het honderdtal wordt één minder.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Haal de honderdtallen nog eens af.  [nieuw]
-  - `andere fout` (andere fout) → Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
+  - `andere fout` (andere fout) → Haal het kleinste getal van het grootste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 6: In [plek] liggen # [ding]. Er gaan er # weg. Hoeveel liggen er nu?
@@ -186,8 +186,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 288  (controle: ok)
     - **Fout-hints (Claude):** 278 → Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen. · 470 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** Er gaan dingen weg, dus er liggen er nu minder. Haal het tweede getal van het eerste af.
-- **Hint 2 (te schrijven):** Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Haal ze één voor één van het eerste getal af.
+- **Hint 1 (te schrijven):** Er gaan dingen weg, dus er liggen er nu minder. Haal het kleinste getal van het grootste af.
+- **Hint 2 (te schrijven):** Splits het kleinste getal in honderdtallen (als het die heeft), tientallen en eenheden. Haal ze één voor één van het grootste getal af.
 - **Ouderzin:** Je kind haalt in een verhaal iets af van een getal tot 1000.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Er gaan dingen weg, dus er blijven er minder over.  [nieuw]
@@ -200,7 +200,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Haal de tientallen nog eens af.  [nieuw]
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Bij de tientallen ga je over een heel honderdtal heen: dan gaat er nog een honderdtal af.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Haal de honderdtallen nog eens af.  [nieuw]
-  - `andere fout` (andere fout) → Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
+  - `andere fout` (andere fout) → Haal het kleinste getal van het grootste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 7: In [plek] lagen # [ding]. Er zijn er # [ding]. Hoeveel [ding] liggen er nog?
@@ -222,8 +222,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 328 → Bij het lenen van een honderdtal wordt het honderdtal één minder. Tel de honderdtallen nog eens. · 238 → Bij het lenen van een tiental wordt het tiental één minder. Tel de tientallen nog eens. · 618 → Er zijn er weggehaald: dit is een minsom. · 372 → Je mag niet zomaar de kleinste van de grootste afhalen per kolom. Leen van de kolom ernaast.
     - **Uitleg (Claude):** Haal eerst de honderdtallen eraf: 423 − 100 = 323. Dan de tientallen: − 90 = 233. Dan de eenheden: − 5 = 228.
 
-- **Hint 1 (te schrijven):** Er zijn dingen weggehaald, dus er liggen er minder. Haal het tweede getal van het eerste af.
-- **Hint 2 (te schrijven):** Splits het tweede getal in honderdtallen, tientallen en eenheden. Haal ze één voor één van het eerste getal af.
+- **Hint 1 (te schrijven):** Er zijn dingen weggehaald, dus er liggen er minder. Haal het kleinste getal van het grootste af.
+- **Hint 2 (te schrijven):** Splits het kleinste getal in honderdtallen, tientallen en eenheden. Haal ze één voor één van het grootste getal af.
 - **Ouderzin:** Je kind rekent uit hoeveel er nog liggen als er iets is weggehaald (tot 1000).
 - **Fout-hints:** fout-hints Claude: deels ok — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Er zijn er weggehaald: dit is een minsom.  [Claude, ok]
@@ -237,8 +237,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `honderdtal te veel (geleend)` (fout = antwoord + 100 (geleend bij de honderdtallen)) → Dat is te veel. Ga je bij de tientallen over een heel honderdtal heen? Dan gaat er nog een honderdtal af.  [nieuw]
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Haal de honderdtallen nog eens af.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Haal de honderdtallen nog eens af.  [nieuw]
-  - `kleinste van de grootste` (fout = antwoord + 2 of meer) → Dat is te veel. Is bij een plek het cijfer van het tweede getal groter? Ga dan eerst terug tot het hele tiental of honderdtal. Reken na: jouw antwoord plus wat er weggaat, moet het eerste getal zijn.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
+  - `kleinste van de grootste` (fout = antwoord + 2 of meer) → Dat is te veel. Is bij een plek het cijfer van het kleinste getal groter? Ga dan eerst terug tot het hele tiental of honderdtal. Reken na: jouw antwoord plus wat er weggaat, moet het grootste getal zijn.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Haal het kleinste getal van het grootste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 8: In [plek] liggen # [ding] en in [plek] #. Hoeveel [ding] zijn dat samen?
@@ -261,7 +261,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Per positie: 600 + 100 = 700, 0 + 10 = 10, 1 + 9 = 10. Samen: 700 + 10 + 10 = 720.
 
 - **Hint 1 (te schrijven):** Samen betekent: bij elkaar optellen. Tel de twee getallen op.
-- **Hint 2 (te schrijven):** Splits het tweede getal in honderdtallen, tientallen en eenheden. Tel ze één voor één bij het eerste getal.
+- **Hint 2 (te schrijven):** Splits het kleinste getal in honderdtallen, tientallen en eenheden. Tel ze één voor één bij het grootste getal.
 - **Ouderzin:** Je kind telt twee aantallen tot 1000 bij elkaar op.
 - **Fout-hints:** fout-hints Claude: deels ok — per soort fout, regels van boven naar beneden (de eerste die past):
   - `min gedaan` (fout = getal1 - getal2 of getal2 - getal1) → Samen betekent optellen.  [Claude, ok]
@@ -273,7 +273,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Tel de honderdtallen nog eens bij elkaar.  [nieuw]
   - `honderdtal te weinig (onthouden)` (fout = antwoord − 100 (onthouden naar de honderdtallen)) → Tel de tientallen nog eens: als ze samen honderd of meer zijn, komt er een honderdtal bij.  [Claude, ok]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Tel de honderdtallen nog eens bij elkaar.  [Claude, ok]
-  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden.  [nieuw]
+  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het kleinste getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 9: # + # = — met overschrijding van het tiental
@@ -293,7 +293,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 520  (controle: ok)
     - **Fout-hints (Claude):** 530 → Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen. · 521 → Je zit er eentje naast. Tel nog eens rustig, en zet elk stapje op papier of op je vingers.
 
-- **Hint 1 (te schrijven):** Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het eerste getal.
+- **Hint 1 (te schrijven):** Splits het kleinste getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het grootste getal.
 - **Hint 2 (te schrijven):** De eenheden komen samen op tien of meer: dan komt er een tiental bij. Bij de tientallen gebeurt dat ook: dan komt er een honderdtal bij.
 - **Ouderzin:** Je kind telt twee getallen tot 1000 op, met overschrijding van het tiental.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -304,7 +304,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. De eenheden zijn samen tien of meer: dan komt er een tiental bij.  [nieuw]
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Tel de honderdtallen nog eens bij elkaar.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. De tientallen komen samen op tien of meer: dan komt er een honderdtal bij.  [nieuw]
-  - `andere fout` (andere fout) → Begin bij het eerste getal. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
+  - `andere fout` (andere fout) → Begin bij het grootste getal. Tel het kleinste getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 10: # − # = — zonder overschrijding van het tiental
@@ -324,7 +324,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 288  (controle: ok)
     - **Fout-hints (Claude):** 298 → Controleer de eenheden: als die boven de 10 komen, hoort er een 1 bij de tientallen. · 470 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Haal ze één voor één van het eerste getal af.
+- **Hint 1 (te schrijven):** Splits het kleinste getal in honderdtallen (als het die heeft), tientallen en eenheden. Haal ze één voor één van het grootste getal af.
 - **Hint 2 (te schrijven):** Bij de tientallen ga je over een heel honderdtal heen. Ga eerst terug naar het hele honderdtal, en haal dan de rest eraf.
 - **Ouderzin:** Je kind haalt een getal af van een getal tot 1000. De eenheden gaan niet over het tiental.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -335,7 +335,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Haal de tientallen nog eens af.  [nieuw]
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Bij de tientallen ga je over een heel honderdtal heen: dan gaat er nog een honderdtal af.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Haal de honderdtallen nog eens af.  [nieuw]
-  - `andere fout` (andere fout) → Reken na: jouw antwoord plus het tweede getal moet het eerste getal zijn.  [nieuw]
+  - `andere fout` (andere fout) → Reken na: jouw antwoord plus het kleinste getal moet het grootste getal zijn.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 11: In [plek] liggen # [ding]. Er gaan er # uit. Welke som hoort bij dit verhaal?
@@ -363,7 +363,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
 - **Fout-hints:** fout-hints Claude: deels ok — per soort fout, regels van boven naar beneden (de eerste die past):
   - `omgedraaid` (de minsom omgedraaid) → Je begint met wat er eerst in ligt. Daar haal je af wat eruit gaat.  [nieuw]
   - `plussom` (de plussom) → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?  [Claude, ok]
-  - `andere fout` (andere fout) → Zoek in het verhaal de twee getallen. Er gaan dingen uit: haal het tweede getal af van wat er eerst in ligt.  [nieuw]
+  - `andere fout` (andere fout) → Zoek in het verhaal de twee getallen. Er gaan dingen uit: haal het kleinste getal af van wat er eerst in ligt.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 12: In [plek] liggen # [ding]. Er komen er # bij. Welke som hoort bij dit verhaal?
@@ -471,7 +471,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 913 wordt 900 en 386 wordt 400. 900 − 400 = 500.
 
 - **Hint 1 (te schrijven):** Rond eerst beide getallen af op honderdtallen. Kijk bij elk getal naar de tientallen: vijf of meer? Dan rond je naar boven af. Minder dan vijf? Dan naar beneden.
-- **Hint 2 (te schrijven):** Reken dan uit met de ronde getallen. Haal het tweede ronde getal van het eerste af.
+- **Hint 2 (te schrijven):** Reken dan uit met de ronde getallen. Haal het kleinste ronde getal van het grootste af.
 - **Ouderzin:** Je kind schat een minsom: eerst beide getallen afronden op honderdtallen, dan uitrekenen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `precies uitgerekend` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het precieze antwoord. De vraag is hoeveel het ongeveer is. Rond eerst beide getallen af, en reken dan uit.  [nieuw]
@@ -499,7 +499,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 400 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven. · 500 → Kijk naar het cijfer achter de plek waarop je afrondt. Is het 5 of meer, dan ga je naar boven.
 
 - **Hint 1 (te schrijven):** Rond eerst beide getallen af op honderdtallen. Kijk bij elk getal naar de tientallen: vijf of meer? Dan rond je naar boven af. Minder dan vijf? Dan naar beneden.
-- **Hint 2 (te schrijven):** Reken dan uit met de ronde getallen. Haal het tweede ronde getal van het eerste af.
+- **Hint 2 (te schrijven):** Reken dan uit met de ronde getallen. Haal het kleinste ronde getal van het grootste af.
 - **Ouderzin:** Je kind schat een minsom: eerst beide getallen afronden op honderdtallen, dan uitrekenen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `precies uitgerekend` (fout = getal1 - getal2 of getal2 - getal1) → Dat is het precieze antwoord. De vraag is hoeveel het ongeveer is. Rond eerst beide getallen af, en reken dan uit.  [nieuw]
@@ -560,15 +560,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 357  (controle: ok)
     - **Fout-hints (Claude):** 527 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 973 → Lees de vraag nog eens: komt er iets bij, of gaat er iets af?
 
-- **Hint 1 (te schrijven):** Rond beide getallen af en haal het tweede van het eerste af. Zo weet je ongeveer hoe groot de uitkomst is.
+- **Hint 1 (te schrijven):** Rond beide getallen af en haal het kleinste van het grootste af. Zo weet je ongeveer hoe groot de uitkomst is.
 - **Hint 2 (te schrijven):** Kijk daarna naar de laatste cijfers. Op welk cijfer moet de uitkomst eindigen? Kies het antwoord dat in de buurt ligt en op dat cijfer eindigt.
 - **Ouderzin:** Je kind kiest zonder uit te rekenen welk antwoord bij een minsom kan kloppen: afronden en naar het laatste cijfer kijken.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `te ver weg` (Claudes sleutel: orde-van-grootte) → Rond eerst af en reken dat uit. Ligt dit antwoord daar in de buurt?  [Claude, taalfix]
-  - `ander laatste cijfer` (Claudes sleutel: laatste-cijfer) → Haal het laatste cijfer van het tweede getal af van het laatste cijfer van het eerste. Kan dat niet? Doe er dan eerst tien bij. Eindigt dit antwoord op dat cijfer?  [Claude, taalfix]
-  - `te groot` (Claudes sleutel: bovengrens) → Rond het eerste getal naar boven af en het tweede naar beneden. Haal ze van elkaar af. Groter dan dat kan de uitkomst niet zijn. Is dit antwoord groter?  [Claude, taalfix]
-  - `te klein` (Claudes sleutel: ondergrens) → Rond het eerste getal naar beneden af en het tweede naar boven. Haal ze van elkaar af. Kleiner dan dat kan de uitkomst niet zijn. Is dit antwoord kleiner?  [Claude, taalfix]
-  - `andere fout` (andere fout) → Rond beide getallen af en haal het tweede van het eerste af. Zo weet je ongeveer hoe groot de uitkomst is. Kijk daarna naar de laatste cijfers.  [nieuw]
+  - `ander laatste cijfer` (Claudes sleutel: laatste-cijfer) → Haal het laatste cijfer van het kleinste getal af van het laatste cijfer van het grootste. Kan dat niet? Doe er dan eerst tien bij. Eindigt dit antwoord op dat cijfer?  [Claude, taalfix]
+  - `te groot` (Claudes sleutel: bovengrens) → Rond het grootste getal naar boven af en het kleinste naar beneden. Haal ze van elkaar af. Groter dan dat kan de uitkomst niet zijn. Is dit antwoord groter?  [Claude, taalfix]
+  - `te klein` (Claudes sleutel: ondergrens) → Rond het grootste getal naar beneden af en het kleinste naar boven. Haal ze van elkaar af. Kleiner dan dat kan de uitkomst niet zijn. Is dit antwoord kleiner?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Rond beide getallen af en haal het kleinste van het grootste af. Zo weet je ongeveer hoe groot de uitkomst is. Kijk daarna naar de laatste cijfers.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 19: Verhaalsom min: # [ding], er gaan er # weg. Hoeveel nog?
@@ -590,17 +590,17 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 552 → Weg is aftrekken. · 348 → Kijk of je moest lenen bij de tientallen.
     - **Uitleg (Claude):** 445 − 107 = 338.
 
-- **Hint 1 (te schrijven):** Er gaat een deel weg, dus er blijven er minder over. Haal het tweede getal van het eerste af.
-- **Hint 2 (te schrijven):** Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Haal ze één voor één van het eerste getal af.
+- **Hint 1 (te schrijven):** Er gaat een deel weg, dus er blijven er minder over. Haal het kleinste getal van het grootste af.
+- **Hint 2 (te schrijven):** Splits het kleinste getal in honderdtallen (als het die heeft), tientallen en eenheden. Haal ze één voor één van het grootste getal af.
 - **Ouderzin:** Je kind haalt in een verhaal iets af van een getal tot 1000.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
-  - `opgeteld` (fout = getal1 + getal2) → Er gaat een deel weg, dus er blijven er minder over. Haal het tweede getal van het eerste af.  [nieuw]
+  - `opgeteld` (fout = getal1 + getal2) → Er gaat een deel weg, dus er blijven er minder over. Haal het kleinste getal van het grootste af.  [nieuw]
   - `tiental te veel (geleend)` (fout = antwoord + 10 (geleend bij de tientallen)) → Dat is te veel. Haal de tientallen nog eens af. Ga je bij de eenheden over een heel tiental heen? Dan gaat er nog een tiental af.  [nieuw]
   - `tiental te veel` (fout = antwoord + 10) → Dat is te veel. Haal de tientallen nog eens af.  [nieuw]
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Haal de tientallen nog eens af.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Dat is te veel. Reken de eenheden nog eens na.  [nieuw]
   - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Reken de eenheden nog eens na.  [nieuw]
-  - `andere fout` (andere fout) → Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
+  - `andere fout` (andere fout) → Haal het kleinste getal van het grootste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 20: Verhaalsom plus: # [ding], er komen er # bij. Hoeveel nu?
@@ -623,7 +623,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** 188 + 74 = 262.
 
 - **Hint 1 (te schrijven):** Er komen er nog bij, dus het worden er meer. Tel de twee getallen bij elkaar op.
-- **Hint 2 (te schrijven):** Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het eerste getal.
+- **Hint 2 (te schrijven):** Splits het kleinste getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het grootste getal.
 - **Ouderzin:** Je kind telt in een verhaal iets bij een getal tot 1000 op.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `min gedaan` (fout = getal1 - getal2 of getal2 - getal1) → Er komen er nog bij, dus het worden er meer. Tel de twee getallen bij elkaar op.  [nieuw]
@@ -632,7 +632,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te veel` (fout = antwoord + 10) → Dat is te veel. Tel de tientallen nog eens bij elkaar.  [nieuw]
   - `één te veel` (fout = antwoord + 1) → Dat is te veel. Tel de eenheden nog eens bij elkaar.  [nieuw]
   - `één te weinig` (fout = antwoord − 1) → Dat is te weinig. Tel de eenheden nog eens bij elkaar.  [nieuw]
-  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukken bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
+  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het kleinste getal er in stukken bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 21: [wie] heeft # [ding] en geeft er # weg. Hoeveel [ding] houdt [wie] over?
@@ -654,7 +654,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 198 → Je zit één tiental te hoog. Vul aan tot het volgende honderdtal en tel dan verder. · 178 → Je zit één tiental te laag. Vul aan tot het volgende honderdtal en tel dan verder. · 212 → Je mag niet zomaar per cijfer het kleinste van het grootste afhalen. Vul liever aan vanaf het kleine getal. · 412 → Er gaan wortels weg, dus het worden er minder. Aftrekken, niet optellen.
     - **Uitleg (Claude):** Vul aan vanaf 112: 112 + 88 = 200. Dan nog 100 erbij tot 300. Samen: 88 + 100 = 188.
 
-- **Hint 1 (te schrijven):** Er worden dingen weggegeven, dus er blijven er minder over. Haal het tweede getal van het eerste af.
+- **Hint 1 (te schrijven):** Er worden dingen weggegeven, dus er blijven er minder over. Haal het kleinste getal van het grootste af.
 - **Hint 2 (te schrijven):** In plaats van eraf halen kun je ook aanvullen: spring vanaf het kleinste getal eerst naar het volgende hele tiental of honderdtal, en dan door naar het grootste getal. Hoe groot zijn je sprongen samen?
 - **Ouderzin:** Je kind rekent uit hoeveel er overblijft als er iets wordt weggegeven (tot 1000).
 - **Fout-hints:** fout-hints Claude: deels ok — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -667,8 +667,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Kijk goed naar de tientallen. Vul aan tot het volgende honderdtal en tel dan verder.  [Claude, ok]
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Bij de tientallen ga je over een heel honderdtal heen: dan gaat er nog een honderdtal af.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Haal de honderdtallen nog eens af.  [nieuw]
-  - `kleinste van de grootste` (fout = antwoord + 2 of meer) → Dat is te veel. Je kunt niet per plek het kleine cijfer van het grote afhalen. Vul liever aan: spring vanaf het tweede getal naar het eerste getal.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
+  - `kleinste van de grootste` (fout = antwoord + 2 of meer) → Dat is te veel. Je kunt niet per plek het kleine cijfer van het grote afhalen. Vul liever aan: spring vanaf het kleinste getal naar het grootste getal.  [Claude, taalfix]
+  - `andere fout` (andere fout) → Haal het kleinste getal van het grootste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 22: Hoeveel is # + # [ding]? Rond beide getallen af op honderdtallen en reken dan uit. — zonder overschrijding van het tiental
@@ -806,15 +806,15 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Antwoord:** 62  (controle: n.v.t.)
     - **Fout-hints (Claude):** 72 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan. · 52 → Schatten is rekenen met ronde getallen. Rond eerst allebei de getallen af, elk naar het dichtstbijzijnde ronde getal, en reken dan.
 
-- **Hint 1 (te schrijven):** Rond beide getallen af en haal het tweede van het eerste af. Zo weet je ongeveer hoe groot de uitkomst is.
+- **Hint 1 (te schrijven):** Rond beide getallen af en haal het kleinste van het grootste af. Zo weet je ongeveer hoe groot de uitkomst is.
 - **Hint 2 (te schrijven):** Kijk daarna naar de laatste cijfers. Op welk cijfer moet de uitkomst eindigen? Kies het antwoord dat in de buurt ligt en op dat cijfer eindigt.
 - **Ouderzin:** Je kind kiest zonder uit te rekenen welk antwoord bij een minsom kan kloppen: afronden en naar het laatste cijfer kijken.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `te ver weg` (Claudes sleutel: orde-van-grootte) → Rond eerst af en reken dat uit. Ligt dit antwoord daar in de buurt?  [Claude, taalfix]
-  - `ander laatste cijfer` (Claudes sleutel: laatste-cijfer) → Haal het laatste cijfer van het tweede getal af van het laatste cijfer van het eerste. Kan dat niet? Doe er dan eerst tien bij. Eindigt dit antwoord op dat cijfer?  [Claude, taalfix]
-  - `te groot` (Claudes sleutel: bovengrens) → Rond het eerste getal naar boven af en het tweede naar beneden. Haal ze van elkaar af. Groter dan dat kan de uitkomst niet zijn. Is dit antwoord groter?  [Claude, taalfix]
-  - `te klein` (Claudes sleutel: ondergrens) → Rond het eerste getal naar beneden af en het tweede naar boven. Haal ze van elkaar af. Kleiner dan dat kan de uitkomst niet zijn. Is dit antwoord kleiner?  [Claude, taalfix]
-  - `andere fout` (andere fout) → Rond beide getallen af en haal het tweede van het eerste af. Zo weet je ongeveer hoe groot de uitkomst is. Kijk daarna naar de laatste cijfers.  [nieuw]
+  - `ander laatste cijfer` (Claudes sleutel: laatste-cijfer) → Haal het laatste cijfer van het kleinste getal af van het laatste cijfer van het grootste. Kan dat niet? Doe er dan eerst tien bij. Eindigt dit antwoord op dat cijfer?  [Claude, taalfix]
+  - `te groot` (Claudes sleutel: bovengrens) → Rond het grootste getal naar boven af en het kleinste naar beneden. Haal ze van elkaar af. Groter dan dat kan de uitkomst niet zijn. Is dit antwoord groter?  [Claude, taalfix]
+  - `te klein` (Claudes sleutel: ondergrens) → Rond het grootste getal naar beneden af en het kleinste naar boven. Haal ze van elkaar af. Kleiner dan dat kan de uitkomst niet zijn. Is dit antwoord kleiner?  [Claude, taalfix]
+  - `andere fout` (andere fout) → Rond beide getallen af en haal het kleinste van het grootste af. Zo weet je ongeveer hoe groot de uitkomst is. Kijk daarna naar de laatste cijfers.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 27: In [plek] liggen # [ding]. Er komen # [ding] bij. Hoeveel liggen er nu?
@@ -837,7 +837,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Rijg in stappen: eerst de honderdtallen, dan de tientallen. 146 + 100 = 246, dan + 40 = 286.
 
 - **Hint 1 (te schrijven):** Er komen dingen bij, dus het worden er meer. Tel de twee getallen bij elkaar op.
-- **Hint 2 (te schrijven):** Splits het tweede getal in honderdtallen, tientallen en eenheden. Tel ze één voor één bij het eerste getal.
+- **Hint 2 (te schrijven):** Splits het kleinste getal in honderdtallen, tientallen en eenheden. Tel ze één voor één bij het grootste getal.
 - **Ouderzin:** Je kind telt in een verhaal iets bij een getal tot 1000 op.
 - **Fout-hints:** fout-hints Claude: deels ok — per soort fout, regels van boven naar beneden (de eerste die past):
   - `min gedaan` (fout = getal1 - getal2 of getal2 - getal1 (tekst per item)) → Er komen … bij, dus je telt op. Niet aftrekken.  [Claude, ok]
@@ -848,7 +848,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Tel de honderdtallen nog eens bij elkaar.  [nieuw]
   - `honderdtal te weinig (onthouden)` (fout = antwoord − 100 (onthouden naar de honderdtallen)) → Komen de tientallen samen op tien of meer? Dan komt er een honderdtal bij. Vergeet dat niet.  [Claude, taalfix]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Tel de honderdtallen nog eens bij elkaar.  [Claude, taalfix]
-  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden.  [nieuw]
+  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het kleinste getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 28: Op [plek] lagen # [ding]. Er zijn er # [ding]. Hoeveel [ding] liggen er nog?
@@ -870,8 +870,8 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 429 → Bij het lenen van een honderdtal wordt het honderdtal één minder. Tel de honderdtallen nog eens. · 339 → Bij het lenen van een tiental wordt het tiental één minder. Tel de tientallen nog eens. · 583 → Er zijn er weggehaald: dit is een minsom.
     - **Uitleg (Claude):** Haal eerst de honderdtallen eraf: 456 − 100 = 356. Dan de tientallen: − 20 = 336. Dan de eenheden: − 7 = 329.
 
-- **Hint 1 (te schrijven):** Er zijn dingen weggehaald, dus er liggen er minder. Haal het tweede getal van het eerste af.
-- **Hint 2 (te schrijven):** Splits het tweede getal in honderdtallen, tientallen en eenheden. Haal ze één voor één van het eerste getal af.
+- **Hint 1 (te schrijven):** Er zijn dingen weggehaald, dus er liggen er minder. Haal het kleinste getal van het grootste af.
+- **Hint 2 (te schrijven):** Splits het kleinste getal in honderdtallen, tientallen en eenheden. Haal ze één voor één van het grootste getal af.
 - **Ouderzin:** Je kind rekent uit hoeveel er nog liggen als er iets is weggehaald (tot 1000).
 - **Fout-hints:** fout-hints Claude: deels ok — per soort fout, regels van boven naar beneden (de eerste die past):
   - `opgeteld` (fout = getal1 + getal2) → Er zijn er weggehaald: dit is een minsom.  [Claude, ok]
@@ -884,7 +884,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Haal de tientallen nog eens af.  [nieuw]
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Haal de honderdtallen nog eens af.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Haal de honderdtallen nog eens af.  [nieuw]
-  - `andere fout` (andere fout) → Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
+  - `andere fout` (andere fout) → Haal het kleinste getal van het grootste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 29: In [plek] liggen # [ding] en op [plek] #. Hoeveel [ding] zijn dat samen?
@@ -907,7 +907,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Per positie: 600 + 200 = 800, 40 + 90 = 130, 4 + 6 = 10. Samen: 800 + 130 + 10 = 940.
 
 - **Hint 1 (te schrijven):** Samen betekent: bij elkaar optellen. Tel de twee getallen op.
-- **Hint 2 (te schrijven):** Splits het tweede getal in honderdtallen, tientallen en eenheden. Tel ze één voor één bij het eerste getal.
+- **Hint 2 (te schrijven):** Splits het kleinste getal in honderdtallen, tientallen en eenheden. Tel ze één voor één bij het grootste getal.
 - **Ouderzin:** Je kind telt twee aantallen tot 1000 bij elkaar op.
 - **Fout-hints:** fout-hints Claude: deels ok — per soort fout, regels van boven naar beneden (de eerste die past):
   - `min gedaan` (fout = getal1 - getal2 of getal2 - getal1) → Samen betekent optellen.  [Claude, ok]
@@ -918,7 +918,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Tel de honderdtallen nog eens bij elkaar.  [nieuw]
   - `honderdtal te weinig (onthouden)` (fout = antwoord − 100 (onthouden naar de honderdtallen)) → Tel de tientallen nog eens: als ze samen honderd of meer zijn, komt er een honderdtal bij.  [Claude, ok]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Tel de honderdtallen nog eens bij elkaar.  [Claude, ok]
-  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden.  [nieuw]
+  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het kleinste getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 30: In [plek] liggen # [ding]. Er komen er # bij. Hoeveel zijn het er samen?
@@ -941,7 +941,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Eerst naar het tiental: 81 + 9 = 90. Dan de rest erbij: 90 + 17 = 107.
 
 - **Hint 1 (te schrijven):** Er komen dingen bij, dus het worden er meer. Tel de twee getallen bij elkaar op.
-- **Hint 2 (te schrijven):** Splits het tweede getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het eerste getal.
+- **Hint 2 (te schrijven):** Splits het kleinste getal in honderdtallen (als het die heeft), tientallen en eenheden. Tel ze één voor één bij het grootste getal.
 - **Ouderzin:** Je kind telt in een verhaal iets bij een getal tot 1000 op.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
   - `min gedaan` (fout = getal1 - getal2 of getal2 - getal1) → Er komen dingen bij, dus het worden er meer.  [Claude, taalfix]
@@ -951,7 +951,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Tel de tientallen nog eens bij elkaar.  [nieuw]
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Tel de honderdtallen nog eens bij elkaar.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. De tientallen komen samen op tien of meer: dan komt er een honderdtal bij.  [nieuw]
-  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
+  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het kleinste getal er in stukjes bij: de honderdtallen (als het die heeft), de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 31: Op [plek] liggen # [ding] en in [plek] #. Hoeveel [ding] zijn dat samen?
@@ -974,7 +974,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Uitleg (Claude):** Per positie: 600 + 200 = 800, 30 + 10 = 40, 3 + 5 = 8. Samen: 800 + 40 + 8 = 848.
 
 - **Hint 1 (te schrijven):** Samen betekent: bij elkaar optellen. Tel de twee getallen op.
-- **Hint 2 (te schrijven):** Splits het tweede getal in honderdtallen, tientallen en eenheden. Tel ze één voor één bij het eerste getal.
+- **Hint 2 (te schrijven):** Splits het kleinste getal in honderdtallen, tientallen en eenheden. Tel ze één voor één bij het grootste getal.
 - **Ouderzin:** Je kind telt twee aantallen tot 1000 bij elkaar op.
 - **Fout-hints:** fout-hints Claude: deels ok — per soort fout, regels van boven naar beneden (de eerste die past):
   - `min gedaan` (fout = getal1 - getal2 of getal2 - getal1) → Samen betekent optellen.  [Claude, ok]
@@ -986,7 +986,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `honderdtal te veel` (fout = antwoord + 100) → Dat is te veel. Tel de honderdtallen nog eens bij elkaar.  [nieuw]
   - `honderdtal te weinig (onthouden)` (fout = antwoord − 100 (onthouden naar de honderdtallen)) → Tel de tientallen nog eens: als ze samen honderd of meer zijn, komt er een honderdtal bij.  [Claude, ok]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Tel de honderdtallen nog eens bij elkaar.  [Claude, ok]
-  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het tweede getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden.  [nieuw]
+  - `andere fout` (andere fout) → Tel de twee getallen uit het verhaal bij elkaar. Tel het kleinste getal er in stukjes bij: de honderdtallen, de tientallen en de eenheden.  [nieuw]
 - Status: hints klaar
 
 ## Somtype 32: Op [plek] liggen # [ding]. Er gaan er # weg. Hoeveel blijven er over?
@@ -1008,7 +1008,7 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
     - **Fout-hints (Claude):** 305 → Na 300 kom je in de 200-en. 300 − 5 eindigt op 95. · 395 → Je gaat onder 300, dus het honderdtal wordt één minder. · 294 → Ga eerst precies naar 300 (dat is 4 eraf), en dan de rest.
     - **Uitleg (Claude):** Ga eerst naar het ronde getal: 304 − 4 = 300. Dan de rest eraf: 300 − 5 = 295.
 
-- **Hint 1 (te schrijven):** Er gaan dingen weg, dus er blijven er minder over. Haal het tweede getal van het eerste af.
+- **Hint 1 (te schrijven):** Er gaan dingen weg, dus er blijven er minder over. Haal het kleinste getal van het grootste af.
 - **Hint 2 (te schrijven):** Je gaat onder het hele honderdtal. Ga eerst terug naar het hele honderdtal, en haal daarna de rest eraf.
 - **Ouderzin:** Je kind haalt een getal af van een getal tot 1000, over een heel honderdtal heen.
 - **Fout-hints:** fout-hints Claude: vervangen — per soort fout, regels van boven naar beneden (de eerste die past):
@@ -1021,5 +1021,5 @@ Bron: Leermees open vragenbank, CC BY-SA 4.0, leermees.nl · https://github.com/
   - `tiental te weinig` (fout = antwoord − 10) → Dat is te weinig. Haal de tientallen nog eens af.  [nieuw]
   - `onder het honderdtal` (fout = antwoord + 100) → Dat is te veel. Je gaat onder het hele honderdtal, dus het honderdtal wordt één minder.  [nieuw]
   - `honderdtal te weinig` (fout = antwoord − 100) → Dat is te weinig. Haal de honderdtallen nog eens af.  [nieuw]
-  - `andere fout` (andere fout) → Haal het tweede getal van het eerste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
+  - `andere fout` (andere fout) → Haal het kleinste getal van het grootste af. Reken na: jouw antwoord plus wat er weggaat, moet het getal zijn waarmee je begint.  [nieuw]
 - Status: hints klaar
