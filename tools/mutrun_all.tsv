@@ -1,0 +1,20 @@
+# naam	script (t.o.v. de repo)	opdracht (bash, in $S; $S $G5 $G8 $L5 $L8 $T $REPO) of 'uit <reden>'
+z1090	claude-aanvulling/groep5/scripts/z1090/mutrun_z1090.sh	bash $G5/scripts/z1090/mutrun_z1090.sh $S
+z1090-r2-lenen	claude-aanvulling/groep5/scripts/z1090/r2/mutrun_lenen.sh	bash $G5/scripts/z1090/r2/mutrun_lenen.sh $S
+z1090-r4-lenen	claude-aanvulling/groep5/scripts/z1090/r4/mutrun_lenen.sh	bash $G5/scripts/z1090/r4/mutrun_lenen.sh $S
+z1092	claude-aanvulling/groep5/scripts/z1090/z1092/mutrun_z1092.sh	bash $G5/scripts/z1090/z1092/mutrun_z1092.sh $S
+z1091	claude-aanvulling/groep5/scripts/z1091/mutrun_z1091.sh	for m in $(cd $G5/scripts/z1091 && ls -d */ | tr -d / | grep -v __pycache__); do BASIS_COMMIT=ec3a77e BASIS_REPO=$REPO bash $G5/scripts/z1091/mutrun_z1091.sh $m $S; done
+z1121	claude-aanvulling/groep5/scripts/z1121/mutrun_z1121.sh	APPLYLOG=$L5 bash $G5/scripts/z1121/mutrun_z1121.sh $S
+z1121-v2	claude-aanvulling/groep5/scripts/z1121/mutrun_z1121_v2.sh	APPLYLOG=$L5 bash $G5/scripts/z1121/mutrun_z1121_v2.sh $S
+z1121-v1b	claude-aanvulling/groep5/scripts/z1121/mutrun_z1121_v1b.sh	APPLYLOG=$L5 bash $G5/scripts/z1121/mutrun_z1121_v1b.sh $S
+z1121-v3	claude-aanvulling/groep5/scripts/z1121/mutrun_z1121_v3.sh	APPLYLOG=$L5 bash $G5/scripts/z1121/mutrun_z1121_v3.sh $S
+z1135	claude-aanvulling/groep5/scripts/z1135/mutrun_z1135.sh	bash $G5/scripts/z1135/mutrun_z1135.sh $S
+z1136	claude-aanvulling/groep5/scripts/z1136/mutrun_z1136.sh	bash $G5/scripts/z1136/mutrun_z1136.sh $S
+z1142	claude-aanvulling/groep5/scripts/z1142/mutrun_z1142.sh	bash $G5/scripts/z1142/mutrun_z1142.sh $S
+z1146	claude-aanvulling/groep5/scripts/z1146/mutrun_z1146.sh	bash $G5/scripts/z1146/mutrun_z1146.sh $S
+v1145	claude-aanvulling/groep5/scripts/v1145/mutrun_v1145.sh	bash $G5/scripts/v1145/mutrun_v1145.sh $S
+oef1070	claude-aanvulling/groep8/scripts/oef1070/mutrun_oef1070.sh	bash $G8/scripts/oef1070/mutrun_oef1070.sh $S
+g8-b6	claude-aanvulling/groep8/tools/b6/runmut.sh	bash $G8/tools/b6/runmut.sh $G8
+g8-b8	claude-aanvulling/groep8/tools/b8/runmut.sh	bash $G8/tools/b8/runmut.sh $G8
+g8-b9	claude-aanvulling/groep8/tools/b9/runmut.sh	bash $G8/tools/b9/runmut.sh $G8
+v1081	claude-aanvulling/r13/v1081/mutrun_andere_kant.sh	python3 -B claude-aanvulling/r13/v1081/zet_andere_kant.py claude-aanvulling/r13/kritisch_concept_g6.json $T/v1081.json >/dev/null && bash claude-aanvulling/r13/v1081/mutrun_andere_kant.sh $T/v1081.json claude-aanvulling/r13/kritisch_concept_g6.json

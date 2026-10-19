@@ -15,9 +15,21 @@ Gebruik: python3 scripts/build_g8.py"""
 import json, re, csv, collections, subprocess, os, sys, math, datetime, hashlib, glob
 from fractions import Fraction as Fr
 HERE = os.path.dirname(os.path.abspath(__file__)); OUT = os.path.dirname(HERE)
-G3, G4, G5, G6, G7 = (f'/workspace/claude-merge/g{n}' for n in (3, 4, 5, 6, 7))
+# r22 (Oefeningen): geen vaste paden. De build leest de merge-werkmappen g3–g7 (gemapt, geschrapt.csv, twijfel, terug_*, geparkeerd_G8) en
+# g7_basis; die staan niet (volledig) in de repo. G8_MERGE = map met g3 … g7 (verplicht); G7_BASIS = map met build_g7.py (standaard scripts/g7_basis);
+# VRAGENBANK_G8 = export vragenbank_g8.json (standaard export-chatgpt/vragenbank_g8.json in de repo, md5 0fc78354). Tools: scripts/merge in de repo.
+def _fout2(m): print(f'FAIL instelling: {m}'); sys.exit(2)
+_REPO = os.path.normpath(os.path.join(HERE, '..', '..', '..'))
+_MERGE = os.environ.get('G8_MERGE') or _fout2('G8_MERGE is niet gezet (map met de merge-werkmappen g3 … g7)')
+G3, G4, G5, G6, G7 = (os.path.join(_MERGE, f'g{n}') for n in (3, 4, 5, 6, 7))
+for _g in (G3, G4, G5, G6, G7):
+    if not os.path.isfile(os.path.join(_g, 'data', 'gemapt.json')): _fout2(f'G8_MERGE={_MERGE}: {_g}/data/gemapt.json ontbreekt')
+_G7B = os.environ.get('G7_BASIS') or f'{HERE}/g7_basis'
+if not os.path.isfile(os.path.join(_G7B, 'build_g7.py')): _fout2(f'geen build_g7.py in {_G7B} (zet G7_BASIS=<map met build_g7.py>)')
+_EXP8 = os.environ.get('VRAGENBANK_G8') or os.path.join(_REPO, 'export-chatgpt', 'vragenbank_g8.json')
+if not os.path.isfile(_EXP8): _fout2(f'export {_EXP8} ontbreekt (zet VRAGENBANK_G8)')
 AANV_UIT = os.environ.get('G8_AANV_UIT') or f'{OUT}/logs/aanvulling_uit_g8'      # Z-#962 (les 363): g{4..7}/data/aanvulling_uit_g8.json eerst hier; scripts/bouw_veilig.py zet ze om
-sys.path.insert(0, f'{HERE}/g7_basis')
+sys.path.insert(0, _G7B)
 import build_g7 as B7                     # laadt de hele G7-keten (alleen functies; B7.main wordt nooit aangeroepen)
 M, B3, R4, R5, R6, R7, BG7, FX21 = B7.M, B7.B3, B7.R4, B7.R5, B7.R6, B7.R7, B7.BG7, B7.FX21
 V, CDOEL, CREDIT, COMMIT, EXP = B3.V, B3.CDOEL, B3.CREDIT, B3.COMMIT, B3.EXP
@@ -25,7 +37,7 @@ R, G, T = R7.R, R7.G, R7.T
 OURS = {d['id']: {'bordtitel': d['bordtitel'], 'korteNaam': d['korteNaam'], 'domein': d['domein'], 'aantalItems': d['aantalItems']}
         for g in EXP['groepen'] if g['groep'] == 8 for dm in g['domeinen'] for d in dm['doelen']}
 import besluiten_g8 as BG8                 # Didactiek-besluiten op de 1226 G8-twijfelitems + Dave 20:56
-sys.path.insert(0, "/workspace/claude-merge/tools"); import breukvorm as BV, kloktijd_fix as KF, e05_routes as ER, bouwsel_routes as BR, kop_vast as KV, g8_b7_vlag as B7VLAG, eindcijfer_check as EC      # (B7VLAG: b7-data pas na patch_batch7 1b) V-#760 (Didactiek G8 batch 1, 8 okt): even grote breuk telt als goed (#170, Dave 21:24)
+sys.path.insert(0, os.path.join(_REPO, "scripts", "merge")); import breukvorm as BV, kloktijd_fix as KF, e05_routes as ER, bouwsel_routes as BR, kop_vast as KV, g8_b7_vlag as B7VLAG, eindcijfer_check as EC      # (B7VLAG: b7-data pas na patch_batch7 1b) V-#760 (Didactiek G8 batch 1, 8 okt): even grote breuk telt als goed (#170, Dave 21:24)
 BESLUIT_G8 = BG8.laad()
 _I8 = json.load(open(f'{OUT}/bevroren/ids_v1.json'))      # Dave 20:56 (5): ook via vorigeIds (het item kreeg in G5 een naar-id; anders valt de regel stil weg)
 E02_001 = next((c for c, i in _I8['ids'].items() if i == 'G8-GET-E02-claude-bank-001'), None) or next((c for c, vs in _I8.get('vorigeIds', {}).items() if 'G8-GET-E02-claude-bank-001' in vs), None)
@@ -47,7 +59,7 @@ for naam, p in (('G3', G3), ('G4', G4), ('G5', G5), ('G6', G6), ('G7', G7)):
 for p, f, w in ((G4, 'terug_G3', 'terug-G3 in G4'), (G5, 'terug_G4', 'terug-G4 in G5'), (G6, 'terug_G5', 'terug-G5 in G6'), (G7, 'terug_G6', 'terug-G6 in G7')):
     for it in json.load(open(f'{p}/data/{f}.json'))['items']: gebruikt.setdefault(it['bron']['claudeId'], w)
 G7PARK = {it['bron']['claudeId']: it for it in json.load(open(f'{G7}/data/geparkeerd_G8.json'))['items']}
-EXP8 = json.load(open('/workspace/exports/leermees-vragenbank-export/vragenbank_g8.json'))
+EXP8 = json.load(open(_EXP8))
 ONZE_G8 = {(d['id'], re.sub(r'\s+', ' ', it['opgave']).strip()): it['id'] for dm in EXP8['domeinen'] for d in dm['doelen'] for it in d['items']}
 PILOT8 = {B7.pnorm(it['opgave']): it['id'] for dm in EXP8['domeinen'] for d in dm['doelen'] for cv in d.get('claudeVarianten') or [] for it in cv['items']}
 

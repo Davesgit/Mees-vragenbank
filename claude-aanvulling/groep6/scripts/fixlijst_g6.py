@@ -1722,10 +1722,11 @@ def aanvul231(rows):
     return uit
 
 # ---- #321/#354 (besluit Dave 1 okt 23:41): G5-GET-E07 #6 'TT × TT schatten' → G6-GET-E06 (de G6-bank: ×/: tot 10.000, ook schattend; 2-cijferig × 2-cijferig met een rond getal)
-G5_PARK = '/workspace/claude-merge/g5/data/geparkeerd_G6.json'
+G5_PARK = __import__('os').environ.get('G5_PARK') or __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'groep5', 'data', 'geparkeerd_G6.json')      # r22: repo groep5/data (md5 85e3b149 = de merge-kopie); G5_PARK om een andere te nemen
 def is321(p5): return bool((p5 or {}).get('merge', {}).get('besluit321'))
 def laad321(rows):
     import json as _j
+    if not __import__('os').path.isfile(G5_PARK): print(f'FAIL instelling: G5_PARK={G5_PARK} bestaat niet (geparkeerd_G6.json van G5)'); raise SystemExit(2)
     P = sorted((x for x in _j.load(open(G5_PARK))['items'] if is321(x)), key=lambda x: x['id'])
     assert len(P) == 10, ('#321: verwacht 10 items van G5-GET-E07 #6 in g5/data/geparkeerd_G6.json', len(P))
     uit = []

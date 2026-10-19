@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Gedeelde haak voor de merge-checkers G3–G8 (G5 fixlijst #63, Didactiek review batch 4, 1 okt 2026).
-Bestaat /workspace/claude-merge/referentiematen.json, dan worden de kindteksten van elk item (opgave, antwoord, opties, hints, fout-hints)
+Bestaat scripts/referentiematen.json (PAD), dan worden de kindteksten van elk item (opgave, antwoord, opties, hints, fout-hints)
 erlangs gelegd: een referentiemaat met een getal + eenheid buiten het bereik in het bestand = WARN (geen FAIL). Bestaat het bestand niet,
 dan doet de haak niets (en zegt dat één keer).
 Formaat (Didactiek, referentiematen.json van 17:44): een lijst met per maat o.a. id, maat, kindzin, nietGebruiken, en
@@ -90,11 +90,15 @@ def rapport(items, pad=PAD, max_regels=30):
     return len(hard)
 
 def banken(groepen=(3, 4, 5, 6, 7, 8), pad=PAD):
-    """Alleen-lezen rapport over de canonieke banken (/workspace/rekenen-groepN/bank/*.md): per regel van het bestand. Schrijft niets."""
-    import glob
+    """Alleen-lezen rapport over de canonieke banken (<BANK_DIR>/groepN/*.md; standaard de repo-map bank/, of BANK_DIR): per regel. Schrijft niets.
+    r22: was een glob op een vaste map buiten de repo; ontbreekt de bankmap van een groep, dan FAIL instelling en exit 2."""
+    import glob, sys
+    bank = os.environ.get('BANK_DIR') or os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'bank')
+    for g in groepen:
+        if not os.path.isdir(os.path.join(bank, f'groep{g}')): print(f'FAIL instelling: geen bankmap {os.path.join(bank, f"groep{g}")} (zet BANK_DIR=<map met groepN/>)'); sys.exit(2)
     regels = laad(pad) or []; n = 0
     for g in groepen:
-        for f in sorted(glob.glob(f'/workspace/rekenen-groep{g}/bank/*.md')):
+        for f in sorted(glob.glob(os.path.join(bank, f'groep{g}', '*.md'))):
             for i, regel in enumerate(open(f, encoding='utf-8'), 1):
                 for s, r in regels:
                     if s == 'patroon' and (m := r[2].search(regel)):

@@ -8,7 +8,7 @@
 - daarna scripts/sync_hint_keys.py (koppen veranderen).
 Gebruik: python3 r13/klok_r13.py 3 4 5  → rapport per groep (json in r13/klok_rapport.json)."""
 import sys, os, json, glob, re, copy, subprocess, random
-sys.path.insert(0, '/workspace/claude-merge/tools'); import kloktijd_fix as KF, kloktijd_check as KT
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'merge')); import kloktijd_fix as KF, kloktijd_check as KT
 R13 = os.path.dirname(os.path.abspath(__file__))
 DIGI = re.compile(r'\((opties|tijd) digitaal\)')
 def omzet(it, tel):
